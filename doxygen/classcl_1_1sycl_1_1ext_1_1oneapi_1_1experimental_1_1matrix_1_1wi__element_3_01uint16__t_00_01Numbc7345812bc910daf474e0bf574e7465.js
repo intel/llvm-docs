@@ -1,0 +1,12 @@
+var classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465 =
+[
+    [ "Converter", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Nu18a1320afc0edc856922712ee37d4432.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Nu18a1320afc0edc856922712ee37d4432" ],
+    [ "Converter< T, uint16_t >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Nu214ebea3060f88ce235c5eab517aadd1.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Nu214ebea3060f88ce235c5eab517aadd1" ],
+    [ "wi_element", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#ac75e82f904877801ab012cf6a6530322", null ],
+    [ "make_bf16", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#a86d570df45d198942fad0b48881fdaf1", null ],
+    [ "make_fp32", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#a884105b33fa9a7857dc630171aef008d", null ],
+    [ "operator bool", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#a1042ff4df42413267bf8db037b884f44", null ],
+    [ "operator uint16_t", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#a18beaf623ed61d5f064bfe20b8ad470a", null ],
+    [ "operator=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#a980386c6c980bcb5a2e28ece209b746b", null ],
+    [ "operator=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1wi__element_3_01uint16__t_00_01Numbc7345812bc910daf474e0bf574e7465.html#ad8c88e076021e9708e351a251f425411", null ]
+];

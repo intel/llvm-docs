@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4.html#ad7aff7e9c7cda7a9c491dc2163d71107", null ]
+];

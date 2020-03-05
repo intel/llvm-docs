@@ -1,0 +1,5 @@
+var structcl_1_1sycl_1_1detail_1_1get__context__info_3_01info_1_1context_1_1atomic__memory__order__capabilities_01_4 =
+[
+    [ "RetType", "structcl_1_1sycl_1_1detail_1_1get__context__info_3_01info_1_1context_1_1atomic__memory__order__capabilities_01_4.html#a7e39940b731e5d028cff976f829b822d", null ],
+    [ "get", "structcl_1_1sycl_1_1detail_1_1get__context__info_3_01info_1_1context_1_1atomic__memory__order__capabilities_01_4.html#adfd0c88d66b7925451f3325924e73136", null ]
+];

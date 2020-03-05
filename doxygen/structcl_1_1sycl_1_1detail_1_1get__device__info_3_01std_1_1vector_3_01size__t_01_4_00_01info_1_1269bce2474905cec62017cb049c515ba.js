@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01size__t_01_4_00_01info_1_1269bce2474905cec62017cb049c515ba =
+[
+    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01size__t_01_4_00_01info_1_1269bce2474905cec62017cb049c515ba.html#a889c238154959763fa071cae07671ab4", null ]
+];

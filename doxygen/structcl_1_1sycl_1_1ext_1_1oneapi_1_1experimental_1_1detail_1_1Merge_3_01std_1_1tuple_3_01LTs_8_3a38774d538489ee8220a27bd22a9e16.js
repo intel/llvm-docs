@@ -1,0 +1,11 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16 =
+[
+    [ "l_head", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#a82b72c77b3f6df4628dc175712bc596c", null ],
+    [ "l_split", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#a3803449072e689abaf4f872b253ff930", null ],
+    [ "merge_tails", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#acd70336d285813129e44e5335d8604e8", null ],
+    [ "min", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#a27e3cb8d1641e90d695f292442a76f12", null ],
+    [ "r_head", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#a6fc33a84238c95c869aa52a60365e4d8", null ],
+    [ "r_split", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#ad45a8ee2c4007ee9de96e5005767482c", null ],
+    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#adddcaa703565c174f5b864fdcb197ca7", null ],
+    [ "left_has_min", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1Merge_3_01std_1_1tuple_3_01LTs_8_3a38774d538489ee8220a27bd22a9e16.html#af1e98282913cff03d629013d9b31c618", null ]
+];

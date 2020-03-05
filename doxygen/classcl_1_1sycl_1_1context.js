@@ -1,0 +1,27 @@
+var classcl_1_1sycl_1_1context =
+[
+    [ "context", "classcl_1_1sycl_1_1context.html#a2bc77d487d06b719eb3c9ea57fec64cb", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a24937839a615b24973334f2371c84264", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a4c97caef4d1b41b51dd35e0d0f7492f1", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#ac925fec6927caa92ef4a6e8837889570", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a090e955b74d65d57416d1792c100d0de", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a4dd9b3c6400d24a533fd2b4e2b60a5bc", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a87bf4d7bd5cf4d20a06665ef31c93197", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a2fddab509aa2e08ca10fdbae752d1cd7", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#a3b03cfe931f6b947844fb99f5d35d3dc", null ],
+    [ "context", "classcl_1_1sycl_1_1context.html#ad290a3fa9e6483a47407935519512d02", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1context.html#a6c61c7620982126adcead76b71153c28", null ],
+    [ "get_devices", "classcl_1_1sycl_1_1context.html#ade5b9c63c4e3602c12cf78475c5b7c0c", null ],
+    [ "get_info", "classcl_1_1sycl_1_1context.html#aa0d2f30f8a540d88cbb1f0122812a764", null ],
+    [ "get_native", "classcl_1_1sycl_1_1context.html#aed9fa657fcd9fd2e8e319192d65fad0a", null ],
+    [ "get_platform", "classcl_1_1sycl_1_1context.html#af27561da9f307daeedbeeedc9ee6dee1", null ],
+    [ "get_property", "classcl_1_1sycl_1_1context.html#a2f985d8794caf74b7fb2665e31c3475f", null ],
+    [ "has_property", "classcl_1_1sycl_1_1context.html#a5c3c09cdb03c1b43beac5a1bfaf1e8ed", null ],
+    [ "is_host", "classcl_1_1sycl_1_1context.html#a86e0d2c756c13114e0464cc42956dd66", null ],
+    [ "operator!=", "classcl_1_1sycl_1_1context.html#a1a247c555fd4a7cb265e0ab15acd4a18", null ],
+    [ "operator=", "classcl_1_1sycl_1_1context.html#a6d49ab248375dd94d73de3952a661b55", null ],
+    [ "operator=", "classcl_1_1sycl_1_1context.html#a8d46093b44d8de2a700814efb4aed83c", null ],
+    [ "operator==", "classcl_1_1sycl_1_1context.html#a0e02518b91db928a0bad711e0ff9521d", null ],
+    [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1context.html#a71492293d0386f542d120a1fc3dfbb55", null ],
+    [ "detail::getRawSyclObjImpl", "classcl_1_1sycl_1_1context.html#a9989cb46a70557073b0113bb9ff923dd", null ]
+];

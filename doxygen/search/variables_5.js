@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['element_5faligned_10304',['element_aligned',['../std_2experimental_2simd_8hpp.html#a12dd54e001e852c457b3b78bec3f9439',1,'element_aligned():&#160;simd.hpp'],['../group__sycl__esimd__core__align.html#gaf11f0c5d8320f6b6df830fe1694c007b',1,'cl::__ESIMD_NS::element_aligned()']]],
+  ['emulation_5fplatform_5fname_10305',['EMULATION_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1ext_1_1intel.html#a7f0e153588858fccde063f143d948c2c',1,'cl::sycl::ext::intel']]],
+  ['enablebuffers_10306',['EnableBuffers',['../classsettings_1_1SetLimits.html#ac707e6051a05c28772a8c25c9048b870',1,'settings::SetLimits']]],
+  ['enabled_10307',['Enabled',['../classZeUSMImportExtension.html#a52671107ad1181289dc31dccd450bfcd',1,'ZeUSMImportExtension']]],
+  ['endl_10308',['endl',['../namespacecl_1_1sycl.html#a6917820bc96aa0484d140def082005d4',1,'cl::sycl']]],
+  ['entriesbegin_10309',['EntriesBegin',['../structpi__device__binary__struct.html#a6eb4a6bb0e5ec4d025383ee3cdc98146',1,'pi_device_binary_struct']]],
+  ['entriesend_10310',['EntriesEnd',['../structpi__device__binary__struct.html#a101af6f5f71e7c55000dd25e5979ec3f',1,'pi_device_binary_struct']]],
+  ['error_10311',['Error',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a51c6459a289134b09c640d3ecda2404c',1,'cl::sycl::detail::KernelProgramCache::BuildResult']]],
+  ['errorlog_5f_10312',['errorLog_',['../struct__pi__program.html#a4342ebed69e0753b50adb2f0050f6751',1,'_pi_program']]],
+  ['errormessage_10313',['ErrorMessage',['../struct__pi__program.html#ae311b6e8375bdd7c64e39e69bafdeff1',1,'_pi_program']]],
+  ['esimdemuversionstring_10314',['ESimdEmuVersionString',['../pi__esimd__emulator_8cpp.html#afb8329dbf0d087b60998fafcf45e30f5',1,'pi_esimd_emulator.cpp']]],
+  ['evbase_5f_10315',['evBase_',['../struct__pi__context.html#ae058668425925400001e631158ae4f20',1,'_pi_context::evBase_()'],['../struct__pi__context.html#a0d8221523827e91a96607e9d21566646',1,'_pi_context::evBase_()']]],
+  ['eventcount_5f_10316',['eventCount_',['../struct__pi__queue.html#ac5db06e60d422bea7318d8e92cc2dde3',1,'_pi_queue']]],
+  ['eventlist_10317',['EventList',['../structpi__command__list__info__t.html#a1a84761e38c5a33c775423f7273669b2',1,'pi_command_list_info_t']]],
+  ['exemodulehandle_10318',['ExeModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#a9edaca3fced53dd24240c77c016be876',1,'cl::sycl::detail::OSUtil']]],
+  ['expr_10319',['Expr',['../structcl_1_1sycl_1_1detail_1_1AssertHappened.html#a519fc9f7a5f13f34c9e2d3877a3078e4',1,'cl::sycl::detail::AssertHappened']]]
+];

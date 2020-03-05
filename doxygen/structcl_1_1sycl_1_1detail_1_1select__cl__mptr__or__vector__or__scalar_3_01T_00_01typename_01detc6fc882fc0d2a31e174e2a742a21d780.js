@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar_3_01T_00_01typename_01detc6fc882fc0d2a31e174e2a742a21d780 =
+[
+    [ "type", "structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar_3_01T_00_01typename_01detc6fc882fc0d2a31e174e2a742a21d780.html#a7e078364b655ac8798ada56c85963319", null ]
+];

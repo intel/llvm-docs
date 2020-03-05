@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyToKind_3_01host__access__key_01_4 =
+[
+    [ "Kind", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyToKind_3_01host__access__key_01_4.html#abf2bf5a2345c53823a1eea95fd191aa7", null ]
+];

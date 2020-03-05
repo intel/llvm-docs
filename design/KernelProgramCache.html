@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>A brief overview of kernel and program caching mechanism &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Global objects in DPC++ runtime" href="GlobalObjectsInRuntime.html" />
+    <link rel="prev" title="Specialization constants" href="SpecializationConstants.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>A brief overview of kernel and program caching mechanism</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="SpecializationConstants.html">Specialization constants</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="GlobalObjectsInRuntime.html">Global objects in DPC++ runtime</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section class="tex2jax_ignore mathjax_ignore" id="a-brief-overview-of-kernel-and-program-caching-mechanism">
+<h1>A brief overview of kernel and program caching mechanism<a class="headerlink" href="#a-brief-overview-of-kernel-and-program-caching-mechanism" title="Permalink to this headline">¶</a></h1>
+<section id="rationale-behind-caching">
+<h2>Rationale behind caching<a class="headerlink" href="#rationale-behind-caching" title="Permalink to this headline">¶</a></h2>
+<p>During SYCL program execution SYCL runtime will create internal objects
+representing kernels and programs, it may also invoke JIT compiler to bring
+kernels in a program to executable state. Those runtime operations are quite
+expensive, and in some cases caching approach can be employed to eliminate
+redundant kernel or program object re-creation and online recompilation. Few
+examples below illustrate scenarios where such optimization is possible.</p>
+<p><em>Use-case #1.</em> Submission of the same kernel in a loop:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>  <span class="k">using</span> <span class="k">namespace</span> <span class="n">sycl</span><span class="p">;</span>
+
+  <span class="n">queue</span> <span class="n">Q</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">buffer</span><span class="o">&gt;</span> <span class="n">Bufs</span><span class="p">;</span>
+
+  <span class="p">...</span>
+  <span class="c1">// initialize Bufs with some number of buffers</span>
+  <span class="p">...</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">Idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">Idx</span> <span class="o">&lt;</span> <span class="n">Bufs</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">Idx</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">auto</span> <span class="n">Acc</span> <span class="o">=</span> <span class="n">Bufs</span><span class="p">[</span><span class="n">Idx</span><span class="p">].</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">CGH</span><span class="p">);</span>
+
+      <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">TheKernel</span><span class="o">&gt;</span><span class="p">(</span>
+          <span class="n">range</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">{</span><span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">},</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Item</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+    <span class="p">});</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Use-case #2.</em> Submission of multiple kernels within a single program<sup><a class="reference external" href="#what-is-program">1</a></sup>:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>  <span class="k">using</span> <span class="k">namespace</span> <span class="n">sycl</span><span class="p">;</span>
+
+  <span class="n">queue</span> <span class="n">Q</span><span class="p">;</span>
+
+  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+
+    <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">TheKernel_1</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="n">range</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">{</span><span class="n">N_1</span><span class="p">,</span> <span class="n">M_1</span><span class="p">},</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Item</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+  <span class="p">});</span>
+  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+
+    <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">TheKernel_2</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="n">range</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">{</span><span class="n">N_2</span><span class="p">,</span> <span class="n">M_2</span><span class="p">},</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Item</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+  <span class="p">});</span>
+  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+
+    <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">TheKernel_3</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="n">range</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">{</span><span class="n">N_3</span><span class="p">,</span> <span class="n">M_3</span><span class="p">},</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Item</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+  <span class="p">});</span>
+  <span class="p">...</span>
+  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">...</span>
+
+    <span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">TheKernel_K</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="n">range</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">{</span><span class="n">N_K</span><span class="p">,</span> <span class="n">M_K</span><span class="p">},</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">Item</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">});</span>
+  <span class="p">});</span>
+</pre></div>
+</div>
+<p>In both cases SYCL runtime will need to build the program and kernels multiple
+times, which may involve JIT compilation and take quite a lot of time.</p>
+<p>In order to eliminate this waste of run-time we introduce a kernel and program
+caching. The cache is per-context and it caches underlying objects of non
+interop kernels and programs.</p>
+<p><em>Use-case #3.</em> Rebuild of all programs on SYCL application restart:
+JIT compilation for cases when an application contains huge amount of device
+code (big kernels or multiple kernels) may take significant time. The kernels
+and programs are rebuilt on every program restart. AOT compilation can be used
+to avoid that but it ties application to specific backend runtime version(s) and
+predefined HW configuration(s). As a general solution it is reasonable to have
+program persistent cache which works between application restarts (e.g. cache
+on disk for device code built for specific HW/SW configuration).</p>
+<p><a name="what-is-program">1</a>: Here “program” means an internal SYCL runtime
+object corresponding to a device code module or native binary defining a set of
+SYCL kernels and/or device functions.</p>
+</section>
+<section id="data-structure-of-cache">
+<h2>Data structure of cache<a class="headerlink" href="#data-structure-of-cache" title="Permalink to this headline">¶</a></h2>
+<p>The cache is split into two levels:</p>
+<ul class="simple">
+<li><p>in-memory cache which is used during application runtime for device code
+which has been already loaded and built for target device.</p></li>
+<li><p>persistent (on-disk) cache which is used to store device binaries between
+application executions.</p></li>
+</ul>
+<section id="in-memory-cache">
+<h3>In-memory cache<a class="headerlink" href="#in-memory-cache" title="Permalink to this headline">¶</a></h3>
+<p>The cache stores underlying PI objects behind <code class="docutils literal notranslate"><span class="pre">sycl::program</span></code> and <code class="docutils literal notranslate"><span class="pre">sycl::kernel</span></code>
+user-level objects in a per-context data storage. The storage consists of two
+maps: one is for programs and the other is for kernels.</p>
+<p>The programs map’s key consists of four components:</p>
+<ul class="simple">
+<li><p>kernel set id<sup><a class="reference external" href="#what-is-ksid">1</a></sup>,</p></li>
+<li><p>specialization constants values,</p></li>
+<li><p>the device this program is built for,</p></li>
+<li><p>build options id <sup><a class="reference external" href="#what-is-bopts">2</a></sup>.</p></li>
+</ul>
+<p>The kernels map’s key consists of two components:</p>
+<ul class="simple">
+<li><p>the program the kernel belongs to,</p></li>
+<li><p>kernel name<sup><a class="reference external" href="#what-is-kname">3</a></sup>.</p></li>
+</ul>
+<p><a name="what-is-ksid">1</a>: Kernel set id is an ordinal number of the device
+binary image the kernel is contained in.</p>
+<p><a name="what-is-bopts">2</a>: The concatenation of build options (both compile
+and link options) set in application or environment variables. There are three
+sources of build options that the cache is aware of:</p>
+<ul class="simple">
+<li><p>from device image (pi_device_binary_struct::CompileOptions,
+pi_device_binary_struct::LinkOptions);</p></li>
+<li><p>environment variables (SYCL_PROGRAM_COMPILE_OPTIONS,
+SYCL_PROGRAM_LINK_OPTIONS);</p></li>
+<li><p>options passed through SYCL API.</p></li>
+</ul>
+<p>Note: Backend runtimes used by SYCL can have extra environment or configurations
+values (e.g. IGC has
+<a class="reference external" href="https://github.com/intel/intel-graphics-compiler/blob/7f91dd6b9f2ca9c1a8ffddd04fa86461311c4271/IGC/common/igc_flags.def">igc_flags.def</a>
+which affect JIT process). Changing such configuration will invalidate cache and
+manual cache cleanup should be done.</p>
+<p><a name="what-is-kname">3</a>: Kernel name is a kernel ID mangled class’ name
+which is provided to methods of <code class="docutils literal notranslate"><span class="pre">sycl::handler</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code> or
+<code class="docutils literal notranslate"><span class="pre">single_task</span></code>).</p>
+</section>
+<section id="persistent-cache">
+<h3>Persistent cache<a class="headerlink" href="#persistent-cache" title="Permalink to this headline">¶</a></h3>
+<p>The cache works behind in-memory cache and stores the same underlying PI
+object behind <code class="docutils literal notranslate"><span class="pre">sycl::program</span></code> user-level objects in a per-context data storage.
+The storage is organized as a map for storing device code image. It uses
+different keys to address difference in SYCL objects ids between applications
+runs as well as the fact that the same kernel name can be used in different
+SYCL applications.</p>
+<p>The programs map’s key consists of four components:</p>
+<ul class="simple">
+<li><p>device image id<sup><a class="reference external" href="#what-is-diid">1</a></sup>,</p></li>
+<li><p>specialization constants values,</p></li>
+<li><p>device id<sup><a class="reference external" href="#what-is-did">2</a></sup> this program is built for,</p></li>
+<li><p>build options id<sup><a class="reference external" href="#what-is-bopts">3</a></sup>.</p></li>
+</ul>
+<p>Hashes are used for fast built device image identification and shorten
+filenames on disk. Once cache directory on disc is identified (see
+<a class="reference external" href="#persistent-cache-storage-structure">Persistent cache storage structure</a>
+for detailed directory structure) full key values are compared with the ones
+stored on disk (in every <n>.src file located in the cache item directory):</p>
+<ul class="simple">
+<li><p>if they match the built image is loaded from corresponding <n>.bin file;</p></li>
+<li><p>otherwise image build is done and new cache item is created on disk
+containing 2 files: &lt;max_n+1&gt;.src for key values and &lt;max_n+1&gt;.bin for
+built image.</p></li>
+</ul>
+<p><a name="what-is-diid">1</a>: Hash out of the device code image used as input
+for the build.</p>
+<p><a name="what-is-did">2</a>: Hash out of the string which is concatenation of
+values for <code class="docutils literal notranslate"><span class="pre">info::platform::name</span></code>, <code class="docutils literal notranslate"><span class="pre">info::device::name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">info::device::version</span></code>, <code class="docutils literal notranslate"><span class="pre">info::device::driver_version</span></code> parameters to
+differentiate different HW and SW installed on the same host as well as SW/HW
+upgrades.</p>
+<p><a name="what-is-bopts">3</a>: Hash for the concatenation of build options (both
+compile and link options) set in application or environment variables. There are
+three sources of build options:</p>
+<ul class="simple">
+<li><p>from device image (pi_device_binary_struct::CompileOptions,
+pi_device_binary_struct::LinkOptions);</p></li>
+<li><p>environment variables (SYCL_PROGRAM_COMPILE_OPTIONS,
+SYCL_PROGRAM_LINK_OPTIONS);</p></li>
+<li><p>options passed through SYCL API.</p></li>
+</ul>
+</section>
+</section>
+<section id="cache-configuration">
+<h2>Cache configuration<a class="headerlink" href="#cache-configuration" title="Permalink to this headline">¶</a></h2>
+<p>The environment variables which affect cache behavior are described in
+<a class="reference internal" href="../EnvironmentVariables.html"><span class="doc std std-doc">EnvironmentVariables.md</span></a>.</p>
+</section>
+<section id="implementation-details">
+<h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
+<p>The caches are represented with instance of
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/source/detail/kernel_program_cache.hpp"><code class="docutils literal notranslate"><span class="pre">KernelProgramCache</span></code></a>
+class. The runtime creates one instance of the class per distinct SYCL context
+(A context object which is a result of copying another context object isn’t
+“distinct”, as it corresponds to the same underlying internal object
+representing a context).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">KernelProgramCache</span></code> is essentially a pair of maps as described above.</p>
+<section id="when-does-the-cache-come-at-work">
+<h3>When does the cache come at work?<a class="headerlink" href="#when-does-the-cache-come-at-work" title="Permalink to this headline">¶</a></h3>
+<p>The cache is used when one submits a kernel for execution or builds program with
+SYCL API. That means that the cache works when either user explicitly calls
+<code class="docutils literal notranslate"><span class="pre">program::build_with_kernel_type&lt;&gt;()</span></code>/<code class="docutils literal notranslate"><span class="pre">program::get_kernel&lt;&gt;()</span></code> methods or SYCL
+RT builds a program or gets the required kernel as needed during application
+execution. Cacheability of an object can be tested with
+<code class="docutils literal notranslate"><span class="pre">program_impl::is_cacheable()</span></code> method. SYCL RT will only try to insert cacheable
+programs or kernels into the cache. This is done as a part of
+<code class="docutils literal notranslate"><span class="pre">ProgramManager::getOrCreateKernel()</span></code> method.</p>
+<p><em>NOTE:</em> a kernel is only cacheable if and only if the program it belongs to is
+cacheable. On the other hand if the program is cacheable, then each and every
+kernel of this program will be cached also.</p>
+<p>All requests to build a program or to create a kernel - whether they originate
+from explicit user API calls or from internal SYCL runtime execution logic - end
+up with calling the function
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/source/detail/program_manager/program_manager.cpp#L149"><code class="docutils literal notranslate"><span class="pre">getOrBuild()</span></code></a>
+with number of lambda functions passed as arguments:</p>
+<ul class="simple">
+<li><p>Acquire function;</p></li>
+<li><p>GetCache function;</p></li>
+<li><p>Build function.</p></li>
+</ul>
+<p><em>Acquire</em> function returns a locked version of cache. Locking is employed for
+thread safety. The threads are blocked only for insert-or-acquire attempt, i.e.
+when calling to <code class="docutils literal notranslate"><span class="pre">map::insert</span></code> in
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/source/detail/program_manager/program_manager.cpp#L149"><code class="docutils literal notranslate"><span class="pre">getOrBuild</span></code></a>
+function. The rest of operation is done with the help of atomics and condition
+variables (plus a mutex for proper work of condition variable).</p>
+<p><em>GetCache</em> function returns a reference to mapping <code class="docutils literal notranslate"><span class="pre">key-&gt;value</span></code> out of locked
+instance of cache. We will see rationale behind it a bit later.</p>
+<p><em>Build</em> function actually builds the kernel or program.</p>
+</section>
+<section id="thread-safety">
+<h3>Thread-safety<a class="headerlink" href="#thread-safety" title="Permalink to this headline">¶</a></h3>
+<p>Why do we need thread safety here? It is quite possible to have a use-case when
+the <code class="docutils literal notranslate"><span class="pre">sycl::context</span></code> is shared across multiple threads (e.g. via sharing a
+queue). Possibility of enqueueing multiple cacheable kernels simultaneously
+from multiple threads requires us to provide thread-safety for the caching
+mechanisms.</p>
+<p>It is worth of noting that we don’t cache the PI resource (kernel or program)
+by itself. Instead we augment the resource with the status of build process.
+Hence, what is cached is a wrapper structure <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> which contains three
+information fields - pointer to built resource, build error (if applicable) and
+current build status (either of “in progress”, “succeeded”, “failed”).</p>
+<p>One can find definition of <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> template in
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/source/detail/kernel_program_cache.hpp">KernelProgramCache</a>.</p>
+<p>The built resource access synchronization approach aims at minimizing the time
+any thread holds the global lock guarding the maps to improve performance. To
+achieve that, the global lock is acquired only for the duration of the global
+map access. Actual build of the program happens outside of the lock, so other
+threads can request or build other programs in the meantime. A thread requesting
+a <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> instance via <code class="docutils literal notranslate"><span class="pre">getOrBuild</span></code> can go one of three ways:
+A) Build result is <strong>not</strong> available, it is the first thread to request it.
+Current thread will then execute the build letting others wait for the
+result using the per-build result condition variable kept in <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code>’s
+<code class="docutils literal notranslate"><span class="pre">MBuildCV</span></code> field.
+B) Build result is <strong>not</strong> available, another thread is already building the
+result. Current thread will then wait for the result using the <code class="docutils literal notranslate"><span class="pre">MBuildCV</span></code>
+condition variable.
+C) Build result <strong>is</strong> available. The thread simply takes it from the <code class="docutils literal notranslate"><span class="pre">Ptr</span></code>
+field w/o using any mutexes or condition variables.</p>
+<p>As noted before, access to <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> instance fields may occur from
+different threads simultaneously, but the global lock is no longer held. So, to
+make it safe and to make sure only one thread builds the requested program, the
+following is done:</p>
+<ul class="simple">
+<li><p>program build state is reflected in the <code class="docutils literal notranslate"><span class="pre">State</span></code> field, threads use
+compare-and-swap technique to compete who will do the build and become thread
+A. Threads C will find ‘DONE’ in this field and immediately return the with
+built result at hand.</p></li>
+<li><p>thread A and thread(s) B use the <code class="docutils literal notranslate"><span class="pre">MBuildCV</span></code> conditional variable field and
+<code class="docutils literal notranslate"><span class="pre">MBuildResultMutex</span></code> mutex field guarding that variable to implement the
+“single producer-multiple consumers scheme”.</p></li>
+<li><p>the build result itself appears in the ‘Ptr’ field when available.</p></li>
+</ul>
+<p>All fields are atomic because they can be accessed from multiple threads.</p>
+<p>A specialization of helper class
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/include/CL/sycl/detail/locked.hpp">Locked</a>
+for reference of proper mapping is returned by Acquire function. The use of this
+class implements RAII to make code look cleaner a bit. Now, GetCache function
+will return the mapping to be employed that includes the 3 components: kernel
+name, device as well as any specialization constants values. These get added to
+<code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> and are cached. The <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> structure is specialized with
+either <code class="docutils literal notranslate"><span class="pre">PiKernel</span></code> or <code class="docutils literal notranslate"><span class="pre">PiProgram</span></code><sup><a class="reference external" href="#remove-pointer">1</a></sup>.</p>
+</section>
+<section id="hash-function">
+<h3>Hash function<a class="headerlink" href="#hash-function" title="Permalink to this headline">¶</a></h3>
+<p>STL hash function specialized for std::string is going to be used:
+<code class="docutils literal notranslate"><span class="pre">template&lt;&gt;</span>&#160; <span class="pre">struct</span> <span class="pre">hash&lt;std::string&gt;</span></code></p>
+</section>
+<section id="core-of-caching-mechanism">
+<h3>Core of caching mechanism<a class="headerlink" href="#core-of-caching-mechanism" title="Permalink to this headline">¶</a></h3>
+<p>Now, let us see how ‘getOrBuild’ function works.
+First, we fetch the cache with sequential calls to Acquire and GetCache
+functions. Then, we check if this is the first attempt to build this kernel or
+program. This is achieved with an attempt to insert another key-value pair into
+the map. At this point we try to insert <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> stub instance with status
+equal to “in progress” which will allow other threads to know that someone is
+(i.e. we’re) building the object (i.e. kernel or program) now. If insertion
+fails, we will wait for building thread to finish with call to <code class="docutils literal notranslate"><span class="pre">waitUntilBuilt</span></code>
+function. This function will throw stored exception<sup><a class="reference external" href="#exception-data">2</a></sup>
+upon build failure. This allows waiting threads to see the same result as the
+building thread. Special case of the failure is when build result doesn’t
+contain the error (i.e. the error wasn’t of <code class="docutils literal notranslate"><span class="pre">sycl::exception</span></code> type) and the
+pointer to object in <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> instance is nil. In this case, the building
+thread has finished the build process and has returned an error to the user.
+But this error may be sporadic in nature and may be spurious. Hence, the waiting
+thread will try to build the same object once more.</p>
+<p><code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> structure also contains synchronization objects: mutex and
+condition variable. We employ them to signal waiting threads that the build
+process for this kernel/program is finished (either successfully or with a
+failure).</p>
+<p><a name="remove-pointer">1</a>: The use of <code class="docutils literal notranslate"><span class="pre">std::remove_pointer</span></code> was omitted for
+the sake of simplicity here.</p>
+<p><a name="exception-data">2</a>: Actually, we store contents of the exception:
+its message and error code.</p>
+</section>
+<section id="persistent-cache-storage-structure">
+<h3>Persistent cache storage structure<a class="headerlink" href="#persistent-cache-storage-structure" title="Permalink to this headline">¶</a></h3>
+<p>The device code image are stored on file system using structure below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;cache_root&gt;/
+  &lt;device_hash&gt;/
+    &lt;device_image_hash&gt;/
+      &lt;spec_constants_values_hash&gt;/
+        &lt;build_options_hash&gt;/
+          &lt;n&gt;.src
+          &lt;n&gt;.bin
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;cache_root&gt;</span></code> - root directory storing cache files, that depends on
+environment variables (see SYCL_CACHE_DIR description in the
+<a class="reference internal" href="../EnvironmentVariables.html"><span class="doc std std-doc">EnvironmentVariables.md</span></a>);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;device_hash&gt;</span></code> - hash out of device information used to identify target
+device;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;device_image_hash&gt;</span></code> - hash made out of device image used as input for the
+JIT compilation;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;spec_constants_values_hash&gt;</span></code> - hash for specialization constants values;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;build_options_hash&gt;</span></code> - hash for all build options;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;n&gt;</span></code> - sequential number of hash collisions. When hashes matches for the
+specific build but full values don’t, new cache item is added with incremented
+value (enumeration started from 0).</p></li>
+</ul>
+<p>Two files per cache item are stored on disk:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;n&gt;.src</span></code> contains full values for build parameters (device information,
+specialization constant values, build options, device image) which is used to
+resolve hash collisions and analysis of cached items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;n&gt;.bin</span></code> contains built device code.</p></li>
+</ul>
+</section>
+<section id="inter-process-safety">
+<h3>Inter-process safety<a class="headerlink" href="#inter-process-safety" title="Permalink to this headline">¶</a></h3>
+<p>For on-disk cache there might be access collisions for accessing the same file
+from different instances of SYCL applications:</p>
+<ul class="simple">
+<li><p>write collision happens when 2 instances of the same application are started
+to write to the same cache file/directory;</p></li>
+<li><p>read collision may happen if one application is writing to the file and the
+other instance of the application is trying to read from it while write
+operation is not finished.</p></li>
+</ul>
+<p>To avoid collisions the file system entries are locked for read-write access
+until write operation is finished. e.g if new file or directory should be
+created/deleted parent directory is locked, file is created in locked state,
+then the directory and the file are unlocked.</p>
+<p>To address cases with high lock rate (multiple copies of the SYCL applications
+are run in parallel and use the same cache directory) nested directories
+representing cache keys are used to minimize locks down to applications which
+build the same device with the same parameters. Directory is locked for minimum
+time because it can be unlocked once subdirectory is created. If file is created
+in a directory, the directory should be locked until file creation is done.</p>
+<p>Advisory locking <sup><a class="reference external" href="#advisory-lock">1</a></sup> is used to ensure that the
+user/OS tools are able to manage files.</p>
+<p><a name="advisory-lock">1.</a> Advisory locks work only when a process
+explicitly acquires and releases locks, and are ignored if a process is not
+aware of locks.</p>
+</section>
+<section id="cache-eviction-mechanism">
+<h3>Cache eviction mechanism<a class="headerlink" href="#cache-eviction-mechanism" title="Permalink to this headline">¶</a></h3>
+<p>Cache eviction mechanism is required to avoid resources overflow both for
+memory and disk. The general idea is to delete items following cache size or
+LRU (least recently used) strategy both for in-memory and persistent cache.</p>
+<section id="in-memory-cache-eviction">
+<h4>In-memory cache eviction<a class="headerlink" href="#in-memory-cache-eviction" title="Permalink to this headline">¶</a></h4>
+<p>It is initiated on program/kernel maps access/add item operation. When cache
+size exceeds storage threshold the items which are least recently used are
+deleted.
+TODO: add detailed description of in-memory cache eviction mechanism.</p>
+</section>
+<section id="persistent-cache-eviction">
+<h4>Persistent cache eviction<a class="headerlink" href="#persistent-cache-eviction" title="Permalink to this headline">¶</a></h4>
+<p>Persistent cache eviction is going to be applied based on file last access
+(read/write) date (access time). On SYCL application shutdown phase cache
+eviction process is initiated which walks through cache directories as follows:</p>
+<ul class="simple">
+<li><p>if the file is locked, go to the next file;</p></li>
+<li><p>otherwise check file access time:</p>
+<ul>
+<li><p>if file access time is above threshold, delete the file and remove parent
+directory while they are unlocked and empty;</p></li>
+<li><p>otherwise do nothing.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="cache-limitations">
+<h2>Cache limitations<a class="headerlink" href="#cache-limitations" title="Permalink to this headline">¶</a></h2>
+<p>The caching isn’t done when:</p>
+<ul class="simple">
+<li><p>when program is built out of source with <code class="docutils literal notranslate"><span class="pre">program::build_with_source()</span></code> or
+<code class="docutils literal notranslate"><span class="pre">program::compile_with_source()</span></code> method;</p></li>
+<li><p>when program is a result of linking multiple programs;</p></li>
+<li><p>program is built using interoperability methods.</p></li>
+</ul>
+</section>
+<section id="points-of-improvement-things-to-do">
+<h2>Points of improvement (things to do)<a class="headerlink" href="#points-of-improvement-things-to-do" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Employ the same built object for multiple devices of the same ISA,
+capabilities and so on. <em>NOTE:</em> It’s not really known if it’s possible to
+check if two distinct devices are <em>exactly</em> the same. Probably this should be
+an improvement request for plugins. By now it is assumed that two devices with
+the same device id <a name="what-is-did">2</a> are the same.</p></li>
+<li><p>Improve testing: cover real use-cases. See currently covered cases
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/unittests/kernel-and-program/Cache.cpp">here</a>.</p></li>
+<li><p>Implement tool for exploring cache items (initially it is possible using OS
+utilities).</p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="SpecializationConstants.html">Specialization constants</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="GlobalObjectsInRuntime.html">Global objects in DPC++ runtime</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

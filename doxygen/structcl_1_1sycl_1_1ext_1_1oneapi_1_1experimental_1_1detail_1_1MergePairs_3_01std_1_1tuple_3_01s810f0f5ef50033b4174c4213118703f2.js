@@ -1,0 +1,6 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s810f0f5ef50033b4174c4213118703f2 =
+[
+    [ "lmerged", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s810f0f5ef50033b4174c4213118703f2.html#ab6fa5e4dc65cd0df96fd49028f1374aa", null ],
+    [ "rmerged", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s810f0f5ef50033b4174c4213118703f2.html#a76c9034fc9324683e495f20cca1263b9", null ],
+    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s810f0f5ef50033b4174c4213118703f2.html#aad9d4dda76f2722ae2769fe315a71c89", null ]
+];

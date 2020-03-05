@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PrependTuple_3_01T_00_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PrependTuple_3_01T_00_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4.html#a710a649b2f89b1b8692145d191d838e5", null ]
+];

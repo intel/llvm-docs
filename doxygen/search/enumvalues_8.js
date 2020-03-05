@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['half_11976',['Half',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aac48615a1bc4197056d522af276aa5a85',1,'cl::sycl::detail::PlatformUtil']]],
+  ['half_5ffp_5fconfig_11977',['half_fp_config',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ae274f2a84e5820be22ee7cc505698105',1,'cl::sycl::info']]],
+  ['handler_5fimpl_11978',['HANDLER_IMPL',['../namespacecl_1_1sycl_1_1detail.html#aae0b2cf58081e898ab5b4bc4fe0abb81ab308d70e1c654e8687a8df10f892d11e',1,'cl::sycl::detail']]],
+  ['handler_5fkernel_5fbundle_11979',['HANDLER_KERNEL_BUNDLE',['../namespacecl_1_1sycl_1_1detail.html#aae0b2cf58081e898ab5b4bc4fe0abb81a68ff0837c698d19a4bc3a0f9fd0beca2',1,'cl::sycl::detail']]],
+  ['handler_5fmem_5fadvice_11980',['HANDLER_MEM_ADVICE',['../namespacecl_1_1sycl_1_1detail.html#aae0b2cf58081e898ab5b4bc4fe0abb81a5403135845d4b93afdfe8dc859c554ef',1,'cl::sycl::detail']]],
+  ['hes_5fcomplete_11981',['HES_Complete',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a583e817d20acdc6407b4fa4d767a5268adf8c111bea39f3dbc0915854452d8f9f',1,'cl::sycl::detail::event_impl']]],
+  ['hes_5fdiscarded_11982',['HES_Discarded',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a583e817d20acdc6407b4fa4d767a5268a6b39a6c15bbc948986269adc7b374716',1,'cl::sycl::detail::event_impl']]],
+  ['hes_5fnotcomplete_11983',['HES_NotComplete',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a583e817d20acdc6407b4fa4d767a5268af5b807375912fb11b4a578b51c00b98b',1,'cl::sycl::detail::event_impl']]],
+  ['hex_11984',['hex',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370ab8d1b43eae73587ba56baef574709ecb',1,'cl::sycl']]],
+  ['hexfloat_11985',['hexfloat',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1ee01a7f098219fbfa0d62b14ab59c4f',1,'cl::sycl']]],
+  ['hitattributekhr_11986',['HitAttributeKHR',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a47afb5b6e34540719de877fb2e31de16',1,'__spv::StorageClass']]],
+  ['hitattributenv_11987',['HitAttributeNV',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a1a953fc3e29728096cc00f16926aa07d',1,'__spv::StorageClass']]],
+  ['host_11988',['Host',['../classSystemMemory.html#a40bbcced5a6b30ab6fbc8d31cfb097c6ae3decbe3789b98665e8f85d3c9c05e91',1,'SystemMemory::Host()'],['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::host()'],['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::host()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::info::host()'],['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0ea67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::usm::host()']]],
+  ['host_5fbuffer_11989',['host_buffer',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598aa0599d72026e3c6df4a0488cdf4e18d7',1,'cl::sycl::access']]],
+  ['host_5fdebuggable_11990',['host_debuggable',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea03cd2703928ae14638ddd45b224107b6',1,'cl::sycl']]],
+  ['host_5fimage_11991',['host_image',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598ad19909e3ef6decbf2453174616b470c2',1,'cl::sycl::access']]],
+  ['host_5ftask_11992',['HOST_TASK',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a9442ba042e55ef6b3a885a86261c287d',1,'cl::sycl::detail::Command']]],
+  ['host_5funified_5fmemory_11993',['host_unified_memory',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a0fbdc8bcd6c762ac073157f9e77b2437',1,'cl::sycl::info']]],
+  ['hostaccess_11994',['HostAccess',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail.html#a2ebfb7d96821c7132cbd6ef5372609e0a1afa615b01e48bc751b73f3f4a2ded89',1,'cl::sycl::ext::oneapi::experimental::detail']]],
+  ['hostaccessor_11995',['HostAccessor',['../classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e',1,'cl::sycl::detail::Command']]],
+  ['hostonlyintel_11996',['HostOnlyINTEL',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a458779511192a5147599fec0f426c53d',1,'__spv::StorageClass']]],
+  ['hosttask_11997',['HostTask',['../classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d',1,'cl::sycl::detail::Command']]]
+];

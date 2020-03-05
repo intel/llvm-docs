@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['g_11951',['G',['../group__sycl__esimd__core.html#gga80f907c01fb30c8981d58c5619d18c06adfcf28d0734569a6a693bc8194de62bf',1,'cl::__ESIMD_NS::G()'],['../group__sycl__esimd__core.html#ggaecff3cd2d5d56f271d9ba8075e5ceabeadfcf28d0734569a6a693bc8194de62bf',1,'cl::__ESIMD_NS::G()']]],
+  ['generic_11952',['Generic',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a27df507b54b469fed8b364fe05eb39a8',1,'__spv::StorageClass']]],
+  ['generic_5fspace_11953',['generic_space',['../namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfab64cf594a8528b084ef86cf7cc5689d3',1,'cl::sycl::access']]],
+  ['global_11954',['global',['../namespacecl_1_1sycl_1_1info.html#ad3cf44d11f60b23508e91d1ed61ad001a9c70933aff6b2a6d08c687a6cbb6b765',1,'cl::sycl::info']]],
+  ['global_5fand_5flocal_11955',['global_and_local',['../namespacecl_1_1sycl_1_1access.html#a4d49b23bd01f94213f7820fba6d5be69a78877b2c21d50a8878a02d10f4a79a3b',1,'cl::sycl::access']]],
+  ['global_5fcoherent_5ffence_11956',['global_coherent_fence',['../group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30afd897b249e67ab97244358d50d2782dc',1,'cl::__ESIMD_NS']]],
+  ['global_5fmem_5fcache_5fline_5fsize_11957',['global_mem_cache_line_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ac3f3f8fdd3d57670e960bbac3d333132',1,'cl::sycl::info']]],
+  ['global_5fmem_5fcache_5fsize_11958',['global_mem_cache_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a6e48f763f3d908a6200bf8f8f90bbad0',1,'cl::sycl::info']]],
+  ['global_5fmem_5fcache_5ftype_11959',['global_mem_cache_type',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a0eeabe1249684d58c7bad29611dded8a',1,'cl::sycl::info']]],
+  ['global_5fmem_5fsize_11960',['global_mem_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ab4de23283932dd3379e1cf289219128c',1,'cl::sycl::info']]],
+  ['global_5fspace_11961',['global_space',['../namespacecl_1_1sycl_1_1access.html#a4d49b23bd01f94213f7820fba6d5be69a8b6e19b80779e1f75b1c5f54a800dca4',1,'cl::sycl::access::global_space()'],['../namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa8b6e19b80779e1f75b1c5f54a800dca4',1,'cl::sycl::access::global_space()']]],
+  ['global_5fwork_5fsize_11962',['global_work_size',['../namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a408f7779a31f0760bb11cec7ace24487',1,'cl::sycl::info']]],
+  ['gpu_11963',['gpu',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea0aa0be2a866411d9ff03515227454947',1,'cl::sycl::gpu()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a0aa0be2a866411d9ff03515227454947',1,'cl::sycl::info::gpu()'],['../group__sycl__esimd__core.html#ggaf14acbd498a389122f66655bfce92402a0aa0be2a866411d9ff03515227454947',1,'cl::__ESIMD_ENS::gpu()']]],
+  ['gpu_5fany_11964',['gpu_any',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706ab9afe9e9eb4cadb29fc1e49bb3609624',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fcfl_11965',['gpu_cfl',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706a5b4ce2c9f1dbbfb9bcb5d378af90a1d9',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fgen11_11966',['gpu_gen11',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706a3962a53e2717063f183b9608fc4f26b0',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fgen12_11967',['gpu_gen12',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706a11fcc6a6680465dd5dda8b0e16c5edd2',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fgen9_11968',['gpu_gen9',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706aeed2986ff3ff8af40753a3303b27b8b3',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fgen9_5f5_11969',['gpu_gen9_5',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706a29160f25fa642d1c773113c6032b72eb',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5ficl_11970',['gpu_icl',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706aab8bc12273a5ff5d86464c24d59258da',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fkbl_11971',['gpu_kbl',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706a60c47ef0d47ad3e2e72205fa1418ae14',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpu_5fskl_11972',['gpu_skl',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a2f54900df2fe66035ed74f7df63b9706a59b931ffef3c1c0e033ffe185cf34908',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['gpus_11973',['gpus',['../group__sycl__esimd__core.html#ggaf14acbd498a389122f66655bfce92402a2e98f7cfbcdadfeb431fec785e549c59',1,'cl::__ESIMD_ENS']]],
+  ['gr_11974',['GR',['../group__sycl__esimd__core.html#ggaecff3cd2d5d56f271d9ba8075e5ceabeaf214a7d42e0de5875d55189e01e2e187',1,'cl::__ESIMD_NS']]],
+  ['group_11975',['group',['../group__sycl__esimd__core.html#ggaf14acbd498a389122f66655bfce92402adb0f6f37ebeb6ea09489124345af2a45',1,'cl::__ESIMD_ENS']]]
+];

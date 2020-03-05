@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01memory__order_01_4_00_01in0d1eff5327dd4af665d4fb5ae4084e96 =
+[
+    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01memory__order_01_4_00_01in0d1eff5327dd4af665d4fb5ae4084e96.html#abb01cc00309b69eeed101a1bb8db3d37", null ]
+];

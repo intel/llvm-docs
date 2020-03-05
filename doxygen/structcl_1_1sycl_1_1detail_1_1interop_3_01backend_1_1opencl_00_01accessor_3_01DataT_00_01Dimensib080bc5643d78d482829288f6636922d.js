@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensib080bc5643d78d482829288f6636922d =
+[
+    [ "type", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensib080bc5643d78d482829288f6636922d.html#ac61d9ddcb3d86e2fea5c3406d1cec05b", null ]
+];

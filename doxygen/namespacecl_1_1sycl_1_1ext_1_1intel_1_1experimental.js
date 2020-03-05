@@ -1,0 +1,25 @@
+var namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental =
+[
+    [ "matrix", "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html", "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix" ],
+    [ "property", "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1property.html", "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1property" ],
+    [ "_GetValue", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__GetValue.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__GetValue" ],
+    [ "_GetValue3", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__GetValue3.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__GetValue3" ],
+    [ "_GetValue3< _VTypeFirst, _VTypeSecond, _VTypeThird, _Type, _T1, _T... >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__GetValue3_3_01__VTypeFirst_00_01__VTypeSecc2776e3ac1b4ff4c1c7f4de6825cb81e.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__GetValue3_3_01__VTypeFirst_00_01__VTypeSecc2776e3ac1b4ff4c1c7f4de6825cb81e" ],
+    [ "_MatchType", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__MatchType.html", null ],
+    [ "_ValueExtractor", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__ValueExtractor.html", null ],
+    [ "_ValueExtractorImp", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__ValueExtractorImp.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__ValueExtractorImp" ],
+    [ "_ValueExtractorImp< const std::tuple< _VTypeFirst, _VTypeSecond, _VTypeThird >, _T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__ValueExtractorImp_3_01const_01std_1_1tuplebf389f3a88d51ede72e088981fbef6b3.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1__ValueExtractorImp_3_01const_01std_1_1tuplebf389f3a88d51ede72e088981fbef6b3" ],
+    [ "bfloat16", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1bfloat16.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1bfloat16" ],
+    [ "burst_coalesce_impl", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1burst__coalesce__impl.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1burst__coalesce__impl" ],
+    [ "cache", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1cache.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1cache" ],
+    [ "device_arch", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch" ],
+    [ "latency_anchor_id", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1latency__anchor__id.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1latency__anchor__id" ],
+    [ "latency_constraint", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1latency__constraint.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1latency__constraint" ],
+    [ "lsu", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1lsu.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1lsu" ],
+    [ "online_compile_error", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1online__compile__error.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1online__compile__error" ],
+    [ "online_compiler", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1online__compiler.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1online__compiler" ],
+    [ "pipe", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe.html", null ],
+    [ "pipe< _name, _dataT, _min_capacity, _propertiesT, std::enable_if_t< std::is_same_v< _propertiesT, decltype(oneapi::experimental::properties{})> > >", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164" ],
+    [ "prefetch_impl", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1prefetch__impl.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1prefetch__impl" ],
+    [ "statically_coalesce_impl", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1statically__coalesce__impl.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1statically__coalesce__impl" ]
+];

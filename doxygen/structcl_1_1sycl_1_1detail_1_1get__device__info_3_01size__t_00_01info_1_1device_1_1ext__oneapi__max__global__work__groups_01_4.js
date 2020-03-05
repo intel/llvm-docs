@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01size__t_00_01info_1_1device_1_1ext__oneapi__max__global__work__groups_01_4 =
+[
+    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01size__t_00_01info_1_1device_1_1ext__oneapi__max__global__work__groups_01_4.html#aece1a428257f6f8e6ba59f83c73469f8", null ]
+];

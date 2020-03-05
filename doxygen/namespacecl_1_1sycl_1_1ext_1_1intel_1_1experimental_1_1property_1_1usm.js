@@ -1,0 +1,4 @@
+var namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1property_1_1usm =
+[
+    [ "buffer_location", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1property_1_1usm_1_1buffer__location.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1property_1_1usm_1_1buffer__location" ]
+];

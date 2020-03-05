@@ -1,0 +1,27 @@
+var classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70 =
+[
+    [ "difference_type", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a4f3f97c9f58c37c3be496bea2ee73d1f", null ],
+    [ "value_type", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#af4f03da83e461c3c1a8fa47ece1ad18c", null ],
+    [ "fetch_add", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#aedb52904de430a32c53e7cad0471939e", null ],
+    [ "fetch_and", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#ac6642412f53415a8ce3cfa474e4948aa", null ],
+    [ "fetch_max", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a85c60adfb8f1bc56868512aa5f554e0d", null ],
+    [ "fetch_min", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#af41a51fe0a26ff9b5c90ff9e44060aee", null ],
+    [ "fetch_or", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a8cbf4b8e8a3b7b018234401234071a59", null ],
+    [ "fetch_sub", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a36319818ab685aaf0b2c7dd694aa9939", null ],
+    [ "fetch_xor", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#ad1ad360e7740d6ce582c6812c83b322a", null ],
+    [ "operator&=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a0db423a8e3a8ddf1ebf5d691b9db0480", null ],
+    [ "operator++", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a5a9c5b3e7786acf98f173a7e302d462d", null ],
+    [ "operator++", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#adbdac6ca1893c94da7fbcb7f1c49a73a", null ],
+    [ "operator+=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#ae1257bb7d4787bc3660d5a2a20d897f5", null ],
+    [ "operator--", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a699dcc4ff9126dd1da7614275f46ace5", null ],
+    [ "operator--", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a5ddd99dd58416088bfa85f1bcd5ee19e", null ],
+    [ "operator-=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a8963d9b153bdd15f878cb1fc597fe9f0", null ],
+    [ "operator^=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a77e7fae9bb3aa46ab11d9fbac78138aa", null ],
+    [ "operator|=", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a923492d2c61e01229049041cd2aa37ee", null ],
+    [ "default_read_modify_write_order", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#adf560fae5c5480ec4380616caa57ab2b", null ],
+    [ "default_read_order", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a81394014aadb1e33b5e6ebc848760ed9", null ],
+    [ "default_scope", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a5c1fe8aee519ce2cd903552dc8f774dc", null ],
+    [ "default_write_order", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a3d0bd5967770f17225229f8245ff7723", null ],
+    [ "is_always_lock_free", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a1479a78d2e1aeb4b8189f26d912057fe", null ],
+    [ "required_alignment", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01Def2f51e5b867e10642ae568d739fad4c70.html#a8e0aa2d12c0cfe2184d160f921882907", null ]
+];

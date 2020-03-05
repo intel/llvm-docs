@@ -1,0 +1,50 @@
+var backend__traits__level__zero_8hpp =
+[
+    [ "interop< backend::ext_oneapi_level_zero, context >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4" ],
+    [ "interop< backend::ext_oneapi_level_zero, device >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4" ],
+    [ "interop< backend::ext_oneapi_level_zero, event >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4" ],
+    [ "interop< backend::ext_oneapi_level_zero, queue >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4" ],
+    [ "interop< backend::ext_oneapi_level_zero, platform >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01platform_01_4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01platform_01_4" ],
+    [ "interop< backend::ext_oneapi_level_zero, accessor< DataT, Dimensions, AccessMode, access::target::device, access::placeholder::false_t > >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01accessor_3_01d991a2d5e230337f5ae5f676cf8927f4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01accessor_3_01d991a2d5e230337f5ae5f676cf8927f4" ],
+    [ "interop< backend::ext_oneapi_level_zero, accessor< DataT, Dimensions, AccessMode, access::target::constant_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01accessor_3_0152dff23f6f0e0742b32259c20dce5880.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01accessor_3_0152dff23f6f0e0742b32259c20dce5880" ],
+    [ "interop< backend::ext_oneapi_level_zero, accessor< DataT, Dimensions, AccessMode, access::target::image, access::placeholder::false_t > >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01accessor_3_016272cb920c010514708c90385aded7b9.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01accessor_3_016272cb920c010514708c90385aded7b9" ],
+    [ "interop< backend::ext_oneapi_level_zero, kernel >", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4.html", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, context >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4.html", [
+      [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4_1_1type" ]
+    ] ],
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4_1_1type" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, context >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01context_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, device >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, device >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, event >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4.html", [
+      [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4_1_1type" ]
+    ] ],
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4_1_1type" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, event >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, queue >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4.html", [
+      [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4_1_1type" ]
+    ] ],
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4_1_1type" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, queue >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01queue_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, platform >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01platform_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01platform_01_4" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, platform >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01platform_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01platform_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, kernel_bundle< State > >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__bundle_3_01State_01_4_01_4.html", [
+      [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__9c723289a030f9c4340d89ef79e2695e.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__9c723289a030f9c4340d89ef79e2695e" ]
+    ] ],
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__9c723289a030f9c4340d89ef79e2695e.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__9c723289a030f9c4340d89ef79e2695e" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, kernel_bundle< State > >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__bundle_3_01State_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01kernel__bundle_3_01State_01_4_01_4" ],
+    [ "BackendInput< backend::ext_oneapi_level_zero, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4.html", [
+      [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4_1_1type" ]
+    ] ],
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4_1_1type.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4_1_1type" ],
+    [ "BackendReturn< backend::ext_oneapi_level_zero, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__level__zero_00_01kernel_01_4" ],
+    [ "InteropFeatureSupportMap< backend::ext_oneapi_level_zero >", "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1ext__oneapi__level__zero_01_4.html", "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1ext__oneapi__level__zero_01_4" ],
+    [ "ze_command_queue_handle_t", "backend__traits__level__zero_8hpp.html#a242658ff4b85797943be3fc447757c3a", null ],
+    [ "ze_context_handle_t", "backend__traits__level__zero_8hpp.html#a33a8c61ad234b16887ba3934b81989e5", null ],
+    [ "ze_device_handle_t", "backend__traits__level__zero_8hpp.html#a3006162fddc0cc6de1c7259073ac35a3", null ],
+    [ "ze_driver_handle_t", "backend__traits__level__zero_8hpp.html#ae3411876cb06a9391e3cfdc593cc9c31", null ],
+    [ "ze_event_handle_t", "backend__traits__level__zero_8hpp.html#a0c4a1b00212c2b8ec35696363f9f74b1", null ],
+    [ "ze_image_handle_t", "backend__traits__level__zero_8hpp.html#a925c7719211a128dae81d024076b5bd1", null ],
+    [ "ze_kernel_handle_t", "backend__traits__level__zero_8hpp.html#af20df6fd4ab52b22b4410aa4540a5562", null ],
+    [ "ze_module_handle_t", "backend__traits__level__zero_8hpp.html#aeab44d48e5c2825f4c483f208b1023dc", null ]
+];

@@ -1,0 +1,36 @@
+var group__sycl__esimd__memory =
+[
+    [ "Atomic memory access.", "group__sycl__esimd__memory__atomics.html", "group__sycl__esimd__memory__atomics" ],
+    [ "Shared local memory access functions.", "group__sycl__esimd__memory__slm.html", "group__sycl__esimd__memory__slm" ],
+    [ "Named barrier APIs.", "group__sycl__esimd__memory__nbarrier.html", "group__sycl__esimd__memory__nbarrier" ],
+    [ "LSC memory access APIs.", "group__sycl__esimd__memory__lsc.html", "group__sycl__esimd__memory__lsc" ],
+    [ "__ESIMD_GET_SURF_HANDLE", "group__sycl__esimd__memory.html#ga83287b408425557fe20fb6a0f2780843", null ],
+    [ "fence_mask", "group__sycl__esimd__memory.html#ga658410cbb58b368bd2f0849dcc630f30", [
+      [ "global_coherent_fence", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30afd897b249e67ab97244358d50d2782dc", null ],
+      [ "l3_flush_instructions", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30abe21832b9b41608507f3353504e9f094", null ],
+      [ "l3_flush_texture_data", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30ab2e7b06ddda154f239271c292cf2bf42", null ],
+      [ "l3_flush_constant_data", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30aba15e53179ebbc82a88a729b3909234b", null ],
+      [ "l3_flush_rw_data", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30a7992ba76348b6a6737aa76b2b64abd98", null ],
+      [ "local_barrier", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30a43c36a5d31ec430ada80f411f0e04406", null ],
+      [ "l1_flush_ro_data", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30a9548898fce7e3bb8f837ce67b543716c", null ],
+      [ "sw_barrier", "group__sycl__esimd__memory.html#gga658410cbb58b368bd2f0849dcc630f30a8f8d2636030186874754276cf69dd69c", null ]
+    ] ],
+    [ "barrier", "group__sycl__esimd__memory.html#ga42a53b701bb3450e03d9b549a1ad22de", null ],
+    [ "block_load", "group__sycl__esimd__memory.html#ga7a455b602a2bdc85fd680f53f4893d6f", null ],
+    [ "block_load", "group__sycl__esimd__memory.html#ga7d7859aa2448dbc52af444a809e9288e", null ],
+    [ "block_store", "group__sycl__esimd__memory.html#ga2eaef94d00241d4703f2a722547678dc", null ],
+    [ "block_store", "group__sycl__esimd__memory.html#ga1065610d35693e1faa004a32c47fa212", null ],
+    [ "fence", "group__sycl__esimd__memory.html#gaeb3c3218cff4303df83d475442e5f3f2", null ],
+    [ "gather", "group__sycl__esimd__memory.html#ga3179c8fc63af2bd2d647b9e66073d0cc", null ],
+    [ "gather", "group__sycl__esimd__memory.html#gaefa3e17ffd3d3387ed511b4674eac904", null ],
+    [ "gather_rgba", "group__sycl__esimd__memory.html#ga4698fe56b5bcaa48c185c5e0efd668d0", null ],
+    [ "get_surface_index", "group__sycl__esimd__memory.html#ga7d32978ca634000ff9b80ec5721e25e6", null ],
+    [ "media_block_load", "group__sycl__esimd__memory.html#ga0f0db9c929d2eb8659654a968f07753a", null ],
+    [ "media_block_store", "group__sycl__esimd__memory.html#gaa2e548dd29c1e65f8a3763e5ff09270f", null ],
+    [ "scalar_load", "group__sycl__esimd__memory.html#ga16b3f78add06a251e420e611117ea06b", null ],
+    [ "scalar_store", "group__sycl__esimd__memory.html#gacf20f93108bbe2ae87042f5b5eaadb51", null ],
+    [ "scatter", "group__sycl__esimd__memory.html#ga1cbaf4ab8abca7ffb7af7ccb17941482", null ],
+    [ "scatter", "group__sycl__esimd__memory.html#gae6f535e9230b4007618513cd75711fe1", null ],
+    [ "scatter_rgba", "group__sycl__esimd__memory.html#ga8608987c44b3edc4f00c94bfdf080a9f", null ],
+    [ "split_barrier", "group__sycl__esimd__memory.html#ga4cd12d9ce3d73a96d12d4848a02496c1", null ]
+];

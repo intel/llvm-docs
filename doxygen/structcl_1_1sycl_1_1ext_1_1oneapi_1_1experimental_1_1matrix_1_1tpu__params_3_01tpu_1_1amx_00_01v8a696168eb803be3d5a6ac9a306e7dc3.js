@@ -1,0 +1,12 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3 =
+[
+    [ "atype", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#a395aac0488a9a14e350dfd1816d1bab7", null ],
+    [ "btype", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#acee5f704273f10bc896a83837c9c7892", null ],
+    [ "ctype", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#af8c7e50415dcce2f7ebe582b0d4c0006", null ],
+    [ "ksize", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#aa96480dbf30f8bbb2f86e128ddc9e379", null ],
+    [ "max_ksize", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#a0e6b018651546aff42f0bd20f05dc92e", null ],
+    [ "max_msize", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#a989ce57d54567a306671292a1b818035", null ],
+    [ "max_nsize", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#a2852a924c795c565b8a760e6a12f7c82", null ],
+    [ "msize", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#a40fc56a2f2a1fc20fbadd62266a89ef0", null ],
+    [ "nsize", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1amx_00_01v8a696168eb803be3d5a6ac9a306e7dc3.html#a16bc1fcb4e3a43ebffa7dcfdfdfac6a2", null ]
+];

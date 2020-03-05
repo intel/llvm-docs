@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_b43c8e8fffa3308e69a5629adf68172b =
+[
+    [ "value", "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_b43c8e8fffa3308e69a5629adf68172b.html#a46ec970987e6398ba11d3f3b791582d7", null ]
+];

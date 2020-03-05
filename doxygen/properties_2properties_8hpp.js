@@ -1,0 +1,23 @@
+var properties_2properties_8hpp =
+[
+    [ "ContainsProperty", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ContainsProperty.html", null ],
+    [ "ContainsProperty< PropT, std::tuple< T, Ts... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ContainsProperty_3_01PropT_00_01s4030043dcd2e76a2691a10623c2bf11e.html", null ],
+    [ "ContainsProperty< PropT, std::tuple< PropT, Rest... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ContainsProperty_3_01PropT_00_01s2fc5799a21f2c9a0f375794f9f6b39e5.html", null ],
+    [ "ContainsProperty< PropT, std::tuple< property_value< PropT, PropValuesTs... >, Rest... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ContainsProperty_3_01PropT_00_01sad32f6fda3bd97e9d7a443aa02227f4e.html", null ],
+    [ "FindCompileTimePropertyValueType", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType" ],
+    [ "FindCompileTimePropertyValueType< CTPropertyT, std::tuple< OtherProperty, Rest... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType_9d66504e0805cdffb981e196b1b642bf.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType_9d66504e0805cdffb981e196b1b642bf" ],
+    [ "FindCompileTimePropertyValueType< CTPropertyT, std::tuple< property_value< CTPropertyT, CTPropertyValueTs... >, Rest... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType_3decf9b6aede64bbff4a5615e9176d32.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType_3decf9b6aede64bbff4a5615e9176d32" ],
+    [ "RuntimePropertyStorage", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1RuntimePropertyStorage.html", null ],
+    [ "RuntimePropertyStorage< std::tuple< Ts... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1RuntimePropertyStorage_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1RuntimePropertyStorage_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4" ],
+    [ "RuntimePropertyStorage< std::tuple< T, Ts... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1RuntimePropertyStorage_3_01std_1_c31dc3bcfe126355cc44e89e19ae142c.html", null ],
+    [ "ExtractProperties", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties.html", null ],
+    [ "ExtractProperties< std::tuple< PropertiesTs... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupla0183cd2880cf860742eaee1393b4eb6.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupla0183cd2880cf860742eaee1393b4eb6" ],
+    [ "ExtractProperties< std::tuple< PropertyT, PropertiesTs... > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupl1369811f65d22e1d47e8ebe5d599fd2a.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01std_1_1tupl1369811f65d22e1d47e8ebe5d599fd2a" ],
+    [ "properties", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1properties.html", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1properties" ],
+    [ "is_property_list", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1is__property__list.html", null ],
+    [ "is_property_list< properties< std::tuple< PropertyValueTs... > > >", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1is__property__list_3_01properties_3_01std_1a17e3fc542d8918993f04d08aaafcc54.html", null ],
+    [ "is_device_copyable< ext::oneapi::experimental::properties< PropertiesT >, std::enable_if_t<!std::is_trivially_copyable< ext::oneapi::experimental::properties< PropertiesT > >::value > >", "structcl_1_1sycl_1_1is__device__copyable_3_01ext_1_1oneapi_1_1experimental_1_1properties_3_01Pro416cbc67687bab4bb47cd5b9491d1bb1.html", null ],
+    [ "is_device_copyable< const ext::oneapi::experimental::properties< PropertiesT >, std::enable_if_t<!std::is_trivially_copyable< const ext::oneapi::experimental::properties< PropertiesT > >::value > >", "structcl_1_1sycl_1_1is__device__copyable_3_01const_01ext_1_1oneapi_1_1experimental_1_1properties6e77d042044748c7840037cd31e9c361.html", null ],
+    [ "get_property", "properties_2properties_8hpp.html#ac28a5e5adcc51ae9d852113e05df49c5", null ],
+    [ "get_property", "properties_2properties_8hpp.html#a8b351532785439005d747ad8eaceacf0", null ]
+];

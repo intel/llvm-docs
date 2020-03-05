@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['fadd_11929',['fadd',['../group__sycl__esimd__core.html#gga23fb0ca831ce2cf4176c9c1ad518bc48a6d6fbe2c4e976a410868effe6deb2171',1,'cl::__ESIMD_NS::fadd()'],['../namespacecl_1_1____ESIMD__ENS_1_1detail.html#a92f1cd862a567fb6e67662d49cc256c7a6d6fbe2c4e976a410868effe6deb2171',1,'cl::__ESIMD_ENS::detail::fadd()']]],
+  ['false_5ft_11930',['false_t',['../namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366',1,'cl::sycl::access']]],
+  ['fcas_11931',['fcas',['../namespacecl_1_1____ESIMD__ENS_1_1detail.html#a92f1cd862a567fb6e67662d49cc256c7a38c10b2aad03c0a2d8eccfea816e74fb',1,'cl::__ESIMD_ENS::detail']]],
+  ['fcmpwr_11932',['fcmpwr',['../group__sycl__esimd__core.html#gga23fb0ca831ce2cf4176c9c1ad518bc48afc01fcd1835c2d3c70415339827e6e73',1,'cl::__ESIMD_NS']]],
+  ['feature_5fnot_5fsupported_11933',['feature_not_supported',['../namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a36312cfd40deb26eefbbde2aab97d3f6',1,'cl::sycl']]],
+  ['fill_11934',['Fill',['../classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a6fe6dbe3cb4ac3aa2db47b7e2a27a9eb',1,'cl::sycl::detail::CG']]],
+  ['fillusm_11935',['FillUSM',['../classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a1a242d7078f95c65037f83ecc4b7ad11',1,'cl::sycl::detail::CG']]],
+  ['fixed_11936',['fixed',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370acec315e3d0975e5cc2811d5d8725f149',1,'cl::sycl']]],
+  ['float_11937',['Float',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa22ae0e2b89e5e3d477f988cc36d3272b',1,'cl::sycl::detail::PlatformUtil']]],
+  ['flush_11938',['flush',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a86f354b8575a1a736775ae003fa344e5',1,'cl::sycl']]],
+  ['flushl3_11939',['flushl3',['../group__sycl__esimd__core.html#gga22fca573bc23d5ccca47a1ea8b01e1dba8ddfd9c7a3f453bf7de52349816e87ec',1,'cl::__ESIMD_ENS']]],
+  ['fma_11940',['fma',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a8c1b768340dffcaf747fd0acc98f0ce5',1,'cl::sycl::info']]],
+  ['fmax_11941',['fmax',['../group__sycl__esimd__core.html#gga23fb0ca831ce2cf4176c9c1ad518bc48a6245653b1ded5cde266a956a325465ce',1,'cl::__ESIMD_NS::fmax()'],['../namespacecl_1_1____ESIMD__ENS_1_1detail.html#a92f1cd862a567fb6e67662d49cc256c7a6245653b1ded5cde266a956a325465ce',1,'cl::__ESIMD_ENS::detail::fmax()']]],
+  ['fmin_11942',['fmin',['../group__sycl__esimd__core.html#gga23fb0ca831ce2cf4176c9c1ad518bc48a91b8694b07e3650d5332a6d51af36421',1,'cl::__ESIMD_NS::fmin()'],['../namespacecl_1_1____ESIMD__ENS_1_1detail.html#a92f1cd862a567fb6e67662d49cc256c7a91b8694b07e3650d5332a6d51af36421',1,'cl::__ESIMD_ENS::detail::fmin()']]],
+  ['fp16_11943',['fp16',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::fp16()'],['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::fp16()'],['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix.html#a9be982ba75449e96b187662b8e7a465ba196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::ext::oneapi::experimental::matrix::fp16()'],['../group__sycl__esimd__core.html#ggac9afb7a6a63e35b3ad812e4893376750aa4bf99d6945c25077fd6660d536af8a0',1,'cl::__ESIMD_ENS::FP16()']]],
+  ['fp19_11944',['fp19',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix.html#a9be982ba75449e96b187662b8e7a465ba9d3bb35f8b4fc5f9ba95164625c76281',1,'cl::sycl::ext::oneapi::experimental::matrix']]],
+  ['fp32_11945',['fp32',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea4e1bd87474ad81110395b71013094b35',1,'cl::sycl::fp32()'],['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix.html#a9be982ba75449e96b187662b8e7a465ba4e1bd87474ad81110395b71013094b35',1,'cl::sycl::ext::oneapi::experimental::matrix::fp32()']]],
+  ['fp64_11946',['fp64',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea36dd759373a12bd5960718d0c482a2d4',1,'cl::sycl::fp64()'],['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix.html#a9be982ba75449e96b187662b8e7a465ba36dd759373a12bd5960718d0c482a2d4',1,'cl::sycl::ext::oneapi::experimental::matrix::fp64()']]],
+  ['fpga_5fany_11947',['fpga_any',['../classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1device__arch.html#a60721397a0ca7358f0e377de8d25fdfda78a767a0107f072f488453dee89bf0fc',1,'cl::sycl::ext::intel::experimental::device_arch']]],
+  ['fsub_11948',['fsub',['../group__sycl__esimd__core.html#gga23fb0ca831ce2cf4176c9c1ad518bc48a09097f6fa7db7027ada3d6d8e930f3bd',1,'cl::__ESIMD_NS::fsub()'],['../namespacecl_1_1____ESIMD__ENS_1_1detail.html#a92f1cd862a567fb6e67662d49cc256c7a09097f6fa7db7027ada3d6d8e930f3bd',1,'cl::__ESIMD_ENS::detail::fsub()']]],
+  ['function_11949',['Function',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420aac64eda8e5d1e491e325866a5c1ac7d7',1,'__spv::StorageClass']]],
+  ['function_5fname_11950',['function_name',['../namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aae82f83ed7c80ba9065e07ee379ce7a56',1,'cl::sycl::info']]]
+];

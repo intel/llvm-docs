@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyToKind_3_01implement__in__csr__key_01_4 =
+[
+    [ "Kind", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyToKind_3_01implement__in__csr__key_01_4.html#a3787b72318036669a49bbead4a9ebe19", null ]
+];

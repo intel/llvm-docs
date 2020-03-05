@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Considerations for programming to multi-tile and multi-card under Level-Zero backend &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="oneAPI DPC++ Compiler and Runtime architecture design" href="design/CompilerAndRuntimeDesign.html" />
+    <link rel="prev" title="Environment Variables" href="EnvironmentVariables.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Considerations for programming to multi-tile and multi-card under Level-Zero backend</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="EnvironmentVariables.html">Environment Variables</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="design/CompilerAndRuntimeDesign.html">oneAPI DPC++ Compiler and Runtime architecture design</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section class="tex2jax_ignore mathjax_ignore" id="considerations-for-programming-to-multi-tile-and-multi-card-under-level-zero-backend">
+<h1>Considerations for programming to multi-tile and multi-card under Level-Zero backend<a class="headerlink" href="#considerations-for-programming-to-multi-tile-and-multi-card-under-level-zero-backend" title="Permalink to this headline">¶</a></h1>
+<section id="devices-discovery">
+<h2>1 Devices discovery<a class="headerlink" href="#devices-discovery" title="Permalink to this headline">¶</a></h2>
+<section id="root-devices">
+<h3>1.1 Root-devices<a class="headerlink" href="#root-devices" title="Permalink to this headline">¶</a></h3>
+<p>Intel GPUs are represented as SYCL GPU devices, root-devices.
+The discovery of root-devices is best with “sycl-ls” tool, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sycl-ls
+[opencl:0] GPU : Intel(R) OpenCL HD Graphics 3.0 [21.19.19792]
+[opencl:0] CPU : Intel(R) OpenCL 2.1 [2020.11.11.0.03_160000]
+[level_zero:0] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
+[host:0] HOST: SYCL host platform 1.2 [1.2]
+</pre></div>
+</div>
+<p>Note that “sycl-ls” shows all devices from all platforms of all SYCL backends that are seen
+by SYCL runtime. Thus in the example above there is CPU (managed by OpenCL backend) and 2!
+GPUs corresponding to the single physical GPU (managed by either OpenCL or Level-Zero backend).
+There are few ways to filter observable root-devices.</p>
+<p>One is using environment variable SYCL_DEVICE_FILTER described in <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/EnvironmentVariables.md">EnvironmentVariables.md</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ SYCL_DEVICE_FILTER=level_zero sycl-ls
+[level_zero:0] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
+</pre></div>
+</div>
+<p>Another way is to use similar SYCL API described in <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/extensions/supported/sycl_ext_oneapi_filter_selector.asciidoc"><span class="xref myst">sycl_ext_oneapi_filter_selector</span></a>
+E.g. <code class="docutils literal notranslate"><span class="pre">filter_selector(&quot;level_zero&quot;)</span></code> will only see Level-Zero operated devices.</p>
+<p>If there are multiple GPUs in a system then they will be seen as multiple different root-devices.
+On Linux these would be multiple SYCL root-devices of the same SYCL platform (representing Level-Zero driver).
+On Windows these would appear as root-devices of multiple different SYCL platforms (Level-Zero drivers).</p>
+<p><code class="docutils literal notranslate"><span class="pre">CreateMultipleRootDevices=N</span> <span class="pre">NEOReadDebugKeys=1</span></code> evironment variables can be used to emulate multiple GPU cards, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ CreateMultipleRootDevices=2 NEOReadDebugKeys=1 SYCL_DEVICE_FILTER=level_zero sycl-ls
+[level_zero:0] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
+[level_zero:1] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
+</pre></div>
+</div>
+</section>
+<section id="sub-devices">
+<h3>1.2 Sub-devices<a class="headerlink" href="#sub-devices" title="Permalink to this headline">¶</a></h3>
+<p>Some Intel GPU HW is composed of multiple tiles, e.g. 4 tile ATS.
+The root-device in such cases can be partitioned to sub-devices, each corresponding to the physical tiles.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="n">SubDevices</span> <span class="o">=</span> <span class="n">RootDevice</span><span class="p">.</span><span class="n">create_sub_devices</span><span class="o">&lt;</span>
+  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="o">::</span><span class="n">partition_property</span><span class="o">::</span><span class="n">partition_by_affinity_domain</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="o">::</span><span class="n">partition_affinity_domain</span><span class="o">::</span><span class="n">next_partitionable</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Each call to <code class="docutils literal notranslate"><span class="pre">create_sub_devices</span></code> will return exactly the same sub-devices and in the persistent order.
+To control what sub-devices are exposed by Level-Zero UMD one can use ZE_AFFINITY_MASK environment variable.</p>
+<p>NOTE: The <code class="docutils literal notranslate"><span class="pre">partition_by_affinity_domain</span></code> is the only partitioning supported for Intel GPU.
+Similar <code class="docutils literal notranslate"><span class="pre">next_partitionable</span></code> and <code class="docutils literal notranslate"><span class="pre">numa</span></code> are the only partitioning properties supported (both doing the same thing).</p>
+<p><code class="docutils literal notranslate"><span class="pre">CreateMultipleSubDevices=N</span> <span class="pre">NEOReadDebugKeys=1</span></code> environment variables can be used to emulate multiple tiles of a GPU.</p>
+</section>
+</section>
+<section id="context">
+<h2>2 Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<p>Contexts are used for resources isolation and sharing. A SYCL context may consist of one or multiple devices.
+Both root-devices and sub-devices can be within single context, but they all should be of the same SYCL platform.
+A SYCL program (kernel_bundle) created against a context with multiple devices will be built to each of the root-devices in the context.
+For context that consists of multiple sub-devices of the same root-device only single build (to that root-device) is needed.</p>
+</section>
+<section id="memory">
+<h2>3 Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h2>
+<section id="usm">
+<h3>3.1 USM<a class="headerlink" href="#usm" title="Permalink to this headline">¶</a></h3>
+<p>There are multiple ways to allocate memory:</p>
+<p><code class="docutils literal notranslate"><span class="pre">malloc_device</span></code>:</p>
+<ul class="simple">
+<li><p>Allocation can only be accessed by the specified device but not by other devices in the context nor by host.</p></li>
+<li><p>The data stays on the device all the time and thus is the fastest available for kernel execution.</p></li>
+<li><p>Explicit copy is needed for transfer data to the host or other devices in the context.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">malloc_host</span></code>:</p>
+<ul class="simple">
+<li><p>Allocation can be accessed by the host and any other device in the context.</p></li>
+<li><p>The data stays on the host all the time and is accessed via PCI from the devices.</p></li>
+<li><p>No explicit copy is needed for synchronizing of the data with the host or devices.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">malloc_shared</span></code>:</p>
+<ul class="simple">
+<li><p>Allocation can be accessed by the host and the specified device only.</p></li>
+<li><p>The data can migrate (operated by the Level-Zero driver) between the host and the device for faster access.</p></li>
+<li><p>No explicit copy is necessary for synchronizing between the host and the device, but it is needed for other devices in the context.</p></li>
+</ul>
+<p>NOTE: Memory allocated against a root-device is accessible by all of its sub-devices (tiles).
+So if operating on a context with multiple sub-devices of the same root-device then you can use <code class="docutils literal notranslate"><span class="pre">malloc_device</span></code> on that root-device instead of using the slower <code class="docutils literal notranslate"><span class="pre">malloc_host</span></code>.
+Remember that if using <code class="docutils literal notranslate"><span class="pre">malloc_device</span></code> you’d need an explicit copy out to the host if it necessary to see data there.</p>
+</section>
+<section id="buffer">
+<h3>3.2 Buffer<a class="headerlink" href="#buffer" title="Permalink to this headline">¶</a></h3>
+<p>SYCL buffers are also created against a context and under the hood are mapped to the Level-Zero USM allocation discussed above.
+The current mapping is following:</p>
+<ul class="simple">
+<li><p>For integrated device the allocations are made on host, and are accessible by the host and the device without any copying.</p></li>
+<li><p>Memory buffers for context with sub-devices of the same root-device (possibly including the root-device itself) are allocated on that root-device.
+Thus they are readily accessible by all the devices in such context. The synchronization with the host is performed by SYCL RT with map/unmap doing implicit copies when necessary.</p></li>
+<li><p>Memory buffers for context with devices from different root-devices in it are allocated on host (thus made accessible to all devices).</p></li>
+</ul>
+</section>
+</section>
+<section id="queue">
+<h2>4 Queue<a class="headerlink" href="#queue" title="Permalink to this headline">¶</a></h2>
+<p>SYCL queue is always attached to a single device in a possibly multi-device context.
+Some typical scenarios are the following (from most performant to least performant):</p>
+<p><strong>A.</strong> Context with a single sub-device in it and the queue is attached to that sub-device (tile)</p>
+<ul class="simple">
+<li><p>The execution/visibility is limited to the single sub-device only</p></li>
+<li><p>Expected to offer the best performance per tile</p></li>
+<li><p>Example:</p></li>
+</ul>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="n">SubDevices</span> <span class="o">=</span> <span class="p">...;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">D</span> <span class="p">:</span> <span class="n">SubDevices</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Each queue is in its own context, no data sharing across them.</span>
+    <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">D</span><span class="p">);</span>
+    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>B.</strong> Context with multiple sub-devices of the same root-device (multi-tile)</p>
+<ul class="simple">
+<li><p>Queues are to be attached to the sub-devices effectively implementing “explicit scaling”</p></li>
+<li><p>The root-device should not be passed to such context for better performance</p></li>
+<li><p>Example:</p></li>
+</ul>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+  <span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="n">SubDevices</span> <span class="o">=</span> <span class="p">...;</span>
+  <span class="k">auto</span> <span class="n">C</span> <span class="o">=</span> <span class="n">context</span><span class="p">(</span><span class="n">SubDevices</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">D</span> <span class="p">:</span> <span class="n">SubDevices</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// All queues share the same context, data can be shared across queues.</span>
+    <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">);</span>
+    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>C.</strong> Context with a single root-device in it and the queue is attached to that root-device</p>
+<ul class="simple">
+<li><p>The work will be automatically distributed across all sub-devices/tiles via “implicit scaling” by the driver</p></li>
+<li><p>The most simple way to enable multi-tile HW but doesn’t offer possibility to target specific tiles</p></li>
+<li><p>Example:</p></li>
+</ul>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+  <span class="c1">// The queue is attached to the root-device, driver distributes to sub-devices, if any.</span>
+  <span class="k">auto</span> <span class="n">D</span> <span class="o">=</span> <span class="n">device</span><span class="p">(</span><span class="n">gpu_selector</span><span class="p">{});</span>
+  <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">D</span><span class="p">);</span>
+  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>D.</strong> Contexts with multiple root-devices (multi-card)</p>
+<ul class="simple">
+<li><p>The most unrestrictive context with queues attached to different root-devices</p></li>
+<li><p>Offers most sharing possibilities at the cost of slow access through host memory or explicit copies needed</p></li>
+<li><p>Example:</p></li>
+</ul>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+  <span class="k">auto</span> <span class="n">P</span> <span class="o">=</span> <span class="n">platform</span><span class="p">(</span><span class="n">gpu_selector</span><span class="p">{});</span>
+  <span class="k">auto</span> <span class="n">RootDevices</span> <span class="o">=</span> <span class="n">P</span><span class="p">.</span><span class="n">get_devices</span><span class="p">();</span>
+  <span class="k">auto</span> <span class="n">C</span> <span class="o">=</span> <span class="n">context</span><span class="p">(</span><span class="n">RootDevices</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">D</span> <span class="p">:</span> <span class="n">RootDevices</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Context has multiple root-devices, data can be shared across multi-card (requires explict copying)</span>
+    <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">);</span>
+    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Depending on the chosen programming model (A,B,C,D) and algorithm used make sure to do proper memory allocation/synchronization.</p>
+</section>
+<section id="examples">
+<h2>5 Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>These are few examples of programming to multiple tiles and multiple cards:</p>
+<ul class="simple">
+<li><p>https://github.com/jeffhammond/PRK/blob/dpct/Cxx11/dgemm-multigpu-onemkl.cc</p></li>
+<li><p>https://github.com/pvelesko/PPP/tree/master/languages/c%2B%2B/sycl/gpu2gpu</p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="EnvironmentVariables.html">Environment Variables</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="design/CompilerAndRuntimeDesign.html">oneAPI DPC++ Compiler and Runtime architecture design</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

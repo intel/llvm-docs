@@ -1,0 +1,7 @@
+var classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164 =
+[
+    [ "read", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164.html#aa295f5acfce085b0fcbb4b071c01e2ef", null ],
+    [ "read", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164.html#ad561da572afeb079486ef2ba7faa8ab2", null ],
+    [ "write", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164.html#ac05c2c9ec738602364f35e33772f2669", null ],
+    [ "write", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1pipe_3_01__name_00_01__dataT_00_01__min__capa7f27ac5abf350f0f9889e1608712d164.html#a7152cb4a01a01d90fa600a71dfa370b2", null ]
+];

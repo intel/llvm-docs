@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Users Manual &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Preprocessor Macros" href="PreprocessorMacros.html" />
+    <link rel="prev" title="Getting Started with oneAPI DPC++" href="GetStartedGuide.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Users Manual</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="GetStartedGuide.html">Getting Started with oneAPI DPC++</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PreprocessorMacros.html">Preprocessor Macros</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section class="tex2jax_ignore mathjax_ignore" id="users-manual">
+<h1>Users Manual<a class="headerlink" href="#users-manual" title="Permalink to this headline">¶</a></h1>
+<p>This is the list of SYCL specific options supported by compiler and some
+examples.</p>
+<p>Options marked as [DEPRECATED] are going to be removed in some future updates.
+Options marked as [EXPERIMENTAL] are expected to be used only in limitted cases
+and not recommended to use in production environment.</p>
+<section id="generic-options">
+<h2>Generic options<a class="headerlink" href="#generic-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>General enabling option for SYCL compilation and linking mode. List of
+targets can be specified with `-fsycl-targets`. This is fundamental option
+for any SYCL compilation. All other SYCL specific options require it.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=&lt;T1&gt;[,...,&lt;Tn&gt;]</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enables ahead of time (AOT) compilation for specified device targets. T is
+a compiler target triple string, representing a target device architecture.
+You can specify more than one target, comma separated. Default just in time
+(JIT) compilation target can be added to the list to produce a combination
+of AOT and JIT code in the resulting fat binary.
+The following triples are supported by default:
+* spir64 - this is the default generic SPIR-V target;
+* spir64_x86_64 - generate code ahead of time for x86_64 CPUs;
+* spir64_fpga - generate code ahead of time for Intel FPGA;
+* spir64_gen - generate code ahead of time for Intel Processor Graphics;
+Full target triples can also be used:
+* spir64-unknown-unknown, spir64_x86_64-unknown-unknown,
+  spir64_fpga-unknown-unknown, spir64_gen-unknown-unknown
+Available in special build configuration:
+* nvptx64-nvidia-cuda - generate code ahead of time for CUDA target;
+</pre></div>
+</div>
+</section>
+<section id="language-options">
+<h2>Language options<a class="headerlink" href="#language-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-sycl-std=&lt;value&gt;</span></code></strong> [EXPERIMENTAL]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>SYCL language standard to compile for. Possible values:
+* 121 - SYCL 1.2.1
+* 2020 - SYCL 2020
+It doesn&#39;t guarantee specific standard compliance, but some selected
+compiler features change behavior.
+It is under development and not recommended to use in production
+environment.
+Default value is 2020.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-unnamed-lambda</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enables/Disables unnamed SYCL lambda kernels support.
+Disabled by default.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-explicit-simd</span></code></strong> [DEPRECATED]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The option was used to enable/disable SYCL explicit SIMD extension.
+Not used anymore.
+</pre></div>
+</div>
+</section>
+<section id="optimization-options">
+<h2>Optimization options<a class="headerlink" href="#optimization-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-early-optimizations</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enables (or disables) intermediate representation optimization pipeline
+before translation to SPIR-V. Have effect only if optimizations are turned
+on by standard compiler options (-O1 or higher).
+Enabled by default.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-dead-args-optimization</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enables (or disables) LLVM IR dead argument elimination pass to remove
+unused arguments for the kernel functions before translation to SPIR-V.
+Currently has effect only on spir64\* targets.
+Disabled by default.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-id-queries-fit-in-int</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Assume/Do not assume that SYCL ID queries fit within MAX_INT. It assumes
+that these values fit within MAX_INT:
+* id class get() member function and operator[]
+* item class get_id() member function and operator[]
+* nd_item class get_global_id()/get_global_linear_id() member functions
+Enabled by default.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fgpu-inline-threshold=&lt;n&gt;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Sets the inline threshold for device compilation to &lt;n&gt;. Note that this
+option only affects the behaviour of the DPC++ compiler, not target-
+specific compilers (e.g. OpenCL/Level Zero/Nvidia/AMD target compilers)
+which may or may not perform additional inlining.
+Default value is 225.
+</pre></div>
+</div>
+</section>
+<section id="target-toolchain-options">
+<h2>Target toolchain options<a class="headerlink" href="#target-toolchain-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend=&lt;T&gt;</span> <span class="pre">&quot;options&quot;</span></code></strong>
+<strong><code class="docutils literal notranslate"><span class="pre">-Xs</span> <span class="pre">&quot;options&quot;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Pass &quot;options&quot; to the backend of target device compiler, specified by
+triple T. The backend of device compiler generates target machine code from
+intermediate representation. This option can be used to tune code
+generation for a specific target. The &quot;options&quot; are used during AOT
+compilation. For JIT compilation &quot;options&quot; are saved in a fat binary and
+used when code is JITed during runtime.
+-Xs is a shortcut to pass &quot;options&quot; to all backends specified via the
+&#39;-fsycl-targets&#39; option (or default one).
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-frontend=&lt;T&gt;</span> <span class="pre">&quot;options&quot;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Pass &quot;options&quot; to the frontend of target device compiler, specified by
+triple T. This option can be used to control of intermediate representation
+generation during offline or online compilation.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-linker=&lt;T&gt;</span> <span class="pre">&quot;options&quot;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Pass &quot;options&quot; to the device code linker, when linking multiple device
+object modules. T is specific target device triple.
+</pre></div>
+</div>
+</section>
+<section id="link-options">
+<h2>Link options<a class="headerlink" href="#link-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-link</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Link device object modules and wrap those into a host-compatible object
+module that can be linked later by any standard host linker into the final
+fat binary.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-link-targets=&lt;T1,...,Tn&gt;</span></code></strong> [DEPRECATED]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Specify comma-separated list of triples SYCL offloading targets to produce
+linked device images. Used in a link step to link device code for given
+targets and output multiple linked device code images, whose names consist
+of the common prefix taken from the -o option and the triple string.
+Does not produce fat binary and must be used together with -fsycl.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-add-targets=&lt;T1:file1...Tn:filen&gt;</span></code></strong> [DEPRECATED]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Add arbitrary device images to the fat binary being linked
+
+Specify comma-separated list of triple and device binary image file name
+pairs to add to the final SYCL binary. Tells clang to include given set of
+device binaries into the fat SYCL binary when linking; the option value is
+a set of pairs triple,filename - filename is treated as the device binary
+image for the target triple it is paired with, and offload bundler is
+invoked to do the actual bundling.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-foffload-static-lib=&lt;lib&gt;</span></code></strong> [DEPRECATED]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Link with fat static library.
+
+Link with &lt;lib&gt;, which is a fat static archive containing fat objects which
+correspond to the target device. When linking clang will extract the device
+code from the objects contained in the library and link it with other
+device objects coming from the individual fat objects passed on the command
+line.
+NOTE:  Any libraries that are passed on the command line which are not
+specified with `-foffload-static-lib` are treated as host libraries and are
+only used during the final host link.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-foffload-whole-static-lib=&lt;lib&gt;</span></code></strong> [DEPRECATED]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Similar to `-foffload-static-lib` but uses the whole archive when
+performing the device code extraction.  This is helpful when creating
+shared objects from fat static archives.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-device-code-split=&lt;mode&gt;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Specifies SYCL device code module assembly. Mode is one of the following:
+* per_kernel - creates a separate device code module for each SYCL kernel.
+  Each device code module will contain a kernel and all its dependencies,
+  such as called functions and used variables.
+* per_source - creates a separate device code module for each source
+  (translation unit). Each device code module will contain a bunch of
+  kernels grouped on per-source basis and all their dependencies, such as
+  all used variables and called functions, including the `SYCL_EXTERNAL`
+  macro-marked functions from other translation units.
+* off - creates a single module for all kernels.
+* auto - the compiler will use a heuristic to select the best way of
+  splitting device code. This is default mode.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-max-parallel-link-jobs=&lt;N&gt;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Experimental feature. When specified, it informs the compiler
+that it can simultaneously spawn up to `N` processes to perform
+actions required to link the DPC++ application. This option is
+only useful in SYCL mode. It only takes effect if link action
+needs to be executed, i.e. it won&#39;t have any effect in presence of
+options like `-c` or `-E`. Default value of `N` is 1.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-device-lib=&lt;lib1&gt;[,&lt;lib2&gt;,...]</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enables/disables linking of the device libraries. Supported libraries:
+libm-fp32, libm-fp64, libc, all. Use of &#39;all&#39; will enable/disable all of
+the device libraries.
+</pre></div>
+</div>
+</section>
+<section id="intel-fpga-specific-options">
+<h2>Intel FPGA specific options<a class="headerlink" href="#intel-fpga-specific-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fintelfpga</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Perform ahead of time compilation for Intel FPGA. It sets the target to
+FPGA and turns on the debug options that are needed to generate FPGA
+reports. It is functionally equivalent shortcut to
+`-fsycl-targets=spir64_fpga -g -MMD` on Linux and
+`-fsycl-targets=spir64_fpga -Zi -MMD` on Windows.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-link=&lt;output&gt;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Controls FPGA target binary output format. Same as -fsycl-link, but
+optional output can be one of the following:
+* early - generate html reports and an intermediate object file that avoids
+a full Quartus compile. Usually takes minutes to generate. Link can later
+be resumed from this point using -fsycl-link=image.
+* image - generate a bitstream which is ready to be linked and used on a
+FPGA board. Usually takes hours to generate.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-reuse-exe=&lt;exe&gt;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Speed up FPGA backend compilation if the device code in &lt;binary&gt; is
+unchanged. If it&#39;s safe to do so the compiler will re-use the device binary
+embedded within it. This can be used to minimize or avoid long Quartus
+compile times for FPGA targets when the device code is unchanged.
+</pre></div>
+</div>
+</section>
+<section id="other-options">
+<h2>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-device-only</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Compile only device part of the code and ignore host part.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-f[no-]sycl-use-bitcode</span></code></strong> [EXPERIMENTAL]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Emit SYCL device code in LLVM-IR bitcode format. When disabled, SPIR-V is
+emitted.
+Enabled by default.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-help[=backend]</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Emit help information from device compiler backend. Backend can be one of
+the following: &quot;x86_64&quot;, &quot;fpga&quot;, &quot;gen&quot;, or &quot;all&quot;. Specifying &quot;all&quot; is the
+same as specifying -fsycl-help with no argument and emits help for all
+backends.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-host-compiler=&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Informs the compiler driver that the host compilation step that is performed
+as part of the greater compilation flow will be performed by the compiler
+&lt;arg&gt;.  It is expected that &lt;arg&gt; is the compiler to be called, either by
+name (in which the PATH will be used to discover it) or a fully qualified
+directory with compiler to invoke.  This option is only useful when -fsycl
+is provided on the command line.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-host-compiler-options=&quot;opts&quot;</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Passes along the space separated quoted &quot;opts&quot; string as option arguments
+to the compiler specified with the -fsycl-host-compiler=&lt;arg&gt; option.  It is
+expected that the options used here are compatible with the compiler
+specified via -fsycl-host-compiler=&lt;arg&gt;.
+
+NOTE: Using -fsycl-host-compiler-options to pass any kind of phase limiting
+options (e.g. -c, -E, -S) may interfere with the expected output set during
+the host compilation.  Doing so is considered undefined behavior.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-fp32-prec-sqrt</span></code></strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Enable use of correctly rounded `sycl::sqrt` function as defined by IEE754.
+Without this flag, the default precision requirement for `sycl::sqrt` is 3
+ULP.
+
+NOTE: This flag is currently only supported with the CUDA and HIP targets.
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="example-sycl-device-code-compilation">
+<h1>Example: SYCL device code compilation<a class="headerlink" href="#example-sycl-device-code-compilation" title="Permalink to this headline">¶</a></h1>
+<p>To invoke SYCL device compiler set <code class="docutils literal notranslate"><span class="pre">-fsycl-device-only</span></code> flag.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> clang++ -fsycl-device-only sycl-app.cpp -o sycl-app.bc
+</pre></div>
+</div>
+<p>By default the output format for SYCL device is LLVM bytecode.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-fno-sycl-use-bitcode</span></code> can be used to emit device code in SPIR-V format.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> clang++ -fsycl-device-only -fno-sycl-use-bitcode sycl-app.cpp -o sycl-app.spv
+</pre></div>
+</div>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="GetStartedGuide.html">Getting Started with oneAPI DPC++</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PreprocessorMacros.html">Preprocessor Macros</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

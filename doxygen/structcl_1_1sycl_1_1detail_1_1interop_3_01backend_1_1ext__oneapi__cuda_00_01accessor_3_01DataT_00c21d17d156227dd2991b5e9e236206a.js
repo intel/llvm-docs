@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__cuda_00_01accessor_3_01DataT_00c21d17d156227dd2991b5e9e236206a =
+[
+    [ "type", "structcl_1_1sycl_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__cuda_00_01accessor_3_01DataT_00c21d17d156227dd2991b5e9e236206a.html#a70de4519544dc34878d29ac67ee9457f", null ]
+];

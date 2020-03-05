@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Implementation design for compile time constant properties &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Docker Containers BKMs" href="../developer/DockerBKMs.html" />
+    <link rel="prev" title="Implementation design for “device_global”" href="DeviceGlobal.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Implementation design for compile time constant properties</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="DeviceGlobal.html">Implementation design for “device_global”</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../developer/DockerBKMs.html">Docker Containers BKMs</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section class="tex2jax_ignore mathjax_ignore" id="implementation-design-for-compile-time-constant-properties">
+<h1>Implementation design for compile time constant properties<a class="headerlink" href="#implementation-design-for-compile-time-constant-properties" title="Permalink to this headline">¶</a></h1>
+<p>This document describes the implementation design for the DPC++ extension
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/experimental/sycl_ext_oneapi_properties.asciidoc"><span class="xref myst">sycl_ext_oneapi_properties</span></a>, which adds a general mechanism for
+specifying properties which are known at compile time.  This extension is not
+itself a feature, but rather a building block that can be incorporated into
+other features.</p>
+<p>There are a number of situations where we plan to use compile-time constant
+properties, but this design document does not attempt to address them all.
+Rather, it describes the design for each “category” of use and illustrates each
+category with a specific feature.  For example <code class="docutils literal notranslate"><span class="pre">accessor</span></code> is used to illustrate
+properties that are applied to a kernel argument, but the same technique could
+be used for other variables that are captured as kernel arguments.</p>
+<p>In all cases, the goal of this design is to explain how a DPC++ program that
+uses properties is consumed by the device compiler and eventually represented
+in LLVM IR.  This typically involves some logic in the header files which
+results in a C++ annotation that contains the properties.  The device compiler
+front-end is responsible for consuming this annotation and producing some
+corresponding LLVM IR.  One of the goals of this design is to avoid changes to
+the front-end each time we add a new property, so the front-end is not required
+to understand each property it consumes.  Instead, it follows a mechanical
+process for converting properties listed in the C++ annotation into LLVM IR,
+and this mechanical process need not be updated when we add new properties.</p>
+<p>Once the information about properties is represented in IR, it is available to
+compiler passes.  For example, the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool might use a property
+in order to perform one of its transformations.  Some properties are consumed
+by the DPC++ compiler, but others are transformed into SPIR-V for use by the
+JIT compiler.  This design document also describes how this SPIR-V
+transformation is done.</p>
+<section id="properties-on-a-global-variable-type">
+<h2>Properties on a global variable type<a class="headerlink" href="#properties-on-a-global-variable-type" title="Permalink to this headline">¶</a></h2>
+<p>One use for compile-time properties is with types that are used exclusively
+for declaring global variables.  One such example is the
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/proposed/sycl_ext_oneapi_device_global.asciidoc"><span class="xref myst">sycl_ext_oneapi_device_global</span></a> extension:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span> <span class="n">PropertyListT</span> <span class="o">=</span> <span class="n">property_list</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">class</span> <span class="nc">device_global</span> <span class="p">{</span><span class="o">/*...*/</span><span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span>
+</pre></div>
+</div>
+<p>The following code illustrates a <code class="docutils literal notranslate"><span class="pre">device_global</span></code> variable that is declared with
+two compile-time properties:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">;</span>
+
+<span class="n">device_global</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span>
+  <span class="n">property_list_t</span><span class="o">&lt;</span>
+    <span class="n">device_image_scope</span><span class="p">::</span><span class="n">value_t</span><span class="p">,</span>
+    <span class="n">host_access</span><span class="p">::</span><span class="n">value_t</span><span class="o">&lt;</span><span class="n">host_access</span><span class="p">::</span><span class="n">access</span><span class="p">::</span><span class="n">read</span><span class="o">&gt;&gt;&gt;</span>
+  <span class="n">dm1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The header file represents these properties with an internal C++ attribute
+named <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code> whose value
+is a list that is created through a template parameter pack expansion:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>namespace sycl::ext::oneapi {
+
+template &lt;typename T, typename PropertyListT = property_list&lt;&gt;&gt;
+class device_global {/*...*/};
+
+// Partial specialization to make PropertyListT visible as a parameter pack
+// of properties.
+template &lt;typename T, typename ...Props&gt;
+class
+#ifdef __SYCL_DEVICE_ONLY__
+  [[__sycl_detail__::add_ir_attributes_global_variable(
+    Props::meta_name..., Props::meta_value...
+    )]]
+#endif
+  device_global&lt;T, property_list&lt;Props...&gt;&gt; {/*...*/};
+
+} // namespace sycl::ext::oneapi
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code> attribute has an
+even number of parameters, assuming that the optional “filter list” parameter
+is not specified (see below for a description of this parameter).  The first
+half of the parameters are the names of the properties, and the second half of
+the parameters are the values for those properties.  Each property has exactly
+one value, so the property at parameter position 0 corresponds to the value at
+position <em>N / 2</em>, etc.  To illustrate using the same example as before, the
+result of the parameter pack expansion would look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>namespace sycl::ext::oneapi {
+
+template &lt;/* ... */&gt; class
+#ifdef __SYCL_DEVICE_ONLY__
+  [[__sycl_detail__::add_ir_attributes_global_variable(
+    &quot;sycl-device-image-scope&quot;,  // Name of first property
+    &quot;sycl-host-access&quot;,         // Name of second property
+    nullptr,                    // First property has no parameter
+    &quot;read&quot;                      // Value of second property
+    )]]
+#endif
+  device_global&lt;/* ... */&gt; {/*...*/};
+
+} // namespace sycl::ext::oneapi
+</pre></div>
+</div>
+<p>The device compiler only uses the
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code> attribute when the
+decorated type is used to create an <a class="reference external" href="https://llvm.org/docs/LangRef.html#global-variables">LLVM IR global variable</a> and the global
+variable’s type is either:</p>
+<ul class="simple">
+<li><p>The type that is decorated by the attribute, or</p></li>
+<li><p>An array of the type that is decorated by the attribute.</p></li>
+</ul>
+<p>The device compiler front-end silently ignores the attribute when the decorated
+type is used in any other way.</p>
+<p>When the device compiler front-end creates a global variable from the decorated
+type as described above, it also adds one IR attribute to the global variable
+for each property using
+<a class="reference external" href="https://llvm.org/doxygen/classllvm_1_1GlobalVariable.html#a6cee3c634aa5de8c51e6eaa4e41898bc"><code class="docutils literal notranslate"><span class="pre">GlobalVariable::addAttribute(StringRef,</span> <span class="pre">StringRef)</span></code></a>.  If the property
+value is not already a string, it converts it to a string as described in
+<a class="reference external" href="#ir-representation-as-ir-attributes">IR representation as IR attributes</a>.</p>
+<p>Note that the front-end does not need to understand any of the properties in
+order to do this translation.</p>
+</section>
+<section id="properties-on-kernel-arguments">
+<h2>Properties on kernel arguments<a class="headerlink" href="#properties-on-kernel-arguments" title="Permalink to this headline">¶</a></h2>
+<p>Another use of compile-time properties is with types that are used to define
+kernel arguments.  For example, the <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/supported/sycl_ext_oneapi_accessor_properties.asciidoc"><span class="xref myst">sycl_ext_oneapi_accessor_properties</span></a>
+extension could be redesigned to use compile-time properties.  Such a redesign
+might look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">dataT</span><span class="p">,</span>
+          <span class="nb">int</span> <span class="n">dimensions</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">mode</span> <span class="n">accessmode</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">target</span> <span class="n">accessTarget</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">placeholder</span> <span class="n">isPlaceholder</span><span class="p">,</span>
+          <span class="n">typename</span> <span class="n">PropertyListT</span> <span class="o">=</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">property_list</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">class</span> <span class="nc">__attribute__</span><span class="p">((</span><span class="n">sycl_special_class</span><span class="p">))</span> <span class="n">accessor</span> <span class="p">{</span><span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span><span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span>
+</pre></div>
+</div>
+<p>Typical usage would look like this (showing a hypothetical property named
+<code class="docutils literal notranslate"><span class="pre">foo</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">sycl</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">;</span>
+
+<span class="n">accessor</span> <span class="n">acc</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">cgh</span><span class="p">,</span> <span class="n">property_list</span><span class="p">{</span><span class="n">no_alias_v</span><span class="p">,</span> <span class="n">foo_v</span><span class="o">&lt;</span><span class="mi">32</span><span class="o">&gt;</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>In the headers the C++ attribute
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_kernel_parameter()]]</span></code> is used to decorate
+parameters of the <code class="docutils literal notranslate"><span class="pre">__init</span></code> member function in the corresponding
+<code class="docutils literal notranslate"><span class="pre">sycl_special_class</span></code> decorated class. As before, the initial parameters are the
+names of the properties and the subsequent parameters are the property values.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">dataT</span><span class="p">,</span>
+          <span class="nb">int</span> <span class="n">dimensions</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">mode</span> <span class="n">accessmode</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">target</span> <span class="n">accessTarget</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">placeholder</span> <span class="n">isPlaceholder</span><span class="p">,</span>
+          <span class="n">typename</span> <span class="n">PropertyListT</span> <span class="o">=</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">property_list</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">class</span> <span class="nc">__attribute__</span><span class="p">((</span><span class="n">sycl_special_class</span><span class="p">))</span> <span class="n">accessor</span> <span class="p">{</span><span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span><span class="p">};</span>
+
+<span class="o">//</span> <span class="n">Partial</span> <span class="n">specialization</span> <span class="n">to</span> <span class="n">make</span> <span class="n">PropertyListT</span> <span class="n">visible</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span> <span class="n">pack</span>
+<span class="o">//</span> <span class="n">of</span> <span class="n">properties</span><span class="o">.</span>
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">dataT</span><span class="p">,</span>
+          <span class="nb">int</span> <span class="n">dimensions</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">mode</span> <span class="n">accessmode</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">target</span> <span class="n">accessTarget</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">placeholder</span> <span class="n">isPlaceholder</span><span class="p">,</span>
+          <span class="n">typename</span> <span class="o">...</span><span class="n">Props</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">__attribute__</span><span class="p">((</span><span class="n">sycl_special_class</span><span class="p">))</span> <span class="n">accessor</span><span class="o">&lt;</span><span class="n">dataT</span><span class="p">,</span>
+                                                   <span class="n">dimensions</span><span class="p">,</span>
+                                                   <span class="n">accessmode</span><span class="p">,</span>
+                                                   <span class="n">accessTarget</span><span class="p">,</span>
+                                                   <span class="n">isPlaceholder</span><span class="p">,</span>
+                                                   <span class="n">property_list</span><span class="o">&lt;</span><span class="n">Props</span><span class="o">...&gt;&gt;</span> <span class="p">{</span>
+  <span class="n">dataT</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="n">void</span> <span class="n">__init</span><span class="p">(</span>
+      <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_attributes_kernel_parameter</span><span class="p">(</span>
+        <span class="n">Props</span><span class="p">::</span><span class="n">meta_name</span><span class="o">...</span><span class="p">,</span> <span class="n">Props</span><span class="p">::</span><span class="n">meta_value</span><span class="o">...</span>
+        <span class="p">)]]</span>
+      <span class="n">dataT</span> <span class="o">*</span><span class="n">_ptr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ptr</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="c1">#endif</span>
+
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span>
+</pre></div>
+</div>
+<p>Illustrating this with the previous example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;/*</span> <span class="o">...</span> <span class="o">*/&gt;</span>
+<span class="k">class</span> <span class="nc">__attribute__</span><span class="p">((</span><span class="n">sycl_special_class</span><span class="p">))</span> <span class="n">accessor</span><span class="o">&lt;/*</span> <span class="o">...</span> <span class="o">*/&gt;</span> <span class="p">{</span>
+  <span class="n">dataT</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="n">void</span> <span class="n">__init</span><span class="p">(</span>
+      <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_attributes_kernel_parameter</span><span class="p">(</span>
+        <span class="s2">&quot;sycl-no-alias&quot;</span><span class="p">,</span>  <span class="o">//</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">first</span> <span class="nb">property</span>
+        <span class="s2">&quot;sycl-foo&quot;</span><span class="p">,</span>       <span class="o">//</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">second</span> <span class="nb">property</span>
+        <span class="n">nullptr</span><span class="p">,</span>          <span class="o">//</span> <span class="n">First</span> <span class="nb">property</span> <span class="n">has</span> <span class="n">no</span> <span class="n">parameter</span>
+        <span class="mi">32</span>                <span class="o">//</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">second</span> <span class="nb">property</span>
+        <span class="p">)]]</span>
+      <span class="n">dataT</span> <span class="o">*</span><span class="n">_ptr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ptr</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="c1">#endif</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span>
+</pre></div>
+</div>
+<p>As the name implies, this C++ attribute is only used to decorate parameters of
+the <code class="docutils literal notranslate"><span class="pre">__init</span></code> member function of a class type that is as SYCL “special class”
+(i.e. a class that is decorated with <code class="docutils literal notranslate"><span class="pre">__attribute__((sycl_special_class))</span></code>).
+The device compiler front-end ignores the attribute when it is used in any
+other syntactic position.</p>
+<p>When the front-end creates a kernel argument from a SYCL “special class”, it
+copies all parameters of the <code class="docutils literal notranslate"><span class="pre">__init</span></code> member function to the corresponding
+kernel function.  If a copied parameter is decorated with
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_kernel_parameter()]]</span></code>, the front-end adds
+one LLVM IR attribute to the resulting kernel function parameter for each
+property in the list.  For example, this can be done by calling
+<a class="reference external" href="https://llvm.org/doxygen/classllvm_1_1Function.html#a092beb46ecce99e6b39628ee92ccd95a"><code class="docutils literal notranslate"><span class="pre">Function::addParamAttrs(unsigned</span> <span class="pre">ArgNo,</span> <span class="pre">const</span> <span class="pre">AttrBuilder</span> <span class="pre">&amp;)</span></code></a>.  As
+before, the IR attributes are added as strings, so the front-end must convert
+the property value to a string if it is not already a string.</p>
+</section>
+<section id="properties-on-kernel-functions">
+<h2>Properties on kernel functions<a class="headerlink" href="#properties-on-kernel-functions" title="Permalink to this headline">¶</a></h2>
+<p>Compile-time properties can also be used to decorate kernel functions as with
+the <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/experimental/sycl_ext_oneapi_properties.asciidoc"><span class="xref myst">sycl_ext_oneapi_properties</span></a> extension.  There are two ways the
+application can specify these properties.  The first is by passing a
+<code class="docutils literal notranslate"><span class="pre">property_list</span></code> parameter to the function that submits the kernel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+
+<span class="k">class</span> <span class="nc">handler</span> <span class="p">{</span>
+  <span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">KernelName</span><span class="p">,</span> <span class="n">typename</span> <span class="n">KernelType</span><span class="p">,</span> <span class="n">typename</span> <span class="n">PropertyListT</span><span class="o">&gt;</span>
+  <span class="n">void</span> <span class="n">single_task</span><span class="p">(</span><span class="n">PropertyListT</span> <span class="n">properties</span><span class="p">,</span> <span class="n">const</span> <span class="n">KernelType</span> <span class="o">&amp;</span><span class="n">kernelFunc</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">sycl</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">;</span>
+
+<span class="n">void</span> <span class="n">foo</span><span class="p">(</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">cgh</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cgh</span><span class="o">.</span><span class="n">single_task</span><span class="p">(</span>
+    <span class="n">property_list</span><span class="p">{</span><span class="n">sub_group_size_v</span><span class="o">&lt;</span><span class="mi">32</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">device_has_v</span><span class="o">&lt;</span><span class="n">aspect</span><span class="p">::</span><span class="n">fp16</span><span class="o">&gt;</span><span class="p">},</span>
+    <span class="p">[</span><span class="o">=</span><span class="p">]</span> <span class="p">{</span><span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The second way an application can specify kernel properties is by adding a
+<code class="docutils literal notranslate"><span class="pre">properties</span></code> member variable to a named kernel function object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">sycl</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">MyKernel</span> <span class="p">{</span>
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">void</span> <span class="n">operator</span><span class="p">()()</span> <span class="p">{</span><span class="o">/*</span> <span class="o">...</span> <span class="o">*/</span><span class="p">}</span>
+
+  <span class="n">static</span> <span class="n">constexpr</span> <span class="n">auto</span> <span class="n">properties</span> <span class="o">=</span>
+    <span class="n">property_list</span><span class="p">{</span><span class="n">sub_group_size_v</span><span class="o">&lt;</span><span class="mi">32</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">device_has_v</span><span class="o">&lt;</span><span class="n">aspect</span><span class="p">::</span><span class="n">fp16</span><span class="o">&gt;</span><span class="p">};</span>
+<span class="p">};</span>
+
+<span class="n">void</span> <span class="n">foo</span><span class="p">(</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">cgh</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">MyKernel</span> <span class="n">k</span><span class="p">;</span>
+  <span class="n">cgh</span><span class="o">.</span><span class="n">single_task</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Internally, the header lowers both cases to a wrapper class which defines
+<code class="docutils literal notranslate"><span class="pre">operator()</span></code>, and that operator function becomes the “top level” kernel
+function that is recognized by the front-end.  The definition of this operator
+is decorated with the C++ attribute
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_function()]]</span></code>, and the parameters to this
+attribute represent the properties.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">KernelType</span><span class="p">,</span> <span class="n">typename</span> <span class="n">PropertyListT</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">KernelSingleTaskWrapper</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Partial</span> <span class="n">specialization</span> <span class="n">to</span> <span class="n">make</span> <span class="n">PropertyListT</span> <span class="n">visible</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span> <span class="n">pack</span>
+<span class="o">//</span> <span class="n">of</span> <span class="n">properties</span><span class="o">.</span>
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">KernelType</span><span class="p">,</span> <span class="n">typename</span> <span class="o">...</span><span class="n">Props</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">KernelSingleTaskWrapper</span><span class="o">&lt;</span><span class="n">KernelType</span><span class="p">,</span> <span class="n">property_list</span><span class="o">&lt;</span><span class="n">Props</span><span class="o">...&gt;&gt;</span> <span class="p">{</span>
+  <span class="n">KernelType</span> <span class="n">k</span><span class="p">;</span>
+
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">KernelSingleTaskWrapper</span><span class="p">(</span><span class="n">KernelType</span> <span class="n">k</span><span class="p">)</span> <span class="p">:</span> <span class="n">k</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">{}</span>
+
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="p">[[</span><span class="n">clang</span><span class="p">::</span><span class="n">sycl_kernel</span><span class="p">]]</span>
+  <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_attributes_function</span><span class="p">(</span>
+    <span class="n">Props</span><span class="p">::</span><span class="n">meta_name</span><span class="o">...</span><span class="p">,</span> <span class="n">Props</span><span class="p">::</span><span class="n">meta_value</span><span class="o">...</span>
+    <span class="p">)]]</span>
+<span class="c1">#endif</span>
+  <span class="n">void</span> <span class="n">operator</span><span class="p">()()</span> <span class="n">const</span> <span class="p">{</span><span class="n">k</span><span class="p">();}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Although the DPC++ headers only use the
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_function()]]</span></code> attribute on the definition
+of a kernel function as shown above, the front-end recognizes it for any
+function definition.  The front-end adds one LLVM IR function attribute for
+each property in the list.  For example, this can be done by calling
+<a class="reference external" href="https://llvm.org/doxygen/classllvm_1_1Function.html#ae7b919df259dce5480774e656791c079"><code class="docutils literal notranslate"><span class="pre">Function::addFnAttr(StringRef,</span> <span class="pre">StringRef)</span></code></a>.  As before, the IR attributes
+are added as strings, so the front-end must convert the property value to a
+string if it is not already a string.</p>
+<p><strong>NOTE</strong>: The intention is to replace the existing member functions like
+<code class="docutils literal notranslate"><span class="pre">handler::kernel_single_task()</span></code> with wrapper classes like
+<code class="docutils literal notranslate"><span class="pre">KernelSingleTaskWrapper</span></code>.  We believe this will not cause problems for the
+device compiler front-end because it recognizes kernel functions via the
+<code class="docutils literal notranslate"><span class="pre">[[clang::sycl_kernel]]</span></code> attribute, not by the name
+<code class="docutils literal notranslate"><span class="pre">handler::kernel_single_task()</span></code>.</p>
+</section>
+<section id="properties-on-a-non-global-variable-type">
+<h2>Properties on a non-global variable type<a class="headerlink" href="#properties-on-a-non-global-variable-type" title="Permalink to this headline">¶</a></h2>
+<p>Another use of compile-time properties is with types that are used to define
+non-global variables.  An example of this is the proposed <code class="docutils literal notranslate"><span class="pre">annotated_ptr</span></code>
+class.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span> <span class="n">PropertyListT</span> <span class="o">=</span> <span class="n">property_list_t</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">class</span> <span class="nc">annotated_ptr</span> <span class="p">{</span>
+  <span class="n">T</span> <span class="o">*</span><span class="n">ptr</span><span class="p">;</span>
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">annotated_ptr</span><span class="p">(</span><span class="n">T</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">:</span> <span class="n">ptr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span>
+</pre></div>
+</div>
+<p>where an example use looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">;</span>
+
+<span class="n">void</span> <span class="n">foo</span><span class="p">(</span><span class="nb">int</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">annotated_ptr</span><span class="o">&lt;</span><span class="nb">int</span>
+    <span class="n">property_list_t</span><span class="o">&lt;</span>
+      <span class="n">foo</span><span class="p">::</span><span class="n">value_t</span><span class="p">,</span>
+      <span class="n">bar</span><span class="p">::</span><span class="n">value_t</span><span class="o">&lt;</span><span class="mi">32</span><span class="o">&gt;&gt;&gt;</span>
+    <span class="n">aptr</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We again use a C++ attribute to represent the properties in the header.  The
+attribute <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_annotations_member()]]</span></code> decorates one of
+the member variables of the class, and the parameters to this attribute
+represent the properties.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span> <span class="n">PropertyListT</span> <span class="o">=</span> <span class="n">property_list_t</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">class</span> <span class="nc">annotated_ptr</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Partial</span> <span class="n">specialization</span> <span class="n">to</span> <span class="n">make</span> <span class="n">PropertyListT</span> <span class="n">visible</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span> <span class="n">pack</span>
+<span class="o">//</span> <span class="n">of</span> <span class="n">properties</span><span class="o">.</span>
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span> <span class="o">...</span><span class="n">Props</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">annotated_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">property_list</span><span class="o">&lt;</span><span class="n">Props</span><span class="o">...&gt;&gt;</span> <span class="p">{</span>
+  <span class="n">T</span> <span class="o">*</span><span class="n">ptr</span>
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_annotations_member</span><span class="p">(</span>
+    <span class="n">Props</span><span class="p">::</span><span class="n">meta_name</span><span class="o">...</span><span class="p">,</span> <span class="n">Props</span><span class="p">::</span><span class="n">meta_value</span><span class="o">...</span>
+    <span class="p">)]]</span>
+<span class="c1">#endif</span>
+  <span class="p">;</span>
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">annotated_ptr</span><span class="p">(</span><span class="n">T</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">:</span> <span class="n">ptr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span>
+</pre></div>
+</div>
+<p>Illustrating this with properties from our previous example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span> <span class="p">{</span>
+
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span> <span class="n">PropertyListT</span> <span class="o">=</span> <span class="n">property_list_t</span><span class="o">&lt;&gt;&gt;</span>
+<span class="k">class</span> <span class="nc">annotated_ptr</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Partial</span> <span class="n">specialization</span> <span class="n">to</span> <span class="n">make</span> <span class="n">PropertyListT</span> <span class="n">visible</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span> <span class="n">pack</span>
+<span class="o">//</span> <span class="n">of</span> <span class="n">properties</span><span class="o">.</span>
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span> <span class="o">...</span><span class="n">Props</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">annotated_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">property_list</span><span class="o">&lt;</span><span class="n">Props</span><span class="o">...&gt;&gt;</span> <span class="p">{</span>
+  <span class="n">T</span> <span class="o">*</span><span class="n">ptr</span>
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_annotations_member</span><span class="p">(</span>
+    <span class="s2">&quot;sycl-foo&quot;</span><span class="p">,</span>   <span class="o">//</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">first</span> <span class="nb">property</span>
+    <span class="s2">&quot;sycl-bar&quot;</span><span class="p">,</span>   <span class="o">//</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">second</span> <span class="nb">property</span>
+    <span class="n">nullptr</span><span class="p">,</span>      <span class="o">//</span> <span class="n">First</span> <span class="nb">property</span> <span class="n">has</span> <span class="n">no</span> <span class="n">parameter</span>
+    <span class="mi">32</span>            <span class="o">//</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">second</span> <span class="nb">property</span>
+    <span class="p">)]]</span>
+<span class="c1">#endif</span>
+  <span class="p">;</span>
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">annotated_ptr</span><span class="p">(</span><span class="n">T</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">:</span> <span class="n">ptr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="p">{}</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span>
+</pre></div>
+</div>
+<p>When the device compiler generates code to reference the decorated member
+variable, it emits a call to the LLVM intrinsic function
+<a class="reference external" href="https://llvm.org/docs/LangRef.html#llvm-ptr-annotation-intrinsic"><code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code></a> that annotates the pointer to that member
+variables, similar to the way the existing <code class="docutils literal notranslate"><span class="pre">[[clang::annotate()]]</span></code> attribute
+works.  Illustrating this with some simplified LLVM IR that matches the example
+code above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">@.</span><span class="n">str</span> <span class="o">=</span> <span class="n">private</span> <span class="n">unnamed_addr</span> <span class="n">constant</span> <span class="p">[</span><span class="mi">16</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span> <span class="n">c</span><span class="s2">&quot;sycl-properties</span><span class="se">\00</span><span class="s2">&quot;</span><span class="p">,</span>
+   <span class="n">section</span> <span class="s2">&quot;llvm.metadata&quot;</span>
+<span class="o">@.</span><span class="n">str</span><span class="o">.</span><span class="mi">1</span> <span class="o">=</span> <span class="n">private</span> <span class="n">unnamed_addr</span> <span class="n">constant</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span> <span class="n">c</span><span class="s2">&quot;file.cpp</span><span class="se">\00</span><span class="s2">&quot;</span><span class="p">,</span>
+   <span class="n">section</span> <span class="s2">&quot;llvm.metadata&quot;</span>
+<span class="o">@.</span><span class="n">str</span><span class="o">.</span><span class="mi">2</span> <span class="o">=</span> <span class="n">private</span> <span class="n">unnamed_addr</span> <span class="n">constant</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span> <span class="n">c</span><span class="s2">&quot;sycl-foo</span><span class="se">\00</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">align</span> <span class="mi">1</span>
+<span class="o">@.</span><span class="n">str</span><span class="o">.</span><span class="mi">3</span> <span class="o">=</span> <span class="n">private</span> <span class="n">unnamed_addr</span> <span class="n">constant</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span> <span class="n">c</span><span class="s2">&quot;sycl-bar</span><span class="se">\00</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">align</span> <span class="mi">1</span>
+
+<span class="o">@.</span><span class="n">args</span> <span class="o">=</span> <span class="n">private</span> <span class="n">unnamed_addr</span> <span class="n">constant</span> <span class="p">{</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span><span class="p">,</span> <span class="n">i8</span><span class="o">*</span><span class="p">,</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span><span class="p">,</span> <span class="n">i32</span> <span class="p">}</span>
+   <span class="p">{</span>
+     <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span> <span class="o">@.</span><span class="n">str</span><span class="o">.</span><span class="mi">2</span><span class="p">,</span>   <span class="p">;</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">first</span> <span class="nb">property</span> <span class="s2">&quot;sycl-foo&quot;</span>
+     <span class="n">i8</span><span class="o">*</span> <span class="n">null</span><span class="p">,</span>            <span class="p">;</span> <span class="n">Null</span> <span class="n">indicates</span> <span class="n">this</span> <span class="nb">property</span> <span class="n">has</span> <span class="n">no</span> <span class="n">value</span>
+     <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span> <span class="o">@.</span><span class="n">str</span><span class="o">.</span><span class="mi">3</span><span class="p">,</span>   <span class="p">;</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">second</span> <span class="nb">property</span> <span class="s2">&quot;sycl-bar&quot;</span>
+     <span class="n">i32</span> <span class="mi">32</span>               <span class="p">;</span> <span class="n">Value</span> <span class="n">of</span> <span class="n">second</span> <span class="nb">property</span>
+   <span class="p">},</span>
+   <span class="n">section</span> <span class="s2">&quot;llvm.metadata&quot;</span>
+
+<span class="n">define</span> <span class="n">void</span> <span class="nd">@foo</span><span class="p">(</span><span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="n">ptr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">%</span><span class="n">aptr</span> <span class="o">=</span> <span class="n">alloca</span> <span class="o">%</span><span class="n">class</span><span class="o">.</span><span class="n">annotated_ptr</span>
+  <span class="o">%</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="o">%</span><span class="n">class</span><span class="o">.</span><span class="n">annotated_ptr</span><span class="p">,</span> <span class="o">%</span><span class="n">class</span><span class="o">.</span><span class="n">annotated_ptr</span><span class="o">*</span> <span class="o">%</span><span class="n">aptr</span><span class="p">,</span>
+    <span class="n">i32</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">bitcast</span> <span class="n">i32</span><span class="o">**</span> <span class="o">%</span><span class="n">ptr</span> <span class="n">to</span> <span class="n">i8</span><span class="o">*</span>
+
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i8</span><span class="o">*</span> <span class="nd">@llvm</span><span class="o">.</span><span class="n">ptr</span><span class="o">.</span><span class="n">annotation</span><span class="o">.</span><span class="n">p0i8</span><span class="p">(</span><span class="n">i8</span><span class="o">*</span> <span class="n">nonnull</span> <span class="o">%</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">i8</span><span class="o">*</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="p">([</span><span class="mi">16</span> <span class="n">x</span> <span class="n">i8</span><span class="p">],</span> <span class="p">[</span><span class="mi">16</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span> <span class="o">@.</span><span class="n">str</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">i8</span><span class="o">*</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="p">([</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span> <span class="o">@.</span><span class="n">str</span><span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">i32</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">i8</span><span class="o">*</span> <span class="n">bitcast</span> <span class="p">({</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span><span class="p">,</span> <span class="n">i8</span><span class="o">*</span><span class="p">,</span> <span class="p">[</span><span class="mi">9</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span><span class="o">*</span><span class="p">,</span> <span class="n">i32</span> <span class="p">}</span><span class="o">*</span> <span class="o">@.</span><span class="n">args</span> <span class="n">to</span> <span class="n">i8</span><span class="o">*</span><span class="p">))</span>
+
+  <span class="o">%</span><span class="mi">3</span> <span class="o">=</span> <span class="n">bitcast</span> <span class="n">i8</span><span class="o">*</span> <span class="o">%</span><span class="mi">2</span> <span class="n">to</span> <span class="n">i32</span><span class="o">**</span>
+  <span class="n">store</span> <span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="n">ptr</span><span class="p">,</span> <span class="n">i32</span><span class="o">**</span> <span class="o">%</span><span class="mi">3</span>
+  <span class="n">ret</span> <span class="n">void</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The front-end encodes the properties from the C++ attribute
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_annotations_member()]]</span></code> into the
+<code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code> call as follows:</p>
+<ul class="simple">
+<li><p>The first parameter to <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code> is the pointer to annotate (as
+with any call to this intrinsic).</p></li>
+<li><p>The second parameter is the literal string <code class="docutils literal notranslate"><span class="pre">&quot;sycl-properties&quot;</span></code>.</p></li>
+<li><p>The third parameter is the name of the source file (as with any call to this
+intrinsic).</p></li>
+<li><p>The fourth parameter is the line number (as with any call to this intrinsic).</p></li>
+<li><p>The fifth parameter is a metadata tuple with information about all of the
+properties.  The first element of the tuple is a string literal with the name
+of the first property.  The second element is the value of the first
+property.  The third element is a string literal with the name of the second
+property, etc.  Since each property has exactly one value, this tuple has an
+even number of elements.</p></li>
+</ul>
+<p><strong>NOTE</strong>: Calls to the <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code> intrinsic function are known to
+disable many clang optimizations.  As a result, properties added to a
+non-global variable will likely result in LLVM IR (and SPIR-V) that is not well
+optimized.  This puts more pressure on the SPIR-V consumer (e.g. JIT compiler)
+to perform these optimizations.</p>
+</section>
+<section id="property-representation-in-c-attributes-and-in-ir">
+<h2>Property representation in C++ attributes and in IR<a class="headerlink" href="#property-representation-in-c-attributes-and-in-ir" title="Permalink to this headline">¶</a></h2>
+<p>As noted above, there are several C++ attributes that convey property names and
+values to the front-end:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_kernel_parameter()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_function()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_annotations_member()]]</span></code></p></li>
+</ul>
+<p>All of these attributes take a parameter list with the same format.  There are
+always an even number of parameters, where the first half are the property
+names and the second half are the property values.  (This assumes that the
+initial optional parameter is not passed.  See below for a description of this
+optional parameter.) The property name is always a string literal or a
+<code class="docutils literal notranslate"><span class="pre">constexpr</span> <span class="pre">char</span> <span class="pre">*</span></code> expression.  By convention, property names normally start
+with the prefix <code class="docutils literal notranslate"><span class="pre">&quot;sycl-&quot;</span></code> in order to avoid collision with non-SYCL IR
+attributes, but this is not a strict requirement.</p>
+<p>The property value can be a literal or <code class="docutils literal notranslate"><span class="pre">constexpr</span></code> expression of the following
+types:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code>.</p></li>
+<li><p>An integer type.</p></li>
+<li><p>A floating point type.</p></li>
+<li><p>A boolean type.</p></li>
+<li><p>A character type.</p></li>
+<li><p>An enumeration type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nullptr_t</span></code> (reserved for the case when a property has no value).</p></li>
+</ul>
+<p>All properties require a value when represented in the C++ attribute.  If the
+SYCL property has no value the header passes <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</p>
+<section id="ir-representation-as-ir-attributes">
+<h3>IR representation as IR attributes<a class="headerlink" href="#ir-representation-as-ir-attributes" title="Permalink to this headline">¶</a></h3>
+<p>Properties that are implemented using the following C++ attributes are
+represented in LLVM IR as IR attributes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_kernel_parameter()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_function()]]</span></code></p></li>
+</ul>
+<p>When the front-end consumes these C++ attributes and produces IR, each property
+name becomes an IR attribute name and each property value becomes the
+attribute’s value.  Because the attribute values must be strings, the front-end
+converts each property value to a string.  Integer and floating point values
+are converted with the same format as <code class="docutils literal notranslate"><span class="pre">std::to_string()</span></code> would produce.
+Boolean values are converted to either <code class="docutils literal notranslate"><span class="pre">&quot;true&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;false&quot;</span></code>.  Enumeration
+values are first converted to an integer and then converted to a string with
+the same format as <code class="docutils literal notranslate"><span class="pre">std::to_string()</span></code>.  The <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> value is converted to an
+empty string (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>).</p>
+<p><strong>TODO</strong>: Should we allow property values that are type names?  If so, I
+suppose they would be converted to a string representation of the mangled name?</p>
+<p><strong>TODO</strong>: Should we allow property values of other (non-fundamental) types?  If
+we allow this, we need to teach the front-end how to convert each type to a
+string, which means the front-end needs to be changed each time we add a
+property with a new non-fundamental type.  This seems undesirable.  However, if
+we do not allow non-fundamental types, how do we represent properties like
+<code class="docutils literal notranslate"><span class="pre">work_group_size</span></code>, whose value is a 3-tuple of integers?  Maybe we could just
+allow <code class="docutils literal notranslate"><span class="pre">std::tuple</span></code>, where the type of each element is one of the fundamental
+types listed above.</p>
+</section>
+<section id="ir-representation-via-llvm-ptr-annotation">
+<h3>IR representation via <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code><a class="headerlink" href="#ir-representation-via-llvm-ptr-annotation" title="Permalink to this headline">¶</a></h3>
+<p>Properties that are implemented using
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_annotations_member()]]</span></code>, are represented in LLVM IR
+as the fifth metadata parameter to the <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code> intrinsic
+function.  This parameter is a tuple of metadata values with the following
+sequence:</p>
+<ul class="simple">
+<li><p>Name of the first property</p></li>
+<li><p>Value of the first property</p></li>
+<li><p>Name of the second property</p></li>
+<li><p>Value of the second property</p></li>
+<li><p>Etc.</p></li>
+</ul>
+<p>Since metadata types are not limited to strings, there is no need to convert
+the property values to strings.</p>
+</section>
+</section>
+<section id="filtering-properties">
+<h2>Filtering properties<a class="headerlink" href="#filtering-properties" title="Permalink to this headline">¶</a></h2>
+<p>It is sometimes necessary to filter out certain properties so that only a
+subset of the properties in a list are represented in IR.  There are two
+scenarios when this is useful.</p>
+<p>In some cases, a property is used only in the header file itself, and there is
+no need to represent that property in LLVM IR.  In order to avoid cluttering
+the IR with unneeded information, these properties can be “filtered out”, so
+that the front-end does not generate an IR representation.</p>
+<p>Another case is when a class wants to represent some properties one way in the
+IR while representing other properties in another way.  For example, a future
+version of <code class="docutils literal notranslate"><span class="pre">accessor</span></code> might pass some properties to
+<code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_kernel_parameter()]]</span></code> while passing other
+properties to <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_annotations_member()]]</span></code>.  Again, the
+header wants some way to “filter” the properties, such that some properties are
+interpreted as “kernel parameter attributes” while other are interpreted as
+“member annotations”.</p>
+<p>To handle these cases, each of the following C++ attributes takes an optional
+first parameter that is a brace-enclosed list of property names:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_kernel_parameter()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_function()]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_annotations_member()]]</span></code></p></li>
+</ul>
+<p>Since this brace-enclosed list acts somewhat like an initializer list, the
+header must include <code class="docutils literal notranslate"><span class="pre">&lt;initializer_list&gt;</span></code> prior to passing this optional first
+parameter.</p>
+<p>The front-end treats this list as a “pass list”, ignoring any property whose
+name is not in the list.  To illustrate, consider the following example where
+<code class="docutils literal notranslate"><span class="pre">accessor</span></code> treats some properties as “kernel parameter attributes” and others
+as “member annotations”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">dataT</span><span class="p">,</span>
+          <span class="nb">int</span> <span class="n">dimensions</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">mode</span> <span class="n">accessmode</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">target</span> <span class="n">accessTarget</span><span class="p">,</span>
+          <span class="n">access</span><span class="p">::</span><span class="n">placeholder</span> <span class="n">isPlaceholder</span><span class="p">,</span>
+          <span class="n">typename</span> <span class="o">...</span><span class="n">Props</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">__attribute__</span><span class="p">((</span><span class="n">sycl_special_class</span><span class="p">))</span> <span class="n">accessor</span><span class="o">&lt;</span><span class="n">dataT</span><span class="p">,</span>
+                                                   <span class="n">dimensions</span><span class="p">,</span>
+                                                   <span class="n">accessmode</span><span class="p">,</span>
+                                                   <span class="n">accessTarget</span><span class="p">,</span>
+                                                   <span class="n">isPlaceholder</span><span class="p">,</span>
+                                                   <span class="n">property_list</span><span class="o">&lt;</span><span class="n">Props</span><span class="o">...&gt;&gt;</span> <span class="p">{</span>
+    <span class="n">T</span> <span class="o">*</span><span class="n">ptr</span>
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+    <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_annotations_member</span><span class="p">(</span>
+
+      <span class="o">//</span> <span class="n">The</span> <span class="n">properties</span> <span class="ow">in</span> <span class="n">this</span> <span class="nb">list</span> <span class="n">are</span> <span class="s2">&quot;member annotations&quot;</span><span class="o">.</span>
+      <span class="p">{</span><span class="s2">&quot;sycl-bar&quot;</span><span class="p">},</span>
+
+      <span class="n">Props</span><span class="p">::</span><span class="n">meta_name</span><span class="o">...</span><span class="p">,</span> <span class="n">Props</span><span class="p">::</span><span class="n">meta_value</span><span class="o">...</span>
+      <span class="p">)]]</span>
+<span class="c1">#endif</span>
+    <span class="p">;</span>
+
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="n">void</span> <span class="n">__init</span><span class="p">(</span>
+      <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_attributes_kernel_parameter</span><span class="p">(</span>
+
+        <span class="o">//</span> <span class="n">The</span> <span class="n">properties</span> <span class="ow">in</span> <span class="n">this</span> <span class="nb">list</span> <span class="n">are</span> <span class="s2">&quot;kernel parameter attributes&quot;</span><span class="o">.</span>
+        <span class="p">{</span><span class="s2">&quot;sycl-no-alias&quot;</span><span class="p">,</span> <span class="s2">&quot;sycl-foo&quot;</span><span class="p">},</span>
+
+        <span class="n">Props</span><span class="p">::</span><span class="n">meta_name</span><span class="o">...</span><span class="p">,</span> <span class="n">Props</span><span class="p">::</span><span class="n">meta_value</span><span class="o">...</span>
+        <span class="p">)]]</span>
+      <span class="n">dataT</span> <span class="o">*</span><span class="n">_ptr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ptr</span> <span class="o">=</span> <span class="n">_ptr</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="c1">#endif</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="representing-properties-in-spir-v">
+<h2>Representing properties in SPIR-V<a class="headerlink" href="#representing-properties-in-spir-v" title="Permalink to this headline">¶</a></h2>
+<p>There is no mechanical process which converts all LLVM IR attributes to
+SPIR-V.  This is because we do not need all properties to be expressed in
+SPIR-V and because there is no consistent way to represent properties in
+SPIR-V.  Therefore, the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool decides on a case-by-case basis
+which properties are translated into SPIR-V and which representation to use.</p>
+<p>We use the <a class="reference external" href="https://github.com/KhronosGroup/SPIRV-LLVM-Translator">SPIR-V LLVM Translator</a> to translate from LLVM IR to SPIR-V,
+and that tool defines <a class="reference external" href="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/blob/master/docs/SPIRVRepresentationInLLVM.rst">idiomatic LLVM IR</a> representations that correspond
+to various SPIR-V instructions.  Therefore, the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool can
+translate a property into a specific SPIR-V instruction by generating the
+corresponding idiomatic LLVM IR.  The following sections describe some common
+cases.</p>
+<section id="property-on-a-kernel-function">
+<h3>Property on a kernel function<a class="headerlink" href="#property-on-a-kernel-function" title="Permalink to this headline">¶</a></h3>
+<p>When a property on a kernel function needs to be represented in SPIR-V, we
+generally translate the property into a SPIR-V <strong>OpExecutionMode</strong> instruction.
+The SPIR-V LLVM Translator has an existing way to generate this instruction
+when the LLVM IR contains the named metadata <code class="docutils literal notranslate"><span class="pre">!spirv.ExecutionMode</span></code> as
+illustrated below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!spirv.ExecutionMode = !{!0, !1}      ; Each operand in this metadata
+                                      ;   represents one OpExectionMode
+                                      ;   instruction that will be generated.
+!0 = !{void ()* @bar, i32 42}         ; The first operand identifies a kernel
+                                      ;   function.  The second operand is the
+                                      ;   integer value of a SPIR-V execution
+                                      ;   mode.
+!1 = !{void ()* @bar, i32 43, i32 3}  ; Any additional operands in the metadata
+                                      ;   correspond to &quot;extra operands&quot; to the
+                                      ;   OpExecutionMode instruction.  These
+                                      ;   operands must be integer literals.
+</pre></div>
+</div>
+</section>
+<section id="property-on-a-kernel-parameter">
+<h3>Property on a kernel parameter<a class="headerlink" href="#property-on-a-kernel-parameter" title="Permalink to this headline">¶</a></h3>
+<p>When a property on a kernel parameter needs to be represented in SPIR-V, we
+generally translate the property into a SPIR-V <strong>OpDecorate</strong> instruction for
+the corresponding <strong>OpFunctionParameter</strong> of the kernel function.  Since the
+SPIR-V LLVM Translator does not have an existing way to generate these
+decorations, we propose the following mechanism.</p>
+<p>An LLVM IR function definition may optionally have a metadata kind of
+<code class="docutils literal notranslate"><span class="pre">!spirv.ParameterDecorations</span></code>.  If it does, that metadata node must have one
+operand for each of the function’s parameters.  Each of those operands is
+another metadata node that describes the decorations for that parameter.  To
+illustrate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>define spir_kernel void @MyKernel(%arg1, %arg2) !spirv.ParameterDecorations !0 {
+}
+
+!0 = !{!1, !2}            ; Each operand in this metadata represents the
+                          ;   decorations for one kernel parameter.
+!1 = !{!3, !4}            ; The first kernel parameter has two decorations.
+!2 = !{}                  ; The second kernel parameter has no decorations.
+!3 = !{i32 7742}          ; This is the integer value of the first decoration.
+!4 = !{i32 7743, i32 10}  ; The first operand is the integer value of the
+                          ;   second decoration.  Additional operands are
+                          ;   &quot;extra operands&quot; to the decoration.  These
+                          ;   operands may be either integer literals or string
+                          ;   literals.
+</pre></div>
+</div>
+</section>
+<section id="property-on-a-global-variable">
+<h3>Property on a global variable<a class="headerlink" href="#property-on-a-global-variable" title="Permalink to this headline">¶</a></h3>
+<p>When a property on a global variable needs to be represented in SPIR-V, we
+generally translate the property into a SPIR-V <strong>OpDecorate</strong> instruction for
+the corresponding module scope (global) <strong>OpVariable</strong>.  Again, there is no
+existing mechanism to do this in the SPIR-V LLVM Translator, so we propose the
+following mechanism.</p>
+<p>An LLVM IR global variable definition may optionally have a metadata kind of
+<code class="docutils literal notranslate"><span class="pre">!spirv.Decorations</span></code>.  If it does, that metadata node has one operand for each
+of the global variable’s decorations.  To illustrate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@MyVariable = global %MyClass !spirv.Decorations !0
+!0 = !{!1, !2}            ; Each operand in this metadata represents one
+                          ;   decoration on the variable.
+!1 = !{i32 7744}          ; This is the integer value of the first decoration.
+!2 = !{i32 7745, i32 20}  ; The first operand is the integer value of the
+                          ;   second decoration.  Additional operands are
+                          ;   &quot;extra operands&quot; to the decoration.  These
+                          ;   operands may be either integer literals or string
+                          ;   literals.
+</pre></div>
+</div>
+</section>
+<section id="property-on-a-structure-member-of-a-non-global-variable">
+<h3>Property on a structure member of a non-global variable<a class="headerlink" href="#property-on-a-structure-member-of-a-non-global-variable" title="Permalink to this headline">¶</a></h3>
+<p>As we noted earlier, a property on a structure member variable is represented
+in LLVM IR as a call to the intrinsic function <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code>, where
+the annotation string is <code class="docutils literal notranslate"><span class="pre">&quot;sycl-properties&quot;</span></code> and the properties are represented
+as metadata in the fifth parameter to <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code>.  In order to
+understand how these SYCL properties are translated into SPIR-V, it’s useful to
+review how a normal (i.e. non-SYCL) call to <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code> is
+translated.</p>
+<p>The existing behavior of the SPIR-V LLVM Translator is to translate this call
+into one (or both) of the following:</p>
+<ul class="simple">
+<li><p>An <strong>OpDecorate</strong> instruction that decorates the intermediate pointer value
+that is returned by the intrinsic (i.e. the pointer to the member variable).</p></li>
+<li><p>An <strong>OpMemberDecorate</strong> instruction that decorates the member variable
+itself.</p></li>
+</ul>
+<p>In both cases, the decoration is a single <strong>UserSemantic</strong> decoration where the
+string literal is the same as the string literal in the LLVM annotation.</p>
+<p>When a SYCL structure member property needs to be represented in SPIR-V,
+however, we prefer to represent each property as an extended SPIR-V decoration
+rather than using a <strong>UserSemantic</strong> decoration.  There is no existing
+mechanism in the SPIR-V LLVM Translator to generate extended decorations like
+this, so we propose the following new mechanism.</p>
+<p>When a member variable property needs to be represented in SPIR-V, the
+<code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool converts the <code class="docutils literal notranslate"><span class="pre">&#64;llvm.ptr.annotation</span></code> intrinsic call into a
+call to the SPIR-V intrinsic <code class="docutils literal notranslate"><span class="pre">__spirv_AddMemberDecoration</span></code> which has a metadata
+function argument that specifies the decorations as illustrated below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%annotated_ptr = call i8* __spirv_AddMemberDecoration(i8* %ptr, metadata !0)
+
+!0 = !{!1, !2}            ; Each operand in this metadata represents one
+                          ;   decoration.
+!1 = !{i32 7744}          ; This is the integer value of the first decoration.
+!2 = !{i32 7745, i32 20}  ; The first operand is the integer value of the
+                          ;   second decoration.  Additional operands are
+                          ;   &quot;extra operands&quot; to the decoration.  These
+                          ;   operands may be either integer literals or string
+                          ;   literals.
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="DeviceGlobal.html">Implementation design for “device_global”</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../developer/DockerBKMs.html">Docker Containers BKMs</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started with oneAPI DPC++ &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Users Manual" href="UsersManual.html" />
+    <link rel="prev" title="Data Parallel C++ Documentation" href="index.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Getting Started with oneAPI DPC++</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Data Parallel C++ Documentation</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="UsersManual.html">Users Manual</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-oneapi-dpc">
+<h1>Getting Started with oneAPI DPC++<a class="headerlink" href="#getting-started-with-oneapi-dpc" title="Permalink to this headline">¶</a></h1>
+<p>The DPC++ Compiler compiles C++ and SYCL* source files with code for both CPU
+and a wide range of compute accelerators such as GPU and FPGA.</p>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p>
+<ul>
+<li><p><a class="reference external" href="#create-dpc-workspace">Create DPC++ workspace</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#build-dpc-toolchain">Build DPC++ toolchain</a></p>
+<ul>
+<li><p><a class="reference external" href="#build-dpc-toolchain-with-libc-library">Build DPC++ toolchain with libc++ library</a></p></li>
+<li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">Build DPC++ toolchain with support for NVIDIA CUDA</a></p></li>
+<li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-hip-amd">Build DPC++ toolchain with support for HIP AMD</a></p></li>
+<li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-hip-nvidia">Build DPC++ toolchain with support for HIP NVIDIA</a></p></li>
+<li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-esimd-emulator">Build DPC++ toolchain with support for ESIMD CPU Emulation</a></p></li>
+<li><p><a class="reference external" href="#build-doxygen-documentation">Build Doxygen documentation</a></p></li>
+<li><p><a class="reference external" href="#deployment">Deployment</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#use-dpc-toolchain">Use DPC++ toolchain</a></p>
+<ul>
+<li><p><a class="reference external" href="#install-low-level-runtime">Install low level runtime</a></p></li>
+<li><p><a class="reference external" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation">Obtain prerequisites for ahead of time (AOT) compilation</a></p>
+<ul>
+<li><p><a class="reference external" href="#gpu">GPU</a></p></li>
+<li><p><a class="reference external" href="#cpu">CPU</a></p></li>
+<li><p><a class="reference external" href="#accelerator">Accelerator</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#test-dpc-toolchain">Test DPC++ toolchain</a></p>
+<ul>
+<li><p><a class="reference external" href="#run-in-tree-lit-tests">Run in-tree LIT tests</a></p></li>
+<li><p><a class="reference external" href="#run-dpc-e2e-test-suite">Run DPC++ E2E test suite</a></p></li>
+<li><p><a class="reference external" href="#run-khronos-sycl-conformance-test-suite-optional">Run Khronos* SYCL* conformance test suite (optional)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#run-simple-dpc-application">Run simple DPC++ application</a></p></li>
+<li><p><a class="reference external" href="#code-the-program-for-a-specific-gpu">Code the program for a specific GPU</a></p></li>
+<li><p><a class="reference external" href="#using-the-dpc-toolchain-on-cuda-platforms">Using the DPC++ toolchain on CUDA platforms</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#c-standard">C++ standard</a></p></li>
+<li><p><a class="reference external" href="#known-issues-and-limitations">Known Issues and Limitations</a></p>
+<ul>
+<li><p><a class="reference external" href="#cuda-back-end-limitations">CUDA back-end limitations</a></p></li>
+<li><p><a class="reference external" href="#hip-back-end-limitations">HIP back-end limitations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#find-more">Find More</a></p></li>
+</ul>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code> - <a class="reference external" href="https://git-scm.com/downloads">Download</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span></code> version 3.14 or later - <a class="reference external" href="http://www.cmake.org/download/">Download</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> - <a class="reference external" href="https://www.python.org/downloads/release/python-2716/">Download</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ninja</span></code> -
+<a class="reference external" href="https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages">Download</a></p></li>
+<li><p>C++ compiler</p>
+<ul>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">GCC</span></code> version 7.1.0 or later (including libstdc++) -
+<a class="reference external" href="https://gcc.gnu.org/install/">Download</a></p></li>
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span></code> version 15.7 preview 4 or later -
+<a class="reference external" href="https://visualstudio.microsoft.com/downloads/">Download</a></p></li>
+</ul>
+</li>
+</ul>
+<p>Alternatively, you can use Docker image, that has everything you need
+pre-installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">sycl_build</span> <span class="o">-</span><span class="n">it</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">workspace</span><span class="o">/</span><span class="nb">dir</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">src</span> <span class="n">ghcr</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">intel</span><span class="o">/</span><span class="n">llvm</span><span class="o">/</span><span class="n">ubuntu2004_base</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+</div>
+<p>This command will start a terminal session, from which you can proceed with the
+instructions below. See <a class="reference internal" href="developer/DockerBKMs.html"><span class="doc std std-doc">Docker BKMs</span></a> for more info on Docker
+commands.</p>
+<section id="create-dpc-workspace">
+<h3>Create DPC++ workspace<a class="headerlink" href="#create-dpc-workspace" title="Permalink to this headline">¶</a></h3>
+<p>Throughout this document <code class="docutils literal notranslate"><span class="pre">DPCPP_HOME</span></code> denotes the path to the local directory
+created as DPC++ workspace. It might be useful to create an environment variable
+with the same name.</p>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DPCPP_HOME</span><span class="o">=</span>~/sycl_workspace
+mkdir <span class="nv">$DPCPP_HOME</span>
+<span class="nb">cd</span> <span class="nv">$DPCPP_HOME</span>
+
+git clone https://github.com/intel/llvm -b sycl
+</pre></div>
+</div>
+<p><strong>Windows (64-bit)</strong>:</p>
+<p>Open a developer command prompt using one of two methods:</p>
+<ul class="simple">
+<li><p>Click start menu and search for “<strong>x64</strong> Native Tools Command Prompt for VS
+XXXX”, where XXXX is a version of installed Visual Studio.</p></li>
+<li><p>Ctrl-R, write “cmd”, click enter, then run
+<code class="docutils literal notranslate"><span class="pre">&quot;C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\Microsoft</span> <span class="pre">Visual</span> <span class="pre">Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat&quot;</span> <span class="pre">x64</span></code></p></li>
+</ul>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">DPCPP_HOME</span><span class="p">=</span><span class="nv">%USERPROFILE%</span>\sycl_workspace
+<span class="k">mkdir</span> <span class="nv">%DPCPP_HOME%</span>
+<span class="k">cd</span> <span class="nv">%DPCPP_HOME%</span>
+
+git clone --config core.autocrlf=false https://github.com/intel/llvm -b sycl
+</pre></div>
+</div>
+</section>
+</section>
+<section id="build-dpc-toolchain">
+<h2>Build DPC++ toolchain<a class="headerlink" href="#build-dpc-toolchain" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to get started is to use the buildbot
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/configure.py"><span class="xref myst">configure</span></a> and
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/compile.py"><span class="xref myst">compile</span></a> scripts.</p>
+<p>In case you want to configure CMake manually the up-to-date reference for
+variables is in these files.</p>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/configure.py
+python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/compile.py
+</pre></div>
+</div>
+<p><strong>Windows (64-bit)</strong>:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\configure.py
+python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
+</pre></div>
+</div>
+<p>You can use the following flags with <code class="docutils literal notranslate"><span class="pre">configure.py</span></code> (full list of available
+flags can be found by launching the script with <code class="docutils literal notranslate"><span class="pre">--help</span></code>):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--system-ocl</span></code> -&gt; Don’t download OpenCL headers and library via CMake but use the system ones</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--no-werror</span></code> -&gt; Don’t treat warnings as errors when compiling llvm</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--cuda</span></code> -&gt; use the cuda backend (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">Nvidia CUDA</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--hip</span></code> -&gt; use the HIP backend (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-hip-amd">HIP</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--hip-platform</span></code> -&gt; select the platform used by the hip backend, <code class="docutils literal notranslate"><span class="pre">AMD</span></code> or <code class="docutils literal notranslate"><span class="pre">NVIDIA</span></code> (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-hip-amd">HIP AMD</a> or see <a class="reference external" href="#build-dpc-toolchain-with-support-for-hip-nvidia">HIP NVIDIA</a>)</p></li>
+<li><p>‘–enable-esimd-emulator’ -&gt; enable ESIMD CPU emulation (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-esimd-cpu">ESIMD CPU emulation</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--shared-libs</span></code> -&gt; Build shared libraries</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code> -&gt; Build type (debug or release)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code> -&gt; Path to build directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--cmake-gen</span></code> -&gt; Set build system type (e.g. <code class="docutils literal notranslate"><span class="pre">--cmake-gen</span> <span class="pre">&quot;Unix</span> <span class="pre">Makefiles&quot;</span></code>)</p></li>
+</ul>
+<p>You can use the following flags with <code class="docutils literal notranslate"><span class="pre">compile.py</span></code> (full list of available flags
+can be found by launching the script with <code class="docutils literal notranslate"><span class="pre">--help</span></code>):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code> -&gt; Path to build directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code>, <code class="docutils literal notranslate"><span class="pre">--build-target</span></code> -&gt; Build target (e.g., <code class="docutils literal notranslate"><span class="pre">clang</span></code> or <code class="docutils literal notranslate"><span class="pre">llvm-spirv</span></code>). Default is <code class="docutils literal notranslate"><span class="pre">deploy-sycl-toolchain</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-j</span></code>, <code class="docutils literal notranslate"><span class="pre">--build-parallelism</span></code> -&gt; Number of threads to use for compilation</p></li>
+</ul>
+<p><strong>Please note</strong> that no data about flags is being shared between <code class="docutils literal notranslate"><span class="pre">configure.py</span></code> and
+<code class="docutils literal notranslate"><span class="pre">compile.py</span></code> scripts, which means that if you configured your build to be
+placed in non-default directory using <code class="docutils literal notranslate"><span class="pre">-o</span></code> flag, you must also specify this flag
+and the same path in <code class="docutils literal notranslate"><span class="pre">compile.py</span></code> options. This allows you, for example, to
+configure several different builds and then build just one of them which is
+needed at the moment.</p>
+<section id="build-dpc-toolchain-with-libc-library">
+<h3>Build DPC++ toolchain with libc++ library<a class="headerlink" href="#build-dpc-toolchain-with-libc-library" title="Permalink to this headline">¶</a></h3>
+<p>There is experimental support for building and linking DPC++ runtime with
+libc++ library instead of libstdc++. To enable it the following CMake options
+should be used.</p>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DSYCL_USE_LIBCXX</span><span class="o">=</span><span class="n">ON</span> \
+<span class="o">-</span><span class="n">DSYCL_LIBCXX_INCLUDE_PATH</span><span class="o">=&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="n">headers</span><span class="o">&gt;</span> \
+<span class="o">-</span><span class="n">DSYCL_LIBCXX_LIBRARY_PATH</span><span class="o">=&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="ow">and</span> <span class="n">libc</span><span class="o">++</span><span class="n">abi</span> <span class="n">libraries</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>You can also use configure script to enable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">%</span><span class="n">DPCPP_HOME</span><span class="o">%</span>\<span class="n">llvm</span>\<span class="n">buildbot</span>\<span class="n">configure</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">use</span><span class="o">-</span><span class="n">libcxx</span> \
+<span class="o">--</span><span class="n">libcxx</span><span class="o">-</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="n">headers</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">libcxx</span><span class="o">-</span><span class="n">library</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="ow">and</span> <span class="n">libc</span><span class="o">++</span> <span class="n">abi</span> <span class="n">libraries</span><span class="o">&gt;</span>
+<span class="n">python</span> <span class="o">%</span><span class="n">DPCPP_HOME</span><span class="o">%</span>\<span class="n">llvm</span>\<span class="n">buildbot</span>\<span class="nb">compile</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</section>
+<section id="build-dpc-toolchain-with-support-for-nvidia-cuda">
+<h3>Build DPC++ toolchain with support for NVIDIA CUDA<a class="headerlink" href="#build-dpc-toolchain-with-support-for-nvidia-cuda" title="Permalink to this headline">¶</a></h3>
+<p>There is experimental support for DPC++ for CUDA devices.</p>
+<p>To enable support for CUDA devices, follow the instructions for the Linux or
+Windows DPC++ toolchain, but add the <code class="docutils literal notranslate"><span class="pre">--cuda</span></code> flag to <code class="docutils literal notranslate"><span class="pre">configure.py</span></code>. Note,
+the CUDA backend has Windows support; windows subsystem for
+linux (WSL) is not needed to build and run the CUDA backend.</p>
+<p>Enabling this flag requires an installation of at least
+<a class="reference external" href="https://developer.nvidia.com/cuda-10.2-download-archive">CUDA 10.2</a> on
+the system, refer to
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">NVIDIA CUDA Installation Guide for Linux</a>
+or
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html">NVIDIA CUDA Installation Guide for Windows</a></p>
+<p><strong><em>NOTE:</em></strong> An installation of at least
+<a class="reference external" href="https://developer.nvidia.com/cuda-downloads">CUDA 11.6</a> is recommended because
+there is a known issue with some math builtins when using -O1/O2/O3
+Optimization options for CUDA toolkits prior to 11.6 (This is due to a bug in
+earlier versions of the CUDA toolkit: see
+<a class="reference external" href="https://forums.developer.nvidia.com/t/libdevice-functions-causing-ptxas-segfault/193352">this issue</a>).</p>
+<p>An installation of at least
+<a class="reference external" href="https://developer.nvidia.com/cuda-11.0-download-archive">CUDA 11.0</a>
+is required to fully utilize Turing (SM 75) devices and to enable Ampere (SM 80)
+core features.</p>
+<p>The CUDA backend should work on Windows or Linux operating systems with any
+GPU compatible with SM 50 or above. The default SM for the NVIDIA CUDA backend
+is 5.0. Users can specify lower values, but some features may not be supported.</p>
+<p><strong>Non-standard CUDA location</strong></p>
+<p>If the CUDA toolkit is installed in a non-default location on your system, two considerations must be made.</p>
+<p>Firstly, <strong>do not</strong> add the toolkit to your standard environment variables (<code class="docutils literal notranslate"><span class="pre">PATH</span></code>, <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code>), as to do so will create conflicts with OpenCL headers.</p>
+<p>Secondly, set the <code class="docutils literal notranslate"><span class="pre">CUDA_LIB_PATH</span></code> environment variable and pass the CMake variable <code class="docutils literal notranslate"><span class="pre">CUDA_TOOLKIT_ROOT_DIR</span></code> as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CUDA_LIB_PATH=/path/to/cuda/toolkit/lib64/stubs CC=gcc CXX=g++ python $DPCPP_HOME/llvm/buildbot/configure.py --cuda --cmake-opt=&quot;-DCUDA_TOOLKIT_ROOT_DIR=/path/to/cuda/toolkit&quot;
+
+CUDA_LIB_PATH=/path/to/cuda/toolkit/lib64/stubs CC=gcc CXX=g++ python $DPCPP_HOME/llvm/buildbot/compile.py
+
+$DPCPP_HOME/llvm/build/bin/clang++ -std=c++17 -O3 -fsycl -fsycl-targets=nvptx64-nvidia-cuda --cuda-path=/path/to/cuda/toolkit *.cpp -o a.out
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DPCPP_HOME/llvm/build/lib ./a.out
+</pre></div>
+</div>
+</section>
+<section id="build-dpc-toolchain-with-support-for-hip-amd">
+<h3>Build DPC++ toolchain with support for HIP AMD<a class="headerlink" href="#build-dpc-toolchain-with-support-for-hip-amd" title="Permalink to this headline">¶</a></h3>
+<p>There is experimental support for DPC++ for HIP on AMD devices. Note as this is
+still experimental and there is no continuous integration for this yet there
+are therefore no guarantees for supported platforms or configurations.</p>
+<p>To enable support for HIP devices, follow the instructions for the Linux
+DPC++ toolchain, but add the <code class="docutils literal notranslate"><span class="pre">--hip</span></code> flag to <code class="docutils literal notranslate"><span class="pre">configure.py</span></code></p>
+<p>Enabling this flag requires an installation of
+ROCm on the system, for instruction on how to install this refer to
+<a class="reference external" href="https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html">AMD ROCm Installation Guide for Linux</a>.</p>
+<p>Currently, this has only been tried on Linux, with ROCm 4.2.0 or 4.3.0 and
+using the MI50 (gfx906) and MI100 (gfx908) devices.</p>
+<p><a class="reference external" href="https://llvm.org/docs/AMDGPUUsage.html">LLD</a> is necessary for the AMDGPU compilation chain.
+The AMDGPU backend generates a standard ELF [ELF] relocatable code object that can be linked by lld to
+produce a standard ELF shared code object which can be loaded and executed on an AMDGPU target.
+The LLD project is enabled by default when configuring for HIP. For more details
+on building LLD refer to <a class="reference external" href="https://lld.llvm.org/">LLD Build Guide</a>.</p>
+<p>The following CMake variables can be updated to change where CMake is looking
+for the HIP installation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SYCL_BUILD_PI_HIP_INCLUDE_DIR</span></code>: Path to HIP include directory (default
+<code class="docutils literal notranslate"><span class="pre">/opt/rocm/hip/include</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SYCL_BUILD_PI_HIP_HSA_INCLUDE_DIR</span></code>: Path to HSA include directory (default
+<code class="docutils literal notranslate"><span class="pre">/opt/rocm/hsa/include</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SYCL_BUILD_PI_HIP_AMD_LIBRARY</span></code>: Path to HIP runtime library (default
+<code class="docutils literal notranslate"><span class="pre">/opt/rocm/hip/lib/libamdhip64.so</span></code>).</p></li>
+</ul>
+</section>
+<section id="build-dpc-toolchain-with-support-for-hip-nvidia">
+<h3>Build DPC++ toolchain with support for HIP NVIDIA<a class="headerlink" href="#build-dpc-toolchain-with-support-for-hip-nvidia" title="Permalink to this headline">¶</a></h3>
+<p>There is experimental support for DPC++ for HIP on Nvidia devices. Note as this
+is still experimental and there is no continuous integration for this yet there
+are therefore no guarantees for supported platforms or configurations.</p>
+<p>This is a compatibility feature and the <a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">CUDA backend</a>
+should be preferred to run on NVIDIA GPUs.</p>
+<p>To enable support for HIP NVIDIA devices, follow the instructions for the Linux
+DPC++ toolchain, but add the <code class="docutils literal notranslate"><span class="pre">--hip</span></code> and <code class="docutils literal notranslate"><span class="pre">--hip-platform</span> <span class="pre">NVIDIA</span></code> flags to
+<code class="docutils literal notranslate"><span class="pre">configure.py</span></code>.</p>
+<p>Enabling this flag requires HIP to be installed, more specifically
+<a class="reference external" href="https://rocmdocs.amd.com/en/latest/Installation_Guide/HIP-Installation.html#nvidia-platform">HIP NVCC</a>,
+as well as CUDA to be installed, see
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">NVIDIA CUDA Installation Guide for Linux</a>.</p>
+<p>Currently, this has only been tried on Linux, with ROCm 4.2.0 or 4.3.0, with
+CUDA 11, and using a GeForce 1060 device.</p>
+</section>
+<section id="build-dpc-toolchain-with-support-for-esimd-cpu-emulation">
+<h3>Build DPC++ toolchain with support for ESIMD CPU Emulation<a class="headerlink" href="#build-dpc-toolchain-with-support-for-esimd-cpu-emulation" title="Permalink to this headline">¶</a></h3>
+<p>There is experimental support for DPC++ for using ESIMD CPU Emulation</p>
+<p>This feature supports ESIMD CPU Emulation using CM_EMU library <a class="reference external" href="https://github.com/intel/cm-cpu-emulation">CM
+Emulation project</a>. The
+library package will be generated from source codes downloaded from
+its open source project and installed in your deploy directory during
+toolchain build.</p>
+<p>To enable support for ESIMD CPU emulation, follow the instructions for
+the Linux DPC++ toolchain, but add the `–enable-esimd-emulator’.</p>
+<p>Enabling this flag requires following packages installed.</p>
+<ul class="simple">
+<li><p>Ubuntu 20.04</p>
+<ul>
+<li><p>libva-dev / 2.7.0-2</p></li>
+<li><p>libffi-dev / 3.3-4</p></li>
+<li><p>libtool</p></li>
+</ul>
+</li>
+<li><p>RHEL 8.*</p>
+<ul>
+<li><p>libffi</p></li>
+<li><p>libffi-devel</p></li>
+<li><p>libva</p></li>
+<li><p>libva-devel</p></li>
+</ul>
+</li>
+</ul>
+<p>Currently, this feature was tested and verified on Ubuntu 20.04
+environment.</p>
+</section>
+<section id="build-doxygen-documentation">
+<h3>Build Doxygen documentation<a class="headerlink" href="#build-doxygen-documentation" title="Permalink to this headline">¶</a></h3>
+<p>Building Doxygen documentation is similar to building the product itself. First,
+the following tools need to be installed:</p>
+<ul class="simple">
+<li><p>doxygen</p></li>
+<li><p>graphviz</p></li>
+</ul>
+<p>Then you’ll need to add the following options to your CMake configuration
+command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DLLVM_ENABLE_DOXYGEN</span><span class="o">=</span><span class="n">ON</span>
+</pre></div>
+</div>
+<p>After CMake cache is generated, build the documentation with <code class="docutils literal notranslate"><span class="pre">doxygen-sycl</span></code>
+target. It will be put to <code class="docutils literal notranslate"><span class="pre">$DPCPP_HOME/llvm/build/tools/sycl/doc/html</span></code>
+directory.</p>
+</section>
+<section id="deployment">
+<h3>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h3>
+<p>TODO: add instructions how to deploy built DPC++ toolchain.</p>
+</section>
+</section>
+<section id="use-dpc-toolchain">
+<h2>Use DPC++ toolchain<a class="headerlink" href="#use-dpc-toolchain" title="Permalink to this headline">¶</a></h2>
+<section id="install-low-level-runtime">
+<h3>Install low level runtime<a class="headerlink" href="#install-low-level-runtime" title="Permalink to this headline">¶</a></h3>
+<p>To run DPC++ applications on OpenCL devices, OpenCL implementation(s) must be
+present in the system.</p>
+<p>To run DPC++ applications on Level Zero devices, Level Zero implementation(s)
+must be present in the system. You can find the link to the Level Zero spec in
+the following section <a class="reference external" href="#find-more">Find More</a>.</p>
+<p>The Level Zero RT for <code class="docutils literal notranslate"><span class="pre">GPU</span></code>, OpenCL RT for <code class="docutils literal notranslate"><span class="pre">GPU</span></code>, OpenCL RT for <code class="docutils literal notranslate"><span class="pre">CPU</span></code>, FPGA
+emulation RT and TBB runtime which are needed to run DPC++ application
+on Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> or Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> devices can be downloaded using links in
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf"><span class="xref myst">the dependency configuration file</span></a>
+and installed following the instructions below. The same versions are used in
+PR testing.</p>
+<p><strong>Linux</strong>:</p>
+<ol>
+<li><p>Extract the archive. For example, for the archives
+<code class="docutils literal notranslate"><span class="pre">oclcpuexp_&lt;cpu_version&gt;.tar.gz</span></code> and <code class="docutils literal notranslate"><span class="pre">fpgaemu_&lt;fpga_version&gt;.tar.gz</span></code> you would
+run the following commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract OpenCL FPGA emulation RT</span>
+mkdir -p /opt/intel/oclfpgaemu_&lt;fpga_version&gt;
+<span class="nb">cd</span> /opt/intel/oclfpgaemu_&lt;fpga_version&gt;
+tar zxvf fpgaemu_&lt;fpga_version&gt;.tar.gz
+<span class="c1"># Extract OpenCL CPU RT</span>
+mkdir -p /opt/intel/oclcpuexp_&lt;cpu_version&gt;
+<span class="nb">cd</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;
+tar -zxvf oclcpu_rt_&lt;cpu_version&gt;.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>Create ICD file pointing to the new runtime (requires root access)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenCL FPGA emulation RT</span>
+<span class="nb">echo</span>  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64/libintelocl_emu.so &gt;
+  /etc/OpenCL/vendors/intel_fpgaemu.icd
+<span class="c1"># OpenCL CPU RT</span>
+<span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64/libintelocl.so &gt;
+  /etc/OpenCL/vendors/intel_expcpu.icd
+</pre></div>
+</div>
+</li>
+<li><p>Extract or build TBB libraries using links in
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf"><span class="xref myst">the dependency configuration file</span></a>. For example,
+for the archive oneapi-tbb-&lt;tbb_version&gt;-lin.tgz:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /opt/intel
+<span class="nb">cd</span> /opt/intel
+tar -zxvf oneapi-tbb*lin.tgz
+</pre></div>
+</div>
+</li>
+<li><p>Copy files from or create symbolic links to TBB libraries in OpenCL RT
+folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenCL FPGA emulation RT</span>
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so.12
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so.2
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+<span class="c1"># OpenCL CPU RT</span>
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so
+  /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so
+  /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so.12
+  /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so.2
+  /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
+</pre></div>
+</div>
+</li>
+<li><p>Configure library paths (requires root access)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64 &gt;
+  /etc/ld.so.conf.d/libintelopenclexp.conf
+<span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64 &gt;&gt;
+  /etc/ld.so.conf.d/libintelopenclexp.conf
+ldconfig -f /etc/ld.so.conf.d/libintelopenclexp.conf
+</pre></div>
+</div>
+</li>
+</ol>
+<p><strong>Windows (64-bit)</strong>:</p>
+<ol>
+<li><p>If you need OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> as well, then update/install it
+first. Do it <strong>before</strong> installing OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime as
+OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> installer may re-write some important
+files or settings and make existing OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime
+not working properly.</p></li>
+<li><p>Extract the archive with OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> and/or for Intel
+<code class="docutils literal notranslate"><span class="pre">FPGA</span></code> emulation using links in
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf"><span class="xref myst">the dependency configuration file</span></a>.  For
+example, to <code class="docutils literal notranslate"><span class="pre">c:\oclcpu_rt_&lt;cpu_version&gt;</span></code>.</p></li>
+<li><p>Extract the archive with TBB runtime or build it from sources using links
+in <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf"><span class="xref myst">the dependency configuration file</span></a>.  For
+example, to <code class="docutils literal notranslate"><span class="pre">c:\oneapi-tbb-&lt;tbb_version&gt;</span></code>.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code> as <code class="docutils literal notranslate"><span class="pre">Administrator</span></code>. To do that click <code class="docutils literal notranslate"><span class="pre">Start</span></code> button,
+type <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code>, click the Right mouse button on it, then click
+<code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">As</span> <span class="pre">Administrator</span></code>, then click <code class="docutils literal notranslate"><span class="pre">Yes</span></code> to confirm.</p></li>
+<li><p>In the opened windows run <code class="docutils literal notranslate"><span class="pre">install.bat</span></code> provided with the extracted files
+to install runtime to the system and setup environment variables. So, if the
+extracted files are in <code class="docutils literal notranslate"><span class="pre">c:\oclcpu_rt_&lt;cpu_version&gt;\</span></code> folder, then type the
+command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install OpenCL FPGA emulation RT</span>
+<span class="c1"># Answer Y to clean previous OCL_ICD_FILENAMES configuration and ICD records cleanup</span>
+c:<span class="se">\o</span>clfpga_rt_&lt;fpga_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\o</span>neapi-tbb-&lt;tbb_version&gt;<span class="se">\r</span>edist<span class="se">\i</span>ntel64<span class="se">\v</span>c14
+<span class="c1"># Install OpenCL CPU RT</span>
+<span class="c1"># Answer N for ICD records cleanup</span>
+c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\o</span>neapi-tbb-&lt;tbb_version&gt;<span class="se">\r</span>edist<span class="se">\i</span>ntel64<span class="se">\v</span>c14
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="obtain-prerequisites-for-ahead-of-time-aot-compilation">
+<h3>Obtain prerequisites for ahead of time (AOT) compilation<a class="headerlink" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="design/CompilerAndRuntimeDesign.md#ahead-of-time-aot-compilation">Ahead of time compilation</a>
+requires ahead of time compiler available in <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. There is
+AOT compiler for each device type:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GPU</span></code>, Level Zero and OpenCL runtimes are supported,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CPU</span></code>, OpenCL runtime is supported,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Accelerator</span></code> (FPGA or FPGA emulation), OpenCL runtime is supported.</p></li>
+</ul>
+<section id="gpu">
+<h4>GPU<a class="headerlink" href="#gpu" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Linux</p>
+<p>There are two ways how to obtain GPU AOT compiler <code class="docutils literal notranslate"><span class="pre">ocloc</span></code>:</p>
+<ul class="simple">
+<li><p>(Ubuntu) Download and install intel-ocloc_***.deb package from
+<a class="reference external" href="https://github.com/intel/compute-runtime/releases">intel/compute-runtime releases</a>.
+This package should have the same version as Level Zero / OpenCL GPU
+runtimes installed on the system.</p></li>
+<li><p>(other distros) <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> is a part of
+<a class="reference external" href="https://dgpu-docs.intel.com/index.html">Intel® software packages for general purpose GPU capabilities</a>.</p></li>
+</ul>
+</li>
+<li><p>Windows</p>
+<ul class="simple">
+<li><p>GPU AOT compiler <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> is a part of
+<a class="reference external" href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html">Intel® oneAPI Base Toolkit</a>
+(Intel® oneAPI DPC++/C++ Compiler component).<br />
+Make sure that the following path to <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> binary is available in <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
+environment variable:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;oneAPI</span> <span class="pre">installation</span> <span class="pre">location&gt;/compiler/&lt;version&gt;/windows/lib/ocloc</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cpu">
+<h4>CPU<a class="headerlink" href="#cpu" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>CPU AOT compiler <code class="docutils literal notranslate"><span class="pre">opencl-aot</span></code> is enabled by default. For more, see
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../opencl/opencl-aot/README.md"><span class="xref myst">opencl-aot documentation</span></a>.</p></li>
+</ul>
+</section>
+<section id="accelerator">
+<h4>Accelerator<a class="headerlink" href="#accelerator" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Accelerator AOT compiler <code class="docutils literal notranslate"><span class="pre">aoc</span></code> is a part of
+<a class="reference external" href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html">Intel® oneAPI Base Toolkit</a>
+(Intel® oneAPI DPC++/C++ Compiler component).<br />
+Make sure that these binaries are available in <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">aoc</span></code> from <code class="docutils literal notranslate"><span class="pre">&lt;oneAPI</span> <span class="pre">installation</span> <span class="pre">location&gt;/compiler/&lt;version&gt;/&lt;OS&gt;/lib/oclfpga/bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aocl-ioc64</span></code> from <code class="docutils literal notranslate"><span class="pre">&lt;oneAPI</span> <span class="pre">installation</span> <span class="pre">location&gt;/compiler/&lt;version&gt;/&lt;OS&gt;/bin</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="test-dpc-toolchain">
+<h3>Test DPC++ toolchain<a class="headerlink" href="#test-dpc-toolchain" title="Permalink to this headline">¶</a></h3>
+<section id="run-in-tree-lit-tests">
+<h4>Run in-tree LIT tests<a class="headerlink" href="#run-in-tree-lit-tests" title="Permalink to this headline">¶</a></h4>
+<p>To verify that built DPC++ toolchain is working correctly, run:</p>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/check.py
+</pre></div>
+</div>
+<p><strong>Windows (64-bit)</strong>:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\check.py
+</pre></div>
+</div>
+<p>If no OpenCL GPU/CPU runtimes are available, the corresponding tests are
+skipped.</p>
+<p>If CUDA support has been built, it is tested only if there are CUDA devices
+available.</p>
+<p>If testing with HIP for AMD, the lit tests will use <code class="docutils literal notranslate"><span class="pre">gfx906</span></code> as the default
+architecture. It is possible to change it by adding
+<code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend=amdgcn-amd-amdhsa</span> <span class="pre">--offload-arch=&lt;target&gt;</span></code> to the CMake
+variable <code class="docutils literal notranslate"><span class="pre">SYCL_CLANG_EXTRA_FLAGS</span></code>.</p>
+</section>
+<section id="run-dpc-e2e-test-suite">
+<h4>Run DPC++ E2E test suite<a class="headerlink" href="#run-dpc-e2e-test-suite" title="Permalink to this headline">¶</a></h4>
+<p>Follow instructions from the link below to build and run tests:
+<a class="reference external" href="https://github.com/intel/llvm-test-suite/tree/intel/SYCL#execution">README</a></p>
+</section>
+<section id="run-khronos-sycl-conformance-test-suite-optional">
+<h4>Run Khronos* SYCL* conformance test suite (optional)<a class="headerlink" href="#run-khronos-sycl-conformance-test-suite-optional" title="Permalink to this headline">¶</a></h4>
+<p>Khronos* SYCL* conformance test suite (CTS) is intended to validate
+implementation conformance to Khronos* SYCL* specification. DPC++ compiler is
+expected to pass significant number of tests, and it keeps improving.</p>
+<p>Follow Khronos* SYCL* CTS instructions from
+<a class="reference external" href="https://github.com/KhronosGroup/SYCL-CTS#sycl-121-conformance-test-suite">README</a>
+file to obtain test sources and instructions how build and execute the tests.</p>
+<p>To configure testing of DPC++ toochain set
+<code class="docutils literal notranslate"><span class="pre">SYCL_IMPLEMENTATION=Intel_SYCL</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Intel_SYCL_ROOT=&lt;path</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">SYCL</span> <span class="pre">installation&gt;</span></code> CMake variables.</p>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake -DIntel_SYCL_ROOT<span class="o">=</span><span class="nv">$DPCPP_HOME</span>/deploy -DSYCL_IMPLEMENTATION<span class="o">=</span>Intel_SYCL ...
+</pre></div>
+</div>
+<p><strong>Windows (64-bit)</strong>:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>cmake -DIntel_SYCL_ROOT=<span class="nv">%DPCPP_HOME%</span>\deploy -DSYCL_IMPLEMENTATION=Intel_SYCL ...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="run-simple-dpc-application">
+<h3>Run simple DPC++ application<a class="headerlink" href="#run-simple-dpc-application" title="Permalink to this headline">¶</a></h3>
+<p>A simple DPC++ or SYCL* program consists of following parts:</p>
+<ol class="simple">
+<li><p>Header section</p></li>
+<li><p>Allocating buffer for data</p></li>
+<li><p>Creating SYCL queue</p></li>
+<li><p>Submitting command group to SYCL queue which includes the kernel</p></li>
+<li><p>Wait for the queue to complete the work</p></li>
+<li><p>Use buffer accessor to retrieve the result on the device and verify the data</p></li>
+<li><p>The end</p></li>
+</ol>
+<p>Creating a file <code class="docutils literal notranslate"><span class="pre">simple-sycl-app.cpp</span></code> with the following C++/SYCL code:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;CL/sycl.hpp&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Creating buffer of 4 ints to be used inside the kernel code</span>
+  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">buffer</span><span class="o">&lt;</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">cl_int</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">Buffer</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+
+  <span class="c1">// Creating SYCL queue</span>
+  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">queue</span> <span class="n">Queue</span><span class="p">;</span>
+
+  <span class="c1">// Size of index space for kernel</span>
+  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span> <span class="n">NumOfWorkItems</span><span class="p">{</span><span class="n">Buffer</span><span class="p">.</span><span class="n">size</span><span class="p">()};</span>
+
+  <span class="c1">// Submitting command group(work) to queue</span>
+  <span class="n">Queue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">cgh</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Getting write only access to the buffer on a device</span>
+    <span class="k">auto</span> <span class="n">Accessor</span> <span class="o">=</span> <span class="n">Buffer</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+    <span class="c1">// Executing kernel</span>
+    <span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">FillBuffer</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="n">NumOfWorkItems</span><span class="p">,</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">id</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span> <span class="n">WIid</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// Fill buffer with indexes</span>
+          <span class="n">Accessor</span><span class="p">[</span><span class="n">WIid</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">cl_int</span><span class="p">)</span><span class="n">WIid</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="p">});</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Getting read only access to the buffer on the host.</span>
+  <span class="c1">// Implicit barrier waiting for queue to complete the work.</span>
+  <span class="k">const</span> <span class="k">auto</span> <span class="n">HostAccessor</span> <span class="o">=</span> <span class="n">Buffer</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read</span><span class="o">&gt;</span><span class="p">();</span>
+
+  <span class="c1">// Check the results</span>
+  <span class="kt">bool</span> <span class="n">MismatchFound</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">I</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">I</span> <span class="o">&lt;</span> <span class="n">Buffer</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">I</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HostAccessor</span><span class="p">[</span><span class="n">I</span><span class="p">]</span> <span class="o">!=</span> <span class="n">I</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The result is incorrect for element: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">I</span>
+                <span class="o">&lt;&lt;</span> <span class="s">&quot; , expected: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">I</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; , got: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">HostAccessor</span><span class="p">[</span><span class="n">I</span><span class="p">]</span>
+                <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+      <span class="n">MismatchFound</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">MismatchFound</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;The results are correct!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="n">MismatchFound</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To build simple-sycl-app put <code class="docutils literal notranslate"><span class="pre">bin</span></code> and <code class="docutils literal notranslate"><span class="pre">lib</span></code> to PATHs:</p>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$DPCPP_HOME</span>/llvm/build/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$DPCPP_HOME</span>/llvm/build/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</pre></div>
+</div>
+<p><strong>Windows (64-bit)</strong>:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span><span class="nv">%DPCPP_HOME%</span>\llvm\build\bin;<span class="nv">%PATH%</span>
+<span class="k">set</span> <span class="nv">LIB</span><span class="p">=</span><span class="nv">%DPCPP_HOME%</span>\llvm\build\lib;<span class="nv">%LIB%</span>
+</pre></div>
+</div>
+<p>and run following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl simple-sycl-app.cpp -o simple-sycl-app.exe
+</pre></div>
+</div>
+<p>When building for CUDA or HIP NVIDIA, use the CUDA target triple as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>nvptx64-nvidia-cuda <span class="se">\</span>
+  simple-sycl-app.cpp -o simple-sycl-app-cuda.exe
+</pre></div>
+</div>
+<p>When building for HIP AMD, use the AMD target triple and specify the
+target architecture with <code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend</span> <span class="pre">--offload-arch=&lt;arch&gt;</span></code>
+as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>amdgcn-amd-amdhsa <span class="se">\</span>
+  -Xsycl-target-backend --offload-arch<span class="o">=</span>gfx906              <span class="se">\</span>
+  simple-sycl-app.cpp -o simple-sycl-app-amd.exe
+</pre></div>
+</div>
+<p>To build simple-sycl-app ahead of time for GPU, CPU or Accelerator devices,
+specify the target architecture.  The examples provided use a supported
+alias for the target, representing a full triple.  Additional details can
+be found in the <a class="reference external" href="UsersManual.md#generic-options">Users Manual</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_gen</span></code> for GPU,
+<code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_x86_64</span></code> for CPU,
+<code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_fpga</span></code> for Accelerator.</p>
+<p>Multiple target architectures are supported.</p>
+<p>E.g., this command builds simple-sycl-app for GPU and CPU devices in
+ahead of time mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>spir64_gen,spir64_x86_64 simple-sycl-app.cpp -o simple-sycl-app-aot.exe
+</pre></div>
+</div>
+<p>Additionally, user can pass specific options of AOT compiler to
+the DPC++ compiler using <code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend</span></code> option, see
+<a class="reference external" href="design/CompilerAndRuntimeDesign.md#device-code-formats">Device code formats</a> for
+more. To find available options, execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ocloc</span> <span class="pre">compile</span> <span class="pre">--help</span></code> for GPU,
+<code class="docutils literal notranslate"><span class="pre">opencl-aot</span> <span class="pre">--help</span></code> for CPU,
+<code class="docutils literal notranslate"><span class="pre">aoc</span> <span class="pre">-help</span> <span class="pre">-sycl</span></code> for Accelerator.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">simple-sycl-app.exe</span></code> application doesn’t specify SYCL device for
+execution, so SYCL runtime will use <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> logic to select one
+of accelerators available in the system or SYCL host device.
+In this case, the behavior of the <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> can be altered
+using the <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment variable, setting <code class="docutils literal notranslate"><span class="pre">PI_CUDA</span></code> forces
+the usage of the CUDA backend (if available), <code class="docutils literal notranslate"><span class="pre">PI_HIP</span></code> forces
+the usage of the HIP backend (if available), <code class="docutils literal notranslate"><span class="pre">PI_OPENCL</span></code> will
+force the usage of the OpenCL backend.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SYCL_BE</span><span class="o">=</span>PI_CUDA ./simple-sycl-app-cuda.exe
+</pre></div>
+</div>
+<p>The default is the OpenCL backend if available.
+If there are no OpenCL or CUDA devices available, the SYCL host device is used.
+The SYCL host device executes the SYCL application directly in the host,
+without using any low-level API.</p>
+<p><strong>NOTE</strong>: <code class="docutils literal notranslate"><span class="pre">nvptx64-nvidia-cuda</span></code> is usable with <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>
+if clang was built with the cmake option <code class="docutils literal notranslate"><span class="pre">SYCL_ENABLE_PLUGINS=cuda</span></code>.</p>
+<p><strong>Linux &amp; Windows (64-bit)</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./simple-sycl-app.exe
+The results are correct!
+</pre></div>
+</div>
+<p><strong>NOTE</strong>: Currently, when the application has been built with the CUDA target,
+the CUDA backend must be selected at runtime using the <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment
+variable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SYCL_BE</span><span class="o">=</span>PI_CUDA ./simple-sycl-app-cuda.exe
+</pre></div>
+</div>
+<p><strong>NOTE</strong>: DPC++/SYCL developers can specify SYCL device for execution using
+device selectors (e.g. <code class="docutils literal notranslate"><span class="pre">cl::sycl::cpu_selector</span></code>, <code class="docutils literal notranslate"><span class="pre">cl::sycl::gpu_selector</span></code>,
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/extensions/supported/sycl_ext_intel_fpga_device_selector.md"><span class="xref myst">Intel FPGA selector(s)</span></a>) as
+explained in following section <a class="reference external" href="#code-the-program-for-a-specific-gpu">Code the program for a specific
+GPU</a>.</p>
+</section>
+<section id="code-the-program-for-a-specific-gpu">
+<h3>Code the program for a specific GPU<a class="headerlink" href="#code-the-program-for-a-specific-gpu" title="Permalink to this headline">¶</a></h3>
+<p>To specify OpenCL device SYCL provides the abstract <code class="docutils literal notranslate"><span class="pre">cl::sycl::device_selector</span></code>
+class which the can be used to define how the runtime should select the best
+device.</p>
+<p>The method <code class="docutils literal notranslate"><span class="pre">cl::sycl::device_selector::operator()</span></code> of the SYCL
+<code class="docutils literal notranslate"><span class="pre">cl::sycl::device_selector</span></code> is an abstract member function which takes a
+reference to a SYCL device and returns an integer score. This abstract member
+function can be implemented in a derived class to provide a logic for selecting
+a SYCL device. SYCL runtime uses the device for with the highest score is
+returned. Such object can be passed to <code class="docutils literal notranslate"><span class="pre">cl::sycl::queue</span></code> and <code class="docutils literal notranslate"><span class="pre">cl::sycl::device</span></code>
+constructors.</p>
+<p>The example below illustrates how to use <code class="docutils literal notranslate"><span class="pre">cl::sycl::device_selector</span></code> to create
+device and queue objects bound to Intel GPU device:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;CL/sycl.hpp&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">class</span> <span class="nc">NEOGPUDeviceSelector</span> <span class="o">:</span> <span class="k">public</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device_selector</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device</span> <span class="o">&amp;</span><span class="n">Device</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
+      <span class="k">using</span> <span class="k">namespace</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="p">;</span>
+
+      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DeviceName</span> <span class="o">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">device</span><span class="o">::</span><span class="n">name</span><span class="o">&gt;</span><span class="p">();</span>
+      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DeviceVendor</span> <span class="o">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">device</span><span class="o">::</span><span class="n">vendor</span><span class="o">&gt;</span><span class="p">();</span>
+
+      <span class="k">return</span> <span class="n">Device</span><span class="p">.</span><span class="n">is_gpu</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">DeviceName</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;HD Graphics NEO&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="n">NEOGPUDeviceSelector</span> <span class="n">Selector</span><span class="p">;</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">queue</span> <span class="n">Queue</span><span class="p">(</span><span class="n">Selector</span><span class="p">);</span>
+    <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device</span> <span class="n">Device</span><span class="p">(</span><span class="n">Selector</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">invalid_parameter_error</span> <span class="o">&amp;</span><span class="n">E</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">E</span><span class="p">.</span><span class="n">what</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The device selector below selects an NVIDIA device only, and won’t execute if
+there is none.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CUDASelector</span> <span class="o">:</span> <span class="k">public</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device_selector</span> <span class="p">{</span>
+  <span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device</span> <span class="o">&amp;</span><span class="n">Device</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
+      <span class="k">using</span> <span class="k">namespace</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="p">;</span>
+      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DriverVersion</span> <span class="o">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">device</span><span class="o">::</span><span class="n">driver_version</span><span class="o">&gt;</span><span class="p">();</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="n">Device</span><span class="p">.</span><span class="n">is_gpu</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">DriverVersion</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;CUDA&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; CUDA device found &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">};</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="using-the-dpc-toolchain-on-cuda-platforms">
+<h3>Using the DPC++ toolchain on CUDA platforms<a class="headerlink" href="#using-the-dpc-toolchain-on-cuda-platforms" title="Permalink to this headline">¶</a></h3>
+<p>The DPC++ toolchain support on CUDA platforms is still in an experimental phase.
+Currently, the DPC++ toolchain relies on having a recent OpenCL implementation
+on the system in order to link applications to the DPC++ runtime.
+The OpenCL implementation is not used at runtime if only the CUDA backend is
+used in the application, but must be installed.</p>
+<p>The OpenCL implementation provided by the CUDA SDK is OpenCL 1.2, which is
+too old to link with the DPC++ runtime and lacks some symbols.</p>
+<p>We recommend installing the low level CPU runtime, following the instructions
+in the next section.</p>
+<p>Instead of installing the low level CPU runtime, it is possible to build and
+install the
+<a class="reference external" href="https://github.com/KhronosGroup/OpenCL-ICD-Loader">Khronos ICD loader</a>,
+which contains all the symbols required.</p>
+</section>
+</section>
+<section id="c-standard">
+<h2>C++ standard<a class="headerlink" href="#c-standard" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>DPC++ runtime and headers require C++17 at least.</p></li>
+<li><p>DPC++ compiler builds apps as C++17 apps by default. Higher versions of
+standard are supported as well.</p></li>
+</ul>
+</section>
+<section id="known-issues-and-limitations">
+<h2>Known Issues and Limitations<a class="headerlink" href="#known-issues-and-limitations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>DPC++ device compiler fails if the same kernel was used in different
+translation units.</p></li>
+<li><p>SYCL host device is not fully supported.</p></li>
+<li><p>SYCL 2020 support work is in progress.</p></li>
+<li><p>32-bit host/target is not supported.</p></li>
+<li><p>DPC++ works only with OpenCL low level runtimes which support out-of-order
+queues.</p></li>
+<li><p>On Windows linking DPC++ applications with <code class="docutils literal notranslate"><span class="pre">/MTd</span></code> flag is known to cause
+crashes.</p></li>
+</ul>
+<section id="cuda-back-end-limitations">
+<h3>CUDA back-end limitations<a class="headerlink" href="#cuda-back-end-limitations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Backend is only supported on Linux</p></li>
+<li><p>The only combination tested is Ubuntu 18.04 with CUDA 10.2 using a Titan RTX
+GPU (SM 71), but it should work on any GPU compatible with SM 50 or above</p></li>
+<li><p>The NVIDIA OpenCL headers conflict with the OpenCL headers required for this
+project and may cause compilation issues on some platforms</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sycl::sqrt</span></code> is not correctly rounded by default as the SYCL specification
+allows lower precision, when porting from CUDA it may be helpful to use
+<code class="docutils literal notranslate"><span class="pre">-fsycl-fp32-prec-sqrt</span></code> to use the correctly rounded square root, this is
+significantly slower but matches the default precision used by <code class="docutils literal notranslate"><span class="pre">nvcc</span></code>, and
+this <code class="docutils literal notranslate"><span class="pre">clang++</span></code> flag is equivalent to the <code class="docutils literal notranslate"><span class="pre">nvcc</span></code> <code class="docutils literal notranslate"><span class="pre">-prec-sqrt</span></code> flag, except that
+it defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p>No Opt (O0) uses the IPSCCP compiler pass by default, although the IPSCCP pass
+can be switched off at O0 using the <code class="docutils literal notranslate"><span class="pre">-mllvm</span> <span class="pre">-use-ipsccp-nvptx-O0=false</span></code> flag at
+the user’s discretion.
+The reason that the IPSCCP pass is used by default even at O0 is that there is
+currently an unresolved issue with the nvvm-reflect compiler pass: This pass is
+used to pick the correct branches depending on the SM version which can be
+optionally specified by the <code class="docutils literal notranslate"><span class="pre">--cuda-gpu-arch</span></code> flag.
+If the arch flag is not specified by the user, the default value, SM 50, is used.
+Without the execution of the IPSCCP pass at -O0 when using a low SM version,
+dead instructions which require a higher SM version can remain. Since
+corresponding issues occur in other backends future work will aim for a
+universal solution to these issues.</p></li>
+</ul>
+</section>
+<section id="hip-back-end-limitations">
+<h3>HIP back-end limitations<a class="headerlink" href="#hip-back-end-limitations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Requires a ROCm compatible operating system, for full details of supported
+Operating System for ROCm, please refer to the
+<a class="reference external" href="https://github.com/RadeonOpenCompute/ROCm#supported-operating-systems">ROCm Supported Operating Systems</a>.</p></li>
+<li><p>Has only been tried with ROCm 4.2.0 and 4.3.0.</p></li>
+<li><p>Has only been tested using the MI50 (gfx906) and MI100 (gfx908) devices.</p></li>
+<li><p>Support is still experimental so not all of the tests are currently passing
+and many of the built-in function are not yet implemented.</p></li>
+<li><p>Additionally there is no continuous integration yet so no guarantee can be
+made for support platforms or configurations</p></li>
+<li><p>Global offsets are currently not supported.</p></li>
+</ul>
+</section>
+</section>
+<section id="find-more">
+<h2>Find More<a class="headerlink" href="#find-more" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>DPC++ specification:
+<a class="reference external" href="https://spec.oneapi.com/versions/latest/elements/dpcpp/source/index.html">https://spec.oneapi.com/versions/latest/elements/dpcpp/source/index.html</a></p></li>
+<li><p>SYCL* 2020 specification:
+<a class="reference external" href="https://www.khronos.org/registry/SYCL/">https://www.khronos.org/registry/SYCL/</a></p></li>
+<li><p>oneAPI Level Zero specification:
+<a class="reference external" href="https://spec.oneapi.com/versions/latest/oneL0/index.html">https://spec.oneapi.com/versions/latest/oneL0/index.html</a></p></li>
+</ul>
+<p>*Other names and brands may be claimed as the property of others.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Data Parallel C++ Documentation</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="UsersManual.html">Users Manual</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>

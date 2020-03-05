@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4.html#a1c040e7acd77cbf98d8d3e730d5b372d", null ]
+];

@@ -1,0 +1,13 @@
+var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c =
+[
+    [ "combination", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_015891ec64515a843ebbb87dc3b40cc4db.html", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_015891ec64515a843ebbb87dc3b40cc4db" ],
+    [ "mt", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#a1f1677bfcbc3dd69a1ee775c52521fb4", null ],
+    [ "combinations", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#adc120f16366ff27abda41bddd0199f9a", null ],
+    [ "defaultK", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#ad8d9d0a9692096d26b64e82e5ce3635c", null ],
+    [ "defaultM", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#a5833114cde20feefb9e0caa5afa87190", null ],
+    [ "defaultN", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#aff0cbc1357d8f6175511b06ae3783aa5", null ],
+    [ "dynamic_p", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#a72e22441fb2b2a29d6c661b55622e22e", null ],
+    [ "num_combinations", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#ae81474c798df62360b541c94d3ecd683", null ],
+    [ "numtiles", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#a072d2d9a1df0048bee45f0372101e90e", null ],
+    [ "scope", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1tpu__params_3_01tpu_1_1dpas_00_017a92bd17227f013ed7ff8a7a635a262c.html#afc6b4088c6cf6651dde2db720c678f90", null ]
+];

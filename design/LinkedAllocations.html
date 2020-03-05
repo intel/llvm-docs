@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Linked allocations &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assert feature" href="Assert.html" />
+    <link rel="prev" title="Global objects in DPC++ runtime" href="GlobalObjectsInRuntime.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Linked allocations</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="GlobalObjectsInRuntime.html">Global objects in DPC++ runtime</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="Assert.html">Assert feature</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section class="tex2jax_ignore mathjax_ignore" id="linked-allocations">
+<h1>Linked allocations<a class="headerlink" href="#linked-allocations" title="Permalink to this headline">¶</a></h1>
+<section id="brief-overview-of-allocations-for-memory-objects">
+<h2>Brief overview of allocations for memory objects<a class="headerlink" href="#brief-overview-of-allocations-for-memory-objects" title="Permalink to this headline">¶</a></h2>
+<p>A SYCL memory object (<code class="docutils literal notranslate"><span class="pre">buffer</span></code>/<code class="docutils literal notranslate"><span class="pre">image</span></code>) can be accessed in multiple contexts
+throughout its lifetime. Since this is dynamic information that is unknown
+during memory object construction, no allocation takes place at that point.
+Instead, memory is allocated in each context whenever the SYCL memory object
+is first accessed there:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">buffer</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">buf</span><span class="p">{</span><span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="nb">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">)};</span> <span class="o">//</span> <span class="n">No</span> <span class="n">allocation</span> <span class="n">here</span>
+
+  <span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">queue</span> <span class="n">q</span><span class="p">;</span>
+  <span class="n">q</span><span class="o">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">cgh</span><span class="p">){</span>
+    <span class="o">//</span> <span class="n">First</span> <span class="n">access</span> <span class="n">to</span> <span class="n">buf</span> <span class="ow">in</span> <span class="n">q</span><span class="s1">&#39;s context: allocate memory</span>
+    <span class="n">auto</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">access</span><span class="p">::</span><span class="n">mode</span><span class="p">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+	<span class="o">...</span>
+  <span class="p">});</span>
+
+  <span class="o">//</span> <span class="n">First</span> <span class="n">access</span> <span class="n">to</span> <span class="n">buf</span> <span class="n">on</span> <span class="n">host</span> <span class="p">(</span><span class="n">assuming</span> <span class="n">q</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">host</span><span class="p">):</span> <span class="n">allocate</span> <span class="n">memory</span>
+  <span class="n">auto</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">access</span><span class="p">::</span><span class="n">mode</span><span class="p">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>In the DPCPP execution graph these allocations are represented by allocation
+command nodes (<code class="docutils literal notranslate"><span class="pre">cl::sycl::detail::AllocaCommand</span></code>). A finished allocation
+command means that the associated memory object is ready for its first use in
+that context, but for host allocation commands it might be the case that no
+actual memory allocation takes place: either because it is possible to reuse the
+data pointer provided by the user:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="nb">int</span> <span class="n">val</span><span class="p">;</span>
+  <span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">buffer</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="n">buf</span><span class="p">{</span><span class="o">&amp;</span><span class="n">val</span><span class="p">,</span> <span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="nb">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">)};</span>
+
+  <span class="o">//</span> <span class="n">An</span> <span class="n">alloca</span> <span class="n">command</span> <span class="ow">is</span> <span class="n">created</span><span class="p">,</span> <span class="n">but</span> <span class="n">it</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">allocate</span> <span class="n">new</span> <span class="n">memory</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">val</span>
+  <span class="o">//</span> <span class="ow">is</span> <span class="n">reused</span> <span class="n">instead</span><span class="o">.</span>
+  <span class="n">auto</span> <span class="n">acc</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">access</span><span class="p">::</span><span class="n">mode</span><span class="p">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Or because a mapped host pointer obtained from a native device memory object
+is used in its place (as is the case for linked commands, covered below).</p>
+</section>
+<section id="linked-allocation-commands">
+<h2>Linked allocation commands<a class="headerlink" href="#linked-allocation-commands" title="Permalink to this headline">¶</a></h2>
+<p>Whenever an allocation command is created for a memory object, it can be created
+as “linked” to another one if they satisfy these requirements:</p>
+<ul class="simple">
+<li><p>Both allocation commands are associated with the same memory object.</p></li>
+<li><p>Exactly one of the two commands is associated with a host context.</p></li>
+<li><p>Neither of the commands is already linked.</p></li>
+</ul>
+<p>The idea behind linked commands is that the device allocation of the pair is
+supposed to reuse the host allocation, i.e. the host memory is requested to be
+shared between the two (the underlying backend is still free to ignore that
+request and allocate additional memory if needed). The difference in handling
+linked and unlinked allocations is summarized in the table below.</p>
+<table class="colwidths-auto docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Unlinked</p></th>
+<th class="head"><p>Linked</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Native memory object creation</p></td>
+<td><p>Created without a host pointer, then initialized as a separate memory transfer operation if a host pointer is available and the first access mode does not discard the data.</p></td>
+<td><p>Created with USE_HOST_PTR if a suitable host pointer is available, regardless of the first access mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Host allocation command behaviour</p></td>
+<td><p>Skipped if a suitable user host pointer is available.</p></td>
+<td><p>In addition to skipping the allocation if a suitable user pointer is provided, the allocation is also skipped if the host command is created after its linked counterpart (it’s retrieved via map operation instead).</p></td>
+</tr>
+<tr class="row-even"><td><p>Memory transfer</p></td>
+<td><p>Performed with read/write operations, device-to-device transfer is done with a host allocation as an intermediary (direct transfer is not supported by PI).</p></td>
+<td><p>Only one allocation from the pair can be active at a time, the switch is done with map/unmap operations. Device-to-device transfer where one of the device allocations is linked is done with the host allocation from the pair as an intermediary (e.g. for transfer from unlinked device allocation A to linked device allocation B: map B -&gt; read A to the host allocation -&gt; unmap B).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="command-linking-approach">
+<h2>Command linking approach<a class="headerlink" href="#command-linking-approach" title="Permalink to this headline">¶</a></h2>
+<p>Whenever two allocation commands are considered for linking, the decision is
+made based on the following criterion: the commands are linked if and only if
+the non-host device of the pair supports host unified memory (i.e. the device
+and host share the same physical memory). The motivation for this is two-fold:</p>
+<ul class="simple">
+<li><p>If the non-host device supports host unified memory, the USE_HOST_PTR flag
+should not result in any additional device memory allocation or copying between
+the two during map/unmap operations.</p></li>
+<li><p>Even if the point above makes no difference for a particular pair of
+allocations (e.g. no host pointer is available for the device allocation),
+it might be possible to exploit that later in the application for another device
+that does support host unified memory.</p></li>
+</ul>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="GlobalObjectsInRuntime.html">Global objects in DPC++ runtime</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="Assert.html">Assert feature</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    </div>
+  </body>
+</html>
