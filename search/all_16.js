@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['wait',['wait',['../classcl_1_1sycl_1_1event.html#a4ce1019bb7e0c38e58339d17548e81f7',1,'cl::sycl::event::wait()'],['../classcl_1_1sycl_1_1event.html#ac6c8f273b74b6b76c76f270f29e80586',1,'cl::sycl::event::wait(const vector_class&lt; event &gt; &amp;EventList)'],['../classcl_1_1sycl_1_1queue.html#ac46bc8ee7cff0a3f77c7afb7d60184b4',1,'cl::sycl::queue::wait()'],['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a9aeaa30df68ed76f504e758a83d740b3',1,'cl::sycl::detail::event_impl::wait()'],['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#aebf80acdf5dcb1026bf40f67042e3740',1,'cl::sycl::detail::queue_impl::wait()']]],
+  ['wait_5fand_5fthrow',['wait_and_throw',['../classcl_1_1sycl_1_1event.html#af651e36e8780b75a851c7587cc9c05a7',1,'cl::sycl::event::wait_and_throw()'],['../classcl_1_1sycl_1_1event.html#a584dcc37a3f18ef093f5eb60424b87cc',1,'cl::sycl::event::wait_and_throw(const vector_class&lt; event &gt; &amp;EventList)'],['../classcl_1_1sycl_1_1queue.html#abfa510446db9f4edd0c16270b199a232',1,'cl::sycl::queue::wait_and_throw()'],['../classcl_1_1sycl_1_1detail_1_1event__impl.html#af54b1c22efd9f80f57cb0db82cf57365',1,'cl::sycl::detail::event_impl::wait_and_throw()']]],
+  ['waitinternal',['waitInternal',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c',1,'cl::sycl::detail::event_impl']]]
+];
