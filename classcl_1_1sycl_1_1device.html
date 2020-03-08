@@ -221,7 +221,7 @@ template&lt;class T &gt; </td></tr>
 <p>Constructs a SYCL device instance using the device selected by the DeviceSelector provided. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">deviceSelector</td><td>SYCL device selector to be used (see 4.6.1.1). </td></tr>
+    <tr><td class="paramname">DeviceSelector</td><td>SYCL device selector to be used (see 4.6.1.1). </td></tr>
   </table>
   </dd>
 </dl>
@@ -365,7 +365,13 @@ template&lt;info::partition_property prop&gt; </div>
 
 <p>Query available SYCL devices. </p>
 <p>The returned vector_class must contain a single SYCL device that is a host device, permitted by the deviceType parameter</p>
-<p>is one of the values described in A.3 of SYCL Spec </p><dl class="section return"><dt>Returns</dt><dd>a vector_class containing all SYCL devices available in the system of the device type specified </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deviceType</td><td>is one of the values described in A.3 of SYCL Spec </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a vector_class containing all SYCL devices available in the system of the device type specified </dd></dl>
 
 </div>
 </div>
@@ -430,7 +436,13 @@ template&lt;info::device param&gt; </div>
 </div><div class="memdoc">
 
 <p>Check SYCL extension support by device. </p>
-<p>is a name of queried extension. </p><dl class="section return"><dt>Returns</dt><dd>true if SYCL device supports the extension. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extension_name</td><td>is a name of queried extension. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if SYCL device supports the extension. </dd></dl>
 
 </div>
 </div>
