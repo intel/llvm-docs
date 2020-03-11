@@ -17,6 +17,7 @@ var searchData=
   ['circularbuffer',['CircularBuffer',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
   ['circularbuffer_3c_20cl_3a_3asycl_3a_3adetail_3a_3acommand_20_2a_3e',['CircularBuffer&lt; cl::sycl::detail::Command *&gt;',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
   ['clusm',['CLUSM',['../classcl_1_1sycl_1_1detail_1_1usm_1_1CLUSM.html',1,'cl::sycl::detail::usm']]],
+  ['code_5flocation',['code_location',['../structcl_1_1sycl_1_1detail_1_1code__location.html',1,'cl::sycl::detail']]],
   ['command',['Command',['../classcl_1_1sycl_1_1detail_1_1Command.html',1,'cl::sycl::detail']]],
   ['compile_5fprogram_5ferror',['compile_program_error',['../classcl_1_1sycl_1_1compile__program__error.html',1,'cl::sycl']]],
   ['compile_5fwith_5fkernel_5fname',['compile_with_kernel_name',['../classcl_1_1sycl_1_1detail_1_1program__impl.html#afe137dd2819614ad149f9673157c8d62',1,'cl::sycl::detail::program_impl']]],

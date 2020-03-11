@@ -36,6 +36,6 @@ var searchData=
   ['getosmemsize',['getOSMemSize',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#aacfd44ffe6bc0bd8eb4d9b596f3ea8e1',1,'cl::sycl::detail::OSUtil']]],
   ['getosmodulehandle',['getOSModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#a0661374eee54c7934f50479d07a3bd65',1,'cl::sycl::detail::OSUtil']]],
   ['getplatformimpl',['getPlatformImpl',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#aaed79a19cb0b34298358c2f3ce7f7933',1,'cl::sycl::detail::context_impl']]],
-  ['getplugin',['getPlugin',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#ae9bc9af4657b84233a4d1139260725b2',1,'cl::sycl::detail::context_impl::getPlugin()'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#af18606417c4104d249d3afb5c54507f3',1,'cl::sycl::detail::device_impl::getPlugin()']]],
+  ['getplugin',['getPlugin',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#ae9bc9af4657b84233a4d1139260725b2',1,'cl::sycl::detail::context_impl::getPlugin()'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#af18606417c4104d249d3afb5c54507f3',1,'cl::sycl::detail::device_impl::getPlugin()'],['../classcl_1_1sycl_1_1detail_1_1event__impl.html#ae28649efc6298a1a68a00924b51fd559',1,'cl::sycl::detail::event_impl::getPlugin()']]],
   ['getstarttime',['getStartTime',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html#a3632f15d2feb52b13644f9ce4d72561a',1,'cl::sycl::detail::HostProfilingInfo']]]
 ];

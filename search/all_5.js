@@ -1,6 +1,8 @@
 var searchData=
 [
   ['elem',['elem',['../structcl_1_1sycl_1_1elem.html',1,'cl::sycl']]],
+  ['emitedgeeventforcommanddependence',['emitEdgeEventForCommandDependence',['../classcl_1_1sycl_1_1detail_1_1Command.html#a089a90b610973c072f4f43b2d20dac00',1,'cl::sycl::detail::Command']]],
+  ['emitedgeeventforeventdependence',['emitEdgeEventForEventDependence',['../classcl_1_1sycl_1_1detail_1_1Command.html#a2db3d5cd729dd0c46b59c0e2d3e81475',1,'cl::sycl::detail::Command']]],
   ['emptycommand',['EmptyCommand',['../classcl_1_1sycl_1_1detail_1_1EmptyCommand.html',1,'cl::sycl::detail']]],
   ['enable_5fprofiling',['enable_profiling',['../classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html',1,'cl::sycl::property::queue']]],
   ['end',['end',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html#a54a7475701fe5c218826edbe202d78ca',1,'cl::sycl::detail::HostProfilingInfo']]],

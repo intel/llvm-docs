@@ -150,6 +150,33 @@ std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl
 <tr class="memitem:a661bc9facf831042a7621a8b1a4a0434"><td class="memItemLeft" align="right" valign="top"><a id="a661bc9facf831042a7621a8b1a4a0434"></a>
 std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> () const</td></tr>
 <tr class="separator:a661bc9facf831042a7621a8b1a4a0434"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4662bac4f0327f36decc4168b230f399"><td class="memItemLeft" align="right" valign="top"><a id="a4662bac4f0327f36decc4168b230f399"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emitInstrumentationDataProxy</b> ()</td></tr>
+<tr class="separator:a4662bac4f0327f36decc4168b230f399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79201bceb39ae975f481c30f5e0741ce"><td class="memItemLeft" align="right" valign="top"><a id="a79201bceb39ae975f481c30f5e0741ce"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>emitInstrumentationData</b> ()=0</td></tr>
+<tr class="separator:a79201bceb39ae975f481c30f5e0741ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316bf823b63d25d102b494d1b066e826"><td class="memItemLeft" align="right" valign="top"><a id="a316bf823b63d25d102b494d1b066e826"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resolveReleaseDependencies</b> (std::set&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&gt; &amp;list)</td></tr>
+<tr class="separator:a316bf823b63d25d102b494d1b066e826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089a90b610973c072f4f43b2d20dac00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a089a90b610973c072f4f43b2d20dac00">emitEdgeEventForCommandDependence</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, void *ObjAddr, const string_class &amp;Prefix, bool IsCommand)</td></tr>
+<tr class="memdesc:a089a90b610973c072f4f43b2d20dac00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method takes in void * for the address as adding a template function to the command group object maybe undesirable.  <a href="#a089a90b610973c072f4f43b2d20dac00">More...</a><br /></td></tr>
+<tr class="separator:a089a90b610973c072f4f43b2d20dac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2db3d5cd729dd0c46b59c0e2d3e81475">emitEdgeEventForEventDependence</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, RT::PiEvent &amp;EventAddr)</td></tr>
+<tr class="memdesc:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an edge when the dependency is due to an event.  <a href="#a2db3d5cd729dd0c46b59c0e2d3e81475">More...</a><br /></td></tr>
+<tr class="separator:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="memItemLeft" align="right" valign="top"><a id="a5aa15b74c02c23cf2aa94be0c560ba1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emitEnqueuedEventSignal</b> (RT::PiEvent &amp;PiEventAddr)</td></tr>
+<tr class="separator:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b8d77da7c09799a1b9913639fcc31d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d">makeTraceEventProlog</a> (void *MAddress)</td></tr>
+<tr class="memdesc:a94b8d77da7c09799a1b9913639fcc31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled() Post Condition: MTraceEvent will be set to the event created.  <a href="#a94b8d77da7c09799a1b9913639fcc31d">More...</a><br /></td></tr>
+<tr class="separator:a94b8d77da7c09799a1b9913639fcc31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b5f83a1250912b24546f6aa1c252d5"><td class="memItemLeft" align="right" valign="top"><a id="a42b5f83a1250912b24546f6aa1c252d5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>makeTraceEventEpilog</b> ()</td></tr>
+<tr class="separator:a42b5f83a1250912b24546f6aa1c252d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f4770317122c099b9282a50e86622ec"><td class="memItemLeft" align="right" valign="top"><a id="a0f4770317122c099b9282a50e86622ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emitInstrumentation</b> (uint16_t Type, const char *Txt=nullptr)</td></tr>
+<tr class="separator:a0f4770317122c099b9282a50e86622ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db86d92eca0ce39ab1992bc0b6ba139"><td class="memItemLeft" align="right" valign="top"><a id="a0db86d92eca0ce39ab1992bc0b6ba139"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>printDot</b> (std::ostream &amp;Stream) const =0</td></tr>
 <tr class="separator:a0db86d92eca0ce39ab1992bc0b6ba139"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +204,33 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>MLeafCounter</b> 
 <tr class="memitem:a961f0304273067947ef51800cc1475ef"><td class="memItemLeft" align="right" valign="top"><a id="a961f0304273067947ef51800cc1475ef"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>MBlockReason</b> = &quot;Unknown&quot;</td></tr>
 <tr class="separator:a961f0304273067947ef51800cc1475ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba092a301276f444590739782a63fff5"><td class="memItemLeft" align="right" valign="top"><a id="aba092a301276f444590739782a63fff5"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>MTraceEvent</b> = nullptr</td></tr>
+<tr class="separator:aba092a301276f444590739782a63fff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa237f982ce0d84b2fe14e4ee7e0e666"><td class="memItemLeft" align="right" valign="top"><a id="afa237f982ce0d84b2fe14e4ee7e0e666"></a>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MStreamID</b> = -1</td></tr>
+<tr class="separator:afa237f982ce0d84b2fe14e4ee7e0e666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0030e3ea7e156c3f77b77df28e9b1fd6"><td class="memItemLeft" align="right" valign="top"><a id="a0030e3ea7e156c3f77b77df28e9b1fd6"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>MAddress</b> = nullptr</td></tr>
+<tr class="separator:a0030e3ea7e156c3f77b77df28e9b1fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d716bf5ff83bb142b0f5fd81424247"><td class="memItemLeft" align="right" valign="top"><a id="a11d716bf5ff83bb142b0f5fd81424247"></a>
+string_class&#160;</td><td class="memItemRight" valign="bottom"><b>MAddressString</b></td></tr>
+<tr class="separator:a11d716bf5ff83bb142b0f5fd81424247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2769f387656b1726eea5a4a965c287e3"><td class="memItemLeft" align="right" valign="top"><a id="a2769f387656b1726eea5a4a965c287e3"></a>
+string_class&#160;</td><td class="memItemRight" valign="bottom"><b>MCommandNodeType</b></td></tr>
+<tr class="separator:a2769f387656b1726eea5a4a965c287e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39ba002b9932a2a5c25c50290222fcef"><td class="memItemLeft" align="right" valign="top"><a id="a39ba002b9932a2a5c25c50290222fcef"></a>
+string_class&#160;</td><td class="memItemRight" valign="bottom"><b>MCommandName</b></td></tr>
+<tr class="separator:a39ba002b9932a2a5c25c50290222fcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="memItemLeft" align="right" valign="top"><a id="a4e56e8d97d07ebe93e1e8c687df0c81c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MTraceEventPrologComplete</b> = false</td></tr>
+<tr class="separator:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f702797d183ad8b80e63acb1454e19"><td class="memItemLeft" align="right" valign="top"><a id="a39f702797d183ad8b80e63acb1454e19"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>MFirstInstance</b> = false</td></tr>
+<tr class="separator:a39f702797d183ad8b80e63acb1454e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="memItemLeft" align="right" valign="top"><a id="abd75de32d432e4c9f0cb65ade0ad41dc"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>MInstanceID</b> = 0</td></tr>
+<tr class="separator:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -212,7 +266,122 @@ std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>MEnqueueMtx</b>
 <tr class="separator:a762563f1833f52d45bee70e9a057bc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"></div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"></div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a089a90b610973c072f4f43b2d20dac00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089a90b610973c072f4f43b2d20dac00">&#9670;&nbsp;</a></span>emitEdgeEventForCommandDependence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::emitEdgeEventForCommandDependence </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>Cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ObjAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const string_class &amp;&#160;</td>
+          <td class="paramname"><em>Prefix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>IsCommand</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method takes in void * for the address as adding a template function to the command group object maybe undesirable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Cmd</td><td>The command object of the source of the edge </td></tr>
+    <tr><td class="paramname">ObjAddr</td><td>The address that defines the edge dependency; it is the event address when the edge is for an event and a memory object address if it is due to an accessor </td></tr>
+    <tr><td class="paramname">Prefix</td><td>Contains "event" if the dependency is an edge and contains the access mode to the buffer if it is due to an accessor </td></tr>
+    <tr><td class="paramname">IsCommand</td><td>True if the dependency has a command object as the source, false otherwise </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2db3d5cd729dd0c46b59c0e2d3e81475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2db3d5cd729dd0c46b59c0e2d3e81475">&#9670;&nbsp;</a></span>emitEdgeEventForEventDependence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::emitEdgeEventForEventDependence </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>Cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RT::PiEvent &amp;&#160;</td>
+          <td class="paramname"><em>PiEventAddr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates an edge when the dependency is due to an event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Cmd</td><td>The command object of the source of the edge </td></tr>
+    <tr><td class="paramname">PiEventAddr</td><td>The address that defines the edge dependency, which in this case is an event </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a94b8d77da7c09799a1b9913639fcc31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b8d77da7c09799a1b9913639fcc31d">&#9670;&nbsp;</a></span>makeTraceEventProlog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t cl::sycl::detail::Command::makeTraceEventProlog </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MAddress</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled() Post Condition: MTraceEvent will be set to the event created. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MAddress</td><td>The address to use to create the payload </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>source/detail/scheduler/<a class="el" href="">commands.hpp</a></li>
 <li>source/detail/scheduler/<a class="el" href="">commands.cpp</a></li>
 </ul>
