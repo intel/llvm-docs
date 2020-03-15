@@ -100,12 +100,12 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>reference_t</b> = ty
 <tr class="memitem:afc810bbf1950d7f654f89b83197e9f47"><td class="memItemLeft" align="right" valign="top"><a id="afc810bbf1950d7f654f89b83197e9f47"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>const_reference_t</b> = typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt; ElementType, Space &gt;::type &amp;</td></tr>
 <tr class="separator:afc810bbf1950d7f654f89b83197e9f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab670c223d87c09bcb28925ff2e5ff844"><td class="memItemLeft" align="right" valign="top"><a id="ab670c223d87c09bcb28925ff2e5ff844"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnPtr</b> = ElementType *</td></tr>
-<tr class="separator:ab670c223d87c09bcb28925ff2e5ff844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39628d3a85a2b9060322a27797c9a420"><td class="memItemLeft" align="right" valign="top"><a id="a39628d3a85a2b9060322a27797c9a420"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnRef</b> = ElementType &amp;</td></tr>
-<tr class="separator:a39628d3a85a2b9060322a27797c9a420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21dc45e887501aef17c986219da5bae"><td class="memItemLeft" align="right" valign="top"><a id="af21dc45e887501aef17c986219da5bae"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnPtr</b> = detail::const_if_const_AS&lt; Space, ElementType &gt; *</td></tr>
+<tr class="separator:af21dc45e887501aef17c986219da5bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afda9140b5575a8ab8132748b7b8febb0"><td class="memItemLeft" align="right" valign="top"><a id="afda9140b5575a8ab8132748b7b8febb0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnRef</b> = detail::const_if_const_AS&lt; Space, ElementType &gt; &amp;</td></tr>
+<tr class="separator:afda9140b5575a8ab8132748b7b8febb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f89f67f5a6589e14a797b3d192cc746"><td class="memItemLeft" align="right" valign="top"><a id="a5f89f67f5a6589e14a797b3d192cc746"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnConstRef</b> = const ElementType &amp;</td></tr>
 <tr class="separator:a5f89f67f5a6589e14a797b3d192cc746"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,9 +232,11 @@ static constexpr access::address_space&#160;</td><td class="memItemRight" valign
 <div class="textblock"><h3>template&lt;typename ElementType, access::address_space Space&gt;<br />
 class cl::sycl::multi_ptr&lt; ElementType, Space &gt;</h3>
 
+
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00033">33</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/CL/sycl/<a class="el" href="">atomic.hpp</a></li>
-<li>include/CL/sycl/<a class="el" href="">multi_ptr.hpp</a></li>
+<li>include/CL/sycl/<a class="el" href="atomic_8hpp_source.html">atomic.hpp</a></li>
+<li>include/CL/sycl/<a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

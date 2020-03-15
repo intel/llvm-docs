@@ -26,6 +26,7 @@ var searchData=
   ['allocasubbufcommand',['AllocaSubBufCommand',['../classcl_1_1sycl_1_1detail_1_1AllocaSubBufCommand.html',1,'cl::sycl::detail']]],
   ['allocate',['allocate',['../classcl_1_1sycl_1_1usm__allocator.html#a88bdedf6055ceaf6dd10b0b2463ba36c',1,'cl::sycl::usm_allocator']]],
   ['argdesc',['ArgDesc',['../classcl_1_1sycl_1_1detail_1_1ArgDesc.html',1,'cl::sycl::detail']]],
+  ['arguments',['arguments',['../struct__pi__kernel_1_1arguments.html',1,'_pi_kernel']]],
   ['array',['array',['../classcl_1_1sycl_1_1detail_1_1array.html',1,'cl::sycl::detail']]],
   ['assigner',['Assigner',['../structcl_1_1sycl_1_1detail_1_1Assigner.html',1,'cl::sycl::detail']]],
   ['assigner_3c_200_20_3e',['Assigner&lt; 0 &gt;',['../structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html',1,'cl::sycl::detail']]],

@@ -12,5 +12,6 @@ var searchData=
   ['device_5fimpl',['device_impl',['../classcl_1_1sycl_1_1detail_1_1device__impl.html',1,'cl::sycl::detail::device_impl'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#ac8804a69581f43fd36d10c78afd99df9',1,'cl::sycl::detail::device_impl::device_impl()'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#a6c55daa20173cc499816d1e8a8ecde51',1,'cl::sycl::detail::device_impl::device_impl(RT::PiDevice Device, PlatformImplPtr Platform)'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#a29769d01ad3552cbd7a36a7e338e8362',1,'cl::sycl::detail::device_impl::device_impl(RT::PiDevice Device, const plugin &amp;Plugin)']]],
   ['device_5fselector',['device_selector',['../classcl_1_1sycl_1_1device__selector.html',1,'cl::sycl']]],
   ['devicebinaries',['DeviceBinaries',['../structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a',1,'pi_device_binaries_struct']]],
-  ['devicetargetspec',['DeviceTargetSpec',['../structpi__device__binary__struct.html#a9a80194f39a66baf5dfcbee492cb0f97',1,'pi_device_binary_struct']]]
+  ['devicetargetspec',['DeviceTargetSpec',['../structpi__device__binary__struct.html#a9a80194f39a66baf5dfcbee492cb0f97',1,'pi_device_binary_struct']]],
+  ['dismiss',['dismiss',['../classReleaseGuard.html#a842fa7466ffe980b5e5fec5a7b582abe',1,'ReleaseGuard']]]
 ];

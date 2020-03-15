@@ -68,9 +68,14 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classcl_1_1sycl_1_1detail_1_1plugin-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::detail::plugin Class Reference</div>  </div>
+<div class="title">cl::sycl::detail::plugin Class Reference<div class="ingroups"><a class="el" href="group__sycl__pi.html">The Plugin Interface</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The plugin class provides a unified interface to the underlying low-level runtimes for the device-agnostic SYCL runtime.  
+ <a href="classcl_1_1sycl_1_1detail_1_1plugin.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="plugin_8hpp_source.html">detail/plugin.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for cl::sycl::detail::plugin:</div>
 <div class="dyncontent">
@@ -86,17 +91,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae57dd233ae848f4908b1cfa636bbc98a"><td class="memItemLeft" align="right" valign="top"><a id="ae57dd233ae848f4908b1cfa636bbc98a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>plugin</b> (<a class="el" href="struct__pi__plugin.html">RT::PiPlugin</a> Plugin)</td></tr>
 <tr class="separator:ae57dd233ae848f4908b1cfa636bbc98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c46fe0e8f5bc50562cb5a5ec60accd4"><td class="memTemplParams" colspan="2"><a id="a7c46fe0e8f5bc50562cb5a5ec60accd4"></a>
-template&lt;typename Exception  = cl::sycl::runtime_error&gt; </td></tr>
-<tr class="memitem:a7c46fe0e8f5bc50562cb5a5ec60accd4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>checkPiResult</b> (RT::PiResult pi_result) const</td></tr>
+<tr class="memitem:a7c46fe0e8f5bc50562cb5a5ec60accd4"><td class="memTemplParams" colspan="2">template&lt;typename Exception  = cl::sycl::runtime_error&gt; </td></tr>
+<tr class="memitem:a7c46fe0e8f5bc50562cb5a5ec60accd4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4">checkPiResult</a> (RT::PiResult pi_result) const</td></tr>
+<tr class="memdesc:a7c46fe0e8f5bc50562cb5a5ec60accd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks return value from PI calls.  <a href="#a7c46fe0e8f5bc50562cb5a5ec60accd4">More...</a><br /></td></tr>
 <tr class="separator:a7c46fe0e8f5bc50562cb5a5ec60accd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0c3e4a9606a7b31199e1dc5530bd295"><td class="memTemplParams" colspan="2"><a id="ae0c3e4a9606a7b31199e1dc5530bd295"></a>
-template&lt;PiApiKind PiApiOffset, typename... ArgsT&gt; </td></tr>
-<tr class="memitem:ae0c3e4a9606a7b31199e1dc5530bd295"><td class="memTemplItemLeft" align="right" valign="top">RT::PiResult&#160;</td><td class="memTemplItemRight" valign="bottom"><b>call_nocheck</b> (ArgsT... Args) const</td></tr>
+<tr class="memitem:ae0c3e4a9606a7b31199e1dc5530bd295"><td class="memTemplParams" colspan="2">template&lt;PiApiKind PiApiOffset, typename... ArgsT&gt; </td></tr>
+<tr class="memitem:ae0c3e4a9606a7b31199e1dc5530bd295"><td class="memTemplItemLeft" align="right" valign="top">RT::PiResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295">call_nocheck</a> (ArgsT... Args) const</td></tr>
+<tr class="memdesc:ae0c3e4a9606a7b31199e1dc5530bd295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the PiApi, traces the call, and returns the result.  <a href="#ae0c3e4a9606a7b31199e1dc5530bd295">More...</a><br /></td></tr>
 <tr class="separator:ae0c3e4a9606a7b31199e1dc5530bd295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b3c3999b6abd71d9c8e5f2ab56c8395"><td class="memTemplParams" colspan="2"><a id="a5b3c3999b6abd71d9c8e5f2ab56c8395"></a>
-template&lt;PiApiKind PiApiOffset, typename... ArgsT&gt; </td></tr>
-<tr class="memitem:a5b3c3999b6abd71d9c8e5f2ab56c8395"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>call</b> (ArgsT... Args) const</td></tr>
+<tr class="memitem:a5b3c3999b6abd71d9c8e5f2ab56c8395"><td class="memTemplParams" colspan="2">template&lt;PiApiKind PiApiOffset, typename... ArgsT&gt; </td></tr>
+<tr class="memitem:a5b3c3999b6abd71d9c8e5f2ab56c8395"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a> (ArgsT... Args) const</td></tr>
+<tr class="memdesc:a5b3c3999b6abd71d9c8e5f2ab56c8395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the API, traces the call, checks the result.  <a href="#a5b3c3999b6abd71d9c8e5f2ab56c8395">More...</a><br /></td></tr>
 <tr class="separator:a5b3c3999b6abd71d9c8e5f2ab56c8395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -106,8 +111,125 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af0bc8a97c0fc1aacdab95c0d893ef43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"></div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>source/detail/<a class="el" href="">plugin.hpp</a></li>
+<div class="textblock"><p>The plugin class provides a unified interface to the underlying low-level runtimes for the device-agnostic SYCL runtime. </p>
+
+<p class="definition">Definition at line <a class="el" href="plugin_8hpp_source.html#l00022">22</a> of file <a class="el" href="plugin_8hpp_source.html">plugin.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5b3c3999b6abd71d9c8e5f2ab56c8395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3c3999b6abd71d9c8e5f2ab56c8395">&#9670;&nbsp;</a></span>call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;PiApiKind PiApiOffset, typename... ArgsT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::plugin::call </td>
+          <td>(</td>
+          <td class="paramtype">ArgsT...&#160;</td>
+          <td class="paramname"><em>Args</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls the API, traces the call, checks the result. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">cl::sycl::runtime_exception</td><td>if the call was not successful. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plugin_8hpp_source.html#l00070">70</a> of file <a class="el" href="plugin_8hpp_source.html">plugin.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="context__impl_8cpp_source.html#l00034">cl::sycl::detail::context_impl::context_impl()</a>, <a class="el" href="device__impl_8cpp_source.html#l00025">cl::sycl::detail::device_impl::device_impl()</a>, <a class="el" href="event__impl_8cpp_source.html#l00073">cl::sycl::detail::event_impl::event_impl()</a>, <a class="el" href="device__impl_8cpp_source.html#l00073">cl::sycl::detail::device_impl::get()</a>, <a class="el" href="context__impl_8cpp_source.html#l00093">cl::sycl::detail::context_impl::get()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00205">cl::sycl::detail::platform_impl::get_devices()</a>, <a class="el" href="context__impl_8cpp_source.html#l00104">cl::sycl::detail::context_impl::is_host()</a>, <a class="el" href="device__impl_8cpp_source.html#l00102">cl::sycl::detail::device_impl::is_partition_supported()</a>, <a class="el" href="kernel__impl_8cpp_source.html#l00027">cl::sycl::detail::kernel_impl::kernel_impl()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00072">cl::sycl::detail::queue_impl::mem_advise()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00083">cl::sycl::detail::program_impl::program_impl()</a>.</p>
+
+</div>
+</div>
+<a id="ae0c3e4a9606a7b31199e1dc5530bd295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c3e4a9606a7b31199e1dc5530bd295">&#9670;&nbsp;</a></span>call_nocheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;PiApiKind PiApiOffset, typename... ArgsT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RT::PiResult cl::sycl::detail::plugin::call_nocheck </td>
+          <td>(</td>
+          <td class="paramtype">ArgsT...&#160;</td>
+          <td class="paramname"><em>Args</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls the PiApi, traces the call, and returns the result. </p>
+<p>Usage: </p><div class="fragment"><div class="line">PiResult Err = plugin.call&lt;PiApiKind::pi&gt;(Args);</div><div class="line">Plugin.checkPiResult(Err); <span class="comment">// Checks Result and throws a runtime_error</span></div><div class="line"><span class="comment">// exception.</span></div></div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4" title="Checks return value from PI calls. ">plugin::checkPiResult</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="plugin_8hpp_source.html#l00051">51</a> of file <a class="el" href="plugin_8hpp_source.html">plugin.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="queue__impl_8hpp_source.html#l00230">cl::sycl::detail::queue_impl::createQueue()</a>.</p>
+
+</div>
+</div>
+<a id="a7c46fe0e8f5bc50562cb5a5ec60accd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c46fe0e8f5bc50562cb5a5ec60accd4">&#9670;&nbsp;</a></span>checkPiResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Exception  = cl::sycl::runtime_error&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::plugin::checkPiResult </td>
+          <td>(</td>
+          <td class="paramtype">RT::PiResult&#160;</td>
+          <td class="paramname"><em>pi_result</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks return value from PI calls. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Exception</td><td>if pi_result is not a PI_SUCCESS. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plugin_8hpp_source.html#l00036">36</a> of file <a class="el" href="plugin_8hpp_source.html">plugin.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>source/detail/<a class="el" href="plugin_8hpp_source.html">plugin.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

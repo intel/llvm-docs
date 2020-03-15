@@ -94,6 +94,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>pointer_t</b> = type
 <tr class="memitem:a1a670ec5cbeb71da630f13828d0ba023"><td class="memItemLeft" align="right" valign="top"><a id="a1a670ec5cbeb71da630f13828d0ba023"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>const_pointer_t</b> = typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt; void, Space &gt;::type const *</td></tr>
 <tr class="separator:a1a670ec5cbeb71da630f13828d0ba023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64c53f73a1bbe0965263f77931e2b0c"><td class="memItemLeft" align="right" valign="top"><a id="ac64c53f73a1bbe0965263f77931e2b0c"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ReturnPtr</b> = detail::const_if_const_AS&lt; Space, void &gt; *</td></tr>
+<tr class="separator:ac64c53f73a1bbe0965263f77931e2b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -140,9 +143,9 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, access::ad
 <tr class="memitem:ac3a871fc525d345d57632e273f661991"><td class="memItemLeft" align="right" valign="top"><a id="ac3a871fc525d345d57632e273f661991"></a>
 pointer_t&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> () const</td></tr>
 <tr class="separator:ac3a871fc525d345d57632e273f661991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47cc6abf4a640e4366164a424bfb5b3c"><td class="memItemLeft" align="right" valign="top"><a id="a47cc6abf4a640e4366164a424bfb5b3c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator void *</b> () const</td></tr>
-<tr class="separator:a47cc6abf4a640e4366164a424bfb5b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c666baf6bf27bef197d4a685763cc9a"><td class="memItemLeft" align="right" valign="top"><a id="a6c666baf6bf27bef197d4a685763cc9a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator ReturnPtr</b> () const</td></tr>
+<tr class="separator:a6c666baf6bf27bef197d4a685763cc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a055ef69f744cb1d92f89acea50ce3196"><td class="memTemplParams" colspan="2"><a id="a055ef69f744cb1d92f89acea50ce3196"></a>
 template&lt;typename ElementType &gt; </td></tr>
 <tr class="memitem:a055ef69f744cb1d92f89acea50ce3196"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator multi_ptr&lt; ElementType, Space &gt;</b> () const</td></tr>
@@ -161,8 +164,10 @@ static constexpr access::address_space&#160;</td><td class="memItemRight" valign
 <div class="textblock"><h3>template&lt;access::address_space Space&gt;<br />
 class cl::sycl::multi_ptr&lt; void, Space &gt;</h3>
 
+
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00286">286</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/CL/sycl/<a class="el" href="">multi_ptr.hpp</a></li>
+<li>include/CL/sycl/<a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

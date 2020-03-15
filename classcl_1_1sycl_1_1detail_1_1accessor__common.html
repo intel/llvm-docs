@@ -99,12 +99,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr class="memitem:acdf1b4cac6da8349c4e478d47e77a146"><td class="memItemLeft" align="right" valign="top"><a id="acdf1b4cac6da8349c4e478d47e77a146"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>RefType</b> = DataT &amp;</td></tr>
-<tr class="separator:acdf1b4cac6da8349c4e478d47e77a146"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9e705a038160fe512547f6dd7e6cb92"><td class="memItemLeft" align="right" valign="top"><a id="ab9e705a038160fe512547f6dd7e6cb92"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>PtrType</b> = DataT *</td></tr>
-<tr class="separator:ab9e705a038160fe512547f6dd7e6cb92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbee7dd5ed118afec3df3350587f22f3"><td class="memItemLeft" align="right" valign="top"><a id="adbee7dd5ed118afec3df3350587f22f3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>RefType</b> = detail::const_if_const_AS&lt; AS, DataT &gt; &amp;</td></tr>
+<tr class="separator:adbee7dd5ed118afec3df3350587f22f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39fc708d748b82e15b70c73ccbebc478"><td class="memItemLeft" align="right" valign="top"><a id="a39fc708d748b82e15b70c73ccbebc478"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>PtrType</b> = detail::const_if_const_AS&lt; AS, DataT &gt; *</td></tr>
+<tr class="separator:a39fc708d748b82e15b70c73ccbebc478"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a388dda10a2a20840fa000963a8f586c4"><td class="memItemLeft" align="right" valign="top"><a id="a388dda10a2a20840fa000963a8f586c4"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AccType</b> = <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;</td></tr>
 <tr class="separator:a388dda10a2a20840fa000963a8f586c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +136,8 @@ static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsAc
 <div class="textblock"><h3>template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::target AccessTarget, access::placeholder IsPlaceholder&gt;<br />
 class cl::sycl::detail::accessor_common&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;</h3>
 
+
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00173">173</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4aae28ab6e52697f2cc2124855f74463"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4aae28ab6e52697f2cc2124855f74463">&#9670;&nbsp;</a></span>IsAccessAnyWrite</h2>
@@ -159,6 +161,8 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      AccessMode == access::mode::write ||</div><div class="line">      AccessMode == access::mode::read_write ||</div><div class="line">      AccessMode == access::mode::discard_write ||</div><div class="line">      AccessMode == access::mode::discard_read_write</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00186">186</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+
 </div>
 </div>
 <a id="af0dc1d3e0ac015619c914766451efdcb"></a>
@@ -183,6 +187,8 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      AccessMode == access::mode::read_write</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00194">194</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+
 </div>
 </div>
 <a id="aa94e7fa38c656ccc85b8c7e329d7d62b"></a>
@@ -207,6 +213,8 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      AccessTarget == access::target::constant_buffer</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00183">183</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+
 </div>
 </div>
 <a id="a4d39ed5678d566da9f5dbb77988d10d6"></a>
@@ -231,10 +239,12 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      AccessTarget == access::target::global_buffer</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00180">180</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/CL/sycl/<a class="el" href="">accessor.hpp</a></li>
+<li>include/CL/sycl/<a class="el" href="accessor_8hpp_source.html">accessor.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

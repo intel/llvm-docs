@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['call',['call',['../classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395',1,'cl::sycl::detail::plugin']]],
+  ['call_5fnocheck',['call_nocheck',['../classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295',1,'cl::sycl::detail::plugin']]],
   ['cg',['CG',['../classcl_1_1sycl_1_1detail_1_1CG.html',1,'cl::sycl::detail']]],
   ['cgcopy',['CGCopy',['../classcl_1_1sycl_1_1detail_1_1CGCopy.html',1,'cl::sycl::detail']]],
   ['cgcopyusm',['CGCopyUSM',['../classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html',1,'cl::sycl::detail']]],
@@ -14,6 +16,7 @@ var searchData=
   ['check_5ffp_5fsupport',['check_fp_support',['../structcl_1_1sycl_1_1detail_1_1check__fp__support.html',1,'cl::sycl::detail']]],
   ['check_5ffp_5fsupport_3c_20info_3a_3adevice_3a_3adouble_5ffp_5fconfig_20_3e',['check_fp_support&lt; info::device::double_fp_config &gt;',['../structcl_1_1sycl_1_1detail_1_1check__fp__support_3_01info_1_1device_1_1double__fp__config_01_4.html',1,'cl::sycl::detail']]],
   ['check_5ffp_5fsupport_3c_20info_3a_3adevice_3a_3ahalf_5ffp_5fconfig_20_3e',['check_fp_support&lt; info::device::half_fp_config &gt;',['../structcl_1_1sycl_1_1detail_1_1check__fp__support_3_01info_1_1device_1_1half__fp__config_01_4.html',1,'cl::sycl::detail']]],
+  ['checkpiresult',['checkPiResult',['../classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4',1,'cl::sycl::detail::plugin']]],
   ['circularbuffer',['CircularBuffer',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
   ['circularbuffer_3c_20cl_3a_3asycl_3a_3adetail_3a_3acommand_20_2a_3e',['CircularBuffer&lt; cl::sycl::detail::Command *&gt;',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
   ['clusm',['CLUSM',['../classcl_1_1sycl_1_1detail_1_1usm_1_1CLUSM.html',1,'cl::sycl::detail::usm']]],
@@ -42,5 +45,8 @@ var searchData=
   ['copy_5fcv_5fqualifiers_5fimpl_3c_20volatile_20t_2c_20r_20_3e',['copy_cv_qualifiers_impl&lt; volatile T, R &gt;',['../structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html',1,'cl::sycl::detail']]],
   ['cpu_5fselector',['cpu_selector',['../classcl_1_1sycl_1_1cpu__selector.html',1,'cl::sycl']]],
   ['create_5fsub_5fdevices',['create_sub_devices',['../classcl_1_1sycl_1_1device.html#a07d74001ee13bfd6879e800b77b00ca8',1,'cl::sycl::device::create_sub_devices(size_t ComputeUnits) const'],['../classcl_1_1sycl_1_1device.html#a37b664e2a251835bd491b7651aa63938',1,'cl::sycl::device::create_sub_devices(const vector_class&lt; size_t &gt; &amp;Counts) const'],['../classcl_1_1sycl_1_1device.html#a8180702aa59ab7d8627a99c3ab433876',1,'cl::sycl::device::create_sub_devices(info::partition_affinity_domain AffinityDomain) const'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#a3458975bac5112442878b542b2a49580',1,'cl::sycl::detail::device_impl::create_sub_devices(size_t ComputeUnits) const'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#a885f0f936d6f29b2d16e95997150ad5b',1,'cl::sycl::detail::device_impl::create_sub_devices(const vector_class&lt; size_t &gt; &amp;Counts) const'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#a1133d8da4ddcbd2a6c9f92be6aa27a23',1,'cl::sycl::detail::device_impl::create_sub_devices(info::partition_affinity_domain AffinityDomain) const']]],
-  ['createqueue',['createQueue',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54',1,'cl::sycl::detail::queue_impl']]]
+  ['createqueue',['createQueue',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54',1,'cl::sycl::detail::queue_impl']]],
+  ['cuda_5fpicontextcreate',['cuda_piContextCreate',['../pi__cuda_8cpp.html#aecbe462ce1fa0674107e55a8a2da1156',1,'pi_cuda.cpp']]],
+  ['cuda_5fpiextusmgetmemallocinfo',['cuda_piextUSMGetMemAllocInfo',['../pi__cuda_8cpp.html#a8efca267aa2fb518172ea37a875514a1',1,'pi_cuda.cpp']]],
+  ['cuda_20plugin',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]]
 ];
