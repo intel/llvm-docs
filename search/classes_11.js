@@ -4,7 +4,7 @@ var searchData=
   ['range_3c_203_20_3e',['range&lt; 3 &gt;',['../classcl_1_1sycl_1_1range.html',1,'cl::sycl']]],
   ['range_3c_20dimensions_20_3e',['range&lt; Dimensions &gt;',['../classcl_1_1sycl_1_1range.html',1,'cl::sycl']]],
   ['range_3c_20dims_20_3e',['range&lt; Dims &gt;',['../classcl_1_1sycl_1_1range.html',1,'cl::sycl']]],
-  ['rebind',['rebind',['../structcl_1_1sycl_1_1usm__allocator_1_1rebind.html',1,'cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::rebind&lt; U &gt;'],['../structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html',1,'cl::sycl::detail::aligned_allocator&lt; T &gt;::rebind&lt; U &gt;']]],
+  ['rebind',['rebind',['../structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html',1,'cl::sycl::detail::aligned_allocator&lt; T &gt;::rebind&lt; U &gt;'],['../structcl_1_1sycl_1_1usm__allocator_1_1rebind.html',1,'cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::rebind&lt; U &gt;']]],
   ['relationalreturntype',['RelationalReturnType',['../structcl_1_1sycl_1_1detail_1_1RelationalReturnType.html',1,'cl::sycl::detail']]],
   ['relationaltestforsignbittype',['RelationalTestForSignBitType',['../structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html',1,'cl::sycl::detail']]],
   ['relconverter',['RelConverter',['../structcl_1_1sycl_1_1detail_1_1RelConverter.html',1,'cl::sycl::detail']]],

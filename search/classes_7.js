@@ -50,5 +50,6 @@ var searchData=
   ['graphprocessor',['GraphProcessor',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html',1,'cl::sycl::detail::Scheduler']]],
   ['greaterequalto',['GreaterEqualTo',['../structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html',1,'cl::sycl::detail']]],
   ['greaterthan',['GreaterThan',['../structcl_1_1sycl_1_1detail_1_1GreaterThan.html',1,'cl::sycl::detail']]],
-  ['group',['group',['../classcl_1_1sycl_1_1group.html',1,'cl::sycl']]]
+  ['group',['group',['../classcl_1_1sycl_1_1group.html',1,'cl::sycl']]],
+  ['group_3c_20dimensions_20_3e',['group&lt; dimensions &gt;',['../classcl_1_1sycl_1_1group.html',1,'cl::sycl']]]
 ];
