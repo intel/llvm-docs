@@ -187,6 +187,9 @@ pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piPlatforms
 <tr class="memitem:a4d8db122240fcbbfd9008959e564d9f0"><td class="memItemLeft" align="right" valign="top"><a id="a4d8db122240fcbbfd9008959e564d9f0"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piPlatformGetInfo</b> (<a class="el" href="struct__pi__platform.html">pi_platform</a> platform, pi_platform_info param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</td></tr>
 <tr class="separator:a4d8db122240fcbbfd9008959e564d9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8518c0c94053df6df55020448065cbd"><td class="memItemLeft" align="right" valign="top"><a id="ac8518c0c94053df6df55020448065cbd"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piextDeviceConvert</b> (<a class="el" href="struct__pi__device.html">pi_device</a> *device, void **handle)</td></tr>
+<tr class="separator:ac8518c0c94053df6df55020448065cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cda6564b9002f577b335c7a6899a149"><td class="memItemLeft" align="right" valign="top"><a id="a6cda6564b9002f577b335c7a6899a149"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piDevicesGet</b> (<a class="el" href="struct__pi__platform.html">pi_platform</a> platform, pi_device_type device_type, pi_uint32 num_entries, <a class="el" href="struct__pi__device.html">pi_device</a> *devices, pi_uint32 *num_devices)</td></tr>
 <tr class="separator:a6cda6564b9002f577b335c7a6899a149"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,6 +289,8 @@ pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piMemImageG
 <tr class="memitem:ad5521d01c5b758c6fccd73e8594e19d0"><td class="memItemLeft" align="right" valign="top"><a id="ad5521d01c5b758c6fccd73e8594e19d0"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piMemRetain</b> (<a class="el" href="struct__pi__mem.html">pi_mem</a> mem)</td></tr>
 <tr class="separator:ad5521d01c5b758c6fccd73e8594e19d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd810fa99470e5d50f09507fac56db11"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#afd810fa99470e5d50f09507fac56db11">cuda_piextProgramConvert</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="struct__pi__program.html">pi_program</a> *program, void **handle)</td></tr>
+<tr class="separator:afd810fa99470e5d50f09507fac56db11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741b3ff74458ce4edafb2940ed2d16b3"><td class="memItemLeft" align="right" valign="top"><a id="a741b3ff74458ce4edafb2940ed2d16b3"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piProgramCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *il, size_t length, <a class="el" href="struct__pi__program.html">pi_program</a> *res_program)</td></tr>
 <tr class="separator:a741b3ff74458ce4edafb2940ed2d16b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -501,7 +506,51 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS on success, otherwise an error return code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01337">1337</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01342">1342</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afd810fa99470e5d50f09507fac56db11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd810fa99470e5d50f09507fac56db11">&#9670;&nbsp;</a></span>cuda_piextProgramConvert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result cuda_piextProgramConvert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi_program</a> *&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>the PI context of the program </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">program</td><td>the pointer to PI program </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">handle</td><td>the pointer to the raw program handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02146">2146</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -569,7 +618,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03365">3365</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03379">3379</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>

@@ -123,6 +123,9 @@ template&lt;const char * FuncName, typename T &gt; </td></tr>
 <tr class="memitem:a050d298e961914c5a37cfea9177facec"><td class="memItemLeft" align="right" valign="top"><a id="a050d298e961914c5a37cfea9177facec"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piPlatformsGet</b> (pi_uint32 num_entries, <a class="el" href="struct__pi__platform.html">pi_platform</a> *platforms, pi_uint32 *num_platforms)</td></tr>
 <tr class="separator:a050d298e961914c5a37cfea9177facec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d1d93e1b7ad439f8922e3a2b8d583c8"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a1d1d93e1b7ad439f8922e3a2b8d583c8">piextDeviceConvert</a> (<a class="el" href="struct__pi__device.html">pi_device</a> *device, void **handle)</td></tr>
+<tr class="memdesc:a1d1d93e1b7ad439f8922e3a2b8d583c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create PI device from the given raw device handle (if the "device" points to null), or, vice versa, extract the raw device handle into the "handle" (if it was pointing to a null) from the given PI device.  <a href="#a1d1d93e1b7ad439f8922e3a2b8d583c8">More...</a><br /></td></tr>
+<tr class="separator:a1d1d93e1b7ad439f8922e3a2b8d583c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb2078879d2370b79c9afd3cad229bcf"><td class="memItemLeft" align="right" valign="top"><a id="aeb2078879d2370b79c9afd3cad229bcf"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piDevicesGet</b> (<a class="el" href="struct__pi__platform.html">pi_platform</a> platform, pi_device_type device_type, pi_uint32 num_entries, <a class="el" href="struct__pi__device.html">pi_device</a> *devices, pi_uint32 *num_devices)</td></tr>
 <tr class="separator:aeb2078879d2370b79c9afd3cad229bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +136,9 @@ pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memitem:a5b78c66986a89df9cfd835e7a551ecd6"><td class="memItemLeft" align="right" valign="top"><a id="a5b78c66986a89df9cfd835e7a551ecd6"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piQueueCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="struct__pi__device.html">pi_device</a> device, pi_queue_properties properties, <a class="el" href="struct__pi__queue.html">pi_queue</a> *queue)</td></tr>
 <tr class="separator:a5b78c66986a89df9cfd835e7a551ecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4b5a4de5a03cc95186b862d0fcb913"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a2d4b5a4de5a03cc95186b862d0fcb913">piextProgramConvert</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="struct__pi__program.html">pi_program</a> *program, void **handle)</td></tr>
+<tr class="memdesc:a2d4b5a4de5a03cc95186b862d0fcb913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create PI program from the given raw program handle (if the "program" points to null), or, vice versa, extract the raw program handle into the "handle" (if it was pointing to a null) from the given PI program.  <a href="#a2d4b5a4de5a03cc95186b862d0fcb913">More...</a><br /></td></tr>
+<tr class="separator:a2d4b5a4de5a03cc95186b862d0fcb913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a30ab6b66bd28f2f6227aeee2cc0176"><td class="memItemLeft" align="right" valign="top"><a id="a5a30ab6b66bd28f2f6227aeee2cc0176"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piProgramCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *il, size_t length, <a class="el" href="struct__pi__program.html">pi_program</a> *res_program)</td></tr>
 <tr class="separator:a5a30ab6b66bd28f2f6227aeee2cc0176"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +297,47 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a1d1d93e1b7ad439f8922e3a2b8d583c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d1d93e1b7ad439f8922e3a2b8d583c8">&#9670;&nbsp;</a></span>piextDeviceConvert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextDeviceConvert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__device.html">pi_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create PI device from the given raw device handle (if the "device" points to null), or, vice versa, extract the raw device handle into the "handle" (if it was pointing to a null) from the given PI device. </p>
+<p>NOTE: The instance of the PI device created is retained.[in,out] the pointer to the raw device handle </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">device</td><td>the pointer to PI device </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00179">179</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00029">cl::sycl::detail::device_impl::device_impl()</a>, and <a class="el" href="device__impl_8cpp_source.html#l00090">cl::sycl::detail::device_impl::get()</a>.</p>
+
+</div>
+</div>
 <a id="af3b380dac11217b8cb2575989eb3fd66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3b380dac11217b8cb2575989eb3fd66">&#9670;&nbsp;</a></span>piextGetDeviceFunctionPointer()</h2>
 
@@ -340,7 +387,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 <li><code>program</code>. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00424">424</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00463">463</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +441,56 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00715">715</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00754">754</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2d4b5a4de5a03cc95186b862d0fcb913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4b5a4de5a03cc95186b862d0fcb913">&#9670;&nbsp;</a></span>piextProgramConvert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextProgramConvert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi_program</a> *&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>handle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create PI program from the given raw program handle (if the "program" points to null), or, vice versa, extract the raw program handle into the "handle" (if it was pointing to a null) from the given PI program. </p>
+<p>NOTE: The instance of the PI program created is retained.[in,out] the pointer to the raw program handle </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>the PI context of the program </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">program</td><td>the pointer to PI program </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">handle</td><td>the pointer to the raw program handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00326">326</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00083">cl::sycl::detail::program_impl::program_impl()</a>.</p>
 
 </div>
 </div>
@@ -461,7 +557,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00632">632</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00671">671</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -521,7 +617,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00881">881</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00920">920</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00072">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
 
@@ -604,7 +700,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00796">796</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00835">835</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -678,7 +774,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00756">756</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00795">795</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -752,7 +848,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00836">836</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00875">875</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -791,7 +887,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00694">694</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00733">733</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -859,7 +955,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00933">933</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00972">972</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -919,7 +1015,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00601">601</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00640">640</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -986,7 +1082,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00665">665</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00704">704</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1136,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </dl>
 <p>If param_name is PI_USM_INDIRECT_ACCESS, the value will be a ptr to the pi_bool value PI_TRUE If param_name is PI_USM_PTRS, the value will be an array of ptrs </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00964">964</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01003">1003</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>

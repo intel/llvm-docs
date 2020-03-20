@@ -82,9 +82,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc640afa00abc81b0239d716d5da6f24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#abc640afa00abc81b0239d716d5da6f24">program_impl</a> (vector_class&lt; shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> &gt;&gt; ProgramList, string_class LinkOptions=&quot;&quot;)</td></tr>
 <tr class="memdesc:abc640afa00abc81b0239d716d5da6f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an instance of SYCL program by linking together each SYCL program instance in ProgramList.  <a href="#abc640afa00abc81b0239d716d5da6f24">More...</a><br /></td></tr>
 <tr class="separator:abc640afa00abc81b0239d716d5da6f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af764386a280256d8da95fc53b78a041a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#af764386a280256d8da95fc53b78a041a">program_impl</a> (ContextImplPtr Context, <a class="el" href="struct__pi__program.html">RT::PiProgram</a> Program)</td></tr>
-<tr class="memdesc:af764386a280256d8da95fc53b78a041a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a program instance from plugin interface interoperability handle.  <a href="#af764386a280256d8da95fc53b78a041a">More...</a><br /></td></tr>
-<tr class="separator:af764386a280256d8da95fc53b78a041a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951d52c1d8e239979594b205330f15ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#a951d52c1d8e239979594b205330f15ad">program_impl</a> (ContextImplPtr Context, program_interop_handle_t InteropProgram)</td></tr>
+<tr class="memdesc:a951d52c1d8e239979594b205330f15ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a program instance from an interop raw BE program handle.  <a href="#a951d52c1d8e239979594b205330f15ad">More...</a><br /></td></tr>
+<tr class="separator:a951d52c1d8e239979594b205330f15ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49edf37d8413eaeb7117b7c662cfde3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#a49edf37d8413eaeb7117b7c662cfde3b">program_impl</a> (ContextImplPtr Context, <a class="el" href="struct__pi__kernel.html">RT::PiKernel</a> Kernel)</td></tr>
 <tr class="memdesc:a49edf37d8413eaeb7117b7c662cfde3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a program instance from plugin interface interoperability kernel.  <a href="#a49edf37d8413eaeb7117b7c662cfde3b">More...</a><br /></td></tr>
 <tr class="separator:a49edf37d8413eaeb7117b7c662cfde3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +158,7 @@ template&lt;&gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00034">34</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00039">39</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abf6c1bbc6896e713f4b8065442b60324"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf6c1bbc6896e713f4b8065442b60324">&#9670;&nbsp;</a></span>program_impl() <span class="overload">[1/5]</span></h2>
@@ -277,8 +277,8 @@ template&lt;&gt; </td></tr>
 
 </div>
 </div>
-<a id="af764386a280256d8da95fc53b78a041a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af764386a280256d8da95fc53b78a041a">&#9670;&nbsp;</a></span>program_impl() <span class="overload">[4/5]</span></h2>
+<a id="a951d52c1d8e239979594b205330f15ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951d52c1d8e239979594b205330f15ad">&#9670;&nbsp;</a></span>program_impl() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,8 +292,8 @@ template&lt;&gt; </td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct__pi__program.html">RT::PiProgram</a>&#160;</td>
-          <td class="paramname"><em>Program</em>&#160;</td>
+          <td class="paramtype">program_interop_handle_t&#160;</td>
+          <td class="paramname"><em>InteropProgram</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -303,20 +303,21 @@ template&lt;&gt; </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a program instance from plugin interface interoperability handle. </p>
-<p>The state of the constructed program can be either program_state::compiled or program_state::linked, depending on the state of the ClProgram. Otherwise an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> SYCL exception is thrown.</p>
-<p>The instance of plugin interface program will be retained on construction.</p>
+<p>Constructs a program instance from an interop raw BE program handle. </p>
+<p>TODO: BE generalization will change that to something better.</p>
+<p>The state of the constructed program can be either program_state::compiled or program_state::linked, depending on the state of the InteropProgram. Otherwise an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> SYCL exception is thrown.</p>
+<p>The instance of the program will be retained on construction.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Context</td><td>is a pointer to SYCL context impl. </td></tr>
-    <tr><td class="paramname">Program</td><td>is an instance of plugin interface interoperability program. </td></tr>
+    <tr><td class="paramname">InteropProgram</td><td>is an instance of plugin interface interoperability program. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00083">83</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00326">piextProgramConvert()</a>.</p>
 
 </div>
 </div>
@@ -355,9 +356,9 @@ template&lt;&gt; </td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00143">143</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00158">158</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="program__impl_8hpp_source.html#l00116">is_host()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="program__impl_8hpp_source.html#l00120">is_host()</a>.</p>
 
 </div>
 </div>
@@ -405,7 +406,7 @@ template&lt;&gt; </td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00190">190</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00205">205</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +446,7 @@ template&lt;&gt; </td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00211">211</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00226">226</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -492,7 +493,7 @@ template&lt;&gt; </td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00167">167</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00182">182</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -532,7 +533,7 @@ template&lt;&gt; </td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00179">179</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00194">194</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -555,7 +556,7 @@ template&lt;&gt; </td></tr>
 <p>The instance of cl_program will be retained before returning. If the program is created for a SYCL host device, an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> exception is thrown.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid OpenCL cl_program instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00156">156</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00171">171</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -578,7 +579,7 @@ template&lt;&gt; </td></tr>
 <p>If this program is not in the program_state::compiled or program_state::linked states, an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> SYCL exception is thrown.</p>
 <dl class="section return"><dt>Returns</dt><dd>a vector of vectors representing the compiled binaries for each associated SYCL device. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00264">264</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00279">279</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -609,7 +610,7 @@ template&lt;&gt; </td></tr>
 <p>If no compile, link, or build operations have been performed on this program, or if the program includes the host device in its device list, then an empty string is returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>a string of valid OpenCL build options. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00287">287</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00291">291</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -640,7 +641,7 @@ template&lt;&gt; </td></tr>
 <p>If the program was built instead of explicitly compiled, if the program has not yet been compiled, or if the program has been compiled for only the host device, then an empty string is return, unless the underlying cl_program was explicitly compiled, in which case the compile options used in the explicit compile are returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>a string of valid OpenCL compile options. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00261">261</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00265">265</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -668,7 +669,7 @@ template&lt;&gt; </td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the SYCL context that this program was constructed with. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00236">236</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00240">240</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -696,7 +697,7 @@ template&lt;&gt; </td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a vector of devices that are associated with this program. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00249">249</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00253">253</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +759,7 @@ template&lt;info::program param&gt; </div>
 <p>If program is in the program_state::none state or if the SYCL kernel function is not available, an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> exception is thrown.</p>
 <dl class="section return"><dt>Returns</dt><dd>a valid instance of SYCL kernel. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00247">247</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00262">262</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -789,7 +790,7 @@ template&lt;info::program param&gt; </div>
 <p>If the program has not been explicitly linked using the aforementioned function, constructed with an explicitly linking constructor, or if the program has been linked for only the host device, then an empty string is returned. If the program was constructed from cl_program, then an empty string is returned unless the cl_program was explicitly linked, in which case the link options used in that explicit link are returned. If the program object was constructed using a constructor form that links a vector of programs, then the link options passed to this constructor are returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>a string of valid OpenCL compile options. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00277">277</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00281">281</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -817,7 +818,7 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the current state of this SYCL program. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00290">290</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00294">294</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -845,7 +846,7 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a reference to a raw PI program handle. PI program is not retained before return. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00110">110</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00114">114</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -873,7 +874,7 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a constant reference to a raw PI program handle. PI program is not retained before return. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00113">113</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00117">117</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -907,7 +908,7 @@ template&lt;info::program param&gt; </div>
 <p>The SYCL kernel is defined by kernel name. If the program state is program_state::none an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> SYCL exception is thrown.</p>
 <dl class="section return"><dt>Returns</dt><dd>true if the SYCL kernel is available. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00238">238</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00253">253</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -935,9 +936,9 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if this SYCL program is a host program. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00116">116</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00120">120</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00143">program_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00158">program_impl()</a>.</p>
 
 </div>
 </div>
@@ -966,7 +967,7 @@ template&lt;info::program param&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00222">222</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00237">237</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
 </div>
 </div>
