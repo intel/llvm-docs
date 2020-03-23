@@ -9,7 +9,7 @@ var searchData=
   ['piextprogramconvert',['piextProgramConvert',['../pi__opencl_8cpp.html#a2d4b5a4de5a03cc95186b862d0fcb913',1,'pi_opencl.cpp']]],
   ['piextusmdevicealloc',['piextUSMDeviceAlloc',['../pi__opencl_8cpp.html#afb277e62c303911ca7544b18ab6282b6',1,'pi_opencl.cpp']]],
   ['piextusmenqueuememadvise',['piextUSMEnqueueMemAdvise',['../pi__opencl_8cpp.html#a45c476b6f3f04e669465cc5dc862a186',1,'pi_opencl.cpp']]],
-  ['piextusmenqueuememcpy',['piextUSMEnqueueMemcpy',['../pi__opencl_8cpp.html#a325e562e07e937cb48fe9e55ad790782',1,'pi_opencl.cpp']]],
+  ['piextusmenqueuememcpy',['piextUSMEnqueueMemcpy',['../pi__opencl_8cpp.html#a8bbd367671f3aad6304b5febb211d9d5',1,'pi_opencl.cpp']]],
   ['piextusmenqueuememset',['piextUSMEnqueueMemset',['../pi__opencl_8cpp.html#ab17a1f185c70eee84cf47a997bcc1cb4',1,'pi_opencl.cpp']]],
   ['piextusmenqueueprefetch',['piextUSMEnqueuePrefetch',['../pi__opencl_8cpp.html#ab7fdca507a18992a9ad713349addc8bb',1,'pi_opencl.cpp']]],
   ['piextusmfree',['piextUSMFree',['../pi__opencl_8cpp.html#a6412f5d3d8b0e84b2898ead2268310e7',1,'pi_opencl.cpp']]],
