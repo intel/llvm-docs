@@ -6,6 +6,7 @@ var searchData=
   ['enqueueresultt',['EnqueueResultT',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html',1,'cl::sycl::detail']]],
   ['equalto',['EqualTo',['../structcl_1_1sycl_1_1detail_1_1EqualTo.html',1,'cl::sycl::detail']]],
   ['event',['event',['../classcl_1_1sycl_1_1event.html',1,'cl::sycl']]],
+  ['event_5fcallback',['event_callback',['../classevent__callback.html',1,'']]],
   ['event_5ferror',['event_error',['../classcl_1_1sycl_1_1event__error.html',1,'cl::sycl']]],
   ['event_5fimpl',['event_impl',['../classcl_1_1sycl_1_1detail_1_1event__impl.html',1,'cl::sycl::detail']]],
   ['exception',['exception',['../classcl_1_1sycl_1_1exception.html',1,'cl::sycl']]],

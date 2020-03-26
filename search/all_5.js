@@ -10,6 +10,7 @@ var searchData=
   ['entriesbegin',['EntriesBegin',['../structpi__device__binary__struct.html#a6eb4a6bb0e5ec4d025383ee3cdc98146',1,'pi_device_binary_struct']]],
   ['equalto',['EqualTo',['../structcl_1_1sycl_1_1detail_1_1EqualTo.html',1,'cl::sycl::detail']]],
   ['event',['event',['../classcl_1_1sycl_1_1event.html',1,'cl::sycl::event'],['../classcl_1_1sycl_1_1event.html#ac6e833ed669c7678e8e88d85718ce4d6',1,'cl::sycl::event::event()'],['../classcl_1_1sycl_1_1event.html#ace726009cd3e13663e86054d3991a414',1,'cl::sycl::event::event(cl_event ClEvent, const context &amp;SyclContext)']]],
+  ['event_5fcallback',['event_callback',['../classevent__callback.html',1,'']]],
   ['event_5ferror',['event_error',['../classcl_1_1sycl_1_1event__error.html',1,'cl::sycl']]],
   ['event_5fimpl',['event_impl',['../classcl_1_1sycl_1_1detail_1_1event__impl.html',1,'cl::sycl::detail::event_impl'],['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a32f9d11d2886854999686049d8d48cf3',1,'cl::sycl::detail::event_impl::event_impl()=default'],['../classcl_1_1sycl_1_1detail_1_1event__impl.html#ab2f3826fd4b4919b3f88c3e48db465ec',1,'cl::sycl::detail::event_impl::event_impl(RT::PiEvent Event, const context &amp;SyclContext)']]],
   ['exception',['exception',['../classcl_1_1sycl_1_1exception.html',1,'cl::sycl']]],
