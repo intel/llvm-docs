@@ -31,6 +31,7 @@ var searchData=
   ['memobjrecord',['MemObjRecord',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html',1,'cl::sycl::detail']]],
   ['memory_5fallocation_5ferror',['memory_allocation_error',['../classcl_1_1sycl_1_1memory__allocation__error.html',1,'cl::sycl']]],
   ['memorymanager',['MemoryManager',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html',1,'cl::sycl::detail']]],
+  ['memorysemanticsmask',['MemorySemanticsMask',['../struct____spv_1_1MemorySemanticsMask.html',1,'__spv']]],
   ['memset',['memset',['../classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540',1,'cl::sycl::handler::memset()'],['../classcl_1_1sycl_1_1queue.html#afcd93967ba2484d50786c22b4148cb67',1,'cl::sycl::queue::memset()'],['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a512fca4ad31e7ae4c97a0223dabf038e',1,'cl::sycl::detail::queue_impl::memset()']]],
   ['minimum',['minimum',['../structcl_1_1sycl_1_1intel_1_1minimum.html',1,'cl::sycl::intel']]],
   ['multi_5fptr',['multi_ptr',['../classcl_1_1sycl_1_1multi__ptr.html',1,'cl::sycl']]],

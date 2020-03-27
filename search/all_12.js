@@ -3,6 +3,7 @@ var searchData=
   ['sampler',['sampler',['../classcl_1_1sycl_1_1sampler.html',1,'cl::sycl']]],
   ['sampler_5fimpl',['sampler_impl',['../classcl_1_1sycl_1_1detail_1_1sampler__impl.html',1,'cl::sycl::detail']]],
   ['scheduler',['Scheduler',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html',1,'cl::sycl::detail']]],
+  ['scope',['Scope',['../struct____spv_1_1Scope.html',1,'__spv']]],
   ['scopedcontext',['ScopedContext',['../classScopedContext.html',1,'']]],
   ['select_5fcl_5fmptr_5for_5fvector_5for_5fscalar',['select_cl_mptr_or_vector_or_scalar',['../structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar.html',1,'cl::sycl::detail']]],
   ['select_5fcl_5fmptr_5for_5fvector_5for_5fscalar_3c_20t_2c_20typename_20std_3a_3aenable_5fif_3c_20is_5fgenptr_3c_20t_20_3e_3a_3avalue_20_26_26_21std_3a_3ais_5fpointer_3c_20t_20_3e_3a_3avalue_20_3e_3a_3atype_20_3e',['select_cl_mptr_or_vector_or_scalar&lt; T, typename std::enable_if&lt; is_genptr&lt; T &gt;::value &amp;&amp;!std::is_pointer&lt; T &gt;::value &gt;::type &gt;',['../structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar_3_01T_00_01typename_01std2223266f392b25f8d85c4af1ff0c5830.html',1,'cl::sycl::detail']]],
