@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Environment Variables &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The DPC++ Runtime Plugin Interface." href="PluginInterface.html" />
+    <link rel="prev" title="oneAPI DPC++ Compiler and Runtime architecture design" href="CompilerAndRuntimeDesign.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Environment Variables</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="CompilerAndRuntimeDesign.html">oneAPI DPC++ Compiler and Runtime architecture design</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PluginInterface.html">The DPC++ Runtime Plugin Interface.</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="environment-variables">
+<h1>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h1>
+<p>This document describes environment variables that are having effect on DPC++
+compiler and runtime.</p>
+<div class="section" id="controlling-dpc-rt">
+<h2>Controlling DPC++ RT<a class="headerlink" href="#controlling-dpc-rt" title="Permalink to this headline">¶</a></h2>
+<p><strong>Warning:</strong> the environment variables described in this document are used for
+development and debugging of DPC++ compiler and runtime. Their semantics are
+subject to change. Do not rely on these variables in production code.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Environment variable</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYCL_PI_TRACE</td>
+<td>Any(*)</td>
+<td>Force tracing of PI calls to stderr.</td>
+</tr>
+<tr>
+<td>SYCL_BE</td>
+<td>PI_OPENCL, PI_CUDA, PI_OTHER</td>
+<td>When SYCL RT is built with PI, this controls which plugin is used by the default device selector. Default value is PI_OPENCL.</td>
+</tr>
+<tr>
+<td>SYCL_DEVICE_TYPE</td>
+<td>One of: CPU, GPU, ACC, HOST</td>
+<td>Force SYCL to use the specified device type. If unset, default selection rules are applied. If set to any unlisted value, this control has no effect. If the requested device type is not found, a <code>cl::sycl::runtime_error</code> exception is thrown. If a non-default device selector is used, a device must satisfy both the selector and this control to be chosen. This control only has effect on devices created with a selector.</td>
+</tr>
+<tr>
+<td>SYCL_PROGRAM_COMPILE_OPTIONS</td>
+<td>String of valid OpenCL compile options</td>
+<td>Override compile options for all programs.</td>
+</tr>
+<tr>
+<td>SYCL_PROGRAM_LINK_OPTIONS</td>
+<td>String of valid OpenCL link options</td>
+<td>Override link options for all programs.</td>
+</tr>
+<tr>
+<td>SYCL_USE_KERNEL_SPV</td>
+<td>Path to the SPIR-V binary</td>
+<td>Load device image from the specified file. If runtime is unable to read the file, <code>cl::sycl::runtime_error</code> exception is thrown.</td>
+</tr>
+<tr>
+<td>SYCL_DUMP_IMAGES</td>
+<td>Any(*)</td>
+<td>Dump device image binaries to file. Control has no effect if SYCL_USE_KERNEL_SPV is set.</td>
+</tr>
+<tr>
+<td>SYCL_PRINT_EXECUTION_GRAPH</td>
+<td>Described <a href="#sycl_print_execution_graph-options">below</a></td>
+<td>Print execution graph to DOT text file.</td>
+</tr>
+<tr>
+<td>SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP</td>
+<td>Any(*)</td>
+<td>Disable cleanup of finished command nodes at host-device synchronization points.</td>
+</tr>
+<tr>
+<td>SYCL_THROW_ON_BLOCK</td>
+<td>Any(*)</td>
+<td>Throw an exception on attempt to wait for a blocked command.</td>
+</tr>
+<tr>
+<td>SYCL_DEVICELIB_INHIBIT_NATIVE</td>
+<td>String of device library extensions (separated by a whitespace)</td>
+<td>Do not rely on device native support for devicelib extensions listed in this option.</td>
+</tr>
+<tr>
+<td>SYCL_DEVICE_ALLOWLIST</td>
+<td>A list of devices and their minimum driver version following the pattern: DeviceName:{{XXX}},DriverVersion:{{X.Y.Z.W}}. Also may contain PlatformName and PlatformVersion</td>
+<td>Filter out devices that do not match the pattern specified. Regular expression can be passed and the DPC++ runtime will select only those devices which satisfy the regex.</td>
+</tr>
+<tr>
+<td><code>(*) Note: Any means this environment variable is effective when set to any non-null value.</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table><div class="section" id="sycl-print-execution-graph-options">
+<h3>SYCL_PRINT_EXECUTION_GRAPH Options<a class="headerlink" href="#sycl-print-execution-graph-options" title="Permalink to this headline">¶</a></h3>
+<p>SYCL_PRINT_EXECUTION_GRAPH can accept one or more comma separated values from the table below</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>before_addCG</td>
+<td>print graph before addCG method</td>
+</tr>
+<tr>
+<td>after_addCG</td>
+<td>print graph after addCG method</td>
+</tr>
+<tr>
+<td>before_addCopyBack</td>
+<td>print graph before addCopyBack method</td>
+</tr>
+<tr>
+<td>after_addCopyBack</td>
+<td>print graph after addCopyBack method</td>
+</tr>
+<tr>
+<td>before_addHostAcc</td>
+<td>print graph before addHostAccessor method</td>
+</tr>
+<tr>
+<td>after_addHostAcc</td>
+<td>print graph after addHostAccessor method</td>
+</tr>
+<tr>
+<td>always</td>
+<td>print graph before and after each of the above methods</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="CompilerAndRuntimeDesign.html">oneAPI DPC++ Compiler and Runtime architecture design</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PluginInterface.html">The DPC++ Runtime Plugin Interface.</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Intel Corporation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

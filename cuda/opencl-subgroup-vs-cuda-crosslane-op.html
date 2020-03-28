@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CUDA crosslane vs OpenCL sub-groups &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions" href="../FAQ.html" />
+    <link rel="prev" title="CUDA vs OpenCL math builtin precision" href="cuda-vs-opencl-math-builtin-precisions.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>CUDA crosslane vs OpenCL sub-groups</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="cuda-vs-opencl-math-builtin-precisions.html">CUDA vs OpenCL math builtin precision</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../FAQ.html">Frequently Asked Questions</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="cuda-crosslane-vs-opencl-sub-groups">
+<h1>CUDA crosslane vs OpenCL sub-groups<a class="headerlink" href="#cuda-crosslane-vs-opencl-sub-groups" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sub-group-function-mapping">
+<h2>Sub-group function mapping<a class="headerlink" href="#sub-group-function-mapping" title="Permalink to this headline">¶</a></h2>
+<p>This document describes the mapping of the SYCL subgroup operations (based on the proposal <a class="reference external" href="../extensions/sub_group_ndrange/sub_group_ndrange">SYCL subgroup proposal</a>) to CUDA (queries responses and PTX instruction mapping)</p>
+<div class="section" id="sub-group-device-queries">
+<h3>Sub-group device Queries<a class="headerlink" href="#sub-group-device-queries" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Query</th>
+<th>CUDA backend result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>info::device::max_num_sub_groups</code></td>
+<td>sm 3.0 to 7.0: 64; sm 7.5 32  (see [HW_spec])</td>
+</tr>
+<tr>
+<td><code>info::device::sub_group_independent_forward_progress</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>info::device::sub_group_sizes</code></td>
+<td>{32}</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="id1">
+<h3>Sub-group function mapping<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Sub-group function</th>
+<th>PTX mapping</th>
+<th>LLVM Intrinsic</th>
+<th>Min version</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>get_local_id()</code></td>
+<td><code>%laneid</code></td>
+<td><code>@llvm.nvvm.read.ptx.sreg.laneid</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>get_local_range()</code></td>
+<td><code>WARP_SZ</code></td>
+<td><code>@llvm.nvvm.read.ptx.sreg.warpsize</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>get_max_local_range</code></td>
+<td><code>WARP_SZ</code></td>
+<td><code>@llvm.nvvm.read.ptx.sreg.warpsize</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>get_group_id</code></td>
+<td><code>%warpid</code></td>
+<td><code>@llvm.nvvm.read.ptx.sreg.warpid</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>get_group_range</code></td>
+<td><code>%nwarpid</code></td>
+<td><code>@llvm.nvvm.read.ptx.sreg.nwarpid</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>get_uniform_group_range</code></td>
+<td><code>%nwarpid</code></td>
+<td><code>@llvm.nvvm.read.ptx.sreg.nwarpid</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>barrier</code></td>
+<td><code>bar.warp.sync</code></td>
+<td><code>@llvm.nvvm.bar.warp.sync</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>any(bool)</code></td>
+<td><code>vote{.sync}.any.pred</code></td>
+<td><code>llvm.nvvm.vote.any{.sync}</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>all(bool)</code></td>
+<td><code>vote{.sync}.all.pred</code></td>
+<td><code>llvm.nvvm.vote.all{.sync}</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>broadcast</code></td>
+<td><code>shfl.sync.idx.b32</code></td>
+<td><code>llvm.shfl.sync.idx.{f32,i32}</code></td>
+<td><code>sm_30</code></td>
+<td>Only implemented for float and int32 in LLVM but should extendable</td>
+</tr>
+<tr>
+<td><code>reduce</code></td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>[cuda_reduce]</td>
+</tr>
+<tr>
+<td><code>exclusive_scan</code></td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>[cuda_scan_example]/[ptx_scan_example]</td>
+</tr>
+<tr>
+<td><code>inclusive_scan</code></td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>[cuda_scan_example]/[ptx_scan_example]</td>
+</tr>
+<tr>
+<td><code>shuffle</code></td>
+<td><code>shfl.sync.idx.b32</code></td>
+<td><code>llvm.shfl.sync.idx.{f32,i32}</code></td>
+<td><code>sm_30</code></td>
+<td>Insn only for 32 bits. Requires emulation for non 32-bits.</td>
+</tr>
+<tr>
+<td><code>shuffle_down</code></td>
+<td><code>shfl.sync.down.b32</code></td>
+<td><code>llvm.shfl.sync.down.{f32,i32}</code></td>
+<td><code>sm_30</code></td>
+<td>Insn only for 32 bits. Requires emulation for non 32-bits.</td>
+</tr>
+<tr>
+<td><code>shuffle_up</code></td>
+<td><code>shfl.sync.up.b32</code></td>
+<td><code>llvm.shfl.sync.up.{f32,i32}</code></td>
+<td><code>sm_30</code></td>
+<td>Insn only for 32 bits. Requires emulation for non 32-bits.</td>
+</tr>
+<tr>
+<td><code>shuffle_xor</code></td>
+<td><code>shfl.sync.bfly.b32</code></td>
+<td><code>llvm.shfl.sync.bfly.{f32,i32}</code></td>
+<td><code>sm_30</code></td>
+<td>Insn only for 32 bits. Requires emulation for non 32-bits.</td>
+</tr>
+<tr>
+<td><code>shuffle</code> (2 inputs)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Can be implemented using CUDA shuffle function (non in-place modification + predication)</td>
+</tr>
+<tr>
+<td><code>shuffle_down</code> (2 inputs)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Can be implemented using CUDA shuffle function (non in-place modification + predication)</td>
+</tr>
+<tr>
+<td><code>shuffle_up</code> (2 inputs)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Can be implemented using CUDA shuffle function (non in-place modification + predication)</td>
+</tr>
+<tr>
+<td><code>load</code> (scalar)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Maps to normal load, guarantees coalesced access</td>
+</tr>
+<tr>
+<td><code>load</code> (vector)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Maps to normal load, guarantees coalesced access</td>
+</tr>
+<tr>
+<td><code>store</code> (scalar)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Maps to normal store, guarantees coalesced access</td>
+</tr>
+<tr>
+<td><code>store</code> (vector)</td>
+<td>None</td>
+<td>None</td>
+<td></td>
+<td>Maps to normal store, guarantees coalesced access</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="cuda-vs-opencl-math-builtin-precisions.html">CUDA vs OpenCL math builtin precision</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../FAQ.html">Frequently Asked Questions</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Intel Corporation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

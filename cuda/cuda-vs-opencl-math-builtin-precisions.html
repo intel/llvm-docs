@@ -1,0 +1,2201 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CUDA vs OpenCL math builtin precision &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CUDA crosslane vs OpenCL sub-groups" href="opencl-subgroup-vs-cuda-crosslane-op.html" />
+    <link rel="prev" title="Experimental CUDA backend for DPC++" href="contents.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>CUDA vs OpenCL math builtin precision</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="contents.html">Experimental CUDA backend for DPC++</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="opencl-subgroup-vs-cuda-crosslane-op.html">CUDA crosslane vs OpenCL sub-groups</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="cuda-vs-opencl-math-builtin-precision">
+<h1>CUDA vs OpenCL math builtin precision<a class="headerlink" href="#cuda-vs-opencl-math-builtin-precision" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cuda-guarantees">
+<h2>CUDA Guarantees<a class="headerlink" href="#cuda-guarantees" title="Permalink to this headline">¶</a></h2>
+<p>From <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#standard-functions">Appendix E.1 of the CUDA C Programming Guide</a>:</p>
+<blockquote>
+<div><p>This section specifies the error bounds of each function when executed on the device and also
+when executed on the host in the case where the host does not supply the function.</p>
+<p>The error bounds are generated from extensive but not exhaustive tests, so they are not
+guaranteed bounds.</p>
+</div></blockquote>
+<p>In <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#math-libraries">Section 11.1.5 of the CUDA C Best Practices Guide</a> on Math Libraries and
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#precision-related-compiler-flags">Section 11.1.6 of the CUDA C Best Practices Guide</a> on Precision-related
+Compiler Flags, there are mentions of the precision of math built-ins.</p>
+</div>
+<div class="section" id="single-precision">
+<h2>Single Precision<a class="headerlink" href="#single-precision" title="Permalink to this headline">¶</a></h2>
+<p>The following table uses the following sources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/opencl-1.2.pdf#page=319">Section 7.4 of the OpenCL 1.2 Specification</a></p></li>
+<li><p><a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#standard-functions">Appendix E.1 of the CUDA C Programming Guide</a> which is referenced from the
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-math-api/group__CUDA__MATH__SINGLE.html#group__CUDA__MATH__SINGLE">CUDA Math API documentation</a></p></li>
+</ul>
+<p>In addition to the following table, the CUDA documentation also includes:</p>
+<blockquote>
+<div><p>Addition and multiplication are IEEE-compliant, so have a maximum error of 0.5 ulp.</p>
+<p>The recommended way to round a single-precision floating-point operand to an integer, with
+the result being a single-precision floating-point number is rintf(), not roundf(). The reason
+is that roundf() maps to an 8-instruction sequence on the device, whereas rintf() maps to a
+single instruction. truncf(), ceilf(), and floorf() each map to a single instruction as well.</p>
+</div></blockquote>
+<p>OpenCL defines ULP (units in last place) as:</p>
+<blockquote>
+<div><p>If x is a real number that lies between two finite consecutive floating-point numbers a and b,
+without being equal to one of them, then ulp(x) = |b − a|, otherwise ulp(x) is the distance
+between the two non-equal finite floating-point numbers nearest x.  Moreover, ulp(NaN) is NaN.</p>
+</div></blockquote>
+<p>Maximum error is defined in the CUDA documentation as:</p>
+<blockquote>
+<div><p>The maximum error is stated as the absolute value of the difference in ulps between a correctly
+rounded single-precision result and the result returned by the CUDA library function.</p>
+</div></blockquote>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>OpenCL Built-in</th>
+<th>OpenCL Min Accuracy (ULP)</th>
+<th>CUDA Built-in</th>
+<th>CUDA Maximum Error (ULP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x + y</code></td>
+<td>Correctly rounded</td>
+<td><code>x + y</code></td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td><code>x - y</code></td>
+<td>Correctly rounded</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>x * y</code></td>
+<td>Correctly rounded</td>
+<td><code>x * y</code></td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td>[<code>1.0 / x</code>][<code>recip</code>]</td>
+<td>≤ 2.5 ulp</td>
+<td><code>1.0 / x</code></td>
+<td>0 ulp (if compute capability ≥ 2 when compiled with <code>-prec-div=true</code>), 1 ulp (full range) otherwise</td>
+</tr>
+<tr>
+<td>[<code>x / y</code>][<code>divide</code>]</td>
+<td>≤ 2.5 ulp</td>
+<td><code>x / y</code></td>
+<td>0 ulp (if compute capability ≥ 2 when compiled with <code>-prec-div=true</code>), 2 ulp (full range) otherwise</td>
+</tr>
+<tr>
+<td>[<code>acos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>acosf</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>acospi</code>][<code>acos</code>]</td>
+<td>≤ 5 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>asin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>asinf</code>]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>asinpi</code>][<code>asin</code>]</td>
+<td>≤ 5 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>atan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>atanf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>atan2</code>][<code>atan</code>]</td>
+<td>≤ 6 ulp</td>
+<td>[<code>atan2f</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>atanpi</code>][<code>atan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>atan2pi</code>][<code>atan</code>]</td>
+<td>≤ 6 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>acosh</code>][<code>acos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>acoshf</code>]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>asinh</code>][<code>asin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>asinhf</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>atanh</code>][<code>atan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>atanhf</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>cbrt</code>]</td>
+<td>≤ 2 ulp</td>
+<td>[<code>cbrtf</code>]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>ceil</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>ceilf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>copysign</code>]</td>
+<td>0 ulp</td>
+<td>[<code>copysignf</code>]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>cos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>cosf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>cosh</code>][<code>cos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>coshf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>cospi</code>][<code>cos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>cospi</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>cyl_bessel_i0f</code>]</td>
+<td>6 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>cyl_bessel_i1f</code>]</td>
+<td>6 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>erfc</code>][<code>erf</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>erfcf</code>]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>erfcinvf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>erfcxf</code>]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>erfinvf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>erf</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>erff</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>expf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>exp2</code>][<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>exp2f</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>exp10</code>][<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>exp10f</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>expm1</code>][<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>expm1f</code>]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fabs</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fabsf</code>]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>fdim</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>fdimf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>floor</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>floorf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fma</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>fmaf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fmax</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fmaxf</code>]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>fmin</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fminf</code>]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>fmod</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fmodf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fract</code>]</td>
+<td>Correctly rounded</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>frexp</code>]</td>
+<td>0 ulp</td>
+<td>[<code>frexpf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>hypot</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>hypotf</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>ilogb</code>]</td>
+<td>0 ulp</td>
+<td>[<code>ilogbf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>j0f</code>]</td>
+<td>9 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>2.2 x 10^(-6)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>j1f</code>]</td>
+<td>9 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>2.2 x 10^(-6)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>jnf</code>]</td>
+<td>For <code>n = 128</code>, <code>2.2 x 10^(-6)</code></td>
+</tr>
+<tr>
+<td>[<code>ldexp</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>ldexpf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>lgammaf</code>]</td>
+<td>6 ulp (outside interval <code>-10.001 ... -2.264; larger inside</code>)</td>
+</tr>
+<tr>
+<td>[<code>log</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>logf</code>]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>log2</code>][<code>log</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>log2f</code>]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>log10</code>][<code>log</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>log10f</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>log1p</code>][<code>log</code>]</td>
+<td>≤ 2 ulp</td>
+<td>[<code>log1pf</code>]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>logb</code>][<code>log</code>]</td>
+<td>0 ulp</td>
+<td>[<code>logbf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>lrintf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>lroundf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>llrintf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>llroundf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>mad</code>]</td>
+<td>Any value allowed (infinite ulp)</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>maxmag</code>][<code>mag</code>]</td>
+<td>0 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>minmag</code>][<code>mag</code>]</td>
+<td>0 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>modf</code>]</td>
+<td>0 ulp</td>
+<td>[<code>modff</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>nan</code>]</td>
+<td>0 ulp</td>
+<td>[<code>nanf</code>]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>nearbyintf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>nextafter</code>]</td>
+<td>0 ulp</td>
+<td>[<code>nextafterf</code>]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>normf</code>]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>normcdff</code>]</td>
+<td>5 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>normcdfinvf</code>]</td>
+<td>5 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>norm3df</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>norm4df</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>pow(x, y)</code>][<code>pow</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>powf</code>]</td>
+<td>8 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>pown(x, y)</code>][<code>pow</code>]</td>
+<td>≤ 16 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>powr(x, y)</code>][<code>pow</code>]</td>
+<td>≤ 16 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rcbrtf</code>]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rhypot</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rnormf</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rnorm3df</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rnorm4df</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>remainder</code>]</td>
+<td>0 ulp</td>
+<td>[<code>remainderf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>remquo</code>]</td>
+<td>0 ulp</td>
+<td>[<code>remquof</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>rint</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>rintf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>rootn</code>]</td>
+<td>≤ 16 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>round</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>roundf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>rsqrt</code>][<code>sqrt</code>]</td>
+<td>≤ 2 ulp</td>
+<td>[<code>rsqrtf</code>]</td>
+<td>2 ulp (full range) (applies to <code>1 / sqrtf(x)</code> only when converted to <code>rsqrtf</code> by compiler)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>scalbnf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>scalblnf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>sinf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sincos</code>][<code>sin</code>]</td>
+<td>≤ 4 ulp for sine and cosine values</td>
+<td>[<code>sincosf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>sincospif</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sinh</code>][<code>sin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>sinhf</code>]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sinpi</code>][<code>sin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>sinpif</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sqrt</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>sqrtf</code>]</td>
+<td>0 ulp (when compiled with <code>-prec-sqrt=true</code>) otherwise 1 ulp if compute capability ≥ 5.2 and 3 ulp otherwise.</td>
+</tr>
+<tr>
+<td>[<code>tan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>tanf</code>]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>tanh</code>][<code>tan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>tanhf</code>]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>tanpi</code>][<code>tan</code>]</td>
+<td>≤ 6 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>tgamma</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>tgammaf</code>]</td>
+<td>11 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>trunc</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>truncf</code>]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>y0f</code>]</td>
+<td>9 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>2.2 x 10^(-6)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>y1f</code>]</td>
+<td>9 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>2.2 x 10^(-6)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>ynf</code>]</td>
+<td><code>ceil(2 + 2.5n)</code> for <code>abs(x) &lt; n</code>, otherwise <code>2.2 x 10^(-6)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>isfinite</code>]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>isinf</code>]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>isnan</code>]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>signbit</code>]</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table><p>OpenCL’s <code class="docutils literal notranslate"><span class="pre">native_</span></code> math built-ins map to the same CUDA built-in as the equivalent non-<code class="docutils literal notranslate"><span class="pre">native_</span></code>
+OpenCL built-in and the precision is implementation-defined:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/cos.html"><code class="docutils literal notranslate"><span class="pre">native_cos</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/divide.html"><code class="docutils literal notranslate"><span class="pre">native_divide</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/exp.html"><code class="docutils literal notranslate"><span class="pre">native_exp</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/exp.html"><code class="docutils literal notranslate"><span class="pre">native_exp2</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/exp.html"><code class="docutils literal notranslate"><span class="pre">native_exp10</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/log.html"><code class="docutils literal notranslate"><span class="pre">native_log</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/log.html"><code class="docutils literal notranslate"><span class="pre">native_log2</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/log.html"><code class="docutils literal notranslate"><span class="pre">native_log10</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/pow.html"><code class="docutils literal notranslate"><span class="pre">native_powr</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/recip.html"><code class="docutils literal notranslate"><span class="pre">native_recip</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/sqrt.html"><code class="docutils literal notranslate"><span class="pre">native_rsqrt</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/sin.html"><code class="docutils literal notranslate"><span class="pre">native_sin</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/sqrt.html"><code class="docutils literal notranslate"><span class="pre">native_sqrt</span></code></a></p></li>
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/sdk/1.2/docs/man/xhtml/tan.html"><code class="docutils literal notranslate"><span class="pre">native_tan</span></code></a></p></li>
+</ul>
+<p>In <a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/2.2/html/OpenCL_C.html#relative-error-as-ulps">section 7.4 of the OpenCL 2.1 Specification</a>, <code class="docutils literal notranslate"><span class="pre">mad</span></code> has a different requirement,
+namely:</p>
+<blockquote>
+<div><p>Implemented either as a correctly rounded fma or as a multiply followed by an add both of which
+are correctly rounded.</p>
+</div></blockquote>
+<p>Precision of SPIR-V math instructions for use in an OpenCL environment, can be
+<a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/2.2/html/OpenCL_Env.html#relative-error-as-ulps">found in this document</a>.</p>
+</div>
+<div class="section" id="double-precision">
+<h2>Double Precision<a class="headerlink" href="#double-precision" title="Permalink to this headline">¶</a></h2>
+<p>The following table uses the following sources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/opencl-1.2.pdf#page=322">Section 7.4 of the OpenCL 1.2 Specification</a></p></li>
+<li><p><a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#standard-functions">Appendix E.1 of the CUDA C Programming Guide</a> which is referenced from the
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-math-api/group__CUDA__MATH__DOUBLE.html#group__CUDA__MATH__DOUBLE">CUDA Math API documentation</a></p></li>
+</ul>
+<p>CUDA defines maximum error in the same way as for single precision, and also includes:</p>
+<blockquote>
+<div><p>The recommended way to round a double-precision floating-point operand to an integer, with the result being a double-precision
+floating-point number is rint(), not round(). The reason is that round() maps to an 8-instruction sequence on the device,
+whereas rint() maps to a single instruction. trunc(), ceil(), and floor() each map to a single instruction as well.</p>
+</div></blockquote>
+<p>Only differences from single precision are included. There are only changes to <code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">/</span> <span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code>
+and <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> from OpenCL. All built-in names changed for CUDA and many precisions too.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>OpenCL Built-in</th>
+<th>OpenCL Min Accuracy (ULP)</th>
+<th>CUDA Built-in</th>
+<th>CUDA Maximum Error (ULP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x + y</code></td>
+<td>Correctly rounded</td>
+<td><code>x + y</code></td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td><code>x - y</code></td>
+<td>Correctly rounded</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>x * y</code></td>
+<td>Correctly rounded</td>
+<td><code>x * y</code></td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td>[<code>1.0 / x</code>][<code>recip</code>]</td>
+<td>Correctly rounded</td>
+<td><code>1.0 / x</code></td>
+<td>0 ulp (IEEE-754 round-to-nearest-even</td>
+</tr>
+<tr>
+<td>[<code>x / y</code>][<code>divide</code>]</td>
+<td>Correctly rounded</td>
+<td><code>x / y</code></td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td>[<code>acos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>acos</code>][<code>acos</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>acospi</code>][<code>acos</code>]</td>
+<td>≤ 5 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>asin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>asin</code>][<code>asin</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>asinpi</code>][<code>asin</code>]</td>
+<td>≤ 5 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>atan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>atan</code>][<code>atan</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>atan2</code>][<code>atan</code>]</td>
+<td>≤ 6 ulp</td>
+<td>[<code>atan2</code>][<code>atan2</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>atanpi</code>][<code>atan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>atan2pi</code>][<code>atan</code>]</td>
+<td>≤ 6 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>acosh</code>][<code>acos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>acosh</code>][<code>acosh</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>asinh</code>][<code>asin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>asinh</code>][<code>asinh</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>atanh</code>][<code>atan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>atanh</code>][<code>atanh</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>cbrt</code>]</td>
+<td>≤ 2 ulp</td>
+<td>[<code>cbrt</code>][<code>cbrt</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>ceil</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>ceil</code>][<code>ceil</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>copysign</code>]</td>
+<td>0 ulp</td>
+<td>[<code>copysign</code>][<code>copysign</code>_cuda]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>cos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>cos</code>][<code>cos</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>cosh</code>][<code>cos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>cosh</code>][<code>cosh</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>cospi</code>][<code>cos</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>cospi</code>][<code>cospi</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>cyl_bessel_i0</code>][<code>cyl_bessel_i0</code>_cuda]</td>
+<td>6 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>cyl_bessel_i1</code>][<code>cyl_bessel_i1</code>_cuda]</td>
+<td>6 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>erfc</code>][<code>erf</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>erfc</code>][<code>erfc</code>_cuda]</td>
+<td>4 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>erfcinv</code>][<code>erfcinv</code>_cuda]</td>
+<td>6 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>erfcx</code>][<code>erfcx</code>_cuda]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>erfinv</code>][<code>erfinv</code>_cuda]</td>
+<td>5 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>erf</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>erf</code>][<code>erf</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>exp</code>][<code>exp</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>exp2</code>][<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>exp2</code>][<code>exp2</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>exp10</code>][<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>exp10</code>][<code>exp10</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>expm1</code>][<code>exp</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>expm1</code>][<code>expm1</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fabs</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fabs</code>][<code>fabs</code>_cuda]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>fdim</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>fdim</code>][<code>fdim</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>floor</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>floor</code>][<code>floor</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fma</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>fma</code>][<code>fma</code>_cuda]</td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td>[<code>fmax</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fmax</code>][<code>fmax</code>_cuda]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>fmin</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fmin</code>][<code>fmin</code>_cuda]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>[<code>fmod</code>]</td>
+<td>0 ulp</td>
+<td>[<code>fmod</code>][<code>fmod</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>fract</code>]</td>
+<td>Correctly rounded</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>frexp</code>]</td>
+<td>0 ulp</td>
+<td>[<code>frexp</code>][<code>frexp</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>hypot</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>hypot</code>][<code>hypot</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>ilogb</code>]</td>
+<td>0 ulp</td>
+<td>[<code>ilogb</code>][<code>ilogb</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>j0</code>][<code>j0</code>_cuda]</td>
+<td>7 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>5 x 10^(-12)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>j1</code>][<code>j1</code>_cuda]</td>
+<td>7 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>5 x 10^(-12)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>jn</code>][<code>jn</code>_cuda]</td>
+<td>For <code>n = 128</code>, <code>5 x 10^(-12)</code></td>
+</tr>
+<tr>
+<td>[<code>ldexp</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>ldexp</code>][<code>ldexp</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>lgamma</code>][<code>lgamma</code>_cuda]</td>
+<td>4 ulp (outside interval <code>-11.0001 ... -2.2637; larger inside</code>)</td>
+</tr>
+<tr>
+<td>[<code>log</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>log</code>][<code>log</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>log2</code>][<code>log</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>log2</code>][<code>log2</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>log10</code>][<code>log</code>]</td>
+<td>≤ 3 ulp</td>
+<td>[<code>log10</code>][<code>log10</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>log1p</code>][<code>log</code>]</td>
+<td>≤ 2 ulp</td>
+<td>[<code>log1p</code>][<code>log1p</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>logb</code>][<code>log</code>]</td>
+<td>0 ulp</td>
+<td>[<code>logb</code>][<code>logb</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>lrint</code>][<code>lrint</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>lround</code>][<code>lround</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>llrint</code>][<code>llrint</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>llround</code>][<code>llround</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>mad</code>]</td>
+<td>Any value allowed (infinite ulp)</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>maxmag</code>][<code>mag</code>]</td>
+<td>0 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>minmag</code>][<code>mag</code>]</td>
+<td>0 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>modf</code>]</td>
+<td>0 ulp</td>
+<td>[<code>mod</code>][<code>mod</code>_cuda] (might be called <code>modf</code>, the documentation is inconsistent)</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>nan</code>]</td>
+<td>0 ulp</td>
+<td>[<code>nan</code>][<code>nan</code>_cuda]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>nearbyint</code>][<code>nearbyint</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>nextafter</code>]</td>
+<td>0 ulp</td>
+<td>[<code>nextafter</code>][<code>nextafter</code>_cuda]</td>
+<td>Undocumented.</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>norm</code>][<code>norm</code>_cuda]</td>
+<td>3 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>normcdf</code>][<code>normcdf</code>_cuda]</td>
+<td>5 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>normcdfinv</code>][<code>normcdfinv</code>_cuda]</td>
+<td>7 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>norm3d</code>][<code>norm3d</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>norm4d</code>][<code>norm4d</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>pow(x, y)</code>][<code>pow</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>pow</code>][<code>pow</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>pown(x, y)</code>][<code>pow</code>]</td>
+<td>≤ 16 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>powr(x, y)</code>][<code>pow</code>]</td>
+<td>≤ 16 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rcbrt</code>][<code>rcbrt</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rhypot</code>][<code>rhypot</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rnorm</code>][<code>rnorm</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rnorm3d</code>][<code>rnorm3d</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>rnorm4d</code>][<code>rnorm4d</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>remainder</code>]</td>
+<td>0 ulp</td>
+<td>[<code>remainder</code>][<code>remainder</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>remquo</code>]</td>
+<td>0 ulp</td>
+<td>[<code>remquo</code>][<code>remquo</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>rint</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>rint</code>][<code>rint</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>rootn</code>]</td>
+<td>≤ 16 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>round</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>round</code>][<code>round</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>rsqrt</code>][<code>sqrt</code>]</td>
+<td>≤ 2 ulp</td>
+<td>[<code>rsqrt</code>][<code>rsqrt</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>scalbn</code>][<code>scalbn</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>scalbln</code>][<code>scalbln</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>sin</code>][<code>sin</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sincos</code>][<code>sin</code>]</td>
+<td>≤ 4 ulp for sine and cosine values</td>
+<td>[<code>sincos</code>][<code>sincos</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>sincospi</code>][<code>sincospi</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sinh</code>][<code>sin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>sinh</code>][<code>sinh</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sinpi</code>][<code>sin</code>]</td>
+<td>≤ 4 ulp</td>
+<td>[<code>sinpi</code>][<code>sinpi</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>sqrt</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>sqrt</code>][<code>sqrt</code>_cuda]</td>
+<td>0 ulp (IEEE-754 round-to-nearest-even)</td>
+</tr>
+<tr>
+<td>[<code>tan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>tan</code>][<code>tan</code>_cuda]</td>
+<td>2 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>tanh</code>][<code>tan</code>]</td>
+<td>≤ 5 ulp</td>
+<td>[<code>tanh</code>][<code>tanh</code>_cuda]</td>
+<td>1 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>tanpi</code>][<code>tan</code>]</td>
+<td>≤ 6 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>tgamma</code>]</td>
+<td>≤ 16 ulp</td>
+<td>[<code>tgamma</code>][<code>tgamma</code>_cuda]</td>
+<td>8 ulp (full range)</td>
+</tr>
+<tr>
+<td>[<code>trunc</code>]</td>
+<td>Correctly rounded</td>
+<td>[<code>trunc</code>][<code>trunc</code>_cuda]</td>
+<td>0 ulp (full range)</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>y0</code>][<code>y0</code>_cuda]</td>
+<td>7 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>5 x 10^(-12)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>y1</code>][<code>y1</code>_cuda]</td>
+<td>7 ulp for <code>abs(x) &lt; 8</code>, otherwise <code>5 x 10^(-12)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>yn</code>][<code>yn</code>_cuda]</td>
+<td>For <code>abs(x) &gt; 1.5n</code>, otherwise <code>5 x 10^(-12)</code></td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>isfinite</code>][<code>isfinite</code>_cuda]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>isinf</code>][<code>isinf</code>_cuda]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>isnan</code>][<code>isnan</code>_cuda]</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>signbit</code>][<code>signbit</code>_cuda]</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="half-precision">
+<h2>Half Precision<a class="headerlink" href="#half-precision" title="Permalink to this headline">¶</a></h2>
+<p>The following tables uses the following sources:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/opencl-1.2.pdf#page=322">Section 7.4 of the OpenCL 1.2 Specification</a></p></li>
+<li><p><a class="reference external" href="https://docs.nvidia.com/cuda/cuda-math-api/group__CUDA__MATH__INTRINSIC__HALF.html#group__CUDA__MATH__INTRINSIC__HALF">CUDA Math API documentation</a></p></li>
+</ul>
+<p>CUDA doesn’t specify the ULP values for any of its half precision math builtins:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>OpenCL Built-in</th>
+<th>OpenCL Min Accuracy (ULP)</th>
+<th>CUDA Built-in</th>
+<th>CUDA Maximum Error (ULP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hadd</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hadd_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>hceil</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>half_cos</code>][<code>cos</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hcos</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>half_divide</code>][<code>divide</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>_hdiv</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_heq</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hequ</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>half_exp</code>][<code>exp</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hexp</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>half_exp2</code>][<code>exp</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hexp2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>half_exp10</code>][<code>exp</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hexp10</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>hfloor</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hfma</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hfma_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hge</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hgeu</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hgt</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hgtu</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hisinf</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hisnan</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hle</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hleu</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>half_log</code>][<code>log</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hlog</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>half_log2</code>][<code>log</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hlog2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>half_log10</code>][<code>log</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hlog10</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hlt</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hltu</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hmul</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hmul_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hneg</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hne</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hneu</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>half_powr</code>][<code>pow</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>[<code>half_recip</code>][<code>recip</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hrcp</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>hrint</code>]</td>
+<td>Undocumented (only specifies "halfway cases rounded to nearest even integer value")</td>
+</tr>
+<tr>
+<td>[<code>half_rsqrt</code>][<code>sqrt</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hrqsrt</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>[<code>half_sin</code>][<code>sin</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hsin</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>half_sqrt</code>][<code>sqrt</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>[<code>hsqrt</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hsub</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>_hsub_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>[<code>half_tan</code>][<code>tan</code>]</td>
+<td>≤ 8192 ulp</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>N/A</td>
+<td>N/A</td>
+<td>[<code>htrunc</code>]</td>
+<td>Undocumented</td>
+</tr>
+</tbody>
+</table><p>CUDA also defines math builtins that operate on a <code class="docutils literal notranslate"><span class="pre">half2</span></code> type to which there is no OpenCL parallel:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>CUDA Built-in</th>
+<th>CUDA Maximum Error (ULP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[<code>_h2div</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>[<code>_hadd2_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hadd2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hbeg2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbegu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbge2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbgeu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbgt2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbgtu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hble2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbleu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hblt2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbltu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbne2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hbneu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_heq2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hequ2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hfma2_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hfma2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hge2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hgeu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hgt2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hgtu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hisnan2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hle2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hleu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hlt2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hltu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hmul2_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hmul2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hne2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hneg2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hneu2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>_hsub2_sat</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>_hsub2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2ceil</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>h2cos</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2exp10</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2exp2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2exp</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest mode")</td>
+</tr>
+<tr>
+<td>[<code>h2floor</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>h2log10</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2log2</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2log</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2rcp</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2rint</code>]</td>
+<td>Undocumented (only specifies "halfway cases rounded to nearest even integer value")</td>
+</tr>
+<tr>
+<td>[<code>h2rsqrt</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>h2trunc</code>]</td>
+<td>Undocumented</td>
+</tr>
+</tbody>
+</table><p>Further, CUDA defines conversion and data movement functions:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>CUDA Built-in</th>
+<th>CUDA Maximum Error (ULP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[<code>__float22half2_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__float2half2_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__float2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__float2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__float2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__float2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__float2half</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__floats2half2_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half22float2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__half2float</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__half2half2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__half2int_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2int_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2int_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2int_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ll_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ll_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ll_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ll_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2short_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2short_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2short_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2short_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2uint_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2uint_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2uint_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2uint_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ull_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ull_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ull_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ull_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ushort_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ushort_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ushort_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__half2ushort_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__half_as_short</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__half_as_ushort</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__halves2half2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__high2float</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__high2half2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__high2half</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__highs2half2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__int2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__int2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__int2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__int2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__ll2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__ll2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__ll2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__ll2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__low2float</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__low2half2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__low2half</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__lowhigh2highlow</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__lows2half2</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__shfl_down_sync</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__shfl_sync</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__shfl_up_sync</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__shfl_xor_sync</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__short2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__short2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__short2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__short2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__short_as_half</code>]</td>
+<td>Undocumented</td>
+</tr>
+<tr>
+<td>[<code>__uint2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__uint2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__uint2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__uint2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__ull2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__ull2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__ull2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__ull2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__ushort2half_rd</code>]</td>
+<td>Undocumented (only specifies "round-down mode")</td>
+</tr>
+<tr>
+<td>[<code>__ushort2half_rn</code>]</td>
+<td>Undocumented (only specifies "round-to-nearest-even mode")</td>
+</tr>
+<tr>
+<td>[<code>__ushort2half_ru</code>]</td>
+<td>Undocumented (only specifies "round-up mode")</td>
+</tr>
+<tr>
+<td>[<code>__ushort2half_rz</code>]</td>
+<td>Undocumented (only specifies "round-towards-zero mode")</td>
+</tr>
+<tr>
+<td>[<code>__ushort_as_half</code>]</td>
+<td>Undocumented</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="contents.html">Experimental CUDA backend for DPC++</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="opencl-subgroup-vs-cuda-crosslane-op.html">CUDA crosslane vs OpenCL sub-groups</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Intel Corporation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Users Manual &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Preprocessor Macros" href="PreprocessorMacros.html" />
+    <link rel="prev" title="Getting Started with oneAPI DPC++" href="GetStartedGuide.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Users Manual</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="GetStartedGuide.html">Getting Started with oneAPI DPC++</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PreprocessorMacros.html">Preprocessor Macros</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="users-manual">
+<h1>Users Manual<a class="headerlink" href="#users-manual" title="Permalink to this headline">¶</a></h1>
+<p>The DPC++ Compiler contains many options to generate the desired binaries for
+your application.</p>
+<div class="section" id="sycl-specific-command-line-options">
+<h2>SYCL specific command line options<a class="headerlink" href="#sycl-specific-command-line-options" title="Permalink to this headline">¶</a></h2>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>General enabling option for SYCL compilation mode.  This option enables
+offload compilation for a given target using the `-fsycl-targets` option.
+When the `-fsycl-targets` option is not provided, the default triple is
+`spir64-unknown-unknown-sycldevice`.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=&lt;value&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>A comma separated list of triples to specify the device target(s) to generate
+code for.  This option is only valid when used with `-fsycl`.
+</pre></div>
+</div>
+<div class="section" id="target-toolchain-options">
+<h3>Target toolchain options.<a class="headerlink" href="#target-toolchain-options" title="Permalink to this headline">¶</a></h3>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend=&lt;triple&gt;</span> <span class="pre">&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pass</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">SYCL</span> <span class="n">based</span> <span class="n">backend</span> <span class="n">identified</span> <span class="n">by</span> <span class="o">&lt;</span><span class="n">triple</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend</span> <span class="pre">&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pass</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">SYCL</span> <span class="n">based</span> <span class="n">target</span> <span class="n">backend</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-frontend=&lt;triple&gt;</span> <span class="pre">&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pass</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">SYCL</span> <span class="n">based</span> <span class="n">target</span> <span class="n">frontend</span> <span class="n">identified</span> <span class="n">by</span> <span class="o">&lt;</span><span class="n">triple</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-frontend</span> <span class="pre">&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pass</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">SYCL</span> <span class="n">based</span> <span class="n">target</span> <span class="n">frontend</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-linker=&lt;triple&gt;</span> <span class="pre">&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pass</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">SYCL</span> <span class="n">based</span> <span class="n">target</span> <span class="n">linker</span> <span class="n">identified</span> <span class="n">by</span> <span class="o">&lt;</span><span class="n">triple</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-Xsycl-target-linker</span> <span class="pre">&lt;arg&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Pass</span> <span class="o">&lt;</span><span class="n">arg</span><span class="o">&gt;</span> <span class="n">to</span> <span class="n">the</span> <span class="n">SYCL</span> <span class="n">based</span> <span class="n">target</span> <span class="n">linker</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="link-options">
+<h3>Link options<a class="headerlink" href="#link-options" title="Permalink to this headline">¶</a></h3>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-link</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Generate</span> <span class="n">partially</span> <span class="n">linked</span> <span class="n">device</span> <span class="nb">object</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">the</span> <span class="n">host</span> <span class="n">link</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-link-targets=&lt;T1,...,Tn&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Specify</span> <span class="n">comma</span><span class="o">-</span><span class="n">separated</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">triples</span> <span class="n">SYCL</span> <span class="n">offloading</span> <span class="n">targets</span> <span class="n">to</span> <span class="n">produce</span>
+<span class="n">linked</span> <span class="n">device</span> <span class="n">images</span><span class="o">.</span> <span class="n">Used</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">link</span> <span class="n">step</span> <span class="n">to</span> <span class="n">link</span> <span class="n">device</span> <span class="n">code</span> <span class="k">for</span> <span class="n">given</span>
+<span class="n">targets</span> <span class="ow">and</span> <span class="n">output</span> <span class="n">multiple</span> <span class="n">linked</span> <span class="n">device</span> <span class="n">code</span> <span class="n">images</span><span class="p">,</span> <span class="n">whose</span> <span class="n">names</span> <span class="n">consist</span>
+<span class="n">of</span> <span class="n">the</span> <span class="n">common</span> <span class="n">prefix</span> <span class="n">taken</span> <span class="kn">from</span> <span class="nn">the</span> <span class="o">-</span><span class="n">o</span> <span class="n">option</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">triple</span> <span class="n">string</span><span class="o">.</span>
+<span class="n">Does</span> <span class="ow">not</span> <span class="n">produce</span> <span class="n">fat</span> <span class="n">binary</span> <span class="ow">and</span> <span class="n">must</span> <span class="n">be</span> <span class="n">used</span> <span class="n">together</span> <span class="k">with</span> <span class="o">-</span><span class="n">fsycl</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-add-targets=&lt;T1:file1...Tn:filen&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Add</span> <span class="n">arbitrary</span> <span class="n">device</span> <span class="n">images</span> <span class="n">to</span> <span class="n">the</span> <span class="n">fat</span> <span class="n">binary</span> <span class="n">being</span> <span class="n">linked</span>
+
+<span class="n">Specify</span> <span class="n">comma</span><span class="o">-</span><span class="n">separated</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">triple</span> <span class="ow">and</span> <span class="n">device</span> <span class="n">binary</span> <span class="n">image</span> <span class="n">file</span> <span class="n">name</span>
+<span class="n">pairs</span> <span class="n">to</span> <span class="n">add</span> <span class="n">to</span> <span class="n">the</span> <span class="n">final</span> <span class="n">SYCL</span> <span class="n">binary</span><span class="o">.</span> <span class="n">Tells</span> <span class="n">clang</span> <span class="n">to</span> <span class="n">include</span> <span class="n">given</span> <span class="nb">set</span> <span class="n">of</span>
+<span class="n">device</span> <span class="n">binaries</span> <span class="n">into</span> <span class="n">the</span> <span class="n">fat</span> <span class="n">SYCL</span> <span class="n">binary</span> <span class="n">when</span> <span class="n">linking</span><span class="p">;</span> <span class="n">the</span> <span class="n">option</span> <span class="n">value</span> <span class="ow">is</span>
+<span class="n">a</span> <span class="nb">set</span> <span class="n">of</span> <span class="n">pairs</span> <span class="n">triple</span><span class="p">,</span><span class="n">filename</span> <span class="o">-</span> <span class="n">filename</span> <span class="ow">is</span> <span class="n">treated</span> <span class="k">as</span> <span class="n">the</span> <span class="n">device</span> <span class="n">binary</span>
+<span class="n">image</span> <span class="k">for</span> <span class="n">the</span> <span class="n">target</span> <span class="n">triple</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">paired</span> <span class="k">with</span><span class="p">,</span> <span class="ow">and</span> <span class="n">offload</span> <span class="n">bundler</span> <span class="ow">is</span>
+<span class="n">invoked</span> <span class="n">to</span> <span class="n">do</span> <span class="n">the</span> <span class="n">actual</span> <span class="n">bundling</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-foffload-static-lib=&lt;lib&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Link with fat static library.
+
+Link with &lt;lib&gt;, which is a fat static archive containing fat objects which
+correspond to the target device. When linking clang will extract the device
+code from the objects contained in the library and link it with other
+device objects coming from the individual fat objects passed on the command
+line.
+NOTE:  Any libraries that are passed on the command line which are not
+specified with `-foffload-static-lib` are treated as host libraries and are
+only used during the final host link.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-foffload-whole-static-lib=&lt;lib&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Similar to `-foffload-static-lib` but uses the whole archive when
+performing the device code extraction.  This is helpful when creating
+shared objects from fat static archives.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-device-code-split=&lt;value&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Perform SYCL device code split. There are three possible values for this
+option:
+- per_kernel - a separate device code module is created for each SYCL
+kernel. Each device code module will contain a kernel and all its
+dependencies, i.e. called functions and used variables.
+- per_source - a separate device code module is created for each source
+(translation unit). Each device code module will contain a bunch of kernels
+grouped on per-source basis and all their dependencies, i.e. all used
+variables and called functions, including the `SYCL_EXTERNAL` macro-marked
+functions from other translation units.
+- off - no device code split.
+NOTE: By default device code split is &#39;off&#39; - all kernels go into a
+single module.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-device-code-split</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Perform</span> <span class="n">SYCL</span> <span class="n">device</span> <span class="n">code</span> <span class="n">split</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">per_source</span> <span class="n">mode</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">create</span> <span class="n">a</span>
+<span class="n">separate</span> <span class="n">device</span> <span class="n">code</span> <span class="n">module</span> <span class="k">for</span> <span class="n">each</span> <span class="n">source</span> <span class="p">(</span><span class="n">translation</span> <span class="n">unit</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="intel-fpga-specific-options">
+<h3>Intel FPGA specific options<a class="headerlink" href="#intel-fpga-specific-options" title="Permalink to this headline">¶</a></h3>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fintelfpga</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Perform ahead of time compilation for Intel FPGA, which relies on the external tool `aoc`
+being available in the `PATH`.
+
+This option is roughly equivalent to `-fsycl-targets=spir64_fpga-unknown-unknown-sycldevice -g -MMD -lOpenCL`.
+
+It is incompatible with `-fsycl-targets=...`; if ahead of time compilation
+is needed for multiple backends (e.g. Intel FPGA, Intel GPU, etc.), the
+alternative form based on `-fsycl-targets=spir64_fpga-unknown-unknown-sycldevice`
+should be used instead.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-link=&lt;value&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Generate partially linked device and host object to be used at various
+stages of compilation. Takes the device binary(s) generated from a `-fsycl`
+enabled compilation and wrap to create a host linkable object. This option
+is enabled only in ahead of time compilation mode fore FPGA (i.e. when
+`-fintelfpga` is set).
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-reuse-exe=&lt;exe&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Speed</span> <span class="n">up</span> <span class="n">FPGA</span> <span class="n">aoc</span> <span class="nb">compile</span> <span class="k">if</span> <span class="n">the</span> <span class="n">device</span> <span class="n">code</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">exe</span><span class="o">&gt;</span> <span class="ow">is</span> <span class="n">unchanged</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-options">
+<h3>Other options<a class="headerlink" href="#other-options" title="Permalink to this headline">¶</a></h3>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-device-only</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Compile</span> <span class="n">only</span> <span class="n">SYCL</span> <span class="n">device</span> <span class="n">code</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-use-bitcode</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Emit</span> <span class="n">SYCL</span> <span class="n">device</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">LLVM</span><span class="o">-</span><span class="n">IR</span> <span class="n">bitcode</span> <span class="nb">format</span><span class="o">.</span> <span class="n">When</span> <span class="n">disabled</span><span class="p">,</span> <span class="n">SPIR</span><span class="o">-</span><span class="n">V</span> <span class="ow">is</span>
+<span class="n">emitted</span><span class="o">.</span> <span class="n">Default</span> <span class="ow">is</span> <span class="n">true</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fno-sycl-use-bitcode</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Use</span> <span class="n">SPIR</span><span class="o">-</span><span class="n">V</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">LLVM</span> <span class="n">bitcode</span> <span class="ow">in</span> <span class="n">fat</span> <span class="n">objects</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-sycl-std=&lt;value&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SYCL</span> <span class="n">language</span> <span class="n">standard</span> <span class="n">to</span> <span class="nb">compile</span> <span class="k">for</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-help</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Emit</span> <span class="n">help</span> <span class="n">information</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">of</span> <span class="n">the</span> <span class="n">offline</span> <span class="n">compilation</span> <span class="n">tools</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-help=&lt;value&gt;</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Emit help information from the offline compilation tool associated with the
+given architecture argument. Supported architectures: `x86_64`, `fpga` and
+`gen`.
+</pre></div>
+</div>
+<p><strong><code class="docutils literal notranslate"><span class="pre">-fsycl-unnamed-lambda</span></code></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Allow</span> <span class="n">unnamed</span> <span class="n">SYCL</span> <span class="k">lambda</span> <span class="n">kernels</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="sycl-device-code-compilation">
+<h2>SYCL device code compilation<a class="headerlink" href="#sycl-device-code-compilation" title="Permalink to this headline">¶</a></h2>
+<p>To invoke SYCL device compiler set <code class="docutils literal notranslate"><span class="pre">-fsycl-device-only</span></code> flag.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> clang++ -fsycl-device-only sycl-app.cpp -o sycl-app.bc
+</pre></div>
+</div>
+<p>By default the output format for SYCL device is LLVM bytecode.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-fno-sycl-use-bitcode</span></code> can be used to emit device code in SPIR-V format.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> clang++ -fsycl-device-only -fno-sycl-use-bitcode sycl-app.cpp -o sycl-app.spv
+</pre></div>
+</div>
+</div>
+<div class="section" id="static-archives-with-sycl-device-code">
+<h2>Static archives with SYCL device code<a class="headerlink" href="#static-archives-with-sycl-device-code" title="Permalink to this headline">¶</a></h2>
+<p>The DPC++ Compiler contains support to create and use static archives that
+contain device enabled fat objects.</p>
+<div class="section" id="build-your-objects">
+<h3>Build your objects<a class="headerlink" href="#build-your-objects" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> clang++ -fsycl sycl-app1.cpp sycl-app2.cpp -c
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-the-static-archive">
+<h3>Create the static archive<a class="headerlink" href="#create-the-static-archive" title="Permalink to this headline">¶</a></h3>
+<p>Build the static archive in the same manner as you would any other normal
+static archive, using the objects that were created using the above step.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ar cr libsyclapp.a sycl-app1.o sycl-app2.o
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-the-static-archive">
+<h3>Use the static archive<a class="headerlink" href="#use-the-static-archive" title="Permalink to this headline">¶</a></h3>
+<p>Once you have created the archive, you can use it when creating your final
+application.  The fat archives are treated differently than a regular archive
+so the option <code class="docutils literal notranslate"><span class="pre">-foffload-static-lib</span></code> is used to signify the needed behavior.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> clang++ -fsycl sycl-main.cpp -foffload-static-lib<span class="o">=</span>libsyclapp.a
+</pre></div>
+</div>
+<p>Use of <code class="docutils literal notranslate"><span class="pre">-foffload-static-lib</span></code> is required or the library will be treated as
+a normal archive.</p>
+</div>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="GetStartedGuide.html">Getting Started with oneAPI DPC++</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="contents.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PreprocessorMacros.html">Preprocessor Macros</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Intel Corporation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>
