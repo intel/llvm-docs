@@ -123,9 +123,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>enqueue</b> (<a class
 <tr class="memitem:ae3e59f84259cd0c0b14c996c808d0990 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="ae3e59f84259cd0c0b14c996c808d0990"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFinished</b> ()</td></tr>
 <tr class="separator:ae3e59f84259cd0c0b14c996c808d0990 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e03e150339eb912900b42547df2520 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="aa7e03e150339eb912900b42547df2520"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEnqueued</b> () const</td></tr>
-<tr class="separator:aa7e03e150339eb912900b42547df2520 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b079400dcccbdc3f8beca70517c3dd inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a89b079400dcccbdc3f8beca70517c3dd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSuccessfullyEnqueued</b> () const</td></tr>
+<tr class="separator:a89b079400dcccbdc3f8beca70517c3dd inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae943f9c76bd856b709f986da7876d5e0 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="ae943f9c76bd856b709f986da7876d5e0"></a>
 std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getQueue</b> () const</td></tr>
 <tr class="separator:ae943f9c76bd856b709f986da7876d5e0 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,15 +185,15 @@ std::unordered_set&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.
 <tr class="memitem:a5d9548e459c7d2fc7a2b8d90c2428057 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a5d9548e459c7d2fc7a2b8d90c2428057"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>MIsBlockable</b> = false</td></tr>
 <tr class="separator:a5d9548e459c7d2fc7a2b8d90c2428057 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a788ef438450765ca23cfc63b7cba142c inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a788ef438450765ca23cfc63b7cba142c"></a>
-std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MCanEnqueue</b></td></tr>
-<tr class="separator:a788ef438450765ca23cfc63b7cba142c inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3062fbf66b0f3597c5ac6890de973604 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a3062fbf66b0f3597c5ac6890de973604"></a>
 unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>MLeafCounter</b> = 0</td></tr>
 <tr class="separator:a3062fbf66b0f3597c5ac6890de973604 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a961f0304273067947ef51800cc1475ef inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a961f0304273067947ef51800cc1475ef"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>MBlockReason</b> = &quot;Unknown&quot;</td></tr>
 <tr class="separator:a961f0304273067947ef51800cc1475ef inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580605145fcb791deed414ea55228238 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a580605145fcb791deed414ea55228238"></a>
+std::atomic&lt; EnqueueResultT::ResultT &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MEnqueueStatus</b></td></tr>
+<tr class="separator:a580605145fcb791deed414ea55228238 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba092a301276f444590739782a63fff5 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="aba092a301276f444590739782a63fff5"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>MTraceEvent</b> = nullptr</td></tr>
 <tr class="separator:aba092a301276f444590739782a63fff5 inherit pub_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,16 +241,13 @@ std::vector&lt; EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bot
 <tr class="memitem:a65cb5498ed29b3f483655d70515fdf0d inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a65cb5498ed29b3f483655d70515fdf0d"></a>
 CommandType&#160;</td><td class="memItemRight" valign="bottom"><b>MType</b></td></tr>
 <tr class="separator:a65cb5498ed29b3f483655d70515fdf0d inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30d2f2db510dae9d1705a309bf0bf032 inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a30d2f2db510dae9d1705a309bf0bf032"></a>
-std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MEnqueued</b></td></tr>
-<tr class="separator:a30d2f2db510dae9d1705a309bf0bf032 inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a762563f1833f52d45bee70e9a057bc2d inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top"><a id="a762563f1833f52d45bee70e9a057bc2d"></a>
 std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>MEnqueueMtx</b></td></tr>
 <tr class="separator:a762563f1833f52d45bee70e9a057bc2d inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00339">339</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00345">345</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>source/detail/scheduler/<a class="el" href="commands_8hpp_source.html">commands.hpp</a></li>
 <li>source/detail/scheduler/<a class="el" href="commands_8cpp_source.html">commands.cpp</a></li>
