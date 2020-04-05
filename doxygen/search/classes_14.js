@@ -7,6 +7,5 @@ var searchData=
   ['usemutexbase',['UseMutexBase',['../classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html',1,'cl::sycl::property::detail']]],
   ['usemutexbase_3c_20detail_3a_3apropkind_3a_3abufferusemutex_20_3e',['UseMutexBase&lt; detail::PropKind::BufferUseMutex &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html',1,'cl::sycl::property::detail']]],
   ['usemutexbase_3c_20detail_3a_3apropkind_3a_3aimageusemutex_20_3e',['UseMutexBase&lt; detail::PropKind::ImageUseMutex &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html',1,'cl::sycl::property::detail']]],
-  ['usm_5fallocator',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html',1,'cl::sycl']]],
-  ['usmdispatcher',['USMDispatcher',['../classcl_1_1sycl_1_1detail_1_1usm_1_1USMDispatcher.html',1,'cl::sycl::detail::usm']]]
+  ['usm_5fallocator',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html',1,'cl::sycl']]]
 ];
