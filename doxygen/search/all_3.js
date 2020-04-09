@@ -68,7 +68,7 @@ var searchData=
   ['cuda_5fpienqueuenativekernel',['cuda_piEnqueueNativeKernel',['../pi__cuda_8cpp.html#a958ae76c0bb2c2c865854b6196705fc5',1,'pi_cuda.cpp']]],
   ['cuda_5fpieventgetprofilinginfo',['cuda_piEventGetProfilingInfo',['../pi__cuda_8cpp.html#ab336548cac9dd7ba3e21a897da095fe3',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextdeviceconvert',['cuda_piextDeviceConvert',['../pi__cuda_8cpp.html#ac8518c0c94053df6df55020448065cbd',1,'pi_cuda.cpp']]],
-  ['cuda_5fpiextdeviceselectbinary',['cuda_piextDeviceSelectBinary',['../pi__cuda_8cpp.html#a1f5f3da997122aef49ac0d82b51a23bf',1,'pi_cuda.cpp']]],
+  ['cuda_5fpiextdeviceselectbinary',['cuda_piextDeviceSelectBinary',['../pi__cuda_8cpp.html#a5237d52c4d339d011129651493a3c514',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextprogramconvert',['cuda_piextProgramConvert',['../pi__cuda_8cpp.html#afd810fa99470e5d50f09507fac56db11',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextusmdevicealloc',['cuda_piextUSMDeviceAlloc',['../pi__cuda_8cpp.html#a3ce1614a9b8fd1b261c6da01b1e18200',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextusmenqueuememadvise',['cuda_piextUSMEnqueueMemAdvise',['../pi__cuda_8cpp.html#a670ccb67750075f70cb3c252d9334644',1,'pi_cuda.cpp']]],
