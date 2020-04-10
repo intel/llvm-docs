@@ -121,13 +121,13 @@ git clone https://github.com/intel/llvm -b sycl
 <p>In case you want to configure CMake manually the up-to-date reference for
 variables is in these files.</p>
 <p><strong>Linux</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/configure.py -s <span class="nv">$DPCPP_HOME</span>/llvm -o <span class="nv">$DPCPP_HOME</span>/build -t release
-python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/compile.py -s <span class="nv">$DPCPP_HOME</span>/llvm -o <span class="nv">$DPCPP_HOME</span>/build
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/configure.py
+python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/compile.py
 </pre></div>
 </div>
 <p><strong>Windows</strong></p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\configure.py -s <span class="nv">%DPCPP_HOME%</span>\llvm -o <span class="nv">%DPCPP_HOME%</span>\build -t release
-python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py -s <span class="nv">%DPCPP_HOME%</span>\llvm -o <span class="nv">%DPCPP_HOME%</span>\build
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\configure.py
+python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
 </pre></div>
 </div>
 <p><strong>Options</strong></p>
@@ -138,6 +138,8 @@ python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py -s <span cl
 <li><p><code class="docutils literal notranslate"><span class="pre">--cuda</span></code> -&gt; use the cuda backend (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">Nvidia CUDA</a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--shared-libs</span></code> -&gt; Build shared libraries</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code> -&gt; Build type (debug or release)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code> -&gt; Path to build directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--cmake-gen</span></code> -&gt; Set build system type (e.g. <code class="docutils literal notranslate"><span class="pre">--cmake-gen</span> <span class="pre">&quot;Unix</span> <span class="pre">Makefiles&quot;</span></code>)</p></li>
 </ul>
 <p>Ahead-of-time compilation for the Intel® processors is enabled by default.
 For more, see <a class="reference external" href="../../opencl-aot/README">opencl-aot documentation</a>.</p>
@@ -286,8 +288,12 @@ command:</p></li>
 <div class="section" id="run-regression-tests">
 <h4>Run regression tests<a class="headerlink" href="#run-regression-tests" title="Permalink to this headline">¶</a></h4>
 <p>To verify that built DPC++ toolchain is working correctly, run:</p>
-<p><strong>Linux/Windows (64-bit)</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ninja check-all
+<p><strong>Linux</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/check.py
+</pre></div>
+</div>
+<p><strong>Windows</strong></p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\check.py
 </pre></div>
 </div>
 <p>If no OpenCL GPU/CPU runtimes are available, the corresponding tests are
