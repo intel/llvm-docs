@@ -250,6 +250,7 @@ into their constituents before linking and link host code and device code
 (per-target) separately and finally produce a “fat binary” - a host executable
 with embedded linked images for each target specified at the command line.</p>
 <p><img alt="Multi source compilation flow" src="_images/Multi-source-compilation-flow.png" /></p>
+<p><em>TODO: the diagram needs to be updating to reflect the latest driver additions.</em></p>
 <p>The clang driver orchestrates compilation and linking process based on a
 SYCL-specific offload action builder and invokes external tools as needed. On
 the diagram above, every dark-blue box is a tool invoked as a separate process
@@ -427,6 +428,67 @@ unit)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">per_kernel</span></code> - enables emitting a separate module for each kernel</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">off</span></code> - disables device code split</p></li>
 </ul>
+</div>
+<div class="section" id="cuda-support">
+<h4>CUDA support<a class="headerlink" href="#cuda-support" title="Permalink to this headline">¶</a></h4>
+<p>The driver supports compilation to NVPTX when the <code class="docutils literal notranslate"><span class="pre">nvptx64-nvidia-cuda-sycldevice</span></code> is passed to <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>.</p>
+<p>Unlike other AOT targets, the bitcode module linked from intermediate compiled objects never goes through SPIR-V. Instead it is passed directly in bitcode form down to the NVPTX Back End. All produced bitcode depends on two libraries, <code class="docutils literal notranslate"><span class="pre">libdevice.bc</span></code> (provided by the CUDA SDK) and <code class="docutils literal notranslate"><span class="pre">libspirv-nvptx64--nvidiacl.bc</span></code> (built by the libclc project).</p>
+<p>During the device linking step (device linker box in the <a class="reference external" href="#separate-compilation-and-linking">Separate Compilation and Linking</a> illustration), llvm bitcode objects for the CUDA target are linked together alongside <code class="docutils literal notranslate"><span class="pre">libspirv-nvptx64--nvidiacl.bc</span></code> and <code class="docutils literal notranslate"><span class="pre">libdevice.bc</span></code>, compiled to PTX using the NVPTX backend, and assembled into a cubin using the <code class="docutils literal notranslate"><span class="pre">ptxas</span></code> tool (part of the CUDA SDK). The PTX file and cubin are assembled together using <code class="docutils literal notranslate"><span class="pre">fatbinary</span></code> to produce a CUDA fatbin. The CUDA fatbin is then passed to the offload wrapper tool.</p>
+<div class="section" id="checking-if-the-compiler-is-targeting-nvptx">
+<h5>Checking if the compiler is targeting NVPTX<a class="headerlink" href="#checking-if-the-compiler-is-targeting-nvptx" title="Permalink to this headline">¶</a></h5>
+<p>When the SYCL compiler is in device mode and targeting the NVPTX backend, compiler defines the macro <code class="docutils literal notranslate"><span class="pre">__SYCL_NVPTX__</span></code>.
+This macro can safely be used to enable NVPTX specific code path in SYCL kernels.</p>
+<p><em>Note: this macro is only define during the device compilation phase.</em></p>
+</div>
+<div class="section" id="nvptx-builtins">
+<h5>NVPTX Builtins<a class="headerlink" href="#nvptx-builtins" title="Permalink to this headline">¶</a></h5>
+<p>When the SYCL compiler is in device mode and targeting the NVPTX backend, the compiler exposes NVPTX builtins supported by clang.</p>
+<p><em>Note: this enable NVPTX specific features which cannot be supported by other targets or the host.</em></p>
+<p>Example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span> <span class="nf">my_min</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+<span class="cp">#ifdef __SYCL_NVPTX__</span>
+  <span class="c1">// Only available if in device mode and</span>
+  <span class="c1">// while compiling for the NVPTX target.</span>
+  <span class="k">return</span> <span class="n">__nvvm_fmin_d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="cp">#else</span>
+  <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="o">?</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">y</span><span class="p">;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="local-memory-support">
+<h5>Local memory support<a class="headerlink" href="#local-memory-support" title="Permalink to this headline">¶</a></h5>
+<p>In CUDA, users can only allocate one chunk of host allocated shared memory (which maps to SYCL’s local accessors).
+This chunk of memory is allocated as an array <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">__shared__</span> <span class="pre">&lt;type&gt;</span> <span class="pre">&lt;name&gt;[];</span></code> which LLVM represents as an external global symbol to the CUDA shared memory address space.
+The NVPTX backend then lowers this into a <code class="docutils literal notranslate"><span class="pre">.extern</span> <span class="pre">.shared</span> <span class="pre">.align</span> <span class="pre">4</span> <span class="pre">.b8</span></code> PTX instruction.</p>
+<p>In SYCL, users can allocate multiple local accessors and pass them as kernel parameters. When the SYCL frontend lowers the SYCL kernel invocation into an OpenCL compliant kernel entry, it lowers local accessors into a pointer to OpenCL local memory (CUDA shared memory) but this is not legal for CUDA kernels.</p>
+<p>To legalize the SYCL lowering for CUDA, a SYCL for CUDA specific pass will do the following:</p>
+<ul class="simple">
+<li><p>Create a global symbol to the CUDA shared memory address space</p></li>
+<li><p>Transform all pointers to CUDA shared memory into a 32 bit integer representing the offset in bytes to use with the global symbol</p></li>
+<li><p>Replace all uses of the transformed pointers by the address to global symbol offset by the value of the integer passed as parameter</p></li>
+</ul>
+<p>As an example, the following kernel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">define</span> <span class="n">void</span> <span class="nd">@SYCL_generated_kernel</span><span class="p">(</span><span class="n">i64</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="n">nocapture</span> <span class="o">%</span><span class="n">local_ptr</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">arg</span><span class="p">,</span> <span class="n">i64</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="n">nocapture</span> <span class="o">%</span><span class="n">local_ptr2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">%</span><span class="mi">0</span> <span class="o">=</span> <span class="n">load</span> <span class="n">i64</span><span class="p">,</span> <span class="n">i64</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="o">%</span><span class="n">local_ptr</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">load</span> <span class="n">i64</span><span class="p">,</span> <span class="n">i64</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="o">%</span><span class="n">local_ptr2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Is transformed into this kernel when targeting CUDA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@SYCL_generated_kernel</span><span class="o">.</span><span class="n">shared_mem</span> <span class="o">=</span> <span class="n">external</span> <span class="n">dso_local</span> <span class="n">local_unnamed_addr</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="k">global</span> <span class="p">[</span><span class="mi">0</span> <span class="n">x</span> <span class="n">i8</span><span class="p">],</span> <span class="n">align</span> <span class="mi">4</span>
+
+<span class="n">define</span> <span class="n">void</span> <span class="nd">@SYCL_generated_kernel</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">local_ptr_offset</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">arg</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">local_ptr_offset2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">%</span><span class="n">new_local_ptr</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="p">[</span><span class="mi">0</span> <span class="n">x</span> <span class="n">i8</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="nd">@SYCL_generated_kernel</span><span class="o">.</span><span class="n">shared_mem</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">local_ptr_offset</span>
+  <span class="o">%</span><span class="n">new_local_ptr2</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="p">[</span><span class="mi">0</span> <span class="n">x</span> <span class="n">i8</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span> <span class="n">x</span> <span class="n">i8</span><span class="p">]</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="nd">@SYCL_generated_kernel</span><span class="o">.</span><span class="n">shared_mem</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">local_ptr_offset2</span>
+  <span class="o">%</span><span class="mi">0</span> <span class="o">=</span> <span class="n">load</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="o">%</span><span class="n">new_local_ptr</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">load</span> <span class="n">i64</span><span class="p">,</span> <span class="n">i64</span> <span class="n">addrspace</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span> <span class="o">%</span><span class="n">new_local_ptr2</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>On the runtime side, when setting local memory arguments, the CUDA PI implementation will internally set the argument as the offset with respect to the accumulated size of used local memory. This approach preserves the exisiting PI interface.</p>
+</div>
 </div>
 </div>
 <div class="section" id="integration-with-spir-v-format">
