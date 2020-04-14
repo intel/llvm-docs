@@ -1,6 +1,7 @@
 var searchData=
 [
   ['default_5fselector',['default_selector',['../classcl_1_1sycl_1_1default__selector.html',1,'cl::sycl']]],
+  ['deleter_5fdata',['deleter_data',['../struct__pi__context_1_1deleter__data.html',1,'_pi_context']]],
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html',1,'cl::sycl::detail']]],
   ['devdesct',['DevDescT',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html',1,'cl::sycl::detail']]],
   ['device',['device',['../classcl_1_1sycl_1_1device.html',1,'cl::sycl']]],

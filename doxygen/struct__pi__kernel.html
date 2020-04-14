@@ -168,7 +168,7 @@ struct <a class="el" href="struct__pi__kernel_1_1arguments.html">_pi_kernel::arg
 <div class="textblock"><p>Implementation of a PI Kernel for CUDA. </p>
 <p>PI Kernels are used to set kernel arguments, creating a state on the Kernel object for a given invocation. This is not the case of CUFunction objects, which are simply passed together with the arguments on the invocation. The PI Kernel implementation for CUDA stores the list of arguments, argument sizes and offsets to emulate the interface of PI Kernel, saving the arguments for the later dispatch. Note that in PI API, the Local memory is specified as a size per individual argument, but in CUDA only the total usage of shared memory is required since it is not passed as a parameter. A compiler pass converts the PI API local memory model into the CUDA shared model. This object simply calculates the total of shared memory, and the initial offsets of each parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00540">540</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00545">545</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2f657f90ec38c3a5ee15c33270cf0e32"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f657f90ec38c3a5ee15c33270cf0e32">&#9670;&nbsp;</a></span>get_num_args()</h2>
@@ -196,7 +196,7 @@ struct <a class="el" href="struct__pi__kernel_1_1arguments.html">_pi_kernel::arg
 <p>Returns the number of arguments. </p>
 <p>Note this only returns the current known number of arguments, not the real one required by the kernel, since this cannot be queried from the CUDA Driver API </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00637">637</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00642">642</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>

@@ -2,6 +2,7 @@ var searchData=
 [
   ['deallocate',['deallocate',['../classcl_1_1sycl_1_1usm__allocator.html#ac4554a69d2570ae390a1c36d0943618a',1,'cl::sycl::usm_allocator']]],
   ['default_5fselector',['default_selector',['../classcl_1_1sycl_1_1default__selector.html',1,'cl::sycl']]],
+  ['deleter_5fdata',['deleter_data',['../struct__pi__context_1_1deleter__data.html',1,'_pi_context']]],
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html',1,'cl::sycl::detail']]],
   ['depends_5fon',['depends_on',['../classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7',1,'cl::sycl::handler::depends_on(event Event)'],['../classcl_1_1sycl_1_1handler.html#a5435fd06ff8e61a4c69788664bf46626',1,'cl::sycl::handler::depends_on(vector_class&lt; event &gt; Events)']]],
   ['destroy',['destroy',['../classcl_1_1sycl_1_1usm__allocator.html#a850632fb63be94813fa367a17fba2710',1,'cl::sycl::usm_allocator']]],

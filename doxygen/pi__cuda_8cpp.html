@@ -169,6 +169,9 @@ pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piContextGe
 <tr class="memitem:a3e618c7fa44b5bebfaec8b087c8f3b49"><td class="memItemLeft" align="right" valign="top"><a id="a3e618c7fa44b5bebfaec8b087c8f3b49"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piContextRetain</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context)</td></tr>
 <tr class="separator:a3e618c7fa44b5bebfaec8b087c8f3b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40efc8c6b316eb99c5ab102e61711605"><td class="memItemLeft" align="right" valign="top"><a id="a40efc8c6b316eb99c5ab102e61711605"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>cuda_piextContextSetExtendedDeleter</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_context_extended_deleter function, void *user_data)</td></tr>
+<tr class="separator:a40efc8c6b316eb99c5ab102e61711605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae802d41b86d3dab80e240a43e839a810"><td class="memItemLeft" align="right" valign="top"><a id="ae802d41b86d3dab80e240a43e839a810"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#ae802d41b86d3dab80e240a43e839a810">cuda_piDevicePartition</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, const cl_device_partition_property *properties, pi_uint32 num_devices, <a class="el" href="class__pi__device.html">pi_device</a> *out_devices, pi_uint32 *out_num_devices)</td></tr>
 <tr class="memdesc:ae802d41b86d3dab80e240a43e839a810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not applicable to CUDA, devices cannot be partitioned. <br /></td></tr>
@@ -524,7 +527,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>General 3D memory copy operation. </p>
 <p>This function requires the corresponding CUDA context to be at the top of the context stack If the source and/or destination is on the device, src_ptr and/or dst_ptr must be a pointer to a CUdeviceptr </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02792">2792</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02798">2798</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -576,7 +579,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Note: No calls to CUDA driver API in this function, only store binaries for later.</p>
 <p>Implement more than one input image  SYCL RT should use cuda_piclprogramCreateWithBinary instead </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02127">2127</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02133">2133</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -645,7 +648,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS on success, otherwise an error return code. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01374">1374</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01380">1380</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -666,7 +669,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS always since CUDA devices are always root devices. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00826">826</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00832">832</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -787,9 +790,9 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Enqueues a wait on the given CUstream for all events. </p>
 <p>See enqueueEventWait </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02720">2720</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02726">2726</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03433">cuda_piextUSMEnqueueMemAdvise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03439">cuda_piextUSMEnqueueMemAdvise()</a>.</p>
 
 </div>
 </div>
@@ -870,7 +873,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Implements mapping on the host using a BufferRead operation. </p>
 <p>Mapped pointers are stored in the pi_mem object.  Untie types from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03178">3178</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03184">3184</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -927,7 +930,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Implements the unmap from the host, using a BufferWrite operation. </p>
 <p>Requires the mapped pointer to be already registered in the given memobj. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03214">3214</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03220">3220</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -977,7 +980,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 
 <p>Obtain profiling information from PI CUDA events  Untie from OpenCL, timings from CUDA are only elapsed time. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02610">2610</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02616">2616</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1020,7 +1023,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>If available, the first binary that is PTX </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00791">791</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00797">797</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1069,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02186">2186</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02192">2192</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1137,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03459">3459</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03465">3465</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00611">cuda_piPlatformsGet()</a>.</p>
 
@@ -1187,7 +1190,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Creates a PI Memory object using a CUDA memory allocation. </p>
 <p>Can trigger a manual copy depending on the mode.  Implement USE_HOST_PTR using cuHostRegister </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01494">1494</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01500">1500</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1238,9 +1241,9 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Implements a buffer partition in the CUDA backend. </p>
 <p>A buffer partition (or a sub-buffer, in OpenCL terms) is simply implemented as an offset over an existing CUDA allocation. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01602">1602</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01608">1608</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00600">ReleaseGuard&lt; T &gt;::dismiss()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00212">_pi_mem::is_buffer()</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00600">ReleaseGuard&lt; T &gt;::dismiss()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00217">_pi_mem::is_buffer()</a>.</p>
 
 </div>
 </div>
@@ -1263,7 +1266,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Decreases the reference count of the Mem object. </p>
 <p>If this is zero, calls the relevant CUDA Free function </p><dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS unless deallocation error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01552">1552</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01558">1558</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1304,7 +1307,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00611">611</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03459">cuda_piextUSMGetMemAllocInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03465">cuda_piextUSMGetMemAllocInfo()</a>.</p>
 
 </div>
 </div>
@@ -1361,7 +1364,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Loads the images from a PI program into a CUmodule that can be used later on to extract functions (kernels). </p>
 <p>See <a class="el" href="struct__pi__program.html">_pi_program</a> for implementation details. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02161">2161</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02167">2167</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1436,7 +1439,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Creates a new program that is the outcome of the compilation of the headers and the program. </p>
 <p>Implement asynchronous compilation </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02316">2316</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02322">2322</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1514,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Creates a new PI program object that is the outcome of linking all input programs. </p>
 <p>Implement linker options, requires mapping of OpenCL to CUDA </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02252">2252</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02258">2258</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1534,7 +1537,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 <p>Decreases the reference count of a pi_program object. </p>
 <p>When the reference count reaches 0, it unloads the module from the context. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02375">2375</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02381">2381</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
@@ -1583,7 +1586,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><b>SupportedVersio
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01678">1678</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01684">1684</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>
