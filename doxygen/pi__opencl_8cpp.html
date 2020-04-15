@@ -132,9 +132,6 @@ template&lt;const char * FuncName, typename T &gt; </td></tr>
 <tr class="memitem:a050d298e961914c5a37cfea9177facec"><td class="memItemLeft" align="right" valign="top"><a id="a050d298e961914c5a37cfea9177facec"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piPlatformsGet</b> (pi_uint32 num_entries, <a class="el" href="struct__pi__platform.html">pi_platform</a> *platforms, pi_uint32 *num_platforms)</td></tr>
 <tr class="separator:a050d298e961914c5a37cfea9177facec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d1d93e1b7ad439f8922e3a2b8d583c8"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a1d1d93e1b7ad439f8922e3a2b8d583c8">piextDeviceConvert</a> (<a class="el" href="class__pi__device.html">pi_device</a> *device, void **handle)</td></tr>
-<tr class="memdesc:a1d1d93e1b7ad439f8922e3a2b8d583c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create PI device from the given raw device handle (if the "device" points to null), or, vice versa, extract the raw device handle into the "handle" (if it was pointing to a null) from the given PI device.  <a href="#a1d1d93e1b7ad439f8922e3a2b8d583c8">More...</a><br /></td></tr>
-<tr class="separator:a1d1d93e1b7ad439f8922e3a2b8d583c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb2078879d2370b79c9afd3cad229bcf"><td class="memItemLeft" align="right" valign="top"><a id="aeb2078879d2370b79c9afd3cad229bcf"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piDevicesGet</b> (<a class="el" href="struct__pi__platform.html">pi_platform</a> platform, pi_device_type device_type, pi_uint32 num_entries, <a class="el" href="class__pi__device.html">pi_device</a> *devices, pi_uint32 *num_devices)</td></tr>
 <tr class="separator:aeb2078879d2370b79c9afd3cad229bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,15 +139,21 @@ pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piDevicesG
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a1fb204a8c2d0c97176e976b4f2fee0f6">piextDeviceSelectBinary</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, <a class="el" href="structpi__device__binary__struct.html">pi_device_binary</a> *images, pi_uint32 num_images, pi_uint32 *selected_image_ind)</td></tr>
 <tr class="memdesc:a1fb204a8c2d0c97176e976b4f2fee0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the most appropriate device binary based on runtime information and the IR characteristics. <br /></td></tr>
 <tr class="separator:a1fb204a8c2d0c97176e976b4f2fee0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ed6043502288acc3dd6d414d50cd05"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a83ed6043502288acc3dd6d414d50cd05">piextDeviceCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="class__pi__device.html">pi_device</a> *piDevice)</td></tr>
+<tr class="memdesc:a83ed6043502288acc3dd6d414d50cd05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI device object from a native handle.  <a href="#a83ed6043502288acc3dd6d414d50cd05">More...</a><br /></td></tr>
+<tr class="separator:a83ed6043502288acc3dd6d414d50cd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b78c66986a89df9cfd835e7a551ecd6"><td class="memItemLeft" align="right" valign="top"><a id="a5b78c66986a89df9cfd835e7a551ecd6"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piQueueCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_queue_properties properties, <a class="el" href="struct__pi__queue.html">pi_queue</a> *queue)</td></tr>
 <tr class="separator:a5b78c66986a89df9cfd835e7a551ecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4b5a4de5a03cc95186b862d0fcb913"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a2d4b5a4de5a03cc95186b862d0fcb913">piextProgramConvert</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="struct__pi__program.html">pi_program</a> *program, void **handle)</td></tr>
-<tr class="memdesc:a2d4b5a4de5a03cc95186b862d0fcb913"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create PI program from the given raw program handle (if the "program" points to null), or, vice versa, extract the raw program handle into the "handle" (if it was pointing to a null) from the given PI program.  <a href="#a2d4b5a4de5a03cc95186b862d0fcb913">More...</a><br /></td></tr>
-<tr class="separator:a2d4b5a4de5a03cc95186b862d0fcb913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cc41267ab47d71b319e8addfee33b29"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a5cc41267ab47d71b319e8addfee33b29">piextQueueCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__queue.html">pi_queue</a> *piQueue)</td></tr>
+<tr class="memdesc:a5cc41267ab47d71b319e8addfee33b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI queue object from a native handle.  <a href="#a5cc41267ab47d71b319e8addfee33b29">More...</a><br /></td></tr>
+<tr class="separator:a5cc41267ab47d71b319e8addfee33b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a30ab6b66bd28f2f6227aeee2cc0176"><td class="memItemLeft" align="right" valign="top"><a id="a5a30ab6b66bd28f2f6227aeee2cc0176"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piProgramCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *il, size_t length, <a class="el" href="struct__pi__program.html">pi_program</a> *res_program)</td></tr>
 <tr class="separator:a5a30ab6b66bd28f2f6227aeee2cc0176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948aedf63a16c5b78406daea9b555cd1"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a948aedf63a16c5b78406daea9b555cd1">piextProgramCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__program.html">pi_program</a> *piProgram)</td></tr>
+<tr class="memdesc:a948aedf63a16c5b78406daea9b555cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI program object from a native handle.  <a href="#a948aedf63a16c5b78406daea9b555cd1">More...</a><br /></td></tr>
+<tr class="separator:a948aedf63a16c5b78406daea9b555cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad368f422864608de396f70a70e375482"><td class="memItemLeft" align="right" valign="top"><a id="ad368f422864608de396f70a70e375482"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piSamplerCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const pi_sampler_properties *sampler_properties, pi_sampler *result_sampler)</td></tr>
 <tr class="separator:ad368f422864608de396f70a70e375482"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +166,9 @@ pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piextKerne
 <tr class="memitem:a1b125c14d8fb3d32df190bd381c93545"><td class="memItemLeft" align="right" valign="top"><a id="a1b125c14d8fb3d32df190bd381c93545"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piContextCreate</b> (const pi_context_properties *properties, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *devices, void(*pfn_notify)(const char *errinfo, const void *private_info, size_t cb, void *user_data1), void *user_data, <a class="el" href="struct__pi__context.html">pi_context</a> *retcontext)</td></tr>
 <tr class="separator:a1b125c14d8fb3d32df190bd381c93545"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3c907e78eb4ab25393550b212781d9"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#acf3c907e78eb4ab25393550b212781d9">piextContextCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__context.html">pi_context</a> *piContext)</td></tr>
+<tr class="memdesc:acf3c907e78eb4ab25393550b212781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI context object from a native handle.  <a href="#acf3c907e78eb4ab25393550b212781d9">More...</a><br /></td></tr>
+<tr class="separator:acf3c907e78eb4ab25393550b212781d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8019991438442acd8387448f81f8d0d8"><td class="memItemLeft" align="right" valign="top"><a id="a8019991438442acd8387448f81f8d0d8"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piMemBufferCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_mem_flags flags, size_t size, void *host_ptr, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
 <tr class="separator:a8019991438442acd8387448f81f8d0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,6 +178,9 @@ pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piMemImage
 <tr class="memitem:ad83595efedbf927e1b0715d3c6e9f8a7"><td class="memItemLeft" align="right" valign="top"><a id="ad83595efedbf927e1b0715d3c6e9f8a7"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piMemBufferPartition</b> (<a class="el" href="struct__pi__mem.html">pi_mem</a> buffer, pi_mem_flags flags, pi_buffer_create_type buffer_create_type, void *buffer_create_info, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
 <tr class="separator:ad83595efedbf927e1b0715d3c6e9f8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159f2c7dc15000d010c09d8e14348a47"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a159f2c7dc15000d010c09d8e14348a47">piextMemCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__mem.html">pi_mem</a> *piMem)</td></tr>
+<tr class="memdesc:a159f2c7dc15000d010c09d8e14348a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI mem object from a native handle.  <a href="#a159f2c7dc15000d010c09d8e14348a47">More...</a><br /></td></tr>
+<tr class="separator:a159f2c7dc15000d010c09d8e14348a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3943581f7f29a46b8f084ea8beab08e0"><td class="memItemLeft" align="right" valign="top"><a id="a3943581f7f29a46b8f084ea8beab08e0"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piclProgramCreateWithSource</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 count, const char **strings, const size_t *lengths, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
 <tr class="separator:a3943581f7f29a46b8f084ea8beab08e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +196,9 @@ pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piKernelCr
 <tr class="memitem:ae23e9a5a6ecf8eed8fd4ba5786c27276"><td class="memItemLeft" align="right" valign="top"><a id="ae23e9a5a6ecf8eed8fd4ba5786c27276"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piEventCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__event.html">pi_event</a> *ret_event)</td></tr>
 <tr class="separator:ae23e9a5a6ecf8eed8fd4ba5786c27276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9920e979a0544568ac8898df2c4ee16"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ae9920e979a0544568ac8898df2c4ee16">piextEventCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="class__pi__event.html">pi_event</a> *piEvent)</td></tr>
+<tr class="memdesc:ae9920e979a0544568ac8898df2c4ee16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI event object from a native handle.  <a href="#ae9920e979a0544568ac8898df2c4ee16">More...</a><br /></td></tr>
+<tr class="separator:ae9920e979a0544568ac8898df2c4ee16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa241520735bdc775f0322b4f201fabdb"><td class="memItemLeft" align="right" valign="top"><a id="aa241520735bdc775f0322b4f201fabdb"></a>
 pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piEnqueueMemBufferMap</b> (<a class="el" href="struct__pi__queue.html">pi_queue</a> command_queue, <a class="el" href="struct__pi__mem.html">pi_mem</a> buffer, pi_bool blocking_map, cl_map_flags map_flags, size_t offset, size_t size, pi_uint32 num_events_in_wait_list, const <a class="el" href="class__pi__event.html">pi_event</a> *event_wait_list, <a class="el" href="class__pi__event.html">pi_event</a> *event, void **ret_map)</td></tr>
 <tr class="separator:aa241520735bdc775f0322b4f201fabdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,6 +238,9 @@ pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piEnqueueM
 <tr class="memitem:a543fc74d87636611fc15ded9bd5b5ff5"><td class="memItemLeft" align="right" valign="top"><a id="a543fc74d87636611fc15ded9bd5b5ff5"></a>
 static pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piextProgramSetSpecializationConstantImpl</b> (<a class="el" href="struct__pi__program.html">pi_program</a> prog, unsigned int spec_id, size_t spec_size, const void *spec_value)</td></tr>
 <tr class="separator:a543fc74d87636611fc15ded9bd5b5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c08bd284aa66edba836fcca3a9d838c"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a2c08bd284aa66edba836fcca3a9d838c">piextGetNativeHandle</a> (void *piObj, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:a2c08bd284aa66edba836fcca3a9d838c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common API for getting the native handle of a PI object.  <a href="#a2c08bd284aa66edba836fcca3a9d838c">More...</a><br /></td></tr>
+<tr class="separator:a2c08bd284aa66edba836fcca3a9d838c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f093d78fa08dd8804600d9b88537571"><td class="memItemLeft" align="right" valign="top"><a id="a6f093d78fa08dd8804600d9b88537571"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piPluginInit</b> (<a class="el" href="struct__pi__plugin.html">pi_plugin</a> *PluginInit)</td></tr>
 <tr class="separator:a6f093d78fa08dd8804600d9b88537571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,23 +326,23 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a1d1d93e1b7ad439f8922e3a2b8d583c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d1d93e1b7ad439f8922e3a2b8d583c8">&#9670;&nbsp;</a></span>piextDeviceConvert()</h2>
+<a id="acf3c907e78eb4ab25393550b212781d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3c907e78eb4ab25393550b212781d9">&#9670;&nbsp;</a></span>piextContextCreateWithNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextDeviceConvert </td>
+          <td class="memname">pi_result OCL() piextContextCreateWithNativeHandle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class__pi__device.html">pi_device</a> *&#160;</td>
-          <td class="paramname"><em>device</em>, </td>
+          <td class="paramtype">pi_native_handle&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void **&#160;</td>
-          <td class="paramname"><em>handle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -337,18 +352,99 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
       </table>
 </div><div class="memdoc">
 
-<p>Create PI device from the given raw device handle (if the "device" points to null), or, vice versa, extract the raw device handle into the "handle" (if it was pointing to a null) from the given PI device. </p>
-<p>NOTE: The instance of the PI device created is retained.[in,out] the pointer to the raw device handle </p>
+<p>Creates PI context object from a native handle. </p>
+<p>NOTE: The created PI object takes ownership of the native handle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">device</td><td>the pointer to PI device </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle to create PI context from. </td></tr>
+    <tr><td class="paramname">context</td><td>is the PI context created from the native handle. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00182">182</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00502">502</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00029">cl::sycl::detail::device_impl::device_impl()</a>, and <a class="el" href="device__impl_8cpp_source.html#l00090">cl::sycl::detail::device_impl::get()</a>.</p>
+</div>
+</div>
+<a id="a83ed6043502288acc3dd6d414d50cd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ed6043502288acc3dd6d414d50cd05">&#9670;&nbsp;</a></span>piextDeviceCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextDeviceCreateWithNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype">pi_native_handle&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class__pi__device.html">pi_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates PI device object from a native handle. </p>
+<p>NOTE: The created PI object takes ownership of the native handle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle to create PI device from. </td></tr>
+    <tr><td class="paramname">device</td><td>is the PI device created from the native handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00272">272</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00030">cl::sycl::detail::device_impl::device_impl()</a>.</p>
+
+</div>
+</div>
+<a id="ae9920e979a0544568ac8898df2c4ee16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9920e979a0544568ac8898df2c4ee16">&#9670;&nbsp;</a></span>piextEventCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextEventCreateWithNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype">pi_native_handle&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class__pi__event.html">pi_event</a> *&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates PI event object from a native handle. </p>
+<p>NOTE: The created PI object takes ownership of the native handle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle to create PI event from. </td></tr>
+    <tr><td class="paramname">event</td><td>is the PI event created from the native handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00613">613</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +497,47 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 <li><code>program</code>. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00467">467</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00449">449</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c08bd284aa66edba836fcca3a9d838c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c08bd284aa66edba836fcca3a9d838c">&#9670;&nbsp;</a></span>piextGetNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextGetNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>piObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_native_handle *&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Common API for getting the native handle of a PI object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">piObj</td><td>is the pi object to get the native handle of </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is a pointer to be set to the native handle</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>PI_SUCCESS </p>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01055">1055</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -455,33 +591,27 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00758">758</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00761">761</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a2d4b5a4de5a03cc95186b862d0fcb913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d4b5a4de5a03cc95186b862d0fcb913">&#9670;&nbsp;</a></span>piextProgramConvert()</h2>
+<a id="a159f2c7dc15000d010c09d8e14348a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a159f2c7dc15000d010c09d8e14348a47">&#9670;&nbsp;</a></span>piextMemCreateWithNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextProgramConvert </td>
+          <td class="memname">pi_result OCL() piextMemCreateWithNativeHandle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a>&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
+          <td class="paramtype">pi_native_handle&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi_program</a> *&#160;</td>
-          <td class="paramname"><em>program</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void **&#160;</td>
-          <td class="paramname"><em>handle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct__pi__mem.html">pi_mem</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -491,20 +621,99 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
       </table>
 </div><div class="memdoc">
 
-<p>Create PI program from the given raw program handle (if the "program" points to null), or, vice versa, extract the raw program handle into the "handle" (if it was pointing to a null) from the given PI program. </p>
-<p>NOTE: The instance of the PI program created is retained.[in,out] the pointer to the raw program handle </p>
+<p>Creates PI mem object from a native handle. </p>
+<p>NOTE: The created PI object takes ownership of the native handle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>the PI context of the program </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">program</td><td>the pointer to PI program </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">handle</td><td>the pointer to the raw program handle </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle to create PI mem from. </td></tr>
+    <tr><td class="paramname">mem</td><td>is the PI mem created from the native handle. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00330">330</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00545">545</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a948aedf63a16c5b78406daea9b555cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948aedf63a16c5b78406daea9b555cd1">&#9670;&nbsp;</a></span>piextProgramCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextProgramCreateWithNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype">pi_native_handle&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi_program</a> *&#160;</td>
+          <td class="paramname"><em>program</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates PI program object from a native handle. </p>
+<p>NOTE: The created PI object takes ownership of the native handle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle to create PI program from. </td></tr>
+    <tr><td class="paramname">program</td><td>is the PI program created from the native handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00404">404</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00085">cl::sycl::detail::program_impl::program_impl()</a>.</p>
+
+</div>
+</div>
+<a id="a5cc41267ab47d71b319e8addfee33b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc41267ab47d71b319e8addfee33b29">&#9670;&nbsp;</a></span>piextQueueCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result OCL() piextQueueCreateWithNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype">pi_native_handle&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__queue.html">pi_queue</a> *&#160;</td>
+          <td class="paramname"><em>queue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates PI queue object from a native handle. </p>
+<p>NOTE: The created PI object takes ownership of the native handle.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle to create PI queue from. </td></tr>
+    <tr><td class="paramname">queue</td><td>is the PI queue created from the native handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00319">319</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -571,7 +780,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00675">675</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00678">678</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +840,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00924">924</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00927">927</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00071">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
 
@@ -714,7 +923,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00839">839</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00842">842</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +997,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00799">799</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00802">802</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -862,7 +1071,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00879">879</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00882">882</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -901,7 +1110,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00737">737</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00740">740</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -969,7 +1178,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00976">976</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00979">979</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -1029,7 +1238,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00644">644</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00647">647</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1305,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00708">708</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00711">711</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1359,7 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </dl>
 <p>If param_name is PI_USM_INDIRECT_ACCESS, the value will be a ptr to the pi_bool value PI_TRUE If param_name is PI_USM_PTRS, the value will be an array of ptrs </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01007">1007</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01010">1010</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>

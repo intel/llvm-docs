@@ -123,6 +123,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memitem:a029fc5e61786a9a3d5e59916d5ba3f67"><td class="memItemLeft" align="right" valign="top">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1context.html#a029fc5e61786a9a3d5e59916d5ba3f67">get_devices</a> () const</td></tr>
 <tr class="memdesc:a029fc5e61786a9a3d5e59916d5ba3f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets devices associated with this SYCL context.  <a href="#a029fc5e61786a9a3d5e59916d5ba3f67">More...</a><br /></td></tr>
 <tr class="separator:a029fc5e61786a9a3d5e59916d5ba3f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace1a143235a0d6a1e0391a22a6121ad6"><td class="memTemplParams" colspan="2">template&lt;backend BackendName&gt; </td></tr>
+<tr class="memitem:ace1a143235a0d6a1e0391a22a6121ad6"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1context.html#ace1a143235a0d6a1e0391a22a6121ad6">get_native</a> () const -&gt; typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; BackendName, <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &gt;::type</td></tr>
+<tr class="memdesc:ace1a143235a0d6a1e0391a22a6121ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL context.  <a href="#ace1a143235a0d6a1e0391a22a6121ad6">More...</a><br /></td></tr>
+<tr class="separator:ace1a143235a0d6a1e0391a22a6121ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -137,7 +141,7 @@ template&lt;class T &gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00028">28</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00030">30</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a349c9ddfdfcea6a7f0b053d563cba9fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a349c9ddfdfcea6a7f0b053d563cba9fa">&#9670;&nbsp;</a></span>context() <span class="overload">[1/5]</span></h2>
@@ -350,7 +354,7 @@ template&lt;class T &gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="context_8cpp_source.html#l00040">40</a> of file <a class="el" href="context_8cpp_source.html">context.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="platform_8cpp_source.html#l00030">cl::sycl::platform::get()</a>, and <a class="el" href="device_8cpp_source.html#l00076">cl::sycl::device::get_platform()</a>.</p>
+<p class="reference">References <a class="el" href="platform_8cpp_source.html#l00030">cl::sycl::platform::get()</a>, and <a class="el" href="device_8cpp_source.html#l00079">cl::sycl::device::get_platform()</a>.</p>
 
 </div>
 </div>
@@ -461,6 +465,38 @@ template&lt;info::context param&gt; </div>
 
 <p>Queries this SYCL context for information. </p>
 <p>The return type depends on information being queried. </p>
+
+</div>
+</div>
+<a id="ace1a143235a0d6a1e0391a22a6121ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1a143235a0d6a1e0391a22a6121ad6">&#9670;&nbsp;</a></span>get_native()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;backend BackendName&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cl::sycl::context::get_native </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt;BackendName, <a class="el" href="classcl_1_1sycl_1_1context.html">context</a>&gt;::type </td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of the SYCL context. </p>
+<dl class="section return"><dt>Returns</dt><dd>a native handle, the type of which defined by the backend. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="context_8hpp_source.html#l00144">144</a> of file <a class="el" href="context_8hpp_source.html">context.hpp</a>.</p>
 
 </div>
 </div>
