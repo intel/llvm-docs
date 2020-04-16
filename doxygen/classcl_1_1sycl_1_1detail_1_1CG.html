@@ -72,19 +72,24 @@ $(function() {
 <div class="title">cl::sycl::detail::CG Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base class for all types of command groups.  
+ <a href="classcl_1_1sycl_1_1detail_1_1CG.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="cg_8hpp_source.html">CL/sycl/detail/cg.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for cl::sycl::detail::CG:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcl_1_1sycl_1_1detail_1_1CG__inherit__graph.png" border="0" usemap="#cl_1_1sycl_1_1detail_1_1CG_inherit__map" alt="Inheritance graph"/></div>
 <map name="cl_1_1sycl_1_1detail_1_1CG_inherit__map" id="cl_1_1sycl_1_1detail_1_1CG_inherit__map">
-<area shape="rect" id="node2" href="classcl_1_1sycl_1_1detail_1_1CGCopy.html" title="cl::sycl::detail::CGCopy" alt="" coords="208,5,371,32"/>
-<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html" title="cl::sycl::detail::CGCopyUSM" alt="" coords="193,56,385,83"/>
-<area shape="rect" id="node4" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html" title="cl::sycl::detail::CGExec\lKernel" alt="" coords="209,107,370,149"/>
-<area shape="rect" id="node5" href="classcl_1_1sycl_1_1detail_1_1CGFill.html" title="cl::sycl::detail::CGFill" alt="" coords="215,173,363,200"/>
-<area shape="rect" id="node6" href="classcl_1_1sycl_1_1detail_1_1CGFillUSM.html" title="cl::sycl::detail::CGFillUSM" alt="" coords="200,224,379,251"/>
+<area shape="rect" id="node2" href="classcl_1_1sycl_1_1detail_1_1CGCopy.html" title="&quot;Copy memory&quot; command group class. " alt="" coords="208,5,371,32"/>
+<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html" title="&quot;Copy USM&quot; command group class. " alt="" coords="193,56,385,83"/>
+<area shape="rect" id="node4" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html" title="&quot;Execute kernel&quot; command group class. " alt="" coords="209,107,370,149"/>
+<area shape="rect" id="node5" href="classcl_1_1sycl_1_1detail_1_1CGFill.html" title="&quot;Fill memory&quot; command group class. " alt="" coords="215,173,363,200"/>
+<area shape="rect" id="node6" href="classcl_1_1sycl_1_1detail_1_1CGFillUSM.html" title="&quot;Fill USM&quot; command group class. " alt="" coords="200,224,379,251"/>
 <area shape="rect" id="node7" href="classcl_1_1sycl_1_1detail_1_1CGInteropTask.html" title="cl::sycl::detail::CGInteropTask" alt="" coords="189,275,389,301"/>
-<area shape="rect" id="node8" href="classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html" title="cl::sycl::detail::CGPrefetchUSM" alt="" coords="184,325,395,352"/>
-<area shape="rect" id="node9" href="classcl_1_1sycl_1_1detail_1_1CGUpdateHost.html" title="cl::sycl::detail::CGUpdateHost" alt="" coords="189,376,390,403"/>
+<area shape="rect" id="node8" href="classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html" title="&quot;Prefetch USM&quot; command group class. " alt="" coords="184,325,395,352"/>
+<area shape="rect" id="node9" href="classcl_1_1sycl_1_1detail_1_1CGUpdateHost.html" title="&quot;Update host&quot; command group class. " alt="" coords="189,376,390,403"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -97,7 +102,7 @@ Collaboration diagram for cl::sycl::detail::CG:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae11c46d4ce80a1602482a9982e8ca7ee"><td class="memItemLeft" align="right" valign="top"><a id="ae11c46d4ce80a1602482a9982e8ca7ee"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CGTYPE</b> { <br />
+<tr class="memitem:ae11c46d4ce80a1602482a9982e8ca7ee"><td class="memItemLeft" align="right" valign="top"><a id="ae11c46d4ce80a1602482a9982e8ca7ee"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7ee">CGTYPE</a> { <br />
 &#160;&#160;<b>NONE</b>, 
 <b>KERNEL</b>, 
 <b>COPY_ACC_TO_PTR</b>, 
@@ -113,28 +118,30 @@ Public Types</h2></td></tr>
 <b>PREFETCH_USM</b>, 
 <b>INTEROP_TASK_CODEPLAY</b>
 <br />
- }</td></tr>
+ }<tr class="memdesc:ae11c46d4ce80a1602482a9982e8ca7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the command group. <br /></td></tr>
+</td></tr>
 <tr class="separator:ae11c46d4ce80a1602482a9982e8ca7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a35e4fd1e0383a2ddfb91e73f22abf29c"><td class="memItemLeft" align="right" valign="top"><a id="a35e4fd1e0383a2ddfb91e73f22abf29c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CG</b> (CGTYPE Type, vector_class&lt; vector_class&lt; char &gt;&gt; ArgsStorage, vector_class&lt; detail::AccessorImplPtr &gt; AccStorage, vector_class&lt; shared_ptr_class&lt; const void &gt;&gt; SharedPtrStorage, vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&gt; Requirements, vector_class&lt; detail::EventImplPtr &gt; Events, <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> loc={})</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CG</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7ee">CGTYPE</a> Type, vector_class&lt; vector_class&lt; char &gt;&gt; ArgsStorage, vector_class&lt; detail::AccessorImplPtr &gt; AccStorage, vector_class&lt; shared_ptr_class&lt; const void &gt;&gt; SharedPtrStorage, vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&gt; Requirements, vector_class&lt; detail::EventImplPtr &gt; Events, <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> loc={})</td></tr>
 <tr class="separator:a35e4fd1e0383a2ddfb91e73f22abf29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea503c1c8f0394eede77a1fdf985d02a"><td class="memItemLeft" align="right" valign="top"><a id="aea503c1c8f0394eede77a1fdf985d02a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>CG</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">CG</a> &amp;&amp;CommandGroup)=default</td></tr>
 <tr class="separator:aea503c1c8f0394eede77a1fdf985d02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41fca13e6a5f79e319806715fa48b743"><td class="memItemLeft" align="right" valign="top"><a id="a41fca13e6a5f79e319806715fa48b743"></a>
-CGTYPE&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> ()</td></tr>
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7ee">CGTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> ()</td></tr>
 <tr class="separator:a41fca13e6a5f79e319806715fa48b743"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5ff4bd61baf6903b250a64a9dc207245"><td class="memItemLeft" align="right" valign="top"><a id="a5ff4bd61baf6903b250a64a9dc207245"></a>
-vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MRequirements</b></td></tr>
+<tr class="memitem:a5ff4bd61baf6903b250a64a9dc207245"><td class="memItemLeft" align="right" valign="top">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a5ff4bd61baf6903b250a64a9dc207245">MRequirements</a></td></tr>
+<tr class="memdesc:a5ff4bd61baf6903b250a64a9dc207245"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of requirements that specify which memory is needed for the command group to be executed.  <a href="#a5ff4bd61baf6903b250a64a9dc207245">More...</a><br /></td></tr>
 <tr class="separator:a5ff4bd61baf6903b250a64a9dc207245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed39ca43cc8e1592955f1d425e641acf"><td class="memItemLeft" align="right" valign="top"><a id="aed39ca43cc8e1592955f1d425e641acf"></a>
-vector_class&lt; detail::EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MEvents</b></td></tr>
+vector_class&lt; detail::EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#aed39ca43cc8e1592955f1d425e641acf">MEvents</a></td></tr>
+<tr class="memdesc:aed39ca43cc8e1592955f1d425e641acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of events that order the execution of this <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html" title="Base class for all types of command groups. ">CG</a>. <br /></td></tr>
 <tr class="separator:aed39ca43cc8e1592955f1d425e641acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac8209b68b492b72b181b9a0fec5f0d"><td class="memItemLeft" align="right" valign="top"><a id="abac8209b68b492b72b181b9a0fec5f0d"></a>
 string_class&#160;</td><td class="memItemRight" valign="bottom"><b>MFunctionName</b></td></tr>
@@ -150,9 +157,29 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>MColumn</b></td></
 <tr class="separator:a6628c8c2ca6833f9cef8a650361bccda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00382">382</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Base class for all types of command groups. </p>
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00379">379</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5ff4bd61baf6903b250a64a9dc207245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff4bd61baf6903b250a64a9dc207245">&#9670;&nbsp;</a></span>MRequirements</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector_class&lt;<a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&gt; cl::sycl::detail::CG::MRequirements</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of requirements that specify which memory is needed for the command group to be executed. </p>
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00437">437</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/CL/sycl/detail/<a class="el" href="cg_8hpp_source.html">cg.hpp</a></li>
 </ul>
 </div><!-- contents -->

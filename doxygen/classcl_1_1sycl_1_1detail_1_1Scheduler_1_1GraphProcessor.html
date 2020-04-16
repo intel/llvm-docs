@@ -67,26 +67,126 @@ $(function() {
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::detail::Scheduler::GraphProcessor Class Reference</div>  </div>
+<div class="title">cl::sycl::detail::Scheduler::GraphProcessor Class Reference<div class="ingroups"><a class="el" href="group__sycl__graph.html">DPC++ Execution Graph</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Graph Processor provides interfaces for enqueueing commands and their dependencies to the underlying runtime.  
+ <a href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="scheduler_8hpp_source.html">detail/scheduler/scheduler.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4e39d54dad155d40da84aa2b23e43b8"><td class="memItemLeft" align="right" valign="top"><a id="ac4e39d54dad155d40da84aa2b23e43b8"></a>
-static std::vector&lt; EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getWaitList</b> (EventImplPtr Event)</td></tr>
+<tr class="memitem:ac4e39d54dad155d40da84aa2b23e43b8"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#ac4e39d54dad155d40da84aa2b23e43b8">getWaitList</a> (EventImplPtr Event)</td></tr>
 <tr class="separator:ac4e39d54dad155d40da84aa2b23e43b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb744c383493e594979353fe434ba2c3"><td class="memItemLeft" align="right" valign="top"><a id="aeb744c383493e594979353fe434ba2c3"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>waitForEvent</b> (EventImplPtr Event)</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#aeb744c383493e594979353fe434ba2c3">waitForEvent</a> (EventImplPtr Event)</td></tr>
+<tr class="memdesc:aeb744c383493e594979353fe434ba2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the command, associated with Event passed, is completed. <br /></td></tr>
 <tr class="separator:aeb744c383493e594979353fe434ba2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc64ef089b1890c00829c77f7c160844"><td class="memItemLeft" align="right" valign="top"><a id="abc64ef089b1890c00829c77f7c160844"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>enqueueCommand</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html">EnqueueResultT</a> &amp;EnqueueResult, BlockingT Blocking=NON_BLOCKING)</td></tr>
+<tr class="memitem:abc64ef089b1890c00829c77f7c160844"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#abc64ef089b1890c00829c77f7c160844">enqueueCommand</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html">EnqueueResultT</a> &amp;EnqueueResult, BlockingT Blocking=NON_BLOCKING)</td></tr>
+<tr class="memdesc:abc64ef089b1890c00829c77f7c160844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues the command and all its dependencies.  <a href="#abc64ef089b1890c00829c77f7c160844">More...</a><br /></td></tr>
 <tr class="separator:abc64ef089b1890c00829c77f7c160844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00221">221</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>Graph Processor provides interfaces for enqueueing commands and their dependencies to the underlying runtime. </p>
+<p>Member functions of this class do not modify the graph.</p>
+<h1><a class="anchor" id="sched_enqueue"></a>
+Command enqueueing</h1>
+<p>Commands are enqueued whenever they come to the <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a>. Each command has enqueue method which takes vector of events that represents dependencies and returns event which represents the command. <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html" title="Graph Processor provides interfaces for enqueueing commands and their dependencies to the underlying ...">GraphProcessor</a> performs topological sort to get the order in which commands have to be enqueued. Then it enqueues each command, passing a vector of events that this command needs to wait on. If an error happens during command enqueue, the whole process is stopped, the faulty command is propagated back to the <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a>.</p>
+<p>The command with dependencies that belong to a context different from its own can't be enqueued directly (limitation of OpenCL runtime). Instead, for each dependency, a proxy event is created in the target context and linked using OpenCL callback mechanism with original one. For example, the following SYCL code:</p>
+<div class="fragment"><div class="line"><span class="comment">// The ContextA and ContextB are different OpenCL contexts</span></div><div class="line">sycl::queue Q1(ContextA);</div><div class="line">sycl::queue Q2(ContextB);</div><div class="line"></div><div class="line">Q1.submit(Task1);</div><div class="line"></div><div class="line">Q2.submit(Task2);</div></div><!-- fragment --><p>is translated to the following OCL API calls:</p>
+<div class="fragment"><div class="line"> <span class="keywordtype">void</span> event_completion_callback(<span class="keywordtype">void</span> *data) {</div><div class="line">   <span class="comment">// Change status of event to complete.</span></div><div class="line">   clSetEventStatus((cl_event *)data, CL_COMPLETE); <span class="comment">// Scope of Context2</span></div><div class="line"> }</div><div class="line"></div><div class="line"><span class="comment">// Enqueue TASK1</span></div><div class="line">EventTask1 = clEnqueueNDRangeKernel(Q1, TASK1, ..); <span class="comment">// Scope of Context1</span></div><div class="line"><span class="comment">// Read memory to host</span></div><div class="line">ReadMem = clEnqueueReadBuffer(A, .., <span class="comment">/*Deps=*/</span>EventTask1); <span class="comment">// Scope of</span></div><div class="line"><span class="comment">// Context1</span></div><div class="line"></div><div class="line"><span class="comment">// Create user event with initial status &quot;not completed&quot;.</span></div><div class="line">UserEvent = clCreateUserEvent(Context2); <span class="comment">// Scope of Context2</span></div><div class="line"><span class="comment">// Ask OpenCL to call callback with UserEvent as data when &quot;read memory</span></div><div class="line"><span class="comment">// to host&quot; operation is completed</span></div><div class="line">clSetEventCallback(ReadMem, event_completion_callback,</div><div class="line">                   <span class="comment">/*data=*/</span>UserEvent); <span class="comment">// Scope of Context1</span></div><div class="line"></div><div class="line"><span class="comment">// Enqueue write memory from host, block it on user event</span></div><div class="line"><span class="comment">// It will be unblocked when we change UserEvent status to completed in</span></div><div class="line"><span class="comment">// callback.</span></div><div class="line">WriteMem =</div><div class="line">   clEnqueueWriteBuffer(A, .., <span class="comment">/*Dep=*/</span>UserEvent); <span class="comment">// Scope of Context2</span></div><div class="line"><span class="comment">// Enqueue TASK2</span></div><div class="line">EventTask2 =</div><div class="line">   clEnqueueNDRangeKernel(TASK, .., <span class="comment">/*Dep=*/</span>WriteMem); <span class="comment">// Scope of</span></div><div class="line">   <span class="comment">// Context2</span></div></div><!-- fragment --><p>The alternative approach that has been considered is to have separate dispatcher thread that would wait for all events from the Context other then target Context to complete and then enqueue command with dependencies from target Context only. Alternative approach makes code significantly more complex and can hurt performance on CPU device vs chosen approach with callbacks. </p>
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00644">644</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc64ef089b1890c00829c77f7c160844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc64ef089b1890c00829c77f7c160844">&#9670;&nbsp;</a></span>enqueueCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>Cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html">EnqueueResultT</a> &amp;&#160;</td>
+          <td class="paramname"><em>EnqueueResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BlockingT&#160;</td>
+          <td class="paramname"><em>Blocking</em> = <code>NON_BLOCKING</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enqueues the command and all its dependencies. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">EnqueueResult</td><td>is set to specific status if enqueue failed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the command is successfully enqueued. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graph__processor_8cpp_source.html#l00055">55</a> of file <a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00453">cl::sycl::detail::Command::enqueue()</a>, <a class="el" href="commands_8hpp_source.html#l00072">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00188">cl::sycl::detail::Command::MDeps</a>, and <a class="el" href="commands_8hpp_source.html#l00053">cl::sycl::detail::EnqueueResultT::MResult</a>.</p>
+
+</div>
+</div>
+<a id="ac4e39d54dad155d40da84aa2b23e43b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e39d54dad155d40da84aa2b23e43b8">&#9670;&nbsp;</a></span>getWaitList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; EventImplPtr &gt; cl::sycl::detail::Scheduler::GraphProcessor::getWaitList </td>
+          <td>(</td>
+          <td class="paramtype">EventImplPtr&#160;</td>
+          <td class="paramname"><em>Event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a list of events that represent immediate dependencies of the command associated with Event passed. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="graph__processor_8cpp_source.html#l00025">25</a> of file <a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00072">cl::sycl::detail::DepDesc::MDepCommand</a>, and <a class="el" href="commands_8hpp_source.html#l00188">cl::sycl::detail::Command::MDeps</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>source/detail/scheduler/<a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a></li>
 <li>source/detail/scheduler/<a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a></li>
 </ul>

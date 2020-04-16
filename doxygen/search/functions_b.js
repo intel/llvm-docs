@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['maketraceeventepilog',['makeTraceEventEpilog',['../classcl_1_1sycl_1_1detail_1_1Command.html#a42b5f83a1250912b24546f6aa1c252d5',1,'cl::sycl::detail::Command']]],
   ['maketraceeventprolog',['makeTraceEventProlog',['../classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d',1,'cl::sycl::detail::Command']]],
   ['mem_5fadvise',['mem_advise',['../classcl_1_1sycl_1_1queue.html#acdf855d45f7c048c839e283c036a05cb',1,'cl::sycl::queue::mem_advise()'],['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a64a2a8cf81ca5f32dec6948e22404209',1,'cl::sycl::detail::queue_impl::mem_advise()']]],
   ['mem_5ffence',['mem_fence',['../classcl_1_1sycl_1_1group.html#a52d3648c400a06ab4a548a0e301ac0da',1,'cl::sycl::group::mem_fence()'],['../classcl_1_1sycl_1_1nd__item.html#a38ea2d76be164ddbbf17355814f26874',1,'cl::sycl::nd_item::mem_fence()']]],

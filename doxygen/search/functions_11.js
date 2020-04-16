@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['update_5fhost',['update_host',['../classcl_1_1sycl_1_1handler.html#a2e0250574969ee1bf7743596662c847e',1,'cl::sycl::handler']]],
-  ['usmsetindirectaccess',['USMSetIndirectAccess',['../pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372',1,'pi_opencl.cpp']]]
+  ['throw_5fasynchronous',['throw_asynchronous',['../classcl_1_1sycl_1_1queue.html#ae5c39ed682422e4e525fe0a01e8b7ad9',1,'cl::sycl::queue::throw_asynchronous()'],['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c6e3a913c64c15cc3874a06f2ca38da',1,'cl::sycl::detail::queue_impl::throw_asynchronous()']]]
 ];

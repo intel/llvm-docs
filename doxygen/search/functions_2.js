@@ -3,6 +3,8 @@ var searchData=
   ['call',['call',['../classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395',1,'cl::sycl::detail::plugin']]],
   ['call_5fnocheck',['call_nocheck',['../classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295',1,'cl::sycl::detail::plugin']]],
   ['checkpiresult',['checkPiResult',['../classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4',1,'cl::sycl::detail::plugin']]],
+  ['cleanupcommandsforrecord',['cleanupCommandsForRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a0bb036ad528209f3d547ff77c0918bbc',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
+  ['cleanupfinishedcommands',['cleanupFinishedCommands',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa',1,'cl::sycl::detail::Scheduler::cleanupFinishedCommands()'],['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a976e10ef65ccfb89a0ec2b59ef03b2ad',1,'cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()']]],
   ['commonenqueuemembuffercopyrect',['commonEnqueueMemBufferCopyRect',['../pi__cuda_8cpp.html#a338cd82b7fd7a36b2e36e5d47154b79f',1,'pi_cuda.cpp']]],
   ['compile_5fwith_5fkernel_5fname',['compile_with_kernel_name',['../classcl_1_1sycl_1_1detail_1_1program__impl.html#afe137dd2819614ad149f9673157c8d62',1,'cl::sycl::detail::program_impl']]],
   ['compile_5fwith_5fkernel_5ftype',['compile_with_kernel_type',['../classcl_1_1sycl_1_1program.html#a1ea2cea6ee603aca30f448cb4e6c8e47',1,'cl::sycl::program']]],

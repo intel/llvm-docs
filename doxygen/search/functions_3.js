@@ -1,6 +1,7 @@
 var searchData=
 [
   ['deallocate',['deallocate',['../classcl_1_1sycl_1_1usm__allocator.html#ac4554a69d2570ae390a1c36d0943618a',1,'cl::sycl::usm_allocator']]],
+  ['decrementleafcountersforrecord',['decrementLeafCountersForRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['depends_5fon',['depends_on',['../classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7',1,'cl::sycl::handler::depends_on(event Event)'],['../classcl_1_1sycl_1_1handler.html#a5435fd06ff8e61a4c69788664bf46626',1,'cl::sycl::handler::depends_on(vector_class&lt; event &gt; Events)']]],
   ['destroy',['destroy',['../classcl_1_1sycl_1_1usm__allocator.html#a850632fb63be94813fa367a17fba2710',1,'cl::sycl::usm_allocator']]],
   ['device',['device',['../classcl_1_1sycl_1_1device.html#a6f54ed6a0d417c5f97686b35cb9783fa',1,'cl::sycl::device::device()'],['../classcl_1_1sycl_1_1device.html#a2590d7bac60e80b4677648060f1180b1',1,'cl::sycl::device::device(cl_device_id DeviceId)'],['../classcl_1_1sycl_1_1device.html#a540fc7168621c90290de1d8ce8c4ca96',1,'cl::sycl::device::device(const device_selector &amp;DeviceSelector)']]],

@@ -72,14 +72,19 @@ $(function() {
 <div class="title">cl::sycl::detail::DepDesc Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Dependency between two commands.  
+ <a href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="commands_8hpp_source.html">detail/scheduler/commands.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for cl::sycl::detail::DepDesc:</div>
 <div class="dyncontent">
 <div class="center"><img src="structcl_1_1sycl_1_1detail_1_1DepDesc__coll__graph.png" border="0" usemap="#cl_1_1sycl_1_1detail_1_1DepDesc_coll__map" alt="Collaboration graph"/></div>
 <map name="cl_1_1sycl_1_1detail_1_1DepDesc_coll__map" id="cl_1_1sycl_1_1detail_1_1DepDesc_coll__map">
-<area shape="rect" id="node2" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html" title="cl::sycl::detail::Alloca\lCommandBase" alt="" coords="1288,508,1435,549"/>
-<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1Command.html" title="cl::sycl::detail::Command" alt="" coords="639,761,810,787"/>
-<area shape="rect" id="node19" href="classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html" title="cl::sycl::detail::Release\lCommand" alt="" coords="977,645,1136,687"/>
+<area shape="rect" id="node2" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html" title="Base class for memory allocation commands. " alt="" coords="1288,508,1435,549"/>
+<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1Command.html" title="The Command class represents some action that needs to be performed on one or more memory objects..." alt="" coords="639,761,810,787"/>
+<area shape="rect" id="node19" href="classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html" title="The release command enqueues release of a memory object instance allocated on Host or underlying fram..." alt="" coords="977,645,1136,687"/>
 <area shape="rect" id="node20" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html" title="cl::sycl::detail::Accessor\lImplHost" alt="" coords="973,201,1140,243"/>
 <area shape="rect" id="node22" href="classcl_1_1sycl_1_1range.html" title="cl::sycl::range\&lt; 3 \&gt;" alt="" coords="657,114,792,141"/>
 <area shape="rect" id="node23" href="classcl_1_1sycl_1_1detail_1_1array.html" title="cl::sycl::detail::array\l\&lt; dimensions \&gt;" alt="" coords="233,85,373,127"/>
@@ -97,13 +102,15 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaa8c5be0032931124fd43c11f0be7b1e"><td class="memItemLeft" align="right" valign="top"><a id="aaa8c5be0032931124fd43c11f0be7b1e"></a>
-<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>MDepCommand</b> = nullptr</td></tr>
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#aaa8c5be0032931124fd43c11f0be7b1e">MDepCommand</a> = nullptr</td></tr>
+<tr class="memdesc:aaa8c5be0032931124fd43c11f0be7b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual dependency command. <br /></td></tr>
 <tr class="separator:aaa8c5be0032931124fd43c11f0be7b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b74a42718d265f20351c6fba98980f9"><td class="memItemLeft" align="right" valign="top"><a id="a9b74a42718d265f20351c6fba98980f9"></a>
-const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>MDepRequirement</b> = nullptr</td></tr>
+const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#a9b74a42718d265f20351c6fba98980f9">MDepRequirement</a> = nullptr</td></tr>
+<tr class="memdesc:a9b74a42718d265f20351c6fba98980f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Requirement for the dependency. <br /></td></tr>
 <tr class="separator:a9b74a42718d265f20351c6fba98980f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd074562572052e2c252a03484c5cee3"><td class="memItemLeft" align="right" valign="top"><a id="abd074562572052e2c252a03484c5cee3"></a>
-<a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html">AllocaCommandBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>MAllocaCmd</b> = nullptr</td></tr>
+<tr class="memitem:abd074562572052e2c252a03484c5cee3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html">AllocaCommandBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#abd074562572052e2c252a03484c5cee3">MAllocaCmd</a> = nullptr</td></tr>
+<tr class="memdesc:abd074562572052e2c252a03484c5cee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocation command for the memory object we have requirement for.  <a href="#abd074562572052e2c252a03484c5cee3">More...</a><br /></td></tr>
 <tr class="separator:abd074562572052e2c252a03484c5cee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -113,9 +120,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (con
 <tr class="separator:a99811a2cf7ae82f3ecf3f44375ab4ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>Dependency between two commands. </p>
+
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00061">61</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="abd074562572052e2c252a03484c5cee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd074562572052e2c252a03484c5cee3">&#9670;&nbsp;</a></span>MAllocaCmd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html">AllocaCommandBase</a>* cl::sycl::detail::DepDesc::MAllocaCmd = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocation command for the memory object we have requirement for. </p>
+<p>Used to simplify searching for memory handle. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00077">77</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00783">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>source/detail/scheduler/<a class="el" href="commands_8hpp_source.html">commands.hpp</a></li>
 </ul>
 </div><!-- contents -->
