@@ -16,7 +16,6 @@ var searchData=
   ['check_5ffp_5fsupport_3c_20info_3a_3adevice_3a_3ahalf_5ffp_5fconfig_20_3e',['check_fp_support&lt; info::device::half_fp_config &gt;',['../structcl_1_1sycl_1_1detail_1_1check__fp__support_3_01info_1_1device_1_1half__fp__config_01_4.html',1,'cl::sycl::detail']]],
   ['circularbuffer',['CircularBuffer',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
   ['circularbuffer_3c_20cl_3a_3asycl_3a_3adetail_3a_3acommand_20_2a_3e',['CircularBuffer&lt; cl::sycl::detail::Command *&gt;',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
-  ['clusm',['CLUSM',['../classcl_1_1sycl_1_1detail_1_1usm_1_1CLUSM.html',1,'cl::sycl::detail::usm']]],
   ['cmpcstr',['CmpCStr',['../structcl_1_1sycl_1_1detail_1_1CmpCStr.html',1,'cl::sycl::detail']]],
   ['code_5flocation',['code_location',['../structcl_1_1sycl_1_1detail_1_1code__location.html',1,'cl::sycl::detail']]],
   ['command',['Command',['../classcl_1_1sycl_1_1detail_1_1Command.html',1,'cl::sycl::detail']]],

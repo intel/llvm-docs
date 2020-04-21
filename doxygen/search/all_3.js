@@ -23,7 +23,6 @@ var searchData=
   ['cl',['cl',['../namespacecl.html',1,'']]],
   ['cleanupcommandsforrecord',['cleanupCommandsForRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a0bb036ad528209f3d547ff77c0918bbc',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['cleanupfinishedcommands',['cleanupFinishedCommands',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa',1,'cl::sycl::detail::Scheduler::cleanupFinishedCommands()'],['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a976e10ef65ccfb89a0ec2b59ef03b2ad',1,'cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()']]],
-  ['clusm',['CLUSM',['../classcl_1_1sycl_1_1detail_1_1usm_1_1CLUSM.html',1,'cl::sycl::detail::usm']]],
   ['cmpcstr',['CmpCStr',['../structcl_1_1sycl_1_1detail_1_1CmpCStr.html',1,'cl::sycl::detail']]],
   ['code_5flocation',['code_location',['../structcl_1_1sycl_1_1detail_1_1code__location.html',1,'cl::sycl::detail']]],
   ['command',['Command',['../classcl_1_1sycl_1_1detail_1_1Command.html',1,'cl::sycl::detail']]],
