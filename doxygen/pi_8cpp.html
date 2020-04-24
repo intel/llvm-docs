@@ -78,39 +78,41 @@ $(function() {
 <code>#include &lt;CL/sycl/context.hpp&gt;</code><br />
 <code>#include &lt;CL/sycl/detail/common.hpp&gt;</code><br />
 <code>#include &lt;<a class="el" href="pi_8hpp_source.html">CL/sycl/detail/pi.hpp</a>&gt;</code><br />
+<code>#include &lt;detail/config.hpp&gt;</code><br />
 <code>#include &lt;detail/plugin.hpp&gt;</code><br />
 <code>#include &lt;bitset&gt;</code><br />
 <code>#include &lt;cstdarg&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pi.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="pi_8cpp__incl.png" border="0" usemap="#source_2detail_2pi_8cpp" alt=""/></div>
 <map name="source_2detail_2pi_8cpp" id="source_2detail_2pi_8cpp">
-<area shape="rect" id="node2" href="context__impl_8hpp_source.html" title="context_impl.hpp" alt="" coords="647,80,769,107"/>
-<area shape="rect" id="node3" href="common_8hpp_source.html" title="CL/sycl/detail/common.hpp" alt="" coords="2419,497,2600,524"/>
-<area shape="rect" id="node22" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="780,415,921,442"/>
-<area shape="rect" id="node41" href="plugin_8hpp_source.html" title="detail/plugin.hpp" alt="" coords="1041,326,1157,353"/>
-<area shape="rect" id="node45" href="context_8hpp_source.html" title="CL/sycl/context.hpp" alt="" coords="3129,244,3268,271"/>
-<area shape="rect" id="node16" href="stl_8hpp_source.html" title="CL/sycl/stl.hpp" alt="" coords="805,647,915,673"/>
-<area shape="rect" id="node20" href="os__util_8hpp_source.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="509,497,678,524"/>
-<area shape="rect" id="node25" href="exception__list_8hpp_source.html" title="CL/sycl/exception_list.hpp" alt="" coords="3431,572,3607,599"/>
-<area shape="rect" id="node27" href="info__desc_8hpp_source.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="1875,326,2053,353"/>
-<area shape="rect" id="node39" href="device__impl_8hpp_source.html" title="detail/device_impl.hpp" alt="" coords="409,162,559,189"/>
-<area shape="rect" id="node40" href="platform__impl_8hpp_source.html" title="detail/platform_impl.hpp" alt="" coords="787,244,947,271"/>
-<area shape="rect" id="node42" href="kernel__program__cache_8hpp_source.html" title="detail/kernel_program\l_cache.hpp" alt="" coords="635,155,781,196"/>
-<area shape="rect" id="node44" href="program__manager_8hpp_source.html" title="detail/program_manager\l/program_manager.hpp" alt="" coords="449,319,610,360"/>
-<area shape="rect" id="node4" href="defines_8hpp_source.html" title="CL/sycl/detail/defines.hpp" alt="" coords="3211,721,3384,748"/>
-<area shape="rect" id="node5" href="export_8hpp_source.html" title="CL/sycl/detail/export.hpp" alt="" coords="1301,647,1467,673"/>
-<area shape="rect" id="node13" href="exception_8hpp_source.html" title="CL/sycl/exception.hpp" alt="" coords="1104,572,1256,599"/>
-<area shape="rect" id="node14" href="pi_8h_source.html" title="CL/sycl/detail/pi.h" alt="" coords="1098,647,1225,673"/>
-<area shape="rect" id="node28" href="id_8hpp_source.html" title="CL/sycl/id.hpp" alt="" coords="2824,415,2931,442"/>
-<area shape="rect" id="node46" href="backend__types_8hpp_source.html" title="CL/sycl/backend_types.hpp" alt="" coords="3360,326,3544,353"/>
+<area shape="rect" id="node2" href="context__impl_8hpp_source.html" title="context_impl.hpp" alt="" coords="1929,80,2050,107"/>
+<area shape="rect" id="node3" href="common_8hpp_source.html" title="CL/sycl/detail/common.hpp" alt="" coords="1523,497,1704,524"/>
+<area shape="rect" id="node20" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="2344,415,2485,442"/>
+<area shape="rect" id="node36" href="plugin_8hpp_source.html" title="detail/plugin.hpp" alt="" coords="1950,326,2066,353"/>
+<area shape="rect" id="node40" href="context_8hpp_source.html" title="CL/sycl/context.hpp" alt="" coords="849,244,988,271"/>
+<area shape="rect" id="node41" href="config_8hpp_source.html" title="detail/config.hpp" alt="" coords="2885,326,3003,353"/>
+<area shape="rect" id="node16" href="stl_8hpp_source.html" title="CL/sycl/stl.hpp" alt="" coords="403,647,514,673"/>
+<area shape="rect" id="node18" href="os__util_8hpp_source.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="2497,497,2666,524"/>
+<area shape="rect" id="node24" href="exception__list_8hpp_source.html" title="CL/sycl/exception_list.hpp" alt="" coords="93,572,269,599"/>
+<area shape="rect" id="node26" href="info__desc_8hpp_source.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="1241,326,1418,353"/>
+<area shape="rect" id="node34" href="device__impl_8hpp_source.html" title="detail/device_impl.hpp" alt="" coords="1849,162,1999,189"/>
+<area shape="rect" id="node35" href="platform__impl_8hpp_source.html" title="detail/platform_impl.hpp" alt="" coords="1869,244,2029,271"/>
+<area shape="rect" id="node37" href="kernel__program__cache_8hpp_source.html" title="detail/kernel_program\l_cache.hpp" alt="" coords="2356,155,2503,196"/>
+<area shape="rect" id="node39" href="program__manager_8hpp_source.html" title="detail/program_manager\l/program_manager.hpp" alt="" coords="2294,319,2455,360"/>
+<area shape="rect" id="node4" href="defines_8hpp_source.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1588,721,1761,748"/>
+<area shape="rect" id="node5" href="export_8hpp_source.html" title="CL/sycl/detail/export.hpp" alt="" coords="1643,647,1810,673"/>
+<area shape="rect" id="node13" href="exception_8hpp_source.html" title="CL/sycl/exception.hpp" alt="" coords="1537,572,1689,599"/>
+<area shape="rect" id="node14" href="pi_8h_source.html" title="CL/sycl/detail/pi.h" alt="" coords="1937,647,2063,673"/>
+<area shape="rect" id="node21" href="backend__types_8hpp_source.html" title="CL/sycl/backend_types.hpp" alt="" coords="2045,497,2229,524"/>
+<area shape="rect" id="node27" href="id_8hpp_source.html" title="CL/sycl/id.hpp" alt="" coords="1555,415,1661,442"/>
 </map>
 </div>
 </div>
@@ -136,21 +138,18 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::deta
 <tr class="memitem:ab9180cb76fb7c1de19f79f357a7abddd"><td class="memItemLeft" align="right" valign="top"><a id="ab9180cb76fb7c1de19f79f357a7abddd"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::memFlagsToString</b> (pi_mem_flags Flags)</td></tr>
 <tr class="separator:ab9180cb76fb7c1de19f79f357a7abddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a324f14c9d078ee658acf91c3af3b85a2"><td class="memItemLeft" align="right" valign="top"><a id="a324f14c9d078ee658acf91c3af3b85a2"></a>
-static Backend&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::getBackend</b> ()</td></tr>
-<tr class="separator:a324f14c9d078ee658acf91c3af3b85a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff4653a0500523b6ce152db4846eaa2c"><td class="memItemLeft" align="right" valign="top"><a id="aff4653a0500523b6ce152db4846eaa2c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::useBackend</b> (Backend Backend)</td></tr>
-<tr class="separator:aff4653a0500523b6ce152db4846eaa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e77660f68c44a185777b9db4cccf785"><td class="memItemLeft" align="right" valign="top"><a id="a3e77660f68c44a185777b9db4cccf785"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::findPlugins</b> (vector_class&lt; std::string &gt; &amp;PluginNames)</td></tr>
-<tr class="separator:a3e77660f68c44a185777b9db4cccf785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2272ac12293db6e5e64527c8c3291f33"><td class="memItemLeft" align="right" valign="top"><a id="a2272ac12293db6e5e64527c8c3291f33"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::findPlugins</b> (vector_class&lt; std::pair&lt; std::string, backend &gt;&gt; &amp;PluginNames)</td></tr>
+<tr class="separator:a2272ac12293db6e5e64527c8c3291f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec8cc975c45bbd1adc7cacbf1cd7107f"><td class="memItemLeft" align="right" valign="top"><a id="aec8cc975c45bbd1adc7cacbf1cd7107f"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::loadPlugin</b> (const std::string &amp;PluginPath)</td></tr>
 <tr class="separator:aec8cc975c45bbd1adc7cacbf1cd7107f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d29befedd23d01289e250d88c88a410"><td class="memItemLeft" align="right" valign="top"><a id="a5d29befedd23d01289e250d88c88a410"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::bindPlugin</b> (void *Library, PiPlugin *PluginInformation)</td></tr>
 <tr class="separator:a5d29befedd23d01289e250d88c88a410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b06e1270bfa6b2b141b9c762198717"><td class="memItemLeft" align="right" valign="top"><a id="aa9b06e1270bfa6b2b141b9c762198717"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::trace</b> (TraceLevel level)</td></tr>
+<tr class="separator:aa9b06e1270bfa6b2b141b9c762198717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf279128e023d1abaeb1725d0ad9c35"><td class="memItemLeft" align="right" valign="top"><a id="aebf279128e023d1abaeb1725d0ad9c35"></a>
 vector_class&lt; plugin &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi::initialize</b> ()</td></tr>
 <tr class="separator:aebf279128e023d1abaeb1725d0ad9c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,11 +209,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>cl::sycl::detail::pi:
 <p>Tries to determine the device binary image foramat. </p>
 <p>Returns PI_DEVICE_BINARY_TYPE_NONE if unsuccessful. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi_8cpp_source.html#l00421">421</a> of file <a class="el" href="pi_8cpp_source.html">pi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8cpp_source.html#l00411">411</a> of file <a class="el" href="pi_8cpp_source.html">pi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00655">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="pi_8h_source.html#l00634">pi_device_binary_struct::Format</a>, and <a class="el" href="pi_8cpp_source.html#l00421">cl::sycl::detail::pi::getBinaryImageFormat()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00655">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="pi_8h_source.html#l00634">pi_device_binary_struct::Format</a>, and <a class="el" href="pi_8cpp_source.html#l00411">cl::sycl::detail::pi::getBinaryImageFormat()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi_8cpp_source.html#l00421">cl::sycl::detail::pi::getBinaryImageFormat()</a>, and <a class="el" href="pi_8hpp_source.html#l00277">cl::sycl::detail::pi::DeviceBinaryImage::getSpecConstants()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi_8cpp_source.html#l00411">cl::sycl::detail::pi::getBinaryImageFormat()</a>, and <a class="el" href="pi_8hpp_source.html#l00282">cl::sycl::detail::pi::DeviceBinaryImage::getSpecConstants()</a>.</p>
 
 </div>
 </div>

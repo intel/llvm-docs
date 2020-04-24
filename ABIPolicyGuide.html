@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ABI Policy Guide &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The DPC++ Runtime Plugin Interface." href="PluginInterface.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>ABI Policy Guide</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="PluginInterface.html">The DPC++ Runtime Plugin Interface.</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="contents.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <div class="section" id="abi-policy-guide">
+<h1>ABI Policy Guide<a class="headerlink" href="#abi-policy-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<p>Application Binary Interface is a contract between binary modules, that defines
+how structures and routines are accessed in machine code. Changing the ABI may
+break backwards compatibility of user application with the DPC++ runtime library
+for user-developed applications, resulting in need to rebuild such applications.
+The goal of this document is to provide guidelines for maintaining the current
+ABI of the DPC++ runtime library and mechanisms of notifying users about ABI
+changes.</p>
+<p>All ABI changes can be divided into two large groups: breaking and non-breaking.
+A breaking change means that the new binary is incompatible with the previous
+version (i.e. it can not be used as a drop-in replacement). A non-breaking
+change means that the forward compatibility is broken (i.e. the old library
+can be replaced with newer version, but not vice versa).</p>
+<p>The following non-exhaustive list contains changes that are considered to be
+breaking:</p>
+<ol class="simple">
+<li><p>Changing the size of exported symbol (for example, adding new member field
+to the exported class).</p></li>
+<li><p>Removing the exported symbol (that includes both changing the signature of
+exported routine and removing it).</p></li>
+<li><p>Changing the alignment of exported symbol.</p></li>
+<li><p>Changing the layout of exported symbol (for example, reordering class field
+members).</p></li>
+<li><p>Adding or removing base classes.</p></li>
+</ol>
+<p>Adding a new exported symbol is considered to be non-breaking change.</p>
+</div>
+<div class="section" id="abi-versioning-policy">
+<h2>ABI Versioning Policy<a class="headerlink" href="#abi-versioning-policy" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
+<div class="section" id="sycl-export-macro">
+<h2><code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> Macro<a class="headerlink" href="#sycl-export-macro" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> provides facilities for fine-grained control over exported
+symbols. Mark symbols that are supposed to be accessible by the user and that
+are implemented in the SYCL Runtime library with this macro. Template
+specializations also must be explicitly marked with <code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> macro.
+Symbols not marked <code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> have internal linkage.</p>
+<p>A few examples of when it is necessary to mark symbols with the macro:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">device</span></code> class:</p>
+<ul>
+<li><p>It is defined as API by the SYCL spec.</p></li>
+<li><p>It is implemented in <code class="docutils literal notranslate"><span class="pre">device.cpp</span></code> file.</p></li>
+</ul>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">SYCLMemObjT</span></code> class:</p>
+<ul>
+<li><p>It is not defined in the SYCL spec, but it is an implementation detail that
+is accessible by the user (buffer and image inherit from this class).</p></li>
+<li><p>It has symbols that are implemented in the Runtime library.</p></li>
+</ul>
+</li>
+</ul>
+<p>When it is not necessary to mark symbols with <code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code>:</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">buffer</span></code> class:</p>
+<ul>
+<li><p>It is defined by the SYCL spec, but it is fully implemented in the headers.</p></li>
+</ul>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">ProgramManager</span></code> class:</p>
+<ul>
+<li><p>It is an implementation detail.</p></li>
+<li><p>It is not accessed from the header files that are available to users.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="automated-abi-changes-testing">
+<h2>Automated ABI Changes Testing<a class="headerlink" href="#automated-abi-changes-testing" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>The automated tests deal with the most commonly occurring problems, but they
+may not catch some corner cases. If you believe your PR breaks ABI, but the
+test does not indicate that, please, notify the reviewers.</p>
+</div></blockquote>
+<p>There is a set of tests to help identifying ABI changes:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">test/abi/sycl_symbols_*.dump</span></code> contains dump of publicly available symbols.
+If you add a new symbol, it is considered non-breaking change. When the test
+reports missing symbols, it means you have either changed or remove some of
+existing API methods. In both cases you need to adjust the dump file. You
+can do it either manually, or by invoking the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 sycl/tools/abi_check.py --mode dump_symbols --output path/to/output.dump path/to/sycl.so<span class="o">(</span>.dll<span class="o">)</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test/abi/layout*</span></code> and <code class="docutils literal notranslate"><span class="pre">test/abi/symbol_size*</span></code> are a group of tests to check
+the internal layout of some classes. The layout tests check Clang AST for
+changes, while symbol_size check <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> for objects. Changing the class
+layout is a breaking change.</p></li>
+</ul>
+</div>
+<div class="section" id="breaking-abi">
+<h2>Breaking ABI<a class="headerlink" href="#breaking-abi" title="Permalink to this headline">¶</a></h2>
+<p>Whenever you need to change the existing ABI, please, follow these steps:</p>
+<ol class="simple">
+<li><p>Adjust you PR description to reflect (non-)breaking ABI changes. Make sure
+it is clear, why breaking ABI is necessary.</p></li>
+<li><p>Fix failing ABI tests in your Pull Request. Use aforementioned techniques to
+update test files.</p></li>
+<li><p>Update the library version according to the policies.</p></li>
+</ol>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="PluginInterface.html">The DPC++ Runtime Plugin Interface.</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="contents.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Intel Corporation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0.
+    </div>
+  </body>
+</html>

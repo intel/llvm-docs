@@ -55,13 +55,13 @@ subject to change. Do not rely on these variables in production code.</p>
 <tbody>
 <tr>
 <td>SYCL_PI_TRACE</td>
-<td>Any(*)</td>
-<td>Force tracing of PI calls to stderr.</td>
+<td>Described <a href="#sycl_pi_trace-options">below</a></td>
+<td>Enable specified level of tracing for PI.</td>
 </tr>
 <tr>
 <td>SYCL_BE</td>
-<td>PI_OPENCL, PI_CUDA, PI_OTHER</td>
-<td>When SYCL RT is built with PI, this controls which plugin is used by the default device selector. Default value is PI_OPENCL.</td>
+<td>PI_OPENCL, PI_CUDA</td>
+<td>Force SYCL RT to consider only devices of the specified backend during the device selection.</td>
 </tr>
 <tr>
 <td>SYCL_DEVICE_TYPE</td>
@@ -157,6 +157,31 @@ subject to change. Do not rely on these variables in production code.</p>
 <tr>
 <td>always</td>
 <td>print graph before and after each of the above methods</td>
+</tr>
+</tbody>
+</table></div>
+<div class="section" id="sycl-pi-trace-options">
+<h3>SYCL_PI_TRACE Options<a class="headerlink" href="#sycl-pi-trace-options" title="Permalink to this headline">¶</a></h3>
+<p>SYCL_PI_TRACE accepts a bit-mask. Supported tracing levels are in the table below</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Enable basic tracing, which is tracing of PI plugins/devices discovery</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Enable tracing of the PI calls</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>Enable all levels of tracing</td>
 </tr>
 </tbody>
 </table></div>
