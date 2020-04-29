@@ -130,6 +130,15 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_
 <tr class="memitem:a5a66aebd466a79d878198bfb55a10bd7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a5a66aebd466a79d878198bfb55a10bd7">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc, const T &amp;Identity)</td></tr>
 <tr class="memdesc:a5a66aebd466a79d878198bfb55a10bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown. <br /></td></tr>
 <tr class="separator:a5a66aebd466a79d878198bfb55a10bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbe0429715f7160192eea1aafcc3d61"><td class="memItemLeft" align="right" valign="top"><a id="addbe0429715f7160192eea1aafcc3d61"></a>
+<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, buffer_dim, access::mode::discard_read_write, access::target::local &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReadWriteLocalAcc</b> (size_t Size, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
+<tr class="separator:addbe0429715f7160192eea1aafcc3d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f59078cee709483236ebb49c5b10f3"><td class="memItemLeft" align="right" valign="top"><a id="a74f59078cee709483236ebb49c5b10f3"></a>
+<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, buffer_dim, access::mode::read &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReadAccToPreviousPartialReds</b> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH) const</td></tr>
+<tr class="separator:a74f59078cee709483236ebb49c5b10f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af140b30364f8543c65587857f8cd9c73"><td class="memItemLeft" align="right" valign="top"><a id="af140b30364f8543c65587857f8cd9c73"></a>
+<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getWriteAccForPartialReds</b> (size_t Size, size_t RunNumber, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
+<tr class="separator:af140b30364f8543c65587857f8cd9c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -156,7 +165,7 @@ class cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, AccM
 
 <p>This class encapsulates the reduction variable/accessor, the reduction operator and an optional operator identity. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00274">274</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00144">144</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5a66aebd466a79d878198bfb55a10bd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a66aebd466a79d878198bfb55a10bd7">&#9670;&nbsp;</a></span>reduction_impl()</h2>
@@ -202,7 +211,8 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>include/CL/sycl/<a class="el" href="handler_8hpp_source.html">handler.hpp</a></li>
 <li>include/CL/sycl/intel/<a class="el" href="reduction_8hpp_source.html">reduction.hpp</a></li>
 </ul>
 </div><!-- contents -->

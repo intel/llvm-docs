@@ -129,6 +129,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca44946e4dd0e13a87d0af40690fe89f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#aca44946e4dd0e13a87d0af40690fe89f">parallel_for</a> (<a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; ExecutionRange, KernelType KernelFunc)</td></tr>
 <tr class="memdesc:aca44946e4dd0e13a87d0af40690fe89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines and invokes a SYCL kernel function for the specified <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>.  <a href="#aca44946e4dd0e13a87d0af40690fe89f">More...</a><br /></td></tr>
 <tr class="separator:aca44946e4dd0e13a87d0af40690fe89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490ae643a29e560e85f52b3cb4982f5a"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </td></tr>
+<tr class="memitem:a490ae643a29e560e85f52b3cb4982f5a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a490ae643a29e560e85f52b3cb4982f5a">reduCGFunc</a> (KernelType KernelFunc, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, Reduction &amp;Redu)</td></tr>
+<tr class="memdesc:a490ae643a29e560e85f52b3cb4982f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function.  <a href="#a490ae643a29e560e85f52b3cb4982f5a">More...</a><br /></td></tr>
+<tr class="separator:a490ae643a29e560e85f52b3cb4982f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b3ce648d5a01476db37e8787b29954"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </td></tr>
+<tr class="memitem:a11b3ce648d5a01476db37e8787b29954"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a11b3ce648d5a01476db37e8787b29954">reduAuxCGFunc</a> (const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, size_t NWorkItems, size_t KernelRun, Reduction &amp;Redu)</td></tr>
+<tr class="memdesc:a11b3ce648d5a01476db37e8787b29954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#a11b3ce648d5a01476db37e8787b29954">More...</a><br /></td></tr>
+<tr class="separator:a11b3ce648d5a01476db37e8787b29954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0850e266c656c9958a63ca1e54a2f846"><td class="memTemplParams" colspan="2">template&lt;typename KernelName  = detail::auto_name, typename KernelType , int Dims, typename Reduction &gt; </td></tr>
+<tr class="memitem:a0850e266c656c9958a63ca1e54a2f846"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a0850e266c656c9958a63ca1e54a2f846">parallel_for</a> (<a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; Range, Reduction &amp;Redu, KernelType KernelFunc)</td></tr>
+<tr class="memdesc:a0850e266c656c9958a63ca1e54a2f846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines and invokes a SYCL kernel function for the specified <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>.  <a href="#a0850e266c656c9958a63ca1e54a2f846">More...</a><br /></td></tr>
+<tr class="separator:a0850e266c656c9958a63ca1e54a2f846"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a719b73779a4aa2d14569b51fe1e6b3ac"><td class="memTemplParams" colspan="2">template&lt;typename KernelName  = detail::auto_name, typename KernelType , int Dims&gt; </td></tr>
 <tr class="memitem:a719b73779a4aa2d14569b51fe1e6b3ac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a719b73779a4aa2d14569b51fe1e6b3ac">parallel_for_work_group</a> (<a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dims &gt; NumWorkGroups, KernelType KernelFunc)</td></tr>
 <tr class="memdesc:a719b73779a4aa2d14569b51fe1e6b3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hierarchical kernel invocation method of a kernel defined as a lambda encoding the body of each work-group to launch.  <a href="#a719b73779a4aa2d14569b51fe1e6b3ac">More...</a><br /></td></tr>
@@ -237,6 +249,10 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>stream</b></td></tr>
 <tr class="memitem:a5fca0ca308f0eac9343990d58cd54374"><td class="memItemLeft" align="right" valign="top"><a id="a5fca0ca308f0eac9343990d58cd54374"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>detail::stream_impl</b></td></tr>
 <tr class="separator:a5fca0ca308f0eac9343990d58cd54374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab59f3feb0ae496e6f0b8e152beae85"><td class="memTemplParams" colspan="2"><a id="abab59f3feb0ae496e6f0b8e152beae85"></a>
+template&lt;typename T , class BinaryOperation , int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </td></tr>
+<tr class="memitem:abab59f3feb0ae496e6f0b8e152beae85"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><b>intel::detail::reduction_impl</b></td></tr>
+<tr class="separator:abab59f3feb0ae496e6f0b8e152beae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa46bc683d37b6005434a0bceb5389f8c"><td class="memItemLeft" align="right" valign="top"><a id="aa46bc683d37b6005434a0bceb5389f8c"></a>
 <a class="el" href="classcl_1_1sycl_1_1device.html">device</a>&#160;</td><td class="memItemRight" valign="bottom"><b>detail::getDeviceFromHandler</b> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)</td></tr>
 <tr class="separator:aa46bc683d37b6005434a0bceb5389f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,7 +262,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>detail::stream_impl<
 <p>Objects of the handler class collect information about command group, such as kernel, requirements to the memory, arguments for the kernel.</p>
 <div class="fragment"><div class="line"><a class="code" href="classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f">sycl::queue::submit</a>([](handler &amp;CGH){</div><div class="line">  CGH.require(Accessor1);   <span class="comment">// Adds a requirement to the memory object.</span></div><div class="line">  CGH.setArg(0, Accessor2); <span class="comment">// Registers accessor given as an argument to</span></div><div class="line">                            <span class="comment">// the kernel + adds a requirement to the memory</span></div><div class="line">                            <span class="comment">// object.</span></div><div class="line">  CGH.setArg(1, N);         <span class="comment">// Registers value given as an argument to the</span></div><div class="line">                            <span class="comment">// kernel.</span></div><div class="line">  <span class="comment">// The following registers KernelFunctor to be a kernel that will be</span></div><div class="line">  <span class="comment">// executed in case of queue is bound to the host device, Kernel - for</span></div><div class="line">  <span class="comment">// an OpenCL device. This function clearly indicates that command group</span></div><div class="line">  <span class="comment">// represents kernel execution.</span></div><div class="line">  CGH.parallel_for(KernelFunctor, Kernel);</div><div class="line"> });</div></div><!-- fragment --><p>The command group can represent absolutely different operations. Depending on the operation we need to store different data. But, in most cases, it's impossible to say what kind of operation we need to perform until the very end. So, handler class contains all fields simultaneously, then during "finalization" it constructs CG object, that represents specific operation, passing fields that are required only. </p>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00138">138</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00175">175</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afd88ec85f759e5617ebdf8b0cacfdd9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd88ec85f759e5617ebdf8b0cacfdd9a">&#9670;&nbsp;</a></span>copy() <span class="overload">[1/5]</span></h2>
@@ -294,7 +310,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01048">1048</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01430">1430</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -344,7 +360,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01071">1071</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01453">1453</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +410,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01094">1094</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01476">1476</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -444,7 +460,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01141">1141</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01523">1523</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -494,7 +510,7 @@ template&lt;typename T_Src , int Dims_Src, access::mode AccessMode_Src, access::
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01189">1189</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01571">1571</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -530,7 +546,7 @@ template&lt;typename T_Src , int Dims_Src, access::mode AccessMode_Src, access::
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00583">583</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00664">664</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00413">cl::sycl::queue::parallel_for()</a>, and <a class="el" href="queue_8hpp_source.html#l00335">cl::sycl::queue::single_task()</a>.</p>
 
@@ -568,7 +584,7 @@ template&lt;typename T_Src , int Dims_Src, access::mode AccessMode_Src, access::
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00590">590</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00671">671</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -618,7 +634,7 @@ template&lt;typename T , int Dims, access::mode AccessMode, access::target Acces
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01255">1255</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01637">1637</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -657,7 +673,7 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00882">882</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01264">1264</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -711,7 +727,7 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01293">1293</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01675">1675</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -765,12 +781,12 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01306">1306</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01688">1688</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a0a780caff7d4d7a22c6e411f10c55f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a780caff7d4d7a22c6e411f10c55f3b">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[1/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a780caff7d4d7a22c6e411f10c55f3b">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[1/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -815,12 +831,12 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00650">650</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00731">731</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a927873c4e4118504ea1e451742994a1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a927873c4e4118504ea1e451742994a1a">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[2/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a927873c4e4118504ea1e451742994a1a">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[2/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -872,12 +888,12 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00691">691</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00772">772</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aca44946e4dd0e13a87d0af40690fe89f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca44946e4dd0e13a87d0af40690fe89f">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[3/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aca44946e4dd0e13a87d0af40690fe89f">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[3/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -922,12 +938,67 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00719">719</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00800">800</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a0850e266c656c9958a63ca1e54a2f846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0850e266c656c9958a63ca1e54a2f846">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelName  = detail::auto_name, typename KernelType , int Dims, typename Reduction &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::handler::parallel_for </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Reduction &amp;&#160;</td>
+          <td class="paramname"><em>Redu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KernelType&#160;</td>
+          <td class="paramname"><em>KernelFunc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Defines and invokes a SYCL kernel function for the specified <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>. </p>
+<p>Performs reduction operation specified in </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Redu.</td><td>The SYCL kernel function is defined as a lambda function or a named function object type and given an id or item for indexing in the indexing space defined by range. If it is a named function object and the function object type is globally visible, there is no need for the developer to provide a kernel name for it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>TODO: currently it calls only those versions of kernels that can handle custom types and operations. Some of types and operations may use faster implementations that use intel::reduce() and/or sycl::atomic.fetch_&lt;op&gt;() functions and thus provide much better performance. Those variants exist, are fully functional. They just wait for their time for code-review. TODO: Need to handle more than 1 reduction in <a class="el" href="classcl_1_1sycl_1_1handler.html#a0a780caff7d4d7a22c6e411f10c55f3b" title="Defines and invokes a SYCL kernel function for the specified range. ">parallel_for()</a>. TODO: Support HOST. The kernels called by this <a class="el" href="classcl_1_1sycl_1_1handler.html#a0a780caff7d4d7a22c6e411f10c55f3b" title="Defines and invokes a SYCL kernel function for the specified range. ">parallel_for()</a> may use some functionality that is not yet supported on HOST such as: barrier(), and intel::reduce() that also may be used in more optimized implementations waiting for their turn of code-review. </p>
+
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01048">1048</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a9a01980738041b20a52326c0aa35a749"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a01980738041b20a52326c0aa35a749">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[4/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a01980738041b20a52326c0aa35a749">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[5/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -972,12 +1043,12 @@ template&lt;int Dims&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00810">810</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01192">1192</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a671be44200e47260093598af1d201d09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a671be44200e47260093598af1d201d09">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[5/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a671be44200e47260093598af1d201d09">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1029,12 +1100,12 @@ template&lt;int Dims&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00828">828</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01210">1210</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a710a56f0785983f0e4f3943679e0f3a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a710a56f0785983f0e4f3943679e0f3a7">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[6/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a710a56f0785983f0e4f3943679e0f3a7">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[7/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1079,12 +1150,12 @@ template&lt;int Dims&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00846">846</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01228">1228</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a7474ecead8a4048aa1be929537e4ed7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7474ecead8a4048aa1be929537e4ed7c">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[7/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7474ecead8a4048aa1be929537e4ed7c">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[8/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1135,12 +1206,12 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00897">897</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01279">1279</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a84a46e04ee6ae01a821b8d1df568d984"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84a46e04ee6ae01a821b8d1df568d984">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[8/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a46e04ee6ae01a821b8d1df568d984">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[9/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1198,12 +1269,12 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00926">926</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01308">1308</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
 <a id="abee9c64bed87db24110115bbebc62837"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abee9c64bed87db24110115bbebc62837">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[9/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abee9c64bed87db24110115bbebc62837">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1254,7 +1325,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00955">955</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01337">1337</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1304,7 +1375,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00744">744</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01126">1126</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1361,7 +1432,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00772">772</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01154">1154</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1418,7 +1489,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00988">988</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01370">1370</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1553,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01020">1020</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01402">1402</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1529,9 +1600,120 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01320">1320</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01702">1702</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00303">cl::sycl::queue::prefetch()</a>.</p>
+
+</div>
+</div>
+<a id="a11b3ce648d5a01476db37e8787b29954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b3ce648d5a01476db37e8787b29954">&#9670;&nbsp;</a></span>reduAuxCGFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::handler::reduAuxCGFunc </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>NWorkItems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>KernelRun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Reduction &amp;&#160;</td>
+          <td class="paramname"><em>Redu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups. </p>
+<p>This version uses tree-reduction algorithm to reduce elements in each of work-groups. At the end of each work-group the partial sum is written to a global buffer.</p>
+<p>Briefly: aux kernel, tree-reduction, CUSTOM types/ops. </p>
+
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00927">927</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a490ae643a29e560e85f52b3cb4982f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a490ae643a29e560e85f52b3cb4982f5a">&#9670;&nbsp;</a></span>reduCGFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::handler::reduCGFunc </td>
+          <td>(</td>
+          <td class="paramtype">KernelType&#160;</td>
+          <td class="paramname"><em>KernelFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Reduction &amp;&#160;</td>
+          <td class="paramname"><em>Redu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements a command group function that enqueues a kernel that calls user's lambda function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">KernelFunc</td><td>and does one iteration of reduction of elements in each of work-groups. This version uses tree-reduction algorithm to reduce elements in each of work-groups. At the end of each work-group the partial sum is written to a global buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Briefly: user's lambda, tree-reduction, CUSTOM types/ops. </p>
+
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00822">822</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1570,7 +1752,7 @@ template&lt;typename DataT , int Dims, access::mode AccMode, access::target AccT
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00564">564</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00645">645</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1608,7 +1790,7 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00667">667</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00748">748</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1658,7 +1840,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00602">602</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00683">683</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1697,7 +1879,7 @@ template&lt;typename... Ts&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00611">611</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00692">692</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1736,7 +1918,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00623">623</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00704">704</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1773,7 +1955,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00793">793</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01175">1175</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1822,7 +2004,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00862">862</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01244">1244</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -1860,7 +2042,7 @@ template&lt;typename T , int Dims, access::mode AccessMode, access::target Acces
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01230">1230</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01612">1612</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
