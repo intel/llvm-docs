@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['reduauxcgfunc',['reduAuxCGFunc',['../classcl_1_1sycl_1_1handler.html#a11b3ce648d5a01476db37e8787b29954',1,'cl::sycl::handler']]],
-  ['reducgfunc',['reduCGFunc',['../classcl_1_1sycl_1_1handler.html#a490ae643a29e560e85f52b3cb4982f5a',1,'cl::sycl::handler']]],
   ['reduction_5fimpl',['reduction_impl',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a199bf5c9e687be9d52a32f60259d0444',1,'cl::sycl::intel::detail::reduction_impl::reduction_impl(accessor_type &amp;Acc)'],['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a5a66aebd466a79d878198bfb55a10bd7',1,'cl::sycl::intel::detail::reduction_impl::reduction_impl(accessor_type &amp;Acc, const T &amp;Identity)'],['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a5a66aebd466a79d878198bfb55a10bd7',1,'cl::sycl::intel::detail::reduction_impl::reduction_impl(accessor_type &amp;Acc, const T &amp;Identity)']]],
   ['releaseguard',['ReleaseGuard',['../classReleaseGuard.html#aa4b97e2f9f510a95213a0716a8e2ff14',1,'ReleaseGuard']]],
   ['releasehostaccessor',['releaseHostAccessor',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa17761af756131d983574f5558c2f854',1,'cl::sycl::detail::Scheduler']]],

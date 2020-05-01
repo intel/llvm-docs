@@ -4,7 +4,7 @@ var searchData=
   ['update_5fhost',['update_host',['../classcl_1_1sycl_1_1handler.html#a2e0250574969ee1bf7743596662c847e',1,'cl::sycl::handler']]],
   ['updatehostrequirementcommand',['UpdateHostRequirementCommand',['../classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html',1,'cl::sycl::detail']]],
   ['updateleaves',['updateLeaves',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a59d7b3e117a153b13ad300e0224ecf90',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
-  ['use_5fhost_5fptr',['use_host_ptr',['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html',1,'cl::sycl::property::buffer::use_host_ptr'],['../classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html',1,'cl::sycl::property::image::use_host_ptr']]],
+  ['use_5fhost_5fptr',['use_host_ptr',['../classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html',1,'cl::sycl::property::image::use_host_ptr'],['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html',1,'cl::sycl::property::buffer::use_host_ptr']]],
   ['use_5fmutex',['use_mutex',['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html',1,'cl::sycl::property::buffer::use_mutex'],['../classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html',1,'cl::sycl::property::image::use_mutex']]],
   ['usemutexbase',['UseMutexBase',['../classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html',1,'cl::sycl::property::detail']]],
   ['usemutexbase_3c_20detail_3a_3apropkind_3a_3abufferusemutex_20_3e',['UseMutexBase&lt; detail::PropKind::BufferUseMutex &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html',1,'cl::sycl::property::detail']]],

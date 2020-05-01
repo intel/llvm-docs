@@ -64,7 +64,15 @@ members).</p></li>
 </div>
 <div class="section" id="abi-versioning-policy">
 <h2>ABI Versioning Policy<a class="headerlink" href="#abi-versioning-policy" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
+<p>The release version of the DPC++ runtime library follows
+<a class="reference external" href="https://semver.org/">Semantic Versioning</a> scheme: <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code>. <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code>
+version indicates breaking change. Version <code class="docutils literal notranslate"><span class="pre">X</span></code> is backwards incompatible with
+version <code class="docutils literal notranslate"><span class="pre">X-1</span></code>. <code class="docutils literal notranslate"><span class="pre">MINOR</span></code> indicates a non-breaking change. The development version
+of the library has a postfix <code class="docutils literal notranslate"><span class="pre">-V</span></code> that indicates breaking changes between
+releases. Every time a pull request introduces a breaking change, it must also
+uplift <code class="docutils literal notranslate"><span class="pre">V</span></code>. It is pull request author responsibility to accordingly update
+this version. If <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> on release date, then <code class="docutils literal notranslate"><span class="pre">MAJOR_VERSION</span></code> is uplifted and
+<code class="docutils literal notranslate"><span class="pre">V</span></code> is set to zero.</p>
 </div>
 <div class="section" id="sycl-export-macro">
 <h2><code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> Macro<a class="headerlink" href="#sycl-export-macro" title="Permalink to this headline">¶</a></h2>
