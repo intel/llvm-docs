@@ -92,6 +92,7 @@ var searchData=
   ['getosmodulehandle',['getOSModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#a0661374eee54c7934f50479d07a3bd65',1,'cl::sycl::detail::OSUtil::getOSModuleHandle()'],['../classcl_1_1sycl_1_1detail_1_1program__impl.html#ae319354d19806ff660c85fb5f9c09f63',1,'cl::sycl::detail::program_impl::getOSModuleHandle()']]],
   ['getplatformimpl',['getPlatformImpl',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#aaed79a19cb0b34298358c2f3ce7f7933',1,'cl::sycl::detail::context_impl']]],
   ['getplugin',['getPlugin',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#ae9bc9af4657b84233a4d1139260725b2',1,'cl::sycl::detail::context_impl::getPlugin()'],['../classcl_1_1sycl_1_1detail_1_1device__impl.html#af18606417c4104d249d3afb5c54507f3',1,'cl::sycl::detail::device_impl::getPlugin()'],['../classcl_1_1sycl_1_1detail_1_1event__impl.html#ae28649efc6298a1a68a00924b51fd559',1,'cl::sycl::detail::event_impl::getPlugin()']]],
+  ['getreadwritescalaracc',['getReadWriteScalarAcc',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a76b83c2b94772f908924d4f13cbd7ea7',1,'cl::sycl::intel::detail::reduction_impl']]],
   ['getscalarop',['GetScalarOp',['../classcl_1_1sycl_1_1detail_1_1GetScalarOp.html',1,'cl::sycl::detail']]],
   ['getspecconstants',['getSpecConstants',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a77e1b1c1b1d3ffc8175c77fc5e07d2de',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['getspirvmemoryscope',['GetSpirvMemoryScope',['../structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope.html',1,'cl::sycl::detail']]],

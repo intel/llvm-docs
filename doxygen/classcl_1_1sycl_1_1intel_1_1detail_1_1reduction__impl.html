@@ -83,9 +83,9 @@ Collaboration diagram for cl::sycl::intel::detail::reduction_impl&lt; T, BinaryO
 <div class="dyncontent">
 <div class="center"><img src="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl__coll__graph.png" border="0" usemap="#cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01AccMode_00_01IsPlaceholder_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01AccMode_00_01IsPlaceholder_01_4_coll__map" id="cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01AccMode_00_01IsPlaceholder_01_4_coll__map">
-<area shape="rect" id="node2" href="classcl_1_1sycl_1_1accessor.html" title="cl::sycl::accessor\l\&lt; T, Dims, AccMode,\l access::target::global\l_buffer, IsPlaceholder \&gt;" alt="" coords="603,79,764,149"/>
-<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html" title="cl::sycl::detail::Accessor\lBaseHost" alt="" coords="373,32,539,73"/>
-<area shape="rect" id="node5" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html" title="cl::sycl::detail::accessor\l_common\&lt; T, Dimensions,\l AccessMode, AccessTarget,\l IsPlaceholder \&gt;" alt="" coords="359,124,553,195"/>
+<area shape="rect" id="node2" href="classcl_1_1sycl_1_1accessor.html" title="cl::sycl::accessor\l\&lt; T, Dims, AccMode,\l access::target::global\l_buffer, IsPlaceholder \&gt;" alt="" coords="709,105,871,175"/>
+<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html" title="cl::sycl::detail::Accessor\lBaseHost" alt="" coords="373,119,539,161"/>
+<area shape="rect" id="node5" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html" title="cl::sycl::detail::accessor\l_common\&lt; T, Dimensions,\l AccessMode, AccessTarget,\l IsPlaceholder \&gt;" alt="" coords="359,25,553,95"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -103,6 +103,9 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>binary_operation</b>
 <tr class="memitem:ab5a77041db00bb01cc06a37b64b15c95"><td class="memItemLeft" align="right" valign="top"><a id="ab5a77041db00bb01cc06a37b64b15c95"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>accessor_type</b> = <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, AccMode, access::target::global_buffer, IsPlaceholder &gt;</td></tr>
 <tr class="separator:ab5a77041db00bb01cc06a37b64b15c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a27a9a17e97fe42dafa86ef9b7ebf8"><td class="memItemLeft" align="right" valign="top"><a id="a64a27a9a17e97fe42dafa86ef9b7ebf8"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>rw_accessor_type</b> = <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, access::mode::read_write, access::target::global_buffer, IsPlaceholder &gt;</td></tr>
+<tr class="separator:a64a27a9a17e97fe42dafa86ef9b7ebf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -139,6 +142,9 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_
 <tr class="memitem:af140b30364f8543c65587857f8cd9c73"><td class="memItemLeft" align="right" valign="top"><a id="af140b30364f8543c65587857f8cd9c73"></a>
 <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getWriteAccForPartialReds</b> (size_t Size, size_t RunNumber, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
 <tr class="separator:af140b30364f8543c65587857f8cd9c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76b83c2b94772f908924d4f13cbd7ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, access::mode::read_write, access::target::global_buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a76b83c2b94772f908924d4f13cbd7ea7">getReadWriteScalarAcc</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH) const</td></tr>
+<tr class="memdesc:a76b83c2b94772f908924d4f13cbd7ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 1-element global buffer initialized with identity value and returns an accessor to that buffer.  <a href="#a76b83c2b94772f908924d4f13cbd7ea7">More...</a><br /></td></tr>
+<tr class="separator:a76b83c2b94772f908924d4f13cbd7ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -158,6 +164,10 @@ static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>acces
 <tr class="memitem:af11382add2c55dbb757d97c578157508"><td class="memItemLeft" align="right" valign="top"><a id="af11382add2c55dbb757d97c578157508"></a>
 static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_dim</b> = (Dims == 0) ? 1 : Dims</td></tr>
 <tr class="separator:af11382add2c55dbb757d97c578157508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858b4cebbfa5f8d2ceba6ecd14766916"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fast_atomics</b></td></tr>
+<tr class="separator:a858b4cebbfa5f8d2ceba6ecd14766916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8350677b5a6d903d84fb8ef47a10a4fc"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fast_reduce</b></td></tr>
+<tr class="separator:a8350677b5a6d903d84fb8ef47a10a4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt;<br />
@@ -165,7 +175,7 @@ class cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, AccM
 
 <p>This class encapsulates the reduction variable/accessor, the reduction operator and an optional operator identity. </p>
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00118">118</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00116">116</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5a66aebd466a79d878198bfb55a10bd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a66aebd466a79d878198bfb55a10bd7">&#9670;&nbsp;</a></span>reduction_impl()</h2>
@@ -207,7 +217,93 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00321">321</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00348">348</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a76b83c2b94772f908924d4f13cbd7ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76b83c2b94772f908924d4f13cbd7ea7">&#9670;&nbsp;</a></span>getReadWriteScalarAcc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt;T, Dims, access::mode::read_write, access::target::global_buffer&gt; <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::getReadWriteScalarAcc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
+          <td class="paramname"><em>CGH</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates 1-element global buffer initialized with identity value and returns an accessor to that buffer. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00401">401</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a858b4cebbfa5f8d2ceba6ecd14766916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858b4cebbfa5f8d2ceba6ecd14766916">&#9670;&nbsp;</a></span>has_fast_atomics</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::has_fast_atomics</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      IsReduOptForFastAtomicFetch&lt;T, BinaryOperation&gt;::value</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00307">307</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8350677b5a6d903d84fb8ef47a10a4fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8350677b5a6d903d84fb8ef47a10a4fc">&#9670;&nbsp;</a></span>has_fast_reduce</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::has_fast_reduce</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      IsReduOptForFastReduce&lt;T, BinaryOperation&gt;::value</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00309">309</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
