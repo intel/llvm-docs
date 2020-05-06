@@ -83,12 +83,12 @@ searched at locations in env LD_LIBRARY_PATH on Linux and env PATH on Windows.
 installation directory by using DT_RPATH on Linux. Similar functionality can be
 achieved on Windows using SetDllDirectory. This will help avoiding extra setting
 of LD_LIBRARY_PATH.)
-To avoid any issues with read-only access, an environment variable SYCL_PI_CONFIG
-can be set to point to the configuration file which lists the Plugin names. The
-enviroment variable if set overrides the predetermined location’s config file.
-These Plugins are then be searched in LD_LIBRARY_PATH locations.
-It is the developer’s responsibility to include the plugin names from the
-predetermined location’s config file to enable discovery of all plugins.
+To avoid any issues with read-only access, an environment variable
+SYCL_PI_CONFIG can be set to point to the configuration file which lists the
+Plugin names. The enviroment variable if set overrides the predetermined
+location’s config file. These Plugins are then be searched in LD_LIBRARY_PATH
+locations. It is the developer’s responsibility to include the plugin names from
+the predetermined location’s config file to enable discovery of all plugins.
 (TBD - Extend to support search in DT_RPATH as above.)
 In the current implementation the plugin names are hardcoded in the library.
 Configuration file or env SYCL_PI_CONFIG is currently not being considered.</p>
@@ -106,8 +106,9 @@ SYCL_PI_TRACE=-1 lists all PI Traces above and more debug messages.</p>
 it supports. There is <a class="reference external" href="../include/CL/sycl/detail/pi.def">pi.def</a>/
 <a class="reference external" href="../include/CL/sycl/detail/pi.h">pi.h</a> file listing all PI API names that can be
 called by the specific version of Plugin Interface.
-It exports a function - “piPluginInit” that returns the plugin details and function pointer
-table containing the list of pointers to implemented Interface Functions defined in pi.h.
+It exports a function - “piPluginInit” that returns the plugin details and
+function pointer table containing the list of pointers to implemented Interface
+Functions defined in pi.h.
 In the future, this document will list the minimum set of Interface APIs
 to be supported by Plugins. This will also require adding functionality to SYCL
 Runtime to work with such limited functionality plugins.</p>
@@ -139,15 +140,17 @@ and initialization involves a nested discovery process which finds out available
 OpenCL implementations. They can be installed either in the standard Khronos
 ICD-compatible way (e.g. listed in files under /etc/OpenCL/vendors on
 Linux) or not, and the OpenCL plugin can hook up with both.</p>
-<p>TBD - implement and describe the nested OpenCL implementation discovery process performed by
-the OpenCL plugin</p>
+<p>TBD - implement and describe the nested OpenCL implementation discovery process
+performed by the OpenCL plugin</p>
 </div>
 </div>
 <div class="section" id="device-enumeration-by-plugins">
 <h3>Device enumeration by plugins<a class="headerlink" href="#device-enumeration-by-plugins" title="Permalink to this headline">¶</a></h3>
-<p>Devices from all bound plugins are queried and listed as and when required, eg: during device selection in device_selector.
+<p>Devices from all bound plugins are queried and listed as and when required, eg:
+during device selection in device_selector.
 The trace shows the PI API calls made when using SYCL_PI_TRACE=-1.
-(TBD - Add the trace to list all available devices when plugins are successfully bound.)</p>
+(TBD - Add the trace to list all available devices when plugins are successfully
+bound.)</p>
 </div>
 <div class="section" id="plugin-unloading">
 <h3>Plugin Unloading<a class="headerlink" href="#plugin-unloading" title="Permalink to this headline">¶</a></h3>
@@ -167,8 +170,8 @@ into</p>
 <li><p><strong>Extension</strong> APIs which don’t have counterparts in the OpenCL</p></li>
 </ul>
 </li>
-<li><p><strong>Interoperability API</strong> which allows interoperability with underlying runtimes
-such as OpenCL.</p></li>
+<li><p><strong>Interoperability API</strong> which allows interoperability with underlying
+runtimes such as OpenCL.</p></li>
 </ul>
 <p>See <a class="reference external" href="../include/CL/sycl/detail/pi.h">pi.h</a> header for the full list and
 descriptions of PI APIs.</p>
