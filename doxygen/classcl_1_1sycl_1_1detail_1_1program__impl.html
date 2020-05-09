@@ -146,9 +146,19 @@ const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &
 <tr class="memitem:ad45c85270e2b0c02507f78c5b59b850d"><td class="memItemLeft" align="right" valign="top"><a id="ad45c85270e2b0c02507f78c5b59b850d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_spec_constant_impl</b> (const char *Name, const void *ValAddr, size_t ValSize)</td></tr>
 <tr class="separator:ad45c85270e2b0c02507f78c5b59b850d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a347496ee85036a08b248197e1e7db1c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#a347496ee85036a08b248197e1e7db1c7">flush_spec_constants</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;Img, <a class="el" href="struct__pi__program.html">RT::PiProgram</a> NativePrg=nullptr) const</td></tr>
+<tr class="memdesc:a347496ee85036a08b248197e1e7db1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes current values of specialization constants and "injects" them into the underlying native program program via specialization constant managemment PI APIs.  <a href="#a347496ee85036a08b248197e1e7db1c7">More...</a><br /></td></tr>
+<tr class="separator:a347496ee85036a08b248197e1e7db1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae319354d19806ff660c85fb5f9c09f63"><td class="memItemLeft" align="right" valign="top">OSModuleHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#ae319354d19806ff660c85fb5f9c09f63">getOSModuleHandle</a> () const</td></tr>
 <tr class="memdesc:ae319354d19806ff660c85fb5f9c09f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the OS module handle this program belongs to.  <a href="#ae319354d19806ff660c85fb5f9c09f63">More...</a><br /></td></tr>
 <tr class="separator:ae319354d19806ff660c85fb5f9c09f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78b53c570a3cc05c83e22f5b912c69b"><td class="memItemLeft" align="right" valign="top"><a id="ab78b53c570a3cc05c83e22f5b912c69b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>stableSerializeSpecConstRegistry</b> (SerializedObj &amp;Dst) const</td></tr>
+<tr class="separator:ab78b53c570a3cc05c83e22f5b912c69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b95d292dac6348c9cfa8bff7bc5d34"><td class="memItemLeft" align="right" valign="top"><a id="af2b95d292dac6348c9cfa8bff7bc5d34"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#af2b95d292dac6348c9cfa8bff7bc5d34">hasSetSpecConstants</a> () const</td></tr>
+<tr class="memdesc:af2b95d292dac6348c9cfa8bff7bc5d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tells whether a specialization constant has been set for this program. <br /></td></tr>
+<tr class="separator:af2b95d292dac6348c9cfa8bff7bc5d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5c28e20f9554c058b6ab2930b9292dd"><td class="memTemplParams" colspan="2"><a id="ad5c28e20f9554c058b6ab2930b9292dd"></a>
 template&lt;&gt; </td></tr>
 <tr class="memitem:ad5c28e20f9554c058b6ab2930b9292dd"><td class="memTemplItemLeft" align="right" valign="top">cl_uint&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_info</b> () const</td></tr>
@@ -164,7 +174,7 @@ template&lt;&gt; </td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00035">35</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00036">36</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abf6c1bbc6896e713f4b8065442b60324"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf6c1bbc6896e713f4b8065442b60324">&#9670;&nbsp;</a></span>program_impl() <span class="overload">[1/5]</span></h2>
@@ -364,7 +374,7 @@ template&lt;&gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00174">174</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00073">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="program__impl_8hpp_source.html#l00116">is_host()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00073">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="program__impl_8hpp_source.html#l00117">is_host()</a>.</p>
 
 </div>
 </div>
@@ -543,6 +553,49 @@ template&lt;&gt; </td></tr>
 
 </div>
 </div>
+<a id="a347496ee85036a08b248197e1e7db1c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347496ee85036a08b248197e1e7db1c7">&#9670;&nbsp;</a></span>flush_spec_constants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::program_impl::flush_spec_constants </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>Img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__program.html">RT::PiProgram</a>&#160;</td>
+          <td class="paramname"><em>NativePrg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Takes current values of specialization constants and "injects" them into the underlying native program program via specialization constant managemment PI APIs. </p>
+<p>The native program passed as non-null argument overrides the MProgram native program field. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Img</td><td>device binary image corresponding to this program, used to resolve spec constant name to SPIRV integer ID </td></tr>
+    <tr><td class="paramname">NativePrg</td><td>if not null, used as the flush target, otherwise MProgram is used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00478">478</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="program__impl_8hpp_source.html#l00237">get_context()</a>, <a class="el" href="program__impl_8hpp_source.html#l00111">getHandleRef()</a>, and <a class="el" href="pi_8hpp_source.html#l00283">cl::sycl::detail::pi::DeviceBinaryImage::getSpecConstants()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00932">cl::sycl::detail::ProgramManager::flushSpecConstants()</a>.</p>
+
+</div>
+</div>
 <a id="ab11da350eec60c4b0b2431c9e42a22b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab11da350eec60c4b0b2431c9e42a22b5">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -563,6 +616,8 @@ template&lt;&gt; </td></tr>
 <dl class="section return"><dt>Returns</dt><dd>a valid OpenCL cl_program instance. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00187">187</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00932">cl::sycl::detail::ProgramManager::flushSpecConstants()</a>.</p>
 
 </div>
 </div>
@@ -616,7 +671,7 @@ template&lt;&gt; </td></tr>
 <p>If no compile, link, or build operations have been performed on this program, or if the program includes the host device in its device list, then an empty string is returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>a string of valid OpenCL build options. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00287">287</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00288">288</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -647,7 +702,7 @@ template&lt;&gt; </td></tr>
 <p>If the program was built instead of explicitly compiled, if the program has not yet been compiled, or if the program has been compiled for only the host device, then an empty string is return, unless the underlying cl_program was explicitly compiled, in which case the compile options used in the explicit compile are returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>a string of valid OpenCL compile options. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00261">261</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00262">262</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -675,7 +730,9 @@ template&lt;&gt; </td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the SYCL context that this program was constructed with. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00236">236</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00237">237</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00478">flush_spec_constants()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00932">cl::sycl::detail::ProgramManager::flushSpecConstants()</a>.</p>
 
 </div>
 </div>
@@ -703,7 +760,7 @@ template&lt;&gt; </td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a vector of devices that are associated with this program. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00249">249</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00250">250</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -796,7 +853,7 @@ template&lt;info::program param&gt; </div>
 <p>If the program has not been explicitly linked using the aforementioned function, constructed with an explicitly linking constructor, or if the program has been linked for only the host device, then an empty string is returned. If the program was constructed from cl_program, then an empty string is returned unless the cl_program was explicitly linked, in which case the link options used in that explicit link are returned. If the program object was constructed using a constructor form that links a vector of programs, then the link options passed to this constructor are returned.</p>
 <dl class="section return"><dt>Returns</dt><dd>a string of valid OpenCL compile options. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00277">277</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00278">278</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +881,7 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the current state of this SYCL program. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00290">290</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00291">291</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -852,7 +909,9 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a reference to a raw PI program handle. PI program is not retained before return. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00110">110</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00111">111</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00478">flush_spec_constants()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00932">cl::sycl::detail::ProgramManager::flushSpecConstants()</a>.</p>
 
 </div>
 </div>
@@ -880,7 +939,7 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a constant reference to a raw PI program handle. PI program is not retained before return. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00113">113</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00114">114</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -910,7 +969,7 @@ template&lt;info::program param&gt; </div>
 <p>Returns the OS module handle this program belongs to. </p>
 <p>A program belongs to an OS module if it was built from device image(s) belonging to that module. TODO Some programs can be linked from images belonging to different modules. May need a special fake handle for the resulting program. </p>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00300">300</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00312">312</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -972,7 +1031,7 @@ template&lt;info::program param&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if this SYCL program is a host program. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00116">116</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__impl_8hpp_source.html#l00117">117</a> of file <a class="el" href="program__impl_8hpp_source.html">program_impl.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00174">program_impl()</a>.</p>
 

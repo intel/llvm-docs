@@ -23,6 +23,7 @@ var searchData=
   ['hash_3c_20cl_3a_3asycl_3a_3astream_20_3e',['hash&lt; cl::sycl::stream &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1stream_01_4.html',1,'std']]],
   ['hash_3c_20half_20_3e',['hash&lt; half &gt;',['../structstd_1_1hash_3_01half_01_4.html',1,'std']]],
   ['hashcstr',['HashCStr',['../structcl_1_1sycl_1_1detail_1_1HashCStr.html',1,'cl::sycl::detail']]],
+  ['hassetspecconstants',['hasSetSpecConstants',['../classcl_1_1sycl_1_1detail_1_1program__impl.html#af2b95d292dac6348c9cfa8bff7bc5d34',1,'cl::sycl::detail::program_impl']]],
   ['helper',['helper',['../structcl_1_1____host__std_1_1detail_1_1helper.html',1,'cl::__host_std::detail']]],
   ['helper_3c_200_20_3e',['helper&lt; 0 &gt;',['../structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html',1,'cl::__host_std::detail']]],
   ['host_5fselector',['host_selector',['../classcl_1_1sycl_1_1host__selector.html',1,'cl::sycl']]],

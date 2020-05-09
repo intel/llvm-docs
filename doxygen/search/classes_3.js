@@ -35,6 +35,5 @@ var searchData=
   ['copy_5fcv_5fqualifiers_5fimpl_3c_20const_20t_2c_20r_20_3e',['copy_cv_qualifiers_impl&lt; const T, R &gt;',['../structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01T_00_01R_01_4.html',1,'cl::sycl::detail']]],
   ['copy_5fcv_5fqualifiers_5fimpl_3c_20const_20volatile_20t_2c_20r_20_3e',['copy_cv_qualifiers_impl&lt; const volatile T, R &gt;',['../structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html',1,'cl::sycl::detail']]],
   ['copy_5fcv_5fqualifiers_5fimpl_3c_20volatile_20t_2c_20r_20_3e',['copy_cv_qualifiers_impl&lt; volatile T, R &gt;',['../structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html',1,'cl::sycl::detail']]],
-  ['cpu_5fselector',['cpu_selector',['../classcl_1_1sycl_1_1cpu__selector.html',1,'cl::sycl']]],
-  ['cstringiterator',['CStringIterator',['../classcl_1_1sycl_1_1detail_1_1CStringIterator.html',1,'cl::sycl::detail']]]
+  ['cpu_5fselector',['cpu_selector',['../classcl_1_1sycl_1_1cpu__selector.html',1,'cl::sycl']]]
 ];

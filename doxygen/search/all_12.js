@@ -22,7 +22,6 @@ var searchData=
   ['spec_5fconstant',['spec_constant',['../classcl_1_1sycl_1_1experimental_1_1spec__constant.html',1,'cl::sycl::experimental']]],
   ['spec_5fconstant_5fimpl',['spec_constant_impl',['../classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html',1,'cl::sycl::detail']]],
   ['specconstantinfo',['SpecConstantInfo',['../structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html',1,'cl::sycl::detail']]],
-  ['specconstnameiterator',['SpecConstNameIterator',['../classcl_1_1sycl_1_1detail_1_1SpecConstNameIterator.html',1,'cl::sycl::detail']]],
   ['start',['start',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html#af581e62f4d374644cb6c26c02ad73cb3',1,'cl::sycl::detail::HostProfilingInfo']]],
   ['stream',['stream',['../classcl_1_1sycl_1_1stream.html',1,'cl::sycl']]],
   ['stream_5fimpl',['stream_impl',['../classcl_1_1sycl_1_1detail_1_1stream__impl.html',1,'cl::sycl::detail']]],

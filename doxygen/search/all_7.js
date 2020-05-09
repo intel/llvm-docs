@@ -67,6 +67,7 @@ var searchData=
   ['get_5fwait_5flist',['get_wait_list',['../classcl_1_1sycl_1_1event.html#a2248e07c40c18441e0a0684d1ce5791d',1,'cl::sycl::event']]],
   ['get_5fwork_5fgroup_5finfo',['get_work_group_info',['../classcl_1_1sycl_1_1kernel.html#a27d679d5218b2aa51e1d41a0088ffbc2',1,'cl::sycl::kernel::get_work_group_info()'],['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a994fc4ad7daf4c23e38de49cc6d6dba0',1,'cl::sycl::detail::kernel_impl::get_work_group_info()']]],
   ['getbinaryimageformat',['getBinaryImageFormat',['../pi_8hpp.html#a5977eda13527e6a59274e95a6b12dce3',1,'cl::sycl::detail::pi']]],
+  ['getbuiltpiprogram',['getBuiltPIProgram',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a7da3b550312897cb193c5ff91b831ab5',1,'cl::sycl::detail::ProgramManager']]],
   ['getcachedlibprograms',['getCachedLibPrograms',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#a2fe1eab8924fc3346341a5ebe4f5de2d',1,'cl::sycl::detail::context_impl']]],
   ['getcommand',['getCommand',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2',1,'cl::sycl::detail::event_impl']]],
   ['getcontextimpl',['getContextImpl',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a39cb94fe708fcdaf47c7b20ef3184535',1,'cl::sycl::detail::event_impl']]],
