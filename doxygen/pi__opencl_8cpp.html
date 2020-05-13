@@ -90,8 +90,9 @@ Include dependency graph for pi_opencl.cpp:</div>
 <div class="center"><img src="pi__opencl_8cpp__incl.png" border="0" usemap="#plugins_2opencl_2pi__opencl_8cpp" alt=""/></div>
 <map name="plugins_2opencl_2pi__opencl_8cpp" id="plugins_2opencl_2pi__opencl_8cpp">
 <area shape="rect" id="node2" href="cl_8h_source.html" title="CL/sycl/detail/cl.h" alt="" coords="5,155,132,181"/>
-<area shape="rect" id="node5" href="pi_8h_source.html" title="CL/sycl/detail/pi.h" alt="" coords="153,80,280,107"/>
+<area shape="rect" id="node5" href="pi_8h_source.html" title="CL/sycl/detail/pi.h" alt="" coords="237,80,364,107"/>
 <area shape="rect" id="node6" href="cl__usm__ext_8h_source.html" title="CL/cl_usm_ext.h" alt="" coords="156,155,277,181"/>
+<area shape="rect" id="node7" href="export_8hpp_source.html" title="CL/sycl/detail/export.hpp" alt="" coords="301,155,468,181"/>
 </map>
 </div>
 </div>
@@ -104,9 +105,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a0317452201a764521f25ac1e14d33c2c"><td class="memItemLeft" align="right" valign="top"><a id="a0317452201a764521f25ac1e14d33c2c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CONSTFIX</b>&#160;&#160;&#160;const</td></tr>
 <tr class="separator:a0317452201a764521f25ac1e14d33c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e322c8f012092c6e6570931ecb51257"><td class="memItemLeft" align="right" valign="top"><a id="a5e322c8f012092c6e6570931ecb51257"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OCL</b>(pi_api)&#160;&#160;&#160;Ocl##pi_api</td></tr>
-<tr class="separator:a5e322c8f012092c6e6570931ecb51257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a202ce1284dfe832d706747e1649ff93e"><td class="memItemLeft" align="right" valign="top"><a id="a202ce1284dfe832d706747e1649ff93e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>_PI_CL</b>(pi_api,  ocl_api)&#160;&#160;&#160;(PluginInit-&gt;PiFunctionTable).pi_api = (decltype(&amp;::pi_api))(&amp;ocl_api);</td></tr>
 <tr class="separator:a202ce1284dfe832d706747e1649ff93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,118 +128,133 @@ template&lt;const char * FuncName, typename T &gt; </td></tr>
 <tr class="memitem:a15b08defea4026996014917341fb1372"><td class="memItemLeft" align="right" valign="top">static pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372">USMSetIndirectAccess</a> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel)</td></tr>
 <tr class="memdesc:a15b08defea4026996014917341fb1372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables indirect access of pointers in kernels.  <a href="#a15b08defea4026996014917341fb1372">More...</a><br /></td></tr>
 <tr class="separator:a15b08defea4026996014917341fb1372"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a050d298e961914c5a37cfea9177facec"><td class="memItemLeft" align="right" valign="top"><a id="a050d298e961914c5a37cfea9177facec"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piPlatformsGet</b> (pi_uint32 num_entries, <a class="el" href="struct__pi__platform.html">pi_platform</a> *platforms, pi_uint32 *num_platforms)</td></tr>
-<tr class="separator:a050d298e961914c5a37cfea9177facec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb2078879d2370b79c9afd3cad229bcf"><td class="memItemLeft" align="right" valign="top"><a id="aeb2078879d2370b79c9afd3cad229bcf"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piDevicesGet</b> (<a class="el" href="struct__pi__platform.html">pi_platform</a> platform, pi_device_type device_type, pi_uint32 num_entries, <a class="el" href="class__pi__device.html">pi_device</a> *devices, pi_uint32 *num_devices)</td></tr>
-<tr class="separator:aeb2078879d2370b79c9afd3cad229bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fb204a8c2d0c97176e976b4f2fee0f6"><td class="memItemLeft" align="right" valign="top"><a id="a1fb204a8c2d0c97176e976b4f2fee0f6"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a1fb204a8c2d0c97176e976b4f2fee0f6">piextDeviceSelectBinary</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, <a class="el" href="structpi__device__binary__struct.html">pi_device_binary</a> *images, pi_uint32 num_images, pi_uint32 *selected_image_ind)</td></tr>
-<tr class="memdesc:a1fb204a8c2d0c97176e976b4f2fee0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the most appropriate device binary based on runtime information and the IR characteristics. <br /></td></tr>
-<tr class="separator:a1fb204a8c2d0c97176e976b4f2fee0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83ed6043502288acc3dd6d414d50cd05"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a83ed6043502288acc3dd6d414d50cd05">piextDeviceCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="class__pi__device.html">pi_device</a> *piDevice)</td></tr>
-<tr class="memdesc:a83ed6043502288acc3dd6d414d50cd05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI device object from a native handle.  <a href="#a83ed6043502288acc3dd6d414d50cd05">More...</a><br /></td></tr>
-<tr class="separator:a83ed6043502288acc3dd6d414d50cd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b78c66986a89df9cfd835e7a551ecd6"><td class="memItemLeft" align="right" valign="top"><a id="a5b78c66986a89df9cfd835e7a551ecd6"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piQueueCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_queue_properties properties, <a class="el" href="struct__pi__queue.html">pi_queue</a> *queue)</td></tr>
-<tr class="separator:a5b78c66986a89df9cfd835e7a551ecd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc41267ab47d71b319e8addfee33b29"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a5cc41267ab47d71b319e8addfee33b29">piextQueueCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__queue.html">pi_queue</a> *piQueue)</td></tr>
-<tr class="memdesc:a5cc41267ab47d71b319e8addfee33b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI queue object from a native handle.  <a href="#a5cc41267ab47d71b319e8addfee33b29">More...</a><br /></td></tr>
-<tr class="separator:a5cc41267ab47d71b319e8addfee33b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a30ab6b66bd28f2f6227aeee2cc0176"><td class="memItemLeft" align="right" valign="top"><a id="a5a30ab6b66bd28f2f6227aeee2cc0176"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piProgramCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *il, size_t length, <a class="el" href="struct__pi__program.html">pi_program</a> *res_program)</td></tr>
-<tr class="separator:a5a30ab6b66bd28f2f6227aeee2cc0176"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948aedf63a16c5b78406daea9b555cd1"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a948aedf63a16c5b78406daea9b555cd1">piextProgramCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__program.html">pi_program</a> *piProgram)</td></tr>
-<tr class="memdesc:a948aedf63a16c5b78406daea9b555cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI program object from a native handle.  <a href="#a948aedf63a16c5b78406daea9b555cd1">More...</a><br /></td></tr>
-<tr class="separator:a948aedf63a16c5b78406daea9b555cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad368f422864608de396f70a70e375482"><td class="memItemLeft" align="right" valign="top"><a id="ad368f422864608de396f70a70e375482"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piSamplerCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const pi_sampler_properties *sampler_properties, pi_sampler *result_sampler)</td></tr>
-<tr class="separator:ad368f422864608de396f70a70e375482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5addb91fb8e85a1a21baff9777f934a2"><td class="memItemLeft" align="right" valign="top"><a id="a5addb91fb8e85a1a21baff9777f934a2"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piextKernelSetArgMemObj</b> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel, pi_uint32 arg_index, const <a class="el" href="struct__pi__mem.html">pi_mem</a> *arg_value)</td></tr>
-<tr class="separator:a5addb91fb8e85a1a21baff9777f934a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3b380dac11217b8cb2575989eb3fd66"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#af3b380dac11217b8cb2575989eb3fd66">piextGetDeviceFunctionPointer</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, <a class="el" href="struct__pi__program.html">pi_program</a> program, const char *func_name, pi_uint64 *function_pointer_ret)</td></tr>
-<tr class="memdesc:af3b380dac11217b8cb2575989eb3fd66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a device function pointer to a user-defined function.  <a href="#af3b380dac11217b8cb2575989eb3fd66">More...</a><br /></td></tr>
-<tr class="separator:af3b380dac11217b8cb2575989eb3fd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b125c14d8fb3d32df190bd381c93545"><td class="memItemLeft" align="right" valign="top"><a id="a1b125c14d8fb3d32df190bd381c93545"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piContextCreate</b> (const pi_context_properties *properties, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *devices, void(*pfn_notify)(const char *errinfo, const void *private_info, size_t cb, void *user_data1), void *user_data, <a class="el" href="struct__pi__context.html">pi_context</a> *retcontext)</td></tr>
-<tr class="separator:a1b125c14d8fb3d32df190bd381c93545"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf3c907e78eb4ab25393550b212781d9"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#acf3c907e78eb4ab25393550b212781d9">piextContextCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__context.html">pi_context</a> *piContext)</td></tr>
-<tr class="memdesc:acf3c907e78eb4ab25393550b212781d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI context object from a native handle.  <a href="#acf3c907e78eb4ab25393550b212781d9">More...</a><br /></td></tr>
-<tr class="separator:acf3c907e78eb4ab25393550b212781d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8019991438442acd8387448f81f8d0d8"><td class="memItemLeft" align="right" valign="top"><a id="a8019991438442acd8387448f81f8d0d8"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piMemBufferCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_mem_flags flags, size_t size, void *host_ptr, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
-<tr class="separator:a8019991438442acd8387448f81f8d0d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf00ccf27fa1c40ff2578e6515a84a2"><td class="memItemLeft" align="right" valign="top"><a id="afcf00ccf27fa1c40ff2578e6515a84a2"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piMemImageCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_mem_flags flags, const <a class="el" href="struct__pi__image__format.html">pi_image_format</a> *image_format, const <a class="el" href="struct__pi__image__desc.html">pi_image_desc</a> *image_desc, void *host_ptr, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
-<tr class="separator:afcf00ccf27fa1c40ff2578e6515a84a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad83595efedbf927e1b0715d3c6e9f8a7"><td class="memItemLeft" align="right" valign="top"><a id="ad83595efedbf927e1b0715d3c6e9f8a7"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piMemBufferPartition</b> (<a class="el" href="struct__pi__mem.html">pi_mem</a> buffer, pi_mem_flags flags, pi_buffer_create_type buffer_create_type, void *buffer_create_info, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
-<tr class="separator:ad83595efedbf927e1b0715d3c6e9f8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159f2c7dc15000d010c09d8e14348a47"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a159f2c7dc15000d010c09d8e14348a47">piextMemCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__mem.html">pi_mem</a> *piMem)</td></tr>
-<tr class="memdesc:a159f2c7dc15000d010c09d8e14348a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI mem object from a native handle.  <a href="#a159f2c7dc15000d010c09d8e14348a47">More...</a><br /></td></tr>
-<tr class="separator:a159f2c7dc15000d010c09d8e14348a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3943581f7f29a46b8f084ea8beab08e0"><td class="memItemLeft" align="right" valign="top"><a id="a3943581f7f29a46b8f084ea8beab08e0"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piclProgramCreateWithSource</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 count, const char **strings, const size_t *lengths, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
-<tr class="separator:a3943581f7f29a46b8f084ea8beab08e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af15c72f11cb553f673fb624d5cb155eb"><td class="memItemLeft" align="right" valign="top"><a id="af15c72f11cb553f673fb624d5cb155eb"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piclProgramCreateWithBinary</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *device_list, const size_t *lengths, const unsigned char **binaries, pi_int32 *binary_status, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
-<tr class="separator:af15c72f11cb553f673fb624d5cb155eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e92e4e882341449705c8a0a59ac5dac"><td class="memItemLeft" align="right" valign="top"><a id="a3e92e4e882341449705c8a0a59ac5dac"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piProgramLink</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *device_list, const char *options, pi_uint32 num_input_programs, const <a class="el" href="struct__pi__program.html">pi_program</a> *input_programs, void(*pfn_notify)(<a class="el" href="struct__pi__program.html">pi_program</a> program, void *user_data), void *user_data, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
-<tr class="separator:a3e92e4e882341449705c8a0a59ac5dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa3051a12106349cc7d0d220e7c8bd61"><td class="memItemLeft" align="right" valign="top"><a id="aaa3051a12106349cc7d0d220e7c8bd61"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piKernelCreate</b> (<a class="el" href="struct__pi__program.html">pi_program</a> program, const char *kernel_name, <a class="el" href="struct__pi__kernel.html">pi_kernel</a> *ret_kernel)</td></tr>
-<tr class="separator:aaa3051a12106349cc7d0d220e7c8bd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae23e9a5a6ecf8eed8fd4ba5786c27276"><td class="memItemLeft" align="right" valign="top"><a id="ae23e9a5a6ecf8eed8fd4ba5786c27276"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piEventCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__event.html">pi_event</a> *ret_event)</td></tr>
-<tr class="separator:ae23e9a5a6ecf8eed8fd4ba5786c27276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9920e979a0544568ac8898df2c4ee16"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ae9920e979a0544568ac8898df2c4ee16">piextEventCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="class__pi__event.html">pi_event</a> *piEvent)</td></tr>
-<tr class="memdesc:ae9920e979a0544568ac8898df2c4ee16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI event object from a native handle.  <a href="#ae9920e979a0544568ac8898df2c4ee16">More...</a><br /></td></tr>
-<tr class="separator:ae9920e979a0544568ac8898df2c4ee16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa241520735bdc775f0322b4f201fabdb"><td class="memItemLeft" align="right" valign="top"><a id="aa241520735bdc775f0322b4f201fabdb"></a>
-pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piEnqueueMemBufferMap</b> (<a class="el" href="struct__pi__queue.html">pi_queue</a> command_queue, <a class="el" href="struct__pi__mem.html">pi_mem</a> buffer, pi_bool blocking_map, cl_map_flags map_flags, size_t offset, size_t size, pi_uint32 num_events_in_wait_list, const <a class="el" href="class__pi__event.html">pi_event</a> *event_wait_list, <a class="el" href="class__pi__event.html">pi_event</a> *event, void **ret_map)</td></tr>
-<tr class="separator:aa241520735bdc775f0322b4f201fabdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c8edcf4baea529c0e9d59e570a0b70"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a11c8edcf4baea529c0e9d59e570a0b70">piextUSMHostAlloc</a> (void **result_ptr, <a class="el" href="struct__pi__context.html">pi_context</a> context, pi_usm_mem_properties *properties, size_t size, pi_uint32 alignment)</td></tr>
-<tr class="memdesc:a11c8edcf4baea529c0e9d59e570a0b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates host memory accessible by the device.  <a href="#a11c8edcf4baea529c0e9d59e570a0b70">More...</a><br /></td></tr>
-<tr class="separator:a11c8edcf4baea529c0e9d59e570a0b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb277e62c303911ca7544b18ab6282b6"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#afb277e62c303911ca7544b18ab6282b6">piextUSMDeviceAlloc</a> (void **result_ptr, <a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_usm_mem_properties *properties, size_t size, pi_uint32 alignment)</td></tr>
-<tr class="memdesc:afb277e62c303911ca7544b18ab6282b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates device memory.  <a href="#afb277e62c303911ca7544b18ab6282b6">More...</a><br /></td></tr>
-<tr class="separator:afb277e62c303911ca7544b18ab6282b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d56fe503ff7812599b80212de21ab94"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a9d56fe503ff7812599b80212de21ab94">piextUSMSharedAlloc</a> (void **result_ptr, <a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_usm_mem_properties *properties, size_t size, pi_uint32 alignment)</td></tr>
-<tr class="memdesc:a9d56fe503ff7812599b80212de21ab94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory accessible on both host and device.  <a href="#a9d56fe503ff7812599b80212de21ab94">More...</a><br /></td></tr>
-<tr class="separator:a9d56fe503ff7812599b80212de21ab94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6412f5d3d8b0e84b2898ead2268310e7"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a6412f5d3d8b0e84b2898ead2268310e7">piextUSMFree</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, void *ptr)</td></tr>
-<tr class="memdesc:a6412f5d3d8b0e84b2898ead2268310e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees allocated USM memory.  <a href="#a6412f5d3d8b0e84b2898ead2268310e7">More...</a><br /></td></tr>
-<tr class="separator:a6412f5d3d8b0e84b2898ead2268310e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71e9b3dc8b95dc24b2e6eb6df1db8cdd"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a71e9b3dc8b95dc24b2e6eb6df1db8cdd">piextKernelSetArgPointer</a> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel, pi_uint32 arg_index, size_t arg_size, const void *arg_value)</td></tr>
-<tr class="memdesc:a71e9b3dc8b95dc24b2e6eb6df1db8cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up pointer arguments for CL kernels.  <a href="#a71e9b3dc8b95dc24b2e6eb6df1db8cdd">More...</a><br /></td></tr>
-<tr class="separator:a71e9b3dc8b95dc24b2e6eb6df1db8cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab17a1f185c70eee84cf47a997bcc1cb4"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ab17a1f185c70eee84cf47a997bcc1cb4">piextUSMEnqueueMemset</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, void *ptr, pi_int32 value, size_t count, pi_uint32 num_events_in_waitlist, const <a class="el" href="class__pi__event.html">pi_event</a> *events_waitlist, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
-<tr class="memdesc:ab17a1f185c70eee84cf47a997bcc1cb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">USM Memset API.  <a href="#ab17a1f185c70eee84cf47a997bcc1cb4">More...</a><br /></td></tr>
-<tr class="separator:ab17a1f185c70eee84cf47a997bcc1cb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bbd367671f3aad6304b5febb211d9d5"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a8bbd367671f3aad6304b5febb211d9d5">piextUSMEnqueueMemcpy</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, pi_bool blocking, void *dst_ptr, const void *src_ptr, size_t size, pi_uint32 num_events_in_waitlist, const <a class="el" href="class__pi__event.html">pi_event</a> *events_waitlist, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
-<tr class="memdesc:a8bbd367671f3aad6304b5febb211d9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">USM Memcpy API.  <a href="#a8bbd367671f3aad6304b5febb211d9d5">More...</a><br /></td></tr>
-<tr class="separator:a8bbd367671f3aad6304b5febb211d9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7fdca507a18992a9ad713349addc8bb"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ab7fdca507a18992a9ad713349addc8bb">piextUSMEnqueuePrefetch</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, const void *ptr, size_t size, pi_usm_migration_flags flags, pi_uint32 num_events_in_waitlist, const <a class="el" href="class__pi__event.html">pi_event</a> *events_waitlist, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
-<tr class="memdesc:ab7fdca507a18992a9ad713349addc8bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hint to migrate memory to the device.  <a href="#ab7fdca507a18992a9ad713349addc8bb">More...</a><br /></td></tr>
-<tr class="separator:ab7fdca507a18992a9ad713349addc8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c476b6f3f04e669465cc5dc862a186"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a45c476b6f3f04e669465cc5dc862a186">piextUSMEnqueueMemAdvise</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, const void *ptr, size_t length, int advice, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
-<tr class="memdesc:a45c476b6f3f04e669465cc5dc862a186"><td class="mdescLeft">&#160;</td><td class="mdescRight">USM Memadvise API.  <a href="#a45c476b6f3f04e669465cc5dc862a186">More...</a><br /></td></tr>
-<tr class="separator:a45c476b6f3f04e669465cc5dc862a186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cde70d9188d6b5d220312b59e78db3c"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a4cde70d9188d6b5d220312b59e78db3c">piextUSMGetMemAllocInfo</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *ptr, pi_mem_info param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</td></tr>
-<tr class="memdesc:a4cde70d9188d6b5d220312b59e78db3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">API to query information about USM allocated pointers Valid Queries: PI_MEM_ALLOC_TYPE returns host/device/shared pi_host_usm value PI_MEM_ALLOC_BASE_PTR returns the base ptr of an allocation if the queried pointer fell inside an allocation.  <a href="#a4cde70d9188d6b5d220312b59e78db3c">More...</a><br /></td></tr>
-<tr class="separator:a4cde70d9188d6b5d220312b59e78db3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2230b3a14c9c34c639eba2ed6ec5d68c"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a2230b3a14c9c34c639eba2ed6ec5d68c">piKernelSetExecInfo</a> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel, pi_kernel_exec_info param_name, size_t param_value_size, const void *param_value)</td></tr>
-<tr class="memdesc:a2230b3a14c9c34c639eba2ed6ec5d68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">API to set attributes controlling kernel execution.  <a href="#a2230b3a14c9c34c639eba2ed6ec5d68c">More...</a><br /></td></tr>
-<tr class="separator:a2230b3a14c9c34c639eba2ed6ec5d68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a543fc74d87636611fc15ded9bd5b5ff5"><td class="memItemLeft" align="right" valign="top"><a id="a543fc74d87636611fc15ded9bd5b5ff5"></a>
-static pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><b>piextProgramSetSpecializationConstantImpl</b> (<a class="el" href="struct__pi__program.html">pi_program</a> prog, unsigned int spec_id, size_t spec_size, const void *spec_value)</td></tr>
-<tr class="separator:a543fc74d87636611fc15ded9bd5b5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c08bd284aa66edba836fcca3a9d838c"><td class="memItemLeft" align="right" valign="top">pi_result OCL()&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a2c08bd284aa66edba836fcca3a9d838c">piextGetNativeHandle</a> (void *piObj, pi_native_handle *nativeHandle)</td></tr>
-<tr class="memdesc:a2c08bd284aa66edba836fcca3a9d838c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common API for getting the native handle of a PI object.  <a href="#a2c08bd284aa66edba836fcca3a9d838c">More...</a><br /></td></tr>
-<tr class="separator:a2c08bd284aa66edba836fcca3a9d838c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c358eae6f8f0527d7ca1a90fce2ab12"><td class="memItemLeft" align="right" valign="top"><a id="a4c358eae6f8f0527d7ca1a90fce2ab12"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piPlatformsGet</b> (pi_uint32 num_entries, <a class="el" href="struct__pi__platform.html">pi_platform</a> *platforms, pi_uint32 *num_platforms)</td></tr>
+<tr class="separator:a4c358eae6f8f0527d7ca1a90fce2ab12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b24df8aa852caaedbbb5f3f31d9fd5"><td class="memItemLeft" align="right" valign="top"><a id="a69b24df8aa852caaedbbb5f3f31d9fd5"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piDevicesGet</b> (<a class="el" href="struct__pi__platform.html">pi_platform</a> platform, pi_device_type device_type, pi_uint32 num_entries, <a class="el" href="class__pi__device.html">pi_device</a> *devices, pi_uint32 *num_devices)</td></tr>
+<tr class="separator:a69b24df8aa852caaedbbb5f3f31d9fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab44da55ce8a6f7f1b7fe429598673614"><td class="memItemLeft" align="right" valign="top"><a id="ab44da55ce8a6f7f1b7fe429598673614"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ab44da55ce8a6f7f1b7fe429598673614">piextDeviceSelectBinary</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, <a class="el" href="structpi__device__binary__struct.html">pi_device_binary</a> *images, pi_uint32 num_images, pi_uint32 *selected_image_ind)</td></tr>
+<tr class="memdesc:ab44da55ce8a6f7f1b7fe429598673614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the most appropriate device binary based on runtime information and the IR characteristics. <br /></td></tr>
+<tr class="separator:ab44da55ce8a6f7f1b7fe429598673614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1fd451cd68d6b0566ee38dca794ce7"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a8d1fd451cd68d6b0566ee38dca794ce7">piextDeviceCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="class__pi__device.html">pi_device</a> *piDevice)</td></tr>
+<tr class="memdesc:a8d1fd451cd68d6b0566ee38dca794ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI device object from a native handle.  <a href="#a8d1fd451cd68d6b0566ee38dca794ce7">More...</a><br /></td></tr>
+<tr class="separator:a8d1fd451cd68d6b0566ee38dca794ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ddf05bdc678ca69911fe8d537eda90c"><td class="memItemLeft" align="right" valign="top"><a id="a9ddf05bdc678ca69911fe8d537eda90c"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piQueueCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_queue_properties properties, <a class="el" href="struct__pi__queue.html">pi_queue</a> *queue)</td></tr>
+<tr class="separator:a9ddf05bdc678ca69911fe8d537eda90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7122b8ca388479547721665ba3c92ebe"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a7122b8ca388479547721665ba3c92ebe">piextQueueCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__queue.html">pi_queue</a> *piQueue)</td></tr>
+<tr class="memdesc:a7122b8ca388479547721665ba3c92ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI queue object from a native handle.  <a href="#a7122b8ca388479547721665ba3c92ebe">More...</a><br /></td></tr>
+<tr class="separator:a7122b8ca388479547721665ba3c92ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9488cd0c11442229375c7198375f785"><td class="memItemLeft" align="right" valign="top"><a id="aa9488cd0c11442229375c7198375f785"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piProgramCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *il, size_t length, <a class="el" href="struct__pi__program.html">pi_program</a> *res_program)</td></tr>
+<tr class="separator:aa9488cd0c11442229375c7198375f785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53086e935c213d7a6a382a2fad32afb0"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a53086e935c213d7a6a382a2fad32afb0">piextProgramCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__program.html">pi_program</a> *piProgram)</td></tr>
+<tr class="memdesc:a53086e935c213d7a6a382a2fad32afb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI program object from a native handle.  <a href="#a53086e935c213d7a6a382a2fad32afb0">More...</a><br /></td></tr>
+<tr class="separator:a53086e935c213d7a6a382a2fad32afb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a2edb3f2bed516c1e5467a5c7ce7b73"><td class="memItemLeft" align="right" valign="top"><a id="a9a2edb3f2bed516c1e5467a5c7ce7b73"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piSamplerCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const pi_sampler_properties *sampler_properties, pi_sampler *result_sampler)</td></tr>
+<tr class="separator:a9a2edb3f2bed516c1e5467a5c7ce7b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7744d7e6636f8d7805e5b082df30bc"><td class="memItemLeft" align="right" valign="top"><a id="afb7744d7e6636f8d7805e5b082df30bc"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piextKernelSetArgMemObj</b> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel, pi_uint32 arg_index, const <a class="el" href="struct__pi__mem.html">pi_mem</a> *arg_value)</td></tr>
+<tr class="separator:afb7744d7e6636f8d7805e5b082df30bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02edeed25c4a9c60960b21f0b0cb0902"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a02edeed25c4a9c60960b21f0b0cb0902">piextGetDeviceFunctionPointer</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, <a class="el" href="struct__pi__program.html">pi_program</a> program, const char *func_name, pi_uint64 *function_pointer_ret)</td></tr>
+<tr class="memdesc:a02edeed25c4a9c60960b21f0b0cb0902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a device function pointer to a user-defined function.  <a href="#a02edeed25c4a9c60960b21f0b0cb0902">More...</a><br /></td></tr>
+<tr class="separator:a02edeed25c4a9c60960b21f0b0cb0902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812679cbe8893dbb9610a5faab2b3c90"><td class="memItemLeft" align="right" valign="top"><a id="a812679cbe8893dbb9610a5faab2b3c90"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piContextCreate</b> (const pi_context_properties *properties, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *devices, void(*pfn_notify)(const char *errinfo, const void *private_info, size_t cb, void *user_data1), void *user_data, <a class="el" href="struct__pi__context.html">pi_context</a> *retcontext)</td></tr>
+<tr class="separator:a812679cbe8893dbb9610a5faab2b3c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2509eccbb811afd35a598a8caf6cecf3"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a2509eccbb811afd35a598a8caf6cecf3">piextContextCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__context.html">pi_context</a> *piContext)</td></tr>
+<tr class="memdesc:a2509eccbb811afd35a598a8caf6cecf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI context object from a native handle.  <a href="#a2509eccbb811afd35a598a8caf6cecf3">More...</a><br /></td></tr>
+<tr class="separator:a2509eccbb811afd35a598a8caf6cecf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a3013fe01c7fdfff8c26aa9329c765"><td class="memItemLeft" align="right" valign="top"><a id="a24a3013fe01c7fdfff8c26aa9329c765"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piMemBufferCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_mem_flags flags, size_t size, void *host_ptr, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
+<tr class="separator:a24a3013fe01c7fdfff8c26aa9329c765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3f5f6001301bae9b964a9946996afc"><td class="memItemLeft" align="right" valign="top"><a id="a3b3f5f6001301bae9b964a9946996afc"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piMemImageCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_mem_flags flags, const <a class="el" href="struct__pi__image__format.html">pi_image_format</a> *image_format, const <a class="el" href="struct__pi__image__desc.html">pi_image_desc</a> *image_desc, void *host_ptr, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
+<tr class="separator:a3b3f5f6001301bae9b964a9946996afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafde0aff43eb04770ec0f52cca6b7fe7"><td class="memItemLeft" align="right" valign="top"><a id="aafde0aff43eb04770ec0f52cca6b7fe7"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piMemBufferPartition</b> (<a class="el" href="struct__pi__mem.html">pi_mem</a> buffer, pi_mem_flags flags, pi_buffer_create_type buffer_create_type, void *buffer_create_info, <a class="el" href="struct__pi__mem.html">pi_mem</a> *ret_mem)</td></tr>
+<tr class="separator:aafde0aff43eb04770ec0f52cca6b7fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacefad3c65f7c173f2233421c3a8a532"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#aacefad3c65f7c173f2233421c3a8a532">piextMemCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="struct__pi__mem.html">pi_mem</a> *piMem)</td></tr>
+<tr class="memdesc:aacefad3c65f7c173f2233421c3a8a532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI mem object from a native handle.  <a href="#aacefad3c65f7c173f2233421c3a8a532">More...</a><br /></td></tr>
+<tr class="separator:aacefad3c65f7c173f2233421c3a8a532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fb4aa49b8c4a3ad5cf0bd08a201e7e"><td class="memItemLeft" align="right" valign="top"><a id="ac5fb4aa49b8c4a3ad5cf0bd08a201e7e"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piclProgramCreateWithSource</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 count, const char **strings, const size_t *lengths, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
+<tr class="separator:ac5fb4aa49b8c4a3ad5cf0bd08a201e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1cecda3a9d92c626a23bce7b1a358e"><td class="memItemLeft" align="right" valign="top"><a id="aba1cecda3a9d92c626a23bce7b1a358e"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piclProgramCreateWithBinary</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *device_list, const size_t *lengths, const unsigned char **binaries, pi_int32 *binary_status, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
+<tr class="separator:aba1cecda3a9d92c626a23bce7b1a358e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d26c70a9073a60bf3ac25c2910245bf"><td class="memItemLeft" align="right" valign="top"><a id="a9d26c70a9073a60bf3ac25c2910245bf"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piProgramLink</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_uint32 num_devices, const <a class="el" href="class__pi__device.html">pi_device</a> *device_list, const char *options, pi_uint32 num_input_programs, const <a class="el" href="struct__pi__program.html">pi_program</a> *input_programs, void(*pfn_notify)(<a class="el" href="struct__pi__program.html">pi_program</a> program, void *user_data), void *user_data, <a class="el" href="struct__pi__program.html">pi_program</a> *ret_program)</td></tr>
+<tr class="separator:a9d26c70a9073a60bf3ac25c2910245bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0917d3a7da3d18319665e9aed9ebe918"><td class="memItemLeft" align="right" valign="top"><a id="a0917d3a7da3d18319665e9aed9ebe918"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piKernelCreate</b> (<a class="el" href="struct__pi__program.html">pi_program</a> program, const char *kernel_name, <a class="el" href="struct__pi__kernel.html">pi_kernel</a> *ret_kernel)</td></tr>
+<tr class="separator:a0917d3a7da3d18319665e9aed9ebe918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f29450c93b62f34c598e7c0d07510d1"><td class="memItemLeft" align="right" valign="top"><a id="a5f29450c93b62f34c598e7c0d07510d1"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piEventCreate</b> (<a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__event.html">pi_event</a> *ret_event)</td></tr>
+<tr class="separator:a5f29450c93b62f34c598e7c0d07510d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f06cd73fa47ae2991cf0f4b06cd3f3"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#af3f06cd73fa47ae2991cf0f4b06cd3f3">piextEventCreateWithNativeHandle</a> (pi_native_handle nativeHandle, <a class="el" href="class__pi__event.html">pi_event</a> *piEvent)</td></tr>
+<tr class="memdesc:af3f06cd73fa47ae2991cf0f4b06cd3f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI event object from a native handle.  <a href="#af3f06cd73fa47ae2991cf0f4b06cd3f3">More...</a><br /></td></tr>
+<tr class="separator:af3f06cd73fa47ae2991cf0f4b06cd3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af802e60387d9bfde27bc885e8d660baa"><td class="memItemLeft" align="right" valign="top"><a id="af802e60387d9bfde27bc885e8d660baa"></a>
+pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piEnqueueMemBufferMap</b> (<a class="el" href="struct__pi__queue.html">pi_queue</a> command_queue, <a class="el" href="struct__pi__mem.html">pi_mem</a> buffer, pi_bool blocking_map, cl_map_flags map_flags, size_t offset, size_t size, pi_uint32 num_events_in_wait_list, const <a class="el" href="class__pi__event.html">pi_event</a> *event_wait_list, <a class="el" href="class__pi__event.html">pi_event</a> *event, void **ret_map)</td></tr>
+<tr class="separator:af802e60387d9bfde27bc885e8d660baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b55c40a7f28db7ca54c72755afe948d"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a4b55c40a7f28db7ca54c72755afe948d">piextUSMHostAlloc</a> (void **result_ptr, <a class="el" href="struct__pi__context.html">pi_context</a> context, pi_usm_mem_properties *properties, size_t size, pi_uint32 alignment)</td></tr>
+<tr class="memdesc:a4b55c40a7f28db7ca54c72755afe948d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates host memory accessible by the device.  <a href="#a4b55c40a7f28db7ca54c72755afe948d">More...</a><br /></td></tr>
+<tr class="separator:a4b55c40a7f28db7ca54c72755afe948d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24c050ded366ab5c2741bc907764600"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ab24c050ded366ab5c2741bc907764600">piextUSMDeviceAlloc</a> (void **result_ptr, <a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_usm_mem_properties *properties, size_t size, pi_uint32 alignment)</td></tr>
+<tr class="memdesc:ab24c050ded366ab5c2741bc907764600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates device memory.  <a href="#ab24c050ded366ab5c2741bc907764600">More...</a><br /></td></tr>
+<tr class="separator:ab24c050ded366ab5c2741bc907764600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0024fcee3a57291e3f618ec67aa744"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#adc0024fcee3a57291e3f618ec67aa744">piextUSMSharedAlloc</a> (void **result_ptr, <a class="el" href="struct__pi__context.html">pi_context</a> context, <a class="el" href="class__pi__device.html">pi_device</a> device, pi_usm_mem_properties *properties, size_t size, pi_uint32 alignment)</td></tr>
+<tr class="memdesc:adc0024fcee3a57291e3f618ec67aa744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates memory accessible on both host and device.  <a href="#adc0024fcee3a57291e3f618ec67aa744">More...</a><br /></td></tr>
+<tr class="separator:adc0024fcee3a57291e3f618ec67aa744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba7089d4a0b1fbe530229485514beab"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a1ba7089d4a0b1fbe530229485514beab">piextUSMFree</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, void *ptr)</td></tr>
+<tr class="memdesc:a1ba7089d4a0b1fbe530229485514beab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees allocated USM memory.  <a href="#a1ba7089d4a0b1fbe530229485514beab">More...</a><br /></td></tr>
+<tr class="separator:a1ba7089d4a0b1fbe530229485514beab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1ef844cab36a9fa7606161ef7e3d2a3"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ae1ef844cab36a9fa7606161ef7e3d2a3">piextKernelSetArgPointer</a> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel, pi_uint32 arg_index, size_t arg_size, const void *arg_value)</td></tr>
+<tr class="memdesc:ae1ef844cab36a9fa7606161ef7e3d2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up pointer arguments for CL kernels.  <a href="#ae1ef844cab36a9fa7606161ef7e3d2a3">More...</a><br /></td></tr>
+<tr class="separator:ae1ef844cab36a9fa7606161ef7e3d2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c7cd6826000f011885275541a7d038"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a01c7cd6826000f011885275541a7d038">piextUSMEnqueueMemset</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, void *ptr, pi_int32 value, size_t count, pi_uint32 num_events_in_waitlist, const <a class="el" href="class__pi__event.html">pi_event</a> *events_waitlist, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
+<tr class="memdesc:a01c7cd6826000f011885275541a7d038"><td class="mdescLeft">&#160;</td><td class="mdescRight">USM Memset API.  <a href="#a01c7cd6826000f011885275541a7d038">More...</a><br /></td></tr>
+<tr class="separator:a01c7cd6826000f011885275541a7d038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add738984ede5e0f9b7587d9ef0abfbb9"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#add738984ede5e0f9b7587d9ef0abfbb9">piextUSMEnqueueMemcpy</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, pi_bool blocking, void *dst_ptr, const void *src_ptr, size_t size, pi_uint32 num_events_in_waitlist, const <a class="el" href="class__pi__event.html">pi_event</a> *events_waitlist, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
+<tr class="memdesc:add738984ede5e0f9b7587d9ef0abfbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">USM Memcpy API.  <a href="#add738984ede5e0f9b7587d9ef0abfbb9">More...</a><br /></td></tr>
+<tr class="separator:add738984ede5e0f9b7587d9ef0abfbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d9d01ffe364d9987bcf6cc3f552a82c"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a3d9d01ffe364d9987bcf6cc3f552a82c">piextUSMEnqueuePrefetch</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, const void *ptr, size_t size, pi_usm_migration_flags flags, pi_uint32 num_events_in_waitlist, const <a class="el" href="class__pi__event.html">pi_event</a> *events_waitlist, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
+<tr class="memdesc:a3d9d01ffe364d9987bcf6cc3f552a82c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hint to migrate memory to the device.  <a href="#a3d9d01ffe364d9987bcf6cc3f552a82c">More...</a><br /></td></tr>
+<tr class="separator:a3d9d01ffe364d9987bcf6cc3f552a82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d8dc1e54bd70a1e6ed50ae9d15a226"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a20d8dc1e54bd70a1e6ed50ae9d15a226">piextUSMEnqueueMemAdvise</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, const void *ptr, size_t length, int advice, <a class="el" href="class__pi__event.html">pi_event</a> *event)</td></tr>
+<tr class="memdesc:a20d8dc1e54bd70a1e6ed50ae9d15a226"><td class="mdescLeft">&#160;</td><td class="mdescRight">USM Memadvise API.  <a href="#a20d8dc1e54bd70a1e6ed50ae9d15a226">More...</a><br /></td></tr>
+<tr class="separator:a20d8dc1e54bd70a1e6ed50ae9d15a226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3c5e8ff3e0643a80f89bc0a7c8c8cd"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#afc3c5e8ff3e0643a80f89bc0a7c8c8cd">piextUSMGetMemAllocInfo</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, const void *ptr, pi_mem_info param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</td></tr>
+<tr class="memdesc:afc3c5e8ff3e0643a80f89bc0a7c8c8cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">API to query information about USM allocated pointers Valid Queries: PI_MEM_ALLOC_TYPE returns host/device/shared pi_host_usm value PI_MEM_ALLOC_BASE_PTR returns the base ptr of an allocation if the queried pointer fell inside an allocation.  <a href="#afc3c5e8ff3e0643a80f89bc0a7c8c8cd">More...</a><br /></td></tr>
+<tr class="separator:afc3c5e8ff3e0643a80f89bc0a7c8c8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f67e1202a6fac787cc3dc5895f1ee08"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a8f67e1202a6fac787cc3dc5895f1ee08">piKernelSetExecInfo</a> (<a class="el" href="struct__pi__kernel.html">pi_kernel</a> kernel, pi_kernel_exec_info param_name, size_t param_value_size, const void *param_value)</td></tr>
+<tr class="memdesc:a8f67e1202a6fac787cc3dc5895f1ee08"><td class="mdescLeft">&#160;</td><td class="mdescRight">API to set attributes controlling kernel execution.  <a href="#a8f67e1202a6fac787cc3dc5895f1ee08">More...</a><br /></td></tr>
+<tr class="separator:a8f67e1202a6fac787cc3dc5895f1ee08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6536605da4d4b98245a07ab1edfc861e"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a6536605da4d4b98245a07ab1edfc861e">piextProgramSetSpecializationConstant</a> (<a class="el" href="struct__pi__program.html">pi_program</a> prog, pi_uint32 spec_id, size_t spec_size, const void *spec_value)</td></tr>
+<tr class="memdesc:a6536605da4d4b98245a07ab1edfc861e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a specialization constant to a specific value.  <a href="#a6536605da4d4b98245a07ab1edfc861e">More...</a><br /></td></tr>
+<tr class="separator:a6536605da4d4b98245a07ab1edfc861e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a8058f33a11be0117391a671edba07"><td class="memItemLeft" align="right" valign="top">static pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#af6a8058f33a11be0117391a671edba07">piextGetNativeHandle</a> (void *piObj, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:af6a8058f33a11be0117391a671edba07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Common API for getting the native handle of a PI object.  <a href="#af6a8058f33a11be0117391a671edba07">More...</a><br /></td></tr>
+<tr class="separator:af6a8058f33a11be0117391a671edba07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120d5faa8d24b9e34fe0d9f7a1a18e92"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a120d5faa8d24b9e34fe0d9f7a1a18e92">piextDeviceGetNativeHandle</a> (<a class="el" href="class__pi__device.html">pi_device</a> device, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:a120d5faa8d24b9e34fe0d9f7a1a18e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of a PI device object.  <a href="#a120d5faa8d24b9e34fe0d9f7a1a18e92">More...</a><br /></td></tr>
+<tr class="separator:a120d5faa8d24b9e34fe0d9f7a1a18e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3fb8ea4d33b7f0656afa0fdfedee5d4"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#aa3fb8ea4d33b7f0656afa0fdfedee5d4">piextContextGetNativeHandle</a> (<a class="el" href="struct__pi__context.html">pi_context</a> context, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:aa3fb8ea4d33b7f0656afa0fdfedee5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of a PI context object.  <a href="#aa3fb8ea4d33b7f0656afa0fdfedee5d4">More...</a><br /></td></tr>
+<tr class="separator:aa3fb8ea4d33b7f0656afa0fdfedee5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cc0be50f59c0e010d223da6882ba23a"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a9cc0be50f59c0e010d223da6882ba23a">piextQueueGetNativeHandle</a> (<a class="el" href="struct__pi__queue.html">pi_queue</a> queue, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:a9cc0be50f59c0e010d223da6882ba23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of a PI queue object.  <a href="#a9cc0be50f59c0e010d223da6882ba23a">More...</a><br /></td></tr>
+<tr class="separator:a9cc0be50f59c0e010d223da6882ba23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0a0dcbcdbfb21fa1649e84f9b43fcd"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a9e0a0dcbcdbfb21fa1649e84f9b43fcd">piextMemGetNativeHandle</a> (<a class="el" href="struct__pi__mem.html">pi_mem</a> mem, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:a9e0a0dcbcdbfb21fa1649e84f9b43fcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of a PI mem object.  <a href="#a9e0a0dcbcdbfb21fa1649e84f9b43fcd">More...</a><br /></td></tr>
+<tr class="separator:a9e0a0dcbcdbfb21fa1649e84f9b43fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbea20ee4a5acc6c997463ae63b96442"><td class="memItemLeft" align="right" valign="top">pi_result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#adbea20ee4a5acc6c997463ae63b96442">piextProgramGetNativeHandle</a> (<a class="el" href="struct__pi__program.html">pi_program</a> program, pi_native_handle *nativeHandle)</td></tr>
+<tr class="memdesc:adbea20ee4a5acc6c997463ae63b96442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of a PI program object.  <a href="#adbea20ee4a5acc6c997463ae63b96442">More...</a><br /></td></tr>
+<tr class="separator:adbea20ee4a5acc6c997463ae63b96442"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f093d78fa08dd8804600d9b88537571"><td class="memItemLeft" align="right" valign="top"><a id="a6f093d78fa08dd8804600d9b88537571"></a>
 pi_result&#160;</td><td class="memItemRight" valign="bottom"><b>piPluginInit</b> (<a class="el" href="struct__pi__plugin.html">pi_plugin</a> *PluginInit)</td></tr>
 <tr class="separator:a6f093d78fa08dd8804600d9b88537571"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,14 +340,14 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="acf3c907e78eb4ab25393550b212781d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf3c907e78eb4ab25393550b212781d9">&#9670;&nbsp;</a></span>piextContextCreateWithNativeHandle()</h2>
+<a id="a2509eccbb811afd35a598a8caf6cecf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2509eccbb811afd35a598a8caf6cecf3">&#9670;&nbsp;</a></span>piextContextCreateWithNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextContextCreateWithNativeHandle </td>
+          <td class="memname">pi_result piextContextCreateWithNativeHandle </td>
           <td>(</td>
           <td class="paramtype">pi_native_handle&#160;</td>
           <td class="paramname"><em>nativeHandle</em>, </td>
@@ -363,18 +376,61 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00502">502</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00497">497</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a83ed6043502288acc3dd6d414d50cd05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83ed6043502288acc3dd6d414d50cd05">&#9670;&nbsp;</a></span>piextDeviceCreateWithNativeHandle()</h2>
+<a id="aa3fb8ea4d33b7f0656afa0fdfedee5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3fb8ea4d33b7f0656afa0fdfedee5d4">&#9670;&nbsp;</a></span>piextContextGetNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextDeviceCreateWithNativeHandle </td>
+          <td class="memname">pi_result piextContextGetNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_native_handle *&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of a PI context object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>is the PI context to get the native handle of. </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle of context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01057">1057</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01045">piextGetNativeHandle()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="context__impl_8cpp_source.html#l00153">cl::sycl::detail::context_impl::getNative()</a>.</p>
+
+</div>
+</div>
+<a id="a8d1fd451cd68d6b0566ee38dca794ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d1fd451cd68d6b0566ee38dca794ce7">&#9670;&nbsp;</a></span>piextDeviceCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result piextDeviceCreateWithNativeHandle </td>
           <td>(</td>
           <td class="paramtype">pi_native_handle&#160;</td>
           <td class="paramname"><em>nativeHandle</em>, </td>
@@ -403,20 +459,63 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00272">272</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00268">268</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00030">cl::sycl::detail::device_impl::device_impl()</a>.</p>
 
 </div>
 </div>
-<a id="ae9920e979a0544568ac8898df2c4ee16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9920e979a0544568ac8898df2c4ee16">&#9670;&nbsp;</a></span>piextEventCreateWithNativeHandle()</h2>
+<a id="a120d5faa8d24b9e34fe0d9f7a1a18e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120d5faa8d24b9e34fe0d9f7a1a18e92">&#9670;&nbsp;</a></span>piextDeviceGetNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextEventCreateWithNativeHandle </td>
+          <td class="memname">pi_result piextDeviceGetNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class__pi__device.html">pi_device</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_native_handle *&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of a PI device object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>is the PI device to get the native handle of. </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle of device. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01052">1052</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01045">piextGetNativeHandle()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00216">cl::sycl::detail::device_impl::getNative()</a>.</p>
+
+</div>
+</div>
+<a id="af3f06cd73fa47ae2991cf0f4b06cd3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3f06cd73fa47ae2991cf0f4b06cd3f3">&#9670;&nbsp;</a></span>piextEventCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result piextEventCreateWithNativeHandle </td>
           <td>(</td>
           <td class="paramtype">pi_native_handle&#160;</td>
           <td class="paramname"><em>nativeHandle</em>, </td>
@@ -445,18 +544,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00613">613</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00609">609</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="af3b380dac11217b8cb2575989eb3fd66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3b380dac11217b8cb2575989eb3fd66">&#9670;&nbsp;</a></span>piextGetDeviceFunctionPointer()</h2>
+<a id="a02edeed25c4a9c60960b21f0b0cb0902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02edeed25c4a9c60960b21f0b0cb0902">&#9670;&nbsp;</a></span>piextGetDeviceFunctionPointer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextGetDeviceFunctionPointer </td>
+          <td class="memname">pi_result piextGetDeviceFunctionPointer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class__pi__device.html">pi_device</a>&#160;</td>
           <td class="paramname"><em>device</em>, </td>
@@ -498,18 +597,21 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 <li><code>program</code>. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00449">449</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00445">445</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a2c08bd284aa66edba836fcca3a9d838c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c08bd284aa66edba836fcca3a9d838c">&#9670;&nbsp;</a></span>piextGetNativeHandle()</h2>
+<a id="af6a8058f33a11be0117391a671edba07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a8058f33a11be0117391a671edba07">&#9670;&nbsp;</a></span>piextGetNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextGetNativeHandle </td>
+          <td class="memname">static pi_result piextGetNativeHandle </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>piObj</em>, </td>
@@ -526,6 +628,11 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Common API for getting the native handle of a PI object. </p>
@@ -538,18 +645,20 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </dl>
 <p>PI_SUCCESS </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01055">1055</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01045">1045</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01057">piextContextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01052">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01067">piextMemGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01071">piextProgramGetNativeHandle()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01062">piextQueueGetNativeHandle()</a>.</p>
 
 </div>
 </div>
-<a id="a71e9b3dc8b95dc24b2e6eb6df1db8cdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71e9b3dc8b95dc24b2e6eb6df1db8cdd">&#9670;&nbsp;</a></span>piextKernelSetArgPointer()</h2>
+<a id="ae1ef844cab36a9fa7606161ef7e3d2a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1ef844cab36a9fa7606161ef7e3d2a3">&#9670;&nbsp;</a></span>piextKernelSetArgPointer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextKernelSetArgPointer </td>
+          <td class="memname">pi_result piextKernelSetArgPointer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__kernel.html">pi_kernel</a>&#160;</td>
           <td class="paramname"><em>kernel</em>, </td>
@@ -592,18 +701,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00761">761</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00757">757</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a159f2c7dc15000d010c09d8e14348a47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a159f2c7dc15000d010c09d8e14348a47">&#9670;&nbsp;</a></span>piextMemCreateWithNativeHandle()</h2>
+<a id="aacefad3c65f7c173f2233421c3a8a532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacefad3c65f7c173f2233421c3a8a532">&#9670;&nbsp;</a></span>piextMemCreateWithNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextMemCreateWithNativeHandle </td>
+          <td class="memname">pi_result piextMemCreateWithNativeHandle </td>
           <td>(</td>
           <td class="paramtype">pi_native_handle&#160;</td>
           <td class="paramname"><em>nativeHandle</em>, </td>
@@ -632,18 +741,59 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00545">545</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00540">540</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a948aedf63a16c5b78406daea9b555cd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a948aedf63a16c5b78406daea9b555cd1">&#9670;&nbsp;</a></span>piextProgramCreateWithNativeHandle()</h2>
+<a id="a9e0a0dcbcdbfb21fa1649e84f9b43fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0a0dcbcdbfb21fa1649e84f9b43fcd">&#9670;&nbsp;</a></span>piextMemGetNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextProgramCreateWithNativeHandle </td>
+          <td class="memname">pi_result piextMemGetNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__mem.html">pi_mem</a>&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_native_handle *&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of a PI mem object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mem</td><td>is the PI mem to get the native handle of. </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle of mem. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01067">1067</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01045">piextGetNativeHandle()</a>.</p>
+
+</div>
+</div>
+<a id="a53086e935c213d7a6a382a2fad32afb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53086e935c213d7a6a382a2fad32afb0">&#9670;&nbsp;</a></span>piextProgramCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result piextProgramCreateWithNativeHandle </td>
           <td>(</td>
           <td class="paramtype">pi_native_handle&#160;</td>
           <td class="paramname"><em>nativeHandle</em>, </td>
@@ -672,20 +822,116 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00404">404</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00400">400</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00099">cl::sycl::detail::program_impl::program_impl()</a>.</p>
 
 </div>
 </div>
-<a id="a5cc41267ab47d71b319e8addfee33b29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cc41267ab47d71b319e8addfee33b29">&#9670;&nbsp;</a></span>piextQueueCreateWithNativeHandle()</h2>
+<a id="adbea20ee4a5acc6c997463ae63b96442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbea20ee4a5acc6c997463ae63b96442">&#9670;&nbsp;</a></span>piextProgramGetNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextQueueCreateWithNativeHandle </td>
+          <td class="memname">pi_result piextProgramGetNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi_program</a>&#160;</td>
+          <td class="paramname"><em>program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_native_handle *&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of a PI program object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">program</td><td>is the PI program to get the native handle of. </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle of program. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01071">1071</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01045">piextGetNativeHandle()</a>.</p>
+
+</div>
+</div>
+<a id="a6536605da4d4b98245a07ab1edfc861e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6536605da4d4b98245a07ab1edfc861e">&#9670;&nbsp;</a></span>piextProgramSetSpecializationConstant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result piextProgramSetSpecializationConstant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi_program</a>&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_uint32&#160;</td>
+          <td class="paramname"><em>spec_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>spec_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>spec_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a specialization constant to a specific value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prog</td><td>the program object which will use the value </td></tr>
+    <tr><td class="paramname">spec_id</td><td>integer ID of the constant </td></tr>
+    <tr><td class="paramname">spec_size</td><td>size of the value </td></tr>
+    <tr><td class="paramname">spec_value</td><td>bytes of the value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01016">1016</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00478">cl::sycl::detail::program_impl::flush_spec_constants()</a>.</p>
+
+</div>
+</div>
+<a id="a7122b8ca388479547721665ba3c92ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7122b8ca388479547721665ba3c92ebe">&#9670;&nbsp;</a></span>piextQueueCreateWithNativeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result piextQueueCreateWithNativeHandle </td>
           <td>(</td>
           <td class="paramtype">pi_native_handle&#160;</td>
           <td class="paramname"><em>nativeHandle</em>, </td>
@@ -714,18 +960,61 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00319">319</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00315">315</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="afb277e62c303911ca7544b18ab6282b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb277e62c303911ca7544b18ab6282b6">&#9670;&nbsp;</a></span>piextUSMDeviceAlloc()</h2>
+<a id="a9cc0be50f59c0e010d223da6882ba23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cc0be50f59c0e010d223da6882ba23a">&#9670;&nbsp;</a></span>piextQueueGetNativeHandle()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMDeviceAlloc </td>
+          <td class="memname">pi_result piextQueueGetNativeHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__queue.html">pi_queue</a>&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pi_native_handle *&#160;</td>
+          <td class="paramname"><em>nativeHandle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of a PI queue object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>is the PI queue to get the native handle of. </td></tr>
+    <tr><td class="paramname">nativeHandle</td><td>is the native handle of queue. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01062">1062</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01045">piextGetNativeHandle()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00198">cl::sycl::detail::queue_impl::getNative()</a>.</p>
+
+</div>
+</div>
+<a id="ab24c050ded366ab5c2741bc907764600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24c050ded366ab5c2741bc907764600">&#9670;&nbsp;</a></span>piextUSMDeviceAlloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pi_result piextUSMDeviceAlloc </td>
           <td>(</td>
           <td class="paramtype">void **&#160;</td>
           <td class="paramname"><em>result_ptr</em>, </td>
@@ -781,18 +1070,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00678">678</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00674">674</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a45c476b6f3f04e669465cc5dc862a186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45c476b6f3f04e669465cc5dc862a186">&#9670;&nbsp;</a></span>piextUSMEnqueueMemAdvise()</h2>
+<a id="a20d8dc1e54bd70a1e6ed50ae9d15a226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20d8dc1e54bd70a1e6ed50ae9d15a226">&#9670;&nbsp;</a></span>piextUSMEnqueueMemAdvise()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMEnqueueMemAdvise </td>
+          <td class="memname">pi_result piextUSMEnqueueMemAdvise </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__queue.html">pi_queue</a>&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
@@ -841,20 +1130,20 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00927">927</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00919">919</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
 
 </div>
 </div>
-<a id="a8bbd367671f3aad6304b5febb211d9d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bbd367671f3aad6304b5febb211d9d5">&#9670;&nbsp;</a></span>piextUSMEnqueueMemcpy()</h2>
+<a id="add738984ede5e0f9b7587d9ef0abfbb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add738984ede5e0f9b7587d9ef0abfbb9">&#9670;&nbsp;</a></span>piextUSMEnqueueMemcpy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMEnqueueMemcpy </td>
+          <td class="memname">pi_result piextUSMEnqueueMemcpy </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__queue.html">pi_queue</a>&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
@@ -924,18 +1213,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00842">842</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00836">836</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ab17a1f185c70eee84cf47a997bcc1cb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab17a1f185c70eee84cf47a997bcc1cb4">&#9670;&nbsp;</a></span>piextUSMEnqueueMemset()</h2>
+<a id="a01c7cd6826000f011885275541a7d038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01c7cd6826000f011885275541a7d038">&#9670;&nbsp;</a></span>piextUSMEnqueueMemset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMEnqueueMemset </td>
+          <td class="memname">pi_result piextUSMEnqueueMemset </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__queue.html">pi_queue</a>&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
@@ -998,18 +1287,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00802">802</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00797">797</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ab7fdca507a18992a9ad713349addc8bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7fdca507a18992a9ad713349addc8bb">&#9670;&nbsp;</a></span>piextUSMEnqueuePrefetch()</h2>
+<a id="a3d9d01ffe364d9987bcf6cc3f552a82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9d01ffe364d9987bcf6cc3f552a82c">&#9670;&nbsp;</a></span>piextUSMEnqueuePrefetch()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMEnqueuePrefetch </td>
+          <td class="memname">pi_result piextUSMEnqueuePrefetch </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__queue.html">pi_queue</a>&#160;</td>
           <td class="paramname"><em>queue</em>, </td>
@@ -1072,18 +1361,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00882">882</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00875">875</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a6412f5d3d8b0e84b2898ead2268310e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6412f5d3d8b0e84b2898ead2268310e7">&#9670;&nbsp;</a></span>piextUSMFree()</h2>
+<a id="a1ba7089d4a0b1fbe530229485514beab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba7089d4a0b1fbe530229485514beab">&#9670;&nbsp;</a></span>piextUSMFree()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMFree </td>
+          <td class="memname">pi_result piextUSMFree </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a>&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -1111,18 +1400,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00740">740</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00736">736</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a4cde70d9188d6b5d220312b59e78db3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cde70d9188d6b5d220312b59e78db3c">&#9670;&nbsp;</a></span>piextUSMGetMemAllocInfo()</h2>
+<a id="afc3c5e8ff3e0643a80f89bc0a7c8c8cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3c5e8ff3e0643a80f89bc0a7c8c8cd">&#9670;&nbsp;</a></span>piextUSMGetMemAllocInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMGetMemAllocInfo </td>
+          <td class="memname">pi_result piextUSMGetMemAllocInfo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__context.html">pi_context</a>&#160;</td>
           <td class="paramname"><em>context</em>, </td>
@@ -1179,18 +1468,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00979">979</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00970">970</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a11c8edcf4baea529c0e9d59e570a0b70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11c8edcf4baea529c0e9d59e570a0b70">&#9670;&nbsp;</a></span>piextUSMHostAlloc()</h2>
+<a id="a4b55c40a7f28db7ca54c72755afe948d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b55c40a7f28db7ca54c72755afe948d">&#9670;&nbsp;</a></span>piextUSMHostAlloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMHostAlloc </td>
+          <td class="memname">pi_result piextUSMHostAlloc </td>
           <td>(</td>
           <td class="paramtype">void **&#160;</td>
           <td class="paramname"><em>result_ptr</em>, </td>
@@ -1239,18 +1528,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00647">647</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00643">643</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9d56fe503ff7812599b80212de21ab94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d56fe503ff7812599b80212de21ab94">&#9670;&nbsp;</a></span>piextUSMSharedAlloc()</h2>
+<a id="adc0024fcee3a57291e3f618ec67aa744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0024fcee3a57291e3f618ec67aa744">&#9670;&nbsp;</a></span>piextUSMSharedAlloc()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piextUSMSharedAlloc </td>
+          <td class="memname">pi_result piextUSMSharedAlloc </td>
           <td>(</td>
           <td class="paramtype">void **&#160;</td>
           <td class="paramname"><em>result_ptr</em>, </td>
@@ -1306,18 +1595,18 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00711">711</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00707">707</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a2230b3a14c9c34c639eba2ed6ec5d68c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2230b3a14c9c34c639eba2ed6ec5d68c">&#9670;&nbsp;</a></span>piKernelSetExecInfo()</h2>
+<a id="a8f67e1202a6fac787cc3dc5895f1ee08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f67e1202a6fac787cc3dc5895f1ee08">&#9670;&nbsp;</a></span>piKernelSetExecInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_result OCL() piKernelSetExecInfo </td>
+          <td class="memname">pi_result piKernelSetExecInfo </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct__pi__kernel.html">pi_kernel</a>&#160;</td>
           <td class="paramname"><em>kernel</em>, </td>
@@ -1360,7 +1649,9 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </dl>
 <p>If param_name is PI_USM_INDIRECT_ACCESS, the value will be a ptr to the pi_bool value PI_TRUE If param_name is PI_USM_PTRS, the value will be an array of ptrs </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01010">1010</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01000">1000</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00121">USMSetIndirectAccess()</a>.</p>
 
 </div>
 </div>
@@ -1398,6 +1689,8 @@ CONSTFIX char&#160;</td><td class="memItemRight" valign="bottom"><b>clGetMemAllo
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00121">121</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01000">piKernelSetExecInfo()</a>.</p>
 
 </div>
 </div>

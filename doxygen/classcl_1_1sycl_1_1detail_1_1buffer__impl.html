@@ -103,7 +103,8 @@ template&lt;typename T &gt; </td></tr>
 <tr class="separator:a1571785f16aacaa2a4a00d57e4f4134b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classcl_1_1sycl_1_1detail_1_1SYCLMemObjI"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classcl_1_1sycl_1_1detail_1_1SYCLMemObjI')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">cl::sycl::detail::SYCLMemObjI</a></td></tr>
 <tr class="memitem:ae9131bc320b7ac1c75a02bb32e9c1b8a inherit pub_types_classcl_1_1sycl_1_1detail_1_1SYCLMemObjI"><td class="memItemLeft" align="right" valign="top"><a id="ae9131bc320b7ac1c75a02bb32e9c1b8a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MemObjType</b> { <b>BUFFER</b>, 
-<b>IMAGE</b>
+<b>IMAGE</b>, 
+<b>UNDEFINED</b>
  }</td></tr>
 <tr class="separator:ae9131bc320b7ac1c75a02bb32e9c1b8a inherit pub_types_classcl_1_1sycl_1_1detail_1_1SYCLMemObjI"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -239,6 +240,12 @@ template&lt;class InputIterator &gt; </td></tr>
 <tr class="memitem:af8c10cbe68f5e376f95ec9df929c252c inherit pub_methods_classcl_1_1sycl_1_1detail_1_1SYCLMemObjT"><td class="memItemLeft" align="right" valign="top"><a id="af8c10cbe68f5e376f95ec9df929c252c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setAlign</b> (size_t RequiredAlign)</td></tr>
 <tr class="separator:af8c10cbe68f5e376f95ec9df929c252c inherit pub_methods_classcl_1_1sycl_1_1detail_1_1SYCLMemObjT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d077839536a0595465da2c636d4936 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1SYCLMemObjT"><td class="memItemLeft" align="right" valign="top"><a id="af8d077839536a0595465da2c636d4936"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateMem</b> (ContextImplPtr Context, bool InitFromUserData, void *HostPtr, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;InteropEvent) override</td></tr>
+<tr class="separator:af8d077839536a0595465da2c636d4936 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1SYCLMemObjT"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a828b92a13317a4274b2959033fa01149 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1SYCLMemObjT"><td class="memItemLeft" align="right" valign="top"><a id="a828b92a13317a4274b2959033fa01149"></a>
+MemObjType&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> () const override</td></tr>
+<tr class="separator:a828b92a13317a4274b2959033fa01149 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1SYCLMemObjT"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
