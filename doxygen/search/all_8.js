@@ -15,7 +15,6 @@ var searchData=
   ['hash_3c_20cl_3a_3asycl_3a_3aevent_20_3e',['hash&lt; cl::sycl::event &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1event_01_4.html',1,'std']]],
   ['hash_3c_20cl_3a_3asycl_3a_3aimage_3c_20dimensions_2c_20allocatort_20_3e_20_3e',['hash&lt; cl::sycl::image&lt; Dimensions, AllocatorT &gt; &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1image_3_01Dimensions_00_01AllocatorT_01_4_01_4.html',1,'std']]],
   ['hash_3c_20cl_3a_3asycl_3a_3akernel_20_3e',['hash&lt; cl::sycl::kernel &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html',1,'std']]],
-  ['hash_3c_20cl_3a_3asycl_3a_3aordered_5fqueue_20_3e',['hash&lt; cl::sycl::ordered_queue &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1ordered__queue_01_4.html',1,'std']]],
   ['hash_3c_20cl_3a_3asycl_3a_3aplatform_20_3e',['hash&lt; cl::sycl::platform &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1platform_01_4.html',1,'std']]],
   ['hash_3c_20cl_3a_3asycl_3a_3aprogram_20_3e',['hash&lt; cl::sycl::program &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1program_01_4.html',1,'std']]],
   ['hash_3c_20cl_3a_3asycl_3a_3aqueue_20_3e',['hash&lt; cl::sycl::queue &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4.html',1,'std']]],
