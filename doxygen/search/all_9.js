@@ -81,7 +81,7 @@ var searchData=
   ['is_5fvec',['is_vec',['../structcl_1_1sycl_1_1detail_1_1is__vec.html',1,'cl::sycl::detail']]],
   ['is_5fvec_3c_20cl_3a_3asycl_3a_3avec_3c_20t_2c_20n_20_3e_20_3e',['is_vec&lt; cl::sycl::vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1is__vec_3_01cl_1_1sycl_1_1vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]],
   ['is_5fvector_5farithmetic',['is_vector_arithmetic',['../structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html',1,'cl::sycl::detail']]],
-  ['iscreatedfromsource',['isCreatedFromSource',['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a290947b82eeaec98c0d61dca870fd466',1,'cl::sycl::detail::kernel_impl']]],
+  ['iscreatedfromsource',['isCreatedFromSource',['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aeec36084f07c3530421b0e80af9a03cb',1,'cl::sycl::detail::kernel_impl']]],
   ['isswizzleop',['IsSwizzleOp',['../structcl_1_1sycl_1_1detail_1_1IsSwizzleOp.html',1,'cl::sycl::detail']]],
   ['isswizzleop_3c_20cl_3a_3asycl_3a_3adetail_3a_3aswizzleop_3c_20vect_2c_20operationleftt_2c_20operationrightt_2c_20operationcurrentt_2c_20indexes_2e_2e_2e_20_3e_20_3e',['IsSwizzleOp&lt; cl::sycl::detail::SwizzleOp&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes... &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html',1,'cl::sycl::detail']]],
   ['isvalidatomicaddressspace',['IsValidAtomicAddressSpace',['../structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html',1,'cl::sycl::detail']]],

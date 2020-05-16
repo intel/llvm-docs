@@ -27,6 +27,7 @@ var searchData=
   ['piextusmgetmemallocinfo',['piextUSMGetMemAllocInfo',['../pi__opencl_8cpp.html#afc3c5e8ff3e0643a80f89bc0a7c8c8cd',1,'pi_opencl.cpp']]],
   ['piextusmhostalloc',['piextUSMHostAlloc',['../pi__opencl_8cpp.html#a4b55c40a7f28db7ca54c72755afe948d',1,'pi_opencl.cpp']]],
   ['piextusmsharedalloc',['piextUSMSharedAlloc',['../pi__opencl_8cpp.html#adc0024fcee3a57291e3f618ec67aa744',1,'pi_opencl.cpp']]],
+  ['pikernelgetsubgroupinfo',['piKernelGetSubGroupInfo',['../pi__opencl_8cpp.html#a642e2fb675fe6b610aa806ff5c318b19',1,'pi_opencl.cpp']]],
   ['pikernelsetexecinfo',['piKernelSetExecInfo',['../pi__opencl_8cpp.html#a8f67e1202a6fac787cc3dc5895f1ee08',1,'pi_opencl.cpp']]],
   ['platform',['platform',['../classcl_1_1sycl_1_1platform.html#ac766c25f9104682dd44f2bfce9ee1e1b',1,'cl::sycl::platform::platform()'],['../classcl_1_1sycl_1_1platform.html#a9e69444af928ab3208a95c03d2a9f528',1,'cl::sycl::platform::platform(cl_platform_id PlatformId)'],['../classcl_1_1sycl_1_1platform.html#a114123976c1fa05de7c64969d164cc52',1,'cl::sycl::platform::platform(const device_selector &amp;DeviceSelector)']]],
   ['platform_5fimpl',['platform_impl',['../classcl_1_1sycl_1_1detail_1_1platform__impl.html#ad78f9542cc0792800e33ce0923d149ea',1,'cl::sycl::detail::platform_impl::platform_impl()'],['../classcl_1_1sycl_1_1detail_1_1platform__impl.html#af1df0cee0165d7f2657e0b11c6481fac',1,'cl::sycl::detail::platform_impl::platform_impl(RT::PiPlatform APlatform, const plugin &amp;APlugin)']]],
