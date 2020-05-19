@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt; Class Template Reference</title>
+<title>SYCL Runtime: cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,11 +66,10 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt; Class Template Reference</div>  </div>
+<div class="title">cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -79,111 +78,132 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="reduction_8hpp_source.html">CL/sycl/intel/reduction.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Collaboration diagram for cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;:</div>
+Collaboration diagram for cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl__coll__graph.png" border="0" usemap="#cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01AccMode_00_01IsPlaceholder_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01AccMode_00_01IsPlaceholder_01_4_coll__map" id="cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01AccMode_00_01IsPlaceholder_01_4_coll__map">
-<area shape="rect" id="node2" href="classcl_1_1sycl_1_1accessor.html" title="cl::sycl::accessor\l\&lt; T, Dims, AccMode,\l access::target::global\l_buffer, IsPlaceholder \&gt;" alt="" coords="709,105,871,175"/>
-<area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html" title="cl::sycl::detail::Accessor\lBaseHost" alt="" coords="373,119,539,161"/>
-<area shape="rect" id="node5" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html" title="cl::sycl::detail::accessor\l_common\&lt; T, Dimensions,\l AccessMode, AccessTarget,\l IsPlaceholder \&gt;" alt="" coords="359,25,553,95"/>
+<div class="center"><img src="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl__coll__graph.png" border="0" usemap="#cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01IsUSM_00_01AccMode_00_01IsPlaceholder_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01IsUSM_00_01AccMode_00_01IsPlaceholder_01_4_coll__map" id="cl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01IsUSM_00_01AccMode_00_01IsPlaceholder_01_4_coll__map">
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3104d61df6472decbfab4213f002f85b"><td class="memItemLeft" align="right" valign="top"><a id="a3104d61df6472decbfab4213f002f85b"></a>
+<tr class="memitem:a9a5dd37a42572ac993c01a896dd2456f"><td class="memItemLeft" align="right" valign="top"><a id="a9a5dd37a42572ac993c01a896dd2456f"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>reducer_type</b> = <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html">reducer</a>&lt; T, BinaryOperation &gt;</td></tr>
-<tr class="separator:a3104d61df6472decbfab4213f002f85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9308587198d5e23aa45a8b6093eb2c1e"><td class="memItemLeft" align="right" valign="top"><a id="a9308587198d5e23aa45a8b6093eb2c1e"></a>
+<tr class="separator:a9a5dd37a42572ac993c01a896dd2456f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764c6aa3e6d7e432fbbeb76b794abad6"><td class="memItemLeft" align="right" valign="top"><a id="a764c6aa3e6d7e432fbbeb76b794abad6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>result_type</b> = T</td></tr>
-<tr class="separator:a9308587198d5e23aa45a8b6093eb2c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224b1284f397330d9944d520328a3e45"><td class="memItemLeft" align="right" valign="top"><a id="a224b1284f397330d9944d520328a3e45"></a>
+<tr class="separator:a764c6aa3e6d7e432fbbeb76b794abad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41ffae97e79eb3c6fd12c83e5efcc101"><td class="memItemLeft" align="right" valign="top"><a id="a41ffae97e79eb3c6fd12c83e5efcc101"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>binary_operation</b> = BinaryOperation</td></tr>
-<tr class="separator:a224b1284f397330d9944d520328a3e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5a77041db00bb01cc06a37b64b15c95"><td class="memItemLeft" align="right" valign="top"><a id="ab5a77041db00bb01cc06a37b64b15c95"></a>
+<tr class="separator:a41ffae97e79eb3c6fd12c83e5efcc101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fad265b82b42d5c6204cb377b3d49e9"><td class="memItemLeft" align="right" valign="top"><a id="a2fad265b82b42d5c6204cb377b3d49e9"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>accessor_type</b> = <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, AccMode, access::target::global_buffer, IsPlaceholder &gt;</td></tr>
-<tr class="separator:ab5a77041db00bb01cc06a37b64b15c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a27a9a17e97fe42dafa86ef9b7ebf8"><td class="memItemLeft" align="right" valign="top"><a id="a64a27a9a17e97fe42dafa86ef9b7ebf8"></a>
+<tr class="separator:a2fad265b82b42d5c6204cb377b3d49e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ee6d8070e6edd18b1cd357b6f45e25"><td class="memItemLeft" align="right" valign="top"><a id="a09ee6d8070e6edd18b1cd357b6f45e25"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>rw_accessor_type</b> = <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, access::mode::read_write, access::target::global_buffer, IsPlaceholder &gt;</td></tr>
-<tr class="separator:a64a27a9a17e97fe42dafa86ef9b7ebf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a09ee6d8070e6edd18b1cd357b6f45e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2e031f1121d937eb39fe4c00efbe225"><td class="memTemplParams" colspan="2"><a id="ad2e031f1121d937eb39fe4c00efbe225"></a>
+<tr class="memitem:adb89d4dae2dcae576ac69485012f730b"><td class="memTemplParams" colspan="2"><a id="adb89d4dae2dcae576ac69485012f730b"></a>
 template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </td></tr>
-<tr class="memitem:ad2e031f1121d937eb39fe4c00efbe225"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value, _T &gt; constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#ad2e031f1121d937eb39fe4c00efbe225">getIdentity</a> ()</td></tr>
-<tr class="memdesc:ad2e031f1121d937eb39fe4c00efbe225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the statically known identity value. <br /></td></tr>
-<tr class="separator:ad2e031f1121d937eb39fe4c00efbe225"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad35baf19e8c95b018658024c857aa5d"><td class="memTemplParams" colspan="2"><a id="aad35baf19e8c95b018658024c857aa5d"></a>
+<tr class="memitem:adb89d4dae2dcae576ac69485012f730b"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value, _T &gt; constexpr&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#adb89d4dae2dcae576ac69485012f730b">getIdentity</a> ()</td></tr>
+<tr class="memdesc:adb89d4dae2dcae576ac69485012f730b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the statically known identity value. <br /></td></tr>
+<tr class="separator:adb89d4dae2dcae576ac69485012f730b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb03ba6d929854ad47270fd0022fe09d"><td class="memTemplParams" colspan="2"><a id="aeb03ba6d929854ad47270fd0022fe09d"></a>
 template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </td></tr>
-<tr class="memitem:aad35baf19e8c95b018658024c857aa5d"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value, _T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#aad35baf19e8c95b018658024c857aa5d">getIdentity</a> ()</td></tr>
-<tr class="memdesc:aad35baf19e8c95b018658024c857aa5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity value given by user. <br /></td></tr>
-<tr class="separator:aad35baf19e8c95b018658024c857aa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a199bf5c9e687be9d52a32f60259d0444"><td class="memTemplParams" colspan="2"><a id="a199bf5c9e687be9d52a32f60259d0444"></a>
+<tr class="memitem:aeb03ba6d929854ad47270fd0022fe09d"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value, _T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#aeb03ba6d929854ad47270fd0022fe09d">getIdentity</a> ()</td></tr>
+<tr class="memdesc:aeb03ba6d929854ad47270fd0022fe09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the identity value given by user. <br /></td></tr>
+<tr class="separator:aeb03ba6d929854ad47270fd0022fe09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afebeb517f8b6a833110ab64953e892ea"><td class="memTemplParams" colspan="2"><a id="afebeb517f8b6a833110ab64953e892ea"></a>
 template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a199bf5c9e687be9d52a32f60259d0444"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a199bf5c9e687be9d52a32f60259d0444">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc)</td></tr>
-<tr class="memdesc:a199bf5c9e687be9d52a32f60259d0444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known. <br /></td></tr>
-<tr class="separator:a199bf5c9e687be9d52a32f60259d0444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a66aebd466a79d878198bfb55a10bd7"><td class="memTemplParams" colspan="2">template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a5a66aebd466a79d878198bfb55a10bd7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a5a66aebd466a79d878198bfb55a10bd7">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc, const T &amp;Identity)</td></tr>
-<tr class="memdesc:a5a66aebd466a79d878198bfb55a10bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value.  <a href="#a5a66aebd466a79d878198bfb55a10bd7">More...</a><br /></td></tr>
-<tr class="separator:a5a66aebd466a79d878198bfb55a10bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a66aebd466a79d878198bfb55a10bd7"><td class="memTemplParams" colspan="2"><a id="a5a66aebd466a79d878198bfb55a10bd7"></a>
+<tr class="memitem:afebeb517f8b6a833110ab64953e892ea"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#afebeb517f8b6a833110ab64953e892ea">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc)</td></tr>
+<tr class="memdesc:afebeb517f8b6a833110ab64953e892ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known. <br /></td></tr>
+<tr class="separator:afebeb517f8b6a833110ab64953e892ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacb0d6760691e1fe288a734f88da546"><td class="memTemplParams" colspan="2">template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:afacb0d6760691e1fe288a734f88da546"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#afacb0d6760691e1fe288a734f88da546">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc, const T &amp;Identity)</td></tr>
+<tr class="memdesc:afacb0d6760691e1fe288a734f88da546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value.  <a href="#afacb0d6760691e1fe288a734f88da546">More...</a><br /></td></tr>
+<tr class="separator:afacb0d6760691e1fe288a734f88da546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacb0d6760691e1fe288a734f88da546"><td class="memTemplParams" colspan="2"><a id="afacb0d6760691e1fe288a734f88da546"></a>
 template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt;!IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
-<tr class="memitem:a5a66aebd466a79d878198bfb55a10bd7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a5a66aebd466a79d878198bfb55a10bd7">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc, const T &amp;Identity)</td></tr>
-<tr class="memdesc:a5a66aebd466a79d878198bfb55a10bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown. <br /></td></tr>
-<tr class="separator:a5a66aebd466a79d878198bfb55a10bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addbe0429715f7160192eea1aafcc3d61"><td class="memItemLeft" align="right" valign="top"><a id="addbe0429715f7160192eea1aafcc3d61"></a>
+<tr class="memitem:afacb0d6760691e1fe288a734f88da546"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#afacb0d6760691e1fe288a734f88da546">reduction_impl</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;Acc, const T &amp;Identity)</td></tr>
+<tr class="memdesc:afacb0d6760691e1fe288a734f88da546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown. <br /></td></tr>
+<tr class="separator:afacb0d6760691e1fe288a734f88da546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96200dc3b2f7e74d5b656d94670a918"><td class="memTemplParams" colspan="2">template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:af96200dc3b2f7e74d5b656d94670a918"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#af96200dc3b2f7e74d5b656d94670a918">reduction_impl</a> (T *VarPtr)</td></tr>
+<tr class="memdesc:af96200dc3b2f7e74d5b656d94670a918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known.  <a href="#af96200dc3b2f7e74d5b656d94670a918">More...</a><br /></td></tr>
+<tr class="separator:af96200dc3b2f7e74d5b656d94670a918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="memTemplParams" colspan="2">template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#ae2866c8c6e342b52122abfbdaeee0bf6">reduction_impl</a> (T *VarPtr, const T &amp;Identity)</td></tr>
+<tr class="memdesc:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value.  <a href="#ae2866c8c6e342b52122abfbdaeee0bf6">More...</a><br /></td></tr>
+<tr class="separator:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="memTemplParams" colspan="2">template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt;!IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#ae2866c8c6e342b52122abfbdaeee0bf6">reduction_impl</a> (T *VarPtr, const T &amp;Identity)</td></tr>
+<tr class="memdesc:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown.  <a href="#ae2866c8c6e342b52122abfbdaeee0bf6">More...</a><br /></td></tr>
+<tr class="separator:ae2866c8c6e342b52122abfbdaeee0bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee32a491754891b9359b4cf54acd08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#adee32a491754891b9359b4cf54acd08a">associateWithHandler</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
+<tr class="memdesc:adee32a491754891b9359b4cf54acd08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associates reduction accessor with the given handler and saves reduction buffer so that it is alive until the command group finishes the work.  <a href="#adee32a491754891b9359b4cf54acd08a">More...</a><br /></td></tr>
+<tr class="separator:adee32a491754891b9359b4cf54acd08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b12bd10b8d0704d20ed31fcbf78b9b"><td class="memItemLeft" align="right" valign="top"><a id="a06b12bd10b8d0704d20ed31fcbf78b9b"></a>
 <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, buffer_dim, access::mode::discard_read_write, access::target::local &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReadWriteLocalAcc</b> (size_t Size, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
-<tr class="separator:addbe0429715f7160192eea1aafcc3d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74f59078cee709483236ebb49c5b10f3"><td class="memItemLeft" align="right" valign="top"><a id="a74f59078cee709483236ebb49c5b10f3"></a>
+<tr class="separator:a06b12bd10b8d0704d20ed31fcbf78b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3b810588e1f6ca96f688b123de5501"><td class="memItemLeft" align="right" valign="top"><a id="a3c3b810588e1f6ca96f688b123de5501"></a>
 <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, buffer_dim, access::mode::read &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReadAccToPreviousPartialReds</b> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH) const</td></tr>
-<tr class="separator:a74f59078cee709483236ebb49c5b10f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af140b30364f8543c65587857f8cd9c73"><td class="memItemLeft" align="right" valign="top"><a id="af140b30364f8543c65587857f8cd9c73"></a>
-<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getWriteAccForPartialReds</b> (size_t Size, size_t RunNumber, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
-<tr class="separator:af140b30364f8543c65587857f8cd9c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76b83c2b94772f908924d4f13cbd7ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, access::mode::read_write, access::target::global_buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a76b83c2b94772f908924d4f13cbd7ea7">getReadWriteScalarAcc</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH) const</td></tr>
-<tr class="memdesc:a76b83c2b94772f908924d4f13cbd7ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 1-element global buffer initialized with identity value and returns an accessor to that buffer.  <a href="#a76b83c2b94772f908924d4f13cbd7ea7">More...</a><br /></td></tr>
-<tr class="separator:a76b83c2b94772f908924d4f13cbd7ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a66f541b54cffdedec245cdb44928dfd1"><td class="memItemLeft" align="right" valign="top"><a id="a66f541b54cffdedec245cdb44928dfd1"></a>
-<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a66f541b54cffdedec245cdb44928dfd1">MAcc</a></td></tr>
-<tr class="memdesc:a66f541b54cffdedec245cdb44928dfd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">User's accessor to where the reduction must be written. <br /></td></tr>
-<tr class="separator:a66f541b54cffdedec245cdb44928dfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a3c3b810588e1f6ca96f688b123de5501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bddbd3525b579be4516ea4a45325f22"><td class="memTemplParams" colspan="2"><a id="a4bddbd3525b579be4516ea4a45325f22"></a>
+template&lt;access::placeholder _IsPlaceholder = IsPlaceholder&gt; </td></tr>
+<tr class="memitem:a4bddbd3525b579be4516ea4a45325f22"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; _IsPlaceholder==access::placeholder::false_t, <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getWriteAccForPartialReds</b> (size_t Size, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
+<tr class="separator:a4bddbd3525b579be4516ea4a45325f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab09a414e1ada1383bc63ba5e7253a0"><td class="memTemplParams" colspan="2"><a id="afab09a414e1ada1383bc63ba5e7253a0"></a>
+template&lt;access::placeholder _IsPlaceholder = IsPlaceholder&gt; </td></tr>
+<tr class="memitem:afab09a414e1ada1383bc63ba5e7253a0"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; _IsPlaceholder==access::placeholder::true_t, <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getWriteAccForPartialReds</b> (size_t Size, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
+<tr class="separator:afab09a414e1ada1383bc63ba5e7253a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1921fb18f84804497efbce5558682ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; T, Dims, access::mode::read_write, access::target::global_buffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a1921fb18f84804497efbce5558682ceb">getReadWriteScalarAcc</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH) const</td></tr>
+<tr class="memdesc:a1921fb18f84804497efbce5558682ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates 1-element global buffer initialized with identity value and returns an accessor to that buffer.  <a href="#a1921fb18f84804497efbce5558682ceb">More...</a><br /></td></tr>
+<tr class="separator:a1921fb18f84804497efbce5558682ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b12b683152dae752420598bfa173a6"><td class="memItemLeft" align="right" valign="top"><a id="a80b12b683152dae752420598bfa173a6"></a>
+<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getUserAccessor</b> ()</td></tr>
+<tr class="separator:a80b12b683152dae752420598bfa173a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2545d5c609f1328cb1af9817c965077b"><td class="memItemLeft" align="right" valign="top"><a id="a2545d5c609f1328cb1af9817c965077b"></a>
+T *&#160;</td><td class="memItemRight" valign="bottom"><b>getUSMPointer</b> ()</td></tr>
+<tr class="separator:a2545d5c609f1328cb1af9817c965077b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae85270fe3fd9dc9da3a4cee4be910aff"><td class="memItemLeft" align="right" valign="top"><a id="ae85270fe3fd9dc9da3a4cee4be910aff"></a>
+<tr class="memitem:aeeb9ac1582af93c0338d87eb78431e3b"><td class="memItemLeft" align="right" valign="top"><a id="aeeb9ac1582af93c0338d87eb78431e3b"></a>
 static constexpr access::mode&#160;</td><td class="memItemRight" valign="bottom"><b>accessor_mode</b> = AccMode</td></tr>
-<tr class="separator:ae85270fe3fd9dc9da3a4cee4be910aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afba6171c81fc89ab85f388038755f051"><td class="memItemLeft" align="right" valign="top"><a id="afba6171c81fc89ab85f388038755f051"></a>
+<tr class="separator:aeeb9ac1582af93c0338d87eb78431e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7130356e58ec445b9c975fe43dc13aec"><td class="memItemLeft" align="right" valign="top"><a id="a7130356e58ec445b9c975fe43dc13aec"></a>
 static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>accessor_dim</b> = Dims</td></tr>
-<tr class="separator:afba6171c81fc89ab85f388038755f051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af11382add2c55dbb757d97c578157508"><td class="memItemLeft" align="right" valign="top"><a id="af11382add2c55dbb757d97c578157508"></a>
+<tr class="separator:a7130356e58ec445b9c975fe43dc13aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab182d5517d9354fa2e3c8ead7defbe2b"><td class="memItemLeft" align="right" valign="top"><a id="ab182d5517d9354fa2e3c8ead7defbe2b"></a>
 static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_dim</b> = (Dims == 0) ? 1 : Dims</td></tr>
-<tr class="separator:af11382add2c55dbb757d97c578157508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a858b4cebbfa5f8d2ceba6ecd14766916"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fast_atomics</b></td></tr>
-<tr class="separator:a858b4cebbfa5f8d2ceba6ecd14766916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8350677b5a6d903d84fb8ef47a10a4fc"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fast_reduce</b></td></tr>
-<tr class="separator:a8350677b5a6d903d84fb8ef47a10a4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ab182d5517d9354fa2e3c8ead7defbe2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb0813e01b87eb39cd338afe97d4ff6"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fast_atomics</b></td></tr>
+<tr class="separator:affb0813e01b87eb39cd338afe97d4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bbc4187edcbaa48933c07b42aa7eabe"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_fast_reduce</b></td></tr>
+<tr class="separator:a5bbc4187edcbaa48933c07b42aa7eabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a583a2855369a9bbd951da8951539ee18"><td class="memItemLeft" align="right" valign="top"><a id="a583a2855369a9bbd951da8951539ee18"></a>
+static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_usm</b> = IsUSM</td></tr>
+<tr class="separator:a583a2855369a9bbd951da8951539ee18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1c2610c2c2f86ac2b167168553404e"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_placeholder</b></td></tr>
+<tr class="separator:a7f1c2610c2c2f86ac2b167168553404e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt;<br />
-class cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;</h3>
+<div class="textblock"><h3>template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt;<br />
+class cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;</h3>
 
 <p>This class encapsulates the reduction variable/accessor, the reduction operator and an optional operator identity. </p>
 
 <p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00116">116</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5a66aebd466a79d878198bfb55a10bd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a66aebd466a79d878198bfb55a10bd7">&#9670;&nbsp;</a></span>reduction_impl()</h2>
+<a id="afacb0d6760691e1fe288a734f88da546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afacb0d6760691e1fe288a734f88da546">&#9670;&nbsp;</a></span>reduction_impl() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
 <div class="memtemplate">
 template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </div>
 <table class="mlabels">
@@ -191,7 +211,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::<a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">reduction_impl</a> </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::<a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">reduction_impl</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor_type</a> &amp;&#160;</td>
           <td class="paramname"><em>Acc</em>, </td>
@@ -217,24 +237,198 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00348">348</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00351">351</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a76b83c2b94772f908924d4f13cbd7ea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76b83c2b94772f908924d4f13cbd7ea7">&#9670;&nbsp;</a></span>getReadWriteScalarAcc()</h2>
+<a id="af96200dc3b2f7e74d5b656d94670a918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96200dc3b2f7e74d5b656d94670a918">&#9670;&nbsp;</a></span>reduction_impl() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt;T, Dims, access::mode::read_write, access::target::global_buffer&gt; <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::getReadWriteScalarAcc </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::<a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">reduction_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>VarPtr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known. </p>
+<p>The </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">VarPtr</td><td>is a USM pointer to memory, to where the computed reduction value is added using BinaryOperation, i.e. it is expected that the memory is pre-initialized with some meaningful value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00382">382</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2866c8c6e342b52122abfbdaeee0bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2866c8c6e342b52122abfbdaeee0bf6">&#9670;&nbsp;</a></span>reduction_impl() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::<a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">reduction_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>VarPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Identity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value. </p>
+<p>The </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">VarPtr</td><td>is a USM pointer to memory, to where the computed reduction value is added using BinaryOperation, i.e. it is expected that the memory is pre-initialized with some meaningful value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00397">397</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae2866c8c6e342b52122abfbdaeee0bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2866c8c6e342b52122abfbdaeee0bf6">&#9670;&nbsp;</a></span>reduction_impl() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<div class="memtemplate">
+template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation, enable_if_t&lt;!IsKnownIdentityOp&lt; _T, _BinaryOperation &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::<a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">reduction_impl</a> </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>VarPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Identity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown. </p>
+<p>The </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">VarPtr</td><td>is a USM pointer to memory, to where the computed reduction value is added using BinaryOperation, i.e. it is expected that the memory is pre-initialized with some meaningful value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00420">420</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="adee32a491754891b9359b4cf54acd08a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee32a491754891b9359b4cf54acd08a">&#9670;&nbsp;</a></span>associateWithHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::associateWithHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
+          <td class="paramname"><em>CGH</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Associates reduction accessor with the given handler and saves reduction buffer so that it is alive until the command group finishes the work. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00429">429</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00691">cl::sycl::handler::require()</a>.</p>
+
+</div>
+</div>
+<a id="a1921fb18f84804497efbce5558682ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1921fb18f84804497efbce5558682ceb">&#9670;&nbsp;</a></span>getReadWriteScalarAcc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt;T, Dims, access::mode::read_write, access::target::global_buffer&gt; <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::getReadWriteScalarAcc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
           <td class="paramname"><em>CGH</em></td><td>)</td>
@@ -250,24 +444,24 @@ template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, a
 
 <p>Creates 1-element global buffer initialized with identity value and returns an accessor to that buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00401">401</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00477">477</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a858b4cebbfa5f8d2ceba6ecd14766916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a858b4cebbfa5f8d2ceba6ecd14766916">&#9670;&nbsp;</a></span>has_fast_atomics</h2>
+<a id="affb0813e01b87eb39cd338afe97d4ff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb0813e01b87eb39cd338afe97d4ff6">&#9670;&nbsp;</a></span>has_fast_atomics</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::has_fast_atomics</td>
+          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::has_fast_atomics</td>
         </tr>
       </table>
   </td>
@@ -277,23 +471,23 @@ template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, a
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      IsReduOptForFastAtomicFetch&lt;T, BinaryOperation&gt;::value</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00307">307</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00308">308</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a8350677b5a6d903d84fb8ef47a10a4fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8350677b5a6d903d84fb8ef47a10a4fc">&#9670;&nbsp;</a></span>has_fast_reduce</h2>
+<a id="a5bbc4187edcbaa48933c07b42aa7eabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bbc4187edcbaa48933c07b42aa7eabe">&#9670;&nbsp;</a></span>has_fast_reduce</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, access::placeholder IsPlaceholder&gt; </div>
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, AccMode, IsPlaceholder &gt;::has_fast_reduce</td>
+          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::has_fast_reduce</td>
         </tr>
       </table>
   </td>
@@ -303,7 +497,33 @@ template&lt;typename T, class BinaryOperation, int Dims, access::mode AccMode, a
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      IsReduOptForFastReduce&lt;T, BinaryOperation&gt;::value</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00309">309</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00310">310</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f1c2610c2c2f86ac2b167168553404e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1c2610c2c2f86ac2b167168553404e">&#9670;&nbsp;</a></span>is_placeholder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, class BinaryOperation, int Dims, bool IsUSM, access::mode AccMode = access::mode::read_write, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">cl::sycl::intel::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::is_placeholder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">      (IsPlaceholder == access::placeholder::true_t)</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00313">313</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['macc',['MAcc',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a66f541b54cffdedec245cdb44928dfd1',1,'cl::sycl::intel::detail::reduction_impl']]],
   ['maddress',['MAddress',['../classcl_1_1sycl_1_1detail_1_1Command.html#a0030e3ea7e156c3f77b77df28e9b1fd6',1,'cl::sycl::detail::Command']]],
   ['maddressstring',['MAddressString',['../classcl_1_1sycl_1_1detail_1_1Command.html#a11d716bf5ff83bb142b0f5fd81424247',1,'cl::sycl::detail::Command']]],
   ['make_5flarger',['make_larger',['../structcl_1_1sycl_1_1detail_1_1make__larger.html',1,'cl::sycl::detail']]],
