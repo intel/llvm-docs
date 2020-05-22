@@ -11,5 +11,6 @@ var searchData=
   ['device_5fselector',['device_selector',['../classcl_1_1sycl_1_1device__selector.html',1,'cl::sycl']]],
   ['devicebinaryimage',['DeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html',1,'cl::sycl::detail::pi']]],
   ['devicebinaryproperty',['DeviceBinaryProperty',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html',1,'cl::sycl::detail::pi']]],
+  ['dispatchhosttask',['DispatchHostTask',['../classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html',1,'cl::sycl::detail']]],
   ['dynrtdevicebinaryimage',['DynRTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html',1,'cl::sycl::detail']]]
 ];

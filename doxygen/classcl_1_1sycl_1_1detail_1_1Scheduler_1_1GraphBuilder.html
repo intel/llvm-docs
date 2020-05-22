@@ -66,6 +66,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cl::sycl::detail::Scheduler::GraphBuilder Class Reference<div class="ingroups"><a class="el" href="group__sycl__graph.html">DPC++ Execution Graph</a></div></div>  </div>
@@ -113,8 +115,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:aed85e3c5fdf6b6547b563ec2e8007dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06383af395fab1747534959c3727c2a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a06383af395fab1747534959c3727c2a4">getMemObjRecord</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObject)</td></tr>
 <tr class="separator:a06383af395fab1747534959c3727c2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73d2d2ca2d7a618feb08fdc5de835bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a73d2d2ca2d7a618feb08fdc5de835bdc">getOrInsertMemObjRecord</a> (const QueueImplPtr &amp;Queue, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *Req)</td></tr>
-<tr class="separator:a73d2d2ca2d7a618feb08fdc5de835bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71b5ab3219d8cbf4beda76786ba3a0c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a71b5ab3219d8cbf4beda76786ba3a0c2">getOrInsertMemObjRecord</a> (const QueueImplPtr &amp;Queue, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *Req)</td></tr>
+<tr class="separator:a71b5ab3219d8cbf4beda76786ba3a0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcc5af244cd15911f043246fbb37230a"><td class="memItemLeft" align="right" valign="top"><a id="afcc5af244cd15911f043246fbb37230a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a">decrementLeafCountersForRecord</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record)</td></tr>
 <tr class="memdesc:afcc5af244cd15911f043246fbb37230a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrements leaf counters for all leaves of the record. <br /></td></tr>
@@ -135,18 +137,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a59d7b3e117a153b13ad300e0224ecf90">updateLeaves</a> (const std::set&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&gt; &amp;Cmds, <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record, access::mode AccessMode)</td></tr>
 <tr class="memdesc:a59d7b3e117a153b13ad300e0224ecf90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes commands from leaves. <br /></td></tr>
 <tr class="separator:a59d7b3e117a153b13ad300e0224ecf90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af26d002e0051ce81139b619ff47f996e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#af26d002e0051ce81139b619ff47f996e">connectDepEvent</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *const Cmd, EventImplPtr DepEvent, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> &amp;Dep)</td></tr>
+<tr class="memdesc:af26d002e0051ce81139b619ff47f996e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform connection of events in multiple contexts.  <a href="#af26d002e0051ce81139b619ff47f996e">More...</a><br /></td></tr>
+<tr class="separator:af26d002e0051ce81139b619ff47f996e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a6d42750e40104858732eb41d29723c2b"><td class="memItemLeft" align="right" valign="top"><a id="a6d42750e40104858732eb41d29723c2b"></a>
 std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MMemObjs</b></td></tr>
 <tr class="separator:a6d42750e40104858732eb41d29723c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:afe96f230f3acb23a552c51869726851a"><td class="memItemLeft" align="right" valign="top"><a id="afe96f230f3acb23a552c51869726851a"></a>
+<a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afe96f230f3acb23a552c51869726851a">findDepForRecord</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record)</td></tr>
+<tr class="memdesc:afe96f230f3acb23a552c51869726851a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a command dependency corresponding to the record. <br /></td></tr>
+<tr class="separator:afe96f230f3acb23a552c51869726851a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada54af5552da8a541eef3a9cad5cb21c"><td class="memItemLeft" align="right" valign="top"><a id="ada54af5552da8a541eef3a9cad5cb21c"></a>
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html">AllocaCommandBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#ada54af5552da8a541eef3a9cad5cb21c">findAllocaForReq</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *Req, const ContextImplPtr &amp;Context)</td></tr>
+<tr class="memdesc:ada54af5552da8a541eef3a9cad5cb21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searches for suitable alloca in memory record. <br /></td></tr>
+<tr class="separator:ada54af5552da8a541eef3a9cad5cb21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a62a7fc89f0ee4604e3ccab9b6b6a343f"><td class="memItemLeft" align="right" valign="top"><a id="a62a7fc89f0ee4604e3ccab9b6b6a343f"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Command</b></td></tr>
+<tr class="separator:a62a7fc89f0ee4604e3ccab9b6b6a343f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Graph builder class. </p>
 <p>The graph builder provides means to change an existing graph (e.g. add or remove edges/nodes). </p>
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00437">437</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00448">448</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a08ea0a1e9d405522bcc638e597c794c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08ea0a1e9d405522bcc638e597c794c7">&#9670;&nbsp;</a></span>addCG()</h2>
@@ -178,7 +200,9 @@ std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.htm
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f" title="Submits a command group function object to the queue, in order to be scheduled for execution on the d...">queue::submit</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac0e8ff38f6f6274626f65b2b52227f47" title="Registers a command group, and adds it to the dependency graph. ">Scheduler::addCG</a></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>a command that represents command group execution. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00644">644</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00684">684</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00115">cl::sycl::detail::Command::getType()</a>.</p>
 
 </div>
 </div>
@@ -211,9 +235,9 @@ std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.htm
 <p>Registers a <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">command group</a> that updates host memory to the latest state. </p>
 <dl class="section return"><dt>Returns</dt><dd>a command that represents command group execution. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00439">439</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00430">430</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00072">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00074">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00188">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00287">cl::sycl::detail::AllocaCommandBase::MIsActive</a>, <a class="el" href="commands_8hpp_source.html#l00194">cl::sycl::detail::Command::MLeafCounter</a>, and <a class="el" href="commands_8hpp_source.html#l00285">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepRequirement</a>, and <a class="el" href="commands_8hpp_source.html#l00215">cl::sycl::detail::Command::MDeps</a>.</p>
 
 </div>
 </div>
@@ -281,8 +305,6 @@ std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.htm
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00396">396</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00199">cl::sycl::detail::Command::MEnqueueStatus</a>, and <a class="el" href="commands_8hpp_source.html#l00192">cl::sycl::detail::Command::MIsBlockable</a>.</p>
-
 </div>
 </div>
 <a id="a976e10ef65ccfb89a0ec2b59ef03b2ad"></a>
@@ -303,9 +325,60 @@ std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.htm
 
 <p>Removes finished non-leaf non-alloca commands from the subgraph (assuming that all its commands have been waited for). </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00783">783</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00853">853</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00110">cl::sycl::detail::Command::getType()</a>, <a class="el" href="commands_8hpp_source.html#l00077">cl::sycl::detail::DepDesc::MAllocaCmd</a>, <a class="el" href="commands_8hpp_source.html#l00072">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00188">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00194">cl::sycl::detail::Command::MLeafCounter</a>, and <a class="el" href="commands_8hpp_source.html#l00190">cl::sycl::detail::Command::MUsers</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00115">cl::sycl::detail::Command::getType()</a>, <a class="el" href="commands_8hpp_source.html#l00081">cl::sycl::detail::DepDesc::MAllocaCmd</a>, <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00215">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00221">cl::sycl::detail::Command::MLeafCounter</a>, and <a class="el" href="commands_8hpp_source.html#l00217">cl::sycl::detail::Command::MUsers</a>.</p>
+
+</div>
+</div>
+<a id="af26d002e0051ce81139b619ff47f996e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26d002e0051ce81139b619ff47f996e">&#9670;&nbsp;</a></span>connectDepEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *const&#160;</td>
+          <td class="paramname"><em>Cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventImplPtr&#160;</td>
+          <td class="paramname"><em>DepEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> &amp;&#160;</td>
+          <td class="paramname"><em>Dep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform connection of events in multiple contexts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Cmd</td><td>dependant command </td></tr>
+    <tr><td class="paramname">DepEvent</td><td>event to depend on </td></tr>
+    <tr><td class="paramname">Dep</td><td>optional <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html" title="Dependency between two commands. ">DepDesc</a> to perform connection properly</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Optionality of Dep is set by Dep.MDepCommand equal to nullptr. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00920">920</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepRequirement</a>, and <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00428">cl::sycl::detail::Command::processDepEvent()</a>.</p>
 
 </div>
 </div>
@@ -330,8 +403,8 @@ std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.htm
 
 </div>
 </div>
-<a id="a73d2d2ca2d7a618feb08fdc5de835bdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73d2d2ca2d7a618feb08fdc5de835bdc">&#9670;&nbsp;</a></span>getOrInsertMemObjRecord()</h2>
+<a id="a71b5ab3219d8cbf4beda76786ba3a0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71b5ab3219d8cbf4beda76786ba3a0c2">&#9670;&nbsp;</a></span>getOrInsertMemObjRecord()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +418,7 @@ std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.htm
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td>
           <td class="paramname"><em>Req</em>&#160;</td>
         </tr>
         <tr>

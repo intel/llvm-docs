@@ -23,5 +23,6 @@ var searchData=
   ['host_5fselector',['host_selector',['../classcl_1_1sycl_1_1host__selector.html',1,'cl::sycl']]],
   ['hostkernel',['HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html',1,'cl::sycl::detail']]],
   ['hostkernelbase',['HostKernelBase',['../classcl_1_1sycl_1_1detail_1_1HostKernelBase.html',1,'cl::sycl::detail']]],
-  ['hostprofilinginfo',['HostProfilingInfo',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html',1,'cl::sycl::detail']]]
+  ['hostprofilinginfo',['HostProfilingInfo',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html',1,'cl::sycl::detail']]],
+  ['hosttask',['HostTask',['../classcl_1_1sycl_1_1detail_1_1HostTask.html',1,'cl::sycl::detail']]]
 ];

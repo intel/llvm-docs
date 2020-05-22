@@ -109,7 +109,7 @@ template&lt;int Dims = Dimensions, typename AllocatorT , typename detail::enable
 <tr class="memitem:af12a701ff3f7d7d815c6c6cbff10a2bd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>accessor</b> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; DataT, 1, AllocatorT &gt; &amp;BufferRef)</td></tr>
 <tr class="separator:af12a701ff3f7d7d815c6c6cbff10a2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2076dae51bdb55bd66d527d49bc031ac"><td class="memTemplParams" colspan="2"><a id="a2076dae51bdb55bd66d527d49bc031ac"></a>
-template&lt;int Dims = Dimensions, typename AllocatorT , typename  = typename detail::enable_if_t&lt;		   (Dims == 0) &amp;&amp;                     (!IsPlaceH &amp;&amp; (IsGlobalBuf || IsConstantBuf))&gt;&gt; </td></tr>
+template&lt;int Dims = Dimensions, typename AllocatorT , typename  = typename detail::enable_if_t&lt;		   (Dims == 0) &amp;&amp;                     (!IsPlaceH &amp;&amp; (IsGlobalBuf || IsConstantBuf || IsHostBuf))&gt;&gt; </td></tr>
 <tr class="memitem:a2076dae51bdb55bd66d527d49bc031ac"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>accessor</b> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; DataT, 1, AllocatorT &gt; &amp;BufferRef, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CommandGroupHandler)</td></tr>
 <tr class="separator:a2076dae51bdb55bd66d527d49bc031ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c5fc43b05d38ff515b82c43cc537d23"><td class="memTemplParams" colspan="2"><a id="a6c5fc43b05d38ff515b82c43cc537d23"></a>
@@ -117,7 +117,7 @@ template&lt;int Dims = Dimensions, typename AllocatorT , typename  = detail::ena
 <tr class="memitem:a6c5fc43b05d38ff515b82c43cc537d23"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>accessor</b> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; DataT, Dims, AllocatorT &gt; &amp;BufferRef)</td></tr>
 <tr class="separator:a6c5fc43b05d38ff515b82c43cc537d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a5836bff8acc7b3676bfd1bf9ad259"><td class="memTemplParams" colspan="2"><a id="a66a5836bff8acc7b3676bfd1bf9ad259"></a>
-template&lt;int Dims = Dimensions, typename AllocatorT , typename  = detail::enable_if_t&lt;(Dims &gt; 0&gt; </td></tr>
+template&lt;int Dims = Dimensions, typename AllocatorT , typename  = detail::enable_if_t&lt;                (Dims &gt; 0&gt; </td></tr>
 <tr class="memitem:a66a5836bff8acc7b3676bfd1bf9ad259"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>accessor</b> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; DataT, Dims, AllocatorT &gt; &amp;BufferRef, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CommandGroupHandler)</td></tr>
 <tr class="separator:a66a5836bff8acc7b3676bfd1bf9ad259"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac22117380377d1deed1468de8ad603f"><td class="memTemplParams" colspan="2"><a id="aac22117380377d1deed1468de8ad603f"></a>

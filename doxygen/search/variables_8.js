@@ -23,6 +23,7 @@ var searchData=
   ['mleafcounter',['MLeafCounter',['../classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604',1,'cl::sycl::detail::Command']]],
   ['mlinkedallocacmd',['MLinkedAllocaCmd',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a26ad0b3875ad355ed64563cd9eb442a8',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['mndrdesc',['MNDRDesc',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#aa762d154fc9c25c29d10cc5b5666d06b',1,'cl::sycl::detail::CGExecKernel']]],
+  ['mprepareddepsevents',['MPreparedDepsEvents',['../classcl_1_1sycl_1_1detail_1_1Command.html#a63d94f8dc12b566122e1eb1a962ec01a',1,'cl::sycl::detail::Command']]],
   ['mrequirements',['MRequirements',['../classcl_1_1sycl_1_1detail_1_1CG.html#a5ff4bd61baf6903b250a64a9dc207245',1,'cl::sycl::detail::CG']]],
   ['mresult',['MResult',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a8df7454bd622da6ded7b9a181cf97eb7',1,'cl::sycl::detail::EnqueueResultT']]],
   ['mstreamid',['MStreamID',['../classcl_1_1sycl_1_1detail_1_1Command.html#afa237f982ce0d84b2fe14e4ee7e0e666',1,'cl::sycl::detail::Command']]],

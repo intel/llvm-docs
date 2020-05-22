@@ -4,7 +4,7 @@ var searchData=
   ['range_3c_203_20_3e',['range&lt; 3 &gt;',['../classcl_1_1sycl_1_1range.html',1,'cl::sycl']]],
   ['range_3c_20dimensions_20_3e',['range&lt; Dimensions &gt;',['../classcl_1_1sycl_1_1range.html',1,'cl::sycl']]],
   ['range_3c_20dims_20_3e',['range&lt; Dims &gt;',['../classcl_1_1sycl_1_1range.html',1,'cl::sycl']]],
-  ['rebind',['rebind',['../structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html',1,'cl::sycl::detail::aligned_allocator&lt; T &gt;::rebind&lt; U &gt;'],['../structcl_1_1sycl_1_1usm__allocator_1_1rebind.html',1,'cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::rebind&lt; U &gt;']]],
+  ['rebind',['rebind',['../structcl_1_1sycl_1_1usm__allocator_1_1rebind.html',1,'cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::rebind&lt; U &gt;'],['../structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html',1,'cl::sycl::detail::aligned_allocator&lt; T &gt;::rebind&lt; U &gt;']]],
   ['reducer',['reducer',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html',1,'cl::sycl::intel::detail']]],
   ['reducer_3c_20t_2c_20binaryoperation_2c_20enable_5fif_5ft_3c_20isknownidentityop_3c_20t_2c_20binaryoperation_20_3e_3a_3avalue_20_3e_20_3e',['reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html',1,'cl::sycl::intel::detail']]],
   ['reduction_5fimpl',['reduction_impl',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html',1,'cl::sycl::intel::detail']]],

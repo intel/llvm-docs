@@ -9,6 +9,7 @@ var searchData=
   ['localaccessorbasehost',['LocalAccessorBaseHost',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html',1,'cl::sycl::detail']]],
   ['localaccessorimplhost',['LocalAccessorImplHost',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html',1,'cl::sycl::detail']]],
   ['locked',['Locked',['../classcl_1_1sycl_1_1detail_1_1Locked.html',1,'cl::sycl::detail']]],
+  ['locksharedtimedmutex',['lockSharedTimedMutex',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4ca29b68b09ab4a43c40604a0960fd09',1,'cl::sycl::detail::Scheduler']]],
   ['logicaland',['LogicalAnd',['../structcl_1_1sycl_1_1detail_1_1LogicalAnd.html',1,'cl::sycl::detail']]],
   ['logicalor',['LogicalOr',['../structcl_1_1sycl_1_1detail_1_1LogicalOr.html',1,'cl::sycl::detail']]],
   ['lshift',['LShift',['../structcl_1_1sycl_1_1detail_1_1LShift.html',1,'cl::sycl::detail']]]

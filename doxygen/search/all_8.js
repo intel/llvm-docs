@@ -29,5 +29,6 @@ var searchData=
   ['hostentriesbegin',['HostEntriesBegin',['../structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69',1,'pi_device_binaries_struct']]],
   ['hostkernel',['HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html',1,'cl::sycl::detail']]],
   ['hostkernelbase',['HostKernelBase',['../classcl_1_1sycl_1_1detail_1_1HostKernelBase.html',1,'cl::sycl::detail']]],
-  ['hostprofilinginfo',['HostProfilingInfo',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html',1,'cl::sycl::detail']]]
+  ['hostprofilinginfo',['HostProfilingInfo',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html',1,'cl::sycl::detail']]],
+  ['hosttask',['HostTask',['../classcl_1_1sycl_1_1detail_1_1HostTask.html',1,'cl::sycl::detail']]]
 ];

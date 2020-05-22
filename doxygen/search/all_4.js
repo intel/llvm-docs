@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['deallocate',['deallocate',['../classcl_1_1sycl_1_1usm__allocator.html#ac4554a69d2570ae390a1c36d0943618a',1,'cl::sycl::usm_allocator']]],
+  ['deallocate',['deallocate',['../classcl_1_1sycl_1_1usm__allocator.html#af68a46caa89d2267a4023a762ef39999',1,'cl::sycl::usm_allocator']]],
   ['decrementleafcountersforrecord',['decrementLeafCountersForRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['default_5fselector',['default_selector',['../classcl_1_1sycl_1_1default__selector.html',1,'cl::sycl']]],
   ['deleter_5fdata',['deleter_data',['../struct__pi__context_1_1deleter__data.html',1,'_pi_context']]],
@@ -18,6 +18,7 @@ var searchData=
   ['devicebinaryproperty',['DeviceBinaryProperty',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html',1,'cl::sycl::detail::pi']]],
   ['devicetargetspec',['DeviceTargetSpec',['../structpi__device__binary__struct.html#a9a80194f39a66baf5dfcbee492cb0f97',1,'pi_device_binary_struct']]],
   ['dismiss',['dismiss',['../classReleaseGuard.html#a842fa7466ffe980b5e5fec5a7b582abe',1,'ReleaseGuard']]],
+  ['dispatchhosttask',['DispatchHostTask',['../classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html',1,'cl::sycl::detail']]],
   ['dummymodulehandle',['DummyModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#ac103c42a32ed4c27ce6f566e7659d184',1,'cl::sycl::detail::OSUtil']]],
   ['dynrtdevicebinaryimage',['DynRTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html',1,'cl::sycl::detail']]],
   ['dpc_2b_2b_20execution_20graph',['DPC++ Execution Graph',['../group__sycl__graph.html',1,'']]]

@@ -3,6 +3,7 @@ var searchData=
   ['targettoas',['TargetToAS',['../structcl_1_1sycl_1_1detail_1_1TargetToAS.html',1,'cl::sycl::detail']]],
   ['targettoas_3c_20access_3a_3atarget_3a_3aconstant_5fbuffer_20_3e',['TargetToAS&lt; access::target::constant_buffer &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html',1,'cl::sycl::detail']]],
   ['targettoas_3c_20access_3a_3atarget_3a_3alocal_20_3e',['TargetToAS&lt; access::target::local &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html',1,'cl::sycl::detail']]],
+  ['threadpool',['ThreadPool',['../classcl_1_1sycl_1_1detail_1_1ThreadPool.html',1,'cl::sycl::detail']]],
   ['trytogetelementtype',['TryToGetElementType',['../classcl_1_1sycl_1_1detail_1_1TryToGetElementType.html',1,'cl::sycl::detail']]],
   ['trytogetnumelements',['TryToGetNumElements',['../structcl_1_1sycl_1_1detail_1_1TryToGetNumElements.html',1,'cl::sycl::detail']]],
   ['trytogetnumelements_3c_20t_2c_20typename_20std_3a_3aenable_5fif_3c_20trytogetvectort_3c_20t_20_3e_3a_3avalue_20_3e_3a_3atype_20_3e',['TryToGetNumElements&lt; T, typename std::enable_if&lt; TryToGetVectorT&lt; T &gt;::value &gt;::type &gt;',['../structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01std_1_1enable__if_3_01Tr0f6838173b0dc4fa5361a939e9387781.html',1,'cl::sycl::detail']]],

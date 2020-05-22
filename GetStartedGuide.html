@@ -39,7 +39,8 @@
 <h1>Getting Started with oneAPI DPC++<a class="headerlink" href="#getting-started-with-oneapi-dpc" title="Permalink to this headline">¶</a></h1>
 <p>The DPC++ Compiler compiles C++ and SYCL* source files with code for both CPU
 and a wide range of compute accelerators such as GPU and FPGA.</p>
-<p><strong>Table of contents</strong></p>
+<div class="section" id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p>
 <ul>
@@ -64,19 +65,21 @@ and a wide range of compute accelerators such as GPU and FPGA.</p>
 <li><p><a class="reference external" href="#cuda-backend-limitations">CUDA backend limitations</a></p></li>
 <li><p><a class="reference external" href="#find-more">Find More</a></p></li>
 </ul>
+</div>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code> - https://git-scm.com/downloads</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span></code> version 3.2 or later - http://www.cmake.org/download/</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> - https://www.python.org/downloads/release/python-2716/</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ninja</span></code> - https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code> - <a class="reference external" href="https://git-scm.com/downloads">Download</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmake</span></code> version 3.2 or later - <a class="reference external" href="http://www.cmake.org/download/">Download</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> - <a class="reference external" href="https://www.python.org/downloads/release/python-2716/">Download</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ninja</span></code> -
+<a class="reference external" href="https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages">Download</a></p></li>
 <li><p>C++ compiler</p>
 <ul>
 <li><p>Linux: <code class="docutils literal notranslate"><span class="pre">GCC</span></code> version 5.1.0 or later (including libstdc++) -
-https://gcc.gnu.org/install/</p></li>
+<a class="reference external" href="https://gcc.gnu.org/install/">Download</a></p></li>
 <li><p>Windows: <code class="docutils literal notranslate"><span class="pre">Visual</span> <span class="pre">Studio</span></code> version 15.7 preview 4 or later -
-https://visualstudio.microsoft.com/downloads/</p></li>
+<a class="reference external" href="https://visualstudio.microsoft.com/downloads/">Download</a></p></li>
 </ul>
 </li>
 </ul>
@@ -85,16 +88,15 @@ https://visualstudio.microsoft.com/downloads/</p></li>
 <p>Throughout this document <code class="docutils literal notranslate"><span class="pre">DPCPP_HOME</span></code> denotes the path to the local directory
 created as DPC++ workspace. It might be useful to create an environment variable
 with the same name.</p>
-<p><strong>Linux</strong></p>
+<p><strong>Linux</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DPCPP_HOME</span><span class="o">=</span>~/sycl_workspace
-mkdir -p <span class="nv">$DPCPP_HOME</span>/build
+mkdir <span class="nv">$DPCPP_HOME</span>
 <span class="nb">cd</span> <span class="nv">$DPCPP_HOME</span>
 
 git clone https://github.com/intel/llvm -b sycl
-<span class="nb">cd</span> <span class="nv">$DPCPP_HOME</span>/build
 </pre></div>
 </div>
-<p><strong>Windows (64-bit)</strong></p>
+<p><strong>Windows (64-bit)</strong>:</p>
 <p>Open a developer command prompt using one of two methods:</p>
 <ul class="simple">
 <li><p>Click start menu and search for “<strong>x64</strong> Native Tools Command Prompt for VS
@@ -107,8 +109,6 @@ XXXX”, where XXXX is a version of installed Visual Studio.</p></li>
 <span class="k">cd</span> <span class="nv">%DPCPP_HOME%</span>
 
 git clone https://github.com/intel/llvm -b sycl
-<span class="k">mkdir</span> <span class="nv">%DPCPP_HOME%</span>\build
-<span class="k">cd</span> <span class="nv">%DPCPP_HOME%</span>\build
 </pre></div>
 </div>
 </div>
@@ -120,17 +120,16 @@ git clone https://github.com/intel/llvm -b sycl
 <a class="reference external" href="../../buildbot/compile.py">compile</a> scripts.</p>
 <p>In case you want to configure CMake manually the up-to-date reference for
 variables is in these files.</p>
-<p><strong>Linux</strong></p>
+<p><strong>Linux</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/configure.py
 python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/compile.py
 </pre></div>
 </div>
-<p><strong>Windows</strong></p>
+<p><strong>Windows (64-bit)</strong>:</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\configure.py
 python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
 </pre></div>
 </div>
-<p><strong>Options</strong></p>
 <p>You can use the following flags with <code class="docutils literal notranslate"><span class="pre">configure.py</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">--system-ocl</span></code> -&gt; Don’t Download OpenCL deps via cmake but use the system ones</p></li>
@@ -143,14 +142,12 @@ python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
 </ul>
 <p>Ahead-of-time compilation for the Intel® processors is enabled by default.
 For more, see <a class="reference external" href="../../opencl-aot/README">opencl-aot documentation</a>.</p>
-<p><strong>Deployment</strong></p>
-<p>TODO: add instructions how to deploy built DPC++ toolchain.</p>
 <div class="section" id="build-dpc-toolchain-with-libc-library">
 <h3>Build DPC++ toolchain with libc++ library<a class="headerlink" href="#build-dpc-toolchain-with-libc-library" title="Permalink to this headline">¶</a></h3>
 <p>There is experimental support for building and linking DPC++ runtime with
 libc++ library instead of libstdc++. To enable it the following CMake options
 should be used.</p>
-<p><strong>Linux</strong></p>
+<p><strong>Linux</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DSYCL_USE_LIBCXX</span><span class="o">=</span><span class="n">ON</span> \
 <span class="o">-</span><span class="n">DSYCL_LIBCXX_INCLUDE_PATH</span><span class="o">=&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="n">headers</span><span class="o">&gt;</span> \
 <span class="o">-</span><span class="n">DSYCL_LIBCXX_LIBRARY_PATH</span><span class="o">=&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="ow">and</span> <span class="n">libc</span><span class="o">++</span><span class="n">abi</span> <span class="n">libraries</span><span class="o">&gt;</span>
@@ -169,6 +166,10 @@ the system, refer to
 <p>Currently, the only combination tested is Ubuntu 18.04 with CUDA 10.2 using
 a Titan RTX GPU (SM 71), but it should work on any GPU compatible with SM 50 or
 above.</p>
+</div>
+<div class="section" id="deployment">
+<h3>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h3>
+<p>TODO: add instructions how to deploy built DPC++ toolchain.</p>
 </div>
 </div>
 <div class="section" id="use-dpc-toolchain">
@@ -193,60 +194,43 @@ which contains all the symbols required.</p>
 <h3>Install low level runtime<a class="headerlink" href="#install-low-level-runtime" title="Permalink to this headline">¶</a></h3>
 <p>To run DPC++ applications on OpenCL devices, OpenCL implementation(s) must be
 present in the system.</p>
-<p>Please, refer to <a class="reference external" href="../ReleaseNotes">the Release Notes</a> for recommended Intel
-runtime versions.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">GPU</span></code> runtime that is needed to run DPC++ application on Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> devices
-can be downloaded from the following web pages:</p>
-<ul class="simple">
-<li><p>Linux: <a class="reference external" href="https://github.com/intel/compute-runtime/releases">Intel® Graphics Compute Runtime for
-OpenCL™</a></p></li>
-<li><p>Windows: <a class="reference external" href="https://downloadcenter.intel.com/product/80939/Graphics-Drivers">Intel® Download
-Center</a></p></li>
-</ul>
-<p>To install Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime for OpenCL devices the corresponding runtime
-asset/archive should be downloaded from
-<a class="reference external" href="../ReleaseNotes">DPC++ Compiler and Runtime updates</a> and installed following
-procedure below.</p>
-<p>Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime for OpenCL depends on Threading Building Blocks library
-which should be downloaded from <a class="reference external" href="https://github.com/intel/tbb">Threading Building Blocks (TBB)
-GitHub repository</a> and installed following
-procedure below.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GPU</span></code> and <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtimes as well as TBB runtime which are needed to run
+DPC++ application on Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> or Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> devices can be downloaded using
+links in <a class="reference external" href="../../buildbot/dependency.conf">the dependency configuration file</a>
+and installed following the instructions below. The same versions are used in PR testing.</p>
 <p>Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime for OpenCL devices can be switched into Intel FPGA
 Emulation device for OpenCL. The following parameter should be set in <code class="docutils literal notranslate"><span class="pre">cl.cfg</span></code>
-file (available in directory containing CPU runtime for OpenCL) to switch
-OpenCL device mode:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CL_CONFIG_DEVICES</span> <span class="o">=</span> <span class="n">fpga</span><span class="o">-</span><span class="n">emu</span>
+file (available in directory containing CPU runtime for OpenCL) or environment
+variable with the same name. The following value should be set to switch OpenCL device
+mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CL_CONFIG_DEVICES</span> <span class="o">=</span> fpga-emu
 </pre></div>
 </div>
-<p><strong>Linux</strong></p>
-<ol class="simple">
+<p><strong>Linux</strong>:</p>
+<ol>
 <li><p>Extract the archive. For example, for the archive
-<code class="docutils literal notranslate"><span class="pre">oclcpu_rt_&lt;cpu_version&gt;.tar.gz</span></code> you would run the following commands</p></li>
-</ol>
+<code class="docutils literal notranslate"><span class="pre">oclcpu_rt_&lt;cpu_version&gt;.tar.gz</span></code> you would run the following commands</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /opt/intel/oclcpuexp_&lt;cpu_version&gt;
 <span class="nb">cd</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;
 tar -zxvf oclcpu_rt_&lt;cpu_version&gt;.tar.gz
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Create ICD file pointing to the new runtime</p></li>
-</ol>
+</li>
+<li><p>Create ICD file pointing to the new runtime</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64/libintelocl.so &gt;
   /etc/OpenCL/vendors/intel_expcpu.icd
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Extract TBB libraries. For example, for the archive tbb-&lt;tbb_version&gt;-lin.tgz</p></li>
-</ol>
+</li>
+<li><p>Extract TBB libraries. For example, for the archive tbb-&lt;tbb_version&gt;-lin.tgz</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /opt/intel/tbb_&lt;tbb_version&gt;
 <span class="nb">cd</span> /opt/intel/tbb_&lt;tbb_version&gt;
 tar -zxvf tbb*lin.tgz
 </pre></div>
 </div>
-<ol class="simple">
+</li>
 <li><p>Copy files from or create symbolic links to TBB libraries in OpenCL RT
-folder:</p></li>
-</ol>
+folder:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
 ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so
@@ -257,16 +241,17 @@ ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so.
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Configure library paths</p></li>
-</ol>
+</li>
+<li><p>Configure library paths</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64 &gt;
   /etc/ld.so.conf.d/libintelopenclexp.conf
 ldconfig -f /etc/ld.so.conf.d/libintelopenclexp.conf
 </pre></div>
 </div>
-<p><strong>Windows (64-bit)</strong></p>
-<ol class="simple">
+</li>
+</ol>
+<p><strong>Windows (64-bit)</strong>:</p>
+<ol>
 <li><p>If you need <code class="docutils literal notranslate"><span class="pre">GPU</span></code> as well, then update/install it first. Do it <strong>before</strong>
 installing <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime as <code class="docutils literal notranslate"><span class="pre">GPU</span></code> runtime installer may re-write some important
 files or settings and make existing <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime not working properly.</p></li>
@@ -278,22 +263,23 @@ type <code class="docutils literal notranslate"><span class="pre">Command</span>
 <li><p>In the opened windows run <code class="docutils literal notranslate"><span class="pre">install.bat</span></code> provided with the extracted files
 to install runtime to the system and setup environment variables. So, if the
 extracted files are in <code class="docutils literal notranslate"><span class="pre">c:\oclcpu_rt_&lt;cpu_version&gt;\</span></code> folder, then type the
-command:</p></li>
-</ol>
+command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\t</span>bb_&lt;tbb_version&gt;<span class="se">\t</span>bb<span class="se">\b</span>in<span class="se">\i</span>ntel64<span class="se">\v</span>c14
 </pre></div>
 </div>
+</li>
+</ol>
 </div>
 <div class="section" id="test-dpc-toolchain">
 <h3>Test DPC++ toolchain<a class="headerlink" href="#test-dpc-toolchain" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="run-regression-tests">
 <h4>Run regression tests<a class="headerlink" href="#run-regression-tests" title="Permalink to this headline">¶</a></h4>
 <p>To verify that built DPC++ toolchain is working correctly, run:</p>
-<p><strong>Linux</strong></p>
+<p><strong>Linux</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/check.py
 </pre></div>
 </div>
-<p><strong>Windows</strong></p>
+<p><strong>Windows (64-bit)</strong>:</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\check.py
 </pre></div>
 </div>
@@ -313,11 +299,11 @@ file to obtain test sources and instructions how build and execute the tests.</p
 <p>To configure testing of DPC++ toochain set
 <code class="docutils literal notranslate"><span class="pre">SYCL_IMPLEMENTATION=Intel_SYCL</span></code> and
 <code class="docutils literal notranslate"><span class="pre">Intel_SYCL_ROOT=&lt;path</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">SYCL</span> <span class="pre">installation&gt;</span></code> CMake variables.</p>
-<p><strong>Linux</strong></p>
+<p><strong>Linux</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake -DIntel_SYCL_ROOT<span class="o">=</span><span class="nv">$DPCPP_HOME</span>/deploy -DSYCL_IMPLEMENTATION<span class="o">=</span>Intel_SYCL ...
 </pre></div>
 </div>
-<p><strong>Windows (64-bit)</strong></p>
+<p><strong>Windows (64-bit)</strong>:</p>
 <div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>cmake -DIntel_SYCL_ROOT=<span class="nv">%DPCPP_HOME%</span>\deploy -DSYCL_IMPLEMENTATION=Intel_SYCL ...
 </pre></div>
 </div>
@@ -337,7 +323,8 @@ command:</p>
 </pre></div>
 </div>
 <p>After CMake cache is generated, build the documentation with <code class="docutils literal notranslate"><span class="pre">doxygen-sycl</span></code>
-target. It will be put to <code class="docutils literal notranslate"><span class="pre">/path/to/build/tools/sycl/doc/html</span></code> directory.</p>
+target. It will be put to <code class="docutils literal notranslate"><span class="pre">$DPCPP_HOME/llvm/build/tools/sycl/doc/html</span></code>
+directory.</p>
 </div>
 <div class="section" id="run-simple-dpc-application">
 <h3>Run simple DPC++ application<a class="headerlink" href="#run-simple-dpc-application" title="Permalink to this headline">¶</a></h3>
@@ -400,14 +387,14 @@ target. It will be put to <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 <p>To build simple-sycl-app put <code class="docutils literal notranslate"><span class="pre">bin</span></code> and <code class="docutils literal notranslate"><span class="pre">lib</span></code> to PATHs:</p>
-<p><strong>Linux</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$DPCPP_HOME</span>/build/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$DPCPP_HOME</span>/build/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+<p><strong>Linux</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$DPCPP_HOME</span>/llvm/build/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$DPCPP_HOME</span>/llvm/build/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 </pre></div>
 </div>
-<p><strong>Windows (64-bit)</strong></p>
-<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span><span class="nv">%DPCPP_HOME%</span>\build\bin;<span class="nv">%PATH%</span>
-<span class="k">set</span> <span class="nv">LIB</span><span class="p">=</span><span class="nv">%DPCPP_HOME%</span>\build\lib;<span class="nv">%LIB%</span>
+<p><strong>Windows (64-bit)</strong>:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">set</span> <span class="nv">PATH</span><span class="p">=</span><span class="nv">%DPCPP_HOME%</span>\llvm\build\bin;<span class="nv">%PATH%</span>
+<span class="k">set</span> <span class="nv">LIB</span><span class="p">=</span><span class="nv">%DPCPP_HOME%</span>\llvm\build\lib;<span class="nv">%LIB%</span>
 </pre></div>
 </div>
 <p>and run following command:</p>
@@ -422,7 +409,7 @@ target. It will be put to <code class="docutils literal notranslate"><span class
 <p>This <code class="docutils literal notranslate"><span class="pre">simple-sycl-app.exe</span></code> application doesn’t specify SYCL device for
 execution, so SYCL runtime will use <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> logic to select one
 of accelerators available in the system or SYCL host device.
-In this case, the behaviour of the <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> can be altered
+In this case, the behavior of the <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> can be altered
 using the <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment variable, setting <code class="docutils literal notranslate"><span class="pre">PI_CUDA</span></code> forces
 the usage of the CUDA backend (if available), <code class="docutils literal notranslate"><span class="pre">PI_OPENCL</span></code> will
 force the usage of the OpenCL backend.</p>
@@ -433,21 +420,21 @@ force the usage of the OpenCL backend.</p>
 If there are no OpenCL or CUDA devices available, the SYCL host device is used.
 The SYCL host device executes the SYCL application directly in the host,
 without using any low-level API.</p>
-<p>Note: <code class="docutils literal notranslate"><span class="pre">nvptx64-nvidia-cuda-sycldevice</span></code> is usable with <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>
+<p><strong>NOTE</strong>: <code class="docutils literal notranslate"><span class="pre">nvptx64-nvidia-cuda-sycldevice</span></code> is usable with <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>
 if clang was built with the cmake option <code class="docutils literal notranslate"><span class="pre">SYCL_BUILD_PI_CUDA=ON</span></code>.</p>
-<p><strong>Linux &amp; Windows</strong></p>
+<p><strong>Linux &amp; Windows (64-bit)</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./simple-sycl-app.exe
 The results are correct!
 </pre></div>
 </div>
-<p><strong>Note</strong>:
-Currently, when the application has been built with the CUDA target, the CUDA
-backend must be selected at runtime using the <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment variable.</p>
+<p><strong>NOTE</strong>: Currently, when the application has been built with the CUDA target,
+the CUDA backend must be selected at runtime using the <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment
+variable.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SYCL_BE</span><span class="o">=</span>PI_CUDA ./simple-sycl-app-cuda.exe
 </pre></div>
 </div>
-<p>NOTE: DPC++/SYCL developers can specify SYCL device for execution using device
-selectors (e.g. <code class="docutils literal notranslate"><span class="pre">cl::sycl::cpu_selector</span></code>, <code class="docutils literal notranslate"><span class="pre">cl::sycl::gpu_selector</span></code>,
+<p><strong>NOTE</strong>: DPC++/SYCL developers can specify SYCL device for execution using
+device selectors (e.g. <code class="docutils literal notranslate"><span class="pre">cl::sycl::cpu_selector</span></code>, <code class="docutils literal notranslate"><span class="pre">cl::sycl::gpu_selector</span></code>,
 <a class="reference external" href="extensions/IntelFPGA/FPGASelector">Intel FPGA selector(s)</a>) as
 explained in following section <a class="reference external" href="#code-the-program-for-a-specific-gpu">Code the program for a specific
 GPU</a>.</p>
@@ -491,8 +478,8 @@ device and queue objects bound to Intel GPU device:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The device selector below selects an NVIDIA device only, and won’t
-execute if there is none.</p>
+<p>The device selector below selects an NVIDIA device only, and won’t execute if
+there is none.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">CUDASelector</span> <span class="o">:</span> <span class="k">public</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device_selector</span> <span class="p">{</span>
   <span class="k">public</span><span class="o">:</span>
     <span class="kt">int</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device</span> <span class="o">&amp;</span><span class="n">Device</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
