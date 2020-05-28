@@ -8,7 +8,6 @@ var searchData=
   ['boolean_3c_201_20_3e',['Boolean&lt; 1 &gt;',['../structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html',1,'cl::sycl::detail']]],
   ['buffer',['buffer',['../classcl_1_1sycl_1_1buffer.html',1,'cl::sycl']]],
   ['buffer_3c_20char_2c_201_20_3e',['buffer&lt; char, 1 &gt;',['../classcl_1_1sycl_1_1buffer.html',1,'cl::sycl']]],
-  ['buffer_3c_20unsigned_2c_201_20_3e',['buffer&lt; unsigned, 1 &gt;',['../classcl_1_1sycl_1_1buffer.html',1,'cl::sycl']]],
   ['buffer_5fimpl',['buffer_impl',['../classcl_1_1sycl_1_1detail_1_1buffer__impl.html',1,'cl::sycl::detail']]],
   ['build_5fwith_5fkernel_5fname',['build_with_kernel_name',['../classcl_1_1sycl_1_1detail_1_1program__impl.html#a789c8ebdd162934731ef574067b571ff',1,'cl::sycl::detail::program_impl']]],
   ['build_5fwith_5fkernel_5ftype',['build_with_kernel_type',['../classcl_1_1sycl_1_1program.html#a719aeddee6da448ddcffc1d8b3628b9c',1,'cl::sycl::program']]],
