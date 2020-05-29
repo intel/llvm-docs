@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: Member List</title>
+<title>DPC++ Runtime: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1CG.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">CG</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">cl::sycl::detail::CG Member List</div>  </div>
@@ -70,36 +96,39 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CG</b>(CGTYPE Type, vector_class&lt; vector_class&lt; char &gt;&gt; ArgsStorage, vector_class&lt; detail::AccessorImplPtr &gt; AccStorage, vector_class&lt; shared_ptr_class&lt; const void &gt;&gt; SharedPtrStorage, vector_class&lt; Requirement *&gt; Requirements, vector_class&lt; detail::EventImplPtr &gt; Events, detail::code_location loc={}) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>CG</b>(CG &amp;&amp;CommandGroup)=default (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a35e4fd1e0383a2ddfb91e73f22abf29c">CG</a>(CGTYPE Type, vector_class&lt; vector_class&lt; char &gt;&gt; ArgsStorage, vector_class&lt; detail::AccessorImplPtr &gt; AccStorage, vector_class&lt; shared_ptr_class&lt; const void &gt;&gt; SharedPtrStorage, vector_class&lt; Requirement *&gt; Requirements, vector_class&lt; detail::EventImplPtr &gt; Events, detail::code_location loc={})</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#aea503c1c8f0394eede77a1fdf985d02a">CG</a>(CG &amp;&amp;CommandGroup)=default</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7ee">CGTYPE</a> enum name</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>CODEPLAY_HOST_TASK</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CODEPLAY_INTEROP_TASK</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>COPY_ACC_TO_ACC</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>COPY_ACC_TO_PTR</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>COPY_PTR_TO_ACC</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>COPY_USM</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>FILL</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>FILL_USM</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getType</b>() (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>KERNEL</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>MColumn</b> (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eead9c25fb4fc5b6b68246f8f590082e061">CODEPLAY_HOST_TASK</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5cb8f7c48a81efc87a5400ab8304f7f8">CODEPLAY_INTEROP_TASK</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea73124c84ee4f610615010cbd5212ff18">COPY_ACC_TO_ACC</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaf2d4daba293a568e97d24890af4b17a8">COPY_ACC_TO_PTR</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeae7070c4b535a7cb64c125d3f08161393">COPY_PTR_TO_ACC</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaac6fede0ce27acc0208f4610a0f27fd4">COPY_USM</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eead43820d7d9556cea7929a119b28d71d1">FILL</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5d1025f00ce039627cd01a97e08a6eb1">FILL_USM</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a41fca13e6a5f79e319806715fa48b743">getType</a>()</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea0a90cb77335c9fd8b7f00352d8090858">KERNEL</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a6628c8c2ca6833f9cef8a650361bccda">MColumn</a></td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#aed39ca43cc8e1592955f1d425e641acf">MEvents</a></td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>MFileName</b> (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>MFunctionName</b> (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>MLine</b> (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a5092dfc352e9f617c2bf1f3e76c0d83a">MFileName</a></td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#abac8209b68b492b72b181b9a0fec5f0d">MFunctionName</a></td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#adac17762f7e2c5c21d19e554cc956c51">MLine</a></td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a5ff4bd61baf6903b250a64a9dc207245">MRequirements</a></td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>NONE</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PREFETCH_USM</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>RUN_ON_HOST_INTEL</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>UPDATE_HOST</b> enum value (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~CG</b>()=default (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaac4f97ceeae9554c0a1bd427a69ab5a5">NONE</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea789955d1c8083d18f9bf4c01e2c0884a">PREFETCH_USM</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea33c2f53039967df9a5f7ef81009fd60e">RUN_ON_HOST_INTEL</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeacc1740df2d5fa39efc228be45f5e96ac">UPDATE_HOST</a> enum value</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#ad909df45d32dc55331140b813f60700b">~CG</a>()=default</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">cl::sycl::detail::CG</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

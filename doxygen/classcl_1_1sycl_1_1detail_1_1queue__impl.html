@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::queue_impl Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::queue_impl Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1queue__impl.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -70,40 +96,42 @@ $(function() {
 <div class="title">cl::sycl::detail::queue_impl Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="queue__impl_8hpp_source.html">detail/queue_impl.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5cf67d2443b7d345cb6a676728373db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa5cf67d2443b7d345cb6a676728373db">queue_impl</a> (DeviceImplPtr Device, async_handler AsyncHandler, QueueOrder Order, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList)</td></tr>
+<tr class="memitem:aa5cf67d2443b7d345cb6a676728373db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa5cf67d2443b7d345cb6a676728373db">queue_impl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a3b78f8c517b1d76ecd7b0eb46ec2056e">DeviceImplPtr</a> Device, <a class="el" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a> AsyncHandler, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">QueueOrder</a> Order, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList)</td></tr>
 <tr class="memdesc:aa5cf67d2443b7d345cb6a676728373db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL queue from a device using an async_handler and <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> provided.  <a href="#aa5cf67d2443b7d345cb6a676728373db">More...</a><br /></td></tr>
 <tr class="separator:aa5cf67d2443b7d345cb6a676728373db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc77d7ce8c4f43cd48baa7244c7ca8a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#adc77d7ce8c4f43cd48baa7244c7ca8a9">queue_impl</a> (DeviceImplPtr Device, ContextImplPtr Context, async_handler AsyncHandler, QueueOrder Order, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList)</td></tr>
+<tr class="memitem:adc77d7ce8c4f43cd48baa7244c7ca8a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#adc77d7ce8c4f43cd48baa7244c7ca8a9">queue_impl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a3b78f8c517b1d76ecd7b0eb46ec2056e">DeviceImplPtr</a> Device, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> Context, <a class="el" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a> AsyncHandler, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">QueueOrder</a> Order, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList)</td></tr>
 <tr class="memdesc:adc77d7ce8c4f43cd48baa7244c7ca8a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL queue with an async_handler and <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> provided form a device and a context.  <a href="#adc77d7ce8c4f43cd48baa7244c7ca8a9">More...</a><br /></td></tr>
 <tr class="separator:adc77d7ce8c4f43cd48baa7244c7ca8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19786ae9b03482ef55e773667cc46ec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a19786ae9b03482ef55e773667cc46ec9">queue_impl</a> (<a class="el" href="struct__pi__queue.html">RT::PiQueue</a> PiQueue, ContextImplPtr Context, const async_handler &amp;AsyncHandler)</td></tr>
+<tr class="memitem:a19786ae9b03482ef55e773667cc46ec9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a19786ae9b03482ef55e773667cc46ec9">queue_impl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a> PiQueue, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> Context, const <a class="el" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a> &amp;AsyncHandler)</td></tr>
 <tr class="memdesc:a19786ae9b03482ef55e773667cc46ec9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL queue from plugin interoperability handle.  <a href="#a19786ae9b03482ef55e773667cc46ec9">More...</a><br /></td></tr>
 <tr class="separator:a19786ae9b03482ef55e773667cc46ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bdbee365712b9476ada470d7cad1678"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a4bdbee365712b9476ada470d7cad1678">~queue_impl</a> ()</td></tr>
+<tr class="separator:a4bdbee365712b9476ada470d7cad1678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb6185e1fbeb68371cbf78f45c848b85"><td class="memItemLeft" align="right" valign="top">cl_command_queue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#afb6185e1fbeb68371cbf78f45c848b85">get</a> ()</td></tr>
 <tr class="separator:afb6185e1fbeb68371cbf78f45c848b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6163342df6c993c9ffc9f100b4911c75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a6163342df6c993c9ffc9f100b4911c75">get_context</a> () const</td></tr>
 <tr class="separator:a6163342df6c993c9ffc9f100b4911c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44bc3d7db560327c91ee019c5aa64642"><td class="memItemLeft" align="right" valign="top"><a id="a44bc3d7db560327c91ee019c5aa64642"></a>
-const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPlugin</b> () const</td></tr>
+<tr class="memitem:a44bc3d7db560327c91ee019c5aa64642"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a44bc3d7db560327c91ee019c5aa64642">getPlugin</a> () const</td></tr>
 <tr class="separator:a44bc3d7db560327c91ee019c5aa64642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a908d0fbd5026bc0fd97311ceb0b07723"><td class="memItemLeft" align="right" valign="top"><a id="a908d0fbd5026bc0fd97311ceb0b07723"></a>
-ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextImplPtr</b> () const</td></tr>
+<tr class="memitem:a908d0fbd5026bc0fd97311ceb0b07723"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a908d0fbd5026bc0fd97311ceb0b07723">getContextImplPtr</a> () const</td></tr>
 <tr class="separator:a908d0fbd5026bc0fd97311ceb0b07723"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a027ac4cd34f1e99c0a5d93b65ddbdd04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a027ac4cd34f1e99c0a5d93b65ddbdd04">get_device</a> () const</td></tr>
 <tr class="separator:a027ac4cd34f1e99c0a5d93b65ddbdd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72030a7fdd11f46d74ec78b85de3f976"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a72030a7fdd11f46d74ec78b85de3f976">is_host</a> () const</td></tr>
 <tr class="separator:a72030a7fdd11f46d74ec78b85de3f976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf4a7a4ef834aff93b2a494136ad5fae"><td class="memTemplParams" colspan="2">template&lt;info::queue param&gt; </td></tr>
-<tr class="memitem:aaf4a7a4ef834aff93b2a494136ad5fae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::queue, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aaf4a7a4ef834aff93b2a494136ad5fae">get_info</a> () const</td></tr>
+<tr class="memitem:aaf4a7a4ef834aff93b2a494136ad5fae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a298d56c26b4eec2a4d4fb1649e2d1063">info::queue</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aaf4a7a4ef834aff93b2a494136ad5fae">get_info</a> () const</td></tr>
 <tr class="memdesc:aaf4a7a4ef834aff93b2a494136ad5fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries SYCL queue for information.  <a href="#aaf4a7a4ef834aff93b2a494136ad5fae">More...</a><br /></td></tr>
 <tr class="separator:aaf4a7a4ef834aff93b2a494136ad5fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0137dba6dcbbf028f159a0132fc18580"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0137dba6dcbbf028f159a0132fc18580">submit</a> (const function_class&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;CGF, shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Self, shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; SecondQueue, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc)</td></tr>
+<tr class="memitem:a0137dba6dcbbf028f159a0132fc18580"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0137dba6dcbbf028f159a0132fc18580">submit</a> (const <a class="el" href="namespacecl_1_1sycl.html#afb9dbf04ee5a8befd9c439daf7e88d83">function_class</a>&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;CGF, <a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Self, <a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; SecondQueue, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc)</td></tr>
 <tr class="memdesc:a0137dba6dcbbf028f159a0132fc18580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a command group function object to the queue, in order to be scheduled for execution on the device.  <a href="#a0137dba6dcbbf028f159a0132fc18580">More...</a><br /></td></tr>
 <tr class="separator:a0137dba6dcbbf028f159a0132fc18580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1e83741ba71bf6cb051ac60e538c703"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab1e83741ba71bf6cb051ac60e538c703">submit</a> (const function_class&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;CGF, shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Self, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc)</td></tr>
+<tr class="memitem:ab1e83741ba71bf6cb051ac60e538c703"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab1e83741ba71bf6cb051ac60e538c703">submit</a> (const <a class="el" href="namespacecl_1_1sycl.html#afb9dbf04ee5a8befd9c439daf7e88d83">function_class</a>&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;CGF, <a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Self, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc)</td></tr>
 <tr class="memdesc:ab1e83741ba71bf6cb051ac60e538c703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submits a command group function object to the queue, in order to be scheduled for execution on the device.  <a href="#ab1e83741ba71bf6cb051ac60e538c703">More...</a><br /></td></tr>
 <tr class="separator:ab1e83741ba71bf6cb051ac60e538c703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0f2111e2e0be91fc0e6072d05380fbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#ae0f2111e2e0be91fc0e6072d05380fbf">wait</a> (const <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc={})</td></tr>
@@ -116,12 +144,12 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 <tr class="memitem:a1c6e3a913c64c15cc3874a06f2ca38da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c6e3a913c64c15cc3874a06f2ca38da">throw_asynchronous</a> ()</td></tr>
 <tr class="memdesc:a1c6e3a913c64c15cc3874a06f2ca38da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a blocking wait for the completion of all enqueued tasks in the queue.  <a href="#a1c6e3a913c64c15cc3874a06f2ca38da">More...</a><br /></td></tr>
 <tr class="separator:a1c6e3a913c64c15cc3874a06f2ca38da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad6c8d6afc28d509bf7d9c3f4da9b54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54">createQueue</a> (QueueOrder Order)</td></tr>
+<tr class="memitem:a1ad6c8d6afc28d509bf7d9c3f4da9b54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54">createQueue</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">QueueOrder</a> Order)</td></tr>
 <tr class="memdesc:a1ad6c8d6afc28d509bf7d9c3f4da9b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates PI queue.  <a href="#a1ad6c8d6afc28d509bf7d9c3f4da9b54">More...</a><br /></td></tr>
 <tr class="separator:a1ad6c8d6afc28d509bf7d9c3f4da9b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6761b743af203217fe665f3c644745df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a6761b743af203217fe665f3c644745df">getExclusiveQueueHandleRef</a> ()</td></tr>
+<tr class="memitem:a6761b743af203217fe665f3c644745df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a6761b743af203217fe665f3c644745df">getExclusiveQueueHandleRef</a> ()</td></tr>
 <tr class="separator:a6761b743af203217fe665f3c644745df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd087f5c5b75c19dcd906e24214dafc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0cd087f5c5b75c19dcd906e24214dafc">getHandleRef</a> ()</td></tr>
+<tr class="memitem:a0cd087f5c5b75c19dcd906e24214dafc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0cd087f5c5b75c19dcd906e24214dafc">getHandleRef</a> ()</td></tr>
 <tr class="separator:a0cd087f5c5b75c19dcd906e24214dafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c55cb2cc1e445bd7fe6ae4931e8fe88"><td class="memTemplParams" colspan="2">template&lt;typename propertyT &gt; </td></tr>
 <tr class="memitem:a1c55cb2cc1e445bd7fe6ae4931e8fe88"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c55cb2cc1e445bd7fe6ae4931e8fe88">has_property</a> () const</td></tr>
@@ -129,22 +157,21 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 <tr class="memitem:a86aa1c97a3a5a8ca9fe38024363693a1"><td class="memTemplParams" colspan="2">template&lt;typename propertyT &gt; </td></tr>
 <tr class="memitem:a86aa1c97a3a5a8ca9fe38024363693a1"><td class="memTemplItemLeft" align="right" valign="top">propertyT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a86aa1c97a3a5a8ca9fe38024363693a1">get_property</a> () const</td></tr>
 <tr class="separator:a86aa1c97a3a5a8ca9fe38024363693a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a512fca4ad31e7ae4c97a0223dabf038e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a512fca4ad31e7ae4c97a0223dabf038e">memset</a> (shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Impl, void *Ptr, int Value, size_t Count)</td></tr>
+<tr class="memitem:a512fca4ad31e7ae4c97a0223dabf038e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a512fca4ad31e7ae4c97a0223dabf038e">memset</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Impl, void *Ptr, int Value, size_t Count)</td></tr>
 <tr class="memdesc:a512fca4ad31e7ae4c97a0223dabf038e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the memory pointed by a USM pointer with the value specified.  <a href="#a512fca4ad31e7ae4c97a0223dabf038e">More...</a><br /></td></tr>
 <tr class="separator:a512fca4ad31e7ae4c97a0223dabf038e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba5150e8132fdbaa945fdc59102639fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aba5150e8132fdbaa945fdc59102639fb">memcpy</a> (shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Impl, void *Dest, const void *Src, size_t Count)</td></tr>
+<tr class="memitem:aba5150e8132fdbaa945fdc59102639fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aba5150e8132fdbaa945fdc59102639fb">memcpy</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Impl, void *Dest, const void *Src, size_t Count)</td></tr>
 <tr class="memdesc:aba5150e8132fdbaa945fdc59102639fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from one memory region to another, both pointed by USM pointers.  <a href="#aba5150e8132fdbaa945fdc59102639fb">More...</a><br /></td></tr>
 <tr class="separator:aba5150e8132fdbaa945fdc59102639fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a2a8cf81ca5f32dec6948e22404209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a64a2a8cf81ca5f32dec6948e22404209">mem_advise</a> (const void *Ptr, size_t Length, pi_mem_advice Advice)</td></tr>
+<tr class="memitem:a64a2a8cf81ca5f32dec6948e22404209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a64a2a8cf81ca5f32dec6948e22404209">mem_advise</a> (const void *Ptr, size_t Length, <a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a> Advice)</td></tr>
 <tr class="memdesc:a64a2a8cf81ca5f32dec6948e22404209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides additional information to the underlying runtime about how different allocations are used.  <a href="#a64a2a8cf81ca5f32dec6948e22404209">More...</a><br /></td></tr>
 <tr class="separator:a64a2a8cf81ca5f32dec6948e22404209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ac26f1a281f5ca47c6610b33499bf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a27ac26f1a281f5ca47c6610b33499bf6">reportAsyncException</a> (std::exception_ptr ExceptionPtr)</td></tr>
 <tr class="memdesc:a27ac26f1a281f5ca47c6610b33499bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts exception to the list of asynchronous ecxeptions.  <a href="#a27ac26f1a281f5ca47c6610b33499bf6">More...</a><br /></td></tr>
 <tr class="separator:a27ac26f1a281f5ca47c6610b33499bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368a51ce99818f8560b21198900161cf"><td class="memItemLeft" align="right" valign="top"><a id="a368a51ce99818f8560b21198900161cf"></a>
-<a class="el" href="classcl_1_1sycl_1_1detail_1_1ThreadPool.html">ThreadPool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getThreadPool</b> ()</td></tr>
+<tr class="memitem:a368a51ce99818f8560b21198900161cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ThreadPool.html">ThreadPool</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">getThreadPool</a> ()</td></tr>
 <tr class="separator:a368a51ce99818f8560b21198900161cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2ab34a2aaa70ae5554fdeebc41752d6"><td class="memItemLeft" align="right" valign="top">pi_native_handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab2ab34a2aaa70ae5554fdeebc41752d6">getNative</a> () const</td></tr>
+<tr class="memitem:ab2ab34a2aaa70ae5554fdeebc41752d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab2ab34a2aaa70ae5554fdeebc41752d6">getNative</a> () const</td></tr>
 <tr class="memdesc:ab2ab34a2aaa70ae5554fdeebc41752d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL queue.  <a href="#ab2ab34a2aaa70ae5554fdeebc41752d6">More...</a><br /></td></tr>
 <tr class="separator:ab2ab34a2aaa70ae5554fdeebc41752d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -164,19 +191,19 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
         <tr>
           <td class="memname">cl::sycl::detail::queue_impl::queue_impl </td>
           <td>(</td>
-          <td class="paramtype">DeviceImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a3b78f8c517b1d76ecd7b0eb46ec2056e">DeviceImplPtr</a>&#160;</td>
           <td class="paramname"><em>Device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">async_handler&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a>&#160;</td>
           <td class="paramname"><em>AsyncHandler</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QueueOrder&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">QueueOrder</a>&#160;</td>
           <td class="paramname"><em>Order</em>, </td>
         </tr>
         <tr>
@@ -225,25 +252,25 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
         <tr>
           <td class="memname">cl::sycl::detail::queue_impl::queue_impl </td>
           <td>(</td>
-          <td class="paramtype">DeviceImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a3b78f8c517b1d76ecd7b0eb46ec2056e">DeviceImplPtr</a>&#160;</td>
           <td class="paramname"><em>Device</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ContextImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
           <td class="paramname"><em>Context</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">async_handler&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a>&#160;</td>
           <td class="paramname"><em>AsyncHandler</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QueueOrder&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">QueueOrder</a>&#160;</td>
           <td class="paramname"><em>Order</em>, </td>
         </tr>
         <tr>
@@ -279,6 +306,8 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00075">75</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
 
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_DEVICE</a>.</p>
+
 </div>
 </div>
 <a id="a19786ae9b03482ef55e773667cc46ec9"></a>
@@ -293,19 +322,19 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
         <tr>
           <td class="memname">cl::sycl::detail::queue_impl::queue_impl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a>&#160;</td>
           <td class="paramname"><em>PiQueue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ContextImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
           <td class="paramname"><em>Context</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const async_handler &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a> &amp;&#160;</td>
           <td class="paramname"><em>AsyncHandler</em>&#160;</td>
         </tr>
         <tr>
@@ -333,6 +362,37 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00097">97</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
 
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00287">PI_QUEUE_INFO_DEVICE</a>, <a class="el" href="pi_8h.html#ad36f2ff72516040388d88f718b392f3b">piQueueGetInfo()</a>, and <a class="el" href="pi_8h.html#af335681aea7ca9e2f6441581b546a6cd">piQueueRetain()</a>.</p>
+
+</div>
+</div>
+<a id="a4bdbee365712b9476ada470d7cad1678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bdbee365712b9476ada470d7cad1678">&#9670;&nbsp;</a></span>~queue_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::detail::queue_impl::~queue_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00116">116</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h.html#a69d95afab741cf15c76c7fb1abcf6b83">piQueueRelease()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -346,9 +406,9 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a> cl::sycl::detail::queue_impl::createQueue </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a> cl::sycl::detail::queue_impl::createQueue </td>
           <td>(</td>
-          <td class="paramtype">QueueOrder&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">QueueOrder</a>&#160;</td>
           <td class="paramname"><em>Order</em></td><td>)</td>
           <td></td>
         </tr>
@@ -370,7 +430,7 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00239">239</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="plugin_8hpp_source.html#l00051">cl::sycl::detail::plugin::checkPiResult()</a>, <a class="el" href="plugin_8hpp_source.html#l00101">cl::sycl::detail::plugin::getBackend()</a>, <a class="el" href="queue__impl_8hpp_source.html#l00043">cl::sycl::detail::OOO</a>, <a class="el" href="queue__impl_8hpp_source.html#l00043">cl::sycl::detail::Ordered</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_QUEUE_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00516">PI_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE</a>, <a class="el" href="pi_8h_source.html#l00518">PI_QUEUE_PROFILING_ENABLE</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00275">piQueueCreate()</a>.</p>
 
 </div>
 </div>
@@ -399,6 +459,8 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 <dl class="section return"><dt>Returns</dt><dd>an OpenCL interoperability queue handle. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00124">124</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00083">PI_INVALID_QUEUE</a>, and <a class="el" href="pi_8h.html#af335681aea7ca9e2f6441581b546a6cd">piQueueRetain()</a>.</p>
 
 </div>
 </div>
@@ -467,7 +529,7 @@ ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContextI
 template&lt;info::queue param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;info::queue, param&gt;::return_type cl::sycl::detail::queue_impl::get_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1info.html#a298d56c26b4eec2a4d4fb1649e2d1063">info::queue</a>, param&gt;::return_type cl::sycl::detail::queue_impl::get_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -507,6 +569,35 @@ template&lt;typename propertyT &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>a copy of the property of type PropertyT that the queue was constructed with. If the queue was not constructed with the PropertyT property, an <a class="el" href="classcl_1_1sycl_1_1invalid__object__error.html">invalid_object_error</a> SYCL exception. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00322">322</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00037">cl::sycl::detail::memcpy()</a>.</p>
+
+</div>
+</div>
+<a id="a908d0fbd5026bc0fd97311ceb0b07723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908d0fbd5026bc0fd97311ceb0b07723">&#9670;&nbsp;</a></span>getContextImplPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> cl::sycl::detail::queue_impl::getContextImplPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00141">141</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +639,7 @@ template&lt;typename propertyT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a>&amp; cl::sycl::detail::queue_impl::getExclusiveQueueHandleRef </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a>&amp; cl::sycl::detail::queue_impl::getExclusiveQueueHandleRef </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -564,6 +655,8 @@ template&lt;typename propertyT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00272">272</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
 
+<p class="reference">References <a class="el" href="queue__impl_8hpp_source.html#l00034">cl::sycl::detail::MaxNumQueues</a>, <a class="el" href="queue__impl_8hpp_source.html#l00043">cl::sycl::detail::Ordered</a>, and <a class="el" href="pi_8h.html#a0f064cd3d0125931ced50f27faf6be8e">piQueueFinish()</a>.</p>
+
 </div>
 </div>
 <a id="a0cd087f5c5b75c19dcd906e24214dafc"></a>
@@ -576,7 +669,7 @@ template&lt;typename propertyT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct__pi__queue.html">RT::PiQueue</a>&amp; cl::sycl::detail::queue_impl::getHandleRef </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a259f9259bf171c834b239f8af47f709e">RT::PiQueue</a>&amp; cl::sycl::detail::queue_impl::getHandleRef </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -601,7 +694,7 @@ template&lt;typename propertyT &gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_native_handle cl::sycl::detail::queue_impl::getNative </td>
+          <td class="memname"><a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> cl::sycl::detail::queue_impl::getNative </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -615,6 +708,60 @@ template&lt;typename propertyT &gt; </div>
 <p class="definition">Definition at line <a class="el" href="queue__impl_8cpp_source.html#l00222">222</a> of file <a class="el" href="queue__impl_8cpp_source.html">queue_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01085">piextQueueGetNativeHandle()</a>.</p>
+
+</div>
+</div>
+<a id="a44bc3d7db560327c91ee019c5aa64642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44bc3d7db560327c91ee019c5aa64642">&#9670;&nbsp;</a></span>getPlugin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a>&amp; cl::sycl::detail::queue_impl::getPlugin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00139">139</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a368a51ce99818f8560b21198900161cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368a51ce99818f8560b21198900161cf">&#9670;&nbsp;</a></span>getThreadPool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ThreadPool.html">ThreadPool</a>&amp; cl::sycl::detail::queue_impl::getThreadPool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="queue__impl_8hpp_source.html#l00360">360</a> of file <a class="el" href="queue__impl_8hpp_source.html">queue_impl.hpp</a>.</p>
 
 </div>
 </div>
@@ -697,7 +844,7 @@ template&lt;typename propertyT &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">pi_mem_advice&#160;</td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a>&#160;</td>
           <td class="paramname"><em>Advice</em>&#160;</td>
         </tr>
         <tr>
@@ -720,7 +867,7 @@ template&lt;typename propertyT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8cpp_source.html#l00070">70</a> of file <a class="el" href="queue__impl_8cpp_source.html">queue_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="device_8cpp_source.html#l00087">cl::sycl::device::is_accelerator()</a>, <a class="el" href="device_8cpp_source.html#l00083">cl::sycl::device::is_cpu()</a>, <a class="el" href="device_8cpp_source.html#l00085">cl::sycl::device::is_gpu()</a>, <a class="el" href="device_8cpp_source.html#l00081">cl::sycl::device::is_host()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00941">piextUSMEnqueueMemAdvise()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00066">cl::sycl::detail::code_location::columnNumber()</a>, <a class="el" href="common_8hpp_source.html#l00067">cl::sycl::detail::code_location::fileName()</a>, <a class="el" href="common_8hpp_source.html#l00068">cl::sycl::detail::code_location::functionName()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="device_8cpp_source.html#l00087">cl::sycl::device::is_accelerator()</a>, <a class="el" href="device_8cpp_source.html#l00083">cl::sycl::device::is_cpu()</a>, <a class="el" href="device_8cpp_source.html#l00085">cl::sycl::device::is_gpu()</a>, <a class="el" href="device_8cpp_source.html#l00081">cl::sycl::device::is_host()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="common_8hpp_source.html#l00065">cl::sycl::detail::code_location::lineNumber()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00941">piextUSMEnqueueMemAdvise()</a>.</p>
 
 </div>
 </div>
@@ -733,7 +880,7 @@ template&lt;typename propertyT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a> cl::sycl::detail::queue_impl::memcpy </td>
           <td>(</td>
-          <td class="paramtype">shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Impl</em>, </td>
         </tr>
         <tr>
@@ -788,7 +935,7 @@ template&lt;typename propertyT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a> cl::sycl::detail::queue_impl::memset </td>
           <td>(</td>
-          <td class="paramtype">shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Impl</em>, </td>
         </tr>
         <tr>
@@ -883,19 +1030,19 @@ template&lt;typename propertyT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a> cl::sycl::detail::queue_impl::submit </td>
           <td>(</td>
-          <td class="paramtype">const function_class&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#afb9dbf04ee5a8befd9c439daf7e88d83">function_class</a>&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;&#160;</td>
           <td class="paramname"><em>CGF</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>SecondQueue</em>, </td>
         </tr>
         <tr>
@@ -946,13 +1093,13 @@ template&lt;typename propertyT &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a> cl::sycl::detail::queue_impl::submit </td>
           <td>(</td>
-          <td class="paramtype">const function_class&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#afb9dbf04ee5a8befd9c439daf7e88d83">function_class</a>&lt; void(<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;&#160;</td>
           <td class="paramname"><em>CGF</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">shared_ptr_class&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Self</em>, </td>
         </tr>
         <tr>
@@ -1045,7 +1192,7 @@ template&lt;typename propertyT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8cpp_source.html#l00174">174</a> of file <a class="el" href="queue__impl_8cpp_source.html">queue_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="event_8cpp_source.html#l00038">cl::sycl::event::wait()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>, <a class="el" href="common_8hpp_source.html#l00032">cl::sycl::detail::SYCL_STREAM_NAME</a>, and <a class="el" href="event_8cpp_source.html#l00038">cl::sycl::event::wait()</a>.</p>
 
 </div>
 </div>
@@ -1088,11 +1235,15 @@ template&lt;typename propertyT &gt; </div>
 <li>source/detail/<a class="el" href="queue__impl_8cpp_source.html">queue_impl.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

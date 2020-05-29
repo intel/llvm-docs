@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['base_5ftype',['base_type',['../structcl_1_1sycl_1_1detail_1_1make__signed__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01afb410ed3c97cd9103dfdc3deaa3c758.html#afe9542d2100697abba2667c2e545ae91',1,'cl::sycl::detail::make_signed_impl&lt; T, enable_if_t&lt; is_contained&lt; T, gtl::vector_integer_list &gt;::value, T &gt; &gt;::base_type()'],['../structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html#ad7e7b7a635238d36e3f17a8c525acd90',1,'cl::sycl::detail::make_unsigned_impl&lt; T, enable_if_t&lt; is_contained&lt; T, gtl::vector_integer_list &gt;::value, T &gt; &gt;::base_type()'],['../structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#a26eb698fef3ad32baa8a012955c53d21',1,'cl::sycl::detail::make_larger_impl&lt; vec&lt; T, N &gt;, vec&lt; T, N &gt; &gt;::base_type()']]],
+  ['basic_5flist',['basic_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a67b1111f378e8c2237029623704ccfff',1,'cl::sycl::detail::gtl']]],
+  ['binary_5foperation',['binary_operation',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a41ffae97e79eb3c6fd12c83e5efcc101',1,'cl::sycl::intel::detail::reduction_impl']]],
+  ['bisrepresentationt',['BIsRepresentationT',['../namespacecl_1_1sycl_1_1detail_1_1half__impl.html#a246852439b33d020098e8eb187d6c7a8',1,'cl::sycl::detail::half_impl']]],
+  ['bit_5fand',['bit_and',['../namespacecl_1_1sycl_1_1intel.html#a5170bb46ad8d7e98d5badb4ce662e291',1,'cl::sycl::intel']]],
+  ['bit_5for',['bit_or',['../namespacecl_1_1sycl_1_1intel.html#afe6b273a148d2fdcd38f5b9a4f2172f7',1,'cl::sycl::intel']]],
+  ['bit_5fxor',['bit_xor',['../namespacecl_1_1sycl_1_1intel.html#a0bcdaf7d87d4dbdb29399e3c796f46d1',1,'cl::sycl::intel']]],
+  ['bool_5fconstant',['bool_constant',['../namespacecl_1_1sycl_1_1detail.html#abe0d3a7302fa94b2522b6182113606fa',1,'cl::sycl::detail']]],
+  ['bool_5ft',['bool_t',['../structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#a58b0b874f8de44f1a53b08937cdf7128',1,'cl::sycl::detail::RelConverter&lt; T, typename std::enable_if&lt; TryToGetElementType&lt; T &gt;::value &gt;::type &gt;']]],
+  ['buffer_5fallocator',['buffer_allocator',['../namespacecl_1_1sycl.html#a7a19058abadafdeccbb4ef44cdb2b318',1,'cl::sycl']]],
+  ['byte',['byte',['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl']]]
+];

@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: Member List</title>
+<title>DPC++ Runtime: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1MemoryManager.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">MemoryManager</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">cl::sycl::detail::MemoryManager Member List</div>  </div>
@@ -70,29 +96,32 @@ $(function() {
 
 <p>This is the complete list of members for <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allocate</b>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, bool InitFromUserData, void *HostPtr, std::vector&lt; EventImplPtr &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>allocateBufferObject</b>(ContextImplPtr TargetContext, void *UserPtr, bool HostPtrReadOnly, const size_t Size) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allocateHostMemory</b>(SYCLMemObjI *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>allocateImageObject</b>(ContextImplPtr TargetContext, void *UserPtr, bool HostPtrReadOnly, const RT::PiMemImageDesc &amp;Desc, const RT::PiMemImageFormat &amp;Format) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allocateInteropMemObject</b>(ContextImplPtr TargetContext, void *UserPtr, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, RT::PiEvent &amp;OutEventToWait) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>allocateMemBuffer</b>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, RT::PiEvent &amp;OutEventToWait) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allocateMemImage</b>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const RT::PiMemImageDesc &amp;Desc, const RT::PiMemImageFormat &amp;Format, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, RT::PiEvent &amp;OutEventToWait) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>allocateMemSubBuffer</b>(ContextImplPtr TargetContext, void *ParentMemObj, size_t ElemSize, size_t Offset, range&lt; 3 &gt; Range, std::vector&lt; EventImplPtr &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>copy</b>(SYCLMemObjI *SYCLMemObj, void *SrcMem, QueueImplPtr SrcQueue, unsigned int DimSrc, sycl::range&lt; 3 &gt; SrcSize, sycl::range&lt; 3 &gt; SrcAccessRange, sycl::id&lt; 3 &gt; SrcOffset, unsigned int SrcElemSize, void *DstMem, QueueImplPtr TgtQueue, unsigned int DimDst, sycl::range&lt; 3 &gt; DstSize, sycl::range&lt; 3 &gt; DstAccessRange, sycl::id&lt; 3 &gt; DstOffset, unsigned int DstElemSize, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>copy_usm</b>(const void *SrcMem, QueueImplPtr Queue, size_t Len, void *DstMem, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>fill</b>(SYCLMemObjI *SYCLMemObj, void *Mem, QueueImplPtr Queue, size_t PatternSize, const char *Pattern, unsigned int Dim, sycl::range&lt; 3 &gt; Size, sycl::range&lt; 3 &gt; AccessRange, sycl::id&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>fill_usm</b>(void *DstMem, QueueImplPtr Queue, size_t Len, int Pattern, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>map</b>(SYCLMemObjI *SYCLMemObj, void *Mem, QueueImplPtr Queue, access::mode AccessMode, unsigned int Dim, sycl::range&lt; 3 &gt; Size, sycl::range&lt; 3 &gt; AccessRange, sycl::id&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>prefetch_usm</b>(void *Ptr, QueueImplPtr Queue, size_t Len, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>release</b>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *MemAllocation, std::vector&lt; EventImplPtr &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>releaseMemObj</b>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *MemAllocation, void *UserPtr) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>unmap</b>(SYCLMemObjI *SYCLMemObj, void *Mem, QueueImplPtr Queue, void *MappedPtr, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent) (defined in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a>)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac311b1b640b53526e5f6a964ac52eba9">allocate</a>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, bool InitFromUserData, void *HostPtr, std::vector&lt; EventImplPtr &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a244e8a24e84be0df523547c642a805f3">allocateBufferObject</a>(ContextImplPtr TargetContext, void *UserPtr, bool HostPtrReadOnly, const size_t Size)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a6df91d25864675140c317e5c74fd207b">allocateHostMemory</a>(SYCLMemObjI *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a29e0d570e609d85c78963f6dece9e3a6">allocateImageObject</a>(ContextImplPtr TargetContext, void *UserPtr, bool HostPtrReadOnly, const RT::PiMemImageDesc &amp;Desc, const RT::PiMemImageFormat &amp;Format)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a44eaa7454c4a260faae7afb726a0768a">allocateInteropMemObject</a>(ContextImplPtr TargetContext, void *UserPtr, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, RT::PiEvent &amp;OutEventToWait)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a7e3fbe9dd146978831683089d2d42837">allocateMemBuffer</a>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, RT::PiEvent &amp;OutEventToWait)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#abb32680bbed892471b70a0bb3eaa8438">allocateMemImage</a>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const RT::PiMemImageDesc &amp;Desc, const RT::PiMemImageFormat &amp;Format, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, RT::PiEvent &amp;OutEventToWait)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae7e34b2e2df980c15d3b2bed30ac0908">allocateMemSubBuffer</a>(ContextImplPtr TargetContext, void *ParentMemObj, size_t ElemSize, size_t Offset, range&lt; 3 &gt; Range, std::vector&lt; EventImplPtr &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#add4c87c0f8a7652755eb435a79c4e35d">copy</a>(SYCLMemObjI *SYCLMemObj, void *SrcMem, QueueImplPtr SrcQueue, unsigned int DimSrc, sycl::range&lt; 3 &gt; SrcSize, sycl::range&lt; 3 &gt; SrcAccessRange, sycl::id&lt; 3 &gt; SrcOffset, unsigned int SrcElemSize, void *DstMem, QueueImplPtr TgtQueue, unsigned int DimDst, sycl::range&lt; 3 &gt; DstSize, sycl::range&lt; 3 &gt; DstAccessRange, sycl::id&lt; 3 &gt; DstOffset, unsigned int DstElemSize, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae8475ada97bafb83ebda1e8a4c93dc27">copy_usm</a>(const void *SrcMem, QueueImplPtr Queue, size_t Len, void *DstMem, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac885d004ad801e0fb49150227b5831ab">fill</a>(SYCLMemObjI *SYCLMemObj, void *Mem, QueueImplPtr Queue, size_t PatternSize, const char *Pattern, unsigned int Dim, sycl::range&lt; 3 &gt; Size, sycl::range&lt; 3 &gt; AccessRange, sycl::id&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a71d6b81364aa47331f0b1275e7d11b8c">fill_usm</a>(void *DstMem, QueueImplPtr Queue, size_t Len, int Pattern, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d">map</a>(SYCLMemObjI *SYCLMemObj, void *Mem, QueueImplPtr Queue, access::mode AccessMode, unsigned int Dim, sycl::range&lt; 3 &gt; Size, sycl::range&lt; 3 &gt; AccessRange, sycl::id&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8d7a472dc0c2bbfa9dd666dc47a9ad0b">prefetch_usm</a>(void *Ptr, QueueImplPtr Queue, size_t Len, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ab9ff512130fc0fa1a38cb168eb1a0386">release</a>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *MemAllocation, std::vector&lt; EventImplPtr &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a563de04e33f937623b8520d336fde086">releaseMemObj</a>(ContextImplPtr TargetContext, SYCLMemObjI *MemObj, void *MemAllocation, void *UserPtr)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c">unmap</a>(SYCLMemObjI *SYCLMemObj, void *Mem, QueueImplPtr Queue, void *MappedPtr, std::vector&lt; RT::PiEvent &gt; DepEvents, RT::PiEvent &amp;OutEvent)</td><td class="entry"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">cl::sycl::detail::MemoryManager</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

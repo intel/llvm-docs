@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: _pi_queue Struct Reference</title>
+<title>DPC++ Runtime: _pi_queue Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('struct__pi__queue.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,7 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -81,66 +111,394 @@ Collaboration diagram for _pi_queue:</div>
 <area shape="rect" id="node3" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="106,5,190,32"/>
 <area shape="rect" id="node5" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="294,95,383,121"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5b36b50f8d42c52a3aa9ee5eda0bd790"><td class="memItemLeft" align="right" valign="top"><a id="a5b36b50f8d42c52a3aa9ee5eda0bd790"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>native_type</b> = CUstream</td></tr>
+<tr class="memitem:a5b36b50f8d42c52a3aa9ee5eda0bd790"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790">native_type</a> = <a class="el" href="cuda_8hpp.html#ab946c7f02e09efd788a204718015d88a">CUstream</a></td></tr>
 <tr class="separator:a5b36b50f8d42c52a3aa9ee5eda0bd790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a63d30619190103a7bead8c063e4bf470"><td class="memItemLeft" align="right" valign="top"><a id="a63d30619190103a7bead8c063e4bf470"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>_pi_queue</b> (CUstream stream, <a class="el" href="struct__pi__context.html">_pi_context</a> *context, <a class="el" href="class__pi__device.html">_pi_device</a> *device, pi_queue_properties properties)</td></tr>
+<tr class="memitem:a63d30619190103a7bead8c063e4bf470"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a63d30619190103a7bead8c063e4bf470">_pi_queue</a> (<a class="el" href="cuda_8hpp.html#ab946c7f02e09efd788a204718015d88a">CUstream</a> stream, <a class="el" href="struct__pi__context.html">_pi_context</a> *context, <a class="el" href="class__pi__device.html">_pi_device</a> *device, <a class="el" href="pi_8h.html#a5ea92e21781614b49be99b4936df2c7a">pi_queue_properties</a> properties)</td></tr>
 <tr class="separator:a63d30619190103a7bead8c063e4bf470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f41bafbe5a8231accf14f4444ec76c6"><td class="memItemLeft" align="right" valign="top"><a id="a8f41bafbe5a8231accf14f4444ec76c6"></a>
-native_type&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> () const noexcept</td></tr>
+<tr class="memitem:ae01364b9dfd939bdc3b3c0b4962e6bd2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#ae01364b9dfd939bdc3b3c0b4962e6bd2">~_pi_queue</a> ()</td></tr>
+<tr class="separator:ae01364b9dfd939bdc3b3c0b4962e6bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f41bafbe5a8231accf14f4444ec76c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790">native_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a8f41bafbe5a8231accf14f4444ec76c6">get</a> () const noexcept</td></tr>
 <tr class="separator:a8f41bafbe5a8231accf14f4444ec76c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f5c8883c7ab5f6e2da68d189d9c50f"><td class="memItemLeft" align="right" valign="top"><a id="a06f5c8883c7ab5f6e2da68d189d9c50f"></a>
-<a class="el" href="struct__pi__context.html">_pi_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>get_context</b> () const</td></tr>
+<tr class="memitem:a06f5c8883c7ab5f6e2da68d189d9c50f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__context.html">_pi_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a06f5c8883c7ab5f6e2da68d189d9c50f">get_context</a> () const</td></tr>
 <tr class="separator:a06f5c8883c7ab5f6e2da68d189d9c50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e42c61b4c00cd03ec6f6e85d9a9678f"><td class="memItemLeft" align="right" valign="top"><a id="a1e42c61b4c00cd03ec6f6e85d9a9678f"></a>
-pi_uint32&#160;</td><td class="memItemRight" valign="bottom"><b>increment_reference_count</b> () noexcept</td></tr>
+<tr class="memitem:a1e42c61b4c00cd03ec6f6e85d9a9678f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a1e42c61b4c00cd03ec6f6e85d9a9678f">increment_reference_count</a> () noexcept</td></tr>
 <tr class="separator:a1e42c61b4c00cd03ec6f6e85d9a9678f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadff72e7ebef5034c4239580d2b6b04f"><td class="memItemLeft" align="right" valign="top"><a id="aadff72e7ebef5034c4239580d2b6b04f"></a>
-pi_uint32&#160;</td><td class="memItemRight" valign="bottom"><b>decrement_reference_count</b> () noexcept</td></tr>
+<tr class="memitem:aadff72e7ebef5034c4239580d2b6b04f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#aadff72e7ebef5034c4239580d2b6b04f">decrement_reference_count</a> () noexcept</td></tr>
 <tr class="separator:aadff72e7ebef5034c4239580d2b6b04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2491d242bb245ef26f08b56dbfeddb2"><td class="memItemLeft" align="right" valign="top"><a id="af2491d242bb245ef26f08b56dbfeddb2"></a>
-pi_uint32&#160;</td><td class="memItemRight" valign="bottom"><b>get_reference_count</b> () const noexcept</td></tr>
+<tr class="memitem:af2491d242bb245ef26f08b56dbfeddb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#af2491d242bb245ef26f08b56dbfeddb2">get_reference_count</a> () const noexcept</td></tr>
 <tr class="separator:af2491d242bb245ef26f08b56dbfeddb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a622784255d6db4ff8f778200b46cb779"><td class="memItemLeft" align="right" valign="top"><a id="a622784255d6db4ff8f778200b46cb779"></a>
-native_type&#160;</td><td class="memItemRight" valign="bottom"><b>stream_</b></td></tr>
+<tr class="memitem:a622784255d6db4ff8f778200b46cb779"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790">native_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a622784255d6db4ff8f778200b46cb779">stream_</a></td></tr>
 <tr class="separator:a622784255d6db4ff8f778200b46cb779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0b09af6796a703c1cb97e3c4bd749d4"><td class="memItemLeft" align="right" valign="top"><a id="aa0b09af6796a703c1cb97e3c4bd749d4"></a>
-<a class="el" href="struct__pi__context.html">_pi_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>context_</b></td></tr>
+<tr class="memitem:aa0b09af6796a703c1cb97e3c4bd749d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__context.html">_pi_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4">context_</a></td></tr>
 <tr class="separator:aa0b09af6796a703c1cb97e3c4bd749d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5763eb6e4cbd778f9b0f71e6f5579bd5"><td class="memItemLeft" align="right" valign="top"><a id="a5763eb6e4cbd778f9b0f71e6f5579bd5"></a>
-<a class="el" href="class__pi__device.html">_pi_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>device_</b></td></tr>
+<tr class="memitem:a5763eb6e4cbd778f9b0f71e6f5579bd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class__pi__device.html">_pi_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5">device_</a></td></tr>
 <tr class="separator:a5763eb6e4cbd778f9b0f71e6f5579bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af82978db8cafce93f764f5a6be9b8706"><td class="memItemLeft" align="right" valign="top"><a id="af82978db8cafce93f764f5a6be9b8706"></a>
-pi_queue_properties&#160;</td><td class="memItemRight" valign="bottom"><b>properties_</b></td></tr>
+<tr class="memitem:af82978db8cafce93f764f5a6be9b8706"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a5ea92e21781614b49be99b4936df2c7a">pi_queue_properties</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#af82978db8cafce93f764f5a6be9b8706">properties_</a></td></tr>
 <tr class="separator:af82978db8cafce93f764f5a6be9b8706"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbd36fbf0364c31d4e901d5f1a9b4b8a"><td class="memItemLeft" align="right" valign="top"><a id="adbd36fbf0364c31d4e901d5f1a9b4b8a"></a>
-std::atomic_uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>refCount_</b></td></tr>
+<tr class="memitem:adbd36fbf0364c31d4e901d5f1a9b4b8a"><td class="memItemLeft" align="right" valign="top">std::atomic_uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#adbd36fbf0364c31d4e901d5f1a9b4b8a">refCount_</a></td></tr>
 <tr class="separator:adbd36fbf0364c31d4e901d5f1a9b4b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PI queue mapping on to CUstream objects. </p>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00270">270</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a5b36b50f8d42c52a3aa9ee5eda0bd790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b36b50f8d42c52a3aa9ee5eda0bd790">&#9670;&nbsp;</a></span>native_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790">_pi_queue::native_type</a> =  <a class="el" href="cuda_8hpp.html#ab946c7f02e09efd788a204718015d88a">CUstream</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00271">271</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a63d30619190103a7bead8c063e4bf470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d30619190103a7bead8c063e4bf470">&#9670;&nbsp;</a></span>_pi_queue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_pi_queue::_pi_queue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="cuda_8hpp.html#ab946c7f02e09efd788a204718015d88a">CUstream</a>&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__context.html">_pi_context</a> *&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class__pi__device.html">_pi_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a5ea92e21781614b49be99b4936df2c7a">pi_queue_properties</a>&#160;</td>
+          <td class="paramname"><em>properties</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00279">279</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00770">cuda_piContextRetain()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00746">cuda_piDeviceRetain()</a>.</p>
+
+</div>
+</div>
+<a id="ae01364b9dfd939bdc3b3c0b4962e6bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01364b9dfd939bdc3b3c0b4962e6bd2">&#9670;&nbsp;</a></span>~_pi_queue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_pi_queue::~_pi_queue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00287">287</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01486">cuda_piContextRelease()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00830">cuda_piDeviceRelease()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aadff72e7ebef5034c4239580d2b6b04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadff72e7ebef5034c4239580d2b6b04f">&#9670;&nbsp;</a></span>decrement_reference_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> _pi_queue::decrement_reference_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00298">298</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01844">cuda_piQueueRelease()</a>.</p>
+
+</div>
+</div>
+<a id="a8f41bafbe5a8231accf14f4444ec76c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f41bafbe5a8231accf14f4444ec76c6">&#9670;&nbsp;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790">native_type</a> _pi_queue::get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00292">292</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02109">cuda_piEnqueueKernelLaunch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03103">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03144">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03189">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01964">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03001">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01919">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03052">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01898">cuda_piextQueueGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03537">cuda_piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03505">cuda_piextUSMEnqueueMemset()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03576">cuda_piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00421">enqueueEventWait()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00346">_pi_event::record()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00301">_pi_event::start()</a>.</p>
+
+</div>
+</div>
+<a id="a06f5c8883c7ab5f6e2da68d189d9c50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f5c8883c7ab5f6e2da68d189d9c50f">&#9670;&nbsp;</a></span>get_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct__pi__context.html">_pi_context</a>* _pi_queue::get_context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00294">294</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02849">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02109">cuda_piEnqueueKernelLaunch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03103">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03144">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03189">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03334">cuda_piEnqueueMemBufferMap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01964">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03001">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01919">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03052">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03383">cuda_piEnqueueMemUnmap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03537">cuda_piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03505">cuda_piextUSMEnqueueMemset()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03576">cuda_piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01868">cuda_piQueueFinish()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01844">cuda_piQueueRelease()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00450">_pi_event::make_native()</a>.</p>
+
+</div>
+</div>
+<a id="af2491d242bb245ef26f08b56dbfeddb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2491d242bb245ef26f08b56dbfeddb2">&#9670;&nbsp;</a></span>get_reference_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> _pi_queue::get_reference_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00300">300</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01809">cuda_piQueueGetInfo()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01836">cuda_piQueueRetain()</a>.</p>
+
+</div>
+</div>
+<a id="a1e42c61b4c00cd03ec6f6e85d9a9678f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e42c61b4c00cd03ec6f6e85d9a9678f">&#9670;&nbsp;</a></span>increment_reference_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> _pi_queue::increment_reference_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00296">296</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01836">cuda_piQueueRetain()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa0b09af6796a703c1cb97e3c4bd749d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b09af6796a703c1cb97e3c4bd749d4">&#9670;&nbsp;</a></span>context_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct__pi__context.html">_pi_context</a>* _pi_queue::context_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00274">274</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01809">cuda_piQueueGetInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a5763eb6e4cbd778f9b0f71e6f5579bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5763eb6e4cbd778f9b0f71e6f5579bd5">&#9670;&nbsp;</a></span>device_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class__pi__device.html">_pi_device</a>* _pi_queue::device_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00275">275</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02109">cuda_piEnqueueKernelLaunch()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01809">cuda_piQueueGetInfo()</a>.</p>
+
+</div>
+</div>
+<a id="af82978db8cafce93f764f5a6be9b8706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af82978db8cafce93f764f5a6be9b8706">&#9670;&nbsp;</a></span>properties_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a5ea92e21781614b49be99b4936df2c7a">pi_queue_properties</a> _pi_queue::properties_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00276">276</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01809">cuda_piQueueGetInfo()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00301">_pi_event::start()</a>.</p>
+
+</div>
+</div>
+<a id="adbd36fbf0364c31d4e901d5f1a9b4b8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd36fbf0364c31d4e901d5f1a9b4b8a">&#9670;&nbsp;</a></span>refCount_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic_uint32_t _pi_queue::refCount_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00277">277</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a622784255d6db4ff8f778200b46cb779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622784255d6db4ff8f778200b46cb779">&#9670;&nbsp;</a></span>stream_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790">native_type</a> _pi_queue::stream_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00273">273</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01868">cuda_piQueueFinish()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>plugins/cuda/<a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct__pi__queue.html">_pi_queue</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

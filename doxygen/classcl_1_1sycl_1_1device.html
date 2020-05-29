@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::device Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::device Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1device.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -69,15 +95,19 @@ $(function() {
 <a href="#friends">Friends</a> &#124;
 <a href="classcl_1_1sycl_1_1device-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::device Class Reference</div>  </div>
+<div class="title">cl::sycl::device Class Reference<div class="ingroups"><a class="el" href="group__sycl__api.html">DPC++ User API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The SYCL device class encapsulates a single SYCL device on which kernels may be executed.  
+ <a href="classcl_1_1sycl_1_1device.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="device_8hpp_source.html">CL/sycl/device.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6f54ed6a0d417c5f97686b35cb9783fa"><td class="memItemLeft" align="right" valign="top"><a id="a6f54ed6a0d417c5f97686b35cb9783fa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a6f54ed6a0d417c5f97686b35cb9783fa">device</a> ()</td></tr>
-<tr class="memdesc:a6f54ed6a0d417c5f97686b35cb9783fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL device instance as a host device. <br /></td></tr>
+<tr class="memitem:a6f54ed6a0d417c5f97686b35cb9783fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a6f54ed6a0d417c5f97686b35cb9783fa">device</a> ()</td></tr>
+<tr class="memdesc:a6f54ed6a0d417c5f97686b35cb9783fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL device instance as a host device.  <a href="#a6f54ed6a0d417c5f97686b35cb9783fa">More...</a><br /></td></tr>
 <tr class="separator:a6f54ed6a0d417c5f97686b35cb9783fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2590d7bac60e80b4677648060f1180b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a2590d7bac60e80b4677648060f1180b1">device</a> (cl_device_id DeviceId)</td></tr>
 <tr class="memdesc:a2590d7bac60e80b4677648060f1180b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL device instance from an OpenCL cl_device_id in accordance with the requirements described in 4.3.1.  <a href="#a2590d7bac60e80b4677648060f1180b1">More...</a><br /></td></tr>
@@ -85,23 +115,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a540fc7168621c90290de1d8ce8c4ca96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a540fc7168621c90290de1d8ce8c4ca96">device</a> (const <a class="el" href="classcl_1_1sycl_1_1device__selector.html">device_selector</a> &amp;DeviceSelector)</td></tr>
 <tr class="memdesc:a540fc7168621c90290de1d8ce8c4ca96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL device instance using the device selected by the DeviceSelector provided.  <a href="#a540fc7168621c90290de1d8ce8c4ca96">More...</a><br /></td></tr>
 <tr class="separator:a540fc7168621c90290de1d8ce8c4ca96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6551090dae841b394331c54e31ac7a3"><td class="memItemLeft" align="right" valign="top"><a id="af6551090dae841b394331c54e31ac7a3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs) const</td></tr>
+<tr class="memitem:af6551090dae841b394331c54e31ac7a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#af6551090dae841b394331c54e31ac7a3">operator==</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs) const</td></tr>
 <tr class="separator:af6551090dae841b394331c54e31ac7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39b463e77ba3c00337475355eb5b1588"><td class="memItemLeft" align="right" valign="top"><a id="a39b463e77ba3c00337475355eb5b1588"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a39b463e77ba3c00337475355eb5b1588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a39b463e77ba3c00337475355eb5b1588">operator!=</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs) const</td></tr>
 <tr class="separator:a39b463e77ba3c00337475355eb5b1588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a980e472ff3da95d67525b637c55dadf1"><td class="memItemLeft" align="right" valign="top"><a id="a980e472ff3da95d67525b637c55dadf1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>device</b> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs)=default</td></tr>
+<tr class="memitem:a980e472ff3da95d67525b637c55dadf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a980e472ff3da95d67525b637c55dadf1">device</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs)=default</td></tr>
 <tr class="separator:a980e472ff3da95d67525b637c55dadf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b0e0f7c8ffe4ec98729f3df8fbbb9f3"><td class="memItemLeft" align="right" valign="top"><a id="a4b0e0f7c8ffe4ec98729f3df8fbbb9f3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>device</b> (<a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&amp;rhs)=default</td></tr>
+<tr class="memitem:a4b0e0f7c8ffe4ec98729f3df8fbbb9f3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a4b0e0f7c8ffe4ec98729f3df8fbbb9f3">device</a> (<a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&amp;rhs)=default</td></tr>
 <tr class="separator:a4b0e0f7c8ffe4ec98729f3df8fbbb9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42afd14840b1ebf9ab281d841071d90c"><td class="memItemLeft" align="right" valign="top"><a id="a42afd14840b1ebf9ab281d841071d90c"></a>
-<a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs)=default</td></tr>
+<tr class="memitem:a42afd14840b1ebf9ab281d841071d90c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a42afd14840b1ebf9ab281d841071d90c">operator=</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;rhs)=default</td></tr>
 <tr class="separator:a42afd14840b1ebf9ab281d841071d90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69e97bbf36b8fc114bd4cda31f2551a3"><td class="memItemLeft" align="right" valign="top"><a id="a69e97bbf36b8fc114bd4cda31f2551a3"></a>
-<a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&amp;rhs)=default</td></tr>
+<tr class="memitem:a69e97bbf36b8fc114bd4cda31f2551a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a69e97bbf36b8fc114bd4cda31f2551a3">operator=</a> (<a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&amp;rhs)=default</td></tr>
 <tr class="separator:a69e97bbf36b8fc114bd4cda31f2551a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98597359400b806fb646064d16ca97e0"><td class="memItemLeft" align="right" valign="top">cl_device_id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a98597359400b806fb646064d16ca97e0">get</a> () const</td></tr>
 <tr class="memdesc:a98597359400b806fb646064d16ca97e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get instance of device.  <a href="#a98597359400b806fb646064d16ca97e0">More...</a><br /></td></tr>
@@ -122,22 +146,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memdesc:afa10a8634c8fa5e4326435e04af485f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get associated SYCL platform.  <a href="#afa10a8634c8fa5e4326435e04af485f2">More...</a><br /></td></tr>
 <tr class="separator:afa10a8634c8fa5e4326435e04af485f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d74001ee13bfd6879e800b77b00ca8"><td class="memTemplParams" colspan="2">template&lt;info::partition_property prop&gt; </td></tr>
-<tr class="memitem:a07d74001ee13bfd6879e800b77b00ca8"><td class="memTemplItemLeft" align="right" valign="top">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a07d74001ee13bfd6879e800b77b00ca8">create_sub_devices</a> (size_t ComputeUnits) const</td></tr>
+<tr class="memitem:a07d74001ee13bfd6879e800b77b00ca8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a07d74001ee13bfd6879e800b77b00ca8">create_sub_devices</a> (size_t ComputeUnits) const</td></tr>
 <tr class="memdesc:a07d74001ee13bfd6879e800b77b00ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition device into sub devices.  <a href="#a07d74001ee13bfd6879e800b77b00ca8">More...</a><br /></td></tr>
 <tr class="separator:a07d74001ee13bfd6879e800b77b00ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b664e2a251835bd491b7651aa63938"><td class="memTemplParams" colspan="2">template&lt;info::partition_property prop&gt; </td></tr>
-<tr class="memitem:a37b664e2a251835bd491b7651aa63938"><td class="memTemplItemLeft" align="right" valign="top">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a37b664e2a251835bd491b7651aa63938">create_sub_devices</a> (const vector_class&lt; size_t &gt; &amp;Counts) const</td></tr>
+<tr class="memitem:a37b664e2a251835bd491b7651aa63938"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a37b664e2a251835bd491b7651aa63938">create_sub_devices</a> (const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; size_t &gt; &amp;Counts) const</td></tr>
 <tr class="memdesc:a37b664e2a251835bd491b7651aa63938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition device into sub devices.  <a href="#a37b664e2a251835bd491b7651aa63938">More...</a><br /></td></tr>
 <tr class="separator:a37b664e2a251835bd491b7651aa63938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8180702aa59ab7d8627a99c3ab433876"><td class="memTemplParams" colspan="2">template&lt;info::partition_property prop&gt; </td></tr>
-<tr class="memitem:a8180702aa59ab7d8627a99c3ab433876"><td class="memTemplItemLeft" align="right" valign="top">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a8180702aa59ab7d8627a99c3ab433876">create_sub_devices</a> (info::partition_affinity_domain AffinityDomain) const</td></tr>
+<tr class="memitem:a8180702aa59ab7d8627a99c3ab433876"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a8180702aa59ab7d8627a99c3ab433876">create_sub_devices</a> (<a class="el" href="namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7c">info::partition_affinity_domain</a> AffinityDomain) const</td></tr>
 <tr class="memdesc:a8180702aa59ab7d8627a99c3ab433876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partition device into sub devices.  <a href="#a8180702aa59ab7d8627a99c3ab433876">More...</a><br /></td></tr>
 <tr class="separator:a8180702aa59ab7d8627a99c3ab433876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1faacc7295978a148966656f4b4ee06"><td class="memTemplParams" colspan="2">template&lt;info::device param&gt; </td></tr>
-<tr class="memitem:ae1faacc7295978a148966656f4b4ee06"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::device, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#ae1faacc7295978a148966656f4b4ee06">get_info</a> () const</td></tr>
+<tr class="memitem:ae1faacc7295978a148966656f4b4ee06"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">info::device</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#ae1faacc7295978a148966656f4b4ee06">get_info</a> () const</td></tr>
 <tr class="memdesc:ae1faacc7295978a148966656f4b4ee06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries this SYCL device for information requested by the template parameter param.  <a href="#ae1faacc7295978a148966656f4b4ee06">More...</a><br /></td></tr>
 <tr class="separator:ae1faacc7295978a148966656f4b4ee06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae54e6c93e268dd5702c9f7d11691d015"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#ae54e6c93e268dd5702c9f7d11691d015">has_extension</a> (const string_class &amp;extension_name) const</td></tr>
+<tr class="memitem:ae54e6c93e268dd5702c9f7d11691d015"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#ae54e6c93e268dd5702c9f7d11691d015">has_extension</a> (const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;extension_name) const</td></tr>
 <tr class="memdesc:ae54e6c93e268dd5702c9f7d11691d015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check SYCL extension support by device.  <a href="#ae54e6c93e268dd5702c9f7d11691d015">More...</a><br /></td></tr>
 <tr class="separator:ae54e6c93e268dd5702c9f7d11691d015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84b4d6bb4a886820ab93ca1726eda6f7"><td class="memTemplParams" colspan="2">template&lt;backend BackendName&gt; </td></tr>
@@ -147,27 +171,47 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d3465dc404d74f4975ab496c68ddc90"><td class="memItemLeft" align="right" valign="top">static vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a5d3465dc404d74f4975ab496c68ddc90">get_devices</a> (info::device_type deviceType=info::device_type::all)</td></tr>
+<tr class="memitem:a5d3465dc404d74f4975ab496c68ddc90"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a5d3465dc404d74f4975ab496c68ddc90">get_devices</a> (<a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165">info::device_type</a> deviceType=<a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165aa181a603769c1f98ad927e7367c7aa51">info::device_type::all</a>)</td></tr>
 <tr class="memdesc:a5d3465dc404d74f4975ab496c68ddc90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query available SYCL devices.  <a href="#a5d3465dc404d74f4975ab496c68ddc90">More...</a><br /></td></tr>
 <tr class="separator:a5d3465dc404d74f4975ab496c68ddc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a3596f7433970fcb520ddb4e2d36f9181"><td class="memTemplParams" colspan="2"><a id="a3596f7433970fcb520ddb4e2d36f9181"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a3596f7433970fcb520ddb4e2d36f9181"><td class="memTemplItemLeft" align="right" valign="top">std::add_pointer&lt; typename decltype(T::impl)::element_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>detail::getRawSyclObjImpl</b> (const T &amp;SyclObject)</td></tr>
+<tr class="memitem:a3596f7433970fcb520ddb4e2d36f9181"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a3596f7433970fcb520ddb4e2d36f9181"><td class="memTemplItemLeft" align="right" valign="top">std::add_pointer&lt; typename decltype(T::impl)::element_type &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a3596f7433970fcb520ddb4e2d36f9181">detail::getRawSyclObjImpl</a> (const T &amp;SyclObject)</td></tr>
 <tr class="separator:a3596f7433970fcb520ddb4e2d36f9181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplParams" colspan="2"><a id="a71492293d0386f542d120a1fc3dfbb55"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>detail::createSyclObjFromImpl</b> (decltype(T::impl) ImplObj)</td></tr>
+<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a71492293d0386f542d120a1fc3dfbb55">detail::createSyclObjFromImpl</a> (decltype(T::impl) ImplObj)</td></tr>
 <tr class="separator:a71492293d0386f542d120a1fc3dfbb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00028">28</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<div class="textblock"><p>The SYCL device class encapsulates a single SYCL device on which kernels may be executed. </p>
+
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00033">33</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6f54ed6a0d417c5f97686b35cb9783fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f54ed6a0d417c5f97686b35cb9783fa">&#9670;&nbsp;</a></span>device() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::device::device </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a SYCL device instance as a host device. </p>
+
+<p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00030">30</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a2590d7bac60e80b4677648060f1180b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2590d7bac60e80b4677648060f1180b1">&#9670;&nbsp;</a></span>device() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2590d7bac60e80b4677648060f1180b1">&#9670;&nbsp;</a></span>device() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +247,7 @@ template&lt;class T &gt; </td></tr>
 </div>
 </div>
 <a id="a540fc7168621c90290de1d8ce8c4ca96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a540fc7168621c90290de1d8ce8c4ca96">&#9670;&nbsp;</a></span>device() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a540fc7168621c90290de1d8ce8c4ca96">&#9670;&nbsp;</a></span>device() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,6 +280,60 @@ template&lt;class T &gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00040">40</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="device__selector_8cpp_source.html#l00031">cl::sycl::device_selector::select_device()</a>.</p>
+
+</div>
+</div>
+<a id="a980e472ff3da95d67525b637c55dadf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a980e472ff3da95d67525b637c55dadf1">&#9670;&nbsp;</a></span>device() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::device::device </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b0e0f7c8ffe4ec98729f3df8fbbb9f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0e0f7c8ffe4ec98729f3df8fbbb9f3">&#9670;&nbsp;</a></span>device() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::device::device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -248,7 +346,7 @@ template&lt;class T &gt; </td></tr>
 template&lt;info::partition_property prop&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::create_sub_devices </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::create_sub_devices </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>ComputeUnits</em></td><td>)</td>
@@ -258,7 +356,7 @@ template&lt;info::partition_property prop&gt; </div>
 </div><div class="memdoc">
 
 <p>Partition device into sub devices. </p>
-<p>Available only when prop is info::partition_property::partition_equally. If this SYCL device does not support info::partition_property::partition_equally a <a class="el" href="classcl_1_1sycl_1_1feature__not__supported.html">feature_not_supported</a> exception must be thrown.</p>
+<p>Available only when prop is <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9faab767eff72d001b59d3d14ed38783c2b">info::partition_property::partition_equally</a>. If this SYCL device does not support <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9faab767eff72d001b59d3d14ed38783c2b">info::partition_property::partition_equally</a> a <a class="el" href="classcl_1_1sycl_1_1feature__not__supported.html">feature_not_supported</a> exception must be thrown.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ComputeUnits</td><td>is a desired count of compute units in each sub device. </td></tr>
@@ -282,9 +380,9 @@ template&lt;info::partition_property prop&gt; </div>
 template&lt;info::partition_property prop&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::create_sub_devices </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::create_sub_devices </td>
           <td>(</td>
-          <td class="paramtype">const vector_class&lt; size_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; size_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>Counts</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -292,7 +390,7 @@ template&lt;info::partition_property prop&gt; </div>
 </div><div class="memdoc">
 
 <p>Partition device into sub devices. </p>
-<p>Available only when prop is info::partition_property::partition_by_counts. If this SYCL device does not support info::partition_property::partition_by_counts a <a class="el" href="classcl_1_1sycl_1_1feature__not__supported.html">feature_not_supported</a> exception must be thrown.</p>
+<p>Available only when prop is <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9fa4c4301ae11412ff3c4e4606babd69941">info::partition_property::partition_by_counts</a>. If this SYCL device does not support <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9fa4c4301ae11412ff3c4e4606babd69941">info::partition_property::partition_by_counts</a> a <a class="el" href="classcl_1_1sycl_1_1feature__not__supported.html">feature_not_supported</a> exception must be thrown.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Counts</td><td>is a vector_class of desired compute units in sub devices. </td></tr>
@@ -314,9 +412,9 @@ template&lt;info::partition_property prop&gt; </div>
 template&lt;info::partition_property prop&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::create_sub_devices </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::create_sub_devices </td>
           <td>(</td>
-          <td class="paramtype">info::partition_affinity_domain&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7c">info::partition_affinity_domain</a>&#160;</td>
           <td class="paramname"><em>AffinityDomain</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -324,7 +422,7 @@ template&lt;info::partition_property prop&gt; </div>
 </div><div class="memdoc">
 
 <p>Partition device into sub devices. </p>
-<p>Available only when prop is info::partition_property::partition_by_affinity_domain. If this SYCL device does not support info::partition_property::partition_by_affinity_domain or the SYCL device does not support info::affinity_domain provided a <a class="el" href="classcl_1_1sycl_1_1feature__not__supported.html">feature_not_supported</a> exception must be thrown.</p>
+<p>Available only when prop is <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9fa328f56c3ee3a3f018f31116e39293733">info::partition_property::partition_by_affinity_domain</a>. If this SYCL device does not support <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9fa328f56c3ee3a3f018f31116e39293733">info::partition_property::partition_by_affinity_domain</a> or the SYCL device does not support info::affinity_domain provided a <a class="el" href="classcl_1_1sycl_1_1feature__not__supported.html">feature_not_supported</a> exception must be thrown.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">AffinityDomain</td><td>is one of the values described in Table 4.20 of SYCL Spec </td></tr>
@@ -335,7 +433,7 @@ template&lt;info::partition_property prop&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00111">111</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="device_8cpp_source.html#l00092">create_sub_devices()</a>.</p>
+<p class="reference">References <a class="el" href="device_8cpp_source.html#l00092">create_sub_devices()</a>, and <a class="el" href="namespacecl_1_1sycl_1_1info.html#a077f45f6ddff224b514b3fc20333cc9fa328f56c3ee3a3f018f31116e39293733">cl::sycl::info::partition_by_affinity_domain</a>.</p>
 
 </div>
 </div>
@@ -371,10 +469,10 @@ template&lt;info::partition_property prop&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::get_devices </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::device::get_devices </td>
           <td>(</td>
-          <td class="paramtype">info::device_type&#160;</td>
-          <td class="paramname"><em>deviceType</em> = <code>info::device_type::all</code></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165">info::device_type</a>&#160;</td>
+          <td class="paramname"><em>deviceType</em> = <code><a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165aa181a603769c1f98ad927e7367c7aa51">info::device_type::all</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -397,6 +495,8 @@ template&lt;info::partition_property prop&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00044">44</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="device_8cpp_source.html#l00020">cl::sycl::detail::force_type()</a>, <a class="el" href="config_8hpp_source.html#l00101">cl::sycl::detail::SYCLConfig&lt; Config &gt;::get()</a>, <a class="el" href="force__device_8cpp_source.html#l00024">cl::sycl::detail::get_forced_type()</a>, <a class="el" href="platform_8cpp_source.html#l00042">cl::sycl::platform::get_platforms()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a67b3dba8bc6778101892eb77249db32e">cl::sycl::info::host</a>, and <a class="el" href="force__device_8cpp_source.html#l00020">cl::sycl::detail::match_types()</a>.</p>
+
 </div>
 </div>
 <a id="ae1faacc7295978a148966656f4b4ee06"></a>
@@ -408,7 +508,7 @@ template&lt;info::partition_property prop&gt; </div>
 template&lt;info::device param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::device, param &gt;::return_type cl::sycl::device::get_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">info::device</a>, param &gt;::return_type cl::sycl::device::get_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -421,6 +521,8 @@ template&lt;info::device param&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>device info of type described in Table 4.20. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00126">126</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device__selector_8cpp_source.html#l00093">cl::sycl::default_selector::operator()()</a>, and <a class="el" href="device__selector_8cpp_source.html#l00031">cl::sycl::device_selector::select_device()</a>.</p>
 
 </div>
 </div>
@@ -452,7 +554,9 @@ template&lt;backend BackendName&gt; </div>
 <p>Gets the native handle of the SYCL device. </p>
 <dl class="section return"><dt>Returns</dt><dd>a native handle, the type of which defined by the backend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00173">173</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00178">178</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, and <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
 </div>
 </div>
@@ -477,7 +581,7 @@ template&lt;backend BackendName&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00089">89</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="context_8cpp_source.html#l00040">cl::sycl::context::context()</a>, and <a class="el" href="platform_8cpp_source.html#l00026">cl::sycl::platform::platform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="context_8cpp_source.html#l00040">cl::sycl::context::context()</a>, <a class="el" href="fpga__device__selector_8hpp_source.html#l00025">cl::sycl::intel::platform_selector::operator()()</a>, and <a class="el" href="platform_8cpp_source.html#l00026">cl::sycl::platform::platform()</a>.</p>
 
 </div>
 </div>
@@ -490,7 +594,7 @@ template&lt;backend BackendName&gt; </div>
         <tr>
           <td class="memname">bool cl::sycl::device::has_extension </td>
           <td>(</td>
-          <td class="paramtype">const string_class &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;&#160;</td>
           <td class="paramname"><em>extension_name</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -530,7 +634,7 @@ template&lt;backend BackendName&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00087">87</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00065">cl::sycl::detail::deviceToString()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>, and <a class="el" href="device__selector_8cpp_source.html#l00140">cl::sycl::accelerator_selector::operator()()</a>.</p>
 
 </div>
 </div>
@@ -554,7 +658,7 @@ template&lt;backend BackendName&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00083">83</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00065">cl::sycl::detail::deviceToString()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>, <a class="el" href="device__selector_8cpp_source.html#l00093">cl::sycl::default_selector::operator()()</a>, and <a class="el" href="device__selector_8cpp_source.html#l00129">cl::sycl::cpu_selector::operator()()</a>.</p>
 
 </div>
 </div>
@@ -578,7 +682,7 @@ template&lt;backend BackendName&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00085">85</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00065">cl::sycl::detail::deviceToString()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>, <a class="el" href="device__selector_8cpp_source.html#l00093">cl::sycl::default_selector::operator()()</a>, and <a class="el" href="device__selector_8cpp_source.html#l00117">cl::sycl::gpu_selector::operator()()</a>.</p>
 
 </div>
 </div>
@@ -602,7 +706,174 @@ template&lt;backend BackendName&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00081">81</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00065">cl::sycl::detail::deviceToString()</a>, <a class="el" href="function__pointer_8hpp_source.html#l00070">cl::sycl::intel::get_device_func_ptr()</a>, <a class="el" href="device__selector_8cpp_source.html#l00023">cl::sycl::isDeviceOfPreferredSyclBe()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00070">cl::sycl::detail::queue_impl::mem_advise()</a>, <a class="el" href="device__selector_8cpp_source.html#l00093">cl::sycl::default_selector::operator()()</a>, and <a class="el" href="device__selector_8cpp_source.html#l00151">cl::sycl::host_selector::operator()()</a>.</p>
+
+</div>
+</div>
+<a id="a39b463e77ba3c00337475355eb5b1588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b463e77ba3c00337475355eb5b1588">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::device::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00052">52</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>.</p>
+
+</div>
+</div>
+<a id="a42afd14840b1ebf9ab281d841071d90c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42afd14840b1ebf9ab281d841071d90c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a>&amp; cl::sycl::device::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69e97bbf36b8fc114bd4cda31f2551a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e97bbf36b8fc114bd4cda31f2551a3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a>&amp; cl::sycl::device::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6551090dae841b394331c54e31ac7a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6551090dae841b394331c54e31ac7a3">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::device::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00050">50</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a71492293d0386f542d120a1fc3dfbb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71492293d0386f542d120a1fc3dfbb55">&#9670;&nbsp;</a></span>detail::createSyclObjFromImpl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="namespacecl_1_1sycl_1_1detail.html#abf270973bb66a47f8e8aebddd06ac8aa">detail::createSyclObjFromImpl</a> </td>
+          <td>(</td>
+          <td class="paramtype">decltype(T::impl)&#160;</td>
+          <td class="paramname"><em>ImplObj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3596f7433970fcb520ddb4e2d36f9181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3596f7433970fcb520ddb4e2d36f9181">&#9670;&nbsp;</a></span>detail::getRawSyclObjImpl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::add_pointer&lt;typename decltype(T::impl)::element_type&gt;::type <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a9e35504c6581e111e85415ee377ee59c">detail::getRawSyclObjImpl</a> </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>SyclObject</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -611,11 +882,15 @@ template&lt;backend BackendName&gt; </div>
 <li>source/<a class="el" href="device_8cpp_source.html">device.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

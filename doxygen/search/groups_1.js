@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dpc_2b_2b_20execution_20graph',['DPC++ Execution Graph',['../group__sycl__graph.html',1,'']]]
+  ['cuda_20plugin',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]]
 ];

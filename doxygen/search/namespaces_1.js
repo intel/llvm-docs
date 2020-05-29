@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['_5f_5fhost_5fstd',['__host_std',['../namespacecl_1_1____host__std.html',1,'cl']]],
+  ['access',['access',['../namespacecl_1_1sycl_1_1access.html',1,'cl::sycl']]],
+  ['buffer',['buffer',['../namespacecl_1_1sycl_1_1property_1_1buffer.html',1,'cl::sycl::property']]],
+  ['cl',['cl',['../namespacecl.html',1,'']]],
+  ['detail',['detail',['../namespacecl_1_1____host__std_1_1detail.html',1,'cl::__host_std::detail'],['../namespacecl_1_1sycl_1_1detail.html',1,'cl::sycl::detail'],['../namespacecl_1_1sycl_1_1intel_1_1detail.html',1,'cl::sycl::intel::detail'],['../namespacecl_1_1sycl_1_1property_1_1detail.html',1,'cl::sycl::property::detail']]],
+  ['enqueue_5fkernel_5flaunch',['enqueue_kernel_launch',['../namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html',1,'cl::sycl::detail']]],
+  ['experimental',['experimental',['../namespacecl_1_1sycl_1_1experimental.html',1,'cl::sycl::experimental'],['../namespacecl_1_1sycl_1_1intel_1_1experimental.html',1,'cl::sycl::intel::experimental']]],
+  ['gtl',['gtl',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html',1,'cl::sycl::detail']]],
+  ['gvl',['gvl',['../namespacecl_1_1sycl_1_1detail_1_1gvl.html',1,'cl::sycl::detail']]],
+  ['half_5fimpl',['half_impl',['../namespacecl_1_1sycl_1_1detail_1_1half__impl.html',1,'cl::sycl::detail']]],
+  ['half_5fprecision',['half_precision',['../namespacecl_1_1sycl_1_1half__precision.html',1,'cl::sycl']]],
+  ['host_5fhalf_5fimpl',['host_half_impl',['../namespacecl_1_1sycl_1_1detail_1_1host__half__impl.html',1,'cl::sycl::detail']]],
+  ['image',['image',['../namespacecl_1_1sycl_1_1property_1_1image.html',1,'cl::sycl::property']]],
+  ['info',['info',['../namespacecl_1_1sycl_1_1info.html',1,'cl::sycl']]],
+  ['intel',['intel',['../namespacecl_1_1sycl_1_1intel.html',1,'cl::sycl']]],
+  ['native',['native',['../namespacecl_1_1sycl_1_1native.html',1,'cl::sycl']]],
+  ['pi',['pi',['../namespacecl_1_1sycl_1_1detail_1_1pi.html',1,'cl::sycl::detail']]],
+  ['property',['property',['../namespacecl_1_1sycl_1_1property.html',1,'cl::sycl']]],
+  ['queue',['queue',['../namespacecl_1_1sycl_1_1property_1_1queue.html',1,'cl::sycl::property']]],
+  ['sycl',['sycl',['../namespacecl_1_1sycl.html',1,'cl']]],
+  ['usm',['usm',['../namespacecl_1_1sycl_1_1detail_1_1usm.html',1,'cl::sycl::detail::usm'],['../namespacecl_1_1sycl_1_1usm.html',1,'cl::sycl::usm']]]
+];

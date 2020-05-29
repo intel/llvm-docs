@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['format',['Format',['../structpi__device__binary__struct.html#ad3b8516afd31a369b2d8474a121cbc90',1,'pi_device_binary_struct']]]
+  ['data',['Data',['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#a84a9fb2a228084828703a23242392910',1,'cl::sycl::detail::DynRTDeviceBinaryImage']]],
+  ['dbgprogmgr',['DbgProgMgr',['../namespacecl_1_1sycl_1_1detail.html#af83bef92e61d7001605e69c78ae76c9a',1,'cl::sycl::detail']]],
+  ['dec',['Dec',['../namespacecl_1_1sycl_1_1detail.html#a232b07a68e66e45357d5e7e08724674c',1,'cl::sycl::detail::Dec()'],['../namespacecl_1_1sycl.html#a2a9c51ac35a1740641bff4c0d39d44d4',1,'cl::sycl::dec()']]],
+  ['defaultcontexttype',['DefaultContextType',['../namespacecl_1_1sycl_1_1detail.html#abdc6ce291d80f74918d891e5e38f1fdf',1,'cl::sycl::detail']]],
+  ['defaultfloat',['defaultfloat',['../namespacecl_1_1sycl.html#a37868449914c033754b31396f24a2070',1,'cl::sycl']]],
+  ['defaulthostqueue',['DefaultHostQueue',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902',1,'cl::sycl::detail::Scheduler']]],
+  ['devdriverver',['devDriverVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#adc4571a02bb3a5e0e9e0f4deb6324c88',1,'cl::sycl::detail::DevDescT']]],
+  ['devdriverversize',['devDriverVerSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a742a74f5d8ce4980b91632a0fef21041',1,'cl::sycl::detail::DevDescT']]],
+  ['device_5f',['device_',['../struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5',1,'_pi_queue']]],
+  ['devicebinaries',['DeviceBinaries',['../structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a',1,'pi_device_binaries_struct']]],
+  ['deviceid_5f',['deviceId_',['../struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2',1,'_pi_context']]],
+  ['devices_5f',['devices_',['../struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8',1,'_pi_platform']]],
+  ['devicetargetspec',['DeviceTargetSpec',['../structpi__device__binary__struct.html#a9a80194f39a66baf5dfcbee492cb0f97',1,'pi_device_binary_struct']]],
+  ['devname',['devName',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a39183a718137eb9b669efa7aa355618e',1,'cl::sycl::detail::DevDescT']]],
+  ['devnamesize',['devNameSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a10bfbbba6035da642f45296358d6fd29',1,'cl::sycl::detail::DevDescT']]],
+  ['digits',['digits',['../structstd_1_1numeric__limits_3_01half_01_4.html#ad156a10b8a032dcbbaf72f6b0cbedaf0',1,'std::numeric_limits&lt; half &gt;']]],
+  ['digits10',['digits10',['../structstd_1_1numeric__limits_3_01half_01_4.html#a9a6307434bf4a81a6752bb7f0096d0e6',1,'std::numeric_limits&lt; half &gt;']]],
+  ['dimensions',['dimensions',['../classcl_1_1sycl_1_1group.html#aa4d9b2a3a331b51dd81e54ac4ad7f338',1,'cl::sycl::group::dimensions()'],['../structcl_1_1sycl_1_1intel_1_1sub__group.html#a6939d4e7f433929c55bb2912f8f36aa8',1,'cl::sycl::intel::sub_group::dimensions()']]],
+  ['dims',['Dims',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a9a7484635bff0a8f568a0146699d97a2',1,'cl::sycl::detail::NDRDescT']]],
+  ['dirsep',['DirSep',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#adb0fd038c22fa4cf2b01f92b72006296',1,'cl::sycl::detail::OSUtil']]],
+  ['dot',['Dot',['../namespacecl_1_1____host__std.html#a6defc1e5c17fb6532028d25886a0d8af',1,'cl::__host_std']]],
+  ['dummymodulehandle',['DummyModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#ac103c42a32ed4c27ce6f566e7659d184',1,'cl::sycl::detail::OSUtil']]]
 ];

@@ -1,0 +1,4 @@
+var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4 =
+[
+    [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#a946b74cc9ddf2d54346647af6bea6856", null ]
+];

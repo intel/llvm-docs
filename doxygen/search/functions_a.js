@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['link',['link',['../classcl_1_1sycl_1_1program.html#ad7ce9c33a3a57e413334d331a66f9246',1,'cl::sycl::program::link()'],['../classcl_1_1sycl_1_1detail_1_1program__impl.html#a5bc7e31df4faca11f91b788ee60081d7',1,'cl::sycl::detail::program_impl::link()']]],
-  ['locksharedtimedmutex',['lockSharedTimedMutex',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4ca29b68b09ab4a43c40604a0960fd09',1,'cl::sycl::detail::Scheduler']]]
+  ['get_5finfo_3c_20info_3a_3akernel_3a_3acontext_20_3e',['get_info&lt; info::kernel::context &gt;',['../namespacecl_1_1sycl_1_1detail.html#a5a6ccab07ef1ff2340b8899388ad7917',1,'cl::sycl::detail']]],
+  ['get_5finfo_3c_20info_3a_3akernel_3a_3aprogram_20_3e',['get_info&lt; info::kernel::program &gt;',['../namespacecl_1_1sycl_1_1detail.html#a6f92273f18fd9cb5c7c5939074388684',1,'cl::sycl::detail']]],
+  ['kernel',['kernel',['../classcl_1_1sycl_1_1kernel.html#a0183adaae0863b75a8e1c629d5b436c2',1,'cl::sycl::kernel::kernel(cl_kernel ClKernel, const context &amp;SyclContext)'],['../classcl_1_1sycl_1_1kernel.html#a9ad63675c9bcd9ce62c5de4b85e6b7ed',1,'cl::sycl::kernel::kernel(const kernel &amp;RHS)=default'],['../classcl_1_1sycl_1_1kernel.html#a3cc1ed06a435e41bb9e61bdcd65d09fb',1,'cl::sycl::kernel::kernel(kernel &amp;&amp;RHS)=default']]],
+  ['kernel_5fimpl',['kernel_impl',['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a5a05eaa95d9400e65bfb3056749401cb',1,'cl::sycl::detail::kernel_impl::kernel_impl(RT::PiKernel Kernel, ContextImplPtr Context)'],['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aed7a7eeb9ed5106c2e70a5742b78b13d',1,'cl::sycl::detail::kernel_impl::kernel_impl(RT::PiKernel Kernel, ContextImplPtr ContextImpl, ProgramImplPtr ProgramImpl, bool IsCreatedFromSource)'],['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a8c30bfabeef4643a31dafeb8c703ba1b',1,'cl::sycl::detail::kernel_impl::kernel_impl(ContextImplPtr Context, ProgramImplPtr ProgramImpl)']]]
 ];

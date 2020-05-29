@@ -1,5 +1,24 @@
 var searchData=
 [
-  ['entriesbegin',['EntriesBegin',['../structpi__device__binary__struct.html#a6eb4a6bb0e5ec4d025383ee3cdc98146',1,'pi_device_binary_struct']]],
-  ['exemodulehandle',['ExeModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#a9edaca3fced53dd24240c77c016be876',1,'cl::sycl::detail::OSUtil']]]
+  ['cast',['cast',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#abdb1239b6e2313d63e121e5d6cb9c94e',1,'cl::sycl::detail::pi']]],
+  ['cldevicememallocname',['clDeviceMemAllocName',['../pi__opencl_8cpp.html#aea06bf6cb4348d692fe4ce6d4bfe3d11',1,'pi_opencl.cpp']]],
+  ['clenqueuememadvisename',['clEnqueueMemAdviseName',['../pi__opencl_8cpp.html#affd635db53886fb71c2a190d06d076cb',1,'pi_opencl.cpp']]],
+  ['clenqueuememcpyname',['clEnqueueMemcpyName',['../pi__opencl_8cpp.html#affdd71aa5e984ec956d1a3e53821dd31',1,'pi_opencl.cpp']]],
+  ['clenqueuememsetname',['clEnqueueMemsetName',['../pi__opencl_8cpp.html#a1b4d8b65c0fe5a7e9f74631732288a00',1,'pi_opencl.cpp']]],
+  ['clenqueuemigratememname',['clEnqueueMigrateMemName',['../pi__opencl_8cpp.html#ae8aadf11bf5447cb03a7e1f850f8a5db',1,'pi_opencl.cpp']]],
+  ['clgetmemallocinfoname',['clGetMemAllocInfoName',['../pi__opencl_8cpp.html#aafbf0abe5e8c7d2f1318bd177b4fb145',1,'pi_opencl.cpp']]],
+  ['clhostmemallocname',['clHostMemAllocName',['../pi__opencl_8cpp.html#aafb6f4a579f5cf8062791385ff8aadb6',1,'pi_opencl.cpp']]],
+  ['clmemfreename',['clMemFreeName',['../pi__opencl_8cpp.html#ae6fdb6489e6ec5c4988a3e223e1063a1',1,'pi_opencl.cpp']]],
+  ['clsetkernelargmempointername',['clSetKernelArgMemPointerName',['../pi__opencl_8cpp.html#a865cd96acb132c2086b73db83766a4c8',1,'pi_opencl.cpp']]],
+  ['clsetprogramspecializationconstantname',['clSetProgramSpecializationConstantName',['../pi__opencl_8cpp.html#adf3f37188849ba8c8aa7084491647406',1,'pi_opencl.cpp']]],
+  ['clsharedmemallocname',['clSharedMemAllocName',['../pi__opencl_8cpp.html#ab1fa2f421251079da1f812894a2c731d',1,'pi_opencl.cpp']]],
+  ['code',['Code',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68',1,'cl::sycl::detail::KernelProgramCache::BuildError']]],
+  ['common_5farray',['common_array',['../classcl_1_1sycl_1_1detail_1_1array.html#abab5f23a26dfb12d2c4ded739e7a29e8',1,'cl::sycl::detail::array']]],
+  ['compile_5fwork_5fgroup_5fsize',['compile_work_group_size',['../namespacecl_1_1sycl_1_1info.html#a325370454f473d4a4b49cd812c6795eb',1,'cl::sycl::info']]],
+  ['compileoptions',['CompileOptions',['../structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd',1,'pi_device_binary_struct']]],
+  ['configfromcompiledefenabled',['ConfigFromCompileDefEnabled',['../namespacecl_1_1sycl_1_1detail.html#a36cb99fb3e385f2a9c276ff777e66c37',1,'cl::sycl::detail']]],
+  ['configfromenvenabled',['ConfigFromEnvEnabled',['../namespacecl_1_1sycl_1_1detail.html#a245c541983ad2cf1ded65461d01a7dfb',1,'cl::sycl::detail']]],
+  ['configfromfileenabled',['ConfigFromFileEnabled',['../namespacecl_1_1sycl_1_1detail.html#a913f2c2f59992d8e823298d3210d408e',1,'cl::sycl::detail']]],
+  ['context_5f',['context_',['../struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21',1,'_pi_mem::context_()'],['../struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4',1,'_pi_queue::context_()'],['../struct__pi__program.html#af256d620344bdd34d8aa60cc058bdad7',1,'_pi_program::context_()'],['../struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb',1,'_pi_kernel::context_()']]],
+  ['cucontext_5f',['cuContext_',['../struct__pi__context.html#a8764718259af9ea016e3d2faeced5c70',1,'_pi_context']]]
 ];

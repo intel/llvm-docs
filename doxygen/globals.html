@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: File Members</title>
+<title>DPC++ Runtime: File Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,16 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('globals.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,274 +89,441 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented file members with links to the documentation:</div>
+<div class="textblock">Here is a list of all file members with links to the files they belong to:</div>
 
-<h3><a id="index_c"></a>- c -</h3><ul>
-<li>commonEnqueueMemBufferCopyRect()
-: <a class="el" href="pi__cuda_8cpp.html#a338cd82b7fd7a36b2e36e5d47154b79f">pi_cuda.cpp</a>
+<h3><a id="index__"></a>- _ -</h3><ul>
+<li>__FUNC_PREFIX_CORE
+: <a class="el" href="detail_2builtins_8hpp.html#aa385e76f8cf9e2f0ac50f50f04ad3a25">builtins.hpp</a>
 </li>
-<li>cuda_piclProgramCreateWithBinary()
-: <a class="el" href="pi__cuda_8cpp.html#ad1b6adef8ca01600053763604d01d605">pi_cuda.cpp</a>
+<li>__FUNC_PREFIX_OCL
+: <a class="el" href="detail_2builtins_8hpp.html#a3e48e2d0e9a2cad50179c234cc5cdbf3">builtins.hpp</a>
 </li>
-<li>cuda_piclProgramCreateWithSource()
-: <a class="el" href="pi__cuda_8cpp.html#ac445fe0b23537e123e95a0cb8c11b2c7">pi_cuda.cpp</a>
+<li>__half16_vec_t
+: <a class="el" href="types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886">types.hpp</a>
 </li>
-<li>cuda_piContextCreate()
-: <a class="el" href="pi__cuda_8cpp.html#aecbe462ce1fa0674107e55a8a2da1156">pi_cuda.cpp</a>
+<li>__half2_vec_t
+: <a class="el" href="types_8hpp.html#a078ed71e8266e98e74cc42286e0bb23a">types.hpp</a>
 </li>
-<li>cuda_piDevicePartition()
-: <a class="el" href="pi__cuda_8cpp.html#ae802d41b86d3dab80e240a43e839a810">pi_cuda.cpp</a>
+<li>__half3_vec_t
+: <a class="el" href="types_8hpp.html#a55606a5fb19a6144017b8ae67902dd57">types.hpp</a>
 </li>
-<li>cuda_piDeviceRelease()
-: <a class="el" href="pi__cuda_8cpp.html#ac71478e67911f874790c4eb641c20c8a">pi_cuda.cpp</a>
+<li>__half4_vec_t
+: <a class="el" href="types_8hpp.html#a54ccfe0f2a676e2dd735fcc5a2eff30f">types.hpp</a>
 </li>
-<li>cuda_piDeviceRetain()
-: <a class="el" href="pi__cuda_8cpp.html#a89307f65cd7a33134bc20a1c06ae7335">pi_cuda.cpp</a>
+<li>__half8_vec_t
+: <a class="el" href="types_8hpp.html#a71029ed6f74bbb3e17e33d2f19de7b93">types.hpp</a>
 </li>
-<li>cuda_piDevicesGet()
-: <a class="el" href="pi__cuda_8cpp.html#a6cda6564b9002f577b335c7a6899a149">pi_cuda.cpp</a>
+<li>__half_t
+: <a class="el" href="types_8hpp.html#a7c143f8207744272ec644cb1404dbf43">types.hpp</a>
 </li>
-<li>cuda_piEnqueueEventsWait()
-: <a class="el" href="pi__cuda_8cpp.html#a2497913392249b469d0614a3e2571cd4">pi_cuda.cpp</a>
+<li>__has_attribute
+: <a class="el" href="defines_8hpp.html#a54d2d7742701f3f112afbcd8d4f9ccdb">defines.hpp</a>
 </li>
-<li>cuda_piEnqueueMemBufferMap()
-: <a class="el" href="pi__cuda_8cpp.html#a4801f0f6a987e176faf8dd43ed3365bd">pi_cuda.cpp</a>
+<li>__has_builtin
+: <a class="el" href="defines_8hpp.html#a447121dcab4275b7839a56082b7a1ab8">defines.hpp</a>
 </li>
-<li>cuda_piEnqueueMemImageCopy()
-: <a class="el" href="pi__cuda_8cpp.html#af3a259c8578e885ff9980383ddc47217">pi_cuda.cpp</a>
+<li>__MAKE_1V
+: <a class="el" href="builtins__helper_8hpp.html#a06909195431933123187d303ee390cc4">builtins_helper.hpp</a>
 </li>
-<li>cuda_piEnqueueMemImageFill()
-: <a class="el" href="pi__cuda_8cpp.html#a63860c19b136afc2080ce264b4d36b6e">pi_cuda.cpp</a>
+<li>__MAKE_1V_2P
+: <a class="el" href="builtins__helper_8hpp.html#a5ae1bd40ef34828726eeb0994d30ed97">builtins_helper.hpp</a>
 </li>
-<li>cuda_piEnqueueMemImageRead()
-: <a class="el" href="pi__cuda_8cpp.html#a4b25fe4f41a6339f91d1b134335b245c">pi_cuda.cpp</a>
+<li>__MAKE_1V_2S
+: <a class="el" href="builtins__helper_8hpp.html#a2b9fd606b9367f2b5f0f9fd74657b5c5">builtins_helper.hpp</a>
 </li>
-<li>cuda_piEnqueueMemImageWrite()
-: <a class="el" href="pi__cuda_8cpp.html#ab6f001eb0ca4ebe7d19d082525c58e4e">pi_cuda.cpp</a>
+<li>__MAKE_1V_2S_3S
+: <a class="el" href="builtins__helper_8hpp.html#ac81ca1a4b5666b86539c9fc3df30a15f">builtins_helper.hpp</a>
 </li>
-<li>cuda_piEnqueueMemUnmap()
-: <a class="el" href="pi__cuda_8cpp.html#a13159d4a1ef4e2b191b68f803f8ffe0a">pi_cuda.cpp</a>
+<li>__MAKE_1V_2V
+: <a class="el" href="builtins__helper_8hpp.html#a663539032f56590806e540cb8a93f109">builtins_helper.hpp</a>
 </li>
-<li>cuda_piEnqueueNativeKernel()
-: <a class="el" href="pi__cuda_8cpp.html#a958ae76c0bb2c2c865854b6196705fc5">pi_cuda.cpp</a>
+<li>__MAKE_1V_2V_3P
+: <a class="el" href="builtins__helper_8hpp.html#ac70e056b2f7302563cbfdb8c0eb558ff">builtins_helper.hpp</a>
 </li>
-<li>cuda_piEventGetProfilingInfo()
-: <a class="el" href="pi__cuda_8cpp.html#ab336548cac9dd7ba3e21a897da095fe3">pi_cuda.cpp</a>
+<li>__MAKE_1V_2V_3V
+: <a class="el" href="builtins__helper_8hpp.html#a24d638390d3e1974efc90241e0f50131">builtins_helper.hpp</a>
 </li>
-<li>cuda_piextContextCreateWithNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a50aace0073db3b9131eccb1a11a82400">pi_cuda.cpp</a>
+<li>__MAKE_1V_2V_RS
+: <a class="el" href="builtins__helper_8hpp.html#a348a8ea7b47617c9f1db525dfed1c937">builtins_helper.hpp</a>
 </li>
-<li>cuda_piextContextGetNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a8776b0c7ed383605e19a90eaab08b176">pi_cuda.cpp</a>
+<li>__MAKE_1V_RS
+: <a class="el" href="builtins__helper_8hpp.html#a171ae134cce0f2a64f2a36f75b3725e4">builtins_helper.hpp</a>
 </li>
-<li>cuda_piextDeviceCreateWithNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#ae18e5a780da75ad36d9bac465b04c8be">pi_cuda.cpp</a>
+<li>__MAKE_SR_1V_AND
+: <a class="el" href="builtins__helper_8hpp.html#af10d48fdf7ce4d032570a03d2a1f3f2c">builtins_helper.hpp</a>
 </li>
-<li>cuda_piextDeviceGetNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#ac8c4bc80e488196453d9f9b019889ce8">pi_cuda.cpp</a>
+<li>__MAKE_SR_1V_OR
+: <a class="el" href="builtins__helper_8hpp.html#a6db292bac902a9f06c5707e5d6c9aa94">builtins_helper.hpp</a>
 </li>
-<li>cuda_piextDeviceSelectBinary()
-: <a class="el" href="pi__cuda_8cpp.html#a5237d52c4d339d011129651493a3c514">pi_cuda.cpp</a>
+<li>__NOEXC
+: <a class="el" href="builtins_8hpp.html#a5f84d521704034bf681ed4b0d5f3650c">builtins.hpp</a>
+, <a class="el" href="builtins__helper_8hpp.html#a5f84d521704034bf681ed4b0d5f3650c">builtins_helper.hpp</a>
 </li>
-<li>cuda_piextEventCreateWithNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a58267ae57889dad9b18512a3aa1c070d">pi_cuda.cpp</a>
+<li>__ocl_event_t
+: <a class="el" href="spirv__types_8hpp.html#a7fdac044910b3c3880cbc8bdbde69fe9">spirv_types.hpp</a>
 </li>
-<li>cuda_piextEventGetNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#afb4c3110d82542efe902eb90abb4f1e1">pi_cuda.cpp</a>
+<li>__ocl_image1d_array_ro_t
+: <a class="el" href="spirv__types_8hpp.html#aae2c1317c23429f504ecf61a1064327c">spirv_types.hpp</a>
 </li>
-<li>cuda_piextMemCreateWithNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a4628c45e1b05b5418df6e7973a406fe8">pi_cuda.cpp</a>
+<li>__ocl_image1d_array_wo_t
+: <a class="el" href="spirv__types_8hpp.html#ad7b80cd0fac63a41573b202fd75b7cc3">spirv_types.hpp</a>
 </li>
-<li>cuda_piextMemGetNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a029e8e2d60dd26e8db0b0fa774d30dbb">pi_cuda.cpp</a>
+<li>__ocl_image1d_ro_t
+: <a class="el" href="spirv__types_8hpp.html#a0b89b92412e6a720b4fc257cefbc1064">spirv_types.hpp</a>
 </li>
-<li>cuda_piextProgramCreateWithNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#ac083b999b3e34f6f2d84bdb684b8b570">pi_cuda.cpp</a>
+<li>__ocl_image1d_wo_t
+: <a class="el" href="spirv__types_8hpp.html#a74c08fd0708faf864e73226965aa826f">spirv_types.hpp</a>
 </li>
-<li>cuda_piextProgramGetNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a16d62cf311dcd619eeb37a8435642030">pi_cuda.cpp</a>
+<li>__ocl_image2d_array_ro_t
+: <a class="el" href="spirv__types_8hpp.html#ab8d47cc7ab2d1391d301d41a59a3eacb">spirv_types.hpp</a>
 </li>
-<li>cuda_piextQueueCreateWithNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a5bc83199947404ed56cc6143240eaf0f">pi_cuda.cpp</a>
+<li>__ocl_image2d_array_wo_t
+: <a class="el" href="spirv__types_8hpp.html#a873ac17dbba634115a8c5b8e56a300cf">spirv_types.hpp</a>
 </li>
-<li>cuda_piextQueueGetNativeHandle()
-: <a class="el" href="pi__cuda_8cpp.html#a110cd48bfeddccb903292ebca77b2b6b">pi_cuda.cpp</a>
+<li>__ocl_image2d_ro_t
+: <a class="el" href="spirv__types_8hpp.html#aed8414b700cf6a98998ff3c8be7fe06c">spirv_types.hpp</a>
 </li>
-<li>cuda_piextUSMDeviceAlloc()
-: <a class="el" href="pi__cuda_8cpp.html#a3ce1614a9b8fd1b261c6da01b1e18200">pi_cuda.cpp</a>
+<li>__ocl_image2d_wo_t
+: <a class="el" href="spirv__types_8hpp.html#ae951e07f3237d5bef91fe0389c0aeb52">spirv_types.hpp</a>
 </li>
-<li>cuda_piextUSMEnqueueMemAdvise()
-: <a class="el" href="pi__cuda_8cpp.html#a4535059a4c7d7c8dc810c75a9881361e">pi_cuda.cpp</a>
+<li>__ocl_image3d_ro_t
+: <a class="el" href="spirv__types_8hpp.html#ad03e7b64b04ad96d5ab3cdc51b43f430">spirv_types.hpp</a>
 </li>
-<li>cuda_piextUSMFree()
-: <a class="el" href="pi__cuda_8cpp.html#affc59804c4827432383071a521b3fc35">pi_cuda.cpp</a>
+<li>__ocl_image3d_wo_t
+: <a class="el" href="spirv__types_8hpp.html#a260835265c4609aeb00915923275d0e4">spirv_types.hpp</a>
 </li>
-<li>cuda_piextUSMGetMemAllocInfo()
-: <a class="el" href="pi__cuda_8cpp.html#a8efca267aa2fb518172ea37a875514a1">pi_cuda.cpp</a>
+<li>__ocl_sampler_t
+: <a class="el" href="spirv__types_8hpp.html#aa8b8d03ccae0846a82d453abd2802a52">spirv_types.hpp</a>
 </li>
-<li>cuda_piextUSMHostAlloc()
-: <a class="el" href="pi__cuda_8cpp.html#afa75da8d074cb6f6fdab41d2f88501cb">pi_cuda.cpp</a>
+<li>__OPENCL_CONSTANT_AS__
+: <a class="el" href="access_8hpp.html#a4b62566ce88466e53a1e3a38bdbdd3a7">access.hpp</a>
 </li>
-<li>cuda_piextUSMSharedAlloc()
-: <a class="el" href="pi__cuda_8cpp.html#ae706bc52d81ef45789bbb61a7a04f7a5">pi_cuda.cpp</a>
+<li>__OPENCL_GLOBAL_AS__
+: <a class="el" href="access_8hpp.html#aa1eee783152203c6fae3fdf9510e63b3">access.hpp</a>
 </li>
-<li>cuda_piKernelGetSubGroupInfo()
-: <a class="el" href="pi__cuda_8cpp.html#ac60820e15d791f639d3e4909c0aa6749">pi_cuda.cpp</a>
+<li>__OPENCL_LOCAL_AS__
+: <a class="el" href="access_8hpp.html#a4760784b0355ee3818bbf0a66a7430ae">access.hpp</a>
 </li>
-<li>cuda_piMemBufferCreate()
-: <a class="el" href="pi__cuda_8cpp.html#a6b019255fe91235b23f16439871c9590">pi_cuda.cpp</a>
+<li>__OPENCL_PRIVATE_AS__
+: <a class="el" href="access_8hpp.html#a11fdf1bd2a48ce97f29b47765bde5088">access.hpp</a>
 </li>
-<li>cuda_piMemBufferPartition()
-: <a class="el" href="pi__cuda_8cpp.html#a9d0e36d8a19a707b41e6ebcb45c98dc8">pi_cuda.cpp</a>
+<li>__spirv_AtomicAnd()
+: <a class="el" href="atomic_8hpp.html#aa718cd3d846316032fe893c2481421a9">atomic.hpp</a>
 </li>
-<li>cuda_piMemImageCreate()
-: <a class="el" href="pi__cuda_8cpp.html#a8484a4f8f7fa9cf699c411a2f3036d58">pi_cuda.cpp</a>
+<li>__spirv_AtomicExchange()
+: <a class="el" href="atomic_8hpp.html#a16bd8803af5537a5471cb34b7989b841">atomic.hpp</a>
 </li>
-<li>cuda_piMemImageGetInfo()
-: <a class="el" href="pi__cuda_8cpp.html#acbe5318fbbbf0fdc3fa3a92a02c04005">pi_cuda.cpp</a>
+<li>__spirv_AtomicIAdd()
+: <a class="el" href="atomic_8hpp.html#aa689b4f0cd645aa202bab411de0a749e">atomic.hpp</a>
 </li>
-<li>cuda_piMemRelease()
-: <a class="el" href="pi__cuda_8cpp.html#a22ce5cf5d44b9e4338a1b9c07964594b">pi_cuda.cpp</a>
+<li>__spirv_AtomicISub()
+: <a class="el" href="atomic_8hpp.html#ab527ab7e7ce79d0b0c592c40a920e62b">atomic.hpp</a>
 </li>
-<li>cuda_piPlatformsGet()
-: <a class="el" href="pi__cuda_8cpp.html#ae9e906a922fd122d45ac7d4c2d5356d1">pi_cuda.cpp</a>
+<li>__spirv_AtomicLoad()
+: <a class="el" href="atomic_8hpp.html#a7dcc23da3b94d4e7d93601955e033a8a">atomic.hpp</a>
 </li>
-<li>cuda_piProgramBuild()
-: <a class="el" href="pi__cuda_8cpp.html#a002889700b8ed359a401bae09993ac09">pi_cuda.cpp</a>
+<li>__spirv_AtomicMax()
+: <a class="el" href="atomic_8hpp.html#a8ee1a5af1eaee91729cc680d812d4599">atomic.hpp</a>
 </li>
-<li>cuda_piProgramCompile()
-: <a class="el" href="pi__cuda_8cpp.html#a6d5a93fcd3c8066fdb444a66a85d9cda">pi_cuda.cpp</a>
+<li>__spirv_AtomicMin()
+: <a class="el" href="atomic_8hpp.html#ae3d8923679b3a34c4bfe8f307f5d47f3">atomic.hpp</a>
 </li>
-<li>cuda_piProgramCreate()
-: <a class="el" href="pi__cuda_8cpp.html#a741b3ff74458ce4edafb2940ed2d16b3">pi_cuda.cpp</a>
+<li>__spirv_AtomicOr()
+: <a class="el" href="atomic_8hpp.html#a0711f260ac39f674a4bfda806193d7a7">atomic.hpp</a>
 </li>
-<li>cuda_piProgramLink()
-: <a class="el" href="pi__cuda_8cpp.html#af1f2162bad115c5febe7fc431a53d3da">pi_cuda.cpp</a>
+<li>__spirv_AtomicStore()
+: <a class="el" href="atomic_8hpp.html#a10d7e230bff2780c663fd6fc916b2eb6">atomic.hpp</a>
 </li>
-<li>cuda_piProgramRelease()
-: <a class="el" href="pi__cuda_8cpp.html#a49ac0744a78e514e163281959f61010d">pi_cuda.cpp</a>
+<li>__spirv_AtomicXor()
+: <a class="el" href="atomic_8hpp.html#ab193824672eb6a34764843743f8d5827">atomic.hpp</a>
 </li>
-<li>cuda_piQueueCreate()
-: <a class="el" href="pi__cuda_8cpp.html#a80b38bc2a6e78e59e2f0c1053dec3a5c">pi_cuda.cpp</a>
+<li>__spirv_ControlBarrier()
+: <a class="el" href="spirv__ops_8hpp.html#a67648b07633fff0f0c256d272f1ecdf8">spirv_ops.hpp</a>
+, <a class="el" href="spirv__ops_8cpp.html#a39d8b08b1a558206fe1e2cbba94b7cba">spirv_ops.cpp</a>
 </li>
-<li>cuda_piSamplerCreate()
-: <a class="el" href="pi__cuda_8cpp.html#a538e36c030cc6bddbe9c34fd27a822dd">pi_cuda.cpp</a>
+<li>__spirv_GroupWaitEvents()
+: <a class="el" href="spirv__ops_8hpp.html#a6712ca3d25dc817202ab1ccbebf5c845">spirv_ops.hpp</a>
+, <a class="el" href="spirv__ops_8cpp.html#a85beef2415b20f2a7383f90280c99ae3">spirv_ops.cpp</a>
 </li>
-<li>cuda_piSamplerGetInfo()
-: <a class="el" href="pi__cuda_8cpp.html#a76bb2e4b83c968acf98fcee4a46f16d1">pi_cuda.cpp</a>
+<li>__spirv_MemoryBarrier()
+: <a class="el" href="spirv__ops_8hpp.html#a78115176e44cb41a264cd00b603307dc">spirv_ops.hpp</a>
+, <a class="el" href="spirv__ops_8cpp.html#a0649355f6b1290e7c6c2e15ab14b5879">spirv_ops.cpp</a>
 </li>
-<li>cuda_piSamplerRelease()
-: <a class="el" href="pi__cuda_8cpp.html#ae8692733dcad37d1eee0be3b473da87e">pi_cuda.cpp</a>
+<li>__spirv_ocl_prefetch()
+: <a class="el" href="spirv__ops_8hpp.html#ae348ac93399e5fc151a847069e712f6f">spirv_ops.hpp</a>
+, <a class="el" href="spirv__ops_8cpp.html#ae348ac93399e5fc151a847069e712f6f">spirv_ops.cpp</a>
 </li>
-<li>cuda_piSamplerRetain()
-: <a class="el" href="pi__cuda_8cpp.html#ab9691c420f3ea23da5ea6458421ad5ad">pi_cuda.cpp</a>
+<li>__SYCL_ACCESS
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-</ul>
-
-
-<h3><a id="index_g"></a>- g -</h3><ul>
-<li>getKernelNames()
-: <a class="el" href="pi__cuda_8cpp.html#a10e2beeb4e4ab8cad7ca4d0644b15ae0">pi_cuda.cpp</a>
+<li>__SYCL_ACCESS_RETURN
+: <a class="el" href="types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06">types.hpp</a>
 </li>
-</ul>
-
-
-<h3><a id="index_p"></a>- p -</h3><ul>
-<li>piextContextCreateWithNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a2509eccbb811afd35a598a8caf6cecf3">pi_opencl.cpp</a>
+<li>__SYCL_ASSERT
+: <a class="el" href="common_8hpp.html#a9a2d345bf334488c06768f6ae5c3d38b">common.hpp</a>
 </li>
-<li>piextContextGetNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#aa3fb8ea4d33b7f0656afa0fdfedee5d4">pi_opencl.cpp</a>
+<li>__SYCL_ASSUME_INT
+: <a class="el" href="defines_8hpp.html#a808bf3baa5187f67f4e388d24809882c">defines.hpp</a>
 </li>
-<li>piextDeviceCreateWithNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a8d1fd451cd68d6b0566ee38dca794ce7">pi_opencl.cpp</a>
+<li>__SYCL_BINOP
+: <a class="el" href="types_8hpp.html#ab1dc027c16c7b98c0fb3ea1ff9c188ed">types.hpp</a>
 </li>
-<li>piextDeviceGetNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a120d5faa8d24b9e34fe0d9f7a1a18e92">pi_opencl.cpp</a>
+<li>__SYCL_COMPILER_VERSION
+: <a class="el" href="version_8hpp.html#a249ef4c2cf1310a4944bb4ae1d33b03b">version.hpp</a>
 </li>
-<li>piextDeviceSelectBinary()
-: <a class="el" href="pi__opencl_8cpp.html#ab44da55ce8a6f7f1b7fe429598673614">pi_opencl.cpp</a>
+<li>__SYCL_CONSTEXPR_ON_DEVICE
+: <a class="el" href="half__type_8hpp.html#a19881648e4886cadb220083b3d884cb4">half_type.hpp</a>
 </li>
-<li>piextEventCreateWithNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#af3f06cd73fa47ae2991cf0f4b06cd3f3">pi_opencl.cpp</a>
+<li>__SYCL_CONVERGENT__
+: <a class="el" href="spirv__ops_8hpp.html#aa8d014f494823edc0fbd58809ccd158f">spirv_ops.hpp</a>
 </li>
-<li>piextGetDeviceFunctionPointer()
-: <a class="el" href="pi__opencl_8cpp.html#a02edeed25c4a9c60960b21f0b0cb0902">pi_opencl.cpp</a>
+<li>__SYCL_E0
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextGetNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#af6a8058f33a11be0117391a671edba07">pi_opencl.cpp</a>
+<li>__SYCL_E1
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextKernelSetArgPointer()
-: <a class="el" href="pi__opencl_8cpp.html#ae1ef844cab36a9fa7606161ef7e3d2a3">pi_opencl.cpp</a>
+<li>__SYCL_E2
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextMemCreateWithNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#aacefad3c65f7c173f2233421c3a8a532">pi_opencl.cpp</a>
+<li>__SYCL_E3
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextMemGetNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a9e0a0dcbcdbfb21fa1649e84f9b43fcd">pi_opencl.cpp</a>
+<li>__SYCL_E4
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextProgramCreateWithNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a53086e935c213d7a6a382a2fad32afb0">pi_opencl.cpp</a>
+<li>__SYCL_E5
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextProgramGetNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#adbea20ee4a5acc6c997463ae63b96442">pi_opencl.cpp</a>
+<li>__SYCL_E6
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextProgramSetSpecializationConstant()
-: <a class="el" href="pi__opencl_8cpp.html#a6536605da4d4b98245a07ab1edfc861e">pi_opencl.cpp</a>
+<li>__SYCL_E7
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextQueueCreateWithNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a7122b8ca388479547721665ba3c92ebe">pi_opencl.cpp</a>
+<li>__SYCL_E8
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextQueueGetNativeHandle()
-: <a class="el" href="pi__opencl_8cpp.html#a9cc0be50f59c0e010d223da6882ba23a">pi_opencl.cpp</a>
+<li>__SYCL_EXPAND
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextUSMDeviceAlloc()
-: <a class="el" href="pi__opencl_8cpp.html#ab24c050ded366ab5c2741bc907764600">pi_opencl.cpp</a>
+<li>__SYCL_EXTERN_IT1
+: <a class="el" href="detail_2builtins_8hpp.html#aac0bf3b4227f7ce07532b122e8bc9725">builtins.hpp</a>
 </li>
-<li>piextUSMEnqueueMemAdvise()
-: <a class="el" href="pi__opencl_8cpp.html#a238bc017b9d0a2888cd2133057666d06">pi_opencl.cpp</a>
+<li>__SYCL_EXTERN_IT2
+: <a class="el" href="detail_2builtins_8hpp.html#a4d352ee0238943843f54efff18aeb2bf">builtins.hpp</a>
 </li>
-<li>piextUSMEnqueueMemcpy()
-: <a class="el" href="pi__opencl_8cpp.html#add738984ede5e0f9b7587d9ef0abfbb9">pi_opencl.cpp</a>
+<li>__SYCL_EXTERN_IT2_SAME
+: <a class="el" href="detail_2builtins_8hpp.html#ae9142738b225bd4aa9c9aa0d346192ee">builtins.hpp</a>
 </li>
-<li>piextUSMEnqueueMemset()
-: <a class="el" href="pi__opencl_8cpp.html#a01c7cd6826000f011885275541a7d038">pi_opencl.cpp</a>
+<li>__SYCL_EXTERN_IT3
+: <a class="el" href="detail_2builtins_8hpp.html#a1740d5616929593b5d7b8a7424dc9d45">builtins.hpp</a>
 </li>
-<li>piextUSMEnqueuePrefetch()
-: <a class="el" href="pi__opencl_8cpp.html#a3d9d01ffe364d9987bcf6cc3f552a82c">pi_opencl.cpp</a>
+<li>__SYCL_GEN_OPT
+: <a class="el" href="id_8hpp.html#a93bee456e4dda914698eeb2e457085b3">id.hpp</a>
+, <a class="el" href="range_8hpp.html#a93bee456e4dda914698eeb2e457085b3">range.hpp</a>
 </li>
-<li>piextUSMFree()
-: <a class="el" href="pi__opencl_8cpp.html#a1ba7089d4a0b1fbe530229485514beab">pi_opencl.cpp</a>
+<li>__SYCL_GEN_OPT_BASE
+: <a class="el" href="id_8hpp.html#aa999c9ff2be6ea85802409903755f482">id.hpp</a>
 </li>
-<li>piextUSMGetMemAllocInfo()
-: <a class="el" href="pi__opencl_8cpp.html#afc3c5e8ff3e0643a80f89bc0a7c8c8cd">pi_opencl.cpp</a>
+<li>__SYCL_INDEXER
+: <a class="el" href="types_8hpp.html">types.hpp</a>
 </li>
-<li>piextUSMHostAlloc()
-: <a class="el" href="pi__opencl_8cpp.html#a4b55c40a7f28db7ca54c72755afe948d">pi_opencl.cpp</a>
+<li>__SYCL_INLINE_NAMESPACE
+: <a class="el" href="defines_8hpp.html#af014229c51476c8c275e6e94d0549384">defines.hpp</a>
 </li>
-<li>piextUSMSharedAlloc()
-: <a class="el" href="pi__opencl_8cpp.html#adc0024fcee3a57291e3f618ec67aa744">pi_opencl.cpp</a>
+<li>__SYCL_MAKE_CALL_ARG1
+: <a class="el" href="detail_2builtins_8hpp.html#a136e81fac14ded11dd827514b0a06b56">builtins.hpp</a>
 </li>
-<li>piKernelGetSubGroupInfo()
-: <a class="el" href="pi__opencl_8cpp.html#a642e2fb675fe6b610aa806ff5c318b19">pi_opencl.cpp</a>
+<li>__SYCL_MAKE_CALL_ARG2
+: <a class="el" href="detail_2builtins_8hpp.html#a9b59dcd670fa5d1905f9592e60db7fca">builtins.hpp</a>
 </li>
-<li>piKernelSetExecInfo()
-: <a class="el" href="pi__opencl_8cpp.html#a8f67e1202a6fac787cc3dc5895f1ee08">pi_opencl.cpp</a>
+<li>__SYCL_MAKE_CALL_ARG2_SAME
+: <a class="el" href="detail_2builtins_8hpp.html#a106ccac7a018c77d6cd894e6e1f4b8a5">builtins.hpp</a>
 </li>
-</ul>
-
-
-<h3><a id="index_u"></a>- u -</h3><ul>
-<li>USMSetIndirectAccess()
-: <a class="el" href="pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372">pi_opencl.cpp</a>
+<li>__SYCL_MAKE_CALL_ARG2_SAME_RESULT
+: <a class="el" href="detail_2builtins_8hpp.html#af7c5680033964e33c3e127997a9df281">builtins.hpp</a>
+</li>
+<li>__SYCL_MAKE_CALL_ARG3
+: <a class="el" href="detail_2builtins_8hpp.html#ab98d809db6a4df6d40c977f4faa45105">builtins.hpp</a>
+</li>
+<li>__SYCL_NTH_ARG
+: <a class="el" href="types_8hpp.html">types.hpp</a>
+</li>
+<li>__SYCL_OPASSIGN
+: <a class="el" href="types_8hpp.html#afa2e9595fcd4af1482232e1b36445f7e">types.hpp</a>
+</li>
+<li>__SYCL_PPCAT
+: <a class="el" href="detail_2builtins_8hpp.html#aa39e7e212e1c6f1aab65ccc5fc1da50c">builtins.hpp</a>
+</li>
+<li>__SYCL_PPCAT_NX
+: <a class="el" href="detail_2builtins_8hpp.html#ad4b58a3f20d8503373f992d5ae521f3f">builtins.hpp</a>
+</li>
+<li>__sycl_register_lib()
+: <a class="el" href="program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e">program_manager.cpp</a>
+, <a class="el" href="program__manager_8hpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e">program_manager.hpp</a>
+</li>
+<li>__SYCL_RELLOGOP
+: <a class="el" href="types_8hpp.html#a8d03946656f8df2e834f264cde74563f">types.hpp</a>
+</li>
+<li>__SYCL_SCALAR_ACCESS
+: <a class="el" href="types_8hpp.html">types.hpp</a>
+</li>
+<li>__sycl_unregister_lib()
+: <a class="el" href="program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d">program_manager.cpp</a>
+, <a class="el" href="program__manager_8hpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d">program_manager.hpp</a>
+</li>
+<li>__SYCL_UOP
+: <a class="el" href="types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578">types.hpp</a>
+</li>
+<li>_Bool
+: <a class="el" href="kernel__desc_8hpp.html#aeaff0db5524987a2f50d71ac0162ceb2">kernel_desc.hpp</a>
+</li>
+<li>_PI_API
+: <a class="el" href="pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516">pi.hpp</a>
+, <a class="el" href="pi_8h.html#a30efcb92adfb3e8888cfe462bb133516">pi.h</a>
+</li>
+<li>_pi_buffer_create_type
+: <a class="el" href="pi_8h.html#a74a9f7b33ccc69844585637720ff8e58">pi.h</a>
+</li>
+<li>_PI_CL
+: <a class="el" href="pi__cuda_8cpp.html#aa6d27edcb01d9bed67c0e444e1edcd4d">pi_cuda.cpp</a>
+, <a class="el" href="pi__opencl_8cpp.html#a202ce1284dfe832d706747e1649ff93e">pi_opencl.cpp</a>
+</li>
+<li>_pi_command_type
+: <a class="el" href="pi_8h.html#abaed2e995068d0454395b8d2e3369df0">pi.h</a>
+</li>
+<li>_PI_CONCAT
+: <a class="el" href="pi_8h.html#a172d9589d78935e5c3d601f04a9a3663">pi.h</a>
+</li>
+<li>_pi_context_info
+: <a class="el" href="pi_8h.html#ace71b427738b48e2c19706dd2239b305">pi.h</a>
+</li>
+<li>_pi_device_info
+: <a class="el" href="pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4e">pi.h</a>
+</li>
+<li>_pi_device_local_mem_type
+: <a class="el" href="pi_8h.html#ac9435d7fcc630cad9edbf944ed3b2957">pi.h</a>
+</li>
+<li>_pi_device_mem_cache_type
+: <a class="el" href="pi_8h.html#a5dae3b62ea70426e2645b8d5f667fd7e">pi.h</a>
+</li>
+<li>_pi_device_type
+: <a class="el" href="pi_8h.html#a5b036d6dc3840381d41a1b3abd902199">pi.h</a>
+</li>
+<li>_pi_event_info
+: <a class="el" href="pi_8h.html#a825f5019751a37471ad2574d163762d2">pi.h</a>
+</li>
+<li>_pi_event_status
+: <a class="el" href="pi_8h.html#adacd0b4ef672ace7be9f693f5c77b055">pi.h</a>
+</li>
+<li>_pi_fp_capabilities
+: <a class="el" href="pi_8h.html#a7f3d5f21d16ce633fb5c05ff429b7b5d">pi.h</a>
+</li>
+<li>_PI_H_VERSION_MAJOR
+: <a class="el" href="pi_8h.html#a51ab31f9fc2fffb8cd8ddbf47ac13c96">pi.h</a>
+</li>
+<li>_PI_H_VERSION_MINOR
+: <a class="el" href="pi_8h.html#a234cb2f34ada2072eb6cfb70154991ce">pi.h</a>
+</li>
+<li>_PI_H_VERSION_STRING
+: <a class="el" href="pi_8h.html#a1c3140f02a0f9a406b415e964b15d103">pi.h</a>
+</li>
+<li>_pi_image_channel_order
+: <a class="el" href="pi_8h.html#a551f7e542035c7d0a113f15e42243f64">pi.h</a>
+</li>
+<li>_pi_image_channel_type
+: <a class="el" href="pi_8h.html#a2eb5f49f94a4321537c2b6961424c0ff">pi.h</a>
+</li>
+<li>_pi_image_info
+: <a class="el" href="pi_8h.html#a51c3248d0ee13eb6b734b43b45625ebb">pi.h</a>
+</li>
+<li>_pi_kernel_exec_info
+: <a class="el" href="pi_8h.html#a3dd6b4cc5d31184f62f6637e33752c57">pi.h</a>
+</li>
+<li>_pi_kernel_group_info
+: <a class="el" href="pi_8h.html#a37f7bb6f3b42262f6c1b7a335f92b1b8">pi.h</a>
+</li>
+<li>_pi_kernel_info
+: <a class="el" href="pi_8h.html#ab5acc77df906e66f21ea8e32a31de767">pi.h</a>
+</li>
+<li>_pi_kernel_sub_group_info
+: <a class="el" href="pi_8h.html#a2ec25ca82738fe2f6a98fcfcc5270dff">pi.h</a>
+</li>
+<li>_pi_mem_advice
+: <a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi.h</a>
+</li>
+<li>_pi_mem_info
+: <a class="el" href="pi_8h.html#af2ce602d590555990cf4caeb4c127732">pi.h</a>
+</li>
+<li>_pi_mem_type
+: <a class="el" href="pi_8h.html#a9995c520b89d8b9d3ae445823d568c5a">pi.h</a>
+</li>
+<li>_pi_offload_entry
+: <a class="el" href="pi_8h.html#aecf4fcab95187d0884bc298b7e7f34e2">pi.h</a>
+</li>
+<li>_pi_platform_info
+: <a class="el" href="pi_8h.html#a4179902598fdb24bceda46b99f96337e">pi.h</a>
+</li>
+<li>_pi_profiling_info
+: <a class="el" href="pi_8h.html#a571c87247e08fd8e646caa8c86c5f3d2">pi.h</a>
+</li>
+<li>_pi_program_build_info
+: <a class="el" href="pi_8h.html#affb012a387665b7fe650f322575cae0e">pi.h</a>
+</li>
+<li>_pi_program_build_status
+: <a class="el" href="pi_8h.html#a26d1b35f455d23f0e3b640b0c90bb1e7">pi.h</a>
+</li>
+<li>_pi_program_info
+: <a class="el" href="pi_8h.html#ae22772ea765e6f3fe64ba7b9ddb49d3c">pi.h</a>
+</li>
+<li>_pi_queue_info
+: <a class="el" href="pi_8h.html#a2818f6fe80b389a315ecddfd865dbebe">pi.h</a>
+</li>
+<li>_pi_result
+: <a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi.h</a>
+</li>
+<li>_pi_sampler_addressing_mode
+: <a class="el" href="pi_8h.html#ae060fc2e99bd29b222ffaf895431666f">pi.h</a>
+</li>
+<li>_pi_sampler_filter_mode
+: <a class="el" href="pi_8h.html#ad17d43a9784687d681c86dc87faf43be">pi.h</a>
+</li>
+<li>_pi_sampler_info
+: <a class="el" href="pi_8h.html#a9cd8b318eb8502c78313b6c0a7b7b7d8">pi.h</a>
+</li>
+<li>_PI_STRING_HELPER
+: <a class="el" href="pi_8h.html#a4886d22e41bfa1830b03fb18b3606c43">pi.h</a>
+</li>
+<li>_pi_usm_capabilities
+: <a class="el" href="pi_8h.html#a51fb8a9c431e708becdc604ebce5e9e2">pi.h</a>
+</li>
+<li>_pi_usm_capability_query
+: <a class="el" href="pi_8h.html#a6f1f34c7a3031bd7dba86ea7ec1a6d86">pi.h</a>
+</li>
+<li>_pi_usm_mem_properties
+: <a class="el" href="pi_8h.html#a6379a64bbf4ee298047d0fb3dd6f054a">pi.h</a>
+</li>
+<li>_pi_usm_migration_flags
+: <a class="el" href="pi_8h.html#a5aace8bff3702d6735960d10cdccc3ec">pi.h</a>
+</li>
+<li>_pi_usm_type
+: <a class="el" href="pi_8h.html#a57c877a8b4170a2a4e9958cce2266278">pi.h</a>
+</li>
+<li>_USE_MATH_DEFINES
+: <a class="el" href="builtins__math_8cpp.html#a525335710b53cb064ca56b936120431e">builtins_math.cpp</a>
+, <a class="el" href="builtins__common_8cpp.html#a525335710b53cb064ca56b936120431e">builtins_common.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

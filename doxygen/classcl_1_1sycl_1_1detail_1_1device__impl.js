@@ -1,0 +1,26 @@
+var classcl_1_1sycl_1_1detail_1_1device__impl =
+[
+    [ "device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html#ac8804a69581f43fd36d10c78afd99df9", null ],
+    [ "device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a215b7734e770b7ff84d07ee2051c7f57", null ],
+    [ "device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a6c55daa20173cc499816d1e8a8ecde51", null ],
+    [ "device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a29769d01ad3552cbd7a36a7e338e8362", null ],
+    [ "~device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a33e33b5cfd5845e208d9f374fdcf40b7", null ],
+    [ "create_sub_devices", "classcl_1_1sycl_1_1detail_1_1device__impl.html#af260892836adecd058683b14d4cf8d26", null ],
+    [ "create_sub_devices", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a3458975bac5112442878b542b2a49580", null ],
+    [ "create_sub_devices", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a885f0f936d6f29b2d16e95997150ad5b", null ],
+    [ "create_sub_devices", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a1133d8da4ddcbd2a6c9f92be6aa27a23", null ],
+    [ "get", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a01e12603cb5bf03fe248e5c3106bd71e", null ],
+    [ "get_info", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a2850b3b56d3b31d984a79eb71176a2b4", null ],
+    [ "get_platform", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a18ebd6bde4817f75e083e7452ccc138b", null ],
+    [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a32d4f75d907820b10e4d08a77d37a2e8", null ],
+    [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1device__impl.html#aa3ab01881c6a17f4f9fdeeba66788a0c", null ],
+    [ "getNative", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a53017098724e542f77cfb9f944e371da", null ],
+    [ "getPlugin", "classcl_1_1sycl_1_1detail_1_1device__impl.html#af18606417c4104d249d3afb5c54507f3", null ],
+    [ "has_extension", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a76f074fc772509a9af5ac1633755910e", null ],
+    [ "is_accelerator", "classcl_1_1sycl_1_1detail_1_1device__impl.html#ac39577cdcf0c7249ad2bdfbcd97df9c9", null ],
+    [ "is_affinity_supported", "classcl_1_1sycl_1_1detail_1_1device__impl.html#aa2f102081281dc600fa44760e21b9333", null ],
+    [ "is_cpu", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a13087693607f0fc8c81cf4aebac1432f", null ],
+    [ "is_gpu", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a8d64b7c3282642aaacb8ca430951d7d9", null ],
+    [ "is_host", "classcl_1_1sycl_1_1detail_1_1device__impl.html#ab35f29cf0d354088af0d9fba5e48b701", null ],
+    [ "is_partition_supported", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a15ecea76950bcb267e3deb939397a7aa", null ]
+];

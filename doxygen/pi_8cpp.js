@@ -1,0 +1,20 @@
+var pi_8cpp =
+[
+    [ "assertion", "pi_8cpp.html#ab5c96c471fc77fc3d6cefa49a7f9549d", null ],
+    [ "asUint32", "pi_8cpp.html#a684743b5a0750004d8dc6f68fe8a7cd1", null ],
+    [ "bindPlugin", "pi_8cpp.html#a5d29befedd23d01289e250d88c88a410", null ],
+    [ "contextSetExtendedDeleter", "pi_8cpp.html#a133dc735ecf261301767f73e7d007022", null ],
+    [ "die", "pi_8cpp.html#abc198fc7f3887cb0deaea2abcbee3d2d", null ],
+    [ "emitFunctionBeginTrace", "pi_8cpp.html#ae61ba170f7f8ad42b4f0d4575b2ccab2", null ],
+    [ "emitFunctionEndTrace", "pi_8cpp.html#abc3549c65cf7bfcca09a931b3aa5779b", null ],
+    [ "findPlugins", "pi_8cpp.html#a2272ac12293db6e5e64527c8c3291f33", null ],
+    [ "getBinaryImageFormat", "pi_8cpp.html#a5977eda13527e6a59274e95a6b12dce3", null ],
+    [ "initialize", "pi_8cpp.html#aebf279128e023d1abaeb1725d0ad9c35", null ],
+    [ "loadPlugin", "pi_8cpp.html#aec8cc975c45bbd1adc7cacbf1cd7107f", null ],
+    [ "memFlagsToString", "pi_8cpp.html#ab9180cb76fb7c1de19f79f357a7abddd", null ],
+    [ "memFlagToString", "pi_8cpp.html#a81abe9a8522f86b9afcb30054c651163", null ],
+    [ "operator<<", "pi_8cpp.html#af3dde3983ba4223609bcdd344ab66084", null ],
+    [ "platformInfoToString", "pi_8cpp.html#a7f46f068db2e8af69c378715c6dc642d", null ],
+    [ "trace", "pi_8cpp.html#aa9b06e1270bfa6b2b141b9c762198717", null ],
+    [ "XPTIInitDone", "pi_8cpp.html#a7ebb67d911d0fd533044b2f6646f9c9f", null ]
+];

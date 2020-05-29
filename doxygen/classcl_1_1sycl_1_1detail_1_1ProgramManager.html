@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::ProgramManager Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::ProgramManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1ProgramManager.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html">ProgramManager</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -71,47 +97,120 @@ $(function() {
 <div class="title">cl::sycl::detail::ProgramManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="program__manager_8hpp_source.html">detail/program_manager/program_manager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad0fe91c19c61b950fbd1c49c1f14a056"><td class="memItemLeft" align="right" valign="top"><a id="ad0fe91c19c61b950fbd1c49c1f14a056"></a>
-<a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getDeviceImage</b> (OSModuleHandle M, const string_class &amp;KernelName, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context)</td></tr>
+<tr class="memitem:ad0fe91c19c61b950fbd1c49c1f14a056"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ad0fe91c19c61b950fbd1c49c1f14a056">getDeviceImage</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> M, const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;KernelName, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context)</td></tr>
 <tr class="separator:ad0fe91c19c61b950fbd1c49c1f14a056"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ac2ebb2599e86aed99a3e9f343569db"><td class="memItemLeft" align="right" valign="top"><a id="a2ac2ebb2599e86aed99a3e9f343569db"></a>
-<a class="el" href="struct__pi__program.html">RT::PiProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createPIProgram</b> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;Img, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context)</td></tr>
+<tr class="memitem:a2ac2ebb2599e86aed99a3e9f343569db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a2ac2ebb2599e86aed99a3e9f343569db">createPIProgram</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;Img, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context)</td></tr>
 <tr class="separator:a2ac2ebb2599e86aed99a3e9f343569db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da3b550312897cb193c5ff91b831ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__program.html">RT::PiProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a7da3b550312897cb193c5ff91b831ab5">getBuiltPIProgram</a> (OSModuleHandle M, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, const string_class &amp;KernelName, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> *Prg=nullptr)</td></tr>
+<tr class="memitem:a7da3b550312897cb193c5ff91b831ab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a7da3b550312897cb193c5ff91b831ab5">getBuiltPIProgram</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> M, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;KernelName, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> *Prg=nullptr)</td></tr>
 <tr class="memdesc:a7da3b550312897cb193c5ff91b831ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds or retrieves from cache a program defining the kernel with given name.  <a href="#a7da3b550312897cb193c5ff91b831ab5">More...</a><br /></td></tr>
 <tr class="separator:a7da3b550312897cb193c5ff91b831ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17413cda78899d5c42d4460f4ccf856a"><td class="memItemLeft" align="right" valign="top"><a id="a17413cda78899d5c42d4460f4ccf856a"></a>
-<a class="el" href="struct__pi__kernel.html">RT::PiKernel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getOrCreateKernel</b> (OSModuleHandle M, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, const string_class &amp;KernelName, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> *Prg)</td></tr>
+<tr class="memitem:a17413cda78899d5c42d4460f4ccf856a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad12e3dd36c586f6fb08795140e0da26e">RT::PiKernel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a17413cda78899d5c42d4460f4ccf856a">getOrCreateKernel</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> M, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;KernelName, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> *Prg)</td></tr>
 <tr class="separator:a17413cda78899d5c42d4460f4ccf856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10cc552efb8087c7ee5b06fdcf29a3f9"><td class="memItemLeft" align="right" valign="top"><a id="a10cc552efb8087c7ee5b06fdcf29a3f9"></a>
-<a class="el" href="struct__pi__program.html">RT::PiProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPiProgramFromPiKernel</b> (<a class="el" href="struct__pi__kernel.html">RT::PiKernel</a> Kernel, const ContextImplPtr Context)</td></tr>
+<tr class="memitem:a10cc552efb8087c7ee5b06fdcf29a3f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a10cc552efb8087c7ee5b06fdcf29a3f9">getPiProgramFromPiKernel</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad12e3dd36c586f6fb08795140e0da26e">RT::PiKernel</a> Kernel, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> Context)</td></tr>
 <tr class="separator:a10cc552efb8087c7ee5b06fdcf29a3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afed37c794b0fd9dbb7bb4cad149d39b6"><td class="memItemLeft" align="right" valign="top"><a id="afed37c794b0fd9dbb7bb4cad149d39b6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addImages</b> (<a class="el" href="structpi__device__binaries__struct.html">pi_device_binaries</a> DeviceImages)</td></tr>
+<tr class="memitem:afed37c794b0fd9dbb7bb4cad149d39b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afed37c794b0fd9dbb7bb4cad149d39b6">addImages</a> (<a class="el" href="pi_8h.html#a114b582e3c429b82709bd1ee2a07536c">pi_device_binaries</a> DeviceImages)</td></tr>
 <tr class="separator:afed37c794b0fd9dbb7bb4cad149d39b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03d6ea06a6e077887ad9707d5933b253"><td class="memItemLeft" align="right" valign="top"><a id="a03d6ea06a6e077887ad9707d5933b253"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>debugPrintBinaryImages</b> () const</td></tr>
+<tr class="memitem:a03d6ea06a6e077887ad9707d5933b253"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253">debugPrintBinaryImages</a> () const</td></tr>
 <tr class="separator:a03d6ea06a6e077887ad9707d5933b253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d4b2dd632041b7803add4dd42ef332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#af4d4b2dd632041b7803add4dd42ef332">flushSpecConstants</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> &amp;Prg, <a class="el" href="struct__pi__program.html">pi::PiProgram</a> NativePrg=nullptr, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> *Img=nullptr)</td></tr>
+<tr class="memitem:af4d4b2dd632041b7803add4dd42ef332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#af4d4b2dd632041b7803add4dd42ef332">flushSpecConstants</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> &amp;Prg, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">pi::PiProgram</a> NativePrg=nullptr, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> *Img=nullptr)</td></tr>
 <tr class="memdesc:af4d4b2dd632041b7803add4dd42ef332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves given program to a device binary image and requests the program to flush constants the image depends on.  <a href="#af4d4b2dd632041b7803add4dd42ef332">More...</a><br /></td></tr>
 <tr class="separator:af4d4b2dd632041b7803add4dd42ef332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e830067ea4f87b1ca4c225abeacc666"><td class="memItemLeft" align="right" valign="top"><a id="a9e830067ea4f87b1ca4c225abeacc666"></a>
-static <a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html">ProgramManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="memitem:a9e830067ea4f87b1ca4c225abeacc666"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html">ProgramManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a9e830067ea4f87b1ca4c225abeacc666">getInstance</a> ()</td></tr>
 <tr class="separator:a9e830067ea4f87b1ca4c225abeacc666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a066900235b68c866aa58db9b479fd21f"><td class="memItemLeft" align="right" valign="top"><a id="a066900235b68c866aa58db9b479fd21f"></a>
-static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getProgramBuildLog</b> (const <a class="el" href="struct__pi__program.html">RT::PiProgram</a> &amp;Program, const ContextImplPtr Context)</td></tr>
+<tr class="memitem:a066900235b68c866aa58db9b479fd21f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a066900235b68c866aa58db9b479fd21f">getProgramBuildLog</a> (const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a> &amp;Program, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> Context)</td></tr>
 <tr class="separator:a066900235b68c866aa58db9b479fd21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="program__manager_8hpp_source.html#l00057">57</a> of file <a class="el" href="program__manager_8hpp_source.html">program_manager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afed37c794b0fd9dbb7bb4cad149d39b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed37c794b0fd9dbb7bb4cad149d39b6">&#9670;&nbsp;</a></span>addImages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::ProgramManager::addImages </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a114b582e3c429b82709bd1ee2a07536c">pi_device_binaries</a>&#160;</td>
+          <td class="paramname"><em>DeviceImages</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00797">797</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00725">pi_device_binaries_struct::DeviceBinaries</a>, <a class="el" href="pi_8h_source.html#l00692">pi_device_binary_struct::EntriesBegin</a>, <a class="el" href="pi_8h_source.html#l00693">pi_device_binary_struct::EntriesEnd</a>, <a class="el" href="pi_8h_source.html#l00573">_pi_offload_entry_struct::name</a>, and <a class="el" href="pi_8h_source.html#l00723">pi_device_binaries_struct::NumDeviceBinaries</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00958">__sycl_register_lib()</a>.</p>
+
+</div>
+</div>
+<a id="a2ac2ebb2599e86aed99a3e9f343569db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac2ebb2599e86aed99a3e9f343569db">&#9670;&nbsp;</a></span>createPIProgram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a> cl::sycl::detail::ProgramManager::createPIProgram </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>Img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>Context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00295">295</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00690">pi_device_binary_struct::BinaryEnd</a>, <a class="el" href="pi_8h_source.html#l00688">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="program__manager_8cpp_source.html#l00072">cl::sycl::detail::createBinaryProgram()</a>, <a class="el" href="program__manager_8cpp_source.html#l00108">cl::sycl::detail::createSpirvProgram()</a>, <a class="el" href="pi_8cpp_source.html#l00479">cl::sycl::detail::pi::getBinaryImageFormat()</a>, <a class="el" href="program__manager_8cpp_source.html#l00280">cl::sycl::detail::getFormatStr()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="program__manager_8cpp_source.html#l00241">cl::sycl::detail::isDeviceBinaryTypeSupported()</a>, <a class="el" href="pi_8h_source.html#l00613">PI_DEVICE_BINARY_TYPE_NONE</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00300">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
+
+</div>
+</div>
+<a id="a03d6ea06a6e077887ad9707d5933b253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d6ea06a6e077887ad9707d5933b253">&#9670;&nbsp;</a></span>debugPrintBinaryImages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::ProgramManager::debugPrintBinaryImages </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00848">848</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00676">pi_device_binary_struct::DeviceTargetSpec</a>, <a class="el" href="pi_8cpp_source.html#l00437">cl::sycl::detail::pi::DeviceBinaryImage::dump()</a>, <a class="el" href="pi_8hpp_source.html#l00286">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>, <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00308">cl::sycl::detail::LastKSId</a>, <a class="el" href="pi_8h_source.html#l00620">PI_DEVICE_BINARY_TYPE_LLVMIR_BITCODE</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="pi_8h_source.html#l00101">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_KERNEL_NAME</a>, and <a class="el" href="common_8hpp_source.html#l00307">cl::sycl::detail::SpvFileKSId</a>.</p>
+
+</div>
+</div>
 <a id="af4d4b2dd632041b7803add4dd42ef332"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4d4b2dd632041b7803add4dd42ef332">&#9670;&nbsp;</a></span>flushSpecConstants()</h2>
 
@@ -127,7 +226,7 @@ static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getPro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct__pi__program.html">pi::PiProgram</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">pi::PiProgram</a>&#160;</td>
           <td class="paramname"><em>NativePrg</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
@@ -156,7 +255,9 @@ static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getPro
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00914">914</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="program__impl_8cpp_source.html#l00478">cl::sycl::detail::program_impl::flush_spec_constants()</a>, <a class="el" href="program__impl_8cpp_source.html#l00187">cl::sycl::detail::program_impl::get()</a>, <a class="el" href="program__impl_8hpp_source.html#l00237">cl::sycl::detail::program_impl::get_context()</a>, <a class="el" href="program__impl_8hpp_source.html#l00111">cl::sycl::detail::program_impl::getHandleRef()</a>, and <a class="el" href="program__impl_8hpp_source.html#l00319">cl::sycl::detail::program_impl::hasSetSpecConstants()</a>.</p>
+<p class="reference">References <a class="el" href="program__impl_8cpp_source.html#l00478">cl::sycl::detail::program_impl::flush_spec_constants()</a>, <a class="el" href="program__impl_8cpp_source.html#l00187">cl::sycl::detail::program_impl::get()</a>, <a class="el" href="program__impl_8hpp_source.html#l00237">cl::sycl::detail::program_impl::get_context()</a>, <a class="el" href="program__impl_8hpp_source.html#l00111">cl::sycl::detail::program_impl::getHandleRef()</a>, <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="program__impl_8hpp_source.html#l00319">cl::sycl::detail::program_impl::hasSetSpecConstants()</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, and <a class="el" href="device__binary__image_8hpp_source.html#l00030">cl::sycl::detail::RTDeviceBinaryImage::supportsSpecConstants()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00300">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
 
 </div>
 </div>
@@ -167,9 +268,9 @@ static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getPro
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct__pi__program.html">RT::PiProgram</a> cl::sycl::detail::ProgramManager::getBuiltPIProgram </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a> cl::sycl::detail::ProgramManager::getBuiltPIProgram </td>
           <td>(</td>
-          <td class="paramtype">OSModuleHandle&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a>&#160;</td>
           <td class="paramname"><em>M</em>, </td>
         </tr>
         <tr>
@@ -181,7 +282,7 @@ static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getPro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string_class &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;&#160;</td>
           <td class="paramname"><em>KernelName</em>, </td>
         </tr>
         <tr>
@@ -211,7 +312,198 @@ static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getPro
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00347">347</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi_8hpp_source.html#l00286">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>.</p>
+<p class="reference">References <a class="el" href="kernel__program__cache_8hpp_source.html#l00070">cl::sycl::detail::KernelProgramCache::acquireCachedPrograms()</a>, <a class="el" href="pi_8hpp_source.html#l00275">cl::sycl::detail::pi::DeviceBinaryImage::getCompileOptions()</a>, <a class="el" href="pi_8hpp_source.html#l00286">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>, <a class="el" href="pi_8hpp_source.html#l00280">cl::sycl::detail::pi::DeviceBinaryImage::getLinkOptions()</a>, <a class="el" href="plugin_8hpp_source.html#l00044">cl::sycl::detail::plugin::getPiPlugin()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7">_pi_plugin::PiFunctionTable</a>, and <a class="el" href="program__impl_8hpp_source.html#l00314">cl::sycl::detail::program_impl::stableSerializeSpecConstRegistry()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00223">cl::sycl::detail::program_impl::build_with_kernel_name()</a>.</p>
+
+</div>
+</div>
+<a id="ad0fe91c19c61b950fbd1c49c1f14a056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0fe91c19c61b950fbd1c49c1f14a056">&#9670;&nbsp;</a></span>getDeviceImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp; cl::sycl::detail::ProgramManager::getDeviceImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a>&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;&#160;</td>
+          <td class="paramname"><em>KernelName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>Context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00119">119</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00300">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
+
+</div>
+</div>
+<a id="a9e830067ea4f87b1ca4c225abeacc666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e830067ea4f87b1ca4c225abeacc666">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html">ProgramManager</a> &amp; cl::sycl::detail::ProgramManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00047">47</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00958">__sycl_register_lib()</a>, <a class="el" href="program__impl_8cpp_source.html#l00223">cl::sycl::detail::program_impl::build_with_kernel_name()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00300">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
+
+</div>
+</div>
+<a id="a17413cda78899d5c42d4460f4ccf856a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17413cda78899d5c42d4460f4ccf856a">&#9670;&nbsp;</a></span>getOrCreateKernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad12e3dd36c586f6fb08795140e0da26e">RT::PiKernel</a> cl::sycl::detail::ProgramManager::getOrCreateKernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a>&#160;</td>
+          <td class="paramname"><em>M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>Context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;&#160;</td>
+          <td class="paramname"><em>KernelName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> *&#160;</td>
+          <td class="paramname"><em>Prg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00405">405</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="kernel__program__cache_8hpp_source.html#l00074">cl::sycl::detail::KernelProgramCache::acquireKernelsPerProgramCache()</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00592">piKernelCreate()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00300">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
+
+</div>
+</div>
+<a id="a10cc552efb8087c7ee5b06fdcf29a3f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10cc552efb8087c7ee5b06fdcf29a3f9">&#9670;&nbsp;</a></span>getPiProgramFromPiKernel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a> cl::sycl::detail::ProgramManager::getPiProgramFromPiKernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad12e3dd36c586f6fb08795140e0da26e">RT::PiKernel</a>&#160;</td>
+          <td class="paramname"><em>Kernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00446">446</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00299">PI_KERNEL_INFO_PROGRAM</a>, and <a class="el" href="pi_8h.html#ae2365c1ee5bd13c0ee4e6e4faa47f1c4">piKernelGetInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a066900235b68c866aa58db9b479fd21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066900235b68c866aa58db9b479fd21f">&#9670;&nbsp;</a></span>getProgramBuildLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> cl::sycl::detail::ProgramManager::getProgramBuildLog </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">RT::PiProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>Program</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00455">455</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00235">PI_DEVICE_INFO_NAME</a>, <a class="el" href="pi_8h_source.html#l00270">PI_PROGRAM_INFO_DEVICES</a>, <a class="el" href="pi_8h.html#a4c04cf52d4de11e8706f60d51a953d60">piDeviceGetInfo()</a>, <a class="el" href="pi_8h.html#a07afae9d8b7df8cb752c6f44ce076484">piProgramGetBuildInfo()</a>, and <a class="el" href="pi_8h.html#a792aa5ffec74888a3e2be91313659c13">piProgramGetInfo()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00300">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
 
 </div>
 </div>
@@ -220,11 +512,15 @@ static string_class&#160;</td><td class="memItemRight" valign="bottom"><b>getPro
 <li>source/detail/program_manager/<a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html">ProgramManager</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

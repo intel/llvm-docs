@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cuda_20plugin',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]]
+  ['accessors',['Accessors',['../group__sycl__api__acc.html',1,'']]]
 ];

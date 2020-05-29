@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['half',['Half',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aac48615a1bc4197056d522af276aa5a85',1,'cl::sycl::detail::PlatformUtil']]],
+  ['half_5ffp_5fconfig',['half_fp_config',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ae274f2a84e5820be22ee7cc505698105',1,'cl::sycl::info']]],
+  ['hex',['hex',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370ab8d1b43eae73587ba56baef574709ecb',1,'cl::sycl']]],
+  ['hexfloat',['hexfloat',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1ee01a7f098219fbfa0d62b14ab59c4f',1,'cl::sycl']]],
+  ['host',['host',['../namespacecl_1_1sycl.html#a571d7124814717169c43cc12bde9ca30a67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::host()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::info::host()'],['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0ea67b3dba8bc6778101892eb77249db32e',1,'cl::sycl::usm::host()']]],
+  ['host_5fbuffer',['host_buffer',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598aa0599d72026e3c6df4a0488cdf4e18d7',1,'cl::sycl::access']]],
+  ['host_5fimage',['host_image',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598ad19909e3ef6decbf2453174616b470c2',1,'cl::sycl::access']]],
+  ['host_5ftask',['HOST_TASK',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a9442ba042e55ef6b3a885a86261c287d',1,'cl::sycl::detail::Command']]],
+  ['host_5funified_5fmemory',['host_unified_memory',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a0fbdc8bcd6c762ac073157f9e77b2437',1,'cl::sycl::info']]],
+  ['hostaccessor',['HostAccessor',['../classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e',1,'cl::sycl::detail::Command']]],
+  ['hosttask',['HostTask',['../classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d',1,'cl::sycl::detail::Command']]]
+];

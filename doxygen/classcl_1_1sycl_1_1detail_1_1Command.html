@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::Command Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::Command Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1Command.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -97,89 +123,78 @@ Inheritance diagram for cl::sycl::detail::Command:</div>
 <area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1AllocaCommand.html" title="The alloca command enqueues allocation of instance of memory object on Host or underlying framework..." alt="" coords="493,5,640,47"/>
 <area shape="rect" id="node4" href="classcl_1_1sycl_1_1detail_1_1AllocaSubBufCommand.html" title="The AllocaSubBuf command enqueues creation of sub&#45;buffer of memory object. " alt="" coords="493,71,640,112"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for cl::sycl::detail::Command:</div>
 <div class="dyncontent">
 <div class="center"><img src="classcl_1_1sycl_1_1detail_1_1Command__coll__graph.png" border="0" usemap="#cl_1_1sycl_1_1detail_1_1Command_coll__map" alt="Collaboration graph"/></div>
 <map name="cl_1_1sycl_1_1detail_1_1Command_coll__map" id="cl_1_1sycl_1_1detail_1_1Command_coll__map">
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a68b8ff940e510d5d289d54dc21718ad4"><td class="memItemLeft" align="right" valign="top"><a id="a68b8ff940e510d5d289d54dc21718ad4"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>CommandType</b> { <br />
-&#160;&#160;<b>RUN_CG</b>, 
-<b>COPY_MEMORY</b>, 
-<b>ALLOCA</b>, 
-<b>ALLOCA_SUB_BUF</b>, 
+<tr class="memitem:a68b8ff940e510d5d289d54dc21718ad4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a> { <br />
+&#160;&#160;<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a21bcd12ce6f4a1cfce54e2ff69b6e886">RUN_CG</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4af7211409a2d3c6aec030ec3bd62696c9">COPY_MEMORY</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4ae03a765310e374f5fd4e8b478d670591">ALLOCA</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a3d4ff687ef7d2d868cb33608892ba56f">ALLOCA_SUB_BUF</a>, 
 <br />
-&#160;&#160;<b>RELEASE</b>, 
-<b>MAP_MEM_OBJ</b>, 
-<b>UNMAP_MEM_OBJ</b>, 
-<b>UPDATE_REQUIREMENT</b>, 
+&#160;&#160;<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a17cfc04bdd6c79656e2dae66bd3ea69f">RELEASE</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4aecafed01df81b9560f8f1ef01227eb90">MAP_MEM_OBJ</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a86e380379b6676bdc832f51d15440f65">UNMAP_MEM_OBJ</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a6ea18adaced89f0cacb69c4e1110a785">UPDATE_REQUIREMENT</a>, 
 <br />
-&#160;&#160;<b>EMPTY_TASK</b>, 
-<b>HOST_TASK</b>
+&#160;&#160;<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a8b89dcf5970cfadfe9a498bf10802b84">EMPTY_TASK</a>, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a9442ba042e55ef6b3a885a86261c287d">HOST_TASK</a>
 <br />
  }</td></tr>
 <tr class="separator:a68b8ff940e510d5d289d54dc21718ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15614136b85646185200079463c1aa09"><td class="memItemLeft" align="right" valign="top"><a id="a15614136b85646185200079463c1aa09"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>BlockReason</b> : int { <b>HostAccessor</b> = 0, 
-<b>HostTask</b>
+<tr class="memitem:a15614136b85646185200079463c1aa09"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09">BlockReason</a> : int { <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e">BlockReason::HostAccessor</a> = 0, 
+<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d">BlockReason::HostTask</a>
  }</td></tr>
 <tr class="separator:a15614136b85646185200079463c1aa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae4372aa392bfea61ada1697a9a75f975"><td class="memItemLeft" align="right" valign="top"><a id="ae4372aa392bfea61ada1697a9a75f975"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Command</b> (CommandType Type, QueueImplPtr Queue)</td></tr>
+<tr class="memitem:ae4372aa392bfea61ada1697a9a75f975"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ae4372aa392bfea61ada1697a9a75f975">Command</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a> Type, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue)</td></tr>
 <tr class="separator:ae4372aa392bfea61ada1697a9a75f975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9308486edfa6d82815466ec0512cb133"><td class="memItemLeft" align="right" valign="top"><a id="a9308486edfa6d82815466ec0512cb133"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addDep</b> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> NewDep)</td></tr>
+<tr class="memitem:a9308486edfa6d82815466ec0512cb133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a9308486edfa6d82815466ec0512cb133">addDep</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> NewDep)</td></tr>
 <tr class="separator:a9308486edfa6d82815466ec0512cb133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affc4788ade954cc20bf745a67f5b3e29"><td class="memItemLeft" align="right" valign="top"><a id="affc4788ade954cc20bf745a67f5b3e29"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addDep</b> (EventImplPtr Event)</td></tr>
+<tr class="memitem:affc4788ade954cc20bf745a67f5b3e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#affc4788ade954cc20bf745a67f5b3e29">addDep</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event)</td></tr>
 <tr class="separator:affc4788ade954cc20bf745a67f5b3e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfe0f3989857b65ba6f3a06f64b37d60"><td class="memItemLeft" align="right" valign="top"><a id="adfe0f3989857b65ba6f3a06f64b37d60"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addUser</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *NewUser)</td></tr>
+<tr class="memitem:adfe0f3989857b65ba6f3a06f64b37d60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#adfe0f3989857b65ba6f3a06f64b37d60">addUser</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *NewUser)</td></tr>
 <tr class="separator:adfe0f3989857b65ba6f3a06f64b37d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a1bff88f24c2adb84c97d38ff24463"><td class="memItemLeft" align="right" valign="top">CommandType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ac5a1bff88f24c2adb84c97d38ff24463">getType</a> () const</td></tr>
+<tr class="memitem:ac5a1bff88f24c2adb84c97d38ff24463"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ac5a1bff88f24c2adb84c97d38ff24463">getType</a> () const</td></tr>
 <tr class="separator:ac5a1bff88f24c2adb84c97d38ff24463"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2565f65d0229d9e933eb24d7cef51c80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2565f65d0229d9e933eb24d7cef51c80">enqueue</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html">EnqueueResultT</a> &amp;EnqueueResult, BlockingT Blocking)</td></tr>
+<tr class="memitem:a2565f65d0229d9e933eb24d7cef51c80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2565f65d0229d9e933eb24d7cef51c80">enqueue</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html">EnqueueResultT</a> &amp;EnqueueResult, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af961fb0fe94eef91c4feb0abf6239819">BlockingT</a> Blocking)</td></tr>
 <tr class="memdesc:a2565f65d0229d9e933eb24d7cef51c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the command is enqueued, and calls enqueueImp.  <a href="#a2565f65d0229d9e933eb24d7cef51c80">More...</a><br /></td></tr>
 <tr class="separator:a2565f65d0229d9e933eb24d7cef51c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3e59f84259cd0c0b14c996c808d0990"><td class="memItemLeft" align="right" valign="top"><a id="ae3e59f84259cd0c0b14c996c808d0990"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFinished</b> ()</td></tr>
+<tr class="memitem:ae3e59f84259cd0c0b14c996c808d0990"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ae3e59f84259cd0c0b14c996c808d0990">isFinished</a> ()</td></tr>
 <tr class="separator:ae3e59f84259cd0c0b14c996c808d0990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89b079400dcccbdc3f8beca70517c3dd"><td class="memItemLeft" align="right" valign="top"><a id="a89b079400dcccbdc3f8beca70517c3dd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSuccessfullyEnqueued</b> () const</td></tr>
+<tr class="memitem:a89b079400dcccbdc3f8beca70517c3dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a89b079400dcccbdc3f8beca70517c3dd">isSuccessfullyEnqueued</a> () const</td></tr>
 <tr class="separator:a89b079400dcccbdc3f8beca70517c3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae943f9c76bd856b709f986da7876d5e0"><td class="memItemLeft" align="right" valign="top"><a id="ae943f9c76bd856b709f986da7876d5e0"></a>
-std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getQueue</b> () const</td></tr>
+<tr class="memitem:ae943f9c76bd856b709f986da7876d5e0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ae943f9c76bd856b709f986da7876d5e0">getQueue</a> () const</td></tr>
 <tr class="separator:ae943f9c76bd856b709f986da7876d5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a661bc9facf831042a7621a8b1a4a0434"><td class="memItemLeft" align="right" valign="top"><a id="a661bc9facf831042a7621a8b1a4a0434"></a>
-std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getEvent</b> () const</td></tr>
+<tr class="memitem:a661bc9facf831042a7621a8b1a4a0434"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a661bc9facf831042a7621a8b1a4a0434">getEvent</a> () const</td></tr>
 <tr class="separator:a661bc9facf831042a7621a8b1a4a0434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4662bac4f0327f36decc4168b230f399"><td class="memItemLeft" align="right" valign="top"><a id="a4662bac4f0327f36decc4168b230f399"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a4662bac4f0327f36decc4168b230f399">emitInstrumentationDataProxy</a> ()</td></tr>
-<tr class="memdesc:a4662bac4f0327f36decc4168b230f399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proxy method which calls emitInstrumentationData. <br /></td></tr>
+<tr class="memitem:a4662bac4f0327f36decc4168b230f399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a4662bac4f0327f36decc4168b230f399">emitInstrumentationDataProxy</a> ()</td></tr>
+<tr class="memdesc:a4662bac4f0327f36decc4168b230f399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proxy method which calls emitInstrumentationData.  <a href="#a4662bac4f0327f36decc4168b230f399">More...</a><br /></td></tr>
 <tr class="separator:a4662bac4f0327f36decc4168b230f399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79201bceb39ae975f481c30f5e0741ce"><td class="memItemLeft" align="right" valign="top"><a id="a79201bceb39ae975f481c30f5e0741ce"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce">emitInstrumentationData</a> ()=0</td></tr>
-<tr class="memdesc:a79201bceb39ae975f481c30f5e0741ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instrumentation method which emits telemetry data. <br /></td></tr>
+<tr class="memitem:a79201bceb39ae975f481c30f5e0741ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce">emitInstrumentationData</a> ()=0</td></tr>
+<tr class="memdesc:a79201bceb39ae975f481c30f5e0741ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instrumentation method which emits telemetry data.  <a href="#a79201bceb39ae975f481c30f5e0741ce">More...</a><br /></td></tr>
 <tr class="separator:a79201bceb39ae975f481c30f5e0741ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a316bf823b63d25d102b494d1b066e826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a316bf823b63d25d102b494d1b066e826">resolveReleaseDependencies</a> (std::set&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&gt; &amp;list)</td></tr>
 <tr class="memdesc:a316bf823b63d25d102b494d1b066e826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks at all the dependencies for the release command and enables instrumentation to report these dependencies as edges.  <a href="#a316bf823b63d25d102b494d1b066e826">More...</a><br /></td></tr>
 <tr class="separator:a316bf823b63d25d102b494d1b066e826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a089a90b610973c072f4f43b2d20dac00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a089a90b610973c072f4f43b2d20dac00">emitEdgeEventForCommandDependence</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, void *ObjAddr, const string_class &amp;Prefix, bool IsCommand)</td></tr>
+<tr class="memitem:a089a90b610973c072f4f43b2d20dac00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a089a90b610973c072f4f43b2d20dac00">emitEdgeEventForCommandDependence</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, void *ObjAddr, const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;Prefix, bool IsCommand)</td></tr>
 <tr class="memdesc:a089a90b610973c072f4f43b2d20dac00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an edge event when the dependency is a command.  <a href="#a089a90b610973c072f4f43b2d20dac00">More...</a><br /></td></tr>
 <tr class="separator:a089a90b610973c072f4f43b2d20dac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2db3d5cd729dd0c46b59c0e2d3e81475">emitEdgeEventForEventDependence</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;EventAddr)</td></tr>
+<tr class="memitem:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2db3d5cd729dd0c46b59c0e2d3e81475">emitEdgeEventForEventDependence</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;EventAddr)</td></tr>
 <tr class="memdesc:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an edge event when the dependency is an event.  <a href="#a2db3d5cd729dd0c46b59c0e2d3e81475">More...</a><br /></td></tr>
 <tr class="separator:a2db3d5cd729dd0c46b59c0e2d3e81475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="memItemLeft" align="right" valign="top"><a id="a5aa15b74c02c23cf2aa94be0c560ba1a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a5aa15b74c02c23cf2aa94be0c560ba1a">emitEnqueuedEventSignal</a> (<a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;PiEventAddr)</td></tr>
-<tr class="memdesc:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a signal event with the enqueued kernel event handle. <br /></td></tr>
+<tr class="memitem:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a5aa15b74c02c23cf2aa94be0c560ba1a">emitEnqueuedEventSignal</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;PiEventAddr)</td></tr>
+<tr class="memdesc:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a signal event with the enqueued kernel event handle.  <a href="#a5aa15b74c02c23cf2aa94be0c560ba1a">More...</a><br /></td></tr>
 <tr class="separator:a5aa15b74c02c23cf2aa94be0c560ba1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94b8d77da7c09799a1b9913639fcc31d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d">makeTraceEventProlog</a> (void *<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0030e3ea7e156c3f77b77df28e9b1fd6">MAddress</a>)</td></tr>
 <tr class="memdesc:a94b8d77da7c09799a1b9913639fcc31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled().  <a href="#a94b8d77da7c09799a1b9913639fcc31d">More...</a><br /></td></tr>
@@ -187,51 +202,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a42b5f83a1250912b24546f6aa1c252d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a42b5f83a1250912b24546f6aa1c252d5">makeTraceEventEpilog</a> ()</td></tr>
 <tr class="memdesc:a42b5f83a1250912b24546f6aa1c252d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">If prolog has been run, run epilog; this must be guarded by a check for xptiTraceEnabled().  <a href="#a42b5f83a1250912b24546f6aa1c252d5">More...</a><br /></td></tr>
 <tr class="separator:a42b5f83a1250912b24546f6aa1c252d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f4770317122c099b9282a50e86622ec"><td class="memItemLeft" align="right" valign="top"><a id="a0f4770317122c099b9282a50e86622ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0f4770317122c099b9282a50e86622ec">emitInstrumentation</a> (uint16_t Type, const char *Txt=nullptr)</td></tr>
-<tr class="memdesc:a0f4770317122c099b9282a50e86622ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an event of Type. <br /></td></tr>
+<tr class="memitem:a0f4770317122c099b9282a50e86622ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0f4770317122c099b9282a50e86622ec">emitInstrumentation</a> (uint16_t Type, const char *Txt=nullptr)</td></tr>
+<tr class="memdesc:a0f4770317122c099b9282a50e86622ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits an event of Type.  <a href="#a0f4770317122c099b9282a50e86622ec">More...</a><br /></td></tr>
 <tr class="separator:a0f4770317122c099b9282a50e86622ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0db86d92eca0ce39ab1992bc0b6ba139"><td class="memItemLeft" align="right" valign="top"><a id="a0db86d92eca0ce39ab1992bc0b6ba139"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>printDot</b> (std::ostream &amp;Stream) const =0</td></tr>
+<tr class="memitem:a0db86d92eca0ce39ab1992bc0b6ba139"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0db86d92eca0ce39ab1992bc0b6ba139">printDot</a> (std::ostream &amp;Stream) const =0</td></tr>
 <tr class="separator:a0db86d92eca0ce39ab1992bc0b6ba139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37bddda2e1f11135708d5e29fb3b331d"><td class="memItemLeft" align="right" valign="top"><a id="a37bddda2e1f11135708d5e29fb3b331d"></a>
-virtual const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getRequirement</b> () const</td></tr>
+<tr class="memitem:a37bddda2e1f11135708d5e29fb3b331d"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a37bddda2e1f11135708d5e29fb3b331d">getRequirement</a> () const</td></tr>
 <tr class="separator:a37bddda2e1f11135708d5e29fb3b331d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0c4f1cdb3da26fc015fdb764469c05"><td class="memItemLeft" align="right" valign="top"><a id="a4a0c4f1cdb3da26fc015fdb764469c05"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>getBlockReason</b> () const</td></tr>
+<tr class="memitem:a22443cd1de2eae28df2621a52c9efc53"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a22443cd1de2eae28df2621a52c9efc53">~Command</a> ()=default</td></tr>
+<tr class="separator:a22443cd1de2eae28df2621a52c9efc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a0c4f1cdb3da26fc015fdb764469c05"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a4a0c4f1cdb3da26fc015fdb764469c05">getBlockReason</a> () const</td></tr>
 <tr class="separator:a4a0c4f1cdb3da26fc015fdb764469c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c3d718aef5df22a68fcf6f54a0fc74b"><td class="memItemLeft" align="right" valign="top"><a id="a5c3d718aef5df22a68fcf6f54a0fc74b"></a>
-virtual ContextImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getContext</b> () const</td></tr>
+<tr class="memitem:a5c3d718aef5df22a68fcf6f54a0fc74b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a5c3d718aef5df22a68fcf6f54a0fc74b">getContext</a> () const</td></tr>
 <tr class="separator:a5c3d718aef5df22a68fcf6f54a0fc74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aab71c1106d244e530278da63ed11f5f9"><td class="memItemLeft" align="right" valign="top"><a id="aab71c1106d244e530278da63ed11f5f9"></a>
-std::vector&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#aab71c1106d244e530278da63ed11f5f9">MDeps</a></td></tr>
-<tr class="memdesc:aab71c1106d244e530278da63ed11f5f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains list of dependencies(edges) <br /></td></tr>
+<tr class="memitem:aab71c1106d244e530278da63ed11f5f9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#aab71c1106d244e530278da63ed11f5f9">MDeps</a></td></tr>
+<tr class="memdesc:aab71c1106d244e530278da63ed11f5f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains list of dependencies(edges)  <a href="#aab71c1106d244e530278da63ed11f5f9">More...</a><br /></td></tr>
 <tr class="separator:aab71c1106d244e530278da63ed11f5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55c1e8c12a8ff2f25ee8d2329270093f"><td class="memItemLeft" align="right" valign="top"><a id="a55c1e8c12a8ff2f25ee8d2329270093f"></a>
-std::unordered_set&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f">MUsers</a></td></tr>
-<tr class="memdesc:a55c1e8c12a8ff2f25ee8d2329270093f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains list of commands that depend on the command. <br /></td></tr>
+<tr class="memitem:a55c1e8c12a8ff2f25ee8d2329270093f"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f">MUsers</a></td></tr>
+<tr class="memdesc:a55c1e8c12a8ff2f25ee8d2329270093f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains list of commands that depend on the command.  <a href="#a55c1e8c12a8ff2f25ee8d2329270093f">More...</a><br /></td></tr>
 <tr class="separator:a55c1e8c12a8ff2f25ee8d2329270093f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d9548e459c7d2fc7a2b8d90c2428057"><td class="memItemLeft" align="right" valign="top"><a id="a5d9548e459c7d2fc7a2b8d90c2428057"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a5d9548e459c7d2fc7a2b8d90c2428057">MIsBlockable</a> = false</td></tr>
-<tr class="memdesc:a5d9548e459c7d2fc7a2b8d90c2428057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the command can be blocked from enqueueing. <br /></td></tr>
+<tr class="memitem:a5d9548e459c7d2fc7a2b8d90c2428057"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a5d9548e459c7d2fc7a2b8d90c2428057">MIsBlockable</a> = false</td></tr>
+<tr class="memdesc:a5d9548e459c7d2fc7a2b8d90c2428057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates whether the command can be blocked from enqueueing.  <a href="#a5d9548e459c7d2fc7a2b8d90c2428057">More...</a><br /></td></tr>
 <tr class="separator:a5d9548e459c7d2fc7a2b8d90c2428057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3062fbf66b0f3597c5ac6890de973604"><td class="memItemLeft" align="right" valign="top"><a id="a3062fbf66b0f3597c5ac6890de973604"></a>
-unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604">MLeafCounter</a> = 0</td></tr>
-<tr class="memdesc:a3062fbf66b0f3597c5ac6890de973604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of memory objects this command is a leaf for. <br /></td></tr>
+<tr class="memitem:a3062fbf66b0f3597c5ac6890de973604"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604">MLeafCounter</a> = 0</td></tr>
+<tr class="memdesc:a3062fbf66b0f3597c5ac6890de973604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of memory objects this command is a leaf for.  <a href="#a3062fbf66b0f3597c5ac6890de973604">More...</a><br /></td></tr>
 <tr class="separator:a3062fbf66b0f3597c5ac6890de973604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11c74a2d1717f958f848aa36d2385a0b"><td class="memItemLeft" align="right" valign="top"><a id="a11c74a2d1717f958f848aa36d2385a0b"></a>
-BlockReason&#160;</td><td class="memItemRight" valign="bottom"><b>MBlockReason</b></td></tr>
+<tr class="memitem:a11c74a2d1717f958f848aa36d2385a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09">BlockReason</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a11c74a2d1717f958f848aa36d2385a0b">MBlockReason</a></td></tr>
 <tr class="separator:a11c74a2d1717f958f848aa36d2385a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a580605145fcb791deed414ea55228238"><td class="memItemLeft" align="right" valign="top"><a id="a580605145fcb791deed414ea55228238"></a>
-std::atomic&lt; EnqueueResultT::ResultT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a580605145fcb791deed414ea55228238">MEnqueueStatus</a></td></tr>
-<tr class="memdesc:a580605145fcb791deed414ea55228238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the status of the command. <br /></td></tr>
+<tr class="memitem:a580605145fcb791deed414ea55228238"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277da">EnqueueResultT::ResultT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a580605145fcb791deed414ea55228238">MEnqueueStatus</a></td></tr>
+<tr class="memdesc:a580605145fcb791deed414ea55228238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the status of the command.  <a href="#a580605145fcb791deed414ea55228238">More...</a><br /></td></tr>
 <tr class="separator:a580605145fcb791deed414ea55228238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba092a301276f444590739782a63fff5"><td class="memItemLeft" align="right" valign="top"><a id="aba092a301276f444590739782a63fff5"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5">MTraceEvent</a> = nullptr</td></tr>
-<tr class="memdesc:aba092a301276f444590739782a63fff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event for node_create and task_begin. <br /></td></tr>
+<tr class="memitem:aba092a301276f444590739782a63fff5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5">MTraceEvent</a> = nullptr</td></tr>
+<tr class="memdesc:aba092a301276f444590739782a63fff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The event for node_create and task_begin.  <a href="#aba092a301276f444590739782a63fff5">More...</a><br /></td></tr>
 <tr class="separator:aba092a301276f444590739782a63fff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa237f982ce0d84b2fe14e4ee7e0e666"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#afa237f982ce0d84b2fe14e4ee7e0e666">MStreamID</a> = -1</td></tr>
 <tr class="memdesc:afa237f982ce0d84b2fe14e4ee7e0e666"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stream under which the traces are emitted.  <a href="#afa237f982ce0d84b2fe14e4ee7e0e666">More...</a><br /></td></tr>
@@ -239,77 +244,61 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memitem:a0030e3ea7e156c3f77b77df28e9b1fd6"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0030e3ea7e156c3f77b77df28e9b1fd6">MAddress</a> = nullptr</td></tr>
 <tr class="memdesc:a0030e3ea7e156c3f77b77df28e9b1fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved for storing the object address such as SPIRV or memory object address.  <a href="#a0030e3ea7e156c3f77b77df28e9b1fd6">More...</a><br /></td></tr>
 <tr class="separator:a0030e3ea7e156c3f77b77df28e9b1fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11d716bf5ff83bb142b0f5fd81424247"><td class="memItemLeft" align="right" valign="top"><a id="a11d716bf5ff83bb142b0f5fd81424247"></a>
-string_class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a11d716bf5ff83bb142b0f5fd81424247">MAddressString</a></td></tr>
-<tr class="memdesc:a11d716bf5ff83bb142b0f5fd81424247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to build the address string. <br /></td></tr>
+<tr class="memitem:a11d716bf5ff83bb142b0f5fd81424247"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a11d716bf5ff83bb142b0f5fd81424247">MAddressString</a></td></tr>
+<tr class="memdesc:a11d716bf5ff83bb142b0f5fd81424247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to build the address string.  <a href="#a11d716bf5ff83bb142b0f5fd81424247">More...</a><br /></td></tr>
 <tr class="separator:a11d716bf5ff83bb142b0f5fd81424247"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2769f387656b1726eea5a4a965c287e3"><td class="memItemLeft" align="right" valign="top"><a id="a2769f387656b1726eea5a4a965c287e3"></a>
-string_class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2769f387656b1726eea5a4a965c287e3">MCommandNodeType</a></td></tr>
-<tr class="memdesc:a2769f387656b1726eea5a4a965c287e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to build the command node type. <br /></td></tr>
+<tr class="memitem:a2769f387656b1726eea5a4a965c287e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2769f387656b1726eea5a4a965c287e3">MCommandNodeType</a></td></tr>
+<tr class="memdesc:a2769f387656b1726eea5a4a965c287e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to build the command node type.  <a href="#a2769f387656b1726eea5a4a965c287e3">More...</a><br /></td></tr>
 <tr class="separator:a2769f387656b1726eea5a4a965c287e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39ba002b9932a2a5c25c50290222fcef"><td class="memItemLeft" align="right" valign="top"><a id="a39ba002b9932a2a5c25c50290222fcef"></a>
-string_class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a39ba002b9932a2a5c25c50290222fcef">MCommandName</a></td></tr>
-<tr class="memdesc:a39ba002b9932a2a5c25c50290222fcef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to build the command end-user understandable name. <br /></td></tr>
+<tr class="memitem:a39ba002b9932a2a5c25c50290222fcef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a39ba002b9932a2a5c25c50290222fcef">MCommandName</a></td></tr>
+<tr class="memdesc:a39ba002b9932a2a5c25c50290222fcef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to build the command end-user understandable name.  <a href="#a39ba002b9932a2a5c25c50290222fcef">More...</a><br /></td></tr>
 <tr class="separator:a39ba002b9932a2a5c25c50290222fcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="memItemLeft" align="right" valign="top"><a id="a4e56e8d97d07ebe93e1e8c687df0c81c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a4e56e8d97d07ebe93e1e8c687df0c81c">MTraceEventPrologComplete</a> = false</td></tr>
-<tr class="memdesc:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate if <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d" title="Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled(). ">makeTraceEventProlog()</a> has been run. <br /></td></tr>
+<tr class="memitem:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a4e56e8d97d07ebe93e1e8c687df0c81c">MTraceEventPrologComplete</a> = false</td></tr>
+<tr class="memdesc:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate if <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d" title="Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled(). ">makeTraceEventProlog()</a> has been run.  <a href="#a4e56e8d97d07ebe93e1e8c687df0c81c">More...</a><br /></td></tr>
 <tr class="separator:a4e56e8d97d07ebe93e1e8c687df0c81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39f702797d183ad8b80e63acb1454e19"><td class="memItemLeft" align="right" valign="top"><a id="a39f702797d183ad8b80e63acb1454e19"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a39f702797d183ad8b80e63acb1454e19">MFirstInstance</a> = false</td></tr>
-<tr class="memdesc:a39f702797d183ad8b80e63acb1454e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate if this is the first time we are seeing this payload. <br /></td></tr>
+<tr class="memitem:a39f702797d183ad8b80e63acb1454e19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a39f702797d183ad8b80e63acb1454e19">MFirstInstance</a> = false</td></tr>
+<tr class="memdesc:a39f702797d183ad8b80e63acb1454e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate if this is the first time we are seeing this payload.  <a href="#a39f702797d183ad8b80e63acb1454e19">More...</a><br /></td></tr>
 <tr class="separator:a39f702797d183ad8b80e63acb1454e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="memItemLeft" align="right" valign="top"><a id="abd75de32d432e4c9f0cb65ade0ad41dc"></a>
-uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#abd75de32d432e4c9f0cb65ade0ad41dc">MInstanceID</a> = 0</td></tr>
-<tr class="memdesc:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance ID tracked for the command. <br /></td></tr>
+<tr class="memitem:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#abd75de32d432e4c9f0cb65ade0ad41dc">MInstanceID</a> = 0</td></tr>
+<tr class="memdesc:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instance ID tracked for the command.  <a href="#abd75de32d432e4c9f0cb65ade0ad41dc">More...</a><br /></td></tr>
 <tr class="separator:abd75de32d432e4c9f0cb65ade0ad41dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2fa389fa756c442cb2c35a850ce2781"><td class="memItemLeft" align="right" valign="top"><a id="ac2fa389fa756c442cb2c35a850ce2781"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>MShouldCompleteEventIfPossible</b> = true</td></tr>
+<tr class="memitem:ac2fa389fa756c442cb2c35a850ce2781"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ac2fa389fa756c442cb2c35a850ce2781">MShouldCompleteEventIfPossible</a> = true</td></tr>
 <tr class="separator:ac2fa389fa756c442cb2c35a850ce2781"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ad85d220f8fc9ac8ee620101d40d8dc8c"><td class="memItemLeft" align="right" valign="top"><a id="ad85d220f8fc9ac8ee620101d40d8dc8c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>waitForEvents</b> (QueueImplPtr Queue, std::vector&lt; EventImplPtr &gt; &amp;RawEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;Event)</td></tr>
+<tr class="memitem:ad85d220f8fc9ac8ee620101d40d8dc8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ad85d220f8fc9ac8ee620101d40d8dc8c">waitForEvents</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; &amp;RawEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;Event)</td></tr>
 <tr class="separator:ad85d220f8fc9ac8ee620101d40d8dc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5b5ba98ed4ab34128737b2974d56160"><td class="memItemLeft" align="right" valign="top"><a id="af5b5ba98ed4ab34128737b2974d56160"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>waitForPreparedHostEvents</b> () const</td></tr>
+<tr class="memitem:af5b5ba98ed4ab34128737b2974d56160"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#af5b5ba98ed4ab34128737b2974d56160">waitForPreparedHostEvents</a> () const</td></tr>
 <tr class="separator:af5b5ba98ed4ab34128737b2974d56160"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24a79100299762eaca79ce4505e9a23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a24a79100299762eaca79ce4505e9a23a">processDepEvent</a> (EventImplPtr DepEvent, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> &amp;Dep)</td></tr>
+<tr class="memitem:a24a79100299762eaca79ce4505e9a23a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a24a79100299762eaca79ce4505e9a23a">processDepEvent</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> DepEvent, const <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a> &amp;Dep)</td></tr>
 <tr class="memdesc:a24a79100299762eaca79ce4505e9a23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform glueing of events from different contexts.  <a href="#a24a79100299762eaca79ce4505e9a23a">More...</a><br /></td></tr>
 <tr class="separator:a24a79100299762eaca79ce4505e9a23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa77ed06edcea210516de7e41259d8f"><td class="memItemLeft" align="right" valign="top"><a id="a0fa77ed06edcea210516de7e41259d8f"></a>
-virtual cl_int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0fa77ed06edcea210516de7e41259d8f">enqueueImp</a> ()=0</td></tr>
-<tr class="memdesc:a0fa77ed06edcea210516de7e41259d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private interface. Derived classes should implement this method. <br /></td></tr>
+<tr class="memitem:a0fa77ed06edcea210516de7e41259d8f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacecl_1_1sycl.html#a2e2f7596dc075c417d85bce4e2c40eae">cl_int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0fa77ed06edcea210516de7e41259d8f">enqueueImp</a> ()=0</td></tr>
+<tr class="memdesc:a0fa77ed06edcea210516de7e41259d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private interface. Derived classes should implement this method.  <a href="#a0fa77ed06edcea210516de7e41259d8f">More...</a><br /></td></tr>
 <tr class="separator:a0fa77ed06edcea210516de7e41259d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:ad3aa9ea3c20a2083ac11f996287b85ac"><td class="memItemLeft" align="right" valign="top"><a id="ad3aa9ea3c20a2083ac11f996287b85ac"></a>
-EventImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>MEvent</b></td></tr>
+<tr class="memitem:ad3aa9ea3c20a2083ac11f996287b85ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ad3aa9ea3c20a2083ac11f996287b85ac">MEvent</a></td></tr>
 <tr class="separator:ad3aa9ea3c20a2083ac11f996287b85ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a058f3c52750d5e57dfa8543bfdfcdd5c"><td class="memItemLeft" align="right" valign="top"><a id="a058f3c52750d5e57dfa8543bfdfcdd5c"></a>
-QueueImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>MQueue</b></td></tr>
+<tr class="memitem:a058f3c52750d5e57dfa8543bfdfcdd5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a058f3c52750d5e57dfa8543bfdfcdd5c">MQueue</a></td></tr>
 <tr class="separator:a058f3c52750d5e57dfa8543bfdfcdd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63d94f8dc12b566122e1eb1a962ec01a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a63d94f8dc12b566122e1eb1a962ec01a">MPreparedDepsEvents</a></td></tr>
+<tr class="memitem:a63d94f8dc12b566122e1eb1a962ec01a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a63d94f8dc12b566122e1eb1a962ec01a">MPreparedDepsEvents</a></td></tr>
 <tr class="memdesc:a63d94f8dc12b566122e1eb1a962ec01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dependency events prepared for waiting by backend.  <a href="#a63d94f8dc12b566122e1eb1a962ec01a">More...</a><br /></td></tr>
 <tr class="separator:a63d94f8dc12b566122e1eb1a962ec01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad973525e277975b7c9da8944857b457c"><td class="memItemLeft" align="right" valign="top"><a id="ad973525e277975b7c9da8944857b457c"></a>
-std::vector&lt; EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MPreparedHostDepsEvents</b></td></tr>
+<tr class="memitem:ad973525e277975b7c9da8944857b457c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ad973525e277975b7c9da8944857b457c">MPreparedHostDepsEvents</a></td></tr>
 <tr class="separator:ad973525e277975b7c9da8944857b457c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65cb5498ed29b3f483655d70515fdf0d"><td class="memItemLeft" align="right" valign="top"><a id="a65cb5498ed29b3f483655d70515fdf0d"></a>
-CommandType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d">MType</a></td></tr>
-<tr class="memdesc:a65cb5498ed29b3f483655d70515fdf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the command. <br /></td></tr>
+<tr class="memitem:a65cb5498ed29b3f483655d70515fdf0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d">MType</a></td></tr>
+<tr class="memdesc:a65cb5498ed29b3f483655d70515fdf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the command.  <a href="#a65cb5498ed29b3f483655d70515fdf0d">More...</a><br /></td></tr>
 <tr class="separator:a65cb5498ed29b3f483655d70515fdf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a762563f1833f52d45bee70e9a057bc2d"><td class="memItemLeft" align="right" valign="top"><a id="a762563f1833f52d45bee70e9a057bc2d"></a>
-std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a762563f1833f52d45bee70e9a057bc2d">MEnqueueMtx</a></td></tr>
-<tr class="memdesc:a762563f1833f52d45bee70e9a057bc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex used to protect enqueueing from race conditions. <br /></td></tr>
+<tr class="memitem:a762563f1833f52d45bee70e9a057bc2d"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a762563f1833f52d45bee70e9a057bc2d">MEnqueueMtx</a></td></tr>
+<tr class="memdesc:a762563f1833f52d45bee70e9a057bc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex used to protect enqueueing from race conditions.  <a href="#a762563f1833f52d45bee70e9a057bc2d">More...</a><br /></td></tr>
 <tr class="separator:a762563f1833f52d45bee70e9a057bc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ac24921e3619f5c224cf67dc02a0d6b76"><td class="memItemLeft" align="right" valign="top"><a id="ac24921e3619f5c224cf67dc02a0d6b76"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b></td></tr>
+<tr class="memitem:ac24921e3619f5c224cf67dc02a0d6b76"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ac24921e3619f5c224cf67dc02a0d6b76">DispatchHostTask</a></td></tr>
 <tr class="separator:ac24921e3619f5c224cf67dc02a0d6b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -317,7 +306,198 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 <p>The <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html" title="The Command class represents some action that needs to be performed on one or more memory objects...">Command</a> has a vector of <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html" title="Dependency between two commands. ">DepDesc</a> objects that represent dependencies of the command. It has a vector of pointers to commands that depend on the command. It has a pointer to a <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> object and an event that is associated with the command. </p>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00091">91</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a15614136b85646185200079463c1aa09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15614136b85646185200079463c1aa09">&#9670;&nbsp;</a></span>BlockReason</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09">cl::sycl::detail::Command::BlockReason</a> : int</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e"></a>HostAccessor&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d"></a>HostTask&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00223">223</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a68b8ff940e510d5d289d54dc21718ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68b8ff940e510d5d289d54dc21718ad4">&#9670;&nbsp;</a></span>CommandType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">cl::sycl::detail::Command::CommandType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a21bcd12ce6f4a1cfce54e2ff69b6e886"></a>RUN_CG&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4af7211409a2d3c6aec030ec3bd62696c9"></a>COPY_MEMORY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4ae03a765310e374f5fd4e8b478d670591"></a>ALLOCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a3d4ff687ef7d2d868cb33608892ba56f"></a>ALLOCA_SUB_BUF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a17cfc04bdd6c79656e2dae66bd3ea69f"></a>RELEASE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4aecafed01df81b9560f8f1ef01227eb90"></a>MAP_MEM_OBJ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a86e380379b6676bdc832f51d15440f65"></a>UNMAP_MEM_OBJ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a6ea18adaced89f0cacb69c4e1110a785"></a>UPDATE_REQUIREMENT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a8b89dcf5970cfadfe9a498bf10802b84"></a>EMPTY_TASK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68b8ff940e510d5d289d54dc21718ad4a9442ba042e55ef6b3a885a86261c287d"></a>HOST_TASK&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00093">93</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae4372aa392bfea61ada1697a9a75f975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4372aa392bfea61ada1697a9a75f975">&#9670;&nbsp;</a></span>Command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::detail::Command::Command </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00252">252</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="commands_8hpp_source.html#l00229">MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00179">MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00180">MQueue</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, <a class="el" href="common_8hpp_source.html#l00032">cl::sycl::detail::SYCL_STREAM_NAME</a>, and <a class="el" href="commands_8hpp_source.html#l00048">cl::sycl::detail::EnqueueResultT::SyclEnqueueReady</a>.</p>
+
+</div>
+</div>
+<a id="a22443cd1de2eae28df2621a52c9efc53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22443cd1de2eae28df2621a52c9efc53">&#9670;&nbsp;</a></span>~Command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cl::sycl::detail::Command::~Command </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9308486edfa6d82815466ec0512cb133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9308486edfa6d82815466ec0512cb133">&#9670;&nbsp;</a></span>addDep() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::addDep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a>&#160;</td>
+          <td class="paramname"><em>NewDep</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00455">455</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00078">cl::sycl::detail::accessModeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00283">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8hpp_source.html#l00133">getEvent()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00098">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00215">MDeps</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00100">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="commands_8cpp_source.html#l00428">processDepEvent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00357">cl::sycl::detail::Scheduler::GraphBuilder::addCopyBack()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="commands_8cpp_source.html#l01263">cl::sycl::detail::EmptyCommand::addRequirement()</a>, <a class="el" href="commands_8cpp_source.html#l00662">cl::sycl::detail::AllocaCommand::AllocaCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00733">cl::sycl::detail::AllocaSubBufCommand::AllocaSubBufCommand()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00920">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+
+</div>
+</div>
+<a id="affc4788ade954cc20bf745a67f5b3e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc4788ade954cc20bf745a67f5b3e29">&#9670;&nbsp;</a></span>addDep() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::addDep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00467">467</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForEventDependence()</a>, and <a class="el" href="commands_8cpp_source.html#l00428">processDepEvent()</a>.</p>
+
+</div>
+</div>
+<a id="adfe0f3989857b65ba6f3a06f64b37d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe0f3989857b65ba6f3a06f64b37d60">&#9670;&nbsp;</a></span>addUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::addUser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>NewUser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00112">112</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00920">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+
+</div>
+</div>
 <a id="a089a90b610973c072f4f43b2d20dac00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a089a90b610973c072f4f43b2d20dac00">&#9670;&nbsp;</a></span>emitEdgeEventForCommandDependence()</h2>
 
@@ -339,7 +519,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const string_class &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;&#160;</td>
           <td class="paramname"><em>Prefix</em>, </td>
         </tr>
         <tr>
@@ -370,7 +550,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00283">283</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00455">addDep()</a>, and <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForEventDependence()</a>.</p>
 
 </div>
 </div>
@@ -389,7 +571,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
           <td class="paramname"><em>PiEventAddr</em>&#160;</td>
         </tr>
         <tr>
@@ -412,7 +594,127 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00328">328</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00283">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00467">addDep()</a>.</p>
+
+</div>
+</div>
+<a id="a5aa15b74c02c23cf2aa94be0c560ba1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa15b74c02c23cf2aa94be0c560ba1a">&#9670;&nbsp;</a></span>emitEnqueuedEventSignal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::emitEnqueuedEventSignal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>PiEventAddr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a signal event with the enqueued kernel event handle. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00480">480</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>.</p>
+
+</div>
+</div>
+<a id="a0f4770317122c099b9282a50e86622ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f4770317122c099b9282a50e86622ec">&#9670;&nbsp;</a></span>emitInstrumentation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::emitInstrumentation </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>Txt</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Emits an event of Type. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00492">492</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>.</p>
+
+</div>
+</div>
+<a id="a79201bceb39ae975f481c30f5e0741ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79201bceb39ae975f481c30f5e0741ce">&#9670;&nbsp;</a></span>emitInstrumentationData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void cl::sycl::detail::Command::emitInstrumentationData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Instrumentation method which emits telemetry data. </p>
+
+<p>Implemented in <a class="el" href="classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aabaf15eaeccdbcdde4275303483c8395">cl::sycl::detail::UpdateHostRequirementCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#aae56ac583f76e469efdf5a49a78c5ae6">cl::sycl::detail::ExecCGCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a851618feb8b6c948f1b69ef1f20f0617">cl::sycl::detail::MemCpyCommandHost</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#adcda55a8d0f23e510c8e093cd62e1c36">cl::sycl::detail::MemCpyCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a20e60be311f14dabecc882f794ba236d">cl::sycl::detail::UnMapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MapMemObject.html#a960d2ecc0f92f0abea22d875947be4e6">cl::sycl::detail::MapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaSubBufCommand.html#ab92b34881d1aa96ed977240bf542b100">cl::sycl::detail::AllocaSubBufCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommand.html#adfa1c6f0f560db70d9dbe746f01da6c7">cl::sycl::detail::AllocaCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a341c0ee090008d84006e304758bf1ba8">cl::sycl::detail::AllocaCommandBase</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#a8366388d77d781ccfb80c8171894dc53">cl::sycl::detail::ReleaseCommand</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#ab3919fec8eeac3f7de825f1bb3315f68">cl::sycl::detail::EmptyCommand</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00267">emitInstrumentationDataProxy()</a>.</p>
+
+</div>
+</div>
+<a id="a4662bac4f0327f36decc4168b230f399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4662bac4f0327f36decc4168b230f399">&#9670;&nbsp;</a></span>emitInstrumentationDataProxy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::emitInstrumentationDataProxy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Proxy method which calls emitInstrumentationData. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00267">267</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce">emitInstrumentationData()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00662">cl::sycl::detail::AllocaCommand::AllocaCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00634">cl::sycl::detail::AllocaCommandBase::AllocaCommandBase()</a>, <a class="el" href="commands_8cpp_source.html#l00733">cl::sycl::detail::AllocaSubBufCommand::AllocaSubBufCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01251">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::ExecCGCommand::ExecCGCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00922">cl::sycl::detail::MapMemObject::MapMemObject()</a>, <a class="el" href="commands_8cpp_source.html#l01037">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, <a class="el" href="commands_8cpp_source.html#l00814">cl::sycl::detail::ReleaseCommand::ReleaseCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00981">cl::sycl::detail::UnMapMemObject::UnMapMemObject()</a>, and <a class="el" href="commands_8cpp_source.html#l01331">cl::sycl::detail::UpdateHostRequirementCommand::UpdateHostRequirementCommand()</a>.</p>
 
 </div>
 </div>
@@ -431,7 +733,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">BlockingT&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af961fb0fe94eef91c4feb0abf6239819">BlockingT</a>&#160;</td>
           <td class="paramname"><em>Blocking</em>&#160;</td>
         </tr>
         <tr>
@@ -454,7 +756,183 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00503">503</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00480">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00492">emitInstrumentation()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0fa77ed06edcea210516de7e41259d8f">enqueueImp()</a>, <a class="el" href="commands_8cpp_source.html#l00623">getBlockReason()</a>, <a class="el" href="commands_8hpp_source.html#l00209">MEnqueueMtx</a>, <a class="el" href="commands_8hpp_source.html#l00229">MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00179">MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00219">MIsBlockable</a>, <a class="el" href="commands_8hpp_source.html#l00264">MShouldCompleteEventIfPossible</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, <a class="el" href="commands_8hpp_source.html#l00050">cl::sycl::detail::EnqueueResultT::SyclEnqueueBlocked</a>, <a class="el" href="commands_8hpp_source.html#l00051">cl::sycl::detail::EnqueueResultT::SyclEnqueueFailed</a>, and <a class="el" href="commands_8hpp_source.html#l00049">cl::sycl::detail::EnqueueResultT::SyclEnqueueSuccess</a>.</p>
+
 <p class="reference">Referenced by <a class="el" href="graph__processor_8cpp_source.html#l00051">cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand()</a>.</p>
+
+</div>
+</div>
+<a id="a0fa77ed06edcea210516de7e41259d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa77ed06edcea210516de7e41259d8f">&#9670;&nbsp;</a></span>enqueueImp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacecl_1_1sycl.html#a2e2f7596dc075c417d85bce4e2c40eae">cl_int</a> cl::sycl::detail::Command::enqueueImp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private interface. Derived classes should implement this method. </p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>.</p>
+
+</div>
+</div>
+<a id="a4a0c4f1cdb3da26fc015fdb764469c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a0c4f1cdb3da26fc015fdb764469c05">&#9670;&nbsp;</a></span>getBlockReason()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * cl::sycl::detail::Command::getBlockReason </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00623">623</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e">HostAccessor</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d">HostTask</a>, and <a class="el" href="commands_8hpp_source.html#l00226">MBlockReason</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>.</p>
+
+</div>
+</div>
+<a id="a5c3d718aef5df22a68fcf6f54a0fc74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3d718aef5df22a68fcf6f54a0fc74b">&#9670;&nbsp;</a></span>getContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> cl::sycl::detail::Command::getContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a9cd4e52581455b5a56318ee9fe0313c7">cl::sycl::detail::MemCpyCommandHost</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a40e35e0c14298c1d2a879dd2b0c9e908">cl::sycl::detail::MemCpyCommand</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00451">451</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="commands_8hpp_source.html#l00180">MQueue</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00920">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, and <a class="el" href="commands_8cpp_source.html#l00428">processDepEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a661bc9facf831042a7621a8b1a4a0434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661bc9facf831042a7621a8b1a4a0434">&#9670;&nbsp;</a></span>getEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a>&gt; cl::sycl::detail::Command::getEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00133">133</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="scheduler_8cpp_source.html#l00101">cl::sycl::detail::Scheduler::addCopyBack()</a>, <a class="el" href="commands_8cpp_source.html#l00455">addDep()</a>, <a class="el" href="scheduler_8cpp_source.html#l00173">cl::sycl::detail::Scheduler::addHostAccessor()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00764">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00853">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00920">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00025">cl::sycl::detail::Scheduler::GraphProcessor::getWaitList()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00039">cl::sycl::detail::Scheduler::GraphProcessor::waitForEvent()</a>, and <a class="el" href="scheduler_8cpp_source.html#l00023">cl::sycl::detail::Scheduler::waitForRecordToFinish()</a>.</p>
+
+</div>
+</div>
+<a id="ae943f9c76bd856b709f986da7876d5e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae943f9c76bd856b709f986da7876d5e0">&#9670;&nbsp;</a></span>getQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a>&gt; cl::sycl::detail::Command::getQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00131">131</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00430">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="scheduler_8cpp_source.html#l00101">cl::sycl::detail::Scheduler::addCopyBack()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00396">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">cl::sycl::detail::event_impl::wait_and_throw()</a>.</p>
+
+</div>
+</div>
+<a id="a37bddda2e1f11135708d5e29fb3b331d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37bddda2e1f11135708d5e29fb3b331d">&#9670;&nbsp;</a></span>getRequirement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a>* cl::sycl::detail::Command::getRequirement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a5eba13a38f6e2dfcd588fa1aefda1953">cl::sycl::detail::UpdateHostRequirementCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#aabfb23a56e10471670561523dbde6b49">cl::sycl::detail::MemCpyCommandHost</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a0b758ddcb773edd62fe88f2f51371587">cl::sycl::detail::MemCpyCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a4bf271823231047a81ff219f49044c4d">cl::sycl::detail::UnMapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MapMemObject.html#a01f9a9003eb009106b5e8218310deb50">cl::sycl::detail::MapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a20850519594e8b6d66044a439c62c099">cl::sycl::detail::AllocaCommandBase</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#ac5b0410be160aea0737e5c415475240d">cl::sycl::detail::EmptyCommand</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00167">167</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -468,7 +946,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">CommandType cl::sycl::detail::Command::getType </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a> cl::sycl::detail::Command::getType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -484,7 +962,53 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00115">115</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00684">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00764">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00853">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00684">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00764">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00853">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+
+</div>
+</div>
+<a id="ae3e59f84259cd0c0b14c996c808d0990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e59f84259cd0c0b14c996c808d0990">&#9670;&nbsp;</a></span>isFinished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::isFinished </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89b079400dcccbdc3f8beca70517c3dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b079400dcccbdc3f8beca70517c3dd">&#9670;&nbsp;</a></span>isSuccessfullyEnqueued()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::isSuccessfullyEnqueued </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00127">127</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__processor_8cpp_source.html#l00051">cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand()</a>.</p>
 
 </div>
 </div>
@@ -506,6 +1030,10 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 <p>If prolog has been run, run epilog; this must be guarded by a check for xptiTraceEnabled(). </p>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00416">416</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00248">MCommandNodeType</a>, <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00252">MTraceEventPrologComplete</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00746">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>.</p>
 
 </div>
 </div>
@@ -535,6 +1063,40 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00384">384</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00246">MAddressString</a>, <a class="el" href="commands_8hpp_source.html#l00250">MCommandName</a>, <a class="el" href="commands_8hpp_source.html#l00248">MCommandNodeType</a>, <a class="el" href="commands_8hpp_source.html#l00254">MFirstInstance</a>, <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>, <a class="el" href="commands_8hpp_source.html#l00252">MTraceEventPrologComplete</a>, and <a class="el" href="commands_8hpp_source.html#l00207">MType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00644">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<a id="a0db86d92eca0ce39ab1992bc0b6ba139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db86d92eca0ce39ab1992bc0b6ba139">&#9670;&nbsp;</a></span>printDot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void cl::sycl::detail::Command::printDot </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>Stream</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aa4ee05ed262f9e78c7b277fcf55e82d5">cl::sycl::detail::UpdateHostRequirementCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#ad6b6c75e8ed7e6ff2af4a10b2ba7fd84">cl::sycl::detail::ExecCGCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#ae5e89ca2a5a699dfc06189be3929ee2d">cl::sycl::detail::MemCpyCommandHost</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a29f093a0bf665ac53ee5b6b42411eee0">cl::sycl::detail::MemCpyCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a9b0bf99829a6f671df64bf4c4c01123e">cl::sycl::detail::UnMapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MapMemObject.html#ad1584e6fb4ec7de41f7d5e3436a49d85">cl::sycl::detail::MapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaSubBufCommand.html#a28c976125e7116dc2da3296af59bcc03">cl::sycl::detail::AllocaSubBufCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommand.html#a57440e28a58cd09076b7e238cb3be51c">cl::sycl::detail::AllocaCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#a0ffbc31bb4f1b0dcd18c75cc362e7c23">cl::sycl::detail::ReleaseCommand</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a2ac1e031f089764d465ecc8d7ae692f5">cl::sycl::detail::EmptyCommand</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00095">cl::sycl::detail::printDotRecursive()</a>.</p>
+
 </div>
 </div>
 <a id="a24a79100299762eaca79ce4505e9a23a"></a>
@@ -549,7 +1111,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
         <tr>
           <td class="memname">void cl::sycl::detail::Command::processDepEvent </td>
           <td>(</td>
-          <td class="paramtype">EventImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td>
           <td class="paramname"><em>DepEvent</em>, </td>
         </tr>
         <tr>
@@ -579,12 +1141,14 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
   </table>
   </dd>
 </dl>
-<p>Glueing (i.e. connecting) will be performed if and only if DepEvent is not from host context and its context doesn't match to context of this command. Context of this command is fetched via getContext().</p>
+<p>Glueing (i.e. connecting) will be performed if and only if DepEvent is not from host context and its context doesn't match to context of this command. Context of this command is fetched via <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a5c3d718aef5df22a68fcf6f54a0fc74b">getContext()</a>.</p>
 <p>Optionality of Dep is set by Dep.MDepCommand not equal to nullptr. </p>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00428">428</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00920">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, and <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepRequirement</a>.</p>
+<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00920">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8cpp_source.html#l00451">getContext()</a>, <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="scheduler_8hpp_source.html#l00696">cl::sycl::detail::Scheduler::MGraphBuilder</a>, <a class="el" href="commands_8hpp_source.html#l00184">MPreparedDepsEvents</a>, and <a class="el" href="commands_8hpp_source.html#l00185">MPreparedHostDepsEvents</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00455">addDep()</a>.</p>
 
 </div>
 </div>
@@ -608,6 +1172,114 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00582">582</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00207">MType</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00023">cl::sycl::detail::Scheduler::waitForRecordToFinish()</a>.</p>
+
+</div>
+</div>
+<a id="ad85d220f8fc9ac8ee620101d40d8dc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85d220f8fc9ac8ee620101d40d8dc8c">&#9670;&nbsp;</a></span>waitForEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::waitForEvents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>RawEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>Event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00235">235</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="commands_8cpp_source.html#l00153">cl::sycl::detail::getPiEvents()</a>, <a class="el" href="pi_8h.html#a51d81664c0083178b40fe876cf0866ae">piEnqueueEventsWait()</a>, and <a class="el" href="pi_8h.html#a894b90a8442143d0a17f895cab845108">piEventsWait()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01251">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01137">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01075">cl::sycl::detail::MemCpyCommand::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::MemCpyCommandHost::getContext()</a>.</p>
+
+</div>
+</div>
+<a id="af5b5ba98ed4ab34128737b2974d56160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b5ba98ed4ab34128737b2974d56160">&#9670;&nbsp;</a></span>waitForPreparedHostEvents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Command::waitForPreparedHostEvents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00230">230</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01251">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01137">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01075">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l00766">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ac24921e3619f5c224cf67dc02a0d6b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24921e3619f5c224cf67dc02a0d6b76">&#9670;&nbsp;</a></span>DispatchHostTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html">DispatchHostTask</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00211">211</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -627,6 +1299,260 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00244">244</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00283">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00644">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00582">resolveReleaseDependencies()</a>.</p>
+
+</div>
+</div>
+<a id="a11d716bf5ff83bb142b0f5fd81424247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d716bf5ff83bb142b0f5fd81424247">&#9670;&nbsp;</a></span>MAddressString</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> cl::sycl::detail::Command::MAddressString</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buffer to build the address string. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00246">246</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00644">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>.</p>
+
+</div>
+</div>
+<a id="a11c74a2d1717f958f848aa36d2385a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c74a2d1717f958f848aa36d2385a0b">&#9670;&nbsp;</a></span>MBlockReason</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09">BlockReason</a> cl::sycl::detail::Command::MBlockReason</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00226">226</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="commands_8cpp_source.html#l00623">getBlockReason()</a>.</p>
+
+</div>
+</div>
+<a id="a39ba002b9932a2a5c25c50290222fcef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39ba002b9932a2a5c25c50290222fcef">&#9670;&nbsp;</a></span>MCommandName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> cl::sycl::detail::Command::MCommandName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buffer to build the command end-user understandable name. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00250">250</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>.</p>
+
+</div>
+</div>
+<a id="a2769f387656b1726eea5a4a965c287e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2769f387656b1726eea5a4a965c287e3">&#9670;&nbsp;</a></span>MCommandNodeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> cl::sycl::detail::Command::MCommandNodeType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buffer to build the command node type. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00248">248</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00416">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>.</p>
+
+</div>
+</div>
+<a id="aab71c1106d244e530278da63ed11f5f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab71c1106d244e530278da63ed11f5f9">&#9670;&nbsp;</a></span>MDeps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html">DepDesc</a>&gt; cl::sycl::detail::Command::MDeps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contains list of dependencies(edges) </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00215">215</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00430">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="commands_8cpp_source.html#l00455">addDep()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00764">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00853">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00051">cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00504">cl::sycl::detail::Scheduler::GraphBuilder::findDepForRecord()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00025">cl::sycl::detail::Scheduler::GraphProcessor::getWaitList()</a>, <a class="el" href="commands_8cpp_source.html#l00192">cl::sycl::detail::DispatchHostTask::operator()()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00904">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00712">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00792">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00964">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01020">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01108">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01314">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01494">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01159">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
+
+</div>
+</div>
+<a id="a762563f1833f52d45bee70e9a057bc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762563f1833f52d45bee70e9a057bc2d">&#9670;&nbsp;</a></span>MEnqueueMtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex cl::sycl::detail::Command::MEnqueueMtx</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mutex used to protect enqueueing from race conditions. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00209">209</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>.</p>
+
+</div>
+</div>
+<a id="a580605145fcb791deed414ea55228238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580605145fcb791deed414ea55228238">&#9670;&nbsp;</a></span>MEnqueueStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277da">EnqueueResultT::ResultT</a>&gt; cl::sycl::detail::Command::MEnqueueStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Describes the status of the command. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00229">229</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00252">Command()</a>, <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="commands_8cpp_source.html#l00192">cl::sycl::detail::DispatchHostTask::operator()()</a>, and <a class="el" href="scheduler_8cpp_source.html#l00189">cl::sycl::detail::Scheduler::releaseHostAccessor()</a>.</p>
+
+</div>
+</div>
+<a id="ad3aa9ea3c20a2083ac11f996287b85ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3aa9ea3c20a2083ac11f996287b85ac">&#9670;&nbsp;</a></span>MEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> cl::sycl::detail::Command::MEvent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00179">179</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00252">Command()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01251">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>, <a class="el" href="commands_8cpp_source.html#l01137">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01075">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00766">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, <a class="el" href="commands_8cpp_source.html#l01037">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, and <a class="el" href="commands_8cpp_source.html#l00192">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
+
+</div>
+</div>
+<a id="a39f702797d183ad8b80e63acb1454e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f702797d183ad8b80e63acb1454e19">&#9670;&nbsp;</a></span>MFirstInstance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::MFirstInstance = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate if this is the first time we are seeing this payload. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00254">254</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00644">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00746">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>.</p>
+
+</div>
+</div>
+<a id="abd75de32d432e4c9f0cb65ade0ad41dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd75de32d432e4c9f0cb65ade0ad41dc">&#9670;&nbsp;</a></span>MInstanceID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t cl::sycl::detail::Command::MInstanceID = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instance ID tracked for the command. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00256">256</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00480">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00492">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00416">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>.</p>
+
+</div>
+</div>
+<a id="a5d9548e459c7d2fc7a2b8d90c2428057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d9548e459c7d2fc7a2b8d90c2428057">&#9670;&nbsp;</a></span>MIsBlockable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::MIsBlockable = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates whether the command can be blocked from enqueueing. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00219">219</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>.</p>
+
+</div>
+</div>
+<a id="a3062fbf66b0f3597c5ac6890de973604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3062fbf66b0f3597c5ac6890de973604">&#9670;&nbsp;</a></span>MLeafCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned cl::sycl::detail::Command::MLeafCounter = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts the number of memory objects this command is a leaf for. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00221">221</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00853">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00754">cl::sycl::detail::Scheduler::GraphBuilder::decrementLeafCountersForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00518">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>.</p>
+
 </div>
 </div>
 <a id="a63d94f8dc12b566122e1eb1a962ec01a"></a>
@@ -639,7 +1565,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;EventImplPtr&gt; cl::sycl::detail::Command::MPreparedDepsEvents</td>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&gt; cl::sycl::detail::Command::MPreparedDepsEvents</td>
         </tr>
       </table>
   </td>
@@ -653,6 +1579,78 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 <p>See processDepEvent for details. </p>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00184">184</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01251">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01137">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01075">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00766">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, and <a class="el" href="commands_8cpp_source.html#l00428">processDepEvent()</a>.</p>
+
+</div>
+</div>
+<a id="ad973525e277975b7c9da8944857b457c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad973525e277975b7c9da8944857b457c">&#9670;&nbsp;</a></span>MPreparedHostDepsEvents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&gt; cl::sycl::detail::Command::MPreparedHostDepsEvents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00185">185</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00428">processDepEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a058f3c52750d5e57dfa8543bfdfcdd5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058f3c52750d5e57dfa8543bfdfcdd5c">&#9670;&nbsp;</a></span>MQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> cl::sycl::detail::Command::MQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00180">180</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00252">Command()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00644">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01251">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01137">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l00451">getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01075">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00766">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, <a class="el" href="commands_8cpp_source.html#l00904">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00712">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00792">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00964">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01020">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01108">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01314">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01494">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01159">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
+
+</div>
+</div>
+<a id="ac2fa389fa756c442cb2c35a850ce2781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fa389fa756c442cb2c35a850ce2781">&#9670;&nbsp;</a></span>MShouldCompleteEventIfPossible</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::MShouldCompleteEventIfPossible = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00264">264</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="commands_8cpp_source.html#l00503">enqueue()</a>.</p>
 
 </div>
 </div>
@@ -673,6 +1671,96 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00241">241</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00252">Command()</a>, <a class="el" href="commands_8cpp_source.html#l00283">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00480">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00492">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00416">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00582">resolveReleaseDependencies()</a>.</p>
+
+</div>
+</div>
+<a id="aba092a301276f444590739782a63fff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba092a301276f444590739782a63fff5">&#9670;&nbsp;</a></span>MTraceEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* cl::sycl::detail::Command::MTraceEvent = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The event for node_create and task_begin. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00237">237</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00283">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00480">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00492">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01272">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00644">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00746">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01196">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="event__impl_8cpp_source.html#l00122">cl::sycl::detail::event_impl::event_impl()</a>, <a class="el" href="commands_8cpp_source.html#l00416">makeTraceEventEpilog()</a>, <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00582">resolveReleaseDependencies()</a>.</p>
+
+</div>
+</div>
+<a id="a4e56e8d97d07ebe93e1e8c687df0c81c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e56e8d97d07ebe93e1e8c687df0c81c">&#9670;&nbsp;</a></span>MTraceEventPrologComplete</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::MTraceEventPrologComplete = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate if <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d" title="Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled(). ">makeTraceEventProlog()</a> has been run. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00252">252</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00416">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>.</p>
+
+</div>
+</div>
+<a id="a65cb5498ed29b3f483655d70515fdf0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65cb5498ed29b3f483655d70515fdf0d">&#9670;&nbsp;</a></span>MType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a> cl::sycl::detail::Command::MType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The type of the command. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00207">207</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00384">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00582">resolveReleaseDependencies()</a>.</p>
+
+</div>
+</div>
+<a id="a55c1e8c12a8ff2f25ee8d2329270093f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55c1e8c12a8ff2f25ee8d2329270093f">&#9670;&nbsp;</a></span>MUsers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_set&lt;<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&gt; cl::sycl::detail::Command::MUsers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contains list of commands that depend on the command. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00217">217</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00764">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00853">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00095">cl::sycl::detail::printDotRecursive()</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -680,11 +1768,15 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b>
 <li>source/detail/scheduler/<a class="el" href="commands_8cpp_source.html">commands.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

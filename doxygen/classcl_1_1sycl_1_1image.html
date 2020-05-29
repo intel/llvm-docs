@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::image&lt; Dimensions, AllocatorT &gt; Class Template Reference</title>
+<title>DPC++ Runtime: cl::sycl::image&lt; Dimensions, AllocatorT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1image.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,147 +88,1591 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classcl_1_1sycl_1_1image-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::image&lt; Dimensions, AllocatorT &gt; Class Template Reference</div>  </div>
+<div class="title">cl::sycl::image&lt; Dimensions, AllocatorT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__sycl__api.html">DPC++ User API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defines a shared image data.  
+ <a href="classcl_1_1sycl_1_1image.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="image__impl_8hpp_source.html">CL/sycl/detail/image_impl.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2a11dd14f6107c7eeb9d87a29b744da1"><td class="memItemLeft" align="right" valign="top"><a id="a2a11dd14f6107c7eeb9d87a29b744da1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a2a11dd14f6107c7eeb9d87a29b744da1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a2a11dd14f6107c7eeb9d87a29b744da1">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a2a11dd14f6107c7eeb9d87a29b744da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c635f2d6c33abf0290953df612a089a"><td class="memItemLeft" align="right" valign="top"><a id="a1c635f2d6c33abf0290953df612a089a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a1c635f2d6c33abf0290953df612a089a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a1c635f2d6c33abf0290953df612a089a">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a1c635f2d6c33abf0290953df612a089a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a9f1d5f5e68f2e931fefd017196f5d7"><td class="memTemplParams" colspan="2"><a id="a8a9f1d5f5e68f2e931fefd017196f5d7"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:a8a9f1d5f5e68f2e931fefd017196f5d7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>image</b> (image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a8a9f1d5f5e68f2e931fefd017196f5d7"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:a8a9f1d5f5e68f2e931fefd017196f5d7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a8a9f1d5f5e68f2e931fefd017196f5d7">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a8a9f1d5f5e68f2e931fefd017196f5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3e4e38990d3f36f9ee30d9f549d68d8"><td class="memTemplParams" colspan="2"><a id="ad3e4e38990d3f36f9ee30d9f549d68d8"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:ad3e4e38990d3f36f9ee30d9f549d68d8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>image</b> (image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:ad3e4e38990d3f36f9ee30d9f549d68d8"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:ad3e4e38990d3f36f9ee30d9f549d68d8"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#ad3e4e38990d3f36f9ee30d9f549d68d8">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:ad3e4e38990d3f36f9ee30d9f549d68d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea6dfa17895f9061069f54a6af99b18a"><td class="memItemLeft" align="right" valign="top"><a id="aea6dfa17895f9061069f54a6af99b18a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (void *HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:aea6dfa17895f9061069f54a6af99b18a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#aea6dfa17895f9061069f54a6af99b18a">image</a> (void *HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:aea6dfa17895f9061069f54a6af99b18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fdce99e84cb38bc6df8bc3561ccc46f"><td class="memItemLeft" align="right" valign="top"><a id="a9fdce99e84cb38bc6df8bc3561ccc46f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (void *HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a9fdce99e84cb38bc6df8bc3561ccc46f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a9fdce99e84cb38bc6df8bc3561ccc46f">image</a> (void *HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a9fdce99e84cb38bc6df8bc3561ccc46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa610959071ffba0ffa2be88e6c90887"><td class="memItemLeft" align="right" valign="top"><a id="afa610959071ffba0ffa2be88e6c90887"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (const void *HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:afa610959071ffba0ffa2be88e6c90887"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#afa610959071ffba0ffa2be88e6c90887">image</a> (const void *HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:afa610959071ffba0ffa2be88e6c90887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e11eb2383caf5ca9598e56d134a7364"><td class="memItemLeft" align="right" valign="top"><a id="a2e11eb2383caf5ca9598e56d134a7364"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (const void *HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a2e11eb2383caf5ca9598e56d134a7364"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a2e11eb2383caf5ca9598e56d134a7364">image</a> (const void *HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a2e11eb2383caf5ca9598e56d134a7364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04920878b65013eb3902064b8f4a13f0"><td class="memTemplParams" colspan="2"><a id="a04920878b65013eb3902064b8f4a13f0"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:a04920878b65013eb3902064b8f4a13f0"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>image</b> (void *HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a04920878b65013eb3902064b8f4a13f0"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:a04920878b65013eb3902064b8f4a13f0"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a04920878b65013eb3902064b8f4a13f0">image</a> (void *HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a04920878b65013eb3902064b8f4a13f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a486a11abf2ff4d994d6db53122ace4c6"><td class="memTemplParams" colspan="2"><a id="a486a11abf2ff4d994d6db53122ace4c6"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:a486a11abf2ff4d994d6db53122ace4c6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>image</b> (void *HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a486a11abf2ff4d994d6db53122ace4c6"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:a486a11abf2ff4d994d6db53122ace4c6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a486a11abf2ff4d994d6db53122ace4c6">image</a> (void *HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a486a11abf2ff4d994d6db53122ace4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3469840d05c6551b87c2c0eeae45da21"><td class="memItemLeft" align="right" valign="top"><a id="a3469840d05c6551b87c2c0eeae45da21"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (shared_ptr_class&lt; void &gt; &amp;HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a3469840d05c6551b87c2c0eeae45da21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a3469840d05c6551b87c2c0eeae45da21">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a3469840d05c6551b87c2c0eeae45da21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe6044e1b04fc73a1741c83a10d705dc"><td class="memItemLeft" align="right" valign="top"><a id="abe6044e1b04fc73a1741c83a10d705dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (shared_ptr_class&lt; void &gt; &amp;HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:abe6044e1b04fc73a1741c83a10d705dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#abe6044e1b04fc73a1741c83a10d705dc">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:abe6044e1b04fc73a1741c83a10d705dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0ade74485adcd1b63a96e86cc9801e2"><td class="memTemplParams" colspan="2"><a id="aa0ade74485adcd1b63a96e86cc9801e2"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:aa0ade74485adcd1b63a96e86cc9801e2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>image</b> (shared_ptr_class&lt; void &gt; &amp;HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:aa0ade74485adcd1b63a96e86cc9801e2"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:aa0ade74485adcd1b63a96e86cc9801e2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#aa0ade74485adcd1b63a96e86cc9801e2">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:aa0ade74485adcd1b63a96e86cc9801e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3a2ebbf1df155215c143cf52900b26"><td class="memTemplParams" colspan="2"><a id="a9c3a2ebbf1df155215c143cf52900b26"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:a9c3a2ebbf1df155215c143cf52900b26"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>image</b> (shared_ptr_class&lt; void &gt; &amp;HostPointer, image_channel_order Order, image_channel_type Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memitem:a9c3a2ebbf1df155215c143cf52900b26"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:a9c3a2ebbf1df155215c143cf52900b26"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a9c3a2ebbf1df155215c143cf52900b26">image</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;HostPointer, <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a> Order, <a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a> Type, const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;Range, const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;Pitch, AllocatorT Allocator, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
 <tr class="separator:a9c3a2ebbf1df155215c143cf52900b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb4b9ef297b171a10a860b2c00910446"><td class="memItemLeft" align="right" valign="top"><a id="acb4b9ef297b171a10a860b2c00910446"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (cl_mem ClMemObject, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;SyclContext, <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> AvailableEvent={})</td></tr>
+<tr class="memitem:acb4b9ef297b171a10a860b2c00910446"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#acb4b9ef297b171a10a860b2c00910446">image</a> (cl_mem ClMemObject, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;SyclContext, <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> AvailableEvent={})</td></tr>
 <tr class="separator:acb4b9ef297b171a10a860b2c00910446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8bb51f895ff692f67ec183a0fbb7fbc"><td class="memItemLeft" align="right" valign="top"><a id="ae8bb51f895ff692f67ec183a0fbb7fbc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs)=default</td></tr>
+<tr class="memitem:ae8bb51f895ff692f67ec183a0fbb7fbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#ae8bb51f895ff692f67ec183a0fbb7fbc">image</a> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs)=default</td></tr>
 <tr class="separator:ae8bb51f895ff692f67ec183a0fbb7fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d58335a8f5997bc75d7b66aad66758b"><td class="memItemLeft" align="right" valign="top"><a id="a1d58335a8f5997bc75d7b66aad66758b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>image</b> (<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&amp;rhs)=default</td></tr>
+<tr class="memitem:a1d58335a8f5997bc75d7b66aad66758b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a1d58335a8f5997bc75d7b66aad66758b">image</a> (<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&amp;rhs)=default</td></tr>
 <tr class="separator:a1d58335a8f5997bc75d7b66aad66758b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8a09af90b43baa97598a68ce4f74d9c"><td class="memItemLeft" align="right" valign="top"><a id="af8a09af90b43baa97598a68ce4f74d9c"></a>
-<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs)=default</td></tr>
+<tr class="memitem:af8a09af90b43baa97598a68ce4f74d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#af8a09af90b43baa97598a68ce4f74d9c">operator=</a> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs)=default</td></tr>
 <tr class="separator:af8a09af90b43baa97598a68ce4f74d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a02313d2ed439ee800d97dadf28c009"><td class="memItemLeft" align="right" valign="top"><a id="a6a02313d2ed439ee800d97dadf28c009"></a>
-<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&amp;rhs)=default</td></tr>
+<tr class="memitem:a6a02313d2ed439ee800d97dadf28c009"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a6a02313d2ed439ee800d97dadf28c009">operator=</a> (<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;&amp;rhs)=default</td></tr>
 <tr class="separator:a6a02313d2ed439ee800d97dadf28c009"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a6cfa985304325e1cc4932cd28b3025"><td class="memItemLeft" align="right" valign="top"><a id="a5a6cfa985304325e1cc4932cd28b3025"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs) const</td></tr>
+<tr class="memitem:aa0e6bb1c5b7fe356e0e28b790a29f261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#aa0e6bb1c5b7fe356e0e28b790a29f261">~image</a> ()=default</td></tr>
+<tr class="separator:aa0e6bb1c5b7fe356e0e28b790a29f261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6cfa985304325e1cc4932cd28b3025"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a5a6cfa985304325e1cc4932cd28b3025">operator==</a> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs) const</td></tr>
 <tr class="separator:a5a6cfa985304325e1cc4932cd28b3025"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06960ce643a161300a20c080d6c11238"><td class="memItemLeft" align="right" valign="top"><a id="a06960ce643a161300a20c080d6c11238"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a06960ce643a161300a20c080d6c11238"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a06960ce643a161300a20c080d6c11238">operator!=</a> (const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a> &amp;rhs) const</td></tr>
 <tr class="separator:a06960ce643a161300a20c080d6c11238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a8987b4c4b1ccebc718b3904957699e"><td class="memTemplParams" colspan="2"><a id="a9a8987b4c4b1ccebc718b3904957699e"></a>
-template&lt;typename propertyT &gt; </td></tr>
-<tr class="memitem:a9a8987b4c4b1ccebc718b3904957699e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>has_property</b> () const</td></tr>
+<tr class="memitem:a9a8987b4c4b1ccebc718b3904957699e"><td class="memTemplParams" colspan="2">template&lt;typename propertyT &gt; </td></tr>
+<tr class="memitem:a9a8987b4c4b1ccebc718b3904957699e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a9a8987b4c4b1ccebc718b3904957699e">has_property</a> () const</td></tr>
 <tr class="separator:a9a8987b4c4b1ccebc718b3904957699e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08cf7e2302ae23ce7f2113bdba30772a"><td class="memTemplParams" colspan="2"><a id="a08cf7e2302ae23ce7f2113bdba30772a"></a>
-template&lt;typename propertyT &gt; </td></tr>
-<tr class="memitem:a08cf7e2302ae23ce7f2113bdba30772a"><td class="memTemplItemLeft" align="right" valign="top">propertyT&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_property</b> () const</td></tr>
+<tr class="memitem:a08cf7e2302ae23ce7f2113bdba30772a"><td class="memTemplParams" colspan="2">template&lt;typename propertyT &gt; </td></tr>
+<tr class="memitem:a08cf7e2302ae23ce7f2113bdba30772a"><td class="memTemplItemLeft" align="right" valign="top">propertyT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a08cf7e2302ae23ce7f2113bdba30772a">get_property</a> () const</td></tr>
 <tr class="separator:a08cf7e2302ae23ce7f2113bdba30772a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd6a0004c3c6ddf536b3e707bd39089"><td class="memItemLeft" align="right" valign="top"><a id="addd6a0004c3c6ddf536b3e707bd39089"></a>
-<a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_range</b> () const</td></tr>
+<tr class="memitem:addd6a0004c3c6ddf536b3e707bd39089"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#addd6a0004c3c6ddf536b3e707bd39089">get_range</a> () const</td></tr>
 <tr class="separator:addd6a0004c3c6ddf536b3e707bd39089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a595e786049836bd15b4b1e627cdbc052"><td class="memTemplParams" colspan="2"><a id="a595e786049836bd15b4b1e627cdbc052"></a>
-template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
-<tr class="memitem:a595e786049836bd15b4b1e627cdbc052"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_pitch</b> () const</td></tr>
+<tr class="memitem:a595e786049836bd15b4b1e627cdbc052"><td class="memTemplParams" colspan="2">template&lt;bool B = (Dimensions &gt; 1)&gt; </td></tr>
+<tr class="memitem:a595e786049836bd15b4b1e627cdbc052"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a595e786049836bd15b4b1e627cdbc052">get_pitch</a> () const</td></tr>
 <tr class="separator:a595e786049836bd15b4b1e627cdbc052"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f92ac12d870a60583aeedeadded29f3"><td class="memItemLeft" align="right" valign="top"><a id="a9f92ac12d870a60583aeedeadded29f3"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_size</b> () const</td></tr>
+<tr class="memitem:a9f92ac12d870a60583aeedeadded29f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#a9f92ac12d870a60583aeedeadded29f3">get_size</a> () const</td></tr>
 <tr class="separator:a9f92ac12d870a60583aeedeadded29f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd6226ee5ebfc8497f6eb1df0c9b6890"><td class="memItemLeft" align="right" valign="top"><a id="acd6226ee5ebfc8497f6eb1df0c9b6890"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>get_count</b> () const</td></tr>
+<tr class="memitem:acd6226ee5ebfc8497f6eb1df0c9b6890"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#acd6226ee5ebfc8497f6eb1df0c9b6890">get_count</a> () const</td></tr>
 <tr class="separator:acd6226ee5ebfc8497f6eb1df0c9b6890"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa813810cdf080e6cb24c27fc2b3fa8b2"><td class="memItemLeft" align="right" valign="top"><a id="aa813810cdf080e6cb24c27fc2b3fa8b2"></a>
-AllocatorT&#160;</td><td class="memItemRight" valign="bottom"><b>get_allocator</b> () const</td></tr>
+<tr class="memitem:aa813810cdf080e6cb24c27fc2b3fa8b2"><td class="memItemLeft" align="right" valign="top">AllocatorT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#aa813810cdf080e6cb24c27fc2b3fa8b2">get_allocator</a> () const</td></tr>
 <tr class="separator:aa813810cdf080e6cb24c27fc2b3fa8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdaddea1d89c7944f089efc37ac70676"><td class="memTemplParams" colspan="2"><a id="acdaddea1d89c7944f089efc37ac70676"></a>
-template&lt;typename DataT , access::mode AccessMode&gt; </td></tr>
-<tr class="memitem:acdaddea1d89c7944f089efc37ac70676"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; detail::EnableIfImgAccDataT&lt; DataT &gt;, Dimensions, AccessMode, access::target::image, access::placeholder::false_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_access</b> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;commandGroupHandler)</td></tr>
+<tr class="memitem:acdaddea1d89c7944f089efc37ac70676"><td class="memTemplParams" colspan="2">template&lt;typename DataT , access::mode AccessMode&gt; </td></tr>
+<tr class="memitem:acdaddea1d89c7944f089efc37ac70676"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#aeefc5bb1b4760af9a04c7072f00fa476">detail::EnableIfImgAccDataT</a>&lt; DataT &gt;, Dimensions, AccessMode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598a78805a221a988e79ef3f42d7c5bfd418">access::target::image</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#acdaddea1d89c7944f089efc37ac70676">get_access</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;commandGroupHandler)</td></tr>
 <tr class="separator:acdaddea1d89c7944f089efc37ac70676"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc0c7f8196ef9d42d9f7dfda31f6dacb"><td class="memTemplParams" colspan="2"><a id="abc0c7f8196ef9d42d9f7dfda31f6dacb"></a>
-template&lt;typename DataT , access::mode AccessMode&gt; </td></tr>
-<tr class="memitem:abc0c7f8196ef9d42d9f7dfda31f6dacb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; detail::EnableIfImgAccDataT&lt; DataT &gt;, Dimensions, AccessMode, access::target::host_image, access::placeholder::false_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_access</b> ()</td></tr>
+<tr class="memitem:abc0c7f8196ef9d42d9f7dfda31f6dacb"><td class="memTemplParams" colspan="2">template&lt;typename DataT , access::mode AccessMode&gt; </td></tr>
+<tr class="memitem:abc0c7f8196ef9d42d9f7dfda31f6dacb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#aeefc5bb1b4760af9a04c7072f00fa476">detail::EnableIfImgAccDataT</a>&lt; DataT &gt;, Dimensions, AccessMode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598ad19909e3ef6decbf2453174616b470c2">access::target::host_image</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#abc0c7f8196ef9d42d9f7dfda31f6dacb">get_access</a> ()</td></tr>
 <tr class="separator:abc0c7f8196ef9d42d9f7dfda31f6dacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab542043e4e0fa9b6e569437d3809a138"><td class="memTemplParams" colspan="2"><a id="ab542043e4e0fa9b6e569437d3809a138"></a>
-template&lt;typename Destination  = std::nullptr_t&gt; </td></tr>
-<tr class="memitem:ab542043e4e0fa9b6e569437d3809a138"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set_final_data</b> (Destination finalData=nullptr)</td></tr>
+<tr class="memitem:ab542043e4e0fa9b6e569437d3809a138"><td class="memTemplParams" colspan="2">template&lt;typename Destination  = std::nullptr_t&gt; </td></tr>
+<tr class="memitem:ab542043e4e0fa9b6e569437d3809a138"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#ab542043e4e0fa9b6e569437d3809a138">set_final_data</a> (Destination finalData=nullptr)</td></tr>
 <tr class="separator:ab542043e4e0fa9b6e569437d3809a138"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab41eadc9c1c1fa60c29a94574cd431b1"><td class="memItemLeft" align="right" valign="top"><a id="ab41eadc9c1c1fa60c29a94574cd431b1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_write_back</b> (bool flag=true)</td></tr>
+<tr class="memitem:ab41eadc9c1c1fa60c29a94574cd431b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1image.html#ab41eadc9c1c1fa60c29a94574cd431b1">set_write_back</a> (bool flag=true)</td></tr>
 <tr class="separator:ab41eadc9c1c1fa60c29a94574cd431b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt;<br />
 class cl::sycl::image&lt; Dimensions, AllocatorT &gt;</h3>
 
+<p>Defines a shared image data. </p>
+<p>Images can be 1-, 2-, and 3-dimensional. They have to be accessed using the accessor class.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__sycl__api__acc.html" title="Specify aquisition and release of buffer and image data structures. ">Accessors</a> </dd>
+<dd>
+<a class="el" href="classcl_1_1sycl_1_1sampler.html" title="Encapsulates a configuration for sampling an image accessor. ">sampler</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="image__impl_8hpp_source.html#l00029">29</a> of file <a class="el" href="image__impl_8hpp_source.html">image_impl.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2a11dd14f6107c7eeb9d87a29b744da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a11dd14f6107c7eeb9d87a29b744da1">&#9670;&nbsp;</a></span>image() <span class="overload">[1/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00073">73</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c635f2d6c33abf0290953df612a089a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c635f2d6c33abf0290953df612a089a">&#9670;&nbsp;</a></span>image() <span class="overload">[2/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00081">81</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8a9f1d5f5e68f2e931fefd017196f5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9f1d5f5e68f2e931fefd017196f5d7">&#9670;&nbsp;</a></span>image() <span class="overload">[3/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;&#160;</td>
+          <td class="paramname"><em>Pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00093">93</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad3e4e38990d3f36f9ee30d9f549d68d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e4e38990d3f36f9ee30d9f549d68d8">&#9670;&nbsp;</a></span>image() <span class="overload">[4/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;&#160;</td>
+          <td class="paramname"><em>Pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00105">105</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aea6dfa17895f9061069f54a6af99b18a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea6dfa17895f9061069f54a6af99b18a">&#9670;&nbsp;</a></span>image() <span class="overload">[5/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00116">116</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9fdce99e84cb38bc6df8bc3561ccc46f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdce99e84cb38bc6df8bc3561ccc46f">&#9670;&nbsp;</a></span>image() <span class="overload">[6/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00124">124</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="afa610959071ffba0ffa2be88e6c90887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa610959071ffba0ffa2be88e6c90887">&#9670;&nbsp;</a></span>image() <span class="overload">[7/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00134">134</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2e11eb2383caf5ca9598e56d134a7364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e11eb2383caf5ca9598e56d134a7364">&#9670;&nbsp;</a></span>image() <span class="overload">[8/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00143">143</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a04920878b65013eb3902064b8f4a13f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04920878b65013eb3902064b8f4a13f0">&#9670;&nbsp;</a></span>image() <span class="overload">[9/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;&#160;</td>
+          <td class="paramname"><em>Pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00155">155</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a486a11abf2ff4d994d6db53122ace4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486a11abf2ff4d994d6db53122ace4c6">&#9670;&nbsp;</a></span>image() <span class="overload">[10/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;&#160;</td>
+          <td class="paramname"><em>Pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00167">167</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3469840d05c6551b87c2c0eeae45da21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3469840d05c6551b87c2c0eeae45da21">&#9670;&nbsp;</a></span>image() <span class="overload">[11/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00178">178</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abe6044e1b04fc73a1741c83a10d705dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe6044e1b04fc73a1741c83a10d705dc">&#9670;&nbsp;</a></span>image() <span class="overload">[12/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00187">187</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa0ade74485adcd1b63a96e86cc9801e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ade74485adcd1b63a96e86cc9801e2">&#9670;&nbsp;</a></span>image() <span class="overload">[13/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;&#160;</td>
+          <td class="paramname"><em>Pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00199">199</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9c3a2ebbf1df155215c143cf52900b26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3a2ebbf1df155215c143cf52900b26">&#9670;&nbsp;</a></span>image() <span class="overload">[14/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; void &gt; &amp;&#160;</td>
+          <td class="paramname"><em>HostPointer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df">image_channel_order</a>&#160;</td>
+          <td class="paramname"><em>Order</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae">image_channel_type</a>&#160;</td>
+          <td class="paramname"><em>Type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const typename std::enable_if&lt; B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; Dimensions - 1 &gt;&gt;::type &amp;&#160;</td>
+          <td class="paramname"><em>Pitch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AllocatorT&#160;</td>
+          <td class="paramname"><em>Allocator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00211">211</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acb4b9ef297b171a10a860b2c00910446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb4b9ef297b171a10a860b2c00910446">&#9670;&nbsp;</a></span>image() <span class="overload">[15/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">cl_mem&#160;</td>
+          <td class="paramname"><em>ClMemObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>SyclContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td>
+          <td class="paramname"><em>AvailableEvent</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00222">222</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae8bb51f895ff692f67ec183a0fbb7fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bb51f895ff692f67ec183a0fbb7fbc">&#9670;&nbsp;</a></span>image() <span class="overload">[16/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&lt; Dimensions, AllocatorT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d58335a8f5997bc75d7b66aad66758b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d58335a8f5997bc75d7b66aad66758b">&#9670;&nbsp;</a></span>image() <span class="overload">[17/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&lt; Dimensions, AllocatorT &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0e6bb1c5b7fe356e0e28b790a29f261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e6bb1c5b7fe356e0e28b790a29f261">&#9670;&nbsp;</a></span>~image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::~<a class="el" href="classcl_1_1sycl_1_1image.html">image</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="acdaddea1d89c7944f089efc37ac70676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdaddea1d89c7944f089efc37ac70676">&#9670;&nbsp;</a></span>get_access() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename DataT , access::mode AccessMode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#aeefc5bb1b4760af9a04c7072f00fa476">detail::EnableIfImgAccDataT</a>&lt;DataT&gt;, Dimensions, AccessMode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598a78805a221a988e79ef3f42d7c5bfd418">access::target::image</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a>&gt; <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_access </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
+          <td class="paramname"><em>commandGroupHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00276">276</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="abc0c7f8196ef9d42d9f7dfda31f6dacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0c7f8196ef9d42d9f7dfda31f6dacb">&#9670;&nbsp;</a></span>get_access() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename DataT , access::mode AccessMode&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#aeefc5bb1b4760af9a04c7072f00fa476">detail::EnableIfImgAccDataT</a>&lt;DataT&gt;, Dimensions, AccessMode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598ad19909e3ef6decbf2453174616b470c2">access::target::host_image</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a>&gt; <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_access </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00284">284</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa813810cdf080e6cb24c27fc2b3fa8b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa813810cdf080e6cb24c27fc2b3fa8b2">&#9670;&nbsp;</a></span>get_allocator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AllocatorT <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_allocator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00269">269</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acd6226ee5ebfc8497f6eb1df0c9b6890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd6226ee5ebfc8497f6eb1df0c9b6890">&#9670;&nbsp;</a></span>get_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00266">266</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l00431">cl::sycl::detail::image_accessor&lt; DataT, Dimensions, AccessMode, access::target::host_image, IsPlaceholder &gt;::image_accessor()</a>.</p>
+
+</div>
+</div>
+<a id="a595e786049836bd15b4b1e627cdbc052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595e786049836bd15b4b1e627cdbc052">&#9670;&nbsp;</a></span>get_pitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;bool B = (Dimensions &gt; 1)&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;B, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt;Dimensions - 1&gt; &gt;::type <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_pitch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00258">258</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a08cf7e2302ae23ce7f2113bdba30772a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08cf7e2302ae23ce7f2113bdba30772a">&#9670;&nbsp;</a></span>get_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename propertyT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">propertyT <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_property </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00250">250</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="addd6a0004c3c6ddf536b3e707bd39089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd6a0004c3c6ddf536b3e707bd39089">&#9670;&nbsp;</a></span>get_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt;Dimensions&gt; <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_range </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00254">254</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l00431">cl::sycl::detail::image_accessor&lt; DataT, Dimensions, AccessMode, access::target::host_image, IsPlaceholder &gt;::image_accessor()</a>.</p>
+
+</div>
+</div>
+<a id="a9f92ac12d870a60583aeedeadded29f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f92ac12d870a60583aeedeadded29f3">&#9670;&nbsp;</a></span>get_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::get_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00263">263</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9a8987b4c4b1ccebc718b3904957699e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a8987b4c4b1ccebc718b3904957699e">&#9670;&nbsp;</a></span>has_property()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename propertyT &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::has_property </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00246">246</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a06960ce643a161300a20c080d6c11238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06960ce643a161300a20c080d6c11238">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&lt; Dimensions, AllocatorT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00243">243</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af8a09af90b43baa97598a68ce4f74d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8a09af90b43baa97598a68ce4f74d9c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&amp; <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&lt; Dimensions, AllocatorT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a02313d2ed439ee800d97dadf28c009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a02313d2ed439ee800d97dadf28c009">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&amp; <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&lt; Dimensions, AllocatorT &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a6cfa985304325e1cc4932cd28b3025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6cfa985304325e1cc4932cd28b3025">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1image.html">image</a>&lt; Dimensions, AllocatorT &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00241">241</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab542043e4e0fa9b6e569437d3809a138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab542043e4e0fa9b6e569437d3809a138">&#9670;&nbsp;</a></span>set_final_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename Destination  = std::nullptr_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::set_final_data </td>
+          <td>(</td>
+          <td class="paramtype">Destination&#160;</td>
+          <td class="paramname"><em>finalData</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00290">290</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab41eadc9c1c1fa60c29a94574cd431b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab41eadc9c1c1fa60c29a94574cd431b1">&#9670;&nbsp;</a></span>set_write_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dimensions = 1, typename AllocatorT = cl::sycl::image_allocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a>&lt; Dimensions, AllocatorT &gt;::set_write_back </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="image_8hpp_source.html#l00294">294</a> of file <a class="el" href="image_8hpp_source.html">image.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/CL/sycl/detail/<a class="el" href="image__impl_8hpp_source.html">image_impl.hpp</a></li>
 <li>include/CL/sycl/<a class="el" href="image_8hpp_source.html">image.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1image.html">image</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

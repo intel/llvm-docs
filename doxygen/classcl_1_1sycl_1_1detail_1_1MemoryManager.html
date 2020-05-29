@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::MemoryManager Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::MemoryManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1MemoryManager.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">MemoryManager</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
@@ -70,74 +96,1286 @@ $(function() {
 <div class="title">cl::sycl::detail::MemoryManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="memory__manager_8hpp_source.html">CL/sycl/detail/memory_manager.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9ff512130fc0fa1a38cb168eb1a0386"><td class="memItemLeft" align="right" valign="top"><a id="ab9ff512130fc0fa1a38cb168eb1a0386"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>release</b> (ContextImplPtr TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *MemAllocation, std::vector&lt; EventImplPtr &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:ab9ff512130fc0fa1a38cb168eb1a0386"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ab9ff512130fc0fa1a38cb168eb1a0386">release</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *MemAllocation, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ab9ff512130fc0fa1a38cb168eb1a0386"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac311b1b640b53526e5f6a964ac52eba9"><td class="memItemLeft" align="right" valign="top"><a id="ac311b1b640b53526e5f6a964ac52eba9"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocate</b> (ContextImplPtr TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, bool InitFromUserData, void *HostPtr, std::vector&lt; EventImplPtr &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:ac311b1b640b53526e5f6a964ac52eba9"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac311b1b640b53526e5f6a964ac52eba9">allocate</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, bool InitFromUserData, void *HostPtr, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ac311b1b640b53526e5f6a964ac52eba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7e34b2e2df980c15d3b2bed30ac0908"><td class="memItemLeft" align="right" valign="top"><a id="ae7e34b2e2df980c15d3b2bed30ac0908"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateMemSubBuffer</b> (ContextImplPtr TargetContext, void *ParentMemObj, size_t ElemSize, size_t Offset, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; 3 &gt; Range, std::vector&lt; EventImplPtr &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:ae7e34b2e2df980c15d3b2bed30ac0908"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae7e34b2e2df980c15d3b2bed30ac0908">allocateMemSubBuffer</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *ParentMemObj, size_t ElemSize, size_t Offset, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; 3 &gt; Range, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ae7e34b2e2df980c15d3b2bed30ac0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e3fbe9dd146978831683089d2d42837"><td class="memItemLeft" align="right" valign="top"><a id="a7e3fbe9dd146978831683089d2d42837"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateMemBuffer</b> (ContextImplPtr TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
+<tr class="memitem:a7e3fbe9dd146978831683089d2d42837"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a7e3fbe9dd146978831683089d2d42837">allocateMemBuffer</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;InteropEvent, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;InteropContext, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
 <tr class="separator:a7e3fbe9dd146978831683089d2d42837"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb32680bbed892471b70a0bb3eaa8438"><td class="memItemLeft" align="right" valign="top"><a id="abb32680bbed892471b70a0bb3eaa8438"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateMemImage</b> (ContextImplPtr TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const <a class="el" href="struct__pi__image__desc.html">RT::PiMemImageDesc</a> &amp;Desc, const <a class="el" href="struct__pi__image__format.html">RT::PiMemImageFormat</a> &amp;Format, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
+<tr class="memitem:abb32680bbed892471b70a0bb3eaa8438"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#abb32680bbed892471b70a0bb3eaa8438">allocateMemImage</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a16107d41c229cc7b48b72a57f5e2e286">RT::PiMemImageDesc</a> &amp;Desc, const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#acc6924024ea5edbed8b5db21fd0fd6a3">RT::PiMemImageFormat</a> &amp;Format, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;InteropEvent, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;InteropContext, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
 <tr class="separator:abb32680bbed892471b70a0bb3eaa8438"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a563de04e33f937623b8520d336fde086"><td class="memItemLeft" align="right" valign="top"><a id="a563de04e33f937623b8520d336fde086"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>releaseMemObj</b> (ContextImplPtr TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *MemAllocation, void *UserPtr)</td></tr>
+<tr class="memitem:a563de04e33f937623b8520d336fde086"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a563de04e33f937623b8520d336fde086">releaseMemObj</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *MemAllocation, void *UserPtr)</td></tr>
 <tr class="separator:a563de04e33f937623b8520d336fde086"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6df91d25864675140c317e5c74fd207b"><td class="memItemLeft" align="right" valign="top"><a id="a6df91d25864675140c317e5c74fd207b"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateHostMemory</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size)</td></tr>
+<tr class="memitem:a6df91d25864675140c317e5c74fd207b"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a6df91d25864675140c317e5c74fd207b">allocateHostMemory</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size)</td></tr>
 <tr class="separator:a6df91d25864675140c317e5c74fd207b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44eaa7454c4a260faae7afb726a0768a"><td class="memItemLeft" align="right" valign="top"><a id="a44eaa7454c4a260faae7afb726a0768a"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateInteropMemObject</b> (ContextImplPtr TargetContext, void *UserPtr, const EventImplPtr &amp;InteropEvent, const ContextImplPtr &amp;InteropContext, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
+<tr class="memitem:a44eaa7454c4a260faae7afb726a0768a"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a44eaa7454c4a260faae7afb726a0768a">allocateInteropMemObject</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *UserPtr, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;InteropEvent, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;InteropContext, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
 <tr class="separator:a44eaa7454c4a260faae7afb726a0768a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e0d570e609d85c78963f6dece9e3a6"><td class="memItemLeft" align="right" valign="top"><a id="a29e0d570e609d85c78963f6dece9e3a6"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateImageObject</b> (ContextImplPtr TargetContext, void *UserPtr, bool HostPtrReadOnly, const <a class="el" href="struct__pi__image__desc.html">RT::PiMemImageDesc</a> &amp;Desc, const <a class="el" href="struct__pi__image__format.html">RT::PiMemImageFormat</a> &amp;Format)</td></tr>
+<tr class="memitem:a29e0d570e609d85c78963f6dece9e3a6"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a29e0d570e609d85c78963f6dece9e3a6">allocateImageObject</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *UserPtr, bool HostPtrReadOnly, const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a16107d41c229cc7b48b72a57f5e2e286">RT::PiMemImageDesc</a> &amp;Desc, const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#acc6924024ea5edbed8b5db21fd0fd6a3">RT::PiMemImageFormat</a> &amp;Format)</td></tr>
 <tr class="separator:a29e0d570e609d85c78963f6dece9e3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a244e8a24e84be0df523547c642a805f3"><td class="memItemLeft" align="right" valign="top"><a id="a244e8a24e84be0df523547c642a805f3"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>allocateBufferObject</b> (ContextImplPtr TargetContext, void *UserPtr, bool HostPtrReadOnly, const size_t Size)</td></tr>
+<tr class="memitem:a244e8a24e84be0df523547c642a805f3"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a244e8a24e84be0df523547c642a805f3">allocateBufferObject</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *UserPtr, bool HostPtrReadOnly, const size_t Size)</td></tr>
 <tr class="separator:a244e8a24e84be0df523547c642a805f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4c87c0f8a7652755eb435a79c4e35d"><td class="memItemLeft" align="right" valign="top"><a id="add4c87c0f8a7652755eb435a79c4e35d"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>copy</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *SrcMem, QueueImplPtr SrcQueue, unsigned int DimSrc, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; SrcSize, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; SrcAccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; SrcOffset, unsigned int SrcElemSize, void *DstMem, QueueImplPtr TgtQueue, unsigned int DimDst, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; DstSize, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; DstAccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; DstOffset, unsigned int DstElemSize, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:add4c87c0f8a7652755eb435a79c4e35d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#add4c87c0f8a7652755eb435a79c4e35d">copy</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *SrcMem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> SrcQueue, unsigned int DimSrc, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; SrcSize, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; SrcAccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; SrcOffset, unsigned int SrcElemSize, void *DstMem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> TgtQueue, unsigned int DimDst, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; DstSize, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; DstAccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; DstOffset, unsigned int DstElemSize, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:add4c87c0f8a7652755eb435a79c4e35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac885d004ad801e0fb49150227b5831ab"><td class="memItemLeft" align="right" valign="top"><a id="ac885d004ad801e0fb49150227b5831ab"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>fill</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *Mem, QueueImplPtr Queue, size_t PatternSize, const char *Pattern, unsigned int Dim, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; Size, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; AccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:ac885d004ad801e0fb49150227b5831ab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac885d004ad801e0fb49150227b5831ab">fill</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *Mem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, size_t PatternSize, const char *Pattern, unsigned int Dim, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; Size, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; AccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ac885d004ad801e0fb49150227b5831ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4cc49829ab25d78f34eb5028d82bf0d"><td class="memItemLeft" align="right" valign="top"><a id="ae4cc49829ab25d78f34eb5028d82bf0d"></a>
-static void *&#160;</td><td class="memItemRight" valign="bottom"><b>map</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *Mem, QueueImplPtr Queue, access::mode AccessMode, unsigned int Dim, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; Size, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; AccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:ae4cc49829ab25d78f34eb5028d82bf0d"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d">map</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *Mem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17">access::mode</a> AccessMode, unsigned int Dim, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; Size, <a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt; AccessRange, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt; AccessOffset, unsigned int ElementSize, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ae4cc49829ab25d78f34eb5028d82bf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e825112f1e0e08b4b2f9d2d7dc2f28c"><td class="memItemLeft" align="right" valign="top"><a id="a8e825112f1e0e08b4b2f9d2d7dc2f28c"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>unmap</b> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *Mem, QueueImplPtr Queue, void *MappedPtr, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:a8e825112f1e0e08b4b2f9d2d7dc2f28c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c">unmap</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *SYCLMemObj, void *Mem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, void *MappedPtr, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:a8e825112f1e0e08b4b2f9d2d7dc2f28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8475ada97bafb83ebda1e8a4c93dc27"><td class="memItemLeft" align="right" valign="top"><a id="ae8475ada97bafb83ebda1e8a4c93dc27"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>copy_usm</b> (const void *SrcMem, QueueImplPtr Queue, size_t Len, void *DstMem, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:ae8475ada97bafb83ebda1e8a4c93dc27"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae8475ada97bafb83ebda1e8a4c93dc27">copy_usm</a> (const void *SrcMem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, size_t Len, void *DstMem, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ae8475ada97bafb83ebda1e8a4c93dc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71d6b81364aa47331f0b1275e7d11b8c"><td class="memItemLeft" align="right" valign="top"><a id="a71d6b81364aa47331f0b1275e7d11b8c"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>fill_usm</b> (void *DstMem, QueueImplPtr Queue, size_t Len, int Pattern, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:a71d6b81364aa47331f0b1275e7d11b8c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a71d6b81364aa47331f0b1275e7d11b8c">fill_usm</a> (void *DstMem, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, size_t Len, int Pattern, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:a71d6b81364aa47331f0b1275e7d11b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d7a472dc0c2bbfa9dd666dc47a9ad0b"><td class="memItemLeft" align="right" valign="top"><a id="a8d7a472dc0c2bbfa9dd666dc47a9ad0b"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>prefetch_usm</b> (void *Ptr, QueueImplPtr Queue, size_t Len, std::vector&lt; <a class="el" href="class__pi__event.html">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="memitem:a8d7a472dc0c2bbfa9dd666dc47a9ad0b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8d7a472dc0c2bbfa9dd666dc47a9ad0b">prefetch_usm</a> (void *Ptr, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, size_t Len, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:a8d7a472dc0c2bbfa9dd666dc47a9ad0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="memory__manager_8hpp_source.html#l00035">35</a> of file <a class="el" href="memory__manager_8hpp_source.html">memory_manager.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac311b1b640b53526e5f6a964ac52eba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac311b1b640b53526e5f6a964ac52eba9">&#9670;&nbsp;</a></span>allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>InitFromUserData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>HostPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00065">65</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ad8d2f576541c58c6ada6d530d1bea092">cl::sycl::detail::SYCLMemObjI::allocateMem()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00674">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<a id="a244e8a24e84be0df523547c642a805f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244e8a24e84be0df523547c642a805f3">&#9670;&nbsp;</a></span>allocateBufferObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateBufferObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>HostPtrReadOnly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>Size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00132">132</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00508">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00511">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_USE</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00504">piMemBufferCreate()</a>.</p>
+
+</div>
+</div>
+<a id="a6df91d25864675140c317e5c74fd207b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df91d25864675140c317e5c74fd207b">&#9670;&nbsp;</a></span>allocateHostMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateHostMemory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>HostPtrReadOnly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00078">78</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a741ab88936bba4fc184aed0b1645f171">cl::sycl::detail::SYCLMemObjI::allocateHostMem()</a>, and <a class="el" href="helpers_8hpp_source.html#l00037">cl::sycl::detail::memcpy()</a>.</p>
+
+</div>
+</div>
+<a id="a29e0d570e609d85c78963f6dece9e3a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e0d570e609d85c78963f6dece9e3a6">&#9670;&nbsp;</a></span>allocateImageObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateImageObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>HostPtrReadOnly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a16107d41c229cc7b48b72a57f5e2e286">RT::PiMemImageDesc</a> &amp;&#160;</td>
+          <td class="paramname"><em>Desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#acc6924024ea5edbed8b5db21fd0fd6a3">RT::PiMemImageFormat</a> &amp;&#160;</td>
+          <td class="paramname"><em>Format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00114">114</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00508">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00511">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_USE</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00514">piMemImageCreate()</a>.</p>
+
+</div>
+</div>
+<a id="a44eaa7454c4a260faae7afb726a0768a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44eaa7454c4a260faae7afb726a0768a">&#9670;&nbsp;</a></span>allocateInteropMemObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateInteropMemObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>InteropEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>InteropContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEventToWait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00093">93</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi_8h.html#aff53ef120fbe3428c54f53756e6a2e02">piEventRetain()</a>.</p>
+
+</div>
+</div>
+<a id="a7e3fbe9dd146978831683089d2d42837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e3fbe9dd146978831683089d2d42837">&#9670;&nbsp;</a></span>allocateMemBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateMemBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>HostPtrReadOnly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>InteropEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>InteropContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEventToWait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00148">148</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb32680bbed892471b70a0bb3eaa8438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb32680bbed892471b70a0bb3eaa8438">&#9670;&nbsp;</a></span>allocateMemImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateMemImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>HostPtrReadOnly</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a16107d41c229cc7b48b72a57f5e2e286">RT::PiMemImageDesc</a> &amp;&#160;</td>
+          <td class="paramname"><em>Desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#acc6924024ea5edbed8b5db21fd0fd6a3">RT::PiMemImageFormat</a> &amp;&#160;</td>
+          <td class="paramname"><em>Format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>InteropEvent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>InteropContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEventToWait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00162">162</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="image__impl_8cpp_source.html#l00307">cl::sycl::detail::image_impl&lt; Dimensions &gt;::allocateMem()</a>.</p>
+
+</div>
+</div>
+<a id="ae7e34b2e2df980c15d3b2bed30ac0908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e34b2e2df980c15d3b2bed30ac0908">&#9670;&nbsp;</a></span>allocateMemSubBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::allocateMemSubBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ParentMemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>ElemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>Range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00176">176</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="pi_8h_source.html#l00449">PI_BUFFER_CREATE_TYPE_REGION</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00508">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00090">PI_MISALIGNED_SUB_BUFFER_OFFSET</a>, <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00528">piMemBufferPartition()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00766">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>.</p>
+
+</div>
+</div>
+<a id="add4c87c0f8a7652755eb435a79c4e35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add4c87c0f8a7652755eb435a79c4e35d">&#9670;&nbsp;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>SYCLMemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>SrcMem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>SrcQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>DimSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>SrcSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>SrcAccessRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>SrcOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>SrcElemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>DstMem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TgtQueue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>DimDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>DstSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>DstAccessRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>DstOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>DstElemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00373">373</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="memory__manager_8cpp_source.html#l00302">cl::sycl::detail::copyD2D()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00255">cl::sycl::detail::copyD2H()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00206">cl::sycl::detail::copyH2D()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00344">cl::sycl::detail::copyH2H()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01075">cl::sycl::detail::MemCpyCommand::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::MemCpyCommandHost::getContext()</a>.</p>
+
+</div>
+</div>
+<a id="ae8475ada97bafb83ebda1e8a4c93dc27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8475ada97bafb83ebda1e8a4c93dc27">&#9670;&nbsp;</a></span>copy_usm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::copy_usm </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>SrcMem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>DstMem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00503">503</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="helpers_8hpp_source.html#l00037">cl::sycl::detail::memcpy()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00858">piextUSMEnqueueMemcpy()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+
+</div>
+</div>
+<a id="ac885d004ad801e0fb49150227b5831ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac885d004ad801e0fb49150227b5831ab">&#9670;&nbsp;</a></span>fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>SYCLMemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>PatternSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>Pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>Size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>AccessRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>AccessOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ElementSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00413">413</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h.html#aa9bd71e372a2a6b94533e5eec85d6f6f">piEnqueueMemBufferFill()</a>, <a class="el" href="pi_8h.html#adba34322e5fc6f26b8b145815219c0cd">piEnqueueMemImageFill()</a>, and <a class="el" href="range_8hpp_source.html#l00057">cl::sycl::range&lt; dimensions &gt;::size()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+
+</div>
+</div>
+<a id="a71d6b81364aa47331f0b1275e7d11b8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71d6b81364aa47331f0b1275e7d11b8c">&#9670;&nbsp;</a></span>fill_usm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::fill_usm </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>DstMem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00520">520</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00819">piextUSMEnqueueMemset()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+
+</div>
+</div>
+<a id="ae4cc49829ab25d78f34eb5028d82bf0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cc49829ab25d78f34eb5028d82bf0d">&#9670;&nbsp;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>SYCLMemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17">access::mode</a>&#160;</td>
+          <td class="paramname"><em>AccessMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Dim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>Size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>AccessRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>AccessOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ElementSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00441">441</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00638">piEnqueueMemBufferMap()</a>, and <a class="el" href="stream__impl_8hpp_source.html#l00316">cl::sycl::detail::write()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00931">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<a id="a8d7a472dc0c2bbfa9dd666dc47a9ad0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d7a472dc0c2bbfa9dd666dc47a9ad0b">&#9670;&nbsp;</a></span>prefetch_usm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::prefetch_usm </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00535">535</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l01359">PI_USM_MIGRATION_TBD0</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00897">piextUSMEnqueuePrefetch()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+
+</div>
+</div>
+<a id="ab9ff512130fc0fa1a38cb168eb1a0386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ff512130fc0fa1a38cb168eb1a0386">&#9670;&nbsp;</a></span>release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MemAllocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00037">37</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a75e7bc6f53234cb0b7afe74caf41d274">cl::sycl::detail::SYCLMemObjI::releaseMem()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<a id="a563de04e33f937623b8520d336fde086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563de04e33f937623b8520d336fde086">&#9670;&nbsp;</a></span>releaseMemObj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::releaseMemObj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MemAllocation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>UserPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00048">48</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h.html#a94678d2dbf31f9330d7c654579f51c6a">piMemRelease()</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aab5adbb453e00e71e7667140e9fc6517">cl::sycl::detail::SYCLMemObjI::releaseHostMem()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sycl__mem__obj__t_8cpp_source.html#l00048">cl::sycl::detail::SYCLMemObjT::releaseMem()</a>.</p>
+
+</div>
+</div>
+<a id="a8e825112f1e0e08b4b2f9d2d7dc2f28c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e825112f1e0e08b4b2f9d2d7dc2f28c">&#9670;&nbsp;</a></span>unmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::unmap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>SYCLMemObj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MappedPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00488">488</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi_8h.html#a75a9ce04861edb6e4faf6de78acb639d">piEnqueueMemUnmap()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/CL/sycl/detail/<a class="el" href="memory__manager_8hpp_source.html">memory_manager.hpp</a></li>
 <li>source/detail/<a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html">MemoryManager</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

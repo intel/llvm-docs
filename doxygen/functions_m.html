@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: Class Members</title>
+<title>DPC++ Runtime: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,16 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_m.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,14 +89,29 @@ $(function() {
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
+<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>m_contextToSampler
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a94e403d4d328d3a240c57fc0ecfedefa">cl::sycl::detail::sampler_impl</a>
+</li>
+<li>MAccessMode
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a33bec32fb9b3bb7336b0e9aa32b8a7e4">cl::sycl::detail::AccessorImplHost</a>
+</li>
+<li>MAccessRange
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a51ad2f8a02f30bff3f7cb0cb0514b654">cl::sycl::detail::AccessorImplHost</a>
+</li>
 <li>MAddress
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0030e3ea7e156c3f77b77df28e9b1fd6">cl::sycl::detail::Command</a>
 </li>
 <li>MAddressString
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a11d716bf5ff83bb142b0f5fd81424247">cl::sycl::detail::Command</a>
+</li>
+<li>make_native()
+: <a class="el" href="class__pi__event.html#a893e8d79288ee852a40e445b775203cf">_pi_event</a>
+</li>
+<li>make_user()
+: <a class="el" href="class__pi__event.html#a2c259d4da88a60636bec8f63c15f1c7b">_pi_event</a>
 </li>
 <li>makeTraceEventEpilog()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a42b5f83a1250912b24546f6aa1c252d5">cl::sycl::detail::Command</a>
@@ -77,20 +122,84 @@ $(function() {
 <li>MAllocaCmd
 : <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#abd074562572052e2c252a03484c5cee3">cl::sycl::detail::DepDesc</a>
 </li>
+<li>MAllocaCommands
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#ac273fa8bbe1679327416b3c2eec5a9d4">cl::sycl::detail::MemObjRecord</a>
+</li>
+<li>MAllocator
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ad76aa1d011980a674c3a8e3b62bd7579">cl::sycl::detail::SYCLMemObjT</a>
+</li>
 <li>ManifestEnd
 : <a class="el" href="structpi__device__binary__struct.html#ae3149612f8f60cfc3bed1c63cc94233e">pi_device_binary_struct</a>
 </li>
 <li>ManifestStart
 : <a class="el" href="structpi__device__binary__struct.html#a878e5bebe74c5308b46fc6819a323e72">pi_device_binary_struct</a>
 </li>
+<li>map()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d">cl::sycl::detail::MemoryManager</a>
+</li>
+<li>MAP_MEM_OBJ
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4aecafed01df81b9560f8f1ef01227eb90">cl::sycl::detail::Command</a>
+</li>
+<li>map_to_ptr()
+: <a class="el" href="struct__pi__mem.html#ade67ff7fc3a116e18a954576fdeda150">_pi_mem</a>
+</li>
+<li>mapFlags_
+: <a class="el" href="struct__pi__mem.html#a16e5dd7c7c5435a9118ebe59ce7b68ce">_pi_mem</a>
+</li>
+<li>MapMemObject()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d">cl::sycl::detail::MapMemObject</a>
+</li>
+<li>mapOffset_
+: <a class="el" href="struct__pi__mem.html#a099358d01a7f6f11e605ccddac7e4a30">_pi_mem</a>
+</li>
+<li>mapPtr_
+: <a class="el" href="struct__pi__mem.html#a907ca90796097685f69c3bd5f4d185fe">_pi_mem</a>
+</li>
+<li>MArgs
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a72e8ae99281477ce9a7c399ab7c56b2a">cl::sycl::detail::CGExecKernel</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a521e90ead6d0b5392e35f28565e8ea17">cl::sycl::detail::CGHostTask</a>
+</li>
+<li>max()
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#ae63fb0d916828d24a7f6da72c083fe77">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>max_digits10
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#a83c0ec81abd29ba7541a3c13d65ae821">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>max_exponent
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#a19a603ec1bb1965590d69a776d4864e8">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>max_exponent10
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#a2de6f5e0d621239374a2d92676f98fbc">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>MAX_LOG_SIZE
+: <a class="el" href="struct__pi__program.html#a5cd306d55644c2e3d22b3745f90cffe6">_pi_program</a>
+</li>
+<li>MAX_PARAM_BYTES
+: <a class="el" href="struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c">_pi_kernel::arguments</a>
+</li>
+<li>MBlockedCmd
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a78581a66dfc447e44d2bacc1e63910c1">cl::sycl::detail::AccessorImplHost</a>
+</li>
+<li>MBlockReason
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a11c74a2d1717f958f848aa36d2385a0b">cl::sycl::detail::Command</a>
+</li>
 <li>MCmd
 : <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a6a8695e06aa1d24a384f1ac3decb86f5">cl::sycl::detail::EnqueueResultT</a>
+</li>
+<li>MColumn
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a6628c8c2ca6833f9cef8a650361bccda">cl::sycl::detail::CG</a>
 </li>
 <li>MCommandName
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a39ba002b9932a2a5c25c50290222fcef">cl::sycl::detail::Command</a>
 </li>
 <li>MCommandNodeType
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2769f387656b1726eea5a4a965c287e3">cl::sycl::detail::Command</a>
+</li>
+<li>MCurContext
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07">cl::sycl::detail::MemObjRecord</a>
+</li>
+<li>MData
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a18792eec200cef6c2a4d904cde2c54c8">cl::sycl::detail::AccessorImplHost</a>
 </li>
 <li>MDepCommand
 : <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#aaa8c5be0032931124fd43c11f0be7b1e">cl::sycl::detail::DepDesc</a>
@@ -100,6 +209,14 @@ $(function() {
 </li>
 <li>MDeps
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#aab71c1106d244e530278da63ed11f5f9">cl::sycl::detail::Command</a>
+</li>
+<li>MDims
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#af324d2b2203ba5d575eb3494518c0d59">cl::sycl::detail::AccessorImplHost</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a5fa3f8f25927232df0b0384e9719da98">cl::sycl::detail::LocalAccessorImplHost</a>
+</li>
+<li>MElemSize
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a976c38c7405497bfe5dd145ab1680451">cl::sycl::detail::AccessorImplHost</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a94c0757f497a3028916d8f8c98daaab9">cl::sycl::detail::LocalAccessorImplHost</a>
 </li>
 <li>mem_advise()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a64a2a8cf81ca5f32dec6948e22404209">cl::sycl::detail::queue_impl</a>
@@ -113,6 +230,28 @@ $(function() {
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#aba5150e8132fdbaa945fdc59102639fb">cl::sycl::detail::queue_impl</a>
 , <a class="el" href="classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c">cl::sycl::handler</a>
 , <a class="el" href="classcl_1_1sycl_1_1queue.html#a6bc6a510e5e9abcbf1ee904d4b86edbf">cl::sycl::queue</a>
+</li>
+<li>MemCpyCommand()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a317c9f85a8922d68c1c70068d74df942">cl::sycl::detail::MemCpyCommand</a>
+</li>
+<li>MemCpyCommandHost()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a5d52b9c5aed6be87dfa1b38e710d30e3">cl::sycl::detail::MemCpyCommandHost</a>
+</li>
+<li>MemObjRecord()
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a637208028b2d731007fa7c89a7eed4c4">cl::sycl::detail::MemObjRecord</a>
+</li>
+<li>MemObjType
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8a">cl::sycl::detail::SYCLMemObjI</a>
+</li>
+<li>MemorySemanticsMask()
+: <a class="el" href="struct____spv_1_1MemorySemanticsMask.html#a21d590ef220b233ccc142a577587a6b9">__spv::MemorySemanticsMask</a>
+</li>
+<li>MEmptyCmd
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a9a8a9dec695980471cd52208264a8d72">cl::sycl::detail::ExecCGCommand</a>
+</li>
+<li>MemRange
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html#a9e521f4a40a12d824e3782b57360b7e9">cl::sycl::detail::AccessorImplDevice&lt; Dims &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice.html#a6c49f88805ba7718967fc430a250dcc9">cl::sycl::detail::LocalAccessorBaseDevice&lt; Dims &gt;</a>
 </li>
 <li>memset()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a512fca4ad31e7ae4c97a0223dabf038e">cl::sycl::detail::queue_impl</a>
@@ -128,14 +267,71 @@ $(function() {
 <li>MErrCode
 : <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a7561c535f5efdcd289a3d9929a5db06e">cl::sycl::detail::EnqueueResultT</a>
 </li>
+<li>MEvent
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ad3aa9ea3c20a2083ac11f996287b85ac">cl::sycl::detail::Command</a>
+</li>
 <li>MEvents
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#aed39ca43cc8e1592955f1d425e641acf">cl::sycl::detail::CG</a>
+</li>
+<li>MExtent
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#afc396f5b8c820d1669d78054f088fc18">cl::sycl::detail::ItemBase&lt; Dims, false &gt;</a>
+, <a class="el" href="structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#a54633002146b70c00c15f6ba4ea02e9c">cl::sycl::detail::ItemBase&lt; Dims, true &gt;</a>
+</li>
+<li>MFileName
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a5092dfc352e9f617c2bf1f3e76c0d83a">cl::sycl::detail::CG</a>
 </li>
 <li>MFirstInstance
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a39f702797d183ad8b80e63acb1454e19">cl::sycl::detail::Command</a>
 </li>
+<li>MFunctionName
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#abac8209b68b492b72b181b9a0fec5f0d">cl::sycl::detail::CG</a>
+</li>
+<li>MGraphBuilder
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e">cl::sycl::detail::Scheduler</a>
+</li>
+<li>MGraphLock
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa1d2966e63f1bb0716ce1c0c6d270470">cl::sycl::detail::Scheduler</a>
+</li>
+<li>MHostAccess
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c">cl::sycl::detail::MemObjRecord</a>
+</li>
+<li>MHostKernel
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a11a808c798eb926073554e3a5a0245f1">cl::sycl::detail::CGExecKernel</a>
+</li>
+<li>MHostPtrReadOnly
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a469bf4a3761a80b0022986b26a2b0083">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MHostTask
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a23ac378c18c9c21813d41d035e6925fb">cl::sycl::detail::CGHostTask</a>
+</li>
+<li>min()
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#a5647e08d5447d7fb14572094e2000d70">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>min_exponent
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#addc0fe37d97afb12c9060037f711886d">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>min_exponent10
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#a98abc16f9d36dc95fba0029662282559">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>MIndex
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ArgDesc.html#a3f088739f639a6dc1446f1109b80a01f">cl::sycl::detail::ArgDesc</a>
+, <a class="el" href="structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#acddf2d86e1328ea992ff4a3dfce67f86">cl::sycl::detail::ItemBase&lt; Dims, false &gt;</a>
+, <a class="el" href="structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#aadd884e93291c20764e982a318b1b760">cl::sycl::detail::ItemBase&lt; Dims, true &gt;</a>
+</li>
 <li>MInstanceID
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#abd75de32d432e4c9f0cb65ade0ad41dc">cl::sycl::detail::Command</a>
+</li>
+<li>MInteropContext
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a6d4eb5ddb7876137b0c467e2dab4d393">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MInteropEvent
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ac20bd01ba834cbbe71ecaed47353ffd7">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MInteropMemObject
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a8c8514fb3201f505e86cbcb89fa8b5c4">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MInteropTask
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGInteropTask.html#a4a75d580209f572ff7cd406856931990">cl::sycl::detail::CGInteropTask</a>
 </li>
 <li>MIsActive
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6">cl::sycl::detail::AllocaCommandBase</a>
@@ -146,17 +342,91 @@ $(function() {
 <li>MIsLeaderAlloca
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661">cl::sycl::detail::AllocaCommandBase</a>
 </li>
+<li>MIsSubBuffer
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#ac7538104eab816573443cd2fe3dbce47">cl::sycl::detail::AccessorImplHost</a>
+</li>
+<li>MKernelName
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a50888c8904b33b445ac25758f04a3e65">cl::sycl::detail::CGExecKernel</a>
+</li>
 <li>MLeafCounter
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604">cl::sycl::detail::Command</a>
+</li>
+<li>MLine
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#adac17762f7e2c5c21d19e554cc956c51">cl::sycl::detail::CG</a>
 </li>
 <li>MLinkedAllocaCmd
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a26ad0b3875ad355ed64563cd9eb442a8">cl::sycl::detail::AllocaCommandBase</a>
 </li>
+<li>MMem
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#ab3248a9f83d3f9836d498af31c9e819d">cl::sycl::detail::LocalAccessorImplHost</a>
+</li>
+<li>MMemAllocation
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54626b5713e483b8f76010a719d80815">cl::sycl::detail::AllocaCommandBase</a>
+</li>
+<li>MMemModified
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c">cl::sycl::detail::MemObjRecord</a>
+</li>
+<li>MMemObjs
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a6d42750e40104858732eb41d29723c2b">cl::sycl::detail::Scheduler::GraphBuilder</a>
+</li>
+<li>MMemoryRange
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#ab97f14a1acd7c80f746a9c33b306be55">cl::sycl::detail::AccessorImplHost</a>
+</li>
 <li>MNDRDesc
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#aa762d154fc9c25c29d10cc5b5666d06b">cl::sycl::detail::CGExecKernel</a>
 </li>
+<li>MNeedWriteBack
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a69e98c9189dbbf746697d296d6a6c188">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>module_
+: <a class="el" href="struct__pi__program.html#a2b33b22a97125a60fadc84bffdf6569d">_pi_program</a>
+</li>
+<li>ModuleHandle
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#a48652491234f3144ea293f234fb36559">cl::sycl::detail::RTDeviceBinaryImage</a>
+</li>
+<li>MOffset
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#ad3670eaf8428375926e91b8534e8e507">cl::sycl::detail::AccessorImplHost</a>
+, <a class="el" href="structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#a58fa85d6b126c8e31b6f48f46aeaae7d">cl::sycl::detail::ItemBase&lt; Dims, true &gt;</a>
+</li>
+<li>MOffsetInBytes
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#aef547222d71a1718e932655345aef8a3">cl::sycl::detail::AccessorImplHost</a>
+</li>
+<li>MOpenCLInterop
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#af61080f405eb5e85fbbb59f564daf270">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MOSModuleHandle
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#ac987ad081bf80da1bb4376c9e7bd4faa">cl::sycl::detail::CGExecKernel</a>
+</li>
+<li>MPattern
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGFill.html#a93ade093956d8670747ad3a0c44dcf3a">cl::sycl::detail::CGFill</a>
+</li>
 <li>MPreparedDepsEvents
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a63d94f8dc12b566122e1eb1a962ec01a">cl::sycl::detail::Command</a>
+</li>
+<li>MPreparedHostDepsEvents
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ad973525e277975b7c9da8944857b457c">cl::sycl::detail::Command</a>
+</li>
+<li>MProps
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a18673bde7f63b6400544def4f831e4c5">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MPtr
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ArgDesc.html#aaabfc261fff25e3efaeb3fbed6365098">cl::sycl::detail::ArgDesc</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGFill.html#ab673fb218534cc8bbaf19c3264ea6034">cl::sycl::detail::CGFill</a>
+</li>
+<li>MQueue
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a058f3c52750d5e57dfa8543bfdfcdd5c">cl::sycl::detail::Command</a>
+</li>
+<li>MReadLeaves
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a6a3e62372c61f59e347984b51d01d68f">cl::sycl::detail::MemObjRecord</a>
+</li>
+<li>MRecord
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a15515300405f37fa361db9aa1f8332bb">cl::sycl::detail::SYCLMemObjI</a>
+</li>
+<li>MReleaseCmd
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a2dc0abdd980c367e4df9dda3e0b06f2f">cl::sycl::detail::AllocaCommandBase</a>
+</li>
+<li>MRequirement
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e">cl::sycl::detail::AllocaCommandBase</a>
 </li>
 <li>MRequirements
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a5ff4bd61baf6903b250a64a9dc207245">cl::sycl::detail::CG</a>
@@ -164,8 +434,36 @@ $(function() {
 <li>MResult
 : <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a8df7454bd622da6ded7b9a181cf97eb7">cl::sycl::detail::EnqueueResultT</a>
 </li>
+<li>Msg
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ae8665653a1132b94504bae878da2e92b">cl::sycl::detail::KernelProgramCache::BuildError</a>
+</li>
+<li>MShadowCopy
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a0624c168b97e8768acabd8075cce3dab">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MSharedPtrStorage
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a152e1277ac18b193bec442742d7a2267">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MShouldCompleteEventIfPossible
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ac2fa389fa756c442cb2c35a850ce2781">cl::sycl::detail::Command</a>
+</li>
+<li>MSize
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ArgDesc.html#a6bf44b9cfdfb881a8498b11dbea13039">cl::sycl::detail::ArgDesc</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#af2ab564d81abd2ede13ebcccae00c68e">cl::sycl::detail::LocalAccessorImplHost</a>
+</li>
+<li>MSizeInBytes
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a88ecdaf9670c702dcf9589c36c339c92">cl::sycl::detail::SYCLMemObjT</a>
+</li>
 <li>MStreamID
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#afa237f982ce0d84b2fe14e4ee7e0e666">cl::sycl::detail::Command</a>
+</li>
+<li>MStreams
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#ade604578dfa234dece017a89e843166e">cl::sycl::detail::CGExecKernel</a>
+</li>
+<li>MSyclKernel
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a6a6211bb1d8aac3c9df95c9b848c5a60">cl::sycl::detail::CGExecKernel</a>
+</li>
+<li>MSYCLMemObj
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a85dc441db1e3b2f4ea11e454e9dd0229">cl::sycl::detail::AccessorImplHost</a>
 </li>
 <li>MTraceEvent
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5">cl::sycl::detail::Command</a>
@@ -174,18 +472,40 @@ $(function() {
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a4e56e8d97d07ebe93e1e8c687df0c81c">cl::sycl::detail::Command</a>
 </li>
 <li>MType
-: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d">cl::sycl::detail::Command</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ArgDesc.html#a2d4ec3b0d3a2a07199d0df4372f3b98d">cl::sycl::detail::ArgDesc</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d">cl::sycl::detail::Command</a>
+</li>
+<li>multi_ptr()
+: <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html#adaf40cc3ca83726e2ce52016f10cf740">cl::sycl::multi_ptr&lt; ElementType, Space &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#af8374896796ef91f868da52996619968">cl::sycl::multi_ptr&lt; const void, Space &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ae4d22398a8e2a7493d0f3397e49439d1">cl::sycl::multi_ptr&lt; void, Space &gt;</a>
+</li>
+<li>MUploadDataFunctor
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a5e28bab89d9287f0604f6f85b4c7dd6b">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>MUserPtr
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a40bbf964fbba5dbde1a8c7c9db0ac772">cl::sycl::detail::SYCLMemObjT</a>
 </li>
 <li>MUsers
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f">cl::sycl::detail::Command</a>
 </li>
+<li>MValue
+: <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html#ab2790ccc93017b965b6f076e5f2f2a28">cl::sycl::intel::detail::reducer&lt; T, BinaryOperation, Subst &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#a2b4298095577cd5c4d947c0f3c770a0b">cl::sycl::intel::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;</a>
+</li>
+<li>MWriteLeaves
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9">cl::sycl::detail::MemObjRecord</a>
+</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

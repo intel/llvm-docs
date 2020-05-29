@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: Class Members - Functions</title>
+<title>DPC++ Runtime: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,16 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func_c.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -63,13 +93,59 @@ $(function() {
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>call()
-: <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">cl::sycl::detail::plugin</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1HostKernel.html#ac8ac824b625ab46b7e8d6c85c3c4c311">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1HostKernelBase.html#a7118d7f206be73578110be47dbe12cad">cl::sycl::detail::HostKernelBase</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1HostTask.html#a09c26c38e4b6bc01088b9509214d1080">cl::sycl::detail::HostTask</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1InteropTask.html#aaa867448bbeb831fe11f03ee9d554a23">cl::sycl::detail::InteropTask</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">cl::sycl::detail::plugin</a>
 </li>
 <li>call_nocheck()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295">cl::sycl::detail::plugin</a>
 </li>
+<li>canReuseHostPtr()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ae4eefdc3cfa1211798ce10b139e184c0">cl::sycl::detail::SYCLMemObjT</a>
+</li>
+<li>capacity()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a70a5de078d677a371181416b0fbb2044">cl::sycl::detail::CircularBuffer&lt; T &gt;</a>
+</li>
+<li>CG()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html#a35e4fd1e0383a2ddfb91e73f22abf29c">cl::sycl::detail::CG</a>
+</li>
+<li>CGCopy()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGCopy.html#a74b1c0efde682243fb623177545e6e77">cl::sycl::detail::CGCopy</a>
+</li>
+<li>CGCopyUSM()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html#a004045ad0fdd6480c17eccf34024ed48">cl::sycl::detail::CGCopyUSM</a>
+</li>
+<li>CGExecKernel()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a12815f26140ef9dcd7b8adc10a96e0eb">cl::sycl::detail::CGExecKernel</a>
+</li>
+<li>CGFill()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGFill.html#a0a53384b65f847657f9ae353c196c805">cl::sycl::detail::CGFill</a>
+</li>
+<li>CGFillUSM()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#ad713aac167a9f49623453450ae8bc617">cl::sycl::detail::CGFillUSM</a>
+</li>
+<li>CGHostTask()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a0100c965c78d71c0cae280758613f149">cl::sycl::detail::CGHostTask</a>
+</li>
+<li>CGInteropTask()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGInteropTask.html#afaad6ef067b9ba533bd02ada240f9585">cl::sycl::detail::CGInteropTask</a>
+</li>
+<li>CGPrefetchUSM()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html#a142165c53de870d38b60d21a7612c819">cl::sycl::detail::CGPrefetchUSM</a>
+</li>
+<li>CGUpdateHost()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CGUpdateHost.html#a05f3d73aa58c3d4dcfcd586e98bc69ee">cl::sycl::detail::CGUpdateHost</a>
+</li>
+<li>check_dimension()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1array.html#a6ed8180dfc774f983b2dbecd80676e48">cl::sycl::detail::array&lt; dimensions &gt;</a>
+</li>
 <li>checkPiResult()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4">cl::sycl::detail::plugin</a>
+</li>
+<li>CircularBuffer()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a1267bf8e9a3eee168d76f3d738c0bf2a">cl::sycl::detail::CircularBuffer&lt; T &gt;</a>
 </li>
 <li>cleanupCommandsForRecord()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a0bb036ad528209f3d547ff77c0918bbc">cl::sycl::detail::Scheduler::GraphBuilder</a>
@@ -77,6 +153,32 @@ $(function() {
 <li>cleanupFinishedCommands()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa">cl::sycl::detail::Scheduler</a>
 , <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a976e10ef65ccfb89a0ec2b59ef03b2ad">cl::sycl::detail::Scheduler::GraphBuilder</a>
+</li>
+<li>clear()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a6793008d8d2f0e4e13eca5f6db17e6cb">cl::sycl::detail::CircularBuffer&lt; T &gt;</a>
+</li>
+<li>clear_local_size()
+: <a class="el" href="struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8">_pi_kernel::arguments</a>
+, <a class="el" href="struct__pi__kernel.html#aa50210e92353398de8da3f620dbdc270">_pi_kernel</a>
+</li>
+<li>code_location()
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html#ac2d2ab9c80c24289f0fdb1d5fefde34e">cl::sycl::detail::code_location</a>
+</li>
+<li>codeplay_host_task()
+: <a class="el" href="classcl_1_1sycl_1_1handler.html#a8e1dacd89a933dd3f8a8d6afde3687fa">cl::sycl::handler</a>
+</li>
+<li>columnNumber()
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html#a348701ea043005bf85f6b8cb8ae37a4a">cl::sycl::detail::code_location</a>
+</li>
+<li>combine()
+: <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html#abe94597753ede18cfd8b8725a0743b99">cl::sycl::intel::detail::reducer&lt; T, BinaryOperation, Subst &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#af29c4b0f72c914b297cf5af92ef75579">cl::sycl::intel::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;</a>
+</li>
+<li>Command()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ae4372aa392bfea61ada1697a9a75f975">cl::sycl::detail::Command</a>
+</li>
+<li>compare_exchange_strong()
+: <a class="el" href="classcl_1_1sycl_1_1atomic.html#a41ae10c6e3bbf7ceda5f6df5d675fcea">cl::sycl::atomic&lt; T, addressSpace &gt;</a>
 </li>
 <li>compile_with_kernel_name()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html#afe137dd2819614ad149f9673157c8d62">cl::sycl::detail::program_impl</a>
@@ -91,32 +193,74 @@ $(function() {
 <li>connectDepEvent()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#af26d002e0051ce81139b619ff47f996e">cl::sycl::detail::Scheduler::GraphBuilder</a>
 </li>
+<li>ConstIterator()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html#a171b81f2d15521f401a43858f84af24b">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::ConstIterator</a>
+</li>
 <li>construct()
-: <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#aa8b35706209ae9bd165d53d66fe43255">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a5e16b67266920dd4934ae8531de2d878">cl::sycl::detail::aligned_allocator&lt; T &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#aa8b35706209ae9bd165d53d66fe43255">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
 </li>
 <li>context()
-: <a class="el" href="classcl_1_1sycl_1_1context.html#a5ea79b08f0ccb3d258faecbd639248eb">cl::sycl::context</a>
+: <a class="el" href="classcl_1_1sycl_1_1context.html#a854340151e049a045d48f52c7b6d8d0d">cl::sycl::context</a>
+</li>
+<li>context_bound()
+: <a class="el" href="classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html#a12a7fad0101d843b0e5878ce74bbc5fa">cl::sycl::property::buffer::context_bound</a>
+, <a class="el" href="classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html#af2bacfcb524193acb4a365f451f93e88">cl::sycl::property::image::context_bound</a>
 </li>
 <li>context_impl()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1context__impl.html#ae062409b9e8f703b047f23e2600aa008">cl::sycl::detail::context_impl</a>
 </li>
+<li>ContextBoundBase()
+: <a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html#a3d734245139f339add7585259fd9a1d4">cl::sycl::property::detail::ContextBoundBase&lt; PropKindT &gt;</a>
+</li>
+<li>convert()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f3cde3c571c5e176e5203950917321f">cl::sycl::detail::SwizzleOp&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes &gt;</a>
+</li>
 <li>copy()
-: <a class="el" href="classcl_1_1sycl_1_1handler.html#af3ef5dbc3cd1700248581e59a1225b21">cl::sycl::handler</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#add4c87c0f8a7652755eb435a79c4e35d">cl::sycl::detail::MemoryManager</a>
+, <a class="el" href="classcl_1_1sycl_1_1handler.html#afd88ec85f759e5617ebdf8b0cacfdd9a">cl::sycl::handler</a>
+</li>
+<li>copy_usm()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae8475ada97bafb83ebda1e8a4c93dc27">cl::sycl::detail::MemoryManager</a>
+</li>
+<li>create_from_source()
+: <a class="el" href="struct__pi__program.html#a9d679ee2080dd52f46256ad849466288">_pi_program</a>
 </li>
 <li>create_sub_devices()
-: <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html#a885f0f936d6f29b2d16e95997150ad5b">cl::sycl::detail::device_impl</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html#a3458975bac5112442878b542b2a49580">cl::sycl::detail::device_impl</a>
 , <a class="el" href="classcl_1_1sycl_1_1device.html#a8180702aa59ab7d8627a99c3ab433876">cl::sycl::device</a>
+</li>
+<li>createGroup()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Builder.html#aaca5ed84fc1e7de7db535628ef5c9366">cl::sycl::detail::Builder</a>
+</li>
+<li>createHItem()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Builder.html#a2e7a2e53da56d66a187374a57f804cf5">cl::sycl::detail::Builder</a>
+</li>
+<li>createItem()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Builder.html#ad045da4c622abb8864b0c35ca18e29a7">cl::sycl::detail::Builder</a>
+</li>
+<li>createNDItem()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1Builder.html#a79941b017a07d13b03ca36583b54bd77">cl::sycl::detail::Builder</a>
+</li>
+<li>createPIProgram()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a2ac2ebb2599e86aed99a3e9f343569db">cl::sycl::detail::ProgramManager</a>
 </li>
 <li>createQueue()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54">cl::sycl::detail::queue_impl</a>
 </li>
+<li>current()
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1code__location.html#ae7e89caff975d6bee93809104e4d0256">cl::sycl::detail::code_location</a>
+</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

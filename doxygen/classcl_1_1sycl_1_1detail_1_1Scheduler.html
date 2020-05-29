@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::Scheduler Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::Scheduler Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1Scheduler.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">Scheduler</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -89,7 +115,7 @@ Collaboration diagram for cl::sycl::detail::Scheduler:</div>
 <map name="cl_1_1sycl_1_1detail_1_1Scheduler_coll__map" id="cl_1_1sycl_1_1detail_1_1Scheduler_coll__map">
 <area shape="rect" id="node4" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html" title="Graph builder class. " alt="" coords="276,123,445,164"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -102,31 +128,30 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0e8ff38f6f6274626f65b2b52227f47"><td class="memItemLeft" align="right" valign="top">EventImplPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac0e8ff38f6f6274626f65b2b52227f47">addCG</a> (std::unique_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">detail::CG</a> &gt; CommandGroup, QueueImplPtr Queue)</td></tr>
+<tr class="memitem:ac0e8ff38f6f6274626f65b2b52227f47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac0e8ff38f6f6274626f65b2b52227f47">addCG</a> (std::unique_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">detail::CG</a> &gt; CommandGroup, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue)</td></tr>
 <tr class="memdesc:ac0e8ff38f6f6274626f65b2b52227f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a command group, and adds it to the dependency graph.  <a href="#ac0e8ff38f6f6274626f65b2b52227f47">More...</a><br /></td></tr>
 <tr class="separator:ac0e8ff38f6f6274626f65b2b52227f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5887b8414f705ee134016e59e14baeb"><td class="memItemLeft" align="right" valign="top">EventImplPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#af5887b8414f705ee134016e59e14baeb">addCopyBack</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *Req)</td></tr>
+<tr class="memitem:af5887b8414f705ee134016e59e14baeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#af5887b8414f705ee134016e59e14baeb">addCopyBack</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *Req)</td></tr>
 <tr class="memdesc:af5887b8414f705ee134016e59e14baeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a command group, that copies most recent memory to the memory pointed by the requirement.  <a href="#af5887b8414f705ee134016e59e14baeb">More...</a><br /></td></tr>
 <tr class="separator:af5887b8414f705ee134016e59e14baeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01d870c24856e2c5d1bd4b74c4f7701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#af01d870c24856e2c5d1bd4b74c4f7701">waitForEvent</a> (EventImplPtr Event)</td></tr>
+<tr class="memitem:af01d870c24856e2c5d1bd4b74c4f7701"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#af01d870c24856e2c5d1bd4b74c4f7701">waitForEvent</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event)</td></tr>
 <tr class="memdesc:af01d870c24856e2c5d1bd4b74c4f7701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the event.  <a href="#af01d870c24856e2c5d1bd4b74c4f7701">More...</a><br /></td></tr>
 <tr class="separator:af01d870c24856e2c5d1bd4b74c4f7701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24c668644f9f5a46f87bd67f68951835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a24c668644f9f5a46f87bd67f68951835">removeMemoryObject</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">detail::SYCLMemObjI</a> *MemObj)</td></tr>
 <tr class="memdesc:a24c668644f9f5a46f87bd67f68951835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes buffer from the graph.  <a href="#a24c668644f9f5a46f87bd67f68951835">More...</a><br /></td></tr>
 <tr class="separator:a24c668644f9f5a46f87bd67f68951835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5f4676243cfbf21edc4abeb054f8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa">cleanupFinishedCommands</a> (EventImplPtr FinishedEvent)</td></tr>
+<tr class="memitem:aec5f4676243cfbf21edc4abeb054f8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa">cleanupFinishedCommands</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> FinishedEvent)</td></tr>
 <tr class="memdesc:aec5f4676243cfbf21edc4abeb054f8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes finished non-leaf non-alloca commands from the subgraph (assuming that all its commands have been waited for).  <a href="#aec5f4676243cfbf21edc4abeb054f8fa">More...</a><br /></td></tr>
 <tr class="separator:aec5f4676243cfbf21edc4abeb054f8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55efbd67f9291199dd13757dc3ca185b"><td class="memItemLeft" align="right" valign="top">EventImplPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a55efbd67f9291199dd13757dc3ca185b">addHostAccessor</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *Req, const bool Destructor=false)</td></tr>
+<tr class="memitem:a55efbd67f9291199dd13757dc3ca185b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a55efbd67f9291199dd13757dc3ca185b">addHostAccessor</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *Req, const bool Destructor=false)</td></tr>
 <tr class="memdesc:a55efbd67f9291199dd13757dc3ca185b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds nodes to the graph, that update the requirement with the pointer to the host memory.  <a href="#a55efbd67f9291199dd13757dc3ca185b">More...</a><br /></td></tr>
 <tr class="separator:a55efbd67f9291199dd13757dc3ca185b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17761af756131d983574f5558c2f854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa17761af756131d983574f5558c2f854">releaseHostAccessor</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *Req)</td></tr>
+<tr class="memitem:aa17761af756131d983574f5558c2f854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa17761af756131d983574f5558c2f854">releaseHostAccessor</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *Req)</td></tr>
 <tr class="memdesc:aa17761af756131d983574f5558c2f854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unblocks operations with the memory object.  <a href="#aa17761af756131d983574f5558c2f854">More...</a><br /></td></tr>
 <tr class="separator:aa17761af756131d983574f5558c2f854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a140b6282077e7de641b759865921a141"><td class="memItemLeft" align="right" valign="top">std::vector&lt; EventImplPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a140b6282077e7de641b759865921a141">getWaitList</a> (EventImplPtr Event)</td></tr>
+<tr class="memitem:a140b6282077e7de641b759865921a141"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a140b6282077e7de641b759865921a141">getWaitList</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event)</td></tr>
 <tr class="separator:a140b6282077e7de641b759865921a141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e54bc01214bd25329e556ba97b0258"><td class="memItemLeft" align="right" valign="top"><a id="a51e54bc01214bd25329e556ba97b0258"></a>
-QueueImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>getDefaultHostQueue</b> ()</td></tr>
+<tr class="memitem:a51e54bc01214bd25329e556ba97b0258"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258">getDefaultHostQueue</a> ()</td></tr>
 <tr class="separator:a51e54bc01214bd25329e556ba97b0258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -136,44 +161,38 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:aad4ad62a6e1d3c4eb1a29c1d464357c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aad4ad62a6e1d3c4eb1a29c1d464357c8">Scheduler</a> ()</td></tr>
+<tr class="separator:aad4ad62a6e1d3c4eb1a29c1d464357c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ca29b68b09ab4a43c40604a0960fd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4ca29b68b09ab4a43c40604a0960fd09">lockSharedTimedMutex</a> (std::unique_lock&lt; std::shared_timed_mutex &gt; &amp;Lock)</td></tr>
 <tr class="memdesc:a4ca29b68b09ab4a43c40604a0960fd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides exclusive access to std::shared_timed_mutex object with deadlock avoidance.  <a href="#a4ca29b68b09ab4a43c40604a0960fd09">More...</a><br /></td></tr>
 <tr class="separator:a4ca29b68b09ab4a43c40604a0960fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bfeba3b1690361a7b7987dbb941e592"><td class="memItemLeft" align="right" valign="top"><a id="a4bfeba3b1690361a7b7987dbb941e592"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>waitForRecordToFinish</b> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record)</td></tr>
+<tr class="memitem:a4bfeba3b1690361a7b7987dbb941e592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4bfeba3b1690361a7b7987dbb941e592">waitForRecordToFinish</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record)</td></tr>
 <tr class="separator:a4bfeba3b1690361a7b7987dbb941e592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:aade0e32407fe42d186a99526f6a00b55"><td class="memItemLeft" align="right" valign="top"><a id="aade0e32407fe42d186a99526f6a00b55"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>enqueueLeavesOfReqUnlocked</b> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *const Req)</td></tr>
+<tr class="memitem:aade0e32407fe42d186a99526f6a00b55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aade0e32407fe42d186a99526f6a00b55">enqueueLeavesOfReqUnlocked</a> (const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *const Req)</td></tr>
 <tr class="separator:aade0e32407fe42d186a99526f6a00b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a609d270e5c2651fb22533dbd9fdf136e"><td class="memItemLeft" align="right" valign="top"><a id="a609d270e5c2651fb22533dbd9fdf136e"></a>
-<a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html">GraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MGraphBuilder</b></td></tr>
+<tr class="memitem:a609d270e5c2651fb22533dbd9fdf136e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html">GraphBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e">MGraphBuilder</a></td></tr>
 <tr class="separator:a609d270e5c2651fb22533dbd9fdf136e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1d2966e63f1bb0716ce1c0c6d270470"><td class="memItemLeft" align="right" valign="top"><a id="aa1d2966e63f1bb0716ce1c0c6d270470"></a>
-std::shared_timed_mutex&#160;</td><td class="memItemRight" valign="bottom"><b>MGraphLock</b></td></tr>
+<tr class="memitem:aa1d2966e63f1bb0716ce1c0c6d270470"><td class="memItemLeft" align="right" valign="top">std::shared_timed_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa1d2966e63f1bb0716ce1c0c6d270470">MGraphLock</a></td></tr>
 <tr class="separator:aa1d2966e63f1bb0716ce1c0c6d270470"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5477da51f48aec98b98e990c887a1902"><td class="memItemLeft" align="right" valign="top"><a id="a5477da51f48aec98b98e990c887a1902"></a>
-QueueImplPtr&#160;</td><td class="memItemRight" valign="bottom"><b>DefaultHostQueue</b></td></tr>
+<tr class="memitem:a5477da51f48aec98b98e990c887a1902"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902">DefaultHostQueue</a></td></tr>
 <tr class="separator:a5477da51f48aec98b98e990c887a1902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a1d8fdc1307c61e081a4e8fc6fe1c885f"><td class="memItemLeft" align="right" valign="top"><a id="a1d8fdc1307c61e081a4e8fc6fe1c885f"></a>
-static <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">Scheduler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b></td></tr>
+<tr class="memitem:a1d8fdc1307c61e081a4e8fc6fe1c885f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">Scheduler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a1d8fdc1307c61e081a4e8fc6fe1c885f">instance</a></td></tr>
 <tr class="separator:a1d8fdc1307c61e081a4e8fc6fe1c885f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a62a7fc89f0ee4604e3ccab9b6b6a343f"><td class="memItemLeft" align="right" valign="top"><a id="a62a7fc89f0ee4604e3ccab9b6b6a343f"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>Command</b></td></tr>
+<tr class="memitem:a62a7fc89f0ee4604e3ccab9b6b6a343f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a62a7fc89f0ee4604e3ccab9b6b6a343f">Command</a></td></tr>
 <tr class="separator:a62a7fc89f0ee4604e3ccab9b6b6a343f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac24921e3619f5c224cf67dc02a0d6b76"><td class="memItemLeft" align="right" valign="top"><a id="ac24921e3619f5c224cf67dc02a0d6b76"></a>
-class&#160;</td><td class="memItemRight" valign="bottom"><b>DispatchHostTask</b></td></tr>
+<tr class="memitem:ac24921e3619f5c224cf67dc02a0d6b76"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac24921e3619f5c224cf67dc02a0d6b76">DispatchHostTask</a></td></tr>
 <tr class="separator:ac24921e3619f5c224cf67dc02a0d6b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -187,13 +206,13 @@ Scheduler Overview</h1>
 </ol>
 <p>As the main input <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> takes a command group and returns an event representing it, so it can be waited on later. When a new command group comes, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> adds one or more nodes to the graph depending on the command groups' requirements. For example, if a new command group is submitted to the SYCL context which has the latest data for all the requirements, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> adds a new "Execute command group" command making it dependent on all commands affecting new command group's requirements. But if one of the requirements has no up-to-date instance in the context which the command group is submitted to, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> additionally inserts copy memory command (together with allocate memory command if needed).</p>
 <p>A simple graph looks like: </p><div class="dotgraph">
-<img src="dot_inline_dotgraph_1.png" alt="dot_inline_dotgraph_1.png" border="0" usemap="#dot_inline_dotgraph_1.map"/>
-<map name="dot_inline_dotgraph_1.map" id="dot_inline_dotgraph_1.map"></map>
+<img src="dot_inline_dotgraph_3.png" alt="dot_inline_dotgraph_3.png" border="0" usemap="#dot_inline_dotgraph_3.map"/>
+<map name="dot_inline_dotgraph_3.map" id="dot_inline_dotgraph_3.map"></map>
 </div>
 <p>Where nodes represent commands and edges represent dependencies between them. There are three commands connected by arrows which mean that before executing second command group the first one must be executed. Also before executing the first command group memory allocation must be performed.</p>
 <p>At some point <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> enqueues commands to the underlying devices. To do this, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> performs topological sort to get the order in which commands should be enqueued. For example, the following graph (D depends on B and C, B and C depends on A) will be enqueued in the following order: </p><div class="fragment"><div class="line">EventA = Enqueue(A, <span class="comment">/*Deps=*/</span>{});</div><div class="line">EventB = Enqueue(B, <span class="comment">/*Deps=*/</span>{EventA});</div><div class="line">EventC = Enqueue(C, <span class="comment">/*Deps=*/</span>{EventA});</div><div class="line">EventD = Enqueue(D, <span class="comment">/*Deps=*/</span>{EventB, EventC});</div></div><!-- fragment --><div class="dotgraph">
-<img src="dot_inline_dotgraph_2.png" alt="dot_inline_dotgraph_2.png" border="0" usemap="#dot_inline_dotgraph_2.map"/>
-<map name="dot_inline_dotgraph_2.map" id="dot_inline_dotgraph_2.map"></map>
+<img src="dot_inline_dotgraph_4.png" alt="dot_inline_dotgraph_4.png" border="0" usemap="#dot_inline_dotgraph_4.map"/>
+<map name="dot_inline_dotgraph_4.map" id="dot_inline_dotgraph_4.map"></map>
 </div>
 <h1><a class="anchor" id="sched_impl"></a>
 Implementation details</h1>
@@ -215,7 +234,37 @@ Error handling</h2>
 <p>An error with command processing can happen in underlying runtime, in this case <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> is notified asynchronously (using callback mechanism) what triggers rescheduling. </p>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00352">352</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aad4ad62a6e1d3c4eb1a29c1d464357c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad4ad62a6e1d3c4eb1a29c1d464357c8">&#9670;&nbsp;</a></span>Scheduler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::detail::Scheduler::Scheduler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00216">216</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="queue__impl_8hpp_source.html#l00043">cl::sycl::detail::Ordered</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac0e8ff38f6f6274626f65b2b52227f47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac0e8ff38f6f6274626f65b2b52227f47">&#9670;&nbsp;</a></span>addCG()</h2>
 
@@ -223,7 +272,7 @@ Error handling</h2>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">EventImplPtr cl::sycl::detail::Scheduler::addCG </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> cl::sycl::detail::Scheduler::addCG </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1CG.html">detail::CG</a> &gt;&#160;</td>
           <td class="paramname"><em>CommandGroup</em>, </td>
@@ -231,7 +280,7 @@ Error handling</h2>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QueueImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
           <td class="paramname"><em>Queue</em>&#160;</td>
         </tr>
         <tr>
@@ -254,7 +303,7 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00064">64</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00115">cl::sycl::detail::Command::getType()</a>, and <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00115">cl::sycl::detail::Command::getType()</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
 </div>
 </div>
@@ -265,9 +314,9 @@ Error handling</h2>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">EventImplPtr cl::sycl::detail::Scheduler::addCopyBack </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> cl::sycl::detail::Scheduler::addCopyBack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td>
           <td class="paramname"><em>Req</em></td><td>)</td>
           <td></td>
         </tr>
@@ -285,7 +334,9 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00101">101</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00131">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="sycl__mem__obj__t_8cpp_source.html#l00053">cl::sycl::detail::SYCLMemObjT::updateHostMemory()</a>.</p>
 
 </div>
 </div>
@@ -296,9 +347,9 @@ Error handling</h2>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">EventImplPtr cl::sycl::detail::Scheduler::addHostAccessor </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> cl::sycl::detail::Scheduler::addHostAccessor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td>
           <td class="paramname"><em>Req</em>, </td>
         </tr>
         <tr>
@@ -327,7 +378,7 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00173">173</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
 </div>
 </div>
@@ -340,7 +391,7 @@ Error handling</h2>
         <tr>
           <td class="memname">void cl::sycl::detail::Scheduler::cleanupFinishedCommands </td>
           <td>(</td>
-          <td class="paramtype">EventImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td>
           <td class="paramname"><em>FinishedEvent</em></td><td>)</td>
           <td></td>
         </tr>
@@ -359,6 +410,65 @@ Error handling</h2>
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00144">144</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00187">cl::sycl::detail::event_impl::wait()</a>.</p>
+
+</div>
+</div>
+<a id="aade0e32407fe42d186a99526f6a00b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aade0e32407fe42d186a99526f6a00b55">&#9670;&nbsp;</a></span>enqueueLeavesOfReqUnlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Scheduler::enqueueLeavesOfReqUnlocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *const&#160;</td>
+          <td class="paramname"><em>Req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00202">202</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00100">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
+
+</div>
+</div>
+<a id="a51e54bc01214bd25329e556ba97b0258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e54bc01214bd25329e556ba97b0258">&#9670;&nbsp;</a></span>getDefaultHostQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> cl::sycl::detail::Scheduler::getDefaultHostQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00427">427</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
 </div>
 </div>
@@ -388,7 +498,7 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00132">132</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event_8cpp_source.html#l00054">cl::sycl::event::get_wait_list()</a>, <a class="el" href="event__impl_8cpp_source.html#l00187">cl::sycl::detail::event_impl::wait()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">cl::sycl::detail::event_impl::wait_and_throw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="event_8cpp_source.html#l00054">cl::sycl::event::get_wait_list()</a>, <a class="el" href="commands_8cpp_source.html#l00428">cl::sycl::detail::Command::processDepEvent()</a>, <a class="el" href="sycl__mem__obj__t_8cpp_source.html#l00053">cl::sycl::detail::SYCLMemObjT::updateHostMemory()</a>, <a class="el" href="event__impl_8cpp_source.html#l00187">cl::sycl::detail::event_impl::wait()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">cl::sycl::detail::event_impl::wait_and_throw()</a>.</p>
 
 </div>
 </div>
@@ -399,9 +509,9 @@ Error handling</h2>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; EventImplPtr &gt; cl::sycl::detail::Scheduler::getWaitList </td>
+          <td class="memname">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; cl::sycl::detail::Scheduler::getWaitList </td>
           <td>(</td>
-          <td class="paramtype">EventImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td>
           <td class="paramname"><em>Event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -458,7 +568,7 @@ Error handling</h2>
         <tr>
           <td class="memname">void cl::sycl::detail::Scheduler::releaseHostAccessor </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html">Requirement</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td>
           <td class="paramname"><em>Req</em></td><td>)</td>
           <td></td>
         </tr>
@@ -475,7 +585,7 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00189">189</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00229">cl::sycl::detail::Command::MEnqueueStatus</a>, and <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>.</p>
+<p class="reference">References <a class="el" href="accessor__impl_8hpp_source.html#l00109">cl::sycl::detail::AccessorImplHost::MBlockedCmd</a>, and <a class="el" href="commands_8hpp_source.html#l00229">cl::sycl::detail::Command::MEnqueueStatus</a>.</p>
 
 </div>
 </div>
@@ -507,6 +617,8 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00158">158</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="sycl__mem__obj__t_8cpp_source.html#l00071">cl::sycl::detail::SYCLMemObjT::updateHostMemory()</a>.</p>
+
 </div>
 </div>
 <a id="af01d870c24856e2c5d1bd4b74c4f7701"></a>
@@ -518,7 +630,7 @@ Error handling</h2>
         <tr>
           <td class="memname">void cl::sycl::detail::Scheduler::waitForEvent </td>
           <td>(</td>
-          <td class="paramtype">EventImplPtr&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td>
           <td class="paramname"><em>Event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -540,16 +652,200 @@ Error handling</h2>
 
 </div>
 </div>
+<a id="a4bfeba3b1690361a7b7987dbb941e592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfeba3b1690361a7b7987dbb941e592">&#9670;&nbsp;</a></span>waitForRecordToFinish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::Scheduler::waitForRecordToFinish </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *&#160;</td>
+          <td class="paramname"><em>Record</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00023">23</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00311">cl::sycl::detail::AllocaCommandBase::getReleaseCmd()</a>, <a class="el" href="scheduler_8hpp_source.html#l00194">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, and <a class="el" href="commands_8cpp_source.html#l00582">cl::sycl::detail::Command::resolveReleaseDependencies()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a62a7fc89f0ee4604e3ccab9b6b6a343f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a7fc89f0ee4604e3ccab9b6b6a343f">&#9670;&nbsp;</a></span>Command</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00703">703</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ac24921e3619f5c224cf67dc02a0d6b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24921e3619f5c224cf67dc02a0d6b76">&#9670;&nbsp;</a></span>DispatchHostTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html">DispatchHostTask</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00704">704</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5477da51f48aec98b98e990c887a1902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5477da51f48aec98b98e990c887a1902">&#9670;&nbsp;</a></span>DefaultHostQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> cl::sycl::detail::Scheduler::DefaultHostQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00701">701</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a1d8fdc1307c61e081a4e8fc6fe1c885f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8fdc1307c61e081a4e8fc6fe1c885f">&#9670;&nbsp;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">Scheduler</a> cl::sycl::detail::Scheduler::instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00431">431</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a609d270e5c2651fb22533dbd9fdf136e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609d270e5c2651fb22533dbd9fdf136e">&#9670;&nbsp;</a></span>MGraphBuilder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html">GraphBuilder</a> cl::sycl::detail::Scheduler::MGraphBuilder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00696">696</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00428">cl::sycl::detail::Command::processDepEvent()</a>.</p>
+
+</div>
+</div>
+<a id="aa1d2966e63f1bb0716ce1c0c6d270470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d2966e63f1bb0716ce1c0c6d270470">&#9670;&nbsp;</a></span>MGraphLock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_timed_mutex cl::sycl::detail::Scheduler::MGraphLock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00699">699</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00192">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>source/detail/scheduler/<a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a></li>
 <li>source/detail/scheduler/<a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">Scheduler</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

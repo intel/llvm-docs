@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::NDRDescT Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::NDRDescT Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1NDRDescT.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html">NDRDescT</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -71,6 +97,8 @@ $(function() {
 <div class="title">cl::sycl::detail::NDRDescT Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="cg_8hpp_source.html">CL/sycl/detail/cg.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for cl::sycl::detail::NDRDescT:</div>
 <div class="dyncontent">
@@ -80,52 +108,316 @@ Collaboration diagram for cl::sycl::detail::NDRDescT:</div>
 <area shape="rect" id="node3" href="classcl_1_1sycl_1_1detail_1_1array.html" title="cl::sycl::detail::array\l\&lt; dimensions \&gt;" alt="" coords="51,95,191,136"/>
 <area shape="rect" id="node5" href="classcl_1_1sycl_1_1id.html" title="cl::sycl::id\&lt; 3 \&gt;" alt="" coords="209,199,323,225"/>
 </map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2d82f780eaa541900995e163165be07a"><td class="memTemplParams" colspan="2"><a id="a2d82f780eaa541900995e163165be07a"></a>
-template&lt;int Dims_&gt; </td></tr>
-<tr class="memitem:a2d82f780eaa541900995e163165be07a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set</b> (<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt; NumWorkItems)</td></tr>
+<tr class="memitem:a4036ce34c9e91448cbed9e1ff2743458"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a4036ce34c9e91448cbed9e1ff2743458">NDRDescT</a> ()</td></tr>
+<tr class="separator:a4036ce34c9e91448cbed9e1ff2743458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d82f780eaa541900995e163165be07a"><td class="memTemplParams" colspan="2">template&lt;int Dims_&gt; </td></tr>
+<tr class="memitem:a2d82f780eaa541900995e163165be07a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a2d82f780eaa541900995e163165be07a">set</a> (<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt; NumWorkItems)</td></tr>
 <tr class="separator:a2d82f780eaa541900995e163165be07a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e850dc5fce7b6e679fe815ff144a044"><td class="memTemplParams" colspan="2"><a id="a4e850dc5fce7b6e679fe815ff144a044"></a>
-template&lt;int Dims_&gt; </td></tr>
-<tr class="memitem:a4e850dc5fce7b6e679fe815ff144a044"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set</b> (<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt; NumWorkItems, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; Dims_ &gt; Offset)</td></tr>
+<tr class="memitem:a4e850dc5fce7b6e679fe815ff144a044"><td class="memTemplParams" colspan="2">template&lt;int Dims_&gt; </td></tr>
+<tr class="memitem:a4e850dc5fce7b6e679fe815ff144a044"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a4e850dc5fce7b6e679fe815ff144a044">set</a> (<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt; NumWorkItems, <a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; Dims_ &gt; Offset)</td></tr>
 <tr class="separator:a4e850dc5fce7b6e679fe815ff144a044"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f85f546ccb9d2900c492c53143c7cf1"><td class="memTemplParams" colspan="2"><a id="a3f85f546ccb9d2900c492c53143c7cf1"></a>
-template&lt;int Dims_&gt; </td></tr>
-<tr class="memitem:a3f85f546ccb9d2900c492c53143c7cf1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>set</b> (<a class="el" href="classcl_1_1sycl_1_1nd__range.html">sycl::nd_range</a>&lt; Dims_ &gt; ExecutionRange)</td></tr>
+<tr class="memitem:a3f85f546ccb9d2900c492c53143c7cf1"><td class="memTemplParams" colspan="2">template&lt;int Dims_&gt; </td></tr>
+<tr class="memitem:a3f85f546ccb9d2900c492c53143c7cf1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a3f85f546ccb9d2900c492c53143c7cf1">set</a> (<a class="el" href="classcl_1_1sycl_1_1nd__range.html">sycl::nd_range</a>&lt; Dims_ &gt; ExecutionRange)</td></tr>
 <tr class="separator:a3f85f546ccb9d2900c492c53143c7cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e1199fbd2344ea6359007847a4398a1"><td class="memItemLeft" align="right" valign="top"><a id="a3e1199fbd2344ea6359007847a4398a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int Dims_, <a class="el" href="classcl_1_1sycl_1_1nd__range.html">sycl::nd_range</a>&lt; 3 &gt; ExecutionRange)</td></tr>
+<tr class="memitem:a3e1199fbd2344ea6359007847a4398a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a3e1199fbd2344ea6359007847a4398a1">set</a> (int Dims_, <a class="el" href="classcl_1_1sycl_1_1nd__range.html">sycl::nd_range</a>&lt; 3 &gt; ExecutionRange)</td></tr>
 <tr class="separator:a3e1199fbd2344ea6359007847a4398a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3467001047f91415d332aeb1f3059701"><td class="memTemplParams" colspan="2"><a id="a3467001047f91415d332aeb1f3059701"></a>
-template&lt;int Dims_&gt; </td></tr>
-<tr class="memitem:a3467001047f91415d332aeb1f3059701"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setNumWorkGroups</b> (<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt; N)</td></tr>
+<tr class="memitem:a3467001047f91415d332aeb1f3059701"><td class="memTemplParams" colspan="2">template&lt;int Dims_&gt; </td></tr>
+<tr class="memitem:a3467001047f91415d332aeb1f3059701"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a3467001047f91415d332aeb1f3059701">setNumWorkGroups</a> (<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt; N)</td></tr>
 <tr class="separator:a3467001047f91415d332aeb1f3059701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:af835ff9556deb75a20d147747e642f79"><td class="memItemLeft" align="right" valign="top"><a id="af835ff9556deb75a20d147747e642f79"></a>
-<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalSize</b></td></tr>
+<tr class="memitem:af835ff9556deb75a20d147747e642f79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#af835ff9556deb75a20d147747e642f79">GlobalSize</a></td></tr>
 <tr class="separator:af835ff9556deb75a20d147747e642f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0caff7db1b43d03cde7cb3c13d7c5c9e"><td class="memItemLeft" align="right" valign="top"><a id="a0caff7db1b43d03cde7cb3c13d7c5c9e"></a>
-<a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>LocalSize</b></td></tr>
+<tr class="memitem:a0caff7db1b43d03cde7cb3c13d7c5c9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a0caff7db1b43d03cde7cb3c13d7c5c9e">LocalSize</a></td></tr>
 <tr class="separator:a0caff7db1b43d03cde7cb3c13d7c5c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad531c2ee2d7db2f42a8fe142953d05e1"><td class="memItemLeft" align="right" valign="top"><a id="ad531c2ee2d7db2f42a8fe142953d05e1"></a>
-<a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GlobalOffset</b></td></tr>
+<tr class="memitem:ad531c2ee2d7db2f42a8fe142953d05e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#ad531c2ee2d7db2f42a8fe142953d05e1">GlobalOffset</a></td></tr>
 <tr class="separator:ad531c2ee2d7db2f42a8fe142953d05e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35a6dbf8c6b0d99e92e2329c703a9ecd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a35a6dbf8c6b0d99e92e2329c703a9ecd">NumWorkGroups</a></td></tr>
 <tr class="memdesc:a35a6dbf8c6b0d99e92e2329c703a9ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of workgroups, used to record the number of workgroups from the simplest form of parallel_for_work_group.  <a href="#a35a6dbf8c6b0d99e92e2329c703a9ecd">More...</a><br /></td></tr>
 <tr class="separator:a35a6dbf8c6b0d99e92e2329c703a9ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a7484635bff0a8f568a0146699d97a2"><td class="memItemLeft" align="right" valign="top"><a id="a9a7484635bff0a8f568a0146699d97a2"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Dims</b></td></tr>
+<tr class="memitem:a9a7484635bff0a8f568a0146699d97a2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a9a7484635bff0a8f568a0146699d97a2">Dims</a></td></tr>
 <tr class="separator:a9a7484635bff0a8f568a0146699d97a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00113">113</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
-</div><h2 class="groupheader">Member Data Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4036ce34c9e91448cbed9e1ff2743458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4036ce34c9e91448cbed9e1ff2743458">&#9670;&nbsp;</a></span>NDRDescT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::detail::NDRDescT::NDRDescT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00126">126</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2d82f780eaa541900995e163165be07a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d82f780eaa541900995e163165be07a">&#9670;&nbsp;</a></span>set() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dims_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::NDRDescT::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt;&#160;</td>
+          <td class="paramname"><em>NumWorkItems</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00129">129</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::adjustNDRangePerKernel()</a>, and <a class="el" href="cg_8hpp_source.html#l00236">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::call()</a>.</p>
+
+</div>
+</div>
+<a id="a4e850dc5fce7b6e679fe815ff144a044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e850dc5fce7b6e679fe815ff144a044">&#9670;&nbsp;</a></span>set() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dims_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::NDRDescT::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt;&#160;</td>
+          <td class="paramname"><em>NumWorkItems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt; Dims_ &gt;&#160;</td>
+          <td class="paramname"><em>Offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00143">143</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3f85f546ccb9d2900c492c53143c7cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f85f546ccb9d2900c492c53143c7cf1">&#9670;&nbsp;</a></span>set() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dims_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::NDRDescT::set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1nd__range.html">sycl::nd_range</a>&lt; Dims_ &gt;&#160;</td>
+          <td class="paramname"><em>ExecutionRange</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00154">154</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3e1199fbd2344ea6359007847a4398a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1199fbd2344ea6359007847a4398a1">&#9670;&nbsp;</a></span>set() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::NDRDescT::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Dims_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1nd__range.html">sycl::nd_range</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>ExecutionRange</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00165">165</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3467001047f91415d332aeb1f3059701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3467001047f91415d332aeb1f3059701">&#9670;&nbsp;</a></span>setNumWorkGroups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int Dims_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::NDRDescT::setNumWorkGroups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt; Dims_ &gt;&#160;</td>
+          <td class="paramname"><em>N</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00176">176</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9a7484635bff0a8f568a0146699d97a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7484635bff0a8f568a0146699d97a2">&#9670;&nbsp;</a></span>Dims</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cl::sycl::detail::NDRDescT::Dims</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00195">195</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::adjustNDRangePerKernel()</a>, <a class="el" href="cg_8hpp_source.html#l00236">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::call()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00214">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkItemSize()</a>, and <a class="el" href="commands_8cpp_source.html#l01579">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
+
+</div>
+</div>
+<a id="ad531c2ee2d7db2f42a8fe142953d05e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad531c2ee2d7db2f42a8fe142953d05e1">&#9670;&nbsp;</a></span>GlobalOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1id.html">sycl::id</a>&lt;3&gt; cl::sycl::detail::NDRDescT::GlobalOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00190">190</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01579">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>, and <a class="el" href="cg_8hpp_source.html#l00301">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::runOnHost()</a>.</p>
+
+</div>
+</div>
+<a id="af835ff9556deb75a20d147747e642f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af835ff9556deb75a20d147747e642f79">&#9670;&nbsp;</a></span>GlobalSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt;3&gt; cl::sycl::detail::NDRDescT::GlobalSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00188">188</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::adjustNDRangePerKernel()</a>, <a class="el" href="cg_8hpp_source.html#l00236">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::call()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00024">cl::sycl::detail::enqueue_kernel_launch::oclHandleInvalidWorkGroupSize()</a>, <a class="el" href="commands_8cpp_source.html#l01579">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>, and <a class="el" href="cg_8hpp_source.html#l00273">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::runOnHost()</a>.</p>
+
+</div>
+</div>
+<a id="a0caff7db1b43d03cde7cb3c13d7c5c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0caff7db1b43d03cde7cb3c13d7c5c9e">&#9670;&nbsp;</a></span>LocalSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1range.html">sycl::range</a>&lt;3&gt; cl::sycl::detail::NDRDescT::LocalSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00189">189</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::adjustNDRangePerKernel()</a>, <a class="el" href="cg_8hpp_source.html#l00236">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::call()</a>, <a class="el" href="commands_8cpp_source.html#l01590">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00174">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkGroupSize()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00214">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkItemSize()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00024">cl::sycl::detail::enqueue_kernel_launch::oclHandleInvalidWorkGroupSize()</a>, <a class="el" href="commands_8cpp_source.html#l01579">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>, and <a class="el" href="cg_8hpp_source.html#l00319">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::runOnHost()</a>.</p>
+
+</div>
+</div>
 <a id="a35a6dbf8c6b0d99e92e2329c703a9ecd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35a6dbf8c6b0d99e92e2329c703a9ecd">&#9670;&nbsp;</a></span>NumWorkGroups</h2>
 
@@ -143,7 +435,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Dims</b></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="cg_8hpp_source.html#l00194">194</a> of file <a class="el" href="cg_8hpp_source.html">cg.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01405">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::adjustNDRangePerKernel()</a>, and <a class="el" href="cg_8hpp_source.html#l00236">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;::call()</a>.</p>
 
 </div>
 </div>
@@ -151,11 +443,15 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>Dims</b></td></tr>
 <li>include/CL/sycl/detail/<a class="el" href="cg_8hpp_source.html">cg.hpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1NDRDescT.html">NDRDescT</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

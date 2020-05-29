@@ -1,0 +1,16 @@
+var struct__pi__kernel_1_1arguments =
+[
+    [ "args_index_t", "struct__pi__kernel_1_1arguments.html#a1985c5423dd1546a76a8feffc0bef40b", null ],
+    [ "args_size_t", "struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d", null ],
+    [ "args_t", "struct__pi__kernel_1_1arguments.html#a61e2f738a9f355cba598336de7f37b3d", null ],
+    [ "add_arg", "struct__pi__kernel_1_1arguments.html#a06c967e47bd96dc18048b8d96f5014ca", null ],
+    [ "add_local_arg", "struct__pi__kernel_1_1arguments.html#ab45f107f6ff96c5b075604f4dd2586e6", null ],
+    [ "clear_local_size", "struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8", null ],
+    [ "get_indices", "struct__pi__kernel_1_1arguments.html#aa1b075a29d40995b403582d209ca7f14", null ],
+    [ "get_local_size", "struct__pi__kernel_1_1arguments.html#a470d38fd59abaa10e15fdbdbcbc0ccaf", null ],
+    [ "indices_", "struct__pi__kernel_1_1arguments.html#ac153603b456fc27c19916362eec6fa9f", null ],
+    [ "MAX_PARAM_BYTES", "struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c", null ],
+    [ "offsetPerIndex_", "struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9", null ],
+    [ "paramSizes_", "struct__pi__kernel_1_1arguments.html#a230fcd08f58246d38d56a1328a435114", null ],
+    [ "storage_", "struct__pi__kernel_1_1arguments.html#aa5e150dedfd765cdc606578f12d249d3", null ]
+];

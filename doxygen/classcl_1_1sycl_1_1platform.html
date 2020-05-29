@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::platform Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::platform Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1platform.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -69,15 +95,19 @@ $(function() {
 <a href="#friends">Friends</a> &#124;
 <a href="classcl_1_1sycl_1_1platform-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::platform Class Reference</div>  </div>
+<div class="title">cl::sycl::platform Class Reference<div class="ingroups"><a class="el" href="group__sycl__api.html">DPC++ User API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Encapsulates a SYCL platform on which kernels may be executed.  
+ <a href="classcl_1_1sycl_1_1platform.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="platform_8hpp_source.html">CL/sycl/platform.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac766c25f9104682dd44f2bfce9ee1e1b"><td class="memItemLeft" align="right" valign="top"><a id="ac766c25f9104682dd44f2bfce9ee1e1b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#ac766c25f9104682dd44f2bfce9ee1e1b">platform</a> ()</td></tr>
-<tr class="memdesc:ac766c25f9104682dd44f2bfce9ee1e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL platform as a host platform. <br /></td></tr>
+<tr class="memitem:ac766c25f9104682dd44f2bfce9ee1e1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#ac766c25f9104682dd44f2bfce9ee1e1b">platform</a> ()</td></tr>
+<tr class="memdesc:ac766c25f9104682dd44f2bfce9ee1e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL platform as a host platform.  <a href="#ac766c25f9104682dd44f2bfce9ee1e1b">More...</a><br /></td></tr>
 <tr class="separator:ac766c25f9104682dd44f2bfce9ee1e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e69444af928ab3208a95c03d2a9f528"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a9e69444af928ab3208a95c03d2a9f528">platform</a> (cl_platform_id PlatformId)</td></tr>
 <tr class="memdesc:a9e69444af928ab3208a95c03d2a9f528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL platform instance from an OpenCL cl_platform_id.  <a href="#a9e69444af928ab3208a95c03d2a9f528">More...</a><br /></td></tr>
@@ -85,60 +115,75 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a114123976c1fa05de7c64969d164cc52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a114123976c1fa05de7c64969d164cc52">platform</a> (const <a class="el" href="classcl_1_1sycl_1_1device__selector.html">device_selector</a> &amp;DeviceSelector)</td></tr>
 <tr class="memdesc:a114123976c1fa05de7c64969d164cc52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL platform instance using device selector.  <a href="#a114123976c1fa05de7c64969d164cc52">More...</a><br /></td></tr>
 <tr class="separator:a114123976c1fa05de7c64969d164cc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a1392ea5387a2f9933587f04e2ce235"><td class="memItemLeft" align="right" valign="top"><a id="a9a1392ea5387a2f9933587f04e2ce235"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>platform</b> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs)=default</td></tr>
+<tr class="memitem:a9a1392ea5387a2f9933587f04e2ce235"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a9a1392ea5387a2f9933587f04e2ce235">platform</a> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs)=default</td></tr>
 <tr class="separator:a9a1392ea5387a2f9933587f04e2ce235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcb89e405da8af04795be141552c561d"><td class="memItemLeft" align="right" valign="top"><a id="abcb89e405da8af04795be141552c561d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>platform</b> (<a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&amp;rhs)=default</td></tr>
+<tr class="memitem:abcb89e405da8af04795be141552c561d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#abcb89e405da8af04795be141552c561d">platform</a> (<a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&amp;rhs)=default</td></tr>
 <tr class="separator:abcb89e405da8af04795be141552c561d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2c05a7278e498ddc99395c432fc8e88"><td class="memItemLeft" align="right" valign="top"><a id="ae2c05a7278e498ddc99395c432fc8e88"></a>
-<a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs)=default</td></tr>
+<tr class="memitem:ae2c05a7278e498ddc99395c432fc8e88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#ae2c05a7278e498ddc99395c432fc8e88">operator=</a> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs)=default</td></tr>
 <tr class="separator:ae2c05a7278e498ddc99395c432fc8e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7d18fbbfe25b63147b1d34ca8ac8bce"><td class="memItemLeft" align="right" valign="top"><a id="ad7d18fbbfe25b63147b1d34ca8ac8bce"></a>
-<a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&amp;rhs)=default</td></tr>
+<tr class="memitem:ad7d18fbbfe25b63147b1d34ca8ac8bce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#ad7d18fbbfe25b63147b1d34ca8ac8bce">operator=</a> (<a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&amp;rhs)=default</td></tr>
 <tr class="separator:ad7d18fbbfe25b63147b1d34ca8ac8bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8c8228ee6fb036fa37b6bbe9386a87"><td class="memItemLeft" align="right" valign="top"><a id="a4c8c8228ee6fb036fa37b6bbe9386a87"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a4c8c8228ee6fb036fa37b6bbe9386a87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a4c8c8228ee6fb036fa37b6bbe9386a87">operator==</a> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs) const</td></tr>
 <tr class="separator:a4c8c8228ee6fb036fa37b6bbe9386a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c85c033a202cd1a86c8dbfe61b52e7"><td class="memItemLeft" align="right" valign="top"><a id="a64c85c033a202cd1a86c8dbfe61b52e7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a64c85c033a202cd1a86c8dbfe61b52e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a64c85c033a202cd1a86c8dbfe61b52e7">operator!=</a> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;rhs) const</td></tr>
 <tr class="separator:a64c85c033a202cd1a86c8dbfe61b52e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c40e8cfc090f6421900a07f90a2b3c4"><td class="memItemLeft" align="right" valign="top">cl_platform_id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a8c40e8cfc090f6421900a07f90a2b3c4">get</a> () const</td></tr>
 <tr class="memdesc:a8c40e8cfc090f6421900a07f90a2b3c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an OpenCL interoperability platform.  <a href="#a8c40e8cfc090f6421900a07f90a2b3c4">More...</a><br /></td></tr>
 <tr class="separator:a8c40e8cfc090f6421900a07f90a2b3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a763d9e2d88403f311b1cdc514dd72656"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a763d9e2d88403f311b1cdc514dd72656">has_extension</a> (const string_class &amp;ExtensionName) const</td></tr>
+<tr class="memitem:a763d9e2d88403f311b1cdc514dd72656"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a763d9e2d88403f311b1cdc514dd72656">has_extension</a> (const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;ExtensionName) const</td></tr>
 <tr class="memdesc:a763d9e2d88403f311b1cdc514dd72656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if platform supports specified extension.  <a href="#a763d9e2d88403f311b1cdc514dd72656">More...</a><br /></td></tr>
 <tr class="separator:a763d9e2d88403f311b1cdc514dd72656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a945019993c817216ac19617d5a9cb62e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a945019993c817216ac19617d5a9cb62e">is_host</a> () const</td></tr>
 <tr class="memdesc:a945019993c817216ac19617d5a9cb62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this SYCL platform is a host platform.  <a href="#a945019993c817216ac19617d5a9cb62e">More...</a><br /></td></tr>
 <tr class="separator:a945019993c817216ac19617d5a9cb62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5f0f8e55fb4fc5d465f411d14e0dfb1"><td class="memItemLeft" align="right" valign="top">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#af5f0f8e55fb4fc5d465f411d14e0dfb1">get_devices</a> (info::device_type DeviceType=info::device_type::all) const</td></tr>
+<tr class="memitem:af5f0f8e55fb4fc5d465f411d14e0dfb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#af5f0f8e55fb4fc5d465f411d14e0dfb1">get_devices</a> (<a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165">info::device_type</a> DeviceType=<a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165aa181a603769c1f98ad927e7367c7aa51">info::device_type::all</a>) const</td></tr>
 <tr class="memdesc:af5f0f8e55fb4fc5d465f411d14e0dfb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all SYCL devices associated with this platform.  <a href="#af5f0f8e55fb4fc5d465f411d14e0dfb1">More...</a><br /></td></tr>
 <tr class="separator:af5f0f8e55fb4fc5d465f411d14e0dfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="memTemplParams" colspan="2">template&lt;info::platform param&gt; </td></tr>
-<tr class="memitem:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::platform, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a2e3b2a40bd6743c4c737dd55077e81f1">get_info</a> () const</td></tr>
+<tr class="memitem:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2a">info::platform</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a2e3b2a40bd6743c4c737dd55077e81f1">get_info</a> () const</td></tr>
 <tr class="memdesc:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries this SYCL platform for info.  <a href="#a2e3b2a40bd6743c4c737dd55077e81f1">More...</a><br /></td></tr>
 <tr class="separator:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a929fcd63e258f5323562746285e09d20"><td class="memItemLeft" align="right" valign="top">static vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a929fcd63e258f5323562746285e09d20">get_platforms</a> ()</td></tr>
+<tr class="memitem:a929fcd63e258f5323562746285e09d20"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a929fcd63e258f5323562746285e09d20">get_platforms</a> ()</td></tr>
 <tr class="memdesc:a929fcd63e258f5323562746285e09d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all available SYCL platforms in the system.  <a href="#a929fcd63e258f5323562746285e09d20">More...</a><br /></td></tr>
 <tr class="separator:a929fcd63e258f5323562746285e09d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplParams" colspan="2"><a id="a71492293d0386f542d120a1fc3dfbb55"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>detail::createSyclObjFromImpl</b> (decltype(T::impl) ImplObj)</td></tr>
+<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a71492293d0386f542d120a1fc3dfbb55">detail::createSyclObjFromImpl</a> (decltype(T::impl) ImplObj)</td></tr>
 <tr class="separator:a71492293d0386f542d120a1fc3dfbb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="platform_8hpp_source.html#l00027">27</a> of file <a class="el" href="platform_8hpp_source.html">platform.hpp</a>.</p>
+<div class="textblock"><p>Encapsulates a SYCL platform on which kernels may be executed. </p>
+
+<p class="definition">Definition at line <a class="el" href="platform_8hpp_source.html#l00030">30</a> of file <a class="el" href="platform_8hpp_source.html">platform.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac766c25f9104682dd44f2bfce9ee1e1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac766c25f9104682dd44f2bfce9ee1e1b">&#9670;&nbsp;</a></span>platform() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::platform::platform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a SYCL platform as a host platform. </p>
+
+<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00019">19</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a9e69444af928ab3208a95c03d2a9f528"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e69444af928ab3208a95c03d2a9f528">&#9670;&nbsp;</a></span>platform() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e69444af928ab3208a95c03d2a9f528">&#9670;&nbsp;</a></span>platform() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +220,7 @@ template&lt;class T &gt; </td></tr>
 </div>
 </div>
 <a id="a114123976c1fa05de7c64969d164cc52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a114123976c1fa05de7c64969d164cc52">&#9670;&nbsp;</a></span>platform() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a114123976c1fa05de7c64969d164cc52">&#9670;&nbsp;</a></span>platform() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,14 +247,66 @@ template&lt;class T &gt; </td></tr>
 <p>One of the SYCL devices that is associated with the constructed SYCL platform instance must be the SYCL device that is produced from the provided device selector.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">DeviceSelector</td><td>is an instance of SYCL <a class="el" href="classcl_1_1sycl_1_1device__selector.html">device_selector</a>. </td></tr>
+    <tr><td class="paramname">DeviceSelector</td><td>is an instance of SYCL <a class="el" href="classcl_1_1sycl_1_1device__selector.html" title="The device_selector class provides ability to choose the best SYCL device based on heuristics specifi...">device_selector</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00026">26</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="device_8cpp_source.html#l00089">cl::sycl::device::get_platform()</a>.</p>
+<p class="reference">References <a class="el" href="device_8cpp_source.html#l00089">cl::sycl::device::get_platform()</a>, and <a class="el" href="device__selector_8cpp_source.html#l00031">cl::sycl::device_selector::select_device()</a>.</p>
+
+</div>
+</div>
+<a id="a9a1392ea5387a2f9933587f04e2ce235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a1392ea5387a2f9933587f04e2ce235">&#9670;&nbsp;</a></span>platform() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::platform::platform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcb89e405da8af04795be141552c561d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb89e405da8af04795be141552c561d">&#9670;&nbsp;</a></span>platform() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::platform::platform </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -245,10 +342,10 @@ template&lt;class T &gt; </td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::platform::get_devices </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; cl::sycl::platform::get_devices </td>
           <td>(</td>
-          <td class="paramtype">info::device_type&#160;</td>
-          <td class="paramname"><em>DeviceType</em> = <code>info::device_type::all</code></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165">info::device_type</a>&#160;</td>
+          <td class="paramname"><em>DeviceType</em> = <code><a class="el" href="namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165aa181a603769c1f98ad927e7367c7aa51">info::device_type::all</a></code></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -266,6 +363,8 @@ template&lt;class T &gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00038">38</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00050">cl::sycl::detail::platform_impl::get_platforms()</a>.</p>
+
 </div>
 </div>
 <a id="a2e3b2a40bd6743c4c737dd55077e81f1"></a>
@@ -277,7 +376,7 @@ template&lt;class T &gt; </td></tr>
 template&lt;info::platform param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::platform, param &gt;::return_type cl::sycl::platform::get_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2a">info::platform</a>, param &gt;::return_type cl::sycl::platform::get_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -289,6 +388,8 @@ template&lt;info::platform param&gt; </div>
 <p>The return type depends on information being queried. </p>
 
 <p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00048">48</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device__info_8hpp_source.html#l00366">cl::sycl::detail::get_device_info&lt; bool, info::device::kernel_kernel_pipe_support &gt;::get()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00174">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkGroupSize()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00023">cl::sycl::detail::IsBannedPlatform()</a>, <a class="el" href="program__manager_8cpp_source.html#l00241">cl::sycl::detail::isDeviceBinaryTypeSupported()</a>, and <a class="el" href="fpga__device__selector_8hpp_source.html#l00025">cl::sycl::intel::platform_selector::operator()()</a>.</p>
 
 </div>
 </div>
@@ -302,7 +403,7 @@ template&lt;info::platform param&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector_class&lt; <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt; cl::sycl::platform::get_platforms </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt; cl::sycl::platform::get_platforms </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -323,6 +424,8 @@ template&lt;info::platform param&gt; </div>
 
 <p class="reference">References <a class="el" href="platform__impl_8cpp_source.html#l00050">cl::sycl::detail::platform_impl::get_platforms()</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="device_8cpp_source.html#l00044">cl::sycl::device::get_devices()</a>.</p>
+
 </div>
 </div>
 <a id="a763d9e2d88403f311b1cdc514dd72656"></a>
@@ -334,7 +437,7 @@ template&lt;info::platform param&gt; </div>
         <tr>
           <td class="memname">bool cl::sycl::platform::has_extension </td>
           <td>(</td>
-          <td class="paramtype">const string_class &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;&#160;</td>
           <td class="paramname"><em>ExtensionName</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -374,6 +477,147 @@ template&lt;info::platform param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00036">36</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00023">cl::sycl::detail::IsBannedPlatform()</a>.</p>
+
+</div>
+</div>
+<a id="a64c85c033a202cd1a86c8dbfe61b52e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c85c033a202cd1a86c8dbfe61b52e7">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::platform::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="platform_8hpp_source.html#l00062">62</a> of file <a class="el" href="platform_8hpp_source.html">platform.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>, <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, and <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
+
+</div>
+</div>
+<a id="ae2c05a7278e498ddc99395c432fc8e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c05a7278e498ddc99395c432fc8e88">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a>&amp; cl::sycl::platform::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7d18fbbfe25b63147b1d34ca8ac8bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d18fbbfe25b63147b1d34ca8ac8bce">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a>&amp; cl::sycl::platform::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c8c8228ee6fb036fa37b6bbe9386a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c8c8228ee6fb036fa37b6bbe9386a87">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::platform::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="platform_8hpp_source.html#l00060">60</a> of file <a class="el" href="platform_8hpp_source.html">platform.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a71492293d0386f542d120a1fc3dfbb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71492293d0386f542d120a1fc3dfbb55">&#9670;&nbsp;</a></span>detail::createSyclObjFromImpl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="namespacecl_1_1sycl_1_1detail.html#abf270973bb66a47f8e8aebddd06ac8aa">detail::createSyclObjFromImpl</a> </td>
+          <td>(</td>
+          <td class="paramtype">decltype(T::impl)&#160;</td>
+          <td class="paramname"><em>ImplObj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -381,11 +625,15 @@ template&lt;info::platform param&gt; </div>
 <li>source/<a class="el" href="platform_8cpp_source.html">platform.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

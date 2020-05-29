@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01vector__class_3_01string__class_01_4_00_0139c6283becf050188b9336488ce1727c =
+[
+    [ "get", "structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01vector__class_3_01string__class_01_4_00_0139c6283becf050188b9336488ce1727c.html#a485d32f373cdced048d4ce6633c9eab8", null ]
+];

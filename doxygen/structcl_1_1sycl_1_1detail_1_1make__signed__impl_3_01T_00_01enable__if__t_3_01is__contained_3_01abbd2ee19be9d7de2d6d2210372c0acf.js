@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1make__signed__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01abbd2ee19be9d7de2d6d2210372c0acf =
+[
+    [ "type", "structcl_1_1sycl_1_1detail_1_1make__signed__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01abbd2ee19be9d7de2d6d2210372c0acf.html#a773538e02839771c0cbc68848179e718", null ]
+];

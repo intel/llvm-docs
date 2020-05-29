@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::detail::event_impl Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::detail::event_impl Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1event__impl.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,11 +88,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><b>detail</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -70,17 +96,18 @@ $(function() {
 <div class="title">cl::sycl::detail::event_impl Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="event__impl_8hpp_source.html">detail/event_impl.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5187067f9cfaf955d840bf12a8896db8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5187067f9cfaf955d840bf12a8896db8">event_impl</a> ()</td></tr>
 <tr class="memdesc:a5187067f9cfaf955d840bf12a8896db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ready SYCL event.  <a href="#a5187067f9cfaf955d840bf12a8896db8">More...</a><br /></td></tr>
 <tr class="separator:a5187067f9cfaf955d840bf12a8896db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2f3826fd4b4919b3f88c3e48db465ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#ab2f3826fd4b4919b3f88c3e48db465ec">event_impl</a> (<a class="el" href="class__pi__event.html">RT::PiEvent</a> Event, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;SyclContext)</td></tr>
+<tr class="memitem:ab2f3826fd4b4919b3f88c3e48db465ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#ab2f3826fd4b4919b3f88c3e48db465ec">event_impl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> Event, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;SyclContext)</td></tr>
 <tr class="memdesc:ab2f3826fd4b4919b3f88c3e48db465ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an event instance from a plug-in event handle.  <a href="#ab2f3826fd4b4919b3f88c3e48db465ec">More...</a><br /></td></tr>
 <tr class="separator:ab2f3826fd4b4919b3f88c3e48db465ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa064a42bbf3a18961b6957c145fb1753"><td class="memItemLeft" align="right" valign="top"><a id="aa064a42bbf3a18961b6957c145fb1753"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>event_impl</b> (QueueImplPtr Queue)</td></tr>
+<tr class="memitem:aa064a42bbf3a18961b6957c145fb1753"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#aa064a42bbf3a18961b6957c145fb1753">event_impl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue)</td></tr>
 <tr class="separator:aa064a42bbf3a18961b6957c145fb1753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acded2e50dbc2cdfc480f9dc2b1f04614"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#acded2e50dbc2cdfc480f9dc2b1f04614">is_host</a> () const</td></tr>
 <tr class="memdesc:acded2e50dbc2cdfc480f9dc2b1f04614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this event is a SYCL host event.  <a href="#acded2e50dbc2cdfc480f9dc2b1f04614">More...</a><br /></td></tr>
@@ -95,33 +122,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af54b1c22efd9f80f57cb0db82cf57365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the event.  <a href="#af54b1c22efd9f80f57cb0db82cf57365">More...</a><br /></td></tr>
 <tr class="separator:af54b1c22efd9f80f57cb0db82cf57365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77f0615418eaa4f780457b96c0f920ce"><td class="memTemplParams" colspan="2">template&lt;info::event_profiling param&gt; </td></tr>
-<tr class="memitem:a77f0615418eaa4f780457b96c0f920ce"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::event_profiling, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a77f0615418eaa4f780457b96c0f920ce">get_profiling_info</a> () const</td></tr>
+<tr class="memitem:a77f0615418eaa4f780457b96c0f920ce"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a888e999cd335944dfbae8bc949b8aa6f">info::event_profiling</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a77f0615418eaa4f780457b96c0f920ce">get_profiling_info</a> () const</td></tr>
 <tr class="memdesc:a77f0615418eaa4f780457b96c0f920ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries this event for profiling information.  <a href="#a77f0615418eaa4f780457b96c0f920ce">More...</a><br /></td></tr>
 <tr class="separator:a77f0615418eaa4f780457b96c0f920ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a4f68b0ddbf4b6f726960d478d13003"><td class="memTemplParams" colspan="2">template&lt;info::event param&gt; </td></tr>
-<tr class="memitem:a4a4f68b0ddbf4b6f726960d478d13003"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::event, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a4f68b0ddbf4b6f726960d478d13003">get_info</a> () const</td></tr>
+<tr class="memitem:a4a4f68b0ddbf4b6f726960d478d13003"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#ae1b3f988fa2d47a56222234081db4e69">info::event</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a4f68b0ddbf4b6f726960d478d13003">get_info</a> () const</td></tr>
 <tr class="memdesc:a4a4f68b0ddbf4b6f726960d478d13003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries this SYCL event for information.  <a href="#a4a4f68b0ddbf4b6f726960d478d13003">More...</a><br /></td></tr>
 <tr class="separator:a4a4f68b0ddbf4b6f726960d478d13003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"><td class="memItemLeft" align="right" valign="top"><a id="a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c">waitInternal</a> () const</td></tr>
-<tr class="memdesc:a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the event with respect to device type. <br /></td></tr>
+<tr class="memitem:a8325d8b974d6b646148433414377190d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a8325d8b974d6b646148433414377190d">~event_impl</a> ()</td></tr>
+<tr class="separator:a8325d8b974d6b646148433414377190d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c">waitInternal</a> () const</td></tr>
+<tr class="memdesc:a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the event with respect to device type.  <a href="#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c">More...</a><br /></td></tr>
 <tr class="separator:a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0547e6f2220909bb9b5bba32bfc1b09f"><td class="memItemLeft" align="right" valign="top"><a id="a0547e6f2220909bb9b5bba32bfc1b09f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a0547e6f2220909bb9b5bba32bfc1b09f">setComplete</a> ()</td></tr>
-<tr class="memdesc:a0547e6f2220909bb9b5bba32bfc1b09f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks this event as completed. <br /></td></tr>
+<tr class="memitem:a0547e6f2220909bb9b5bba32bfc1b09f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a0547e6f2220909bb9b5bba32bfc1b09f">setComplete</a> ()</td></tr>
+<tr class="memdesc:a0547e6f2220909bb9b5bba32bfc1b09f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks this event as completed.  <a href="#a0547e6f2220909bb9b5bba32bfc1b09f">More...</a><br /></td></tr>
 <tr class="separator:a0547e6f2220909bb9b5bba32bfc1b09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6d659834d145816fcefb48508fc878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4f6d659834d145816fcefb48508fc878">getHandleRef</a> ()</td></tr>
+<tr class="memitem:a4f6d659834d145816fcefb48508fc878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4f6d659834d145816fcefb48508fc878">getHandleRef</a> ()</td></tr>
 <tr class="memdesc:a4f6d659834d145816fcefb48508fc878"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns raw interoperability event handle.  <a href="#a4f6d659834d145816fcefb48508fc878">More...</a><br /></td></tr>
 <tr class="separator:a4f6d659834d145816fcefb48508fc878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8813ecb8382394b4cfb2148c380f7637"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a8813ecb8382394b4cfb2148c380f7637">getHandleRef</a> () const</td></tr>
+<tr class="memitem:a8813ecb8382394b4cfb2148c380f7637"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a8813ecb8382394b4cfb2148c380f7637">getHandleRef</a> () const</td></tr>
 <tr class="memdesc:a8813ecb8382394b4cfb2148c380f7637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns raw interoperability event handle.  <a href="#a8813ecb8382394b4cfb2148c380f7637">More...</a><br /></td></tr>
 <tr class="separator:a8813ecb8382394b4cfb2148c380f7637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39cb94fe708fcdaf47c7b20ef3184535"><td class="memItemLeft" align="right" valign="top">const ContextImplPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a39cb94fe708fcdaf47c7b20ef3184535">getContextImpl</a> ()</td></tr>
+<tr class="memitem:a39cb94fe708fcdaf47c7b20ef3184535"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a39cb94fe708fcdaf47c7b20ef3184535">getContextImpl</a> ()</td></tr>
 <tr class="memdesc:a39cb94fe708fcdaf47c7b20ef3184535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns context that is associated with this event.  <a href="#a39cb94fe708fcdaf47c7b20ef3184535">More...</a><br /></td></tr>
 <tr class="separator:a39cb94fe708fcdaf47c7b20ef3184535"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae28649efc6298a1a68a00924b51fd559"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#ae28649efc6298a1a68a00924b51fd559">getPlugin</a> () const</td></tr>
 <tr class="separator:ae28649efc6298a1a68a00924b51fd559"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b346f45adee9cff19fdbd92c29c31d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a3b346f45adee9cff19fdbd92c29c31d7">setContextImpl</a> (const ContextImplPtr &amp;Context)</td></tr>
+<tr class="memitem:a3b346f45adee9cff19fdbd92c29c31d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a3b346f45adee9cff19fdbd92c29c31d7">setContextImpl</a> (const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;Context)</td></tr>
 <tr class="memdesc:a3b346f45adee9cff19fdbd92c29c31d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Associate event with the context.  <a href="#a3b346f45adee9cff19fdbd92c29c31d7">More...</a><br /></td></tr>
 <tr class="separator:a3b346f45adee9cff19fdbd92c29c31d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ea457d14d9c534d2961edf993d50bc2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">getCommand</a> ()</td></tr>
@@ -133,7 +160,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a4a1ee081efbf4bbb365eda7c54c24e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html">HostProfilingInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">getHostProfilingInfo</a> ()</td></tr>
 <tr class="memdesc:a4a1ee081efbf4bbb365eda7c54c24e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns host profiling information.  <a href="#a4a1ee081efbf4bbb365eda7c54c24e3f">More...</a><br /></td></tr>
 <tr class="separator:a4a1ee081efbf4bbb365eda7c54c24e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d671ead5bd093dc0432c4df45ee0cc"><td class="memItemLeft" align="right" valign="top">pi_native_handle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a91d671ead5bd093dc0432c4df45ee0cc">getNative</a> () const</td></tr>
+<tr class="memitem:a91d671ead5bd093dc0432c4df45ee0cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a91d671ead5bd093dc0432c4df45ee0cc">getNative</a> () const</td></tr>
 <tr class="memdesc:a91d671ead5bd093dc0432c4df45ee0cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL event.  <a href="#a91d671ead5bd093dc0432c4df45ee0cc">More...</a><br /></td></tr>
 <tr class="separator:a91d671ead5bd093dc0432c4df45ee0cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -142,7 +169,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p class="definition">Definition at line <a class="el" href="event__impl_8hpp_source.html#l00031">31</a> of file <a class="el" href="event__impl_8hpp_source.html">event_impl.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5187067f9cfaf955d840bf12a8896db8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5187067f9cfaf955d840bf12a8896db8">&#9670;&nbsp;</a></span>event_impl() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5187067f9cfaf955d840bf12a8896db8">&#9670;&nbsp;</a></span>event_impl() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +191,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <a id="ab2f3826fd4b4919b3f88c3e48db465ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2f3826fd4b4919b3f88c3e48db465ec">&#9670;&nbsp;</a></span>event_impl() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f3826fd4b4919b3f88c3e48db465ec">&#9670;&nbsp;</a></span>event_impl() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +199,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">cl::sycl::detail::event_impl::event_impl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class__pi__event.html">RT::PiEvent</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a>&#160;</td>
           <td class="paramname"><em>Event</em>, </td>
         </tr>
         <tr>
@@ -201,7 +228,50 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00097">97</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00085">getPlugin()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="event__impl_8cpp_source.html#l00085">getPlugin()</a>, <a class="el" href="pi_8h_source.html#l00344">PI_EVENT_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_CONTEXT</a>, <a class="el" href="pi_8h.html#a6750b7af591f76d276ed772ad3266a97">piEventGetInfo()</a>, and <a class="el" href="pi_8h.html#aff53ef120fbe3428c54f53756e6a2e02">piEventRetain()</a>.</p>
+
+</div>
+</div>
+<a id="aa064a42bbf3a18961b6957c145fb1753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa064a42bbf3a18961b6957c145fb1753">&#9670;&nbsp;</a></span>event_impl() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::detail::event_impl::event_impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00122">122</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00237">cl::sycl::detail::Command::MTraceEvent</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_OUT_OF_HOST_MEMORY</a>.</p>
+
+</div>
+</div>
+<a id="a8325d8b974d6b646148433414377190d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8325d8b974d6b646148433414377190d">&#9670;&nbsp;</a></span>~event_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::detail::event_impl::~event_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00047">47</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h.html#ad1fae6b91625481663fc2cd1aed01206">piEventRelease()</a>.</p>
 
 </div>
 </div>
@@ -226,6 +296,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00037">37</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00088">PI_INVALID_EVENT</a>, and <a class="el" href="pi_8h.html#aff53ef120fbe3428c54f53756e6a2e02">piEventRetain()</a>.</p>
+
 </div>
 </div>
 <a id="a4a4f68b0ddbf4b6f726960d478d13003"></a>
@@ -237,7 +309,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 template&lt;info::event param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;info::event, param&gt;::return_type cl::sycl::detail::event_impl::get_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1info.html#ae1b3f988fa2d47a56222234081db4e69">info::event</a>, param&gt;::return_type cl::sycl::detail::event_impl::get_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -259,7 +331,7 @@ template&lt;info::event param&gt; </div>
 template&lt;info::event_profiling param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;info::event_profiling, param&gt;::return_type cl::sycl::detail::event_impl::get_profiling_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1info.html#a888e999cd335944dfbae8bc949b8aa6f">info::event_profiling</a>, param&gt;::return_type cl::sycl::detail::event_impl::get_profiling_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -310,7 +382,7 @@ template&lt;info::event_profiling param&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const ContextImplPtr &amp; cl::sycl::detail::event_impl::getContextImpl </td>
+          <td class="memname">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp; cl::sycl::detail::event_impl::getContextImpl </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -332,7 +404,7 @@ template&lt;info::event_profiling param&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp; cl::sycl::detail::event_impl::getHandleRef </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp; cl::sycl::detail::event_impl::getHandleRef </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -346,7 +418,7 @@ template&lt;info::event_profiling param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00081">81</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00292">getNative()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">wait_and_throw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00274">cl::sycl::detail::event_impl::get_info&lt; info::event::command_execution_status &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00264">cl::sycl::detail::event_impl::get_info&lt; info::event::reference_count &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00253">cl::sycl::detail::event_impl::get_profiling_info&lt; info::event_profiling::command_end &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00240">cl::sycl::detail::event_impl::get_profiling_info&lt; info::event_profiling::command_start &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00227">cl::sycl::detail::event_impl::get_profiling_info&lt; info::event_profiling::command_submit &gt;()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00292">getNative()</a>.</p>
 
 </div>
 </div>
@@ -357,7 +429,7 @@ template&lt;info::event_profiling param&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="class__pi__event.html">RT::PiEvent</a> &amp; cl::sycl::detail::event_impl::getHandleRef </td>
+          <td class="memname">const <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp; cl::sycl::detail::event_impl::getHandleRef </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -410,7 +482,7 @@ template&lt;info::event_profiling param&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pi_native_handle cl::sycl::detail::event_impl::getNative </td>
+          <td class="memname"><a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> cl::sycl::detail::event_impl::getNative </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -423,7 +495,7 @@ template&lt;info::event_profiling param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00292">292</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="event__impl_8cpp_source.html#l00081">getHandleRef()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00085">getPlugin()</a>.</p>
+<p class="reference">References <a class="el" href="event__impl_8cpp_source.html#l00081">getHandleRef()</a>, <a class="el" href="event__impl_8cpp_source.html#l00085">getPlugin()</a>, and <a class="el" href="pi_8h.html#a51c971f0beede2c7037ff2d9e271e418">piextEventGetNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +517,7 @@ template&lt;info::event_profiling param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00085">85</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00097">event_impl()</a>, <a class="el" href="event__impl_8cpp_source.html#l00292">getNative()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">wait_and_throw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00097">event_impl()</a>, <a class="el" href="event__impl_8cpp_source.html#l00274">cl::sycl::detail::event_impl::get_info&lt; info::event::command_execution_status &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00264">cl::sycl::detail::event_impl::get_info&lt; info::event::reference_count &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00253">cl::sycl::detail::event_impl::get_profiling_info&lt; info::event_profiling::command_end &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00240">cl::sycl::detail::event_impl::get_profiling_info&lt; info::event_profiling::command_start &gt;()</a>, <a class="el" href="event__impl_8cpp_source.html#l00227">cl::sycl::detail::event_impl::get_profiling_info&lt; info::event_profiling::command_submit &gt;()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00292">getNative()</a>.</p>
 
 </div>
 </div>
@@ -507,6 +579,27 @@ template&lt;info::event_profiling param&gt; </div>
 
 </div>
 </div>
+<a id="a0547e6f2220909bb9b5bba32bfc1b09f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0547e6f2220909bb9b5bba32bfc1b09f">&#9670;&nbsp;</a></span>setComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::event_impl::setComplete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks this event as completed. </p>
+
+<p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00062">62</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a3b346f45adee9cff19fdbd92c29c31d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b346f45adee9cff19fdbd92c29c31d7">&#9670;&nbsp;</a></span>setContextImpl()</h2>
 
@@ -516,7 +609,7 @@ template&lt;info::event_profiling param&gt; </div>
         <tr>
           <td class="memname">void cl::sycl::detail::event_impl::setContextImpl </td>
           <td>(</td>
-          <td class="paramtype">const ContextImplPtr &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>Context</em></td><td>)</td>
           <td></td>
         </tr>
@@ -563,7 +656,7 @@ template&lt;info::event_profiling param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00187">187</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="scheduler_8cpp_source.html#l00144">cl::sycl::detail::Scheduler::cleanupFinishedCommands()</a>, <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="scheduler_8cpp_source.html#l00139">cl::sycl::detail::Scheduler::waitForEvent()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00052">waitInternal()</a>.</p>
+<p class="reference">References <a class="el" href="scheduler_8cpp_source.html#l00144">cl::sycl::detail::Scheduler::cleanupFinishedCommands()</a>, <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="common_8hpp_source.html#l00032">cl::sycl::detail::SYCL_STREAM_NAME</a>, <a class="el" href="scheduler_8cpp_source.html#l00139">cl::sycl::detail::Scheduler::waitForEvent()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00052">waitInternal()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00211">wait_and_throw()</a>.</p>
 
@@ -596,7 +689,32 @@ template&lt;info::event_profiling param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00211">211</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="event__impl_8cpp_source.html#l00081">getHandleRef()</a>, <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="event__impl_8cpp_source.html#l00085">getPlugin()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00187">wait()</a>.</p>
+<p class="reference">References <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="commands_8hpp_source.html#l00131">cl::sycl::detail::Command::getQueue()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00187">wait()</a>.</p>
+
+</div>
+</div>
+<a id="a8dec4cecc4eaa7ece9ea7cb3a7aaf57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c">&#9670;&nbsp;</a></span>waitInternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::event_impl::waitInternal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Waits for the event with respect to device type. </p>
+
+<p class="definition">Definition at line <a class="el" href="event__impl_8cpp_source.html#l00052">52</a> of file <a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h.html#a894b90a8442143d0a17f895cab845108">piEventsWait()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="event__impl_8cpp_source.html#l00187">wait()</a>.</p>
 
 </div>
 </div>
@@ -605,11 +723,15 @@ template&lt;info::event_profiling param&gt; </div>
 <li>source/detail/<a class="el" href="event__impl_8cpp_source.html">event_impl.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: Class Members - Functions</title>
+<title>DPC++ Runtime: Class Members - Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,16 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('functions_func_d.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -63,33 +93,78 @@ $(function() {
 
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>deallocate()
-: <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#af68a46caa89d2267a4023a762ef39999">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a98b90560fdcba17284bf2e54bf30ab32">cl::sycl::detail::aligned_allocator&lt; T &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#accaafeab1d40cfd90a40d11d2724ad9b">cl::sycl::detail::SYCLMemObjAllocator</a>
+, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#aaa04a64f3b7919fe6c76be1a64dd70c9">cl::sycl::detail::SYCLMemObjAllocatorHolder&lt; AllocatorT &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#af68a46caa89d2267a4023a762ef39999">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
+</li>
+<li>debugPrintBinaryImages()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253">cl::sycl::detail::ProgramManager</a>
+</li>
+<li>decrement_reference_count()
+: <a class="el" href="struct__pi__context.html#a7299c02da0e3d6f14c31d4019919c466">_pi_context</a>
+, <a class="el" href="class__pi__event.html#af500cdc448b2881e2b5fdec7076c6748">_pi_event</a>
+, <a class="el" href="struct__pi__kernel.html#ad42826cd20b4f5138bb59fb526f14f39">_pi_kernel</a>
+, <a class="el" href="struct__pi__mem.html#ae957daeff1a6ec53dba7387281407def">_pi_mem</a>
+, <a class="el" href="struct__pi__program.html#aed0f636555a6cb95fb520bfa7cb085de">_pi_program</a>
+, <a class="el" href="struct__pi__queue.html#aadff72e7ebef5034c4239580d2b6b04f">_pi_queue</a>
 </li>
 <li>decrementLeafCountersForRecord()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a">cl::sycl::detail::Scheduler::GraphBuilder</a>
+</li>
+<li>denorm_min()
+: <a class="el" href="structstd_1_1numeric__limits_3_01half_01_4.html#a13da2f4db8560b11d94ca6dafa528a2a">std::numeric_limits&lt; half &gt;</a>
+</li>
+<li>DepDesc()
+: <a class="el" href="structcl_1_1sycl_1_1detail_1_1DepDesc.html#a517e13667cc6ba1340423b6bb9b0a8e0">cl::sycl::detail::DepDesc</a>
 </li>
 <li>depends_on()
 : <a class="el" href="classcl_1_1sycl_1_1handler.html#a5435fd06ff8e61a4c69788664bf46626">cl::sycl::handler</a>
 </li>
 <li>destroy()
-: <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#a850632fb63be94813fa367a17fba2710">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a84e3e22e10e15fd8868e62a53a3b2e8c">cl::sycl::detail::aligned_allocator&lt; T &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#a850632fb63be94813fa367a17fba2710">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
 </li>
 <li>device()
-: <a class="el" href="classcl_1_1sycl_1_1device.html#a540fc7168621c90290de1d8ce8c4ca96">cl::sycl::device</a>
+: <a class="el" href="classcl_1_1sycl_1_1device.html#a980e472ff3da95d67525b637c55dadf1">cl::sycl::device</a>
+</li>
+<li>device_error()
+: <a class="el" href="classcl_1_1sycl_1_1device__error.html#aac4cd456b35fc59c69dc5cfdea92aeb6">cl::sycl::device_error</a>
+</li>
+<li>device_event()
+: <a class="el" href="classcl_1_1sycl_1_1device__event.html#ab7a73ede2ae2b450ce9f325bceb055ab">cl::sycl::device_event</a>
 </li>
 <li>device_impl()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html#ac8804a69581f43fd36d10c78afd99df9">cl::sycl::detail::device_impl</a>
 </li>
+<li>DeviceBinaryImage()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a04b8cd1a1bbf947a865e59140bf3b580">cl::sycl::detail::pi::DeviceBinaryImage</a>
+</li>
+<li>DeviceBinaryProperty()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html#ace403f7a56c4c0b92ed6add312d1f7c1">cl::sycl::detail::pi::DeviceBinaryProperty</a>
+</li>
 <li>dismiss()
 : <a class="el" href="classReleaseGuard.html#a842fa7466ffe980b5e5fec5a7b582abe">ReleaseGuard&lt; T &gt;</a>
 </li>
+<li>DispatchHostTask()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html#a75b16a4a1619c9e01587dc50b6315e8c">cl::sycl::detail::DispatchHostTask</a>
+</li>
+<li>dump()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac2f464da03c9ada02ec1770514898104">cl::sycl::detail::pi::DeviceBinaryImage</a>
+</li>
+<li>DynRTDeviceBinaryImage()
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#adb02446ac622be2261bab89132f32d55">cl::sycl::detail::DynRTDeviceBinaryImage</a>
+</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

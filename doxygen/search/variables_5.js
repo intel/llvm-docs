@@ -1,4 +1,11 @@
 var searchData=
 [
-  ['hostentriesbegin',['HostEntriesBegin',['../structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69',1,'pi_device_binaries_struct']]]
+  ['emulation_5fplatform_5fname',['EMULATION_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#ab82a4cebd3c95467f4fbd25dc2f8c943',1,'cl::sycl::intel']]],
+  ['endl',['endl',['../namespacecl_1_1sycl.html#a6917820bc96aa0484d140def082005d4',1,'cl::sycl']]],
+  ['entriesbegin',['EntriesBegin',['../structpi__device__binary__struct.html#a6eb4a6bb0e5ec4d025383ee3cdc98146',1,'pi_device_binary_struct']]],
+  ['entriesend',['EntriesEnd',['../structpi__device__binary__struct.html#a101af6f5f71e7c55000dd25e5979ec3f',1,'pi_device_binary_struct']]],
+  ['error',['Error',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a51c6459a289134b09c640d3ecda2404c',1,'cl::sycl::detail::KernelProgramCache::BuildResult']]],
+  ['errorlog_5f',['errorLog_',['../struct__pi__program.html#a873725d5107c7fe0ab362184f6af9c10',1,'_pi_program']]],
+  ['evbase_5f',['evBase_',['../struct__pi__context.html#ae058668425925400001e631158ae4f20',1,'_pi_context']]],
+  ['exemodulehandle',['ExeModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#a9edaca3fced53dd24240c77c016be876',1,'cl::sycl::detail::OSUtil']]]
 ];

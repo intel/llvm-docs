@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['il_5fversion',['il_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a03aa631709a8a1162ede52565f3887d7',1,'cl::sycl::info']]],
+  ['image',['IMAGE',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8aa4bf2cd1b27159b523e07549b86da5d20',1,'cl::sycl::detail::SYCLMemObjI::IMAGE()'],['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598a78805a221a988e79ef3f42d7c5bfd418',1,'cl::sycl::access::image()']]],
+  ['image2d_5fmax_5fheight',['image2d_max_height',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a32d3cc82e659c366219c0c4199aecfb4',1,'cl::sycl::info']]],
+  ['image2d_5fmax_5fwidth',['image2d_max_width',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ad51e9d78d8bbceba716fc595dcf62060',1,'cl::sycl::info']]],
+  ['image3d_5fmax_5fdepth',['image3d_max_depth',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a163aaee413467d48a5da83ae13c592ba',1,'cl::sycl::info']]],
+  ['image3d_5fmax_5fheight',['image3d_max_height',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a803763900aa6655c989e3c39e4702e39',1,'cl::sycl::info']]],
+  ['image3d_5fmax_5fwidth',['image3d_max_width',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a26fbc768da96d93116e5d79b23e4ae8b',1,'cl::sycl::info']]],
+  ['image_5farray',['image_array',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598a2b129ecb57e9d0146c2de1fb9ef6cdd3',1,'cl::sycl::access']]],
+  ['image_5fmax_5farray_5fsize',['image_max_array_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aa454d1c5114e7b085e5e21e7be5e18de',1,'cl::sycl::info']]],
+  ['image_5fmax_5fbuffer_5fsize',['image_max_buffer_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a6d89b3affe73b8dbe95ae9d61cdac33a',1,'cl::sycl::info']]],
+  ['image_5fsupport',['image_support',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aa6474ef1a7514c0b0d89cac06ef81a6c',1,'cl::sycl::info']]],
+  ['imagecontextbound',['ImageContextBound',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa52a7a6e35b57957acb82dfc06b849b7e',1,'cl::sycl::property::detail']]],
+  ['imagememory',['ImageMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a7692c59e9a736f00a3bf8f77fda75bfa',1,'__spv::MemorySemanticsMask']]],
+  ['imageusehostptr',['ImageUseHostPtr',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aaeb32eea052263190f505977a4446bfbe',1,'cl::sycl::property::detail']]],
+  ['imageusemutex',['ImageUseMutex',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa3fffd49984c908b5d80f7de179ee6042',1,'cl::sycl::property::detail']]],
+  ['inclusivescan',['InclusiveScan',['../namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753a61ffbdbbe03bbaed7a3926191b00d4b1',1,'__spv']]],
+  ['inf_5fnan',['inf_nan',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a55148441bb694773f842b0553e451c53',1,'cl::sycl::info']]],
+  ['inorder',['InOrder',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aad81ee2eb0884e93e55c75f81c5a2fd29',1,'cl::sycl::property::detail']]],
+  ['int',['Int',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa1686a6c336b71b36d77354cea19a8b52',1,'cl::sycl::detail::PlatformUtil']]],
+  ['intensity',['intensity',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa04bb0ec2d0e931c59f606510558e55a1',1,'cl::sycl']]],
+  ['invocation',['Invocation',['../struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad7060bbcb95ef87981650a77f3abe978',1,'__spv::Scope']]],
+  ['is_5favailable',['is_available',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ad331bbef72d5903997a0e6fb68d984e0',1,'cl::sycl::info']]],
+  ['is_5fcompiler_5favailable',['is_compiler_available',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ac59501c63a2e4c12f3ef0e624694a96e',1,'cl::sycl::info']]],
+  ['is_5fendian_5flittle',['is_endian_little',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a3ca47443dadc1af662dd9389c57a7dcf',1,'cl::sycl::info']]],
+  ['is_5flinker_5favailable',['is_linker_available',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a7e6049679642fdf8aa7123a16d01c068',1,'cl::sycl::info']]]
+];

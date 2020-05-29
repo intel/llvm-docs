@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: DPC++ Execution Graph</title>
+<title>DPC++ Runtime: DPC++ Execution Graph</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,16 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-</script>
-<div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('group__sycl__graph.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -98,18 +128,21 @@ Classes</h2></td></tr>
 <p>Memory requirements are requests to SYCL memory objects, such as buffer and image. SYCL memory objects are not bound to any specific context or device, it's SYCL responsibility to allocate and/or copy memory to the target context to achieve correct execution.</p>
 <p>Refer to SYCL Specification 1.2.1 sections 3.4 and 3.5 to find more information about SYCL execution and memory model.</p>
 <h3>Example of DPC++ application</h3>
-<div class="fragment"><div class="line">{</div><div class="line">  <span class="comment">// Creating SYCL CPU and GPU queues</span></div><div class="line">  <a class="code" href="classcl_1_1sycl_1_1queue.html">cl::sycl::queue</a> CPU_Queue = ...;</div><div class="line">  <a class="code" href="classcl_1_1sycl_1_1queue.html">cl::sycl::queue</a> GPU_Queue = ...;</div><div class="line"></div><div class="line">  <span class="comment">// Creating 3 SYCL buffers</span></div><div class="line">  <span class="keyword">auto</span> BufferA = ...; <span class="comment">// Buffer is initialized with host memory.</span></div><div class="line">  <span class="keyword">auto</span> BufferB = ...;</div><div class="line">  <span class="keyword">auto</span> BufferC = ...;</div><div class="line"></div><div class="line">  <span class="comment">// &quot;Copy command group&quot; section</span></div><div class="line">  <span class="comment">// Request processing explicit copy operation on CPU</span></div><div class="line">  <span class="comment">// The copy operation reads from BufferA and writes to BufferB</span></div><div class="line"></div><div class="line">  CPU_Queue.<a class="code" href="classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f">submit</a>([&amp;](handler &amp;CGH) {</div><div class="line">    <span class="keyword">auto</span> A = BufferA.get_access&lt;read&gt;(CGH);</div><div class="line">    <span class="keyword">auto</span> B = BufferB.get_access&lt;write&gt;(CGH);</div><div class="line">    CGH.copy(A, B);</div><div class="line">  });</div><div class="line"></div><div class="line">  <span class="comment">// &quot;Multi command group&quot; section</span></div><div class="line">  <span class="comment">// Request processing multi kernel on GPU</span></div><div class="line">  <span class="comment">// The kernel reads from BufferB, multiplies by 4 and writes result to</span></div><div class="line">  <span class="comment">// BufferC</span></div><div class="line"></div><div class="line">  GPU_Queue.<a class="code" href="classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f">submit</a>([&amp;](handler &amp;CGH) {</div><div class="line">    <span class="keyword">auto</span> B = BufferB.get_access&lt;read&gt;(CGH);</div><div class="line">    <span class="keyword">auto</span> C = BufferC.get_access&lt;write&gt;(CGH);</div><div class="line">    CGH.parallel_for&lt;<span class="keyword">class </span>multi&gt;(range&lt;1&gt;{N}, [=](id&lt;1&gt; Index) {</div><div class="line">      C[Index] = B[Index] * 4;</div><div class="line">    });</div><div class="line">  });</div><div class="line"></div><div class="line">  <span class="comment">// &quot;Host accessor creation&quot; section</span></div><div class="line">  <span class="comment">// Request the latest data of BufferC for the moment</span></div><div class="line">  <span class="comment">// This is a synchronization point, which means that the DPC++ RT blocks</span></div><div class="line">  <span class="comment">// on creation of the accessor until requested data is available.</span></div><div class="line">  <span class="keyword">auto</span> C = BufferC.get_access&lt;read&gt;();</div><div class="line">}</div></div><!-- fragment --><p>In the example above the DPC++ RT does the following:</p>
+<div class="fragment"><div class="line">{</div><div class="line">  <span class="comment">// Creating SYCL CPU and GPU queues</span></div><div class="line">  <a class="code" href="classcl_1_1sycl_1_1queue.html">cl::sycl::queue</a> CPU_Queue = ...;</div><div class="line">  <a class="code" href="classcl_1_1sycl_1_1queue.html">cl::sycl::queue</a> GPU_Queue = ...;</div><div class="line"></div><div class="line">  <span class="comment">// Creating 3 SYCL buffers</span></div><div class="line">  <span class="keyword">auto</span> BufferA = ...; <span class="comment">// Buffer is initialized with host memory.</span></div><div class="line">  <span class="keyword">auto</span> BufferB = ...;</div><div class="line">  <span class="keyword">auto</span> BufferC = ...;</div><div class="line"></div><div class="line">  <span class="comment">// &quot;Copy command group&quot; section</span></div><div class="line">  <span class="comment">// Request processing explicit copy operation on CPU</span></div><div class="line">  <span class="comment">// The copy operation reads from BufferA and writes to BufferB</span></div><div class="line"></div><div class="line">  CPU_Queue.<a class="code" href="classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f">submit</a>([&amp;](handler &amp;CGH) {</div><div class="line">    <span class="keyword">auto</span> A = BufferA.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;(CGH);</div><div class="line">    <span class="keyword">auto</span> B = BufferB.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9007a86d233026b732effc926356efad">write</a>&gt;(CGH);</div><div class="line">    CGH.copy(A, B);</div><div class="line">  });</div><div class="line"></div><div class="line">  <span class="comment">// &quot;Multi command group&quot; section</span></div><div class="line">  <span class="comment">// Request processing multi kernel on GPU</span></div><div class="line">  <span class="comment">// The kernel reads from BufferB, multiplies by 4 and writes result to</span></div><div class="line">  <span class="comment">// BufferC</span></div><div class="line"></div><div class="line">  GPU_Queue.<a class="code" href="classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f">submit</a>([&amp;](handler &amp;CGH) {</div><div class="line">    <span class="keyword">auto</span> B = BufferB.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;(CGH);</div><div class="line">    <span class="keyword">auto</span> C = BufferC.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9007a86d233026b732effc926356efad">write</a>&gt;(CGH);</div><div class="line">    CGH.parallel_for&lt;<span class="keyword">class </span>multi&gt;(range&lt;1&gt;{N}, [=](id&lt;1&gt; Index) {</div><div class="line">      C[Index] = B[Index] * 4;</div><div class="line">    });</div><div class="line">  });</div><div class="line"></div><div class="line">  <span class="comment">// &quot;Host accessor creation&quot; section</span></div><div class="line">  <span class="comment">// Request the latest data of BufferC for the moment</span></div><div class="line">  <span class="comment">// This is a synchronization point, which means that the DPC++ RT blocks</span></div><div class="line">  <span class="comment">// on creation of the accessor until requested data is available.</span></div><div class="line">  <span class="keyword">auto</span> C = BufferC.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;();</div><div class="line">}</div></div><!-- fragment --><p>In the example above the DPC++ RT does the following:</p>
 <ol type="1">
 <li><b>Copy command group</b>. The DPC++ RT allocates memory for BufferA and BufferB on CPU then executes an explicit copy operation on CPU.</li>
 <li><b>Multi command group</b> DPC++ RT allocates memory for BufferC and BufferB on GPU and copy content of BufferB from CPU to GPU, then execute "multi" kernel on GPU.</li>
 <li><b>Host accessor creation</b> DPC++ RT allocates(it's possible to reuse already allocated memory) memory available for user for BufferC then copy content of BufferC from GPU to this memory.</li>
 </ol>
 <p>So, the example above will be converted to the following OpenCL pseudo code </p><div class="fragment"><div class="line"><span class="comment">// Initialization(not related to the Scheduler)</span></div><div class="line">Platform = clGetPlatforms(...);</div><div class="line">DeviceCPU = clGetDevices(CL_DEVICE_TYPE_CPU, ...);</div><div class="line">DeviceGPU = clGetDevices(CL_DEVICE_TYPE_GPU, ...);</div><div class="line">ContextCPU = clCreateContext(DeviceCPU, ...)</div><div class="line">ContextGPU = clCreateContext(DeviceGPU, ...)</div><div class="line">QueueCPU = clCreateCommandQueue(ContextCPU, DeviceCPU, ...);</div><div class="line">QueueGPU = clCreateCommandQueue(ContextGPU, DeviceGPU, ...);</div><div class="line"></div><div class="line"><span class="comment">// Copy command group:</span></div><div class="line">BufferACPU = clCreateBuffer(ContextCPU, CL_MEM_USE_HOST_PTR, ...);</div><div class="line">BufferBCPU = clCreateBuffer(ContextCPU, ...);</div><div class="line">CopyEvent = clEnqueueCopyBuffer(QueueCPU, BufferACPU, BufferBCPU, ...)</div><div class="line"></div><div class="line"><span class="comment">// Multi command group:</span></div><div class="line">ReadBufferEvent =</div><div class="line">   clEnqueueReadBuffer(QueueCPU, BufferBCPU, HostPtr, CopyEvent, ...);</div><div class="line">BufferBGPU = clCreateBuffer(ContextGPU, ...);</div><div class="line"></div><div class="line">UserEvent = clCreateUserEvent(ContextCPU);</div><div class="line">clSetEventCallback(ReadBufferEvent, event_completion_callback,</div><div class="line"><span class="comment">/*data=*/</span>UserEvent);</div><div class="line"></div><div class="line">WriteBufferEvent = clEnqueueWriteBuffer(QueueGPU, BufferBGPU, HostPtr,</div><div class="line">UserEvent, ...); BufferCGPU = clCreateBuffer(ContextGPU, ...); ProgramGPU =</div><div class="line">clCreateProgramWithIL(ContextGPU, ...); clBuildProgram(ProgramGPU);</div><div class="line">MultiKernel = clCreateKernel(&quot;multi&quot;);</div><div class="line">clSetKernelArg(MultiKernel, BufferBGPU, ...);</div><div class="line">clSetKernelArg(MultiKernel, BufferCGPU, ...);</div><div class="line">MultiEvent =</div><div class="line">   clEnqueueNDRangeKernel(QueueGPU, MultiKernel, WriteBufferEvent, ...);</div><div class="line"></div><div class="line"><span class="comment">// Host accessor creation:</span></div><div class="line">clEnqueueMapBuffer(QueueGPU, BufferCGPU, BLOCKING_MAP, MultiEvent, ...);</div><div class="line"></div><div class="line"><span class="comment">// Releasing mem objects during SYCL buffers destruction.</span></div><div class="line">clReleaseBuffer(BufferACPU);</div><div class="line">clReleaseBuffer(BufferBCPU);</div><div class="line">clReleaseBuffer(BufferBGPU);</div><div class="line">clReleaseBuffer(BufferCGPU);</div><div class="line"></div><div class="line"><span class="comment">// Release(not related to the Scheduler)</span></div><div class="line">clReleaseKernel(MultiKernel);</div><div class="line">clReleaseProgram(ProgramGPU);</div><div class="line">clReleaseContext(ContextGPU);</div><div class="line">clReleaseContext(ContextCPU);</div></div><!-- fragment --> </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,5 @@
+var structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g0c79ebac53851faf996337b56e7ddedd =
+[
+    [ "arg_type", "structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g0c79ebac53851faf996337b56e7ddedd.html#a54a30e75d49ce54ef4fc94824649f455", null ],
+    [ "ret_type", "structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g0c79ebac53851faf996337b56e7ddedd.html#af0a19025377948573b3e05a27de432eb", null ]
+];

@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c =
+[
+    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c.html#a4d6d8be54ed0c8beddcd9d9f9b980c79", null ]
+];

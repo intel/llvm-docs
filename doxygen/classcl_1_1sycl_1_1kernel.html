@@ -5,13 +5,23 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SYCL Runtime: cl::sycl::kernel Class Reference</title>
+<title>DPC++ Runtime: cl::sycl::kernel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -21,10 +31,25 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">SYCL Runtime
+   <div id="projectname">DPC++ Runtime
    </div>
-   <div id="projectbrief">Runtime libraries for SYCL</div>
+   <div id="projectbrief">Runtime libraries for oneAPI Data Parallel C++</div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -34,15 +59,21 @@
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
+$(document).ready(function(){initNavTree('classcl_1_1sycl_1_1kernel.html','');});
 </script>
-<div id="main-nav"></div>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -57,43 +88,37 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><b>sycl</b></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classcl_1_1sycl_1_1kernel-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::kernel Class Reference</div>  </div>
+<div class="title">cl::sycl::kernel Class Reference<div class="ingroups"><a class="el" href="group__sycl__api.html">DPC++ User API</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Provides an abstraction of a SYCL kernel.  
+ <a href="classcl_1_1sycl_1_1kernel.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="kernel_8hpp_source.html">CL/sycl/kernel.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0183adaae0863b75a8e1c629d5b436c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a0183adaae0863b75a8e1c629d5b436c2">kernel</a> (cl_kernel ClKernel, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;SyclContext)</td></tr>
 <tr class="memdesc:a0183adaae0863b75a8e1c629d5b436c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a SYCL kernel instance from an OpenCL cl_kernel.  <a href="#a0183adaae0863b75a8e1c629d5b436c2">More...</a><br /></td></tr>
 <tr class="separator:a0183adaae0863b75a8e1c629d5b436c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad63675c9bcd9ce62c5de4b85e6b7ed"><td class="memItemLeft" align="right" valign="top"><a id="a9ad63675c9bcd9ce62c5de4b85e6b7ed"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>kernel</b> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS)=default</td></tr>
+<tr class="memitem:a9ad63675c9bcd9ce62c5de4b85e6b7ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a9ad63675c9bcd9ce62c5de4b85e6b7ed">kernel</a> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS)=default</td></tr>
 <tr class="separator:a9ad63675c9bcd9ce62c5de4b85e6b7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cc1ed06a435e41bb9e61bdcd65d09fb"><td class="memItemLeft" align="right" valign="top"><a id="a3cc1ed06a435e41bb9e61bdcd65d09fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>kernel</b> (<a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&amp;RHS)=default</td></tr>
+<tr class="memitem:a3cc1ed06a435e41bb9e61bdcd65d09fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a3cc1ed06a435e41bb9e61bdcd65d09fb">kernel</a> (<a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&amp;RHS)=default</td></tr>
 <tr class="separator:a3cc1ed06a435e41bb9e61bdcd65d09fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15ac0a1948ca9570150c558764663e4e"><td class="memItemLeft" align="right" valign="top"><a id="a15ac0a1948ca9570150c558764663e4e"></a>
-<a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS)=default</td></tr>
+<tr class="memitem:a15ac0a1948ca9570150c558764663e4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a15ac0a1948ca9570150c558764663e4e">operator=</a> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS)=default</td></tr>
 <tr class="separator:a15ac0a1948ca9570150c558764663e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb83a013dd7ce77ab8cef20d2a5dc94"><td class="memItemLeft" align="right" valign="top"><a id="a5cb83a013dd7ce77ab8cef20d2a5dc94"></a>
-<a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&amp;RHS)=default</td></tr>
+<tr class="memitem:a5cb83a013dd7ce77ab8cef20d2a5dc94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a5cb83a013dd7ce77ab8cef20d2a5dc94">operator=</a> (<a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&amp;RHS)=default</td></tr>
 <tr class="separator:a5cb83a013dd7ce77ab8cef20d2a5dc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e3acef84de6c88f560d4844c75436cf"><td class="memItemLeft" align="right" valign="top"><a id="a9e3acef84de6c88f560d4844c75436cf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS) const</td></tr>
+<tr class="memitem:a9e3acef84de6c88f560d4844c75436cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a9e3acef84de6c88f560d4844c75436cf">operator==</a> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS) const</td></tr>
 <tr class="separator:a9e3acef84de6c88f560d4844c75436cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38dfaeba5d4f372f9cca596e52a6a872"><td class="memItemLeft" align="right" valign="top"><a id="a38dfaeba5d4f372f9cca596e52a6a872"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS) const</td></tr>
+<tr class="memitem:a38dfaeba5d4f372f9cca596e52a6a872"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a38dfaeba5d4f372f9cca596e52a6a872">operator!=</a> (const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;RHS) const</td></tr>
 <tr class="separator:a38dfaeba5d4f372f9cca596e52a6a872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75a071360a293e0d0eea6e98dd545658"><td class="memItemLeft" align="right" valign="top">cl_kernel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a75a071360a293e0d0eea6e98dd545658">get</a> () const</td></tr>
 <tr class="memdesc:a75a071360a293e0d0eea6e98dd545658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a valid OpenCL kernel handle.  <a href="#a75a071360a293e0d0eea6e98dd545658">More...</a><br /></td></tr>
@@ -108,35 +133,40 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const
 <tr class="memdesc:a44e9b48f6121c2b483129c733b56273d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the program that this kernel is defined for.  <a href="#a44e9b48f6121c2b483129c733b56273d">More...</a><br /></td></tr>
 <tr class="separator:a44e9b48f6121c2b483129c733b56273d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeef5b4353a35936c99c2f5e92a6e4d17"><td class="memTemplParams" colspan="2">template&lt;info::kernel param&gt; </td></tr>
-<tr class="memitem:aeef5b4353a35936c99c2f5e92a6e4d17"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#aeef5b4353a35936c99c2f5e92a6e4d17">get_info</a> () const</td></tr>
+<tr class="memitem:aeef5b4353a35936c99c2f5e92a6e4d17"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4a">info::kernel</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#aeef5b4353a35936c99c2f5e92a6e4d17">get_info</a> () const</td></tr>
 <tr class="memdesc:aeef5b4353a35936c99c2f5e92a6e4d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query information from the kernel object using the info::kernel_info descriptor.  <a href="#aeef5b4353a35936c99c2f5e92a6e4d17">More...</a><br /></td></tr>
 <tr class="separator:aeef5b4353a35936c99c2f5e92a6e4d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27d679d5218b2aa51e1d41a0088ffbc2"><td class="memTemplParams" colspan="2">template&lt;info::kernel_work_group param&gt; </td></tr>
-<tr class="memitem:a27d679d5218b2aa51e1d41a0088ffbc2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel_work_group, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a27d679d5218b2aa51e1d41a0088ffbc2">get_work_group_info</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Device) const</td></tr>
-<tr class="memdesc:a27d679d5218b2aa51e1d41a0088ffbc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query work-group information from a kernel using the info::kernel_work_group descriptor for a specific device.  <a href="#a27d679d5218b2aa51e1d41a0088ffbc2">More...</a><br /></td></tr>
+<tr class="memitem:a27d679d5218b2aa51e1d41a0088ffbc2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9">info::kernel_work_group</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a27d679d5218b2aa51e1d41a0088ffbc2">get_work_group_info</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Device) const</td></tr>
+<tr class="memdesc:a27d679d5218b2aa51e1d41a0088ffbc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query work-group information from a kernel using the <a class="el" href="namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9">info::kernel_work_group</a> descriptor for a specific device.  <a href="#a27d679d5218b2aa51e1d41a0088ffbc2">More...</a><br /></td></tr>
 <tr class="separator:a27d679d5218b2aa51e1d41a0088ffbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa238d78470ac17226fb0f81ea0e719ef"><td class="memTemplParams" colspan="2">template&lt;info::kernel_sub_group param&gt; </td></tr>
-<tr class="memitem:aa238d78470ac17226fb0f81ea0e719ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel_sub_group, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#aa238d78470ac17226fb0f81ea0e719ef">get_sub_group_info</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Device) const</td></tr>
-<tr class="memdesc:aa238d78470ac17226fb0f81ea0e719ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query sub-group information from a kernel using the info::kernel_sub_group descriptor for a specific device.  <a href="#aa238d78470ac17226fb0f81ea0e719ef">More...</a><br /></td></tr>
+<tr class="memitem:aa238d78470ac17226fb0f81ea0e719ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#aa238d78470ac17226fb0f81ea0e719ef">get_sub_group_info</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Device) const</td></tr>
+<tr class="memdesc:aa238d78470ac17226fb0f81ea0e719ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query sub-group information from a kernel using the <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a> descriptor for a specific device.  <a href="#aa238d78470ac17226fb0f81ea0e719ef">More...</a><br /></td></tr>
 <tr class="separator:aa238d78470ac17226fb0f81ea0e719ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad471b43543aee5eeb297b8be92f72c6a"><td class="memTemplParams" colspan="2">template&lt;info::kernel_sub_group param&gt; </td></tr>
-<tr class="memitem:ad471b43543aee5eeb297b8be92f72c6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel_sub_group, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#ad471b43543aee5eeb297b8be92f72c6a">get_sub_group_info</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Device, typename <a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel_sub_group, param &gt;::input_type Value) const</td></tr>
-<tr class="memdesc:ad471b43543aee5eeb297b8be92f72c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query sub-group information from a kernel using the info::kernel_sub_group descriptor for a specific device and value.  <a href="#ad471b43543aee5eeb297b8be92f72c6a">More...</a><br /></td></tr>
+<tr class="memitem:ad471b43543aee5eeb297b8be92f72c6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#ad471b43543aee5eeb297b8be92f72c6a">get_sub_group_info</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Device, typename <a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a>, param &gt;::input_type Value) const</td></tr>
+<tr class="memdesc:ad471b43543aee5eeb297b8be92f72c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query sub-group information from a kernel using the <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a> descriptor for a specific device and value.  <a href="#ad471b43543aee5eeb297b8be92f72c6a">More...</a><br /></td></tr>
 <tr class="separator:ad471b43543aee5eeb297b8be92f72c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplParams" colspan="2"><a id="a71492293d0386f542d120a1fc3dfbb55"></a>
-template&lt;class T &gt; </td></tr>
-<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>detail::createSyclObjFromImpl</b> (decltype(T::impl) ImplObj)</td></tr>
+<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a71492293d0386f542d120a1fc3dfbb55"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1kernel.html#a71492293d0386f542d120a1fc3dfbb55">detail::createSyclObjFromImpl</a> (decltype(T::impl) ImplObj)</td></tr>
 <tr class="separator:a71492293d0386f542d120a1fc3dfbb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="kernel_8hpp_source.html#l00027">27</a> of file <a class="el" href="kernel_8hpp_source.html">kernel.hpp</a>.</p>
+<div class="textblock"><p>Provides an abstraction of a SYCL kernel. </p>
+<dl class="section see"><dt>See also</dt><dd>sycl_api_exec </dd>
+<dd>
+<a class="el" href="classcl_1_1sycl_1_1program.html" title="Provides an abstraction of a SYCL program. ">program</a> </dd>
+<dd>
+<a class="el" href="classcl_1_1sycl_1_1queue.html" title="Encapsulates a single SYCL queue which schedules kernels on a SYCL device. ">queue</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kernel_8hpp_source.html#l00034">34</a> of file <a class="el" href="kernel_8hpp_source.html">kernel.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0183adaae0863b75a8e1c629d5b436c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0183adaae0863b75a8e1c629d5b436c2">&#9670;&nbsp;</a></span>kernel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0183adaae0863b75a8e1c629d5b436c2">&#9670;&nbsp;</a></span>kernel() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +203,57 @@ template&lt;class T &gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="kernel_8cpp_source.html#l00017">17</a> of file <a class="el" href="kernel_8cpp_source.html">kernel.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kernel_8cpp_source.html#l00050">get_work_group_info()</a>.</p>
+</div>
+</div>
+<a id="a9ad63675c9bcd9ce62c5de4b85e6b7ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad63675c9bcd9ce62c5de4b85e6b7ed">&#9670;&nbsp;</a></span>kernel() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::kernel::kernel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td>
+          <td class="paramname"><em>RHS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3cc1ed06a435e41bb9e61bdcd65d09fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc1ed06a435e41bb9e61bdcd65d09fb">&#9670;&nbsp;</a></span>kernel() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cl::sycl::kernel::kernel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>RHS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -222,6 +302,8 @@ template&lt;class T &gt; </td></tr>
 
 <p class="definition">Definition at line <a class="el" href="kernel_8cpp_source.html#l00026">26</a> of file <a class="el" href="kernel_8cpp_source.html">kernel.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aa5c18ef72771564b7f43c497dc507aeab">cl::sycl::info::context</a>.</p>
+
 </div>
 </div>
 <a id="aeef5b4353a35936c99c2f5e92a6e4d17"></a>
@@ -233,7 +315,7 @@ template&lt;class T &gt; </td></tr>
 template&lt;info::kernel param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel, param &gt;::return_type cl::sycl::kernel::get_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4a">info::kernel</a>, param &gt;::return_type cl::sycl::kernel::get_info </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -269,6 +351,8 @@ template&lt;info::kernel param&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="kernel_8cpp_source.html#l00030">30</a> of file <a class="el" href="kernel_8cpp_source.html">kernel.cpp</a>.</p>
 
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aaa9c449d4fa44e9e5a41c574ae55ce4d9">cl::sycl::info::program</a>.</p>
+
 </div>
 </div>
 <a id="aa238d78470ac17226fb0f81ea0e719ef"></a>
@@ -280,7 +364,7 @@ template&lt;info::kernel param&gt; </div>
 template&lt;info::kernel_sub_group param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;info::kernel_sub_group, param&gt;::return_type cl::sycl::kernel::get_sub_group_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a>, param&gt;::return_type cl::sycl::kernel::get_sub_group_info </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
           <td class="paramname"><em>Device</em></td><td>)</td>
@@ -289,7 +373,7 @@ template&lt;info::kernel_sub_group param&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Query sub-group information from a kernel using the info::kernel_sub_group descriptor for a specific device. </p>
+<p>Query sub-group information from a kernel using the <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a> descriptor for a specific device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Device</td><td>is a valid SYCL device. </td></tr>
@@ -297,8 +381,6 @@ template&lt;info::kernel_sub_group param&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>depends on information being queried. </dd></dl>
-
-<p class="reference">Referenced by <a class="el" href="kernel_8cpp_source.html#l00050">get_work_group_info()</a>.</p>
 
 </div>
 </div>
@@ -311,7 +393,7 @@ template&lt;info::kernel_sub_group param&gt; </div>
 template&lt;info::kernel_sub_group param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;info::kernel_sub_group, param&gt;::return_type cl::sycl::kernel::get_sub_group_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt;<a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a>, param&gt;::return_type cl::sycl::kernel::get_sub_group_info </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
           <td class="paramname"><em>Device</em>, </td>
@@ -319,7 +401,7 @@ template&lt;info::kernel_sub_group param&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename <a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel_sub_group, param &gt;::input_type&#160;</td>
+          <td class="paramtype">typename <a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a>, param &gt;::input_type&#160;</td>
           <td class="paramname"><em>Value</em>&#160;</td>
         </tr>
         <tr>
@@ -330,7 +412,7 @@ template&lt;info::kernel_sub_group param&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Query sub-group information from a kernel using the info::kernel_sub_group descriptor for a specific device and value. </p>
+<p>Query sub-group information from a kernel using the <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6">info::kernel_sub_group</a> descriptor for a specific device and value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Device</td><td>is a valid SYCL device. </td></tr>
@@ -351,7 +433,7 @@ template&lt;info::kernel_sub_group param&gt; </div>
 template&lt;info::kernel_work_group param&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; info::kernel_work_group, param &gt;::return_type cl::sycl::kernel::get_work_group_info </td>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9">info::kernel_work_group</a>, param &gt;::return_type cl::sycl::kernel::get_work_group_info </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
           <td class="paramname"><em>Device</em></td><td>)</td>
@@ -360,7 +442,7 @@ template&lt;info::kernel_work_group param&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Query work-group information from a kernel using the info::kernel_work_group descriptor for a specific device. </p>
+<p>Query work-group information from a kernel using the <a class="el" href="namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9">info::kernel_work_group</a> descriptor for a specific device. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Device</td><td>is a valid SYCL device. </td></tr>
@@ -370,8 +452,6 @@ template&lt;info::kernel_work_group param&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>depends on information being queried. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="kernel_8cpp_source.html#l00050">50</a> of file <a class="el" href="kernel_8cpp_source.html">kernel.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1kernel.html#aa238d78470ac17226fb0f81ea0e719ef">get_sub_group_info()</a>, and <a class="el" href="kernel_8cpp_source.html#l00017">kernel()</a>.</p>
 
 </div>
 </div>
@@ -397,16 +477,159 @@ template&lt;info::kernel_work_group param&gt; </div>
 
 </div>
 </div>
+<a id="a38dfaeba5d4f372f9cca596e52a6a872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38dfaeba5d4f372f9cca596e52a6a872">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::kernel::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td>
+          <td class="paramname"><em>RHS</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="kernel_8hpp_source.html#l00055">55</a> of file <a class="el" href="kernel_8hpp_source.html">kernel.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="multi__ptr_8hpp_source.html#l00568">cl::sycl::operator==()</a>.</p>
+
+</div>
+</div>
+<a id="a15ac0a1948ca9570150c558764663e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ac0a1948ca9570150c558764663e4e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a>&amp; cl::sycl::kernel::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td>
+          <td class="paramname"><em>RHS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cb83a013dd7ce77ab8cef20d2a5dc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb83a013dd7ce77ab8cef20d2a5dc94">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a>&amp; cl::sycl::kernel::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>RHS</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e3acef84de6c88f560d4844c75436cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3acef84de6c88f560d4844c75436cf">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::kernel::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a> &amp;&#160;</td>
+          <td class="paramname"><em>RHS</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="kernel_8hpp_source.html#l00053">53</a> of file <a class="el" href="kernel_8hpp_source.html">kernel.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a71492293d0386f542d120a1fc3dfbb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71492293d0386f542d120a1fc3dfbb55">&#9670;&nbsp;</a></span>detail::createSyclObjFromImpl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="namespacecl_1_1sycl_1_1detail.html#abf270973bb66a47f8e8aebddd06ac8aa">detail::createSyclObjFromImpl</a> </td>
+          <td>(</td>
+          <td class="paramtype">decltype(T::impl)&#160;</td>
+          <td class="paramname"><em>ImplObj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/CL/sycl/<a class="el" href="kernel_8hpp_source.html">kernel.hpp</a></li>
 <li>source/<a class="el" href="kernel_8cpp_source.html">kernel.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecl.html">cl</a></li><li class="navelem"><a class="el" href="namespacecl_1_1sycl.html">sycl</a></li><li class="navelem"><a class="el" href="classcl_1_1sycl_1_1kernel.html">kernel</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>
