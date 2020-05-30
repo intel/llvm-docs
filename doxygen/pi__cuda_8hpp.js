@@ -6,7 +6,6 @@ var pi__cuda_8hpp =
     [ "deleter_data", "struct__pi__context_1_1deleter__data.html", "struct__pi__context_1_1deleter__data" ],
     [ "_pi_mem", "struct__pi__mem.html", "struct__pi__mem" ],
     [ "_pi_queue", "struct__pi__queue.html", "struct__pi__queue" ],
-    [ "event_callback", "classevent__callback.html", "classevent__callback" ],
     [ "_pi_event", "class__pi__event.html", "class__pi__event" ],
     [ "_pi_program", "struct__pi__program.html", "struct__pi__program" ],
     [ "_pi_kernel", "struct__pi__kernel.html", "struct__pi__kernel" ],

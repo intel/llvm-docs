@@ -55,7 +55,6 @@ var searchData=
   ['make_5funsigned_5fimpl_5ft',['make_unsigned_impl_t',['../namespacecl_1_1sycl_1_1detail.html#ae9a165f74e0e85e5e1b6acd6a889c2eb',1,'cl::sycl::detail']]],
   ['make_5funsigned_5ft',['make_unsigned_t',['../namespacecl_1_1sycl_1_1detail.html#a9480d1d92df8fb08b39c65719fb53dc0',1,'cl::sycl::detail']]],
   ['make_5funsinged_5finteger_5ft',['make_unsinged_integer_t',['../namespacecl_1_1sycl_1_1detail.html#ac8120becb309596db6b3716cce89f937',1,'cl::sycl::detail']]],
-  ['make_5fuser',['make_user',['../class__pi__event.html#a2c259d4da88a60636bec8f63c15f1c7b',1,'_pi_event']]],
   ['make_5fvector_5falias',['MAKE_VECTOR_ALIAS',['../aliases_8hpp.html#a7557892713090d3d64b767f86a1a157f',1,'aliases.hpp']]],
   ['make_5fvector_5faliases_5ffor_5farithmetic_5ftypes',['MAKE_VECTOR_ALIASES_FOR_ARITHMETIC_TYPES',['../aliases_8hpp.html#ae099f22191a749379a4b348e92bc6ac6',1,'aliases.hpp']]],
   ['make_5fvector_5faliases_5ffor_5fopencl_5ftypes',['MAKE_VECTOR_ALIASES_FOR_OPENCL_TYPES',['../aliases_8hpp.html#ad951fb477449579ae8d6f50409848ad6',1,'aliases.hpp']]],

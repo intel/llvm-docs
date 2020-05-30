@@ -8,7 +8,6 @@ var searchData=
   ['make_5fnative',['make_native',['../class__pi__event.html#a893e8d79288ee852a40e445b775203cf',1,'_pi_event']]],
   ['make_5fptr',['make_ptr',['../namespacecl_1_1sycl.html#acaf0512ae2f23c1229f97e0d1b7d16da',1,'cl::sycl']]],
   ['make_5funique_5fptr',['make_unique_ptr',['../namespacecl_1_1sycl.html#aab7129c40cbde88f63706b1fb5bc1936',1,'cl::sycl']]],
-  ['make_5fuser',['make_user',['../class__pi__event.html#a2c259d4da88a60636bec8f63c15f1c7b',1,'_pi_event']]],
   ['maketraceeventepilog',['makeTraceEventEpilog',['../classcl_1_1sycl_1_1detail_1_1Command.html#a42b5f83a1250912b24546f6aa1c252d5',1,'cl::sycl::detail::Command']]],
   ['maketraceeventprolog',['makeTraceEventProlog',['../classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d',1,'cl::sycl::detail::Command']]],
   ['malloc',['malloc',['../namespacecl_1_1sycl.html#a6a8609a1485c85d0f85666276f9ed5c3',1,'cl::sycl::malloc(size_t size, const device &amp;dev, const context &amp;ctxt, usm::alloc kind)'],['../namespacecl_1_1sycl.html#a0476c6d4e2e68fef9c2df4dc27a115ef',1,'cl::sycl::malloc(size_t size, const queue &amp;q, usm::alloc kind)']]],

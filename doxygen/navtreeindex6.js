@@ -1,11 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a3f85f546ccb9d2900c492c53143c7cf1":[3,0,1,1,0,218,3],
-"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a4036ce34c9e91448cbed9e1ff2743458":[3,0,1,1,0,218,0],
-"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a4e850dc5fce7b6e679fe815ff144a044":[3,0,1,1,0,218,2],
-"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a9a7484635bff0a8f568a0146699d97a2":[3,0,1,1,0,218,6],
-"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#ad531c2ee2d7db2f42a8fe142953d05e1":[3,0,1,1,0,218,7],
-"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#af835ff9556deb75a20d147747e642f79":[3,0,1,1,0,218,8],
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html":[3,0,1,1,0,220],
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html#a00b7cb37e0fdf9d56044258cc5d8d15b":[3,0,1,1,0,220,2],
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html#a0661374eee54c7934f50479d07a3bd65":[3,0,1,1,0,220,5],
@@ -249,5 +243,11 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1TryToGetVectorT.html#a344065e1deee0a5667767753e7be068f":[3,0,1,1,0,280,1],
 "classcl_1_1sycl_1_1detail_1_1TryToGetVectorT.html#a5c373d0b403eb0583968b2a4b0db12e8":[3,0,1,1,0,280,0],
 "classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html":[3,0,1,1,0,285],
-"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a20e60be311f14dabecc882f794ba236d":[3,0,1,1,0,285,1]
+"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a20e60be311f14dabecc882f794ba236d":[3,0,1,1,0,285,1],
+"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a4bf271823231047a81ff219f49044c4d":[3,0,1,1,0,285,2],
+"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a8268c2182a71578df6cabdcdf5599c86":[3,0,1,1,0,285,0],
+"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a9b0bf99829a6f671df64bf4c4c01123e":[3,0,1,1,0,285,3],
+"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html":[3,0,1,1,0,286],
+"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a1fabf65af286368eaae6a93fa9385168":[3,0,1,1,0,286,0],
+"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a5eba13a38f6e2dfcd588fa1aefda1953":[3,0,1,1,0,286,2]
 };

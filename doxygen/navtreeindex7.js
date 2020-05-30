@@ -1,11 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a4bf271823231047a81ff219f49044c4d":[3,0,1,1,0,285,2],
-"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a8268c2182a71578df6cabdcdf5599c86":[3,0,1,1,0,285,0],
-"classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a9b0bf99829a6f671df64bf4c4c01123e":[3,0,1,1,0,285,3],
-"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html":[3,0,1,1,0,286],
-"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a1fabf65af286368eaae6a93fa9385168":[3,0,1,1,0,286,0],
-"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a5eba13a38f6e2dfcd588fa1aefda1953":[3,0,1,1,0,286,2],
 "classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aa4ee05ed262f9e78c7b277fcf55e82d5":[3,0,1,1,0,286,3],
 "classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aabaf15eaeccdbcdde4275303483c8395":[3,0,1,1,0,286,1],
 "classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html":[3,0,1,1,0,3],
@@ -249,5 +243,11 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a7220d02ef11dc216ffc77270f4cb9f13":[3,0,1,1,0,2,0,12],
 "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a77e1b1c1b1d3ffc8175c77fc5e07d2de":[3,0,1,1,0,2,0,10],
 "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a91c3cb418038889ea7963d8ba716e646":[3,0,1,1,0,2,0,11],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a96be6fc973be6400cd5a210e4cb87427":[3,0,1,1,0,2,0,6]
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a96be6fc973be6400cd5a210e4cb87427":[3,0,1,1,0,2,0,6],
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aad75dcd40f639e866c0050fb5b51c6ce":[3,0,1,1,0,2,0,14],
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ab25030f048e6145b3beab9bc94f5af65":[3,0,1,1,0,2,0,9],
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac28251854e81b5ee223d9e15b68614da":[3,0,1,1,0,2,0,7],
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac2f464da03c9ada02ec1770514898104":[3,0,1,1,0,2,0,4],
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ad0c6cedf588260a96748ff1867266262":[3,0,1,1,0,2,0,8],
+"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html":[3,0,1,1,0,2,0,0]
 };

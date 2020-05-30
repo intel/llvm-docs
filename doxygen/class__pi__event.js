@@ -14,16 +14,10 @@ var class__pi__event =
     [ "get_start_time", "class__pi__event.html#a942ef2f8ff18e006ae8074f96d2f7438", null ],
     [ "increment_reference_count", "class__pi__event.html#aae4027672107fc6ce1f75598f519e3b6", null ],
     [ "is_completed", "class__pi__event.html#acc34d475beb7fd715889182c6b1deed7", null ],
-    [ "is_native_event", "class__pi__event.html#a2b0a368ef0e1732e460607d84611b73c", null ],
     [ "is_recorded", "class__pi__event.html#a3de149cef2c3b8bacd7598c835d2c1e1", null ],
     [ "is_started", "class__pi__event.html#a934372cc42188ff0ce139630bc4c8b22", null ],
-    [ "is_user_event", "class__pi__event.html#a9415985e7e4d3138f350263fd8bb86ea", null ],
     [ "make_native", "class__pi__event.html#a893e8d79288ee852a40e445b775203cf", null ],
-    [ "make_user", "class__pi__event.html#a2c259d4da88a60636bec8f63c15f1c7b", null ],
     [ "record", "class__pi__event.html#af0c02a7ea9a80a7afd718a62409397ba", null ],
-    [ "set_event_callback", "class__pi__event.html#af409edb315d93526b5241860a8cc2bbd", null ],
-    [ "set_event_complete", "class__pi__event.html#aaf242802e96b02a1f685e641d1e7d917", null ],
     [ "start", "class__pi__event.html#a888ed5b68e7e812448439dda1cb9dbc3", null ],
-    [ "trigger_callback", "class__pi__event.html#a1c753f385a15f44f7478a36f4e972345", null ],
     [ "wait", "class__pi__event.html#a4c26466908c0791106777bde099eb723", null ]
 ];

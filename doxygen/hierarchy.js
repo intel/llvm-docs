@@ -171,7 +171,6 @@ var hierarchy =
     [ "cl::sycl::detail::EnqueueResultT", "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html", null ],
     [ "cl::sycl::detail::EqualTo< T >", "structcl_1_1sycl_1_1detail_1_1EqualTo.html", null ],
     [ "cl::sycl::event", "classcl_1_1sycl_1_1event.html", null ],
-    [ "event_callback", "classevent__callback.html", null ],
     [ "cl::sycl::detail::event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html", null ],
     [ "exception", null, [
       [ "cl::sycl::exception", "classcl_1_1sycl_1_1exception.html", [
@@ -466,8 +465,8 @@ var hierarchy =
     [ "cl::sycl::detail::PtrValueType< void, Space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
-    [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html", null ],
     [ "cl::sycl::intel::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", null ],

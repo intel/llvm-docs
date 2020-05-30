@@ -22,7 +22,6 @@ var searchData=
   ['trace',['trace',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#aa9b06e1270bfa6b2b141b9c762198717',1,'cl::sycl::detail::pi']]],
   ['tracelevel',['TraceLevel',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a153495ba443668e0febb9335940a9153',1,'cl::sycl::detail::pi']]],
   ['traps',['traps',['../structstd_1_1numeric__limits_3_01half_01_4.html#a38b53645928636e68b1f6f7f161d9ec2',1,'std::numeric_limits&lt; half &gt;']]],
-  ['trigger_5fcallback',['trigger_callback',['../classevent__callback.html#a9c5a17fc255b9f5bad34ec9da916c4f4',1,'event_callback::trigger_callback()'],['../class__pi__event.html#a1c753f385a15f44f7478a36f4e972345',1,'_pi_event::trigger_callback()']]],
   ['true_5ft',['true_t',['../namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03',1,'cl::sycl::access']]],
   ['trunc',['trunc',['../namespacecl_1_1sycl.html#ade43894da670759748f2b69b17de4c02',1,'cl::sycl::trunc()'],['../namespacecl_1_1____host__std.html#a504717593f7ec07d1a6ac9954add4def',1,'cl::__host_std::trunc(s::cl_float x) __NOEXC'],['../namespacecl_1_1____host__std.html#a269dd40c65352a755c2e4e620802d09d',1,'cl::__host_std::trunc(s::cl_double x) __NOEXC'],['../namespacecl_1_1____host__std.html#abdd8d2396ace335a238665b118863763',1,'cl::__host_std::trunc(s::cl_half x) __NOEXC']]],
   ['trytogetelementtype',['TryToGetElementType',['../classcl_1_1sycl_1_1detail_1_1TryToGetElementType.html',1,'cl::sycl::detail']]],

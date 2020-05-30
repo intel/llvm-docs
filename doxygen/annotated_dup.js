@@ -22,7 +22,6 @@ var annotated_dup =
     [ "_pi_program", "struct__pi__program.html", "struct__pi__program" ],
     [ "_pi_queue", "struct__pi__queue.html", "struct__pi__queue" ],
     [ "bool_constant", "classbool__constant.html", null ],
-    [ "event_callback", "classevent__callback.html", "classevent__callback" ],
     [ "pi_buffer_region_struct", "structpi__buffer__region__struct.html", "structpi__buffer__region__struct" ],
     [ "pi_device_binaries_struct", "structpi__device__binaries__struct.html", "structpi__device__binaries__struct" ],
     [ "pi_device_binary_struct", "structpi__device__binary__struct.html", "structpi__device__binary__struct" ],

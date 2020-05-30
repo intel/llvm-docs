@@ -1,11 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"classcl_1_1sycl_1_1accessor.html#ae0167e44cad38c56d77a9bb1ec97b1cc":[1,1,1,0,0],
-"classcl_1_1sycl_1_1accessor.html#ae3972de1b8cf944c40b0dd362077fc18":[1,1,1,0,20],
-"classcl_1_1sycl_1_1accessor.html#af12a701ff3f7d7d815c6c6cbff10a2bd":[1,1,1,0,3],
-"classcl_1_1sycl_1_1accessor.html#af85fa4aacdab896f9d81910b2bbfda6f":[1,1,1,0,8],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html":[1,1,1,3],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html#a31e33f8d677f8ca202ede49467d33735":[1,1,1,3,0],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html":[1,1,1,4],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#a066e6987587803e1e0a9b2bd3626ff5e":[1,1,1,4,1],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#a3cc33a4b8b54470a2c8059284051e646":[1,1,1,4,0],
@@ -249,5 +243,11 @@ var NAVTREEINDEX4 =
 "classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#a5775b2cf06aa45f81b4a01371a964eb9":[3,0,1,1,0,27,3],
 "classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#ac11ed7dde9a0fd56bfb9ecd7e058c0e4":[3,0,1,1,0,27,1],
 "classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#ad713aac167a9f49623453450ae8bc617":[3,0,1,1,0,27,0],
-"classcl_1_1sycl_1_1detail_1_1CGHostTask.html":[3,0,1,1,0,28]
+"classcl_1_1sycl_1_1detail_1_1CGHostTask.html":[3,0,1,1,0,28],
+"classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a0100c965c78d71c0cae280758613f149":[3,0,1,1,0,28,0],
+"classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a23ac378c18c9c21813d41d035e6925fb":[3,0,1,1,0,28,2],
+"classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a521e90ead6d0b5392e35f28565e8ea17":[3,0,1,1,0,28,1],
+"classcl_1_1sycl_1_1detail_1_1CGInteropTask.html":[3,0,1,1,0,29],
+"classcl_1_1sycl_1_1detail_1_1CGInteropTask.html#a4a75d580209f572ff7cd406856931990":[3,0,1,1,0,29,1],
+"classcl_1_1sycl_1_1detail_1_1CGInteropTask.html#afaad6ef067b9ba533bd02ada240f9585":[3,0,1,1,0,29,0]
 };
