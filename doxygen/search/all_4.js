@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['associatewithhandler',['associateWithHandler',['../classcl_1_1sycl_1_1handler.html#ae548b3b019349fdb34b6be5d88d2165a',1,'cl::sycl::handler']]],
   ['builder',['Builder',['../classcl_1_1sycl_1_1group.html#ad90f883e62dca93f6bdd31c1ead4b756',1,'cl::sycl::group::Builder()'],['../classcl_1_1sycl_1_1h__item.html#ad90f883e62dca93f6bdd31c1ead4b756',1,'cl::sycl::h_item::Builder()'],['../classcl_1_1sycl_1_1item.html#ad90f883e62dca93f6bdd31c1ead4b756',1,'cl::sycl::item::Builder()'],['../classcl_1_1sycl_1_1nd__item.html#ad90f883e62dca93f6bdd31c1ead4b756',1,'cl::sycl::nd_item::Builder()']]],
   ['create_5fsub_5fdevices_3c_20info_3a_3apartition_5fproperty_3a_3apartition_5fby_5faffinity_5fdomain_20_3e',['create_sub_devices&lt; info::partition_property::partition_by_affinity_domain &gt;',['../namespacecl_1_1sycl.html#a2eec6e592edb12c2855ea1d98754de7b',1,'cl::sycl']]],
   ['create_5fsub_5fdevices_3c_20info_3a_3apartition_5fproperty_3a_3apartition_5fby_5fcounts_20_3e',['create_sub_devices&lt; info::partition_property::partition_by_counts &gt;',['../namespacecl_1_1sycl.html#afbbf0dc2f8ffe92c25381b3180612e54',1,'cl::sycl']]],

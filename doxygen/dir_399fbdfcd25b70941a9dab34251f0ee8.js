@@ -17,13 +17,6 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "buffer_impl.hpp", "buffer__impl_8hpp.html", "buffer__impl_8hpp" ],
     [ "builtins.hpp", "detail_2builtins_8hpp.html", "detail_2builtins_8hpp" ],
     [ "cg.hpp", "cg_8hpp.html", [
-      [ "interop_handler", "classcl_1_1sycl_1_1interop__handler.html", "classcl_1_1sycl_1_1interop__handler" ],
-      [ "ArgDesc", "classcl_1_1sycl_1_1detail_1_1ArgDesc.html", "classcl_1_1sycl_1_1detail_1_1ArgDesc" ],
-      [ "NDRDescT", "classcl_1_1sycl_1_1detail_1_1NDRDescT.html", "classcl_1_1sycl_1_1detail_1_1NDRDescT" ],
-      [ "HostKernelBase", "classcl_1_1sycl_1_1detail_1_1HostKernelBase.html", "classcl_1_1sycl_1_1detail_1_1HostKernelBase" ],
-      [ "InteropTask", "classcl_1_1sycl_1_1detail_1_1InteropTask.html", "classcl_1_1sycl_1_1detail_1_1InteropTask" ],
-      [ "HostTask", "classcl_1_1sycl_1_1detail_1_1HostTask.html", "classcl_1_1sycl_1_1detail_1_1HostTask" ],
-      [ "HostKernel", "classcl_1_1sycl_1_1detail_1_1HostKernel.html", "classcl_1_1sycl_1_1detail_1_1HostKernel" ],
       [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html", "classcl_1_1sycl_1_1detail_1_1CG" ],
       [ "CGExecKernel", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html", "classcl_1_1sycl_1_1detail_1_1CGExecKernel" ],
       [ "CGCopy", "classcl_1_1sycl_1_1detail_1_1CGCopy.html", "classcl_1_1sycl_1_1detail_1_1CGCopy" ],
@@ -34,6 +27,14 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
       [ "CGPrefetchUSM", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM" ],
       [ "CGInteropTask", "classcl_1_1sycl_1_1detail_1_1CGInteropTask.html", "classcl_1_1sycl_1_1detail_1_1CGInteropTask" ],
       [ "CGHostTask", "classcl_1_1sycl_1_1detail_1_1CGHostTask.html", "classcl_1_1sycl_1_1detail_1_1CGHostTask" ]
+    ] ],
+    [ "cg_types.hpp", "cg__types_8hpp.html", [
+      [ "ArgDesc", "classcl_1_1sycl_1_1detail_1_1ArgDesc.html", "classcl_1_1sycl_1_1detail_1_1ArgDesc" ],
+      [ "NDRDescT", "classcl_1_1sycl_1_1detail_1_1NDRDescT.html", "classcl_1_1sycl_1_1detail_1_1NDRDescT" ],
+      [ "HostKernelBase", "classcl_1_1sycl_1_1detail_1_1HostKernelBase.html", "classcl_1_1sycl_1_1detail_1_1HostKernelBase" ],
+      [ "InteropTask", "classcl_1_1sycl_1_1detail_1_1InteropTask.html", "classcl_1_1sycl_1_1detail_1_1InteropTask" ],
+      [ "HostTask", "classcl_1_1sycl_1_1detail_1_1HostTask.html", "classcl_1_1sycl_1_1detail_1_1HostTask" ],
+      [ "HostKernel", "classcl_1_1sycl_1_1detail_1_1HostKernel.html", "classcl_1_1sycl_1_1detail_1_1HostKernel" ]
     ] ],
     [ "circular_buffer.hpp", "circular__buffer_8hpp.html", [
       [ "CircularBuffer", "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html", "classcl_1_1sycl_1_1detail_1_1CircularBuffer" ]
@@ -50,6 +51,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "export.hpp", "export_8hpp.html", null ],
     [ "generic_type_lists.hpp", "generic__type__lists_8hpp.html", "generic__type__lists_8hpp" ],
     [ "generic_type_traits.hpp", "generic__type__traits_8hpp.html", "generic__type__traits_8hpp" ],
+    [ "handler_proxy.hpp", "handler__proxy_8hpp.html", "handler__proxy_8hpp" ],
     [ "helpers.hpp", "helpers_8hpp.html", "helpers_8hpp" ],
     [ "host_profiling_info.hpp", "host__profiling__info_8hpp.html", [
       [ "HostProfilingInfo", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo" ]

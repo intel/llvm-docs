@@ -1,5 +1,16 @@
 var NAVTREEINDEX24 =
 {
+"structcl_1_1sycl_1_1detail_1_1make__type__impl.html":[3,0,1,1,0,199],
+"structcl_1_1sycl_1_1detail_1_1make__type__impl.html#a1f67d365d82e1445216443762190d4f1":[3,0,1,1,0,199,0],
+"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html":[3,0,1,1,0,200],
+"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html#abdec62a11f15e36ab24093490f6fb337":[3,0,1,1,0,200,0],
+"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html#afbfd01d586a5cbfe85eb902350096551":[3,0,1,1,0,200,1],
+"structcl_1_1sycl_1_1detail_1_1make__unsigned.html":[3,0,1,1,0,201],
+"structcl_1_1sycl_1_1detail_1_1make__unsigned.html#a25fa2e910c7aef9f0c32290fd76c3c59":[3,0,1,1,0,201,0],
+"structcl_1_1sycl_1_1detail_1_1make__unsigned.html#adf290698afc18b57738930d95f59f471":[3,0,1,1,0,201,1],
+"structcl_1_1sycl_1_1detail_1_1make__unsigned__impl.html":[3,0,1,1,0,202],
+"structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_14a9e415c8a47cc88acb4203d5b5638e.html":[3,0,1,1,0,203],
+"structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_14a9e415c8a47cc88acb4203d5b5638e.html#ae66acf21e65342a2e4f30247a55e3175":[3,0,1,1,0,203,0],
 "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html":[3,0,1,1,0,204],
 "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html#ac2e2b102d8424e80120fedaa44813c22":[3,0,1,1,0,204,1],
 "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html#ad7e7b7a635238d36e3f17a8c525acd90":[3,0,1,1,0,204,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX24 =
 "structstd_1_1numeric__limits_3_01half_01_4.html#ae2c68ea746186c2d4a11de651d34ac5d":[3,0,2,13,15],
 "structstd_1_1numeric__limits_3_01half_01_4.html#ae63fb0d916828d24a7f6da72c083fe77":[3,0,2,13,4],
 "sub__group_8hpp.html":[4,0,0,0,1,5,9],
-"sub__group_8hpp_source.html":[4,0,0,0,1,5,9],
-"sub__group__host_8hpp.html":[4,0,0,0,1,5,10],
-"sub__group__host_8hpp_source.html":[4,0,0,0,1,5,10],
-"sycl_8hpp.html":[4,0,0,0,3],
-"sycl_8hpp_source.html":[4,0,0,0,3],
-"sycl__fe__intrins_8hpp.html":[4,0,0,0,1,2,34],
-"sycl__fe__intrins_8hpp_source.html":[4,0,0,0,1,2,34],
-"sycl__mem__obj__allocator_8hpp.html":[4,0,0,0,1,2,35],
-"sycl__mem__obj__allocator_8hpp_source.html":[4,0,0,0,1,2,35],
-"sycl__mem__obj__i_8hpp.html":[4,0,0,0,1,2,36],
-"sycl__mem__obj__i_8hpp_source.html":[4,0,0,0,1,2,36],
-"sycl__mem__obj__t_8cpp.html":[4,0,2,0,53]
+"sub__group_8hpp_source.html":[4,0,0,0,1,5,9]
 };

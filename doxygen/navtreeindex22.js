@@ -1,5 +1,16 @@
 var NAVTREEINDEX22 =
 {
+"struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8":[3,0,14,0,5],
+"struct__pi__kernel_1_1arguments.html#a470d38fd59abaa10e15fdbdbcbc0ccaf":[3,0,14,0,7],
+"struct__pi__kernel_1_1arguments.html#a61e2f738a9f355cba598336de7f37b3d":[3,0,14,0,2],
+"struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d":[3,0,14,0,1],
+"struct__pi__kernel_1_1arguments.html#aa1b075a29d40995b403582d209ca7f14":[3,0,14,0,6],
+"struct__pi__kernel_1_1arguments.html#aa5e150dedfd765cdc606578f12d249d3":[3,0,14,0,12],
+"struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9":[3,0,14,0,10],
+"struct__pi__kernel_1_1arguments.html#ab45f107f6ff96c5b075604f4dd2586e6":[3,0,14,0,4],
+"struct__pi__kernel_1_1arguments.html#ac153603b456fc27c19916362eec6fa9f":[3,0,14,0,8],
+"struct__pi__mem.html":[3,0,15],
+"struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0":[3,0,15,26],
 "struct__pi__mem.html#a099358d01a7f6f11e605ccddac7e4a30":[3,0,15,22],
 "struct__pi__mem.html#a1048ed41565664dbdbad0db2218b2fad":[3,0,15,7],
 "struct__pi__mem.html#a16e5dd7c7c5435a9118ebe59ce7b68ce":[3,0,15,21],
@@ -238,16 +249,5 @@ var NAVTREEINDEX22 =
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html":[3,0,1,1,0,217],
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html#a2067e161d2459ace54fa45711ad1bdc0":[3,0,1,1,0,217,0],
 "structcl_1_1sycl_1_1detail_1_1NotEqualTo.html":[3,0,1,1,0,219],
-"structcl_1_1sycl_1_1detail_1_1NotEqualTo.html#abc8d38d8a81c8aad8a857d32dd81d5fd":[3,0,1,1,0,219,0],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html":[3,0,1,1,0,222],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a0934e234f2c39b7d90aade2d202d2980":[3,0,1,1,0,222,2],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a5191de605498f3f54293f67f8b41d568":[3,0,1,1,0,222,5],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a79fd0dbeb9f73e5034f33fa63e4ca881":[3,0,1,1,0,222,4],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ada67fc534b599e5bea393b57e9824bd0":[3,0,1,1,0,222,3],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a":[3,0,1,1,0,222,0],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa1686a6c336b71b36d77354cea19a8b52":[3,0,1,1,0,222,0,2],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa22ae0e2b89e5e3d477f988cc36d3272b":[3,0,1,1,0,222,0,4],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa30bb747c98bccdd11b3f89e644c4d0ad":[3,0,1,1,0,222,0,1],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8394f0347c184cf156ac5924dccb773b":[3,0,1,1,0,222,0,3],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8e95e84813830072b7516cfaa7dbc1a9":[3,0,1,1,0,222,0,0]
+"structcl_1_1sycl_1_1detail_1_1NotEqualTo.html#abc8d38d8a81c8aad8a857d32dd81d5fd":[3,0,1,1,0,219,0]
 };

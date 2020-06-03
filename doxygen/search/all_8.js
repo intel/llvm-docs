@@ -31,6 +31,8 @@ var searchData=
   ['handler',['handler',['../classcl_1_1sycl_1_1handler.html',1,'cl::sycl::handler'],['../classcl_1_1sycl_1_1handler.html#aab6e38c9f1c74a6353d9328a2a6950d6',1,'cl::sycl::handler::handler(const handler &amp;)=delete'],['../classcl_1_1sycl_1_1handler.html#a87d56a475a807c51c9f750bb6c8ee15e',1,'cl::sycl::handler::handler(handler &amp;&amp;)=delete']]],
   ['handler_2ecpp',['handler.cpp',['../handler_8cpp.html',1,'']]],
   ['handler_2ehpp',['handler.hpp',['../handler_8hpp.html',1,'']]],
+  ['handler_5fproxy_2ecpp',['handler_proxy.cpp',['../handler__proxy_8cpp.html',1,'']]],
+  ['handler_5fproxy_2ehpp',['handler_proxy.hpp',['../handler__proxy_8hpp.html',1,'']]],
   ['handleunknownparamname',['handleUnknownParamName',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#ab3874682c7df0b17cdb14b09b5f7ad76',1,'cl::sycl::detail::pi']]],
   ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#a28427fb57ae4f8d092f9d439e97c8c89',1,'cl::sycl::intel']]],
   ['has_5fcontext',['has_context',['../classcl_1_1sycl_1_1exception.html#a32caf4741d72b0e8d1ee617a1713f653',1,'cl::sycl::exception']]],

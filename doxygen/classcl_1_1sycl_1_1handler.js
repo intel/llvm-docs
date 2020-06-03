@@ -42,6 +42,7 @@ var classcl_1_1sycl_1_1handler =
     [ "single_task", "classcl_1_1sycl_1_1handler.html#a0b4748620714e38e25cc6f27d0e7e979", null ],
     [ "update_host", "classcl_1_1sycl_1_1handler.html#a2e0250574969ee1bf7743596662c847e", null ],
     [ "accessor", "classcl_1_1sycl_1_1handler.html#a98f66aa14b67d43ebf8c4e8b42315983", null ],
+    [ "detail::associateWithHandler", "classcl_1_1sycl_1_1handler.html#ae548b3b019349fdb34b6be5d88d2165a", null ],
     [ "detail::getDeviceFromHandler", "classcl_1_1sycl_1_1handler.html#aa46bc683d37b6005434a0bceb5389f8c", null ],
     [ "detail::image_accessor", "classcl_1_1sycl_1_1handler.html#adbb498cc698f57626f0746b3365a880e", null ],
     [ "detail::queue_impl", "classcl_1_1sycl_1_1handler.html#a3a8c1bacdcf03b3534b9696769e9f0fc", null ],

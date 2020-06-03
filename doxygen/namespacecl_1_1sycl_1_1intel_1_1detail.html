@@ -515,9 +515,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
 <p>Briefly: aux kernel, intel:<a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">reduce()</a>, reproducible results,FP + ADD/MIN/MAX </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00923">923</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00927">927</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="handler_8hpp_source.html#l00829">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00380">cl::sycl::intel::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="handler_8hpp_source.html#l00834">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00380">cl::sycl::intel::reduce()</a>.</p>
 
 </div>
 </div>
@@ -565,9 +565,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses tree-reduction algorithm to reduce elements in each of work-groups. At the end of each work-group the partial sum is written to a global buffer.</p>
 <p>Briefly: aux kernel, tree-reduction, CUSTOM types/ops. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00985">985</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00989">989</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00829">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00834">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -621,9 +621,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> algorithm to reduce elements in each of work-groups, then it calls fast sycl atomic operations to update user's reduction variable.</p>
 <p>Briefly: calls user's lambda, <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> + atomic, INT + ADD/MIN/MAX. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00597">597</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00601">601</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="handler_8hpp_source.html#l00829">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00380">cl::sycl::intel::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="handler_8hpp_source.html#l00834">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00380">cl::sycl::intel::reduce()</a>.</p>
 
 </div>
 </div>
@@ -677,9 +677,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses tree-reduction algorithm to reduce elements in each of work-groups, then it calls fast sycl atomic operations to update user's reduction variable.</p>
 <p>Briefly: calls user's lambda, tree-reduction + atomic, INT + AND/OR/XOR. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00647">647</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00651">651</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00829">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00834">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -727,9 +727,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
 <p>Briefly: user's lambda, intel:<a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">reduce()</a>, FP + ADD/MIN/MAX. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00743">743</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00747">747</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="handler_8hpp_source.html#l00829">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00380">cl::sycl::intel::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="handler_8hpp_source.html#l00834">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00380">cl::sycl::intel::reduce()</a>.</p>
 
 </div>
 </div>
@@ -782,9 +782,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 </dl>
 <p>Briefly: user's lambda, tree-reduction, CUSTOM types/ops. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00811">811</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00815">815</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00829">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00834">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
