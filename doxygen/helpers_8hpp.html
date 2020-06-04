@@ -105,6 +105,7 @@ $(document).ready(function(){initNavTree('helpers_8hpp.html','');});
 <code>#include &lt;<a class="el" href="pi_8hpp_source.html">CL/sycl/detail/pi.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="type__traits_8hpp_source.html">CL/sycl/detail/type_traits.hpp</a>&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
@@ -115,22 +116,22 @@ Include dependency graph for helpers.hpp:</div>
 <map name="include_2CL_2sycl_2detail_2helpers_8hpp" id="include_2CL_2sycl_2detail_2helpers_8hpp">
 <area shape="rect" id="node2" href="spirv__types_8hpp.html" title="CL/__spirv/spirv_types.hpp" alt="" coords="80,281,261,307"/>
 <area shape="rect" id="node4" href="spirv__vars_8hpp.html" title="CL/__spirv/spirv_vars.hpp" alt="" coords="227,102,402,129"/>
-<area shape="rect" id="node6" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="1541,370,1725,397"/>
-<area shape="rect" id="node9" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="835,191,1016,218"/>
+<area shape="rect" id="node6" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="1535,370,1719,397"/>
+<area shape="rect" id="node9" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="847,191,1028,218"/>
 <area shape="rect" id="node14" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="1067,452,1234,479"/>
-<area shape="rect" id="node28" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1104,102,1245,129"/>
-<area shape="rect" id="node34" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="1847,95,1977,136"/>
+<area shape="rect" id="node28" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1167,102,1308,129"/>
+<area shape="rect" id="node34" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="1829,95,1960,136"/>
 <area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1425,452,1599,479"/>
 <area shape="rect" id="node11" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="318,452,445,479"/>
 <area shape="rect" id="node18" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="713,281,865,307"/>
 <area shape="rect" id="node19" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="519,370,646,397"/>
 <area shape="rect" id="node22" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="799,370,910,397"/>
 <area shape="rect" id="node20" href="cl__usm__ext_8h.html" title="CL/cl_usm_ext.h" alt="" coords="469,452,590,479"/>
-<area shape="rect" id="node29" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="1389,281,1573,307"/>
-<area shape="rect" id="node30" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1246,370,1415,397"/>
-<area shape="rect" id="node35" href="generic__type__lists_8hpp.html" title="CL/sycl/detail/generic\l_type_lists.hpp" alt="" coords="1782,184,1930,225"/>
-<area shape="rect" id="node36" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="1856,363,1976,404"/>
-<area shape="rect" id="node38" href="type__list_8hpp.html" title="CL/sycl/detail/type\l_list.hpp" alt="" coords="1851,273,1981,315"/>
+<area shape="rect" id="node29" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="1372,281,1556,307"/>
+<area shape="rect" id="node30" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1239,370,1409,397"/>
+<area shape="rect" id="node35" href="generic__type__lists_8hpp.html" title="CL/sycl/detail/generic\l_type_lists.hpp" alt="" coords="1765,184,1913,225"/>
+<area shape="rect" id="node36" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="1839,363,1959,404"/>
+<area shape="rect" id="node38" href="type__list_8hpp.html" title="CL/sycl/detail/type\l_list.hpp" alt="" coords="1833,273,1964,315"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -229,6 +230,9 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a4060c8b4d2872c8c5d154ed35a5a4023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a4060c8b4d2872c8c5d154ed35a5a4023">cl::sycl::detail::memcpy</a> (void *Dst, const void *Src, size_t Size)</td></tr>
 <tr class="separator:a4060c8b4d2872c8c5d154ed35a5a4023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa111e5bde83c3614b6333105b92170da"><td class="memTemplParams" colspan="2">template&lt;typename To , typename From &gt; </td></tr>
+<tr class="memitem:aa111e5bde83c3614b6333105b92170da"><td class="memTemplItemLeft" align="right" valign="top">constexpr To&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aa111e5bde83c3614b6333105b92170da">cl::sycl::detail::bit_cast</a> (const From &amp;from) noexcept</td></tr>
+<tr class="separator:aa111e5bde83c3614b6333105b92170da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d5939f060c37ee122f2f0854eed809c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a7d5939f060c37ee122f2f0854eed809c">cl::sycl::detail::getOrWaitEvents</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">cl::sycl::event</a> &gt; DepEvents, std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1context__impl.html">cl::sycl::detail::context_impl</a> &gt; Context)</td></tr>
 <tr class="separator:a7d5939f060c37ee122f2f0854eed809c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0f6b72f07a81730b1f6d9adad0dcced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae0f6b72f07a81730b1f6d9adad0dcced">cl::sycl::detail::waitEvents</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">cl::sycl::event</a> &gt; DepEvents)</td></tr>

@@ -19,6 +19,7 @@ var searchData=
   ['bindplugin',['bindPlugin',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a5d29befedd23d01289e250d88c88a410',1,'cl::sycl::detail::pi']]],
   ['bisrepresentationt',['BIsRepresentationT',['../namespacecl_1_1sycl_1_1detail_1_1half__impl.html#a246852439b33d020098e8eb187d6c7a8',1,'cl::sycl::detail::half_impl']]],
   ['bit_5fand',['bit_and',['../namespacecl_1_1sycl_1_1intel.html#a5170bb46ad8d7e98d5badb4ce662e291',1,'cl::sycl::intel']]],
+  ['bit_5fcast',['bit_cast',['../namespacecl_1_1sycl_1_1detail.html#aa111e5bde83c3614b6333105b92170da',1,'cl::sycl::detail']]],
   ['bit_5for',['bit_or',['../namespacecl_1_1sycl_1_1intel.html#afe6b273a148d2fdcd38f5b9a4f2172f7',1,'cl::sycl::intel']]],
   ['bit_5fxor',['bit_xor',['../namespacecl_1_1sycl_1_1intel.html#a0bcdaf7d87d4dbdb29399e3c796f46d1',1,'cl::sycl::intel']]],
   ['bitselect',['bitselect',['../namespacecl_1_1sycl.html#a27cc127045b0fea4059afcd6261d53ba',1,'cl::sycl']]],

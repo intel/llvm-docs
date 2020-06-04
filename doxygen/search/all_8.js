@@ -34,7 +34,7 @@ var searchData=
   ['handler_5fproxy_2ecpp',['handler_proxy.cpp',['../handler__proxy_8cpp.html',1,'']]],
   ['handler_5fproxy_2ehpp',['handler_proxy.hpp',['../handler__proxy_8hpp.html',1,'']]],
   ['handleunknownparamname',['handleUnknownParamName',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#ab3874682c7df0b17cdb14b09b5f7ad76',1,'cl::sycl::detail::pi']]],
-  ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#a28427fb57ae4f8d092f9d439e97c8c89',1,'cl::sycl::intel']]],
+  ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#a0d9794c3b37e01249656efd346dbb01b',1,'cl::sycl::intel']]],
   ['has_5fcontext',['has_context',['../classcl_1_1sycl_1_1exception.html#a32caf4741d72b0e8d1ee617a1713f653',1,'cl::sycl::exception']]],
   ['has_5fdenorm',['has_denorm',['../structstd_1_1numeric__limits_3_01half_01_4.html#a46367b7c7c302f5e043ce75f931e8207',1,'std::numeric_limits&lt; half &gt;']]],
   ['has_5fdenorm_5floss',['has_denorm_loss',['../structstd_1_1numeric__limits_3_01half_01_4.html#a99750bacfaef913c3ba44962c8a111fb',1,'std::numeric_limits&lt; half &gt;']]],

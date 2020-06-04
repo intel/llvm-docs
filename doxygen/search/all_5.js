@@ -14,7 +14,7 @@ var searchData=
   ['empty_5ftask',['EMPTY_TASK',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a8b89dcf5970cfadfe9a498bf10802b84',1,'cl::sycl::detail::Command']]],
   ['empty_5ftype_5flist',['empty_type_list',['../namespacecl_1_1sycl_1_1detail.html#a02a128fb2e7e85058225bf09341576e5',1,'cl::sycl::detail']]],
   ['emptycommand',['EmptyCommand',['../classcl_1_1sycl_1_1detail_1_1EmptyCommand.html',1,'cl::sycl::detail::EmptyCommand'],['../classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#aed67f1c5291737aa9adc40ca825c2404',1,'cl::sycl::detail::EmptyCommand::EmptyCommand()']]],
-  ['emulation_5fplatform_5fname',['EMULATION_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#ab82a4cebd3c95467f4fbd25dc2f8c943',1,'cl::sycl::intel']]],
+  ['emulation_5fplatform_5fname',['EMULATION_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#ada47acbb93cfa789aeb076ffad1896ea',1,'cl::sycl::intel']]],
   ['enable_5fif_5fis_5ffunction_5fpointer_5ft',['enable_if_is_function_pointer_t',['../namespacecl_1_1sycl_1_1intel.html#ab486c9b9a4cf91aeab7a77a62ebd537f',1,'cl::sycl::intel']]],
   ['enable_5fif_5ft',['enable_if_t',['../namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383',1,'cl::sycl::detail']]],
   ['enable_5fprofiling',['enable_profiling',['../classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html',1,'cl::sycl::property::queue']]],

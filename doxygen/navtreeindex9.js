@@ -212,7 +212,7 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1intel_1_1pipe.html#ad53505e4e8d14f54eb6b8d57e28a11da":[3,0,1,1,3,7,3],
 "classcl_1_1sycl_1_1intel_1_1platform__selector.html":[3,0,1,1,3,8],
 "classcl_1_1sycl_1_1intel_1_1platform__selector.html#a443de2ea0cb4ecaa1f2a5b1111403b23":[3,0,1,1,3,8,0],
-"classcl_1_1sycl_1_1intel_1_1platform__selector.html#adbb0cc60301d320942b7019c77d07c33":[3,0,1,1,3,8,1],
+"classcl_1_1sycl_1_1intel_1_1platform__selector.html#a774a09b3dd2bb0afa57a5e2fd2f26782":[3,0,1,1,3,8,1],
 "classcl_1_1sycl_1_1interop__handler.html":[3,0,1,1,45],
 "classcl_1_1sycl_1_1interop__handler.html#a01c2d77c9e8734d927d22e8383d90d04":[3,0,1,1,45,2],
 "classcl_1_1sycl_1_1interop__handler.html#a189cd7d2b8748bc83c47fb42c69f9922":[3,0,1,1,45,4],

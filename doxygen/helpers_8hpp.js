@@ -1,6 +1,7 @@
 var helpers_8hpp =
 [
     [ "Builder", "classcl_1_1sycl_1_1detail_1_1Builder.html", "classcl_1_1sycl_1_1detail_1_1Builder" ],
+    [ "bit_cast", "helpers_8hpp.html#aa111e5bde83c3614b6333105b92170da", null ],
     [ "getOrWaitEvents", "helpers_8hpp.html#a7d5939f060c37ee122f2f0854eed809c", null ],
     [ "getSPIRVMemorySemanticsMask", "helpers_8hpp.html#a05c0a3bfbd49041ac8b198d16031be53", null ],
     [ "getSPIRVMemorySemanticsMask", "helpers_8hpp.html#a252c50e12b021b6fe6d8b5d81e3dfb7a", null ],

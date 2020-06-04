@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#a28427fb57ae4f8d092f9d439e97c8c89',1,'cl::sycl::intel']]],
+  ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1intel.html#a0d9794c3b37e01249656efd346dbb01b',1,'cl::sycl::intel']]],
   ['has_5fdenorm',['has_denorm',['../structstd_1_1numeric__limits_3_01half_01_4.html#a46367b7c7c302f5e043ce75f931e8207',1,'std::numeric_limits&lt; half &gt;']]],
   ['has_5fdenorm_5floss',['has_denorm_loss',['../structstd_1_1numeric__limits_3_01half_01_4.html#a99750bacfaef913c3ba44962c8a111fb',1,'std::numeric_limits&lt; half &gt;']]],
   ['has_5ffast_5fatomics',['has_fast_atomics',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#affb0813e01b87eb39cd338afe97d4ff6',1,'cl::sycl::intel::detail::reduction_impl']]],
