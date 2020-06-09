@@ -8,6 +8,7 @@ var searchData=
   ['defaulthostqueue',['DefaultHostQueue',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902',1,'cl::sycl::detail::Scheduler']]],
   ['devdriverver',['devDriverVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#adc4571a02bb3a5e0e9e0f4deb6324c88',1,'cl::sycl::detail::DevDescT']]],
   ['devdriverversize',['devDriverVerSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a742a74f5d8ce4980b91632a0fef21041',1,'cl::sycl::detail::DevDescT']]],
+  ['device',['Device',['../struct__pi__context.html#afc9a249b1677570ca35b382d12445025',1,'_pi_context']]],
   ['device_5f',['device_',['../struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5',1,'_pi_queue']]],
   ['devicebinaries',['DeviceBinaries',['../structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a',1,'pi_device_binaries_struct']]],
   ['deviceid_5f',['deviceId_',['../struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2',1,'_pi_context']]],

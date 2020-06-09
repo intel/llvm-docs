@@ -1,5 +1,25 @@
 var searchData=
 [
-  ['ocl_5ferror_5freport',['OCL_ERROR_REPORT',['../common_8hpp.html#ad6463373a3493ae65392ebe377346c9c',1,'common.hpp']]],
-  ['opencl_5fplugin_5fname',['OPENCL_PLUGIN_NAME',['../pi_8hpp.html#ad529bda5cbc5a021323dd2627cdca36a',1,'pi.hpp']]]
+  ['make_5f1v',['MAKE_1V',['../builtins__helper_8hpp.html#ab967f2df28a0d8240b0670346b01ea2a',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2p',['MAKE_1V_2P',['../builtins__helper_8hpp.html#a0ced08a05f6b6d4f11dc379fce65d331',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2s',['MAKE_1V_2S',['../builtins__helper_8hpp.html#ad9b73bdce23b240a010da461bf7ebc5c',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2s_5f3s',['MAKE_1V_2S_3S',['../builtins__helper_8hpp.html#a93df471aa7acda73c1c3e0e40b884d3d',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2v',['MAKE_1V_2V',['../builtins__helper_8hpp.html#a6cbf390b1df065f6747a1ef56f81be39',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2v_5f3p',['MAKE_1V_2V_3P',['../builtins__helper_8hpp.html#a2e2c9c4f6620de4e0b64ad011a59c3fd',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2v_5f3v',['MAKE_1V_2V_3V',['../builtins__helper_8hpp.html#ab6ea60924aee7448ec90d4dca63253ed',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2v_5f3v_5ffunc',['MAKE_1V_2V_3V_FUNC',['../builtins__helper_8hpp.html#a6d2f126b665504013e5a05fc4ddf99d5',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5f2v_5ffunc',['MAKE_1V_2V_FUNC',['../builtins__helper_8hpp.html#a00b5f4a90d01c4eff96f87206cf21712',1,'builtins_helper.hpp']]],
+  ['make_5f1v_5ffunc',['MAKE_1V_FUNC',['../builtins__helper_8hpp.html#af5816f55706d7c0b56a2322218534381',1,'builtins_helper.hpp']]],
+  ['make_5fgeo_5f1v_5f2v_5frs',['MAKE_GEO_1V_2V_RS',['../builtins__helper_8hpp.html#a40cc681dceadb82151c77b523db62e29',1,'builtins_helper.hpp']]],
+  ['make_5fsc_5f1v_5f2v_5f3v',['MAKE_SC_1V_2V_3V',['../builtins__helper_8hpp.html#a53deaf206deaa4109da5104f693e9671',1,'builtins_helper.hpp']]],
+  ['make_5fsc_5f3arg',['MAKE_SC_3ARG',['../builtins__helper_8hpp.html#ae1af3bb79bf99569468a20686d69140a',1,'builtins_helper.hpp']]],
+  ['make_5fsc_5ffsc_5f1v_5f2v_5f3v_5ffv',['MAKE_SC_FSC_1V_2V_3V_FV',['../builtins__helper_8hpp.html#aa28e804c94e14bb95b6dae1d50100643',1,'builtins_helper.hpp']]],
+  ['make_5fsr_5f1v_5fand',['MAKE_SR_1V_AND',['../builtins__helper_8hpp.html#ae05d5e6f6f75c38885731e4f2292d408',1,'builtins_helper.hpp']]],
+  ['make_5fsr_5f1v_5for',['MAKE_SR_1V_OR',['../builtins__helper_8hpp.html#af94f9356c79c6896a26ff578f54a948f',1,'builtins_helper.hpp']]],
+  ['make_5fvector_5falias',['MAKE_VECTOR_ALIAS',['../aliases_8hpp.html#a7557892713090d3d64b767f86a1a157f',1,'aliases.hpp']]],
+  ['make_5fvector_5faliases_5ffor_5farithmetic_5ftypes',['MAKE_VECTOR_ALIASES_FOR_ARITHMETIC_TYPES',['../aliases_8hpp.html#ae099f22191a749379a4b348e92bc6ac6',1,'aliases.hpp']]],
+  ['make_5fvector_5faliases_5ffor_5fopencl_5ftypes',['MAKE_VECTOR_ALIASES_FOR_OPENCL_TYPES',['../aliases_8hpp.html#ad951fb477449579ae8d6f50409848ad6',1,'aliases.hpp']]],
+  ['make_5fvector_5faliases_5ffor_5fsigned_5fand_5funsigned_5ftypes',['MAKE_VECTOR_ALIASES_FOR_SIGNED_AND_UNSIGNED_TYPES',['../aliases_8hpp.html#adc3c42d8253ec4fcc3b6422ba6ebcc2f',1,'aliases.hpp']]],
+  ['make_5fvector_5faliases_5ffor_5fvector_5flength',['MAKE_VECTOR_ALIASES_FOR_VECTOR_LENGTH',['../aliases_8hpp.html#a563a5f1e19cfb5d73901de2b961c4b45',1,'aliases.hpp']]],
+  ['max_5fconfig_5fname',['MAX_CONFIG_NAME',['../config_8cpp.html#ad5d0dadaaad78e00b3a3d991e539d4a8',1,'config.cpp']]]
 ];

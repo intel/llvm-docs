@@ -18,7 +18,7 @@ var searchData=
   ['fetch_5fxor',['fetch_xor',['../classcl_1_1sycl_1_1atomic.html#a90b86d7de98a256a74b2b98be3be2706',1,'cl::sycl::atomic']]],
   ['filename',['fileName',['../structcl_1_1sycl_1_1detail_1_1code__location.html#a50531b2d26d19483b02330010733f8e6',1,'cl::sycl::detail::code_location']]],
   ['fill',['FILL',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eead43820d7d9556cea7929a119b28d71d1',1,'cl::sycl::detail::CG::FILL()'],['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac885d004ad801e0fb49150227b5831ab',1,'cl::sycl::detail::MemoryManager::fill()'],['../classcl_1_1sycl_1_1handler.html#a928150e8912597bfc30f81459b8c46bf',1,'cl::sycl::handler::fill()']]],
-  ['fill_5fusm',['fill_usm',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a71d6b81364aa47331f0b1275e7d11b8c',1,'cl::sycl::detail::MemoryManager::fill_usm()'],['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5d1025f00ce039627cd01a97e08a6eb1',1,'cl::sycl::detail::CG::FILL_USM()']]],
+  ['fill_5fusm',['FILL_USM',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5d1025f00ce039627cd01a97e08a6eb1',1,'cl::sycl::detail::CG::FILL_USM()'],['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a71d6b81364aa47331f0b1275e7d11b8c',1,'cl::sycl::detail::MemoryManager::fill_usm()']]],
   ['filterallowlist',['filterAllowList',['../namespacecl_1_1sycl_1_1detail.html#ad0846abb3ec30b307b798fafc62a962d',1,'cl::sycl::detail']]],
   ['filtering_5fmode',['filtering_mode',['../namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59',1,'cl::sycl']]],
   ['find_5flarger_5ftype_5ft',['find_larger_type_t',['../namespacecl_1_1sycl_1_1detail.html#af0a1ad2c8a459cfffd66bf1aa9d30fa4',1,'cl::sycl::detail']]],

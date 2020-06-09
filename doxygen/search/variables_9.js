@@ -29,5 +29,6 @@ var searchData=
   ['isconstantbuf',['IsConstantBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#aa94e7fa38c656ccc85b8c7e329d7d62b',1,'cl::sycl::detail::accessor_common']]],
   ['isglobalbuf',['IsGlobalBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a4d39ed5678d566da9f5dbb77988d10d6',1,'cl::sycl::detail::accessor_common']]],
   ['ishostbuf',['IsHostBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a29f0ef1ecc9f529b85951a1767a8050f',1,'cl::sycl::detail::accessor_common']]],
-  ['isplaceh',['IsPlaceH',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a6616e79ad8faab3e307c3287907fb6c2',1,'cl::sycl::detail::accessor_common']]]
+  ['isplaceh',['IsPlaceH',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a6616e79ad8faab3e307c3287907fb6c2',1,'cl::sycl::detail::accessor_common']]],
+  ['issubdevice',['IsSubDevice',['../class__pi__device.html#a63fa3ab96aa179b3900f2290f0fb6f89',1,'_pi_device']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../structcl_1_1sycl_1_1elem.html#a08274fc4fcc20507640de4dae80ef179',1,'cl::sycl::elem']]]
+  ['y',['y',['../structcl_1_1sycl_1_1elem.html#a5cfcdcdca9ada16b8ec61188feeeb428',1,'cl::sycl::elem']]]
 ];

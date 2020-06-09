@@ -4,6 +4,7 @@ var struct__pi__kernel =
     [ "native_type", "struct__pi__kernel.html#a3f6403f55ad9a2f53e928f064fc40548", null ],
     [ "_pi_kernel", "struct__pi__kernel.html#ade707fb649357321fa55ed8765ea6030", null ],
     [ "~_pi_kernel", "struct__pi__kernel.html#a08bfff65a06c87506fc6049ce73202f4", null ],
+    [ "_pi_kernel", "struct__pi__kernel.html#a9dab17a01d4108af3d787039ac31cd09", null ],
     [ "clear_local_size", "struct__pi__kernel.html#aa50210e92353398de8da3f620dbdc270", null ],
     [ "decrement_reference_count", "struct__pi__kernel.html#ad42826cd20b4f5138bb59fb526f14f39", null ],
     [ "get", "struct__pi__kernel.html#ae34fd39afe4bc5dd3dd1ddd868b084f8", null ],
@@ -21,6 +22,8 @@ var struct__pi__kernel =
     [ "context_", "struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb", null ],
     [ "function_", "struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339", null ],
     [ "name_", "struct__pi__kernel.html#acbe725b178f9972d7a98563a0fad2768", null ],
+    [ "Program", "struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6", null ],
     [ "program_", "struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba", null ],
-    [ "refCount_", "struct__pi__kernel.html#aee626d969a1e970d9802f8fe04c32a63", null ]
+    [ "refCount_", "struct__pi__kernel.html#aee626d969a1e970d9802f8fe04c32a63", null ],
+    [ "ZeKernel", "struct__pi__kernel.html#a2a69000010873d5ca19eae3fadb9701a", null ]
 ];

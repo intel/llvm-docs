@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opencl_20plugin',['OpenCL Plugin',['../group__sycl__pi__ocl.html',1,'']]]
+  ['level_20zero_20plugin',['Level Zero Plugin',['../group__sycl__pi__level0.html',1,'']]]
 ];

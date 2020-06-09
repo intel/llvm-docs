@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['the_20plugin_20interface',['The Plugin Interface',['../group__sycl__pi.html',1,'']]]
+  ['opencl_20plugin',['OpenCL Plugin',['../group__sycl__pi__ocl.html',1,'']]]
 ];

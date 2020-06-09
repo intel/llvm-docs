@@ -143,9 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aec5f4676243cfbf21edc4abeb054f8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa">cleanupFinishedCommands</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> FinishedEvent)</td></tr>
 <tr class="memdesc:aec5f4676243cfbf21edc4abeb054f8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes finished non-leaf non-alloca commands from the subgraph (assuming that all its commands have been waited for).  <a href="#aec5f4676243cfbf21edc4abeb054f8fa">More...</a><br /></td></tr>
 <tr class="separator:aec5f4676243cfbf21edc4abeb054f8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55efbd67f9291199dd13757dc3ca185b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a55efbd67f9291199dd13757dc3ca185b">addHostAccessor</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *Req, const bool Destructor=false)</td></tr>
-<tr class="memdesc:a55efbd67f9291199dd13757dc3ca185b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds nodes to the graph, that update the requirement with the pointer to the host memory.  <a href="#a55efbd67f9291199dd13757dc3ca185b">More...</a><br /></td></tr>
-<tr class="separator:a55efbd67f9291199dd13757dc3ca185b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e184b6920626e812994f0b905a9644a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6e184b6920626e812994f0b905a9644a">addHostAccessor</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *Req)</td></tr>
+<tr class="memdesc:a6e184b6920626e812994f0b905a9644a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds nodes to the graph, that update the requirement with the pointer to the host memory.  <a href="#a6e184b6920626e812994f0b905a9644a">More...</a><br /></td></tr>
+<tr class="separator:a6e184b6920626e812994f0b905a9644a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa17761af756131d983574f5558c2f854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa17761af756131d983574f5558c2f854">releaseHostAccessor</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *Req)</td></tr>
 <tr class="memdesc:aa17761af756131d983574f5558c2f854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unblocks operations with the memory object.  <a href="#aa17761af756131d983574f5558c2f854">More...</a><br /></td></tr>
 <tr class="separator:aa17761af756131d983574f5558c2f854"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -258,7 +258,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00216">216</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00215">215</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="queue__impl_8hpp_source.html#l00043">cl::sycl::detail::Ordered</a>.</p>
 
@@ -340,8 +340,8 @@ Error handling</h2>
 
 </div>
 </div>
-<a id="a55efbd67f9291199dd13757dc3ca185b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55efbd67f9291199dd13757dc3ca185b">&#9670;&nbsp;</a></span>addHostAccessor()</h2>
+<a id="a6e184b6920626e812994f0b905a9644a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e184b6920626e812994f0b905a9644a">&#9670;&nbsp;</a></span>addHostAccessor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,18 +350,8 @@ Error handling</h2>
           <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> cl::sycl::detail::Scheduler::addHostAccessor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td>
-          <td class="paramname"><em>Req</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>Req</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const bool&#160;</td>
-          <td class="paramname"><em>Destructor</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -437,7 +427,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00202">202</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00201">201</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00100">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
@@ -555,7 +545,7 @@ Error handling</h2>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00223">223</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00222">222</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
 </div>
 </div>
@@ -583,7 +573,7 @@ Error handling</h2>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00189">189</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00188">188</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="accessor__impl_8hpp_source.html#l00109">cl::sycl::detail::AccessorImplHost::MBlockedCmd</a>, and <a class="el" href="commands_8hpp_source.html#l00229">cl::sycl::detail::Command::MEnqueueStatus</a>.</p>
 

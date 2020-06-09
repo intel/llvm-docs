@@ -3,7 +3,7 @@ var classcl_1_1sycl_1_1detail_1_1Scheduler =
     [ "Scheduler", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aad4ad62a6e1d3c4eb1a29c1d464357c8", null ],
     [ "addCG", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac0e8ff38f6f6274626f65b2b52227f47", null ],
     [ "addCopyBack", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#af5887b8414f705ee134016e59e14baeb", null ],
-    [ "addHostAccessor", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a55efbd67f9291199dd13757dc3ca185b", null ],
+    [ "addHostAccessor", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6e184b6920626e812994f0b905a9644a", null ],
     [ "cleanupFinishedCommands", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa", null ],
     [ "enqueueLeavesOfReqUnlocked", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aade0e32407fe42d186a99526f6a00b55", null ],
     [ "getDefaultHostQueue", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258", null ],

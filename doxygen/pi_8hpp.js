@@ -8,6 +8,7 @@ var pi_8hpp =
     [ "_PI_API", "pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "_PI_API", "pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "CUDA_PLUGIN_NAME", "pi_8hpp.html#ae269eb24387f3f87c260b3c7735fcc80", null ],
+    [ "LEVEL0_PLUGIN_NAME", "pi_8hpp.html#a104ad5a9e4f1879c00246df59134d090", null ],
     [ "OPENCL_PLUGIN_NAME", "pi_8hpp.html#ad529bda5cbc5a021323dd2627cdca36a", null ],
     [ "PI_HANDLE_UNKNOWN_PARAM_NAME", "pi_8hpp.html#a6a37fc8698c7dd2e17d464f7f466380d", null ],
     [ "PiContext", "pi_8hpp.html#affdd574e979e343c0e6d45125be9ce6c", null ],

@@ -26,7 +26,7 @@ var searchData=
   ['kernelprogramcache',['KernelProgramCache',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html',1,'cl::sycl::detail']]],
   ['kernelsetid',['KernelSetId',['../namespacecl_1_1sycl_1_1detail.html#aec49fd62110c9128fa044e38a1c1f9c2',1,'cl::sycl::detail']]],
   ['kernelwithbuildstatet',['KernelWithBuildStateT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ac1739d71236aa9daa580cd969f4c2f05',1,'cl::sycl::detail::KernelProgramCache']]],
-  ['kind',['Kind',['../structpi__device__binary__struct.html#aecd218b85c8c7499aa5c22e900de30dc',1,'pi_device_binary_struct::Kind()'],['../struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084',1,'_pi_context::kind()'],['../structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#ab02bfda6fa8097e2a80f0cfc01fef305',1,'cl::sycl::detail::kernel_param_desc_t::kind()']]],
+  ['kind',['kind',['../struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084',1,'_pi_context::kind()'],['../structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#ab02bfda6fa8097e2a80f0cfc01fef305',1,'cl::sycl::detail::kernel_param_desc_t::kind()'],['../structpi__device__binary__struct.html#aecd218b85c8c7499aa5c22e900de30dc',1,'pi_device_binary_struct::Kind()']]],
   ['kind_5f',['kind_',['../struct__pi__context.html#aacdb938710dcd43e1f12123af4043da3',1,'_pi_context']]],
   ['kind_5faccessor',['kind_accessor',['../namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc',1,'cl::sycl::detail']]],
   ['kind_5fpointer',['kind_pointer',['../namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa4978aa503ec00be00af860d6e8ba41ef',1,'cl::sycl::detail']]],

@@ -11,6 +11,7 @@ var searchData=
   ['manifestend',['ManifestEnd',['../structpi__device__binary__struct.html#ae3149612f8f60cfc3bed1c63cc94233e',1,'pi_device_binary_struct']]],
   ['manifeststart',['ManifestStart',['../structpi__device__binary__struct.html#a878e5bebe74c5308b46fc6819a323e72',1,'pi_device_binary_struct']]],
   ['mapflags_5f',['mapFlags_',['../struct__pi__mem.html#a16e5dd7c7c5435a9118ebe59ce7b68ce',1,'_pi_mem']]],
+  ['maphostptr',['MapHostPtr',['../struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955',1,'_pi_mem']]],
   ['mapoffset_5f',['mapOffset_',['../struct__pi__mem.html#a099358d01a7f6f11e605ccddac7e4a30',1,'_pi_mem']]],
   ['mapptr_5f',['mapPtr_',['../struct__pi__mem.html#a907ca90796097685f69c3bd5f4d185fe',1,'_pi_mem']]],
   ['margs',['MArgs',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a72e8ae99281477ce9a7c399ab7c56b2a',1,'cl::sycl::detail::CGExecKernel::MArgs()'],['../classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a521e90ead6d0b5392e35f28565e8ea17',1,'cl::sycl::detail::CGHostTask::MArgs()']]],

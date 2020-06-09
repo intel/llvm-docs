@@ -10,18 +10,22 @@ var searchData=
   ['_5f_5fsycl_5freduction_5faux_5f2nd_5fkernel',['__sycl_reduction_aux_2nd_kernel',['../classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__aux__2nd__kernel.html',1,'cl::sycl::intel::detail']]],
   ['_5f_5fsycl_5freduction_5fmain_5f2nd_5fkernel',['__sycl_reduction_main_2nd_kernel',['../classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__main__2nd__kernel.html',1,'cl::sycl::intel::detail']]],
   ['_5f_5fwidth_5fmanipulator_5f_5f',['__width_manipulator__',['../classcl_1_1sycl_1_1____width__manipulator____.html',1,'cl::sycl']]],
+  ['_5fpi_5fbuffer',['_pi_buffer',['../struct__pi__buffer.html',1,'']]],
   ['_5fpi_5fcontext',['_pi_context',['../struct__pi__context.html',1,'']]],
   ['_5fpi_5fdevice',['_pi_device',['../class__pi__device.html',1,'']]],
   ['_5fpi_5fdevice_5fbinary_5fproperty_5fset_5fstruct',['_pi_device_binary_property_set_struct',['../struct__pi__device__binary__property__set__struct.html',1,'']]],
   ['_5fpi_5fdevice_5fbinary_5fproperty_5fstruct',['_pi_device_binary_property_struct',['../struct__pi__device__binary__property__struct.html',1,'']]],
   ['_5fpi_5fevent',['_pi_event',['../class__pi__event.html',1,'']]],
+  ['_5fpi_5fimage',['_pi_image',['../struct__pi__image.html',1,'']]],
   ['_5fpi_5fimage_5fdesc',['_pi_image_desc',['../struct__pi__image__desc.html',1,'']]],
   ['_5fpi_5fimage_5fformat',['_pi_image_format',['../struct__pi__image__format.html',1,'']]],
   ['_5fpi_5fkernel',['_pi_kernel',['../struct__pi__kernel.html',1,'']]],
   ['_5fpi_5fmem',['_pi_mem',['../struct__pi__mem.html',1,'']]],
+  ['_5fpi_5fobject',['_pi_object',['../struct__pi__object.html',1,'']]],
   ['_5fpi_5foffload_5fentry_5fstruct',['_pi_offload_entry_struct',['../struct__pi__offload__entry__struct.html',1,'']]],
   ['_5fpi_5fplatform',['_pi_platform',['../struct__pi__platform.html',1,'']]],
   ['_5fpi_5fplugin',['_pi_plugin',['../struct__pi__plugin.html',1,'']]],
   ['_5fpi_5fprogram',['_pi_program',['../struct__pi__program.html',1,'']]],
-  ['_5fpi_5fqueue',['_pi_queue',['../struct__pi__queue.html',1,'']]]
+  ['_5fpi_5fqueue',['_pi_queue',['../struct__pi__queue.html',1,'']]],
+  ['_5fpi_5fsampler',['_pi_sampler',['../struct__pi__sampler.html',1,'']]]
 ];

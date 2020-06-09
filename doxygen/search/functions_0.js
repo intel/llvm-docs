@@ -21,10 +21,16 @@ var searchData=
   ['_5f_5fsycl_5fregister_5flib',['__sycl_register_lib',['../program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e',1,'__sycl_register_lib(pi_device_binaries desc):&#160;program_manager.cpp'],['../program__manager_8hpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e',1,'__sycl_register_lib(pi_device_binaries desc):&#160;program_manager.cpp']]],
   ['_5f_5fsycl_5funregister_5flib',['__sycl_unregister_lib',['../program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d',1,'__sycl_unregister_lib(pi_device_binaries desc):&#160;program_manager.cpp'],['../program__manager_8hpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d',1,'__sycl_unregister_lib(pi_device_binaries desc):&#160;program_manager.cpp']]],
   ['_5f_5fwidth_5fmanipulator_5f_5f',['__width_manipulator__',['../classcl_1_1sycl_1_1____width__manipulator____.html#a348efc9803275f46600a2e98cf6ab07e',1,'cl::sycl::__width_manipulator__']]],
-  ['_5fpi_5fcontext',['_pi_context',['../struct__pi__context.html#a1174224c548d8cfd86dbe16f42d87d12',1,'_pi_context']]],
-  ['_5fpi_5fdevice',['_pi_device',['../class__pi__device.html#a627746d796788070558a11165b761246',1,'_pi_device']]],
-  ['_5fpi_5fkernel',['_pi_kernel',['../struct__pi__kernel.html#ade707fb649357321fa55ed8765ea6030',1,'_pi_kernel']]],
-  ['_5fpi_5fmem',['_pi_mem',['../struct__pi__mem.html#a2735fae8c7932d6b8263f1d638652264',1,'_pi_mem']]],
-  ['_5fpi_5fprogram',['_pi_program',['../struct__pi__program.html#a7b5a49f4f89db7dcb3a2df8cf3e5328a',1,'_pi_program']]],
-  ['_5fpi_5fqueue',['_pi_queue',['../struct__pi__queue.html#a63d30619190103a7bead8c063e4bf470',1,'_pi_queue']]]
+  ['_5fpi_5fbuffer',['_pi_buffer',['../struct__pi__buffer.html#afe6f27b638297e2fb9ca69da44a792e9',1,'_pi_buffer']]],
+  ['_5fpi_5fcontext',['_pi_context',['../struct__pi__context.html#a1174224c548d8cfd86dbe16f42d87d12',1,'_pi_context::_pi_context(kind k, CUcontext ctxt, _pi_device *devId)'],['../struct__pi__context.html#aaeb2ec52f70dd222d4f5febd40a01f4a',1,'_pi_context::_pi_context(pi_device Device)']]],
+  ['_5fpi_5fdevice',['_pi_device',['../class__pi__device.html#a627746d796788070558a11165b761246',1,'_pi_device::_pi_device(native_type cuDevice, pi_platform platform)'],['../class__pi__device.html#aa60b52067ba928a43fc749e3fc7ffc3c',1,'_pi_device::_pi_device(ze_device_handle_t Device, pi_platform Plt, bool isSubDevice=false)']]],
+  ['_5fpi_5fevent',['_pi_event',['../class__pi__event.html#a974d7d88ff54a1ede837b70139eeea9c',1,'_pi_event']]],
+  ['_5fpi_5fimage',['_pi_image',['../struct__pi__image.html#a5d1fc0ae3281003869ea9a5f0386bd85',1,'_pi_image']]],
+  ['_5fpi_5fkernel',['_pi_kernel',['../struct__pi__kernel.html#ade707fb649357321fa55ed8765ea6030',1,'_pi_kernel::_pi_kernel(CUfunction func, const char *name, pi_program program, pi_context ctxt)'],['../struct__pi__kernel.html#a9dab17a01d4108af3d787039ac31cd09',1,'_pi_kernel::_pi_kernel(ze_kernel_handle_t Kernel, pi_program Program)']]],
+  ['_5fpi_5fmem',['_pi_mem',['../struct__pi__mem.html#a2735fae8c7932d6b8263f1d638652264',1,'_pi_mem::_pi_mem(pi_context ctxt, pi_mem parent, alloc_mode mode, CUdeviceptr ptr, void *host_ptr, size_t size)'],['../struct__pi__mem.html#a9e55112f82599c30317d06b0c314cea3',1,'_pi_mem::_pi_mem(pi_platform Plt, char *HostPtr)']]],
+  ['_5fpi_5fobject',['_pi_object',['../struct__pi__object.html#ad2fa5eacd09f855b9781f1cd85860646',1,'_pi_object']]],
+  ['_5fpi_5fplatform',['_pi_platform',['../struct__pi__platform.html#a6e3d1a923247c6bc99e9e74c05cce70d',1,'_pi_platform']]],
+  ['_5fpi_5fprogram',['_pi_program',['../struct__pi__program.html#a7b5a49f4f89db7dcb3a2df8cf3e5328a',1,'_pi_program::_pi_program(pi_context ctxt)'],['../struct__pi__program.html#aef98325db616ceb8db700bc51cdcc2de',1,'_pi_program::_pi_program(ze_module_handle_t Module, pi_context Context)']]],
+  ['_5fpi_5fqueue',['_pi_queue',['../struct__pi__queue.html#a63d30619190103a7bead8c063e4bf470',1,'_pi_queue::_pi_queue(CUstream stream, _pi_context *context, _pi_device *device, pi_queue_properties properties)'],['../struct__pi__queue.html#af743ade2384f46236d8b0f57ee78c7bd',1,'_pi_queue::_pi_queue(ze_command_queue_handle_t Queue, pi_context Context)']]],
+  ['_5fpi_5fsampler',['_pi_sampler',['../struct__pi__sampler.html#aaff4c24bc8bc4b729bf79cbae2f7f1f6',1,'_pi_sampler']]]
 ];

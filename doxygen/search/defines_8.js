@@ -1,8 +1,18 @@
 var searchData=
 [
-  ['registerprop',['RegisterProp',['../property__list_8hpp.html#ac5f13f9b17e7370c457482b50c80e0f8',1,'property_list.hpp']]],
-  ['report_5focl_5ferr_5fto_5fexc',['REPORT_OCL_ERR_TO_EXC',['../common_8hpp.html#aa081d6d4682176fbf532f5bc5859e4a5',1,'common.hpp']]],
-  ['report_5focl_5ferr_5fto_5fexc_5fbase',['REPORT_OCL_ERR_TO_EXC_BASE',['../common_8hpp.html#ac472d2f24c4fb98c55b31951b501337a',1,'common.hpp']]],
-  ['report_5focl_5ferr_5fto_5fexc_5fthrow',['REPORT_OCL_ERR_TO_EXC_THROW',['../common_8hpp.html#a36e88b6d9e8a963c6cd0e4ca6cf27353',1,'common.hpp']]],
-  ['report_5focl_5ferr_5fto_5fstream',['REPORT_OCL_ERR_TO_STREAM',['../common_8hpp.html#aba8193e0614c0305d85aadbef0a99a91',1,'common.hpp']]]
+  ['param_5ftraits_5fspec',['PARAM_TRAITS_SPEC',['../info__desc_8hpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;info_desc.hpp'],['../context_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;context.cpp'],['../kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;kernel_impl.cpp'],['../kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;kernel_impl.cpp'],['../kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;kernel_impl.cpp'],['../platform__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;platform_impl.cpp'],['../device_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;device.cpp'],['../event_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;event.cpp'],['../event_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;event.cpp'],['../kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;kernel.cpp'],['../kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;kernel.cpp'],['../kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;kernel.cpp'],['../platform_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;platform.cpp'],['../program_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;program.cpp'],['../queue_8cpp.html#a522cc2c6a59f548ee17c359f636f7909',1,'PARAM_TRAITS_SPEC():&#160;queue.cpp']]],
+  ['param_5ftraits_5fspec_5fwith_5finput',['PARAM_TRAITS_SPEC_WITH_INPUT',['../info__desc_8hpp.html#a6a01e05d8be8780e20459af676b03622',1,'PARAM_TRAITS_SPEC_WITH_INPUT():&#160;info_desc.hpp'],['../kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622',1,'PARAM_TRAITS_SPEC_WITH_INPUT():&#160;kernel_impl.cpp'],['../kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622',1,'PARAM_TRAITS_SPEC_WITH_INPUT():&#160;kernel.cpp']]],
+  ['pi_5fcontext_5fproperties_5fcuda_5fprimary',['PI_CONTEXT_PROPERTIES_CUDA_PRIMARY',['../cuda__definitions_8hpp.html#aed94471964370b91d80b6d861e790e70',1,'cuda_definitions.hpp']]],
+  ['pi_5fcuda_5fraw_5fpointer',['PI_CUDA_RAW_POINTER',['../cuda__definitions_8hpp.html#a89f179e9342287bda946da32770a280c',1,'cuda_definitions.hpp']]],
+  ['pi_5fcuda_5fsync_5fwith_5fdefault',['PI_CUDA_SYNC_WITH_DEFAULT',['../cuda__definitions_8hpp.html#aadcadc4007887d1014c5f4442dcb65b9',1,'cuda_definitions.hpp']]],
+  ['pi_5fcuda_5fuse_5fdefault_5fstream',['PI_CUDA_USE_DEFAULT_STREAM',['../cuda__definitions_8hpp.html#ac2eadbdcfae8ceb92a3cd48bf56ab1ce',1,'cuda_definitions.hpp']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5fnvptx64',['PI_DEVICE_BINARY_TARGET_NVPTX64',['../pi_8h.html#af593ba11a9c4bd8ea072da23aa568f26',1,'pi.h']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5fspirv32',['PI_DEVICE_BINARY_TARGET_SPIRV32',['../pi_8h.html#a7737631a44e9f99bb22bcd1186d11ed8',1,'pi.h']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5fspirv64',['PI_DEVICE_BINARY_TARGET_SPIRV64',['../pi_8h.html#acf77d009eb3e79b0369fb48a55f51bd9',1,'pi.h']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5fspirv64_5ffpga',['PI_DEVICE_BINARY_TARGET_SPIRV64_FPGA',['../pi_8h.html#acc0a3432e6656917bb3a52375e2b43a5',1,'pi.h']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5fspirv64_5fgen',['PI_DEVICE_BINARY_TARGET_SPIRV64_GEN',['../pi_8h.html#ac6f5afd2799a83486744112b520a5815',1,'pi.h']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5fspirv64_5fx86_5f64',['PI_DEVICE_BINARY_TARGET_SPIRV64_X86_64',['../pi_8h.html#a376e6222a25172f29cbe4216e24ad0ca',1,'pi.h']]],
+  ['pi_5fdevice_5fbinary_5ftarget_5funknown',['PI_DEVICE_BINARY_TARGET_UNKNOWN',['../pi_8h.html#ac496c00c22140902a0c642c816666825',1,'pi.h']]],
+  ['pi_5fhandle_5funknown_5fparam_5fname',['PI_HANDLE_UNKNOWN_PARAM_NAME',['../pi_8hpp.html#a6a37fc8698c7dd2e17d464f7f466380d',1,'pi.hpp']]],
+  ['pi_5fproperty_5fset_5fspec_5fconst_5fmap',['PI_PROPERTY_SET_SPEC_CONST_MAP',['../pi_8h.html#ab5d36d369f514ced89972d8fe057d71b',1,'pi.h']]]
 ];

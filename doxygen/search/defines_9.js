@@ -1,20 +1,8 @@
 var searchData=
 [
-  ['static_5fassert_5fnot_5ffloat',['STATIC_ASSERT_NOT_FLOAT',['../atomic_8hpp.html#a92f676413d20ba1cc534fb333dc503be',1,'atomic.hpp']]],
-  ['stringify_5fline',['STRINGIFY_LINE',['../common_8hpp.html#a8a14c9b3548e5e00ee28c829aec18eaf',1,'STRINGIFY_LINE():&#160;common.hpp'],['../config_8cpp.html#a8a14c9b3548e5e00ee28c829aec18eaf',1,'STRINGIFY_LINE():&#160;config.cpp']]],
-  ['stringify_5fline_5fhelp',['STRINGIFY_LINE_HELP',['../common_8hpp.html#aabad77538ffad994f729a3f8685957ea',1,'STRINGIFY_LINE_HELP():&#160;common.hpp'],['../config_8cpp.html#aabad77538ffad994f729a3f8685957ea',1,'STRINGIFY_LINE_HELP():&#160;config.cpp']]],
-  ['sycl_5falignas',['SYCL_ALIGNAS',['../types_8hpp.html#ac584ce40399ae48d463ca9288452c26e',1,'types.hpp']]],
-  ['sycl_5fconfig_5ffile_5fname',['SYCL_CONFIG_FILE_NAME',['../config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930',1,'config.cpp']]],
-  ['sycl_5fexternal',['SYCL_EXTERNAL',['../defines_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901',1,'defines.hpp']]],
-  ['sycl_5fhlf_5fdecimal_5fdig',['SYCL_HLF_DECIMAL_DIG',['../half__type_8hpp.html#a78eb2f08b78d3f09f4adc1294a3bd1b6',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fdig',['SYCL_HLF_DIG',['../half__type_8hpp.html#a7547afab88a551a26e6e1ed4b586d75e',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fepsilon',['SYCL_HLF_EPSILON',['../half__type_8hpp.html#a58a32a2401e7660fce15a2741cd623f5',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmant_5fdig',['SYCL_HLF_MANT_DIG',['../half__type_8hpp.html#abebc01fb1d2dcaae4931a60e1ce7211d',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmax',['SYCL_HLF_MAX',['../half__type_8hpp.html#aab76245da391015e3f4ce1897e2e9058',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmax_5f10_5fexp',['SYCL_HLF_MAX_10_EXP',['../half__type_8hpp.html#a0a94f6f0840e0552103cf464eb456e7c',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmax_5fexp',['SYCL_HLF_MAX_EXP',['../half__type_8hpp.html#ac90ba776700206176fb51a95f14504e0',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmin',['SYCL_HLF_MIN',['../half__type_8hpp.html#a6b8c65d784447415d92bc32fdad1011b',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmin_5f10_5fexp',['SYCL_HLF_MIN_10_EXP',['../half__type_8hpp.html#a3d5b05e977c2462d538a01f4d6f5fce4',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fmin_5fexp',['SYCL_HLF_MIN_EXP',['../half__type_8hpp.html#a49bf7b96c1171eaed9883f61225450a6',1,'half_type.hpp']]],
-  ['sycl_5fhlf_5fradix',['SYCL_HLF_RADIX',['../half__type_8hpp.html#a5282d78ecbefeb6edf33c4b429d33836',1,'half_type.hpp']]]
+  ['registerprop',['RegisterProp',['../property__list_8hpp.html#ac5f13f9b17e7370c457482b50c80e0f8',1,'property_list.hpp']]],
+  ['report_5focl_5ferr_5fto_5fexc',['REPORT_OCL_ERR_TO_EXC',['../common_8hpp.html#aa081d6d4682176fbf532f5bc5859e4a5',1,'common.hpp']]],
+  ['report_5focl_5ferr_5fto_5fexc_5fbase',['REPORT_OCL_ERR_TO_EXC_BASE',['../common_8hpp.html#ac472d2f24c4fb98c55b31951b501337a',1,'common.hpp']]],
+  ['report_5focl_5ferr_5fto_5fexc_5fthrow',['REPORT_OCL_ERR_TO_EXC_THROW',['../common_8hpp.html#a36e88b6d9e8a963c6cd0e4ca6cf27353',1,'common.hpp']]],
+  ['report_5focl_5ferr_5fto_5fstream',['REPORT_OCL_ERR_TO_STREAM',['../common_8hpp.html#aba8193e0614c0305d85aadbef0a99a91',1,'common.hpp']]]
 ];

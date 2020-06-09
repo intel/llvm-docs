@@ -2,7 +2,7 @@ var searchData=
 [
   ['b',['b',['../structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b',1,'cl::sycl::elem']]],
   ['back',['back',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#abad80d35abb80420d44990cd8981e863',1,'cl::sycl::detail::CircularBuffer::back()'],['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a75332f6530913d3a88344d44bd631efb',1,'cl::sycl::detail::CircularBuffer::back() const']]],
-  ['backend',['backend',['../namespacecl_1_1sycl.html#a571d7124814717169c43cc12bde9ca30',1,'cl::sycl']]],
+  ['backend',['backend',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336',1,'cl::sycl']]],
   ['backend_2ehpp',['backend.hpp',['../backend_8hpp.html',1,'']]],
   ['backend_5ftypes_2ehpp',['backend_types.hpp',['../backend__types_8hpp.html',1,'']]],
   ['barrier',['barrier',['../structcl_1_1sycl_1_1intel_1_1sub__group.html#a2df99d250faf94db7d4240bbe5bb8155',1,'cl::sycl::intel::sub_group::barrier()'],['../classcl_1_1sycl_1_1nd__item.html#a25470d2b92e6e8df3d83709969ff876b',1,'cl::sycl::nd_item::barrier()']]],

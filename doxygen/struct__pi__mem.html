@@ -90,12 +90,14 @@ $(document).ready(function(){initNavTree('struct__pi__mem.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="struct__pi__mem-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">_pi_mem Struct Reference</div>  </div>
+<div class="title">_pi_mem Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -104,15 +106,32 @@ $(document).ready(function(){initNavTree('struct__pi__mem.html','');});
 
 <p><code>#include &lt;<a class="el" href="pi__cuda_8hpp_source.html">cuda/pi_cuda.hpp</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for _pi_mem:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct__pi__mem__inherit__graph.png" border="0" usemap="#__pi__mem_inherit__map" alt="Inheritance graph"/></div>
+<map name="__pi__mem_inherit__map" id="__pi__mem_inherit__map">
+<area shape="rect" id="node3" href="struct__pi__buffer.html" title="_pi_buffer" alt="" coords="5,155,84,181"/>
+<area shape="rect" id="node4" href="struct__pi__image.html" title="_pi_image" alt="" coords="108,155,189,181"/>
+<area shape="rect" id="node2" href="struct__pi__object.html" title="_pi_object" alt="" coords="56,5,137,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
 Collaboration diagram for _pi_mem:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct__pi__mem__coll__graph.png" border="0" usemap="#__pi__mem_coll__map" alt="Collaboration graph"/></div>
 <map name="__pi__mem_coll__map" id="__pi__mem_coll__map">
-<area shape="rect" id="node6" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="442,95,531,121"/>
-<area shape="rect" id="node7" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="353,5,437,32"/>
+<area shape="rect" id="node2" href="struct__pi__object.html" title="_pi_object" alt="" coords="379,397,461,424"/>
+<area shape="rect" id="node9" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1011,296,1101,323"/>
+<area shape="rect" id="node10" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,195,859,221"/>
+<area shape="rect" id="node16" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,57,467,84"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem_1_1Mapping.html">Mapping</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:afb3145cea0024c0bedcd5b4c19011d02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a> { <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">alloc_mode::classic</a>, 
@@ -157,6 +176,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a428f85a34e907b3c38fe5c9365371cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a836623e9588d3c4acac63f532d7edf7b"><td class="memItemLeft" align="right" valign="top">cl_map_flags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a836623e9588d3c4acac63f532d7edf7b">get_map_flags</a> () const noexcept</td></tr>
 <tr class="separator:a836623e9588d3c4acac63f532d7edf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa82873428514b48b664a6448e06cc4a0"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aa82873428514b48b664a6448e06cc4a0">getZeHandle</a> ()=0</td></tr>
+<tr class="separator:aa82873428514b48b664a6448e06cc4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7684519dcdc3636e5d18e29eba259c5e"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a7684519dcdc3636e5d18e29eba259c5e">getZeHandlePtr</a> ()=0</td></tr>
+<tr class="separator:a7684519dcdc3636e5d18e29eba259c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc72e630ddec076edcabe05a733f5f1f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#acc72e630ddec076edcabe05a733f5f1f">isImage</a> () const =0</td></tr>
+<tr class="separator:acc72e630ddec076edcabe05a733f5f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15063ff84e67289129e03decb8891bcd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a15063ff84e67289129e03decb8891bcd">~_pi_mem</a> ()=default</td></tr>
+<tr class="separator:a15063ff84e67289129e03decb8891bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ebfeb2cb495b3b73139904887ee258c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a6ebfeb2cb495b3b73139904887ee258c">addMapping</a> (void *MappedTo, size_t Size, size_t Offset)</td></tr>
+<tr class="separator:a6ebfeb2cb495b3b73139904887ee258c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d291743da42fb5b6f24a9673dd77535"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a7d291743da42fb5b6f24a9673dd77535">removeMapping</a> (void *MappedTo, <a class="el" href="struct__pi__mem_1_1Mapping.html">Mapping</a> &amp;MapInfo)</td></tr>
+<tr class="separator:a7d291743da42fb5b6f24a9673dd77535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_struct__pi__object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct__pi__object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="struct__pi__object.html">_pi_object</a></td></tr>
+<tr class="memitem:ad2fa5eacd09f855b9781f1cd85860646 inherit pub_methods_struct__pi__object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__object.html#ad2fa5eacd09f855b9781f1cd85860646">_pi_object</a> ()</td></tr>
+<tr class="separator:ad2fa5eacd09f855b9781f1cd85860646 inherit pub_methods_struct__pi__object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -180,6 +214,18 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a053c712d3983e00f30f097f96d3c10a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad646178731915cf7f0179124b6ae73c6"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">_pi_mem::alloc_mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ad646178731915cf7f0179124b6ae73c6">allocMode_</a></td></tr>
 <tr class="separator:ad646178731915cf7f0179124b6ae73c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403ef5332404e235a08ea3a1a0c5f97e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a403ef5332404e235a08ea3a1a0c5f97e">Platform</a></td></tr>
+<tr class="separator:a403ef5332404e235a08ea3a1a0c5f97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80835690887d8a5aeb8ba2831cb2f955"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955">MapHostPtr</a></td></tr>
+<tr class="separator:a80835690887d8a5aeb8ba2831cb2f955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_struct__pi__object"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct__pi__object')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct__pi__object.html">_pi_object</a></td></tr>
+<tr class="memitem:a13511661a13b4406ea1a861738ab9acc inherit pub_attribs_struct__pi__object"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__object.html#a13511661a13b4406ea1a861738ab9acc">RefCount</a></td></tr>
+<tr class="separator:a13511661a13b4406ea1a861738ab9acc inherit pub_attribs_struct__pi__object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9e55112f82599c30317d06b0c314cea3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9e55112f82599c30317d06b0c314cea3">_pi_mem</a> (<a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a> Plt, char *HostPtr)</td></tr>
+<tr class="separator:a9e55112f82599c30317d06b0c314cea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PI Mem mapping to a CUDA memory allocation. </p>
@@ -249,7 +295,7 @@ Public Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2735fae8c7932d6b8263f1d638652264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2735fae8c7932d6b8263f1d638652264">&#9670;&nbsp;</a></span>_pi_mem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2735fae8c7932d6b8263f1d638652264">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +359,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aebc26c331e43a45f182812a7f2ee797d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebc26c331e43a45f182812a7f2ee797d">&#9670;&nbsp;</a></span>~_pi_mem()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc26c331e43a45f182812a7f2ee797d">&#9670;&nbsp;</a></span>~_pi_mem() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,7 +387,110 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a15063ff84e67289129e03decb8891bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15063ff84e67289129e03decb8891bcd">&#9670;&nbsp;</a></span>~_pi_mem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual _pi_mem::~_pi_mem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e55112f82599c30317d06b0c314cea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e55112f82599c30317d06b0c314cea3">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_pi_mem::_pi_mem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a>&#160;</td>
+          <td class="paramname"><em>Plt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>HostPtr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00216">216</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6ebfeb2cb495b3b73139904887ee258c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebfeb2cb495b3b73139904887ee258c">&#9670;&nbsp;</a></span>addMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> _pi_mem::addMapping </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MappedTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8cpp_source.html#l00146">146</a> of file <a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02824">piEnqueueMemBufferMap()</a>.</p>
+
+</div>
+</div>
 <a id="ae957daeff1a6ec53dba7387281407def"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae957daeff1a6ec53dba7387281407def">&#9670;&nbsp;</a></span>decrement_reference_count()</h2>
 
@@ -573,6 +722,62 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa82873428514b48b664a6448e06cc4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82873428514b48b664a6448e06cc4a0">&#9670;&nbsp;</a></span>getZeHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void* _pi_mem::getZeHandle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="struct__pi__image.html#a85de932a49ff40e6df07b7a88c1519c3">_pi_image</a>, and <a class="el" href="struct__pi__buffer.html#aa29dbcda036be9d0886aeb5b5a1545d6">_pi_buffer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03008">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02714">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02732">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02809">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02824">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02502">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02515">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02682">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02698">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03185">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01417">piMemRelease()</a>.</p>
+
+</div>
+</div>
+<a id="a7684519dcdc3636e5d18e29eba259c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7684519dcdc3636e5d18e29eba259c5e">&#9670;&nbsp;</a></span>getZeHandlePtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void* _pi_mem::getZeHandlePtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="struct__pi__image.html#a4fc11bd70735d1b7adba21fe70194579">_pi_image</a>, and <a class="el" href="struct__pi__buffer.html#a03b87538e30969c67f43cb6c73d2c0db">_pi_buffer</a>.</p>
+
+</div>
+</div>
 <a id="a3aa929377c74539593f2a2c6f6822389"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3aa929377c74539593f2a2c6f6822389">&#9670;&nbsp;</a></span>increment_reference_count()</h2>
 
@@ -662,6 +867,35 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="acc72e630ddec076edcabe05a733f5f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc72e630ddec076edcabe05a733f5f1f">&#9670;&nbsp;</a></span>isImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool _pi_mem::isImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="struct__pi__image.html#a7d7723d168a86fb211bfa3c9ac97dd54">_pi_image</a>, and <a class="el" href="struct__pi__buffer.html#a7aa1bc51e539792476d875e10dfb6991">_pi_buffer</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03008">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02970">getImageRegionHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03185">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01417">piMemRelease()</a>.</p>
+
+</div>
+</div>
 <a id="ade67ff7fc3a116e18a954576fdeda150"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade67ff7fc3a116e18a954576fdeda150">&#9670;&nbsp;</a></span>map_to_ptr()</h2>
 
@@ -701,6 +935,40 @@ Public Attributes</h2></td></tr>
 <p class="reference">References <a class="el" href="usm_8hpp_source.html#l00135">cl::sycl::malloc()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03227">cuda_piEnqueueMemBufferMap()</a>.</p>
+
+</div>
+</div>
+<a id="a7d291743da42fb5b6f24a9673dd77535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d291743da42fb5b6f24a9673dd77535">&#9670;&nbsp;</a></span>removeMapping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> _pi_mem::removeMapping </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MappedTo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__pi__mem_1_1Mapping.html">Mapping</a> &amp;&#160;</td>
+          <td class="paramname"><em>MapInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8cpp_source.html#l00156">156</a> of file <a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -803,6 +1071,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a80835690887d8a5aeb8ba2831cb2f955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80835690887d8a5aeb8ba2831cb2f955">&#9670;&nbsp;</a></span>MapHostPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* _pi_mem::MapHostPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00187">187</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02824">piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemUnmap()</a>.</p>
+
+</div>
+</div>
 <a id="a099358d01a7f6f11e605ccddac7e4a30"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a099358d01a7f6f11e605ccddac7e4a30">&#9670;&nbsp;</a></span>mapOffset_</h2>
 
@@ -848,6 +1134,24 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00186">186</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a403ef5332404e235a08ea3a1a0c5f97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403ef5332404e235a08ea3a1a0c5f97e">&#9670;&nbsp;</a></span>Platform</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a> _pi_mem::Platform</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00182">182</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03185">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01417">piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -901,8 +1205,10 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>plugins/cuda/<a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a></li>
+<li>plugins/level_zero/<a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a></li>
+<li>plugins/level_zero/<a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

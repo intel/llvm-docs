@@ -16,6 +16,7 @@ var searchData=
   ['malloc_5fshared',['malloc_shared',['../namespacecl_1_1sycl.html#a6305df5d225ae1a1ae79ce16bcb6158a',1,'cl::sycl::malloc_shared(size_t size, const device &amp;dev, const context &amp;ctxt)'],['../namespacecl_1_1sycl.html#ac2861039868cba91e0250e34eb67e4b2',1,'cl::sycl::malloc_shared(size_t size, const queue &amp;q)']]],
   ['map',['map',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d',1,'cl::sycl::detail::MemoryManager']]],
   ['map_5fto_5fptr',['map_to_ptr',['../struct__pi__mem.html#ade67ff7fc3a116e18a954576fdeda150',1,'_pi_mem']]],
+  ['maperror',['mapError',['../pi__level0_8cpp.html#a41a23a2e2a5ffd7aab6083589edddbd8',1,'pi_level0.cpp']]],
   ['mapmemobject',['MapMemObject',['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d',1,'cl::sycl::detail::MapMemObject']]],
   ['match_5ftypes',['match_types',['../namespacecl_1_1sycl_1_1detail.html#ade08101e2be3b3752374d9a21b3173c9',1,'cl::sycl::detail']]],
   ['max',['max',['../structstd_1_1numeric__limits_3_01half_01_4.html#ae63fb0d916828d24a7f6da72c083fe77',1,'std::numeric_limits&lt; half &gt;']]],
