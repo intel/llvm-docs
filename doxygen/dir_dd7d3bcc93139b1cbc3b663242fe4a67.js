@@ -50,6 +50,9 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "handler.hpp", "handler_8hpp.html", "handler_8hpp" ],
     [ "id.hpp", "id_8hpp.html", "id_8hpp" ],
     [ "image.hpp", "image_8hpp.html", "image_8hpp" ],
+    [ "interop_handle.hpp", "interop__handle_8hpp.html", [
+      [ "interop_handle", "classcl_1_1sycl_1_1interop__handle.html", "classcl_1_1sycl_1_1interop__handle" ]
+    ] ],
     [ "interop_handler.hpp", "interop__handler_8hpp.html", [
       [ "interop_handler", "classcl_1_1sycl_1_1interop__handler.html", "classcl_1_1sycl_1_1interop__handler" ]
     ] ],

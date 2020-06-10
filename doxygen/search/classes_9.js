@@ -27,6 +27,7 @@ var searchData=
   ['interop_3c_20backend_3a_3acuda_2c_20queue_20_3e',['interop&lt; backend::cuda, queue &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html',1,'cl::sycl']]],
   ['interop_3c_20backend_3a_3aopencl_2c_20accessor_3c_20datat_2c_20dimensions_2c_20accessmode_2c_20access_3a_3atarget_3a_3aglobal_5fbuffer_2c_20access_3a_3aplaceholder_3a_3afalse_5ft_20_3e_20_3e',['interop&lt; backend::opencl, accessor&lt; DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t &gt; &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html',1,'cl::sycl']]],
   ['interop_3c_20backend_3a_3aopencl_2c_20queue_20_3e',['interop&lt; backend::opencl, queue &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01queue_01_4.html',1,'cl::sycl']]],
+  ['interop_5fhandle',['interop_handle',['../classcl_1_1sycl_1_1interop__handle.html',1,'cl::sycl']]],
   ['interop_5fhandler',['interop_handler',['../classcl_1_1sycl_1_1interop__handler.html',1,'cl::sycl']]],
   ['interoptask',['InteropTask',['../classcl_1_1sycl_1_1detail_1_1InteropTask.html',1,'cl::sycl::detail']]],
   ['invalid_5fobject_5ferror',['invalid_object_error',['../classcl_1_1sycl_1_1invalid__object__error.html',1,'cl::sycl']]],

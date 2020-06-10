@@ -1,5 +1,16 @@
 var NAVTREEINDEX23 =
 {
+"struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90":[3,0,20,3],
+"struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8":[3,0,20,1],
+"struct__pi__platform.html#ac538d7ae8f84c2475c1f4a80f9af6643":[3,0,20,2],
+"struct__pi__plugin.html":[3,0,21],
+"struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7":[3,0,21,1],
+"struct__pi__plugin.html#a61f3c14948bd380bdb111988cfedef09":[3,0,21,3],
+"struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d":[3,0,21,2],
+"struct__pi__plugin.html#af620ffb734e20021fbfa88067860e456":[3,0,21,4],
+"struct__pi__plugin_1_1FunctionPointers.html":[3,0,21,0],
+"struct__pi__program.html":[3,0,22],
+"struct__pi__program.html#a07ee027170c3138223814e6f23953c42":[3,0,22,12],
 "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,22,2],
 "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854":[3,0,22,4],
 "struct__pi__program.html#a1141df0b0f5c7934d84f859311e8f8a9":[3,0,22,20],
@@ -238,16 +249,5 @@ var NAVTREEINDEX23 =
 "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html":[3,0,1,1,0,236],
 "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#a3382410cf6244f9670de55d2a12cdfea":[3,0,1,1,0,236,0],
 "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#adde632b55829cfb6201557bc9e749f27":[3,0,1,1,0,236,1],
-"structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#af9ca4bfeb6b251cccef43e1a468cb3fc":[3,0,1,1,0,236,2],
-"structcl_1_1sycl_1_1detail_1_1RelationalReturnType.html":[3,0,1,1,0,232],
-"structcl_1_1sycl_1_1detail_1_1RelationalReturnType.html#a61bd4aa0922b194953317fe8094cbc3b":[3,0,1,1,0,232,0],
-"structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html":[3,0,1,1,0,233],
-"structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html#a4d2f6377e263d6c866dd580cc35d9e13":[3,0,1,1,0,233,0],
-"structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html#a6033512f5c0ea5b2b7c631ac90c7a65e":[3,0,1,1,0,233,1],
-"structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html":[3,0,1,1,0,254],
-"structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html#a5a8b51e8f64d24641258fa3d6579cf40":[3,0,1,1,0,254,0],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS.html":[3,0,1,1,0,270],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS.html#a7ade00344f99b2fc25ad6b9a9f49b621":[3,0,1,1,0,270,0],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html":[3,0,1,1,0,271],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html#aab8574cdb226a701f0fa2d1e7a70387d":[3,0,1,1,0,271,0]
+"structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#af9ca4bfeb6b251cccef43e1a468cb3fc":[3,0,1,1,0,236,2]
 };

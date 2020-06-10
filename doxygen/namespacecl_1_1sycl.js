@@ -45,6 +45,7 @@ var namespacecl_1_1sycl =
     [ "interop< backend::cuda, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4" ],
     [ "interop< backend::opencl, accessor< DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32" ],
     [ "interop< backend::opencl, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01queue_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01queue_01_4" ],
+    [ "interop_handle", "classcl_1_1sycl_1_1interop__handle.html", "classcl_1_1sycl_1_1interop__handle" ],
     [ "interop_handler", "classcl_1_1sycl_1_1interop__handler.html", "classcl_1_1sycl_1_1interop__handler" ],
     [ "invalid_object_error", "classcl_1_1sycl_1_1invalid__object__error.html", null ],
     [ "invalid_parameter_error", "classcl_1_1sycl_1_1invalid__parameter__error.html", null ],
