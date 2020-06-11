@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['lambda_5farg_5ftype',['lambda_arg_type',['../namespacecl_1_1sycl_1_1detail.html#a4569da1b463c35d5620e227b05b1d5dc',1,'cl::sycl::detail']]],
+  ['lambda_5farg_5ftype',['lambda_arg_type',['../namespacecl_1_1sycl_1_1detail.html#aacf8c7510a63a5b1b0e97c3d26216ef4',1,'cl::sycl::detail']]],
   ['linear_5fid_5ftype',['linear_id_type',['../classcl_1_1sycl_1_1group.html#a0a7b0118ec8edee18b72c79284550a60',1,'cl::sycl::group::linear_id_type()'],['../structcl_1_1sycl_1_1intel_1_1sub__group.html#a3cfdfa447ad9e0c08a31adfa33d200dc',1,'cl::sycl::intel::sub_group::linear_id_type()']]],
   ['local_5fptr',['local_ptr',['../namespacecl_1_1sycl.html#a12634ddedf53a9d91884e902b4f282c2',1,'cl::sycl']]],
   ['localaccessorimplptr',['LocalAccessorImplPtr',['../namespacecl_1_1sycl_1_1detail.html#adb80107e19788baf7fd62eab2be54148',1,'cl::sycl::detail']]],

@@ -340,9 +340,7 @@ var pi_8h =
       [ "PI_MEM_ALLOC_TYPE", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a411a13f091c4af2cff5fb892f026dfc4", null ],
       [ "PI_MEM_ALLOC_BASE_PTR", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a073b9a997750368cfa97bea976599eaa", null ],
       [ "PI_MEM_ALLOC_SIZE", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a8c108f4ef5412f8ef08f0b44d744c169", null ],
-      [ "PI_MEM_ALLOC_DEVICE", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a876af4ca04f219e672d34f7a62359698", null ],
-      [ "PI_MEM_ALLOC_INFO_TBD0", "pi_8h.html#af2ce602d590555990cf4caeb4c127732aa53494bba8aae57d110eb50517b8c772", null ],
-      [ "PI_MEM_ALLOC_INFO_TBD1", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a6ef2608e03ab7f159d14b3207d971cda", null ]
+      [ "PI_MEM_ALLOC_DEVICE", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a876af4ca04f219e672d34f7a62359698", null ]
     ] ],
     [ "_pi_mem_type", "pi_8h.html#a9995c520b89d8b9d3ae445823d568c5a", [
       [ "PI_MEM_TYPE_BUFFER", "pi_8h.html#a9995c520b89d8b9d3ae445823d568c5aa0e4575b7d3ed51a940e433ff73e104a4", null ],

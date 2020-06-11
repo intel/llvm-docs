@@ -4,7 +4,7 @@ var searchData=
   ['l2_5fcache',['L2_cache',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7cac58e8051e3e9607bb653b0d5bcb918e7',1,'cl::sycl::info']]],
   ['l3_5fcache',['L3_cache',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca4caa8fade30967a8377af50b650cdba4',1,'cl::sycl::info']]],
   ['l4_5fcache',['L4_cache',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca7f52cd07191bbdfc8bf925acf7076ffd',1,'cl::sycl::info']]],
-  ['lambda_5farg_5ftype',['lambda_arg_type',['../namespacecl_1_1sycl_1_1detail.html#a4569da1b463c35d5620e227b05b1d5dc',1,'cl::sycl::detail']]],
+  ['lambda_5farg_5ftype',['lambda_arg_type',['../namespacecl_1_1sycl_1_1detail.html#aacf8c7510a63a5b1b0e97c3d26216ef4',1,'cl::sycl::detail']]],
   ['lastksid',['LastKSId',['../namespacecl_1_1sycl_1_1detail.html#a894aa77dab94574a0fa3b2a84416d3ca',1,'cl::sycl::detail']]],
   ['ldexp',['ldexp',['../namespacecl_1_1sycl.html#ab865efa8a67a82ab99a74d4ec97f30ff',1,'cl::sycl::ldexp(T x, int k) __NOEXC'],['../namespacecl_1_1sycl.html#aa0a2e1c10e1f0b46260750b394dd9adc',1,'cl::sycl::ldexp(T x, int k) __NOEXC'],['../namespacecl_1_1sycl.html#a63e6c2116bcbaab8f0767b28213d7715',1,'cl::sycl::ldexp(T x, T2 k) __NOEXC'],['../namespacecl_1_1____host__std.html#a248c66309c6e905935c6ad1135aaaddc',1,'cl::__host_std::ldexp(s::cl_float x, s::cl_int k) __NOEXC'],['../namespacecl_1_1____host__std.html#ac6ae2d80ac87198acee430a0d8e970b7',1,'cl::__host_std::ldexp(s::cl_double x, s::cl_int k) __NOEXC'],['../namespacecl_1_1____host__std.html#a40cabd96145867ec89dac6d9508954b9',1,'cl::__host_std::ldexp(s::cl_half x, s::cl_int k) __NOEXC']]],
   ['leader',['leader',['../namespacecl_1_1sycl_1_1intel.html#ab0571a983a2c3a8060dad1b31a20572a',1,'cl::sycl::intel']]],

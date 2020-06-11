@@ -13,6 +13,7 @@ var classcl_1_1sycl_1_1item =
     [ "get_range", "classcl_1_1sycl_1_1item.html#ac81837c6da141fd98aa22e31ad9fd673", null ],
     [ "get_range", "classcl_1_1sycl_1_1item.html#a312dffe18bc40c6650f043f170e67396", null ],
     [ "operator detail::enable_if_t<!has_offset, item< dimensions, true >>", "classcl_1_1sycl_1_1item.html#a289128aefe7bf9b6a673ae5468e48196", null ],
+    [ "operator EnableIfT< dimensions==1, std::size_t >", "classcl_1_1sycl_1_1item.html#af851bb6e29ba84f3e1fae289508c8d83", null ],
     [ "operator!=", "classcl_1_1sycl_1_1item.html#aaec8bae53f57c623b130750589e5b98d", null ],
     [ "operator=", "classcl_1_1sycl_1_1item.html#a95d7281aa211e5de0243b02db886ab7f", null ],
     [ "operator=", "classcl_1_1sycl_1_1item.html#a69b6672ac943d5a672cc5e4a3d8d3141", null ],

@@ -23,9 +23,7 @@ var classcl_1_1sycl_1_1accessor =
     [ "operator!=", "classcl_1_1sycl_1_1accessor.html#ae3972de1b8cf944c40b0dd362077fc18", null ],
     [ "operator==", "classcl_1_1sycl_1_1accessor.html#a6b3f7fb9c17dab8802123227bc90dbb6", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a5355620f00b1cbca1ce001d64ad6190e", null ],
-    [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a63f8c293463dbc81fd22d333158317c9", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#ad3084c0efca520bdae01bbdaee458f3e", null ],
-    [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a887eb2f0007ce561fed61c114e9098ac", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a6fd5b14a8e7c668a52a0dbb83fa6b228", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a7f3f76fbe4b324fc8c6d8f4a3add971c", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a2bc04778dbd94b3000b361374b0cd890", null ]

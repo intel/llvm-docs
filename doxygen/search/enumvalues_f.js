@@ -241,8 +241,6 @@ var searchData=
   ['pi_5fmem_5falloc_5fbase_5fptr',['PI_MEM_ALLOC_BASE_PTR',['../pi_8h.html#af2ce602d590555990cf4caeb4c127732a073b9a997750368cfa97bea976599eaa',1,'pi.h']]],
   ['pi_5fmem_5falloc_5fdevice',['PI_MEM_ALLOC_DEVICE',['../pi_8h.html#af2ce602d590555990cf4caeb4c127732a876af4ca04f219e672d34f7a62359698',1,'pi.h']]],
   ['pi_5fmem_5falloc_5fflags',['PI_MEM_ALLOC_FLAGS',['../pi_8h.html#a6379a64bbf4ee298047d0fb3dd6f054aa5b04bd7340e1436b78cc992f2c881d84',1,'pi.h']]],
-  ['pi_5fmem_5falloc_5finfo_5ftbd0',['PI_MEM_ALLOC_INFO_TBD0',['../pi_8h.html#af2ce602d590555990cf4caeb4c127732aa53494bba8aae57d110eb50517b8c772',1,'pi.h']]],
-  ['pi_5fmem_5falloc_5finfo_5ftbd1',['PI_MEM_ALLOC_INFO_TBD1',['../pi_8h.html#af2ce602d590555990cf4caeb4c127732a6ef2608e03ab7f159d14b3207d971cda',1,'pi.h']]],
   ['pi_5fmem_5falloc_5fsize',['PI_MEM_ALLOC_SIZE',['../pi_8h.html#af2ce602d590555990cf4caeb4c127732a8c108f4ef5412f8ef08f0b44d744c169',1,'pi.h']]],
   ['pi_5fmem_5falloc_5ftype',['PI_MEM_ALLOC_TYPE',['../pi_8h.html#af2ce602d590555990cf4caeb4c127732a411a13f091c4af2cff5fb892f026dfc4',1,'pi.h']]],
   ['pi_5fmem_5fobject_5fallocation_5ffailure',['PI_MEM_OBJECT_ALLOCATION_FAILURE',['../pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a222487ba3047a6ac6ce51709dc5ec041',1,'pi.h']]],
