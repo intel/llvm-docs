@@ -476,7 +476,6 @@ var pi_8h =
       [ "PI_PROPERTY_TYPE_UINT32", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fa4b758e3208f4a2455b06b2776434c47a", null ],
       [ "PI_PROPERTY_TYPE_STRING", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fadde9b8a2ecb0b23ec303ca941f0ba1a6", null ]
     ] ],
-    [ "piclProgramCreateWithBinary", "pi_8h.html#aba1cecda3a9d92c626a23bce7b1a358e", null ],
     [ "piclProgramCreateWithSource", "pi_8h.html#ac5fb4aa49b8c4a3ad5cf0bd08a201e7e", null ],
     [ "piContextCreate", "pi_8h.html#a8c7db6243282e69199e76bada8607488", null ],
     [ "piContextGetInfo", "pi_8h.html#aee320401a1ebf46e946b23f2783187a6", null ],
@@ -488,6 +487,7 @@ var pi_8h =
     [ "piDeviceRetain", "pi_8h.html#aad0bd5367fb2c07f2adf685baea87471", null ],
     [ "piDevicesGet", "pi_8h.html#a69b24df8aa852caaedbbb5f3f31d9fd5", null ],
     [ "piEnqueueEventsWait", "pi_8h.html#a51d81664c0083178b40fe876cf0866ae", null ],
+    [ "piEnqueueEventsWaitWithBarrier", "pi_8h.html#a35fbac51ea0d01ed9eb8803a45a82ec6", null ],
     [ "piEnqueueKernelLaunch", "pi_8h.html#a36cf254b93d77e806ed4509e29e59c5f", null ],
     [ "piEnqueueMemBufferCopy", "pi_8h.html#a73dd7cb30dd5bbb9c481fcc8c0a776cb", null ],
     [ "piEnqueueMemBufferCopyRect", "pi_8h.html#a46c1d4f614dd37c5f5885bac96f8d86b", null ],
@@ -559,6 +559,7 @@ var pi_8h =
     [ "piProgramBuild", "pi_8h.html#a7b97b450acfc8ecd2c2fadb25e2b9ca4", null ],
     [ "piProgramCompile", "pi_8h.html#aadbd51a1ca700a237e638ee31774149a", null ],
     [ "piProgramCreate", "pi_8h.html#aa9488cd0c11442229375c7198375f785", null ],
+    [ "piProgramCreateWithBinary", "pi_8h.html#ab06bab2beb83a33991a60f1eee31656d", null ],
     [ "piProgramGetBuildInfo", "pi_8h.html#a07afae9d8b7df8cb752c6f44ce076484", null ],
     [ "piProgramGetInfo", "pi_8h.html#a792aa5ffec74888a3e2be91313659c13", null ],
     [ "piProgramLink", "pi_8h.html#a9d26c70a9073a60bf3ac25c2910245bf", null ],

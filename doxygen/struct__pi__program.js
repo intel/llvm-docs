@@ -5,12 +5,14 @@ var struct__pi__program =
     [ "~_pi_program", "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0", null ],
     [ "_pi_program", "struct__pi__program.html#aef98325db616ceb8db700bc51cdcc2de", null ],
     [ "build_program", "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854", null ],
-    [ "create_from_source", "struct__pi__program.html#a9d679ee2080dd52f46256ad849466288", null ],
     [ "decrement_reference_count", "struct__pi__program.html#aed0f636555a6cb95fb520bfa7cb085de", null ],
     [ "get", "struct__pi__program.html#a51624ac57edd2c5bac78740c8c8960be", null ],
     [ "get_context", "struct__pi__program.html#a46ebd0700632b8ec1cb7940161f7b2cc", null ],
     [ "get_reference_count", "struct__pi__program.html#a541f026aac8de09ad708fa6d9d7cf8d6", null ],
     [ "increment_reference_count", "struct__pi__program.html#a946af28c3e46707c7eb7f43f3177d02b", null ],
+    [ "set_binary", "struct__pi__program.html#ab14ee0c97c0d3ef6adc3c4974d7a1bf2", null ],
+    [ "binary_", "struct__pi__program.html#ac87e23fa8485dda3baac43d1ecb20fc1", null ],
+    [ "binarySizeInBytes_", "struct__pi__program.html#a50486172acd1157a2f27f32e04c62181", null ],
     [ "buildOptions_", "struct__pi__program.html#ade63366c16239d4f0e5726ff6a940321", null ],
     [ "buildStatus_", "struct__pi__program.html#a07ee027170c3138223814e6f23953c42", null ],
     [ "Context", "struct__pi__program.html#a1b8a31275c1dada5a33deee42ea29f6a", null ],
@@ -20,7 +22,5 @@ var struct__pi__program =
     [ "MAX_LOG_SIZE", "struct__pi__program.html#a5cd306d55644c2e3d22b3745f90cffe6", null ],
     [ "module_", "struct__pi__program.html#a2b33b22a97125a60fadc84bffdf6569d", null ],
     [ "refCount_", "struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52", null ],
-    [ "source_", "struct__pi__program.html#a1141df0b0f5c7934d84f859311e8f8a9", null ],
-    [ "sourceLength_", "struct__pi__program.html#a90e05e035f2d0ea5f062ef792ced2d5c", null ],
     [ "ZeModule", "struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8", null ]
 ];

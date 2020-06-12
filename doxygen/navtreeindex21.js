@@ -1,5 +1,17 @@
 var NAVTREEINDEX21 =
 {
+"queue_8cpp.html#aea79727faf0c39623dbc3ef6cc2b9d10":[4,0,2,16,2],
+"queue_8cpp_source.html":[4,0,2,16],
+"queue_8hpp.html":[4,0,0,0,1,39],
+"queue_8hpp_source.html":[4,0,0,0,1,39],
+"queue__impl_8cpp.html":[4,0,2,0,48],
+"queue__impl_8cpp.html#a20a7aaeb4c81e81ea6460b3249b64446":[4,0,2,0,48,0],
+"queue__impl_8cpp.html#a20ed13879c2c7c4e5585b710b125f18e":[4,0,2,0,48,2],
+"queue__impl_8cpp.html#a90189ecc5e6b48aa2e74d02f9de448c0":[4,0,2,0,48,1],
+"queue__impl_8cpp_source.html":[4,0,2,0,48],
+"queue__impl_8hpp.html":[4,0,2,0,49],
+"queue__impl_8hpp.html#a3b78f8c517b1d76ecd7b0eb46ec2056e":[4,0,2,0,49,1],
+"queue__impl_8hpp.html#a574bceff7ee9afb6beeeaf28b0f549bb":[4,0,2,0,49,2],
 "queue__impl_8hpp.html#a574bceff7ee9afb6beeeaf28b0f549bba386bba5a5dc4fac215c9cf0b9a29b352":[4,0,2,0,49,2,0],
 "queue__impl_8hpp.html#a574bceff7ee9afb6beeeaf28b0f549bba8b9035807842a4e4dbe009f3f1478127":[4,0,2,0,49,2,1],
 "queue__impl_8hpp.html#a6c7da261d49ad7f8568e3ebad99d6320":[4,0,2,0,49,5],
@@ -237,17 +249,5 @@ var NAVTREEINDEX21 =
 "stream__impl_8hpp.html#ac012efbdb7a0f15ef31696c85bc53b12":[4,0,0,0,1,2,35,41],
 "stream__impl_8hpp.html#ac06b16e2dd80b89702afe5954bbf78df":[4,0,0,0,1,2,35,42],
 "stream__impl_8hpp.html#ac9753b1995dc29975f010b0a8ca0688f":[4,0,0,0,1,2,35,12],
-"stream__impl_8hpp.html#ad3584f19ea86d6869220dbd66272a868":[4,0,0,0,1,2,35,6],
-"stream__impl_8hpp.html#adb84bbc3df525480d467cfec12c36ad9":[4,0,0,0,1,2,35,21],
-"stream__impl_8hpp.html#adbf7c1f124b7be64e4fea58110a9d453":[4,0,0,0,1,2,35,13],
-"stream__impl_8hpp.html#ae83b5381dfba55574848b5e2cbcd19d2":[4,0,0,0,1,2,35,19],
-"stream__impl_8hpp.html#af0d0bb8b3b5f57bbc46f5110b7480068":[4,0,0,0,1,2,35,17],
-"stream__impl_8hpp.html#af5f11b77641acbd4d53ca207ec7e6999":[4,0,0,0,1,2,35,44],
-"stream__impl_8hpp.html#af659ed0c8c5f4af2c8a971cff5f75ab8":[4,0,0,0,1,2,35,29],
-"stream__impl_8hpp_source.html":[4,0,0,0,1,2,35],
-"struct____spv_1_1MemorySemanticsMask.html":[3,0,0,0],
-"struct____spv_1_1MemorySemanticsMask.html#a21d590ef220b233ccc142a577587a6b9":[3,0,0,0,1],
-"struct____spv_1_1MemorySemanticsMask.html#a2c5d6c7282da8f0837c79981fe7a4cf8":[3,0,0,0,3],
-"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1":[3,0,0,0,0],
-"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a0303c48d9eb3c7b2581caf6fc0d8e43e":[3,0,0,0,0,4]
+"stream__impl_8hpp.html#ad3584f19ea86d6869220dbd66272a868":[4,0,0,0,1,2,35,6]
 };

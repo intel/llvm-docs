@@ -1,5 +1,14 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1queue.html#ad8799ea8912a3021ac068f5691d57538":[1,1,21,43],
+"classcl_1_1sycl_1_1queue.html#add22f711aa7be299cd42c3bd3dfdf19e":[1,1,21,41],
+"classcl_1_1sycl_1_1queue.html#adef0b518923e220bf19b37e9e0ccf562":[1,1,21,5],
+"classcl_1_1sycl_1_1queue.html#adfaac4845e98e5b3a1cfb32580a820be":[1,1,21,7],
+"classcl_1_1sycl_1_1queue.html#adfbbd03cb8e3021fab6835538ff72a65":[1,1,21,20],
+"classcl_1_1sycl_1_1queue.html#ae386f2f6243bf270826be8e9bf20878d":[1,1,21,29],
+"classcl_1_1sycl_1_1queue.html#ae3e7582f72008b3586a6c74405e36a65":[1,1,21,6],
+"classcl_1_1sycl_1_1queue.html#ae5c39ed682422e4e525fe0a01e8b7ad9":[1,1,21,46],
+"classcl_1_1sycl_1_1queue.html#ae7e83eac58fefe465f3f665459ad6e40":[1,1,21,33],
 "classcl_1_1sycl_1_1queue.html#ae876d48c2c4479425934b03a0f355129":[1,1,21,30],
 "classcl_1_1sycl_1_1queue.html#aed77ab58b263bf7fa82bfd1041eb2a2f":[1,1,21,26],
 "classcl_1_1sycl_1_1queue.html#af8244d40020d5524492549a66cf4396e":[1,1,21,21],
@@ -133,9 +142,9 @@ var NAVTREEINDEX11 =
 "config_8cpp.html":[4,0,2,0,13],
 "config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,0,13,6],
 "config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,0,13,8],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,0,13,1],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,0,13,0],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,0,13,2],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,0,13,0],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,0,13,1],
 "config_8cpp.html#a8a14c9b3548e5e00ee28c829aec18eaf":[4,0,2,0,13,4],
 "config_8cpp.html#aabad77538ffad994f729a3f8685957ea":[4,0,2,0,13,5],
 "config_8cpp.html#abbdcbea69a36cd9ddd50332f7020c4bd":[4,0,2,0,13,9],
@@ -240,14 +249,5 @@ var NAVTREEINDEX11 =
 "device__impl_8hpp_source.html":[4,0,2,0,20],
 "device__info_8hpp.html":[4,0,2,0,21],
 "device__info_8hpp.html#a017e9df8598fb0cfb2f86ca0d2f7c423":[4,0,2,0,21,53],
-"device__info_8hpp.html#a082bcfbe50209125768ee9a3c608816c":[4,0,2,0,21,76],
-"device__info_8hpp.html#a092115d9f08420b96df453523bb7a226":[4,0,2,0,21,89],
-"device__info_8hpp.html#a09d0ffd5a7bf093bc67e6c425b8a9f2d":[4,0,2,0,21,73],
-"device__info_8hpp.html#a13647cdc52124d9d0ca898f8c6891594":[4,0,2,0,21,65],
-"device__info_8hpp.html#a198902e1f80fac5be1fc4c61fd46f937":[4,0,2,0,21,68],
-"device__info_8hpp.html#a1aa8f628d3454525da31fd721f183c6e":[4,0,2,0,21,102],
-"device__info_8hpp.html#a247bd0099e65423b3a81c4d1fceb3b1e":[4,0,2,0,21,104],
-"device__info_8hpp.html#a252461d62817836af07493b8a56261ba":[4,0,2,0,21,55],
-"device__info_8hpp.html#a27dfedd97aea288dde635c776d987e91":[4,0,2,0,21,87],
-"device__info_8hpp.html#a2ad6b436a008a65e988f0c8376e8b5e3":[4,0,2,0,21,35]
+"device__info_8hpp.html#a082bcfbe50209125768ee9a3c608816c":[4,0,2,0,21,76]
 };

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['barrier',['BARRIER',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea50ee37fb5951df9f6148bbf9744fef95',1,'cl::sycl::detail::CG']]],
+  ['barrier_5fwaitlist',['BARRIER_WAITLIST',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5f2bb0c3b4becdea8bd4da46287118fb',1,'cl::sycl::detail::CG']]],
   ['bgra',['bgra',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa657c0fdc8e544dcb7153dcf613e04e2d',1,'cl::sycl']]],
   ['blocking',['BLOCKING',['../namespacecl_1_1sycl_1_1detail.html#af961fb0fe94eef91c4feb0abf6239819a0a199c5a354348f76dd16d046aebf6f8',1,'cl::sycl::detail']]],
   ['bs_5fdone',['BS_Done',['../namespacecl_1_1sycl_1_1detail.html#a71d37979557aa87f873963bbccde99b6a63ca16a252db0db8d56394971ac5bdb1',1,'cl::sycl::detail']]],

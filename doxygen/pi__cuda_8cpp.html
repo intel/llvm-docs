@@ -280,7 +280,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ad5521d01c5b758c6fccd73e8594e19d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#ad5521d01c5b758c6fccd73e8594e19d0">cuda_piMemRetain</a> (<a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a> mem)</td></tr>
 <tr class="separator:ad5521d01c5b758c6fccd73e8594e19d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac445fe0b23537e123e95a0cb8c11b2c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#ac445fe0b23537e123e95a0cb8c11b2c7">cuda_piclProgramCreateWithSource</a> (<a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a> context, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> count, const char **strings, const size_t *lengths, <a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *program)</td></tr>
-<tr class="memdesc:ac445fe0b23537e123e95a0cb8c11b2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a PI program from a list of PTX or CUBIN binaries.  <a href="#ac445fe0b23537e123e95a0cb8c11b2c7">More...</a><br /></td></tr>
+<tr class="memdesc:ac445fe0b23537e123e95a0cb8c11b2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not used as CUDA backend only creates programs from binary.  <a href="#ac445fe0b23537e123e95a0cb8c11b2c7">More...</a><br /></td></tr>
 <tr class="separator:ac445fe0b23537e123e95a0cb8c11b2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a002889700b8ed359a401bae09993ac09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#a002889700b8ed359a401bae09993ac09">cuda_piProgramBuild</a> (<a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> program, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> num_devices, const <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> *device_list, const char *options, void(*<a class="el" href="pi__cuda_8hpp.html#a17f22be67ea315d8fe7e7a6f494f9d3c">pfn_notify</a>)(<a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> program, void *user_data), void *user_data)</td></tr>
 <tr class="memdesc:a002889700b8ed359a401bae09993ac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the images from a PI program into a CUmodule that can be used later on to extract functions (kernels).  <a href="#a002889700b8ed359a401bae09993ac09">More...</a><br /></td></tr>
@@ -288,9 +288,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a741b3ff74458ce4edafb2940ed2d16b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#a741b3ff74458ce4edafb2940ed2d16b3">cuda_piProgramCreate</a> (<a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a> context, const void *il, size_t length, <a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *res_program)</td></tr>
 <tr class="memdesc:a741b3ff74458ce4edafb2940ed2d16b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented  <a href="#a741b3ff74458ce4edafb2940ed2d16b3">More...</a><br /></td></tr>
 <tr class="separator:a741b3ff74458ce4edafb2940ed2d16b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1b6adef8ca01600053763604d01d605"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#ad1b6adef8ca01600053763604d01d605">cuda_piclProgramCreateWithBinary</a> (<a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a> context, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> num_devices, const <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> *device_list, const size_t *lengths, const unsigned char **binaries, <a class="el" href="pi_8h.html#a0b846aad087f48e338d6e4d5adb9c00e">pi_int32</a> *binary_status, <a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *errcode_ret)</td></tr>
-<tr class="memdesc:ad1b6adef8ca01600053763604d01d605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented. See <a class="el" href="pi__cuda_8cpp.html#ac445fe0b23537e123e95a0cb8c11b2c7">cuda_piclProgramCreateWithSource</a>  <a href="#ad1b6adef8ca01600053763604d01d605">More...</a><br /></td></tr>
-<tr class="separator:ad1b6adef8ca01600053763604d01d605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6601104e2c6b9bdc3916476a90c0add3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#a6601104e2c6b9bdc3916476a90c0add3">cuda_piProgramCreateWithBinary</a> (<a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a> context, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> num_devices, const <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> *device_list, const size_t *lengths, const unsigned char **binaries, <a class="el" href="pi_8h.html#a0b846aad087f48e338d6e4d5adb9c00e">pi_int32</a> *binary_status, <a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *program)</td></tr>
+<tr class="memdesc:a6601104e2c6b9bdc3916476a90c0add3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads images from a list of PTX or CUBIN binaries.  <a href="#a6601104e2c6b9bdc3916476a90c0add3">More...</a><br /></td></tr>
+<tr class="separator:a6601104e2c6b9bdc3916476a90c0add3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9ae3a2f7bb96d32b8386e5d7fd705c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#aec9ae3a2f7bb96d32b8386e5d7fd705c">cuda_piProgramGetInfo</a> (<a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> program, <a class="el" href="pi_8h.html#ae22772ea765e6f3fe64ba7b9ddb49d3c">pi_program_info</a> param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</td></tr>
 <tr class="separator:aec9ae3a2f7bb96d32b8386e5d7fd705c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1f2162bad115c5febe7fc431a53d3da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__cuda_8cpp.html#af1f2162bad115c5febe7fc431a53d3da">cuda_piProgramLink</a> (<a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a> context, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> num_devices, const <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> *device_list, const char *options, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> num_input_programs, const <a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *input_programs, void(*<a class="el" href="pi__cuda_8hpp.html#a17f22be67ea315d8fe7e7a6f494f9d3c">pfn_notify</a>)(<a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> program, void *user_data), void *user_data, <a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *ret_program)</td></tr>
@@ -450,7 +450,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -552,75 +552,9 @@ Variables</h2></td></tr>
 <p>General 3D memory copy operation. </p>
 <p>This function requires the corresponding CUDA context to be at the top of the context stack If the source and/or destination is on the device, src_ptr and/or dst_ptr must be a pointer to a CUdeviceptr </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02842">2842</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02840">2840</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03037">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02894">cuda_piEnqueueMemBufferReadRect()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02945">cuda_piEnqueueMemBufferWriteRect()</a>.</p>
-
-</div>
-</div>
-<a id="ad1b6adef8ca01600053763604d01d605"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1b6adef8ca01600053763604d01d605">&#9670;&nbsp;</a></span>cuda_piclProgramCreateWithBinary()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> cuda_piclProgramCreateWithBinary </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a>&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td>
-          <td class="paramname"><em>num_devices</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> *&#160;</td>
-          <td class="paramname"><em>device_list</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const size_t *&#160;</td>
-          <td class="paramname"><em>lengths</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned char **&#160;</td>
-          <td class="paramname"><em>binaries</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="pi_8h.html#a0b846aad087f48e338d6e4d5adb9c00e">pi_int32</a> *&#160;</td>
-          <td class="paramname"><em>binary_status</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *&#160;</td>
-          <td class="paramname"><em>errcode_ret</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Not implemented. See <a class="el" href="pi__cuda_8cpp.html#ac445fe0b23537e123e95a0cb8c11b2c7">cuda_piclProgramCreateWithSource</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02248">2248</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03035">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02892">cuda_piEnqueueMemBufferReadRect()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02943">cuda_piEnqueueMemBufferWriteRect()</a>.</p>
 
 </div>
 </div>
@@ -668,15 +602,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a PI program from a list of PTX or CUBIN binaries. </p>
-<p>Note: No calls to CUDA driver API in this function, only store binaries for later.</p>
-<p>Implement more than one input image  SYCL RT should use cuda_piclprogramCreateWithBinary instead </p>
+<p>Not used as CUDA backend only creates programs from binary. </p>
+<p>See cuda_piclProgramCreateWithBinary. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02182">2182</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02172">2172</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01011">cl::sycl::length()</a>, <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_PROGRAM</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -749,7 +682,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="cuda__definitions_8hpp_source.html#l00019">PI_CONTEXT_PROPERTIES_CUDA_PRIMARY</a>, <a class="el" href="pi_8h_source.html#l00452">PI_FALSE</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi_8h_source.html#l00451">PI_TRUE</a>, <a class="el" href="struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084a386bba5a5dc4fac215c9cf0b9a29b352">_pi_context::primary</a>, and <a class="el" href="struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084aacf0d09710ee2f2dd6c1124d35d8d842">_pi_context::user_defined</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -797,11 +730,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00685">685</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00681">681</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00162">_pi_context::get_device()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00172">_pi_context::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00278">PI_CONTEXT_INFO_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00279">PI_CONTEXT_INFO_NUM_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00281">PI_CONTEXT_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, and <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -825,7 +758,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00170">_pi_context::decrement_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00164">_pi_context::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00162">_pi_context::get_device()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00149">_pi_context::invoke_extended_deleters()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00166">_pi_context::is_primary()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00294">_pi_event::~_pi_event()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00525">_pi_kernel::~_pi_kernel()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00208">_pi_mem::~_pi_mem()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00398">_pi_program::~_pi_program()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00287">_pi_queue::~_pi_queue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00292">_pi_event::~_pi_event()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00525">_pi_kernel::~_pi_kernel()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00208">_pi_mem::~_pi_mem()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00395">_pi_program::~_pi_program()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00287">_pi_queue::~_pi_queue()</a>.</p>
 
 </div>
 </div>
@@ -845,11 +778,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00705">705</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00701">701</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00172">_pi_context::get_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00168">_pi_context::increment_reference_count()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00517">_pi_kernel::_pi_kernel()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00197">_pi_mem::_pi_mem()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00391">_pi_program::_pi_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00279">_pi_queue::_pi_queue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00517">_pi_kernel::_pi_kernel()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00197">_pi_mem::_pi_mem()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00389">_pi_program::_pi_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00279">_pi_queue::_pi_queue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -897,11 +830,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00769">769</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00764">764</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00369">cl::sycl::detail::pi::assertion()</a>, <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00082">_pi_device::get_platform()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00080">_pi_device::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00194">PI_DEVICE_INFO_ADDRESS_BITS</a>, <a class="el" href="pi_8h_source.html#l00223">PI_DEVICE_INFO_AVAILABLE</a>, <a class="el" href="pi_8h_source.html#l00230">PI_DEVICE_INFO_BUILT_IN_KERNELS</a>, <a class="el" href="pi_8h_source.html#l00224">PI_DEVICE_INFO_COMPILER_AVAILABLE</a>, <a class="el" href="pi_8h_source.html#l00167">PI_DEVICE_INFO_DOUBLE_FP_CONFIG</a>, <a class="el" href="pi_8h_source.html#l00236">PI_DEVICE_INFO_DRIVER_VERSION</a>, <a class="el" href="pi_8h_source.html#l00222">PI_DEVICE_INFO_ENDIAN_LITTLE</a>, <a class="el" href="pi_8h_source.html#l00218">PI_DEVICE_INFO_ERROR_CORRECTION_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00226">PI_DEVICE_INFO_EXECUTION_CAPABILITIES</a>, <a class="el" href="pi_8h_source.html#l00240">PI_DEVICE_INFO_EXTENSIONS</a>, <a class="el" href="pi_8h_source.html#l00212">PI_DEVICE_INFO_GLOBAL_MEM_CACHE_SIZE</a>, <a class="el" href="pi_8h_source.html#l00209">PI_DEVICE_INFO_GLOBAL_MEM_CACHE_TYPE</a>, <a class="el" href="pi_8h_source.html#l00210">PI_DEVICE_INFO_GLOBAL_MEM_CACHELINE_SIZE</a>, <a class="el" href="pi_8h_source.html#l00213">PI_DEVICE_INFO_GLOBAL_MEM_SIZE</a>, <a class="el" href="pi_8h_source.html#l00166">PI_DEVICE_INFO_HALF_FP_CONFIG</a>, <a class="el" href="pi_8h_source.html#l00219">PI_DEVICE_INFO_HOST_UNIFIED_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00200">PI_DEVICE_INFO_IMAGE2D_MAX_HEIGHT</a>, <a class="el" href="pi_8h_source.html#l00199">PI_DEVICE_INFO_IMAGE2D_MAX_WIDTH</a>, <a class="el" href="pi_8h_source.html#l00203">PI_DEVICE_INFO_IMAGE3D_MAX_DEPTH</a>, <a class="el" href="pi_8h_source.html#l00202">PI_DEVICE_INFO_IMAGE3D_MAX_HEIGHT</a>, <a class="el" href="pi_8h_source.html#l00201">PI_DEVICE_INFO_IMAGE3D_MAX_WIDTH</a>, <a class="el" href="pi_8h_source.html#l00205">PI_DEVICE_INFO_IMAGE_MAX_ARRAY_SIZE</a>, <a class="el" href="pi_8h_source.html#l00204">PI_DEVICE_INFO_IMAGE_MAX_BUFFER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00196">PI_DEVICE_INFO_IMAGE_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00225">PI_DEVICE_INFO_LINKER_AVAILABLE</a>, <a class="el" href="pi_8h_source.html#l00217">PI_DEVICE_INFO_LOCAL_MEM_SIZE</a>, <a class="el" href="pi_8h_source.html#l00216">PI_DEVICE_INFO_LOCAL_MEM_TYPE</a>, <a class="el" href="pi_8h_source.html#l00193">PI_DEVICE_INFO_MAX_CLOCK_FREQUENCY</a>, <a class="el" href="pi_8h_source.html#l00161">PI_DEVICE_INFO_MAX_COMPUTE_UNITS</a>, <a class="el" href="pi_8h_source.html#l00215">PI_DEVICE_INFO_MAX_CONSTANT_ARGS</a>, <a class="el" href="pi_8h_source.html#l00214">PI_DEVICE_INFO_MAX_CONSTANT_BUFFER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00195">PI_DEVICE_INFO_MAX_MEM_ALLOC_SIZE</a>, <a class="el" href="pi_8h_source.html#l00207">PI_DEVICE_INFO_MAX_PARAMETER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00197">PI_DEVICE_INFO_MAX_READ_IMAGE_ARGS</a>, <a class="el" href="pi_8h_source.html#l00206">PI_DEVICE_INFO_MAX_SAMPLERS</a>, <a class="el" href="pi_8h_source.html#l00164">PI_DEVICE_INFO_MAX_WORK_GROUP_SIZE</a>, <a class="el" href="pi_8h_source.html#l00162">PI_DEVICE_INFO_MAX_WORK_ITEM_DIMENSIONS</a>, <a class="el" href="pi_8h_source.html#l00163">PI_DEVICE_INFO_MAX_WORK_ITEM_SIZES</a>, <a class="el" href="pi_8h_source.html#l00198">PI_DEVICE_INFO_MAX_WRITE_IMAGE_ARGS</a>, <a class="el" href="pi_8h_source.html#l00208">PI_DEVICE_INFO_MEM_BASE_ADDR_ALIGN</a>, <a class="el" href="pi_8h_source.html#l00234">PI_DEVICE_INFO_NAME</a>, <a class="el" href="pi_8h_source.html#l00183">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_CHAR</a>, <a class="el" href="pi_8h_source.html#l00190">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_DOUBLE</a>, <a class="el" href="pi_8h_source.html#l00188">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_FLOAT</a>, <a class="el" href="pi_8h_source.html#l00192">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_HALF</a>, <a class="el" href="pi_8h_source.html#l00186">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_INT</a>, <a class="el" href="pi_8h_source.html#l00187">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_LONG</a>, <a class="el" href="pi_8h_source.html#l00184">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_SHORT</a>, <a class="el" href="pi_8h_source.html#l00239">PI_DEVICE_INFO_OPENCL_C_VERSION</a>, <a class="el" href="pi_8h_source.html#l00244">PI_DEVICE_INFO_PARENT_DEVICE</a>, <a class="el" href="pi_8h_source.html#l00248">PI_DEVICE_INFO_PARTITION_AFFINITY_DOMAIN</a>, <a class="el" href="pi_8h_source.html#l00246">PI_DEVICE_INFO_PARTITION_MAX_SUB_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00245">PI_DEVICE_INFO_PARTITION_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00250">PI_DEVICE_INFO_PARTITION_TYPE</a>, <a class="el" href="pi_8h_source.html#l00231">PI_DEVICE_INFO_PLATFORM</a>, <a class="el" href="pi_8h_source.html#l00242">PI_DEVICE_INFO_PREFERRED_INTEROP_USER_SYNC</a>, <a class="el" href="pi_8h_source.html#l00169">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_CHAR</a>, <a class="el" href="pi_8h_source.html#l00179">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_DOUBLE</a>, <a class="el" href="pi_8h_source.html#l00177">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_FLOAT</a>, <a class="el" href="pi_8h_source.html#l00181">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_HALF</a>, <a class="el" href="pi_8h_source.html#l00173">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_INT</a>, <a class="el" href="pi_8h_source.html#l00175">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_LONG</a>, <a class="el" href="pi_8h_source.html#l00171">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_SHORT</a>, <a class="el" href="pi_8h_source.html#l00241">PI_DEVICE_INFO_PRINTF_BUFFER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00237">PI_DEVICE_INFO_PROFILE</a>, <a class="el" href="pi_8h_source.html#l00220">PI_DEVICE_INFO_PROFILING_TIMER_RESOLUTION</a>, <a class="el" href="pi_8h_source.html#l00227">PI_DEVICE_INFO_QUEUE_ON_DEVICE_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00229">PI_DEVICE_INFO_QUEUE_ON_HOST_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00232">PI_DEVICE_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8h_source.html#l00165">PI_DEVICE_INFO_SINGLE_FP_CONFIG</a>, <a class="el" href="pi_8h_source.html#l00159">PI_DEVICE_INFO_TYPE</a>, <a class="el" href="pi_8h_source.html#l00259">PI_DEVICE_INFO_USM_CROSS_SHARED_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00256">PI_DEVICE_INFO_USM_DEVICE_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00255">PI_DEVICE_INFO_USM_HOST_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00257">PI_DEVICE_INFO_USM_SINGLE_SHARED_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00261">PI_DEVICE_INFO_USM_SYSTEM_SHARED_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00235">PI_DEVICE_INFO_VENDOR</a>, <a class="el" href="pi_8h_source.html#l00160">PI_DEVICE_INFO_VENDOR_ID</a>, <a class="el" href="pi_8h_source.html#l00238">PI_DEVICE_INFO_VERSION</a>, <a class="el" href="pi_8h_source.html#l00154">PI_DEVICE_LOCAL_MEM_TYPE_LOCAL</a>, <a class="el" href="pi_8h_source.html#l00142">PI_DEVICE_TYPE_GPU</a>, <a class="el" href="pi_8h_source.html#l00452">PI_FALSE</a>, <a class="el" href="pi_8h_source.html#l00314">PI_FP_CORRECTLY_ROUNDED_DIVIDE_SQRT</a>, <a class="el" href="pi_8h_source.html#l00319">PI_FP_DENORM</a>, <a class="el" href="pi_8h_source.html#l00320">PI_FP_FMA</a>, <a class="el" href="pi_8h_source.html#l00318">PI_FP_INF_NAN</a>, <a class="el" href="pi_8h_source.html#l00317">PI_FP_ROUND_TO_INF</a>, <a class="el" href="pi_8h_source.html#l00315">PI_FP_ROUND_TO_NEAREST</a>, <a class="el" href="pi_8h_source.html#l00316">PI_FP_ROUND_TO_ZERO</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l01330">PI_USM_ACCESS</a>, <a class="el" href="pi_8h_source.html#l01331">PI_USM_ATOMIC_ACCESS</a>, <a class="el" href="pi_8h_source.html#l01332">PI_USM_CONCURRENT_ACCESS</a>, and <a class="el" href="pi_8h_source.html#l01333">PI_USM_CONCURRENT_ATOMIC_ACCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00384">cl::sycl::detail::pi::assertion()</a>, <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00082">_pi_device::get_platform()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00080">_pi_device::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00194">PI_DEVICE_INFO_ADDRESS_BITS</a>, <a class="el" href="pi_8h_source.html#l00223">PI_DEVICE_INFO_AVAILABLE</a>, <a class="el" href="pi_8h_source.html#l00230">PI_DEVICE_INFO_BUILT_IN_KERNELS</a>, <a class="el" href="pi_8h_source.html#l00224">PI_DEVICE_INFO_COMPILER_AVAILABLE</a>, <a class="el" href="pi_8h_source.html#l00167">PI_DEVICE_INFO_DOUBLE_FP_CONFIG</a>, <a class="el" href="pi_8h_source.html#l00236">PI_DEVICE_INFO_DRIVER_VERSION</a>, <a class="el" href="pi_8h_source.html#l00222">PI_DEVICE_INFO_ENDIAN_LITTLE</a>, <a class="el" href="pi_8h_source.html#l00218">PI_DEVICE_INFO_ERROR_CORRECTION_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00226">PI_DEVICE_INFO_EXECUTION_CAPABILITIES</a>, <a class="el" href="pi_8h_source.html#l00240">PI_DEVICE_INFO_EXTENSIONS</a>, <a class="el" href="pi_8h_source.html#l00212">PI_DEVICE_INFO_GLOBAL_MEM_CACHE_SIZE</a>, <a class="el" href="pi_8h_source.html#l00209">PI_DEVICE_INFO_GLOBAL_MEM_CACHE_TYPE</a>, <a class="el" href="pi_8h_source.html#l00210">PI_DEVICE_INFO_GLOBAL_MEM_CACHELINE_SIZE</a>, <a class="el" href="pi_8h_source.html#l00213">PI_DEVICE_INFO_GLOBAL_MEM_SIZE</a>, <a class="el" href="pi_8h_source.html#l00166">PI_DEVICE_INFO_HALF_FP_CONFIG</a>, <a class="el" href="pi_8h_source.html#l00219">PI_DEVICE_INFO_HOST_UNIFIED_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00200">PI_DEVICE_INFO_IMAGE2D_MAX_HEIGHT</a>, <a class="el" href="pi_8h_source.html#l00199">PI_DEVICE_INFO_IMAGE2D_MAX_WIDTH</a>, <a class="el" href="pi_8h_source.html#l00203">PI_DEVICE_INFO_IMAGE3D_MAX_DEPTH</a>, <a class="el" href="pi_8h_source.html#l00202">PI_DEVICE_INFO_IMAGE3D_MAX_HEIGHT</a>, <a class="el" href="pi_8h_source.html#l00201">PI_DEVICE_INFO_IMAGE3D_MAX_WIDTH</a>, <a class="el" href="pi_8h_source.html#l00205">PI_DEVICE_INFO_IMAGE_MAX_ARRAY_SIZE</a>, <a class="el" href="pi_8h_source.html#l00204">PI_DEVICE_INFO_IMAGE_MAX_BUFFER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00196">PI_DEVICE_INFO_IMAGE_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00225">PI_DEVICE_INFO_LINKER_AVAILABLE</a>, <a class="el" href="pi_8h_source.html#l00217">PI_DEVICE_INFO_LOCAL_MEM_SIZE</a>, <a class="el" href="pi_8h_source.html#l00216">PI_DEVICE_INFO_LOCAL_MEM_TYPE</a>, <a class="el" href="pi_8h_source.html#l00193">PI_DEVICE_INFO_MAX_CLOCK_FREQUENCY</a>, <a class="el" href="pi_8h_source.html#l00161">PI_DEVICE_INFO_MAX_COMPUTE_UNITS</a>, <a class="el" href="pi_8h_source.html#l00215">PI_DEVICE_INFO_MAX_CONSTANT_ARGS</a>, <a class="el" href="pi_8h_source.html#l00214">PI_DEVICE_INFO_MAX_CONSTANT_BUFFER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00195">PI_DEVICE_INFO_MAX_MEM_ALLOC_SIZE</a>, <a class="el" href="pi_8h_source.html#l00207">PI_DEVICE_INFO_MAX_PARAMETER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00197">PI_DEVICE_INFO_MAX_READ_IMAGE_ARGS</a>, <a class="el" href="pi_8h_source.html#l00206">PI_DEVICE_INFO_MAX_SAMPLERS</a>, <a class="el" href="pi_8h_source.html#l00164">PI_DEVICE_INFO_MAX_WORK_GROUP_SIZE</a>, <a class="el" href="pi_8h_source.html#l00162">PI_DEVICE_INFO_MAX_WORK_ITEM_DIMENSIONS</a>, <a class="el" href="pi_8h_source.html#l00163">PI_DEVICE_INFO_MAX_WORK_ITEM_SIZES</a>, <a class="el" href="pi_8h_source.html#l00198">PI_DEVICE_INFO_MAX_WRITE_IMAGE_ARGS</a>, <a class="el" href="pi_8h_source.html#l00208">PI_DEVICE_INFO_MEM_BASE_ADDR_ALIGN</a>, <a class="el" href="pi_8h_source.html#l00234">PI_DEVICE_INFO_NAME</a>, <a class="el" href="pi_8h_source.html#l00183">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_CHAR</a>, <a class="el" href="pi_8h_source.html#l00190">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_DOUBLE</a>, <a class="el" href="pi_8h_source.html#l00188">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_FLOAT</a>, <a class="el" href="pi_8h_source.html#l00192">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_HALF</a>, <a class="el" href="pi_8h_source.html#l00186">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_INT</a>, <a class="el" href="pi_8h_source.html#l00187">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_LONG</a>, <a class="el" href="pi_8h_source.html#l00184">PI_DEVICE_INFO_NATIVE_VECTOR_WIDTH_SHORT</a>, <a class="el" href="pi_8h_source.html#l00239">PI_DEVICE_INFO_OPENCL_C_VERSION</a>, <a class="el" href="pi_8h_source.html#l00244">PI_DEVICE_INFO_PARENT_DEVICE</a>, <a class="el" href="pi_8h_source.html#l00248">PI_DEVICE_INFO_PARTITION_AFFINITY_DOMAIN</a>, <a class="el" href="pi_8h_source.html#l00246">PI_DEVICE_INFO_PARTITION_MAX_SUB_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00245">PI_DEVICE_INFO_PARTITION_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00250">PI_DEVICE_INFO_PARTITION_TYPE</a>, <a class="el" href="pi_8h_source.html#l00231">PI_DEVICE_INFO_PLATFORM</a>, <a class="el" href="pi_8h_source.html#l00242">PI_DEVICE_INFO_PREFERRED_INTEROP_USER_SYNC</a>, <a class="el" href="pi_8h_source.html#l00169">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_CHAR</a>, <a class="el" href="pi_8h_source.html#l00179">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_DOUBLE</a>, <a class="el" href="pi_8h_source.html#l00177">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_FLOAT</a>, <a class="el" href="pi_8h_source.html#l00181">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_HALF</a>, <a class="el" href="pi_8h_source.html#l00173">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_INT</a>, <a class="el" href="pi_8h_source.html#l00175">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_LONG</a>, <a class="el" href="pi_8h_source.html#l00171">PI_DEVICE_INFO_PREFERRED_VECTOR_WIDTH_SHORT</a>, <a class="el" href="pi_8h_source.html#l00241">PI_DEVICE_INFO_PRINTF_BUFFER_SIZE</a>, <a class="el" href="pi_8h_source.html#l00237">PI_DEVICE_INFO_PROFILE</a>, <a class="el" href="pi_8h_source.html#l00220">PI_DEVICE_INFO_PROFILING_TIMER_RESOLUTION</a>, <a class="el" href="pi_8h_source.html#l00227">PI_DEVICE_INFO_QUEUE_ON_DEVICE_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00229">PI_DEVICE_INFO_QUEUE_ON_HOST_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00232">PI_DEVICE_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8h_source.html#l00165">PI_DEVICE_INFO_SINGLE_FP_CONFIG</a>, <a class="el" href="pi_8h_source.html#l00159">PI_DEVICE_INFO_TYPE</a>, <a class="el" href="pi_8h_source.html#l00259">PI_DEVICE_INFO_USM_CROSS_SHARED_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00256">PI_DEVICE_INFO_USM_DEVICE_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00255">PI_DEVICE_INFO_USM_HOST_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00257">PI_DEVICE_INFO_USM_SINGLE_SHARED_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00261">PI_DEVICE_INFO_USM_SYSTEM_SHARED_SUPPORT</a>, <a class="el" href="pi_8h_source.html#l00235">PI_DEVICE_INFO_VENDOR</a>, <a class="el" href="pi_8h_source.html#l00160">PI_DEVICE_INFO_VENDOR_ID</a>, <a class="el" href="pi_8h_source.html#l00238">PI_DEVICE_INFO_VERSION</a>, <a class="el" href="pi_8h_source.html#l00154">PI_DEVICE_LOCAL_MEM_TYPE_LOCAL</a>, <a class="el" href="pi_8h_source.html#l00142">PI_DEVICE_TYPE_GPU</a>, <a class="el" href="pi_8h_source.html#l00452">PI_FALSE</a>, <a class="el" href="pi_8h_source.html#l00314">PI_FP_CORRECTLY_ROUNDED_DIVIDE_SQRT</a>, <a class="el" href="pi_8h_source.html#l00319">PI_FP_DENORM</a>, <a class="el" href="pi_8h_source.html#l00320">PI_FP_FMA</a>, <a class="el" href="pi_8h_source.html#l00318">PI_FP_INF_NAN</a>, <a class="el" href="pi_8h_source.html#l00317">PI_FP_ROUND_TO_INF</a>, <a class="el" href="pi_8h_source.html#l00315">PI_FP_ROUND_TO_NEAREST</a>, <a class="el" href="pi_8h_source.html#l00316">PI_FP_ROUND_TO_ZERO</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l01334">PI_USM_ACCESS</a>, <a class="el" href="pi_8h_source.html#l01335">PI_USM_ATOMIC_ACCESS</a>, <a class="el" href="pi_8h_source.html#l01336">PI_USM_CONCURRENT_ACCESS</a>, and <a class="el" href="pi_8h_source.html#l01337">PI_USM_CONCURRENT_ATOMIC_ACCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02052">cuda_piEnqueueKernelLaunch()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02050">cuda_piEnqueueKernelLaunch()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -951,9 +884,9 @@ Variables</h2></td></tr>
 
 <p>Not applicable to CUDA, devices cannot be partitioned. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00721">721</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00717">717</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -974,11 +907,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS always since CUDA devices are always root devices. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00765">765</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00762">762</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00147">_pi_context::~_pi_context()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00287">_pi_queue::~_pi_queue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00147">_pi_context::~_pi_context()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00287">_pi_queue::~_pi_queue()</a>.</p>
 
 </div>
 </div>
@@ -999,11 +932,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS if the function is executed successfully CUDA devices are always root devices so retain always returns success. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00681">681</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00679">679</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00141">_pi_context::_pi_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00279">_pi_queue::_pi_queue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00141">_pi_context::_pi_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00279">_pi_queue::_pi_queue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1058,11 +991,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00649">649</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00647">647</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00059">_pi_platform::devices_</a>, <a class="el" href="pi_8h_source.html#l00135">PI_DEVICE_TYPE_DEFAULT</a>, <a class="el" href="pi_8h_source.html#l00142">PI_DEVICE_TYPE_GPU</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1107,11 +1040,11 @@ Variables</h2></td></tr>
 <p>Enqueues a wait on the given CUstream for all events. </p>
 <p>See <a class="el" href="pi__cuda_8cpp.html#a79eda25f391043dec763dfa29c9acf6c">enqueueEventWait</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02745">2745</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02743">2743</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00384">enqueueEventWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00368">PI_COMMAND_TYPE_MARKER</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00082">PI_INVALID_QUEUE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00382">enqueueEventWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00368">PI_COMMAND_TYPE_MARKER</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00082">PI_INVALID_QUEUE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02052">cuda_piEnqueueKernelLaunch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02996">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03037">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03082">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01907">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02894">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01862">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02945">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03508">cuda_piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03430">cuda_piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03398">cuda_piextUSMEnqueueMemset()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03469">cuda_piextUSMEnqueuePrefetch()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02050">cuda_piEnqueueKernelLaunch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02994">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03035">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03080">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01904">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02892">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01858">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02943">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03506">cuda_piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03428">cuda_piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03396">cuda_piextUSMEnqueueMemset()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03467">cuda_piextUSMEnqueuePrefetch()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1183,11 +1116,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02052">2052</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02050">2050</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00565">_pi_kernel::clear_local_size()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00769">cuda_piDeviceGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00275">_pi_queue::device_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00539">_pi_kernel::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00559">_pi_kernel::get_arg_indices()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00541">_pi_kernel::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00563">_pi_kernel::get_local_size()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00350">PI_COMMAND_TYPE_NDRANGE_KERNEL</a>, <a class="el" href="pi_8h_source.html#l00163">PI_DEVICE_INFO_MAX_WORK_ITEM_SIZES</a>, <a class="el" href="pi_8h_source.html#l00091">PI_INVALID_WORK_GROUP_SIZE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00565">_pi_kernel::clear_local_size()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00764">cuda_piDeviceGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00275">_pi_queue::device_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00539">_pi_kernel::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00559">_pi_kernel::get_arg_indices()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00541">_pi_kernel::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00563">_pi_kernel::get_local_size()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00350">PI_COMMAND_TYPE_NDRANGE_KERNEL</a>, <a class="el" href="pi_8h_source.html#l00163">PI_DEVICE_INFO_MAX_WORK_ITEM_SIZES</a>, <a class="el" href="pi_8h_source.html#l00091">PI_INVALID_WORK_GROUP_SIZE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1259,11 +1192,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02996">2996</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02994">2994</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, and <a class="el" href="pi_8h_source.html#l00082">PI_INVALID_QUEUE</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, and <a class="el" href="pi_8h_source.html#l00082">PI_INVALID_QUEUE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1359,11 +1292,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03037">3037</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03035">3035</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02842">commonEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02840">commonEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1435,11 +1368,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03082">3082</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03080">3080</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00360">PI_COMMAND_TYPE_MEM_BUFFER_FILL</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, <a class="el" href="builtins_8hpp_source.html#l00582">cl::sycl::step()</a>, and <a class="el" href="kernel__impl_8cpp_source.html#l00021">cl::sycl::detail::uint32_t</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00360">PI_COMMAND_TYPE_MEM_BUFFER_FILL</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, <a class="el" href="builtins_8hpp_source.html#l00582">cl::sycl::step()</a>, and <a class="el" href="kernel__impl_8cpp_source.html#l00021">cl::sycl::detail::uint32_t</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1520,11 +1453,11 @@ Variables</h2></td></tr>
 <p>Implements mapping on the host using a BufferRead operation. </p>
 <p>Mapped pointers are stored in the pi_mem object.  Untie types from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03227">3227</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03225">3225</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01907">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00235">_pi_mem::get_map_ptr()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00239">_pi_mem::map_to_ptr()</a>, <a class="el" href="pi_8h_source.html#l00354">PI_COMMAND_TYPE_MEM_BUFFER_MAP</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01904">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00235">_pi_mem::get_map_ptr()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00239">_pi_mem::map_to_ptr()</a>, <a class="el" href="pi_8h_source.html#l00354">PI_COMMAND_TYPE_MEM_BUFFER_MAP</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1596,11 +1529,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01907">1907</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01904">1904</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00351">PI_COMMAND_TYPE_MEM_BUFFER_READ</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00351">PI_COMMAND_TYPE_MEM_BUFFER_READ</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03227">cuda_piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03225">cuda_piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1702,11 +1635,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02894">2894</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02892">2892</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02842">commonEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00351">PI_COMMAND_TYPE_MEM_BUFFER_READ</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02840">commonEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00351">PI_COMMAND_TYPE_MEM_BUFFER_READ</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1778,11 +1711,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01862">1862</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01858">1858</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00352">PI_COMMAND_TYPE_MEM_BUFFER_WRITE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00352">PI_COMMAND_TYPE_MEM_BUFFER_WRITE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03276">cuda_piEnqueueMemUnmap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1884,11 +1817,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02945">2945</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02943">2943</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02842">commonEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00352">PI_COMMAND_TYPE_MEM_BUFFER_WRITE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02840">commonEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00352">PI_COMMAND_TYPE_MEM_BUFFER_WRITE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1962,11 +1895,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, requires untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03201">3201</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03199">3199</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2034,11 +1967,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, requires untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03213">3213</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03211">3211</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2124,11 +2057,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, requires untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03179">3179</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03177">3177</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2214,11 +2147,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, requires untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03190">3190</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03188">3188</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2275,11 +2208,11 @@ Variables</h2></td></tr>
 <p>Implements the unmap from the host, using a BufferWrite operation. </p>
 <p>Requires the mapped pointer to be already registered in the given memobj. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03276">3276</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03274">3274</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01862">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00262">_pi_mem::get_map_flags()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00237">_pi_mem::get_map_offset()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00235">_pi_mem::get_map_ptr()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00233">_pi_mem::get_size()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00355">PI_COMMAND_TYPE_MEM_BUFFER_UNMAP</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00252">_pi_mem::unmap()</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01858">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00262">_pi_mem::get_map_flags()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00237">_pi_mem::get_map_offset()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00235">_pi_mem::get_map_ptr()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00233">_pi_mem::get_size()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00355">PI_COMMAND_TYPE_MEM_BUFFER_UNMAP</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00252">_pi_mem::unmap()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2359,11 +2292,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02142">2142</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02136">2136</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2393,11 +2326,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02630">2630</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02627">2627</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2445,11 +2378,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02634">2634</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02631">2631</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00321">_pi_event::get_command_type()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00343">_pi_event::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00331">_pi_event::get_execution_status()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00319">_pi_event::get_queue()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00323">_pi_event::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00345">PI_EVENT_INFO_COMMAND_EXECUTION_STATUS</a>, <a class="el" href="pi_8h_source.html#l00342">PI_EVENT_INFO_COMMAND_QUEUE</a>, <a class="el" href="pi_8h_source.html#l00344">PI_EVENT_INFO_COMMAND_TYPE</a>, <a class="el" href="pi_8h_source.html#l00343">PI_EVENT_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00346">PI_EVENT_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, and <a class="el" href="pi_8h_source.html#l00087">PI_INVALID_EVENT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2499,11 +2432,11 @@ Variables</h2></td></tr>
 
 <p>Obtain profiling information from PI CUDA events  Untie from OpenCL, timings from CUDA are only elapsed time. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02665">2665</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02662">2662</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00498">PI_PROFILING_INFO_COMMAND_END</a>, <a class="el" href="pi_8h_source.html#l00495">PI_PROFILING_INFO_COMMAND_QUEUED</a>, <a class="el" href="pi_8h_source.html#l00497">PI_PROFILING_INFO_COMMAND_START</a>, and <a class="el" href="pi_8h_source.html#l00496">PI_PROFILING_INFO_COMMAND_SUBMIT</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00498">PI_PROFILING_INFO_COMMAND_END</a>, <a class="el" href="pi_8h_source.html#l00495">PI_PROFILING_INFO_COMMAND_QUEUED</a>, <a class="el" href="pi_8h_source.html#l00497">PI_PROFILING_INFO_COMMAND_START</a>, and <a class="el" href="pi_8h_source.html#l00496">PI_PROFILING_INFO_COMMAND_SUBMIT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2523,11 +2456,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02716">2716</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02714">2714</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00369">cl::sycl::detail::pi::assertion()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00347">_pi_event::decrement_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00343">_pi_event::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00323">_pi_event::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00087">PI_INVALID_EVENT</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00384">cl::sycl::detail::pi::assertion()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00347">_pi_event::decrement_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00343">_pi_event::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00323">_pi_event::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00087">PI_INVALID_EVENT</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2547,11 +2480,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02705">2705</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02702">2702</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00369">cl::sycl::detail::pi::assertion()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00384">cl::sycl::detail::pi::assertion()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2593,11 +2526,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02691">2691</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02688">2688</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2627,11 +2560,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02699">2699</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02696">2696</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, and <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, and <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2661,11 +2594,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01953">1953</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01951">1951</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00343">_pi_event::get_context()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00087">PI_INVALID_EVENT</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2708,9 +2641,9 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01476">1476</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2754,7 +2687,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00164">_pi_context::get()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2790,11 +2723,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00713">713</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00709">709</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00156">_pi_context::set_extended_deleter()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2837,9 +2770,9 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01314">1314</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2883,7 +2816,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2926,11 +2859,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>If available, the first binary that is PTX </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00730">730</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00726">726</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi_8h_source.html#l00645">PI_DEVICE_BINARY_TARGET_NVPTX64</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_BINARY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi_8h_source.html#l00645">PI_DEVICE_BINARY_TARGET_NVPTX64</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_BINARY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2971,11 +2904,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TBD </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02802">2802</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02800">2800</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3015,11 +2948,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS on success. PI_INVALID_EVENT if given a user event. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02788">2788</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02786">2786</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3061,11 +2994,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00755">755</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00751">751</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3101,11 +3034,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02036">2036</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02034">2034</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00551">_pi_kernel::set_kernel_arg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3147,11 +3080,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02620">2620</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02617">2617</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00551">_pi_kernel::set_kernel_arg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3192,11 +3125,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TBD </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01693">1693</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01691">1691</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3236,11 +3169,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01679">1679</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01677">1677</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00223">_pi_mem::get()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3281,9 +3214,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TBD </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02469">2469</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02465">2465</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
 </div>
 </div>
@@ -3323,7 +3256,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TBD </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02455">2455</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02451">2451</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00427">_pi_program::get()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
@@ -3366,11 +3299,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TBD </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01855">1855</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01851">1851</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3410,11 +3343,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01841">1841</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01837">1837</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3470,11 +3403,11 @@ Variables</h2></td></tr>
 
 <p>USM: Implements USM device allocations using a normal CUDA device pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03334">3334</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03332">3332</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3524,11 +3457,11 @@ Variables</h2></td></tr>
 
 <p>USM: memadvise API to govern behavior of automatic migration mechanisms. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03508">3508</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03506">3506</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3594,11 +3527,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03430">3430</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03428">3428</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3658,11 +3591,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03398">3398</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03396">3396</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3722,11 +3655,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03469">3469</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03467">3467</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00162">_pi_context::get_device()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00162">_pi_context::get_device()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00362">_pi_event::make_native()</a>, <a class="el" href="pi_8h_source.html#l00353">PI_COMMAND_TYPE_MEM_BUFFER_COPY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3758,11 +3691,11 @@ Variables</h2></td></tr>
 
 <p>USM: Frees the given USM pointer associated with the context. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03377">3377</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03375">3375</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3830,11 +3763,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03534">3534</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03532">3532</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00547">cuda_piPlatformsGet()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00059">_pi_platform::devices_</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01339">PI_MEM_ALLOC_BASE_PTR</a>, <a class="el" href="pi_8h_source.html#l01341">PI_MEM_ALLOC_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01340">PI_MEM_ALLOC_SIZE</a>, <a class="el" href="pi_8h_source.html#l01338">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01347">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01346">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01348">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l01345">PI_MEM_TYPE_UNKNOWN</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00545">cuda_piPlatformsGet()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00059">_pi_platform::devices_</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01343">PI_MEM_ALLOC_BASE_PTR</a>, <a class="el" href="pi_8h_source.html#l01345">PI_MEM_ALLOC_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01344">PI_MEM_ALLOC_SIZE</a>, <a class="el" href="pi_8h_source.html#l01342">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01351">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01350">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01352">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l01349">PI_MEM_TYPE_UNKNOWN</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3884,11 +3817,11 @@ Variables</h2></td></tr>
 
 <p>USM: Implements USM Host allocations using CUDA Pinned Memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03315">3315</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03313">3313</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3944,11 +3877,11 @@ Variables</h2></td></tr>
 
 <p>USM: Implements USM Shared allocations using CUDA Managed Memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03355">3355</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03353">3353</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3984,11 +3917,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01992">1992</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01990">1990</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00427">_pi_program::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">_pi_program::get_context()</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4042,11 +3975,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02513">2513</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02508">2508</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00369">cl::sycl::detail::pi::assertion()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00539">_pi_kernel::get()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_KERNEL</a>, <a class="el" href="pi_8h_source.html#l00305">PI_KERNEL_GROUP_INFO_COMPILE_WORK_GROUP_SIZE</a>, <a class="el" href="pi_8h_source.html#l00307">PI_KERNEL_GROUP_INFO_LOCAL_MEM_SIZE</a>, <a class="el" href="pi_8h_source.html#l00308">PI_KERNEL_GROUP_INFO_PREFERRED_WORK_GROUP_SIZE_MULTIPLE</a>, <a class="el" href="pi_8h_source.html#l00310">PI_KERNEL_GROUP_INFO_PRIVATE_MEM_SIZE</a>, and <a class="el" href="pi_8h_source.html#l00304">PI_KERNEL_GROUP_INFO_WORK_GROUP_SIZE</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00384">cl::sycl::detail::pi::assertion()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00539">_pi_kernel::get()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_KERNEL</a>, <a class="el" href="pi_8h_source.html#l00305">PI_KERNEL_GROUP_INFO_COMPILE_WORK_GROUP_SIZE</a>, <a class="el" href="pi_8h_source.html#l00307">PI_KERNEL_GROUP_INFO_LOCAL_MEM_SIZE</a>, <a class="el" href="pi_8h_source.html#l00308">PI_KERNEL_GROUP_INFO_PREFERRED_WORK_GROUP_SIZE_MULTIPLE</a>, <a class="el" href="pi_8h_source.html#l00310">PI_KERNEL_GROUP_INFO_PRIVATE_MEM_SIZE</a>, and <a class="el" href="pi_8h_source.html#l00304">PI_KERNEL_GROUP_INFO_WORK_GROUP_SIZE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4094,11 +4027,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02476">2476</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02472">2472</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00541">_pi_kernel::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00543">_pi_kernel::get_name()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00549">_pi_kernel::get_num_args()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00531">_pi_kernel::get_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00537">_pi_kernel::get_reference_count()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_KERNEL</a>, <a class="el" href="pi_8h_source.html#l00299">PI_KERNEL_INFO_ATTRIBUTES</a>, <a class="el" href="pi_8h_source.html#l00297">PI_KERNEL_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00294">PI_KERNEL_INFO_FUNCTION_NAME</a>, <a class="el" href="pi_8h_source.html#l00295">PI_KERNEL_INFO_NUM_ARGS</a>, <a class="el" href="pi_8h_source.html#l00298">PI_KERNEL_INFO_PROGRAM</a>, and <a class="el" href="pi_8h_source.html#l00296">PI_KERNEL_INFO_REFERENCE_COUNT</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4166,11 +4099,11 @@ Variables</h2></td></tr>
 
 <p>Untie from OpenCL  Not implemented </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02579">2579</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02575">2575</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4190,11 +4123,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02595">2595</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02591">2591</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00535">_pi_kernel::decrement_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00537">_pi_kernel::get_reference_count()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4214,11 +4147,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02587">2587</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02583">2583</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00537">_pi_kernel::get_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00533">_pi_kernel::increment_reference_count()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4260,11 +4193,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02019">2019</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02017">2017</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00551">_pi_kernel::set_kernel_arg()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00555">_pi_kernel::set_kernel_local_arg()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4306,11 +4239,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02614">2614</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02610">2610</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4365,7 +4298,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">_pi_mem::classic</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00509">PI_MEM_FLAGS_HOST_PTR_USE</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">_pi_mem::use_host_ptr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4418,9 +4351,9 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01603">1603</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">_pi_mem::classic</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00185">_pi_mem::context_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00536">ReleaseGuard&lt; T &gt;::dismiss()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00233">_pi_mem::get_size()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00189">_pi_mem::hostPtr_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00217">_pi_mem::is_buffer()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00219">_pi_mem::is_sub_buffer()</a>, <a class="el" href="pi_8h_source.html#l00448">PI_BUFFER_CREATE_TYPE_REGION</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00187">_pi_mem::ptr_</a>.</p>
+<p class="reference">References <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">_pi_mem::classic</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00185">_pi_mem::context_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00534">ReleaseGuard&lt; T &gt;::dismiss()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00233">_pi_mem::get_size()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00189">_pi_mem::hostPtr_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00217">_pi_mem::is_buffer()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00219">_pi_mem::is_sub_buffer()</a>, <a class="el" href="pi_8h_source.html#l00448">PI_BUFFER_CREATE_TYPE_REGION</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00187">_pi_mem::ptr_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4468,11 +4401,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01666">1666</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01664">1664</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4528,11 +4461,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02152">2152</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02146">2146</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4582,11 +4515,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02161">2161</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02155">2155</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4609,11 +4542,11 @@ Variables</h2></td></tr>
 <p>Decreases the reference count of the Mem object. </p>
 <p>If this is zero, calls the relevant CUDA Free function </p><dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS unless deallocation error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01553">1553</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01552">1552</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">_pi_mem::classic</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00229">_pi_mem::decrement_reference_count()</a>, <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00219">_pi_mem::is_sub_buffer()</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">_pi_mem::use_host_ptr</a>.</p>
+<p class="reference">References <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">_pi_mem::classic</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00229">_pi_mem::decrement_reference_count()</a>, <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00219">_pi_mem::is_sub_buffer()</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">_pi_mem::use_host_ptr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00208">_pi_mem::~_pi_mem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00208">_pi_mem::~_pi_mem()</a>.</p>
 
 </div>
 </div>
@@ -4633,11 +4566,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02168">2168</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02162">2162</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00231">_pi_mem::get_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00227">_pi_mem::increment_reference_count()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00197">_pi_mem::_pi_mem()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00197">_pi_mem::_pi_mem()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4685,11 +4618,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00613">613</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00611">611</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00111">PI_PLATFORM_INFO_EXTENSIONS</a>, <a class="el" href="pi_8h_source.html#l00112">PI_PLATFORM_INFO_NAME</a>, <a class="el" href="pi_8h_source.html#l00113">PI_PLATFORM_INFO_PROFILE</a>, <a class="el" href="pi_8h_source.html#l00114">PI_PLATFORM_INFO_VENDOR</a>, and <a class="el" href="pi_8h_source.html#l00115">PI_PLATFORM_INFO_VERSION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00111">PI_PLATFORM_INFO_EXTENSIONS</a>, <a class="el" href="pi_8h_source.html#l00112">PI_PLATFORM_INFO_NAME</a>, <a class="el" href="pi_8h_source.html#l00113">PI_PLATFORM_INFO_PROFILE</a>, <a class="el" href="pi_8h_source.html#l00114">PI_PLATFORM_INFO_VENDOR</a>, and <a class="el" href="pi_8h_source.html#l00115">PI_PLATFORM_INFO_VERSION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4728,11 +4661,11 @@ Variables</h2></td></tr>
 <p>Obtains the CUDA platform. </p>
 <p>There is only one CUDA platform, and contains all devices on the system. Triggers the CUDA Driver initialization (cuInit) the first time, so this must be the first PI API called. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00547">547</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00545">545</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00059">_pi_platform::devices_</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03534">cuda_piextUSMGetMemAllocInfo()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03532">cuda_piextUSMGetMemAllocInfo()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4789,11 +4722,11 @@ Variables</h2></td></tr>
 <p>Loads the images from a PI program into a CUmodule that can be used later on to extract functions (kernels). </p>
 <p>See <a class="el" href="struct__pi__program.html">_pi_program</a> for implementation details. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02216">2216</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02184">2184</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00408">_pi_program::build_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">_pi_program::get_context()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00405">_pi_program::build_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">_pi_program::get_context()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4868,11 +4801,11 @@ Variables</h2></td></tr>
 <p>Creates a new program that is the outcome of the compilation of the headers and the program. </p>
 <p>Implement asynchronous compilation </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02361">2361</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02357">2357</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00408">_pi_program::build_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">_pi_program::get_context()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00405">_pi_program::build_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">_pi_program::get_context()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4916,11 +4849,79 @@ Variables</h2></td></tr>
 
 <p>Not implemented </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02241">2241</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02209">2209</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
+
+</div>
+</div>
+<a id="a6601104e2c6b9bdc3916476a90c0add3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6601104e2c6b9bdc3916476a90c0add3">&#9670;&nbsp;</a></span>cuda_piProgramCreateWithBinary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> cuda_piProgramCreateWithBinary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a>&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td>
+          <td class="paramname"><em>num_devices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> *&#160;</td>
+          <td class="paramname"><em>device_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t *&#160;</td>
+          <td class="paramname"><em>lengths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char **&#160;</td>
+          <td class="paramname"><em>binaries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a0b846aad087f48e338d6e4d5adb9c00e">pi_int32</a> *&#160;</td>
+          <td class="paramname"><em>binary_status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a35ed6e6c0424fc58c3e2e17d42a2f9dd">pi_program</a> *&#160;</td>
+          <td class="paramname"><em>program</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads images from a list of PTX or CUBIN binaries. </p>
+<p>Note: No calls to CUDA driver API in this function, only store binaries for later.</p>
+<p>Note: Only supports one device </p>
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02221">2221</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00078">_pi_device::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00162">_pi_context::get_device()</a>, <a class="el" href="builtins_8hpp_source.html#l01011">cl::sycl::length()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -4974,11 +4975,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02385">2385</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02381">2381</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00415">_pi_program::buildOptions_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00416">_pi_program::buildStatus_</a>, <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00414">_pi_program::infoLog_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00412">_pi_program::MAX_LOG_SIZE</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00121">PI_PROGRAM_BUILD_INFO_LOG</a>, <a class="el" href="pi_8h_source.html#l00120">PI_PROGRAM_BUILD_INFO_OPTIONS</a>, and <a class="el" href="pi_8h_source.html#l00119">PI_PROGRAM_BUILD_INFO_STATUS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00415">_pi_program::buildOptions_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00416">_pi_program::buildStatus_</a>, <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00414">_pi_program::infoLog_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00412">_pi_program::MAX_LOG_SIZE</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00121">PI_PROGRAM_BUILD_INFO_LOG</a>, <a class="el" href="pi_8h_source.html#l00120">PI_PROGRAM_BUILD_INFO_OPTIONS</a>, and <a class="el" href="pi_8h_source.html#l00119">PI_PROGRAM_BUILD_INFO_STATUS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5026,11 +5027,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02256">2256</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02252">2252</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00410">_pi_program::context_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00136">_pi_context::deviceId_</a>, <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00433">_pi_program::get_reference_count()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00448">getKernelNames()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00272">PI_PROGRAM_INFO_BINARIES</a>, <a class="el" href="pi_8h_source.html#l00271">PI_PROGRAM_INFO_BINARY_SIZES</a>, <a class="el" href="pi_8h_source.html#l00267">PI_PROGRAM_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00269">PI_PROGRAM_INFO_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00274">PI_PROGRAM_INFO_KERNEL_NAMES</a>, <a class="el" href="pi_8h_source.html#l00268">PI_PROGRAM_INFO_NUM_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00266">PI_PROGRAM_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8h_source.html#l00270">PI_PROGRAM_INFO_SOURCE</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00407">_pi_program::source_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00408">_pi_program::sourceLength_</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00407">_pi_program::binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00408">_pi_program::binarySizeInBytes_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00410">_pi_program::context_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00136">_pi_context::deviceId_</a>, <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00433">_pi_program::get_reference_count()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00445">getKernelNames()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00272">PI_PROGRAM_INFO_BINARIES</a>, <a class="el" href="pi_8h_source.html#l00271">PI_PROGRAM_INFO_BINARY_SIZES</a>, <a class="el" href="pi_8h_source.html#l00267">PI_PROGRAM_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00269">PI_PROGRAM_INFO_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00274">PI_PROGRAM_INFO_KERNEL_NAMES</a>, <a class="el" href="pi_8h_source.html#l00268">PI_PROGRAM_INFO_NUM_DEVICES</a>, <a class="el" href="pi_8h_source.html#l00266">PI_PROGRAM_INFO_REFERENCE_COUNT</a>, and <a class="el" href="pi_8h_source.html#l00270">PI_PROGRAM_INFO_SOURCE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5105,11 +5106,11 @@ Variables</h2></td></tr>
 <p>Creates a new PI program object that is the outcome of linking all input programs. </p>
 <p>Implement linker options, requires mapping of OpenCL to CUDA </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02297">2297</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02293">2293</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00407">_pi_program::source_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00408">_pi_program::sourceLength_</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00407">_pi_program::binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00408">_pi_program::binarySizeInBytes_</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5132,11 +5133,11 @@ Variables</h2></td></tr>
 <p>Decreases the reference count of a pi_program object. </p>
 <p>When the reference count reaches 0, it unloads the module from the context. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02420">2420</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02416">2416</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00431">_pi_program::decrement_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00427">_pi_program::get()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">_pi_program::get_context()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00433">_pi_program::get_reference_count()</a>, <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_PROGRAM</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00525">_pi_kernel::~_pi_kernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00525">_pi_kernel::~_pi_kernel()</a>.</p>
 
 </div>
 </div>
@@ -5156,11 +5157,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02410">2410</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02406">2406</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00433">_pi_program::get_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00429">_pi_program::increment_reference_count()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00517">_pi_kernel::_pi_kernel()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00517">_pi_kernel::_pi_kernel()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5209,11 +5210,11 @@ Variables</h2></td></tr>
 </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01706">1706</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01704">1704</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00162">_pi_context::get_device()</a>, <a class="el" href="cuda__definitions_8hpp_source.html#l00024">PI_CUDA_SYNC_WITH_DEFAULT</a>, <a class="el" href="cuda__definitions_8hpp_source.html#l00022">PI_CUDA_USE_DEFAULT_STREAM</a>, <a class="el" href="pi_8h_source.html#l00080">PI_INVALID_DEVICE</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5233,11 +5234,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01811">1811</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01807">1807</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00273">_pi_queue::stream_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5285,11 +5286,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01752">1752</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01750">1750</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00274">_pi_queue::context_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00275">_pi_queue::device_</a>, <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00300">_pi_queue::get_reference_count()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00285">PI_QUEUE_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00286">PI_QUEUE_INFO_DEVICE</a>, <a class="el" href="pi_8h_source.html#l00288">PI_QUEUE_INFO_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00289">PI_QUEUE_INFO_REFERENCE_COUNT</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00276">_pi_queue::properties_</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00274">_pi_queue::context_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00275">_pi_queue::device_</a>, <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00300">_pi_queue::get_reference_count()</a>, <a class="el" href="pi_8hpp_source.html#l00086">PI_HANDLE_UNKNOWN_PARAM_NAME</a>, <a class="el" href="pi_8h_source.html#l00285">PI_QUEUE_INFO_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00286">PI_QUEUE_INFO_DEVICE</a>, <a class="el" href="pi_8h_source.html#l00288">PI_QUEUE_INFO_PROPERTIES</a>, <a class="el" href="pi_8h_source.html#l00289">PI_QUEUE_INFO_REFERENCE_COUNT</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00276">_pi_queue::properties_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5309,11 +5310,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01787">1787</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01783">1783</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00298">_pi_queue::decrement_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00294">_pi_queue::get_context()</a>, <a class="el" href="pi_8h_source.html#l00086">PI_OUT_OF_RESOURCES</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00294">_pi_event::~_pi_event()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00292">_pi_event::~_pi_event()</a>.</p>
 
 </div>
 </div>
@@ -5333,11 +5334,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01779">1779</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l01775">1775</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00300">_pi_queue::get_reference_count()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00296">_pi_queue::increment_reference_count()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5375,11 +5376,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, need untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02810">2810</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02808">2808</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5429,11 +5430,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, need untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02818">2818</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02816">2816</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5455,11 +5456,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, need untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02832">2832</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02830">2830</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5481,11 +5482,11 @@ Variables</h2></td></tr>
 
 <p>Not implemented in CUDA, need untie from OpenCL </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02826">2826</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l02824">2824</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00364">cl::sycl::detail::pi::die()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00379">cl::sycl::detail::pi::die()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03623">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03621">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -5515,11 +5516,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00384">384</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00382">382</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00292">_pi_queue::get()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>.</p>
 
 </div>
 </div>
@@ -5542,11 +5543,11 @@ Variables</h2></td></tr>
 <p>Finds kernel names by searching for entry points in the PTX source, as the CUDA driver API doesn't expose an operation for this. </p>
 <p>Note: This is currently only being used by the SYCL program class for the has_kernel method, so an alternative would be to move the has_kernel query to PI and use cuModuleGetFunction to check for a kernel. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00448">448</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00445">445</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00407">_pi_program::source_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00408">_pi_program::sourceLength_</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00407">_pi_program::binary_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00408">_pi_program::binarySizeInBytes_</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02256">cuda_piProgramGetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02252">cuda_piProgramGetInfo()</a>.</p>
 
 </div>
 </div>
@@ -5566,9 +5567,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03623">3623</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03621">3621</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp.html#aa6d27edcb01d9bed67c0e444e1edcd4d">_PI_CL</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02248">cuda_piclProgramCreateWithBinary()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02182">cuda_piclProgramCreateWithSource()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01340">cuda_piContextCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00685">cuda_piContextGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01421">cuda_piContextRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00705">cuda_piContextRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00769">cuda_piDeviceGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00721">cuda_piDevicePartition()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00765">cuda_piDeviceRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00681">cuda_piDeviceRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00649">cuda_piDevicesGet()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02745">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02052">cuda_piEnqueueKernelLaunch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02996">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03037">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03082">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03227">cuda_piEnqueueMemBufferMap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01907">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02894">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01862">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02945">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03201">cuda_piEnqueueMemImageCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03213">cuda_piEnqueueMemImageFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03179">cuda_piEnqueueMemImageRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03190">cuda_piEnqueueMemImageWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03276">cuda_piEnqueueMemUnmap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02142">cuda_piEnqueueNativeKernel()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02630">cuda_piEventCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02634">cuda_piEventGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02665">cuda_piEventGetProfilingInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02716">cuda_piEventRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02705">cuda_piEventRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02691">cuda_piEventSetCallback()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02699">cuda_piEventSetStatus()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01953">cuda_piEventsWait()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01476">cuda_piextContextCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01462">cuda_piextContextGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00713">cuda_piextContextSetExtendedDeleter()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01314">cuda_piextDeviceCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01300">cuda_piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00730">cuda_piextDeviceSelectBinary()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02802">cuda_piextEventCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02788">cuda_piextEventGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00755">cuda_piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02036">cuda_piextKernelSetArgMemObj()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02620">cuda_piextKernelSetArgPointer()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01693">cuda_piextMemCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01679">cuda_piextMemGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01855">cuda_piextQueueCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01841">cuda_piextQueueGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03334">cuda_piextUSMDeviceAlloc()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03508">cuda_piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03430">cuda_piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03398">cuda_piextUSMEnqueueMemset()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03469">cuda_piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03377">cuda_piextUSMFree()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03534">cuda_piextUSMGetMemAllocInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03315">cuda_piextUSMHostAlloc()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03355">cuda_piextUSMSharedAlloc()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01992">cuda_piKernelCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02513">cuda_piKernelGetGroupInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02476">cuda_piKernelGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02579">cuda_piKernelGetSubGroupInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02595">cuda_piKernelRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02587">cuda_piKernelRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02019">cuda_piKernelSetArg()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02614">cuda_piKernelSetExecInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01487">cuda_piMemBufferCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01666">cuda_piMemGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02152">cuda_piMemImageCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02161">cuda_piMemImageGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01553">cuda_piMemRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02168">cuda_piMemRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00613">cuda_piPlatformGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00547">cuda_piPlatformsGet()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02216">cuda_piProgramBuild()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02361">cuda_piProgramCompile()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02241">cuda_piProgramCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02385">cuda_piProgramGetBuildInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02256">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02297">cuda_piProgramLink()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02420">cuda_piProgramRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02410">cuda_piProgramRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01706">cuda_piQueueCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01811">cuda_piQueueFinish()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01752">cuda_piQueueGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01787">cuda_piQueueRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01779">cuda_piQueueRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02810">cuda_piSamplerCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02818">cuda_piSamplerGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02832">cuda_piSamplerRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02826">cuda_piSamplerRetain()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__level0_8cpp_source.html#l01637">piclProgramCreateWithBinary()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01682">piclProgramCreateWithSource()</a>, <a class="el" href="pi_8h.html#a8c7db6243282e69199e76bada8607488">piContextCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01194">piContextGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01243">piContextRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01236">piContextRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00633">piDeviceGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01073">piDevicePartition()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00619">piDeviceRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00609">piDeviceRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00566">piDevicesGet()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02495">piEnqueueEventsWait()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02061">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02714">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02732">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02809">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02824">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02502">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02515">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02682">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02698">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03158">piEnqueueMemImageCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03174">piEnqueueMemImageFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03121">piEnqueueMemImageRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03139">piEnqueueMemImageWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03217">piEnqueueNativeKernel()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00422">piEventCreate</a>, <a class="el" href="pi__level0_8cpp_source.html#l02194">piEventGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02231">piEventGetProfilingInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02318">piEventRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02313">piEventRetain()</a>, <a class="el" href="pi_8h.html#a8f04272d7667fb2e7ffce8cad594304d">piEventSetCallback()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02308">piEventSetStatus()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02267">piEventsWait()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01230">piextContextCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01224">piextContextGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01217">piextContextSetExtendedDeleter()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01159">piextDeviceCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01148">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01130">piextDeviceSelectBinary()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02350">piextEventCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02344">piextEventGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03230">piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01907">piextKernelSetArgMemObj()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03305">piextKernelSetArgPointer()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01602">piextMemCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01597">piextMemGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01352">piextQueueCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01346">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03257">piextUSMDeviceAlloc()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03419">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03338">piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03322">piextUSMEnqueueMemset()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03363">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03300">piextUSMFree()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03506">piextUSMGetMemAllocInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03240">piextUSMHostAlloc()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03277">piextUSMSharedAlloc()</a>, <a class="el" href="struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7">_pi_plugin::PiFunctionTable</a>, <a class="el" href="pi__level0_8cpp_source.html#l01856">piKernelCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01969">piKernelGetGroupInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01923">piKernelGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02034">piKernelGetSubGroupInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02051">piKernelRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02044">piKernelRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01882">piKernelSetArg()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03566">piKernelSetExecInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01358">piMemBufferCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03185">piMemBufferPartition()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01403">piMemGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01433">piMemImageCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02960">piMemImageGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01417">piMemRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01411">piMemRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00517">piPlatformGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00426">piPlatformsGet()</a>, <a class="el" href="pi_8h.html#a7b97b450acfc8ecd2c2fadb25e2b9ca4">piProgramBuild()</a>, <a class="el" href="pi_8h.html#aadbd51a1ca700a237e638ee31774149a">piProgramCompile()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01608">piProgramCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01804">piProgramGetBuildInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01691">piProgramGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00574">piProgramLink()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01835">piProgramRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01829">piProgramRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01252">piQueueCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01339">piQueueFinish()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01293">piQueueGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01331">piQueueRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01326">piQueueRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02359">piSamplerCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02469">piSamplerGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02483">piSamplerRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02477">piSamplerRetain()</a>, <a class="el" href="pi_8h_source.html#l01500">_pi_plugin::PiVersion</a>, and <a class="el" href="pi_8h_source.html#l01502">_pi_plugin::PluginVersion</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp.html#aa6d27edcb01d9bed67c0e444e1edcd4d">_PI_CL</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02172">cuda_piclProgramCreateWithSource()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01340">cuda_piContextCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00681">cuda_piContextGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01421">cuda_piContextRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00701">cuda_piContextRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00764">cuda_piDeviceGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00717">cuda_piDevicePartition()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00762">cuda_piDeviceRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00679">cuda_piDeviceRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00647">cuda_piDevicesGet()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02743">cuda_piEnqueueEventsWait()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02050">cuda_piEnqueueKernelLaunch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02994">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03035">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03080">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03225">cuda_piEnqueueMemBufferMap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01904">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02892">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01858">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02943">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03199">cuda_piEnqueueMemImageCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03211">cuda_piEnqueueMemImageFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03177">cuda_piEnqueueMemImageRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03188">cuda_piEnqueueMemImageWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02136">cuda_piEnqueueNativeKernel()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02627">cuda_piEventCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02631">cuda_piEventGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02662">cuda_piEventGetProfilingInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02714">cuda_piEventRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02702">cuda_piEventRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02688">cuda_piEventSetCallback()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02696">cuda_piEventSetStatus()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01951">cuda_piEventsWait()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01476">cuda_piextContextCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01462">cuda_piextContextGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00709">cuda_piextContextSetExtendedDeleter()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01314">cuda_piextDeviceCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01300">cuda_piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00726">cuda_piextDeviceSelectBinary()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02800">cuda_piextEventCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02786">cuda_piextEventGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00751">cuda_piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02034">cuda_piextKernelSetArgMemObj()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02617">cuda_piextKernelSetArgPointer()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01691">cuda_piextMemCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01677">cuda_piextMemGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01851">cuda_piextQueueCreateWithNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01837">cuda_piextQueueGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03332">cuda_piextUSMDeviceAlloc()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03506">cuda_piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03428">cuda_piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03396">cuda_piextUSMEnqueueMemset()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03467">cuda_piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03375">cuda_piextUSMFree()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03532">cuda_piextUSMGetMemAllocInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03313">cuda_piextUSMHostAlloc()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03353">cuda_piextUSMSharedAlloc()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01990">cuda_piKernelCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02508">cuda_piKernelGetGroupInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02472">cuda_piKernelGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02575">cuda_piKernelGetSubGroupInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02591">cuda_piKernelRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02583">cuda_piKernelRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02017">cuda_piKernelSetArg()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02610">cuda_piKernelSetExecInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01487">cuda_piMemBufferCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01664">cuda_piMemGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02146">cuda_piMemImageCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02155">cuda_piMemImageGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01552">cuda_piMemRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02162">cuda_piMemRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00611">cuda_piPlatformGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00545">cuda_piPlatformsGet()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02184">cuda_piProgramBuild()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02357">cuda_piProgramCompile()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02209">cuda_piProgramCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02221">cuda_piProgramCreateWithBinary()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02381">cuda_piProgramGetBuildInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02252">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02293">cuda_piProgramLink()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02416">cuda_piProgramRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02406">cuda_piProgramRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01704">cuda_piQueueCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01807">cuda_piQueueFinish()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01750">cuda_piQueueGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01783">cuda_piQueueRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01775">cuda_piQueueRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02808">cuda_piSamplerCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02816">cuda_piSamplerGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02830">cuda_piSamplerRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02824">cuda_piSamplerRetain()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__level0_8cpp_source.html#l01684">piclProgramCreateWithSource()</a>, <a class="el" href="pi_8h.html#a8c7db6243282e69199e76bada8607488">piContextCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01196">piContextGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01245">piContextRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01238">piContextRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00635">piDeviceGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01075">piDevicePartition()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00621">piDeviceRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00611">piDeviceRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00568">piDevicesGet()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02499">piEnqueueEventsWait()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02065">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02758">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02776">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02853">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02868">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02546">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02559">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02726">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02742">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03202">piEnqueueMemImageCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03218">piEnqueueMemImageFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03165">piEnqueueMemImageRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03183">piEnqueueMemImageWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02943">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03261">piEnqueueNativeKernel()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00424">piEventCreate</a>, <a class="el" href="pi__level0_8cpp_source.html#l02198">piEventGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02235">piEventGetProfilingInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02322">piEventRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02317">piEventRetain()</a>, <a class="el" href="pi_8h.html#a8f04272d7667fb2e7ffce8cad594304d">piEventSetCallback()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02312">piEventSetStatus()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02271">piEventsWait()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01232">piextContextCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01226">piextContextGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01219">piextContextSetExtendedDeleter()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01161">piextDeviceCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01150">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01132">piextDeviceSelectBinary()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02354">piextEventCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02348">piextEventGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03274">piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01911">piextKernelSetArgMemObj()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03349">piextKernelSetArgPointer()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01604">piextMemCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01599">piextMemGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01354">piextQueueCreateWithNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01348">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03301">piextUSMDeviceAlloc()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03463">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03382">piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03366">piextUSMEnqueueMemset()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03407">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03344">piextUSMFree()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03550">piextUSMGetMemAllocInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03284">piextUSMHostAlloc()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03321">piextUSMSharedAlloc()</a>, <a class="el" href="struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7">_pi_plugin::PiFunctionTable</a>, <a class="el" href="pi__level0_8cpp_source.html#l01860">piKernelCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01973">piKernelGetGroupInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01927">piKernelGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02038">piKernelGetSubGroupInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02055">piKernelRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02048">piKernelRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01886">piKernelSetArg()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03610">piKernelSetExecInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01360">piMemBufferCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03229">piMemBufferPartition()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01405">piMemGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01435">piMemImageCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03004">piMemImageGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01419">piMemRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01413">piMemRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00519">piPlatformGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l00428">piPlatformsGet()</a>, <a class="el" href="pi_8h.html#a7b97b450acfc8ecd2c2fadb25e2b9ca4">piProgramBuild()</a>, <a class="el" href="pi_8h.html#aadbd51a1ca700a237e638ee31774149a">piProgramCompile()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01610">piProgramCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01639">piProgramCreateWithBinary()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01807">piProgramGetBuildInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01693">piProgramGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00574">piProgramLink()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01838">piProgramRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01832">piProgramRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01254">piQueueCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01341">piQueueFinish()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01295">piQueueGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01333">piQueueRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01328">piQueueRetain()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02363">piSamplerCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02473">piSamplerGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02487">piSamplerRelease()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02481">piSamplerRetain()</a>, <a class="el" href="pi_8h_source.html#l01504">_pi_plugin::PiVersion</a>, and <a class="el" href="pi_8h_source.html#l01506">_pi_plugin::PluginVersion</a>.</p>
 
 </div>
 </div>
@@ -5585,7 +5586,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03621">3621</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l03619">3619</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
 </div>
 </div>

@@ -6,6 +6,8 @@ var classcl_1_1sycl_1_1detail_1_1CG =
       [ "COPY_ACC_TO_PTR", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaf2d4daba293a568e97d24890af4b17a8", null ],
       [ "COPY_PTR_TO_ACC", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeae7070c4b535a7cb64c125d3f08161393", null ],
       [ "COPY_ACC_TO_ACC", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea73124c84ee4f610615010cbd5212ff18", null ],
+      [ "BARRIER", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea50ee37fb5951df9f6148bbf9744fef95", null ],
+      [ "BARRIER_WAITLIST", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5f2bb0c3b4becdea8bd4da46287118fb", null ],
       [ "FILL", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eead43820d7d9556cea7929a119b28d71d1", null ],
       [ "UPDATE_HOST", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeacc1740df2d5fa39efc228be45f5e96ac", null ],
       [ "RUN_ON_HOST_INTEL", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea33c2f53039967df9a5f7ef81009fd60e", null ],

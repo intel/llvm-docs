@@ -95,6 +95,7 @@ var hierarchy =
     [ "cl::sycl::detail::KernelProgramCache::BuildError", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html", null ],
     [ "cl::sycl::detail::KernelProgramCache::BuildResult< T >", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", null ],
     [ "cl::sycl::detail::CG", "classcl_1_1sycl_1_1detail_1_1CG.html", [
+      [ "cl::sycl::detail::CGBarrier", "classcl_1_1sycl_1_1detail_1_1CGBarrier.html", null ],
       [ "cl::sycl::detail::CGCopy", "classcl_1_1sycl_1_1detail_1_1CGCopy.html", null ],
       [ "cl::sycl::detail::CGCopyUSM", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html", null ],
       [ "cl::sycl::detail::CGExecKernel", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html", null ],
@@ -473,8 +474,8 @@ var hierarchy =
     [ "cl::sycl::detail::PtrValueType< void, Space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
-    [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html", null ],
     [ "cl::sycl::intel::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", null ],

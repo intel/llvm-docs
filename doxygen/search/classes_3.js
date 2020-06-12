@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cg',['CG',['../classcl_1_1sycl_1_1detail_1_1CG.html',1,'cl::sycl::detail']]],
+  ['cgbarrier',['CGBarrier',['../classcl_1_1sycl_1_1detail_1_1CGBarrier.html',1,'cl::sycl::detail']]],
   ['cgcopy',['CGCopy',['../classcl_1_1sycl_1_1detail_1_1CGCopy.html',1,'cl::sycl::detail']]],
   ['cgcopyusm',['CGCopyUSM',['../classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html',1,'cl::sycl::detail']]],
   ['cgexeckernel',['CGExecKernel',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html',1,'cl::sycl::detail']]],

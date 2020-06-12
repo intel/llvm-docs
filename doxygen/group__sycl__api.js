@@ -212,6 +212,8 @@ var group__sycl__api =
     [ "handler", "classcl_1_1sycl_1_1handler.html", [
       [ "handler", "classcl_1_1sycl_1_1handler.html#aab6e38c9f1c74a6353d9328a2a6950d6", null ],
       [ "handler", "classcl_1_1sycl_1_1handler.html#a87d56a475a807c51c9f750bb6c8ee15e", null ],
+      [ "barrier", "classcl_1_1sycl_1_1handler.html#aa263b98900a3e67d195b5bc591c50ef3", null ],
+      [ "barrier", "classcl_1_1sycl_1_1handler.html#a8f112c5b9cbd5db123764bf1eae306bb", null ],
       [ "codeplay_host_task", "classcl_1_1sycl_1_1handler.html#a8e1dacd89a933dd3f8a8d6afde3687fa", null ],
       [ "copy", "classcl_1_1sycl_1_1handler.html#afd88ec85f759e5617ebdf8b0cacfdd9a", null ],
       [ "copy", "classcl_1_1sycl_1_1handler.html#a9b5797be83894c081b6ea29f9bec85f8", null ],
@@ -548,6 +550,8 @@ var group__sycl__api =
       [ "single_task", "classcl_1_1sycl_1_1queue.html#add22f711aa7be299cd42c3bd3dfdf19e", null ],
       [ "submit", "classcl_1_1sycl_1_1queue.html#ab895211b284f8132dfc5ac0d87bc5f6f", null ],
       [ "submit", "classcl_1_1sycl_1_1queue.html#ad8799ea8912a3021ac068f5691d57538", null ],
+      [ "submit_barrier", "classcl_1_1sycl_1_1queue.html#a1fd63a0e90929bfdddf4ef0a786fbaf4", null ],
+      [ "submit_barrier", "classcl_1_1sycl_1_1queue.html#a13dae36896e13300f28ab0545ccf104f", null ],
       [ "throw_asynchronous", "classcl_1_1sycl_1_1queue.html#ae5c39ed682422e4e525fe0a01e8b7ad9", null ],
       [ "wait", "classcl_1_1sycl_1_1queue.html#ab3cf219eaa774adb0c0e8a67e61df7c8", null ],
       [ "wait_and_throw", "classcl_1_1sycl_1_1queue.html#a31f819e48aa5eb945147dda5f212535c", null ],

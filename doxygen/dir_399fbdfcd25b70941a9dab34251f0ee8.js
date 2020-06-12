@@ -26,7 +26,8 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
       [ "CGFillUSM", "classcl_1_1sycl_1_1detail_1_1CGFillUSM.html", "classcl_1_1sycl_1_1detail_1_1CGFillUSM" ],
       [ "CGPrefetchUSM", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM" ],
       [ "CGInteropTask", "classcl_1_1sycl_1_1detail_1_1CGInteropTask.html", "classcl_1_1sycl_1_1detail_1_1CGInteropTask" ],
-      [ "CGHostTask", "classcl_1_1sycl_1_1detail_1_1CGHostTask.html", "classcl_1_1sycl_1_1detail_1_1CGHostTask" ]
+      [ "CGHostTask", "classcl_1_1sycl_1_1detail_1_1CGHostTask.html", "classcl_1_1sycl_1_1detail_1_1CGHostTask" ],
+      [ "CGBarrier", "classcl_1_1sycl_1_1detail_1_1CGBarrier.html", "classcl_1_1sycl_1_1detail_1_1CGBarrier" ]
     ] ],
     [ "cg_types.hpp", "cg__types_8hpp.html", [
       [ "ArgDesc", "classcl_1_1sycl_1_1detail_1_1ArgDesc.html", "classcl_1_1sycl_1_1detail_1_1ArgDesc" ],

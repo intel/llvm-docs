@@ -151,6 +151,7 @@ var searchData=
   ['merrcode',['MErrCode',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a7561c535f5efdcd289a3d9929a5db06e',1,'cl::sycl::detail::EnqueueResultT']]],
   ['mevent',['MEvent',['../classcl_1_1sycl_1_1detail_1_1Command.html#ad3aa9ea3c20a2083ac11f996287b85ac',1,'cl::sycl::detail::Command']]],
   ['mevents',['MEvents',['../classcl_1_1sycl_1_1detail_1_1CG.html#aed39ca43cc8e1592955f1d425e641acf',1,'cl::sycl::detail::CG']]],
+  ['meventswaitwithbarrier',['MEventsWaitWithBarrier',['../classcl_1_1sycl_1_1detail_1_1CGBarrier.html#af21a28826582b9c3fdd2cf9733cb2053',1,'cl::sycl::detail::CGBarrier']]],
   ['mextent',['MExtent',['../structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#a54633002146b70c00c15f6ba4ea02e9c',1,'cl::sycl::detail::ItemBase&lt; Dims, true &gt;::MExtent()'],['../structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#afc396f5b8c820d1669d78054f088fc18',1,'cl::sycl::detail::ItemBase&lt; Dims, false &gt;::MExtent()']]],
   ['mfilename',['MFileName',['../classcl_1_1sycl_1_1detail_1_1CG.html#a5092dfc352e9f617c2bf1f3e76c0d83a',1,'cl::sycl::detail::CG']]],
   ['mfirstinstance',['MFirstInstance',['../classcl_1_1sycl_1_1detail_1_1Command.html#a39f702797d183ad8b80e63acb1454e19',1,'cl::sycl::detail::Command']]],

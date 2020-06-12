@@ -23,6 +23,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "buffer_impl", "classcl_1_1sycl_1_1detail_1_1buffer__impl.html", "classcl_1_1sycl_1_1detail_1_1buffer__impl" ],
     [ "Builder", "classcl_1_1sycl_1_1detail_1_1Builder.html", "classcl_1_1sycl_1_1detail_1_1Builder" ],
     [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html", "classcl_1_1sycl_1_1detail_1_1CG" ],
+    [ "CGBarrier", "classcl_1_1sycl_1_1detail_1_1CGBarrier.html", "classcl_1_1sycl_1_1detail_1_1CGBarrier" ],
     [ "CGCopy", "classcl_1_1sycl_1_1detail_1_1CGCopy.html", "classcl_1_1sycl_1_1detail_1_1CGCopy" ],
     [ "CGCopyUSM", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM" ],
     [ "CGExecKernel", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html", "classcl_1_1sycl_1_1detail_1_1CGExecKernel" ],
