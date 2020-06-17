@@ -16,11 +16,8 @@ var handler_8hpp =
     [ "checkValueRange", "handler_8hpp.html#a042e58bee12db0078c232dc3a0ad237a", null ],
     [ "getDeviceFromHandler", "handler_8hpp.html#a4679ea98c7f73f344135382c7b7ab13d", null ],
     [ "member_ptr_helper", "handler_8hpp.html#a43f7210adc907fb76c8fe3b46b659afb", null ],
-    [ "reduAuxCGFunc", "handler_8hpp.html#a1e91d54f4f961bfbad4a2206837fa530", null ],
-    [ "reduAuxCGFunc", "handler_8hpp.html#ab7226b5097559db94aead7d67959692e", null ],
-    [ "reduCGFunc", "handler_8hpp.html#a82ba382efb612f3174411dff57543ab7", null ],
-    [ "reduCGFunc", "handler_8hpp.html#ac3b6eed1052788456d84e8149e2584c2", null ],
-    [ "reduCGFunc", "handler_8hpp.html#a4601ce63d62c0a471a2e86822c2a7cff", null ],
-    [ "reduCGFunc", "handler_8hpp.html#a51ce16346185e98044539ba14fbe45e3", null ],
+    [ "reduAuxCGFunc", "handler_8hpp.html#ac472674ebc7023d1a66490dd4a45937f", null ],
+    [ "reduCGFunc", "handler_8hpp.html#a986508bdfd0973bc9d429df6fa373c56", null ],
+    [ "reduCGFunc", "handler_8hpp.html#a294b91a0c59b6a63bb2b43508efb74f4", null ],
     [ "argument_helper", "handler_8hpp.html#a0e2a8cd39c5325f03f08e50ef55bb73c", null ]
 ];

@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html":[3,0,1,1,0,51],
+"structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html#a3fe276a0b368b4ac97ec5124f0bc3f78":[3,0,1,1,0,51,0],
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html":[3,0,1,1,0,52],
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html#af22caf370843420b5d37ee1d32a13f20":[3,0,1,1,0,52,0],
 "structcl_1_1sycl_1_1detail_1_1find__type.html":[3,0,1,1,0,63],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "structcl_1_1sycl_1_1elem.html#a1a726788627eccc26e0400ddd510f812":[3,0,1,1,24,15],
 "structcl_1_1sycl_1_1elem.html#a1d398ff506697ae71bccb29f3b00db27":[3,0,1,1,24,17],
 "structcl_1_1sycl_1_1elem.html#a22f4efb887304823c67299f38019ded0":[3,0,1,1,24,8],
-"structcl_1_1sycl_1_1elem.html#a29e4f10ddb4b9a9540e4ca1922f139f2":[3,0,1,1,24,9],
-"structcl_1_1sycl_1_1elem.html#a313a91c8a485d983ecae892e87f9b6d7":[3,0,1,1,24,18],
-"structcl_1_1sycl_1_1elem.html#a391e19e48ff05630f1f1fdd0b49e08b3":[3,0,1,1,24,20]
+"structcl_1_1sycl_1_1elem.html#a29e4f10ddb4b9a9540e4ca1922f139f2":[3,0,1,1,24,9]
 };

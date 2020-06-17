@@ -14,6 +14,8 @@ var classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl =
     [ "associateWithHandler", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#adee32a491754891b9359b4cf54acd08a", null ],
     [ "getIdentity", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#adb89d4dae2dcae576ac69485012f730b", null ],
     [ "getIdentity", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#aeb03ba6d929854ad47270fd0022fe09d", null ],
+    [ "getOutPointer", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a9d4c87109c455692ec2c63b411df3760", null ],
+    [ "getOutPointer", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a649ec685f2875c1e5e1c3d554d7a04f9", null ],
     [ "getReadAccToPreviousPartialReds", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a3c3b810588e1f6ca96f688b123de5501", null ],
     [ "getReadWriteLocalAcc", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a06b12bd10b8d0704d20ed31fcbf78b9b", null ],
     [ "getReadWriteScalarAcc", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a1921fb18f84804497efbce5558682ceb", null ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX22 =
 {
+"stream__impl_8hpp.html#ac9753b1995dc29975f010b0a8ca0688f":[4,0,0,0,1,2,35,12],
+"stream__impl_8hpp.html#ad3584f19ea86d6869220dbd66272a868":[4,0,0,0,1,2,35,6],
 "stream__impl_8hpp.html#adb84bbc3df525480d467cfec12c36ad9":[4,0,0,0,1,2,35,21],
 "stream__impl_8hpp.html#adbf7c1f124b7be64e4fea58110a9d453":[4,0,0,0,1,2,35,13],
 "stream__impl_8hpp.html#ae83b5381dfba55574848b5e2cbcd19d2":[4,0,0,0,1,2,35,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX22 =
 "struct__pi__queue.html#ae01364b9dfd939bdc3b3c0b4962e6bd2":[3,0,23,2],
 "struct__pi__queue.html#af2491d242bb245ef26f08b56dbfeddb2":[3,0,23,8],
 "struct__pi__queue.html#af743ade2384f46236d8b0f57ee78c7bd":[3,0,23,3],
-"struct__pi__queue.html#af82978db8cafce93f764f5a6be9b8706":[3,0,23,13],
-"struct__pi__sampler.html":[3,0,24],
-"struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673":[3,0,24,1]
+"struct__pi__queue.html#af82978db8cafce93f764f5a6be9b8706":[3,0,23,13]
 };

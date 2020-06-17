@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"struct__pi__sampler.html":[3,0,24],
+"struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673":[3,0,24,1],
 "struct__pi__sampler.html#aaff4c24bc8bc4b729bf79cbae2f7f1f6":[3,0,24,0],
 "structcl_1_1____host__std_1_1detail_1_1helper.html":[3,0,1,0,0,0],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a200150106dd820b6356382592dfae4a4":[3,0,1,0,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl.html":[3,0,1,1,0,49],
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl.html#ad5c739550b3e5282947831ef9957c366":[3,0,1,1,0,49,0],
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01T_00_01R_01_4.html":[3,0,1,1,0,50],
-"structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01T_00_01R_01_4.html#a933de3361463c6f427554aa61ccf3ce4":[3,0,1,1,0,50,0],
-"structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html":[3,0,1,1,0,51],
-"structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html#a3fe276a0b368b4ac97ec5124f0bc3f78":[3,0,1,1,0,51,0]
+"structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01T_00_01R_01_4.html#a933de3361463c6f427554aa61ccf3ce4":[3,0,1,1,0,50,0]
 };
