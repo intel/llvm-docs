@@ -50,5 +50,6 @@ var classcl_1_1sycl_1_1queue =
     [ "wait", "classcl_1_1sycl_1_1queue.html#ab3cf219eaa774adb0c0e8a67e61df7c8", null ],
     [ "wait_and_throw", "classcl_1_1sycl_1_1queue.html#a31f819e48aa5eb945147dda5f212535c", null ],
     [ "wait_and_throw_proxy", "classcl_1_1sycl_1_1queue.html#a967e0150616bc53f07da9d949dffe431", null ],
-    [ "wait_proxy", "classcl_1_1sycl_1_1queue.html#a0d8abb9c998a175a7e115b0b475cdc76", null ]
+    [ "wait_proxy", "classcl_1_1sycl_1_1queue.html#a0d8abb9c998a175a7e115b0b475cdc76", null ],
+    [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1queue.html#a71492293d0386f542d120a1fc3dfbb55", null ]
 ];

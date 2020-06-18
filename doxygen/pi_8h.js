@@ -524,6 +524,8 @@ var pi_8h =
     [ "piextKernelSetArgPointer", "pi_8h.html#ae1ef844cab36a9fa7606161ef7e3d2a3", null ],
     [ "piextMemCreateWithNativeHandle", "pi_8h.html#a80e585104ef93a2ac042896e513397be", null ],
     [ "piextMemGetNativeHandle", "pi_8h.html#a9e0a0dcbcdbfb21fa1649e84f9b43fcd", null ],
+    [ "piextPlatformCreateWithNativeHandle", "pi_8h.html#a60a901e32f2bbcbaa6f8c8e8b2bf7029", null ],
+    [ "piextPlatformGetNativeHandle", "pi_8h.html#a3ee5238db6e2fa6bd6d7a40aff3c8326", null ],
     [ "piextProgramCreateWithNativeHandle", "pi_8h.html#a51e34ed91d42a275ea19bfa016948f26", null ],
     [ "piextProgramGetNativeHandle", "pi_8h.html#adbea20ee4a5acc6c997463ae63b96442", null ],
     [ "piextProgramSetSpecializationConstant", "pi_8h.html#a6536605da4d4b98245a07ab1edfc861e", null ],

@@ -8,6 +8,7 @@ var classcl_1_1sycl_1_1platform =
     [ "get", "classcl_1_1sycl_1_1platform.html#a8c40e8cfc090f6421900a07f90a2b3c4", null ],
     [ "get_devices", "classcl_1_1sycl_1_1platform.html#af5f0f8e55fb4fc5d465f411d14e0dfb1", null ],
     [ "get_info", "classcl_1_1sycl_1_1platform.html#a2e3b2a40bd6743c4c737dd55077e81f1", null ],
+    [ "get_native", "classcl_1_1sycl_1_1platform.html#adeccfdfaa4fad084df7d6a3e24e8de6d", null ],
     [ "get_platforms", "classcl_1_1sycl_1_1platform.html#a929fcd63e258f5323562746285e09d20", null ],
     [ "has_extension", "classcl_1_1sycl_1_1platform.html#a763d9e2d88403f311b1cdc514dd72656", null ],
     [ "is_host", "classcl_1_1sycl_1_1platform.html#a945019993c817216ac19617d5a9cb62e", null ],

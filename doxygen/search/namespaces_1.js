@@ -16,6 +16,7 @@ var searchData=
   ['info',['info',['../namespacecl_1_1sycl_1_1info.html',1,'cl::sycl']]],
   ['intel',['intel',['../namespacecl_1_1sycl_1_1intel.html',1,'cl::sycl']]],
   ['native',['native',['../namespacecl_1_1sycl_1_1native.html',1,'cl::sycl']]],
+  ['opencl',['opencl',['../namespacecl_1_1sycl_1_1opencl.html',1,'cl::sycl']]],
   ['pi',['pi',['../namespacecl_1_1sycl_1_1detail_1_1pi.html',1,'cl::sycl::detail']]],
   ['property',['property',['../namespacecl_1_1sycl_1_1property.html',1,'cl::sycl']]],
   ['queue',['queue',['../namespacecl_1_1sycl_1_1property_1_1queue.html',1,'cl::sycl::property']]],

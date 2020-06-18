@@ -9,6 +9,8 @@ var pi_8cpp =
     [ "emitFunctionEndTrace", "pi_8cpp.html#abc3549c65cf7bfcca09a931b3aa5779b", null ],
     [ "findPlugins", "pi_8cpp.html#a2272ac12293db6e5e64527c8c3291f33", null ],
     [ "getBinaryImageFormat", "pi_8cpp.html#a5977eda13527e6a59274e95a6b12dce3", null ],
+    [ "getPlugin", "pi_8cpp.html#a25a3cf13e929d772f08013fea813fb41", null ],
+    [ "getPlugin< backend::opencl >", "pi_8cpp.html#a4e75d48259dcacca3a4703e3c1d48ba2", null ],
     [ "initialize", "pi_8cpp.html#aca711f16e058b99fa411043bfafbc4aa", null ],
     [ "initializePlugins", "pi_8cpp.html#acab66c67ecf6ce5d442f030710a0722a", null ],
     [ "loadPlugin", "pi_8cpp.html#aec8cc975c45bbd1adc7cacbf1cd7107f", null ],

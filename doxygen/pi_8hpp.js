@@ -54,6 +54,7 @@ var pi_8hpp =
     [ "emitFunctionEndTrace", "pi_8hpp.html#abc3549c65cf7bfcca09a931b3aa5779b", null ],
     [ "getBinaryImageFormat", "pi_8hpp.html#a5977eda13527e6a59274e95a6b12dce3", null ],
     [ "getOsLibraryFuncAddress", "pi_8hpp.html#a04e5dff7ef22d15c8b3cd7f80a128785", null ],
+    [ "getPlugin", "pi_8hpp.html#a25a3cf13e929d772f08013fea813fb41", null ],
     [ "handleUnknownParamName", "pi_8hpp.html#ab3874682c7df0b17cdb14b09b5f7ad76", null ],
     [ "initialize", "pi_8hpp.html#aca711f16e058b99fa411043bfafbc4aa", null ],
     [ "loadOsLibrary", "pi_8hpp.html#a492fcb5eea191575bbfb650e8ac4f392", null ],

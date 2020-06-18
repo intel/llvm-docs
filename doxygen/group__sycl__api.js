@@ -463,6 +463,7 @@ var group__sycl__api =
       [ "get", "classcl_1_1sycl_1_1platform.html#a8c40e8cfc090f6421900a07f90a2b3c4", null ],
       [ "get_devices", "classcl_1_1sycl_1_1platform.html#af5f0f8e55fb4fc5d465f411d14e0dfb1", null ],
       [ "get_info", "classcl_1_1sycl_1_1platform.html#a2e3b2a40bd6743c4c737dd55077e81f1", null ],
+      [ "get_native", "classcl_1_1sycl_1_1platform.html#adeccfdfaa4fad084df7d6a3e24e8de6d", null ],
       [ "get_platforms", "classcl_1_1sycl_1_1platform.html#a929fcd63e258f5323562746285e09d20", null ],
       [ "has_extension", "classcl_1_1sycl_1_1platform.html#a763d9e2d88403f311b1cdc514dd72656", null ],
       [ "is_host", "classcl_1_1sycl_1_1platform.html#a945019993c817216ac19617d5a9cb62e", null ],
@@ -557,7 +558,8 @@ var group__sycl__api =
       [ "wait", "classcl_1_1sycl_1_1queue.html#ab3cf219eaa774adb0c0e8a67e61df7c8", null ],
       [ "wait_and_throw", "classcl_1_1sycl_1_1queue.html#a31f819e48aa5eb945147dda5f212535c", null ],
       [ "wait_and_throw_proxy", "classcl_1_1sycl_1_1queue.html#a967e0150616bc53f07da9d949dffe431", null ],
-      [ "wait_proxy", "classcl_1_1sycl_1_1queue.html#a0d8abb9c998a175a7e115b0b475cdc76", null ]
+      [ "wait_proxy", "classcl_1_1sycl_1_1queue.html#a0d8abb9c998a175a7e115b0b475cdc76", null ],
+      [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1queue.html#a71492293d0386f542d120a1fc3dfbb55", null ]
     ] ],
     [ "range", "classcl_1_1sycl_1_1range.html", [
       [ "range", "classcl_1_1sycl_1_1range.html#a28633d6f830a909e888e82224b12be86", null ],

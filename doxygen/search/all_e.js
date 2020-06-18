@@ -12,6 +12,7 @@ var searchData=
   ['onceflag',['OnceFlag',['../pi__level0_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7',1,'pi_level0.cpp']]],
   ['ooo',['OOO',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06af1254165ff2e284b1b555d99d1c67e64',1,'cl::sycl::detail']]],
   ['opencl',['opencl',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a93195db1ad73788fe96193503a7d8887',1,'cl::sycl']]],
+  ['opencl_2ecpp',['opencl.cpp',['../opencl_8cpp.html',1,'']]],
   ['opencl_2ehpp',['opencl.hpp',['../opencl_8hpp.html',1,'']]],
   ['opencl_5fc_5fversion',['opencl_c_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a82aeb1c67f59db3c5704c12572c32832',1,'cl::sycl::info']]],
   ['opencl_5fplugin_5fname',['OPENCL_PLUGIN_NAME',['../pi_8hpp.html#ad529bda5cbc5a021323dd2627cdca36a',1,'pi.hpp']]],

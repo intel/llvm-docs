@@ -23,6 +23,8 @@ var pi__opencl_8cpp =
     [ "piextKernelSetArgPointer", "pi__opencl_8cpp.html#ae1ef844cab36a9fa7606161ef7e3d2a3", null ],
     [ "piextMemCreateWithNativeHandle", "pi__opencl_8cpp.html#aacefad3c65f7c173f2233421c3a8a532", null ],
     [ "piextMemGetNativeHandle", "pi__opencl_8cpp.html#a9e0a0dcbcdbfb21fa1649e84f9b43fcd", null ],
+    [ "piextPlatformCreateWithNativeHandle", "pi__opencl_8cpp.html#a60a901e32f2bbcbaa6f8c8e8b2bf7029", null ],
+    [ "piextPlatformGetNativeHandle", "pi__opencl_8cpp.html#a3ee5238db6e2fa6bd6d7a40aff3c8326", null ],
     [ "piextProgramCreateWithNativeHandle", "pi__opencl_8cpp.html#a53086e935c213d7a6a382a2fad32afb0", null ],
     [ "piextProgramGetNativeHandle", "pi__opencl_8cpp.html#adbea20ee4a5acc6c997463ae63b96442", null ],
     [ "piextProgramSetSpecializationConstant", "pi__opencl_8cpp.html#a6536605da4d4b98245a07ab1edfc861e", null ],

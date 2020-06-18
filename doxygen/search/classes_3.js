@@ -26,7 +26,7 @@ var searchData=
   ['compile_5fprogram_5ferror',['compile_program_error',['../classcl_1_1sycl_1_1compile__program__error.html',1,'cl::sycl']]],
   ['constiterator',['ConstIterator',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html',1,'cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange']]],
   ['context',['context',['../classcl_1_1sycl_1_1context.html',1,'cl::sycl']]],
-  ['context_5fbound',['context_bound',['../classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html',1,'cl::sycl::property::buffer::context_bound'],['../classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html',1,'cl::sycl::property::image::context_bound']]],
+  ['context_5fbound',['context_bound',['../classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html',1,'cl::sycl::property::image::context_bound'],['../classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html',1,'cl::sycl::property::buffer::context_bound']]],
   ['context_5fimpl',['context_impl',['../classcl_1_1sycl_1_1detail_1_1context__impl.html',1,'cl::sycl::detail']]],
   ['contextboundbase',['ContextBoundBase',['../classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html',1,'cl::sycl::property::detail']]],
   ['contextboundbase_3c_20detail_3a_3apropkind_3a_3abuffercontextbound_20_3e',['ContextBoundBase&lt; detail::PropKind::BufferContextBound &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html',1,'cl::sycl::property::detail']]],

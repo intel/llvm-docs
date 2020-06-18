@@ -134,6 +134,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade46fd39139c39bd3ed3b78871d24221"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#ade46fd39139c39bd3ed3b78871d24221">setPlugin</a> (std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &gt; PluginPtr)</td></tr>
 <tr class="memdesc:ade46fd39139c39bd3ed3b78871d24221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the platform implementation to use another plugin.  <a href="#ade46fd39139c39bd3ed3b78871d24221">More...</a><br /></td></tr>
 <tr class="separator:ade46fd39139c39bd3ed3b78871d24221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9305c6cda4e3e47dced1a3f7257e6a3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#a9305c6cda4e3e47dced1a3f7257e6a3c">getNative</a> () const</td></tr>
+<tr class="memdesc:a9305c6cda4e3e47dced1a3f7257e6a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL platform.  <a href="#a9305c6cda4e3e47dced1a3f7257e6a3c">More...</a><br /></td></tr>
+<tr class="separator:a9305c6cda4e3e47dced1a3f7257e6a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -345,7 +348,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00228">228</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00172">cl::sycl::detail::filterAllowList()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l00568">piDevicesGet()</a>.</p>
+<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00172">cl::sycl::detail::filterAllowList()</a>, <a class="el" href="pi_8cpp_source.html#l00376">cl::sycl::detail::pi::getPlugin()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l00590">piDevicesGet()</a>.</p>
 
 </div>
 </div>
@@ -369,7 +372,9 @@ template&lt;info::platform param&gt; </div>
 <p>Queries this SYCL platform for info. </p>
 <p>The return type depends on information being queried. </p>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00281">281</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00288">288</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00376">cl::sycl::detail::pi::getPlugin()</a>.</p>
 
 </div>
 </div>
@@ -441,6 +446,30 @@ template&lt;info::platform param&gt; </div>
 
 </div>
 </div>
+<a id="a9305c6cda4e3e47dced1a3f7257e6a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9305c6cda4e3e47dced1a3f7257e6a3c">&#9670;&nbsp;</a></span>getNative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> cl::sycl::detail::platform_impl::getNative </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the native handle of the SYCL platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>a native handle. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00279">279</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00376">cl::sycl::detail::pi::getPlugin()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l00568">piextPlatformGetNativeHandle()</a>.</p>
+
+</div>
+</div>
 <a id="a1408dc7e20f70a17439da81dd97d2912"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1408dc7e20f70a17439da81dd97d2912">&#9670;&nbsp;</a></span>getPlugin()</h2>
 
@@ -494,6 +523,8 @@ template&lt;info::platform param&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>true if platform supports specified extension. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00269">269</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00376">cl::sycl::detail::pi::getPlugin()</a>.</p>
 
 </div>
 </div>
