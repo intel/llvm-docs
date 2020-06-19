@@ -28,6 +28,8 @@ var searchData=
   ['memorymanager',['MemoryManager',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html',1,'cl::sycl::detail']]],
   ['memorysemanticsmask',['MemorySemanticsMask',['../struct____spv_1_1MemorySemanticsMask.html',1,'__spv']]],
   ['minimum',['minimum',['../structcl_1_1sycl_1_1intel_1_1minimum.html',1,'cl::sycl::intel']]],
+  ['mode_5ftag_5ft',['mode_tag_t',['../structcl_1_1sycl_1_1mode__tag__t.html',1,'cl::sycl']]],
+  ['mode_5ftarget_5ftag_5ft',['mode_target_tag_t',['../structcl_1_1sycl_1_1mode__target__tag__t.html',1,'cl::sycl']]],
   ['multi_5fptr',['multi_ptr',['../classcl_1_1sycl_1_1multi__ptr.html',1,'cl::sycl']]],
   ['multi_5fptr_3c_20const_20void_2c_20space_20_3e',['multi_ptr&lt; const void, Space &gt;',['../classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html',1,'cl::sycl']]],
   ['multi_5fptr_3c_20void_2c_20space_20_3e',['multi_ptr&lt; void, Space &gt;',['../classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html',1,'cl::sycl']]]

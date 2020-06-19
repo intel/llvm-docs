@@ -13,6 +13,7 @@ var property__list_8hpp =
     [ "context_bound", "classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html", "classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound" ],
     [ "enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ],
     [ "in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ],
+    [ "noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ],
     [ "property_list", "classcl_1_1sycl_1_1property__list.html", "classcl_1_1sycl_1_1property__list" ],
     [ "RegisterProp", "property__list_8hpp.html#ac5f13f9b17e7370c457482b50c80e0f8", null ],
     [ "PropKind", "property__list_8hpp.html#ae6452b68a5b895bd0bc6212513da523a", [
@@ -24,6 +25,7 @@ var property__list_8hpp =
       [ "ImageUseMutex", "property__list_8hpp.html#ae6452b68a5b895bd0bc6212513da523aa3fffd49984c908b5d80f7de179ee6042", null ],
       [ "QueueEnableProfiling", "property__list_8hpp.html#ae6452b68a5b895bd0bc6212513da523aaa44200f702e5e85e16b383480e7946c7", null ],
       [ "InOrder", "property__list_8hpp.html#ae6452b68a5b895bd0bc6212513da523aad81ee2eb0884e93e55c75f81c5a2fd29", null ],
+      [ "NoInit", "property__list_8hpp.html#ae6452b68a5b895bd0bc6212513da523aa02aaa84a5403a13f4c4e029e53a83b5a", null ],
       [ "PropKindSize", "property__list_8hpp.html#ae6452b68a5b895bd0bc6212513da523aab6183904c68d4f4d60f341c0079127cb", null ]
     ] ],
     [ "RegisterProp", "property__list_8hpp.html#ad3583c37eec557aa450fd156e0513967", null ],
@@ -34,5 +36,6 @@ var property__list_8hpp =
     [ "RegisterProp", "property__list_8hpp.html#ac3711f82a9158c680502ec67c4cc9cbb", null ],
     [ "RegisterProp", "property__list_8hpp.html#acd615f73334008096a473070a345fe56", null ],
     [ "RegisterProp", "property__list_8hpp.html#ace1a542c521379bede5f951212fdce4c", null ],
+    [ "RegisterProp", "property__list_8hpp.html#aff83433345c9135fef95a82a554f598b", null ],
     [ "RegisterProp", "property__list_8hpp.html#a080b7307701c5d55e6d167887e50ddbd", null ]
 ];

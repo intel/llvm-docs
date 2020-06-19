@@ -1,7 +1,11 @@
 var searchData=
 [
+  ['access_5fmode',['access_mode',['../namespacecl_1_1sycl.html#a8ff538a48e293e2653792311c99c6ecd',1,'cl::sycl']]],
   ['accessor_5ftype',['accessor_type',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a2fad265b82b42d5c6204cb377b3d49e9',1,'cl::sycl::intel::detail::reduction_impl']]],
+  ['accessorcommont',['AccessorCommonT',['../classcl_1_1sycl_1_1accessor.html#a6c6d8ae10e06c20b94e673b8e6022e8b',1,'cl::sycl::accessor']]],
   ['accessorimplptr',['AccessorImplPtr',['../namespacecl_1_1sycl_1_1detail.html#a315930034330a1282d44c75ad2509bb6',1,'cl::sycl::detail']]],
+  ['accessorsubscript',['AccessorSubscript',['../classcl_1_1sycl_1_1accessor.html#a6e1419767e22d362fc0897741f6ca161',1,'cl::sycl::accessor']]],
+  ['accessort',['AccessorT',['../classcl_1_1sycl_1_1host__accessor.html#ae82de2ebe63c0d71938427a03751a583',1,'cl::sycl::host_accessor']]],
   ['acctype',['AccType',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a388dda10a2a20840fa000963a8f586c4',1,'cl::sycl::detail::accessor_common::AccType()'],['../structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318.html#a0580dbd5891aa6727f2d006df643ab6d',1,'std::hash&lt; cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt; &gt;::AccType()']]],
   ['add_5fpointer_5ft',['add_pointer_t',['../namespacecl_1_1sycl_1_1detail.html#a818e82695699adc215e550ad6b963d1d',1,'cl::sycl::detail']]],
   ['address_5fspace_5flist',['address_space_list',['../namespacecl_1_1sycl_1_1detail.html#a70f4ef27a74b64b9ffefbb908000da49',1,'cl::sycl::detail']]],

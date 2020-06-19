@@ -1,5 +1,7 @@
 var access_8hpp =
 [
+    [ "mode_tag_t", "structcl_1_1sycl_1_1mode__tag__t.html", "structcl_1_1sycl_1_1mode__tag__t" ],
+    [ "mode_target_tag_t", "structcl_1_1sycl_1_1mode__target__tag__t.html", "structcl_1_1sycl_1_1mode__target__tag__t" ],
     [ "TargetToAS", "structcl_1_1sycl_1_1detail_1_1TargetToAS.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS" ],
     [ "TargetToAS< access::target::local >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4" ],
     [ "TargetToAS< access::target::constant_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4" ],
@@ -13,6 +15,7 @@ var access_8hpp =
     [ "__OPENCL_GLOBAL_AS__", "access_8hpp.html#aa1eee783152203c6fae3fdf9510e63b3", null ],
     [ "__OPENCL_LOCAL_AS__", "access_8hpp.html#a4760784b0355ee3818bbf0a66a7430ae", null ],
     [ "__OPENCL_PRIVATE_AS__", "access_8hpp.html#a11fdf1bd2a48ce97f29b47765bde5088", null ],
+    [ "access_mode", "access_8hpp.html#a8ff538a48e293e2653792311c99c6ecd", null ],
     [ "address_space", "access_8hpp.html#a0b32461aa4a1867f288b640d7fc64fbf", [
       [ "private_space", "access_8hpp.html#a0b32461aa4a1867f288b640d7fc64fbfa9c3fa85807d489cc15cbbef1fcc1f9b0", null ],
       [ "global_space", "access_8hpp.html#a0b32461aa4a1867f288b640d7fc64fbfa8b6e19b80779e1f75b1c5f54a800dca4", null ],

@@ -126,6 +126,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "InitializedVal< 1, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4.html", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4" ],
     [ "InitializedVal< 2, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4" ],
     [ "InitializedVal< 3, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4" ],
+    [ "InlineVariableHelper", "structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html", "structcl_1_1sycl_1_1detail_1_1InlineVariableHelper" ],
     [ "InteropTask", "classcl_1_1sycl_1_1detail_1_1InteropTask.html", "classcl_1_1sycl_1_1detail_1_1InteropTask" ],
     [ "is_address_space_compliant", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant.html", null ],
     [ "is_address_space_compliant_impl", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html", null ],

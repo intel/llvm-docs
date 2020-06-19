@@ -57,6 +57,7 @@ var searchData=
   ['isnotequal',['isnotequal',['../namespacecl_1_1sycl.html#a540f8ac29726306820ff225136838571',1,'cl::sycl']]],
   ['isordered',['isordered',['../namespacecl_1_1sycl.html#a68c31bc6e48c8fd07f661f513ac2d5e8',1,'cl::sycl']]],
   ['isoutofrange',['isOutOfRange',['../namespacecl_1_1sycl_1_1detail.html#af4e508ca6daca4984f672dfcea172455',1,'cl::sycl::detail']]],
+  ['issameasbuffer',['IsSameAsBuffer',['../classcl_1_1sycl_1_1accessor.html#af5f6c66ab700676c62f964a7e9e4f3ee',1,'cl::sycl::accessor::IsSameAsBuffer()'],['../classcl_1_1sycl_1_1host__accessor.html#ad8883d82a6ebbd05b2b918a5564eda63',1,'cl::sycl::host_accessor::IsSameAsBuffer()']]],
   ['isset',['isSet',['../classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html#a6ea56a18f1c31160987c7ee294439d6e',1,'cl::sycl::detail::spec_constant_impl']]],
   ['issubbuffer',['isSubBuffer',['../struct__pi__buffer.html#a8ca3c4c33b398bed6ddf6d4272774fdb',1,'_pi_buffer']]],
   ['issuccessfullyenqueued',['isSuccessfullyEnqueued',['../classcl_1_1sycl_1_1detail_1_1Command.html#a89b079400dcccbdc3f8beca70517c3dd',1,'cl::sycl::detail::Command']]],

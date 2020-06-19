@@ -8,6 +8,7 @@ var common_8hpp =
     [ "NDLoopIterateImpl", "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl.html", "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl" ],
     [ "NDLoopIterateImpl< NDIMS, 0, LoopBoundTy, FuncTy, LoopIndexTy >", "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html", "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4" ],
     [ "NDLoop", "structcl_1_1sycl_1_1detail_1_1NDLoop.html", "structcl_1_1sycl_1_1detail_1_1NDLoop" ],
+    [ "InlineVariableHelper", "structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html", "structcl_1_1sycl_1_1detail_1_1InlineVariableHelper" ],
     [ "__SYCL_ASSERT", "common_8hpp.html#a9a2d345bf334488c06768f6ae5c3d38b", null ],
     [ "CHECK_OCL_CODE", "common_8hpp.html#a867b59d4d820aeaadadfd15ff9c2ce20", null ],
     [ "CHECK_OCL_CODE_NO_EXC", "common_8hpp.html#aaee4b59f5805ee838766905ec4c3ba60", null ],

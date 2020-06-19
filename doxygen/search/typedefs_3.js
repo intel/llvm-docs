@@ -16,6 +16,7 @@ var searchData=
   ['cl_5fushort',['cl_ushort',['../namespacecl_1_1sycl.html#ae572567ca007eed2a0d67d700a5a18f1',1,'cl::sycl']]],
   ['clsetprogramspecializationconstant_5ffn',['clSetProgramSpecializationConstant_fn',['../pi__opencl_8cpp.html#a6adb57f04a7f087cb902f2cadae76550',1,'pi_opencl.cpp']]],
   ['common_5frel_5fret_5ft',['common_rel_ret_t',['../namespacecl_1_1sycl_1_1detail.html#a65bb96243da5397603945a135428ab03',1,'cl::sycl::detail']]],
+  ['concreteasptrtype',['ConcreteASPtrType',['../classcl_1_1sycl_1_1accessor.html#ae748411d145e0a0df95083a97510a57a',1,'cl::sycl::accessor']]],
   ['conditional_5ft',['conditional_t',['../namespacecl_1_1sycl_1_1detail.html#ac666de109fc99c49823e41f88b82bddd',1,'cl::sycl::detail']]],
   ['const_5fif_5fconst_5fas',['const_if_const_AS',['../namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202',1,'cl::sycl::detail']]],
   ['const_5fiterator',['const_iterator',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ad7095e2d4e2bf14462923b1471fbbb40',1,'cl::sycl::detail::CircularBuffer::const_iterator()'],['../classcl_1_1sycl_1_1exception__list.html#afab85d4c36b00f85b5c59ae53de3bfd4',1,'cl::sycl::exception_list::const_iterator()']]],

@@ -125,6 +125,7 @@ var searchData=
   ['compiled',['compiled',['../namespacecl_1_1sycl.html#a104e4e04504c3752e3ba5a3d4013e0ebacb5185196ad3147d58c13c22b2a32292',1,'cl::sycl']]],
   ['compileoptions',['CompileOptions',['../structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd',1,'pi_device_binary_struct']]],
   ['complete',['complete',['../namespacecl_1_1sycl_1_1info.html#a14478aa11b108f1b29dfa017770c493bad9a22d7a8178d5b42a8750123cbfe5b1',1,'cl::sycl::info']]],
+  ['concreteasptrtype',['ConcreteASPtrType',['../classcl_1_1sycl_1_1accessor.html#ae748411d145e0a0df95083a97510a57a',1,'cl::sycl::accessor']]],
   ['conditional_5ft',['conditional_t',['../namespacecl_1_1sycl_1_1detail.html#ac666de109fc99c49823e41f88b82bddd',1,'cl::sycl::detail']]],
   ['config',['CONFIG',['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8hpp.html#acaa9617679f6b60fc24220c53822c283',1,'CONFIG():&#160;config.hpp'],['../config_8hpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.hpp']]],
   ['config_2ecpp',['config.cpp',['../config_8cpp.html',1,'']]],

@@ -21,6 +21,7 @@ var searchData=
   ['prop_3c_20detail_3a_3apropkind_3a_3abufferusehostptr_20_3e',['Prop&lt; detail::PropKind::BufferUseHostPtr &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html',1,'cl::sycl::property::detail']]],
   ['prop_3c_20detail_3a_3apropkind_3a_3aimageusehostptr_20_3e',['Prop&lt; detail::PropKind::ImageUseHostPtr &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html',1,'cl::sycl::property::detail']]],
   ['prop_3c_20detail_3a_3apropkind_3a_3ainorder_20_3e',['Prop&lt; detail::PropKind::InOrder &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html',1,'cl::sycl::property::detail']]],
+  ['prop_3c_20detail_3a_3apropkind_3a_3anoinit_20_3e',['Prop&lt; detail::PropKind::NoInit &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html',1,'cl::sycl::property::detail']]],
   ['prop_3c_20detail_3a_3apropkind_3a_3aqueueenableprofiling_20_3e',['Prop&lt; detail::PropKind::QueueEnableProfiling &gt;',['../classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html',1,'cl::sycl::property::detail']]],
   ['propbase',['PropBase',['../classcl_1_1sycl_1_1property_1_1detail_1_1PropBase.html',1,'cl::sycl::property::detail']]],
   ['property_5flist',['property_list',['../classcl_1_1sycl_1_1property__list.html',1,'cl::sycl']]],

@@ -19,6 +19,7 @@ var searchData=
   ['initializedval_3c_201_2c_20t_20_3e',['InitializedVal&lt; 1, T &gt;',['../structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4.html',1,'cl::sycl::detail']]],
   ['initializedval_3c_202_2c_20t_20_3e',['InitializedVal&lt; 2, T &gt;',['../structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html',1,'cl::sycl::detail']]],
   ['initializedval_3c_203_2c_20t_20_3e',['InitializedVal&lt; 3, T &gt;',['../structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html',1,'cl::sycl::detail']]],
+  ['inlinevariablehelper',['InlineVariableHelper',['../structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html',1,'cl::sycl::detail']]],
   ['interop',['interop',['../structcl_1_1sycl_1_1interop.html',1,'cl::sycl']]],
   ['interop_3c_20backend_3a_3acuda_2c_20accessor_3c_20datat_2c_20dimensions_2c_20accessmode_2c_20access_3a_3atarget_3a_3aglobal_5fbuffer_2c_20access_3a_3aplaceholder_3a_3afalse_5ft_20_3e_20_3e',['interop&lt; backend::cuda, accessor&lt; DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t &gt; &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01accessor_3_01DataT_00_01Dimensions_00_01Acc637bad91ed5432401a3db57882822f56.html',1,'cl::sycl']]],
   ['interop_3c_20backend_3a_3acuda_2c_20context_20_3e',['interop&lt; backend::cuda, context &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01context_01_4.html',1,'cl::sycl']]],

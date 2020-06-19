@@ -31,6 +31,9 @@ var hierarchy =
     [ "_pi_plugin", "struct__pi__plugin.html", null ],
     [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
       [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
+      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", [
+        [ "cl::sycl::host_accessor< DataT, Dimensions, AccessMode >", "classcl_1_1sycl_1_1host__accessor.html", null ]
+      ] ],
       [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", null ]
     ] ],
@@ -39,6 +42,7 @@ var hierarchy =
     ] ],
     [ "cl::sycl::detail::AccessorBaseHost", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html", [
       [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
+      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", null ],
@@ -305,6 +309,7 @@ var hierarchy =
     [ "cl::sycl::detail::InitializedVal< 1, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4.html", null ],
     [ "cl::sycl::detail::InitializedVal< 2, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html", null ],
     [ "cl::sycl::detail::InitializedVal< 3, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html", null ],
+    [ "cl::sycl::detail::InlineVariableHelper< T >", "structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html", null ],
     [ "int_constant", null, [
       [ "cl::sycl::detail::vector_size_impl< T >", "structcl_1_1sycl_1_1detail_1_1vector__size__impl.html", null ],
       [ "cl::sycl::detail::vector_size_impl< vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html", null ],
@@ -402,6 +407,8 @@ var hierarchy =
     [ "cl::sycl::detail::MemoryManager", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html", null ],
     [ "__spv::MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", null ],
     [ "cl::sycl::intel::minimum< T >", "structcl_1_1sycl_1_1intel_1_1minimum.html", null ],
+    [ "cl::sycl::mode_tag_t< mode >", "structcl_1_1sycl_1_1mode__tag__t.html", null ],
+    [ "cl::sycl::mode_target_tag_t< mode, trgt >", "structcl_1_1sycl_1_1mode__target__tag__t.html", null ],
     [ "cl::sycl::multi_ptr< ElementType, Space >", "classcl_1_1sycl_1_1multi__ptr.html", null ],
     [ "cl::sycl::multi_ptr< const void, Space >", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html", null ],
     [ "cl::sycl::multi_ptr< void, Space >", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html", null ],
@@ -456,6 +463,9 @@ var hierarchy =
     ] ],
     [ "cl::sycl::property::detail::Prop< detail::PropKind::InOrder >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
       [ "cl::sycl::property::queue::in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ]
+    ] ],
+    [ "cl::sycl::property::detail::Prop< detail::PropKind::NoInit >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
+      [ "cl::sycl::property::noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ]
     ] ],
     [ "cl::sycl::property::detail::Prop< detail::PropKind::QueueEnableProfiling >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
       [ "cl::sycl::property::queue::enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ]
@@ -561,5 +571,7 @@ var hierarchy =
     [ "cl::sycl::vec< Type, NumElements >", "classcl_1_1sycl_1_1vec.html", null ],
     [ "cl::sycl::detail::vector_element< T >", "structcl_1_1sycl_1_1detail_1_1vector__element.html", null ],
     [ "cl::sycl::detail::vector_element_impl< T >", "structcl_1_1sycl_1_1detail_1_1vector__element__impl.html", null ],
-    [ "cl::sycl::detail::vector_element_impl< vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1vector__element__impl_3_01vec_3_01T_00_01N_01_4_01_4.html", null ]
+    [ "cl::sycl::detail::vector_element_impl< vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1vector__element__impl_3_01vec_3_01T_00_01N_01_4_01_4.html", null ],
+    [ "char", "classchar.html", null ],
+    [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]
 ];
