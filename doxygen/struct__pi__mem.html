@@ -136,8 +136,10 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:afb3145cea0024c0bedcd5b4c19011d02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a> { <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">alloc_mode::classic</a>, 
-<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">alloc_mode::use_host_ptr</a>
- }</td></tr>
+<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">alloc_mode::use_host_ptr</a>, 
+<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607">alloc_mode::copy_in</a>
+ }<tr class="memdesc:afb3145cea0024c0bedcd5b4c19011d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">alloc_mode classic: Just a normal buffer allocated on the device via cuda malloc use_host_ptr: Use an address on the host for the device copy_in: The data for the device comes from the host but the host pointer is not available later for re-use  <a href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:afb3145cea0024c0bedcd5b4c19011d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30c8fa65aa01ea0da98a80eb83a9b550"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a> = <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a></td></tr>
 <tr class="separator:a30c8fa65aa01ea0da98a80eb83a9b550"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,12 +287,15 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>alloc_mode classic: Just a normal buffer allocated on the device via cuda malloc use_host_ptr: Use an address on the host for the device copy_in: The data for the device comes from the host but the host pointer is not available later for re-use </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58"></a>classic&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27"></a>use_host_ptr&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607"></a>copy_in&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00195">195</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00201">201</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -353,9 +358,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00197">197</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00203">203</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00701">cuda_piContextRetain()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02162">cuda_piMemRetain()</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00701">cuda_piContextRetain()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02169">cuda_piMemRetain()</a>.</p>
 
 </div>
 </div>
@@ -382,9 +387,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00208">208</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00214">214</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01421">cuda_piContextRelease()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01552">cuda_piMemRelease()</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01424">cuda_piContextRelease()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01558">cuda_piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -515,9 +520,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00229">229</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00235">235</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01552">cuda_piMemRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01558">cuda_piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -544,9 +549,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00223">223</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00229">229</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02994">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03035">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03080">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01904">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02892">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01858">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02943">cuda_piEnqueueMemBufferWriteRect()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01677">cuda_piextMemGetNativeHandle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03001">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03042">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03087">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01911">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02899">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01865">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02950">cuda_piEnqueueMemBufferWriteRect()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01684">cuda_piextMemGetNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -573,7 +578,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00225">225</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00231">231</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -600,9 +605,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00262">262</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00268">268</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03281">cuda_piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -630,9 +635,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00237">237</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00243">243</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03281">cuda_piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -659,9 +664,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00235">235</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00241">241</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03225">cuda_piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03232">cuda_piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03281">cuda_piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -688,9 +693,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00231">231</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00237">237</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02162">cuda_piMemRetain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02169">cuda_piMemRetain()</a>.</p>
 
 </div>
 </div>
@@ -717,9 +722,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00233">233</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00239">239</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03281">cuda_piEnqueueMemUnmap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01610">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>
@@ -802,9 +807,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00227">227</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00233">233</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02162">cuda_piMemRetain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02169">cuda_piMemRetain()</a>.</p>
 
 </div>
 </div>
@@ -833,9 +838,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>: Adapt once images are supported. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00217">217</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00223">223</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01610">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>
@@ -862,9 +867,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00219">219</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00225">225</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01552">cuda_piMemRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01610">cuda_piMemBufferPartition()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01558">cuda_piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -931,11 +936,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00239">239</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00245">245</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="usm_8hpp_source.html#l00135">cl::sycl::malloc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03225">cuda_piEnqueueMemBufferMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03232">cuda_piEnqueueMemBufferMap()</a>.</p>
 
 </div>
 </div>
@@ -997,11 +1002,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00252">252</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00258">258</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03274">cuda_piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03281">cuda_piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1039,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00185">185</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01610">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1057,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00189">189</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01610">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1175,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00187">187</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01603">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01610">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,8 @@ var struct__pi__mem =
     [ "pi_context", "struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135", null ],
     [ "alloc_mode", "struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02", [
       [ "classic", "struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58", null ],
-      [ "use_host_ptr", "struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27", null ]
+      [ "use_host_ptr", "struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27", null ],
+      [ "copy_in", "struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607", null ]
     ] ],
     [ "_pi_mem", "struct__pi__mem.html#a2735fae8c7932d6b8263f1d638652264", null ],
     [ "~_pi_mem", "struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d", null ],

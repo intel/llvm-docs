@@ -25,6 +25,7 @@ var searchData=
   ['context',['context',['../namespacecl_1_1sycl_1_1info.html#a298d56c26b4eec2a4d4fb1649e2d1063a5c18ef72771564b7f43c497dc507aeab',1,'cl::sycl::info::context()'],['../namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aa5c18ef72771564b7f43c497dc507aeab',1,'cl::sycl::info::context()'],['../namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792a5c18ef72771564b7f43c497dc507aeab',1,'cl::sycl::info::context()']]],
   ['copy_5facc_5fto_5facc',['COPY_ACC_TO_ACC',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea73124c84ee4f610615010cbd5212ff18',1,'cl::sycl::detail::CG']]],
   ['copy_5facc_5fto_5fptr',['COPY_ACC_TO_PTR',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaf2d4daba293a568e97d24890af4b17a8',1,'cl::sycl::detail::CG']]],
+  ['copy_5fin',['copy_in',['../struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607',1,'_pi_mem']]],
   ['copy_5fmemory',['COPY_MEMORY',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4af7211409a2d3c6aec030ec3bd62696c9',1,'cl::sycl::detail::Command']]],
   ['copy_5fptr_5fto_5facc',['COPY_PTR_TO_ACC',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeae7070c4b535a7cb64c125d3f08161393',1,'cl::sycl::detail::CG']]],
   ['copy_5fusm',['COPY_USM',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaac6fede0ce27acc0208f4610a0f27fd4',1,'cl::sycl::detail::CG']]],

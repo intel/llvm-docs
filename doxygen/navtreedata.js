@@ -69,9 +69,9 @@ var NAVTREEINDEX =
 "program_8hpp.html#a104e4e04504c3752e3ba5a3d4013e0ebacb5185196ad3147d58c13c22b2a32292",
 "stream_8hpp.html#a9d13eebde2c37713f29f49b54230ddf9",
 "struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d",
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8e95e84813830072b7516cfaa7dbc1a9",
-"structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_14a9e415c8a47cc88acb4203d5b5638e.html#ae66acf21e65342a2e4f30247a55e3175",
-"sub__group__host_8hpp.html"
+"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8394f0347c184cf156ac5924dccb773b",
+"structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_14a9e415c8a47cc88acb4203d5b5638e.html",
+"sub__group_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -187,6 +187,7 @@ var searchData=
   ['copy_5fcv_5fqualifiers_5fimpl_3c_20const_20volatile_20t_2c_20r_20_3e',['copy_cv_qualifiers_impl&lt; const volatile T, R &gt;',['../structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html',1,'cl::sycl::detail']]],
   ['copy_5fcv_5fqualifiers_5fimpl_3c_20volatile_20t_2c_20r_20_3e',['copy_cv_qualifiers_impl&lt; volatile T, R &gt;',['../structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html',1,'cl::sycl::detail']]],
   ['copy_5fcv_5fqualifiers_5ft',['copy_cv_qualifiers_t',['../namespacecl_1_1sycl_1_1detail.html#a1943bfb593638dfe2dca4b9dd2222067',1,'cl::sycl::detail']]],
+  ['copy_5fin',['copy_in',['../struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607',1,'_pi_mem']]],
   ['copy_5fmemory',['COPY_MEMORY',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4af7211409a2d3c6aec030ec3bd62696c9',1,'cl::sycl::detail::Command']]],
   ['copy_5fptr_5fto_5facc',['COPY_PTR_TO_ACC',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeae7070c4b535a7cb64c125d3f08161393',1,'cl::sycl::detail::CG']]],
   ['copy_5fusm',['COPY_USM',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeaac6fede0ce27acc0208f4610a0f27fd4',1,'cl::sycl::detail::CG::COPY_USM()'],['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae8475ada97bafb83ebda1e8a4c93dc27',1,'cl::sycl::detail::MemoryManager::copy_usm()']]],
