@@ -33,6 +33,6 @@ var reduction_8hpp =
     [ "reduCGFuncImpl", "reduction_8hpp.html#a5e4733361f9997eb48ad7723932d01f4", null ],
     [ "reduction", "reduction_8hpp.html#a5bdcc00bbe2138f543ddde22ab02fd0d", null ],
     [ "reduction", "reduction_8hpp.html#a9f0cf13fef19ddfeccf05d6672958a1c", null ],
-    [ "reduction", "reduction_8hpp.html#afd31401f66794a0ffb3131aa26cf9611", null ],
-    [ "reduction", "reduction_8hpp.html#ae65db61bf60107a26e3404a61d0a8d48", null ]
+    [ "reduction", "reduction_8hpp.html#ab5bf45113b8e29d68441fde2cf52971a", null ],
+    [ "reduction", "reduction_8hpp.html#a70d4b60e16b4731b5ff670361831eff6", null ]
 ];
