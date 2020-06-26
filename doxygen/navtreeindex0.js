@@ -134,7 +134,7 @@ var NAVTREEINDEX0 =
 "buffer__impl_8cpp.html":[4,0,2,1,5],
 "buffer__impl_8cpp_source.html":[4,0,2,1,5],
 "buffer__impl_8hpp.html":[4,0,0,0,1,2,4],
-"buffer__impl_8hpp.html#a7a19058abadafdeccbb4ef44cdb2b318":[4,0,0,0,1,2,4,1],
+"buffer__impl_8hpp.html#a7a19058abadafdeccbb4ef44cdb2b318":[4,0,0,0,1,2,4,2],
 "buffer__impl_8hpp_source.html":[4,0,0,0,1,2,4],
 "builtins_8hpp.html":[4,0,0,0,1,13],
 "builtins_8hpp.html#a032dfaaf09a784771a427e12f5755cd5":[4,0,0,0,1,13,1],

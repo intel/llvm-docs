@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"struct__pi__mem.html#ad6add1624447042834e6d34ad4bd1c9a":[3,0,17,10],
 "struct__pi__mem.html#ade67ff7fc3a116e18a954576fdeda150":[3,0,17,23],
 "struct__pi__mem.html#ae957daeff1a6ec53dba7387281407def":[3,0,17,9],
 "struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d":[3,0,17,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a5191de605498f3f54293f67f8b41d568":[3,0,1,1,0,224,5],
 "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a79fd0dbeb9f73e5034f33fa63e4ca881":[3,0,1,1,0,224,4],
 "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ada67fc534b599e5bea393b57e9824bd0":[3,0,1,1,0,224,3],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a":[3,0,1,1,0,224,0],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa1686a6c336b71b36d77354cea19a8b52":[3,0,1,1,0,224,0,2]
+"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a":[3,0,1,1,0,224,0]
 };
