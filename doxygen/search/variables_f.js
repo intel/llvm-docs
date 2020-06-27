@@ -49,6 +49,6 @@ var searchData=
   ['propertiesend',['PropertiesEnd',['../struct__pi__device__binary__property__set__struct.html#ad40793d809f022073b2cc29a778e2c09',1,'_pi_device_binary_property_set_struct']]],
   ['propertysetsbegin',['PropertySetsBegin',['../structpi__device__binary__struct.html#ac6b82018fed8ac3d4cc28a65eb8ee33e',1,'pi_device_binary_struct']]],
   ['propertysetsend',['PropertySetsEnd',['../structpi__device__binary__struct.html#aad9bedb5c6973ec8af21c98a1e427935',1,'pi_device_binary_struct']]],
-  ['ptr',['Ptr',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult']]],
+  ['ptr',['ptr',['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html#abd776ce702de08263280db849b8630b0',1,'cl::sycl::intel::detail::atomic_ref_base::ptr()'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()']]],
   ['ptr_5f',['ptr_',['../struct__pi__mem.html#a9556a97da972a95d3ccab5755961729a',1,'_pi_mem']]]
 ];

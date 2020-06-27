@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3 =
+[
+    [ "operator()", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3.html#afeb695cefbcd26c0cf503d8c517af93e", null ]
+];

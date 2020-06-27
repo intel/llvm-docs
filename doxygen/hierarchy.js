@@ -75,8 +75,23 @@ var hierarchy =
     [ "cl::sycl::detail::Assigner< Num >", "structcl_1_1sycl_1_1detail_1_1Assigner.html", null ],
     [ "cl::sycl::detail::Assigner< 0 >", "structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html", null ],
     [ "cl::sycl::atomic< T, addressSpace >", "classcl_1_1sycl_1_1atomic.html", null ],
+    [ "cl::sycl::intel::detail::atomic_ref_base< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html", [
+      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl.html", [
+        [ "cl::sycl::intel::atomic_ref< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1atomic__ref.html", null ]
+      ] ],
+      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl.html", null ],
+      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_floating_point< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScop9e8246ef496054d7424575b8995f65d9.html", null ],
+      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_integral< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html", null ]
+    ] ],
+    [ "cl::sycl::intel::detail::atomic_ref_base< T *, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html", [
+      [ "cl::sycl::intel::detail::atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_pointer< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01Defaul42d8db00e3fe85753f7f73da9b2e3a69.html", null ]
+    ] ],
     [ "cl::sycl::detail::auto_name", "classcl_1_1sycl_1_1detail_1_1auto__name.html", null ],
     [ "cl::sycl::detail::BaseCLTypeConverter< T, N >", "classcl_1_1sycl_1_1detail_1_1BaseCLTypeConverter.html", null ],
+    [ "cl::sycl::intel::detail::bit_equal< T, typename >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal.html", null ],
+    [ "cl::sycl::intel::detail::bit_equal< double >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01double_01_4.html", null ],
+    [ "cl::sycl::intel::detail::bit_equal< float >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01float_01_4.html", null ],
+    [ "cl::sycl::intel::detail::bit_equal< T, typename detail::enable_if_t< std::is_integral< T >::value > >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3.html", null ],
     [ "bool_constant", "classbool__constant.html", [
       [ "cl::sycl::detail::is_address_space_compliant_impl< multi_ptr< T, Space >, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html", null ],
       [ "cl::sycl::detail::is_arithmetic< T >", "structcl_1_1sycl_1_1detail_1_1is__arithmetic.html", null ],
@@ -404,6 +419,10 @@ var hierarchy =
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
     [ "cl::sycl::intel::maximum< T >", "structcl_1_1sycl_1_1intel_1_1maximum.html", null ],
     [ "cl::sycl::detail::MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html", null ],
+    [ "cl::sycl::intel::detail::memory_order_traits< ReadModifyWriteOrder >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits.html", null ],
+    [ "cl::sycl::intel::detail::memory_order_traits< memory_order::acq_rel >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html", null ],
+    [ "cl::sycl::intel::detail::memory_order_traits< memory_order::relaxed >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1relaxed_01_4.html", null ],
+    [ "cl::sycl::intel::detail::memory_order_traits< memory_order::seq_cst >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1seq__cst_01_4.html", null ],
     [ "cl::sycl::detail::MemoryManager", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html", null ],
     [ "__spv::MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", null ],
     [ "cl::sycl::intel::minimum< T >", "structcl_1_1sycl_1_1intel_1_1minimum.html", null ],
@@ -484,8 +503,8 @@ var hierarchy =
     [ "cl::sycl::detail::PtrValueType< void, Space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
-    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html", null ],
     [ "cl::sycl::intel::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", null ],
@@ -572,6 +591,7 @@ var hierarchy =
     [ "cl::sycl::detail::vector_element< T >", "structcl_1_1sycl_1_1detail_1_1vector__element.html", null ],
     [ "cl::sycl::detail::vector_element_impl< T >", "structcl_1_1sycl_1_1detail_1_1vector__element__impl.html", null ],
     [ "cl::sycl::detail::vector_element_impl< vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1vector__element__impl_3_01vec_3_01T_00_01N_01_4_01_4.html", null ],
+    [ "atomic< T * > *", "classstd_1_1atomic_3_01T_01_5_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
     [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]
 ];

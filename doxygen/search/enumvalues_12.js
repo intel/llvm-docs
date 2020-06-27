@@ -1,6 +1,7 @@
 var searchData=
 [
   ['scientific',['scientific',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a55a95650a66b53ecbb960b53d985b964',1,'cl::sycl']]],
+  ['seq_5fcst',['seq_cst',['../namespacecl_1_1sycl_1_1intel.html#a672372faa371f44025b94a474bbc83b5a14cede869a7aee57588ab47066432604',1,'cl::sycl::intel']]],
   ['sequentiallyconsistent',['SequentiallyConsistent',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a0303c48d9eb3c7b2581caf6fc0d8e43e',1,'__spv::MemorySemanticsMask']]],
   ['shared',['shared',['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0ea9e81e7b963c71363e2fb3eefcfecfc0e',1,'cl::sycl::usm']]],
   ['short',['Short',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa30bb747c98bccdd11b3f89e644c4d0ad',1,'cl::sycl::detail::PlatformUtil']]],
@@ -14,6 +15,7 @@ var searchData=
   ['snorm_5fint8',['snorm_int8',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aead4c65045d7c2cb3055c3773d2029a0c1',1,'cl::sycl']]],
   ['soft_5ffloat',['soft_float',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a6e6513399f942d48c430159b1fbe93ec',1,'cl::sycl::info']]],
   ['start',['START',['../namespacecl_1_1sycl_1_1detail.html#a1f36acdc3445e874ecb97bb9f6129f01a3248d3bb7d45b52dc5f8dfded07fdfe0',1,'cl::sycl::detail']]],
+  ['sub_5fgroup',['sub_group',['../namespacecl_1_1sycl_1_1intel.html#acc0318aafaaff3cd50f48b4e22542121a651f1a87340bd311aa665c6e56f1df7c',1,'cl::sycl::intel']]],
   ['sub_5fgroup_5findependent_5fforward_5fprogress',['sub_group_independent_forward_progress',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190af7787a35537723ea9c6218076245ce24',1,'cl::sycl::info']]],
   ['sub_5fgroup_5fsizes',['sub_group_sizes',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a6a85a810baaadbbff72b9ad5fef5e533',1,'cl::sycl::info']]],
   ['subgroup',['Subgroup',['../struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4aeb370dc85602eb0978fbb4cfe3f71020',1,'__spv::Scope']]],
@@ -22,5 +24,6 @@ var searchData=
   ['syclenqueueblocked',['SyclEnqueueBlocked',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa04375079fd08ad82a0bd3cfbb712ee30',1,'cl::sycl::detail::EnqueueResultT']]],
   ['syclenqueuefailed',['SyclEnqueueFailed',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa9bdbfe7b23293f67f5f91a5b07f1077c',1,'cl::sycl::detail::EnqueueResultT']]],
   ['syclenqueueready',['SyclEnqueueReady',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa0a7c9fe2f517c23caf1eace1f94addb7',1,'cl::sycl::detail::EnqueueResultT']]],
-  ['syclenqueuesuccess',['SyclEnqueueSuccess',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daaca1601739a416250c95ff4718b6c9826',1,'cl::sycl::detail::EnqueueResultT']]]
+  ['syclenqueuesuccess',['SyclEnqueueSuccess',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daaca1601739a416250c95ff4718b6c9826',1,'cl::sycl::detail::EnqueueResultT']]],
+  ['system',['system',['../namespacecl_1_1sycl_1_1intel.html#acc0318aafaaff3cd50f48b4e22542121a54b53072540eeeb8f8e9343e71f28176',1,'cl::sycl::intel']]]
 ];

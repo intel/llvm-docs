@@ -515,14 +515,18 @@ objects never goes through SPIR-V. Instead it is passed directly in bitcode form
 down to the NVPTX Back End. All produced bitcode depends on two libraries,
 <code class="docutils literal notranslate"><span class="pre">libdevice.bc</span></code> (provided by the CUDA SDK) and <code class="docutils literal notranslate"><span class="pre">libspirv-nvptx64--nvidiacl.bc</span></code>
 (built by the libclc project).</p>
-<p>During the device linking step (device linker box in the
-<a class="reference external" href="#separate-compilation-and-linking">Separate Compilation and Linking</a>
-illustration), llvm bitcode objects for the CUDA target are linked together
-alongside <code class="docutils literal notranslate"><span class="pre">libspirv-nvptx64--nvidiacl.bc</span></code> and <code class="docutils literal notranslate"><span class="pre">libdevice.bc</span></code>, compiled to PTX
-using the NVPTX backend, and assembled into a cubin using the <code class="docutils literal notranslate"><span class="pre">ptxas</span></code> tool (part
-of the CUDA SDK). The PTX file and cubin are assembled together using
-<code class="docutils literal notranslate"><span class="pre">fatbinary</span></code> to produce a CUDA fatbin. The CUDA fatbin is then passed to the
-offload wrapper tool.</p>
+<div class="section" id="id1">
+<h5>Device code post-link step<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<p>During the “PTX target processing” in the device linking step <a class="reference external" href="#device-code-post-link-step">Device
+code post-link step</a>, the llvm bitcode
+objects for the CUDA target are linked together alongside
+<code class="docutils literal notranslate"><span class="pre">libspirv-nvptx64--nvidiacl.bc</span></code> and <code class="docutils literal notranslate"><span class="pre">libdevice.bc</span></code>, compiled to PTX
+using the NVPTX backend and assembled into a cubin using the <code class="docutils literal notranslate"><span class="pre">ptxas</span></code>
+tool (part of the CUDA SDK). The PTX file and cubin are assembled
+together using <code class="docutils literal notranslate"><span class="pre">fatbinary</span></code> to produce a CUDA fatbin. The CUDA fatbin
+is then passed to the offload wrapper tool.</p>
+<p><img alt="NVPTX AOT build" src="_images/DevicePTXProcessing.svg" /></p>
+</div>
 <div class="section" id="checking-if-the-compiler-is-targeting-nvptx">
 <h5>Checking if the compiler is targeting NVPTX<a class="headerlink" href="#checking-if-the-compiler-is-targeting-nvptx" title="Permalink to this headline">¶</a></h5>
 <p>When the SYCL compiler is in device mode and targeting the NVPTX backend,
@@ -590,8 +594,92 @@ offset by the value of the integer passed as parameter</p></li>
 </div>
 <p>On the runtime side, when setting local memory arguments, the CUDA PI
 implementation will internally set the argument as the offset with respect to
-the accumulated size of used local memory. This approach preserves the exisiting
+the accumulated size of used local memory. This approach preserves the existing
 PI interface.</p>
+</div>
+<div class="section" id="global-offset-support">
+<h5>Global offset support<a class="headerlink" href="#global-offset-support" title="Permalink to this headline">¶</a></h5>
+<p>The CUDA API does not natively support the global offset parameter
+expected by the SYCL.</p>
+<p>In order to emulate this and make generated kernel compliant, an
+intrinsic <code class="docutils literal notranslate"><span class="pre">llvm.nvvm.implicit.offset</span></code> (clang builtin
+<code class="docutils literal notranslate"><span class="pre">__builtin_ptx_implicit_offset</span></code>) was introduced materializing the use
+of this implicit parameter for the NVPTX backend. The intrinsic returns
+a pointer to <code class="docutils literal notranslate"><span class="pre">i32</span></code> referring to a 3 elements array.</p>
+<p>Each non-kernel function reaching the implicit offset intrinsic in the
+call graph is augmented with an extra implicit parameter of type
+pointer to <code class="docutils literal notranslate"><span class="pre">i32</span></code>. Kernels calling one of these functions using
+this intrinsic are cloned:</p>
+<ul class="simple">
+<li><p>the original kernel initializes an array of 3 <code class="docutils literal notranslate"><span class="pre">i32</span></code> to 0 and passes
+the pointer to this array to each function with the implicit
+parameter;</p></li>
+<li><p>the cloned function type is augmented with an implicit parameter of
+type array of 3 <code class="docutils literal notranslate"><span class="pre">i32</span></code>. The pointer to this array is then passed each
+function with the implicit parameter.</p></li>
+</ul>
+<p>The runtime will query both kernels and call the appropriate one based
+on the following logic:</p>
+<ul class="simple">
+<li><p>If the 2 versions exist, the original kernel is called if global
+offset is 0 otherwise it will call the cloned one and pass the
+offset by value;</p></li>
+<li><p>If only 1 function exist, it is assumed that the kernel makes no use
+of this parameter and therefore ignores it.</p></li>
+</ul>
+<p>As an example, the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">declare</span> <span class="n">i32</span><span class="o">*</span> <span class="nd">@llvm</span><span class="o">.</span><span class="n">nvvm</span><span class="o">.</span><span class="n">implicit</span><span class="o">.</span><span class="n">offset</span><span class="p">()</span>
+
+<span class="n">define</span> <span class="n">weak_odr</span> <span class="n">dso_local</span> <span class="n">i64</span> <span class="nd">@other_function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">i32</span><span class="o">*</span> <span class="nd">@llvm</span><span class="o">.</span><span class="n">nvvm</span><span class="o">.</span><span class="n">implicit</span><span class="o">.</span><span class="n">offset</span><span class="p">()</span>
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">2</span>
+  <span class="o">%</span><span class="mi">3</span> <span class="o">=</span> <span class="n">load</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">2</span><span class="p">,</span> <span class="n">align</span> <span class="mi">4</span>
+  <span class="o">%</span><span class="mi">4</span> <span class="o">=</span> <span class="n">zext</span> <span class="n">i32</span> <span class="o">%</span><span class="mi">3</span> <span class="n">to</span> <span class="n">i64</span>
+  <span class="n">ret</span> <span class="n">i64</span> <span class="o">%</span><span class="mi">4</span>
+<span class="p">}</span>
+
+<span class="n">define</span> <span class="n">weak_odr</span> <span class="n">dso_local</span> <span class="n">void</span> <span class="nd">@other_function2</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">ret</span>
+<span class="p">}</span>
+
+<span class="n">define</span> <span class="n">weak_odr</span> <span class="n">dso_local</span> <span class="n">void</span> <span class="nd">@example_kernel</span><span class="p">()</span> <span class="p">{</span>
+<span class="n">entry</span><span class="p">:</span>
+  <span class="o">%</span><span class="mi">0</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i64</span> <span class="nd">@other_function</span><span class="p">()</span>
+  <span class="n">call</span> <span class="n">void</span> <span class="nd">@other_function2</span><span class="p">()</span>
+  <span class="n">ret</span> <span class="n">void</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Is transformed into this in the <code class="docutils literal notranslate"><span class="pre">sycldevice</span></code> environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">define</span> <span class="n">weak_odr</span> <span class="n">dso_local</span> <span class="n">i64</span> <span class="nd">@other_function</span><span class="p">(</span><span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">0</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">2</span>
+  <span class="o">%</span><span class="mi">3</span> <span class="o">=</span> <span class="n">load</span> <span class="n">i32</span><span class="p">,</span> <span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">2</span><span class="p">,</span> <span class="n">align</span> <span class="mi">4</span>
+  <span class="o">%</span><span class="mi">4</span> <span class="o">=</span> <span class="n">zext</span> <span class="n">i32</span> <span class="o">%</span><span class="mi">3</span> <span class="n">to</span> <span class="n">i64</span>
+
+  <span class="n">ret</span> <span class="n">i64</span> <span class="o">%</span><span class="mi">4</span>
+<span class="p">}</span>
+
+<span class="n">define</span> <span class="n">weak_odr</span> <span class="n">dso_local</span> <span class="n">void</span> <span class="nd">@example_kernel</span><span class="p">()</span> <span class="p">{</span>
+<span class="n">entry</span><span class="p">:</span>
+  <span class="o">%</span><span class="mi">0</span> <span class="o">=</span> <span class="n">alloca</span> <span class="p">[</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">],</span> <span class="n">align</span> <span class="mi">4</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">bitcast</span> <span class="p">[</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">]</span><span class="o">*</span> <span class="o">%</span><span class="mi">0</span> <span class="n">to</span> <span class="n">i8</span><span class="o">*</span>
+  <span class="n">call</span> <span class="n">void</span> <span class="nd">@llvm</span><span class="o">.</span><span class="n">memset</span><span class="o">.</span><span class="n">p0i8</span><span class="o">.</span><span class="n">i64</span><span class="p">(</span><span class="n">i8</span><span class="o">*</span> <span class="n">nonnull</span> <span class="n">align</span> <span class="mi">4</span> <span class="n">dereferenceable</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="n">i8</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i64</span> <span class="mi">12</span><span class="p">,</span> <span class="n">i1</span> <span class="n">false</span><span class="p">)</span>
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">inbounds</span> <span class="p">[</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">]</span><span class="o">*</span> <span class="o">%</span><span class="mi">0</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span>
+  <span class="o">%</span><span class="mi">3</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i64</span> <span class="nd">@other_function</span><span class="p">(</span><span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">call</span> <span class="n">void</span> <span class="nd">@other_function2</span><span class="p">()</span>
+  <span class="n">ret</span> <span class="n">void</span>
+<span class="p">}</span>
+
+<span class="n">define</span> <span class="n">weak_odr</span> <span class="n">dso_local</span> <span class="n">void</span> <span class="nd">@example_kernel_with_offset</span><span class="p">([</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">]</span><span class="o">*</span> <span class="n">byval</span><span class="p">([</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">])</span> <span class="o">%</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">entry</span><span class="p">:</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">bitcast</span> <span class="p">[</span><span class="mi">3</span> <span class="n">x</span> <span class="n">i32</span><span class="p">]</span><span class="o">*</span> <span class="o">%</span><span class="mi">0</span> <span class="n">to</span> <span class="n">i32</span><span class="o">*</span>
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i64</span> <span class="nd">@other_function</span><span class="p">(</span><span class="n">i32</span><span class="o">*</span> <span class="o">%</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">call</span> <span class="n">void</span> <span class="nd">@other_function2</span><span class="p">()</span>
+  <span class="n">ret</span> <span class="n">void</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note: Kernel naming is not fully stable for now.</p>
 </div>
 </div>
 </div>

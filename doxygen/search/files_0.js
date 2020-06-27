@@ -9,5 +9,8 @@ var searchData=
   ['aligned_5fallocator_2ehpp',['aligned_allocator.hpp',['../aligned__allocator_8hpp.html',1,'']]],
   ['api_2edox',['api.dox',['../api_8dox.html',1,'']]],
   ['array_2ehpp',['array.hpp',['../array_8hpp.html',1,'']]],
-  ['atomic_2ehpp',['atomic.hpp',['../atomic_8hpp.html',1,'']]]
+  ['atomic_2ehpp',['atomic.hpp',['../atomic_8hpp.html',1,'(Global Namespace)'],['../intel_2atomic_8hpp.html',1,'(Global Namespace)']]],
+  ['atomic_5fenums_2ehpp',['atomic_enums.hpp',['../atomic__enums_8hpp.html',1,'']]],
+  ['atomic_5ffence_2ehpp',['atomic_fence.hpp',['../atomic__fence_8hpp.html',1,'']]],
+  ['atomic_5fref_2ehpp',['atomic_ref.hpp',['../atomic__ref_8hpp.html',1,'']]]
 ];

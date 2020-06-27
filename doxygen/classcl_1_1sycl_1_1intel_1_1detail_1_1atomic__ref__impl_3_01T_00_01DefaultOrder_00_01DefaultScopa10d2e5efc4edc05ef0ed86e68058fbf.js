@@ -1,0 +1,27 @@
+var classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf =
+[
+    [ "difference_type", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#afe2279f840a34ae85040d801d6542250", null ],
+    [ "value_type", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a7dd311c68283a3c0dc99b2319d5f1a4b", null ],
+    [ "fetch_add", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#af2b076a027a6910df8b905287b32fefe", null ],
+    [ "fetch_and", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#abea05c26cf5de14af1b7223cbe05413d", null ],
+    [ "fetch_max", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a245d1c78162e000b79e79d581e305c30", null ],
+    [ "fetch_min", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a8adfa37ba6abba643357e57f7f3b6f2d", null ],
+    [ "fetch_or", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#ac178ac00b289553c34c3b5e4920773d3", null ],
+    [ "fetch_sub", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a38e272bde47ab1bd7ae13bfa38087848", null ],
+    [ "fetch_xor", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#ad6988bf0aa9c919a4b2303379d77a6d3", null ],
+    [ "operator &=", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a4180e76156b823ea30921efe409f5cde", null ],
+    [ "operator++", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a736fec687e5ee37f31398e419dba0bdf", null ],
+    [ "operator++", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a3c85e9c8fab9ddc725d3ba5878409773", null ],
+    [ "operator+=", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a81baca4af1df0dbeca18ed45777574b1", null ],
+    [ "operator--", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a72cf08058a1f941ceffabb08b754a8c6", null ],
+    [ "operator--", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a663a56538800cd04b115e7e48d211ce7", null ],
+    [ "operator-=", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#ae0bb67aa8110427b97ac09acfceddb56", null ],
+    [ "operator^=", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#aad0d9993c3417fdbacfaac1294b59fda", null ],
+    [ "operator|=", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#aec680cd2e73baf345a10776be26b9cfa", null ],
+    [ "default_read_modify_write_order", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#acb2113e839af8969d03c382306f21f55", null ],
+    [ "default_read_order", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a6fd56f11ef130784f55b0dbf7ec0e425", null ],
+    [ "default_scope", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a68a2b042cea06aa290ed0bacd2bc12e7", null ],
+    [ "default_write_order", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a622146815360edfa16301b5f5fd92784", null ],
+    [ "is_always_lock_free", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a1f3340fe2012105eaac45281edd9a195", null ],
+    [ "required_alignment", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html#a3543e7c5efc37f0f7c4a798d5afc086c", null ]
+];

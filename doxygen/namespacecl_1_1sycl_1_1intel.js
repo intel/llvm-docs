@@ -1,6 +1,7 @@
 var namespacecl_1_1sycl_1_1intel =
 [
     [ "detail", "namespacecl_1_1sycl_1_1intel_1_1detail.html", "namespacecl_1_1sycl_1_1intel_1_1detail" ],
+    [ "atomic_ref", "classcl_1_1sycl_1_1intel_1_1atomic__ref.html", null ],
     [ "fpga_emulator_selector", "classcl_1_1sycl_1_1intel_1_1fpga__emulator__selector.html", "classcl_1_1sycl_1_1intel_1_1fpga__emulator__selector" ],
     [ "fpga_selector", "classcl_1_1sycl_1_1intel_1_1fpga__selector.html", "classcl_1_1sycl_1_1intel_1_1fpga__selector" ],
     [ "kernel_readable_io_pipe", "classcl_1_1sycl_1_1intel_1_1kernel__readable__io__pipe.html", "classcl_1_1sycl_1_1intel_1_1kernel__readable__io__pipe" ],
