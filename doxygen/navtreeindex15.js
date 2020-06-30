@@ -1,5 +1,8 @@
 var NAVTREEINDEX15 =
 {
+"group__sycl__api.html":[1,1],
+"group__sycl__api__acc.html":[1,1,1],
+"group__sycl__api__dev__sel.html":[1,1,0],
 "group__sycl__graph.html":[1,2],
 "group__sycl__pi.html":[1,0],
 "group__sycl__pi__cuda.html":[1,0,0],
@@ -84,8 +87,8 @@ var NAVTREEINDEX15 =
 "host__profiling__info_8hpp_source.html":[4,0,0,0,1,2,20],
 "id_8hpp.html":[4,0,0,0,1,25],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,25,0],
-"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,25,2],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,25,1],
+"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,25,2],
 "id_8hpp.html#aa8953bc09b85c70fd186496488a89a76":[4,0,0,0,1,25,4],
 "id_8hpp.html#aa999c9ff2be6ea85802409903755f482":[4,0,0,0,1,25,3],
 "id_8hpp_source.html":[4,0,0,0,1,25],
@@ -246,8 +249,5 @@ var NAVTREEINDEX15 =
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,4,0,11,0],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5abefe72871b2de8f4f0e20108517e31fe":[4,0,0,0,1,4,0,11,1],
 "info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7c":[4,0,0,0,1,4,0,16],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca0dfb2d09aeef6a0220a25c2e2d0fddbd":[4,0,0,0,1,4,0,16,1],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca4caa8fade30967a8377af50b650cdba4":[4,0,0,0,1,4,0,16,3],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca4d5dc746cb3817f420a9dc05425e660f":[4,0,0,0,1,4,0,16,0],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca7f52cd07191bbdfc8bf925acf7076ffd":[4,0,0,0,1,4,0,16,2]
+"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca0dfb2d09aeef6a0220a25c2e2d0fddbd":[4,0,0,0,1,4,0,16,1]
 };

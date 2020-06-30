@@ -143,6 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2a">info::platform</a>, param &gt;::return_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a2e3b2a40bd6743c4c737dd55077e81f1">get_info</a> () const</td></tr>
 <tr class="memdesc:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries this SYCL platform for info.  <a href="#a2e3b2a40bd6743c4c737dd55077e81f1">More...</a><br /></td></tr>
 <tr class="separator:a2e3b2a40bd6743c4c737dd55077e81f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a2d7d501466f19527e386e35a90183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336">backend</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#af0a2d7d501466f19527e386e35a90183">get_backend</a> () const noexcept</td></tr>
+<tr class="memdesc:af0a2d7d501466f19527e386e35a90183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the backend associated with this platform.  <a href="#af0a2d7d501466f19527e386e35a90183">More...</a><br /></td></tr>
+<tr class="separator:af0a2d7d501466f19527e386e35a90183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeccfdfaa4fad084df7d6a3e24e8de6d"><td class="memTemplParams" colspan="2">template&lt;backend BackendName&gt; </td></tr>
 <tr class="memitem:adeccfdfaa4fad084df7d6a3e24e8de6d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#adeccfdfaa4fad084df7d6a3e24e8de6d">get_native</a> () const -&gt; typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; BackendName, <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt;::type</td></tr>
 <tr class="memdesc:adeccfdfaa4fad084df7d6a3e24e8de6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL platform.  <a href="#adeccfdfaa4fad084df7d6a3e24e8de6d">More...</a><br /></td></tr>
@@ -339,6 +342,36 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="af0a2d7d501466f19527e386e35a90183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0a2d7d501466f19527e386e35a90183">&#9670;&nbsp;</a></span>get_backend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336">backend</a> cl::sycl::platform::get_backend </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the backend associated with this platform. </p>
+<dl class="section return"><dt>Returns</dt><dd>the backend associated with this platform </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00046">46</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
+
+</div>
+</div>
 <a id="af5f0f8e55fb4fc5d465f411d14e0dfb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5f0f8e55fb4fc5d465f411d14e0dfb1">&#9670;&nbsp;</a></span>get_devices()</h2>
 
@@ -391,7 +424,7 @@ template&lt;info::platform param&gt; </div>
 <p>Queries this SYCL platform for info. </p>
 <p>The return type depends on information being queried. </p>
 
-<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00048">48</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00050">50</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="device__info_8hpp_source.html#l00366">cl::sycl::detail::get_device_info&lt; bool, info::device::kernel_kernel_pipe_support &gt;::get()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00199">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkGroupSize()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00023">cl::sycl::detail::IsBannedPlatform()</a>, <a class="el" href="program__manager_8cpp_source.html#l00235">cl::sycl::detail::isDeviceBinaryTypeSupported()</a>, and <a class="el" href="fpga__device__selector_8hpp_source.html#l00025">cl::sycl::intel::platform_selector::operator()()</a>.</p>
 
@@ -425,7 +458,7 @@ template&lt;backend BackendName&gt; </div>
 <p>Gets the native handle of the SYCL platform. </p>
 <dl class="section return"><dt>Returns</dt><dd>a native handle, the type of which defined by the backend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform_8hpp_source.html#l00109">109</a> of file <a class="el" href="platform_8hpp_source.html">platform.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8hpp_source.html#l00114">114</a> of file <a class="el" href="platform_8hpp_source.html">platform.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, and <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 

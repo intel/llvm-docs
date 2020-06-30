@@ -1,5 +1,8 @@
 var NAVTREEINDEX22 =
 {
+"sampler_8hpp.html#a7affaf1f828474ac7e461ae6e9831367":[4,0,0,0,1,41,3],
+"sampler_8hpp.html#a7affaf1f828474ac7e461ae6e9831367a14f42e76ae2e9c7f0eba61593087e78e":[4,0,0,0,1,41,3,0],
+"sampler_8hpp.html#a7affaf1f828474ac7e461ae6e9831367a7f897d648fc51836310548dd56c5a70d":[4,0,0,0,1,41,3,1],
 "sampler_8hpp_source.html":[4,0,0,0,1,41],
 "sampler__impl_8cpp.html":[4,0,2,1,50],
 "sampler__impl_8cpp_source.html":[4,0,2,1,50],
@@ -246,8 +249,5 @@ var NAVTREEINDEX22 =
 "struct__pi__context.html#aacdb938710dcd43e1f12123af4043da3":[3,0,8,20],
 "struct__pi__context.html#aaeb2ec52f70dd222d4f5febd40a01f4a":[3,0,8,5],
 "struct__pi__context.html#acc5b18d55e9e2189d16ca565fb13c8d9":[3,0,8,11],
-"struct__pi__context.html#ae058668425925400001e631158ae4f20":[3,0,8,19],
-"struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1":[3,0,8,21],
-"struct__pi__context.html#af08cf83490887848df4ada9d3f465916":[3,0,8,9],
-"struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2":[3,0,8,18]
+"struct__pi__context.html#ae058668425925400001e631158ae4f20":[3,0,8,19]
 };

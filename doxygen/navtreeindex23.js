@@ -1,5 +1,8 @@
 var NAVTREEINDEX23 =
 {
+"struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1":[3,0,8,21],
+"struct__pi__context.html#af08cf83490887848df4ada9d3f465916":[3,0,8,9],
+"struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2":[3,0,8,18],
 "struct__pi__context.html#af56ff0c4b9c8cfa11218d62fc91a54f5":[3,0,8,10],
 "struct__pi__context.html#afc9a249b1677570ca35b382d12445025":[3,0,8,17],
 "struct__pi__context_1_1deleter__data.html":[3,0,8,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX23 =
 "structcl_1_1sycl_1_1detail_1_1DevDescT.html#aae121c47457936e32d623c74b9ccf38e":[3,0,1,1,0,54,4],
 "structcl_1_1sycl_1_1detail_1_1DevDescT.html#adc4571a02bb3a5e0e9e0f4deb6324c88":[3,0,1,1,0,54,0],
 "structcl_1_1sycl_1_1detail_1_1DevDescT.html#ae1b28b2cac0746d314a6ab0dcfb254b1":[3,0,1,1,0,54,7],
-"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html":[3,0,1,1,0,59],
-"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277da":[3,0,1,1,0,59,0],
-"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa04375079fd08ad82a0bd3cfbb712ee30":[3,0,1,1,0,59,0,2],
-"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa0a7c9fe2f517c23caf1eace1f94addb7":[3,0,1,1,0,59,0,0]
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html":[3,0,1,1,0,59]
 };

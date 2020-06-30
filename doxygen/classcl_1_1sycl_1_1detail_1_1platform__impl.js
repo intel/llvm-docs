@@ -5,6 +5,7 @@ var classcl_1_1sycl_1_1detail_1_1platform__impl =
     [ "platform_impl", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#a485a32b30891b481b584f7069b7a9494", null ],
     [ "~platform_impl", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#a96264223ce64e7944d824070f911e850", null ],
     [ "get", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#abb894d70230a790f196dd051dd38108b", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#ae86440fd0b8babc4d3dd1375210c912d", null ],
     [ "get_devices", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#ae7106e95eb90c5498e4fe06751c89146", null ],
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#af7f3aec8517a15855cf7b4d670a54cd1", null ],
     [ "get_platforms", "classcl_1_1sycl_1_1detail_1_1platform__impl.html#a368e4f63bd4b21f42bac72739f48fa3f", null ],

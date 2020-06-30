@@ -1,5 +1,8 @@
 var NAVTREEINDEX26 =
 {
+"structcl_1_1sycl_1_1intel_1_1sub__group.html#a6bb9e6e422e15b5e5f21ccdf83d5f585":[3,0,1,1,3,10,4],
+"structcl_1_1sycl_1_1intel_1_1sub__group.html#a729b2a45562244a44c93d0e87244df0e":[3,0,1,1,3,10,8],
+"structcl_1_1sycl_1_1intel_1_1sub__group.html#a94bc0470e30399560dac25b9261889a9":[3,0,1,1,3,10,15],
 "structcl_1_1sycl_1_1intel_1_1sub__group.html#a96c7600e1a0abcbbad6686aa78363ecf":[3,0,1,1,3,10,22],
 "structcl_1_1sycl_1_1intel_1_1sub__group.html#a9ac66a3919f6b2f6bc4b9b530e0c41d4":[3,0,1,1,3,10,10],
 "structcl_1_1sycl_1_1intel_1_1sub__group.html#aa54bc92da738072775e3b1f2082a3e52":[3,0,1,1,3,10,16],
@@ -187,8 +190,8 @@ var NAVTREEINDEX26 =
 "types_8hpp.html#a27848427d46997732c0ad6186b227f6b":[4,0,0,0,1,44,45],
 "types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886":[4,0,0,0,1,44,47],
 "types_8hpp.html#a2bf12e570712d1c48367f396e982a251":[4,0,0,0,1,44,62],
-"types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,44,24],
 "types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,44,23],
+"types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,44,24],
 "types_8hpp.html#a36448a429dc894e3368752066aa63295":[4,0,0,0,1,44,44],
 "types_8hpp.html#a38a5b62828fad8613b4bdd9913a7c11e":[4,0,0,0,1,44,35],
 "types_8hpp.html#a53cff3eaefbe796306a1d941968a382d":[4,0,0,0,1,44,42],
@@ -222,8 +225,8 @@ var NAVTREEINDEX26 =
 "types_8hpp.html#ac584ce40399ae48d463ca9288452c26e":[4,0,0,0,1,44,46],
 "types_8hpp.html#ad2bcd44f79a3de65d64de22c817e4640":[4,0,0,0,1,44,63],
 "types_8hpp.html#ad3373d8fce05b7b4666497e43fc7ad30":[4,0,0,0,1,44,29],
-"types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06":[4,0,0,0,1,44,17],
 "types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06":[4,0,0,0,1,44,16],
+"types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06":[4,0,0,0,1,44,17],
 "types_8hpp.html#adbd52276a65e059008b8aa11bc14d4d6":[4,0,0,0,1,44,38],
 "types_8hpp.html#ae51509d2097e818fef2e3ae3912f03cf":[4,0,0,0,1,44,39],
 "types_8hpp.html#ae8f1a55b1be20b6052dce4af61d421b7":[4,0,0,0,1,44,53],
@@ -246,8 +249,5 @@ var NAVTREEINDEX26 =
 "usm_8hpp.html#a6a8609a1485c85d0f85666276f9ed5c3":[4,0,0,0,1,45,12],
 "usm_8hpp.html#a90e05cdb4ee7ea0b2fef4ea8bfd1adb4":[4,0,0,0,1,45,2],
 "usm_8hpp.html#a926362a87856ed707139cc8e86f5e973":[4,0,0,0,1,45,0],
-"usm_8hpp.html#a938e4c26916c924ae2b7695ece42215b":[4,0,0,0,1,45,7],
-"usm_8hpp.html#a9a338d59dd7adeb19f5515fab4faf17c":[4,0,0,0,1,45,8],
-"usm_8hpp.html#aa97c1f578e23516d56c4437cef4f09da":[4,0,0,0,1,45,17],
-"usm_8hpp.html#aadac759bd9ebd094cfe333257576319d":[4,0,0,0,1,45,14]
+"usm_8hpp.html#a938e4c26916c924ae2b7695ece42215b":[4,0,0,0,1,45,7]
 };
