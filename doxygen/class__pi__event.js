@@ -10,6 +10,7 @@ var class__pi__event =
     [ "get_command_type", "class__pi__event.html#a4edb4638fe40265060d062242fad8eee", null ],
     [ "get_context", "class__pi__event.html#a460cc421c3a23abebc5402d49357a9fb", null ],
     [ "get_end_time", "class__pi__event.html#aa4d5ac3c840af2ef323e1a9b19f767dc", null ],
+    [ "get_event_id", "class__pi__event.html#af8e67b4dae595213988bed380f67983d", null ],
     [ "get_execution_status", "class__pi__event.html#aac121dddcdc24cbee5ad3d3525cd56ea", null ],
     [ "get_queue", "class__pi__event.html#aca7a817522e92be5b33ebc90acac94bb", null ],
     [ "get_queued_time", "class__pi__event.html#a9c2087ecd5ec496b64dd5c33b41d24e5", null ],

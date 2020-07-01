@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['acceptableforgloballoadstore',['AcceptableForGlobalLoadStore',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html#a26a0dc304181ee2753708514efbadac4',1,'cl::sycl::detail::sub_group']]],
+  ['acceptableforlocalloadstore',['AcceptableForLocalLoadStore',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html#a430da6af374a62162fa73455de025696',1,'cl::sycl::detail::sub_group']]],
   ['access_5fmode',['access_mode',['../namespacecl_1_1sycl.html#a8ff538a48e293e2653792311c99c6ecd',1,'cl::sycl']]],
   ['accessor_5ftype',['accessor_type',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a2fad265b82b42d5c6204cb377b3d49e9',1,'cl::sycl::intel::detail::reduction_impl']]],
   ['accessorcommont',['AccessorCommonT',['../classcl_1_1sycl_1_1accessor.html#a6c6d8ae10e06c20b94e673b8e6022e8b',1,'cl::sycl::accessor']]],

@@ -20,6 +20,7 @@ var searchData=
   ['pi',['pi',['../namespacecl_1_1sycl_1_1detail_1_1pi.html',1,'cl::sycl::detail']]],
   ['property',['property',['../namespacecl_1_1sycl_1_1property.html',1,'cl::sycl']]],
   ['queue',['queue',['../namespacecl_1_1sycl_1_1property_1_1queue.html',1,'cl::sycl::property']]],
+  ['sub_5fgroup',['sub_group',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html',1,'cl::sycl::detail']]],
   ['sycl',['sycl',['../namespacecl_1_1sycl.html',1,'cl']]],
   ['usm',['usm',['../namespacecl_1_1sycl_1_1detail_1_1usm.html',1,'cl::sycl::detail::usm'],['../namespacecl_1_1sycl_1_1usm.html',1,'cl::sycl::usm']]]
 ];

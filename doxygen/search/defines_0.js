@@ -28,6 +28,7 @@ var searchData=
   ['_5f_5fsycl_5fcompiler_5fversion',['__SYCL_COMPILER_VERSION',['../version_8hpp.html#a249ef4c2cf1310a4944bb4ae1d33b03b',1,'version.hpp']]],
   ['_5f_5fsycl_5fconstexpr_5fon_5fdevice',['__SYCL_CONSTEXPR_ON_DEVICE',['../half__type_8hpp.html#a19881648e4886cadb220083b3d884cb4',1,'half_type.hpp']]],
   ['_5f_5fsycl_5fconvergent_5f_5f',['__SYCL_CONVERGENT__',['../spirv__ops_8hpp.html#aa8d014f494823edc0fbd58809ccd158f',1,'spirv_ops.hpp']]],
+  ['_5f_5fsycl_5fdeprecated',['__SYCL_DEPRECATED',['../defines_8hpp.html#ab4a96e525ccaf88ee209bf2e85fb7d5a',1,'defines.hpp']]],
   ['_5f_5fsycl_5fe0',['__SYCL_E0',['../types_8hpp.html',1,'__SYCL_E0():&#160;types.hpp'],['../types_8hpp.html',1,'__SYCL_E0():&#160;types.hpp']]],
   ['_5f_5fsycl_5fe1',['__SYCL_E1',['../types_8hpp.html',1,'__SYCL_E1():&#160;types.hpp'],['../types_8hpp.html',1,'__SYCL_E1():&#160;types.hpp']]],
   ['_5f_5fsycl_5fe2',['__SYCL_E2',['../types_8hpp.html',1,'__SYCL_E2():&#160;types.hpp'],['../types_8hpp.html',1,'__SYCL_E2():&#160;types.hpp']]],

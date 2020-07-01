@@ -12,6 +12,7 @@ var classcl_1_1sycl_1_1detail_1_1SYCLMemObjI =
     [ "getType", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068", null ],
     [ "releaseHostMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aab5adbb453e00e71e7667140e9fc6517", null ],
     [ "releaseMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a75e7bc6f53234cb0b7afe74caf41d274", null ],
+    [ "ExecCGCommand", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#abde56188bd93c1b50e35df8dda10bd84", null ],
     [ "Scheduler", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#afb88c77ea5daaefa6c8fa6bc5b9aa5c1", null ],
     [ "MRecord", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a15515300405f37fa361db9aa1f8332bb", null ]
 ];

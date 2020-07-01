@@ -9,7 +9,7 @@ var searchData=
   ['enableiffp',['EnableIfFP',['../namespacecl_1_1sycl_1_1detail.html#a675d525db5d350f3757b592a47858526',1,'cl::sycl::detail']]],
   ['enableifimgaccdatat',['EnableIfImgAccDataT',['../namespacecl_1_1sycl_1_1detail.html#aeefc5bb1b4760af9a04c7072f00fa476',1,'cl::sycl::detail']]],
   ['enableifispointer',['EnableIfIsPointer',['../namespacecl_1_1sycl_1_1intel.html#ab898d263524b1e64acfd0f0c4c98b77c',1,'cl::sycl::intel']]],
-  ['enableifisscalararithmetic',['EnableIfIsScalarArithmetic',['../namespacecl_1_1sycl_1_1intel.html#a1bdcc63af84ac2b3b9365d350d79fc8d',1,'cl::sycl::intel']]],
+  ['enableifisscalararithmetic',['EnableIfIsScalarArithmetic',['../structcl_1_1sycl_1_1intel_1_1sub__group.html#a8cfe92b47822b4bdf0e2eeeb29658d7c',1,'cl::sycl::intel::sub_group::EnableIfIsScalarArithmetic()'],['../namespacecl_1_1sycl_1_1intel.html#a1bdcc63af84ac2b3b9365d350d79fc8d',1,'cl::sycl::intel::EnableIfIsScalarArithmetic()']]],
   ['enableifisvectorarithmetic',['EnableIfIsVectorArithmetic',['../namespacecl_1_1sycl_1_1intel.html#aede473342667d326eb34dd18db5c5a45',1,'cl::sycl::intel']]],
   ['enableifitinputiterator',['EnableIfItInputIterator',['../classcl_1_1sycl_1_1buffer.html#abb9def451f44cef9dbaefcd22b7f1785',1,'cl::sycl::buffer']]],
   ['enableifnotconstiterator',['EnableIfNotConstIterator',['../classcl_1_1sycl_1_1detail_1_1buffer__impl.html#a70d127fe61a9ae2dc88e5d80ee060d21',1,'cl::sycl::detail::buffer_impl']]],

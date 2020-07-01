@@ -17,8 +17,5 @@ var dir_893b3a32fa17000f148d472f42b26e66 =
       [ "kernel_writeable_io_pipe", "classcl_1_1sycl_1_1intel_1_1kernel__writeable__io__pipe.html", "classcl_1_1sycl_1_1intel_1_1kernel__writeable__io__pipe" ]
     ] ],
     [ "reduction.hpp", "reduction_8hpp.html", "reduction_8hpp" ],
-    [ "sub_group.hpp", "sub__group_8hpp.html", null ],
-    [ "sub_group_host.hpp", "sub__group__host_8hpp.html", [
-      [ "sub_group", "structcl_1_1sycl_1_1intel_1_1sub__group.html", "structcl_1_1sycl_1_1intel_1_1sub__group" ]
-    ] ]
+    [ "sub_group.hpp", "sub__group_8hpp.html", "sub__group_8hpp" ]
 ];

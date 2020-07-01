@@ -42,6 +42,7 @@ var searchData=
   ['select_5fcl_5fscalar_5fintegral_5ft',['select_cl_scalar_integral_t',['../namespacecl_1_1sycl_1_1detail.html#a32d59997e0123fb653cefcc6c781bef8',1,'cl::sycl::detail']]],
   ['select_5fcl_5fscalar_5fintegral_5funsigned_5ft',['select_cl_scalar_integral_unsigned_t',['../namespacecl_1_1sycl_1_1detail.html#a2a7c10c0915bf2bc94adb9241f1304be',1,'cl::sycl::detail']]],
   ['select_5fcl_5fscalar_5ft',['select_cl_scalar_t',['../namespacecl_1_1sycl_1_1detail.html#a86846f09a435d485d6dd2c16f0fd9846',1,'cl::sycl::detail']]],
+  ['selectblockt',['SelectBlockT',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html#a8a90fbb7e05922d7959de7d32ded5542',1,'cl::sycl::detail::sub_group']]],
   ['selectmatchingopencltype_5ft',['SelectMatchingOpenCLType_t',['../namespacecl_1_1sycl_1_1detail.html#aaf9c4aff9697f058e072332f77a32fe2',1,'cl::sycl::detail']]],
   ['serializedobj',['SerializedObj',['../namespacecl_1_1sycl_1_1detail.html#ae4d35b797ef6c3e3dcfc255e1d7f1ff0',1,'cl::sycl::detail']]],
   ['shared_5fptr_5fclass',['shared_ptr_class',['../namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012',1,'cl::sycl']]],

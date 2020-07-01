@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('classcl_1_1sycl_1_1interop__handle.htm
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classcl_1_1sycl_1_1interop__handle-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cl::sycl::interop_handle Class Reference</div>  </div>
@@ -120,64 +121,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a668e8d6447ffd22a8d6869d4287aa63e"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1interop__handle.html#a668e8d6447ffd22a8d6869d4287aa63e">get_native_context</a> () const noexcept -&gt; typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; BackendName, <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &gt;::type</td></tr>
 <tr class="memdesc:a668e8d6447ffd22a8d6869d4287aa63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an underlying OpenCL context associated with the SYCL queue used to submit the command group, or the fallback queue if this command-group is re-trying execution on an OpenCL queue.  <a href="#a668e8d6447ffd22a8d6869d4287aa63e">More...</a><br /></td></tr>
 <tr class="separator:a668e8d6447ffd22a8d6869d4287aa63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c3b4e2e6a31cd11b8225160d38f4cf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1interop__handle.html#a6c3b4e2e6a31cd11b8225160d38f4cf6">interop_handle</a> (std::vector&lt; ReqToMem &gt; MemObjs, const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; &amp;Queue, const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">detail::device_impl</a> &gt; &amp;Device, const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1context__impl.html">detail::context_impl</a> &gt; &amp;Context)</td></tr>
-<tr class="separator:a6c3b4e2e6a31cd11b8225160d38f4cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a4f69ba37a1747cab3361b014668d20be"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1interop__handle.html#a4f69ba37a1747cab3361b014668d20be">detail::ExecCGCommand</a></td></tr>
+<tr class="separator:a4f69ba37a1747cab3361b014668d20be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6773ffcfa523f1813df4246b51776feb"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1interop__handle.html#a6773ffcfa523f1813df4246b51776feb">detail::DispatchHostTask</a></td></tr>
+<tr class="separator:a6773ffcfa523f1813df4246b51776feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00037">37</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6c3b4e2e6a31cd11b8225160d38f4cf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c3b4e2e6a31cd11b8225160d38f4cf6">&#9670;&nbsp;</a></span>interop_handle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cl::sycl::interop_handle::interop_handle </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; ReqToMem &gt;&#160;</td>
-          <td class="paramname"><em>MemObjs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Queue</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">detail::device_impl</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Device</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1context__impl.html">detail::context_impl</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Context</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00116">116</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a668e8d6447ffd22a8d6869d4287aa63e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a668e8d6447ffd22a8d6869d4287aa63e">&#9670;&nbsp;</a></span>get_native_context()</h2>
 
@@ -205,7 +160,7 @@ template&lt;backend BackendName = backend::opencl&gt; </div>
 
 <p>Returns an underlying OpenCL context associated with the SYCL queue used to submit the command group, or the fallback queue if this command-group is re-trying execution on an OpenCL queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00105">105</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00115">115</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
 
 </div>
 </div>
@@ -236,7 +191,7 @@ template&lt;backend BackendName = backend::opencl&gt; </div>
 
 <p>Returns an underlying OpenCL device associated with the SYCL queue used to submit the command group, or the fallback queue if this command-group is re-trying execution on an OpenCL queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00095">95</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00100">100</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
 
 </div>
 </div>
@@ -336,6 +291,55 @@ template&lt;backend BackendName = backend::opencl&gt; </div>
 <p>The OpenCL command queue returned is implementation-defined in cases where the SYCL queue maps to multiple underlying OpenCL objects. It is responsibility of the SYCL runtime to ensure the OpenCL queue returned is in a state that can be used to dispatch work, and that other potential OpenCL command queues associated with the same SYCL command queue are not executing commands while the host task is executing. </p>
 
 <p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00085">85</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a6773ffcfa523f1813df4246b51776feb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6773ffcfa523f1813df4246b51776feb">&#9670;&nbsp;</a></span>detail::DispatchHostTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html">detail::DispatchHostTask</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00128">128</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a4f69ba37a1747cab3361b014668d20be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f69ba37a1747cab3361b014668d20be">&#9670;&nbsp;</a></span>detail::ExecCGCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html">detail::ExecCGCommand</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="interop__handle_8hpp_source.html#l00127">127</a> of file <a class="el" href="interop__handle_8hpp_source.html">interop_handle.hpp</a>.</p>
 
 </div>
 </div>
