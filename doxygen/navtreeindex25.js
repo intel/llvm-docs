@@ -1,5 +1,8 @@
 var NAVTREEINDEX25 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html#ad9dbc2f0523a505d314a754320dda212":[3,0,1,1,0,73,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html":[3,0,1,1,0,74],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html#addb77f1714d4d62da94e8c0994f54ad3":[3,0,1,1,0,74,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01info_1_1device_1_1max__work__item__sizes_01_4.html":[3,0,1,1,0,75],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01info_1_1device_1_1max__work__item__sizes_01_4.html#a6bef3c6884ede274c1fe1c19288e58cc":[3,0,1,1,0,75,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01param_01_4.html":[3,0,1,1,0,76],
@@ -246,8 +249,5 @@ var NAVTREEINDEX25 =
 "structcl_1_1sycl_1_1intel_1_1detail_1_1get__reduction__main__kernel__name__t.html":[3,0,1,1,3,0,12],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1get__reduction__main__kernel__name__t.html#a84a60d8936928ce08d2311c9c42ccfb0":[3,0,1,1,3,0,12,0],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits.html":[3,0,1,1,3,0,13],
-"structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html":[3,0,1,1,3,0,14],
-"structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html#a9abfac0c410354d2ace431ac604c5716":[3,0,1,1,3,0,14,1],
-"structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html#afa8cfd353350b2736163bf755836e0b9":[3,0,1,1,3,0,14,0],
-"structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1relaxed_01_4.html":[3,0,1,1,3,0,15]
+"structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html":[3,0,1,1,3,0,14]
 };

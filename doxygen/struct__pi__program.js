@@ -3,7 +3,7 @@ var struct__pi__program =
     [ "native_type", "struct__pi__program.html#a233c10d83b39eb811cc0a323744cd0af", null ],
     [ "_pi_program", "struct__pi__program.html#a7b5a49f4f89db7dcb3a2df8cf3e5328a", null ],
     [ "~_pi_program", "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0", null ],
-    [ "_pi_program", "struct__pi__program.html#aef98325db616ceb8db700bc51cdcc2de", null ],
+    [ "_pi_program", "struct__pi__program.html#ab818d1df9ac3e8670579962b6d95721c", null ],
     [ "build_program", "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854", null ],
     [ "decrement_reference_count", "struct__pi__program.html#aed0f636555a6cb95fb520bfa7cb085de", null ],
     [ "get", "struct__pi__program.html#a51624ac57edd2c5bac78740c8c8960be", null ],
@@ -22,5 +22,7 @@ var struct__pi__program =
     [ "MAX_LOG_SIZE", "struct__pi__program.html#a5cd306d55644c2e3d22b3745f90cffe6", null ],
     [ "module_", "struct__pi__program.html#a2b33b22a97125a60fadc84bffdf6569d", null ],
     [ "refCount_", "struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52", null ],
-    [ "ZeModule", "struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8", null ]
+    [ "ZeBuildLog", "struct__pi__program.html#a1bae8f9def19a50e7e0c439e3b56dba7", null ],
+    [ "ZeModule", "struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8", null ],
+    [ "ZeModuleDesc", "struct__pi__program.html#a442f6fd8ce6376ef33fd7a086f81c252", null ]
 ];

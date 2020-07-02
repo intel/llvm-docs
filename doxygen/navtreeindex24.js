@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#aa2371ef607a8c70849d5361c1c25a9af":[3,0,1,1,0,15,1],
+"structcl_1_1sycl_1_1detail_1_1Boolean.html":[3,0,1,1,0,18],
+"structcl_1_1sycl_1_1detail_1_1Boolean.html#a09dfeeb34872bc23b22a90752e511f74":[3,0,1,1,0,18,2],
 "structcl_1_1sycl_1_1detail_1_1Boolean.html#a0de3dbf10e9618d0f22f7334809340f1":[3,0,1,1,0,18,3],
 "structcl_1_1sycl_1_1detail_1_1Boolean.html#a1e9c18900b9203225f0356e84e3c1afd":[3,0,1,1,0,18,4],
 "structcl_1_1sycl_1_1detail_1_1Boolean.html#a6a87d59629d6587e15b7f2814f5df5c7":[3,0,1,1,0,18,7],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__restricted__shared__allocations_01_4.html#ae141554ab06824118f95df2c13480d13":[3,0,1,1,0,71,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__shared__allocations_01_4.html":[3,0,1,1,0,72],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__shared__allocations_01_4.html#a3c4a0bf590bdeb77165a7220e7d7e745":[3,0,1,1,0,72,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html":[3,0,1,1,0,73],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html#ad9dbc2f0523a505d314a754320dda212":[3,0,1,1,0,73,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html":[3,0,1,1,0,74],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html#addb77f1714d4d62da94e8c0994f54ad3":[3,0,1,1,0,74,0]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html":[3,0,1,1,0,73]
 };
