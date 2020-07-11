@@ -14,7 +14,7 @@ var atomic__ref_8hpp =
     [ "atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_floating_point< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScop9e8246ef496054d7424575b8995f65d9.html", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScop9e8246ef496054d7424575b8995f65d9" ],
     [ "atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_pointer< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01Defaul42d8db00e3fe85753f7f73da9b2e3a69.html", null ],
     [ "atomic_ref", "classcl_1_1sycl_1_1intel_1_1atomic__ref.html", null ],
-    [ "IsValidAtomicAddressSpace", "atomic__ref_8hpp.html#a4308158ee4feacd5a61527f0c095a92c", null ],
+    [ "IsValidAtomicAddressSpace", "atomic__ref_8hpp.html#abb0cbd4026debd126d6c67e53fcdd686", null ],
     [ "IsValidAtomicType", "atomic__ref_8hpp.html#a8dd904d8d283c6da1c6e8ea358b873b5", null ],
     [ "IsValidDefaultOrder", "atomic__ref_8hpp.html#a004fcefce1f0831648538058128b40e0", null ],
     [ "memory_order", "atomic__ref_8hpp.html#a91ca309b86970a235703dc98408ba653", null ],

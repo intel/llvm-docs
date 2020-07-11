@@ -11,6 +11,16 @@ var searchData=
   ['device_5fselector',['device_selector',['../classcl_1_1sycl_1_1device__selector.html',1,'cl::sycl']]],
   ['devicebinaryimage',['DeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html',1,'cl::sycl::detail::pi']]],
   ['devicebinaryproperty',['DeviceBinaryProperty',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html',1,'cl::sycl::detail::pi']]],
+  ['dftype',['dftype',['../structdftype.html',1,'']]],
+  ['dftype_3c_20double_20_3e',['dftype&lt; double &gt;',['../structdftype_3_01double_01_4.html',1,'']]],
   ['dispatchhosttask',['DispatchHostTask',['../classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html',1,'cl::sycl::detail']]],
+  ['dword_5ftype',['dword_type',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1dword__type.html',1,'cl::sycl::intel::gpu::details']]],
+  ['dword_5ftype_3c_20char_20_3e',['dword_type&lt; char &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1dword__type_3_01char_01_4.html',1,'cl::sycl::intel::gpu::details']]],
+  ['dword_5ftype_3c_20short_20_3e',['dword_type&lt; short &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1dword__type_3_01short_01_4.html',1,'cl::sycl::intel::gpu::details']]],
+  ['dword_5ftype_3c_20uchar_20_3e',['dword_type&lt; uchar &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1dword__type_3_01uchar_01_4.html',1,'cl::sycl::intel::gpu::details']]],
+  ['dword_5ftype_3c_20ushort_20_3e',['dword_type&lt; ushort &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1dword__type_3_01ushort_01_4.html',1,'cl::sycl::intel::gpu::details']]],
+  ['dwordtype',['dwordtype',['../structdwordtype.html',1,'']]],
+  ['dwordtype_3c_20int_20_3e',['dwordtype&lt; int &gt;',['../structdwordtype_3_01int_01_4.html',1,'']]],
+  ['dwordtype_3c_20unsigned_20int_20_3e',['dwordtype&lt; unsigned int &gt;',['../structdwordtype_3_01unsigned_01int_01_4.html',1,'']]],
   ['dynrtdevicebinaryimage',['DynRTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html',1,'cl::sycl::detail']]]
 ];

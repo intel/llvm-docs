@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1intel_1_1gpu_1_1element__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1intel_1_1gpu_1_1element__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html#ad5ba61f4cf7454fc3935108053459a21", null ]
+];

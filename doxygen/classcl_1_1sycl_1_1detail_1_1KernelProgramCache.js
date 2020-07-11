@@ -2,10 +2,11 @@ var classcl_1_1sycl_1_1detail_1_1KernelProgramCache =
 [
     [ "BuildError", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError" ],
     [ "BuildResult", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult" ],
+    [ "BuildResultKernel", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel" ],
     [ "ContextPtr", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a6523fc330c25c466dfb6e003892977c5", null ],
     [ "KernelByNameT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a3e74e9a3aee109ae2481109623067aaa", null ],
     [ "KernelCacheT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ae45b79c025b522795f8677b223a047d8", null ],
-    [ "KernelWithBuildStateT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ac1739d71236aa9daa580cd969f4c2f05", null ],
+    [ "KernelWithBuildStateT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a96188925059885cdfbf5d4b231f9ed09", null ],
     [ "PiKernelPtrT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a70a34486c45596239cf31574129f6c6d", null ],
     [ "PiKernelT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ade38d5b66114bf42727698039497326d", null ],
     [ "PiProgramPtrT", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a4d3ead190b89f8bf329a7174d8f3ee67", null ],

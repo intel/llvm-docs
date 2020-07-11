@@ -4,6 +4,7 @@ var atomic_8hpp =
     [ "IsValidAtomicAddressSpace", "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html", "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace" ],
     [ "GetSpirvMemoryScope", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope.html", null ],
     [ "GetSpirvMemoryScope< access::address_space::global_space >", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4" ],
+    [ "GetSpirvMemoryScope< access::address_space::global_device_space >", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4" ],
     [ "GetSpirvMemoryScope< access::address_space::local_space >", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4" ],
     [ "atomic", "classcl_1_1sycl_1_1atomic.html", "classcl_1_1sycl_1_1atomic" ],
     [ "STATIC_ASSERT_NOT_FLOAT", "atomic_8hpp.html#a92f676413d20ba1cc534fb333dc503be", null ],

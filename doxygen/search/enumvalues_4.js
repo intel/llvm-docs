@@ -10,5 +10,6 @@ var searchData=
   ['discard_5fwrite',['discard_write',['../namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17af0d9952b32031a9b0c9606400dff53f9',1,'cl::sycl::access']]],
   ['double',['Double',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aad909d38d705ce75386dd86e611a82f5b',1,'cl::sycl::detail::PlatformUtil']]],
   ['double_5ffp_5fconfig',['double_fp_config',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a758a728dea63697dd78fdda02d46cdd4',1,'cl::sycl::info']]],
-  ['driver_5fversion',['driver_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ad5612938744d9340b9b447854c8a18fb',1,'cl::sycl::info']]]
+  ['driver_5fversion',['driver_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ad5612938744d9340b9b447854c8a18fb',1,'cl::sycl::info']]],
+  ['dword',['DWORD',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a5a4f73217d31446af223739cfb925386',1,'__esimd']]]
 ];

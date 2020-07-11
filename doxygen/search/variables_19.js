@@ -20,5 +20,7 @@ var searchData=
   ['zemem',['ZeMem',['../struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd',1,'_pi_buffer']]],
   ['zemodule',['ZeModule',['../struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8',1,'_pi_program']]],
   ['zemoduledesc',['ZeModuleDesc',['../struct__pi__program.html#a442f6fd8ce6376ef33fd7a086f81c252',1,'_pi_program']]],
-  ['zesampler',['ZeSampler',['../struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673',1,'_pi_sampler']]]
+  ['zesampler',['ZeSampler',['../struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673',1,'_pi_sampler']]],
+  ['zespecconstants',['ZeSpecConstants',['../struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b',1,'_pi_program']]],
+  ['zespecconstantsmutex',['ZeSpecConstantsMutex',['../struct__pi__program.html#a91920a50d408d77eeb7add13bc66e2e1',1,'_pi_program']]]
 ];

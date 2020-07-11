@@ -105,7 +105,7 @@ var searchData=
   ['isreduoptforfastatomicfetch',['IsReduOptForFastAtomicFetch',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#ab853edbcbd1e28b22e6d37b8e1d64757',1,'cl::sycl::intel::detail']]],
   ['isreduoptforfastreduce',['IsReduOptForFastReduce',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#ac1f16427d5c4c820ab003d9cf790cbbd',1,'cl::sycl::intel::detail']]],
   ['isreduplus',['IsReduPlus',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a87f9dfbf8a3409c06c28ee7b35e89df1',1,'cl::sycl::intel::detail']]],
-  ['isvalidatomicaddressspace',['IsValidAtomicAddressSpace',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a4308158ee4feacd5a61527f0c095a92c',1,'cl::sycl::intel::detail']]],
+  ['isvalidatomicaddressspace',['IsValidAtomicAddressSpace',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#abb0cbd4026debd126d6c67e53fcdd686',1,'cl::sycl::intel::detail']]],
   ['isvalidatomictype',['IsValidAtomicType',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a8dd904d8d283c6da1c6e8ea358b873b5',1,'cl::sycl::intel::detail']]],
   ['isvalidcoordtype',['IsValidCoordType',['../namespacecl_1_1sycl_1_1detail.html#aa57622bb20db2414ed12b9eb3afa1d97',1,'cl::sycl::detail']]],
   ['isvaliddefaultorder',['IsValidDefaultOrder',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a004fcefce1f0831648538058128b40e0',1,'cl::sycl::intel::detail']]],

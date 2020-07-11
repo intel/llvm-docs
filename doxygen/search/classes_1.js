@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['abstype',['abstype',['../structabstype.html',1,'']]],
+  ['abstype_3c_20char_20_3e',['abstype&lt; char &gt;',['../structabstype_3_01char_01_4.html',1,'']]],
+  ['abstype_3c_20long_20long_20_3e',['abstype&lt; long long &gt;',['../structabstype_3_01long_01long_01_4.html',1,'']]],
+  ['abstype_3c_20short_20_3e',['abstype&lt; short &gt;',['../structabstype_3_01short_01_4.html',1,'']]],
   ['accelerator_5fselector',['accelerator_selector',['../classcl_1_1sycl_1_1accelerator__selector.html',1,'cl::sycl']]],
   ['accessor',['accessor',['../classcl_1_1sycl_1_1accessor.html',1,'cl::sycl']]],
   ['accessor_3c_20char_2c_201_2c_20cl_3a_3asycl_3a_3aaccess_3a_3amode_3a_3aread_5fwrite_2c_20cl_3a_3asycl_3a_3aaccess_3a_3atarget_3a_3aglobal_5fbuffer_2c_20cl_3a_3asycl_3a_3aaccess_3a_3aplaceholder_3a_3afalse_5ft_20_3e',['accessor&lt; char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t &gt;',['../classcl_1_1sycl_1_1accessor.html',1,'cl::sycl']]],
@@ -15,6 +19,7 @@ var searchData=
   ['accessorbasehost',['AccessorBaseHost',['../classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html',1,'cl::sycl::detail']]],
   ['accessorimpldevice',['AccessorImplDevice',['../classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html',1,'cl::sycl::detail']]],
   ['accessorimplhost',['AccessorImplHost',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html',1,'cl::sycl::detail']]],
+  ['accessorprivateproxy',['AccessorPrivateProxy',['../classcl_1_1sycl_1_1intel_1_1gpu_1_1AccessorPrivateProxy.html',1,'cl::sycl::intel::gpu']]],
   ['accessorsubscript',['AccessorSubscript',['../classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html',1,'cl::sycl::detail::accessor_common']]],
   ['aligned_5fallocator',['aligned_allocator',['../classcl_1_1sycl_1_1detail_1_1aligned__allocator.html',1,'cl::sycl::detail']]],
   ['allocacommand',['AllocaCommand',['../classcl_1_1sycl_1_1detail_1_1AllocaCommand.html',1,'cl::sycl::detail']]],

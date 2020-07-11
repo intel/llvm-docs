@@ -13,5 +13,6 @@ var searchData=
   ['vector_5fsize',['vector_size',['../structcl_1_1sycl_1_1detail_1_1vector__size.html',1,'cl::sycl::detail']]],
   ['vector_5fsize_5fimpl',['vector_size_impl',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl.html',1,'cl::sycl::detail']]],
   ['vector_5fsize_5fimpl_3c_20remove_5fcv_5ft_3c_20remove_5freference_5ft_3c_20t_20_3e_20_3e_20_3e',['vector_size_impl&lt; remove_cv_t&lt; remove_reference_t&lt; T &gt; &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl.html',1,'cl::sycl::detail']]],
-  ['vector_5fsize_5fimpl_3c_20vec_3c_20t_2c_20n_20_3e_20_3e',['vector_size_impl&lt; vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]]
+  ['vector_5fsize_5fimpl_3c_20vec_3c_20t_2c_20n_20_3e_20_3e',['vector_size_impl&lt; vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]],
+  ['vector_5ftype',['vector_type',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1vector__type.html',1,'cl::sycl::intel::gpu']]]
 ];

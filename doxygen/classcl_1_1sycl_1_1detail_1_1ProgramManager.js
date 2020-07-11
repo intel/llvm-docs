@@ -7,7 +7,7 @@ var classcl_1_1sycl_1_1detail_1_1ProgramManager =
     [ "getBuiltPIProgram", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afc307b85f2fd43363d0ebe30fa82fd8e", null ],
     [ "getDeviceImage", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a7b0763effb74b2c0c6f407862e41afa2", null ],
     [ "getInstance", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a9e830067ea4f87b1ca4c225abeacc666", null ],
-    [ "getOrCreateKernel", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a17413cda78899d5c42d4460f4ccf856a", null ],
+    [ "getOrCreateKernel", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a494dbdaeb95ebf4a7d90aedba19213dc", null ],
     [ "getPiProgramFromPiKernel", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a10cc552efb8087c7ee5b06fdcf29a3f9", null ],
     [ "getProgramBuildLog", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a066900235b68c866aa58db9b479fd21f", null ]
 ];

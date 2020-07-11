@@ -66,5 +66,6 @@ var classcl_1_1sycl_1_1detail_1_1Command =
     [ "MTraceEvent", "classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5", null ],
     [ "MTraceEventPrologComplete", "classcl_1_1sycl_1_1detail_1_1Command.html#a4e56e8d97d07ebe93e1e8c687df0c81c", null ],
     [ "MType", "classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d", null ],
-    [ "MUsers", "classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f", null ]
+    [ "MUsers", "classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f", null ],
+    [ "MVisited", "classcl_1_1sycl_1_1detail_1_1Command.html#acb3f9f031e66884e4514d5a392d402c0", null ]
 ];

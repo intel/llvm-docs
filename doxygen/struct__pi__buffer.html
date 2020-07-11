@@ -104,7 +104,7 @@ Inheritance diagram for _pi_buffer:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct__pi__buffer__inherit__graph.png" border="0" usemap="#__pi__buffer_inherit__map" alt="Inheritance graph"/></div>
 <map name="__pi__buffer_inherit__map" id="__pi__buffer_inherit__map">
-<area shape="rect" id="node2" href="struct__pi__mem.html" title="PI Mem mapping to a CUDA memory allocation. " alt="" coords="9,80,83,107"/>
+<area shape="rect" id="node2" href="struct__pi__mem.html" title="PI Mem mapping to CUDA memory allocations, both data and texture/surface. " alt="" coords="9,80,83,107"/>
 <area shape="rect" id="node3" href="struct__pi__object.html" title="_pi_object" alt="" coords="5,5,87,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -113,12 +113,15 @@ Collaboration diagram for _pi_buffer:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct__pi__buffer__coll__graph.png" border="0" usemap="#__pi__buffer_coll__map" alt="Collaboration graph"/></div>
 <map name="__pi__buffer_coll__map" id="__pi__buffer_coll__map">
-<area shape="rect" id="node2" href="struct__pi__mem.html" title="PI Mem mapping to a CUDA memory allocation. " alt="" coords="1266,429,1341,456"/>
-<area shape="rect" id="node3" href="struct__pi__object.html" title="_pi_object" alt="" coords="379,451,461,477"/>
-<area shape="rect" id="node10" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1011,361,1101,388"/>
-<area shape="rect" id="node11" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,283,859,309"/>
-<area shape="rect" id="node7" href="classchar.html" title="char" alt="" coords="1033,572,1079,599"/>
-<area shape="rect" id="node17" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,121,467,148"/>
+<area shape="rect" id="node2" href="struct__pi__mem.html" title="PI Mem mapping to CUDA memory allocations, both data and texture/surface. " alt="" coords="1257,563,1331,589"/>
+<area shape="rect" id="node10" href="struct__pi__mem_1_1mem___1_1buffer__mem__.html" title="_pi_mem::mem_::buffer_mem_" alt="" coords="1499,284,1701,311"/>
+<area shape="rect" id="node3" href="struct__pi__object.html" title="_pi_object" alt="" coords="379,687,461,713"/>
+<area shape="rect" id="node18" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1007,563,1096,589"/>
+<area shape="rect" id="node19" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,484,859,511"/>
+<area shape="rect" id="node5" href="union__pi__mem_1_1mem__.html" title="A PI Memory object represents either plain memory allocations (&quot;Buffers&quot; in OpenCL) or typed allocati..." alt="" coords="1845,284,1964,311"/>
+<area shape="rect" id="node6" href="struct__pi__mem_1_1mem___1_1surface__mem__.html" title="_pi_mem::mem_::surface_mem_" alt="" coords="1493,80,1707,107"/>
+<area shape="rect" id="node16" href="classchar.html" title="char" alt="" coords="1028,801,1075,828"/>
+<area shape="rect" id="node25" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,355,467,381"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -135,17 +138,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8ca3c4c33b398bed6ddf6d4272774fdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__buffer.html#a8ca3c4c33b398bed6ddf6d4272774fdb">isSubBuffer</a> () const</td></tr>
 <tr class="separator:a8ca3c4c33b398bed6ddf6d4272774fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_struct__pi__mem"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_struct__pi__mem')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="struct__pi__mem.html">_pi_mem</a></td></tr>
-<tr class="memitem:a2735fae8c7932d6b8263f1d638652264 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a2735fae8c7932d6b8263f1d638652264">_pi_mem</a> (<a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> ctxt, <a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a> parent, <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a> mode, <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a> ptr, void *host_ptr, size_t size)</td></tr>
-<tr class="separator:a2735fae8c7932d6b8263f1d638652264 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dda5b2a2e033cb371775cce95364d7b inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a6dda5b2a2e033cb371775cce95364d7b">_pi_mem</a> (<a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> ctxt, <a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a> parent, <a class="el" href="struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55">mem_::buffer_mem_::alloc_mode</a> mode, <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a> ptr, void *host_ptr, size_t size)</td></tr>
+<tr class="memdesc:a6dda5b2a2e033cb371775cce95364d7b inherit pub_methods_struct__pi__mem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the PI MEM handler for a non-typed allocation ("buffer")  <a href="struct__pi__mem.html#a6dda5b2a2e033cb371775cce95364d7b">More...</a><br /></td></tr>
+<tr class="separator:a6dda5b2a2e033cb371775cce95364d7b inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5e19416fa6df4b2d61d77f112397c8 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9f5e19416fa6df4b2d61d77f112397c8">_pi_mem</a> (<a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> ctxt, CUarray array, CUsurfObject surf, <a class="el" href="pi_8h.html#a9995c520b89d8b9d3ae445823d568c5a">pi_mem_type</a> image_type, void *host_ptr)</td></tr>
+<tr class="memdesc:a9f5e19416fa6df4b2d61d77f112397c8 inherit pub_methods_struct__pi__mem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the PI allocation for an Image object (surface in CUDA)  <a href="struct__pi__mem.html#a9f5e19416fa6df4b2d61d77f112397c8">More...</a><br /></td></tr>
+<tr class="separator:a9f5e19416fa6df4b2d61d77f112397c8 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebc26c331e43a45f182812a7f2ee797d inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d">~_pi_mem</a> ()</td></tr>
 <tr class="separator:aebc26c331e43a45f182812a7f2ee797d inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5167988e00829fba3cf4d3bd8271967 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#af5167988e00829fba3cf4d3bd8271967">is_buffer</a> () const noexcept</td></tr>
-<tr class="memdesc:af5167988e00829fba3cf4d3bd8271967 inherit pub_methods_struct__pi__mem"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Adapt once images are supported.  <a href="struct__pi__mem.html#af5167988e00829fba3cf4d3bd8271967">More...</a><br /></td></tr>
 <tr class="separator:af5167988e00829fba3cf4d3bd8271967 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c2aae50881caf61d311fe75a2ee87b inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a95c2aae50881caf61d311fe75a2ee87b">is_sub_buffer</a> () const noexcept</td></tr>
 <tr class="separator:a95c2aae50881caf61d311fe75a2ee87b inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6add1624447042834e6d34ad4bd1c9a inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ad6add1624447042834e6d34ad4bd1c9a">get</a> () const noexcept</td></tr>
-<tr class="separator:ad6add1624447042834e6d34ad4bd1c9a inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbceaf290710aa4db27fba364e233e86 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#abbceaf290710aa4db27fba364e233e86">is_image</a> () const noexcept</td></tr>
+<tr class="separator:abbceaf290710aa4db27fba364e233e86 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1048ed41565664dbdbad0db2218b2fad inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a1048ed41565664dbdbad0db2218b2fad">get_context</a> () const noexcept</td></tr>
 <tr class="separator:a1048ed41565664dbdbad0db2218b2fad inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa929377c74539593f2a2c6f6822389 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a3aa929377c74539593f2a2c6f6822389">increment_reference_count</a> () noexcept</td></tr>
@@ -154,18 +160,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae957daeff1a6ec53dba7387281407def inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275e89afd9e097ec16265868d932032f inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a275e89afd9e097ec16265868d932032f">get_reference_count</a> () const noexcept</td></tr>
 <tr class="separator:a275e89afd9e097ec16265868d932032f inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6417a2cfc2c16e607fe781f216a3a8a inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#af6417a2cfc2c16e607fe781f216a3a8a">get_size</a> () const noexcept</td></tr>
-<tr class="separator:af6417a2cfc2c16e607fe781f216a3a8a inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf210c8137e219f4656952ef35454220 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#abf210c8137e219f4656952ef35454220">get_map_ptr</a> () const noexcept</td></tr>
-<tr class="separator:abf210c8137e219f4656952ef35454220 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed4b74e6b79249b7fad91b9061b9fb02 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aed4b74e6b79249b7fad91b9061b9fb02">get_map_offset</a> (void *ptr) const noexcept</td></tr>
-<tr class="separator:aed4b74e6b79249b7fad91b9061b9fb02 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade67ff7fc3a116e18a954576fdeda150 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ade67ff7fc3a116e18a954576fdeda150">map_to_ptr</a> (size_t offset, cl_map_flags flags) noexcept</td></tr>
-<tr class="separator:ade67ff7fc3a116e18a954576fdeda150 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a428f85a34e907b3c38fe5c9365371cd9 inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a428f85a34e907b3c38fe5c9365371cd9">unmap</a> (void *ptr) noexcept</td></tr>
-<tr class="separator:a428f85a34e907b3c38fe5c9365371cd9 inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a836623e9588d3c4acac63f532d7edf7b inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">cl_map_flags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a836623e9588d3c4acac63f532d7edf7b">get_map_flags</a> () const noexcept</td></tr>
-<tr class="separator:a836623e9588d3c4acac63f532d7edf7b inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15063ff84e67289129e03decb8891bcd inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a15063ff84e67289129e03decb8891bcd">~_pi_mem</a> ()=default</td></tr>
 <tr class="separator:a15063ff84e67289129e03decb8891bcd inherit pub_methods_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ebfeb2cb495b3b73139904887ee258c inherit pub_methods_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a6ebfeb2cb495b3b73139904887ee258c">addMapping</a> (void *MappedTo, size_t Size, size_t Offset)</td></tr>
@@ -180,36 +174,25 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a61ffd1ec6e561468f08cc05eb6a020cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchar.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd">ZeMem</a></td></tr>
 <tr class="separator:a61ffd1ec6e561468f08cc05eb6a020cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1adaccbb2645f61e282dd66d523de376"><td class="memItemLeft" >struct {</td></tr>
-<tr class="memitem:af24e0f2c0d75baec4797597a2856bb8f"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct__pi__mem.html">_pi_mem</a> *&#160;&#160;&#160;<a class="el" href="struct__pi__buffer.html#aabab9f4228e10b2e6f96249bdfc671a9">Parent</a></td></tr>
-<tr class="separator:af24e0f2c0d75baec4797597a2856bb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f3ed128ccf04718837692533e139448"><td class="memItemLeft" >&#160;&#160;&#160;size_t&#160;&#160;&#160;<a class="el" href="struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf">Origin</a></td></tr>
-<tr class="separator:a2f3ed128ccf04718837692533e139448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41e007835109c07bef22bd2d1d44263f"><td class="memItemLeft" >&#160;&#160;&#160;size_t&#160;&#160;&#160;<a class="el" href="struct__pi__buffer.html#a35453f1a8090674506c83200ca09303b">Size</a></td></tr>
-<tr class="separator:a41e007835109c07bef22bd2d1d44263f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1adaccbb2645f61e282dd66d523de376"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__buffer.html#a1adaccbb2645f61e282dd66d523de376">SubBuffer</a></td></tr>
-<tr class="separator:a1adaccbb2645f61e282dd66d523de376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d305994c71f3f2af5d7b490f035d62"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a27e5572a0a036af62031525610160eeb"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct__pi__mem.html">_pi_mem</a> *&#160;&#160;&#160;<a class="el" href="struct__pi__buffer.html#aabab9f4228e10b2e6f96249bdfc671a9">Parent</a></td></tr>
+<tr class="separator:a27e5572a0a036af62031525610160eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4689a62a3a8326db1e13479f33d6e3d0"><td class="memItemLeft" >&#160;&#160;&#160;size_t&#160;&#160;&#160;<a class="el" href="struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf">Origin</a></td></tr>
+<tr class="separator:a4689a62a3a8326db1e13479f33d6e3d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355413c51e6bb797384ebef086db673f"><td class="memItemLeft" >&#160;&#160;&#160;size_t&#160;&#160;&#160;<a class="el" href="struct__pi__buffer.html#a35453f1a8090674506c83200ca09303b">Size</a></td></tr>
+<tr class="separator:a355413c51e6bb797384ebef086db673f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d305994c71f3f2af5d7b490f035d62"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__buffer.html#ae5d305994c71f3f2af5d7b490f035d62">SubBuffer</a></td></tr>
+<tr class="separator:ae5d305994c71f3f2af5d7b490f035d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_struct__pi__mem"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_struct__pi__mem')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="struct__pi__mem.html">_pi_mem</a></td></tr>
 <tr class="memitem:afeb0ef34df3b78485d184900007b2a21 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21">context_</a></td></tr>
 <tr class="separator:afeb0ef34df3b78485d184900007b2a21 inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24ebff361179097fd3f02fb4723153bb inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a24ebff361179097fd3f02fb4723153bb">parent_</a></td></tr>
-<tr class="separator:a24ebff361179097fd3f02fb4723153bb inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9556a97da972a95d3ccab5755961729a inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9556a97da972a95d3ccab5755961729a">ptr_</a></td></tr>
-<tr class="separator:a9556a97da972a95d3ccab5755961729a inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa282d69586314e359e5b45ae579ac5cc inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aa282d69586314e359e5b45ae579ac5cc">hostPtr_</a></td></tr>
-<tr class="separator:aa282d69586314e359e5b45ae579ac5cc inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf2f1018d1092e572d2b7d426af1d8ca inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#abf2f1018d1092e572d2b7d426af1d8ca">size_</a></td></tr>
-<tr class="separator:abf2f1018d1092e572d2b7d426af1d8ca inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099358d01a7f6f11e605ccddac7e4a30 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a099358d01a7f6f11e605ccddac7e4a30">mapOffset_</a></td></tr>
-<tr class="separator:a099358d01a7f6f11e605ccddac7e4a30 inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a907ca90796097685f69c3bd5f4d185fe inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a907ca90796097685f69c3bd5f4d185fe">mapPtr_</a></td></tr>
-<tr class="separator:a907ca90796097685f69c3bd5f4d185fe inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e5dd7c7c5435a9118ebe59ce7b68ce inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">cl_map_flags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a16e5dd7c7c5435a9118ebe59ce7b68ce">mapFlags_</a></td></tr>
-<tr class="separator:a16e5dd7c7c5435a9118ebe59ce7b68ce inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a053c712d3983e00f30f097f96d3c10a0 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">std::atomic_uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0">refCount_</a></td></tr>
+<tr class="memdesc:a053c712d3983e00f30f097f96d3c10a0 inherit pub_attribs_struct__pi__mem"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference counting of the handler.  <a href="struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0">More...</a><br /></td></tr>
 <tr class="separator:a053c712d3983e00f30f097f96d3c10a0 inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad646178731915cf7f0179124b6ae73c6 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">_pi_mem::alloc_mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ad646178731915cf7f0179124b6ae73c6">allocMode_</a></td></tr>
-<tr class="separator:ad646178731915cf7f0179124b6ae73c6 inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac840f8416b7e278f282ff3523057c77 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59">_pi_mem::mem_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aac840f8416b7e278f282ff3523057c77">mem_type_</a></td></tr>
+<tr class="separator:aac840f8416b7e278f282ff3523057c77 inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9907188047f64222c897c4d61964a232 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">union <a class="el" href="union__pi__mem_1_1mem__.html">_pi_mem::mem_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9907188047f64222c897c4d61964a232">mem_</a></td></tr>
+<tr class="separator:a9907188047f64222c897c4d61964a232 inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403ef5332404e235a08ea3a1a0c5f97e inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a403ef5332404e235a08ea3a1a0c5f97e">Platform</a></td></tr>
 <tr class="separator:a403ef5332404e235a08ea3a1a0c5f97e inherit pub_attribs_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80835690887d8a5aeb8ba2831cb2f955 inherit pub_attribs_struct__pi__mem"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchar.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955">MapHostPtr</a></td></tr>
@@ -221,14 +204,10 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_struct__pi__mem"><td colspan="2" onclick="javascript:toggleInherit('pub_types_struct__pi__mem')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="struct__pi__mem.html">_pi_mem</a></td></tr>
-<tr class="memitem:afb3145cea0024c0bedcd5b4c19011d02 inherit pub_types_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a> { <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">alloc_mode::classic</a>, 
-<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">alloc_mode::use_host_ptr</a>, 
-<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607">alloc_mode::copy_in</a>
- }<tr class="memdesc:afb3145cea0024c0bedcd5b4c19011d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">alloc_mode classic: Just a normal buffer allocated on the device via cuda malloc use_host_ptr: Use an address on the host for the device copy_in: The data for the device comes from the host but the host pointer is not available later for re-use  <a href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:afb3145cea0024c0bedcd5b4c19011d02 inherit pub_types_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c8fa65aa01ea0da98a80eb83a9b550 inherit pub_types_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a> = <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a></td></tr>
-<tr class="separator:a30c8fa65aa01ea0da98a80eb83a9b550 inherit pub_types_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ac70810bd3be2b55e4d31859966b59 inherit pub_types_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59">mem_type</a> { <a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59a7f2db423a49b305459147332fb01cf87">mem_type::buffer</a>, 
+<a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59ad302e976c9dd527a9521a88c012437c5">mem_type::surface</a>
+ }</td></tr>
+<tr class="separator:a67ac70810bd3be2b55e4d31859966b59 inherit pub_types_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63b0b992e1834877641b4220c5d2f135 inherit pub_types_struct__pi__mem"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> = <a class="el" href="struct__pi__context.html">_pi_context</a> *</td></tr>
 <tr class="separator:a63b0b992e1834877641b4220c5d2f135 inherit pub_types_struct__pi__mem"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_struct__pi__mem"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_struct__pi__mem')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="struct__pi__mem.html">_pi_mem</a></td></tr>
@@ -465,8 +444,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1adaccbb2645f61e282dd66d523de376"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1adaccbb2645f61e282dd66d523de376">&#9670;&nbsp;</a></span>SubBuffer</h2>
+<a id="ae5d305994c71f3f2af5d7b490f035d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d305994c71f3f2af5d7b490f035d62">&#9670;&nbsp;</a></span>SubBuffer</h2>
 
 <div class="memitem">
 <div class="memproto">

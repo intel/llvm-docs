@@ -20,6 +20,8 @@ var searchData=
   ['hashcstr',['HashCStr',['../structcl_1_1sycl_1_1detail_1_1HashCStr.html',1,'cl::sycl::detail']]],
   ['helper',['helper',['../structcl_1_1____host__std_1_1detail_1_1helper.html',1,'cl::__host_std::detail']]],
   ['helper_3c_200_20_3e',['helper&lt; 0 &gt;',['../structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html',1,'cl::__host_std::detail']]],
+  ['hftype',['hftype',['../structhftype.html',1,'']]],
+  ['hftype_3c_20half_20_3e',['hftype&lt; half &gt;',['../structhftype_3_01half_01_4.html',1,'']]],
   ['host_5faccessor',['host_accessor',['../classcl_1_1sycl_1_1host__accessor.html',1,'cl::sycl']]],
   ['host_5fselector',['host_selector',['../classcl_1_1sycl_1_1host__selector.html',1,'cl::sycl']]],
   ['hostkernel',['HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html',1,'cl::sycl::detail']]],

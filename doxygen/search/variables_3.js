@@ -12,6 +12,7 @@ var searchData=
   ['clsetkernelargmempointername',['clSetKernelArgMemPointerName',['../pi__opencl_8cpp.html#a865cd96acb132c2086b73db83766a4c8',1,'pi_opencl.cpp']]],
   ['clsetprogramspecializationconstantname',['clSetProgramSpecializationConstantName',['../pi__opencl_8cpp.html#adf3f37188849ba8c8aa7084491647406',1,'pi_opencl.cpp']]],
   ['clsharedmemallocname',['clSharedMemAllocName',['../pi__opencl_8cpp.html#ab1fa2f421251079da1f812894a2c731d',1,'pi_opencl.cpp']]],
+  ['cmpi',['CMPI',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a46c7d5f2ee34fa1025c22619a94bae01',1,'cl::sycl::intel::gpu']]],
   ['code',['Code',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68',1,'cl::sycl::detail::KernelProgramCache::BuildError']]],
   ['commanddata',['CommandData',['../class__pi__event.html#a5993746ca407e835220191dc4cf48f39',1,'_pi_event']]],
   ['commandtype',['CommandType',['../class__pi__event.html#a8e51bce41cd2d0c9f986d780712b7d34',1,'_pi_event']]],
@@ -21,7 +22,8 @@ var searchData=
   ['configfromcompiledefenabled',['ConfigFromCompileDefEnabled',['../namespacecl_1_1sycl_1_1detail.html#a36cb99fb3e385f2a9c276ff777e66c37',1,'cl::sycl::detail']]],
   ['configfromenvenabled',['ConfigFromEnvEnabled',['../namespacecl_1_1sycl_1_1detail.html#a245c541983ad2cf1ded65461d01a7dfb',1,'cl::sycl::detail']]],
   ['configfromfileenabled',['ConfigFromFileEnabled',['../namespacecl_1_1sycl_1_1detail.html#a913f2c2f59992d8e823298d3210d408e',1,'cl::sycl::detail']]],
+  ['conformable',['conformable',['../structressize.html#a7abaa31a9b03a22aed78c2ede44dd62d',1,'ressize']]],
   ['context',['Context',['../struct__pi__queue.html#a6c2bdb3b70b640d9e41511e931e2b82f',1,'_pi_queue::Context()'],['../class__pi__event.html#a135c8a28d6e5276efd69f8b737caf352',1,'_pi_event::Context()'],['../struct__pi__program.html#a1b8a31275c1dada5a33deee42ea29f6a',1,'_pi_program::Context()']]],
-  ['context_5f',['context_',['../struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21',1,'_pi_mem::context_()'],['../struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4',1,'_pi_queue::context_()'],['../struct__pi__program.html#af256d620344bdd34d8aa60cc058bdad7',1,'_pi_program::context_()'],['../struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb',1,'_pi_kernel::context_()']]],
+  ['context_5f',['context_',['../struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21',1,'_pi_mem::context_()'],['../struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4',1,'_pi_queue::context_()'],['../struct__pi__program.html#af256d620344bdd34d8aa60cc058bdad7',1,'_pi_program::context_()'],['../struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb',1,'_pi_kernel::context_()'],['../struct__pi__sampler.html#a9c348292d97da1ef286fb7bdbe7ae48a',1,'_pi_sampler::context_()']]],
   ['cucontext_5f',['cuContext_',['../struct__pi__context.html#a8764718259af9ea016e3d2faeced5c70',1,'_pi_context']]]
 ];

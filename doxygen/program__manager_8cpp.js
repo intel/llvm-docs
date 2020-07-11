@@ -14,7 +14,7 @@ var program__manager_8cpp =
     [ "getDeviceLibPrograms", "program__manager_8cpp.html#adb31201a3c7d99a08d7771b46f2f4a27", null ],
     [ "getFirstDevice", "program__manager_8cpp.html#a307371673a7ad5641cb72909ba731045", null ],
     [ "getFormatStr", "program__manager_8cpp.html#a8d920ea65962dbd1901ac90f0c81aeb3", null ],
-    [ "getOrBuild", "program__manager_8cpp.html#ad2be343ff99a54a66d9666387515f216", null ],
+    [ "getOrBuild", "program__manager_8cpp.html#a5bb97fd352dd69e2c791625dcbf7b745", null ],
     [ "isDeviceBinaryTypeSupported", "program__manager_8cpp.html#a474f4027bdd65987004b7c7c4524e0e3", null ],
     [ "loadDeviceLib", "program__manager_8cpp.html#ac29f9371e6109311affa76a9de3ec78b", null ],
     [ "loadDeviceLibFallback", "program__manager_8cpp.html#a051975fc0eb6d3709b47576a7d906948", null ],

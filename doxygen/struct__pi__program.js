@@ -24,5 +24,7 @@ var struct__pi__program =
     [ "refCount_", "struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52", null ],
     [ "ZeBuildLog", "struct__pi__program.html#a1bae8f9def19a50e7e0c439e3b56dba7", null ],
     [ "ZeModule", "struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8", null ],
-    [ "ZeModuleDesc", "struct__pi__program.html#a442f6fd8ce6376ef33fd7a086f81c252", null ]
+    [ "ZeModuleDesc", "struct__pi__program.html#a442f6fd8ce6376ef33fd7a086f81c252", null ],
+    [ "ZeSpecConstants", "struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b", null ],
+    [ "ZeSpecConstantsMutex", "struct__pi__program.html#a91920a50d408d77eeb7add13bc66e2e1", null ]
 ];

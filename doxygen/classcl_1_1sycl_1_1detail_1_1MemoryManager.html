@@ -105,6 +105,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab9ff512130fc0fa1a38cb168eb1a0386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac311b1b640b53526e5f6a964ac52eba9"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac311b1b640b53526e5f6a964ac52eba9">allocate</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, bool InitFromUserData, void *HostPtr, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ac311b1b640b53526e5f6a964ac52eba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad82016f75f13b645c868986261b1a6da"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad82016f75f13b645c868986261b1a6da">wrapIntoImageBuffer</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *MemBuf, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj)</td></tr>
+<tr class="separator:ad82016f75f13b645c868986261b1a6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdc14d8315ab61332c5de245bfa76f7c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#acdc14d8315ab61332c5de245bfa76f7c">releaseImageBuffer</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *ImageBuf)</td></tr>
+<tr class="separator:acdc14d8315ab61332c5de245bfa76f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7e34b2e2df980c15d3b2bed30ac0908"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae7e34b2e2df980c15d3b2bed30ac0908">allocateMemSubBuffer</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, void *ParentMemObj, size_t ElemSize, size_t Offset, <a class="el" href="classcl_1_1sycl_1_1range.html">range</a>&lt; 3 &gt; Range, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:ae7e34b2e2df980c15d3b2bed30ac0908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e3fbe9dd146978831683089d2d42837"><td class="memItemLeft" align="right" valign="top">static void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a7e3fbe9dd146978831683089d2d42837">allocateMemBuffer</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> TargetContext, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObj, void *UserPtr, bool HostPtrReadOnly, size_t Size, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;InteropEvent, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;InteropContext, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEventToWait)</td></tr>
@@ -198,7 +202,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00065">65</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00071">71</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ad8d2f576541c58c6ada6d530d1bea092">cl::sycl::detail::SYCLMemObjI::allocateMem()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
 
@@ -252,9 +256,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00132">132</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00162">162</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00509">PI_MEM_FLAGS_HOST_PTR_USE</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01383">piMemBufferCreate()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00509">PI_MEM_FLAGS_HOST_PTR_USE</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01408">piMemBufferCreate()</a>.</p>
 
 </div>
 </div>
@@ -304,7 +308,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00078">78</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00108">108</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a741ab88936bba4fc184aed0b1645f171">cl::sycl::detail::SYCLMemObjI::allocateHostMem()</a>, and <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>.</p>
 
@@ -362,9 +366,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00114">114</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00144">144</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00509">PI_MEM_FLAGS_HOST_PTR_USE</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01458">piMemImageCreate()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00510">PI_MEM_FLAGS_HOST_PTR_COPY</a>, <a class="el" href="pi_8h_source.html#l00509">PI_MEM_FLAGS_HOST_PTR_USE</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01483">piMemImageCreate()</a>.</p>
 
 </div>
 </div>
@@ -420,9 +424,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00093">93</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00123">123</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02348">piEventRetain()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02425">piEventRetain()</a>.</p>
 
 </div>
 </div>
@@ -496,7 +500,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00148">148</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00178">178</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
 </div>
 </div>
@@ -582,7 +586,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00162">162</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00192">192</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="image__impl_8cpp_source.html#l00307">cl::sycl::detail::image_impl&lt; Dimensions &gt;::allocateMem()</a>.</p>
 
@@ -652,11 +656,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00176">176</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00206">206</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="pi_8h_source.html#l00448">PI_BUFFER_CREATE_TYPE_REGION</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00089">PI_MISALIGNED_SUB_BUFFER_OFFSET</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__level0_8cpp_source.html#l03260">piMemBufferPartition()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="pi_8h_source.html#l00448">PI_BUFFER_CREATE_TYPE_REGION</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00507">PI_MEM_FLAGS_ACCESS_RW</a>, <a class="el" href="pi_8h_source.html#l00089">PI_MISALIGNED_SUB_BUFFER_OFFSET</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__level0_8cpp_source.html#l03337">piMemBufferPartition()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00811">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>.</p>
 
 </div>
 </div>
@@ -784,11 +788,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00371">371</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00401">401</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="memory__manager_8cpp_source.html#l00302">cl::sycl::detail::copyD2D()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00255">cl::sycl::detail::copyD2H()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00206">cl::sycl::detail::copyH2D()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00343">cl::sycl::detail::copyH2H()</a>.</p>
+<p class="reference">References <a class="el" href="memory__manager_8cpp_source.html#l00332">cl::sycl::detail::copyD2D()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00285">cl::sycl::detail::copyD2H()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00236">cl::sycl::detail::copyH2D()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00373">cl::sycl::detail::copyH2H()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01120">cl::sycl::detail::MemCpyCommand::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l01264">cl::sycl::detail::MemCpyCommandHost::getContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01132">cl::sycl::detail::MemCpyCommand::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l01276">cl::sycl::detail::MemCpyCommandHost::getContext()</a>.</p>
 
 </div>
 </div>
@@ -850,11 +854,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00497">497</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00527">527</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03413">piextUSMEnqueueMemcpy()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03490">piextUSMEnqueueMemcpy()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
 </div>
 </div>
@@ -952,11 +956,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00411">411</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00441">441</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi__level0_8cpp_source.html#l02884">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03249">piEnqueueMemImageFill()</a>, and <a class="el" href="range_8hpp_source.html#l00057">cl::sycl::range&lt; dimensions &gt;::size()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi__level0_8cpp_source.html#l02961">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03326">piEnqueueMemImageFill()</a>, and <a class="el" href="range_8hpp_source.html#l00057">cl::sycl::range&lt; dimensions &gt;::size()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
 </div>
 </div>
@@ -1018,11 +1022,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00514">514</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00544">544</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03397">piextUSMEnqueueMemset()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03474">piextUSMEnqueueMemset()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
 </div>
 </div>
@@ -1114,11 +1118,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00437">437</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00467">467</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemBufferMap()</a>, and <a class="el" href="stream__impl_8hpp_source.html#l00316">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi__level0_8cpp_source.html#l02976">piEnqueueMemBufferMap()</a>, and <a class="el" href="stream__impl_8hpp_source.html#l00316">cl::sycl::detail::write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>.</p>
 
 </div>
 </div>
@@ -1174,11 +1178,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00529">529</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00559">559</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l01375">PI_USM_MIGRATION_TBD0</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03438">piextUSMEnqueuePrefetch()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00087">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l01391">PI_USM_MIGRATION_TBD0</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03515">piextUSMEnqueuePrefetch()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1242,49 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a75e7bc6f53234cb0b7afe74caf41d274">cl::sycl::detail::SYCLMemObjI::releaseMem()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00023">cl::sycl::detail::waitForEvents()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<a id="acdc14d8315ab61332c5de245bfa76f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdc14d8315ab61332c5de245bfa76f7c">&#9670;&nbsp;</a></span>releaseImageBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::releaseImageBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ImageBuf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00048">48</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__level0_8cpp_source.html#l01467">piMemRelease()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>.</p>
 
 </div>
 </div>
@@ -1288,9 +1334,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00048">48</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00054">54</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01442">piMemRelease()</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aab5adbb453e00e71e7667140e9fc6517">cl::sycl::detail::SYCLMemObjI::releaseHostMem()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01467">piMemRelease()</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aab5adbb453e00e71e7667140e9fc6517">cl::sycl::detail::SYCLMemObjI::releaseHostMem()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="sycl__mem__obj__t_8cpp_source.html#l00048">cl::sycl::detail::SYCLMemObjT::releaseMem()</a>.</p>
 
@@ -1354,11 +1400,59 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00483">483</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00513">513</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02974">piEnqueueMemUnmap()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03051">piEnqueueMemUnmap()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>.</p>
+
+</div>
+</div>
+<a id="ad82016f75f13b645c868986261b1a6da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad82016f75f13b645c868986261b1a6da">&#9670;&nbsp;</a></span>wrapIntoImageBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::detail::MemoryManager::wrapIntoImageBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a>&#160;</td>
+          <td class="paramname"><em>TargetContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>MemBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *&#160;</td>
+          <td class="paramname"><em>MemObj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00085">85</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00768">_pi_image_desc::buffer</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a0ae169c7e40bbac53a166e5adc86bab3">cl::sycl::detail::SYCLMemObjI::getSize()</a>, <a class="el" href="pi_8h_source.html#l00759">_pi_image_desc::image_type</a>, <a class="el" href="pi_8h_source.html#l00760">_pi_image_desc::image_width</a>, <a class="el" href="pi_8h_source.html#l00414">PI_IMAGE_CHANNEL_ORDER_R</a>, <a class="el" href="pi_8h_source.html#l00440">PI_IMAGE_CHANNEL_TYPE_UNSIGNED_INT8</a>, <a class="el" href="pi_8h_source.html#l00388">PI_MEM_TYPE_IMAGE1D_BUFFER</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01483">piMemImageCreate()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>.</p>
 
 </div>
 </div>

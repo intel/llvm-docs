@@ -165,7 +165,8 @@ the system, refer to
 <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html">NVIDIA CUDA Installation Guide for Linux</a>.</p>
 <p>Currently, the only combination tested is Ubuntu 18.04 with CUDA 10.2 using
 a Titan RTX GPU (SM 71), but it should work on any GPU compatible with SM 50 or
-above.</p>
+above. The default SM for the NVIDIA CUDA backend is 5.0. Users can specify
+lower values, but some features may not be supported.</p>
 </div>
 <div class="section" id="deployment">
 <h3>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h3>
@@ -495,11 +496,10 @@ there is none.</p>
   <span class="k">public</span><span class="o">:</span>
     <span class="kt">int</span> <span class="k">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">device</span> <span class="o">&amp;</span><span class="n">Device</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
       <span class="k">using</span> <span class="k">namespace</span> <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="p">;</span>
+      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DriverVersion</span> <span class="o">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">device</span><span class="o">::</span><span class="n">driver_version</span><span class="o">&gt;</span><span class="p">();</span>
 
-      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DeviceName</span> <span class="o">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">device</span><span class="o">::</span><span class="n">name</span><span class="o">&gt;</span><span class="p">();</span>
-      <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">DeviceVendor</span> <span class="o">=</span> <span class="n">Device</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">device</span><span class="o">::</span><span class="n">vendor</span><span class="o">&gt;</span><span class="p">();</span>
-
-      <span class="k">if</span> <span class="p">(</span><span class="n">Device</span><span class="p">.</span><span class="n">is_gpu</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">DeviceName</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;NVIDIA&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">Device</span><span class="p">.</span><span class="n">is_gpu</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">DriverVersion</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;CUDA&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">::</span><span class="n">npos</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; CUDA device found &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
         <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
       <span class="p">};</span>
       <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>

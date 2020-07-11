@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__qword__type_3_01sycl_1_1intel_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__qword__type_3_01sycl_1_1intel_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html#a5d90cf73a553f2928ff85d31d4d44052", null ]
+];

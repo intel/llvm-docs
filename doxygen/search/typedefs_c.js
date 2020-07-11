@@ -9,6 +9,7 @@ var searchData=
   ['make_5funsigned_5fimpl_5ft',['make_unsigned_impl_t',['../namespacecl_1_1sycl_1_1detail.html#ae9a165f74e0e85e5e1b6acd6a889c2eb',1,'cl::sycl::detail']]],
   ['make_5funsigned_5ft',['make_unsigned_t',['../namespacecl_1_1sycl_1_1detail.html#a9480d1d92df8fb08b39c65719fb53dc0',1,'cl::sycl::detail']]],
   ['make_5funsinged_5finteger_5ft',['make_unsinged_integer_t',['../namespacecl_1_1sycl_1_1detail.html#ac8120becb309596db6b3716cce89f937',1,'cl::sycl::detail']]],
+  ['mask_5ftype_5ft',['mask_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#adf423b125e16cca59dd6455ce9183ece',1,'cl::sycl::intel::gpu']]],
   ['memory_5forder',['memory_order',['../namespacecl_1_1sycl_1_1detail.html#a88dc0675485acc0898b7343c6dcfac40',1,'cl::sycl::detail::memory_order()'],['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a91ca309b86970a235703dc98408ba653',1,'cl::sycl::intel::detail::memory_order()']]],
   ['memory_5fscope',['memory_scope',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a89a53c5c7664e66a09a06bd609b73270',1,'cl::sycl::intel::detail']]],
   ['mutex_5fclass',['mutex_class',['../namespacecl_1_1sycl.html#a0e818f1ac2ba5084b08dd41ca813ef28',1,'cl::sycl']]]

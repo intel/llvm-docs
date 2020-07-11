@@ -107,6 +107,8 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecl_1_1sycl_1_1intel_1_1experimental"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1experimental.html">experimental</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacecl_1_1sycl_1_1intel_1_1gpu"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1gpu.html">gpu</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -858,7 +860,7 @@ template&lt;typename Group , typename Ptr , class Predicate &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="atomic__fence_8hpp_source.html#l00026">26</a> of file <a class="el" href="atomic__fence_8hpp_source.html">atomic_fence.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="spirv__ops_8cpp_source.html#l00030">__spirv_MemoryBarrier()</a>, and <a class="el" href="atomic_8hpp_source.html#l00076">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="spirv__ops_8cpp_source.html#l00030">__spirv_MemoryBarrier()</a>, and <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1481,7 @@ template&lt;class FuncType , enable_if_is_function_pointer_t&lt; FuncType &gt;  
 
 <p class="definition">Definition at line <a class="el" href="function__pointer_8hpp_source.html#l00070">70</a> of file <a class="el" href="function__pointer_8hpp_source.html">function_pointer.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="program_8cpp_source.html#l00122">cl::sycl::program::get_state()</a>, <a class="el" href="function__pointer_8cpp_source.html#l00017">cl::sycl::detail::getDeviceFunctionPointerImpl()</a>, <a class="el" href="device_8cpp_source.html#l00081">cl::sycl::device::is_host()</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="program_8cpp_source.html#l00125">cl::sycl::program::get_state()</a>, <a class="el" href="function__pointer_8cpp_source.html#l00017">cl::sycl::detail::getDeviceFunctionPointerImpl()</a>, <a class="el" href="device_8cpp_source.html#l00081">cl::sycl::device::is_host()</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
 
 </div>
 </div>
@@ -1950,8 +1952,6 @@ template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
 <p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00380">380</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00080">PI_INVALID_DEVICE</a>, and <a class="el" href="namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753aec4875f03ff0bb0b26cf76ac7f41e3c8">__spv::Reduce</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="sub__group_8hpp_source.html#l00445">cl::sycl::intel::sub_group::barrier()</a>, <a class="el" href="reduction_8hpp_source.html#l00874">cl::sycl::intel::detail::reduAuxCGFuncImpl()</a>, and <a class="el" href="reduction_8hpp_source.html#l00610">cl::sycl::intel::detail::reduCGFuncImpl()</a>.</p>
 
 </div>
 </div>
@@ -2474,7 +2474,7 @@ template&lt;class FuncType , typename FuncPtrType  = typename std::add_pointer&l
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    memory_order::acquire</div></div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="atomic__enums_8hpp_source.html#l00035">35</a> of file <a class="el" href="atomic__enums_8hpp_source.html">atomic_enums.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic__ref_8hpp_source.html#l00090">cl::sycl::intel::detail::getLoadOrder()</a>, and <a class="el" href="atomic__enums_8hpp_source.html#l00084">cl::sycl::intel::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic__ref_8hpp_source.html#l00091">cl::sycl::intel::detail::getLoadOrder()</a>, and <a class="el" href="atomic__enums_8hpp_source.html#l00084">cl::sycl::intel::detail::getStdMemoryOrder()</a>.</p>
 
 </div>
 </div>
@@ -2492,7 +2492,7 @@ template&lt;class FuncType , typename FuncPtrType  = typename std::add_pointer&l
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    memory_order::relaxed</div></div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="atomic__enums_8hpp_source.html#l00033">33</a> of file <a class="el" href="atomic__enums_8hpp_source.html">atomic_enums.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic__ref_8hpp_source.html#l00090">cl::sycl::intel::detail::getLoadOrder()</a>, <a class="el" href="atomic_8hpp_source.html#l00076">cl::sycl::detail::getStdMemoryOrder()</a>, and <a class="el" href="atomic__enums_8hpp_source.html#l00084">cl::sycl::intel::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic__ref_8hpp_source.html#l00091">cl::sycl::intel::detail::getLoadOrder()</a>, <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>, and <a class="el" href="atomic__enums_8hpp_source.html#l00084">cl::sycl::intel::detail::getStdMemoryOrder()</a>.</p>
 
 </div>
 </div>
@@ -2528,7 +2528,7 @@ template&lt;class FuncType , typename FuncPtrType  = typename std::add_pointer&l
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    memory_order::seq_cst</div></div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="atomic__enums_8hpp_source.html#l00041">41</a> of file <a class="el" href="atomic__enums_8hpp_source.html">atomic_enums.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="spirv__ops_8cpp_source.html#l00030">__spirv_MemoryBarrier()</a>, <a class="el" href="atomic__ref_8hpp_source.html#l00090">cl::sycl::intel::detail::getLoadOrder()</a>, and <a class="el" href="atomic__enums_8hpp_source.html#l00084">cl::sycl::intel::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="spirv__ops_8cpp_source.html#l00030">__spirv_MemoryBarrier()</a>, <a class="el" href="atomic__ref_8hpp_source.html#l00091">cl::sycl::intel::detail::getLoadOrder()</a>, and <a class="el" href="atomic__enums_8hpp_source.html#l00084">cl::sycl::intel::detail::getStdMemoryOrder()</a>.</p>
 
 </div>
 </div>

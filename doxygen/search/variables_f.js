@@ -3,7 +3,7 @@ var searchData=
   ['padding',['padding',['../classcl_1_1sycl_1_1accessor.html#ae4ca64349d5c15e1755861cb5b33320b',1,'cl::sycl::accessor']]],
   ['paramsizes_5f',['paramSizes_',['../struct__pi__kernel_1_1arguments.html#a230fcd08f58246d38d56a1328a435114',1,'_pi_kernel::arguments']]],
   ['parent',['Parent',['../struct__pi__buffer.html#aabab9f4228e10b2e6f96249bdfc671a9',1,'_pi_buffer']]],
-  ['parent_5f',['parent_',['../struct__pi__mem.html#a24ebff361179097fd3f02fb4723153bb',1,'_pi_mem']]],
+  ['parent_5f',['parent_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#aac51643c77130af9f87de37928c30cf4',1,'_pi_mem::mem_::buffer_mem_']]],
   ['partition_5fproperties',['partition_properties',['../namespacecl_1_1sycl_1_1info.html#af9775be79ea21cf031cf226d918a2481',1,'cl::sycl::info::partition_properties()'],['../namespacecl_1_1sycl.html#a0b8614fcdfa21c548976bd74c2ae70b6',1,'cl::sycl::partition_properties()']]],
   ['partition_5ftype_5faffinity_5fdomain',['partition_type_affinity_domain',['../namespacecl_1_1sycl_1_1info.html#a806524cd6d26b3dfaa020e7a1e56cc3b',1,'cl::sycl::info::partition_type_affinity_domain()'],['../namespacecl_1_1sycl.html#a42eec62185c8f455138fc9a4d024b644',1,'cl::sycl::partition_type_affinity_domain()']]],
   ['perwi',['PerWI',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a193f555c34ad7e2349e039dfb11c3970',1,'cl::sycl::detail::AccessorImplHost']]],
@@ -22,6 +22,7 @@ var searchData=
   ['pi_5fdevice_5fpartition_5fequally',['PI_DEVICE_PARTITION_EQUALLY',['../pi_8h.html#a5b18f0ec65432f9ede04dca25d562312',1,'pi.h']]],
   ['pi_5ffalse',['PI_FALSE',['../pi_8h.html#a6586389e9937eb1ed283845ed4cc7061',1,'pi.h']]],
   ['pi_5fmem_5fflags_5faccess_5frw',['PI_MEM_FLAGS_ACCESS_RW',['../pi_8h.html#ab40dc9bf2f2924669fac2eff0b53be6b',1,'pi.h']]],
+  ['pi_5fmem_5fflags_5fhost_5fptr_5falloc',['PI_MEM_FLAGS_HOST_PTR_ALLOC',['../pi_8h.html#a2562e15b06c77655f7e4f6d05df12706',1,'pi.h']]],
   ['pi_5fmem_5fflags_5fhost_5fptr_5fcopy',['PI_MEM_FLAGS_HOST_PTR_COPY',['../pi_8h.html#a74816d868e1dba07680aa80db3cf31dd',1,'pi.h']]],
   ['pi_5fmem_5fflags_5fhost_5fptr_5fuse',['PI_MEM_FLAGS_HOST_PTR_USE',['../pi_8h.html#a9493f815921f58c6e410def36d93bf10',1,'pi.h']]],
   ['pi_5fqueue_5fon_5fdevice',['PI_QUEUE_ON_DEVICE',['../pi_8h.html#a4af3feaac9c439f33d41b0806e43d100',1,'pi.h']]],
@@ -41,6 +42,7 @@ var searchData=
   ['platformver',['platformVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a77c93b69532854b35080dc83431ed494',1,'cl::sycl::detail::DevDescT']]],
   ['platformversize',['platformVerSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#ae1b28b2cac0746d314a6ab0dcfb254b1',1,'cl::sycl::detail::DevDescT']]],
   ['pluginversion',['PluginVersion',['../struct__pi__plugin.html#a61f3c14948bd380bdb111988cfedef09',1,'_pi_plugin']]],
+  ['prod',['Prod',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#aeb71a91a409b6b4995d7e30d0987d2b1',1,'cl::sycl::intel::gpu::compute_format_type_2d&lt; simd&lt; Ty, N &gt;, EltTy, Height, Width &gt;::Prod()'],['../structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd__view_3_01BaseTy_00_01Reg96c8ef6f3a27060479a38ec02030149c.html#aa660180e83415b8767a2dcdbd8d7fa3d',1,'cl::sycl::intel::gpu::compute_format_type_2d&lt; simd_view&lt; BaseTy, RegionTy &gt;, EltTy, Height, Width &gt;::Prod()']]],
   ['program',['Program',['../struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6',1,'_pi_kernel']]],
   ['program_5f',['program_',['../struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba',1,'_pi_kernel']]],
   ['prop',['Prop',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html#a1cb057f05023421d5ab51ea6d41615c3',1,'cl::sycl::detail::pi::DeviceBinaryProperty']]],
@@ -49,6 +51,7 @@ var searchData=
   ['propertiesend',['PropertiesEnd',['../struct__pi__device__binary__property__set__struct.html#ad40793d809f022073b2cc29a778e2c09',1,'_pi_device_binary_property_set_struct']]],
   ['propertysetsbegin',['PropertySetsBegin',['../structpi__device__binary__struct.html#ac6b82018fed8ac3d4cc28a65eb8ee33e',1,'pi_device_binary_struct']]],
   ['propertysetsend',['PropertySetsEnd',['../structpi__device__binary__struct.html#aad9bedb5c6973ec8af21c98a1e427935',1,'pi_device_binary_struct']]],
+  ['props_5f',['props_',['../struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d',1,'_pi_sampler']]],
   ['ptr',['ptr',['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html#abd776ce702de08263280db849b8630b0',1,'cl::sycl::intel::detail::atomic_ref_base::ptr()'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()']]],
-  ['ptr_5f',['ptr_',['../struct__pi__mem.html#a9556a97da972a95d3ccab5755961729a',1,'_pi_mem']]]
+  ['ptr_5f',['ptr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a6fd19a557e066187980772292237aa5e',1,'_pi_mem::mem_::buffer_mem_']]]
 ];

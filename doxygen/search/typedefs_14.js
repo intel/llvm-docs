@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['uchar',['uchar',['../namespacecl_1_1sycl.html#a91a51ecf5500910171e7fddd472ed667',1,'cl::sycl']]],
-  ['uint',['uint',['../namespacecl_1_1sycl.html#a2826aebb7f3b5945a4e189f69aa957f2',1,'cl::sycl']]],
+  ['uchar',['uchar',['../namespacecl_1_1sycl.html#a91a51ecf5500910171e7fddd472ed667',1,'cl::sycl::uchar()'],['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a6f1c50e68d5744416a86bae0054678c2',1,'cl::sycl::intel::gpu::uchar()']]],
+  ['uint',['uint',['../namespacecl_1_1sycl.html#a2826aebb7f3b5945a4e189f69aa957f2',1,'cl::sycl::uint()'],['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a71dec5e87af775a0b650bb62cb722d44',1,'cl::sycl::intel::gpu::uint()']]],
   ['ulong',['ulong',['../namespacecl_1_1sycl.html#a79866bec9394124765180c6b2423f9c0',1,'cl::sycl']]],
   ['ulonglong',['ulonglong',['../namespacecl_1_1sycl.html#a78dfbd05d620c0ce08d9e62f97823fe3',1,'cl::sycl']]],
   ['unique_5fptr_5fclass',['unique_ptr_class',['../namespacecl_1_1sycl.html#a5e426b5073574b2553fa7fb9a430eb50',1,'cl::sycl']]],
@@ -14,5 +14,5 @@ var searchData=
   ['unsigned_5flonglong_5flist',['unsigned_longlong_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#aee7d3fc920b08c3ecaef0f9f7c99bab0',1,'cl::sycl::detail::gtl']]],
   ['unsigned_5fshort_5flist',['unsigned_short_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#aba4d864db62c0eadd9950bdf48901057',1,'cl::sycl::detail::gtl']]],
   ['upper_5ftype',['upper_type',['../structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#afde909503ae5685923f9171747ec3b3c',1,'cl::sycl::detail::make_larger_impl&lt; vec&lt; T, N &gt;, vec&lt; T, N &gt; &gt;']]],
-  ['ushort',['ushort',['../namespacecl_1_1sycl.html#a2ed9ea802a195d0fe74c56cb03b45c2a',1,'cl::sycl']]]
+  ['ushort',['ushort',['../namespacecl_1_1sycl.html#a2ed9ea802a195d0fe74c56cb03b45c2a',1,'cl::sycl::ushort()'],['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a5d9e2857136b081224be26afbeefba28',1,'cl::sycl::intel::gpu::ushort()']]]
 ];

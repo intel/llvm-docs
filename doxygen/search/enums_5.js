@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['esimdatomicoptype',['EsimdAtomicOpType',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8d8bb62e26ddc09af7ae1cb116824c53',1,'cl::sycl::intel::gpu']]],
+  ['esimdfencemask',['EsimdFenceMask',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a5dd51f5c4b839a25081ccae03fa96c7b',1,'cl::sycl::intel::gpu']]],
   ['event',['event',['../namespacecl_1_1sycl_1_1info.html#ae1b3f988fa2d47a56222234081db4e69',1,'cl::sycl::info']]],
   ['event_5fcommand_5fstatus',['event_command_status',['../namespacecl_1_1sycl_1_1info.html#a14478aa11b108f1b29dfa017770c493b',1,'cl::sycl::info']]],
   ['event_5fprofiling',['event_profiling',['../namespacecl_1_1sycl_1_1info.html#a888e999cd335944dfbae8bc949b8aa6f',1,'cl::sycl::info']]],

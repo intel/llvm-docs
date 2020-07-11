@@ -8,5 +8,6 @@ var searchData=
   ['format',['Format',['../structpi__device__binary__struct.html#ad3b8516afd31a369b2d8474a121cbc90',1,'pi_device_binary_struct::Format()'],['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aad75dcd40f639e866c0050fb5b51c6ce',1,'cl::sycl::detail::pi::DeviceBinaryImage::Format()']]],
   ['found',['found',['../structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#afbcb3def8ad7a611db8c2654f186cb68',1,'cl::sycl::detail::make_larger_impl&lt; vec&lt; T, N &gt;, vec&lt; T, N &gt; &gt;']]],
   ['function',['function',['../struct__pi__context_1_1deleter__data.html#ae6cd408cfa859b56d3c075c3805da818',1,'_pi_context::deleter_data']]],
-  ['function_5f',['function_',['../struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339',1,'_pi_kernel']]]
+  ['function_5f',['function_',['../struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339',1,'_pi_kernel']]],
+  ['functionwithoffsetparam_5f',['functionWithOffsetParam_',['../struct__pi__kernel.html#a8242ec7d4f228dc10873fc7733cf596f',1,'_pi_kernel']]]
 ];

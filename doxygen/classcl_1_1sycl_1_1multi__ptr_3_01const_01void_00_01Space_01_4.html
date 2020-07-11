@@ -144,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a69fc8070ddfbe3053fd1786829e6f81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cadbc5fda97ddb05914a31b68b0849a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a4cadbc5fda97ddb05914a31b68b0849a">operator=</a> (std::nullptr_t)</td></tr>
 <tr class="separator:a4cadbc5fda97ddb05914a31b68b0849a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbd7a40f748e8a968d055ef0719e0bbb"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                Space == access::address_space::global_space&gt;::type&gt; </td></tr>
+<tr class="memitem:acbd7a40f748e8a968d055ef0719e0bbb"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_space ||                 Space == access::address_space::global_device_space)&gt;::type&gt; </td></tr>
 <tr class="memitem:acbd7a40f748e8a968d055ef0719e0bbb"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#acbd7a40f748e8a968d055ef0719e0bbb">multi_ptr</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; ElementType, dimensions, Mode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598acb1529b5988261a81704f0f39d6c287b">access::target::global_buffer</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a> &gt; Accessor)</td></tr>
 <tr class="separator:acbd7a40f748e8a968d055ef0719e0bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0acd15012d2b014700623f7f50e649c6"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, access::address_space _Space = Space, typename  = typename std::enable_if&lt;          _Space == Space &amp;&amp; Space == access::address_space::local_space&gt;::type&gt; </td></tr>
@@ -171,7 +171,7 @@ Static Public Attributes</h2></td></tr>
 class cl::sycl::multi_ptr&lt; const void, Space &gt;</h3>
 
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00411">411</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00432">432</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a837fec1986e610cf308872b735b1a506"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a837fec1986e610cf308872b735b1a506">&#9670;&nbsp;</a></span>const_pointer_t</h2>
@@ -187,7 +187,7 @@ template&lt;access::address_space Space&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00420">420</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00441">441</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -205,7 +205,7 @@ template&lt;access::address_space Space&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00414">414</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00435">435</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -223,7 +223,7 @@ template&lt;access::address_space Space&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00413">413</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00434">434</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ template&lt;access::address_space Space&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00418">418</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00439">439</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +271,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00425">425</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00446">446</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00428">428</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00449">449</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +387,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00439">439</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00460">460</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00447">447</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00468">468</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ template&lt;typename ElementType &gt; </div>
 <div class="memtemplate">
 template&lt;access::address_space Space&gt; </div>
 <div class="memtemplate">
-template&lt;typename ElementType , int dimensions, access::mode Mode, access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                Space == access::address_space::global_space&gt;::type&gt; </div>
+template&lt;typename ElementType , int dimensions, access::mode Mode, access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_space ||                 Space == access::address_space::global_device_space)&gt;::type&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -478,7 +478,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, access::ad
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00475">475</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00497">497</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -510,7 +510,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, access::ad
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00487">487</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00509">509</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -542,7 +542,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, access::ad
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00498">498</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00520">520</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -572,7 +572,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00505">505</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00527">527</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -601,7 +601,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00508">508</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00530">530</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -632,9 +632,7 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00516">516</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="multi__ptr_8hpp_source.html#l00049">cl::sycl::multi_ptr&lt; ElementType, Space &gt;::multi_ptr()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00538">538</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -720,7 +718,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00452">452</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00473">473</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -750,7 +748,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00464">464</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00485">485</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -777,7 +775,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00422">422</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00443">443</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>

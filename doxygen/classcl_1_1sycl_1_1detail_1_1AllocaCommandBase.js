@@ -6,10 +6,12 @@ var classcl_1_1sycl_1_1detail_1_1AllocaCommandBase =
     [ "getReleaseCmd", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#ac49d47abc8cfd53d70a58da9f44afc52", null ],
     [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a20850519594e8b6d66044a439c62c099", null ],
     [ "getSYCLMemObj", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54182d49730f7d82e111295afaa9ae18", null ],
+    [ "ESIMDExt", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a1e670f0b058864e33ff29348193adfbd", null ],
     [ "MIsActive", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6", null ],
     [ "MIsLeaderAlloca", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661", null ],
     [ "MLinkedAllocaCmd", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a26ad0b3875ad355ed64563cd9eb442a8", null ],
     [ "MMemAllocation", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54626b5713e483b8f76010a719d80815", null ],
     [ "MReleaseCmd", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a2dc0abdd980c367e4df9dda3e0b06f2f", null ],
-    [ "MRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e", null ]
+    [ "MRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e", null ],
+    [ "MWrapperImage", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a9e60b6f0c8be8dd5691fb617168e339f", null ]
 ];

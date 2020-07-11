@@ -22,6 +22,7 @@ var class__pi__event =
     [ "is_started", "class__pi__event.html#a934372cc42188ff0ce139630bc4c8b22", null ],
     [ "make_native", "class__pi__event.html#a893e8d79288ee852a40e445b775203cf", null ],
     [ "record", "class__pi__event.html#af0c02a7ea9a80a7afd718a62409397ba", null ],
+    [ "release", "class__pi__event.html#aa9ace9cc52d7f9a5f66121f1eca86cce", null ],
     [ "start", "class__pi__event.html#a888ed5b68e7e812448439dda1cb9dbc3", null ],
     [ "wait", "class__pi__event.html#a4c26466908c0791106777bde099eb723", null ],
     [ "CommandData", "class__pi__event.html#a5993746ca407e835220191dc4cf48f39", null ],

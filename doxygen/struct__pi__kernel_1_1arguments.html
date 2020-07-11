@@ -123,11 +123,15 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae34c341ba210edf6e763e8bcf0f3b083"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#ae34c341ba210edf6e763e8bcf0f3b083">arguments</a> ()</td></tr>
+<tr class="separator:ae34c341ba210edf6e763e8bcf0f3b083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06c967e47bd96dc18048b8d96f5014ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#a06c967e47bd96dc18048b8d96f5014ca">add_arg</a> (size_t index, size_t size, const void *arg, size_t localSize=0)</td></tr>
 <tr class="memdesc:a06c967e47bd96dc18048b8d96f5014ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an argument to the kernel.  <a href="#a06c967e47bd96dc18048b8d96f5014ca">More...</a><br /></td></tr>
 <tr class="separator:a06c967e47bd96dc18048b8d96f5014ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45f107f6ff96c5b075604f4dd2586e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#ab45f107f6ff96c5b075604f4dd2586e6">add_local_arg</a> (size_t index, size_t size)</td></tr>
 <tr class="separator:ab45f107f6ff96c5b075604f4dd2586e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f34c5c75b081756a86cd1500b64f866"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#a2f34c5c75b081756a86cd1500b64f866">set_implicit_offset</a> (size_t size, std::uint32_t *implicitOffset)</td></tr>
+<tr class="separator:a2f34c5c75b081756a86cd1500b64f866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a357ee4a9e94d6639dd21be2ffa4b83e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8">clear_local_size</a> ()</td></tr>
 <tr class="separator:a357ee4a9e94d6639dd21be2ffa4b83e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b075a29d40995b403582d209ca7f14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__kernel_1_1arguments.html#a1985c5423dd1546a76a8feffc0bef40b">args_index_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#aa1b075a29d40995b403582d209ca7f14">get_indices</a> () const noexcept</td></tr>
@@ -145,6 +149,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ac153603b456fc27c19916362eec6fa9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fe8de1ed6f870ccf327f31abf2cdf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d">args_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9">offsetPerIndex_</a></td></tr>
 <tr class="separator:ab0fe8de1ed6f870ccf327f31abf2cdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ec3fc0e124184dfad11bcf40b19ef6"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__kernel_1_1arguments.html#a13ec3fc0e124184dfad11bcf40b19ef6">implicitOffsetArgs_</a> [3] = {0, 0, 0}</td></tr>
+<tr class="separator:a13ec3fc0e124184dfad11bcf40b19ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -155,7 +161,7 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock"><p>Structure that holds the arguments to the kernel. </p>
 <p>Note earch argument size is known, since it comes from the kernel signature. This is not something can be queried from the CUDA API so there is a hard-coded size (<a class="el" href="struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c">MAX_PARAM_BYTES</a>) and a storage. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00481">481</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00559">559</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a1985c5423dd1546a76a8feffc0bef40b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1985c5423dd1546a76a8feffc0bef40b">&#9670;&nbsp;</a></span>args_index_t</h2>
@@ -169,7 +175,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00485">485</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00563">563</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -185,7 +191,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00484">484</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00562">562</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -201,7 +207,35 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00483">483</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00561">561</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae34c341ba210edf6e763e8bcf0f3b083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34c341ba210edf6e763e8bcf0f3b083">&#9670;&nbsp;</a></span>arguments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_pi_kernel::arguments::arguments </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00571">571</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -253,9 +287,9 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds an argument to the kernel. </p>
-<p>If the argument existed before, it is replaced. Otherwise, it is added. Gaps are filled with empty arguments. </p>
+<p>If the argument existed before, it is replaced. Otherwise, it is added. Gaps are filled with empty arguments. Implicit offset argument is kept at the back of the indices collection. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00495">495</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00581">581</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>.</p>
 
@@ -295,7 +329,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00513">513</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00600">600</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -322,7 +356,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00518">518</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00610">610</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +383,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00522">522</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00614">614</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -376,11 +410,67 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00524">524</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00616">616</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a2f34c5c75b081756a86cd1500b64f866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f34c5c75b081756a86cd1500b64f866">&#9670;&nbsp;</a></span>set_implicit_offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _pi_kernel::arguments::set_implicit_offset </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint32_t *&#160;</td>
+          <td class="paramname"><em>implicitOffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00605">605</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>, and <a class="el" href="kernel__impl_8cpp_source.html#l00021">cl::sycl::detail::uint32_t</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a13ec3fc0e124184dfad11bcf40b19ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ec3fc0e124184dfad11bcf40b19ef6">&#9670;&nbsp;</a></span>implicitOffsetArgs_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint32_t _pi_kernel::arguments::implicitOffsetArgs_[3] = {0, 0, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00569">569</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ac153603b456fc27c19916362eec6fa9f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac153603b456fc27c19916362eec6fa9f">&#9670;&nbsp;</a></span>indices_</h2>
 
@@ -393,7 +483,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00488">488</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00566">566</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +507,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00482">482</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00560">560</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +523,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00489">489</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00567">567</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -449,7 +539,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00487">487</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00565">565</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +555,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00486">486</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00564">564</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>

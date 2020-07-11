@@ -21,6 +21,7 @@ var classcl_1_1sycl_1_1program =
     [ "get_kernel", "classcl_1_1sycl_1_1program.html#a66001da30147f4582e8436e9fe4a3404", null ],
     [ "get_kernel", "classcl_1_1sycl_1_1program.html#a97395b8e594e0c323095e26506ba2f36", null ],
     [ "get_link_options", "classcl_1_1sycl_1_1program.html#a3818d7c7f142bb245cdae198a107d29a", null ],
+    [ "get_native", "classcl_1_1sycl_1_1program.html#aac347f6c2e357827a3fac8be3dee602b", null ],
     [ "get_state", "classcl_1_1sycl_1_1program.html#ad6a80548fddd3a70f3d763ea433e58b4", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1program.html#a03ccc2ea0ff460ccb3729c88e8506864", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1program.html#a13e4ac956db0d71f33667ba31f2724e2", null ],

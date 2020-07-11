@@ -13,5 +13,5 @@ var searchData=
   ['hexfloat',['hexfloat',['../namespacecl_1_1sycl.html#aa26c10ce0228ce3c9a15234241ffb40a',1,'cl::sycl']]],
   ['hostentriesbegin',['HostEntriesBegin',['../structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69',1,'pi_device_binaries_struct']]],
   ['hostentriesend',['HostEntriesEnd',['../structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1',1,'pi_device_binaries_struct']]],
-  ['hostptr_5f',['hostPtr_',['../struct__pi__mem.html#aa282d69586314e359e5b45ae579ac5cc',1,'_pi_mem']]]
+  ['hostptr_5f',['hostPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a1b6cdff933ec7aa1dccf602551ebfab0',1,'_pi_mem::mem_::buffer_mem_']]]
 ];

@@ -230,6 +230,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3062fbf66b0f3597c5ac6890de973604"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604">MLeafCounter</a> = 0</td></tr>
 <tr class="memdesc:a3062fbf66b0f3597c5ac6890de973604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of memory objects this command is a leaf for.  <a href="#a3062fbf66b0f3597c5ac6890de973604">More...</a><br /></td></tr>
 <tr class="separator:a3062fbf66b0f3597c5ac6890de973604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3f9f031e66884e4514d5a392d402c0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#acb3f9f031e66884e4514d5a392d402c0">MVisited</a> = false</td></tr>
+<tr class="memdesc:acb3f9f031e66884e4514d5a392d402c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for marking the node as visited during graph traversal.  <a href="#acb3f9f031e66884e4514d5a392d402c0">More...</a><br /></td></tr>
+<tr class="separator:acb3f9f031e66884e4514d5a392d402c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c74a2d1717f958f848aa36d2385a0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09">BlockReason</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a11c74a2d1717f958f848aa36d2385a0b">MBlockReason</a></td></tr>
 <tr class="separator:a11c74a2d1717f958f848aa36d2385a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580605145fcb791deed414ea55228238"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277da">EnqueueResultT::ResultT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a580605145fcb791deed414ea55228238">MEnqueueStatus</a></td></tr>
@@ -331,7 +334,7 @@ Friends</h2></td></tr>
 <tr><td class="fieldname"><a id="a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d"></a>HostTask&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00223">223</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00225">225</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 </div>
 </div>
@@ -392,7 +395,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00297">297</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="commands_8hpp_source.html#l00229">MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00179">MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00180">MQueue</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, <a class="el" href="common_8hpp_source.html#l00032">cl::sycl::detail::SYCL_STREAM_NAME</a>, and <a class="el" href="commands_8hpp_source.html#l00048">cl::sycl::detail::EnqueueResultT::SyclEnqueueReady</a>.</p>
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="commands_8hpp_source.html#l00231">MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00179">MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00180">MQueue</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, <a class="el" href="common_8hpp_source.html#l00032">cl::sycl::detail::SYCL_STREAM_NAME</a>, and <a class="el" href="commands_8hpp_source.html#l00048">cl::sycl::detail::EnqueueResultT::SyclEnqueueReady</a>.</p>
 
 </div>
 </div>
@@ -440,9 +443,9 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00500">500</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00079">cl::sycl::detail::accessModeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8hpp_source.html#l00133">getEvent()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00098">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00215">MDeps</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00100">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="commands_8cpp_source.html#l00473">processDepEvent()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00079">cl::sycl::detail::accessModeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8hpp_source.html#l00133">getEvent()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="commands_8hpp_source.html#l00076">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00215">MDeps</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="commands_8cpp_source.html#l00473">processDepEvent()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00357">cl::sycl::detail::Scheduler::GraphBuilder::addCopyBack()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::addRequirement()</a>, <a class="el" href="commands_8cpp_source.html#l00707">cl::sycl::detail::AllocaCommand::AllocaCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00778">cl::sycl::detail::AllocaSubBufCommand::AllocaSubBufCommand()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00959">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00372">cl::sycl::detail::Scheduler::GraphBuilder::addCopyBack()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00183">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="commands_8cpp_source.html#l01320">cl::sycl::detail::EmptyCommand::addRequirement()</a>, <a class="el" href="commands_8cpp_source.html#l00707">cl::sycl::detail::AllocaCommand::AllocaCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00786">cl::sycl::detail::AllocaSubBufCommand::AllocaSubBufCommand()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00981">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00230">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -494,7 +497,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00112">112</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00959">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00183">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00981">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00230">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -550,7 +553,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00328">328</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00246">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00500">addDep()</a>, and <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>.</p>
 
@@ -594,7 +597,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00373">373</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8hpp_source.html#l00246">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00512">addDep()</a>.</p>
 
@@ -620,7 +623,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00525">525</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00258">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>.</p>
 
@@ -656,7 +659,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00537">537</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00258">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, and <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>.</p>
 
@@ -714,7 +717,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce">emitInstrumentationData()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00707">cl::sycl::detail::AllocaCommand::AllocaCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00679">cl::sycl::detail::AllocaCommandBase::AllocaCommandBase()</a>, <a class="el" href="commands_8cpp_source.html#l00778">cl::sycl::detail::AllocaSubBufCommand::AllocaSubBufCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01442">cl::sycl::detail::ExecCGCommand::ExecCGCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00967">cl::sycl::detail::MapMemObject::MapMemObject()</a>, <a class="el" href="commands_8cpp_source.html#l01082">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01227">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, <a class="el" href="commands_8cpp_source.html#l00859">cl::sycl::detail::ReleaseCommand::ReleaseCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01026">cl::sycl::detail::UnMapMemObject::UnMapMemObject()</a>, and <a class="el" href="commands_8cpp_source.html#l01376">cl::sycl::detail::UpdateHostRequirementCommand::UpdateHostRequirementCommand()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00707">cl::sycl::detail::AllocaCommand::AllocaCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00679">cl::sycl::detail::AllocaCommandBase::AllocaCommandBase()</a>, <a class="el" href="commands_8cpp_source.html#l00786">cl::sycl::detail::AllocaSubBufCommand::AllocaSubBufCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01454">cl::sycl::detail::ExecCGCommand::ExecCGCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00979">cl::sycl::detail::MapMemObject::MapMemObject()</a>, <a class="el" href="commands_8cpp_source.html#l01094">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01239">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, <a class="el" href="commands_8cpp_source.html#l00867">cl::sycl::detail::ReleaseCommand::ReleaseCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01038">cl::sycl::detail::UnMapMemObject::UnMapMemObject()</a>, and <a class="el" href="commands_8cpp_source.html#l01388">cl::sycl::detail::UpdateHostRequirementCommand::UpdateHostRequirementCommand()</a>.</p>
 
 </div>
 </div>
@@ -756,7 +759,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00548">548</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0fa77ed06edcea210516de7e41259d8f">enqueueImp()</a>, <a class="el" href="commands_8cpp_source.html#l00668">getBlockReason()</a>, <a class="el" href="commands_8hpp_source.html#l00209">MEnqueueMtx</a>, <a class="el" href="commands_8hpp_source.html#l00229">MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00179">MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00219">MIsBlockable</a>, <a class="el" href="commands_8hpp_source.html#l00264">MShouldCompleteEventIfPossible</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="commands_8hpp_source.html#l00050">cl::sycl::detail::EnqueueResultT::SyclEnqueueBlocked</a>, <a class="el" href="commands_8hpp_source.html#l00051">cl::sycl::detail::EnqueueResultT::SyclEnqueueFailed</a>, and <a class="el" href="commands_8hpp_source.html#l00049">cl::sycl::detail::EnqueueResultT::SyclEnqueueSuccess</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0fa77ed06edcea210516de7e41259d8f">enqueueImp()</a>, <a class="el" href="commands_8cpp_source.html#l00668">getBlockReason()</a>, <a class="el" href="commands_8hpp_source.html#l00209">MEnqueueMtx</a>, <a class="el" href="commands_8hpp_source.html#l00231">MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00179">MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00219">MIsBlockable</a>, <a class="el" href="commands_8hpp_source.html#l00266">MShouldCompleteEventIfPossible</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="commands_8hpp_source.html#l00050">cl::sycl::detail::EnqueueResultT::SyclEnqueueBlocked</a>, <a class="el" href="commands_8hpp_source.html#l00051">cl::sycl::detail::EnqueueResultT::SyclEnqueueFailed</a>, and <a class="el" href="commands_8hpp_source.html#l00049">cl::sycl::detail::EnqueueResultT::SyclEnqueueSuccess</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="graph__processor_8cpp_source.html#l00055">cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand()</a>.</p>
 
@@ -808,7 +811,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00668">668</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e">HostAccessor</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d">HostTask</a>, and <a class="el" href="commands_8hpp_source.html#l00226">MBlockReason</a>.</p>
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e">HostAccessor</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d">HostTask</a>, and <a class="el" href="commands_8hpp_source.html#l00228">MBlockReason</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>.</p>
 
@@ -843,7 +846,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="commands_8hpp_source.html#l00180">MQueue</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00959">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, and <a class="el" href="commands_8cpp_source.html#l00473">processDepEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00981">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, and <a class="el" href="commands_8cpp_source.html#l00473">processDepEvent()</a>.</p>
 
 </div>
 </div>
@@ -872,7 +875,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00133">133</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="scheduler_8cpp_source.html#l00101">cl::sycl::detail::Scheduler::addCopyBack()</a>, <a class="el" href="commands_8cpp_source.html#l00500">addDep()</a>, <a class="el" href="scheduler_8cpp_source.html#l00188">cl::sycl::detail::Scheduler::addHostAccessor()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00803">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00892">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00959">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00025">cl::sycl::detail::Scheduler::GraphProcessor::getWaitList()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00039">cl::sycl::detail::Scheduler::GraphProcessor::waitForEvent()</a>, and <a class="el" href="scheduler_8cpp_source.html#l00023">cl::sycl::detail::Scheduler::waitForRecordToFinish()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="scheduler_8cpp_source.html#l00101">cl::sycl::detail::Scheduler::addCopyBack()</a>, <a class="el" href="commands_8cpp_source.html#l00500">addDep()</a>, <a class="el" href="scheduler_8cpp_source.html#l00188">cl::sycl::detail::Scheduler::addHostAccessor()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00821">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00981">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00025">cl::sycl::detail::Scheduler::GraphProcessor::getWaitList()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00039">cl::sycl::detail::Scheduler::GraphProcessor::waitForEvent()</a>, and <a class="el" href="scheduler_8cpp_source.html#l00023">cl::sycl::detail::Scheduler::waitForRecordToFinish()</a>.</p>
 
 </div>
 </div>
@@ -901,7 +904,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00131">131</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00429">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="scheduler_8cpp_source.html#l00101">cl::sycl::detail::Scheduler::addCopyBack()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00396">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">cl::sycl::detail::event_impl::wait_and_throw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00444">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="scheduler_8cpp_source.html#l00101">cl::sycl::detail::Scheduler::addCopyBack()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00411">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00230">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>, and <a class="el" href="event__impl_8cpp_source.html#l00211">cl::sycl::detail::event_impl::wait_and_throw()</a>.</p>
 
 </div>
 </div>
@@ -932,7 +935,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00167">167</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00230">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -962,7 +965,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00115">115</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00693">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00803">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00892">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00215">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00064">cl::sycl::detail::Scheduler::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00711">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00821">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00230">cl::sycl::detail::insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -1031,9 +1034,9 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00461">461</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00248">MCommandNodeType</a>, <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00252">MTraceEventPrologComplete</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00250">MCommandNodeType</a>, <a class="el" href="commands_8hpp_source.html#l00258">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00254">MTraceEventPrologComplete</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00791">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00799">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>.</p>
 
 </div>
 </div>
@@ -1063,9 +1066,9 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00429">429</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00246">MAddressString</a>, <a class="el" href="commands_8hpp_source.html#l00250">MCommandName</a>, <a class="el" href="commands_8hpp_source.html#l00248">MCommandNodeType</a>, <a class="el" href="commands_8hpp_source.html#l00254">MFirstInstance</a>, <a class="el" href="commands_8hpp_source.html#l00256">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>, <a class="el" href="commands_8hpp_source.html#l00252">MTraceEventPrologComplete</a>, and <a class="el" href="commands_8hpp_source.html#l00207">MType</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00246">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00248">MAddressString</a>, <a class="el" href="commands_8hpp_source.html#l00252">MCommandName</a>, <a class="el" href="commands_8hpp_source.html#l00250">MCommandNodeType</a>, <a class="el" href="commands_8hpp_source.html#l00256">MFirstInstance</a>, <a class="el" href="commands_8hpp_source.html#l00258">MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>, <a class="el" href="commands_8hpp_source.html#l00254">MTraceEventPrologComplete</a>, and <a class="el" href="commands_8hpp_source.html#l00207">MType</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1098,7 @@ Friends</h2></td></tr>
 
 <p>Implemented in <a class="el" href="classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aa4ee05ed262f9e78c7b277fcf55e82d5">cl::sycl::detail::UpdateHostRequirementCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#ad6b6c75e8ed7e6ff2af4a10b2ba7fd84">cl::sycl::detail::ExecCGCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#ae5e89ca2a5a699dfc06189be3929ee2d">cl::sycl::detail::MemCpyCommandHost</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a29f093a0bf665ac53ee5b6b42411eee0">cl::sycl::detail::MemCpyCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a9b0bf99829a6f671df64bf4c4c01123e">cl::sycl::detail::UnMapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1MapMemObject.html#ad1584e6fb4ec7de41f7d5e3436a49d85">cl::sycl::detail::MapMemObject</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaSubBufCommand.html#a28c976125e7116dc2da3296af59bcc03">cl::sycl::detail::AllocaSubBufCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommand.html#a57440e28a58cd09076b7e238cb3be51c">cl::sycl::detail::AllocaCommand</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#a0ffbc31bb4f1b0dcd18c75cc362e7c23">cl::sycl::detail::ReleaseCommand</a>, and <a class="el" href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a2ac1e031f089764d465ecc8d7ae692f5">cl::sycl::detail::EmptyCommand</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00095">cl::sycl::detail::printDotRecursive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00108">cl::sycl::detail::printDotRecursive()</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1149,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00473">473</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00959">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8cpp_source.html#l00496">getContext()</a>, <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="scheduler_8hpp_source.html#l00696">cl::sycl::detail::Scheduler::MGraphBuilder</a>, <a class="el" href="commands_8hpp_source.html#l00184">MPreparedDepsEvents</a>, and <a class="el" href="commands_8hpp_source.html#l00185">MPreparedHostDepsEvents</a>.</p>
+<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00981">cl::sycl::detail::Scheduler::GraphBuilder::connectDepEvent()</a>, <a class="el" href="commands_8cpp_source.html#l00496">getContext()</a>, <a class="el" href="scheduler_8cpp_source.html#l00132">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="scheduler_8hpp_source.html#l00696">cl::sycl::detail::Scheduler::MGraphBuilder</a>, <a class="el" href="commands_8hpp_source.html#l00184">MPreparedDepsEvents</a>, and <a class="el" href="commands_8hpp_source.html#l00185">MPreparedHostDepsEvents</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00500">addDep()</a>.</p>
 
@@ -1172,7 +1175,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00627">627</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00244">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00241">MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00237">MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00207">MType</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00246">MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00243">MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00239">MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00207">MType</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="scheduler_8cpp_source.html#l00023">cl::sycl::detail::Scheduler::waitForRecordToFinish()</a>.</p>
 
@@ -1220,9 +1223,9 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00247">247</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00326">_pi_event::get()</a>, <a class="el" href="commands_8cpp_source.html#l00154">cl::sycl::detail::getPiEvents()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02530">piEnqueueEventsWait()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02302">piEventsWait()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00401">_pi_event::get()</a>, <a class="el" href="commands_8cpp_source.html#l00154">cl::sycl::detail::getPiEvents()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02607">piEnqueueEventsWait()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02388">piEventsWait()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01120">cl::sycl::detail::MemCpyCommand::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l01264">cl::sycl::detail::MemCpyCommandHost::getContext()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01194">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01132">cl::sycl::detail::MemCpyCommand::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l01276">cl::sycl::detail::MemCpyCommandHost::getContext()</a>.</p>
 
 </div>
 </div>
@@ -1251,7 +1254,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00242">242</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01120">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01264">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l00811">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01194">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01132">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01276">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, and <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>.</p>
 
 </div>
 </div>
@@ -1278,7 +1281,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00211">211</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
 </div>
 </div>
@@ -1297,9 +1300,9 @@ Friends</h2></td></tr>
 
 <p>Reserved for storing the object address such as SPIRV or memory object address. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00244">244</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00246">246</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01450">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01462">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
 
 </div>
 </div>
@@ -1317,9 +1320,9 @@ Friends</h2></td></tr>
 
 <p>Buffer to build the address string. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00246">246</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00248">248</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
 
 </div>
 </div>
@@ -1335,9 +1338,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00226">226</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00228">228</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="commands_8cpp_source.html#l00668">getBlockReason()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="commands_8cpp_source.html#l00668">getBlockReason()</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1358,7 @@ Friends</h2></td></tr>
 
 <p>Buffer to build the command end-user understandable name. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00250">250</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00252">252</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
 
@@ -1375,7 +1378,7 @@ Friends</h2></td></tr>
 
 <p>Buffer to build the command node type. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00248">248</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00250">250</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
 
@@ -1397,7 +1400,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00215">215</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00429">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="commands_8cpp_source.html#l00500">addDep()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00803">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00892">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00055">cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00503">cl::sycl::detail::Scheduler::GraphBuilder::findDepForRecord()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00025">cl::sycl::detail::Scheduler::GraphProcessor::getWaitList()</a>, <a class="el" href="commands_8cpp_source.html#l00196">cl::sycl::detail::DispatchHostTask::operator()()</a>, <a class="el" href="commands_8cpp_source.html#l01341">cl::sycl::detail::EmptyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00949">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00757">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00837">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01009">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01065">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01153">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01359">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01204">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00444">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="commands_8cpp_source.html#l00500">addDep()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00821">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00055">cl::sycl::detail::Scheduler::GraphProcessor::enqueueCommand()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00519">cl::sycl::detail::Scheduler::GraphBuilder::findDepForRecord()</a>, <a class="el" href="graph__processor_8cpp_source.html#l00025">cl::sycl::detail::Scheduler::GraphProcessor::getWaitList()</a>, <a class="el" href="commands_8cpp_source.html#l00196">cl::sycl::detail::DispatchHostTask::operator()()</a>, <a class="el" href="commands_8cpp_source.html#l01353">cl::sycl::detail::EmptyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00961">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00765">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00845">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01021">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01077">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01165">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01371">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01551">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01216">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
 
 </div>
 </div>
@@ -1443,9 +1446,9 @@ Friends</h2></td></tr>
 
 <p>Describes the status of the command. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00229">229</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00231">231</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="commands_8cpp_source.html#l00196">cl::sycl::detail::DispatchHostTask::operator()()</a>, and <a class="el" href="scheduler_8cpp_source.html#l00203">cl::sycl::detail::Scheduler::releaseHostAccessor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="commands_8cpp_source.html#l00196">cl::sycl::detail::DispatchHostTask::operator()()</a>, and <a class="el" href="scheduler_8cpp_source.html#l00203">cl::sycl::detail::Scheduler::releaseHostAccessor()</a>.</p>
 
 </div>
 </div>
@@ -1471,7 +1474,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00179">179</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01120">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01264">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00811">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, <a class="el" href="commands_8cpp_source.html#l01082">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01227">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, and <a class="el" href="commands_8cpp_source.html#l00196">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>, <a class="el" href="commands_8cpp_source.html#l01194">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01132">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01276">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, <a class="el" href="commands_8cpp_source.html#l01094">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01239">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, and <a class="el" href="commands_8cpp_source.html#l00196">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
 
 </div>
 </div>
@@ -1489,9 +1492,9 @@ Friends</h2></td></tr>
 
 <p>Flag to indicate if this is the first time we are seeing this payload. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00254">254</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00256">256</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00791">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00799">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
 
 </div>
 </div>
@@ -1509,9 +1512,9 @@ Friends</h2></td></tr>
 
 <p>Instance ID tracked for the command. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00256">256</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00258">258</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01450">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01462">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
 
 </div>
 </div>
@@ -1531,7 +1534,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00219">219</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1554,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00221">221</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00168">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00892">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00793">cl::sycl::detail::Scheduler::GraphBuilder::decrementLeafCountersForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00517">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00183">cl::sycl::detail::Scheduler::GraphBuilder::addNodeToLeaves()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00811">cl::sycl::detail::Scheduler::GraphBuilder::decrementLeafCountersForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00533">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>.</p>
 
 </div>
 </div>
@@ -1580,7 +1583,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00184">184</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01120">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01264">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00811">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, and <a class="el" href="commands_8cpp_source.html#l00473">processDepEvent()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01194">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l01132">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01276">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, and <a class="el" href="commands_8cpp_source.html#l00473">processDepEvent()</a>.</p>
 
 </div>
 </div>
@@ -1632,7 +1635,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00180">180</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01450">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01296">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01182">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l00496">getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01120">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01264">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00811">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, <a class="el" href="commands_8cpp_source.html#l00949">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00757">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00837">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01009">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01065">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01153">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01359">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01539">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01204">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00719">cl::sycl::detail::AllocaCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01462">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01308">cl::sycl::detail::EmptyCommand::EmptyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01194">cl::sycl::detail::ExecCGCommand::flushStreams()</a>, <a class="el" href="commands_8cpp_source.html#l00496">getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01132">cl::sycl::detail::MemCpyCommand::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l01276">cl::sycl::detail::MemCpyCommandHost::getContext()</a>, <a class="el" href="commands_8cpp_source.html#l00819">cl::sycl::detail::AllocaSubBufCommand::getMemAllocation()</a>, <a class="el" href="commands_8cpp_source.html#l00961">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00765">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00845">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01021">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01077">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01165">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01371">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01551">cl::sycl::detail::ExecCGCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01216">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01636">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
 
 </div>
 </div>
@@ -1648,9 +1651,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00264">264</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00266">266</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01635">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="commands_8cpp_source.html#l00548">enqueue()</a>.</p>
 
 </div>
 </div>
@@ -1669,9 +1672,9 @@ Friends</h2></td></tr>
 <p>The stream under which the traces are emitted. </p>
 <p>Stream ids are positive integers and we set it to an invalid value. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00241">241</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00243">243</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01450">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00297">Command()</a>, <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01462">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
 
 </div>
 </div>
@@ -1689,9 +1692,9 @@ Friends</h2></td></tr>
 
 <p>The event for node_create and task_begin. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00237">237</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00239">239</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01317">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00864">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00791">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00976">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01097">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01241">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01450">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01385">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="event__impl_8cpp_source.html#l00122">cl::sycl::detail::event_impl::event_impl()</a>, <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00328">emitEdgeEventForCommandDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00373">emitEdgeEventForEventDependence()</a>, <a class="el" href="commands_8cpp_source.html#l00525">emitEnqueuedEventSignal()</a>, <a class="el" href="commands_8cpp_source.html#l00537">emitInstrumentation()</a>, <a class="el" href="commands_8cpp_source.html#l01329">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00872">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00689">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00799">cl::sycl::detail::AllocaSubBufCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00988">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01045">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01109">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01253">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01462">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01397">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="event__impl_8cpp_source.html#l00122">cl::sycl::detail::event_impl::event_impl()</a>, <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
 
 </div>
 </div>
@@ -1709,7 +1712,7 @@ Friends</h2></td></tr>
 
 <p>Flag to indicate if <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d" title="Create a trace event of node_create type; this must be guarded by a check for xptiTraceEnabled(). ">makeTraceEventProlog()</a> has been run. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00252">252</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00254">254</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00461">makeTraceEventEpilog()</a>, and <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>.</p>
 
@@ -1739,7 +1742,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00207">207</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01450">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01462">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00429">makeTraceEventProlog()</a>, and <a class="el" href="commands_8cpp_source.html#l00627">resolveReleaseDependencies()</a>.</p>
 
 </div>
 </div>
@@ -1759,7 +1762,27 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00217">217</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00803">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00892">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00095">cl::sycl::detail::printDotRecursive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00821">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00108">cl::sycl::detail::printDotRecursive()</a>.</p>
+
+</div>
+</div>
+<a id="acb3f9f031e66884e4514d5a392d402c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3f9f031e66884e4514d5a392d402c0">&#9670;&nbsp;</a></span>MVisited</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::Command::MVisited = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used for marking the node as visited during graph traversal. </p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00223">223</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00821">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00095">cl::sycl::detail::markNodeAsVisited()</a>.</p>
 
 </div>
 </div>

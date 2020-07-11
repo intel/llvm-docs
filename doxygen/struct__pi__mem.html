@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('struct__pi__mem.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>PI Mem mapping to a CUDA memory allocation.  
+<p>PI Mem mapping to CUDA memory allocations, both data and texture/surface.  
  <a href="struct__pi__mem.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="pi__cuda_8hpp_source.html">cuda/pi_cuda.hpp</a>&gt;</code></p>
@@ -120,11 +120,14 @@ Collaboration diagram for _pi_mem:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct__pi__mem__coll__graph.png" border="0" usemap="#__pi__mem_coll__map" alt="Collaboration graph"/></div>
 <map name="__pi__mem_coll__map" id="__pi__mem_coll__map">
-<area shape="rect" id="node2" href="struct__pi__object.html" title="_pi_object" alt="" coords="379,397,461,424"/>
-<area shape="rect" id="node9" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1011,296,1101,323"/>
-<area shape="rect" id="node10" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,195,859,221"/>
-<area shape="rect" id="node6" href="classchar.html" title="char" alt="" coords="1033,600,1079,627"/>
-<area shape="rect" id="node16" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,57,467,84"/>
+<area shape="rect" id="node9" href="struct__pi__mem_1_1mem___1_1buffer__mem__.html" title="_pi_mem::mem_::buffer_mem_" alt="" coords="1455,293,1657,320"/>
+<area shape="rect" id="node2" href="struct__pi__object.html" title="_pi_object" alt="" coords="379,460,461,487"/>
+<area shape="rect" id="node17" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1007,359,1096,385"/>
+<area shape="rect" id="node18" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,257,859,284"/>
+<area shape="rect" id="node4" href="union__pi__mem_1_1mem__.html" title="A PI Memory object represents either plain memory allocations (&quot;Buffers&quot; in OpenCL) or typed allocati..." alt="" coords="1801,293,1920,320"/>
+<area shape="rect" id="node5" href="struct__pi__mem_1_1mem___1_1surface__mem__.html" title="_pi_mem::mem_::surface_mem_" alt="" coords="1449,80,1663,107"/>
+<area shape="rect" id="node15" href="classchar.html" title="char" alt="" coords="1028,561,1075,588"/>
+<area shape="rect" id="node24" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,120,467,147"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -132,33 +135,35 @@ Collaboration diagram for _pi_mem:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem_1_1Mapping.html">Mapping</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union__pi__mem_1_1mem__.html">mem_</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A PI Memory object represents either plain memory allocations ("Buffers" in OpenCL) or typed allocations ("Images" in OpenCL).  <a href="union__pi__mem_1_1mem__.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:afb3145cea0024c0bedcd5b4c19011d02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a> { <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58">alloc_mode::classic</a>, 
-<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27">alloc_mode::use_host_ptr</a>, 
-<a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607">alloc_mode::copy_in</a>
- }<tr class="memdesc:afb3145cea0024c0bedcd5b4c19011d02"><td class="mdescLeft">&#160;</td><td class="mdescRight">alloc_mode classic: Just a normal buffer allocated on the device via cuda malloc use_host_ptr: Use an address on the host for the device copy_in: The data for the device comes from the host but the host pointer is not available later for re-use  <a href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:afb3145cea0024c0bedcd5b4c19011d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c8fa65aa01ea0da98a80eb83a9b550"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a> = <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a></td></tr>
-<tr class="separator:a30c8fa65aa01ea0da98a80eb83a9b550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ac70810bd3be2b55e4d31859966b59"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59">mem_type</a> { <a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59a7f2db423a49b305459147332fb01cf87">mem_type::buffer</a>, 
+<a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59ad302e976c9dd527a9521a88c012437c5">mem_type::surface</a>
+ }</td></tr>
+<tr class="separator:a67ac70810bd3be2b55e4d31859966b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63b0b992e1834877641b4220c5d2f135"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> = <a class="el" href="struct__pi__context.html">_pi_context</a> *</td></tr>
 <tr class="separator:a63b0b992e1834877641b4220c5d2f135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2735fae8c7932d6b8263f1d638652264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a2735fae8c7932d6b8263f1d638652264">_pi_mem</a> (<a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> ctxt, <a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a> parent, <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a> mode, <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a> ptr, void *host_ptr, size_t size)</td></tr>
-<tr class="separator:a2735fae8c7932d6b8263f1d638652264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dda5b2a2e033cb371775cce95364d7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a6dda5b2a2e033cb371775cce95364d7b">_pi_mem</a> (<a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> ctxt, <a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a> parent, <a class="el" href="struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55">mem_::buffer_mem_::alloc_mode</a> mode, <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a> ptr, void *host_ptr, size_t size)</td></tr>
+<tr class="memdesc:a6dda5b2a2e033cb371775cce95364d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the PI MEM handler for a non-typed allocation ("buffer")  <a href="#a6dda5b2a2e033cb371775cce95364d7b">More...</a><br /></td></tr>
+<tr class="separator:a6dda5b2a2e033cb371775cce95364d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5e19416fa6df4b2d61d77f112397c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9f5e19416fa6df4b2d61d77f112397c8">_pi_mem</a> (<a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a> ctxt, CUarray array, CUsurfObject surf, <a class="el" href="pi_8h.html#a9995c520b89d8b9d3ae445823d568c5a">pi_mem_type</a> image_type, void *host_ptr)</td></tr>
+<tr class="memdesc:a9f5e19416fa6df4b2d61d77f112397c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the PI allocation for an Image object (surface in CUDA)  <a href="#a9f5e19416fa6df4b2d61d77f112397c8">More...</a><br /></td></tr>
+<tr class="separator:a9f5e19416fa6df4b2d61d77f112397c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebc26c331e43a45f182812a7f2ee797d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d">~_pi_mem</a> ()</td></tr>
 <tr class="separator:aebc26c331e43a45f182812a7f2ee797d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5167988e00829fba3cf4d3bd8271967"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#af5167988e00829fba3cf4d3bd8271967">is_buffer</a> () const noexcept</td></tr>
-<tr class="memdesc:af5167988e00829fba3cf4d3bd8271967"><td class="mdescLeft">&#160;</td><td class="mdescRight">: Adapt once images are supported.  <a href="#af5167988e00829fba3cf4d3bd8271967">More...</a><br /></td></tr>
 <tr class="separator:af5167988e00829fba3cf4d3bd8271967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95c2aae50881caf61d311fe75a2ee87b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a95c2aae50881caf61d311fe75a2ee87b">is_sub_buffer</a> () const noexcept</td></tr>
 <tr class="separator:a95c2aae50881caf61d311fe75a2ee87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6add1624447042834e6d34ad4bd1c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ad6add1624447042834e6d34ad4bd1c9a">get</a> () const noexcept</td></tr>
-<tr class="separator:ad6add1624447042834e6d34ad4bd1c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbceaf290710aa4db27fba364e233e86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#abbceaf290710aa4db27fba364e233e86">is_image</a> () const noexcept</td></tr>
+<tr class="separator:abbceaf290710aa4db27fba364e233e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1048ed41565664dbdbad0db2218b2fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a1048ed41565664dbdbad0db2218b2fad">get_context</a> () const noexcept</td></tr>
 <tr class="separator:a1048ed41565664dbdbad0db2218b2fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa929377c74539593f2a2c6f6822389"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a3aa929377c74539593f2a2c6f6822389">increment_reference_count</a> () noexcept</td></tr>
@@ -167,18 +172,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae957daeff1a6ec53dba7387281407def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275e89afd9e097ec16265868d932032f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a275e89afd9e097ec16265868d932032f">get_reference_count</a> () const noexcept</td></tr>
 <tr class="separator:a275e89afd9e097ec16265868d932032f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6417a2cfc2c16e607fe781f216a3a8a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#af6417a2cfc2c16e607fe781f216a3a8a">get_size</a> () const noexcept</td></tr>
-<tr class="separator:af6417a2cfc2c16e607fe781f216a3a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf210c8137e219f4656952ef35454220"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#abf210c8137e219f4656952ef35454220">get_map_ptr</a> () const noexcept</td></tr>
-<tr class="separator:abf210c8137e219f4656952ef35454220"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed4b74e6b79249b7fad91b9061b9fb02"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aed4b74e6b79249b7fad91b9061b9fb02">get_map_offset</a> (void *ptr) const noexcept</td></tr>
-<tr class="separator:aed4b74e6b79249b7fad91b9061b9fb02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade67ff7fc3a116e18a954576fdeda150"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ade67ff7fc3a116e18a954576fdeda150">map_to_ptr</a> (size_t offset, cl_map_flags flags) noexcept</td></tr>
-<tr class="separator:ade67ff7fc3a116e18a954576fdeda150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a428f85a34e907b3c38fe5c9365371cd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a428f85a34e907b3c38fe5c9365371cd9">unmap</a> (void *ptr) noexcept</td></tr>
-<tr class="separator:a428f85a34e907b3c38fe5c9365371cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a836623e9588d3c4acac63f532d7edf7b"><td class="memItemLeft" align="right" valign="top">cl_map_flags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a836623e9588d3c4acac63f532d7edf7b">get_map_flags</a> () const noexcept</td></tr>
-<tr class="separator:a836623e9588d3c4acac63f532d7edf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa82873428514b48b664a6448e06cc4a0"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aa82873428514b48b664a6448e06cc4a0">getZeHandle</a> ()=0</td></tr>
 <tr class="separator:aa82873428514b48b664a6448e06cc4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7684519dcdc3636e5d18e29eba259c5e"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a7684519dcdc3636e5d18e29eba259c5e">getZeHandlePtr</a> ()=0</td></tr>
@@ -199,24 +192,13 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr class="memitem:afeb0ef34df3b78485d184900007b2a21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21">context_</a></td></tr>
 <tr class="separator:afeb0ef34df3b78485d184900007b2a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24ebff361179097fd3f02fb4723153bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a24ebff361179097fd3f02fb4723153bb">parent_</a></td></tr>
-<tr class="separator:a24ebff361179097fd3f02fb4723153bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9556a97da972a95d3ccab5755961729a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9556a97da972a95d3ccab5755961729a">ptr_</a></td></tr>
-<tr class="separator:a9556a97da972a95d3ccab5755961729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa282d69586314e359e5b45ae579ac5cc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aa282d69586314e359e5b45ae579ac5cc">hostPtr_</a></td></tr>
-<tr class="separator:aa282d69586314e359e5b45ae579ac5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf2f1018d1092e572d2b7d426af1d8ca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#abf2f1018d1092e572d2b7d426af1d8ca">size_</a></td></tr>
-<tr class="separator:abf2f1018d1092e572d2b7d426af1d8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099358d01a7f6f11e605ccddac7e4a30"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a099358d01a7f6f11e605ccddac7e4a30">mapOffset_</a></td></tr>
-<tr class="separator:a099358d01a7f6f11e605ccddac7e4a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a907ca90796097685f69c3bd5f4d185fe"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a907ca90796097685f69c3bd5f4d185fe">mapPtr_</a></td></tr>
-<tr class="separator:a907ca90796097685f69c3bd5f4d185fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e5dd7c7c5435a9118ebe59ce7b68ce"><td class="memItemLeft" align="right" valign="top">cl_map_flags&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a16e5dd7c7c5435a9118ebe59ce7b68ce">mapFlags_</a></td></tr>
-<tr class="separator:a16e5dd7c7c5435a9118ebe59ce7b68ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a053c712d3983e00f30f097f96d3c10a0"><td class="memItemLeft" align="right" valign="top">std::atomic_uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0">refCount_</a></td></tr>
+<tr class="memdesc:a053c712d3983e00f30f097f96d3c10a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference counting of the handler.  <a href="#a053c712d3983e00f30f097f96d3c10a0">More...</a><br /></td></tr>
 <tr class="separator:a053c712d3983e00f30f097f96d3c10a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad646178731915cf7f0179124b6ae73c6"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">_pi_mem::alloc_mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#ad646178731915cf7f0179124b6ae73c6">allocMode_</a></td></tr>
-<tr class="separator:ad646178731915cf7f0179124b6ae73c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac840f8416b7e278f282ff3523057c77"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59">_pi_mem::mem_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#aac840f8416b7e278f282ff3523057c77">mem_type_</a></td></tr>
+<tr class="separator:aac840f8416b7e278f282ff3523057c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9907188047f64222c897c4d61964a232"><td class="memItemLeft" align="right" valign="top">union <a class="el" href="union__pi__mem_1_1mem__.html">_pi_mem::mem_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a9907188047f64222c897c4d61964a232">mem_</a></td></tr>
+<tr class="separator:a9907188047f64222c897c4d61964a232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a403ef5332404e235a08ea3a1a0c5f97e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a403ef5332404e235a08ea3a1a0c5f97e">Platform</a></td></tr>
 <tr class="separator:a403ef5332404e235a08ea3a1a0c5f97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80835690887d8a5aeb8ba2831cb2f955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchar.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955">MapHostPtr</a></td></tr>
@@ -231,26 +213,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a9e55112f82599c30317d06b0c314cea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>PI Mem mapping to a CUDA memory allocation. </p>
+<div class="textblock"><p>PI Mem mapping to CUDA memory allocations, both data and texture/surface. </p>
+<p>Represents non-SVM allocations on the CUDA backend. Keeps tracks of all mapped regions used for Map/Unmap calls. Only one region can be active at the same time per allocation. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00181">181</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00183">183</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a30c8fa65aa01ea0da98a80eb83a9b550"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30c8fa65aa01ea0da98a80eb83a9b550">&#9670;&nbsp;</a></span>native_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">_pi_mem::native_type</a> =  <a class="el" href="cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de">CUdeviceptr</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00182">182</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-</div>
-</div>
 <a id="a63b0b992e1834877641b4220c5d2f135"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63b0b992e1834877641b4220c5d2f135">&#9670;&nbsp;</a></span>pi_context</h2>
 
@@ -263,13 +230,13 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00183">183</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00186">186</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="afb3145cea0024c0bedcd5b4c19011d02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb3145cea0024c0bedcd5b4c19011d02">&#9670;&nbsp;</a></span>alloc_mode</h2>
+<a id="a67ac70810bd3be2b55e4d31859966b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ac70810bd3be2b55e4d31859966b59">&#9670;&nbsp;</a></span>mem_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +245,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">_pi_mem::alloc_mode</a></td>
+          <td class="memname">enum <a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59">_pi_mem::mem_type</a></td>
         </tr>
       </table>
   </td>
@@ -287,21 +254,18 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>alloc_mode classic: Just a normal buffer allocated on the device via cuda malloc use_host_ptr: Use an address on the host for the device copy_in: The data for the device comes from the host but the host pointer is not available later for re-use </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afb3145cea0024c0bedcd5b4c19011d02af3d64714d1f6e7f71558d4252e84ab58"></a>classic&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27"></a>use_host_ptr&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="afb3145cea0024c0bedcd5b4c19011d02ad318bf011157b5e4bccd36b488ef9607"></a>copy_in&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a67ac70810bd3be2b55e4d31859966b59a7f2db423a49b305459147332fb01cf87"></a>buffer&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a67ac70810bd3be2b55e4d31859966b59ad302e976c9dd527a9521a88c012437c5"></a>surface&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00201">201</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00193">193</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2735fae8c7932d6b8263f1d638652264"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2735fae8c7932d6b8263f1d638652264">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[1/2]</span></h2>
+<a id="a6dda5b2a2e033cb371775cce95364d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dda5b2a2e033cb371775cce95364d7b">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +288,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">alloc_mode</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55">mem_::buffer_mem_::alloc_mode</a>&#160;</td>
           <td class="paramname"><em>mode</em>, </td>
         </tr>
         <tr>
@@ -358,9 +322,71 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00203">203</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p>Constructs the PI MEM handler for a non-typed allocation ("buffer") </p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l00728">cuda_piContextRetain()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02192">cuda_piMemRetain()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00293">293</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="struct__pi__mem_1_1mem___1_1buffer__mem__.html#aaf08e53e244f71e8308de38465256e67">_pi_mem::mem_::buffer_mem_::allocMode_</a>, <a class="el" href="union__pi__mem_1_1mem__.html#aa0e1f0043ce400bd9c551f1d9845cc13">_pi_mem::mem_::buffer_mem_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00740">cuda_piContextRetain()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02535">cuda_piMemRetain()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00212">_pi_mem::mem_::buffer_mem_::hostPtr_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00220">_pi_mem::mem_::buffer_mem_::mapFlags_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00216">_pi_mem::mem_::buffer_mem_::mapOffset_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00218">_pi_mem::mem_::buffer_mem_::mapPtr_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00207">_pi_mem::mem_::buffer_mem_::parent_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00209">_pi_mem::mem_::buffer_mem_::ptr_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00214">_pi_mem::mem_::buffer_mem_::size_</a>.</p>
+
+</div>
+</div>
+<a id="a9f5e19416fa6df4b2d61d77f112397c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5e19416fa6df4b2d61d77f112397c8">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">_pi_mem::_pi_mem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__pi__mem.html#a63b0b992e1834877641b4220c5d2f135">pi_context</a>&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CUarray&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CUsurfObject&#160;</td>
+          <td class="paramname"><em>surf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a9995c520b89d8b9d3ae445823d568c5a">pi_mem_type</a>&#160;</td>
+          <td class="paramname"><em>image_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>host_ptr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the PI allocation for an Image object (surface in CUDA) </p>
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00312">312</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00280">_pi_mem::mem_::surface_mem_::array_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00740">cuda_piContextRetain()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00282">_pi_mem::mem_::surface_mem_::imageType_</a>, <a class="el" href="union__pi__mem_1_1mem__.html#af005ee6398eb792867a03ad209fbdc53">_pi_mem::mem_::surface_mem_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00281">_pi_mem::mem_::surface_mem_::surfObj_</a>.</p>
 
 </div>
 </div>
@@ -387,9 +413,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00214">214</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00321">321</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8cpp_source.html#l01451">cuda_piContextRelease()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01585">cuda_piMemRelease()</a>.</p>
+<p class="reference">References <a class="el" href="union__pi__mem_1_1mem__.html#aa0e1f0043ce400bd9c551f1d9845cc13">_pi_mem::mem_::buffer_mem_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01563">cuda_piContextRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01702">cuda_piMemRelease()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00207">_pi_mem::mem_::buffer_mem_::parent_</a>.</p>
 
 </div>
 </div>
@@ -419,7 +445,7 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a9e55112f82599c30317d06b0c314cea3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e55112f82599c30317d06b0c314cea3">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e55112f82599c30317d06b0c314cea3">&#9670;&nbsp;</a></span>_pi_mem() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,11 +515,11 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level0_8cpp_source.html#l00146">146</a> of file <a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level0_8cpp_source.html#l00147">147</a> of file <a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemBufferMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02976">piEnqueueMemBufferMap()</a>.</p>
 
 </div>
 </div>
@@ -520,38 +546,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00235">235</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00344">344</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01585">cuda_piMemRelease()</a>.</p>
-
-</div>
-</div>
-<a id="ad6add1624447042834e6d34ad4bd1c9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6add1624447042834e6d34ad4bd1c9a">&#9670;&nbsp;</a></span>get()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a> _pi_mem::get </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00229">229</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03024">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03065">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03110">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01938">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02922">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01892">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02973">cuda_piEnqueueMemBufferWriteRect()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01711">cuda_piextMemGetNativeHandle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01702">cuda_piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -578,95 +575,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00231">231</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a836623e9588d3c4acac63f532d7edf7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a836623e9588d3c4acac63f532d7edf7b">&#9670;&nbsp;</a></span>get_map_flags()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">cl_map_flags _pi_mem::get_map_flags </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00268">268</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03304">cuda_piEnqueueMemUnmap()</a>.</p>
-
-</div>
-</div>
-<a id="aed4b74e6b79249b7fad91b9061b9fb02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed4b74e6b79249b7fad91b9061b9fb02">&#9670;&nbsp;</a></span>get_map_offset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t _pi_mem::get_map_offset </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00243">243</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03304">cuda_piEnqueueMemUnmap()</a>.</p>
-
-</div>
-</div>
-<a id="abf210c8137e219f4656952ef35454220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf210c8137e219f4656952ef35454220">&#9670;&nbsp;</a></span>get_map_ptr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* _pi_mem::get_map_ptr </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00241">241</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03255">cuda_piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l03304">cuda_piEnqueueMemUnmap()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00340">340</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -693,38 +602,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00237">237</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00346">346</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02192">cuda_piMemRetain()</a>.</p>
-
-</div>
-</div>
-<a id="af6417a2cfc2c16e607fe781f216a3a8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6417a2cfc2c16e607fe781f216a3a8a">&#9670;&nbsp;</a></span>get_size()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t _pi_mem::get_size </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00239">239</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03304">cuda_piEnqueueMemUnmap()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01637">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02535">cuda_piMemRetain()</a>.</p>
 
 </div>
 </div>
@@ -753,7 +633,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="struct__pi__image.html#a85de932a49ff40e6df07b7a88c1519c3">_pi_image</a>, and <a class="el" href="struct__pi__buffer.html#aa29dbcda036be9d0886aeb5b5a1545d6">_pi_buffer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03083">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02789">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02807">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02884">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02577">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02590">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02757">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02773">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02974">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03260">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01442">piMemRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03160">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02866">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02884">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02961">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02976">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02654">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02667">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02834">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02850">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03051">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03337">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01467">piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -807,9 +687,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00233">233</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00342">342</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02192">cuda_piMemRetain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02535">cuda_piMemRetain()</a>.</p>
 
 </div>
 </div>
@@ -836,11 +716,36 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>: Adapt once images are supported. </p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00332">332</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00223">223</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01766">cuda_piMemBufferPartition()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01637">cuda_piMemBufferPartition()</a>.</p>
+</div>
+</div>
+<a id="abbceaf290710aa4db27fba364e233e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbceaf290710aa4db27fba364e233e86">&#9670;&nbsp;</a></span>is_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _pi_mem::is_image </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00338">338</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -867,9 +772,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00225">225</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00334">334</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01637">cuda_piMemBufferPartition()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01585">cuda_piMemRelease()</a>.</p>
+<p class="reference">References <a class="el" href="union__pi__mem_1_1mem__.html#aa0e1f0043ce400bd9c551f1d9845cc13">_pi_mem::mem_::buffer_mem_</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00207">_pi_mem::mem_::buffer_mem_::parent_</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01766">cuda_piMemBufferPartition()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01702">cuda_piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -898,49 +805,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Implemented in <a class="el" href="struct__pi__image.html#a7d7723d168a86fb211bfa3c9ac97dd54">_pi_image</a>, and <a class="el" href="struct__pi__buffer.html#a7aa1bc51e539792476d875e10dfb6991">_pi_buffer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03083">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03045">getImageRegionHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03260">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01442">piMemRelease()</a>.</p>
-
-</div>
-</div>
-<a id="ade67ff7fc3a116e18a954576fdeda150"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade67ff7fc3a116e18a954576fdeda150">&#9670;&nbsp;</a></span>map_to_ptr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* _pi_mem::map_to_ptr </td>
-          <td>(</td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>offset</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">cl_map_flags&#160;</td>
-          <td class="paramname"><em>flags</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00245">245</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00135">cl::sycl::malloc()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03255">cuda_piEnqueueMemBufferMap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03160">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03122">getImageRegionHelper()</a>, <a class="el" href="pi__level0_8cpp_source.html#l03337">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01467">piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -970,61 +835,15 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level0_8cpp_source.html#l00158">158</a> of file <a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level0_8cpp_source.html#l00159">159</a> of file <a class="el" href="pi__level0_8cpp_source.html">pi_level0.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02974">piEnqueueMemUnmap()</a>.</p>
-
-</div>
-</div>
-<a id="a428f85a34e907b3c38fe5c9365371cd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a428f85a34e907b3c38fe5c9365371cd9">&#9670;&nbsp;</a></span>unmap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void _pi_mem::unmap </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00258">258</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03304">cuda_piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03051">piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ad646178731915cf7f0179124b6ae73c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad646178731915cf7f0179124b6ae73c6">&#9670;&nbsp;</a></span>allocMode_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02">_pi_mem::alloc_mode</a>  _pi_mem::allocMode_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="afeb0ef34df3b78485d184900007b2a21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afeb0ef34df3b78485d184900007b2a21">&#9670;&nbsp;</a></span>context_</h2>
 
@@ -1037,43 +856,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00185">185</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01637">cuda_piMemBufferPartition()</a>.</p>
-
-</div>
-</div>
-<a id="aa282d69586314e359e5b45ae579ac5cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa282d69586314e359e5b45ae579ac5cc">&#9670;&nbsp;</a></span>hostPtr_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* _pi_mem::hostPtr_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00189">189</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01637">cuda_piMemBufferPartition()</a>.</p>
-
-</div>
-</div>
-<a id="a16e5dd7c7c5435a9118ebe59ce7b68ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16e5dd7c7c5435a9118ebe59ce7b68ce">&#9670;&nbsp;</a></span>mapFlags_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cl_map_flags _pi_mem::mapFlags_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00193">193</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01766">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>
@@ -1091,55 +876,39 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00187">187</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02899">piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02974">piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02976">piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l03051">piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
-<a id="a099358d01a7f6f11e605ccddac7e4a30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a099358d01a7f6f11e605ccddac7e4a30">&#9670;&nbsp;</a></span>mapOffset_</h2>
+<a id="a9907188047f64222c897c4d61964a232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9907188047f64222c897c4d61964a232">&#9670;&nbsp;</a></span>mem_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">size_t _pi_mem::mapOffset_</td>
+          <td class="memname">union <a class="el" href="union__pi__mem_1_1mem__.html">_pi_mem::mem_</a>  <a class="el" href="union__pi__mem_1_1mem__.html">_pi_mem::mem_</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00191">191</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03480">cuda_piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03527">cuda_piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03572">cuda_piEnqueueMemBufferFill()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03980">cuda_piEnqueueMemBufferMap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02072">cuda_piEnqueueMemBufferRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03378">cuda_piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02026">cuda_piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03429">cuda_piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03890">cuda_piEnqueueMemImageCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03760">cuda_piEnqueueMemImageRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03827">cuda_piEnqueueMemImageWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l04030">cuda_piEnqueueMemUnmap()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02211">cuda_piextKernelSetArgMemObj()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l01843">cuda_piextMemGetNativeHandle()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01766">cuda_piMemBufferPartition()</a>.</p>
 
 </div>
 </div>
-<a id="a907ca90796097685f69c3bd5f4d185fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a907ca90796097685f69c3bd5f4d185fe">&#9670;&nbsp;</a></span>mapPtr_</h2>
+<a id="aac840f8416b7e278f282ff3523057c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac840f8416b7e278f282ff3523057c77">&#9670;&nbsp;</a></span>mem_type_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* _pi_mem::mapPtr_</td>
+          <td class="memname">enum <a class="el" href="struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59">_pi_mem::mem_type</a>  _pi_mem::mem_type_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00192">192</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a24ebff361179097fd3f02fb4723153bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24ebff361179097fd3f02fb4723153bb">&#9670;&nbsp;</a></span>parent_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="pi_8h.html#a37c81d75889dc81b6bf1b0ec2350e5b5">pi_mem</a> _pi_mem::parent_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00186">186</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l03890">cuda_piEnqueueMemImageCopy()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03760">cuda_piEnqueueMemImageRead()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l03827">cuda_piEnqueueMemImageWrite()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02211">cuda_piextKernelSetArgMemObj()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01702">cuda_piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -1157,25 +926,7 @@ Protected Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00182">182</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03260">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01442">piMemRelease()</a>.</p>
-
-</div>
-</div>
-<a id="a9556a97da972a95d3ccab5755961729a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9556a97da972a95d3ccab5755961729a">&#9670;&nbsp;</a></span>ptr_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct__pi__mem.html#a30c8fa65aa01ea0da98a80eb83a9b550">native_type</a> _pi_mem::ptr_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00187">187</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01637">cuda_piMemBufferPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03337">piMemBufferPartition()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01467">piMemRelease()</a>.</p>
 
 </div>
 </div>
@@ -1191,23 +942,9 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00194">194</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p>Reference counting of the handler. </p>
 
-</div>
-</div>
-<a id="abf2f1018d1092e572d2b7d426af1d8ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf2f1018d1092e572d2b7d426af1d8ca">&#9670;&nbsp;</a></span>size_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t _pi_mem::size_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00190">190</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00192">192</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>

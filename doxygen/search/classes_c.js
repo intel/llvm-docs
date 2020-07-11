@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['make_5fesimd_5fvoid',['make_esimd_void',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1make__esimd__void.html',1,'cl::sycl::intel::gpu']]],
   ['make_5flarger',['make_larger',['../structcl_1_1sycl_1_1detail_1_1make__larger.html',1,'cl::sycl::detail']]],
   ['make_5flarger_5fimpl',['make_larger_impl',['../structcl_1_1sycl_1_1detail_1_1make__larger__impl.html',1,'cl::sycl::detail']]],
   ['make_5flarger_5fimpl_3c_20t_2c_20enable_5fif_5ft_3c_20is_5fcontained_3c_20t_2c_20gtl_3a_3ascalar_5ffloating_5flist_20_3e_3a_3avalue_2c_20t_20_3e_20_3e',['make_larger_impl&lt; T, enable_if_t&lt; is_contained&lt; T, gtl::scalar_floating_list &gt;::value, T &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html',1,'cl::sycl::detail']]],
@@ -21,6 +22,12 @@ var searchData=
   ['mapmemobject',['MapMemObject',['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html',1,'cl::sycl::detail']]],
   ['mapping',['Mapping',['../struct__pi__mem_1_1Mapping.html',1,'_pi_mem']]],
   ['maximum',['maximum',['../structcl_1_1sycl_1_1intel_1_1maximum.html',1,'cl::sycl::intel']]],
+  ['maxtype',['maxtype',['../structmaxtype.html',1,'']]],
+  ['maxtype_3c_20char_20_3e',['maxtype&lt; char &gt;',['../structmaxtype_3_01char_01_4.html',1,'']]],
+  ['maxtype_3c_20short_20_3e',['maxtype&lt; short &gt;',['../structmaxtype_3_01short_01_4.html',1,'']]],
+  ['maxtype_3c_20unsigned_20char_20_3e',['maxtype&lt; unsigned char &gt;',['../structmaxtype_3_01unsigned_01char_01_4.html',1,'']]],
+  ['maxtype_3c_20unsigned_20short_20_3e',['maxtype&lt; unsigned short &gt;',['../structmaxtype_3_01unsigned_01short_01_4.html',1,'']]],
+  ['mem_5f',['mem_',['../union__pi__mem_1_1mem__.html',1,'_pi_mem']]],
   ['memcpycommand',['MemCpyCommand',['../classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html',1,'cl::sycl::detail']]],
   ['memcpycommandhost',['MemCpyCommandHost',['../classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html',1,'cl::sycl::detail']]],
   ['memobjrecord',['MemObjRecord',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html',1,'cl::sycl::detail']]],

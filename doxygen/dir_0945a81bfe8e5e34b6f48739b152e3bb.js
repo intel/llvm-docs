@@ -45,7 +45,8 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "kernel_program_cache.hpp", "kernel__program__cache_8hpp.html", [
       [ "KernelProgramCache", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache" ],
       [ "BuildError", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError" ],
-      [ "BuildResult", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult" ]
+      [ "BuildResult", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult" ],
+      [ "BuildResultKernel", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel" ]
     ] ],
     [ "memory_manager.cpp", "memory__manager_8cpp.html", "memory__manager_8cpp" ],
     [ "os_util.cpp", "os__util_8cpp.html", null ],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['uncached',['Uncached',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8eac13457901ccaa5c8bb67d5eb2a937aab47215a1173a0ee7b4740f249a7ca2c',1,'cl::sycl::intel::gpu']]],
   ['undefined',['UNDEFINED',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8aada7af7a9dbcced08692c315ef5049fdb',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['uniformmemory',['UniformMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a63f47c7ceb16c99bcf521934fd4b7043',1,'__spv::MemorySemanticsMask']]],
   ['unknown',['unknown',['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0eaad921d60486366258809553a3db49a4a',1,'cl::sycl::usm']]],
@@ -15,7 +16,7 @@ var searchData=
   ['unsigned_5fint8',['unsigned_int8',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea7482b579391d1c2d29c4c93a0f2571d0',1,'cl::sycl']]],
   ['update_5fhost',['UPDATE_HOST',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeacc1740df2d5fa39efc228be45f5e96ac',1,'cl::sycl::detail::CG']]],
   ['update_5frequirement',['UPDATE_REQUIREMENT',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a6ea18adaced89f0cacb69c4e1110a785',1,'cl::sycl::detail::Command']]],
-  ['use_5fhost_5fptr',['use_host_ptr',['../struct__pi__mem.html#afb3145cea0024c0bedcd5b4c19011d02a975f7eb1c03d05e028b85bd101c66a27',1,'_pi_mem']]],
+  ['use_5fhost_5fptr',['use_host_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a975f7eb1c03d05e028b85bd101c66a27',1,'_pi_mem::mem_::buffer_mem_']]],
   ['user_5fdefined',['user_defined',['../struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084aacf0d09710ee2f2dd6c1124d35d8d842',1,'_pi_context']]],
   ['usm_5fdevice_5fallocations',['usm_device_allocations',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aed96eac28639cadc818b197ffff31d65',1,'cl::sycl::info']]],
   ['usm_5fhost_5fallocations',['usm_host_allocations',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a1f662c5dce6a25abcb7d2c926e3a0827',1,'cl::sycl::info']]],

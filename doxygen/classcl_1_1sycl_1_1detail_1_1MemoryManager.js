@@ -15,6 +15,8 @@ var classcl_1_1sycl_1_1detail_1_1MemoryManager =
     [ "map", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d", null ],
     [ "prefetch_usm", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8d7a472dc0c2bbfa9dd666dc47a9ad0b", null ],
     [ "release", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ab9ff512130fc0fa1a38cb168eb1a0386", null ],
+    [ "releaseImageBuffer", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#acdc14d8315ab61332c5de245bfa76f7c", null ],
     [ "releaseMemObj", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a563de04e33f937623b8520d336fde086", null ],
-    [ "unmap", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c", null ]
+    [ "unmap", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c", null ],
+    [ "wrapIntoImageBuffer", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad82016f75f13b645c868986261b1a6da", null ]
 ];

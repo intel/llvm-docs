@@ -12,5 +12,6 @@ var classcl_1_1sycl_1_1detail_1_1image__accessor =
     [ "read", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#aa56227f01968a3a078b5fda095ded417", null ],
     [ "read", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a2a2dcd09742d97f423c4edc2ee205054", null ],
     [ "write", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a25b22d00a8fec9c9da461486847de9af", null ],
-    [ "__image_array_slice__", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a5f21982bc6aa211c8bd51f38c89434b7", null ]
+    [ "__image_array_slice__", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a5f21982bc6aa211c8bd51f38c89434b7", null ],
+    [ "sycl::intel::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a4a96d79285637a3b20f6a8b45186390b", null ]
 ];

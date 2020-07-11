@@ -15,5 +15,8 @@ var searchData=
   ['declare_5funsigned_5fintegral_5fconverter',['DECLARE_UNSIGNED_INTEGRAL_CONVERTER',['../types_8hpp.html#ae51509d2097e818fef2e3ae3912f03cf',1,'types.hpp']]],
   ['declare_5funsigned_5fintegral_5fvector_5fconverters',['DECLARE_UNSIGNED_INTEGRAL_VECTOR_CONVERTERS',['../types_8hpp.html#a67c120b30f24daf9f11bd8971101affe',1,'types.hpp']]],
   ['declare_5fvector_5fconverters',['DECLARE_VECTOR_CONVERTERS',['../types_8hpp.html#a93d55fbee9e7ebf6c76eb344da02de0f',1,'types.hpp']]],
-  ['declare_5fvector_5flonglong_5fconverters',['DECLARE_VECTOR_LONGLONG_CONVERTERS',['../types_8hpp.html#a53cff3eaefbe796306a1d941968a382d',1,'types.hpp']]]
+  ['declare_5fvector_5flonglong_5fconverters',['DECLARE_VECTOR_LONGLONG_CONVERTERS',['../types_8hpp.html#a53cff3eaefbe796306a1d941968a382d',1,'types.hpp']]],
+  ['def_5fbinop',['DEF_BINOP',['../esimd_2esimd_8hpp.html#a6755e207502267cee2f3ed0c2326b428',1,'DEF_BINOP():&#160;esimd.hpp'],['../esimd__view_8hpp.html#a6755e207502267cee2f3ed0c2326b428',1,'DEF_BINOP():&#160;esimd_view.hpp']]],
+  ['def_5flogic_5fop',['DEF_LOGIC_OP',['../esimd_2esimd_8hpp.html#ae50502d3d5ed5fe93a7f18febd142360',1,'DEF_LOGIC_OP():&#160;esimd.hpp'],['../esimd__view_8hpp.html#ae50502d3d5ed5fe93a7f18febd142360',1,'DEF_LOGIC_OP():&#160;esimd_view.hpp']]],
+  ['def_5frelop',['DEF_RELOP',['../esimd_2esimd_8hpp.html#a8241f63afa29f1b094415697fafce1ee',1,'DEF_RELOP():&#160;esimd.hpp'],['../esimd__view_8hpp.html#a8241f63afa29f1b094415697fafce1ee',1,'DEF_RELOP():&#160;esimd_view.hpp']]]
 ];

@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__fp__or__dword__type_3_01sycl_1_1intel_1_1gpu_7c146ca85f1af6e1a086db01bce0e7fa =
+[
+    [ "value", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__fp__or__dword__type_3_01sycl_1_1intel_1_1gpu_7c146ca85f1af6e1a086db01bce0e7fa.html#a7ec36dd32f484ce3564fe3b16aece36a", null ]
+];

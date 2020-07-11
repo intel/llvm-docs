@@ -16,6 +16,9 @@ var searchData=
   ['cl_5fushort',['cl_ushort',['../namespacecl_1_1sycl.html#ae572567ca007eed2a0d67d700a5a18f1',1,'cl::sycl']]],
   ['clsetprogramspecializationconstant_5ffn',['clSetProgramSpecializationConstant_fn',['../pi__opencl_8cpp.html#a6adb57f04a7f087cb902f2cadae76550',1,'pi_opencl.cpp']]],
   ['common_5frel_5fret_5ft',['common_rel_ret_t',['../namespacecl_1_1sycl_1_1detail.html#a65bb96243da5397603945a135428ab03',1,'cl::sycl::detail']]],
+  ['compute_5fformat_5ftype_5f2d_5ft',['compute_format_type_2d_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a64039e576ea967f70336e507ad87289f',1,'cl::sycl::intel::gpu']]],
+  ['compute_5fformat_5ftype_5ft',['compute_format_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a89f19e2a084b174f3ace50d4fcd67118',1,'cl::sycl::intel::gpu']]],
+  ['compute_5ftype_5ft',['compute_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a9aac781579d0d420018f577e9f33f855',1,'cl::sycl::intel::gpu']]],
   ['concreteasptrtype',['ConcreteASPtrType',['../classcl_1_1sycl_1_1accessor.html#ae748411d145e0a0df95083a97510a57a',1,'cl::sycl::accessor']]],
   ['conditional_5ft',['conditional_t',['../namespacecl_1_1sycl_1_1detail.html#ac666de109fc99c49823e41f88b82bddd',1,'cl::sycl::detail']]],
   ['const_5fif_5fconst_5fas',['const_if_const_AS',['../namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202',1,'cl::sycl::detail']]],
@@ -38,5 +41,6 @@ var searchData=
   ['cudevice',['CUdevice',['../cuda_8hpp.html#acd81b70eb9968392bb5cdf582af8eab4',1,'cuda.hpp']]],
   ['cudeviceptr',['CUdeviceptr',['../cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de',1,'cuda.hpp']]],
   ['cuevent',['CUevent',['../cuda_8hpp.html#a6d740185cf0953636d4ae37f68d7559b',1,'cuda.hpp']]],
+  ['cumodule',['CUmodule',['../cuda_8hpp.html#a9e4ef4dcfba4662b2299acb8d049a1ef',1,'cuda.hpp']]],
   ['custream',['CUstream',['../cuda_8hpp.html#ab946c7f02e09efd788a204718015d88a',1,'cuda.hpp']]]
 ];

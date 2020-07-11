@@ -118,16 +118,16 @@ Collaboration diagram for _pi_program:</div>
 <div class="center"><img src="struct__pi__program__coll__graph.png" border="0" usemap="#__pi__program_coll__map" alt="Collaboration graph"/></div>
 <map name="__pi__program_coll__map" id="__pi__program_coll__map">
 <area shape="rect" id="node2" href="struct__pi__object.html" title="_pi_object" alt="" coords="379,407,461,433"/>
-<area shape="rect" id="node11" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1047,305,1137,332"/>
-<area shape="rect" id="node12" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,204,859,231"/>
-<area shape="rect" id="node6" href="classchar.html" title="char" alt="" coords="1069,629,1115,656"/>
-<area shape="rect" id="node18" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,79,467,105"/>
+<area shape="rect" id="node13" href="struct__pi__context.html" title="PI context mapping to a CUDA context object. " alt="" coords="1047,305,1137,332"/>
+<area shape="rect" id="node14" href="class__pi__device.html" title="PI device mapping to a CUdevice. " alt="" coords="775,204,859,231"/>
+<area shape="rect" id="node6" href="classchar.html" title="char" alt="" coords="1069,628,1115,655"/>
+<area shape="rect" id="node20" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="373,79,467,105"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a233c10d83b39eb811cc0a323744cd0af"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a233c10d83b39eb811cc0a323744cd0af">native_type</a> = CUmodule</td></tr>
+<tr class="memitem:a233c10d83b39eb811cc0a323744cd0af"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a233c10d83b39eb811cc0a323744cd0af">native_type</a> = <a class="el" href="cuda_8hpp.html#a9e4ef4dcfba4662b2299acb8d049a1ef">CUmodule</a></td></tr>
 <tr class="separator:a233c10d83b39eb811cc0a323744cd0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -180,6 +180,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a442f6fd8ce6376ef33fd7a086f81c252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7deb46fc8c6b760511f88a688a433bb8"><td class="memItemLeft" align="right" valign="top">ze_module_handle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8">ZeModule</a></td></tr>
 <tr class="separator:a7deb46fc8c6b760511f88a688a433bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91920a50d408d77eeb7add13bc66e2e1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a91920a50d408d77eeb7add13bc66e2e1">ZeSpecConstantsMutex</a></td></tr>
+<tr class="separator:a91920a50d408d77eeb7add13bc66e2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79370f1278679d95d0a0c993780d8d4b"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; uint32_t, uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b">ZeSpecConstants</a></td></tr>
+<tr class="separator:a79370f1278679d95d0a0c993780d8d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bae8f9def19a50e7e0c439e3b56dba7"><td class="memItemLeft" align="right" valign="top">ze_module_build_log_handle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a1bae8f9def19a50e7e0c439e3b56dba7">ZeBuildLog</a></td></tr>
 <tr class="separator:a1bae8f9def19a50e7e0c439e3b56dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b8a31275c1dada5a33deee42ea29f6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#afad6e9ccbeee78d2eb0a9b994b9f3796">pi_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__program.html#a1b8a31275c1dada5a33deee42ea29f6a">Context</a></td></tr>
@@ -196,7 +200,7 @@ Static Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of PI Program on CUDA Module object. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00417">417</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00494">494</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a233c10d83b39eb811cc0a323744cd0af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a233c10d83b39eb811cc0a323744cd0af">&#9670;&nbsp;</a></span>native_type</h2>
@@ -205,12 +209,12 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="struct__pi__program.html#a233c10d83b39eb811cc0a323744cd0af">_pi_program::native_type</a> =  CUmodule</td>
+          <td class="memname">using <a class="el" href="struct__pi__program.html#a233c10d83b39eb811cc0a323744cd0af">_pi_program::native_type</a> =  <a class="el" href="cuda_8hpp.html#a9e4ef4dcfba4662b2299acb8d049a1ef">CUmodule</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00418">418</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00495">495</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
 </div>
 </div>
@@ -231,9 +235,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00416">416</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00428">428</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00420">binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00421">binarySizeInBytes_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00423">context_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00728">cuda_piContextRetain()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00422">refCount_</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00497">binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00498">binarySizeInBytes_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00500">context_</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00740">cuda_piContextRetain()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00499">refCount_</a>.</p>
 
 </div>
 </div>
@@ -252,9 +256,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00422">422</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00434">434</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00423">context_</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01451">cuda_piContextRelease()</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00500">context_</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l01563">cuda_piContextRelease()</a>.</p>
 
 </div>
 </div>
@@ -319,11 +323,11 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00432">432</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00444">444</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00420">binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00428">buildOptions_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00429">buildStatus_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00427">errorLog_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00427">infoLog_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00425">MAX_LOG_SIZE</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00419">module_</a>, <a class="el" href="pi_8h_source.html#l00090">PI_BUILD_PROGRAM_FAILURE</a>, <a class="el" href="pi_8h_source.html#l00126">PI_PROGRAM_BUILD_STATUS_ERROR</a>, <a class="el" href="pi_8h_source.html#l00127">PI_PROGRAM_BUILD_STATUS_SUCCESS</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00497">binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00505">buildOptions_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00506">buildStatus_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00504">errorLog_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00504">infoLog_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00502">MAX_LOG_SIZE</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00496">module_</a>, <a class="el" href="pi_8h_source.html#l00090">PI_BUILD_PROGRAM_FAILURE</a>, <a class="el" href="pi_8h_source.html#l00126">PI_PROGRAM_BUILD_STATUS_ERROR</a>, <a class="el" href="pi_8h_source.html#l00127">PI_PROGRAM_BUILD_STATUS_SUCCESS</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02214">cuda_piProgramBuild()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02387">cuda_piProgramCompile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02557">cuda_piProgramBuild()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02730">cuda_piProgramCompile()</a>.</p>
 
 </div>
 </div>
@@ -350,9 +354,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00444">444</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00521">521</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02446">cuda_piProgramRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02789">cuda_piProgramRelease()</a>.</p>
 
 </div>
 </div>
@@ -379,9 +383,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00440">440</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00517">517</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02481">cuda_piextProgramGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02020">cuda_piKernelCreate()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02446">cuda_piProgramRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02824">cuda_piextProgramGetNativeHandle()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02154">cuda_piKernelCreate()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02789">cuda_piProgramRelease()</a>.</p>
 
 </div>
 </div>
@@ -408,9 +412,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00438">438</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00515">515</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02020">cuda_piKernelCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02214">cuda_piProgramBuild()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02387">cuda_piProgramCompile()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02446">cuda_piProgramRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02154">cuda_piKernelCreate()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02557">cuda_piProgramBuild()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02730">cuda_piProgramCompile()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02789">cuda_piProgramRelease()</a>.</p>
 
 </div>
 </div>
@@ -437,9 +441,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00446">446</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00523">523</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02282">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02446">cuda_piProgramRelease()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02436">cuda_piProgramRetain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02625">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02789">cuda_piProgramRelease()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02779">cuda_piProgramRetain()</a>.</p>
 
 </div>
 </div>
@@ -466,9 +470,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00442">442</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00519">519</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02436">cuda_piProgramRetain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l02779">cuda_piProgramRetain()</a>.</p>
 
 </div>
 </div>
@@ -498,9 +502,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00424">424</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8cpp_source.html#l00436">436</a> of file <a class="el" href="pi__cuda_8cpp_source.html">pi_cuda.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00420">binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00421">binarySizeInBytes_</a>, <a class="el" href="builtins_8hpp_source.html#l01011">cl::sycl::length()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__cuda_8hpp_source.html#l00497">binary_</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00498">binarySizeInBytes_</a>, <a class="el" href="builtins_8hpp_source.html#l01011">cl::sycl::length()</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
 
 </div>
 </div>
@@ -517,9 +521,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00420">420</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00497">497</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00416">_pi_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02282">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02323">cuda_piProgramLink()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00472">getKernelNames()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00424">set_binary()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00428">_pi_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02625">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02666">cuda_piProgramLink()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00484">getKernelNames()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00436">set_binary()</a>.</p>
 
 </div>
 </div>
@@ -535,9 +539,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00421">421</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00498">498</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00416">_pi_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02282">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02323">cuda_piProgramLink()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00472">getKernelNames()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00424">set_binary()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00428">_pi_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02625">cuda_piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02666">cuda_piProgramLink()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00484">getKernelNames()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00436">set_binary()</a>.</p>
 
 </div>
 </div>
@@ -553,9 +557,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00428">428</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00505">505</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02411">cuda_piProgramGetBuildInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02754">cuda_piProgramGetBuildInfo()</a>.</p>
 
 </div>
 </div>
@@ -571,9 +575,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00429">429</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00506">506</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02411">cuda_piProgramGetBuildInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02754">cuda_piProgramGetBuildInfo()</a>.</p>
 
 </div>
 </div>
@@ -589,9 +593,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00324">324</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00327">327</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02096">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01953">piKernelGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01797">piProgramBuild()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01709">piProgramGetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l02182">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level0_8cpp_source.html#l02039">piKernelGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01822">piProgramBuild()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01734">piProgramGetInfo()</a>.</p>
 
 </div>
 </div>
@@ -607,9 +611,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00423">423</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00500">500</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00416">_pi_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02282">cuda_piProgramGetInfo()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00422">~_pi_program()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00428">_pi_program()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02625">cuda_piProgramGetInfo()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l00434">~_pi_program()</a>.</p>
 
 </div>
 </div>
@@ -625,9 +629,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00427">427</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00504">504</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>.</p>
 
 </div>
 </div>
@@ -643,9 +647,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00427">427</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00504">504</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02411">cuda_piProgramGetBuildInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02754">cuda_piProgramGetBuildInfo()</a>.</p>
 
 </div>
 </div>
@@ -669,9 +673,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00425">425</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00502">502</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02411">cuda_piProgramGetBuildInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l02754">cuda_piProgramGetBuildInfo()</a>.</p>
 
 </div>
 </div>
@@ -687,9 +691,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00419">419</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00496">496</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00432">build_program()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00444">build_program()</a>.</p>
 
 </div>
 </div>
@@ -705,9 +709,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00422">422</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00499">499</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00416">_pi_program()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l00428">_pi_program()</a>.</p>
 
 </div>
 </div>
@@ -723,9 +727,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00321">321</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00324">324</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l01797">piProgramBuild()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01820">piProgramGetBuildInfo()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01861">piProgramRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l01822">piProgramBuild()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01865">piProgramGetBuildInfo()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01906">piProgramRelease()</a>.</p>
 
 </div>
 </div>
@@ -743,7 +747,7 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00318">318</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03305">piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01886">piKernelCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01797">piProgramBuild()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01709">piProgramGetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03382">piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01919">piextProgramGetNativeHandle()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01961">piKernelCreate()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01822">piProgramBuild()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01734">piProgramGetInfo()</a>.</p>
 
 </div>
 </div>
@@ -761,7 +765,43 @@ Static Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00315">315</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l01797">piProgramBuild()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01861">piProgramRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l01822">piProgramBuild()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01906">piProgramRelease()</a>.</p>
+
+</div>
+</div>
+<a id="a79370f1278679d95d0a0c993780d8d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79370f1278679d95d0a0c993780d8d4b">&#9670;&nbsp;</a></span>ZeSpecConstants</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;uint32_t, uint64_t&gt; _pi_program::ZeSpecConstants</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00321">321</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03745">piextProgramSetSpecializationConstant()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01822">piProgramBuild()</a>.</p>
+
+</div>
+</div>
+<a id="a91920a50d408d77eeb7add13bc66e2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91920a50d408d77eeb7add13bc66e2e1">&#9670;&nbsp;</a></span>ZeSpecConstantsMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex _pi_program::ZeSpecConstantsMutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level0_8hpp_source.html#l00320">320</a> of file <a class="el" href="pi__level0_8hpp_source.html">pi_level0.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level0_8cpp_source.html#l03745">piextProgramSetSpecializationConstant()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01822">piProgramBuild()</a>.</p>
 
 </div>
 </div>
