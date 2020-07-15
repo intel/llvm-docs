@@ -16,6 +16,7 @@ var searchData=
   ['device_5f',['device_',['../struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5',1,'_pi_queue']]],
   ['devicebinaries',['DeviceBinaries',['../structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a',1,'pi_device_binaries_struct']]],
   ['deviceid_5f',['deviceId_',['../struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2',1,'_pi_context']]],
+  ['devicelibreqmask',['DeviceLibReqMask',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a96f297f8ce4925dc593c0a22043c8e09',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['devices_5f',['devices_',['../struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8',1,'_pi_platform']]],
   ['devicetargetspec',['DeviceTargetSpec',['../structpi__device__binary__struct.html#a9a80194f39a66baf5dfcbee492cb0f97',1,'pi_device_binary_struct']]],
   ['devname',['devName',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a39183a718137eb9b669efa7aa355618e',1,'cl::sycl::detail::DevDescT']]],

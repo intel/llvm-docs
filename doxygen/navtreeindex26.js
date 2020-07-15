@@ -1,5 +1,11 @@
 var NAVTREEINDEX26 =
 {
+"struct__pi__mem_1_1mem___1_1surface__mem__.html#aa430a1391e2a8a8d5573bf07c9e4e0aa":[3,0,18,1,1,0],
+"struct__pi__mem_1_1mem___1_1surface__mem__.html#abc0d607ac380f8f6eca4ec612ac334bc":[3,0,18,1,1,5],
+"struct__pi__object.html":[3,0,19],
+"struct__pi__object.html#a13511661a13b4406ea1a861738ab9acc":[3,0,19,1],
+"struct__pi__object.html#ad2fa5eacd09f855b9781f1cd85860646":[3,0,19,0],
+"struct__pi__offload__entry__struct.html":[3,0,20],
 "struct__pi__offload__entry__struct.html#a25fd5ebf183672b3bed64e2be713a048":[3,0,20,2],
 "struct__pi__offload__entry__struct.html#a5144d6930a275c412c19deba79d6ab25":[3,0,20,4],
 "struct__pi__offload__entry__struct.html#a528556e48bfe666bdf43bf70a55150da":[3,0,20,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX26 =
 "structcl_1_1sycl_1_1detail_1_1LogicalAnd.html#ab3e76a798c1a1df27c207a1ce1a7fa30":[3,0,1,1,0,188,0],
 "structcl_1_1sycl_1_1detail_1_1LogicalOr.html":[3,0,1,1,0,189],
 "structcl_1_1sycl_1_1detail_1_1LogicalOr.html#a4b8e7e4c1bb71116990b320bd0434d8d":[3,0,1,1,0,189,0],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html":[1,2,1],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9":[1,2,1,6],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,2,1,4],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,2,1,3],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07":[1,2,1,2],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a637208028b2d731007fa7c89a7eed4c4":[1,2,1,0],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a6a3e62372c61f59e347984b51d01d68f":[1,2,1,5]
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html":[1,2,1]
 };

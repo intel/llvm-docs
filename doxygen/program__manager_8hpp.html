@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('program__manager_8hpp.html','');});
 <code>#include &lt;<a class="el" href="spec__constant__impl_8hpp_source.html">CL/sycl/detail/spec_constant_impl.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="util_8hpp_source.html">CL/sycl/detail/util.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="stl_8hpp_source.html">CL/sycl/stl.hpp</a>&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
@@ -115,19 +116,19 @@ Include dependency graph for program_manager.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="program__manager_8hpp__incl.png" border="0" usemap="#source_2detail_2program__manager_2program__manager_8hpp" alt=""/></div>
 <map name="source_2detail_2program__manager_2program__manager_8hpp" id="source_2detail_2program__manager_2program__manager_8hpp">
-<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="405,266,587,293"/>
-<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="301,497,467,524"/>
-<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="1442,423,1553,449"/>
-<area shape="rect" id="node23" href="device__binary__image_8hpp.html" title="CL/sycl/detail/device\l_binary_image.hpp" alt="" coords="1108,95,1252,136"/>
-<area shape="rect" id="node24" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="734,423,903,449"/>
-<area shape="rect" id="node26" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="697,184,839,211"/>
-<area shape="rect" id="node32" href="spec__constant__impl_8hpp.html" title="CL/sycl/detail/spec\l_constant_impl.hpp" alt="" coords="1489,259,1623,300"/>
-<area shape="rect" id="node33" href="util_8hpp.html" title="CL/sycl/detail/util.hpp" alt="" coords="1610,348,1758,375"/>
-<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="150,497,277,524"/>
-<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1263,497,1436,524"/>
-<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="477,348,629,375"/>
-<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="321,423,447,449"/>
-<area shape="rect" id="node27" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="1021,266,1205,293"/>
+<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="355,266,536,293"/>
+<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="393,497,559,524"/>
+<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="1507,423,1618,449"/>
+<area shape="rect" id="node23" href="device__binary__image_8hpp.html" title="CL/sycl/detail/device\l_binary_image.hpp" alt="" coords="1237,95,1381,136"/>
+<area shape="rect" id="node24" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1059,423,1229,449"/>
+<area shape="rect" id="node26" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="716,184,857,211"/>
+<area shape="rect" id="node32" href="spec__constant__impl_8hpp.html" title="CL/sycl/detail/spec\l_constant_impl.hpp" alt="" coords="1457,259,1591,300"/>
+<area shape="rect" id="node33" href="util_8hpp.html" title="CL/sycl/detail/util.hpp" alt="" coords="1681,348,1829,375"/>
+<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="227,497,354,524"/>
+<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1277,497,1451,524"/>
+<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="352,348,504,375"/>
+<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="318,423,445,449"/>
+<area shape="rect" id="node27" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="965,266,1149,293"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -194,16 +195,16 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ae78b3f76523d524c664f165013c985cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cb">cl::sycl::detail::DeviceLibExt</a> { <br />
-&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba57f2a9bfcc123bcfc74975bb4c0f3eb0">cl::sycl::detail::cl_intel_devicelib_assert</a> = 0, 
-<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba973e90f8dca773b8b64b6f0ffd394e10">cl::sycl::detail::cl_intel_devicelib_math</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba6ca9f3c191c6b96ced9c5dc27a637da7">cl::sycl::detail::cl_intel_devicelib_math_fp64</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba14ced6a34da7327fa752a16620bca2df">cl::sycl::detail::cl_intel_devicelib_complex</a>, 
+<tr class="memitem:a045cbe01ad07bfc1cf04c73a8b8c6cce"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cce">cl::sycl::detail::DeviceLibExt</a> : std::uint32_t { <br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaacfa9f017868216058731d1981114cb2">cl::sycl::detail::DeviceLibExt::cl_intel_devicelib_assert</a>, 
+<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6ccea9c3a2639f4033305f595cc6a42280287">cl::sycl::detail::DeviceLibExt::cl_intel_devicelib_math</a>, 
+<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6ccea086b10faf7b97c7bbe741c0f271bfe16">cl::sycl::detail::DeviceLibExt::cl_intel_devicelib_math_fp64</a>, 
+<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaff0aeaf9ac61bd19aaf2886eb35abb90">cl::sycl::detail::DeviceLibExt::cl_intel_devicelib_complex</a>, 
 <br />
-&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cbaf83fe16f66120927c05046dae77b4cbb">cl::sycl::detail::cl_intel_devicelib_complex_fp64</a>
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaa57584e225f65820e3a898dd91fbe11e">cl::sycl::detail::DeviceLibExt::cl_intel_devicelib_complex_fp64</a>
 <br />
  }</td></tr>
-<tr class="separator:ae78b3f76523d524c664f165013c985cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a045cbe01ad07bfc1cf04c73a8b8c6cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -234,9 +235,9 @@ Functions</h2></td></tr>
 <p>Executed as a part of current module's (.exe, .dll) static initialization. </p>
 <p>Registers device executable images with the runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00994">994</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l01019">1019</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="program__manager_8cpp_source.html#l00834">cl::sycl::detail::ProgramManager::addImages()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00047">cl::sycl::detail::ProgramManager::getInstance()</a>.</p>
+<p class="reference">References <a class="el" href="program__manager_8cpp_source.html#l00847">cl::sycl::detail::ProgramManager::addImages()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00047">cl::sycl::detail::ProgramManager::getInstance()</a>.</p>
 
 </div>
 </div>
@@ -259,7 +260,7 @@ Functions</h2></td></tr>
 <p>Executed as a part of current module's (.exe, .dll) static de-initialization. </p>
 <p>Unregisters device executable images with the runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00999">999</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l01024">1024</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
 </div>
 </div>

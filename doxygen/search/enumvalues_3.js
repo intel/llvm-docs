@@ -1,11 +1,11 @@
 var searchData=
 [
   ['char',['Char',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8e95e84813830072b7516cfaa7dbc1a9',1,'cl::sycl::detail::PlatformUtil']]],
-  ['cl_5fintel_5fdevicelib_5fassert',['cl_intel_devicelib_assert',['../namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba57f2a9bfcc123bcfc74975bb4c0f3eb0',1,'cl::sycl::detail']]],
-  ['cl_5fintel_5fdevicelib_5fcomplex',['cl_intel_devicelib_complex',['../namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba14ced6a34da7327fa752a16620bca2df',1,'cl::sycl::detail']]],
-  ['cl_5fintel_5fdevicelib_5fcomplex_5ffp64',['cl_intel_devicelib_complex_fp64',['../namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cbaf83fe16f66120927c05046dae77b4cbb',1,'cl::sycl::detail']]],
-  ['cl_5fintel_5fdevicelib_5fmath',['cl_intel_devicelib_math',['../namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba973e90f8dca773b8b64b6f0ffd394e10',1,'cl::sycl::detail']]],
-  ['cl_5fintel_5fdevicelib_5fmath_5ffp64',['cl_intel_devicelib_math_fp64',['../namespacecl_1_1sycl_1_1detail.html#ae78b3f76523d524c664f165013c985cba6ca9f3c191c6b96ced9c5dc27a637da7',1,'cl::sycl::detail']]],
+  ['cl_5fintel_5fdevicelib_5fassert',['cl_intel_devicelib_assert',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaacfa9f017868216058731d1981114cb2',1,'cl::sycl::detail']]],
+  ['cl_5fintel_5fdevicelib_5fcomplex',['cl_intel_devicelib_complex',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaff0aeaf9ac61bd19aaf2886eb35abb90',1,'cl::sycl::detail']]],
+  ['cl_5fintel_5fdevicelib_5fcomplex_5ffp64',['cl_intel_devicelib_complex_fp64',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaa57584e225f65820e3a898dd91fbe11e',1,'cl::sycl::detail']]],
+  ['cl_5fintel_5fdevicelib_5fmath',['cl_intel_devicelib_math',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6ccea9c3a2639f4033305f595cc6a42280287',1,'cl::sycl::detail']]],
+  ['cl_5fintel_5fdevicelib_5fmath_5ffp64',['cl_intel_devicelib_math_fp64',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6ccea086b10faf7b97c7bbe741c0f271bfe16',1,'cl::sycl::detail']]],
   ['clamp',['clamp',['../namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42dfaa597a055c00d084069e4bb23dc789ac9',1,'cl::sycl']]],
   ['clamp_5fto_5fedge',['clamp_to_edge',['../namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42dfa7ff5ead6fef18ca5f63119754ac76c3e',1,'cl::sycl']]],
   ['classic',['classic',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55af3d64714d1f6e7f71558d4252e84ab58',1,'_pi_mem::mem_::buffer_mem_']]],

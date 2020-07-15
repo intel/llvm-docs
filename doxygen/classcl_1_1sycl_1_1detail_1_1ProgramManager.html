@@ -120,6 +120,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af4d4b2dd632041b7803add4dd42ef332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#af4d4b2dd632041b7803add4dd42ef332">flushSpecConstants</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1program__impl.html">program_impl</a> &amp;Prg, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a2ed97a00574cc541f4506d7c35cdf002">pi::PiProgram</a> NativePrg=nullptr, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> *Img=nullptr)</td></tr>
 <tr class="memdesc:af4d4b2dd632041b7803add4dd42ef332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resolves given program to a device binary image and requests the program to flush constants the image depends on.  <a href="#af4d4b2dd632041b7803add4dd42ef332">More...</a><br /></td></tr>
 <tr class="separator:af4d4b2dd632041b7803add4dd42ef332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae24464726cb11cc3f589ba4f6117a7dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a8ddf7276b86332ffdf26ae68ff6d694d">uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ae24464726cb11cc3f589ba4f6117a7dd">getDeviceLibReqMask</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;Img)</td></tr>
+<tr class="separator:ae24464726cb11cc3f589ba4f6117a7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -130,7 +132,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="program__manager_8hpp_source.html#l00057">57</a> of file <a class="el" href="program__manager_8hpp_source.html">program_manager.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8hpp_source.html#l00059">59</a> of file <a class="el" href="program__manager_8hpp_source.html">program_manager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afed37c794b0fd9dbb7bb4cad149d39b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afed37c794b0fd9dbb7bb4cad149d39b6">&#9670;&nbsp;</a></span>addImages()</h2>
@@ -148,11 +150,11 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00834">834</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00847">847</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00725">pi_device_binaries_struct::DeviceBinaries</a>, <a class="el" href="pi_8h_source.html#l00692">pi_device_binary_struct::EntriesBegin</a>, <a class="el" href="pi_8h_source.html#l00693">pi_device_binary_struct::EntriesEnd</a>, <a class="el" href="pi_8h_source.html#l00573">_pi_offload_entry_struct::name</a>, and <a class="el" href="pi_8h_source.html#l00723">pi_device_binaries_struct::NumDeviceBinaries</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00727">pi_device_binaries_struct::DeviceBinaries</a>, <a class="el" href="pi_8h_source.html#l00694">pi_device_binary_struct::EntriesBegin</a>, <a class="el" href="pi_8h_source.html#l00695">pi_device_binary_struct::EntriesEnd</a>, <a class="el" href="pi_8h_source.html#l00573">_pi_offload_entry_struct::name</a>, and <a class="el" href="pi_8h_source.html#l00725">pi_device_binaries_struct::NumDeviceBinaries</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00994">__sycl_register_lib()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01019">__sycl_register_lib()</a>.</p>
 
 </div>
 </div>
@@ -184,7 +186,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00290">290</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00690">pi_device_binary_struct::BinaryEnd</a>, <a class="el" href="pi_8h_source.html#l00688">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="program__manager_8cpp_source.html#l00072">cl::sycl::detail::createBinaryProgram()</a>, <a class="el" href="program__manager_8cpp_source.html#l00101">cl::sycl::detail::createSpirvProgram()</a>, <a class="el" href="pi_8cpp_source.html#l00518">cl::sycl::detail::pi::getBinaryImageFormat()</a>, <a class="el" href="program__manager_8cpp_source.html#l00275">cl::sycl::detail::getFormatStr()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="program__manager_8cpp_source.html#l00236">cl::sycl::detail::isDeviceBinaryTypeSupported()</a>, <a class="el" href="pi_8h_source.html#l00613">PI_DEVICE_BINARY_TYPE_NONE</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00692">pi_device_binary_struct::BinaryEnd</a>, <a class="el" href="pi_8h_source.html#l00690">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="program__manager_8cpp_source.html#l00072">cl::sycl::detail::createBinaryProgram()</a>, <a class="el" href="program__manager_8cpp_source.html#l00101">cl::sycl::detail::createSpirvProgram()</a>, <a class="el" href="pi_8cpp_source.html#l00518">cl::sycl::detail::pi::getBinaryImageFormat()</a>, <a class="el" href="program__manager_8cpp_source.html#l00275">cl::sycl::detail::getFormatStr()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="program__manager_8cpp_source.html#l00236">cl::sycl::detail::isDeviceBinaryTypeSupported()</a>, <a class="el" href="pi_8h_source.html#l00613">PI_DEVICE_BINARY_TYPE_NONE</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00305">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
 
@@ -205,9 +207,9 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00884">884</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00897">897</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00676">pi_device_binary_struct::DeviceTargetSpec</a>, <a class="el" href="pi_8cpp_source.html#l00476">cl::sycl::detail::pi::DeviceBinaryImage::dump()</a>, <a class="el" href="pi_8hpp_source.html#l00291">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>, <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00308">cl::sycl::detail::LastKSId</a>, <a class="el" href="pi_8h_source.html#l00620">PI_DEVICE_BINARY_TYPE_LLVMIR_BITCODE</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00073">PI_INVALID_KERNEL_NAME</a>, and <a class="el" href="common_8hpp_source.html#l00307">cl::sycl::detail::SpvFileKSId</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00678">pi_device_binary_struct::DeviceTargetSpec</a>, <a class="el" href="pi_8cpp_source.html#l00476">cl::sycl::detail::pi::DeviceBinaryImage::dump()</a>, <a class="el" href="pi_8hpp_source.html#l00292">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>, <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00308">cl::sycl::detail::LastKSId</a>, <a class="el" href="pi_8h_source.html#l00620">PI_DEVICE_BINARY_TYPE_LLVMIR_BITCODE</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="pi_8h_source.html#l00100">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00073">PI_INVALID_KERNEL_NAME</a>, and <a class="el" href="common_8hpp_source.html#l00307">cl::sycl::detail::SpvFileKSId</a>.</p>
 
 </div>
 </div>
@@ -253,7 +255,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00950">950</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00963">963</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="program__impl_8cpp_source.html#l00490">cl::sycl::detail::program_impl::flush_spec_constants()</a>, <a class="el" href="program__impl_8cpp_source.html#l00187">cl::sycl::detail::program_impl::get()</a>, <a class="el" href="program__impl_8hpp_source.html#l00237">cl::sycl::detail::program_impl::get_context()</a>, <a class="el" href="program__impl_8hpp_source.html#l00111">cl::sycl::detail::program_impl::getHandleRef()</a>, <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="program__impl_8hpp_source.html#l00319">cl::sycl::detail::program_impl::hasSetSpecConstants()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="device__binary__image_8hpp_source.html#l00030">cl::sycl::detail::RTDeviceBinaryImage::supportsSpecConstants()</a>.</p>
 
@@ -319,7 +321,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00345">345</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="kernel__program__cache_8hpp_source.html#l00077">cl::sycl::detail::KernelProgramCache::acquireCachedPrograms()</a>, <a class="el" href="pi_8hpp_source.html#l00280">cl::sycl::detail::pi::DeviceBinaryImage::getCompileOptions()</a>, <a class="el" href="pi_8hpp_source.html#l00291">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>, <a class="el" href="pi_8hpp_source.html#l00285">cl::sycl::detail::pi::DeviceBinaryImage::getLinkOptions()</a>, <a class="el" href="plugin_8hpp_source.html#l00044">cl::sycl::detail::plugin::getPiPlugin()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, and <a class="el" href="struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7">_pi_plugin::PiFunctionTable</a>.</p>
+<p class="reference">References <a class="el" href="kernel__program__cache_8hpp_source.html#l00077">cl::sycl::detail::KernelProgramCache::acquireCachedPrograms()</a>, <a class="el" href="pi_8hpp_source.html#l00281">cl::sycl::detail::pi::DeviceBinaryImage::getCompileOptions()</a>, <a class="el" href="pi_8hpp_source.html#l00292">cl::sycl::detail::pi::DeviceBinaryImage::getFormat()</a>, <a class="el" href="pi_8hpp_source.html#l00286">cl::sycl::detail::pi::DeviceBinaryImage::getLinkOptions()</a>, <a class="el" href="plugin_8hpp_source.html#l00044">cl::sycl::detail::plugin::getPiPlugin()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="pi_8h_source.html#l00618">PI_DEVICE_BINARY_TYPE_SPIRV</a>, <a class="el" href="struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7">_pi_plugin::PiFunctionTable</a>, and <a class="el" href="kernel__impl_8cpp_source.html#l00021">cl::sycl::detail::uint32_t</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00225">cl::sycl::detail::program_impl::build_with_kernel_name()</a>.</p>
 
@@ -371,6 +373,28 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae24464726cb11cc3f589ba4f6117a7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae24464726cb11cc3f589ba4f6117a7dd">&#9670;&nbsp;</a></span>getDeviceLibReqMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a8ddf7276b86332ffdf26ae68ff6d694d">uint32_t</a> cl::sycl::detail::ProgramManager::getDeviceLibReqMask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>Img</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l01006">1006</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8cpp_source.html#l00487">cl::sycl::detail::pi::DeviceBinaryProperty::asUint32()</a>, <a class="el" href="pi_8hpp_source.html#l00250">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::begin()</a>, <a class="el" href="pi_8hpp_source.html#l00302">cl::sycl::detail::pi::DeviceBinaryImage::getDeviceLibReqMask()</a>, and <a class="el" href="pi_8hpp_source.html#l00253">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::isAvailable()</a>.</p>
+
+</div>
+</div>
 <a id="a9e830067ea4f87b1ca4c225abeacc666"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e830067ea4f87b1ca4c225abeacc666">&#9670;&nbsp;</a></span>getInstance()</h2>
 
@@ -396,7 +420,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00047">47</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00994">__sycl_register_lib()</a>, <a class="el" href="program__impl_8cpp_source.html#l00225">cl::sycl::detail::program_impl::build_with_kernel_name()</a>, <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00305">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01019">__sycl_register_lib()</a>, <a class="el" href="program__impl_8cpp_source.html#l00225">cl::sycl::detail::program_impl::build_with_kernel_name()</a>, <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00305">cl::sycl::detail::program_impl::get_binaries()</a>.</p>
 
 </div>
 </div>
@@ -438,7 +462,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00408">408</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00412">412</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="kernel__program__cache_8hpp_source.html#l00081">cl::sycl::detail::KernelProgramCache::acquireKernelsPerProgramCache()</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01961">piKernelCreate()</a>.</p>
 
@@ -472,7 +496,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00451">451</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00455">455</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00298">PI_KERNEL_INFO_PROGRAM</a>, and <a class="el" href="pi__level0_8cpp_source.html#l02039">piKernelGetInfo()</a>.</p>
 
@@ -512,7 +536,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00460">460</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00464">464</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00234">PI_DEVICE_INFO_NAME</a>, <a class="el" href="pi_8h_source.html#l00269">PI_PROGRAM_INFO_DEVICES</a>, <a class="el" href="pi__level0_8cpp_source.html#l00666">piDeviceGetInfo()</a>, <a class="el" href="pi__level0_8cpp_source.html#l01865">piProgramGetBuildInfo()</a>, and <a class="el" href="pi__level0_8cpp_source.html#l01734">piProgramGetInfo()</a>.</p>
 

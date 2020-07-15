@@ -58,12 +58,13 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html#adb0fd038c22fa4cf2b01f92b72006296":[3,0,1,1,0,223,6],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html":[3,0,1,1,0,228],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253":[3,0,1,1,0,228,2],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a066900235b68c866aa58db9b479fd21f":[3,0,1,1,0,228,9],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a10cc552efb8087c7ee5b06fdcf29a3f9":[3,0,1,1,0,228,8],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a066900235b68c866aa58db9b479fd21f":[3,0,1,1,0,228,10],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a10cc552efb8087c7ee5b06fdcf29a3f9":[3,0,1,1,0,228,9],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a2ac2ebb2599e86aed99a3e9f343569db":[3,0,1,1,0,228,1],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a494dbdaeb95ebf4a7d90aedba19213dc":[3,0,1,1,0,228,7],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a494dbdaeb95ebf4a7d90aedba19213dc":[3,0,1,1,0,228,8],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a7b0763effb74b2c0c6f407862e41afa2":[3,0,1,1,0,228,5],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a9e830067ea4f87b1ca4c225abeacc666":[3,0,1,1,0,228,6],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a9e830067ea4f87b1ca4c225abeacc666":[3,0,1,1,0,228,7],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ae24464726cb11cc3f589ba4f6117a7dd":[3,0,1,1,0,228,6],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#af4d4b2dd632041b7803add4dd42ef332":[3,0,1,1,0,228,3],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afc307b85f2fd43363d0ebe30fa82fd8e":[3,0,1,1,0,228,4],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afed37c794b0fd9dbb7bb4cad149d39b6":[3,0,1,1,0,228,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aaa058841851dbf8cfff78b097ba14cf2":[3,0,1,1,0,261,28],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aaadd1753dc7e2105ee3a915b2d63b1cf":[3,0,1,1,0,261,20],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aabd2aedf519985f35119a538b5b7debb":[3,0,1,1,0,261,29],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aafded46310ddce898a1f9810601ca57c":[3,0,1,1,0,261,46],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab4066954553c18a34b3cb2ea6f362b08":[3,0,1,1,0,261,39]
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aafded46310ddce898a1f9810601ca57c":[3,0,1,1,0,261,46]
 };

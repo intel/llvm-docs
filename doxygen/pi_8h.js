@@ -23,6 +23,7 @@ var pi_8h =
     [ "PI_DEVICE_BINARY_TARGET_SPIRV64_GEN", "pi_8h.html#ac6f5afd2799a83486744112b520a5815", null ],
     [ "PI_DEVICE_BINARY_TARGET_SPIRV64_X86_64", "pi_8h.html#a376e6222a25172f29cbe4216e24ad0ca", null ],
     [ "PI_DEVICE_BINARY_TARGET_UNKNOWN", "pi_8h.html#ac496c00c22140902a0c642c816666825", null ],
+    [ "PI_PROPERTY_SET_DEVICELIB_REQ_MASK", "pi_8h.html#a7d491811a5dec7b9cc3328796f2bc0ca", null ],
     [ "PI_PROPERTY_SET_SPEC_CONST_MAP", "pi_8h.html#ab5d36d369f514ced89972d8fe057d71b", null ],
     [ "_pi_offload_entry", "pi_8h.html#aecf4fcab95187d0884bc298b7e7f34e2", null ],
     [ "pi_bitfield", "pi_8h.html#a20d37307942b72c0722fafa5578fdaf9", null ],

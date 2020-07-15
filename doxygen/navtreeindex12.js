@@ -1,5 +1,9 @@
 var NAVTREEINDEX12 =
 {
+"classcl_1_1sycl_1_1queue.html#a55bb9d96aef1bf3ab04e9412ec10bc57":[1,1,21,12],
+"classcl_1_1sycl_1_1queue.html#a5c458b2a33f18ab0e30ecce113c6defe":[1,1,21,0],
+"classcl_1_1sycl_1_1queue.html#a66e6eb0c4a4ac9e12c903ddde0bd5106":[1,1,21,17],
+"classcl_1_1sycl_1_1queue.html#a6bc6a510e5e9abcbf1ee904d4b86edbf":[1,1,21,23],
 "classcl_1_1sycl_1_1queue.html#a71492293d0386f542d120a1fc3dfbb55":[1,1,21,53],
 "classcl_1_1sycl_1_1queue.html#a74f4a0a5cca1452483558660a1cc3445":[1,1,21,18],
 "classcl_1_1sycl_1_1queue.html#a7d95cbe038171289e8b8a104ab199ca3":[1,1,21,42],
@@ -166,9 +170,9 @@ var NAVTREEINDEX12 =
 "config_8cpp.html":[4,0,2,1,13],
 "config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,1,13,6],
 "config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,1,13,8],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,13,1],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,13,2],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,13,0],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,13,2],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,13,1],
 "config_8cpp.html#a8a14c9b3548e5e00ee28c829aec18eaf":[4,0,2,1,13,4],
 "config_8cpp.html#aabad77538ffad994f729a3f8685957ea":[4,0,2,1,13,5],
 "config_8cpp.html#abbdcbea69a36cd9ddd50332f7020c4bd":[4,0,2,1,13,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX12 =
 "detail_2builtins_8hpp.html#aac0bf3b4227f7ce07532b122e8bc9725":[4,0,0,0,1,2,5,3],
 "detail_2builtins_8hpp.html#ab13817d8d4daaa8e6055defdd359f5fa":[4,0,0,0,1,2,5,19],
 "detail_2builtins_8hpp.html#ab98d809db6a4df6d40c977f4faa45105":[4,0,0,0,1,2,5,11],
-"detail_2builtins_8hpp.html#ad4b58a3f20d8503373f992d5ae521f3f":[4,0,0,0,1,2,5,13],
-"detail_2builtins_8hpp.html#add629c5efdcf4a53e97ed76d32afd8c6":[4,0,0,0,1,2,5,14],
-"detail_2builtins_8hpp.html#ae3e7fc27232ef3e84d8e6e4ee5d60faa":[4,0,0,0,1,2,5,22],
-"detail_2builtins_8hpp.html#ae9142738b225bd4aa9c9aa0d346192ee":[4,0,0,0,1,2,5,5],
-"detail_2builtins_8hpp.html#af7c5680033964e33c3e127997a9df281":[4,0,0,0,1,2,5,10]
+"detail_2builtins_8hpp.html#ad4b58a3f20d8503373f992d5ae521f3f":[4,0,0,0,1,2,5,13]
 };

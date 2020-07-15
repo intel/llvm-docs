@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9":[1,2,1,6],
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,2,1,4],
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,2,1,3],
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07":[1,2,1,2],
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a637208028b2d731007fa7c89a7eed4c4":[1,2,1,0],
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a6a3e62372c61f59e347984b51d01d68f":[1,2,1,5],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#ac273fa8bbe1679327416b3c2eec5a9d4":[1,2,1,1],
 "structcl_1_1sycl_1_1detail_1_1NDLoop.html":[3,0,1,1,0,218],
 "structcl_1_1sycl_1_1detail_1_1NDLoop.html#ab69663cbb5d1e8dadb70c3e79e75d1f8":[3,0,1,1,0,218,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1detail_1_1make__larger.html":[3,0,1,1,0,191],
 "structcl_1_1sycl_1_1detail_1_1make__larger.html#a191ad18323e1b24425595335eb31d164":[3,0,1,1,0,191,0],
 "structcl_1_1sycl_1_1detail_1_1make__larger__impl.html":[3,0,1,1,0,192],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html":[3,0,1,1,0,193],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html#a06d5993c101cbdd00845218db1179b57":[3,0,1,1,0,193,0],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c.html":[3,0,1,1,0,194],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c.html#a92faca2394d73cb895444dd413258eca":[3,0,1,1,0,194,0],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01e7c76f4ed80dd6f84c8d6298f7781617.html":[3,0,1,1,0,195],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01e7c76f4ed80dd6f84c8d6298f7781617.html#a424ae3ffd48662e120f6de1725372052":[3,0,1,1,0,195,0],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,0,196]
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html":[3,0,1,1,0,193]
 };
