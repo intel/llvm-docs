@@ -1,5 +1,9 @@
 var NAVTREEINDEX28 =
 {
+"structcl_1_1sycl_1_1detail_1_1make__larger.html":[3,0,1,1,0,191],
+"structcl_1_1sycl_1_1detail_1_1make__larger.html#a191ad18323e1b24425595335eb31d164":[3,0,1,1,0,191,0],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl.html":[3,0,1,1,0,192],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html":[3,0,1,1,0,193],
 "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html#a06d5993c101cbdd00845218db1179b57":[3,0,1,1,0,193,0],
 "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c.html":[3,0,1,1,0,194],
 "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c.html#a92faca2394d73cb895444dd413258eca":[3,0,1,1,0,194,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_01_4.html":[3,0,1,1,3,1,1,34],
 "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_01_4.html#a9c28c1c7b4abe2b3ebd25eec5383b87a":[3,0,1,1,3,1,1,34,0],
 "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_6_01_4.html":[3,0,1,1,3,1,1,35],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_6_01_4.html#a1d826e4af699391219882cee05b8550c":[3,0,1,1,3,1,1,35,0],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01const_01T_01_4.html":[3,0,1,1,3,1,1,32],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01const_01T_01_4.html#a3e7d2d4afd3d12a98e861a22b6ca36dc":[3,0,1,1,3,1,1,32,0],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01sycl_1_1intel_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,3,1,1,33],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01sycl_1_1intel_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html#aa6e3a19af7e707e0d02647e803907732":[3,0,1,1,3,1,1,33,0]
+"structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_6_01_4.html#a1d826e4af699391219882cee05b8550c":[3,0,1,1,3,1,1,35,0]
 };
