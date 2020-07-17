@@ -1,10 +1,5 @@
 var group__algorithm_8hpp =
 [
-    [ "is_group", "structcl_1_1sycl_1_1detail_1_1is__group.html", null ],
-    [ "is_group< group< Dimensions > >", "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html", null ],
-    [ "is_sub_group", "structcl_1_1sycl_1_1detail_1_1is__sub__group.html", null ],
-    [ "is_sub_group< intel::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01intel_1_1sub__group_01_4.html", null ],
-    [ "is_generic_group", "structcl_1_1sycl_1_1detail_1_1is__generic__group.html", null ],
     [ "identity", "structcl_1_1sycl_1_1detail_1_1identity.html", null ],
     [ "identity< T, intel::plus< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1plus_3_01V_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1plus_3_01V_01_4_01_4" ],
     [ "identity< T, intel::minimum< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1minimum_3_01V_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1minimum_3_01V_01_4_01_4" ],
