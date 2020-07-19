@@ -852,7 +852,6 @@ var hierarchy =
     [ "cl::sycl::detail::Sync", "classcl_1_1sycl_1_1detail_1_1Sync.html", null ],
     [ "cl::sycl::detail::TargetToAS< accessTarget >", "structcl_1_1sycl_1_1detail_1_1TargetToAS.html", null ],
     [ "cl::sycl::detail::TargetToAS< access::target::constant_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html", null ],
-    [ "cl::sycl::detail::TargetToAS< access::target::global_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1global__buffer_01_4.html", null ],
     [ "cl::sycl::detail::TargetToAS< access::target::local >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html", null ],
     [ "cl::sycl::detail::ThreadPool", "classcl_1_1sycl_1_1detail_1_1ThreadPool.html", null ],
     [ "true_type", null, [

@@ -3,7 +3,6 @@ var access_8hpp =
     [ "mode_tag_t", "structcl_1_1sycl_1_1mode__tag__t.html", "structcl_1_1sycl_1_1mode__tag__t" ],
     [ "mode_target_tag_t", "structcl_1_1sycl_1_1mode__target__tag__t.html", "structcl_1_1sycl_1_1mode__target__tag__t" ],
     [ "TargetToAS", "structcl_1_1sycl_1_1detail_1_1TargetToAS.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS" ],
-    [ "TargetToAS< access::target::global_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1global__buffer_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1global__buffer_01_4" ],
     [ "TargetToAS< access::target::local >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4" ],
     [ "TargetToAS< access::target::constant_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4" ],
     [ "PtrValueType", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],

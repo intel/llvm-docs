@@ -211,9 +211,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab29a3e91d9450e41e817cd277b8d1577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a80671083a2127d52e82250b8e6782b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html#a4a80671083a2127d52e82250b8e6782b">operator-</a> (<a class="el" href="classcl_1_1sycl_1_1multi__ptr.html#a953961d47ccf052f29f50558c896c61c">difference_type</a> <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa4b43b0aee35624cd95b910189b3dc231">r</a>) const</td></tr>
 <tr class="separator:a4a80671083a2127d52e82250b8e6782b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127124138824be43316860b6fef4fa3a"><td class="memTemplParams" colspan="2">template&lt;access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_device_space ||                 Space == access::address_space::global_host_space)&gt;::type&gt; </td></tr>
-<tr class="memitem:a127124138824be43316860b6fef4fa3a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html#a127124138824be43316860b6fef4fa3a">operator multi_ptr&lt; ElementType, access::address_space::global_space &gt;</a> () const</td></tr>
-<tr class="separator:a127124138824be43316860b6fef4fa3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d1b1c8a95241ef9e29b69b445de19c0"><td class="memTemplParams" colspan="2">template&lt;access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                Space == access::address_space::global_space&gt;::type&gt; </td></tr>
 <tr class="memitem:a0d1b1c8a95241ef9e29b69b445de19c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html#a0d1b1c8a95241ef9e29b69b445de19c0">prefetch</a> (size_t NumElements) const</td></tr>
 <tr class="separator:a0d1b1c8a95241ef9e29b69b445de19c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -851,37 +848,6 @@ template&lt;typename ElementType, access::address_space Space&gt; </div>
 
 </div>
 </div>
-<a id="a127124138824be43316860b6fef4fa3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127124138824be43316860b6fef4fa3a">&#9670;&nbsp;</a></span>operator multi_ptr< ElementType, access::address_space::global_space >()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename ElementType, access::address_space Space&gt; </div>
-<div class="memtemplate">
-template&lt;access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_device_space ||                 Space == access::address_space::global_host_space)&gt;::type&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">cl::sycl::multi_ptr</a>&lt; ElementType, Space &gt;::operator <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt; ElementType, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a4d49b23bd01f94213f7820fba6d5be69a8b6e19b80779e1f75b1c5f54a800dca4">access::address_space::global_space</a> &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00287">287</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
-
-</div>
-</div>
 <a id="abb8828f7e3c86bd7df8e6affc483551c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb8828f7e3c86bd7df8e6affc483551c">&#9670;&nbsp;</a></span>operator multi_ptr< typename std::enable_if< std::is_same< ET, ElementType >::value &&!std::is_const< ET >::value, void >::type, Space >()</h2>
 
@@ -1473,7 +1439,7 @@ template&lt;access::address_space _Space = Space, typename  = typename std::enab
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00299">299</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00301">301</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="spirv__ops_8cpp_source.html#l00039">__spirv_ocl_prefetch()</a>.</p>
 

@@ -11,7 +11,6 @@ var searchData=
   ['targets',['Targets',['../struct__pi__plugin.html#af620ffb734e20021fbfa88067860e456',1,'_pi_plugin']]],
   ['targettoas',['TargetToAS',['../structcl_1_1sycl_1_1detail_1_1TargetToAS.html',1,'cl::sycl::detail']]],
   ['targettoas_3c_20access_3a_3atarget_3a_3aconstant_5fbuffer_20_3e',['TargetToAS&lt; access::target::constant_buffer &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html',1,'cl::sycl::detail']]],
-  ['targettoas_3c_20access_3a_3atarget_3a_3aglobal_5fbuffer_20_3e',['TargetToAS&lt; access::target::global_buffer &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1global__buffer_01_4.html',1,'cl::sycl::detail']]],
   ['targettoas_3c_20access_3a_3atarget_3a_3alocal_20_3e',['TargetToAS&lt; access::target::local &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html',1,'cl::sycl::detail']]],
   ['tgamma',['tgamma',['../namespacecl_1_1sycl.html#ad60f4c86551834290997eb40439eba77',1,'cl::sycl::tgamma()'],['../namespacecl_1_1____host__std.html#a29d8d0b73bf0d1fb17ecfc94c8f7bc42',1,'cl::__host_std::tgamma(s::cl_float x) __NOEXC'],['../namespacecl_1_1____host__std.html#ad1525e71cc44e5d887ff23f66e97aef3',1,'cl::__host_std::tgamma(s::cl_double x) __NOEXC'],['../namespacecl_1_1____host__std.html#a60e36905f2e3ac3bbc6a898dfd9d51d3',1,'cl::__host_std::tgamma(s::cl_half x) __NOEXC']]],
   ['thread_5fpool_2ehpp',['thread_pool.hpp',['../thread__pool_8hpp.html',1,'']]],

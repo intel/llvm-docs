@@ -24,7 +24,6 @@ var classcl_1_1sycl_1_1multi__ptr =
     [ "multi_ptr", "classcl_1_1sycl_1_1multi__ptr.html#a360afd45717e388665e7420b99b22e25", null ],
     [ "get", "classcl_1_1sycl_1_1multi__ptr.html#ae03f28bb469ee678abbee0a2e3024750", null ],
     [ "operator multi_ptr< const ElementType, Space >", "classcl_1_1sycl_1_1multi__ptr.html#ab7f8e862022a199e37124f98af22a2c3", null ],
-    [ "operator multi_ptr< ElementType, access::address_space::global_space >", "classcl_1_1sycl_1_1multi__ptr.html#a127124138824be43316860b6fef4fa3a", null ],
     [ "operator multi_ptr< typename std::enable_if< std::is_same< ET, ElementType >::value &&!std::is_const< ET >::value, void >::type, Space >", "classcl_1_1sycl_1_1multi__ptr.html#abb8828f7e3c86bd7df8e6affc483551c", null ],
     [ "operator multi_ptr< typename std::enable_if< std::is_same< ET, ElementType >::value &&std::is_const< ET >::value, const void >::type, Space >", "classcl_1_1sycl_1_1multi__ptr.html#a217a2c58e607f111ad97c5dfcb91e879", null ],
     [ "operator ReturnPtr", "classcl_1_1sycl_1_1multi__ptr.html#a71e120103cf301830cbae2811ad8e829", null ],

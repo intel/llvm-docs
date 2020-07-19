@@ -2,7 +2,6 @@ var searchData=
 [
   ['targettoas',['TargetToAS',['../structcl_1_1sycl_1_1detail_1_1TargetToAS.html',1,'cl::sycl::detail']]],
   ['targettoas_3c_20access_3a_3atarget_3a_3aconstant_5fbuffer_20_3e',['TargetToAS&lt; access::target::constant_buffer &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html',1,'cl::sycl::detail']]],
-  ['targettoas_3c_20access_3a_3atarget_3a_3aglobal_5fbuffer_20_3e',['TargetToAS&lt; access::target::global_buffer &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1global__buffer_01_4.html',1,'cl::sycl::detail']]],
   ['targettoas_3c_20access_3a_3atarget_3a_3alocal_20_3e',['TargetToAS&lt; access::target::local &gt;',['../structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html',1,'cl::sycl::detail']]],
   ['threadpool',['ThreadPool',['../classcl_1_1sycl_1_1detail_1_1ThreadPool.html',1,'cl::sycl::detail']]],
   ['trytogetelementtype',['TryToGetElementType',['../classcl_1_1sycl_1_1detail_1_1TryToGetElementType.html',1,'cl::sycl::detail']]],
