@@ -1,7 +1,7 @@
 var classcl_1_1sycl_1_1detail_1_1queue__impl =
 [
-    [ "queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa5cf67d2443b7d345cb6a676728373db", null ],
-    [ "queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#adc77d7ce8c4f43cd48baa7244c7ca8a9", null ],
+    [ "queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ac313bc54e9774310b790e2b18aeada09", null ],
+    [ "queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab53f683477a23440e352c1ef38c57577", null ],
     [ "queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a19786ae9b03482ef55e773667cc46ec9", null ],
     [ "~queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a4bdbee365712b9476ada470d7cad1678", null ],
     [ "createQueue", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54", null ],

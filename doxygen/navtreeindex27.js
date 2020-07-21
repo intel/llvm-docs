@@ -1,6 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html":[1,2,1],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9":[1,2,1,6],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,2,1,4],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,2,1,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1detail_1_1make__larger.html#a191ad18323e1b24425595335eb31d164":[3,0,1,1,0,191,0],
 "structcl_1_1sycl_1_1detail_1_1make__larger__impl.html":[3,0,1,1,0,192],
 "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html":[3,0,1,1,0,193],
-"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html#a06d5993c101cbdd00845218db1179b57":[3,0,1,1,0,193,0]
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_013055f5e5b0cf0bca29750a5c4d017c03.html#a06d5993c101cbdd00845218db1179b57":[3,0,1,1,0,193,0],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c.html":[3,0,1,1,0,194]
 };

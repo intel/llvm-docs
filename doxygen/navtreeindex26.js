@@ -1,6 +1,5 @@
 var NAVTREEINDEX26 =
 {
-"struct__pi__mem_1_1mem___1_1surface__mem__.html#a837b81d6a96b383ef521c60a2ea2f15c":[3,0,18,1,1,2],
 "struct__pi__mem_1_1mem___1_1surface__mem__.html#aa430a1391e2a8a8d5573bf07c9e4e0aa":[3,0,18,1,1,0],
 "struct__pi__mem_1_1mem___1_1surface__mem__.html#abc0d607ac380f8f6eca4ec612ac334bc":[3,0,18,1,1,5],
 "struct__pi__object.html":[3,0,19],
@@ -249,5 +248,6 @@ var NAVTREEINDEX26 =
 "structcl_1_1sycl_1_1detail_1_1LogicalAnd.html":[3,0,1,1,0,188],
 "structcl_1_1sycl_1_1detail_1_1LogicalAnd.html#ab3e76a798c1a1df27c207a1ce1a7fa30":[3,0,1,1,0,188,0],
 "structcl_1_1sycl_1_1detail_1_1LogicalOr.html":[3,0,1,1,0,189],
-"structcl_1_1sycl_1_1detail_1_1LogicalOr.html#a4b8e7e4c1bb71116990b320bd0434d8d":[3,0,1,1,0,189,0]
+"structcl_1_1sycl_1_1detail_1_1LogicalOr.html#a4b8e7e4c1bb71116990b320bd0434d8d":[3,0,1,1,0,189,0],
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html":[1,2,1]
 };
