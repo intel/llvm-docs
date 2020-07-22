@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d":[3,0,1,1,0,209,0],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html":[3,0,1,1,0,210],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a0b758ddcb773edd62fe88f2f51371587":[3,0,1,1,0,210,3],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a240fe7b71de27b4c9d169f9b6df4cc93":[3,0,1,1,0,210,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aaadd1753dc7e2105ee3a915b2d63b1cf":[3,0,1,1,0,261,20],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aabd2aedf519985f35119a538b5b7debb":[3,0,1,1,0,261,29],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aafded46310ddce898a1f9810601ca57c":[3,0,1,1,0,261,46],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab4066954553c18a34b3cb2ea6f362b08":[3,0,1,1,0,261,39],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab6c17c202b19c6820d644342860f6a67":[3,0,1,1,0,261,47]
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab4066954553c18a34b3cb2ea6f362b08":[3,0,1,1,0,261,39]
 };

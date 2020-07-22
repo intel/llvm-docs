@@ -184,9 +184,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7126c0f2c305df00598a085a7c4ffb8a"><td class="memTemplParams" colspan="2">template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;Dims == 0 &amp;&amp; IsAccessReadOnly&gt;&gt; </td></tr>
 <tr class="memitem:a7126c0f2c305df00598a085a7c4ffb8a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#a7126c0f2c305df00598a085a7c4ffb8a">operator DataT</a> () const</td></tr>
 <tr class="separator:a7126c0f2c305df00598a085a7c4ffb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3084c0efca520bdae01bbdaee458f3e"><td class="memTemplParams" colspan="2">template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt; 0&gt; </td></tr>
-<tr class="memitem:ad3084c0efca520bdae01bbdaee458f3e"><td class="memTemplItemLeft" align="right" valign="top">DataT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#ad3084c0efca520bdae01bbdaee458f3e">operator[]</a> (<a class="el" href="classcl_1_1sycl_1_1id.html">id</a>&lt; Dimensions &gt; Index) const</td></tr>
-<tr class="separator:ad3084c0efca520bdae01bbdaee458f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c139b902994a1588604657b0aad5b0"><td class="memTemplParams" colspan="2">template&lt;int Dims = Dimensions&gt; </td></tr>
+<tr class="memitem:ab7c139b902994a1588604657b0aad5b0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(Dims &gt; 0) &amp;&amp;<a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a97aaac7f685b05303dbf0d2039aa03f8">IsAccessReadOnly</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a48cdf0c2081c53f5aa46571df1946bf8">ConstRefType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#ab7c139b902994a1588604657b0aad5b0">operator[]</a> (<a class="el" href="classcl_1_1sycl_1_1id.html">id</a>&lt; Dimensions &gt; Index) const</td></tr>
+<tr class="separator:ab7c139b902994a1588604657b0aad5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a29f7a6e11622924aa83ba6f5d18851"><td class="memTemplParams" colspan="2">template&lt;int Dims = Dimensions&gt; </td></tr>
 <tr class="memitem:a1a29f7a6e11622924aa83ba6f5d18851"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#a1a29f7a6e11622924aa83ba6f5d18851">operator typename detail::enable_if_t&lt; Dims==0 &amp;&amp;AccessMode==access::mode::atomic, atomic&lt; DataT, AS &gt;&gt;</a> () const</td></tr>
 <tr class="separator:a1a29f7a6e11622924aa83ba6f5d18851"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,11 +227,15 @@ Protected Types</h2></td></tr>
 <tr class="separator:ae748411d145e0a0df95083a97510a57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51928f5cb28dd9162bdbef27fe45c0e4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#a51928f5cb28dd9162bdbef27fe45c0e4">RefType</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202">detail::const_if_const_AS</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a41da3a67ea03e21211fa5f4c2c9e8518">AS</a>, DataT &gt; &amp;</td></tr>
 <tr class="separator:a51928f5cb28dd9162bdbef27fe45c0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1128bf1d2c9a44e4f71b82ab525059a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#ad1128bf1d2c9a44e4f71b82ab525059a">ConstRefType</a> = const DataT &amp;</td></tr>
+<tr class="separator:ad1128bf1d2c9a44e4f71b82ab525059a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b845554c4c218ae946b5e6c5c30fabf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1accessor.html#a9b845554c4c218ae946b5e6c5c30fabf">PtrType</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202">detail::const_if_const_AS</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a41da3a67ea03e21211fa5f4c2c9e8518">AS</a>, DataT &gt; *</td></tr>
 <tr class="separator:a9b845554c4c218ae946b5e6c5c30fabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html">cl::sycl::detail::accessor_common&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;</a></td></tr>
 <tr class="memitem:adbee7dd5ed118afec3df3350587f22f3 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#adbee7dd5ed118afec3df3350587f22f3">RefType</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202">detail::const_if_const_AS</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a41da3a67ea03e21211fa5f4c2c9e8518">AS</a>, DataT &gt; &amp;</td></tr>
 <tr class="separator:adbee7dd5ed118afec3df3350587f22f3 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48cdf0c2081c53f5aa46571df1946bf8 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a48cdf0c2081c53f5aa46571df1946bf8">ConstRefType</a> = const DataT &amp;</td></tr>
+<tr class="separator:a48cdf0c2081c53f5aa46571df1946bf8 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39fc708d748b82e15b70c73ccbebc478 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a39fc708d748b82e15b70c73ccbebc478">PtrType</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202">detail::const_if_const_AS</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a41da3a67ea03e21211fa5f4c2c9e8518">AS</a>, DataT &gt; *</td></tr>
 <tr class="separator:a39fc708d748b82e15b70c73ccbebc478 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a388dda10a2a20840fa000963a8f586c4 inherit pro_types_classcl_1_1sycl_1_1detail_1_1accessor__common"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a388dda10a2a20840fa000963a8f586c4">AccType</a> = <a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;</td></tr>
@@ -341,7 +345,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00752">752</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00753">753</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +373,7 @@ template&lt;int Dims&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00765">765</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00766">766</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +399,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00767">767</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00768">768</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +417,33 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00889">889</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00891">891</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ad1128bf1d2c9a44e4f71b82ab525059a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1128bf1d2c9a44e4f71b82ab525059a">&#9670;&nbsp;</a></span>ConstRefType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::target AccessTarget, access::placeholder IsPlaceholder&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1accessor.html">cl::sycl::accessor</a>&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;::<a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a48cdf0c2081c53f5aa46571df1946bf8">ConstRefType</a> =  const DataT &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00771">771</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -439,7 +469,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00770">770</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00772">772</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +487,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00888">888</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00890">890</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -483,7 +513,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00769">769</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00770">770</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,7 +531,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00887">887</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00889">889</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,9 +574,9 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00920">920</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00922">922</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l01267">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::operator!=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l01269">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::operator!=()</a>.</p>
 
 </div>
 </div>
@@ -594,7 +624,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00942">942</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00944">944</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -636,7 +666,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00966">966</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00968">968</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +714,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01003">1003</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01005">1005</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -732,7 +762,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01041">1041</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01043">1043</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -786,7 +816,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01064">1064</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01066">1066</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -840,7 +870,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01090">1090</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01092">1092</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -900,7 +930,7 @@ template&lt;typename T  = DataT, int Dims = Dimensions, typename AllocatorT , ty
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01129">1129</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01131">1131</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -930,7 +960,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01169">1169</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01171">1171</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00287">cl::sycl::operator&lt;&lt;()</a>, and <a class="el" href="stream__impl_8hpp_source.html#l00316">cl::sycl::detail::write()</a>.</p>
 
@@ -963,7 +993,7 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01177">1177</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01179">1179</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1024,7 @@ template&lt;access::target AccessTarget_ = AccessTarget, typename  = detail::ena
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01245">1245</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01247">1247</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1055,7 @@ template&lt;access::target AccessTarget_ = AccessTarget, typename  = detail::ena
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01253">1253</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01255">1255</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1086,7 @@ template&lt;access::target AccessTarget_ = AccessTarget, typename  = detail::ena
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01261">1261</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01263">1263</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1087,9 +1117,9 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01172">1172</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01174">1174</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01649">cl::sycl::handler::fill()</a>, and <a class="el" href="stream__impl_8hpp_source.html#l00286">cl::sycl::detail::updateOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01661">cl::sycl::handler::fill()</a>, and <a class="el" href="stream__impl_8hpp_source.html#l00286">cl::sycl::detail::updateOffset()</a>.</p>
 
 </div>
 </div>
@@ -1118,9 +1148,9 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01167">1167</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01169">1169</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01583">cl::sycl::handler::copy()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01595">cl::sycl::handler::copy()</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1180,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00790">790</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00792">792</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1182,7 +1212,7 @@ template&lt;int Dims = Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00772">772</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00774">774</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1241,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00877">877</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00879">879</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1270,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01165">1165</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01167">1167</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1271,7 +1301,7 @@ template&lt;typename T , int Dims&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00786">786</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00788">788</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1332,7 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;Dims == 0 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01197">1197</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01199">1199</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1363,7 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;Dims == 0 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01183">1183</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01185">1185</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1394,7 @@ template&lt;int Dims = Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01211">1211</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01213">1213</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1424,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01267">1267</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01269">1269</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1424,7 +1454,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01266">1266</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01268">1268</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1456,25 +1486,25 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01190">1190</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01192">1192</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ad3084c0efca520bdae01bbdaee458f3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3084c0efca520bdae01bbdaee458f3e">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/5]</span></h2>
+<a id="ab7c139b902994a1588604657b0aad5b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c139b902994a1588604657b0aad5b0">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::target AccessTarget, access::placeholder IsPlaceholder&gt; </div>
 <div class="memtemplate">
-template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt; 0&gt; </div>
+template&lt;int Dims = Dimensions&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">DataT <a class="el" href="classcl_1_1sycl_1_1accessor.html">cl::sycl::accessor</a>&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(Dims &gt; 0) &amp;&amp; <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a97aaac7f685b05303dbf0d2039aa03f8">IsAccessReadOnly</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1accessor__common.html#a48cdf0c2081c53f5aa46571df1946bf8">ConstRefType</a>&gt; <a class="el" href="classcl_1_1sycl_1_1accessor.html">cl::sycl::accessor</a>&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1id.html">id</a>&lt; Dimensions &gt;&#160;</td>
           <td class="paramname"><em>Index</em></td><td>)</td>
@@ -1488,7 +1518,7 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01204">1204</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01206">1206</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +1550,7 @@ template&lt;int Dims = Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01221">1221</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01223">1223</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1552,7 +1582,7 @@ template&lt;int Dims = Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01230">1230</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01232">1232</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1584,7 +1614,7 @@ template&lt;int Dims = Dimensions, typename  = detail::enable_if_t&lt;(Dims &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01238">1238</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l01240">1240</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1641,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00884">884</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00886">886</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1638,7 +1668,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00754">754</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00755">755</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1694,7 @@ template&lt;typename DataT, int Dimensions, access::mode AccessMode, access::tar
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00875">875</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor_8hpp_source.html#l00877">877</a> of file <a class="el" href="accessor_8hpp_source.html">accessor.hpp</a>.</p>
 
 </div>
 </div>

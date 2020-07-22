@@ -22,17 +22,19 @@ var reduction_8hpp =
     [ "IsReduOptForFastReduce", "reduction_8hpp.html#ac1f16427d5c4c820ab003d9cf790cbbd", null ],
     [ "IsReduPlus", "reduction_8hpp.html#a87f9dfbf8a3409c06c28ee7b35e89df1", null ],
     [ "IsZeroIdentityOp", "reduction_8hpp.html#aa343e064832fafb8baee28aec28c71f8", null ],
-    [ "reduAuxCGFunc", "reduction_8hpp.html#ac472674ebc7023d1a66490dd4a45937f", null ],
-    [ "reduAuxCGFuncImpl", "reduction_8hpp.html#a8f7ec1c689f82ea839142d96371d9106", null ],
-    [ "reduAuxCGFuncImpl", "reduction_8hpp.html#af000f91d48ab931b82a7ce643d37c1dd", null ],
+    [ "reduAuxCGFunc", "reduction_8hpp.html#a89a80998f4e31c7a742c5514606e202b", null ],
+    [ "reduAuxCGFuncImpl", "reduction_8hpp.html#a20c92bf837d07ffc6c621f2b42000d0f", null ],
+    [ "reduAuxCGFuncImpl", "reduction_8hpp.html#a5de96c389f6baa4bb1b5ce5e55205c3a", null ],
     [ "reduCGFunc", "reduction_8hpp.html#a986508bdfd0973bc9d429df6fa373c56", null ],
     [ "reduCGFunc", "reduction_8hpp.html#a294b91a0c59b6a63bb2b43508efb74f4", null ],
     [ "reduCGFuncImpl", "reduction_8hpp.html#a1a885f1532b91dedc067d6cf454291ad", null ],
     [ "reduCGFuncImpl", "reduction_8hpp.html#acd0c1b88dfa786e5c0efee8e96cecb61", null ],
     [ "reduCGFuncImpl", "reduction_8hpp.html#a52768ac7377bd299da5c1ed10f9affcc", null ],
     [ "reduCGFuncImpl", "reduction_8hpp.html#a5e4733361f9997eb48ad7723932d01f4", null ],
+    [ "reduComputeWGSize", "reduction_8hpp.html#a6ec2825f342b4844f25074bd41b3c0e5", null ],
     [ "reduction", "reduction_8hpp.html#a5bdcc00bbe2138f543ddde22ab02fd0d", null ],
     [ "reduction", "reduction_8hpp.html#a9f0cf13fef19ddfeccf05d6672958a1c", null ],
     [ "reduction", "reduction_8hpp.html#ab5bf45113b8e29d68441fde2cf52971a", null ],
-    [ "reduction", "reduction_8hpp.html#a70d4b60e16b4731b5ff670361831eff6", null ]
+    [ "reduction", "reduction_8hpp.html#a70d4b60e16b4731b5ff670361831eff6", null ],
+    [ "reduGetMaxWGSize", "reduction_8hpp.html#a9e8470c8671b0893cc2e3dda4ca10efd", null ]
 ];

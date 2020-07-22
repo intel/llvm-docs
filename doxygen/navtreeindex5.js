@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"classcl_1_1sycl_1_1detail_1_1CGCopy.html#a167a15763a5f4683a0b8998dfbf08ee7":[3,0,1,1,0,24,1],
 "classcl_1_1sycl_1_1detail_1_1CGCopy.html#a42cc629aa9b82880fc2b2db23b16357d":[3,0,1,1,0,24,2],
 "classcl_1_1sycl_1_1detail_1_1CGCopy.html#a74b1c0efde682243fb623177545e6e77":[3,0,1,1,0,24,0],
 "classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html":[3,0,1,1,0,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1detail_1_1MapMemObject.html":[3,0,1,1,0,209],
 "classcl_1_1sycl_1_1detail_1_1MapMemObject.html#a01f9a9003eb009106b5e8218310deb50":[3,0,1,1,0,209,2],
 "classcl_1_1sycl_1_1detail_1_1MapMemObject.html#a960d2ecc0f92f0abea22d875947be4e6":[3,0,1,1,0,209,1],
-"classcl_1_1sycl_1_1detail_1_1MapMemObject.html#ad1584e6fb4ec7de41f7d5e3436a49d85":[3,0,1,1,0,209,3],
-"classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d":[3,0,1,1,0,209,0]
+"classcl_1_1sycl_1_1detail_1_1MapMemObject.html#ad1584e6fb4ec7de41f7d5e3436a49d85":[3,0,1,1,0,209,3]
 };

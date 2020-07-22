@@ -76,7 +76,6 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "sampler_impl.hpp", "sampler__impl_8hpp.html", [
       [ "sampler_impl", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html", "classcl_1_1sycl_1_1detail_1_1sampler__impl" ]
     ] ],
-    [ "spec_constant_impl.hpp", "spec__constant__impl_8hpp.html", "spec__constant__impl_8hpp" ],
     [ "spirv.hpp", "spirv_8hpp.html", null ],
     [ "stl_type_traits.hpp", "stl__type__traits_8hpp.html", "stl__type__traits_8hpp" ],
     [ "stream_impl.hpp", "stream__impl_8hpp.html", "stream__impl_8hpp" ],

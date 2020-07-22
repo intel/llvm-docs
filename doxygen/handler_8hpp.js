@@ -16,8 +16,9 @@ var handler_8hpp =
     [ "checkValueRange", "handler_8hpp.html#a042e58bee12db0078c232dc3a0ad237a", null ],
     [ "getDeviceFromHandler", "handler_8hpp.html#a4679ea98c7f73f344135382c7b7ab13d", null ],
     [ "member_ptr_helper", "handler_8hpp.html#a43f7210adc907fb76c8fe3b46b659afb", null ],
-    [ "reduAuxCGFunc", "handler_8hpp.html#ac472674ebc7023d1a66490dd4a45937f", null ],
+    [ "reduAuxCGFunc", "handler_8hpp.html#a89a80998f4e31c7a742c5514606e202b", null ],
     [ "reduCGFunc", "handler_8hpp.html#a986508bdfd0973bc9d429df6fa373c56", null ],
     [ "reduCGFunc", "handler_8hpp.html#a294b91a0c59b6a63bb2b43508efb74f4", null ],
+    [ "reduGetMaxWGSize", "handler_8hpp.html#a9e8470c8671b0893cc2e3dda4ca10efd", null ],
     [ "argument_helper", "handler_8hpp.html#a0e2a8cd39c5325f03f08e50ef55bb73c", null ]
 ];

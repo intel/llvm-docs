@@ -215,13 +215,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a294b91a0c59b6a63bb2b43508efb74f4"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </td></tr>
 <tr class="memitem:a294b91a0c59b6a63bb2b43508efb74f4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a294b91a0c59b6a63bb2b43508efb74f4">reduCGFunc</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, KernelType KernelFunc, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, Reduction &amp;Redu)</td></tr>
 <tr class="separator:a294b91a0c59b6a63bb2b43508efb74f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac472674ebc7023d1a66490dd4a45937f"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </td></tr>
-<tr class="memitem:ac472674ebc7023d1a66490dd4a45937f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#ac472674ebc7023d1a66490dd4a45937f">reduAuxCGFunc</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, size_t NWorkItems, Reduction &amp;Redu)</td></tr>
-<tr class="separator:ac472674ebc7023d1a66490dd4a45937f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a80998f4e31c7a742c5514606e202b"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , class Reduction &gt; </td></tr>
+<tr class="memitem:a89a80998f4e31c7a742c5514606e202b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_atomics, size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a89a80998f4e31c7a742c5514606e202b">reduAuxCGFunc</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, size_t NWorkItems, size_t MaxWGSize, Reduction &amp;Redu)</td></tr>
+<tr class="memdesc:a89a80998f4e31c7a742c5514606e202b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#a89a80998f4e31c7a742c5514606e202b">More...</a><br /></td></tr>
+<tr class="separator:a89a80998f4e31c7a742c5514606e202b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e8470c8671b0893cc2e3dda4ca10efd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a9e8470c8671b0893cc2e3dda4ca10efd">reduGetMaxWGSize</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
+<tr class="separator:a9e8470c8671b0893cc2e3dda4ca10efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e297edc2675dd7221b566d67ee0397"><td class="memItemLeft" align="right" valign="top">static constexpr std::memory_order&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a11e297edc2675dd7221b566d67ee0397">getStdMemoryOrder</a> (::<a class="el" href="namespacecl_1_1sycl_1_1intel.html#a672372faa371f44025b94a474bbc83b5">cl::sycl::intel::memory_order</a> order)</td></tr>
 <tr class="separator:a11e297edc2675dd7221b566d67ee0397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a368d16d7727cbf992539120862318421"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76">memory_order</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a368d16d7727cbf992539120862318421">getLoadOrder</a> (<a class="el" href="namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76">memory_order</a> order)</td></tr>
 <tr class="separator:a368d16d7727cbf992539120862318421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec2825f342b4844f25074bd41b3c0e5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a6ec2825f342b4844f25074bd41b3c0e5">reduComputeWGSize</a> (size_t NWorkItems, size_t MaxWGSize, size_t &amp;NWorkGroups)</td></tr>
+<tr class="separator:a6ec2825f342b4844f25074bd41b3c0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a885f1532b91dedc067d6cf454291ad"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool UniformWG, typename OutputT &gt; </td></tr>
 <tr class="memitem:a1a885f1532b91dedc067d6cf454291ad"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt; Reduction::has_fast_reduce &amp;&amp;Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a1a885f1532b91dedc067d6cf454291ad">reduCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, KernelType KernelFunc, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, Reduction &amp;, OutputT Out)</td></tr>
 <tr class="memdesc:a1a885f1532b91dedc067d6cf454291ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function KernelFunc and also does one iteration of reduction of elements computed in user's lambda function.  <a href="#a1a885f1532b91dedc067d6cf454291ad">More...</a><br /></td></tr>
@@ -238,14 +243,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a5e4733361f9997eb48ad7723932d01f4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a5e4733361f9997eb48ad7723932d01f4">reduCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, KernelType KernelFunc, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, Reduction &amp;Redu, OutputT Out)</td></tr>
 <tr class="memdesc:a5e4733361f9997eb48ad7723932d01f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function.  <a href="#a5e4733361f9997eb48ad7723932d01f4">More...</a><br /></td></tr>
 <tr class="separator:a5e4733361f9997eb48ad7723932d01f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f7ec1c689f82ea839142d96371d9106"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool UniformWG, typename InputT , typename OutputT &gt; </td></tr>
-<tr class="memitem:a8f7ec1c689f82ea839142d96371d9106"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt; Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a8f7ec1c689f82ea839142d96371d9106">reduAuxCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, size_t NWorkItems, Reduction &amp;, InputT In, OutputT Out)</td></tr>
-<tr class="memdesc:a8f7ec1c689f82ea839142d96371d9106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#a8f7ec1c689f82ea839142d96371d9106">More...</a><br /></td></tr>
-<tr class="separator:a8f7ec1c689f82ea839142d96371d9106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af000f91d48ab931b82a7ce643d37c1dd"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool UniformPow2WG, typename InputT , typename OutputT &gt; </td></tr>
-<tr class="memitem:af000f91d48ab931b82a7ce643d37c1dd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#af000f91d48ab931b82a7ce643d37c1dd">reduAuxCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;Range, size_t NWorkItems, Reduction &amp;Redu, InputT In, OutputT Out)</td></tr>
-<tr class="memdesc:af000f91d48ab931b82a7ce643d37c1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#af000f91d48ab931b82a7ce643d37c1dd">More...</a><br /></td></tr>
-<tr class="separator:af000f91d48ab931b82a7ce643d37c1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c92bf837d07ffc6c621f2b42000d0f"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , bool UniformWG, class Reduction , typename InputT , typename OutputT &gt; </td></tr>
+<tr class="memitem:a20c92bf837d07ffc6c621f2b42000d0f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt; Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a20c92bf837d07ffc6c621f2b42000d0f">reduAuxCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, Reduction &amp;, InputT In, OutputT Out)</td></tr>
+<tr class="memdesc:a20c92bf837d07ffc6c621f2b42000d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#a20c92bf837d07ffc6c621f2b42000d0f">More...</a><br /></td></tr>
+<tr class="separator:a20c92bf837d07ffc6c621f2b42000d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5de96c389f6baa4bb1b5ce5e55205c3a"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , bool UniformPow2WG, class Reduction , typename InputT , typename OutputT &gt; </td></tr>
+<tr class="memitem:a5de96c389f6baa4bb1b5ce5e55205c3a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a5de96c389f6baa4bb1b5ce5e55205c3a">reduAuxCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, Reduction &amp;Redu, InputT In, OutputT Out)</td></tr>
+<tr class="memdesc:a5de96c389f6baa4bb1b5ce5e55205c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#a5de96c389f6baa4bb1b5ce5e55205c3a">More...</a><br /></td></tr>
+<tr class="separator:a5de96c389f6baa4bb1b5ce5e55205c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d728e222ada5390d7055e30cbaf6b9e"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a1d728e222ada5390d7055e30cbaf6b9e">reduGetMaxWGSize</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
+<tr class="separator:a1d728e222ada5390d7055e30cbaf6b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="afb6b377805ee33a62eb7e76a69e8f671"></a>
@@ -262,7 +269,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00135">135</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00141">141</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -280,7 +287,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00127">127</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00133">133</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -298,7 +305,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00118">118</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00124">124</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +323,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00102">102</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00108">108</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -334,7 +341,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00109">109</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00115">115</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -352,7 +359,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00061">61</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00067">67</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -370,7 +377,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00051">51</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00057">57</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -388,7 +395,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00056">56</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00062">62</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -406,7 +413,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00046">46</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00052">52</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -424,7 +431,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00041">41</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00047">47</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -442,7 +449,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00036">36</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00042">42</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -460,7 +467,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00072">72</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00078">78</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -478,7 +485,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00081">81</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00087">87</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +503,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00031">31</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00037">37</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +575,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00093">93</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00099">99</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -667,16 +674,16 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 
 </div>
 </div>
-<a id="ac472674ebc7023d1a66490dd4a45937f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac472674ebc7023d1a66490dd4a45937f">&#9670;&nbsp;</a></span>reduAuxCGFunc()</h2>
+<a id="a89a80998f4e31c7a742c5514606e202b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a80998f4e31c7a742c5514606e202b">&#9670;&nbsp;</a></span>reduAuxCGFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </div>
+template&lt;typename KernelName , typename KernelType , class Reduction &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_atomics &gt; cl::sycl::intel::detail::reduAuxCGFunc </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_atomics, size_t &gt; cl::sycl::intel::detail::reduAuxCGFunc </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
           <td class="paramname"><em>CGH</em>, </td>
@@ -684,14 +691,14 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Range</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>NWorkItems</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>NWorkItems</em>, </td>
+          <td class="paramname"><em>MaxWGSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -707,19 +714,22 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00967">967</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p>Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups. </p>
+<p>At the end of each work-group the partial sum is written to a global buffer. The function returns the number of the newly generated partial sums. </p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00975">975</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="reduction_8cpp_source.html#l00019">reduComputeWGSize()</a>.</p>
 
 </div>
 </div>
-<a id="a8f7ec1c689f82ea839142d96371d9106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f7ec1c689f82ea839142d96371d9106">&#9670;&nbsp;</a></span>reduAuxCGFuncImpl() <span class="overload">[1/2]</span></h2>
+<a id="a20c92bf837d07ffc6c621f2b42000d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c92bf837d07ffc6c621f2b42000d0f">&#9670;&nbsp;</a></span>reduAuxCGFuncImpl() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool UniformWG, typename InputT , typename OutputT &gt; </div>
+template&lt;typename KernelName , typename KernelType , bool UniformWG, class Reduction , typename InputT , typename OutputT &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;Reduction::has_fast_reduce &amp;&amp; !Reduction::has_fast_atomics&gt; cl::sycl::intel::detail::reduAuxCGFuncImpl </td>
@@ -730,14 +740,20 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Range</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>NWorkItems</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>NWorkItems</em>, </td>
+          <td class="paramname"><em>NWorkGroups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>WGSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -767,21 +783,21 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 
 <p>Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups. </p>
 <p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
-<p>Briefly: aux kernel, intel:<a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">reduce()</a>, reproducible results,FP + ADD/MIN/MAX </p>
+<p>Briefly: aux kernel, intel:<a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">reduce()</a>, reproducible results, FP + ADD/MIN/MAX </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00874">874</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00880">880</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="handler_8hpp_source.html#l00838">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="esimd__math_8hpp_source.html#l01929">cl::sycl::intel::gpu::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00843">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="esimd__math_8hpp_source.html#l01929">cl::sycl::intel::gpu::reduce()</a>.</p>
 
 </div>
 </div>
-<a id="af000f91d48ab931b82a7ce643d37c1dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af000f91d48ab931b82a7ce643d37c1dd">&#9670;&nbsp;</a></span>reduAuxCGFuncImpl() <span class="overload">[2/2]</span></h2>
+<a id="a5de96c389f6baa4bb1b5ce5e55205c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5de96c389f6baa4bb1b5ce5e55205c3a">&#9670;&nbsp;</a></span>reduAuxCGFuncImpl() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool UniformPow2WG, typename InputT , typename OutputT &gt; </div>
+template&lt;typename KernelName , typename KernelType , bool UniformPow2WG, class Reduction , typename InputT , typename OutputT &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_reduce &amp;&amp; !Reduction::has_fast_atomics&gt; cl::sycl::intel::detail::reduAuxCGFuncImpl </td>
@@ -792,14 +808,20 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; &amp;&#160;</td>
-          <td class="paramname"><em>Range</em>, </td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>NWorkItems</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>NWorkItems</em>, </td>
+          <td class="paramname"><em>NWorkGroups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>WGSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -831,9 +853,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses tree-reduction algorithm to reduce elements in each of work-groups. At the end of each work-group the partial sum is written to a global buffer.</p>
 <p>Briefly: aux kernel, tree-reduction, CUSTOM types/ops. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00909">909</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00915">915</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00838">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00843">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -883,7 +905,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00698">698</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00704">704</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
 
@@ -929,7 +951,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00833">833</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00839">839</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
 
@@ -985,9 +1007,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> algorithm to reduce elements in each of work-groups, then it calls fast sycl atomic operations to update user's reduction variable.</p>
 <p>Briefly: calls user's lambda, <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> + atomic, INT + ADD/MIN/MAX. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00610">610</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00616">616</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="handler_8hpp_source.html#l00838">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="esimd__math_8hpp_source.html#l01929">cl::sycl::intel::gpu::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="handler_8hpp_source.html#l00843">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="esimd__math_8hpp_source.html#l01929">cl::sycl::intel::gpu::reduce()</a>.</p>
 
 </div>
 </div>
@@ -1041,9 +1063,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses tree-reduction algorithm to reduce elements in each of work-groups, then it calls fast sycl atomic operations to update user's reduction variable.</p>
 <p>Briefly: calls user's lambda, tree-reduction + atomic, INT + AND/OR/XOR. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00642">642</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00648">648</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00838">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00843">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -1097,9 +1119,9 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 <p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">intel::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
 <p>Briefly: user's lambda, intel:<a class="el" href="namespacecl_1_1sycl_1_1intel.html#a4d9e12167dddb86b0a7ab22dcd48fea8">reduce()</a>, FP + ADD/MIN/MAX. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00727">727</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00733">733</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="handler_8hpp_source.html#l00838">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="esimd__math_8hpp_source.html#l01929">cl::sycl::intel::gpu::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="handler_8hpp_source.html#l00843">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="esimd__math_8hpp_source.html#l01929">cl::sycl::intel::gpu::reduce()</a>.</p>
 
 </div>
 </div>
@@ -1158,9 +1180,109 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 </dl>
 <p>Briefly: user's lambda, tree-reduction, CUSTOM types/ops. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00773">773</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00779">779</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00838">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00035">cl::sycl::nd_range&lt; dimensions &gt;::get_global_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l00843">cl::sycl::handler::parallel_for()</a>.</p>
+
+</div>
+</div>
+<a id="a6ec2825f342b4844f25074bd41b3c0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec2825f342b4844f25074bd41b3c0e5">&#9670;&nbsp;</a></span>reduComputeWGSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cl::sycl::intel::detail::reduComputeWGSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>NWorkItems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>MaxWGSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>NWorkGroups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="reduction_8cpp_source.html#l00019">19</a> of file <a class="el" href="reduction_8cpp_source.html">reduction.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="reduction_8hpp_source.html#l00975">reduAuxCGFunc()</a>.</p>
+
+</div>
+</div>
+<a id="a1d728e222ada5390d7055e30cbaf6b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d728e222ada5390d7055e30cbaf6b9e">&#9670;&nbsp;</a></span>reduGetMaxWGSize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cl::sycl::intel::detail::reduGetMaxWGSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt;&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>LocalMemBytesPerWorkItem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="reduction_8cpp_source.html#l00046">46</a> of file <a class="el" href="reduction_8cpp_source.html">reduction.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="device_8cpp_source.html#l00126">cl::sycl::device::get_info()</a>.</p>
+
+</div>
+</div>
+<a id="a9e8470c8671b0893cc2e3dda4ca10efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e8470c8671b0893cc2e3dda4ca10efd">&#9670;&nbsp;</a></span>reduGetMaxWGSize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t cl::sycl::intel::detail::reduGetMaxWGSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>LocalMemBytesPerWorkItem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01043">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
