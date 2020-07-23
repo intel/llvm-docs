@@ -21,6 +21,7 @@ var searchData=
   ['make_5funsigned_5fimpl_3c_20t_2c_20enable_5fif_5ft_3c_21is_5fcontained_3c_20t_2c_20gtl_3a_3ainteger_5flist_20_3e_3a_3avalue_2c_20t_20_3e_20_3e',['make_unsigned_impl&lt; T, enable_if_t&lt;!is_contained&lt; T, gtl::integer_list &gt;::value, T &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_9is__contained_3_07ab07014fed00ccca14dfc34322099d2.html',1,'cl::sycl::detail']]],
   ['mapmemobject',['MapMemObject',['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html',1,'cl::sycl::detail']]],
   ['mapping',['Mapping',['../struct__pi__mem_1_1Mapping.html',1,'_pi_mem']]],
+  ['matchtype',['MatchType',['../structcl_1_1sycl_1_1intel_1_1MatchType.html',1,'cl::sycl::intel']]],
   ['maximum',['maximum',['../structcl_1_1sycl_1_1intel_1_1maximum.html',1,'cl::sycl::intel']]],
   ['maxtype',['maxtype',['../structmaxtype.html',1,'']]],
   ['maxtype_3c_20char_20_3e',['maxtype&lt; char &gt;',['../structmaxtype_3_01char_01_4.html',1,'']]],

@@ -11,6 +11,9 @@ var searchData=
   ['ndloopiterateimpl',['NDLoopIterateImpl',['../structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl.html',1,'cl::sycl::detail']]],
   ['ndloopiterateimpl_3c_20ndims_2c_200_2c_20loopboundty_2c_20functy_2c_20loopindexty_20_3e',['NDLoopIterateImpl&lt; NDIMS, 0, LoopBoundTy, FuncTy, LoopIndexTy &gt;',['../structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html',1,'cl::sycl::detail']]],
   ['ndrdesct',['NDRDescT',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html',1,'cl::sycl::detail']]],
+  ['nextpowerof2',['NextPowerOf2',['../struct____esimd_1_1NextPowerOf2.html',1,'__esimd']]],
+  ['nextpowerof2_3c_20n_2c_20k_2c_20false_20_3e',['NextPowerOf2&lt; N, K, false &gt;',['../struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4.html',1,'__esimd']]],
+  ['nextpowerof2_3c_20n_2c_20k_2c_20true_20_3e',['NextPowerOf2&lt; N, K, true &gt;',['../struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html',1,'__esimd']]],
   ['noinit',['noinit',['../classcl_1_1sycl_1_1property_1_1noinit.html',1,'cl::sycl::property']]],
   ['notequalto',['NotEqualTo',['../structcl_1_1sycl_1_1detail_1_1NotEqualTo.html',1,'cl::sycl::detail']]],
   ['numeric_5flimits_3c_20half_20_3e',['numeric_limits&lt; half &gt;',['../structstd_1_1numeric__limits_3_01half_01_4.html',1,'std']]]

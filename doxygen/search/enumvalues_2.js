@@ -11,6 +11,7 @@ var searchData=
   ['buffercontextbound',['BufferContextBound',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa787929af791476ab0ffc7d8318342140',1,'cl::sycl::property::detail']]],
   ['bufferusehostptr',['BufferUseHostPtr',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa9b06e01dc952aea458dc4b60c4eda820',1,'cl::sycl::property::detail']]],
   ['bufferusemutex',['BufferUseMutex',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa68e0ba099ae35b6952215149034f8cde',1,'cl::sycl::property::detail']]],
+  ['bufferusepinnedhostmemory',['BufferUsePinnedHostMemory',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aaeb161c8618b277175f09e4c286bfde08',1,'cl::sycl::property::detail']]],
   ['built_5fin_5fkernels',['built_in_kernels',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190accba6884a1618c6371e7aecc2bc3092d',1,'cl::sycl::info']]],
   ['byte',['BYTE',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a3407b861163a8ca3525253a3b91b5f95',1,'__esimd']]]
 ];

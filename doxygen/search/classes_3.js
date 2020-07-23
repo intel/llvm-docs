@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cache',['cache',['../structcl_1_1sycl_1_1intel_1_1cache.html',1,'cl::sycl::intel']]],
   ['cg',['CG',['../classcl_1_1sycl_1_1detail_1_1CG.html',1,'cl::sycl::detail']]],
   ['cgbarrier',['CGBarrier',['../classcl_1_1sycl_1_1detail_1_1CGBarrier.html',1,'cl::sycl::detail']]],
   ['cgcopy',['CGCopy',['../classcl_1_1sycl_1_1detail_1_1CGCopy.html',1,'cl::sycl::detail']]],

@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "__esimd", "namespace____esimd.html", "namespace____esimd" ],
     [ "__spv", "namespace____spv.html", "namespace____spv" ],
     [ "cl", "namespacecl.html", "namespacecl" ],
     [ "EsimdEmulSys", "namespaceEsimdEmulSys.html", "namespaceEsimdEmulSys" ],

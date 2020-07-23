@@ -11,5 +11,6 @@ var searchData=
   ['buffer_5fdim',['buffer_dim',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#ab182d5517d9354fa2e3c8ead7defbe2b',1,'cl::sycl::intel::detail::reduction_impl']]],
   ['buffer_5fmem_5f',['buffer_mem_',['../union__pi__mem_1_1mem__.html#aa0e1f0043ce400bd9c551f1d9845cc13',1,'_pi_mem::mem_']]],
   ['buildoptions_5f',['buildOptions_',['../struct__pi__program.html#ade63366c16239d4f0e5726ff6a940321',1,'_pi_program']]],
-  ['buildstatus_5f',['buildStatus_',['../struct__pi__program.html#a07ee027170c3138223814e6f23953c42',1,'_pi_program']]]
+  ['buildstatus_5f',['buildStatus_',['../struct__pi__program.html#a07ee027170c3138223814e6f23953c42',1,'_pi_program']]],
+  ['burst_5fcoalesce',['BURST_COALESCE',['../namespacecl_1_1sycl_1_1intel.html#a5014170ec3d1c91afdb13e9e0e6a4f06',1,'cl::sycl::intel']]]
 ];

@@ -2,6 +2,7 @@ var namespacecl_1_1sycl =
 [
     [ "detail", "namespacecl_1_1sycl_1_1detail.html", "namespacecl_1_1sycl_1_1detail" ],
     [ "experimental", "namespacecl_1_1sycl_1_1experimental.html", "namespacecl_1_1sycl_1_1experimental" ],
+    [ "ext", "namespacecl_1_1sycl_1_1ext.html", "namespacecl_1_1sycl_1_1ext" ],
     [ "info", "namespacecl_1_1sycl_1_1info.html", "namespacecl_1_1sycl_1_1info" ],
     [ "intel", "namespacecl_1_1sycl_1_1intel.html", "namespacecl_1_1sycl_1_1intel" ],
     [ "property", "namespacecl_1_1sycl_1_1property.html", "namespacecl_1_1sycl_1_1property" ],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cache',['CACHE',['../namespacecl_1_1sycl_1_1intel.html#adf02a62ac3b1b0c6a1c98fd9d370bd82',1,'cl::sycl::intel']]],
   ['cast',['cast',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#abdb1239b6e2313d63e121e5d6cb9c94e',1,'cl::sycl::detail::pi']]],
   ['cldevicememallocname',['clDeviceMemAllocName',['../pi__opencl_8cpp.html#aea06bf6cb4348d692fe4ce6d4bfe3d11',1,'pi_opencl.cpp']]],
   ['clenqueuememadvisename',['clEnqueueMemAdviseName',['../pi__opencl_8cpp.html#affd635db53886fb71c2a190d06d076cb',1,'pi_opencl.cpp']]],

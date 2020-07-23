@@ -14,5 +14,6 @@ var searchData=
   ['unsigned_5flonglong_5flist',['unsigned_longlong_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#aee7d3fc920b08c3ecaef0f9f7c99bab0',1,'cl::sycl::detail::gtl']]],
   ['unsigned_5fshort_5flist',['unsigned_short_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#aba4d864db62c0eadd9950bdf48901057',1,'cl::sycl::detail::gtl']]],
   ['upper_5ftype',['upper_type',['../structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#afde909503ae5685923f9171747ec3b3c',1,'cl::sycl::detail::make_larger_impl&lt; vec&lt; T, N &gt;, vec&lt; T, N &gt; &gt;']]],
+  ['use_5fpinned_5fhost_5fmemory',['use_pinned_host_memory',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer.html#a32f616898301b29066bcd22796b63aac',1,'cl::sycl::ext::oneapi::property::buffer']]],
   ['ushort',['ushort',['../namespacecl_1_1sycl.html#a2ed9ea802a195d0fe74c56cb03b45c2a',1,'cl::sycl::ushort()'],['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a5d9e2857136b081224be26afbeefba28',1,'cl::sycl::intel::gpu::ushort()']]]
 ];

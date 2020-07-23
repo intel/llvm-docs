@@ -42,6 +42,7 @@ var searchData=
   ['platformver',['platformVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a77c93b69532854b35080dc83431ed494',1,'cl::sycl::detail::DevDescT']]],
   ['platformversize',['platformVerSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#ae1b28b2cac0746d314a6ab0dcfb254b1',1,'cl::sycl::detail::DevDescT']]],
   ['pluginversion',['PluginVersion',['../struct__pi__plugin.html#a61f3c14948bd380bdb111988cfedef09',1,'_pi_plugin']]],
+  ['prefetch',['PREFETCH',['../namespacecl_1_1sycl_1_1intel.html#a4d7d03a50339cdb763c88d17a4500f4e',1,'cl::sycl::intel']]],
   ['prod',['Prod',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#aeb71a91a409b6b4995d7e30d0987d2b1',1,'cl::sycl::intel::gpu::compute_format_type_2d&lt; simd&lt; Ty, N &gt;, EltTy, Height, Width &gt;::Prod()'],['../structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd__view_3_01BaseTy_00_01Reg96c8ef6f3a27060479a38ec02030149c.html#aa660180e83415b8767a2dcdbd8d7fa3d',1,'cl::sycl::intel::gpu::compute_format_type_2d&lt; simd_view&lt; BaseTy, RegionTy &gt;, EltTy, Height, Width &gt;::Prod()']]],
   ['program',['Program',['../struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6',1,'_pi_kernel']]],
   ['program_5f',['program_',['../struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba',1,'_pi_kernel']]],

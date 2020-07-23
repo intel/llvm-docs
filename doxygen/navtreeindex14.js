@@ -1,5 +1,14 @@
 var NAVTREEINDEX14 =
 {
+"esimd__intrin_8hpp.html#af8b49bc153fb248be53859c74cadc6c2":[4,0,0,0,1,5,0,0,1,2],
+"esimd__intrin_8hpp_source.html":[4,0,0,0,1,5,0,0,1],
+"esimd__math_8hpp.html":[4,0,0,0,1,5,0,3],
+"esimd__math_8hpp.html#a03dd91a2c2c26e928ae223e2093bf8e3":[4,0,0,0,1,5,0,3,126],
+"esimd__math_8hpp.html#a058f075f4a084559cd0aea500e758f42":[4,0,0,0,1,5,0,3,46],
+"esimd__math_8hpp.html#a091908af6dcf3ed86b8bfa73709f4ece":[4,0,0,0,1,5,0,3,122],
+"esimd__math_8hpp.html#a0f8d616151a230c9dd4c056e0287a898":[4,0,0,0,1,5,0,3,59],
+"esimd__math_8hpp.html#a126425a5519f5817fe291f6d09647f94":[4,0,0,0,1,5,0,3,51],
+"esimd__math_8hpp.html#a12cc3f6ea49b31506ca3882fa91784de":[4,0,0,0,1,5,0,3,93],
 "esimd__math_8hpp.html#a16262f119c86f8281281a37f99828f7e":[4,0,0,0,1,5,0,3,14],
 "esimd__math_8hpp.html#a1957b6e08f13a80437d9f05079eae03d":[4,0,0,0,1,5,0,3,117],
 "esimd__math_8hpp.html#a19f611cc235683dce635f802fb239500":[4,0,0,0,1,5,0,3,18],
@@ -240,14 +249,5 @@ var NAVTREEINDEX14 =
 "esimd__memory__intrin_8hpp.html#a1a27a917af62944937062001a4d30ed5":[4,0,0,0,1,5,0,0,3,7],
 "esimd__memory__intrin_8hpp.html#a274271150b5aa05d8e368f1ad20b7162":[4,0,0,0,1,5,0,0,3,23],
 "esimd__memory__intrin_8hpp.html#a27e57ebb9c30a64e379fc8580fbff28d":[4,0,0,0,1,5,0,0,3,10],
-"esimd__memory__intrin_8hpp.html#a3315fd65c34dbc7df6604e368e144efb":[4,0,0,0,1,5,0,0,3,24],
-"esimd__memory__intrin_8hpp.html#a4296df4db5a140362d130e780ba2df40":[4,0,0,0,1,5,0,0,3,1],
-"esimd__memory__intrin_8hpp.html#a445e2435b61778501b98c8f240c5c66e":[4,0,0,0,1,5,0,0,3,12],
-"esimd__memory__intrin_8hpp.html#a4fedda19ee6246f01b8d7f2e1abe867d":[4,0,0,0,1,5,0,0,3,25],
-"esimd__memory__intrin_8hpp.html#a5cc3c7ef9d26233c2ee967cf972d9906":[4,0,0,0,1,5,0,0,3,11],
-"esimd__memory__intrin_8hpp.html#a63e0131d70ab7cec0b4e934fae46750a":[4,0,0,0,1,5,0,0,3,0],
-"esimd__memory__intrin_8hpp.html#a725ad0abe149c3c498c25463792c7d8c":[4,0,0,0,1,5,0,0,3,2],
-"esimd__memory__intrin_8hpp.html#a7396aeaf43c43fe703f0b7f98df287e1":[4,0,0,0,1,5,0,0,3,16],
-"esimd__memory__intrin_8hpp.html#a73e3e2bca0201d9a0be13655ce2e4598":[4,0,0,0,1,5,0,0,3,26],
-"esimd__memory__intrin_8hpp.html#a77903a1cee9309b3648549f1ccb46e94":[4,0,0,0,1,5,0,0,3,13]
+"esimd__memory__intrin_8hpp.html#a3315fd65c34dbc7df6604e368e144efb":[4,0,0,0,1,5,0,0,3,24]
 };

@@ -34,6 +34,7 @@ var searchData=
   ['spec_5fconstant',['spec_constant',['../classcl_1_1sycl_1_1experimental_1_1spec__constant.html',1,'cl::sycl::experimental']]],
   ['spec_5fconstant_5fimpl',['spec_constant_impl',['../classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html',1,'cl::sycl::detail']]],
   ['specconstantinfo',['SpecConstantInfo',['../structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html',1,'cl::sycl::detail']]],
+  ['statically_5fcoalesce_5fimpl',['statically_coalesce_impl',['../structcl_1_1sycl_1_1intel_1_1statically__coalesce__impl.html',1,'cl::sycl::intel']]],
   ['stream',['stream',['../classcl_1_1sycl_1_1stream.html',1,'cl::sycl']]],
   ['stream_5fimpl',['stream_impl',['../classcl_1_1sycl_1_1detail_1_1stream__impl.html',1,'cl::sycl::detail']]],
   ['sub_5fgroup',['sub_group',['../structcl_1_1sycl_1_1intel_1_1sub__group.html',1,'cl::sycl::intel']]],

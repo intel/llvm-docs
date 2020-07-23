@@ -1,5 +1,11 @@
 var esimd__util_8hpp =
 [
+    [ "NextPowerOf2", "struct____esimd_1_1NextPowerOf2.html", null ],
+    [ "NextPowerOf2< N, K, true >", "struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html", "struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4" ],
+    [ "NextPowerOf2< N, K, false >", "struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4.html", "struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4" ],
+    [ "Log2", "struct____esimd_1_1Log2.html", null ],
+    [ "Log2< N, false >", "struct____esimd_1_1Log2_3_01N_00_01false_01_4.html", "struct____esimd_1_1Log2_3_01N_00_01false_01_4" ],
+    [ "Log2< N, true >", "struct____esimd_1_1Log2_3_01N_00_01true_01_4.html", "struct____esimd_1_1Log2_3_01N_00_01true_01_4" ],
     [ "is_esimd_vector", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__esimd__vector.html", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__esimd__vector" ],
     [ "is_esimd_vector< sycl::intel::gpu::simd< T, N > >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__esimd__vector_3_01sycl_1_1intel_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__esimd__vector_3_01sycl_1_1intel_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4" ],
     [ "is_esimd_vector< sycl::intel::gpu::vector_type< T, N > >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__esimd__vector_3_01sycl_1_1intel_1_1gpu_1_1vece4dc8166bff5b408ec664bd74fc5328b.html", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__esimd__vector_3_01sycl_1_1intel_1_1gpu_1_1vece4dc8166bff5b408ec664bd74fc5328b" ],
@@ -48,8 +54,9 @@ var esimd__util_8hpp =
     [ "OWORD", "esimd__util_8hpp.html#a9233803d97590e06af43def404fcf951a9f6ea8d65486568b05ca13ddc33c74a3", null ],
     [ "GRF", "esimd__util_8hpp.html#a9233803d97590e06af43def404fcf951aa336fcc5f3186c774795aaec472e6185", null ],
     [ "ElemsPerAddrDecoding", "esimd__util_8hpp.html#a20e5792bfdb278372918bc1ddb91a1c0", null ],
-    [ "getNextPowerOf2", "esimd__util_8hpp.html#a1aed3778c58904ce96eb53d62028ec7f", null ],
+    [ "getNextPowerOf2", "esimd__util_8hpp.html#ad7ce6590512442cc1ce31cfbf9af0715", null ],
+    [ "getNextPowerOf2< 0 >", "esimd__util_8hpp.html#a13f7e6dfbb81dee240ff0407bf170e26", null ],
     [ "isPowerOf2", "esimd__util_8hpp.html#adcd09b1b839a30e554e843f817ca05b8", null ],
     [ "isPowerOf2", "esimd__util_8hpp.html#ad52e4aea71df110d280fbbb114f9228a", null ],
-    [ "log2", "esimd__util_8hpp.html#ae469f0fcf707e1d85dc7cd7df5940cbe", null ]
+    [ "log2", "esimd__util_8hpp.html#ade05d2f8edc1644182681e1f2b4de651", null ]
 ];

@@ -94,6 +94,7 @@ var searchData=
   ['marknodeasvisited',['markNodeAsVisited',['../namespacecl_1_1sycl_1_1detail.html#a4ed11d52e54184938bfbbc566174696b',1,'cl::sycl::detail']]],
   ['mask_5ftype_5ft',['mask_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#adf423b125e16cca59dd6455ce9183ece',1,'cl::sycl::intel::gpu']]],
   ['match_5ftypes',['match_types',['../namespacecl_1_1sycl_1_1detail.html#ade08101e2be3b3752374d9a21b3173c9',1,'cl::sycl::detail']]],
+  ['matchtype',['MatchType',['../structcl_1_1sycl_1_1intel_1_1MatchType.html',1,'cl::sycl::intel']]],
   ['max',['max',['../structstd_1_1numeric__limits_3_01half_01_4.html#ae63fb0d916828d24a7f6da72c083fe77',1,'std::numeric_limits&lt; half &gt;']]],
   ['max_5farray_5fsize',['MAX_ARRAY_SIZE',['../namespacecl_1_1sycl_1_1detail.html#a6d339d0ea9dfaeb97d240e52ccf8e5f3',1,'cl::sycl::detail']]],
   ['max_5fclock_5ffrequency',['max_clock_frequency',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190adf82af158ea87328fc4baf6980e25b73',1,'cl::sycl::info']]],
