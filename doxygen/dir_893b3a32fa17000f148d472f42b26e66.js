@@ -2,6 +2,9 @@ var dir_893b3a32fa17000f148d472f42b26e66 =
 [
     [ "esimd", "dir_691b5d1226506ac07c8eac90a7adb0d7.html", "dir_691b5d1226506ac07c8eac90a7adb0d7" ],
     [ "atomic.hpp", "intel_2atomic_8hpp.html", null ],
+    [ "atomic_accessor.hpp", "atomic__accessor_8hpp.html", [
+      [ "atomic_accessor", "classcl_1_1sycl_1_1intel_1_1atomic__accessor.html", "classcl_1_1sycl_1_1intel_1_1atomic__accessor" ]
+    ] ],
     [ "atomic_enums.hpp", "atomic__enums_8hpp.html", "atomic__enums_8hpp" ],
     [ "atomic_fence.hpp", "atomic__fence_8hpp.html", "atomic__fence_8hpp" ],
     [ "atomic_ref.hpp", "atomic__ref_8hpp.html", "atomic__ref_8hpp" ],

@@ -2,6 +2,7 @@ var namespacecl_1_1sycl_1_1intel =
 [
     [ "detail", "namespacecl_1_1sycl_1_1intel_1_1detail.html", "namespacecl_1_1sycl_1_1intel_1_1detail" ],
     [ "gpu", "namespacecl_1_1sycl_1_1intel_1_1gpu.html", "namespacecl_1_1sycl_1_1intel_1_1gpu" ],
+    [ "atomic_accessor", "classcl_1_1sycl_1_1intel_1_1atomic__accessor.html", "classcl_1_1sycl_1_1intel_1_1atomic__accessor" ],
     [ "atomic_ref", "classcl_1_1sycl_1_1intel_1_1atomic__ref.html", null ],
     [ "burst_coalesce_impl", "structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl.html", "structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl" ],
     [ "cache", "structcl_1_1sycl_1_1intel_1_1cache.html", "structcl_1_1sycl_1_1intel_1_1cache" ],

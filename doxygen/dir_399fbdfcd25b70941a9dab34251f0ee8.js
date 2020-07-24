@@ -73,9 +73,6 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "os_util.hpp", "os__util_8hpp.html", "os__util_8hpp" ],
     [ "pi.h", "pi_8h.html", "pi_8h" ],
     [ "pi.hpp", "pi_8hpp.html", "pi_8hpp" ],
-    [ "sampler_impl.hpp", "sampler__impl_8hpp.html", [
-      [ "sampler_impl", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html", "classcl_1_1sycl_1_1detail_1_1sampler__impl" ]
-    ] ],
     [ "spirv.hpp", "spirv_8hpp.html", null ],
     [ "stl_type_traits.hpp", "stl__type__traits_8hpp.html", "stl__type__traits_8hpp" ],
     [ "stream_impl.hpp", "stream__impl_8hpp.html", "stream__impl_8hpp" ],

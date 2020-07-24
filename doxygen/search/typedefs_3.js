@@ -19,7 +19,7 @@ var searchData=
   ['compute_5fformat_5ftype_5f2d_5ft',['compute_format_type_2d_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a64039e576ea967f70336e507ad87289f',1,'cl::sycl::intel::gpu']]],
   ['compute_5fformat_5ftype_5ft',['compute_format_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a89f19e2a084b174f3ace50d4fcd67118',1,'cl::sycl::intel::gpu']]],
   ['compute_5ftype_5ft',['compute_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a9aac781579d0d420018f577e9f33f855',1,'cl::sycl::intel::gpu']]],
-  ['concreteasptrtype',['ConcreteASPtrType',['../classcl_1_1sycl_1_1accessor.html#ae748411d145e0a0df95083a97510a57a',1,'cl::sycl::accessor']]],
+  ['concreteasptrtype',['ConcreteASPtrType',['../classcl_1_1sycl_1_1accessor.html#ae748411d145e0a0df95083a97510a57a',1,'cl::sycl::accessor::ConcreteASPtrType()'],['../classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#afd6c3ee73d4bfb6ccc3c6c14bc6f646e',1,'cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder &gt;::ConcreteASPtrType()']]],
   ['conditional_5ft',['conditional_t',['../namespacecl_1_1sycl_1_1detail.html#ac666de109fc99c49823e41f88b82bddd',1,'cl::sycl::detail']]],
   ['const_5fif_5fconst_5fas',['const_if_const_AS',['../namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202',1,'cl::sycl::detail']]],
   ['const_5fiterator',['const_iterator',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ad7095e2d4e2bf14462923b1471fbbb40',1,'cl::sycl::detail::CircularBuffer::const_iterator()'],['../classcl_1_1sycl_1_1exception__list.html#afab85d4c36b00f85b5c59ae53de3bfd4',1,'cl::sycl::exception_list::const_iterator()']]],

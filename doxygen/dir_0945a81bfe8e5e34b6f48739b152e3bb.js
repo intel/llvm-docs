@@ -68,6 +68,9 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "queue_impl.hpp", "queue__impl_8hpp.html", "queue__impl_8hpp" ],
     [ "reduction.cpp", "reduction_8cpp.html", "reduction_8cpp" ],
     [ "sampler_impl.cpp", "sampler__impl_8cpp.html", null ],
+    [ "sampler_impl.hpp", "sampler__impl_8hpp.html", [
+      [ "sampler_impl", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html", "classcl_1_1sycl_1_1detail_1_1sampler__impl" ]
+    ] ],
     [ "spec_constant_impl.cpp", "spec__constant__impl_8cpp.html", "spec__constant__impl_8cpp" ],
     [ "spec_constant_impl.hpp", "spec__constant__impl_8hpp.html", "spec__constant__impl_8hpp" ],
     [ "stream_impl.cpp", "stream__impl_8cpp.html", null ],

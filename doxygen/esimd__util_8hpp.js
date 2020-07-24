@@ -54,8 +54,8 @@ var esimd__util_8hpp =
     [ "OWORD", "esimd__util_8hpp.html#a9233803d97590e06af43def404fcf951a9f6ea8d65486568b05ca13ddc33c74a3", null ],
     [ "GRF", "esimd__util_8hpp.html#a9233803d97590e06af43def404fcf951aa336fcc5f3186c774795aaec472e6185", null ],
     [ "ElemsPerAddrDecoding", "esimd__util_8hpp.html#a20e5792bfdb278372918bc1ddb91a1c0", null ],
-    [ "getNextPowerOf2", "esimd__util_8hpp.html#ad7ce6590512442cc1ce31cfbf9af0715", null ],
-    [ "getNextPowerOf2< 0 >", "esimd__util_8hpp.html#a13f7e6dfbb81dee240ff0407bf170e26", null ],
+    [ "getNextPowerOf2", "esimd__util_8hpp.html#aee9b66daf1f51c64732d052090c1a46e", null ],
+    [ "getNextPowerOf2< 0 >", "esimd__util_8hpp.html#a4163acdeb203b8ac148d1266f3d71b47", null ],
     [ "isPowerOf2", "esimd__util_8hpp.html#adcd09b1b839a30e554e843f817ca05b8", null ],
     [ "isPowerOf2", "esimd__util_8hpp.html#ad52e4aea71df110d280fbbb114f9228a", null ],
     [ "log2", "esimd__util_8hpp.html#ade05d2f8edc1644182681e1f2b4de651", null ]

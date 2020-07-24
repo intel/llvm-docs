@@ -1,7 +1,12 @@
 var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4 =
 [
+    [ "AccessorCommonT", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a593d3582c70c8e2c9fc50bf9bc41770f", null ],
+    [ "AccessorSubscript", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a06eb43690877da45e2816f66bd0fc50f", null ],
+    [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#afd6c3ee73d4bfb6ccc3c6c14bc6f646e", null ],
     [ "const_reference", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7907072e2a19d4108f77d070774f62ed", null ],
+    [ "PtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8fb033561947b165b31e8e76a9e06f9a", null ],
     [ "reference", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3300db3e66965ecd2ba727615420037c", null ],
+    [ "RefType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a314d912a8f8847cf4ca74d873cccd179", null ],
     [ "value_type", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#affbea3f1ed18d49cfa7d60d8fbcf690f", null ],
     [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#acac61d7dfca2abeb08fa2be4ec4c2e8b", null ],
     [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7928217b66778d723cf211ca3ddae858", null ],
@@ -9,6 +14,8 @@ var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01a
     [ "get_pointer", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3506c044759d10b13aba846d008a68e5", null ],
     [ "get_range", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8150f9414685815dd00717ece3089d0b", null ],
     [ "get_size", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac373bd3a9bb2525e52edf1d682c5ecb8", null ],
+    [ "getLinearIndex", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a6d18ff74570ff27c2771918bd85e34f2", null ],
+    [ "getQualifiedPtr", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#abddd57b8773e1fa82f68110355dbfafa", null ],
     [ "operator RefType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#af59fa47b23bf4ba048edb30e35fb2d8f", null ],
     [ "operator typename detail::enable_if_t< Dims==0 &&AccessMode==access::mode::atomic, atomic< DataT, AS >>", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a1c7b17c3d857af4681c5dcee86f948a3", null ],
     [ "operator!=", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a4cc3463685f9304b4e85909da4bdffbc", null ],
@@ -17,5 +24,7 @@ var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01a
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3b877b05b5ee646d71d28db583d99c59", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aec5a310abc8dc5903b0b93a80b0ace4f", null ],
-    [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7a4c716552d304f864a9adf608fe9110", null ]
+    [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7a4c716552d304f864a9adf608fe9110", null ],
+    [ "AdjustedDim", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aa47de423a08600aff8814997ea77827c", null ],
+    [ "padding", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa", null ]
 ];

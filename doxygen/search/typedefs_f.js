@@ -109,5 +109,5 @@ var searchData=
   ['programcachet',['ProgramCacheT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#adaa15b38586684e15ed7e79c3666dbf1',1,'cl::sycl::detail::KernelProgramCache']]],
   ['programimplptr',['ProgramImplPtr',['../namespacecl_1_1sycl_1_1detail.html#a315a01ce991392ee5467115647a06840',1,'cl::sycl::detail']]],
   ['programwithbuildstatet',['ProgramWithBuildStateT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a0b6d5eec19eaec3676df979b57716cad',1,'cl::sycl::detail::KernelProgramCache']]],
-  ['ptrtype',['PtrType',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a39fc708d748b82e15b70c73ccbebc478',1,'cl::sycl::detail::accessor_common::PtrType()'],['../classcl_1_1sycl_1_1accessor.html#a9b845554c4c218ae946b5e6c5c30fabf',1,'cl::sycl::accessor::PtrType()']]]
+  ['ptrtype',['PtrType',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a39fc708d748b82e15b70c73ccbebc478',1,'cl::sycl::detail::accessor_common::PtrType()'],['../classcl_1_1sycl_1_1accessor.html#a9b845554c4c218ae946b5e6c5c30fabf',1,'cl::sycl::accessor::PtrType()'],['../classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8fb033561947b165b31e8e76a9e06f9a',1,'cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder &gt;::PtrType()']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['padding',['padding',['../classcl_1_1sycl_1_1accessor.html#ae4ca64349d5c15e1755861cb5b33320b',1,'cl::sycl::accessor']]],
+  ['padding',['padding',['../classcl_1_1sycl_1_1accessor.html#ae4ca64349d5c15e1755861cb5b33320b',1,'cl::sycl::accessor::padding()'],['../classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa',1,'cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder &gt;::padding()']]],
   ['paramsizes_5f',['paramSizes_',['../struct__pi__kernel_1_1arguments.html#a230fcd08f58246d38d56a1328a435114',1,'_pi_kernel::arguments']]],
   ['parent',['Parent',['../struct__pi__buffer.html#aabab9f4228e10b2e6f96249bdfc671a9',1,'_pi_buffer']]],
   ['parent_5f',['parent_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#aac51643c77130af9f87de37928c30cf4',1,'_pi_mem::mem_::buffer_mem_']]],
