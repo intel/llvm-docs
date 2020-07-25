@@ -2,6 +2,7 @@ var commands_8hpp =
 [
     [ "EnqueueResultT", "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html", "structcl_1_1sycl_1_1detail_1_1EnqueueResultT" ],
     [ "DepDesc", "structcl_1_1sycl_1_1detail_1_1DepDesc.html", "structcl_1_1sycl_1_1detail_1_1DepDesc" ],
+    [ "Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks" ],
     [ "EmptyCommand", "classcl_1_1sycl_1_1detail_1_1EmptyCommand.html", "classcl_1_1sycl_1_1detail_1_1EmptyCommand" ],
     [ "ReleaseCommand", "classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html", "classcl_1_1sycl_1_1detail_1_1ReleaseCommand" ],
     [ "AllocaCommandBase", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase" ],

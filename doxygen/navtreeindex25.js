@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"stream_8hpp.html#a2a9c51ac35a1740641bff4c0d39d44d4":[4,0,0,0,1,43,27],
 "stream_8hpp.html#a37868449914c033754b31396f24a2070":[4,0,0,0,1,43,28],
 "stream_8hpp.html#a4362cb3c044a3fbb68f8726f88e441ad":[4,0,0,0,1,43,13],
 "stream_8hpp.html#a526d77bfbbdc547b67b8d933881da090":[4,0,0,0,1,43,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "struct__pi__kernel_1_1arguments.html":[3,0,18,0],
 "struct__pi__kernel_1_1arguments.html#a06c967e47bd96dc18048b8d96f5014ca":[3,0,18,0,4],
 "struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c":[3,0,18,0,12],
-"struct__pi__kernel_1_1arguments.html#a13ec3fc0e124184dfad11bcf40b19ef6":[3,0,18,0,10],
-"struct__pi__kernel_1_1arguments.html#a1985c5423dd1546a76a8feffc0bef40b":[3,0,18,0,0]
+"struct__pi__kernel_1_1arguments.html#a13ec3fc0e124184dfad11bcf40b19ef6":[3,0,18,0,10]
 };

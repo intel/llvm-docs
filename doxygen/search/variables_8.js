@@ -9,7 +9,7 @@ var searchData=
   ['has_5fquiet_5fnan',['has_quiet_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#ac3d58676c6384b3c606bc19d556285bd',1,'std::numeric_limits&lt; half &gt;']]],
   ['has_5fsignaling_5fnan',['has_signaling_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#ae2c68ea746186c2d4a11de651d34ac5d',1,'std::numeric_limits&lt; half &gt;']]],
   ['head',['head',['../structcl_1_1sycl_1_1detail_1_1value__list_3_01T_00_01H_00_01V_8_8_8_01_4.html#aca1612d2fd4d55bf76d82d8deb4f5730',1,'cl::sycl::detail::value_list&lt; T, H, V... &gt;']]],
-  ['hex',['Hex',['../namespacecl_1_1sycl_1_1detail.html#a8f0a6ff5de2e162d83a7ac0bb85f13cd',1,'cl::sycl::detail::Hex()'],['../namespacecl_1_1sycl.html#ae28f72850af7190c5175e2e5ff1bcf0f',1,'cl::sycl::hex()']]],
+  ['hex',['hex',['../namespacecl_1_1sycl.html#ae28f72850af7190c5175e2e5ff1bcf0f',1,'cl::sycl::hex()'],['../namespacecl_1_1sycl_1_1detail.html#a8f0a6ff5de2e162d83a7ac0bb85f13cd',1,'cl::sycl::detail::Hex()']]],
   ['hexfloat',['hexfloat',['../namespacecl_1_1sycl.html#aa26c10ce0228ce3c9a15234241ffb40a',1,'cl::sycl']]],
   ['hostentriesbegin',['HostEntriesBegin',['../structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69',1,'pi_device_binaries_struct']]],
   ['hostentriesend',['HostEntriesEnd',['../structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1',1,'pi_device_binaries_struct']]],

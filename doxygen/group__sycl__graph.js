@@ -1,6 +1,10 @@
 var group__sycl__graph =
 [
     [ "Command", "classcl_1_1sycl_1_1detail_1_1Command.html", [
+      [ "Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", [
+        [ "MToBeDeleted", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a2ae26f5a902a582482175b71cbc31792", null ],
+        [ "MVisited", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a4f5423b989b23434d7dc0aad3ff73a59", null ]
+      ] ],
       [ "BlockReason", "classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09", [
         [ "HostAccessor", "classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e", null ],
         [ "HostTask", "classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d", null ]
@@ -59,6 +63,7 @@ var group__sycl__graph =
       [ "MInstanceID", "classcl_1_1sycl_1_1detail_1_1Command.html#abd75de32d432e4c9f0cb65ade0ad41dc", null ],
       [ "MIsBlockable", "classcl_1_1sycl_1_1detail_1_1Command.html#a5d9548e459c7d2fc7a2b8d90c2428057", null ],
       [ "MLeafCounter", "classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604", null ],
+      [ "MMarks", "classcl_1_1sycl_1_1detail_1_1Command.html#acc87da4858aacf939c1192d1170d90d8", null ],
       [ "MPreparedDepsEvents", "classcl_1_1sycl_1_1detail_1_1Command.html#a63d94f8dc12b566122e1eb1a962ec01a", null ],
       [ "MPreparedHostDepsEvents", "classcl_1_1sycl_1_1detail_1_1Command.html#ad973525e277975b7c9da8944857b457c", null ],
       [ "MQueue", "classcl_1_1sycl_1_1detail_1_1Command.html#a058f3c52750d5e57dfa8543bfdfcdd5c", null ],
@@ -67,8 +72,7 @@ var group__sycl__graph =
       [ "MTraceEvent", "classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5", null ],
       [ "MTraceEventPrologComplete", "classcl_1_1sycl_1_1detail_1_1Command.html#a4e56e8d97d07ebe93e1e8c687df0c81c", null ],
       [ "MType", "classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d", null ],
-      [ "MUsers", "classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f", null ],
-      [ "MVisited", "classcl_1_1sycl_1_1detail_1_1Command.html#acb3f9f031e66884e4514d5a392d402c0", null ]
+      [ "MUsers", "classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f", null ]
     ] ],
     [ "MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html", [
       [ "MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a637208028b2d731007fa7c89a7eed4c4", null ],

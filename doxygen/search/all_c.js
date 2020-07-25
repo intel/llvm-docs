@@ -92,6 +92,7 @@ var searchData=
   ['mapptr_5f',['mapPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a870da0afef4a9f1b6d24f7cdd3cc4d47',1,'_pi_mem::mem_::buffer_mem_']]],
   ['margs',['MArgs',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a72e8ae99281477ce9a7c399ab7c56b2a',1,'cl::sycl::detail::CGExecKernel::MArgs()'],['../classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a521e90ead6d0b5392e35f28565e8ea17',1,'cl::sycl::detail::CGHostTask::MArgs()']]],
   ['marknodeasvisited',['markNodeAsVisited',['../namespacecl_1_1sycl_1_1detail.html#a4ed11d52e54184938bfbbc566174696b',1,'cl::sycl::detail']]],
+  ['marks',['Marks',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html',1,'cl::sycl::detail::Command']]],
   ['mask_5ftype_5ft',['mask_type_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#adf423b125e16cca59dd6455ce9183ece',1,'cl::sycl::intel::gpu']]],
   ['match_5ftypes',['match_types',['../namespacecl_1_1sycl_1_1detail.html#ade08101e2be3b3752374d9a21b3173c9',1,'cl::sycl::detail']]],
   ['matchtype',['MatchType',['../structcl_1_1sycl_1_1intel_1_1MatchType.html',1,'cl::sycl::intel']]],
@@ -225,6 +226,7 @@ var searchData=
   ['mleafcounter',['MLeafCounter',['../classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604',1,'cl::sycl::detail::Command']]],
   ['mline',['MLine',['../classcl_1_1sycl_1_1detail_1_1CG.html#adac17762f7e2c5c21d19e554cc956c51',1,'cl::sycl::detail::CG']]],
   ['mlinkedallocacmd',['MLinkedAllocaCmd',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a26ad0b3875ad355ed64563cd9eb442a8',1,'cl::sycl::detail::AllocaCommandBase']]],
+  ['mmarks',['MMarks',['../classcl_1_1sycl_1_1detail_1_1Command.html#acc87da4858aacf939c1192d1170d90d8',1,'cl::sycl::detail::Command']]],
   ['mmem',['MMem',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#ab3248a9f83d3f9836d498af31c9e819d',1,'cl::sycl::detail::LocalAccessorImplHost']]],
   ['mmemallocation',['MMemAllocation',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54626b5713e483b8f76010a719d80815',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['mmemmodified',['MMemModified',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c',1,'cl::sycl::detail::MemObjRecord']]],
@@ -268,6 +270,7 @@ var searchData=
   ['mstreams',['MStreams',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#ade604578dfa234dece017a89e843166e',1,'cl::sycl::detail::CGExecKernel']]],
   ['msyclkernel',['MSyclKernel',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a6a6211bb1d8aac3c9df95c9b848c5a60',1,'cl::sycl::detail::CGExecKernel']]],
   ['msyclmemobj',['MSYCLMemObj',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a85dc441db1e3b2f4ea11e454e9dd0229',1,'cl::sycl::detail::AccessorImplHost']]],
+  ['mtobedeleted',['MToBeDeleted',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a2ae26f5a902a582482175b71cbc31792',1,'cl::sycl::detail::Command::Marks']]],
   ['mtraceevent',['MTraceEvent',['../classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5',1,'cl::sycl::detail::Command']]],
   ['mtraceeventprologcomplete',['MTraceEventPrologComplete',['../classcl_1_1sycl_1_1detail_1_1Command.html#a4e56e8d97d07ebe93e1e8c687df0c81c',1,'cl::sycl::detail::Command']]],
   ['mtype',['MType',['../classcl_1_1sycl_1_1detail_1_1ArgDesc.html#a2e0fb80953af06c75c8f6b98f6759bdc',1,'cl::sycl::detail::ArgDesc::MType()'],['../classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d',1,'cl::sycl::detail::Command::MType()']]],
@@ -282,7 +285,7 @@ var searchData=
   ['musers',['MUsers',['../classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f',1,'cl::sycl::detail::Command']]],
   ['mutex_5fclass',['mutex_class',['../namespacecl_1_1sycl.html#a0e818f1ac2ba5084b08dd41ca813ef28',1,'cl::sycl']]],
   ['mvalue',['MValue',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html#ab2790ccc93017b965b6f076e5f2f2a28',1,'cl::sycl::intel::detail::reducer::MValue()'],['../classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#a2b4298095577cd5c4d947c0f3c770a0b',1,'cl::sycl::intel::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;::MValue()']]],
-  ['mvisited',['MVisited',['../classcl_1_1sycl_1_1detail_1_1Command.html#acb3f9f031e66884e4514d5a392d402c0',1,'cl::sycl::detail::Command']]],
+  ['mvisited',['MVisited',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a4f5423b989b23434d7dc0aad3ff73a59',1,'cl::sycl::detail::Command::Marks']]],
   ['mwrapperimage',['MWrapperImage',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a9e60b6f0c8be8dd5691fb617168e339f',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['mwriteleaves',['MWriteLeaves',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9',1,'cl::sycl::detail::MemObjRecord']]]
 ];

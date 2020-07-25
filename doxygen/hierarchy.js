@@ -575,6 +575,7 @@ var hierarchy =
     [ "cl::sycl::detail::make_unsigned_impl< T, enable_if_t< is_contained< T, gtl::vector_integer_list >::value, T > >", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html", null ],
     [ "cl::sycl::detail::make_unsigned_impl< T, enable_if_t<!is_contained< T, gtl::integer_list >::value, T > >", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_9is__contained_3_07ab07014fed00ccca14dfc34322099d2.html", null ],
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
+    [ "cl::sycl::detail::Command::Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", null ],
     [ "cl::sycl::intel::maximum< T >", "structcl_1_1sycl_1_1intel_1_1maximum.html", null ],
     [ "maxtype< T >", "structmaxtype.html", null ],
     [ "maxtype< char >", "structmaxtype_3_01char_01_4.html", null ],
