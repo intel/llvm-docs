@@ -74,6 +74,9 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "spec_constant_impl.cpp", "spec__constant__impl_8cpp.html", "spec__constant__impl_8cpp" ],
     [ "spec_constant_impl.hpp", "spec__constant__impl_8hpp.html", "spec__constant__impl_8hpp" ],
     [ "stream_impl.cpp", "stream__impl_8cpp.html", null ],
+    [ "stream_impl.hpp", "stream__impl_8hpp.html", [
+      [ "stream_impl", "classcl_1_1sycl_1_1detail_1_1stream__impl.html", "classcl_1_1sycl_1_1detail_1_1stream__impl" ]
+    ] ],
     [ "sycl_mem_obj_t.cpp", "sycl__mem__obj__t_8cpp.html", null ],
     [ "thread_pool.hpp", "thread__pool_8hpp.html", [
       [ "ThreadPool", "classcl_1_1sycl_1_1detail_1_1ThreadPool.html", "classcl_1_1sycl_1_1detail_1_1ThreadPool" ]

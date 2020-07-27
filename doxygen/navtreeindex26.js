@@ -1,6 +1,5 @@
 var NAVTREEINDEX26 =
 {
-"struct__pi__kernel_1_1arguments.html#a1985c5423dd1546a76a8feffc0bef40b":[3,0,18,0,0],
 "struct__pi__kernel_1_1arguments.html#a230fcd08f58246d38d56a1328a435114":[3,0,18,0,14],
 "struct__pi__kernel_1_1arguments.html#a2f34c5c75b081756a86cd1500b64f866":[3,0,18,0,9],
 "struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8":[3,0,18,0,6],
@@ -249,5 +248,6 @@ var NAVTREEINDEX26 =
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html#a513fd614d8c40c9c286596c62ed6ae79":[3,0,2,1,0,107,0],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html":[3,0,2,1,0,108],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html#a1f2f9409aa5c0ef331a729843ea688de":[3,0,2,1,0,108,0],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html":[3,0,2,1,0,109]
+"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html":[3,0,2,1,0,109],
+"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html#ab53f6879305765bc9826b4e8243fb77e":[3,0,2,1,0,109,0]
 };

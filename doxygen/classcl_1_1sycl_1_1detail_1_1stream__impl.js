@@ -1,7 +1,5 @@
 var classcl_1_1sycl_1_1detail_1_1stream__impl =
 [
-    [ "GlobalBufAccessorT", "classcl_1_1sycl_1_1detail_1_1stream__impl.html#ad7dc5908fea2ca5f10e4cd62eb55b622", null ],
-    [ "GlobalOffsetAccessorT", "classcl_1_1sycl_1_1detail_1_1stream__impl.html#ae0d5eb1d210998348015f9b57b8ba93d", null ],
     [ "stream_impl", "classcl_1_1sycl_1_1detail_1_1stream__impl.html#acc6b99c3a5e8c96b8d165ee24c957e60", null ],
     [ "accessGlobalBuf", "classcl_1_1sycl_1_1detail_1_1stream__impl.html#a17f9dcf6a28684001cb640751348b1cf", null ],
     [ "accessGlobalFlushBuf", "classcl_1_1sycl_1_1detail_1_1stream__impl.html#a1c38f5daa08b9a1f9b14f185a4efbf57", null ],

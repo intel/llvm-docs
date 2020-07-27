@@ -75,7 +75,6 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "pi.hpp", "pi_8hpp.html", "pi_8hpp" ],
     [ "spirv.hpp", "spirv_8hpp.html", null ],
     [ "stl_type_traits.hpp", "stl__type__traits_8hpp.html", "stl__type__traits_8hpp" ],
-    [ "stream_impl.hpp", "stream__impl_8hpp.html", "stream__impl_8hpp" ],
     [ "sycl_fe_intrins.hpp", "sycl__fe__intrins_8hpp.html", null ],
     [ "sycl_mem_obj_allocator.hpp", "sycl__mem__obj__allocator_8hpp.html", [
       [ "aligned_allocator", "classcl_1_1sycl_1_1detail_1_1aligned__allocator.html", "classcl_1_1sycl_1_1detail_1_1aligned__allocator" ],

@@ -25,7 +25,7 @@ var searchData=
   ['check_5fvector_5fsize',['check_vector_size',['../namespacecl_1_1sycl_1_1detail.html#aa37a2fd35ebd4bc7ecc1882fe3bd8808',1,'cl::sycl::detail']]],
   ['checkany',['checkAny',['../namespacecl_1_1sycl_1_1detail.html#ac780ec345b19ea51440d5816e62d650a',1,'cl::sycl::detail']]],
   ['checkanyimpl',['checkAnyImpl',['../namespacecl_1_1sycl_1_1detail.html#a058573987f256f347f869e9fcb584ccd',1,'cl::sycl::detail::checkAnyImpl(T)'],['../namespacecl_1_1sycl_1_1detail.html#a34b060ce614b48e36cb679e25945d310',1,'cl::sycl::detail::checkAnyImpl(ValT Value, VarT Variant, Args... Arguments)']]],
-  ['checkforinfnan',['checkForInfNan',['../namespacecl_1_1sycl_1_1detail.html#a357a9bf0aca9cb8ce185e5fd27cccb75',1,'cl::sycl::detail::checkForInfNan(char *Buf, T Val)'],['../namespacecl_1_1sycl_1_1detail.html#a6e4d5e7072083f73536cd6ff31f62118',1,'cl::sycl::detail::checkForInfNan(char *Buf, T Val)']]],
+  ['checkforinfnan',['checkForInfNan',['../namespacecl_1_1sycl_1_1detail.html#a6e4d5e7072083f73536cd6ff31f62118',1,'cl::sycl::detail::checkForInfNan(char *Buf, T Val)'],['../namespacecl_1_1sycl_1_1detail.html#a357a9bf0aca9cb8ce185e5fd27cccb75',1,'cl::sycl::detail::checkForInfNan(char *Buf, T Val)']]],
   ['checkimagevaluerange',['checkImageValueRange',['../namespacecl_1_1sycl_1_1detail.html#a7dfd992a79aaa0f21677d05002775859',1,'cl::sycl::detail']]],
   ['checkpiresult',['checkPiResult',['../classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4',1,'cl::sycl::detail::plugin']]],
   ['checkvaluerange',['checkValueRange',['../namespacecl_1_1sycl_1_1detail.html#a042e58bee12db0078c232dc3a0ad237a',1,'cl::sycl::detail']]],

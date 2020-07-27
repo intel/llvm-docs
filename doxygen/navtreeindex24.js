@@ -1,8 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"program_8hpp.html#a104e4e04504c3752e3ba5a3d4013e0eb":[4,0,0,0,1,37,1],
-"program_8hpp.html#a104e4e04504c3752e3ba5a3d4013e0eba334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,37,1,0],
-"program_8hpp.html#a104e4e04504c3752e3ba5a3d4013e0ebacb5185196ad3147d58c13c22b2a32292":[4,0,0,0,1,37,1,1],
 "program_8hpp.html#a104e4e04504c3752e3ba5a3d4013e0ebad48e37bc19b9fe2c72923c30fd7a4152":[4,0,0,0,1,37,1,2],
 "program_8hpp_source.html":[4,0,0,0,1,37],
 "program__impl_8cpp.html":[4,0,2,1,46],
@@ -100,8 +97,8 @@ var NAVTREEINDEX24 =
 "queue__impl_8hpp.html#abdc6ce291d80f74918d891e5e38f1fdf":[4,0,2,1,49,4],
 "queue__impl_8hpp_source.html":[4,0,2,1,49],
 "range_8hpp.html":[4,0,0,0,1,40],
-"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,40,0],
 "range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,40,1],
+"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,40,0],
 "range_8hpp_source.html":[4,0,0,0,1,40],
 "reduction_8cpp.html":[4,0,2,1,50],
 "reduction_8cpp.html#a1d728e222ada5390d7055e30cbaf6b9e":[4,0,2,1,50,1],
@@ -245,9 +242,12 @@ var NAVTREEINDEX24 =
 "stream_8cpp.html":[4,0,2,20],
 "stream_8cpp_source.html":[4,0,2,20],
 "stream_8hpp.html":[4,0,0,0,1,43],
-"stream_8hpp.html#a0c975199bef2659a981b1fe373edbbb8":[4,0,0,0,1,43,11],
-"stream_8hpp.html#a1372dbd2334364dcc50fbaa0fe84e647":[4,0,0,0,1,43,18],
-"stream_8hpp.html#a18ed04762b28064cf932dce8c930454e":[4,0,0,0,1,43,24],
-"stream_8hpp.html#a1c8a8f0333ab8e6dc1c4e0136986a7af":[4,0,0,0,1,43,37],
-"stream_8hpp.html#a20eb99e5cce8a8fa90e54ce91a376a6d":[4,0,0,0,1,43,36]
+"stream_8hpp.html#a0547e8fd8068da50e71f9a13996c89ac":[4,0,0,0,1,43,75],
+"stream_8hpp.html#a07628d7be8b343773a0699637c14c83c":[4,0,0,0,1,43,8],
+"stream_8hpp.html#a0a7ba53680c2e00f9853d81800de6538":[4,0,0,0,1,43,80],
+"stream_8hpp.html#a0c975199bef2659a981b1fe373edbbb8":[4,0,0,0,1,43,28],
+"stream_8hpp.html#a11b38b79a8701fd23f4374d1563097af":[4,0,0,0,1,43,47],
+"stream_8hpp.html#a1372dbd2334364dcc50fbaa0fe84e647":[4,0,0,0,1,43,35],
+"stream_8hpp.html#a141586b5d4e7b4af0b7bef7ab278c432":[4,0,0,0,1,43,53],
+"stream_8hpp.html#a18ed04762b28064cf932dce8c930454e":[4,0,0,0,1,43,41]
 };

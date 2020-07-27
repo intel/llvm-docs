@@ -1,14 +1,11 @@
 var NAVTREEINDEX19 =
 {
-"kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa4978aa503ec00be00af860d6e8ba41ef":[4,0,0,0,1,2,25,4,3],
-"kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa7fd1bdac15933981ada28fffd6c40372":[4,0,0,0,1,2,25,4,2],
-"kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa804d646aee6ffb43decdc5ca71c12fba":[4,0,0,0,1,2,25,4,1],
 "kernel__desc_8hpp.html#aeaff0db5524987a2f50d71ac0162ceb2":[4,0,0,0,1,2,25,3],
 "kernel__desc_8hpp_source.html":[4,0,0,0,1,2,25],
 "kernel__impl_8cpp.html":[4,0,2,1,31],
 "kernel__impl_8cpp.html#a0fa9b6316b4a22b17634726e05df14b0":[4,0,2,1,31,6],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,31,0],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,31,2],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,31,0],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,31,1],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,31,4],
 "kernel__impl_8cpp.html#a5d06cdeae7af18abb18f3c6df02761fc":[4,0,2,1,31,7],
@@ -88,10 +85,10 @@ var NAVTREEINDEX19 =
 "namespace____esimd.html":[3,0,0],
 "namespace____spv.html":[3,0,1],
 "namespace____spv.html":[2,0,1],
-"namespacecl.html":[2,0,2],
 "namespacecl.html":[3,0,2],
-"namespacecl_1_1____host__std.html":[3,0,2,0],
+"namespacecl.html":[2,0,2],
 "namespacecl_1_1____host__std.html":[2,0,2,0],
+"namespacecl_1_1____host__std.html":[3,0,2,0],
 "namespacecl_1_1____host__std_1_1detail.html":[3,0,2,0,0],
 "namespacecl_1_1____host__std_1_1detail.html":[2,0,2,0,0],
 "namespacecl_1_1sycl.html":[3,0,2,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX19 =
 "opencl_8hpp.html#abfe0522d028d516df3f5a1c16cb6c525":[4,0,0,0,1,1,2,7],
 "opencl_8hpp.html#adc9921fd2f0a31c127549af6d649b08e":[4,0,0,0,1,1,2,10],
 "opencl_8hpp_source.html":[4,0,0,0,1,1,2],
-"os__util_8cpp.html":[4,0,2,1,37]
+"os__util_8cpp.html":[4,0,2,1,37],
+"os__util_8cpp_source.html":[4,0,2,1,37],
+"os__util_8hpp.html":[4,0,0,0,1,2,28],
+"os__util_8hpp.html#aec90012b596acd79e65ed3df89dd7c1e":[4,0,0,0,1,2,28,1]
 };
