@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"stream_8hpp.html#a0a7ba53680c2e00f9853d81800de6538":[4,0,0,0,1,43,80],
+"stream_8hpp.html#a0c975199bef2659a981b1fe373edbbb8":[4,0,0,0,1,43,28],
+"stream_8hpp.html#a11b38b79a8701fd23f4374d1563097af":[4,0,0,0,1,43,47],
+"stream_8hpp.html#a1372dbd2334364dcc50fbaa0fe84e647":[4,0,0,0,1,43,35],
+"stream_8hpp.html#a141586b5d4e7b4af0b7bef7ab278c432":[4,0,0,0,1,43,53],
+"stream_8hpp.html#a18ed04762b28064cf932dce8c930454e":[4,0,0,0,1,43,41],
 "stream_8hpp.html#a1ab9678fb1d43b9ce67bf5009fa61375":[4,0,0,0,1,43,15],
 "stream_8hpp.html#a1c8a8f0333ab8e6dc1c4e0136986a7af":[4,0,0,0,1,43,83],
 "stream_8hpp.html#a1cc5f5a2ca4d22fa735284ff1f1beea2":[4,0,0,0,1,43,89],
@@ -92,10 +98,10 @@ var NAVTREEINDEX25 =
 "stream_8hpp.html#af0d0bb8b3b5f57bbc46f5110b7480068":[4,0,0,0,1,43,44],
 "stream_8hpp.html#af5f11b77641acbd4d53ca207ec7e6999":[4,0,0,0,1,43,82],
 "stream_8hpp_source.html":[4,0,0,0,1,43],
-"stream__impl_8cpp.html":[4,0,2,1,55],
-"stream__impl_8cpp_source.html":[4,0,2,1,55],
-"stream__impl_8hpp.html":[4,0,2,1,56],
-"stream__impl_8hpp_source.html":[4,0,2,1,56],
+"stream__impl_8cpp.html":[4,0,2,1,56],
+"stream__impl_8cpp_source.html":[4,0,2,1,56],
+"stream__impl_8hpp.html":[4,0,2,1,57],
+"stream__impl_8hpp_source.html":[4,0,2,1,57],
 "structEsimdEmulSys_1_1SetSatur.html":[3,0,3,3],
 "structEsimdEmulSys_1_1SetSatur.html#a50ca5e7dd13d3349cbd427d76a497530":[3,0,3,3,0],
 "structEsimdEmulSys_1_1SetSatur_3_01double_00_01true_01_4.html":[3,0,3,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "struct__pi__kernel.html#ae34fd39afe4bc5dd3dd1ddd868b084f8":[3,0,18,8],
 "struct__pi__kernel.html#aee626d969a1e970d9802f8fe04c32a63":[3,0,18,30],
 "struct__pi__kernel.html#aef7e7a0ffabf3ead806217e8e7bd0dbc":[3,0,18,21],
-"struct__pi__kernel.html#afaaa478565588b1504f7980cd38c7033":[3,0,18,18],
-"struct__pi__kernel.html#afb1f0e36d8ff9b93ad5e6aec68928280":[3,0,18,9],
-"struct__pi__kernel_1_1arguments.html":[3,0,18,0],
-"struct__pi__kernel_1_1arguments.html#a06c967e47bd96dc18048b8d96f5014ca":[3,0,18,0,4],
-"struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c":[3,0,18,0,12],
-"struct__pi__kernel_1_1arguments.html#a13ec3fc0e124184dfad11bcf40b19ef6":[3,0,18,0,10],
-"struct__pi__kernel_1_1arguments.html#a1985c5423dd1546a76a8feffc0bef40b":[3,0,18,0,0]
+"struct__pi__kernel.html#afaaa478565588b1504f7980cd38c7033":[3,0,18,18]
 };

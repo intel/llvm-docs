@@ -53,6 +53,6 @@ var searchData=
   ['propertysetsbegin',['PropertySetsBegin',['../structpi__device__binary__struct.html#ac6b82018fed8ac3d4cc28a65eb8ee33e',1,'pi_device_binary_struct']]],
   ['propertysetsend',['PropertySetsEnd',['../structpi__device__binary__struct.html#aad9bedb5c6973ec8af21c98a1e427935',1,'pi_device_binary_struct']]],
   ['props_5f',['props_',['../struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d',1,'_pi_sampler']]],
-  ['ptr',['ptr',['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html#abd776ce702de08263280db849b8630b0',1,'cl::sycl::intel::detail::atomic_ref_base::ptr()'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()']]],
+  ['ptr',['Ptr',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()'],['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html#abd776ce702de08263280db849b8630b0',1,'cl::sycl::intel::detail::atomic_ref_base::ptr()']]],
   ['ptr_5f',['ptr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a6fd19a557e066187980772292237aa5e',1,'_pi_mem::mem_::buffer_mem_']]]
 ];

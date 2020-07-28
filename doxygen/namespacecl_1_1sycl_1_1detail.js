@@ -146,6 +146,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "is_group", "structcl_1_1sycl_1_1detail_1_1is__group.html", null ],
     [ "is_group< group< Dimensions > >", "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html", null ],
     [ "is_integral", "structcl_1_1sycl_1_1detail_1_1is__integral.html", null ],
+    [ "is_native_op", "structcl_1_1sycl_1_1detail_1_1is__native__op.html", "structcl_1_1sycl_1_1detail_1_1is__native__op" ],
     [ "is_output_iterator", "structcl_1_1sycl_1_1detail_1_1is__output__iterator.html", "structcl_1_1sycl_1_1detail_1_1is__output__iterator" ],
     [ "is_output_iterator< T, output_iterator_requirements< T > >", "structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4" ],
     [ "is_pointer", "structcl_1_1sycl_1_1detail_1_1is__pointer.html", null ],

@@ -109,6 +109,7 @@ var searchData=
   ['is_5finttype_3c_20unsigned_20int_20_3e',['is_inttype&lt; unsigned int &gt;',['../structis__inttype_3_01unsigned_01int_01_4.html',1,'']]],
   ['is_5finttype_3c_20unsigned_20long_20long_20_3e',['is_inttype&lt; unsigned long long &gt;',['../structis__inttype_3_01unsigned_01long_01long_01_4.html',1,'']]],
   ['is_5finttype_3c_20unsigned_20short_20_3e',['is_inttype&lt; unsigned short &gt;',['../structis__inttype_3_01unsigned_01short_01_4.html',1,'']]],
+  ['is_5fnative_5fop',['is_native_op',['../structcl_1_1sycl_1_1detail_1_1is__native__op.html',1,'cl::sycl::detail']]],
   ['is_5foutput_5fiterator',['is_output_iterator',['../structcl_1_1sycl_1_1detail_1_1is__output__iterator.html',1,'cl::sycl::detail']]],
   ['is_5foutput_5fiterator_3c_20t_2c_20output_5fiterator_5frequirements_3c_20t_20_3e_20_3e',['is_output_iterator&lt; T, output_iterator_requirements&lt; T &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4.html',1,'cl::sycl::detail']]],
   ['is_5fpointer',['is_pointer',['../structcl_1_1sycl_1_1detail_1_1is__pointer.html',1,'cl::sycl::detail']]],

@@ -37,9 +37,6 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
       [ "HostTask", "classcl_1_1sycl_1_1detail_1_1HostTask.html", "classcl_1_1sycl_1_1detail_1_1HostTask" ],
       [ "HostKernel", "classcl_1_1sycl_1_1detail_1_1HostKernel.html", "classcl_1_1sycl_1_1detail_1_1HostKernel" ]
     ] ],
-    [ "circular_buffer.hpp", "circular__buffer_8hpp.html", [
-      [ "CircularBuffer", "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html", "classcl_1_1sycl_1_1detail_1_1CircularBuffer" ]
-    ] ],
     [ "cl.h", "cl_8h.html", "cl_8h" ],
     [ "common.hpp", "common_8hpp.html", "common_8hpp" ],
     [ "common_info.hpp", "common__info_8hpp.html", "common__info_8hpp" ],

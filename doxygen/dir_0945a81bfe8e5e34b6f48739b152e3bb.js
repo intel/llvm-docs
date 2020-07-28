@@ -12,6 +12,9 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "builtins_integer.cpp", "builtins__integer_8cpp.html", "builtins__integer_8cpp" ],
     [ "builtins_math.cpp", "builtins__math_8cpp.html", "builtins__math_8cpp" ],
     [ "builtins_relational.cpp", "builtins__relational_8cpp.html", "builtins__relational_8cpp" ],
+    [ "circular_buffer.hpp", "circular__buffer_8hpp.html", [
+      [ "CircularBuffer", "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html", "classcl_1_1sycl_1_1detail_1_1CircularBuffer" ]
+    ] ],
     [ "common.cpp", "common_8cpp.html", "common_8cpp" ],
     [ "config.cpp", "config_8cpp.html", "config_8cpp" ],
     [ "config.hpp", "config_8hpp.html", "config_8hpp" ],
