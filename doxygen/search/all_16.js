@@ -12,7 +12,7 @@ var searchData=
   ['waitforpreparedhostevents',['waitForPreparedHostEvents',['../classcl_1_1sycl_1_1detail_1_1Command.html#af5b5ba98ed4ab34128737b2974d56160',1,'cl::sycl::detail::Command']]],
   ['waitforrecordtofinish',['waitForRecordToFinish',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4bfeba3b1690361a7b7987dbb941e592',1,'cl::sycl::detail::Scheduler']]],
   ['waitinternal',['waitInternal',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c',1,'cl::sycl::detail::event_impl']]],
-  ['waituntilbuilt',['waitUntilBuilt',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#af4c9b6a0ff12d98dd80aacd91ada31ae',1,'cl::sycl::detail::KernelProgramCache::waitUntilBuilt()'],['../namespacecl_1_1sycl_1_1detail.html#acf8df730890eb62093f0eeb5d2ebc01b',1,'cl::sycl::detail::waitUntilBuilt()']]],
+  ['waituntilbuilt',['waitUntilBuilt',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a4b5881bb2bbad24f257263634b8baa89',1,'cl::sycl::detail::KernelProgramCache::waitUntilBuilt()'],['../namespacecl_1_1sycl_1_1detail.html#acf8df730890eb62093f0eeb5d2ebc01b',1,'cl::sycl::detail::waitUntilBuilt()']]],
   ['weak_5fptr_5fclass',['weak_ptr_class',['../namespacecl_1_1sycl.html#a8cc65d5e679773a053245819fa2a13de',1,'cl::sycl']]],
   ['what',['what',['../classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e',1,'cl::sycl::exception']]],
   ['width',['width',['../classcl_1_1sycl_1_1____width__manipulator____.html#a1e7f7f96ae56b515157fbd621571665f',1,'cl::sycl::__width_manipulator__']]],

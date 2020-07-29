@@ -23,6 +23,7 @@ var searchData=
   ['shape_5ftype_3c_20simd_5fview_3c_20basety_2c_20regionty_20_3e_20_3e',['shape_type&lt; simd_view&lt; BaseTy, RegionTy &gt; &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html',1,'cl::sycl::intel::gpu']]],
   ['shape_5ftype_3c_20std_3a_3apair_3c_20topregionty_2c_20baseregionty_20_3e_20_3e',['shape_type&lt; std::pair&lt; TopRegionTy, BaseRegionTy &gt; &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type_3_01std_1_1pair_3_01TopRegionTy_00_01BaseRegionTy_01_4_01_4.html',1,'cl::sycl::intel::gpu']]],
   ['shape_5ftype_3c_20topregionty_20_3e',['shape_type&lt; TopRegionTy &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type.html',1,'cl::sycl::intel::gpu']]],
+  ['shouldenablesetarg',['ShouldEnableSetArg',['../structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html',1,'cl::sycl::handler']]],
   ['simd',['simd',['../classcl_1_1sycl_1_1intel_1_1gpu_1_1simd.html',1,'cl::sycl::intel::gpu']]],
   ['simd_5ftype',['simd_type',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type.html',1,'cl::sycl::intel::gpu::details']]],
   ['simd_5ftype_3c_20const_20t_20_3e',['simd_type&lt; const T &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01const_01T_01_4.html',1,'cl::sycl::intel::gpu::details']]],

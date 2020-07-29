@@ -67,8 +67,6 @@ var searchData=
   ['builderror',['BuildError',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html',1,'cl::sycl::detail::KernelProgramCache']]],
   ['buildoptions_5f',['buildOptions_',['../struct__pi__program.html#ade63366c16239d4f0e5726ff6a940321',1,'_pi_program']]],
   ['buildresult',['BuildResult',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html',1,'cl::sycl::detail::KernelProgramCache::BuildResult&lt; T &gt;'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a8008d8af652ba1f2e8172dc8e2cbfc27',1,'cl::sycl::detail::KernelProgramCache::BuildResult::BuildResult()']]],
-  ['buildresult_3c_20pikernelt_20_3e',['BuildResult&lt; PiKernelT &gt;',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html',1,'cl::sycl::detail::KernelProgramCache']]],
-  ['buildresultkernel',['BuildResultKernel',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html',1,'cl::sycl::detail::KernelProgramCache::BuildResultKernel'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html#add4319a5c849cfc4501e95cd1b7e5cb4',1,'cl::sycl::detail::KernelProgramCache::BuildResultKernel::BuildResultKernel()']]],
   ['buildstate',['BuildState',['../namespacecl_1_1sycl_1_1detail.html#a71d37979557aa87f873963bbccde99b6',1,'cl::sycl::detail']]],
   ['buildstatus_5f',['buildStatus_',['../struct__pi__program.html#a07ee027170c3138223814e6f23953c42',1,'_pi_program']]],
   ['built_5fin_5fkernels',['built_in_kernels',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190accba6884a1618c6371e7aecc2bc3092d',1,'cl::sycl::info']]],

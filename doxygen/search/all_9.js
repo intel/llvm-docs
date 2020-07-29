@@ -266,6 +266,7 @@ var searchData=
   ['is_5fqword_5ftype_3c_20sycl_3a_3aintel_3a_3agpu_3a_3asimd_3c_20t_2c_20n_20_3e_20_3e',['is_qword_type&lt; sycl::intel::gpu::simd&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__qword__type_3_01sycl_1_1intel_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::intel::gpu::details']]],
   ['is_5fqword_5ftype_3c_20sycl_3a_3aintel_3a_3agpu_3a_3avector_5ftype_3c_20t_2c_20n_20_3e_20_3e',['is_qword_type&lt; sycl::intel::gpu::vector_type&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1is__qword__type_3_01sycl_1_1intel_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::intel::gpu::details']]],
   ['is_5frecorded',['is_recorded',['../class__pi__event.html#a3de149cef2c3b8bacd7598c835d2c1e1',1,'_pi_event']]],
+  ['is_5fsame_5ftype',['is_same_type',['../classcl_1_1sycl_1_1handler.html#a6d1ff6744816686a4abffc42f4276610',1,'cl::sycl::handler']]],
   ['is_5fsame_5fvector_5fsize',['is_same_vector_size',['../classcl_1_1sycl_1_1detail_1_1is__same__vector__size.html',1,'cl::sycl::detail']]],
   ['is_5fsame_5fvector_5fsize_5fimpl',['is_same_vector_size_impl',['../classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl.html',1,'cl::sycl::detail']]],
   ['is_5fsame_5fvector_5fsize_5fimpl_3c_20firstsize_20_3e',['is_same_vector_size_impl&lt; FirstSize &gt;',['../classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl_3_01FirstSize_01_4.html',1,'cl::sycl::detail']]],

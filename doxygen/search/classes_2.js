@@ -16,8 +16,6 @@ var searchData=
   ['builder',['Builder',['../classcl_1_1sycl_1_1detail_1_1Builder.html',1,'cl::sycl::detail']]],
   ['builderror',['BuildError',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html',1,'cl::sycl::detail::KernelProgramCache']]],
   ['buildresult',['BuildResult',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html',1,'cl::sycl::detail::KernelProgramCache']]],
-  ['buildresult_3c_20pikernelt_20_3e',['BuildResult&lt; PiKernelT &gt;',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html',1,'cl::sycl::detail::KernelProgramCache']]],
-  ['buildresultkernel',['BuildResultKernel',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html',1,'cl::sycl::detail::KernelProgramCache']]],
   ['burst_5fcoalesce_5fimpl',['burst_coalesce_impl',['../structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl.html',1,'cl::sycl::intel']]],
   ['byte_5ftype',['byte_type',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1byte__type.html',1,'cl::sycl::intel::gpu::details']]],
   ['byte_5ftype_3c_20int_20_3e',['byte_type&lt; int &gt;',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1byte__type_3_01int_01_4.html',1,'cl::sycl::intel::gpu::details']]],

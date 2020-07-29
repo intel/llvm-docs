@@ -121,9 +121,6 @@ var hierarchy =
     [ "cl::sycl::detail::Builder", "classcl_1_1sycl_1_1detail_1_1Builder.html", null ],
     [ "cl::sycl::detail::KernelProgramCache::BuildError", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html", null ],
     [ "cl::sycl::detail::KernelProgramCache::BuildResult< T >", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", null ],
-    [ "cl::sycl::detail::KernelProgramCache::BuildResult< PiKernelT >", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", [
-      [ "cl::sycl::detail::KernelProgramCache::BuildResultKernel", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html", null ]
-    ] ],
     [ "cl::sycl::intel::burst_coalesce_impl< N >", "structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl.html", null ],
     [ "cl::sycl::intel::gpu::details::byte_type< T >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1byte__type.html", null ],
     [ "cl::sycl::intel::gpu::details::byte_type< int >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1byte__type_3_01int_01_4.html", null ],
@@ -844,6 +841,7 @@ var hierarchy =
     [ "cl::sycl::intel::gpu::shape_type< TopRegionTy >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type.html", [
       [ "cl::sycl::intel::gpu::shape_type< std::pair< TopRegionTy, BaseRegionTy > >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type_3_01std_1_1pair_3_01TopRegionTy_00_01BaseRegionTy_01_4_01_4.html", null ]
     ] ],
+    [ "cl::sycl::handler::ShouldEnableSetArg< T >", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html", null ],
     [ "cl::sycl::intel::gpu::simd< Ty, N >", "classcl_1_1sycl_1_1intel_1_1gpu_1_1simd.html", null ],
     [ "cl::sycl::intel::gpu::details::simd_type< T >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type.html", null ],
     [ "cl::sycl::intel::gpu::details::simd_type< const T >", "structcl_1_1sycl_1_1intel_1_1gpu_1_1details_1_1simd__type_3_01const_01T_01_4.html", null ],
@@ -925,7 +923,6 @@ var hierarchy =
     [ "wordtype< T >", "structwordtype.html", null ],
     [ "wordtype< short >", "structwordtype_3_01short_01_4.html", null ],
     [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", null ],
-    [ "atomic< PiKernelT * >", "classstd_1_1atomic_3_01PiKernelT_01_5_01_4.html", null ],
     [ "atomic< T * > *", "classstd_1_1atomic_3_01T_01_5_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
     [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]

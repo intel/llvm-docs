@@ -1,5 +1,8 @@
 var NAVTREEINDEX27 =
 {
+"structcl_1_1sycl_1_1detail_1_1EqualTo.html":[3,0,2,1,0,60],
+"structcl_1_1sycl_1_1detail_1_1EqualTo.html#a696e430769194f2ddb33c7f7b365a89f":[3,0,2,1,0,60,0],
+"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope.html":[3,0,2,1,0,106],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html":[3,0,2,1,0,107],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html#a513fd614d8c40c9c286596c62ed6ae79":[3,0,2,1,0,107,0],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html":[3,0,2,1,0,108],
@@ -61,13 +64,12 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ae8665653a1132b94504bae878da2e92b":[3,0,2,1,0,182,0,2],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#aef5bbe86207714e29ab0e3cd38f95728":[3,0,2,1,0,182,0,0],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html":[3,0,2,1,0,182,1],
+"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a2e0ad5af7ca19cbbfc89887e6ca409a4":[3,0,2,1,0,182,1,2],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a51c6459a289134b09c640d3ecda2404c":[3,0,2,1,0,182,1,1],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a8008d8af652ba1f2e8172dc8e2cbfc27":[3,0,2,1,0,182,1,0],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec":[3,0,2,1,0,182,1,2],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a990f4ed1d1f63caffc46eb131876a84a":[3,0,2,1,0,182,1,3],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html":[3,0,2,1,0,182,2],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html#a7928c062d59279e75d53c2189317a770":[3,0,2,1,0,182,2,1],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html#add4319a5c849cfc4501e95cd1b7e5cb4":[3,0,2,1,0,182,2,0],
+"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec":[3,0,2,1,0,182,1,4],
+"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a990f4ed1d1f63caffc46eb131876a84a":[3,0,2,1,0,182,1,5],
+"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#aefa4a1b7eab3fd5e3ca4d90e8ce6df5b":[3,0,2,1,0,182,1,3],
 "structcl_1_1sycl_1_1detail_1_1LShift.html":[3,0,2,1,0,191],
 "structcl_1_1sycl_1_1detail_1_1LShift.html#a942ea4cb683c5a91983f4ee3bce23b11":[3,0,2,1,0,191,0],
 "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html":[3,0,2,1,0,183],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html":[3,0,2,1,0,89],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html#a0297a2a8b2f83f31b8880d18fe1d9d48":[3,0,2,1,0,89,0],
 "structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,90],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,90,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,90,1],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,91]
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,90,0]
 };

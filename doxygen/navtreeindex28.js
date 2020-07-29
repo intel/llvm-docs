@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,90,1],
+"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,91],
 "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#a5badfd995b080853e3b33a62baa3c5bf":[3,0,2,1,0,91,0],
 "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#aaebd2033fe583d7e9d53458f1ded8b28":[3,0,2,1,0,91,1],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__info.html":[3,0,2,1,0,92],
@@ -204,6 +206,8 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1elem.html#aeeb1357cd93c2d007b2af483e196462d":[3,0,2,1,25,4],
 "structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b":[3,0,2,1,25,1],
 "structcl_1_1sycl_1_1elem.html#af900fbbf12553b8206da4d996599b44f":[3,0,2,1,25,14],
+"structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html":[1,1,11,0],
+"structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html#a01096b8ddcb1a1d6989e77e843116056":[1,1,11,0,0],
 "structcl_1_1sycl_1_1intel_1_1GetValue.html":[3,0,2,1,4,8],
 "structcl_1_1sycl_1_1intel_1_1GetValue.html#ab9327da3dc5f2ad97a828efcdc310c4a":[3,0,2,1,4,8,0],
 "structcl_1_1sycl_1_1intel_1_1GetValue_3_01Type_00_01T1_00_01T_8_8_8_01_4.html":[3,0,2,1,4,9],
@@ -245,9 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type.html":[3,0,2,1,4,1,6],
 "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html":[3,0,2,1,4,1,7],
 "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#a2adb4722e03ba85f8742efd9b02206eb":[3,0,2,1,4,1,7,0],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#ab10ad22cfc8acd772fb758818cb223ab":[3,0,2,1,4,1,7,2],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#ac457be9971d734cbdefbcdfe8815927c":[3,0,2,1,4,1,7,1],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html":[3,0,2,1,4,1,8],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html#a14943694dd546cdef2fdb3cdde4fa82d":[3,0,2,1,4,1,8,3],
-"structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html#a605a9609b495955e5cb13eaa2634b4e1":[3,0,2,1,4,1,8,1]
+"structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#ab10ad22cfc8acd772fb758818cb223ab":[3,0,2,1,4,1,7,2]
 };

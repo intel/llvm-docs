@@ -1,5 +1,8 @@
 var NAVTREEINDEX12 =
 {
+"classcl_1_1sycl_1_1property_1_1detail_1_1buffer___1_1use__pinned__host__memory.html":[3,0,2,1,5,1,0,0],
+"classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html":[3,0,2,1,5,2,0],
+"classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html#af2bacfcb524193acb4a365f451f93e88":[3,0,2,1,5,2,0,0],
 "classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html":[3,0,2,1,5,2,1],
 "classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html":[3,0,2,1,5,2,2],
 "classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html#a267a937c909bf191898649ce7d715fff":[3,0,2,1,5,2,2,0],
@@ -197,9 +200,9 @@ var NAVTREEINDEX12 =
 "config_8cpp.html":[4,0,2,1,14],
 "config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,1,14,6],
 "config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,1,14,8],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,14,1],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,14,2],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,14,0],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,14,1],
 "config_8cpp.html#a8a14c9b3548e5e00ee28c829aec18eaf":[4,0,2,1,14,4],
 "config_8cpp.html#aabad77538ffad994f729a3f8685957ea":[4,0,2,1,14,5],
 "config_8cpp.html#abbdcbea69a36cd9ddd50332f7020c4bd":[4,0,2,1,14,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX12 =
 "cuda__definitions_8hpp.html#aadcadc4007887d1014c5f4442dcb65b9":[4,0,0,0,1,2,11,2],
 "cuda__definitions_8hpp.html#ac2eadbdcfae8ceb92a3cd48bf56ab1ce":[4,0,0,0,1,2,11,3],
 "cuda__definitions_8hpp.html#aed94471964370b91d80b6d861e790e70":[4,0,0,0,1,2,11,0],
-"cuda__definitions_8hpp_source.html":[4,0,0,0,1,2,11],
-"defines_8hpp.html":[4,0,0,0,1,2,12],
-"defines_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba":[4,0,0,0,1,2,12,4],
-"defines_8hpp.html#a447121dcab4275b7839a56082b7a1ab8":[4,0,0,0,1,2,12,1]
+"cuda__definitions_8hpp_source.html":[4,0,0,0,1,2,11]
 };

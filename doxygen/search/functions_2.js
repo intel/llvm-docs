@@ -18,6 +18,5 @@ var searchData=
   ['build_5fwith_5fkernel_5ftype',['build_with_kernel_type',['../classcl_1_1sycl_1_1program.html#a719aeddee6da448ddcffc1d8b3628b9c',1,'cl::sycl::program']]],
   ['build_5fwith_5fsource',['build_with_source',['../classcl_1_1sycl_1_1program.html#a894107dbebdd9480e6cebbdccf89bdbc',1,'cl::sycl::program::build_with_source()'],['../classcl_1_1sycl_1_1detail_1_1program__impl.html#a7d0a909406be3d35374d3b49e21044fd',1,'cl::sycl::detail::program_impl::build_with_source()']]],
   ['builder',['Builder',['../classcl_1_1sycl_1_1detail_1_1Builder.html#a05ac9c29fbe8f1d194ce233aa8fbebc8',1,'cl::sycl::detail::Builder']]],
-  ['buildresult',['BuildResult',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a8008d8af652ba1f2e8172dc8e2cbfc27',1,'cl::sycl::detail::KernelProgramCache::BuildResult']]],
-  ['buildresultkernel',['BuildResultKernel',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResultKernel.html#add4319a5c849cfc4501e95cd1b7e5cb4',1,'cl::sycl::detail::KernelProgramCache::BuildResultKernel']]]
+  ['buildresult',['BuildResult',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a8008d8af652ba1f2e8172dc8e2cbfc27',1,'cl::sycl::detail::KernelProgramCache::BuildResult']]]
 ];

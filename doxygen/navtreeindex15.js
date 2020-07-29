@@ -1,5 +1,8 @@
 var NAVTREEINDEX15 =
 {
+"esimd__memory_8hpp.html#aa99ace92faae84cf83b971f1ea9d21f0":[4,0,0,0,1,5,0,4,15],
+"esimd__memory_8hpp.html#ab7ecc73ad0c6b213967c6e59a408c74f":[4,0,0,0,1,5,0,4,6],
+"esimd__memory_8hpp.html#ab8e678d851521c3d35eede46a7bab0fc":[4,0,0,0,1,5,0,4,22],
 "esimd__memory_8hpp.html#abc16560ddc3e61311fbc78843de2e01c":[4,0,0,0,1,5,0,4,9],
 "esimd__memory_8hpp.html#ac4e4a3aeff65a4d98d7677ef318ab5ff":[4,0,0,0,1,5,0,4,26],
 "esimd__memory_8hpp.html#ad29b90a258cc18aa96de6039f539b58f":[4,0,0,0,1,5,0,4,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX15 =
 "functions_vars_q.html":[3,3,2,15],
 "functions_vars_r.html":[3,3,2,16],
 "functions_vars_s.html":[3,3,2,17],
-"functions_vars_t.html":[3,3,2,18],
-"functions_vars_u.html":[3,3,2,19],
-"functions_vars_v.html":[3,3,2,20],
-"functions_vars_w.html":[3,3,2,21]
+"functions_vars_t.html":[3,3,2,18]
 };
