@@ -1,8 +1,8 @@
 var classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost =
 [
     [ "MemCpyCommandHost", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a5d52b9c5aed6be87dfa1b38e710d30e3", null ],
-    [ "emitInstrumentationData", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a6e13bdfb7a04192e2b64d65258c0d754", null ],
-    [ "getContext", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a84685ef080b013a8b53c630ebf1c5508", null ],
-    [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#aabfb23a56e10471670561523dbde6b49", null ],
-    [ "printDot", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#ae5e89ca2a5a699dfc06189be3929ee2d", null ]
+    [ "emitInstrumentationData", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#ad8ce5d3a00f912483f7808edfb2d40bf", null ],
+    [ "getContext", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#abc78c4f7b1c52a2ec61a22eab16686b3", null ],
+    [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#adda52b58b98f0459d92d7e20ace75cb8", null ],
+    [ "printDot", "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#ad1311b5b215e676dc42ec8bba162e5e5", null ]
 ];

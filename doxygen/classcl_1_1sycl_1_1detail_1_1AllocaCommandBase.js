@@ -1,10 +1,10 @@
 var classcl_1_1sycl_1_1detail_1_1AllocaCommandBase =
 [
     [ "AllocaCommandBase", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#af60412cfb2f047bc8e69016ec7d1e4b5", null ],
-    [ "emitInstrumentationData", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a341c0ee090008d84006e304758bf1ba8", null ],
+    [ "emitInstrumentationData", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a6f22dcfda6f3161b3f563635c4626705", null ],
     [ "getMemAllocation", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed", null ],
     [ "getReleaseCmd", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#ac49d47abc8cfd53d70a58da9f44afc52", null ],
-    [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a20850519594e8b6d66044a439c62c099", null ],
+    [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a56e5711875e3fe53481f8cfa2910e128", null ],
     [ "getSYCLMemObj", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54182d49730f7d82e111295afaa9ae18", null ],
     [ "ESIMDExt", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a1e670f0b058864e33ff29348193adfbd", null ],
     [ "MIsActive", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6", null ],

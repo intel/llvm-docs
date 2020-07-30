@@ -12,7 +12,7 @@ var searchData=
   ['waitforrecordtofinish',['waitForRecordToFinish',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4bfeba3b1690361a7b7987dbb941e592',1,'cl::sycl::detail::Scheduler']]],
   ['waitinternal',['waitInternal',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c',1,'cl::sycl::detail::event_impl']]],
   ['waituntilbuilt',['waitUntilBuilt',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a4b5881bb2bbad24f257263634b8baa89',1,'cl::sycl::detail::KernelProgramCache::waitUntilBuilt()'],['../namespacecl_1_1sycl_1_1detail.html#acf8df730890eb62093f0eeb5d2ebc01b',1,'cl::sycl::detail::waitUntilBuilt()']]],
-  ['what',['what',['../classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e',1,'cl::sycl::exception']]],
+  ['what',['what',['../classcl_1_1sycl_1_1exception.html#ad13e77ed941c60a65abd828fbe36a77b',1,'cl::sycl::exception']]],
   ['width',['width',['../classcl_1_1sycl_1_1____width__manipulator____.html#a1e7f7f96ae56b515157fbd621571665f',1,'cl::sycl::__width_manipulator__']]],
   ['workgroupbarrier',['workGroupBarrier',['../namespacecl_1_1sycl_1_1detail.html#a40a063097235eddf08bf5152dfdca067',1,'cl::sycl::detail']]],
   ['wrapintoimagebuffer',['wrapIntoImageBuffer',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad82016f75f13b645c868986261b1a6da',1,'cl::sycl::detail::MemoryManager']]],

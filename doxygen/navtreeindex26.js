@@ -1,6 +1,5 @@
 var NAVTREEINDEX26 =
 {
-"struct__pi__kernel.html#aee626d969a1e970d9802f8fe04c32a63":[3,0,18,30],
 "struct__pi__kernel.html#aef7e7a0ffabf3ead806217e8e7bd0dbc":[3,0,18,21],
 "struct__pi__kernel.html#afaaa478565588b1504f7980cd38c7033":[3,0,18,18],
 "struct__pi__kernel.html#afb1f0e36d8ff9b93ad5e6aec68928280":[3,0,18,9],
@@ -249,5 +248,6 @@ var NAVTREEINDEX26 =
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a6a8695e06aa1d24a384f1ac3decb86f5":[3,0,2,1,0,59,2],
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a7561c535f5efdcd289a3d9929a5db06e":[3,0,2,1,0,59,3],
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a8df7454bd622da6ded7b9a181cf97eb7":[3,0,2,1,0,59,4],
-"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a9030b73cdcc7adcb0431352117f821d1":[3,0,2,1,0,59,1]
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a9030b73cdcc7adcb0431352117f821d1":[3,0,2,1,0,59,1],
+"structcl_1_1sycl_1_1detail_1_1EqualTo.html":[3,0,2,1,0,60]
 };

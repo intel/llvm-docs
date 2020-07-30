@@ -14,7 +14,7 @@ var searchData=
   ['waitinternal',['waitInternal',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c',1,'cl::sycl::detail::event_impl']]],
   ['waituntilbuilt',['waitUntilBuilt',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a4b5881bb2bbad24f257263634b8baa89',1,'cl::sycl::detail::KernelProgramCache::waitUntilBuilt()'],['../namespacecl_1_1sycl_1_1detail.html#acf8df730890eb62093f0eeb5d2ebc01b',1,'cl::sycl::detail::waitUntilBuilt()']]],
   ['weak_5fptr_5fclass',['weak_ptr_class',['../namespacecl_1_1sycl.html#a8cc65d5e679773a053245819fa2a13de',1,'cl::sycl']]],
-  ['what',['what',['../classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e',1,'cl::sycl::exception']]],
+  ['what',['what',['../classcl_1_1sycl_1_1exception.html#ad13e77ed941c60a65abd828fbe36a77b',1,'cl::sycl::exception']]],
   ['width',['width',['../classcl_1_1sycl_1_1____width__manipulator____.html#a1e7f7f96ae56b515157fbd621571665f',1,'cl::sycl::__width_manipulator__']]],
   ['windows_5fpi_2ecpp',['windows_pi.cpp',['../windows__pi_8cpp.html',1,'']]],
   ['word',['WORD',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a75bb707ca749d9afd47f2b34b01cd576',1,'__esimd']]],

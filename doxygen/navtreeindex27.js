@@ -1,6 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"structcl_1_1sycl_1_1detail_1_1EqualTo.html":[3,0,2,1,0,60],
 "structcl_1_1sycl_1_1detail_1_1EqualTo.html#a696e430769194f2ddb33c7f7b365a89f":[3,0,2,1,0,60,0],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope.html":[3,0,2,1,0,106],
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html":[3,0,2,1,0,107],
@@ -249,5 +248,6 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html":[3,0,2,1,0,89],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html#a0297a2a8b2f83f31b8880d18fe1d9d48":[3,0,2,1,0,89,0],
 "structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,90],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,90,0]
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,90,0],
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,90,1]
 };

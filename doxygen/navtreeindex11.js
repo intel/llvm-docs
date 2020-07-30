@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1item.html#a7c1b7f7e205800d8aa1ef8c9717a57e6":[1,1,14,8],
 "classcl_1_1sycl_1_1item.html#a95d7281aa211e5de0243b02db886ab7f":[1,1,14,15],
 "classcl_1_1sycl_1_1item.html#aa2f77841b8ab99a8f7b27b1ee83be30c":[1,1,14,3],
 "classcl_1_1sycl_1_1item.html#aaec8bae53f57c623b130750589e5b98d":[1,1,14,14],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1property_1_1detail_1_1PropertyHolder.html#ae9a0fa5a2afa7b4005183617f137ca8b":[3,0,2,1,5,1,4,5],
 "classcl_1_1sycl_1_1property_1_1detail_1_1PropertyHolder.html#aef2a909545156b7e0e99c509b89a4739":[3,0,2,1,5,1,4,2],
 "classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html":[3,0,2,1,5,1,5],
-"classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html#a67ab98d824c813208aeb63b701d8b67f":[3,0,2,1,5,1,5,1],
-"classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html#ac0450d51e3025a51b1ab17941caef99f":[3,0,2,1,5,1,5,0]
+"classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html#a67ab98d824c813208aeb63b701d8b67f":[3,0,2,1,5,1,5,1]
 };

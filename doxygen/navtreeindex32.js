@@ -1,6 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"type__traits_8hpp.html#ae9a165f74e0e85e5e1b6acd6a889c2eb":[4,0,0,0,1,2,37,70],
 "type__traits_8hpp_source.html":[4,0,0,0,1,2,37],
 "types_8hpp.html":[4,0,0,0,1,44],
 "types_8hpp.html#a078ed71e8266e98e74cc42286e0bb23a":[4,0,0,0,1,44,48],

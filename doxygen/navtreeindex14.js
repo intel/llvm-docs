@@ -1,6 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d":[4,0,0,0,1,5,0,2,0],
 "esimd__enum_8hpp.html#af7f3fe9d26dcab36910f0ca2d7254faf":[4,0,0,0,1,5,0,2,5],
 "esimd__enum_8hpp.html#afd8733f73584ee7148d688ef7228e5f7":[4,0,0,0,1,5,0,2,3],
 "esimd__enum_8hpp_source.html":[4,0,0,0,1,5,0,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX14 =
 "esimd__memory_8hpp.html#a8c410c28963dc5d4bba5567a59eb9c20":[4,0,0,0,1,5,0,4,14],
 "esimd__memory_8hpp.html#a9683bba2e9ec7ea40da3421e4c5611ba":[4,0,0,0,1,5,0,4,8],
 "esimd__memory_8hpp.html#a9ef5a82dcf5e420948d2f790ce2f387d":[4,0,0,0,1,5,0,4,7],
-"esimd__memory_8hpp.html#aa28d7d60d0b2dae42ba9cc90f13ce463":[4,0,0,0,1,5,0,4,18]
+"esimd__memory_8hpp.html#aa28d7d60d0b2dae42ba9cc90f13ce463":[4,0,0,0,1,5,0,4,18],
+"esimd__memory_8hpp.html#aa99ace92faae84cf83b971f1ea9d21f0":[4,0,0,0,1,5,0,4,15]
 };

@@ -32,9 +32,9 @@ var reduction_8hpp =
     [ "reduCGFuncImpl", "reduction_8hpp.html#a52768ac7377bd299da5c1ed10f9affcc", null ],
     [ "reduCGFuncImpl", "reduction_8hpp.html#a5e4733361f9997eb48ad7723932d01f4", null ],
     [ "reduComputeWGSize", "reduction_8hpp.html#a6ec2825f342b4844f25074bd41b3c0e5", null ],
-    [ "reduction", "reduction_8hpp.html#a5bdcc00bbe2138f543ddde22ab02fd0d", null ],
+    [ "reduction", "reduction_8hpp.html#abec2eea8790c17a758a3633f27aa3d4e", null ],
     [ "reduction", "reduction_8hpp.html#a9f0cf13fef19ddfeccf05d6672958a1c", null ],
-    [ "reduction", "reduction_8hpp.html#ab5bf45113b8e29d68441fde2cf52971a", null ],
+    [ "reduction", "reduction_8hpp.html#a71c079d096472a321044b6f1cfa85700", null ],
     [ "reduction", "reduction_8hpp.html#a70d4b60e16b4731b5ff670361831eff6", null ],
     [ "reduGetMaxWGSize", "reduction_8hpp.html#a9e8470c8671b0893cc2e3dda4ca10efd", null ]
 ];

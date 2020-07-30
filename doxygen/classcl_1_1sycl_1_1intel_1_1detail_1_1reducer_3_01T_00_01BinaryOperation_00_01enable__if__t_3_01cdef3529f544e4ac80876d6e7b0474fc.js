@@ -1,7 +1,7 @@
 var classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc =
 [
     [ "reducer", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#ad14ffa4f19bd311b3957362fb6e37df8", null ],
-    [ "reducer", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#a14ecceceb3a58c42acfb11f5b2449253", null ],
+    [ "reducer", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#ab41c2de273e045ce6236a8712e0550f1", null ],
     [ "atomic_combine", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#a9f8ee0ed66745ab1ca93981b796739f3", null ],
     [ "atomic_combine", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#aebae35b0e1d1390e70f45f22a24c679f", null ],
     [ "atomic_combine", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#ab49b4b16fde02f4022844de80c7dfaa0", null ],
