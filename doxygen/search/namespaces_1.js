@@ -19,7 +19,7 @@ var searchData=
   ['image',['image',['../namespacecl_1_1sycl_1_1property_1_1image.html',1,'cl::sycl::property']]],
   ['info',['info',['../namespacecl_1_1sycl_1_1info.html',1,'cl::sycl']]],
   ['intel',['intel',['../namespacecl_1_1sycl_1_1intel.html',1,'cl::sycl']]],
-  ['level0',['level0',['../namespacecl_1_1sycl_1_1level0.html',1,'cl::sycl']]],
+  ['level_5fzero',['level_zero',['../namespacecl_1_1sycl_1_1level__zero.html',1,'cl::sycl']]],
   ['native',['native',['../namespacecl_1_1sycl_1_1native.html',1,'cl::sycl']]],
   ['oneapi',['oneapi',['../namespacecl_1_1sycl_1_1ext_1_1oneapi.html',1,'cl::sycl::ext']]],
   ['opencl',['opencl',['../namespacecl_1_1sycl_1_1opencl.html',1,'cl::sycl']]],

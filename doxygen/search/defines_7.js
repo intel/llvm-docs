@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['level0_5fplugin_5fname',['LEVEL0_PLUGIN_NAME',['../pi_8hpp.html#a104ad5a9e4f1879c00246df59134d090',1,'pi.hpp']]]
+  ['level_5fzero_5fplugin_5fname',['LEVEL_ZERO_PLUGIN_NAME',['../pi_8hpp.html#a559a44eb3cabdb9840f5ca5ec408a7b0',1,'pi.hpp']]]
 ];

@@ -1,7 +1,7 @@
 var group__sycl__pi =
 [
     [ "CUDA Plugin", "group__sycl__pi__cuda.html", "group__sycl__pi__cuda" ],
-    [ "Level Zero Plugin", "group__sycl__pi__level0.html", "group__sycl__pi__level0" ],
+    [ "Level Zero Plugin", "group__sycl__pi__level__zero.html", "group__sycl__pi__level__zero" ],
     [ "OpenCL Plugin", "group__sycl__pi__ocl.html", "group__sycl__pi__ocl" ],
     [ "pi.hpp", "pi_8hpp.html", null ],
     [ "pi.cpp", "pi_8cpp.html", null ],

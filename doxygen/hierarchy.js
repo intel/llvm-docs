@@ -92,8 +92,8 @@ var hierarchy =
       [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_floating_point< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScop9e8246ef496054d7424575b8995f65d9.html", null ],
       [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_integral< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html", null ]
     ] ],
-    [ "cl::sycl::intel::detail::atomic_ref_base< T *, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html", [
-      [ "cl::sycl::intel::detail::atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_pointer< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01Defaul42d8db00e3fe85753f7f73da9b2e3a69.html", null ]
+    [ "cl::sycl::intel::detail::atomic_ref_base< uintptr_t, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html", [
+      [ "cl::sycl::intel::detail::atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::auto_name", "classcl_1_1sycl_1_1detail_1_1auto__name.html", null ],
     [ "cl::sycl::detail::BaseCLTypeConverter< T, N >", "classcl_1_1sycl_1_1detail_1_1BaseCLTypeConverter.html", null ],
@@ -430,12 +430,12 @@ var hierarchy =
     [ "cl::sycl::interop< backend::cuda, event >", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01event_01_4.html", null ],
     [ "cl::sycl::interop< backend::cuda, program >", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01program_01_4.html", null ],
     [ "cl::sycl::interop< backend::cuda, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html", null ],
-    [ "cl::sycl::interop< backend::level0, accessor< DataT, Dimensions, AccessMode, access::target::constant_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level0_00_01accessor_3_01DataT_00_01Dimensions_00_01A17155c4783b16541004085b8a552e910.html", null ],
-    [ "cl::sycl::interop< backend::level0, accessor< DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level0_00_01accessor_3_01DataT_00_01Dimensions_00_01Ada7bab676650c3cc3b0a3595bafad54d.html", null ],
-    [ "cl::sycl::interop< backend::level0, device >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level0_00_01device_01_4.html", null ],
-    [ "cl::sycl::interop< backend::level0, platform >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level0_00_01platform_01_4.html", null ],
-    [ "cl::sycl::interop< backend::level0, program >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level0_00_01program_01_4.html", null ],
-    [ "cl::sycl::interop< backend::level0, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level0_00_01queue_01_4.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, accessor< DataT, Dimensions, AccessMode, access::target::constant_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, accessor< DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, device >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, platform >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, program >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html", null ],
     [ "cl::sycl::interop< backend::opencl, accessor< DataT, Dimensions, AccessMode, access::target::constant_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html", null ],
     [ "cl::sycl::interop< backend::opencl, accessor< DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html", null ],
     [ "cl::sycl::interop< backend::opencl, context >", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01context_01_4.html", null ],
@@ -923,7 +923,7 @@ var hierarchy =
     [ "wordtype< T >", "structwordtype.html", null ],
     [ "wordtype< short >", "structwordtype_3_01short_01_4.html", null ],
     [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", null ],
-    [ "atomic< T * > *", "classstd_1_1atomic_3_01T_01_5_01_4_01_5.html", null ],
+    [ "atomic< uintptr_t > *", "classstd_1_1atomic_3_01uintptr__t_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
     [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]
 ];

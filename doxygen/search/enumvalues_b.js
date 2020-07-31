@@ -4,7 +4,7 @@ var searchData=
   ['l2_5fcache',['L2_cache',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7cac58e8051e3e9607bb653b0d5bcb918e7',1,'cl::sycl::info']]],
   ['l3_5fcache',['L3_cache',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca4caa8fade30967a8377af50b650cdba4',1,'cl::sycl::info']]],
   ['l4_5fcache',['L4_cache',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca7f52cd07191bbdfc8bf925acf7076ffd',1,'cl::sycl::info']]],
-  ['level0',['level0',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336afc8843ac8a5adfecbc64ae28e6a343b4',1,'cl::sycl']]],
+  ['level_5fzero',['level_zero',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b',1,'cl::sycl']]],
   ['linear',['linear',['../namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59a9a932b3cb396238423eb2f33ec17d6aa',1,'cl::sycl']]],
   ['linked',['linked',['../namespacecl_1_1sycl.html#a104e4e04504c3752e3ba5a3d4013e0ebad48e37bc19b9fe2c72923c30fd7a4152',1,'cl::sycl']]],
   ['local',['local',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598af5ddaf0ca7929578b408c909429f68f2',1,'cl::sycl::access::local()'],['../namespacecl_1_1sycl_1_1info.html#ad3cf44d11f60b23508e91d1ed61ad001af5ddaf0ca7929578b408c909429f68f2',1,'cl::sycl::info::local()']]],

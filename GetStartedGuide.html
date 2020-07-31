@@ -198,32 +198,34 @@ present in the system.</p>
 <p>To run DPC++ applications on Level Zero devices, Level Zero implementation(s)
 must be present in the system. You can find the link to the Level Zero spec in
 the following section <a class="reference external" href="#find-more">Find More</a>.</p>
-<p>The Level Zero RT for <code class="docutils literal notranslate"><span class="pre">GPU</span></code>, OpenCL RT for <code class="docutils literal notranslate"><span class="pre">GPU</span></code>, OpenCL RT for <code class="docutils literal notranslate"><span class="pre">CPU</span></code> and TBB runtime
-which are needed to run DPC++ application on Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> or Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> devices can be
-downloaded using links in
+<p>The Level Zero RT for <code class="docutils literal notranslate"><span class="pre">GPU</span></code>, OpenCL RT for <code class="docutils literal notranslate"><span class="pre">GPU</span></code>, OpenCL RT for <code class="docutils literal notranslate"><span class="pre">CPU</span></code>, FPGA
+emulation RT and TBB runtime which are needed to run DPC++ application
+on Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> or Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> devices can be downloaded using links in
 <a class="reference external" href="../../buildbot/dependency.conf">the dependency configuration file</a>
 and installed following the instructions below. The same versions are used in
 PR testing.</p>
-<p>Intel OpenCL RT for <code class="docutils literal notranslate"><span class="pre">CPU</span></code> devices can be switched into OpenCL runtime for
-Intel FPGA Emulation. The following parameter should be set in <code class="docutils literal notranslate"><span class="pre">cl.cfg</span></code> file
-(available in directory containing CPU runtime for OpenCL) or environment
-variable with the same name. The following value should be set to switch
-OpenCL device mode:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CL_CONFIG_DEVICES</span> <span class="o">=</span> fpga-emu
-</pre></div>
-</div>
 <p><strong>Linux</strong>:</p>
 <ol>
-<li><p>Extract the archive. For example, for the archive
-<code class="docutils literal notranslate"><span class="pre">oclcpu_rt_&lt;cpu_version&gt;.tar.gz</span></code> you would run the following commands</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /opt/intel/oclcpuexp_&lt;cpu_version&gt;
+<li><p>Extract the archive. For example, for the archives
+<code class="docutils literal notranslate"><span class="pre">oclcpuexp_&lt;cpu_version&gt;.tar.gz</span></code> and <code class="docutils literal notranslate"><span class="pre">fpgaemu_&lt;fpga_version&gt;.tar.gz</span></code> you would
+run the following commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract OpenCL FPGA emulation RT</span>
+mkdir -p /opt/intel/oclfpgaemu_&lt;fpga_version&gt;
+<span class="nb">cd</span> /opt/intel/oclfpgaemu_&lt;fpga_version&gt;
+tar zxvf fpgaemu_&lt;fpga_version&gt;.tar.gz
+<span class="c1"># Extract OpenCL CPU RT</span>
+mkdir -p /opt/intel/oclcpuexp_&lt;cpu_version&gt;
 <span class="nb">cd</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;
 tar -zxvf oclcpu_rt_&lt;cpu_version&gt;.tar.gz
 </pre></div>
 </div>
 </li>
-<li><p>Create ICD file pointing to the new runtime</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64/libintelocl.so &gt;
+<li><p>Create ICD file pointing to the new runtime (requires root access)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenCL FPGA emulation RT</span>
+<span class="nb">echo</span>  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64/libintelocl_emu.so &gt;
+  /etc/OpenCL/vendors/intel_fpgaemu.icd
+<span class="c1"># OpenCL CPU RT</span>
+<span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64/libintelocl.so &gt;
   /etc/OpenCL/vendors/intel_expcpu.icd
 </pre></div>
 </div>
@@ -237,7 +239,17 @@ tar -zxvf tbb*lin.tgz
 </li>
 <li><p>Copy files from or create symbolic links to TBB libraries in OpenCL RT
 folder:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenCL FPGA emulation RT</span>
+ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so.2
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so.2
+  /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
+<span class="c1"># OpenCL CPU RT</span>
+ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
 ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
@@ -248,8 +260,10 @@ ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so.
 </pre></div>
 </div>
 </li>
-<li><p>Configure library paths</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64 &gt;
+<li><p>Configure library paths (requires root access)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64 &gt;
+  /etc/ld.so.conf.d/libintelopenclexp.conf
+<span class="nb">echo</span> /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64 &gt;&gt;
   /etc/ld.so.conf.d/libintelopenclexp.conf
 ldconfig -f /etc/ld.so.conf.d/libintelopenclexp.conf
 </pre></div>
@@ -263,7 +277,8 @@ first. Do it <strong>before</strong> installing OpenCL runtime for Intel <code c
 OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">GPU</span></code> installer may re-write some important
 files or settings and make existing OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> runtime
 not working properly.</p></li>
-<li><p>Extract the archive with OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> using links in
+<li><p>Extract the archive with OpenCL runtime for Intel <code class="docutils literal notranslate"><span class="pre">CPU</span></code> and/or for Intel
+<code class="docutils literal notranslate"><span class="pre">FPGA</span></code> emulation using links in
 <a class="reference external" href="../../buildbot/dependency.conf">the dependency configuration file</a>.  For
 example, to <code class="docutils literal notranslate"><span class="pre">c:\oclcpu_rt_&lt;cpu_version&gt;</span></code>.</p></li>
 <li><p>Extract the archive with TBB runtime using links in
@@ -276,7 +291,12 @@ type <code class="docutils literal notranslate"><span class="pre">Command</span>
 to install runtime to the system and setup environment variables. So, if the
 extracted files are in <code class="docutils literal notranslate"><span class="pre">c:\oclcpu_rt_&lt;cpu_version&gt;\</span></code> folder, then type the
 command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\t</span>bb_&lt;tbb_version&gt;<span class="se">\t</span>bb<span class="se">\b</span>in<span class="se">\i</span>ntel64<span class="se">\v</span>c14
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install OpenCL FPGA emulation RT</span>
+<span class="c1"># Answer N to clean previous OCL_ICD_FILENAMES configuration</span>
+c:<span class="se">\o</span>clfpga_rt_&lt;fpga_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\t</span>bb_&lt;tbb_version&gt;<span class="se">\t</span>bb<span class="se">\b</span>in<span class="se">\i</span>ntel64<span class="se">\v</span>c14
+<span class="c1"># Install OpenCL CPU RT</span>
+<span class="c1"># Answer Y to setup CPU RT side-bi-side with FPGA RT</span>
+c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\t</span>bb_&lt;tbb_version&gt;<span class="se">\t</span>bb<span class="se">\b</span>in<span class="se">\i</span>ntel64<span class="se">\v</span>c14
 </pre></div>
 </div>
 </li>

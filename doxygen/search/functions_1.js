@@ -93,5 +93,6 @@ var searchData=
   ['atomic_5ffetch_5fxor',['atomic_fetch_xor',['../namespacecl_1_1sycl.html#a70d2bad67cdf6071c8ae96a9bb3d4d36',1,'cl::sycl']]],
   ['atomic_5fload',['atomic_load',['../namespacecl_1_1sycl.html#af3574f37ddf6daaa4fbfc01940d946d1',1,'cl::sycl']]],
   ['atomic_5fref_5fbase',['atomic_ref_base',['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html#a1c4779b9cd6b993ce628a3e12a36cdc9',1,'cl::sycl::intel::detail::atomic_ref_base::atomic_ref_base(T &amp;ref)'],['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html#ae5dd434defd5f105f0428ac3ea2e9d57',1,'cl::sycl::intel::detail::atomic_ref_base::atomic_ref_base(const atomic_ref_base &amp;ref) noexcept']]],
+  ['atomic_5fref_5fimpl',['atomic_ref_impl',['../classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ac78e1fbd5254b5d43fb268693f74f6d9',1,'cl::sycl::intel::detail::atomic_ref_impl&lt; T *, DefaultOrder, DefaultScope, AddressSpace &gt;']]],
   ['atomic_5fstore',['atomic_store',['../namespacecl_1_1sycl.html#a964b6f49d8cbce86677e3363956b6149',1,'cl::sycl']]]
 ];
