@@ -17,6 +17,7 @@ var searchData=
   ['update_5fhost',['UPDATE_HOST',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eeacc1740df2d5fa39efc228be45f5e96ac',1,'cl::sycl::detail::CG']]],
   ['update_5frequirement',['UPDATE_REQUIREMENT',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a6ea18adaced89f0cacb69c4e1110a785',1,'cl::sycl::detail::Command']]],
   ['use_5fhost_5fptr',['use_host_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a975f7eb1c03d05e028b85bd101c66a27',1,'_pi_mem::mem_::buffer_mem_']]],
+  ['useprimarycontext',['UsePrimaryContext',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa5a4d7f27258e21fbf0d04c360281af39',1,'cl::sycl::detail']]],
   ['user_5fdefined',['user_defined',['../struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084aacf0d09710ee2f2dd6c1124d35d8d842',1,'_pi_context']]],
   ['usm_5fdevice_5fallocations',['usm_device_allocations',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aed96eac28639cadc818b197ffff31d65',1,'cl::sycl::info']]],
   ['usm_5fhost_5fallocations',['usm_host_allocations',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a1f662c5dce6a25abcb7d2c926e3a0827',1,'cl::sycl::info']]],

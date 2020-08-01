@@ -228,6 +228,7 @@ var annotated_dup =
     [ "restype_ex< unsigned short, unsigned int >", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01int_01_4.html", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01int_01_4" ],
     [ "restype_ex< unsigned short, unsigned long long >", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01long_01long_01_4.html", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01long_01long_01_4" ],
     [ "restype_ex< unsigned short, unsigned short >", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01short_01_4.html", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01short_01_4" ],
+    [ "type", "classstd_1_1conditional_1_1type.html", null ],
     [ "wordtype", "structwordtype.html", null ],
     [ "wordtype< short >", "structwordtype_3_01short_01_4.html", "structwordtype_3_01short_01_4" ],
     [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", "structwordtype_3_01unsigned_01short_01_4" ]

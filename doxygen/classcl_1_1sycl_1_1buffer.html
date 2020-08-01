@@ -115,7 +115,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:a5f46645c23214ee24fd78bcbfed9037e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#a5f46645c23214ee24fd78bcbfed9037e">allocator_type</a> = AllocatorT</td></tr>
 <tr class="separator:a5f46645c23214ee24fd78bcbfed9037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68f9f0177af8df6cd0a738d825b9b678"><td class="memTemplParams" colspan="2">template&lt;int dims&gt; </td></tr>
-<tr class="memitem:a68f9f0177af8df6cd0a738d825b9b678"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#a68f9f0177af8df6cd0a738d825b9b678">EnableIfOneDimension</a> = typename std::enable_if&lt; 1==dims &gt;::type</td></tr>
+<tr class="memitem:a68f9f0177af8df6cd0a738d825b9b678"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#a68f9f0177af8df6cd0a738d825b9b678">EnableIfOneDimension</a> = typename std::enable_if&lt; 1==dims &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
 <tr class="separator:a68f9f0177af8df6cd0a738d825b9b678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16647d098b1dad56e968980417959c4a"><td class="memTemplParams" colspan="2">template&lt;class Container &gt; </td></tr>
 <tr class="memitem:a16647d098b1dad56e968980417959c4a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#a16647d098b1dad56e968980417959c4a">EnableIfContiguous</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a66da54b132ab2b3ff263a214f924f32b">detail::void_t</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_convertible&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#abbfc9fbc0a39f53321df76e435720253">detail::remove_pointer_t</a>&lt; decltype(std::declval&lt; Container &gt;().data())&gt;(*)[], const T(*)[]&gt;::value &gt;, decltype(std::declval&lt; Container &gt;().size())&gt;</td></tr>
@@ -124,7 +124,7 @@ Public Types</h2></td></tr>
 <tr class="memitem:abb9def451f44cef9dbaefcd22b7f1785"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#abb9def451f44cef9dbaefcd22b7f1785">EnableIfItInputIterator</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_convertible&lt; typename std::iterator_traits&lt; It &gt;::iterator_category, std::input_iterator_tag &gt;::value &gt;</td></tr>
 <tr class="separator:abb9def451f44cef9dbaefcd22b7f1785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bedfccc0c403e300a1fe85373ff7c37"><td class="memTemplParams" colspan="2">template&lt;typename ItA , typename ItB &gt; </td></tr>
-<tr class="memitem:a3bedfccc0c403e300a1fe85373ff7c37"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#a3bedfccc0c403e300a1fe85373ff7c37">EnableIfSameNonConstIterators</a> = typename std::enable_if&lt; std::is_same&lt; ItA, ItB &gt;::value &amp;&amp;!std::is_const&lt; ItA &gt;::value, ItA &gt;::type</td></tr>
+<tr class="memitem:a3bedfccc0c403e300a1fe85373ff7c37"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1buffer.html#a3bedfccc0c403e300a1fe85373ff7c37">EnableIfSameNonConstIterators</a> = typename std::enable_if&lt; std::is_same&lt; ItA, ItB &gt;::value &amp;&amp;!std::is_const&lt; ItA &gt;::value, ItA &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
 <tr class="separator:a3bedfccc0c403e300a1fe85373ff7c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -321,7 +321,7 @@ template&lt;typename T, int dimensions = 1, typename AllocatorT = cl::sycl::buff
 template&lt;int dims&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1buffer.html">cl::sycl::buffer</a>&lt; T, dimensions, AllocatorT, typename &gt;::<a class="el" href="classcl_1_1sycl_1_1buffer.html#a68f9f0177af8df6cd0a738d825b9b678">EnableIfOneDimension</a> =  typename std::enable_if&lt;1 == dims&gt;::type</td>
+          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1buffer.html">cl::sycl::buffer</a>&lt; T, dimensions, AllocatorT, typename &gt;::<a class="el" href="classcl_1_1sycl_1_1buffer.html#a68f9f0177af8df6cd0a738d825b9b678">EnableIfOneDimension</a> =  typename std::enable_if&lt;1 == dims&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -341,7 +341,7 @@ template&lt;typename T, int dimensions = 1, typename AllocatorT = cl::sycl::buff
 template&lt;typename ItA , typename ItB &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1buffer.html">cl::sycl::buffer</a>&lt; T, dimensions, AllocatorT, typename &gt;::<a class="el" href="classcl_1_1sycl_1_1buffer.html#a3bedfccc0c403e300a1fe85373ff7c37">EnableIfSameNonConstIterators</a> =  typename std::enable_if&lt;std::is_same&lt;ItA, ItB&gt;::value &amp;&amp; !std::is_const&lt;ItA&gt;::value, ItA&gt;::type</td>
+          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1buffer.html">cl::sycl::buffer</a>&lt; T, dimensions, AllocatorT, typename &gt;::<a class="el" href="classcl_1_1sycl_1_1buffer.html#a3bedfccc0c403e300a1fe85373ff7c37">EnableIfSameNonConstIterators</a> =  typename std::enable_if&lt;std::is_same&lt;ItA, ItB&gt;::value &amp;&amp; !std::is_const&lt;ItA&gt;::value, ItA&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1352,7 +1352,7 @@ template&lt;typename T, int dimensions = 1, typename AllocatorT = cl::sycl::buff
 
 <p class="definition">Definition at line <a class="el" href="buffer_8hpp_source.html#l00238">238</a> of file <a class="el" href="buffer_8hpp_source.html">buffer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l00922">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::accessor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l00924">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::accessor()</a>.</p>
 
 </div>
 </div>
@@ -1414,7 +1414,7 @@ template&lt;typename T, int dimensions = 1, typename AllocatorT = cl::sycl::buff
 
 <p class="definition">Definition at line <a class="el" href="buffer_8hpp_source.html#l00236">236</a> of file <a class="el" href="buffer_8hpp_source.html">buffer.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l00922">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::accessor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l00924">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::accessor()</a>.</p>
 
 </div>
 </div>

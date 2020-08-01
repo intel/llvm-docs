@@ -91,42 +91,30 @@ $(document).ready(function(){initNavTree('property__list_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">property_list.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="context_8hpp_source.html">CL/sycl/context.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="common_8hpp_source.html">CL/sycl/detail/common.hpp</a>&gt;</code><br />
-<code>#include &lt;tuple&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="common_8hpp_source.html">CL/sycl/detail/common.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="property__helper_8hpp_source.html">CL/sycl/detail/property_helper.hpp</a>&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
-<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for property_list.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="property__list_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2property__list_8hpp" alt=""/></div>
 <map name="include_2CL_2sycl_2property__list_8hpp" id="include_2CL_2sycl_2property__list_8hpp">
-<area shape="rect" id="node2" href="context_8hpp.html" title="CL/sycl/context.hpp" alt="" coords="599,95,737,121"/>
-<area shape="rect" id="node10" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="1115,408,1296,435"/>
-<area shape="rect" id="node3" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="669,408,853,435"/>
-<area shape="rect" id="node15" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="1366,647,1533,673"/>
-<area shape="rect" id="node21" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="193,572,303,599"/>
-<area shape="rect" id="node27" href="exception__list_8hpp.html" title="CL/sycl/exception_list.hpp" alt="" coords="29,490,205,517"/>
-<area shape="rect" id="node29" href="info__desc_8hpp.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="1233,169,1410,196"/>
-<area shape="rect" id="node4" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="557,647,731,673"/>
-<area shape="rect" id="node12" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1889,647,2015,673"/>
-<area shape="rect" id="node18" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="1016,490,1168,517"/>
-<area shape="rect" id="node19" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1843,572,1970,599"/>
-<area shape="rect" id="node30" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1836,333,1977,360"/>
-<area shape="rect" id="node35" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="493,251,600,278"/>
-<area shape="rect" id="node31" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1497,572,1666,599"/>
-<area shape="rect" id="node36" href="array_8hpp.html" title="CL/sycl/detail/array.hpp" alt="" coords="484,408,644,435"/>
-<area shape="rect" id="node37" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="331,483,461,524"/>
-<area shape="rect" id="node38" href="range_8hpp.html" title="CL/sycl/range.hpp" alt="" coords="381,333,509,360"/>
+<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="675,184,856,211"/>
+<area shape="rect" id="node23" href="property__helper_8hpp.html" title="CL/sycl/detail/property\l_helper.hpp" alt="" coords="929,95,1082,136"/>
+<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="590,408,717,435"/>
+<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1108,408,1281,435"/>
+<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="91,408,258,435"/>
+<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="689,259,841,285"/>
+<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="314,333,441,360"/>
+<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="917,333,1027,360"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -134,55 +122,55 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="property__list_8hpp__dep__incl.png" border="0" usemap="#include_2CL_2sycl_2property__list_8hppdep" alt=""/></div>
 <map name="include_2CL_2sycl_2property__list_8hppdep" id="include_2CL_2sycl_2property__list_8hppdep">
-<area shape="rect" id="node2" href="sycl__mem__obj__t_8hpp.html" title="include/CL/sycl/detail\l/sycl_mem_obj_t.hpp" alt="" coords="1339,95,1485,136"/>
-<area shape="rect" id="node3" href="buffer__impl_8hpp.html" title="include/CL/sycl/detail\l/buffer_impl.hpp" alt="" coords="716,273,863,315"/>
-<area shape="rect" id="node7" href="handler_8hpp.html" title="include/CL/sycl/handler.hpp" alt="" coords="991,705,1174,732"/>
-<area shape="rect" id="node8" href="queue_8hpp.html" title="include/CL/sycl/queue.hpp" alt="" coords="296,787,472,814"/>
-<area shape="rect" id="node26" href="queue__impl_8hpp.html" title="source/detail/queue\l_impl.hpp" alt="" coords="1941,780,2075,821"/>
-<area shape="rect" id="node45" href="image__impl_8hpp.html" title="include/CL/sycl/detail\l/image_impl.hpp" alt="" coords="1228,184,1375,225"/>
-<area shape="rect" id="node50" href="memory__manager_8hpp.html" title="include/CL/sycl/detail\l/memory_manager.hpp" alt="" coords="2553,273,2708,315"/>
-<area shape="rect" id="node49" href="sycl__mem__obj__t_8cpp.html" title="source/detail/sycl\l_mem_obj_t.cpp" alt="" coords="2295,363,2419,404"/>
-<area shape="rect" id="node4" href="buffer_8hpp.html" title="include/CL/sycl/buffer.hpp" alt="" coords="451,370,626,397"/>
-<area shape="rect" id="node43" href="accessor__impl_8cpp.html" title="source/detail/accessor\l_impl.cpp" alt="" coords="94,363,247,404"/>
-<area shape="rect" id="node44" href="buffer__impl_8cpp.html" title="source/detail/buffer\l_impl.cpp" alt="" coords="723,363,856,404"/>
-<area shape="rect" id="node5" href="accessor_8hpp.html" title="The file contains implementations of accessor class. " alt="" coords="741,452,936,479"/>
-<area shape="rect" id="node9" href="sycl_8hpp.html" title="include/CL/sycl.hpp" alt="" coords="430,1055,567,1082"/>
-<area shape="rect" id="node21" href="stream__impl_8hpp.html" title="source/detail/stream\l_impl.hpp" alt="" coords="753,869,893,911"/>
-<area shape="rect" id="node6" href="cuda_8hpp.html" title="include/CL/sycl/backend\l/cuda.hpp" alt="" coords="245,869,411,911"/>
-<area shape="rect" id="node18" href="reduction_8hpp.html" title="include/CL/sycl/intel\l/reduction.hpp" alt="" coords="598,780,738,821"/>
-<area shape="rect" id="node27" href="accessor_8cpp.html" title="source/accessor.cpp" alt="" coords="1726,877,1869,903"/>
-<area shape="rect" id="node37" href="cg_8hpp.html" title="include/CL/sycl/detail\l/cg.hpp" alt="" coords="1339,616,1485,657"/>
-<area shape="rect" id="node38" href="interop__handle_8hpp.html" title="include/CL/sycl/interop\l_handle.hpp" alt="" coords="1105,527,1260,568"/>
-<area shape="rect" id="node39" href="interop__handler_8hpp.html" title="include/CL/sycl/interop\l_handler.hpp" alt="" coords="1335,527,1489,568"/>
-<area shape="rect" id="node40" href="backend_8hpp.html" title="include/CL/sycl/backend.hpp" alt="" coords="246,623,437,650"/>
-<area shape="rect" id="node41" href="opencl_8hpp.html" title="include/CL/sycl/backend\l/opencl.hpp" alt="" coords="756,527,921,568"/>
-<area shape="rect" id="node42" href="image__accessor__util_8cpp.html" title="source/detail/image\l_accessor_util.cpp" alt="" coords="946,527,1081,568"/>
-<area shape="rect" id="node17" href="queue_8cpp.html" title="source/queue.cpp" alt="" coords="1019,877,1144,903"/>
-<area shape="rect" id="node20" href="stream_8hpp.html" title="include/CL/sycl/stream.hpp" alt="" coords="864,787,1045,814"/>
-<area shape="rect" id="node25" href="handler__proxy_8cpp.html" title="source/detail/handler\l_proxy.cpp" alt="" coords="1121,780,1263,821"/>
-<area shape="rect" id="node34" href="handler_8cpp.html" title="source/handler.cpp" alt="" coords="1371,877,1503,903"/>
-<area shape="rect" id="node14" href="usm__allocator_8hpp.html" title="include/CL/sycl/usm\l/usm_allocator.hpp" alt="" coords="536,869,677,911"/>
-<area shape="rect" id="node10" href="level__zero_8hpp.html" title="include/CL/sycl/backend\l/level_zero.hpp" alt="" coords="319,1137,484,1179"/>
-<area shape="rect" id="node11" href="fpga__device__selector_8hpp.html" title="include/CL/sycl/intel\l/fpga_device_selector.hpp" alt="" coords="509,1137,683,1179"/>
-<area shape="rect" id="node12" href="level__zero_8cpp.html" title="source/backend/level\l_zero.cpp" alt="" coords="1253,1137,1398,1179"/>
-<area shape="rect" id="node13" href="opencl_8cpp.html" title="source/backend/opencl.cpp" alt="" coords="1695,1145,1876,1171"/>
-<area shape="rect" id="node15" href="usm_8hpp.html" title="include/CL/sycl/usm.hpp" alt="" coords="587,966,754,993"/>
-<area shape="rect" id="node16" href="usm__impl_8cpp.html" title="source/detail/usm/usm\l_impl.cpp" alt="" coords="1204,1048,1359,1089"/>
-<area shape="rect" id="node19" href="reduction_8cpp.html" title="source/detail/reduction.cpp" alt="" coords="1168,877,1347,903"/>
-<area shape="rect" id="node24" href="stream_8cpp.html" title="source/stream.cpp" alt="" coords="993,966,1124,993"/>
-<area shape="rect" id="node22" href="commands_8cpp.html" title="source/detail/scheduler\l/commands.cpp" alt="" coords="2189,959,2345,1000"/>
-<area shape="rect" id="node23" href="stream__impl_8cpp.html" title="source/detail/stream\l_impl.cpp" alt="" coords="778,959,918,1000"/>
-<area shape="rect" id="node28" href="event__impl_8cpp.html" title="source/detail/event\l_impl.cpp" alt="" coords="2097,869,2229,911"/>
-<area shape="rect" id="node29" href="memory__manager_8cpp.html" title="source/detail/memory\l_manager.cpp" alt="" coords="3049,869,3196,911"/>
-<area shape="rect" id="node30" href="queue__impl_8cpp.html" title="source/detail/queue\l_impl.cpp" alt="" coords="3221,869,3355,911"/>
-<area shape="rect" id="node31" href="graph__builder_8cpp.html" title="source/detail/scheduler\l/graph_builder.cpp" alt="" coords="2869,869,3025,911"/>
-<area shape="rect" id="node32" href="graph__processor_8cpp.html" title="source/detail/scheduler\l/graph_processor.cpp" alt="" coords="2305,869,2461,911"/>
-<area shape="rect" id="node33" href="scheduler_8cpp.html" title="source/detail/scheduler\l/scheduler.cpp" alt="" coords="2485,869,2641,911"/>
-<area shape="rect" id="node35" href="interop__handle_8cpp.html" title="source/interop_handle.cpp" alt="" coords="1527,877,1702,903"/>
-<area shape="rect" id="node36" href="interop__handler_8cpp.html" title="source/interop_handler.cpp" alt="" coords="2665,877,2844,903"/>
-<area shape="rect" id="node46" href="image_8hpp.html" title="include/CL/sycl/image.hpp" alt="" coords="928,281,1104,307"/>
-<area shape="rect" id="node48" href="image__impl_8cpp.html" title="source/detail/image\l_impl.cpp" alt="" coords="1234,363,1369,404"/>
-<area shape="rect" id="node47" href="image__accessor__util_8hpp.html" title="include/CL/sycl/detail\l/image_accessor_util.hpp" alt="" coords="931,363,1101,404"/>
+<area shape="rect" id="node2" href="sycl__mem__obj__t_8hpp.html" title="include/CL/sycl/detail\l/sycl_mem_obj_t.hpp" alt="" coords="2163,95,2310,136"/>
+<area shape="rect" id="node3" href="buffer__impl_8hpp.html" title="include/CL/sycl/detail\l/buffer_impl.hpp" alt="" coords="1999,273,2146,315"/>
+<area shape="rect" id="node5" href="accessor_8hpp.html" title="The file contains implementations of accessor class. " alt="" coords="1007,452,1202,479"/>
+<area shape="rect" id="node7" href="handler_8hpp.html" title="include/CL/sycl/handler.hpp" alt="" coords="1023,802,1205,829"/>
+<area shape="rect" id="node8" href="queue_8hpp.html" title="include/CL/sycl/queue.hpp" alt="" coords="267,891,443,918"/>
+<area shape="rect" id="node21" href="queue__impl_8hpp.html" title="source/detail/queue\l_impl.hpp" alt="" coords="1341,973,1476,1015"/>
+<area shape="rect" id="node46" href="image__impl_8hpp.html" title="include/CL/sycl/detail\l/image_impl.hpp" alt="" coords="2422,184,2569,225"/>
+<area shape="rect" id="node50" href="memory__manager_8hpp.html" title="include/CL/sycl/detail\l/memory_manager.hpp" alt="" coords="2647,884,2802,925"/>
+<area shape="rect" id="node39" href="sycl__mem__obj__t_8cpp.html" title="source/detail/sycl\l_mem_obj_t.cpp" alt="" coords="2457,973,2581,1015"/>
+<area shape="rect" id="node4" href="buffer_8hpp.html" title="include/CL/sycl/buffer.hpp" alt="" coords="1432,370,1607,397"/>
+<area shape="rect" id="node37" href="accessor__impl_8cpp.html" title="source/detail/accessor\l_impl.cpp" alt="" coords="2020,973,2173,1015"/>
+<area shape="rect" id="node38" href="buffer__impl_8cpp.html" title="source/detail/buffer\l_impl.cpp" alt="" coords="2299,973,2433,1015"/>
+<area shape="rect" id="node9" href="sycl_8hpp.html" title="include/CL/sycl.hpp" alt="" coords="539,981,676,1007"/>
+<area shape="rect" id="node17" href="stream__impl_8hpp.html" title="source/detail/stream\l_impl.hpp" alt="" coords="1500,973,1640,1015"/>
+<area shape="rect" id="node6" href="cuda_8hpp.html" title="include/CL/sycl/backend\l/cuda.hpp" alt="" coords="133,973,298,1015"/>
+<area shape="rect" id="node14" href="reduction_8hpp.html" title="include/CL/sycl/intel\l/reduction.hpp" alt="" coords="721,884,861,925"/>
+<area shape="rect" id="node22" href="accessor_8cpp.html" title="source/accessor.cpp" alt="" coords="5,1070,148,1097"/>
+<area shape="rect" id="node33" href="cg_8hpp.html" title="include/CL/sycl/detail\l/cg.hpp" alt="" coords="1867,705,2014,747"/>
+<area shape="rect" id="node40" href="interop__handle_8hpp.html" title="include/CL/sycl/interop\l_handle.hpp" alt="" coords="1422,527,1577,568"/>
+<area shape="rect" id="node42" href="interop__handler_8hpp.html" title="include/CL/sycl/interop\l_handler.hpp" alt="" coords="1705,527,1859,568"/>
+<area shape="rect" id="node43" href="backend_8hpp.html" title="include/CL/sycl/backend.hpp" alt="" coords="705,623,896,650"/>
+<area shape="rect" id="node44" href="opencl_8hpp.html" title="include/CL/sycl/backend\l/opencl.hpp" alt="" coords="1022,527,1187,568"/>
+<area shape="rect" id="node45" href="image__accessor__util_8cpp.html" title="source/detail/image\l_accessor_util.cpp" alt="" coords="1212,527,1347,568"/>
+<area shape="rect" id="node13" href="queue_8cpp.html" title="source/queue.cpp" alt="" coords="173,1070,298,1097"/>
+<area shape="rect" id="node16" href="stream_8hpp.html" title="include/CL/sycl/stream.hpp" alt="" coords="1206,891,1387,918"/>
+<area shape="rect" id="node20" href="handler__proxy_8cpp.html" title="source/detail/handler\l_proxy.cpp" alt="" coords="988,884,1131,925"/>
+<area shape="rect" id="node30" href="handler_8cpp.html" title="source/handler.cpp" alt="" coords="1100,1070,1232,1097"/>
+<area shape="rect" id="node12" href="usm__allocator_8hpp.html" title="include/CL/sycl/usm\l/usm_allocator.hpp" alt="" coords="322,973,463,1015"/>
+<area shape="rect" id="node10" href="level__zero_8cpp.html" title="source/backend/level\l_zero.cpp" alt="" coords="323,1063,468,1104"/>
+<area shape="rect" id="node11" href="opencl_8cpp.html" title="source/backend/opencl.cpp" alt="" coords="493,1070,674,1097"/>
+<area shape="rect" id="node15" href="reduction_8cpp.html" title="source/detail/reduction.cpp" alt="" coords="698,1070,877,1097"/>
+<area shape="rect" id="node19" href="stream_8cpp.html" title="source/stream.cpp" alt="" coords="1435,1070,1566,1097"/>
+<area shape="rect" id="node18" href="commands_8cpp.html" title="source/detail/scheduler\l/commands.cpp" alt="" coords="2309,1063,2465,1104"/>
+<area shape="rect" id="node23" href="event__impl_8cpp.html" title="source/detail/event\l_impl.cpp" alt="" coords="1793,1063,1925,1104"/>
+<area shape="rect" id="node24" href="memory__manager_8cpp.html" title="source/detail/memory\l_manager.cpp" alt="" coords="2490,1063,2637,1104"/>
+<area shape="rect" id="node25" href="queue__impl_8cpp.html" title="source/detail/queue\l_impl.cpp" alt="" coords="2852,1063,2987,1104"/>
+<area shape="rect" id="node26" href="graph__builder_8cpp.html" title="source/detail/scheduler\l/graph_builder.cpp" alt="" coords="2661,1063,2817,1104"/>
+<area shape="rect" id="node27" href="graph__processor_8cpp.html" title="source/detail/scheduler\l/graph_processor.cpp" alt="" coords="1949,1063,2105,1104"/>
+<area shape="rect" id="node28" href="scheduler_8cpp.html" title="source/detail/scheduler\l/scheduler.cpp" alt="" coords="2129,1063,2285,1104"/>
+<area shape="rect" id="node29" href="usm__impl_8cpp.html" title="source/detail/usm/usm\l_impl.cpp" alt="" coords="1257,1063,1411,1104"/>
+<area shape="rect" id="node31" href="interop__handle_8cpp.html" title="source/interop_handle.cpp" alt="" coords="901,1070,1076,1097"/>
+<area shape="rect" id="node32" href="interop__handler_8cpp.html" title="source/interop_handler.cpp" alt="" coords="1590,1070,1769,1097"/>
+<area shape="rect" id="node34" href="error__handling_8hpp.html" title="source/detail/error\l_handling/error_handling.hpp" alt="" coords="2110,795,2297,836"/>
+<area shape="rect" id="node35" href="commands_8hpp.html" title="source/detail/scheduler\l/commands.hpp" alt="" coords="1879,795,2035,836"/>
+<area shape="rect" id="node36" href="scheduler_8hpp.html" title="source/detail/scheduler\l/scheduler.hpp" alt="" coords="1836,884,1992,925"/>
+<area shape="rect" id="node41" href="cg__types_8hpp.html" title="include/CL/sycl/detail\l/cg_types.hpp" alt="" coords="1651,616,1798,657"/>
+<area shape="rect" id="node47" href="image_8hpp.html" title="include/CL/sycl/image.hpp" alt="" coords="1139,281,1315,307"/>
+<area shape="rect" id="node49" href="image__impl_8cpp.html" title="source/detail/image\l_impl.cpp" alt="" coords="2605,973,2740,1015"/>
+<area shape="rect" id="node48" href="image__accessor__util_8hpp.html" title="include/CL/sycl/detail\l/image_accessor_util.hpp" alt="" coords="1142,363,1313,404"/>
 </map>
 </div>
 </div>
@@ -190,37 +178,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1PropBase.html">cl::sycl::property::detail::PropBase</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html">cl::sycl::property::detail::Prop&lt; PropKindT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1PropertyHolder.html">cl::sycl::property::detail::PropertyHolder&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html">cl::sycl::property::detail::UseMutexBase&lt; PropKindT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html">cl::sycl::property::detail::ContextBoundBase&lt; PropKindT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html">cl::sycl::property::image::use_host_ptr</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html">cl::sycl::property::image::use_mutex</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html">cl::sycl::property::image::context_bound</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html">cl::sycl::property::buffer::use_host_ptr</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html">cl::sycl::property::buffer::use_mutex</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html">cl::sycl::property::buffer::context_bound</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1detail_1_1buffer___1_1use__pinned__host__memory.html">cl::sycl::property::detail::buffer_::use_pinned_host_memory</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html">cl::sycl::property::queue::enable_profiling</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html">cl::sycl::property::queue::in_order</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property_1_1noinit.html">cl::sycl::property::noinit</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1property__list.html">cl::sycl::property_list</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objects of the <a class="el" href="classcl_1_1sycl_1_1property__list.html" title="Objects of the property_list class are containers for the SYCL properties. ">property_list</a> class are containers for the SYCL properties.  <a href="classcl_1_1sycl_1_1property__list.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -230,114 +189,7 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecl_1_1sycl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html">cl::sycl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1property"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property.html">cl::sycl::property</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1property_1_1image"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1image.html">cl::sycl::property::image</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1property_1_1buffer"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1buffer.html">cl::sycl::property::buffer</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1property_1_1queue"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1queue.html">cl::sycl::property::queue</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1property_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html">cl::sycl::property::detail</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1property_1_1detail_1_1buffer__"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail_1_1buffer__.html">cl::sycl::property::detail::buffer_</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1ext"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext.html">cl::sycl::ext</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1ext_1_1oneapi"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1oneapi.html">cl::sycl::ext::oneapi</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html">cl::sycl::ext::oneapi::property</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer.html">cl::sycl::ext::oneapi::property::buffer</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ac5f13f9b17e7370c457482b50c80e0f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="property__list_8hpp.html#ac5f13f9b17e7370c457482b50c80e0f8">RegisterProp</a>(PropKindT,  Type)</td></tr>
-<tr class="separator:ac5f13f9b17e7370c457482b50c80e0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a32f616898301b29066bcd22796b63aac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer.html#a32f616898301b29066bcd22796b63aac">cl::sycl::ext::oneapi::property::buffer::use_pinned_host_memory</a> = sycl::property::detail::buffer_::use_pinned_host_memory</td></tr>
-<tr class="separator:a32f616898301b29066bcd22796b63aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ae6452b68a5b895bd0bc6212513da523a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523a">cl::sycl::property::detail::PropKind</a> { <br />
-&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa9b06e01dc952aea458dc4b60c4eda820">cl::sycl::property::detail::BufferUseHostPtr</a> = 0, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa787929af791476ab0ffc7d8318342140">cl::sycl::property::detail::BufferContextBound</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa68e0ba099ae35b6952215149034f8cde">cl::sycl::property::detail::BufferUseMutex</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aaeb32eea052263190f505977a4446bfbe">cl::sycl::property::detail::ImageUseHostPtr</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa52a7a6e35b57957acb82dfc06b849b7e">cl::sycl::property::detail::ImageContextBound</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa3fffd49984c908b5d80f7de179ee6042">cl::sycl::property::detail::ImageUseMutex</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aaa44200f702e5e85e16b383480e7946c7">cl::sycl::property::detail::QueueEnableProfiling</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aad81ee2eb0884e93e55c75f81c5a2fd29">cl::sycl::property::detail::InOrder</a>, 
-<br />
-&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aa02aaa84a5403a13f4c4e029e53a83b5a">cl::sycl::property::detail::NoInit</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aaeb161c8618b277175f09e4c286bfde08">cl::sycl::property::detail::BufferUsePinnedHostMemory</a>, 
-<a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523aab6183904c68d4f4d60f341c0079127cb">cl::sycl::property::detail::PropKindSize</a>
-<br />
- }</td></tr>
-<tr class="separator:ae6452b68a5b895bd0bc6212513da523a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ad3583c37eec557aa450fd156e0513967"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ad3583c37eec557aa450fd156e0513967">cl::sycl::property::detail::RegisterProp</a> (PropKind::ImageUseHostPtr, image::use_host_ptr)</td></tr>
-<tr class="separator:ad3583c37eec557aa450fd156e0513967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89c95b30592547166cb0ad94f9f1b584"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#a89c95b30592547166cb0ad94f9f1b584">cl::sycl::property::detail::RegisterProp</a> (PropKind::ImageUseMutex, image::use_mutex)</td></tr>
-<tr class="separator:a89c95b30592547166cb0ad94f9f1b584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6a2ff2c47b0dadf1b0fdd515b2aab36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6a2ff2c47b0dadf1b0fdd515b2aab36">cl::sycl::property::detail::RegisterProp</a> (PropKind::ImageContextBound, image::context_bound)</td></tr>
-<tr class="separator:ae6a2ff2c47b0dadf1b0fdd515b2aab36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaeeb700051650e08af0c6aa3c44444f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#abaeeb700051650e08af0c6aa3c44444f">cl::sycl::property::detail::RegisterProp</a> (PropKind::BufferUseHostPtr, buffer::use_host_ptr)</td></tr>
-<tr class="separator:abaeeb700051650e08af0c6aa3c44444f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbf01192d0ccfbb4b8d723d7a006dde0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#afbf01192d0ccfbb4b8d723d7a006dde0">cl::sycl::property::detail::RegisterProp</a> (PropKind::BufferUseMutex, buffer::use_mutex)</td></tr>
-<tr class="separator:afbf01192d0ccfbb4b8d723d7a006dde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3711f82a9158c680502ec67c4cc9cbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ac3711f82a9158c680502ec67c4cc9cbb">cl::sycl::property::detail::RegisterProp</a> (PropKind::BufferContextBound, buffer::context_bound)</td></tr>
-<tr class="separator:ac3711f82a9158c680502ec67c4cc9cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76dd33f5c8415edef7bbc7284b844e6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#a76dd33f5c8415edef7bbc7284b844e6f">cl::sycl::property::detail::RegisterProp</a> (PropKind::BufferUsePinnedHostMemory, buffer_::use_pinned_host_memory)</td></tr>
-<tr class="separator:a76dd33f5c8415edef7bbc7284b844e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd615f73334008096a473070a345fe56"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#acd615f73334008096a473070a345fe56">cl::sycl::property::detail::RegisterProp</a> (PropKind::QueueEnableProfiling, queue::enable_profiling)</td></tr>
-<tr class="separator:acd615f73334008096a473070a345fe56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace1a542c521379bede5f951212fdce4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ace1a542c521379bede5f951212fdce4c">cl::sycl::property::detail::RegisterProp</a> (PropKind::InOrder, queue::in_order)</td></tr>
-<tr class="separator:ace1a542c521379bede5f951212fdce4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff83433345c9135fef95a82a554f598b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#aff83433345c9135fef95a82a554f598b">cl::sycl::property::detail::RegisterProp</a> (PropKind::NoInit, noinit)</td></tr>
-<tr class="separator:aff83433345c9135fef95a82a554f598b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a080b7307701c5d55e6d167887e50ddbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1property_1_1detail.html#a080b7307701c5d55e6d167887e50ddbd">cl::sycl::property::detail::RegisterProp</a> (PropKind::PropKindSize, PropBase)</td></tr>
-<tr class="separator:a080b7307701c5d55e6d167887e50ddbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ac5f13f9b17e7370c457482b50c80e0f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5f13f9b17e7370c457482b50c80e0f8">&#9670;&nbsp;</a></span>RegisterProp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RegisterProp</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">PropKindT, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">Type&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>Prop&lt;PropKindT&gt; : <span class="keyword">public</span> PropBase {                        \</div><div class="line">  public:                                                                      \</div><div class="line">    static constexpr <a class="code" href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523a">PropKind</a> getKind() { <span class="keywordflow">return</span> PropKindT; }                  \</div><div class="line">    using FinalType = Type;                                                    \</div><div class="line">  }</div><div class="ttc" id="namespacecl_1_1sycl_1_1property_1_1detail_html_ae6452b68a5b895bd0bc6212513da523a"><div class="ttname"><a href="namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523a">cl::sycl::property::detail::PropKind</a></div><div class="ttdeci">PropKind</div><div class="ttdef"><b>Definition:</b> <a href="property__list_8hpp_source.html#l00056">property_list.hpp:56</a></div></div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="property__list_8hpp_source.html#l00142">142</a> of file <a class="el" href="property__list_8hpp_source.html">property_list.hpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -6,6 +6,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "experimental", "dir_5de95f4ec0c4a5b18b5411d3aef3cafe.html", "dir_5de95f4ec0c4a5b18b5411d3aef3cafe" ],
     [ "info", "dir_12b9ed12eb09663275c0ccaddd9adede.html", "dir_12b9ed12eb09663275c0ccaddd9adede" ],
     [ "intel", "dir_893b3a32fa17000f148d472f42b26e66.html", "dir_893b3a32fa17000f148d472f42b26e66" ],
+    [ "properties", "dir_44c465508f81c3871cd3b8ecbdc75500.html", "dir_44c465508f81c3871cd3b8ecbdc75500" ],
     [ "usm", "dir_37f6d7b558fa13a28d407413718293f0.html", "dir_37f6d7b558fa13a28d407413718293f0" ],
     [ "accessor.hpp", "accessor_8hpp.html", "accessor_8hpp" ],
     [ "aliases.hpp", "aliases_8hpp.html", "aliases_8hpp" ],
@@ -69,7 +70,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     ] ],
     [ "pointers.hpp", "pointers_8hpp.html", "pointers_8hpp" ],
     [ "program.hpp", "program_8hpp.html", "program_8hpp" ],
-    [ "property_list.hpp", "property__list_8hpp.html", "property__list_8hpp" ],
+    [ "property_list.hpp", "property__list_8hpp.html", null ],
     [ "queue.hpp", "queue_8hpp.html", [
       [ "hash< cl::sycl::queue >", "structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4" ]
     ] ],

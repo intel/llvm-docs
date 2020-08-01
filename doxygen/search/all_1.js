@@ -36,6 +36,7 @@ var searchData=
   ['accessor_5fimpl_2ecpp',['accessor_impl.cpp',['../accessor__impl_8cpp.html',1,'']]],
   ['accessor_5fimpl_2ehpp',['accessor_impl.hpp',['../accessor__impl_8hpp.html',1,'']]],
   ['accessor_5fmode',['accessor_mode',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#aeeb9ac1582af93c0338d87eb78431e3b',1,'cl::sycl::intel::detail::reduction_impl']]],
+  ['accessor_5fproperties_2ehpp',['accessor_properties.hpp',['../accessor__properties_8hpp.html',1,'']]],
   ['accessor_5ftype',['accessor_type',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a2fad265b82b42d5c6204cb377b3d49e9',1,'cl::sycl::intel::detail::reduction_impl']]],
   ['accessorbasehost',['AccessorBaseHost',['../classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html',1,'cl::sycl::detail::AccessorBaseHost'],['../classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#afb38e744f2173be3e560fbe37777b24e',1,'cl::sycl::detail::AccessorBaseHost::AccessorBaseHost()']]],
   ['accessorcommont',['AccessorCommonT',['../classcl_1_1sycl_1_1accessor.html#a6c6d8ae10e06c20b94e673b8e6022e8b',1,'cl::sycl::accessor::AccessorCommonT()'],['../classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a593d3582c70c8e2c9fc50bf9bc41770f',1,'cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder &gt;::AccessorCommonT()']]],

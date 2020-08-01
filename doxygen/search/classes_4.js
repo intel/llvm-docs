@@ -1,5 +1,14 @@
 var searchData=
 [
+  ['datalessproperty',['DataLessProperty',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3abufferusehostptr_20_3e',['DataLessProperty&lt; detail::BufferUseHostPtr &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3abufferusepinnedhostmemory_20_3e',['DataLessProperty&lt; detail::BufferUsePinnedHostMemory &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3aimageusehostptr_20_3e',['DataLessProperty&lt; detail::ImageUseHostPtr &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3ainorder_20_3e',['DataLessProperty&lt; detail::InOrder &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3anoinit_20_3e',['DataLessProperty&lt; detail::NoInit &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3aqueueenableprofiling_20_3e',['DataLessProperty&lt; detail::QueueEnableProfiling &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalessproperty_3c_20detail_3a_3auseprimarycontext_20_3e',['DataLessProperty&lt; detail::UsePrimaryContext &gt;',['../classcl_1_1sycl_1_1detail_1_1DataLessProperty.html',1,'cl::sycl::detail']]],
+  ['datalesspropertybase',['DataLessPropertyBase',['../classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html',1,'cl::sycl::detail']]],
   ['default_5fselector',['default_selector',['../classcl_1_1sycl_1_1default__selector.html',1,'cl::sycl']]],
   ['deleter_5fdata',['deleter_data',['../struct__pi__context_1_1deleter__data.html',1,'_pi_context']]],
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html',1,'cl::sycl::detail']]],

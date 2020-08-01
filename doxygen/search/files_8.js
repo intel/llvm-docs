@@ -7,6 +7,7 @@ var searchData=
   ['image_5fimpl_2ecpp',['image_impl.cpp',['../image__impl_8cpp.html',1,'']]],
   ['image_5fimpl_2ehpp',['image_impl.hpp',['../image__impl_8hpp.html',1,'']]],
   ['image_5focl_5ftypes_2ehpp',['image_ocl_types.hpp',['../image__ocl__types_8hpp.html',1,'']]],
+  ['image_5fproperties_2ehpp',['image_properties.hpp',['../image__properties_8hpp.html',1,'']]],
   ['info_5fdesc_2ehpp',['info_desc.hpp',['../info__desc_8hpp.html',1,'']]],
   ['interop_5fhandle_2ecpp',['interop_handle.cpp',['../interop__handle_8cpp.html',1,'']]],
   ['interop_5fhandle_2ehpp',['interop_handle.hpp',['../interop__handle_8hpp.html',1,'']]],

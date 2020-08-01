@@ -34,5 +34,5 @@ var searchData=
   ['crossdevice',['CrossDevice',['../struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4afe7b910d8db10176ef18b2e08796792e',1,'__spv::Scope']]],
   ['crossworkgroupmemory',['CrossWorkgroupMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a56b4a304a05af381e2e06c0357083dae',1,'__spv::MemorySemanticsMask']]],
   ['cuda',['cuda',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a39466fe22b062a34cfe09f3cc8c24868',1,'cl::sycl']]],
-  ['custom',['custom',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a8b9035807842a4e4dbe009f3f1478127',1,'cl::sycl::info::custom()'],['../namespacecl_1_1sycl_1_1detail.html#a574bceff7ee9afb6beeeaf28b0f549bba8b9035807842a4e4dbe009f3f1478127',1,'cl::sycl::detail::custom()']]]
+  ['custom',['custom',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a8b9035807842a4e4dbe009f3f1478127',1,'cl::sycl::info::custom()'],['../namespacecl_1_1sycl_1_1detail.html#a3e65b92996d59ada3452ecba0fd88524a8b9035807842a4e4dbe009f3f1478127',1,'cl::sycl::detail::custom()']]]
 ];

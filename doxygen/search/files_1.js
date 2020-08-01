@@ -6,6 +6,7 @@ var searchData=
   ['buffer_2ehpp',['buffer.hpp',['../buffer_8hpp.html',1,'']]],
   ['buffer_5fimpl_2ecpp',['buffer_impl.cpp',['../buffer__impl_8cpp.html',1,'']]],
   ['buffer_5fimpl_2ehpp',['buffer_impl.hpp',['../buffer__impl_8hpp.html',1,'']]],
+  ['buffer_5fproperties_2ehpp',['buffer_properties.hpp',['../buffer__properties_8hpp.html',1,'']]],
   ['builtins_2ehpp',['builtins.hpp',['../builtins_8hpp.html',1,'(Global Namespace)'],['../detail_2builtins_8hpp.html',1,'(Global Namespace)'],['../intel_2builtins_8hpp.html',1,'(Global Namespace)']]],
   ['builtins_5fcommon_2ecpp',['builtins_common.cpp',['../builtins__common_8cpp.html',1,'']]],
   ['builtins_5fgeometric_2ecpp',['builtins_geometric.cpp',['../builtins__geometric_8cpp.html',1,'']]],

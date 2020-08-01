@@ -12,6 +12,7 @@ var searchData=
   ['enableifispointer',['EnableIfIsPointer',['../namespacecl_1_1sycl_1_1intel.html#ab898d263524b1e64acfd0f0c4c98b77c',1,'cl::sycl::intel']]],
   ['enableifisscalararithmetic',['EnableIfIsScalarArithmetic',['../structcl_1_1sycl_1_1intel_1_1sub__group.html#a8cfe92b47822b4bdf0e2eeeb29658d7c',1,'cl::sycl::intel::sub_group::EnableIfIsScalarArithmetic()'],['../namespacecl_1_1sycl_1_1intel.html#a1bdcc63af84ac2b3b9365d350d79fc8d',1,'cl::sycl::intel::EnableIfIsScalarArithmetic()']]],
   ['enableifisscalararithmeticnativeop',['EnableIfIsScalarArithmeticNativeOp',['../namespacecl_1_1sycl_1_1intel.html#a5f6a84a6f2bba817e6793c320916c2f5',1,'cl::sycl::intel']]],
+  ['enableifistriviallycopyable',['EnableIfIsTriviallyCopyable',['../namespacecl_1_1sycl_1_1intel.html#a27f294331c29600e0da5ec2140b4c682',1,'cl::sycl::intel']]],
   ['enableifisvectorarithmetic',['EnableIfIsVectorArithmetic',['../namespacecl_1_1sycl_1_1intel.html#aede473342667d326eb34dd18db5c5a45',1,'cl::sycl::intel']]],
   ['enableifisvectorarithmeticnativeop',['EnableIfIsVectorArithmeticNativeOp',['../namespacecl_1_1sycl_1_1intel.html#a0eb0ab44b384e5691996ff4c157311c0',1,'cl::sycl::intel']]],
   ['enableifitinputiterator',['EnableIfItInputIterator',['../classcl_1_1sycl_1_1buffer.html#abb9def451f44cef9dbaefcd22b7f1785',1,'cl::sycl::buffer']]],

@@ -8,5 +8,5 @@ var searchData=
   ['platform',['platform',['../namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2a',1,'cl::sycl::info']]],
   ['program',['program',['../namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792',1,'cl::sycl::info']]],
   ['program_5fstate',['program_state',['../namespacecl_1_1sycl.html#a104e4e04504c3752e3ba5a3d4013e0eb',1,'cl::sycl']]],
-  ['propkind',['PropKind',['../namespacecl_1_1sycl_1_1property_1_1detail.html#ae6452b68a5b895bd0bc6212513da523a',1,'cl::sycl::property::detail']]]
+  ['propwithdatakind',['PropWithDataKind',['../namespacecl_1_1sycl_1_1detail.html#ab239bf63c30d37433cefe089d9c3a816',1,'cl::sycl::detail']]]
 ];

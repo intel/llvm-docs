@@ -16,6 +16,7 @@ var searchData=
   ['context_5fimpl_2ecpp',['context_impl.cpp',['../context__impl_8cpp.html',1,'']]],
   ['context_5fimpl_2ehpp',['context_impl.hpp',['../context__impl_8hpp.html',1,'']]],
   ['context_5finfo_2ehpp',['context_info.hpp',['../context__info_8hpp.html',1,'']]],
+  ['context_5fproperties_2ehpp',['context_properties.hpp',['../context__properties_8hpp.html',1,'']]],
   ['cuda_2ehpp',['cuda.hpp',['../cuda_8hpp.html',1,'']]],
   ['cuda_5fdefinitions_2ehpp',['cuda_definitions.hpp',['../cuda__definitions_8hpp.html',1,'']]]
 ];

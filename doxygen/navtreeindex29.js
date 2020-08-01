@@ -1,5 +1,10 @@
 var NAVTREEINDEX29 =
 {
+"structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3.html":[3,0,2,1,4,0,10],
+"structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3.html#afeb695cefbcd26c0cf503d8c517af93e":[3,0,2,1,4,0,10,0],
+"structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01double_01_4.html":[3,0,2,1,4,0,8],
+"structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01double_01_4.html#a7109dd3aaf4a69d37ff41dee3277b7f4":[3,0,2,1,4,0,8,0],
+"structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01float_01_4.html":[3,0,2,1,4,0,9],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01float_01_4.html#a102b10209680fd8e8d81a472dea9c500":[3,0,2,1,4,0,9,0],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1get__reduction__aux__kernel__name__t.html":[3,0,2,1,4,0,11],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1get__reduction__aux__kernel__name__t.html#ad83da0cd399bfffaacdb7f82000d8859":[3,0,2,1,4,0,11,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html#a226f992d4457e159a946bcfb5a8d76dd":[3,0,2,1,50,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html":[3,0,2,1,51],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html#a759024eabd998e3eaf6e3fdc85996e4c":[3,0,2,1,51,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html":[3,0,2,1,52],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html#a9d1e1ed94185e07d707fe8937ca94174":[3,0,2,1,52,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html":[3,0,2,1,53],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html#af84c96538789a3c3560e4a82dd24c502":[3,0,2,1,53,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html":[3,0,2,1,54],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html#a8b6a7564e4e531423c495966b989d407":[3,0,2,1,54,0]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html":[3,0,2,1,52]
 };

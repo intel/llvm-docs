@@ -1,6 +1,6 @@
 var queue__impl_8cpp =
 [
-    [ "prepareUSMEvent", "queue__impl_8cpp.html#a050f8400d425d483940c9d509e19d4a2", null ],
+    [ "prepareUSMEvent", "queue__impl_8cpp.html#a1544693ebf45a294574b28ea539a28d3", null ],
     [ "queue_impl::get_info< info::queue::context >", "queue__impl_8cpp.html#a20a7aaeb4c81e81ea6460b3249b64446", null ],
     [ "queue_impl::get_info< info::queue::device >", "queue__impl_8cpp.html#a90189ecc5e6b48aa2e74d02f9de448c0", null ],
     [ "queue_impl::get_info< info::queue::reference_count >", "queue__impl_8cpp.html#a20ed13879c2c7c4e5585b710b125f18e", null ]

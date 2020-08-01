@@ -7,5 +7,5 @@ var searchData=
   ['configid',['ConfigID',['../namespacecl_1_1sycl_1_1detail.html#a1f36acdc3445e874ecb97bb9f6129f01',1,'cl::sycl::detail']]],
   ['context',['context',['../namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707',1,'cl::sycl::info']]],
   ['coordinate_5fnormalization_5fmode',['coordinate_normalization_mode',['../namespacecl_1_1sycl.html#a7affaf1f828474ac7e461ae6e9831367',1,'cl::sycl']]],
-  ['cuda_5fcontext_5ftype',['cuda_context_type',['../namespacecl_1_1sycl_1_1detail.html#a574bceff7ee9afb6beeeaf28b0f549bb',1,'cl::sycl::detail']]]
+  ['cudacontextt',['CUDAContextT',['../namespacecl_1_1sycl_1_1detail.html#a3e65b92996d59ada3452ecba0fd88524',1,'cl::sycl::detail']]]
 ];

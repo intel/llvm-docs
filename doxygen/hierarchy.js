@@ -197,6 +197,30 @@ var hierarchy =
     [ "cl::sycl::detail::copy_cv_qualifiers_impl< const T, R >", "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01T_00_01R_01_4.html", null ],
     [ "cl::sycl::detail::copy_cv_qualifiers_impl< const volatile T, R >", "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html", null ],
     [ "cl::sycl::detail::copy_cv_qualifiers_impl< volatile T, R >", "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html", null ],
+    [ "cl::sycl::detail::DataLessPropertyBase", "classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html", [
+      [ "cl::sycl::detail::DataLessProperty< ID >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", null ],
+      [ "cl::sycl::detail::DataLessProperty< detail::BufferUseHostPtr >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::buffer::use_host_ptr", "classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::BufferUsePinnedHostMemory >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::ext::oneapi::property::buffer::use_pinned_host_memory", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::ImageUseHostPtr >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::image::use_host_ptr", "classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::InOrder >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::queue::in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::NoInit >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::QueueEnableProfiling >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::queue::enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::UsePrimaryContext >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::context::cuda::use_primary_context", "classcl_1_1sycl_1_1property_1_1context_1_1cuda_1_1use__primary__context.html", null ]
+      ] ]
+    ] ],
     [ "_pi_context::deleter_data", "struct__pi__context_1_1deleter__data.html", null ],
     [ "cl::sycl::detail::DepDesc", "structcl_1_1sycl_1_1detail_1_1DepDesc.html", null ],
     [ "cl::sycl::detail::DevDescT", "structcl_1_1sycl_1_1detail_1_1DevDescT.html", null ],
@@ -625,44 +649,23 @@ var hierarchy =
     [ "cl::sycl::program", "classcl_1_1sycl_1_1program.html", null ],
     [ "cl::sycl::detail::program_impl", "classcl_1_1sycl_1_1detail_1_1program__impl.html", null ],
     [ "cl::sycl::detail::ProgramManager", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html", null ],
-    [ "cl::sycl::property::detail::Prop< PropKindT >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::detail::ContextBoundBase< PropKindT >", "classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html", null ],
-      [ "cl::sycl::property::detail::UseMutexBase< PropKindT >", "classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html", null ],
-      [ "cl::sycl::property::detail::ContextBoundBase< detail::PropKind::BufferContextBound >", "classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html", [
+    [ "cl::sycl::property_list", "classcl_1_1sycl_1_1property__list.html", null ],
+    [ "cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html", null ],
+    [ "cl::sycl::detail::PropertyWithDataBase", "classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html", [
+      [ "cl::sycl::detail::PropertyWithData< ID >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", null ],
+      [ "cl::sycl::detail::PropertyWithData< detail::BufferContextBound >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", [
         [ "cl::sycl::property::buffer::context_bound", "classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html", null ]
       ] ],
-      [ "cl::sycl::property::detail::ContextBoundBase< detail::PropKind::ImageContextBound >", "classcl_1_1sycl_1_1property_1_1detail_1_1ContextBoundBase.html", [
-        [ "cl::sycl::property::image::context_bound", "classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html", null ]
-      ] ],
-      [ "cl::sycl::property::detail::UseMutexBase< detail::PropKind::BufferUseMutex >", "classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html", [
+      [ "cl::sycl::detail::PropertyWithData< detail::BufferUseMutex >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", [
         [ "cl::sycl::property::buffer::use_mutex", "classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html", null ]
       ] ],
-      [ "cl::sycl::property::detail::UseMutexBase< detail::PropKind::ImageUseMutex >", "classcl_1_1sycl_1_1property_1_1detail_1_1UseMutexBase.html", [
+      [ "cl::sycl::detail::PropertyWithData< detail::ImageContextBound >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", [
+        [ "cl::sycl::property::image::context_bound", "classcl_1_1sycl_1_1property_1_1image_1_1context__bound.html", null ]
+      ] ],
+      [ "cl::sycl::detail::PropertyWithData< detail::ImageUseMutex >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", [
         [ "cl::sycl::property::image::use_mutex", "classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html", null ]
       ] ]
     ] ],
-    [ "cl::sycl::property::detail::Prop< detail::PropKind::BufferUseHostPtr >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::buffer::use_host_ptr", "classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html", null ]
-    ] ],
-    [ "cl::sycl::property::detail::Prop< detail::PropKind::BufferUsePinnedHostMemory >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::detail::buffer_::use_pinned_host_memory", "classcl_1_1sycl_1_1property_1_1detail_1_1buffer___1_1use__pinned__host__memory.html", null ]
-    ] ],
-    [ "cl::sycl::property::detail::Prop< detail::PropKind::ImageUseHostPtr >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::image::use_host_ptr", "classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html", null ]
-    ] ],
-    [ "cl::sycl::property::detail::Prop< detail::PropKind::InOrder >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::queue::in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ]
-    ] ],
-    [ "cl::sycl::property::detail::Prop< detail::PropKind::NoInit >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ]
-    ] ],
-    [ "cl::sycl::property::detail::Prop< detail::PropKind::QueueEnableProfiling >", "classcl_1_1sycl_1_1property_1_1detail_1_1Prop.html", [
-      [ "cl::sycl::property::queue::enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ]
-    ] ],
-    [ "cl::sycl::property::detail::PropBase", "classcl_1_1sycl_1_1property_1_1detail_1_1PropBase.html", null ],
-    [ "cl::sycl::property_list", "classcl_1_1sycl_1_1property__list.html", null ],
-    [ "cl::sycl::property::detail::PropertyHolder< T >", "classcl_1_1sycl_1_1property_1_1detail_1_1PropertyHolder.html", null ],
-    [ "cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html", null ],
     [ "cl::sycl::detail::PtrValueType< ElementType, addressSpace >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::detail::PtrValueType< const void, Space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::detail::PtrValueType< ElementType, access::address_space::constant_space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html", null ],
@@ -675,8 +678,8 @@ var hierarchy =
     [ "cl::sycl::detail::PtrValueType< void, Space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
-    [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html", null ],
     [ "cl::sycl::intel::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", null ],
@@ -902,6 +905,7 @@ var hierarchy =
     [ "cl::sycl::detail::TryToGetPointerT< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetPointerT.html", null ],
     [ "cl::sycl::detail::TryToGetPointerVecT< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetPointerVecT.html", null ],
     [ "cl::sycl::detail::TryToGetVectorT< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetVectorT.html", null ],
+    [ "type", "classstd_1_1conditional_1_1type.html", null ],
     [ "cl::sycl::detail::type_list< T >", "structcl_1_1sycl_1_1detail_1_1type__list.html", null ],
     [ "cl::sycl::detail::type_list< H, T... >", "structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html", null ],
     [ "cl::sycl::detail::type_list< type_list< H, T... >, T2... >", "structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html", null ],

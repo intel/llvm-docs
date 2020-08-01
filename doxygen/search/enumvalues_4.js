@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['datalesspropkindsize',['DataLessPropKindSize',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa3e52d3421431774d908abb15de3620ac',1,'cl::sycl::detail']]],
   ['dec',['dec',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1feea25ecb958229287f885aebe7c49b',1,'cl::sycl']]],
   ['defaultfloat',['defaultfloat',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a2ef4603357809b52b88d59db2f18c4da',1,'cl::sycl']]],
   ['denorm',['denorm',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273ad14934558f81f7ea5012ab4de4031017',1,'cl::sycl::info']]],
