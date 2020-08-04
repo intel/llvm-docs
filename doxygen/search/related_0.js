@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5f_5fimage_5farray_5fslice_5f_5f',['__image_array_slice__',['../classcl_1_1sycl_1_1detail_1_1image__accessor.html#a5f21982bc6aa211c8bd51f38c89434b7',1,'cl::sycl::detail::image_accessor']]]
+  ['mockscheduler',['MockScheduler',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#abdaaf5a2d722606881305408b00bcc5f',1,'cl::sycl::detail::Scheduler::GraphBuilder']]]
 ];

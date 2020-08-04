@@ -103,6 +103,7 @@ var group__sycl__graph =
       [ "removeRecordForMemObj", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afa56d71db0c9239e57ea83ac5236b123", null ],
       [ "rescheduleCommand", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#aed85e3c5fdf6b6547b563ec2e8007dc9", null ],
       [ "updateLeaves", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a59d7b3e117a153b13ad300e0224ecf90", null ],
+      [ "::MockScheduler", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#abdaaf5a2d722606881305408b00bcc5f", null ],
       [ "Command", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a62a7fc89f0ee4604e3ccab9b6b6a343f", null ],
       [ "MMemObjs", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a6d42750e40104858732eb41d29723c2b", null ]
     ] ],

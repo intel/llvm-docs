@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"sycl__mem__obj__t_8hpp.html#abe01ee7a2b6230dd8d7603a3f41fda44":[4,0,0,0,1,2,36,2],
+"sycl__mem__obj__t_8hpp_source.html":[4,0,0,0,1,2,36],
 "thread__pool_8hpp.html":[4,0,2,1,59],
 "thread__pool_8hpp_source.html":[4,0,2,1,59],
 "todo.html":[0],
@@ -81,8 +83,8 @@ var NAVTREEINDEX32 =
 "types_8hpp.html#ac584ce40399ae48d463ca9288452c26e":[4,0,0,0,1,45,46],
 "types_8hpp.html#ad2bcd44f79a3de65d64de22c817e4640":[4,0,0,0,1,45,63],
 "types_8hpp.html#ad3373d8fce05b7b4666497e43fc7ad30":[4,0,0,0,1,45,29],
-"types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06":[4,0,0,0,1,45,16],
 "types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06":[4,0,0,0,1,45,17],
+"types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06":[4,0,0,0,1,45,16],
 "types_8hpp.html#adbd52276a65e059008b8aa11bc14d4d6":[4,0,0,0,1,45,38],
 "types_8hpp.html#ae51509d2097e818fef2e3ae3912f03cf":[4,0,0,0,1,45,39],
 "types_8hpp.html#ae8f1a55b1be20b6052dce4af61d421b7":[4,0,0,0,1,45,53],

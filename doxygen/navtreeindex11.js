@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1intel_1_1kernel__writeable__io__pipe.html#aae97f1eed6c748b99177d22e74107f76":[3,0,2,1,4,11,1],
 "classcl_1_1sycl_1_1intel_1_1lsu.html":[3,0,2,1,4,12],
 "classcl_1_1sycl_1_1intel_1_1lsu.html#a14178d9c0f992f82fbf18a10cc4fdf37":[3,0,2,1,4,12,2],
 "classcl_1_1sycl_1_1intel_1_1lsu.html#a2de8a9685da569fe97c035d138ca3eee":[3,0,2,1,4,12,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1program.html#a3dd0c8d9c68fb667b23caa8502f64efa":[1,1,20,30],
 "classcl_1_1sycl_1_1program.html#a3f05e5d7b985fe6e8a3b6e5654527a62":[1,1,20,28],
 "classcl_1_1sycl_1_1program.html#a52de7223f772e3d98b7a700ec0f146b7":[1,1,20,25],
-"classcl_1_1sycl_1_1program.html#a66001da30147f4582e8436e9fe4a3404":[1,1,20,18],
-"classcl_1_1sycl_1_1program.html#a6a8e0f5e8e85d87cf97a42ff528c72b9":[1,1,20,6]
+"classcl_1_1sycl_1_1program.html#a66001da30147f4582e8436e9fe4a3404":[1,1,20,18]
 };

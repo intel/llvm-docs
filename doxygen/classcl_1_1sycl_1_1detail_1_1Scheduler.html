@@ -233,7 +233,7 @@ Error handling</h2>
 <p>If an error occurs during command enqueue process, the <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a2565f65d0229d9e933eb24d7cef51c80" title="Checks if the command is enqueued, and calls enqueueImp. ">Command::enqueue</a> method returns the faulty command. <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> then reschedules the command and all dependent commands (if any).</p>
 <p>An error with command processing can happen in underlying runtime, in this case <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html" title="DPC++ graph scheduler class. ">Scheduler</a> is notified asynchronously (using callback mechanism) what triggers rescheduling. </p>
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00352">352</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00355">355</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aad4ad62a6e1d3c4eb1a29c1d464357c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad4ad62a6e1d3c4eb1a29c1d464357c8">&#9670;&nbsp;</a></span>Scheduler()</h2>
@@ -429,7 +429,7 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00216">216</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00203">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
 
 </div>
 </div>
@@ -456,7 +456,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00427">427</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00430">430</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01708">cl::sycl::detail::DispatchNativeKernel()</a>.</p>
 
@@ -668,7 +668,7 @@ Error handling</h2>
 
 <p class="definition">Definition at line <a class="el" href="scheduler_8cpp_source.html#l00023">23</a> of file <a class="el" href="scheduler_8cpp_source.html">scheduler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00320">cl::sycl::detail::AllocaCommandBase::getReleaseCmd()</a>, <a class="el" href="scheduler_8hpp_source.html#l00194">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="commands_8cpp_source.html#l00632">cl::sycl::detail::Command::resolveReleaseDependencies()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00320">cl::sycl::detail::AllocaCommandBase::getReleaseCmd()</a>, <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="commands_8hpp_source.html#l00057">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="scheduler_8hpp_source.html#l00203">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="commands_8cpp_source.html#l00632">cl::sycl::detail::Command::resolveReleaseDependencies()</a>.</p>
 
 </div>
 </div>
@@ -693,7 +693,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00703">703</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00708">708</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>
@@ -717,7 +717,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00704">704</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00709">709</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>
@@ -742,7 +742,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00701">701</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00706">706</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>
@@ -766,7 +766,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00431">431</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00434">434</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>
@@ -790,7 +790,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00696">696</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00701">701</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00478">cl::sycl::detail::Command::processDepEvent()</a>.</p>
 
@@ -816,7 +816,7 @@ Error handling</h2>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00699">699</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00704">704</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00197">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
 
