@@ -1,5 +1,7 @@
 var group__algorithm_8hpp =
 [
+    [ "FenceScope", "structcl_1_1sycl_1_1detail_1_1FenceScope.html", "structcl_1_1sycl_1_1detail_1_1FenceScope" ],
+    [ "FenceScope< intel::sub_group >", "structcl_1_1sycl_1_1detail_1_1FenceScope_3_01intel_1_1sub__group_01_4.html", "structcl_1_1sycl_1_1detail_1_1FenceScope_3_01intel_1_1sub__group_01_4" ],
     [ "identity", "structcl_1_1sycl_1_1detail_1_1identity.html", null ],
     [ "identity< T, intel::plus< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1plus_3_01V_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1plus_3_01V_01_4_01_4" ],
     [ "identity< T, intel::minimum< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1minimum_3_01V_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1minimum_3_01V_01_4_01_4" ],
@@ -19,6 +21,8 @@ var group__algorithm_8hpp =
     [ "any_of", "group__algorithm_8hpp.html#a420f7984e613623652c2f61442f74127", null ],
     [ "any_of", "group__algorithm_8hpp.html#af11d7cc65efd66a70f73eda3be730f74", null ],
     [ "any_of", "group__algorithm_8hpp.html#a6cbc9e59bf4d4b2124ff04b749cd2ff2", null ],
+    [ "barrier", "group__algorithm_8hpp.html#a7f88cc0583691f15baf40126df4459ac", null ],
+    [ "barrier", "group__algorithm_8hpp.html#ac2a24a2e1e165b1ce9192eb1fd083cd7", null ],
     [ "broadcast", "group__algorithm_8hpp.html#a7527d19b370ac7ed5b4d081a6d144594", null ],
     [ "broadcast", "group__algorithm_8hpp.html#af13e04e2dbce8290336e5da68186bbe6", null ],
     [ "broadcast", "group__algorithm_8hpp.html#a9dd89dea4be507c70418ffb4fc7ec368", null ],

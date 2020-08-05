@@ -65,6 +65,8 @@ var namespacecl_1_1sycl_1_1detail =
     [ "EqualTo", "structcl_1_1sycl_1_1detail_1_1EqualTo.html", "structcl_1_1sycl_1_1detail_1_1EqualTo" ],
     [ "event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html", "classcl_1_1sycl_1_1detail_1_1event__impl" ],
     [ "ExecCGCommand", "classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html", "classcl_1_1sycl_1_1detail_1_1ExecCGCommand" ],
+    [ "FenceScope", "structcl_1_1sycl_1_1detail_1_1FenceScope.html", "structcl_1_1sycl_1_1detail_1_1FenceScope" ],
+    [ "FenceScope< intel::sub_group >", "structcl_1_1sycl_1_1detail_1_1FenceScope_3_01intel_1_1sub__group_01_4.html", "structcl_1_1sycl_1_1detail_1_1FenceScope_3_01intel_1_1sub__group_01_4" ],
     [ "find_type", "structcl_1_1sycl_1_1detail_1_1find__type.html", "structcl_1_1sycl_1_1detail_1_1find__type" ],
     [ "find_type< empty_type_list, C, T >", "structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html", "structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4" ],
     [ "get_context_info", "structcl_1_1sycl_1_1detail_1_1get__context__info.html", "structcl_1_1sycl_1_1detail_1_1get__context__info" ],

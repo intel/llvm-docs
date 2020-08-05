@@ -64,7 +64,7 @@ var searchData=
   ['denorm',['denorm',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273ad14934558f81f7ea5012ab4de4031017',1,'cl::sycl::info']]],
   ['denorm_5fmin',['denorm_min',['../structstd_1_1numeric__limits_3_01half_01_4.html#a13da2f4db8560b11d94ca6dafa528a2a',1,'std::numeric_limits&lt; half &gt;']]],
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html',1,'cl::sycl::detail::DepDesc'],['../structcl_1_1sycl_1_1detail_1_1DepDesc.html#a517e13667cc6ba1340423b6bb9b0a8e0',1,'cl::sycl::detail::DepDesc::DepDesc()']]],
-  ['depends_5fon',['depends_on',['../classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7',1,'cl::sycl::handler::depends_on(event Event)'],['../classcl_1_1sycl_1_1handler.html#a5435fd06ff8e61a4c69788664bf46626',1,'cl::sycl::handler::depends_on(vector_class&lt; event &gt; Events)']]],
+  ['depends_5fon',['depends_on',['../classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7',1,'cl::sycl::handler::depends_on(event Event)'],['../classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4',1,'cl::sycl::handler::depends_on(const vector_class&lt; event &gt; &amp;Events)']]],
   ['destroy',['destroy',['../classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a84e3e22e10e15fd8868e62a53a3b2e8c',1,'cl::sycl::detail::aligned_allocator']]],
   ['devdesct',['DevDescT',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html',1,'cl::sycl::detail']]],
   ['devdriverver',['devDriverVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#adc4571a02bb3a5e0e9e0f4deb6324c88',1,'cl::sycl::detail::DevDescT']]],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190afaf7badb225f9861e3d4fa808d023f77":[4,0,0,0,1,4,0,4,12],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190afc1fc31ceecfb5079c46662e292a9d3e":[4,0,0,0,1,4,0,4,54],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190afe373d69771aca74db47fccb0126c6f7":[4,0,0,0,1,4,0,4,35],
 "info__desc_8hpp.html#ac3bd643d974bc2dd3dc81e8c716807f1":[4,0,0,0,1,4,0,22],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001":[4,0,0,0,1,4,0,15],
@@ -32,9 +34,9 @@ var NAVTREEINDEX19 =
 "item__base_8hpp.html":[4,0,0,0,1,2,23],
 "item__base_8hpp_source.html":[4,0,0,0,1,2,23],
 "kernel_8cpp.html":[4,0,2,14],
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
 "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,3],
 "kernel_8cpp.html#a72e67c3793a817f25283854d0b349c61":[4,0,2,14,4],
 "kernel_8cpp_source.html":[4,0,2,14],
@@ -50,9 +52,9 @@ var NAVTREEINDEX19 =
 "kernel__desc_8hpp_source.html":[4,0,0,0,1,2,24],
 "kernel__impl_8cpp.html":[4,0,2,1,32],
 "kernel__impl_8cpp.html#a0fa9b6316b4a22b17634726e05df14b0":[4,0,2,1,32,6],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,0],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,1],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,2],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,0],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,32,4],
 "kernel__impl_8cpp.html#a5d06cdeae7af18abb18f3c6df02761fc":[4,0,2,1,32,7],
 "kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,1,32,3],
@@ -131,8 +133,8 @@ var NAVTREEINDEX19 =
 "namespace____esimd.html":[3,0,0],
 "namespace____spv.html":[3,0,1],
 "namespace____spv.html":[2,0,1],
-"namespacecl.html":[2,0,2],
 "namespacecl.html":[3,0,2],
+"namespacecl.html":[2,0,2],
 "namespacecl_1_1____host__std.html":[2,0,2,0],
 "namespacecl_1_1____host__std.html":[3,0,2,0],
 "namespacecl_1_1____host__std_1_1detail.html":[2,0,2,0,0],
@@ -188,8 +190,8 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,10,1],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,5,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,10,1,0],
-"namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,5,2],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,2,1,10,2],
+"namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,5,2],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,2,1,5,3],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,2,1,10,3],
 "namespacecl_1_1sycl_1_1usm.html":[2,0,2,1,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "namespacemembers_type_b.html":[2,1,3,2],
 "namespacemembers_type_c.html":[2,1,3,3],
 "namespacemembers_type_d.html":[2,1,3,4],
-"namespacemembers_type_e.html":[2,1,3,5],
-"namespacemembers_type_f.html":[2,1,3,6],
-"namespacemembers_type_g.html":[2,1,3,7]
+"namespacemembers_type_e.html":[2,1,3,5]
 };

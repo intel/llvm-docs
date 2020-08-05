@@ -227,7 +227,7 @@ var group__sycl__api =
       [ "copy", "classcl_1_1sycl_1_1handler.html#a29d402737cbdce196b0278d6b3e6de84", null ],
       [ "copy", "classcl_1_1sycl_1_1handler.html#adfccda42f0d1957d65c2ca1e9e2d5097", null ],
       [ "depends_on", "classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7", null ],
-      [ "depends_on", "classcl_1_1sycl_1_1handler.html#a5435fd06ff8e61a4c69788664bf46626", null ],
+      [ "depends_on", "classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4", null ],
       [ "fill", "classcl_1_1sycl_1_1handler.html#a928150e8912597bfc30f81459b8c46bf", null ],
       [ "interop_task", "classcl_1_1sycl_1_1handler.html#a0cd322b2a5abd30dc4496dd110ee9546", null ],
       [ "memcpy", "classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c", null ],

@@ -1,5 +1,11 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html#a3aa462cb8497155b005a55cecf776faf":[3,0,2,1,47,0],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html":[3,0,2,1,49],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html#ab5d6be889a88ad49f584b0aa763f025d":[3,0,2,1,49,0],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html":[3,0,2,1,50],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html#a226f992d4457e159a946bcfb5a8d76dd":[3,0,2,1,50,0],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html":[3,0,2,1,51],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html#a759024eabd998e3eaf6e3fdc85996e4c":[3,0,2,1,51,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html":[3,0,2,1,52],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html#a9d1e1ed94185e07d707fe8937ca94174":[3,0,2,1,52,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX30 =
 "structrestype__ex_3_01float_00_01unsigned_01long_01long_01_4.html#adc7b559e449b7bc3657d7ffaeac48f97":[3,0,138,0],
 "structrestype__ex_3_01float_00_01unsigned_01short_01_4.html":[3,0,139],
 "structrestype__ex_3_01float_00_01unsigned_01short_01_4.html#a23167f05d3cdcd1ceb8f71c42523bf2c":[3,0,139,0],
-"structrestype__ex_3_01half_00_01char_01_4.html":[3,0,140],
-"structrestype__ex_3_01half_00_01char_01_4.html#ad391485e7d627b7d5df4a72b3275676d":[3,0,140,0],
-"structrestype__ex_3_01half_00_01double_01_4.html":[3,0,141],
-"structrestype__ex_3_01half_00_01double_01_4.html#a4f5ac436d0cc808021316f8aef09776e":[3,0,141,0],
-"structrestype__ex_3_01half_00_01float_01_4.html":[3,0,142],
-"structrestype__ex_3_01half_00_01float_01_4.html#aee2f88224d61113f4ae05845d138ee55":[3,0,142,0],
-"structrestype__ex_3_01half_00_01half_01_4.html":[3,0,143]
+"structrestype__ex_3_01half_00_01char_01_4.html":[3,0,140]
 };

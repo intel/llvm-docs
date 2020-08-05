@@ -1,5 +1,11 @@
 var NAVTREEINDEX29 =
 {
+"structcl_1_1sycl_1_1intel_1_1MatchType.html":[3,0,2,1,4,13],
+"structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl.html":[3,0,2,1,4,4],
+"structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl.html#aa956741896772cbe2f5253ac68d2f2af":[3,0,2,1,4,4,0],
+"structcl_1_1sycl_1_1intel_1_1burst__coalesce__impl.html#ae26a9b0f8c8b84d0c3c57e6b525c8181":[3,0,2,1,4,4,1],
+"structcl_1_1sycl_1_1intel_1_1cache.html":[3,0,2,1,4,5],
+"structcl_1_1sycl_1_1intel_1_1cache.html#a47a2e32cbf9d61f7657280b1bc2020ec":[3,0,2,1,4,5,0],
 "structcl_1_1sycl_1_1intel_1_1cache.html#a796eb554f39881d9b322ecb7aa17fbd1":[3,0,2,1,4,5,1],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal.html":[3,0,2,1,4,0,7],
 "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3.html":[3,0,2,1,4,0,10],
@@ -243,11 +249,5 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html#a7a89079fccc01970c51c2f11dc8762f2":[3,0,2,1,46,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html":[3,0,2,1,48],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html#a7cde3937196c36822cb694f8b8256d1e":[3,0,2,1,48,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html":[3,0,2,1,47],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html#a3aa462cb8497155b005a55cecf776faf":[3,0,2,1,47,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html":[3,0,2,1,49],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html#ab5d6be889a88ad49f584b0aa763f025d":[3,0,2,1,49,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html":[3,0,2,1,50],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html#a226f992d4457e159a946bcfb5a8d76dd":[3,0,2,1,50,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html":[3,0,2,1,51]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html":[3,0,2,1,47]
 };
