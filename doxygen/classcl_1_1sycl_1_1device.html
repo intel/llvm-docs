@@ -168,6 +168,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a84b4d6bb4a886820ab93ca1726eda6f7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a84b4d6bb4a886820ab93ca1726eda6f7">get_native</a> () const -&gt; typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; BackendName, <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
 <tr class="memdesc:a84b4d6bb4a886820ab93ca1726eda6f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL device.  <a href="#a84b4d6bb4a886820ab93ca1726eda6f7">More...</a><br /></td></tr>
 <tr class="separator:a84b4d6bb4a886820ab93ca1726eda6f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b7e8ad5111f22b96326ff5e0d2fb72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1device.html#a80b7e8ad5111f22b96326ff5e0d2fb72">has</a> (<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261e">aspect</a> Aspect) const</td></tr>
+<tr class="memdesc:a80b7e8ad5111f22b96326ff5e0d2fb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if the SYCL device has the given feature.  <a href="#a80b7e8ad5111f22b96326ff5e0d2fb72">More...</a><br /></td></tr>
+<tr class="separator:a80b7e8ad5111f22b96326ff5e0d2fb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -187,7 +190,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The SYCL device class encapsulates a single SYCL device on which kernels may be executed. </p>
 
-<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00033">33</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00034">34</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6f54ed6a0d417c5f97686b35cb9783fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f54ed6a0d417c5f97686b35cb9783fa">&#9670;&nbsp;</a></span>device() <span class="overload">[1/5]</span></h2>
@@ -554,7 +557,7 @@ template&lt;backend BackendName&gt; </div>
 <p>Gets the native handle of the SYCL device. </p>
 <dl class="section return"><dt>Returns</dt><dd>a native handle, the type of which defined by the backend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00178">178</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00179">179</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, <a class="el" href="common_8hpp_source.html#l00172">cl::sycl::detail::getRawSyclObjImpl()</a>, and <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
@@ -582,6 +585,35 @@ template&lt;backend BackendName&gt; </div>
 <p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00089">89</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="context_8cpp_source.html#l00040">cl::sycl::context::context()</a>, <a class="el" href="fpga__device__selector_8hpp_source.html#l00025">cl::sycl::intel::platform_selector::operator()()</a>, and <a class="el" href="platform_8cpp_source.html#l00026">cl::sycl::platform::platform()</a>.</p>
+
+</div>
+</div>
+<a id="a80b7e8ad5111f22b96326ff5e0d2fb72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b7e8ad5111f22b96326ff5e0d2fb72">&#9670;&nbsp;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::device::has </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261e">aspect</a>&#160;</td>
+          <td class="paramname"><em>Aspect</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates if the SYCL device has the given feature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Aspect</td><td>is one of the values in Table 4.20 of the SYCL 2020 Provisional Spec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the SYCL device has the given feature. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="device_8cpp_source.html#l00140">140</a> of file <a class="el" href="device_8cpp_source.html">device.cpp</a>.</p>
 
 </div>
 </div>
@@ -734,7 +766,7 @@ template&lt;backend BackendName&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00052">52</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00053">53</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>.</p>
 
@@ -816,7 +848,7 @@ template&lt;backend BackendName&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00050">50</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="device_8hpp_source.html#l00051">51</a> of file <a class="el" href="device_8hpp_source.html">device.hpp</a>.</p>
 
 </div>
 </div>

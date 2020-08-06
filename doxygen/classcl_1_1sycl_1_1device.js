@@ -13,6 +13,7 @@ var classcl_1_1sycl_1_1device =
     [ "get_info", "classcl_1_1sycl_1_1device.html#ae1faacc7295978a148966656f4b4ee06", null ],
     [ "get_native", "classcl_1_1sycl_1_1device.html#a84b4d6bb4a886820ab93ca1726eda6f7", null ],
     [ "get_platform", "classcl_1_1sycl_1_1device.html#afa10a8634c8fa5e4326435e04af485f2", null ],
+    [ "has", "classcl_1_1sycl_1_1device.html#a80b7e8ad5111f22b96326ff5e0d2fb72", null ],
     [ "has_extension", "classcl_1_1sycl_1_1device.html#ae54e6c93e268dd5702c9f7d11691d015", null ],
     [ "is_accelerator", "classcl_1_1sycl_1_1device.html#a4c46ad9dfc37b0ae3aee39e1ea98ca03", null ],
     [ "is_cpu", "classcl_1_1sycl_1_1device.html#af232cc1464ff46474750f3511243e017", null ],

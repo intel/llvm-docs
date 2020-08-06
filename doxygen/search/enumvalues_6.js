@@ -7,7 +7,8 @@ var searchData=
   ['float',['Float',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa22ae0e2b89e5e3d477f988cc36d3272b',1,'cl::sycl::detail::PlatformUtil']]],
   ['flush',['flush',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a86f354b8575a1a736775ae003fa344e5',1,'cl::sycl']]],
   ['fma',['fma',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a8c1b768340dffcaf747fd0acc98f0ce5',1,'cl::sycl::info']]],
-  ['fp16',['fp16',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl']]],
+  ['fp16',['fp16',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::fp16()'],['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::fp16()']]],
   ['fp32',['fp32',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea4e1bd87474ad81110395b71013094b35',1,'cl::sycl']]],
+  ['fp64',['fp64',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea36dd759373a12bd5960718d0c482a2d4',1,'cl::sycl']]],
   ['function_5fname',['function_name',['../namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aae82f83ed7c80ba9065e07ee379ce7a56',1,'cl::sycl::info']]]
 ];

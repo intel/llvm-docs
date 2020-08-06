@@ -13,6 +13,6 @@ var searchData=
   ['global_5fmem_5fsize',['global_mem_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ab4de23283932dd3379e1cf289219128c',1,'cl::sycl::info']]],
   ['global_5fspace',['global_space',['../namespacecl_1_1sycl_1_1access.html#a4d49b23bd01f94213f7820fba6d5be69a8b6e19b80779e1f75b1c5f54a800dca4',1,'cl::sycl::access::global_space()'],['../namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa8b6e19b80779e1f75b1c5f54a800dca4',1,'cl::sycl::access::global_space()']]],
   ['global_5fwork_5fsize',['global_work_size',['../namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9a408f7779a31f0760bb11cec7ace24487',1,'cl::sycl::info']]],
-  ['gpu',['gpu',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a0aa0be2a866411d9ff03515227454947',1,'cl::sycl::info']]],
+  ['gpu',['gpu',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea0aa0be2a866411d9ff03515227454947',1,'cl::sycl::gpu()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a0aa0be2a866411d9ff03515227454947',1,'cl::sycl::info::gpu()']]],
   ['grf',['GRF',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951aa336fcc5f3186c774795aaec472e6185',1,'__esimd']]]
 ];

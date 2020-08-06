@@ -2,7 +2,7 @@ var searchData=
 [
   ['a',['a',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa0cc175b9c0f1b6a831c399e269772661',1,'cl::sycl']]],
   ['abgr',['abgr',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa46128f8d3bdd9be3f4c5085161e4f8b9',1,'cl::sycl']]],
-  ['accelerator',['accelerator',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a226522b5dff606dbd2bc2538e0d26f6c',1,'cl::sycl::info']]],
+  ['accelerator',['accelerator',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea226522b5dff606dbd2bc2538e0d26f6c',1,'cl::sycl::accelerator()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a226522b5dff606dbd2bc2538e0d26f6c',1,'cl::sycl::info::accelerator()']]],
   ['acq_5frel',['acq_rel',['../namespacecl_1_1sycl_1_1intel.html#a672372faa371f44025b94a474bbc83b5af3e0f4fa6020c4a1b19d21f32f42020c',1,'cl::sycl::intel']]],
   ['acquire',['Acquire',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a2b13bf19cb4780fd2e870d35615c923d',1,'__spv::MemorySemanticsMask::Acquire()'],['../namespacecl_1_1sycl_1_1intel.html#a672372faa371f44025b94a474bbc83b5a86a4fa105ff51b8c3be84734797d8144',1,'cl::sycl::intel::acquire()']]],
   ['acquirerelease',['AcquireRelease',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a5fc2f876d685f347e61660379b448400',1,'__spv::MemorySemanticsMask']]],

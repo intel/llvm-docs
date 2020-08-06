@@ -1,7 +1,7 @@
 var searchData=
 [
   ['il_5fversion',['il_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a03aa631709a8a1162ede52565f3887d7',1,'cl::sycl::info']]],
-  ['image',['IMAGE',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8aa4bf2cd1b27159b523e07549b86da5d20',1,'cl::sycl::detail::SYCLMemObjI::IMAGE()'],['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598a78805a221a988e79ef3f42d7c5bfd418',1,'cl::sycl::access::image()']]],
+  ['image',['IMAGE',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8aa4bf2cd1b27159b523e07549b86da5d20',1,'cl::sycl::detail::SYCLMemObjI::IMAGE()'],['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598a78805a221a988e79ef3f42d7c5bfd418',1,'cl::sycl::access::image()'],['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea78805a221a988e79ef3f42d7c5bfd418',1,'cl::sycl::image()']]],
   ['image2d_5fmax_5fheight',['image2d_max_height',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a32d3cc82e659c366219c0c4199aecfb4',1,'cl::sycl::info']]],
   ['image2d_5fmax_5fwidth',['image2d_max_width',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ad51e9d78d8bbceba716fc595dcf62060',1,'cl::sycl::info']]],
   ['image3d_5fmax_5fdepth',['image3d_max_depth',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a163aaee413467d48a5da83ae13c592ba',1,'cl::sycl::info']]],
@@ -19,6 +19,8 @@ var searchData=
   ['inf_5fnan',['inf_nan',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a55148441bb694773f842b0553e451c53',1,'cl::sycl::info']]],
   ['inorder',['InOrder',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa176ead5f066b47ab35b35fc1f6d437e8',1,'cl::sycl::detail']]],
   ['int',['Int',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa1686a6c336b71b36d77354cea19a8b52',1,'cl::sycl::detail::PlatformUtil']]],
+  ['int64_5fbase_5fatomics',['int64_base_atomics',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261eaaa6617e52aac9a99ad45d5a3aa0b60da',1,'cl::sycl']]],
+  ['int64_5fextended_5fatomics',['int64_extended_atomics',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261eac759159b1d194edcb39b140f599e0c2c',1,'cl::sycl']]],
   ['intensity',['intensity',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa04bb0ec2d0e931c59f606510558e55a1',1,'cl::sycl']]],
   ['invocation',['Invocation',['../struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad7060bbcb95ef87981650a77f3abe978',1,'__spv::Scope']]],
   ['is_5favailable',['is_available',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ad331bbef72d5903997a0e6fb68d984e0',1,'cl::sycl::info']]],

@@ -10,6 +10,8 @@ var searchData=
   ['offset',['offset',['../structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#a972dfd401bb4303521c903b18882b703',1,'cl::sycl::detail::kernel_param_desc_t::offset()'],['../classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html#a07873069e1d8a18e4198fb3441a1cdf7',1,'cl::sycl::detail::AccessorImplDevice::Offset()'],['../classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice.html#a307c7a829e9c3b3a5ae88367d4309ba6',1,'cl::sycl::detail::LocalAccessorBaseDevice::Offset()'],['../struct__pi__mem_1_1Mapping.html#a8a12e9a9600c82469ccb7d1151be524b',1,'_pi_mem::Mapping::Offset()']]],
   ['offsetperindex_5f',['offsetPerIndex_',['../struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9',1,'_pi_kernel::arguments']]],
   ['onceflag',['OnceFlag',['../pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7',1,'pi_level_zero.cpp']]],
+  ['online_5fcompiler',['online_compiler',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ead09fec1f234c40f63b2caa649928bffd',1,'cl::sycl']]],
+  ['online_5flinker',['online_linker',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea6eac88ab4945becf3d3ddeeaee00e2a0',1,'cl::sycl']]],
   ['ooo',['OOO',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06af1254165ff2e284b1b555d99d1c67e64',1,'cl::sycl::detail']]],
   ['opencl',['opencl',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a93195db1ad73788fe96193503a7d8887',1,'cl::sycl']]],
   ['opencl_2ecpp',['opencl.cpp',['../opencl_8cpp.html',1,'']]],

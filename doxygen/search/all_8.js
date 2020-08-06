@@ -425,7 +425,7 @@ var searchData=
   ['globaloffsetaccessort',['GlobalOffsetAccessorT',['../namespacecl_1_1sycl_1_1detail.html#ae5ee318241f0c6c891a706271ec3fda5',1,'cl::sycl::detail']]],
   ['globalplugin',['GlobalPlugin',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#ac267da9935c76d2d2b9859739e8c0017',1,'cl::sycl::detail::pi']]],
   ['globalsize',['GlobalSize',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#af835ff9556deb75a20d147747e642f79',1,'cl::sycl::detail::NDRDescT']]],
-  ['gpu',['gpu',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a0aa0be2a866411d9ff03515227454947',1,'cl::sycl::info']]],
+  ['gpu',['gpu',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea0aa0be2a866411d9ff03515227454947',1,'cl::sycl::gpu()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a0aa0be2a866411d9ff03515227454947',1,'cl::sycl::info::gpu()']]],
   ['gpu_5fselector',['gpu_selector',['../classcl_1_1sycl_1_1gpu__selector.html',1,'cl::sycl']]],
   ['graph_5fbuilder_2ecpp',['graph_builder.cpp',['../graph__builder_8cpp.html',1,'']]],
   ['graph_5fprocessor_2ecpp',['graph_processor.cpp',['../graph__processor_8cpp.html',1,'']]],

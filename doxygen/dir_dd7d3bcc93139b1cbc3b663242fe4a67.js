@@ -10,6 +10,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "usm", "dir_37f6d7b558fa13a28d407413718293f0.html", "dir_37f6d7b558fa13a28d407413718293f0" ],
     [ "accessor.hpp", "accessor_8hpp.html", "accessor_8hpp" ],
     [ "aliases.hpp", "aliases_8hpp.html", "aliases_8hpp" ],
+    [ "aspects.hpp", "aspects_8hpp.html", "aspects_8hpp" ],
     [ "atomic.hpp", "atomic_8hpp.html", "atomic_8hpp" ],
     [ "backend.hpp", "backend_8hpp.html", "backend_8hpp" ],
     [ "backend_types.hpp", "backend__types_8hpp.html", "backend__types_8hpp" ],

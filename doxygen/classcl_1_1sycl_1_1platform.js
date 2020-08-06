@@ -11,6 +11,7 @@ var classcl_1_1sycl_1_1platform =
     [ "get_info", "classcl_1_1sycl_1_1platform.html#a2e3b2a40bd6743c4c737dd55077e81f1", null ],
     [ "get_native", "classcl_1_1sycl_1_1platform.html#adeccfdfaa4fad084df7d6a3e24e8de6d", null ],
     [ "get_platforms", "classcl_1_1sycl_1_1platform.html#a929fcd63e258f5323562746285e09d20", null ],
+    [ "has", "classcl_1_1sycl_1_1platform.html#a854bf6ee1c6e507b0213532607822caf", null ],
     [ "has_extension", "classcl_1_1sycl_1_1platform.html#a763d9e2d88403f311b1cdc514dd72656", null ],
     [ "is_host", "classcl_1_1sycl_1_1platform.html#a945019993c817216ac19617d5a9cb62e", null ],
     [ "operator!=", "classcl_1_1sycl_1_1platform.html#a64c85c033a202cd1a86c8dbfe61b52e7", null ],

@@ -150,6 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adeccfdfaa4fad084df7d6a3e24e8de6d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#adeccfdfaa4fad084df7d6a3e24e8de6d">get_native</a> () const -&gt; typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; BackendName, <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
 <tr class="memdesc:adeccfdfaa4fad084df7d6a3e24e8de6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the native handle of the SYCL platform.  <a href="#adeccfdfaa4fad084df7d6a3e24e8de6d">More...</a><br /></td></tr>
 <tr class="separator:adeccfdfaa4fad084df7d6a3e24e8de6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854bf6ee1c6e507b0213532607822caf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1platform.html#a854bf6ee1c6e507b0213532607822caf">has</a> (<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261e">aspect</a> Aspect) const</td></tr>
+<tr class="memdesc:a854bf6ee1c6e507b0213532607822caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if all of the SYCL devices on this platform have the given feature.  <a href="#a854bf6ee1c6e507b0213532607822caf">More...</a><br /></td></tr>
+<tr class="separator:a854bf6ee1c6e507b0213532607822caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -498,6 +501,35 @@ template&lt;backend BackendName&gt; </div>
 <p class="reference">References <a class="el" href="platform__impl_8cpp_source.html#l00051">cl::sycl::detail::platform_impl::get_platforms()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="device_8cpp_source.html#l00044">cl::sycl::device::get_devices()</a>.</p>
+
+</div>
+</div>
+<a id="a854bf6ee1c6e507b0213532607822caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854bf6ee1c6e507b0213532607822caf">&#9670;&nbsp;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::platform::has </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261e">aspect</a>&#160;</td>
+          <td class="paramname"><em>Aspect</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates if all of the SYCL devices on this platform have the given feature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Aspect</td><td>is one of the values in Table 4.20 of the SYCL 2020 Provisional Spec.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if all of the SYCL devices on this platform have the given feature. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00056">56</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
 
 </div>
 </div>
