@@ -836,7 +836,7 @@ template&lt;typename T_Src , int Dims_Src, access::mode AccessMode_Src, access::
 
 <p class="reference">References <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00811">cl::sycl::queue::get_native()</a>, <a class="el" href="queue_8hpp_source.html#l00664">cl::sycl::queue::parallel_for()</a>, and <a class="el" href="queue_8hpp_source.html#l00386">cl::sycl::queue::single_task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00817">cl::sycl::queue::get_native()</a>, <a class="el" href="queue_8hpp_source.html#l00670">cl::sycl::queue::parallel_for()</a>, and <a class="el" href="queue_8hpp_source.html#l00392">cl::sycl::queue::single_task()</a>.</p>
 
 </div>
 </div>
@@ -1002,8 +1002,11 @@ template&lt;typename FuncT &gt; </div>
 </div><div class="memdoc">
 
 <p>Copies data from one memory region to another, both pointed by USM pointers. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>No operations is done if </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">Count</td><td>is zero. An exception is thrown if either </td></tr>
+    <tr><td class="paramname">Dest</td><td>or </td></tr>
+    <tr><td class="paramname">Src</td><td>is nullptr. The behavior is undefined if any of the pointer parameters is invalid.</td></tr>
     <tr><td class="paramname">Dest</td><td>is a USM pointer to the destination memory. </td></tr>
     <tr><td class="paramname">Src</td><td>is a USM pointer to the source memory. </td></tr>
     <tr><td class="paramname">Count</td><td>is a number of bytes to copy. </td></tr>
@@ -1048,8 +1051,11 @@ template&lt;typename FuncT &gt; </div>
 </div><div class="memdoc">
 
 <p>Fills the memory pointed by a USM pointer with the value specified. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>No operations is done if </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">Count</td><td>is zero. An exception is thrown if </td></tr>
+    <tr><td class="paramname">Dest</td><td>is nullptr. The behavior is undefined if </td></tr>
+    <tr><td class="paramname">Dest</td><td>is invalid.</td></tr>
     <tr><td class="paramname">Dest</td><td>is a USM pointer to the memory to fill. </td></tr>
     <tr><td class="paramname">Value</td><td>is a value to be set. Value is cast as an unsigned char. </td></tr>
     <tr><td class="paramname">Count</td><td>is a number of bytes to fill. </td></tr>
@@ -2226,7 +2232,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 
 <p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00323">323</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00354">cl::sycl::queue::prefetch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00360">cl::sycl::queue::prefetch()</a>.</p>
 
 </div>
 </div>
@@ -2632,7 +2638,7 @@ template&lt;typename DataT , int Dims, access::mode AccMode, access::target AccT
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01814">1814</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01820">1820</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2726,7 +2732,7 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01819">1819</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01825">1825</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2750,7 +2756,7 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01810">1810</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01816">1816</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2774,7 +2780,7 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01822">1822</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01828">1828</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2800,7 +2806,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::m
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01827">1827</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01833">1833</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2824,7 +2830,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::m
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01821">1821</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01827">1827</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
