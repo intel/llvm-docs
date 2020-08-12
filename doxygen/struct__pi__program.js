@@ -1,9 +1,21 @@
 var struct__pi__program =
 [
+    [ "LinkedReleaser", "class__pi__program_1_1LinkedReleaser.html", "class__pi__program_1_1LinkedReleaser" ],
+    [ "ModuleIterator", "class__pi__program_1_1ModuleIterator.html", "class__pi__program_1_1ModuleIterator" ],
     [ "native_type", "struct__pi__program.html#a233c10d83b39eb811cc0a323744cd0af", null ],
+    [ "state", "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16", [
+      [ "IL", "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a1684fb88863210e92ec87a7ffb479c95", null ],
+      [ "Native", "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16afb3b1dde300994de84635c9c8f0d66fa", null ],
+      [ "Object", "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a41596e4f89393cfa5c76cc9b983e4ae2", null ],
+      [ "Exe", "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a5346c86145bdf6bc60c8da4e96bb8fd6", null ],
+      [ "LinkedExe", "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16aedb53617763fb2fdbf49ae51e52347bd", null ]
+    ] ],
     [ "_pi_program", "struct__pi__program.html#a7b5a49f4f89db7dcb3a2df8cf3e5328a", null ],
     [ "~_pi_program", "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0", null ],
-    [ "_pi_program", "struct__pi__program.html#ab818d1df9ac3e8670579962b6d95721c", null ],
+    [ "_pi_program", "struct__pi__program.html#a251487c77387eed19962bfb7a229e527", null ],
+    [ "_pi_program", "struct__pi__program.html#af901568e1f02b6fdca9e872662f8a02a", null ],
+    [ "_pi_program", "struct__pi__program.html#a89f30375e3a698425cc2eb360b34e369", null ],
+    [ "~_pi_program", "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0", null ],
     [ "build_program", "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854", null ],
     [ "decrement_reference_count", "struct__pi__program.html#aed0f636555a6cb95fb520bfa7cb085de", null ],
     [ "get", "struct__pi__program.html#a51624ac57edd2c5bac78740c8c8960be", null ],
@@ -15,16 +27,22 @@ var struct__pi__program =
     [ "binarySizeInBytes_", "struct__pi__program.html#a50486172acd1157a2f27f32e04c62181", null ],
     [ "buildOptions_", "struct__pi__program.html#ade63366c16239d4f0e5726ff6a940321", null ],
     [ "buildStatus_", "struct__pi__program.html#a07ee027170c3138223814e6f23953c42", null ],
+    [ "Code", "struct__pi__program.html#a7e557029dc88dd5a04b15ad8ea2bc773", null ],
+    [ "CodeLength", "struct__pi__program.html#ad1a2f4610a6f9870cb479ccd676b4f8f", null ],
     [ "Context", "struct__pi__program.html#a1b8a31275c1dada5a33deee42ea29f6a", null ],
     [ "context_", "struct__pi__program.html#af256d620344bdd34d8aa60cc058bdad7", null ],
     [ "errorLog_", "struct__pi__program.html#a873725d5107c7fe0ab362184f6af9c10", null ],
+    [ "HasImports", "struct__pi__program.html#a82f6bbcf27d177b85077e85cd53805bf", null ],
+    [ "HasImportsAndIsLinked", "struct__pi__program.html#afec59a76fa9df65aaa6e7e5a62bf4e3a", null ],
     [ "infoLog_", "struct__pi__program.html#acb1209c709fae3cc4f7a19802dd2e974", null ],
+    [ "LinkedPrograms", "struct__pi__program.html#afe9c67f0986969c97bca91ab4706dea9", null ],
     [ "MAX_LOG_SIZE", "struct__pi__program.html#a5cd306d55644c2e3d22b3745f90cffe6", null ],
     [ "module_", "struct__pi__program.html#a2b33b22a97125a60fadc84bffdf6569d", null ],
+    [ "MutexHasImportsAndIsLinked", "struct__pi__program.html#a019071f4456b2301a42fe00264265fbd", null ],
+    [ "MutexZeSpecConstants", "struct__pi__program.html#ad0ec5f905a8611f6e9abd4ef8e3e3808", null ],
     [ "refCount_", "struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52", null ],
+    [ "State", "struct__pi__program.html#a8d5f620396d9b8bd269ea3c75b7d8773", null ],
     [ "ZeBuildLog", "struct__pi__program.html#a1bae8f9def19a50e7e0c439e3b56dba7", null ],
     [ "ZeModule", "struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8", null ],
-    [ "ZeModuleDesc", "struct__pi__program.html#a442f6fd8ce6376ef33fd7a086f81c252", null ],
-    [ "ZeSpecConstants", "struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b", null ],
-    [ "ZeSpecConstantsMutex", "struct__pi__program.html#a91920a50d408d77eeb7add13bc66e2e1", null ]
+    [ "ZeSpecConstants", "struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b", null ]
 ];

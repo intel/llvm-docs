@@ -564,6 +564,7 @@ var hierarchy =
     [ "cl::sycl::detail::KernelProgramCache", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html", null ],
     [ "cl::sycl::detail::LessEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html", null ],
     [ "cl::sycl::detail::LessThan< T >", "structcl_1_1sycl_1_1detail_1_1LessThan.html", null ],
+    [ "_pi_program::LinkedReleaser", "class__pi__program_1_1LinkedReleaser.html", null ],
     [ "cl::sycl::detail::LocalAccessorBaseDevice< Dims >", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice.html", null ],
     [ "cl::sycl::detail::LocalAccessorBaseHost", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html", [
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", null ]
@@ -615,6 +616,7 @@ var hierarchy =
     [ "cl::sycl::intel::minimum< T >", "structcl_1_1sycl_1_1intel_1_1minimum.html", null ],
     [ "cl::sycl::mode_tag_t< mode >", "structcl_1_1sycl_1_1mode__tag__t.html", null ],
     [ "cl::sycl::mode_target_tag_t< mode, trgt >", "structcl_1_1sycl_1_1mode__target__tag__t.html", null ],
+    [ "_pi_program::ModuleIterator", "class__pi__program_1_1ModuleIterator.html", null ],
     [ "cl::sycl::multi_ptr< ElementType, Space >", "classcl_1_1sycl_1_1multi__ptr.html", null ],
     [ "cl::sycl::multi_ptr< const void, Space >", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html", null ],
     [ "cl::sycl::multi_ptr< void, Space >", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html", null ],
@@ -678,8 +680,8 @@ var hierarchy =
     [ "cl::sycl::detail::PtrValueType< void, Space >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
-    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html", null ],
     [ "cl::sycl::intel::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", null ],
@@ -927,6 +929,7 @@ var hierarchy =
     [ "wordtype< T >", "structwordtype.html", null ],
     [ "wordtype< short >", "structwordtype_3_01short_01_4.html", null ],
     [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", null ],
+    [ "ze_module_properties_t", "structze__module__properties__t.html", null ],
     [ "atomic< uintptr_t > *", "classstd_1_1atomic_3_01uintptr__t_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
     [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]

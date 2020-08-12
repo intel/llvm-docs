@@ -3,6 +3,7 @@ var searchData=
   ['lessequalto',['LessEqualTo',['../structcl_1_1sycl_1_1detail_1_1LessEqualTo.html',1,'cl::sycl::detail']]],
   ['lessthan',['LessThan',['../structcl_1_1sycl_1_1detail_1_1LessThan.html',1,'cl::sycl::detail']]],
   ['link_5fprogram_5ferror',['link_program_error',['../classcl_1_1sycl_1_1link__program__error.html',1,'cl::sycl']]],
+  ['linkedreleaser',['LinkedReleaser',['../class__pi__program_1_1LinkedReleaser.html',1,'_pi_program']]],
   ['localaccessorbasedevice',['LocalAccessorBaseDevice',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice.html',1,'cl::sycl::detail']]],
   ['localaccessorbasehost',['LocalAccessorBaseHost',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html',1,'cl::sycl::detail']]],
   ['localaccessorimplhost',['LocalAccessorImplHost',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html',1,'cl::sycl::detail']]],

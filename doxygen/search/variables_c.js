@@ -135,6 +135,8 @@ var searchData=
   ['muploaddatafunctor',['MUploadDataFunctor',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a5e28bab89d9287f0604f6f85b4c7dd6b',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['muserptr',['MUserPtr',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a40bbf964fbba5dbde1a8c7c9db0ac772',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['musers',['MUsers',['../classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f',1,'cl::sycl::detail::Command']]],
+  ['mutexhasimportsandislinked',['MutexHasImportsAndIsLinked',['../struct__pi__program.html#a019071f4456b2301a42fe00264265fbd',1,'_pi_program']]],
+  ['mutexzespecconstants',['MutexZeSpecConstants',['../struct__pi__program.html#ad0ec5f905a8611f6e9abd4ef8e3e3808',1,'_pi_program']]],
   ['mvalue',['MValue',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html#ab2790ccc93017b965b6f076e5f2f2a28',1,'cl::sycl::intel::detail::reducer::MValue()'],['../classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html#a2b4298095577cd5c4d947c0f3c770a0b',1,'cl::sycl::intel::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;::MValue()']]],
   ['mvisited',['MVisited',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a4f5423b989b23434d7dc0aad3ff73a59',1,'cl::sycl::detail::Command::Marks']]],
   ['mwrapperimage',['MWrapperImage',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a9e60b6f0c8be8dd5691fb617168e339f',1,'cl::sycl::detail::AllocaCommandBase']]],

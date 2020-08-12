@@ -60,6 +60,7 @@ var searchData=
   ['specconstregistryt',['SpecConstRegistryT',['../namespacecl_1_1sycl_1_1detail.html#ab834edf6243a91ad1fbd0741e988ab6e',1,'cl::sycl::detail']]],
   ['statically_5fcoalesce',['statically_coalesce',['../namespacecl_1_1sycl_1_1intel.html#adc758fd688cdd0a6b3a4d476607df4f3',1,'cl::sycl::intel']]],
   ['storaget',['StorageT',['../namespacecl_1_1sycl_1_1detail_1_1half__impl.html#aa2ac5b92936289cb1258bf03b8a108c2',1,'cl::sycl::detail::half_impl']]],
+  ['streamimplptr',['StreamImplPtr',['../namespacecl_1_1sycl_1_1detail.html#ab57afe61b17444737ae6ea8ff5df7725',1,'cl::sycl::detail']]],
   ['string_5fclass',['string_class',['../namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b',1,'cl::sycl']]],
   ['sycl_5fmemory_5fobject_5fallocator',['sycl_memory_object_allocator',['../namespacecl_1_1sycl_1_1detail.html#abe01ee7a2b6230dd8d7603a3f41fda44',1,'cl::sycl::detail']]]
 ];

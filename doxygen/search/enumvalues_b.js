@@ -7,6 +7,7 @@ var searchData=
   ['level_5fzero',['level_zero',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b',1,'cl::sycl']]],
   ['linear',['linear',['../namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59a9a932b3cb396238423eb2f33ec17d6aa',1,'cl::sycl']]],
   ['linked',['linked',['../namespacecl_1_1sycl.html#a104e4e04504c3752e3ba5a3d4013e0ebad48e37bc19b9fe2c72923c30fd7a4152',1,'cl::sycl']]],
+  ['linkedexe',['LinkedExe',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16aedb53617763fb2fdbf49ae51e52347bd',1,'_pi_program']]],
   ['local',['local',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598af5ddaf0ca7929578b408c909429f68f2',1,'cl::sycl::access::local()'],['../namespacecl_1_1sycl_1_1info.html#ad3cf44d11f60b23508e91d1ed61ad001af5ddaf0ca7929578b408c909429f68f2',1,'cl::sycl::info::local()']]],
   ['local_5fmem_5fsize',['local_mem_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a735f7e0da765dcc1dfc4d3454a9aba14',1,'cl::sycl::info']]],
   ['local_5fmem_5ftype',['local_mem_type',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a65f9a150cd584ee5dd60ce5450b93ebd',1,'cl::sycl::info']]],

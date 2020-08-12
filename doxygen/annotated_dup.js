@@ -231,5 +231,6 @@ var annotated_dup =
     [ "type", "classstd_1_1conditional_1_1type.html", null ],
     [ "wordtype", "structwordtype.html", null ],
     [ "wordtype< short >", "structwordtype_3_01short_01_4.html", "structwordtype_3_01short_01_4" ],
-    [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", "structwordtype_3_01unsigned_01short_01_4" ]
+    [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", "structwordtype_3_01unsigned_01short_01_4" ],
+    [ "ze_module_properties_t", "structze__module__properties__t.html", "structze__module__properties__t" ]
 ];

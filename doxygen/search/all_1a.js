@@ -4,6 +4,9 @@ var searchData=
   ['ze_5fcall',['ZE_CALL',['../pi__level__zero_8cpp.html#a942ae4efbf61ce684eb093c3c07b8a73',1,'pi_level_zero.cpp']]],
   ['ze_5fcall_5fnocheck',['ZE_CALL_NOCHECK',['../pi__level__zero_8cpp.html#a8009409c5f86d03cdbdc2bf11a8756eb',1,'pi_level_zero.cpp']]],
   ['ze_5ferrcase',['ZE_ERRCASE',['../pi__level__zero_8cpp.html#a811e97d9ea03c4cf9bfc979d6d243ab9',1,'pi_level_zero.cpp']]],
+  ['ze_5fmodule_5fproperties_5ft',['ze_module_properties_t',['../structze__module__properties__t.html',1,'']]],
+  ['ze_5fmodule_5fproperty_5fflag_5fimports',['ZE_MODULE_PROPERTY_FLAG_IMPORTS',['../pi__level__zero_8cpp.html#a60e368622444eeb9aee94699daa51bd0a4679c202c8347a71aa5950cd1d623c46',1,'pi_level_zero.cpp']]],
+  ['ze_5fmodule_5fproperty_5fflag_5ft',['ze_module_property_flag_t',['../pi__level__zero_8cpp.html#a60e368622444eeb9aee94699daa51bd0',1,'pi_level_zero.cpp']]],
   ['ze_5fsupported_5fextensions',['ZE_SUPPORTED_EXTENSIONS',['../pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e',1,'pi_level_zero.cpp']]],
   ['zebuildlog',['ZeBuildLog',['../struct__pi__program.html#a1bae8f9def19a50e7e0c439e3b56dba7',1,'_pi_program']]],
   ['zecommandlist',['ZeCommandList',['../class__pi__event.html#a6ff8db9dffcdd3ac6cf539500de6c737',1,'_pi_event']]],
@@ -22,9 +25,9 @@ var searchData=
   ['zekernel',['ZeKernel',['../struct__pi__kernel.html#a2a69000010873d5ca19eae3fadb9701a',1,'_pi_kernel']]],
   ['zemem',['ZeMem',['../struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd',1,'_pi_buffer']]],
   ['zemodule',['ZeModule',['../struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8',1,'_pi_program']]],
-  ['zemoduledesc',['ZeModuleDesc',['../struct__pi__program.html#a442f6fd8ce6376ef33fd7a086f81c252',1,'_pi_program']]],
+  ['zemoduledynamiclink',['zeModuleDynamicLink',['../pi__level__zero_8cpp.html#a1b9998140d8b66a9d8aae51577f5255d',1,'pi_level_zero.cpp']]],
+  ['zemodulegetproperties',['zeModuleGetProperties',['../pi__level__zero_8cpp.html#af2363a470f95f84deeb4122447cb2db7',1,'pi_level_zero.cpp']]],
   ['zeparseerror',['zeParseError',['../pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815',1,'pi_level_zero.cpp']]],
   ['zesampler',['ZeSampler',['../struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673',1,'_pi_sampler']]],
-  ['zespecconstants',['ZeSpecConstants',['../struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b',1,'_pi_program']]],
-  ['zespecconstantsmutex',['ZeSpecConstantsMutex',['../struct__pi__program.html#a91920a50d408d77eeb7add13bc66e2e1',1,'_pi_program']]]
+  ['zespecconstants',['ZeSpecConstants',['../struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b',1,'_pi_program']]]
 ];

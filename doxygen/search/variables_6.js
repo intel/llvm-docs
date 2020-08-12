@@ -2,7 +2,7 @@ var searchData=
 [
   ['fixed',['Fixed',['../namespacecl_1_1sycl_1_1detail.html#a3e5cb282980136e0132064e0a3974290',1,'cl::sycl::detail::Fixed()'],['../namespacecl_1_1sycl.html#ac36f97886a0165a7456ca6197ec27dd6',1,'cl::sycl::fixed()']]],
   ['flag_5fvalue',['flag_value',['../struct____spv_1_1Scope.html#ad2791ef82982e203428179c77703ecda',1,'__spv::Scope::flag_value()'],['../struct____spv_1_1MemorySemanticsMask.html#a2c5d6c7282da8f0837c79981fe7a4cf8',1,'__spv::MemorySemanticsMask::flag_value()']]],
-  ['flags',['flags',['../struct__pi__offload__entry__struct.html#a76a3565f400c268d36cdadc8b893f4c9',1,'_pi_offload_entry_struct']]],
+  ['flags',['flags',['../struct__pi__offload__entry__struct.html#a76a3565f400c268d36cdadc8b893f4c9',1,'_pi_offload_entry_struct::flags()'],['../structze__module__properties__t.html#a36eb5d4e23f586955dd19623baa05053',1,'ze_module_properties_t::flags()']]],
   ['floatfield',['FloatField',['../namespacecl_1_1sycl_1_1detail.html#a93266ef2005b027ab9bb0f64f7d52b23',1,'cl::sycl::detail']]],
   ['flush',['flush',['../namespacecl_1_1sycl.html#a5b190eaea413280904b163fbf1372ee4',1,'cl::sycl']]],
   ['format',['Format',['../structpi__device__binary__struct.html#ad3b8516afd31a369b2d8474a121cbc90',1,'pi_device_binary_struct::Format()'],['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aad75dcd40f639e866c0050fb5b51c6ce',1,'cl::sycl::detail::pi::DeviceBinaryImage::Format()']]],

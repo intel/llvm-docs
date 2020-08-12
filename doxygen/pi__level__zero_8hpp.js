@@ -11,6 +11,8 @@ var pi__level__zero_8hpp =
     [ "_pi_image", "struct__pi__image.html", "struct__pi__image" ],
     [ "_pi_event", "class__pi__event.html", "class__pi__event" ],
     [ "_pi_program", "struct__pi__program.html", "struct__pi__program" ],
+    [ "LinkedReleaser", "class__pi__program_1_1LinkedReleaser.html", "class__pi__program_1_1LinkedReleaser" ],
+    [ "ModuleIterator", "class__pi__program_1_1ModuleIterator.html", "class__pi__program_1_1ModuleIterator" ],
     [ "_pi_kernel", "struct__pi__kernel.html", "struct__pi__kernel" ],
     [ "_pi_sampler", "struct__pi__sampler.html", "struct__pi__sampler" ],
     [ "die", "pi__level__zero_8hpp.html#addeb84d9aa94ce57f216c82c6f1c3eae", null ],

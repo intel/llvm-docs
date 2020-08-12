@@ -1,9 +1,15 @@
 var pi__level__zero_8cpp =
 [
+    [ "ze_module_properties_t", "structze__module__properties__t.html", "structze__module__properties__t" ],
     [ "_PI_API", "pi__level__zero_8cpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "ZE_CALL", "pi__level__zero_8cpp.html#a942ae4efbf61ce684eb093c3c07b8a73", null ],
     [ "ZE_CALL_NOCHECK", "pi__level__zero_8cpp.html#a8009409c5f86d03cdbdc2bf11a8756eb", null ],
     [ "ZE_ERRCASE", "pi__level__zero_8cpp.html#a811e97d9ea03c4cf9bfc979d6d243ab9", null ],
+    [ "ze_module_property_flag_t", "pi__level__zero_8cpp.html#a60e368622444eeb9aee94699daa51bd0", [
+      [ "ZE_MODULE_PROPERTY_FLAG_IMPORTS", "pi__level__zero_8cpp.html#a60e368622444eeb9aee94699daa51bd0a4679c202c8347a71aa5950cd1d623c46", null ]
+    ] ],
+    [ "compileOrBuild", "pi__level__zero_8cpp.html#a915bbb39491e005cd01c8fa963219178", null ],
+    [ "copyModule", "pi__level__zero_8cpp.html#aacbff73b82e104033322b1daaeffe943", null ],
     [ "enqueueMemCopyHelper", "pi__level__zero_8cpp.html#ad398f84213a3bf05205775114594b3ef", null ],
     [ "enqueueMemCopyRectHelper", "pi__level__zero_8cpp.html#ae423053da508d7557a172aee2e0a3f73", null ],
     [ "enqueueMemFillHelper", "pi__level__zero_8cpp.html#a2daa6fd82b433d43479179c5cb88b3b9", null ],
@@ -95,8 +101,8 @@ var pi__level__zero_8cpp =
     [ "piPluginInit", "pi__level__zero_8cpp.html#a6f093d78fa08dd8804600d9b88537571", null ],
     [ "piProgramBuild", "pi__level__zero_8cpp.html#acc9b8a45e2deae6989b38b70213e8194", null ],
     [ "piProgramCompile", "pi__level__zero_8cpp.html#a18bb2233cfafa80e3aacc21b0686416b", null ],
-    [ "piProgramCreate", "pi__level__zero_8cpp.html#abfe7fb79a4b32b0d136400e714339f50", null ],
-    [ "piProgramCreateWithBinary", "pi__level__zero_8cpp.html#af65e02f5e8d7335897eeff1cfee1884f", null ],
+    [ "piProgramCreate", "pi__level__zero_8cpp.html#afb165cd0b891cf7c80cfdb157654cd75", null ],
+    [ "piProgramCreateWithBinary", "pi__level__zero_8cpp.html#a1798053118f7dc9b8df9af146b92f421", null ],
     [ "piProgramGetBuildInfo", "pi__level__zero_8cpp.html#a0aa2f7c32507a3363857a40965c08267", null ],
     [ "piProgramGetInfo", "pi__level__zero_8cpp.html#a9587b7f1cd88561cc2f17427a5228113", null ],
     [ "piProgramLink", "pi__level__zero_8cpp.html#ad7611d86e5209fe2b90a05a5571ab5e0", null ],
@@ -111,6 +117,8 @@ var pi__level__zero_8cpp =
     [ "piSamplerGetInfo", "pi__level__zero_8cpp.html#a4a75c9fa6097756ef41160b218c25dee", null ],
     [ "piSamplerRelease", "pi__level__zero_8cpp.html#a3e6c8bb1ca70ed13b07fca70dea76a08", null ],
     [ "piSamplerRetain", "pi__level__zero_8cpp.html#a6551ae9c262ed234fcace964e7a1805d", null ],
+    [ "zeModuleDynamicLink", "pi__level__zero_8cpp.html#a1b9998140d8b66a9d8aae51577f5255d", null ],
+    [ "zeModuleGetProperties", "pi__level__zero_8cpp.html#af2363a470f95f84deeb4122447cb2db7", null ],
     [ "zeParseError", "pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815", null ],
     [ "OnceFlag", "pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7", null ],
     [ "piEventCreate", "pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b", null ],

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['name',['name',['../namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2aab068931cc450442b63f5b3d276ea4297',1,'cl::sycl::info::name()'],['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ab068931cc450442b63f5b3d276ea4297',1,'cl::sycl::info::name()']]],
+  ['native',['Native',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16afb3b1dde300994de84635c9c8f0d66fa',1,'_pi_program']]],
   ['native_5fvector_5fwidth_5fchar',['native_vector_width_char',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a217d87c50234009ab4d8dd08a2fa97d5',1,'cl::sycl::info']]],
   ['native_5fvector_5fwidth_5fdouble',['native_vector_width_double',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a522877ef93f453eeef4f917203ecbcc3',1,'cl::sycl::info']]],
   ['native_5fvector_5fwidth_5ffloat',['native_vector_width_float',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aaa45085f0e282cdfc60b3336159be71f',1,'cl::sycl::info']]],
