@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1intel_1_1minimum.html":[3,0,2,1,4,15],
+"structcl_1_1sycl_1_1intel_1_1minimum.html#a814cf9dd72bf525e66c3565c51d107c5":[3,0,2,1,4,15,0],
 "structcl_1_1sycl_1_1intel_1_1prefetch__impl.html":[3,0,2,1,4,18],
 "structcl_1_1sycl_1_1intel_1_1prefetch__impl.html#a4af5d1d51da77944e38bd754b493c28f":[3,0,2,1,4,18,0],
 "structcl_1_1sycl_1_1intel_1_1prefetch__impl.html#af45a2341d8a4713ae86f4712d83c8016":[3,0,2,1,4,18,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "structrestype__ex_3_01char_00_01char_01_4.html#af916cfe3f21c0a0f44afe0cf64b66264":[3,0,109,0],
 "structrestype__ex_3_01char_00_01double_01_4.html":[3,0,110],
 "structrestype__ex_3_01char_00_01double_01_4.html#a02576f437279bcead4363b61dc3bc7cd":[3,0,110,0],
-"structrestype__ex_3_01char_00_01float_01_4.html":[3,0,111],
-"structrestype__ex_3_01char_00_01float_01_4.html#a929555c726aa4f55d47feebb8655a1a8":[3,0,111,0],
-"structrestype__ex_3_01char_00_01half_01_4.html":[3,0,112]
+"structrestype__ex_3_01char_00_01float_01_4.html":[3,0,111]
 };

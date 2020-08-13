@@ -72,12 +72,12 @@ var NAVTREEINDEX =
 "pi__opencl_8cpp.html#a6536605da4d4b98245a07ab1edfc861e",
 "spec__constant__impl_8cpp.html",
 "struct__pi__context.html#a7299c02da0e3d6f14c31d4019919c466",
-"struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673",
-"structcl_1_1sycl_1_1detail_1_1change__base__type.html",
-"structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01platform_01_4.html#a4d7fe5c72f1c495c69279b85f34169a6",
-"structcl_1_1sycl_1_1intel_1_1prefetch__impl.html",
-"structrestype__ex_3_01char_00_01half_01_4.html#a5cbacf92bba1bb5fa85ce80d1d89d24f",
-"structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4.html"
+"struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d",
+"structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html",
+"structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01device_01_4.html#a714ce0e4ee441991bb2ec04fa27ad90a",
+"structcl_1_1sycl_1_1intel_1_1minimum.html",
+"structrestype__ex_3_01char_00_01float_01_4.html#a929555c726aa4f55d47feebb8655a1a8",
+"structstd_1_1hash_3_01cl_1_1sycl_1_1program_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
