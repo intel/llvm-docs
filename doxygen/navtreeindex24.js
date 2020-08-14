@@ -1,6 +1,5 @@
 var NAVTREEINDEX24 =
 {
-"pi__opencl_8cpp.html#a6536605da4d4b98245a07ab1edfc861e":[4,0,1,2,0,28],
 "pi__opencl_8cpp.html#a6943cecba0128e74adc68da1a7321510":[4,0,1,2,0,4],
 "pi__opencl_8cpp.html#a69b24df8aa852caaedbbb5f3f31d9fd5":[4,0,1,2,0,8],
 "pi__opencl_8cpp.html#a6adb57f04a7f087cb902f2cadae76550":[4,0,1,2,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX24 =
 "scheduler_8hpp.html":[4,0,2,1,2,5],
 "scheduler_8hpp_source.html":[4,0,2,1,2,5],
 "spec__constant_8hpp.html":[4,0,0,0,1,3,0],
-"spec__constant_8hpp_source.html":[4,0,0,0,1,3,0]
+"spec__constant_8hpp_source.html":[4,0,0,0,1,3,0],
+"spec__constant__impl_8cpp.html":[4,0,2,1,54]
 };

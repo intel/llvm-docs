@@ -6,6 +6,5 @@ var classcl_1_1sycl_1_1detail_1_1sampler__impl =
     [ "get_addressing_mode", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html#af666a6e9e6fedb7c696423545dcdf9e6", null ],
     [ "get_coordinate_normalization_mode", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html#aabfc8ad3f5749f8a50361c5b141511ca", null ],
     [ "get_filtering_mode", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a161126b8cb2b02135194919aa3880655", null ],
-    [ "getOrCreateSampler", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html#ac0d5af410f3aad3a5adb19632c00b388", null ],
-    [ "m_contextToSampler", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a94e403d4d328d3a240c57fc0ecfedefa", null ]
+    [ "getOrCreateSampler", "classcl_1_1sycl_1_1detail_1_1sampler__impl.html#ac0d5af410f3aad3a5adb19632c00b388", null ]
 ];

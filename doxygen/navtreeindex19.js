@@ -1,6 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a7c3613dba5171cb6027c67835dd3b9d4":[4,0,0,0,1,4,0,4,59],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a7d97481b1fe66f4b51db90da7e794d9f":[4,0,0,0,1,4,0,4,61],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a7e6049679642fdf8aa7123a16d01c068":[4,0,0,0,1,4,0,4,53],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a803763900aa6655c989e3c39e4702e39":[4,0,0,0,1,4,0,4,29],
@@ -73,9 +72,9 @@ var NAVTREEINDEX19 =
 "item__base_8hpp.html":[4,0,0,0,1,2,23],
 "item__base_8hpp_source.html":[4,0,0,0,1,2,23],
 "kernel_8cpp.html":[4,0,2,14],
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
 "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,3],
 "kernel_8cpp.html#a72e67c3793a817f25283854d0b349c61":[4,0,2,14,4],
 "kernel_8cpp_source.html":[4,0,2,14],
@@ -225,8 +224,8 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1sycl_1_1property.html":[2,0,2,1,10],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,5,0],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,10,0],
-"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,10,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,2,1,5,1],
+"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,10,1],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,5,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,10,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,5,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX19 =
 "namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
-"namespacemembers_func_c.html":[2,1,1,3]
+"namespacemembers_func_c.html":[2,1,1,3],
+"namespacemembers_func_d.html":[2,1,1,4]
 };

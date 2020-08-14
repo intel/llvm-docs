@@ -1,6 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"enqueue__kernel_8cpp.html":[4,0,2,1,0,0],
 "enqueue__kernel_8cpp.html#a978902656e07ee77f03bd7f9ad8d49f8":[4,0,2,1,0,0,0],
 "enqueue__kernel_8cpp.html#ac5a4c3b18247b8c69ef0f9d5b3a5310a":[4,0,2,1,0,0,2],
 "enqueue__kernel_8cpp.html#ad64d8bb17d2d1f0c09c714ef11133efb":[4,0,2,1,0,0,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX14 =
 "esimd__math__intrin_8hpp.html#a54b3636ffbfd388fcc08fca4dc7c7482":[4,0,0,0,1,5,0,0,2,13],
 "esimd__math__intrin_8hpp.html#a54fe1956bc74bae56760691153f55c86":[4,0,0,0,1,5,0,0,2,51],
 "esimd__math__intrin_8hpp.html#a608c180f5bf2f1b98157368a3a11d697":[4,0,0,0,1,5,0,0,2,23],
-"esimd__math__intrin_8hpp.html#a60ea3186858880f9acd7787d187d086d":[4,0,0,0,1,5,0,0,2,36]
+"esimd__math__intrin_8hpp.html#a60ea3186858880f9acd7787d187d086d":[4,0,0,0,1,5,0,0,2,36],
+"esimd__math__intrin_8hpp.html#a66273d8c6158d142b6a76ab3066f451f":[4,0,0,0,1,5,0,0,2,47]
 };
