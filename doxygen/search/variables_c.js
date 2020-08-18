@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['m_5foffset_5fx',['M_offset_x',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1region__base.html#a9d1e23ee83a69726213987dde4d9ba5e',1,'cl::sycl::intel::gpu::region_base']]],
-  ['m_5foffset_5fy',['M_offset_y',['../structcl_1_1sycl_1_1intel_1_1gpu_1_1region__base.html#af3ca636b8e662b3baf9b38cc801af4db',1,'cl::sycl::intel::gpu::region_base']]],
+  ['m_5foffset_5fx',['M_offset_x',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html#a66e30c79a264efa3a45aa9078f26f23d',1,'cl::sycl::INTEL::gpu::region_base']]],
+  ['m_5foffset_5fy',['M_offset_y',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html#ad387dd5f5ddcd4f5124af79823e0298e',1,'cl::sycl::INTEL::gpu::region_base']]],
   ['maccessmode',['MAccessMode',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a33bec32fb9b3bb7336b0e9aa32b8a7e4',1,'cl::sycl::detail::AccessorImplHost']]],
   ['maccessrange',['MAccessRange',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a51ad2f8a02f30bff3f7cb0cb0514b654',1,'cl::sycl::detail::AccessorImplHost']]],
   ['maddress',['MAddress',['../classcl_1_1sycl_1_1detail_1_1Command.html#a0030e3ea7e156c3f77b77df28e9b1fd6',1,'cl::sycl::detail::Command']]],

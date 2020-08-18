@@ -15,5 +15,6 @@ var searchData=
   ['pi_5fdevice_5fbinary_5ftarget_5funknown',['PI_DEVICE_BINARY_TARGET_UNKNOWN',['../pi_8h.html#ac496c00c22140902a0c642c816666825',1,'pi.h']]],
   ['pi_5fhandle_5funknown_5fparam_5fname',['PI_HANDLE_UNKNOWN_PARAM_NAME',['../pi_8hpp.html#a6a37fc8698c7dd2e17d464f7f466380d',1,'pi.hpp']]],
   ['pi_5fproperty_5fset_5fdevicelib_5freq_5fmask',['PI_PROPERTY_SET_DEVICELIB_REQ_MASK',['../pi_8h.html#a7d491811a5dec7b9cc3328796f2bc0ca',1,'pi.h']]],
+  ['pi_5fproperty_5fset_5fkernel_5fparam_5fopt_5finfo',['PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO',['../pi_8h.html#ad4324098bbe8cb56a6ba3c1c95df8bc2',1,'pi.h']]],
   ['pi_5fproperty_5fset_5fspec_5fconst_5fmap',['PI_PROPERTY_SET_SPEC_CONST_MAP',['../pi_8h.html#ab5d36d369f514ced89972d8fe057d71b',1,'pi.h']]]
 ];

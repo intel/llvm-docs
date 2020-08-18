@@ -1,6 +1,7 @@
 var pi_8hpp =
 [
     [ "PiFuncInfo", "structcl_1_1sycl_1_1detail_1_1pi_1_1PiFuncInfo.html", null ],
+    [ "ByteArray", "classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html", "classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray" ],
     [ "DeviceBinaryProperty", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty" ],
     [ "DeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage" ],
     [ "PropertyRange", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange" ],

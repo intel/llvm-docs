@@ -24,6 +24,7 @@ var pi_8h =
     [ "PI_DEVICE_BINARY_TARGET_SPIRV64_X86_64", "pi_8h.html#a376e6222a25172f29cbe4216e24ad0ca", null ],
     [ "PI_DEVICE_BINARY_TARGET_UNKNOWN", "pi_8h.html#ac496c00c22140902a0c642c816666825", null ],
     [ "PI_PROPERTY_SET_DEVICELIB_REQ_MASK", "pi_8h.html#a7d491811a5dec7b9cc3328796f2bc0ca", null ],
+    [ "PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO", "pi_8h.html#ad4324098bbe8cb56a6ba3c1c95df8bc2", null ],
     [ "PI_PROPERTY_SET_SPEC_CONST_MAP", "pi_8h.html#ab5d36d369f514ced89972d8fe057d71b", null ],
     [ "_pi_offload_entry", "pi_8h.html#aecf4fcab95187d0884bc298b7e7f34e2", null ],
     [ "pi_bitfield", "pi_8h.html#a20d37307942b72c0722fafa5578fdaf9", null ],
@@ -475,6 +476,7 @@ var pi_8h =
     [ "pi_property_type", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7f", [
       [ "PI_PROPERTY_TYPE_UNKNOWN", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fa7a5b9154066abb1e410bc3be60f9b211", null ],
       [ "PI_PROPERTY_TYPE_UINT32", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fa4b758e3208f4a2455b06b2776434c47a", null ],
+      [ "PI_PROPERTY_TYPE_BYTE_ARRAY", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fac7e94b52b591558f0fc54c06a3cdaf82", null ],
       [ "PI_PROPERTY_TYPE_STRING", "pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fadde9b8a2ecb0b23ec303ca941f0ba1a6", null ]
     ] ],
     [ "piclProgramCreateWithSource", "pi_8h.html#ac5fb4aa49b8c4a3ad5cf0bd08a201e7e", null ],

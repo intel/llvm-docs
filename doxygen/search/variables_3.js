@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cache',['CACHE',['../namespacecl_1_1sycl_1_1intel.html#adf02a62ac3b1b0c6a1c98fd9d370bd82',1,'cl::sycl::intel']]],
+  ['cache',['CACHE',['../namespacecl_1_1sycl_1_1INTEL.html#a03684d27452e9c1fb8343e643d10ab84',1,'cl::sycl::INTEL']]],
   ['cast',['cast',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#abdb1239b6e2313d63e121e5d6cb9c94e',1,'cl::sycl::detail::pi']]],
   ['cldevicememallocname',['clDeviceMemAllocName',['../pi__opencl_8cpp.html#aea06bf6cb4348d692fe4ce6d4bfe3d11',1,'pi_opencl.cpp']]],
   ['clenqueuememadvisename',['clEnqueueMemAdviseName',['../pi__opencl_8cpp.html#affd635db53886fb71c2a190d06d076cb',1,'pi_opencl.cpp']]],
@@ -13,7 +13,7 @@ var searchData=
   ['clsetkernelargmempointername',['clSetKernelArgMemPointerName',['../pi__opencl_8cpp.html#a865cd96acb132c2086b73db83766a4c8',1,'pi_opencl.cpp']]],
   ['clsetprogramspecializationconstantname',['clSetProgramSpecializationConstantName',['../pi__opencl_8cpp.html#adf3f37188849ba8c8aa7084491647406',1,'pi_opencl.cpp']]],
   ['clsharedmemallocname',['clSharedMemAllocName',['../pi__opencl_8cpp.html#ab1fa2f421251079da1f812894a2c731d',1,'pi_opencl.cpp']]],
-  ['cmpi',['CMPI',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a46c7d5f2ee34fa1025c22619a94bae01',1,'cl::sycl::intel::gpu']]],
+  ['cmpi',['CMPI',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a034ca5f8c72ae2b5dc321b51e694b907',1,'cl::sycl::INTEL::gpu']]],
   ['code',['Code',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68',1,'cl::sycl::detail::KernelProgramCache::BuildError::Code()'],['../struct__pi__program.html#a7e557029dc88dd5a04b15ad8ea2bc773',1,'_pi_program::Code()']]],
   ['codelength',['CodeLength',['../struct__pi__program.html#ad1a2f4610a6f9870cb479ccd676b4f8f',1,'_pi_program']]],
   ['commanddata',['CommandData',['../class__pi__event.html#a5993746ca407e835220191dc4cf48f39',1,'_pi_event']]],

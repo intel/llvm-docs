@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['genx_5fnosat',['GENX_NOSAT',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#acbcdc76eb1c08c2e35f1b0d55de2c065a69c10d66c59e4235b6e36e30ad5bb169',1,'cl::sycl::intel::gpu']]],
-  ['genx_5fsat',['GENX_SAT',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#acbcdc76eb1c08c2e35f1b0d55de2c065ab1d38c2c228e338632ead8358d9da6b6',1,'cl::sycl::intel::gpu']]],
+  ['genx_5fnosat',['GENX_NOSAT',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a72d6b7f92afb4fc8cc4a86441d163f91abcb0491a59c90be5ec04e82f2e8c20e9',1,'cl::sycl::INTEL::gpu']]],
+  ['genx_5fsat',['GENX_SAT',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a72d6b7f92afb4fc8cc4a86441d163f91a40d04eacd0e96c27f5d674ed625564ce',1,'cl::sycl::INTEL::gpu']]],
   ['global',['global',['../namespacecl_1_1sycl_1_1info.html#ad3cf44d11f60b23508e91d1ed61ad001a9c70933aff6b2a6d08c687a6cbb6b765',1,'cl::sycl::info']]],
   ['global_5fand_5flocal',['global_and_local',['../namespacecl_1_1sycl_1_1access.html#a4d49b23bd01f94213f7820fba6d5be69a78877b2c21d50a8878a02d10f4a79a3b',1,'cl::sycl::access']]],
   ['global_5fbuffer',['global_buffer',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598acb1529b5988261a81704f0f39d6c287b',1,'cl::sycl::access']]],

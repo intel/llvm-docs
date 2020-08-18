@@ -8,6 +8,7 @@ var program__manager_8cpp =
     [ "__sycl_register_lib", "program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e", null ],
     [ "__sycl_unregister_lib", "program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d", null ],
     [ "createBinaryProgram", "program__manager_8cpp.html#afe0e35174bdc80b28666c7ee3ef7bc00", null ],
+    [ "createKernelArgMask", "program__manager_8cpp.html#ac5f2d6686ee96e455ca673a86a761546", null ],
     [ "createSpirvProgram", "program__manager_8cpp.html#ac2d3fdc86f5fb4e36334638b3fb3c6de", null ],
     [ "getDeviceLibExtensionStr", "program__manager_8cpp.html#ab3e55b79ddbe123667f4f935680db019", null ],
     [ "getDeviceLibFilename", "program__manager_8cpp.html#a043e235cb1f469faee4e5c6a66b6d8ab", null ],

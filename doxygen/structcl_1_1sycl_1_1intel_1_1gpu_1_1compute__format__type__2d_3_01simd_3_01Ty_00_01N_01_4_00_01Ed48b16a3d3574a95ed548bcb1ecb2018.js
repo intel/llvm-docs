@@ -1,9 +1,0 @@
-var structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018 =
-[
-    [ "type", "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#a8bd0b67e9142e9a51b27f9baf48dde33", null ],
-    [ "Prod", "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#aeb71a91a409b6b4995d7e30d0987d2b1", null ],
-    [ "SizeX", "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#a2be27cf549e6c9cf3ba5f34b4ce133ce", null ],
-    [ "SizeY", "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#aa1728b5eb0a2e88a7f0ae72f3dd1f942", null ],
-    [ "StrideX", "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#a6bc7bd65ae6d91bc9f62f71ccc5ed09c", null ],
-    [ "StrideY", "structcl_1_1sycl_1_1intel_1_1gpu_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_01_4_00_01Ed48b16a3d3574a95ed548bcb1ecb2018.html#aabaad623c96e1e8c825cf2399e775e71", null ]
-];

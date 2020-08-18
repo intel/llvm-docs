@@ -284,6 +284,7 @@ var searchData=
   ['pi_5fprogram_5finfo_5fnum_5fkernels',['PI_PROGRAM_INFO_NUM_KERNELS',['../pi_8h.html#ae22772ea765e6f3fe64ba7b9ddb49d3caa186e2301bdc0e023990aa91c9a96e4b',1,'pi.h']]],
   ['pi_5fprogram_5finfo_5freference_5fcount',['PI_PROGRAM_INFO_REFERENCE_COUNT',['../pi_8h.html#ae22772ea765e6f3fe64ba7b9ddb49d3ca75fe1b54ded746c9cc11a94de894f55c',1,'pi.h']]],
   ['pi_5fprogram_5finfo_5fsource',['PI_PROGRAM_INFO_SOURCE',['../pi_8h.html#ae22772ea765e6f3fe64ba7b9ddb49d3ca350727c682f5b07c975e992d0fba5731',1,'pi.h']]],
+  ['pi_5fproperty_5ftype_5fbyte_5farray',['PI_PROPERTY_TYPE_BYTE_ARRAY',['../pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fac7e94b52b591558f0fc54c06a3cdaf82',1,'pi.h']]],
   ['pi_5fproperty_5ftype_5fstring',['PI_PROPERTY_TYPE_STRING',['../pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fadde9b8a2ecb0b23ec303ca941f0ba1a6',1,'pi.h']]],
   ['pi_5fproperty_5ftype_5fuint32',['PI_PROPERTY_TYPE_UINT32',['../pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fa4b758e3208f4a2455b06b2776434c47a',1,'pi.h']]],
   ['pi_5fproperty_5ftype_5funknown',['PI_PROPERTY_TYPE_UNKNOWN',['../pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7fa7a5b9154066abb1e410bc3be60f9b211',1,'pi.h']]],

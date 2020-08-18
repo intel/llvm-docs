@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__esimd__vector_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__esimd__vector_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html#a6dc894775c2deb1bf705aa018a109b02", null ]
+];

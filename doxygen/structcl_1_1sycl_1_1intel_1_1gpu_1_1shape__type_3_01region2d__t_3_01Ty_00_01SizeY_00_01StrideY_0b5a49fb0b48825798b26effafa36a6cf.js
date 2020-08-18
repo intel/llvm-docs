@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type_3_01region2d__t_3_01Ty_00_01SizeY_00_01StrideY_0b5a49fb0b48825798b26effafa36a6cf =
-[
-    [ "element_type", "structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type_3_01region2d__t_3_01Ty_00_01SizeY_00_01StrideY_0b5a49fb0b48825798b26effafa36a6cf.html#a07b91b8e6d5942771f9200a7f7d3593c", null ],
-    [ "type", "structcl_1_1sycl_1_1intel_1_1gpu_1_1shape__type_3_01region2d__t_3_01Ty_00_01SizeY_00_01StrideY_0b5a49fb0b48825798b26effafa36a6cf.html#aa82457c87dabf888b39325032925e0d5", null ]
-];

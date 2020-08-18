@@ -15,7 +15,7 @@ var searchData=
   ['snorm_5fint8',['snorm_int8',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aead4c65045d7c2cb3055c3773d2029a0c1',1,'cl::sycl']]],
   ['soft_5ffloat',['soft_float',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a6e6513399f942d48c430159b1fbe93ec',1,'cl::sycl::info']]],
   ['start',['START',['../namespacecl_1_1sycl_1_1detail.html#a1f36acdc3445e874ecb97bb9f6129f01a3248d3bb7d45b52dc5f8dfded07fdfe0',1,'cl::sycl::detail']]],
-  ['streaming',['Streaming',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8eac13457901ccaa5c8bb67d5eb2a937aac21d502848247aa2f578d0f718f5d1d',1,'cl::sycl::intel::gpu']]],
+  ['streaming',['Streaming',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67aac21d502848247aa2f578d0f718f5d1d',1,'cl::sycl::INTEL::gpu']]],
   ['sub_5fgroup',['sub_group',['../namespacecl_1_1sycl_1_1intel.html#acc0318aafaaff3cd50f48b4e22542121a651f1a87340bd311aa665c6e56f1df7c',1,'cl::sycl::intel']]],
   ['sub_5fgroup_5findependent_5fforward_5fprogress',['sub_group_independent_forward_progress',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190af7787a35537723ea9c6218076245ce24',1,'cl::sycl::info']]],
   ['sub_5fgroup_5fsizes',['sub_group_sizes',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a6a85a810baaadbbff72b9ad5fef5e533',1,'cl::sycl::info']]],

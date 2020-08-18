@@ -257,7 +257,7 @@ var group__sycl__api =
       [ "parallel_for_work_group", "classcl_1_1sycl_1_1handler.html#abc6a1a8aeadb1a1fe90af5610fe00cd2", null ],
       [ "parallel_for_work_group", "classcl_1_1sycl_1_1handler.html#a927452af4a4f57ef69def1e7782502d9", null ],
       [ "prefetch", "classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863", null ],
-      [ "require", "classcl_1_1sycl_1_1handler.html#af5e38e5bd628cc1b09304f65850aeedb", null ],
+      [ "require", "classcl_1_1sycl_1_1handler.html#ae15174598d704c69779e60fdb86da80e", null ],
       [ "run_on_host_intel", "classcl_1_1sycl_1_1handler.html#a04a8df865df1e1c16280417bf07cdffe", null ],
       [ "set_arg", "classcl_1_1sycl_1_1handler.html#a1df56095367bb7fc6b8048d672f84ffe", null ],
       [ "set_arg", "classcl_1_1sycl_1_1handler.html#aebd7ddca219b45fd8eebbf768f4abff0", null ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5f_5fesimd_5fvoid_5ft',['__esimd_void_t',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#ab23cf4466488c8e793eb8a4eec06f4f8',1,'cl::sycl::intel::gpu']]],
+  ['_5f_5fesimd_5fvoid_5ft',['__esimd_void_t',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a67dbf96b58b749a1bc55a17c20e12d80',1,'cl::sycl::INTEL::gpu']]],
   ['_5f_5fhalf16_5fvec_5ft',['__half16_vec_t',['../types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886',1,'types.hpp']]],
   ['_5f_5fhalf2_5fvec_5ft',['__half2_vec_t',['../types_8hpp.html#a078ed71e8266e98e74cc42286e0bb23a',1,'types.hpp']]],
   ['_5f_5fhalf3_5fvec_5ft',['__half3_vec_t',['../types_8hpp.html#a55606a5fb19a6144017b8ae67902dd57',1,'types.hpp']]],

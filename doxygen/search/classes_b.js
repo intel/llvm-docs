@@ -14,5 +14,5 @@ var searchData=
   ['logicaland',['LogicalAnd',['../structcl_1_1sycl_1_1detail_1_1LogicalAnd.html',1,'cl::sycl::detail']]],
   ['logicalor',['LogicalOr',['../structcl_1_1sycl_1_1detail_1_1LogicalOr.html',1,'cl::sycl::detail']]],
   ['lshift',['LShift',['../structcl_1_1sycl_1_1detail_1_1LShift.html',1,'cl::sycl::detail']]],
-  ['lsu',['lsu',['../classcl_1_1sycl_1_1intel_1_1lsu.html',1,'cl::sycl::intel']]]
+  ['lsu',['lsu',['../classcl_1_1sycl_1_1INTEL_1_1lsu.html',1,'cl::sycl::INTEL']]]
 ];

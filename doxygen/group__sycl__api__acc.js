@@ -40,7 +40,7 @@ var group__sycl__api__acc =
       [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a6fd5b14a8e7c668a52a0dbb83fa6b228", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a7f3f76fbe4b324fc8c6d8f4a3add971c", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a2bc04778dbd94b3000b361374b0cd890", null ],
-      [ "sycl::intel::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1accessor.html#a4a96d79285637a3b20f6a8b45186390b", null ],
+      [ "sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1accessor.html#a12f3ae6067bda013eded4e74dc92e3a4", null ],
       [ "AdjustedDim", "classcl_1_1sycl_1_1accessor.html#a358af8358127f2f948e068b9f8815813", null ],
       [ "padding", "classcl_1_1sycl_1_1accessor.html#ae4ca64349d5c15e1755861cb5b33320b", null ]
     ] ],

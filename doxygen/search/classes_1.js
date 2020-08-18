@@ -20,7 +20,7 @@ var searchData=
   ['accessorbasehost',['AccessorBaseHost',['../classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html',1,'cl::sycl::detail']]],
   ['accessorimpldevice',['AccessorImplDevice',['../classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html',1,'cl::sycl::detail']]],
   ['accessorimplhost',['AccessorImplHost',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html',1,'cl::sycl::detail']]],
-  ['accessorprivateproxy',['AccessorPrivateProxy',['../classcl_1_1sycl_1_1intel_1_1gpu_1_1AccessorPrivateProxy.html',1,'cl::sycl::intel::gpu']]],
+  ['accessorprivateproxy',['AccessorPrivateProxy',['../classcl_1_1sycl_1_1INTEL_1_1gpu_1_1AccessorPrivateProxy.html',1,'cl::sycl::INTEL::gpu']]],
   ['accessorsubscript',['AccessorSubscript',['../classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html',1,'cl::sycl::detail::accessor_common']]],
   ['aligned_5fallocator',['aligned_allocator',['../classcl_1_1sycl_1_1detail_1_1aligned__allocator.html',1,'cl::sycl::detail']]],
   ['allocacommand',['AllocaCommand',['../classcl_1_1sycl_1_1detail_1_1AllocaCommand.html',1,'cl::sycl::detail']]],

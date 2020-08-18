@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['cachehint',['CacheHint',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8eac13457901ccaa5c8bb67d5eb2a937',1,'cl::sycl::intel::gpu']]],
+  ['cachehint',['CacheHint',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67',1,'cl::sycl::INTEL::gpu']]],
   ['cgtype',['CGTYPE',['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7ee',1,'cl::sycl::detail::CG']]],
-  ['channelmasktype',['ChannelMaskType',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a13633011c9f1f1a32c9c6750cb5d264a',1,'cl::sycl::intel::gpu']]],
+  ['channelmasktype',['ChannelMaskType',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a618d115f4b5266a64f76c12eb96c52ed',1,'cl::sycl::INTEL::gpu']]],
   ['commandtype',['CommandType',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4',1,'cl::sycl::detail::Command']]],
   ['configid',['ConfigID',['../namespacecl_1_1sycl_1_1detail.html#a1f36acdc3445e874ecb97bb9f6129f01',1,'cl::sycl::detail']]],
   ['context',['context',['../namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707',1,'cl::sycl::info']]],

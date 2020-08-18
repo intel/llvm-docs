@@ -1,0 +1,5 @@
+var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type_3_01region2d__t_3_01Ty_00_01SizeY_00_01StrideY_01117294e493b8b41fc90b3e9b48a2f95 =
+[
+    [ "element_type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type_3_01region2d__t_3_01Ty_00_01SizeY_00_01StrideY_01117294e493b8b41fc90b3e9b48a2f95.html#aa95dd6c735e73a1cf4146f0e0a6211bd", null ],
+    [ "type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type_3_01region2d__t_3_01Ty_00_01SizeY_00_01StrideY_01117294e493b8b41fc90b3e9b48a2f95.html#a169d880c84cc07a311eae68a8e77f5f6", null ]
+];

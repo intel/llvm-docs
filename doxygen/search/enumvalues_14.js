@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['uncached',['Uncached',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8eac13457901ccaa5c8bb67d5eb2a937aab47215a1173a0ee7b4740f249a7ca2c',1,'cl::sycl::intel::gpu']]],
+  ['uncached',['Uncached',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67aab47215a1173a0ee7b4740f249a7ca2c',1,'cl::sycl::INTEL::gpu']]],
   ['undefined',['UNDEFINED',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8aada7af7a9dbcced08692c315ef5049fdb',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['uniformmemory',['UniformMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a63f47c7ceb16c99bcf521934fd4b7043',1,'__spv::MemorySemanticsMask']]],
   ['unknown',['unknown',['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0eaad921d60486366258809553a3db49a4a',1,'cl::sycl::usm']]],

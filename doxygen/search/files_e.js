@@ -8,7 +8,7 @@ var searchData=
   ['pi_5flevel_5fzero_2ecpp',['pi_level_zero.cpp',['../pi__level__zero_8cpp.html',1,'']]],
   ['pi_5flevel_5fzero_2ehpp',['pi_level_zero.hpp',['../pi__level__zero_8hpp.html',1,'']]],
   ['pi_5fopencl_2ecpp',['pi_opencl.cpp',['../pi__opencl_8cpp.html',1,'']]],
-  ['pipes_2ehpp',['pipes.hpp',['../intel_2pipes_8hpp.html',1,'(Global Namespace)'],['../pipes_8hpp.html',1,'(Global Namespace)']]],
+  ['pipes_2ehpp',['pipes.hpp',['../INTEL_2pipes_8hpp.html',1,'(Global Namespace)'],['../pipes_8hpp.html',1,'(Global Namespace)']]],
   ['platform_2ecpp',['platform.cpp',['../platform_8cpp.html',1,'']]],
   ['platform_2ehpp',['platform.hpp',['../platform_8hpp.html',1,'']]],
   ['platform_5fimpl_2ecpp',['platform_impl.cpp',['../platform__impl_8cpp.html',1,'']]],

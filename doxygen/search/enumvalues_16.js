@@ -7,6 +7,6 @@ var searchData=
   ['workgroup',['Workgroup',['../struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad45dc8fada3e0e533b4df56d5be7720c',1,'__spv::Scope']]],
   ['workgroupmemory',['WorkgroupMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a994291624454a3524491e5cd17bf6dff',1,'__spv::MemorySemanticsMask']]],
   ['write',['write',['../namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aefb2a684e4afb7d55e6147fbe5a332ee',1,'cl::sycl::access']]],
-  ['writeback',['WriteBack',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8eac13457901ccaa5c8bb67d5eb2a937adf8e90f657c55cab67bfd1f1b91ba573',1,'cl::sycl::intel::gpu']]],
-  ['writethrough',['WriteThrough',['../namespacecl_1_1sycl_1_1intel_1_1gpu.html#a8eac13457901ccaa5c8bb67d5eb2a937aacb7820573f20d69befb56e41f440549',1,'cl::sycl::intel::gpu']]]
+  ['writeback',['WriteBack',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67adf8e90f657c55cab67bfd1f1b91ba573',1,'cl::sycl::INTEL::gpu']]],
+  ['writethrough',['WriteThrough',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67aacb7820573f20d69befb56e41f440549',1,'cl::sycl::INTEL::gpu']]]
 ];
