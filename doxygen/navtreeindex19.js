@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a40d852658166dc8a786c23023cb20f92":[4,0,0,0,1,4,0,4,72],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a419c736fc210de1c55decd67e8ac9f61":[4,0,0,0,1,4,0,4,47],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a4b44f9472d27f1a338e03013f5b8a80a":[4,0,0,0,1,4,0,4,16],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a4d034db6176d6fe61a8c61993e4a8755":[4,0,0,0,1,4,0,4,11],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a4f15cdbe3dbdc9ad4f5058cc9cd27f25":[4,0,0,0,1,4,0,4,74],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a522877ef93f453eeef4f917203ecbcc3":[4,0,0,0,1,4,0,4,18],
@@ -85,8 +88,8 @@ var NAVTREEINDEX19 =
 "item__base_8hpp.html":[4,0,0,0,1,2,23],
 "item__base_8hpp_source.html":[4,0,0,0,1,2,23],
 "kernel_8cpp.html":[4,0,2,14],
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
 "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,3],
 "kernel_8cpp.html#a72e67c3793a817f25283854d0b349c61":[4,0,2,14,4],
@@ -103,8 +106,8 @@ var NAVTREEINDEX19 =
 "kernel__desc_8hpp_source.html":[4,0,0,0,1,2,24],
 "kernel__impl_8cpp.html":[4,0,2,1,32],
 "kernel__impl_8cpp.html#a0fa9b6316b4a22b17634726e05df14b0":[4,0,2,1,32,6],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,1],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,2],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,1],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,0],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,32,4],
 "kernel__impl_8cpp.html#a5d06cdeae7af18abb18f3c6df02761fc":[4,0,2,1,32,7],
@@ -241,13 +244,10 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,11,0],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,2,1,6,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,11,1],
-"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,6,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
+"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,6,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,6,2],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,2,1,11,2],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,2,1,6,3],
-"namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,2,1,11,3],
-"namespacecl_1_1sycl_1_1usm.html":[2,0,2,1,12],
-"namespaceintelfpga.html":[2,0,4],
-"namespacemembers.html":[2,1,0]
+"namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,2,1,11,3]
 };

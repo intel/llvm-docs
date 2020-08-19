@@ -186,7 +186,7 @@ var searchData=
   ['is_5ffp_5for_5fdword_5ftype_3c_20sycl_3a_3aintel_3a_3agpu_3a_3asimd_3c_20t_2c_20n_20_3e_20_3e',['is_fp_or_dword_type&lt; sycl::INTEL::gpu::simd&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__fp__or__dword__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::INTEL::gpu::details']]],
   ['is_5ffp_5for_5fdword_5ftype_3c_20sycl_3a_3aintel_3a_3agpu_3a_3avector_5ftype_3c_20t_2c_20n_20_3e_20_3e',['is_fp_or_dword_type&lt; sycl::INTEL::gpu::vector_type&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__fp__or__dword__type_3_01sycl_1_1INTEL_1_1gpu_c1154e3affdb7ea35c92e7ceb02474f6.html',1,'cl::sycl::INTEL::gpu::details']]],
   ['is_5ffp_5for_5fdword_5ftype_3c_20unsigned_20int_20_3e',['is_fp_or_dword_type&lt; unsigned int &gt;',['../structis__fp__or__dword__type_3_01unsigned_01int_01_4.html',1,'']]],
-  ['is_5ffp_5ftype',['is_fp_type',['../structis__fp__type.html',1,'is_fp_type&lt; T &gt;'],['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__fp__type.html',1,'cl::sycl::INTEL::gpu::details::is_fp_type&lt; T &gt;']]],
+  ['is_5ffp_5ftype',['is_fp_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__fp__type.html',1,'cl::sycl::INTEL::gpu::details::is_fp_type&lt; T &gt;'],['../structis__fp__type.html',1,'is_fp_type&lt; T &gt;']]],
   ['is_5ffp_5ftype_3c_20float_20_3e',['is_fp_type&lt; float &gt;',['../structis__fp__type_3_01float_01_4.html',1,'']]],
   ['is_5fgen_5fbased_5fon_5ftype_5fsizeof',['is_gen_based_on_type_sizeof',['../namespacecl_1_1sycl_1_1detail.html#aaa2ca0f84e25150a3e149b3115d77446',1,'cl::sycl::detail']]],
   ['is_5fgenchar',['is_genchar',['../namespacecl_1_1sycl_1_1detail.html#abfb11e836a8259e1b740ae8ec8fe2800',1,'cl::sycl::detail']]],

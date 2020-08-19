@@ -9,6 +9,7 @@ var annotated_dup =
     [ "__copyAcc2Ptr", "class____copyAcc2Ptr.html", null ],
     [ "__copyPtr2Acc", "class____copyPtr2Acc.html", null ],
     [ "__fill", "class____fill.html", null ],
+    [ "__usmfill", "class____usmfill.html", null ],
     [ "_pi_buffer", "struct__pi__buffer.html", "struct__pi__buffer" ],
     [ "_pi_context", "struct__pi__context.html", "struct__pi__context" ],
     [ "_pi_device", "class__pi__device.html", "class__pi__device" ],

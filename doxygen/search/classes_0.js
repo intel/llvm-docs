@@ -8,6 +8,7 @@ var searchData=
   ['_5f_5fprecision_5fmanipulator_5f_5f',['__precision_manipulator__',['../classcl_1_1sycl_1_1____precision__manipulator____.html',1,'cl::sycl']]],
   ['_5f_5fsycl_5freduction_5faux_5fkernel',['__sycl_reduction_aux_kernel',['../classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__aux__kernel.html',1,'cl::sycl::intel::detail']]],
   ['_5f_5fsycl_5freduction_5fmain_5fkernel',['__sycl_reduction_main_kernel',['../classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__main__kernel.html',1,'cl::sycl::intel::detail']]],
+  ['_5f_5fusmfill',['__usmfill',['../class____usmfill.html',1,'']]],
   ['_5f_5fwidth_5fmanipulator_5f_5f',['__width_manipulator__',['../classcl_1_1sycl_1_1____width__manipulator____.html',1,'cl::sycl']]],
   ['_5fpi_5fbuffer',['_pi_buffer',['../struct__pi__buffer.html',1,'']]],
   ['_5fpi_5fcontext',['_pi_context',['../struct__pi__context.html',1,'']]],

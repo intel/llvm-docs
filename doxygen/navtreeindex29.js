@@ -1,5 +1,8 @@
 var NAVTREEINDEX29 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html#acfcd8dac5b3ffdd0fd9e828fde952015":[3,0,2,1,0,69,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html":[3,0,2,1,0,70],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html#a3c22a919abd5b7939735fb162d93f761":[3,0,2,1,0,70,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__device__allocations_01_4.html":[3,0,2,1,0,71],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__device__allocations_01_4.html#ab43d3d75726ac4f5a74a7a3b11735038":[3,0,2,1,0,71,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__host__allocations_01_4.html":[3,0,2,1,0,72],
@@ -246,8 +249,5 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1elem.html#aeace5e4b3952b15bfa6c81bce1450168":[3,0,2,1,26,0],
 "structcl_1_1sycl_1_1elem.html#aee2e9af1c3b1ec7ee265d43589460e8a":[3,0,2,1,26,19],
 "structcl_1_1sycl_1_1elem.html#aeeb1357cd93c2d007b2af483e196462d":[3,0,2,1,26,4],
-"structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b":[3,0,2,1,26,1],
-"structcl_1_1sycl_1_1elem.html#af900fbbf12553b8206da4d996599b44f":[3,0,2,1,26,14],
-"structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html":[1,1,11,0],
-"structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html#a01096b8ddcb1a1d6989e77e843116056":[1,1,11,0,0]
+"structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b":[3,0,2,1,26,1]
 };

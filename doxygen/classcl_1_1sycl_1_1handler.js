@@ -17,6 +17,7 @@ var classcl_1_1sycl_1_1handler =
     [ "depends_on", "classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7", null ],
     [ "depends_on", "classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4", null ],
     [ "fill", "classcl_1_1sycl_1_1handler.html#a928150e8912597bfc30f81459b8c46bf", null ],
+    [ "fill", "classcl_1_1sycl_1_1handler.html#ae77b0cbec35d932eba1bd1a022673d21", null ],
     [ "interop_task", "classcl_1_1sycl_1_1handler.html#a0cd322b2a5abd30dc4496dd110ee9546", null ],
     [ "memcpy", "classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c", null ],
     [ "memset", "classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540", null ],

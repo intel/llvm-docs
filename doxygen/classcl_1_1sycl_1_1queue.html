@@ -197,6 +197,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adddf14c63128569224aad4967408ecf1"><td class="memTemplParams" colspan="2">template&lt;typename PropertyT &gt; </td></tr>
 <tr class="memitem:adddf14c63128569224aad4967408ecf1"><td class="memTemplItemLeft" align="right" valign="top">PropertyT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1queue.html#adddf14c63128569224aad4967408ecf1">get_property</a> () const</td></tr>
 <tr class="separator:adddf14c63128569224aad4967408ecf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a885877f9ae12cb55d61a24d2a179dbba"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a885877f9ae12cb55d61a24d2a179dbba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1queue.html#a885877f9ae12cb55d61a24d2a179dbba">fill</a> (void *Ptr, const T &amp;Pattern, size_t Count)</td></tr>
+<tr class="memdesc:a885877f9ae12cb55d61a24d2a179dbba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the specified memory with the specified pattern.  <a href="#a885877f9ae12cb55d61a24d2a179dbba">More...</a><br /></td></tr>
+<tr class="separator:a885877f9ae12cb55d61a24d2a179dbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd93967ba2484d50786c22b4148cb67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1queue.html#afcd93967ba2484d50786c22b4148cb67">memset</a> (void *Ptr, int Value, size_t Count)</td></tr>
 <tr class="memdesc:afcd93967ba2484d50786c22b4148cb67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the memory pointed by a USM pointer with the value specified.  <a href="#afcd93967ba2484d50786c22b4148cb67">More...</a><br /></td></tr>
 <tr class="separator:afcd93967ba2484d50786c22b4148cb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -903,6 +907,64 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a885877f9ae12cb55d61a24d2a179dbba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a885877f9ae12cb55d61a24d2a179dbba">&#9670;&nbsp;</a></span>fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a> cl::sycl::queue::fill </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fills the specified memory with the specified pattern. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Ptr</td><td>is the pointer to the memory to fill </td></tr>
+    <tr><td class="paramname">Pattern</td><td>is the pattern to fill into the memory. T should be trivially copyable. </td></tr>
+    <tr><td class="paramname">Count</td><td>is the number of times to fill Pattern into Ptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00328">328</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01686">cl::sycl::handler::fill()</a>, and <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>.</p>
+
+</div>
+</div>
 <a id="a8edb4ea02ee6c99c98287f336bd32874"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8edb4ea02ee6c99c98287f336bd32874">&#9670;&nbsp;</a></span>get()</h2>
 
@@ -1019,9 +1081,9 @@ template&lt;backend BackendName&gt; </div>
 <p>Gets the native handle of the SYCL queue. </p>
 <dl class="section return"><dt>Returns</dt><dd>a native handle, the type of which defined by the backend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00817">817</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00827">827</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>, and <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
+<p class="reference">References <a class="el" href="common_8hpp_source.html#l00180">cl::sycl::detail::createSyclObjFromImpl()</a>, <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>, and <a class="el" href="common_8hpp_source.html#l00163">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
 </div>
 </div>
@@ -1418,7 +1480,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00442">442</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00452">452</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1536,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00462">462</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00472">472</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1530,7 +1592,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00482">482</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00492">492</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1593,7 +1655,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00503">503</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00513">513</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1656,7 +1718,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00525">525</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00535">535</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1781,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00547">547</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00557">557</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1782,7 +1844,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00570">570</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00580">580</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1845,7 +1907,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00594">594</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00604">604</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1908,7 +1970,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00618">618</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00628">628</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -1971,7 +2033,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00642">642</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00652">652</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -2041,9 +2103,9 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00670">670</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00680">680</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>.</p>
 
 </div>
 </div>
@@ -2113,9 +2175,9 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00701">701</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00711">711</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>.</p>
 
 </div>
 </div>
@@ -2171,7 +2233,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00730">730</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00740">740</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -2234,9 +2296,9 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00758">758</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00768">768</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>.</p>
 
 </div>
 </div>
@@ -2299,9 +2361,9 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00788">788</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00798">798</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>.</p>
 
 </div>
 </div>
@@ -2348,7 +2410,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00360">360</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00370">370</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="handler_8cpp_source.html#l00323">cl::sycl::handler::prefetch()</a>.</p>
 
@@ -2399,7 +2461,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00369">369</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00379">379</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 </div>
 </div>
@@ -2455,9 +2517,9 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00392">392</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00402">402</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>.</p>
 
 </div>
 </div>
@@ -2513,9 +2575,9 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00417">417</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00427">427</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00773">cl::sycl::handler::depends_on()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l00775">cl::sycl::handler::depends_on()</a>.</p>
 
 </div>
 </div>
@@ -2662,7 +2724,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00231">231</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01719">cl::sycl::handler::barrier()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01737">cl::sycl::handler::barrier()</a>.</p>
 
 </div>
 </div>
@@ -2713,7 +2775,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00251">251</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01719">cl::sycl::handler::barrier()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01737">cl::sycl::handler::barrier()</a>.</p>
 
 </div>
 </div>
@@ -2808,8 +2870,6 @@ template&lt;typename T &gt; </div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00288">288</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00038">cl::sycl::detail::memcpy()</a>.</p>
 
 </div>
 </div>
