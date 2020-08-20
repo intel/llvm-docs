@@ -1,5 +1,10 @@
 var NAVTREEINDEX27 =
 {
+"struct__pi__program.html#afec59a76fa9df65aaa6e7e5a62bf4e3a":[3,0,25,27],
+"struct__pi__queue.html":[3,0,26],
+"struct__pi__queue.html#a06f5c8883c7ab5f6e2da68d189d9c50f":[3,0,26,7],
+"struct__pi__queue.html#a1e42c61b4c00cd03ec6f6e85d9a9678f":[3,0,26,10],
+"struct__pi__queue.html#a4f3f532139c63eb72b3d54f661cf0649":[3,0,26,5],
 "struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5":[3,0,26,13],
 "struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790":[3,0,26,0],
 "struct__pi__queue.html#a622784255d6db4ff8f778200b46cb779":[3,0,26,17],
@@ -244,10 +249,5 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#a73851661d172e2b4977cf0dfa4841c33":[3,0,2,1,5,13,1],
 "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#af68d69bcaf40e989b9651996e97ee37c":[3,0,2,1,5,13,0],
 "structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html":[3,0,2,1,5,14],
-"structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html#aa7a41fc7e029ff5c2916b389500d5a00":[3,0,2,1,5,14,1],
-"structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html#ab4116e0dbd18f09f611fc170c23aece1":[3,0,2,1,5,14,0],
-"structcl_1_1sycl_1_1detail_1_1Assigner.html":[3,0,2,1,0,14],
-"structcl_1_1sycl_1_1detail_1_1Assigner.html#a58e16b7e75a06644b195c8a38e13bc16":[3,0,2,1,0,14,0],
-"structcl_1_1sycl_1_1detail_1_1Assigner.html#ae698e7db2f58e13513e418ab572be79a":[3,0,2,1,0,14,1],
-"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html":[3,0,2,1,0,15]
+"structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html#aa7a41fc7e029ff5c2916b389500d5a00":[3,0,2,1,5,14,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a3ca47443dadc1af662dd9389c57a7dcf":[4,0,0,0,1,4,0,4,50],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a3e61f47504a8d1de81642c7c72f25dba":[4,0,0,0,1,4,0,4,66],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a40d852658166dc8a786c23023cb20f92":[4,0,0,0,1,4,0,4,72],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a419c736fc210de1c55decd67e8ac9f61":[4,0,0,0,1,4,0,4,47],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a4b44f9472d27f1a338e03013f5b8a80a":[4,0,0,0,1,4,0,4,16],
@@ -106,8 +108,8 @@ var NAVTREEINDEX19 =
 "kernel__desc_8hpp_source.html":[4,0,0,0,1,2,24],
 "kernel__impl_8cpp.html":[4,0,2,1,32],
 "kernel__impl_8cpp.html#a0fa9b6316b4a22b17634726e05df14b0":[4,0,2,1,32,6],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,2],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,1],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,2],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,0],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,32,4],
 "kernel__impl_8cpp.html#a5d06cdeae7af18abb18f3c6df02761fc":[4,0,2,1,32,7],
@@ -195,8 +197,8 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1____host__std_1_1detail.html":[2,0,2,0,0],
 "namespacecl_1_1sycl.html":[3,0,2,1],
 "namespacecl_1_1sycl.html":[2,0,2,1],
-"namespacecl_1_1sycl_1_1INTEL.html":[2,0,2,1,7],
 "namespacecl_1_1sycl_1_1INTEL.html":[3,0,2,1,5],
+"namespacecl_1_1sycl_1_1INTEL.html":[2,0,2,1,7],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu.html":[2,0,2,1,7,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu.html":[3,0,2,1,5,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html":[2,0,2,1,7,0,0],
@@ -238,16 +240,14 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1sycl_1_1level__zero.html":[2,0,2,1,8],
 "namespacecl_1_1sycl_1_1native.html":[2,0,2,1,9],
 "namespacecl_1_1sycl_1_1opencl.html":[2,0,2,1,10],
-"namespacecl_1_1sycl_1_1property.html":[3,0,2,1,6],
 "namespacecl_1_1sycl_1_1property.html":[2,0,2,1,11],
-"namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,6,0],
+"namespacecl_1_1sycl_1_1property.html":[3,0,2,1,6],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,11,0],
+"namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,6,0],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,2,1,6,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,11,1],
-"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,6,1,0],
-"namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,6,2],
+"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,2,1,11,2],
-"namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,2,1,6,3],
-"namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,2,1,11,3]
+"namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,6,2]
 };

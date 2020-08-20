@@ -1,5 +1,10 @@
 var NAVTREEINDEX25 =
 {
+"sampler_8cpp_source.html":[4,0,2,18],
+"sampler_8hpp.html":[4,0,0,0,1,44],
+"sampler_8hpp.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59":[4,0,0,0,1,44,4],
+"sampler_8hpp.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59a9a932b3cb396238423eb2f33ec17d6aa":[4,0,0,0,1,44,4,1],
+"sampler_8hpp.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59ad879c351426770bc0b13c3628db1e636":[4,0,0,0,1,44,4,0],
 "sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42df":[4,0,0,0,1,44,2],
 "sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42dfa301defc6e7425fc63ef35c7827d43b44":[4,0,0,0,1,44,2,0],
 "sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42dfa32cf6da134a8b268cf4ab6b79a9a5ad9":[4,0,0,0,1,44,2,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX25 =
 "struct____spv_1_1MemorySemanticsMask.html#ad6be9f078822f83c67c307b660d59807":[3,0,1,0,2],
 "struct____spv_1_1Scope.html":[3,0,1,1],
 "struct____spv_1_1Scope.html#a1ad2cc873d2655edb54eb81f88915f99":[3,0,1,1,2],
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4":[3,0,1,1,0],
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad45dc8fada3e0e533b4df56d5be7720c":[3,0,1,1,0,2],
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad7060bbcb95ef87981650a77f3abe978":[3,0,1,1,0,4],
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4aeb370dc85602eb0978fbb4cfe3f71020":[3,0,1,1,0,3],
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4aee17adef74a1205f37cd2c48208396f4":[3,0,1,1,0,1],
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4afe7b910d8db10176ef18b2e08796792e":[3,0,1,1,0,0]
+"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4":[3,0,1,1,0]
 };

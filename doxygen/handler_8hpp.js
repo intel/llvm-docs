@@ -13,6 +13,8 @@ var handler_8hpp =
     [ "check_fn_signature< F, RetT(Args...)>", "structcl_1_1sycl_1_1detail_1_1check__fn__signature_3_01F_00_01RetT_07Args_8_8_8_08_4.html", "structcl_1_1sycl_1_1detail_1_1check__fn__signature_3_01F_00_01RetT_07Args_8_8_8_08_4" ],
     [ "reduction_impl", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl" ],
     [ "ShouldEnableSetArg", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg" ],
+    [ "__SYCL_NONCONST_FUNCTOR__", "handler_8hpp.html#af7cb6628b45f7f1a9ba69f2843febe17", null ],
+    [ "_KERNELFUNCPARAM", "handler_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1", null ],
     [ "lambda_arg_type", "handler_8hpp.html#aacf8c7510a63a5b1b0e97c3d26216ef4", null ],
     [ "argument_helper", "handler_8hpp.html#a0fb12c55b73a022f2aa1397b6fa3a24a", null ],
     [ "checkValueRange", "handler_8hpp.html#a042e58bee12db0078c232dc3a0ad237a", null ],

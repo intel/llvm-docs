@@ -73,9 +73,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "pointers.hpp", "pointers_8hpp.html", "pointers_8hpp" ],
     [ "program.hpp", "program_8hpp.html", "program_8hpp" ],
     [ "property_list.hpp", "property__list_8hpp.html", null ],
-    [ "queue.hpp", "queue_8hpp.html", [
-      [ "hash< cl::sycl::queue >", "structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4" ]
-    ] ],
+    [ "queue.hpp", "queue_8hpp.html", "queue_8hpp" ],
     [ "range.hpp", "range_8hpp.html", "range_8hpp" ],
     [ "sampler.hpp", "sampler_8hpp.html", "sampler_8hpp" ],
     [ "stl.hpp", "stl_8hpp.html", "stl_8hpp" ],
