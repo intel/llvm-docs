@@ -17,7 +17,7 @@ var searchData=
   ['threadpool',['ThreadPool',['../classcl_1_1sycl_1_1detail_1_1ThreadPool.html',1,'cl::sycl::detail::ThreadPool'],['../classcl_1_1sycl_1_1detail_1_1ThreadPool.html#a357a91b5e103067aad377b535804fd2b',1,'cl::sycl::detail::ThreadPool::ThreadPool()']]],
   ['throw_5fasynchronous',['throw_asynchronous',['../classcl_1_1sycl_1_1queue.html#ae5c39ed682422e4e525fe0a01e8b7ad9',1,'cl::sycl::queue::throw_asynchronous()'],['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c6e3a913c64c15cc3874a06f2ca38da',1,'cl::sycl::detail::queue_impl::throw_asynchronous()']]],
   ['tinyness_5fbefore',['tinyness_before',['../structstd_1_1numeric__limits_3_01half_01_4.html#ab666e7d99991d25601b3887c40dd47d9',1,'std::numeric_limits&lt; half &gt;']]],
-  ['to_5fdevice_5ffunc_5fptr',['to_device_func_ptr',['../namespacecl_1_1sycl_1_1intel.html#a5cb0e234712f608f46a4302593bba199',1,'cl::sycl::intel']]],
+  ['to_5fdevice_5ffunc_5fptr',['to_device_func_ptr',['../namespacecl_1_1sycl_1_1ONEAPI.html#aa244f1f5cdc62d266a16ea5ca6fee013',1,'cl::sycl::ONEAPI']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
   ['trace',['trace',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#aa9b06e1270bfa6b2b141b9c762198717',1,'cl::sycl::detail::pi']]],
   ['tracelevel',['TraceLevel',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a153495ba443668e0febb9335940a9153',1,'cl::sycl::detail::pi']]],

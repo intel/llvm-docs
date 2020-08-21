@@ -6,8 +6,8 @@ var hierarchy =
     [ "__fill< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "class____fill.html", null ],
     [ "cl::sycl::detail::__image_array_slice__< DataT, Dimensions, AccessMode, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html", null ],
     [ "cl::sycl::__precision_manipulator__", "classcl_1_1sycl_1_1____precision__manipulator____.html", null ],
-    [ "cl::sycl::intel::detail::__sycl_reduction_aux_kernel< T1, B1, B2, T2 >", "classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__aux__kernel.html", null ],
-    [ "cl::sycl::intel::detail::__sycl_reduction_main_kernel< T1, B1, B2, T2 >", "classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__main__kernel.html", null ],
+    [ "cl::sycl::ONEAPI::detail::__sycl_reduction_aux_kernel< T1, B1, B2, T2 >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__aux__kernel.html", null ],
+    [ "cl::sycl::ONEAPI::detail::__sycl_reduction_main_kernel< T1, B1, B2, T2 >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html", null ],
     [ "__usmfill< T >", "class____usmfill.html", null ],
     [ "cl::sycl::__width_manipulator__", "classcl_1_1sycl_1_1____width__manipulator____.html", null ],
     [ "_pi_device_binary_property_set_struct", "struct__pi__device__binary__property__set__struct.html", null ],
@@ -37,7 +37,7 @@ var hierarchy =
     [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
       [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", [
-        [ "cl::sycl::intel::atomic_accessor< DataT, Dimensions, DefaultOrder, DefaultScope, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1atomic__accessor.html", null ]
+        [ "cl::sycl::ONEAPI::atomic_accessor< DataT, Dimensions, DefaultOrder, DefaultScope, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html", null ]
       ] ],
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", [
         [ "cl::sycl::host_accessor< DataT, Dimensions, AccessMode >", "classcl_1_1sycl_1_1host__accessor.html", null ]
@@ -85,23 +85,23 @@ var hierarchy =
     [ "cl::sycl::detail::Assigner< Num >", "structcl_1_1sycl_1_1detail_1_1Assigner.html", null ],
     [ "cl::sycl::detail::Assigner< 0 >", "structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html", null ],
     [ "cl::sycl::atomic< T, addressSpace >", "classcl_1_1sycl_1_1atomic.html", null ],
-    [ "cl::sycl::intel::detail::atomic_ref_base< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html", [
-      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl.html", [
-        [ "cl::sycl::intel::atomic_ref< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1atomic__ref.html", null ]
+    [ "cl::sycl::ONEAPI::detail::atomic_ref_base< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html", [
+      [ "cl::sycl::ONEAPI::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl.html", [
+        [ "cl::sycl::ONEAPI::atomic_ref< T, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1ONEAPI_1_1atomic__ref.html", null ]
       ] ],
-      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl.html", null ],
-      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_floating_point< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScop9e8246ef496054d7424575b8995f65d9.html", null ],
-      [ "cl::sycl::intel::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_integral< T >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScopa10d2e5efc4edc05ef0ed86e68058fbf.html", null ]
+      [ "cl::sycl::ONEAPI::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl.html", null ],
+      [ "cl::sycl::ONEAPI::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_floating_point< T >::value > >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html", null ],
+      [ "cl::sycl::ONEAPI::detail::atomic_ref_impl< T, DefaultOrder, DefaultScope, AddressSpace, typename detail::enable_if_t< std::is_integral< T >::value > >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html", null ]
     ] ],
-    [ "cl::sycl::intel::detail::atomic_ref_base< uintptr_t, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__base.html", [
-      [ "cl::sycl::intel::detail::atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1intel_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html", null ]
+    [ "cl::sycl::ONEAPI::detail::atomic_ref_base< uintptr_t, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html", [
+      [ "cl::sycl::ONEAPI::detail::atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::auto_name", "classcl_1_1sycl_1_1detail_1_1auto__name.html", null ],
     [ "cl::sycl::detail::BaseCLTypeConverter< T, N >", "classcl_1_1sycl_1_1detail_1_1BaseCLTypeConverter.html", null ],
-    [ "cl::sycl::intel::detail::bit_equal< T, typename >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal.html", null ],
-    [ "cl::sycl::intel::detail::bit_equal< double >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01double_01_4.html", null ],
-    [ "cl::sycl::intel::detail::bit_equal< float >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01float_01_4.html", null ],
-    [ "cl::sycl::intel::detail::bit_equal< T, typename detail::enable_if_t< std::is_integral< T >::value > >", "structcl_1_1sycl_1_1intel_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t_a45a4b765c3ccf16b6fc636e7497d3d3.html", null ],
+    [ "cl::sycl::ONEAPI::detail::bit_equal< T, typename >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html", null ],
+    [ "cl::sycl::ONEAPI::detail::bit_equal< double >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::detail::bit_equal< float >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::detail::bit_equal< T, typename detail::enable_if_t< std::is_integral< T >::value > >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html", null ],
     [ "cl::sycl::INTEL::gpu::bitcast_helper< ToEltTy, FromEltTy, FromN, typename >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html", null ],
     [ "bool_constant", "classbool__constant.html", [
       [ "cl::sycl::detail::is_address_space_compliant_impl< multi_ptr< T, Space >, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html", null ],
@@ -287,7 +287,7 @@ var hierarchy =
       [ "cl::sycl::exception", "classcl_1_1sycl_1_1exception.html", [
         [ "cl::sycl::device_error", "classcl_1_1sycl_1_1device__error.html", [
           [ "cl::sycl::compile_program_error", "classcl_1_1sycl_1_1compile__program__error.html", [
-            [ "cl::sycl::experimental::spec_const_error", "classcl_1_1sycl_1_1experimental_1_1spec__const__error.html", null ]
+            [ "cl::sycl::ONEAPI::experimental::spec_const_error", "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html", null ]
           ] ],
           [ "cl::sycl::feature_not_supported", "classcl_1_1sycl_1_1feature__not__supported.html", null ],
           [ "cl::sycl::invalid_object_error", "classcl_1_1sycl_1_1invalid__object__error.html", null ],
@@ -373,8 +373,8 @@ var hierarchy =
     [ "cl::sycl::detail::get_platform_info< T, param >", "structcl_1_1sycl_1_1detail_1_1get__platform__info.html", null ],
     [ "cl::sycl::detail::get_platform_info< string_class, param >", "structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01string__class_00_01param_01_4.html", null ],
     [ "cl::sycl::detail::get_platform_info< vector_class< string_class >, info::platform::extensions >", "structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01vector__class_3_01string__class_01_4_00_0139c6283becf050188b9336488ce1727c.html", null ],
-    [ "cl::sycl::intel::detail::get_reduction_aux_kernel_name_t< Name, Type, B1, B2, OutputT >", "structcl_1_1sycl_1_1intel_1_1detail_1_1get__reduction__aux__kernel__name__t.html", null ],
-    [ "cl::sycl::intel::detail::get_reduction_main_kernel_name_t< Name, Type, B1, B2, OutputT >", "structcl_1_1sycl_1_1intel_1_1detail_1_1get__reduction__main__kernel__name__t.html", null ],
+    [ "cl::sycl::ONEAPI::detail::get_reduction_aux_kernel_name_t< Name, Type, B1, B2, OutputT >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html", null ],
+    [ "cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t< Name, Type, B1, B2, OutputT >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html", null ],
     [ "cl::sycl::detail::GetOp< T >", "classcl_1_1sycl_1_1detail_1_1GetOp.html", null ],
     [ "cl::sycl::detail::GetScalarOp< T >", "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html", null ],
     [ "cl::sycl::detail::GetSpirvMemoryScope< AS >", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope.html", null ],
@@ -418,9 +418,13 @@ var hierarchy =
     [ "cl::sycl::detail::HostProfilingInfo", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html", null ],
     [ "cl::sycl::detail::HostTask", "classcl_1_1sycl_1_1detail_1_1HostTask.html", null ],
     [ "cl::sycl::detail::identity< T, BinaryOperation >", "structcl_1_1sycl_1_1detail_1_1identity.html", null ],
-    [ "cl::sycl::detail::identity< T, intel::maximum< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1maximum_3_01V_01_4_01_4.html", null ],
-    [ "cl::sycl::detail::identity< T, intel::minimum< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1minimum_3_01V_01_4_01_4.html", null ],
-    [ "cl::sycl::detail::identity< T, intel::plus< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1plus_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::bit_and< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::bit_or< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__or_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::bit_xor< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__xor_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::maximum< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1maximum_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::minimum< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1minimum_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::multiplies< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::identity< T, ONEAPI::plus< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html", null ],
     [ "cl::sycl::image< Dimensions, AllocatorT >", "classcl_1_1sycl_1_1image.html", null ],
     [ "cl::sycl::detail::InitializedVal< N, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal.html", null ],
     [ "cl::sycl::detail::InitializedVal< 1, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4.html", null ],
@@ -601,7 +605,7 @@ var hierarchy =
     [ "cl::sycl::detail::make_unsigned_impl< T, enable_if_t<!is_contained< T, gtl::integer_list >::value, T > >", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_9is__contained_3_07ab07014fed00ccca14dfc34322099d2.html", null ],
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
     [ "cl::sycl::detail::Command::Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", null ],
-    [ "cl::sycl::intel::maximum< T >", "structcl_1_1sycl_1_1intel_1_1maximum.html", null ],
+    [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
     [ "maxtype< T >", "structmaxtype.html", null ],
     [ "maxtype< char >", "structmaxtype_3_01char_01_4.html", null ],
     [ "maxtype< short >", "structmaxtype_3_01short_01_4.html", null ],
@@ -609,13 +613,13 @@ var hierarchy =
     [ "maxtype< unsigned short >", "structmaxtype_3_01unsigned_01short_01_4.html", null ],
     [ "_pi_mem::mem_", "union__pi__mem_1_1mem__.html", null ],
     [ "cl::sycl::detail::MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html", null ],
-    [ "cl::sycl::intel::detail::memory_order_traits< ReadModifyWriteOrder >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits.html", null ],
-    [ "cl::sycl::intel::detail::memory_order_traits< memory_order::acq_rel >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html", null ],
-    [ "cl::sycl::intel::detail::memory_order_traits< memory_order::relaxed >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1relaxed_01_4.html", null ],
-    [ "cl::sycl::intel::detail::memory_order_traits< memory_order::seq_cst >", "structcl_1_1sycl_1_1intel_1_1detail_1_1memory__order__traits_3_01memory__order_1_1seq__cst_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::detail::memory_order_traits< ReadModifyWriteOrder >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1memory__order__traits.html", null ],
+    [ "cl::sycl::ONEAPI::detail::memory_order_traits< memory_order::acq_rel >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1memory__order__traits_3_01memory__order_1_1acq__rel_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::detail::memory_order_traits< memory_order::relaxed >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1memory__order__traits_3_01memory__order_1_1relaxed_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::detail::memory_order_traits< memory_order::seq_cst >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1memory__order__traits_3_01memory__order_1_1seq__cst_01_4.html", null ],
     [ "cl::sycl::detail::MemoryManager", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html", null ],
     [ "__spv::MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", null ],
-    [ "cl::sycl::intel::minimum< T >", "structcl_1_1sycl_1_1intel_1_1minimum.html", null ],
+    [ "cl::sycl::ONEAPI::minimum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum.html", null ],
     [ "cl::sycl::mode_tag_t< mode >", "structcl_1_1sycl_1_1mode__tag__t.html", null ],
     [ "cl::sycl::mode_target_tag_t< mode, trgt >", "structcl_1_1sycl_1_1mode__target__tag__t.html", null ],
     [ "_pi_program::ModuleIterator", "class__pi__program_1_1ModuleIterator.html", null ],
@@ -684,9 +688,9 @@ var hierarchy =
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
-    [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer.html", null ],
-    [ "cl::sycl::intel::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_01cdef3529f544e4ac80876d6e7b0474fc.html", null ],
-    [ "cl::sycl::intel::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html", null ],
+    [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html", null ],
+    [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html", null ],
+    [ "cl::sycl::ONEAPI::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", null ],
     [ "cl::sycl::INTEL::gpu::region_base< Is2D, T, SizeY, StrideY, SizeX, StrideX >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html", null ],
     [ "cl::sycl::detail::RelationalReturnType< T >", "structcl_1_1sycl_1_1detail_1_1RelationalReturnType.html", null ],
     [ "cl::sycl::detail::RelationalTestForSignBitType< T >", "structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html", null ],
@@ -856,13 +860,13 @@ var hierarchy =
     [ "cl::sycl::INTEL::gpu::details::simd_type< T & >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::details::simd_type< T && >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_6_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::simd_view< BaseTy, RegionTy >", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html", null ],
-    [ "cl::sycl::experimental::spec_constant< T, ID >", "classcl_1_1sycl_1_1experimental_1_1spec__constant.html", null ],
+    [ "cl::sycl::ONEAPI::experimental::spec_constant< T, ID >", "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html", null ],
     [ "cl::sycl::detail::spec_constant_impl", "classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html", null ],
     [ "cl::sycl::detail::SpecConstantInfo< Name >", "structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html", null ],
     [ "cl::sycl::INTEL::statically_coalesce_impl< N >", "structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html", null ],
     [ "cl::sycl::stream", "classcl_1_1sycl_1_1stream.html", null ],
     [ "cl::sycl::detail::stream_impl", "classcl_1_1sycl_1_1detail_1_1stream__impl.html", null ],
-    [ "cl::sycl::intel::sub_group", "structcl_1_1sycl_1_1intel_1_1sub__group.html", null ],
+    [ "cl::sycl::ONEAPI::sub_group", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html", null ],
     [ "_pi_mem::mem_::surface_mem_", "struct__pi__mem_1_1mem___1_1surface__mem__.html", null ],
     [ "cl::sycl::detail::SwizzleOp< VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes >", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html", null ],
     [ "cl::sycl::detail::sycl_to_pi< T >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi.html", null ],
@@ -894,7 +898,7 @@ var hierarchy =
       [ "cl::sycl::detail::is_pointer_impl< multi_ptr< T, Space > >", "structcl_1_1sycl_1_1detail_1_1is__pointer__impl_3_01multi__ptr_3_01T_00_01Space_01_4_01_4.html", null ],
       [ "cl::sycl::detail::is_pointer_impl< T * >", "structcl_1_1sycl_1_1detail_1_1is__pointer__impl_3_01T_01_5_01_4.html", null ],
       [ "cl::sycl::detail::is_same_vector_size_impl< FirstSize >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl_3_01FirstSize_01_4.html", null ],
-      [ "cl::sycl::detail::is_sub_group< intel::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01intel_1_1sub__group_01_4.html", null ],
+      [ "cl::sycl::detail::is_sub_group< ONEAPI::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html", null ],
       [ "cl::sycl::detail::is_vec< cl::sycl::vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1is__vec_3_01cl_1_1sycl_1_1vec_3_01T_00_01N_01_4_01_4.html", null ],
       [ "cl::sycl::detail::IsSwizzleOp< cl::sycl::detail::SwizzleOp< VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes... > >", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html", null ],
       [ "cl::sycl::INTEL::gpu::is_esimd_arithmetic_type< Ty, __esimd_void_t< decltype(std::declval< Ty >()+std::declval< Ty >()), decltype(std::declval< Ty >() - std::declval< Ty >()), decltype(std::declval< Ty >() *std::declval< Ty >()), decltype(std::declval< Ty >()/std::declval< Ty >())> >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type_3_01Ty_00_01____esimd__void__t_3d7d08b23155dc5e9134f97f43ccf842b.html", null ],

@@ -312,9 +312,9 @@ Friends</h2></td></tr>
 <tr class="separator:ad6cdd83c821525ef93cdeb8332fd7de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fca0ca308f0eac9343990d58cd54374"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a5fca0ca308f0eac9343990d58cd54374">detail::stream_impl</a></td></tr>
 <tr class="separator:a5fca0ca308f0eac9343990d58cd54374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e67291cf7d3926c9011bf240dd76c48"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::mode AccMode, access::placeholder IsPlaceholder&gt; </td></tr>
-<tr class="memitem:a5e67291cf7d3926c9011bf240dd76c48"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a5e67291cf7d3926c9011bf240dd76c48">intel::detail::reduction_impl</a></td></tr>
-<tr class="separator:a5e67291cf7d3926c9011bf240dd76c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b6e4d61c88a70fd9ae7aad67769dd16"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::mode AccMode, access::placeholder IsPlaceholder&gt; </td></tr>
+<tr class="memitem:a2b6e4d61c88a70fd9ae7aad67769dd16"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a2b6e4d61c88a70fd9ae7aad67769dd16">ONEAPI::detail::reduction_impl</a></td></tr>
+<tr class="separator:a2b6e4d61c88a70fd9ae7aad67769dd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa46bc683d37b6005434a0bceb5389f8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#aa46bc683d37b6005434a0bceb5389f8c">detail::getDeviceFromHandler</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)</td></tr>
 <tr class="separator:aa46bc683d37b6005434a0bceb5389f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae548b3b019349fdb34b6be5d88d2165a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#ae548b3b019349fdb34b6be5d88d2165a">detail::associateWithHandler</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html">detail::AccessorBaseHost</a> *, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598">access::target</a>)</td></tr>
@@ -1219,7 +1219,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 
 <p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00885">885</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reduction_8hpp_source.html#l00884">cl::sycl::intel::detail::reduAuxCGFuncImpl()</a>, and <a class="el" href="reduction_8hpp_source.html#l00620">cl::sycl::intel::detail::reduCGFuncImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reduction_8hpp_source.html#l00886">cl::sycl::ONEAPI::detail::reduAuxCGFuncImpl()</a>, and <a class="el" href="reduction_8hpp_source.html#l00622">cl::sycl::ONEAPI::detail::reduCGFuncImpl()</a>.</p>
 
 </div>
 </div>
@@ -1611,11 +1611,11 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </table>
   </dd>
 </dl>
-<p>TODO: Need to handle more than 1 reduction in <a class="el" href="classcl_1_1sycl_1_1handler.html#a534a4723975d044713a59904347f6587">parallel_for()</a>. TODO: Support HOST. The kernels called by this <a class="el" href="classcl_1_1sycl_1_1handler.html#a534a4723975d044713a59904347f6587">parallel_for()</a> may use some functionality that is not yet supported on HOST such as: <a class="el" href="classcl_1_1sycl_1_1handler.html#aa263b98900a3e67d195b5bc591c50ef3" title="Prevents any commands submitted afterward to this queue from executing until all commands previously ...">barrier()</a>, and <a class="el" href="namespacecl_1_1sycl_1_1intel.html#ab9f089018367402a4c9b5be926d0d17e">intel::reduce()</a> that also may be used in more optimized implementations waiting for their turn of code-review. </p>
+<p>TODO: Need to handle more than 1 reduction in <a class="el" href="classcl_1_1sycl_1_1handler.html#a534a4723975d044713a59904347f6587">parallel_for()</a>. TODO: Support HOST. The kernels called by this <a class="el" href="classcl_1_1sycl_1_1handler.html#a534a4723975d044713a59904347f6587">parallel_for()</a> may use some functionality that is not yet supported on HOST such as: <a class="el" href="classcl_1_1sycl_1_1handler.html#aa263b98900a3e67d195b5bc591c50ef3" title="Prevents any commands submitted afterward to this queue from executing until all commands previously ...">barrier()</a>, and <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">ONEAPI::reduce()</a> that also may be used in more optimized implementations waiting for their turn of code-review. </p>
 
 <p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01108">1108</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="pi_8h_source.html#l00091">PI_INVALID_WORK_GROUP_SIZE</a>, and <a class="el" href="namespacecl_1_1sycl_1_1intel_1_1detail.html#a9e8470c8671b0893cc2e3dda4ca10efd">cl::sycl::intel::detail::reduGetMaxWGSize()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="pi_8h_source.html#l00091">PI_INVALID_WORK_GROUP_SIZE</a>, and <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a217c7e07fa61a2c040a362501711afb4">cl::sycl::ONEAPI::detail::reduGetMaxWGSize()</a>.</p>
 
 </div>
 </div>
@@ -2337,7 +2337,7 @@ template&lt;typename DataT , int Dims, access::mode AccMode, access::target AccT
 
 <p class="reference">References <a class="el" href="handler__proxy_8cpp_source.html#l00017">cl::sycl::detail::associateWithHandler()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="reduction_8hpp_source.html#l00520">cl::sycl::intel::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::getWriteAccForPartialReds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="reduction_8hpp_source.html#l00522">cl::sycl::ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;::getWriteAccForPartialReds()</a>.</p>
 
 </div>
 </div>
@@ -2846,8 +2846,8 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 
 </div>
 </div>
-<a id="a5e67291cf7d3926c9011bf240dd76c48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e67291cf7d3926c9011bf240dd76c48">&#9670;&nbsp;</a></span>intel::detail::reduction_impl</h2>
+<a id="a2b6e4d61c88a70fd9ae7aad67769dd16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6e4d61c88a70fd9ae7aad67769dd16">&#9670;&nbsp;</a></span>ONEAPI::detail::reduction_impl</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2858,7 +2858,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::m
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html">intel::detail::reduction_impl</a></td>
+          <td class="memname">friend class <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a></td>
         </tr>
       </table>
   </td>

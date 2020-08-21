@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5f_5fconsume_5funsupported',['__consume_unsupported',['../namespacecl_1_1sycl_1_1intel.html#a672372faa371f44025b94a474bbc83b5acb5a4763b264b2c55ea90a4d26ddbe70',1,'cl::sycl::intel']]],
+  ['_5f_5fconsume_5funsupported',['__consume_unsupported',['../namespacecl_1_1sycl_1_1ONEAPI.html#a46f2e11c907d87cb0584eba0dc3f020facb5a4763b264b2c55ea90a4d26ddbe70',1,'cl::sycl::ONEAPI']]],
   ['_5f_5fcopyacc2acc',['__copyAcc2Acc',['../class____copyAcc2Acc.html',1,'']]],
   ['_5f_5fcopyacc2ptr',['__copyAcc2Ptr',['../class____copyAcc2Ptr.html',1,'']]],
   ['_5f_5fcopyptr2acc',['__copyPtr2Acc',['../class____copyPtr2Acc.html',1,'']]],
@@ -185,8 +185,8 @@ var searchData=
   ['_5f_5fsycl_5fopassign',['__SYCL_OPASSIGN',['../types_8hpp.html#afa2e9595fcd4af1482232e1b36445f7e',1,'types.hpp']]],
   ['_5f_5fsycl_5fppcat',['__SYCL_PPCAT',['../detail_2builtins_8hpp.html#aa39e7e212e1c6f1aab65ccc5fc1da50c',1,'builtins.hpp']]],
   ['_5f_5fsycl_5fppcat_5fnx',['__SYCL_PPCAT_NX',['../detail_2builtins_8hpp.html#ad4b58a3f20d8503373f992d5ae521f3f',1,'builtins.hpp']]],
-  ['_5f_5fsycl_5freduction_5faux_5fkernel',['__sycl_reduction_aux_kernel',['../classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__aux__kernel.html',1,'cl::sycl::intel::detail']]],
-  ['_5f_5fsycl_5freduction_5fmain_5fkernel',['__sycl_reduction_main_kernel',['../classcl_1_1sycl_1_1intel_1_1detail_1_1____sycl__reduction__main__kernel.html',1,'cl::sycl::intel::detail']]],
+  ['_5f_5fsycl_5freduction_5faux_5fkernel',['__sycl_reduction_aux_kernel',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__aux__kernel.html',1,'cl::sycl::ONEAPI::detail']]],
+  ['_5f_5fsycl_5freduction_5fmain_5fkernel',['__sycl_reduction_main_kernel',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html',1,'cl::sycl::ONEAPI::detail']]],
   ['_5f_5fsycl_5fregister_5flib',['__sycl_register_lib',['../program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e',1,'__sycl_register_lib(pi_device_binaries desc):&#160;program_manager.cpp'],['../program__manager_8hpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e',1,'__sycl_register_lib(pi_device_binaries desc):&#160;program_manager.cpp']]],
   ['_5f_5fsycl_5frellogop',['__SYCL_RELLOGOP',['../types_8hpp.html#a8d03946656f8df2e834f264cde74563f',1,'__SYCL_RELLOGOP():&#160;types.hpp'],['../types_8hpp.html#a8d03946656f8df2e834f264cde74563f',1,'__SYCL_RELLOGOP():&#160;types.hpp']]],
   ['_5f_5fsycl_5fscalar_5faccess',['__SYCL_SCALAR_ACCESS',['../types_8hpp.html',1,'__SYCL_SCALAR_ACCESS():&#160;types.hpp'],['../types_8hpp.html',1,'__SYCL_SCALAR_ACCESS():&#160;types.hpp']]],

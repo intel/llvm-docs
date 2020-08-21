@@ -10,7 +10,8 @@ var searchData=
   ['make_5funsigned_5ft',['make_unsigned_t',['../namespacecl_1_1sycl_1_1detail.html#a9480d1d92df8fb08b39c65719fb53dc0',1,'cl::sycl::detail']]],
   ['make_5funsinged_5finteger_5ft',['make_unsinged_integer_t',['../namespacecl_1_1sycl_1_1detail.html#ac8120becb309596db6b3716cce89f937',1,'cl::sycl::detail']]],
   ['mask_5ftype_5ft',['mask_type_t',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aede170e290d57755a7f30822ace70d2f',1,'cl::sycl::INTEL::gpu']]],
-  ['memory_5forder',['memory_order',['../namespacecl_1_1sycl_1_1detail.html#a88dc0675485acc0898b7343c6dcfac40',1,'cl::sycl::detail::memory_order()'],['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a91ca309b86970a235703dc98408ba653',1,'cl::sycl::intel::detail::memory_order()']]],
-  ['memory_5fscope',['memory_scope',['../namespacecl_1_1sycl_1_1intel_1_1detail.html#a89a53c5c7664e66a09a06bd609b73270',1,'cl::sycl::intel::detail']]],
+  ['memory_5forder',['memory_order',['../namespacecl_1_1sycl_1_1detail.html#a88dc0675485acc0898b7343c6dcfac40',1,'cl::sycl::detail::memory_order()'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a1a0b89e6ffb7fc6a307bdc018068ba19',1,'cl::sycl::ONEAPI::detail::memory_order()']]],
+  ['memory_5fscope',['memory_scope',['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ac47a526c807969b732257722c2a0d7ee',1,'cl::sycl::ONEAPI::detail']]],
+  ['multiplies',['multiplies',['../namespacecl_1_1sycl_1_1ONEAPI.html#a5e9f6f03ea1b557e8753af9b5de73169',1,'cl::sycl::ONEAPI']]],
   ['mutex_5fclass',['mutex_class',['../namespacecl_1_1sycl.html#a0e818f1ac2ba5084b08dd41ca813ef28',1,'cl::sycl']]]
 ];

@@ -60,6 +60,6 @@ var classcl_1_1sycl_1_1handler =
     [ "detail::image_accessor", "classcl_1_1sycl_1_1handler.html#adbb498cc698f57626f0746b3365a880e", null ],
     [ "detail::queue_impl", "classcl_1_1sycl_1_1handler.html#a3a8c1bacdcf03b3534b9696769e9f0fc", null ],
     [ "detail::stream_impl", "classcl_1_1sycl_1_1handler.html#a5fca0ca308f0eac9343990d58cd54374", null ],
-    [ "intel::detail::reduction_impl", "classcl_1_1sycl_1_1handler.html#a5e67291cf7d3926c9011bf240dd76c48", null ],
+    [ "ONEAPI::detail::reduction_impl", "classcl_1_1sycl_1_1handler.html#a2b6e4d61c88a70fd9ae7aad67769dd16", null ],
     [ "stream", "classcl_1_1sycl_1_1handler.html#ad6cdd83c821525ef93cdeb8332fd7de8", null ]
 ];

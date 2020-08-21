@@ -1,8 +1,8 @@
 var searchData=
 [
   ['a',['a',['../structcl_1_1sycl_1_1elem.html#aeace5e4b3952b15bfa6c81bce1450168',1,'cl::sycl::elem']]],
-  ['accessor_5fdim',['accessor_dim',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#a7130356e58ec445b9c975fe43dc13aec',1,'cl::sycl::intel::detail::reduction_impl']]],
-  ['accessor_5fmode',['accessor_mode',['../classcl_1_1sycl_1_1intel_1_1detail_1_1reduction__impl.html#aeeb9ac1582af93c0338d87eb78431e3b',1,'cl::sycl::intel::detail::reduction_impl']]],
+  ['accessor_5fdim',['accessor_dim',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#afb11b8fc0a386728c891b9f6c4149b98',1,'cl::sycl::ONEAPI::detail::reduction_impl']]],
+  ['accessor_5fmode',['accessor_mode',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#aeb0e7af4362c3a476a18972682349861',1,'cl::sycl::ONEAPI::detail::reduction_impl']]],
   ['accessrange',['AccessRange',['../classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html#a3a32cab481aa612947ffaa32262e5cee',1,'cl::sycl::detail::AccessorImplDevice::AccessRange()'],['../classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice.html#ad340a8972fc20939a556115f5062a312',1,'cl::sycl::detail::LocalAccessorBaseDevice::AccessRange()']]],
   ['addr',['addr',['../struct__pi__offload__entry__struct.html#a7e1080b75d3ca8a3b603bbf010e1c1d4',1,'_pi_offload_entry_struct']]],
   ['address_5fspace',['address_space',['../classcl_1_1sycl_1_1multi__ptr.html#ac33a5a284b92308b440007c35bf612ef',1,'cl::sycl::multi_ptr::address_space()'],['../classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a5d7d9071930cc6254f2cb971e3a66604',1,'cl::sycl::multi_ptr&lt; void, Space &gt;::address_space()'],['../classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#aa0cb3bb078dc61e903ecaeb2855ab6f5',1,'cl::sycl::multi_ptr&lt; const void, Space &gt;::address_space()']]],

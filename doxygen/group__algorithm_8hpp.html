@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DPC++ Runtime: include/CL/sycl/intel/group_algorithm.hpp File Reference</title>
+<title>DPC++ Runtime: include/CL/sycl/ONEAPI/group_algorithm.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,57 +101,65 @@ $(document).ready(function(){initNavTree('group__algorithm_8hpp.html','');});
 <div class="textblock"><code>#include &lt;<a class="el" href="spirv__ops_8hpp_source.html">CL/__spirv/spirv_ops.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="spirv__types_8hpp_source.html">CL/__spirv/spirv_types.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="spirv__vars_8hpp_source.html">CL/__spirv/spirv_vars.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="ONEAPI_2atomic_8hpp_source.html">CL/sycl/ONEAPI/atomic.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="functional_8hpp_source.html">CL/sycl/ONEAPI/functional.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="sub__group_8hpp_source.html">CL/sycl/ONEAPI/sub_group.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="spirv_8hpp_source.html">CL/sycl/detail/spirv.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="type__traits_8hpp_source.html">CL/sycl/detail/type_traits.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="group_8hpp_source.html">CL/sycl/group.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="functional_8hpp_source.html">CL/sycl/intel/functional.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="sub__group_8hpp_source.html">CL/sycl/intel/sub_group.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="nd__item_8hpp_source.html">CL/sycl/nd_item.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for group_algorithm.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__algorithm_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2intel_2group__algorithm_8hpp" alt=""/></div>
-<map name="include_2CL_2sycl_2intel_2group__algorithm_8hpp" id="include_2CL_2sycl_2intel_2group__algorithm_8hpp">
-<area shape="rect" id="node2" href="spirv__ops_8hpp.html" title="CL/__spirv/spirv_ops.hpp" alt="" coords="349,483,520,509"/>
-<area shape="rect" id="node3" href="spirv__types_8hpp.html" title="CL/__spirv/spirv_types.hpp" alt="" coords="15,565,196,591"/>
-<area shape="rect" id="node10" href="spirv__vars_8hpp.html" title="CL/__spirv/spirv_vars.hpp" alt="" coords="474,565,649,591"/>
-<area shape="rect" id="node11" href="spirv_8hpp.html" title="CL/sycl/detail/spirv.hpp" alt="" coords="610,319,769,345"/>
-<area shape="rect" id="node26" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="1883,557,2013,599"/>
-<area shape="rect" id="node39" href="group_8hpp.html" title="CL/sycl/group.hpp" alt="" coords="809,95,937,121"/>
-<area shape="rect" id="node47" href="functional_8hpp.html" title="CL/sycl/intel/functional.hpp" alt="" coords="3102,319,3282,345"/>
-<area shape="rect" id="node48" href="sub__group_8hpp.html" title="CL/sycl/intel/sub_group.hpp" alt="" coords="1777,244,1961,271"/>
-<area shape="rect" id="node5" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="2005,989,2179,1016"/>
-<area shape="rect" id="node7" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="1003,1064,1170,1091"/>
-<area shape="rect" id="node12" href="generic__type__traits_8hpp.html" title="CL/sycl/detail/generic\l_type_traits.hpp" alt="" coords="2319,393,2467,435"/>
-<area shape="rect" id="node32" href="atomic__enums_8hpp.html" title="CL/sycl/intel/atomic\l_enums.hpp" alt="" coords="696,393,835,435"/>
-<area shape="rect" id="node13" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="2276,833,2460,859"/>
-<area shape="rect" id="node14" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="2347,915,2528,941"/>
-<area shape="rect" id="node20" href="aliases_8hpp.html" title="CL/sycl/aliases.hpp" alt="" coords="2442,565,2579,591"/>
-<area shape="rect" id="node21" href="generic__type__lists_8hpp.html" title="CL/sycl/detail/generic\l_type_lists.hpp" alt="" coords="1986,647,2134,688"/>
-<area shape="rect" id="node27" href="half__type_8hpp.html" title="CL/sycl/half_type.hpp" alt="" coords="2908,483,3057,509"/>
-<area shape="rect" id="node16" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="2439,989,2566,1016"/>
-<area shape="rect" id="node19" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="1760,989,1912,1016"/>
-<area shape="rect" id="node22" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="1940,825,2060,867"/>
-<area shape="rect" id="node25" href="type__list_8hpp.html" title="CL/sycl/detail/type\l_list.hpp" alt="" coords="1935,736,2065,777"/>
-<area shape="rect" id="node33" href="helpers_8hpp.html" title="CL/sycl/detail/helpers.hpp" alt="" coords="1097,483,1271,509"/>
-<area shape="rect" id="node34" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="908,833,1049,859"/>
-<area shape="rect" id="node40" href="device__event_8hpp.html" title="CL/sycl/device_event.hpp" alt="" coords="245,401,419,427"/>
-<area shape="rect" id="node41" href="h__item_8hpp.html" title="CL/sycl/h_item.hpp" alt="" coords="859,169,994,196"/>
-<area shape="rect" id="node42" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="1469,319,1576,345"/>
-<area shape="rect" id="node44" href="range_8hpp.html" title="CL/sycl/range.hpp" alt="" coords="1011,401,1139,427"/>
-<area shape="rect" id="node46" href="pointers_8hpp.html" title="CL/sycl/pointers.hpp" alt="" coords="2293,743,2435,770"/>
-<area shape="rect" id="node45" href="item_8hpp.html" title="CL/sycl/item.hpp" alt="" coords="1115,244,1237,271"/>
-<area shape="rect" id="node43" href="array_8hpp.html" title="CL/sycl/detail/array.hpp" alt="" coords="1447,483,1607,509"/>
-<area shape="rect" id="node49" href="types_8hpp.html" title="CL/sycl/types.hpp" alt="" coords="2756,319,2884,345"/>
-<area shape="rect" id="node50" href="multi__ptr_8hpp.html" title="CL/sycl/multi_ptr.hpp" alt="" coords="2087,401,2233,427"/>
+<div class="center"><img src="group__algorithm_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2ONEAPI_2group__algorithm_8hpp" alt=""/></div>
+<map name="include_2CL_2sycl_2ONEAPI_2group__algorithm_8hpp" id="include_2CL_2sycl_2ONEAPI_2group__algorithm_8hpp">
+<area shape="rect" id="node2" href="spirv__ops_8hpp.html" title="CL/__spirv/spirv_ops.hpp" alt="" coords="645,601,816,628"/>
+<area shape="rect" id="node3" href="spirv__types_8hpp.html" title="CL/__spirv/spirv_types.hpp" alt="" coords="211,683,392,710"/>
+<area shape="rect" id="node10" href="spirv__vars_8hpp.html" title="CL/__spirv/spirv_vars.hpp" alt="" coords="1145,601,1319,628"/>
+<area shape="rect" id="node11" href="ONEAPI_2atomic_8hpp.html" title="CL/sycl/ONEAPI/atomic.hpp" alt="" coords="1187,95,1378,121"/>
+<area shape="rect" id="node19" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="3191,676,3321,717"/>
+<area shape="rect" id="node29" href="spirv_8hpp.html" title="CL/sycl/detail/spirv.hpp" alt="" coords="1441,348,1599,375"/>
+<area shape="rect" id="node41" href="functional_8hpp.html" title="CL/sycl/ONEAPI/functional.hpp" alt="" coords="2489,348,2695,375"/>
+<area shape="rect" id="node42" href="sub__group_8hpp.html" title="CL/sycl/ONEAPI/sub\l_group.hpp" alt="" coords="2660,259,2807,300"/>
+<area shape="rect" id="node45" href="group_8hpp.html" title="CL/sycl/group.hpp" alt="" coords="1872,177,2000,203"/>
+<area shape="rect" id="node49" href="nd__item_8hpp.html" title="CL/sycl/nd_item.hpp" alt="" coords="3697,95,3839,121"/>
+<area shape="rect" id="node5" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="3961,1108,4135,1135"/>
+<area shape="rect" id="node7" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="694,1108,861,1135"/>
+<area shape="rect" id="node12" href="atomic__accessor_8hpp.html" title="CL/sycl/ONEAPI/atomic\l_accessor.hpp" alt="" coords="1200,169,1365,211"/>
+<area shape="rect" id="node13" href="atomic__enums_8hpp.html" title="CL/sycl/ONEAPI/atomic\l_enums.hpp" alt="" coords="1269,423,1435,464"/>
+<area shape="rect" id="node27" href="atomic__ref_8hpp.html" title="CL/sycl/ONEAPI/atomic\l_ref.hpp" alt="" coords="1149,259,1315,300"/>
+<area shape="rect" id="node40" href="atomic__fence_8hpp.html" title="CL/sycl/ONEAPI/atomic\l_fence.hpp" alt="" coords="696,259,861,300"/>
+<area shape="rect" id="node14" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="2512,951,2696,978"/>
+<area shape="rect" id="node38" href="accessor_8hpp.html" title="The file contains implementations of accessor class. " alt="" coords="899,348,1048,375"/>
+<area shape="rect" id="node16" href="helpers_8hpp.html" title="CL/sycl/detail/helpers.hpp" alt="" coords="1645,519,1819,546"/>
+<area shape="rect" id="node15" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="1892,1033,2073,1060"/>
+<area shape="rect" id="node17" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1296,951,1437,978"/>
+<area shape="rect" id="node20" href="generic__type__lists_8hpp.html" title="CL/sycl/detail/generic\l_type_lists.hpp" alt="" coords="2894,765,3042,807"/>
+<area shape="rect" id="node21" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="3121,944,3241,985"/>
+<area shape="rect" id="node23" href="type__list_8hpp.html" title="CL/sycl/detail/type\l_list.hpp" alt="" coords="3013,855,3144,896"/>
+<area shape="rect" id="node28" href="atomic_8hpp.html" title="CL/sycl/atomic.hpp" alt="" coords="1009,430,1143,457"/>
+<area shape="rect" id="node30" href="generic__type__traits_8hpp.html" title="CL/sycl/detail/generic\l_type_traits.hpp" alt="" coords="2345,512,2493,553"/>
+<area shape="rect" id="node35" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="3361,430,3468,457"/>
+<area shape="rect" id="node31" href="aliases_8hpp.html" title="CL/sycl/aliases.hpp" alt="" coords="2147,601,2285,628"/>
+<area shape="rect" id="node32" href="half__type_8hpp.html" title="CL/sycl/half_type.hpp" alt="" coords="2715,601,2864,628"/>
+<area shape="rect" id="node36" href="array_8hpp.html" title="CL/sycl/detail/array.hpp" alt="" coords="3648,601,3808,628"/>
+<area shape="rect" id="node37" href="range_8hpp.html" title="CL/sycl/range.hpp" alt="" coords="3796,519,3924,546"/>
+<area shape="rect" id="node39" href="pointers_8hpp.html" title="CL/sycl/pointers.hpp" alt="" coords="1865,430,2007,457"/>
+<area shape="rect" id="node43" href="types_8hpp.html" title="CL/sycl/types.hpp" alt="" coords="2627,430,2755,457"/>
+<area shape="rect" id="node44" href="multi__ptr_8hpp.html" title="CL/sycl/multi_ptr.hpp" alt="" coords="2617,519,2764,546"/>
+<area shape="rect" id="node46" href="device__event_8hpp.html" title="CL/sycl/device_event.hpp" alt="" coords="296,519,469,546"/>
+<area shape="rect" id="node47" href="h__item_8hpp.html" title="CL/sycl/h_item.hpp" alt="" coords="3362,266,3497,293"/>
+<area shape="rect" id="node48" href="item_8hpp.html" title="CL/sycl/item.hpp" alt="" coords="3501,348,3622,375"/>
+<area shape="rect" id="node50" href="nd__range_8hpp.html" title="CL/sycl/nd_range.hpp" alt="" coords="4001,348,4151,375"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="group__algorithm_8hpp__dep__incl.png" border="0" usemap="#include_2CL_2sycl_2intel_2group__algorithm_8hppdep" alt=""/></div>
-<map name="include_2CL_2sycl_2intel_2group__algorithm_8hppdep" id="include_2CL_2sycl_2intel_2group__algorithm_8hppdep">
+<div class="center"><img src="group__algorithm_8hpp__dep__incl.png" border="0" usemap="#include_2CL_2sycl_2ONEAPI_2group__algorithm_8hppdep" alt=""/></div>
+<map name="include_2CL_2sycl_2ONEAPI_2group__algorithm_8hppdep" id="include_2CL_2sycl_2ONEAPI_2group__algorithm_8hppdep">
 <area shape="rect" id="node2" href="sycl_8hpp.html" title="include/CL/sycl.hpp" alt="" coords="306,184,443,211"/>
-<area shape="rect" id="node8" href="reduction_8hpp.html" title="include/CL/sycl/intel\l/reduction.hpp" alt="" coords="413,95,553,136"/>
+<area shape="rect" id="node8" href="reduction_8hpp.html" title="include/CL/sycl/ONEAPI\l/reduction.hpp" alt="" coords="413,95,579,136"/>
 <area shape="rect" id="node3" href="level__zero_8hpp.html" title="include/CL/sycl/backend\l/level_zero.hpp" alt="" coords="5,259,171,300"/>
 <area shape="rect" id="node4" href="fpga__device__selector_8hpp.html" title="include/CL/sycl/INTEL\l/fpga_device_selector.hpp" alt="" coords="195,259,370,300"/>
 <area shape="rect" id="node6" href="level__zero_8cpp.html" title="source/backend/level\l_zero.cpp" alt="" coords="394,259,539,300"/>
@@ -167,11 +175,19 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity.html">cl::sycl::detail::identity&lt; T, BinaryOperation &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1plus_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, intel::plus&lt; V &gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::plus&lt; V &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1minimum_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, intel::minimum&lt; V &gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1minimum_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::minimum&lt; V &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01intel_1_1maximum_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, intel::maximum&lt; V &gt; &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1maximum_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::maximum&lt; V &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::multiplies&lt; V &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__or_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::bit_or&lt; V &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__xor_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::bit_xor&lt; V &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html">cl::sycl::detail::identity&lt; T, ONEAPI::bit_and&lt; V &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op&lt; T, BinaryOperation &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,35 +201,35 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecl_1_1sycl_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html">cl::sycl::detail</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1intel"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html">cl::sycl::intel</a></td></tr>
+<tr class="memitem:namespacecl_1_1sycl_1_1ONEAPI"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html">cl::sycl::ONEAPI</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a36526326d52ec39a743939ee378730c1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a36526326d52ec39a743939ee378730c1"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a36526326d52ec39a743939ee378730c1">cl::sycl::detail::native_op_list</a> = type_list&lt; intel::plus&lt; T &gt;, intel::bit_or&lt; T &gt;, intel::bit_xor&lt; T &gt;, intel::bit_and&lt; T &gt;, intel::maximum&lt; T &gt;, intel::minimum&lt; T &gt; &gt;</td></tr>
-<tr class="separator:a36526326d52ec39a743939ee378730c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bdcc63af84ac2b3b9365d350d79fc8d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a1bdcc63af84ac2b3b9365d350d79fc8d"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a1bdcc63af84ac2b3b9365d350d79fc8d">cl::sycl::intel::EnableIfIsScalarArithmetic</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">cl::sycl::detail::is_scalar_arithmetic</a>&lt; T &gt;::value, T &gt;</td></tr>
-<tr class="separator:a1bdcc63af84ac2b3b9365d350d79fc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede473342667d326eb34dd18db5c5a45"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aede473342667d326eb34dd18db5c5a45"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aede473342667d326eb34dd18db5c5a45">cl::sycl::intel::EnableIfIsVectorArithmetic</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value, T &gt;</td></tr>
-<tr class="separator:aede473342667d326eb34dd18db5c5a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab898d263524b1e64acfd0f0c4c98b77c"><td class="memTemplParams" colspan="2">template&lt;typename Ptr , typename T &gt; </td></tr>
-<tr class="memitem:ab898d263524b1e64acfd0f0c4c98b77c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ab898d263524b1e64acfd0f0c4c98b77c">cl::sycl::intel::EnableIfIsPointer</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">cl::sycl::detail::is_pointer</a>&lt; Ptr &gt;::value, T &gt;</td></tr>
-<tr class="separator:ab898d263524b1e64acfd0f0c4c98b77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27f294331c29600e0da5ec2140b4c682"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a27f294331c29600e0da5ec2140b4c682"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a27f294331c29600e0da5ec2140b4c682">cl::sycl::intel::EnableIfIsTriviallyCopyable</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; std::is_trivially_copyable&lt; T &gt;::value &amp;&amp;!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value, T &gt;</td></tr>
-<tr class="separator:a27f294331c29600e0da5ec2140b4c682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f6a84a6f2bba817e6793c320916c2f5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
-<tr class="memitem:a5f6a84a6f2bba817e6793c320916c2f5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a5f6a84a6f2bba817e6793c320916c2f5">cl::sycl::intel::EnableIfIsScalarArithmeticNativeOp</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">cl::sycl::detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value, T &gt;</td></tr>
-<tr class="separator:a5f6a84a6f2bba817e6793c320916c2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eb0ab44b384e5691996ff4c157311c0"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
-<tr class="memitem:a0eb0ab44b384e5691996ff4c157311c0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a0eb0ab44b384e5691996ff4c157311c0">cl::sycl::intel::EnableIfIsVectorArithmeticNativeOp</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value, T &gt;</td></tr>
-<tr class="separator:a0eb0ab44b384e5691996ff4c157311c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a7b56868710b3016102b5810dd93635"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
-<tr class="memitem:a9a7b56868710b3016102b5810dd93635"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a9a7b56868710b3016102b5810dd93635">cl::sycl::intel::EnableIfIsNonNativeOp</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt;(!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">cl::sycl::detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;std::is_trivially_copyable&lt; T &gt;::value)||!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value, T &gt;</td></tr>
-<tr class="separator:a9a7b56868710b3016102b5810dd93635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7350e3db6459334619d1c17d9e105618"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7350e3db6459334619d1c17d9e105618"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a7350e3db6459334619d1c17d9e105618">cl::sycl::detail::native_op_list</a> = type_list&lt; ONEAPI::plus&lt; T &gt;, ONEAPI::bit_or&lt; T &gt;, ONEAPI::bit_xor&lt; T &gt;, ONEAPI::bit_and&lt; T &gt;, ONEAPI::maximum&lt; T &gt;, ONEAPI::minimum&lt; T &gt;, ONEAPI::multiplies&lt; T &gt; &gt;</td></tr>
+<tr class="separator:a7350e3db6459334619d1c17d9e105618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28858c878da06f10106f41a9816fb468"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a28858c878da06f10106f41a9816fb468"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a28858c878da06f10106f41a9816fb468">cl::sycl::ONEAPI::EnableIfIsScalarArithmetic</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">cl::sycl::detail::is_scalar_arithmetic</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a28858c878da06f10106f41a9816fb468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d777b1b7f5d92ff6d14381255faa8dc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6d777b1b7f5d92ff6d14381255faa8dc"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a6d777b1b7f5d92ff6d14381255faa8dc">cl::sycl::ONEAPI::EnableIfIsVectorArithmetic</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:a6d777b1b7f5d92ff6d14381255faa8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8263471c751b4a96dbec7b0de450a3e2"><td class="memTemplParams" colspan="2">template&lt;typename Ptr , typename T &gt; </td></tr>
+<tr class="memitem:a8263471c751b4a96dbec7b0de450a3e2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a8263471c751b4a96dbec7b0de450a3e2">cl::sycl::ONEAPI::EnableIfIsPointer</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">cl::sycl::detail::is_pointer</a>&lt; Ptr &gt;::value, T &gt;</td></tr>
+<tr class="separator:a8263471c751b4a96dbec7b0de450a3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66ed1d5477adcc4e911179e66984f62"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac66ed1d5477adcc4e911179e66984f62"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ac66ed1d5477adcc4e911179e66984f62">cl::sycl::ONEAPI::EnableIfIsTriviallyCopyable</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; std::is_trivially_copyable&lt; T &gt;::value &amp;&amp;!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value, T &gt;</td></tr>
+<tr class="separator:ac66ed1d5477adcc4e911179e66984f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14bbca6cc39b9d748bfad8f31510eb44"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a14bbca6cc39b9d748bfad8f31510eb44"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a14bbca6cc39b9d748bfad8f31510eb44">cl::sycl::ONEAPI::EnableIfIsScalarArithmeticNativeOp</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">cl::sycl::detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value, T &gt;</td></tr>
+<tr class="separator:a14bbca6cc39b9d748bfad8f31510eb44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb07c0f2d81414f5de4fd5afdf0b56a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:accb07c0f2d81414f5de4fd5afdf0b56a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#accb07c0f2d81414f5de4fd5afdf0b56a">cl::sycl::ONEAPI::EnableIfIsVectorArithmeticNativeOp</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value, T &gt;</td></tr>
+<tr class="separator:accb07c0f2d81414f5de4fd5afdf0b56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a31cf136e0667740cca60e6b1b57a8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:ad0a31cf136e0667740cca60e6b1b57a8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ad0a31cf136e0667740cca60e6b1b57a8">cl::sycl::ONEAPI::EnableIfIsNonNativeOp</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a>&lt;(!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">cl::sycl::detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">cl::sycl::detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;std::is_trivially_copyable&lt; T &gt;::value)||!<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">cl::sycl::detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value, T &gt;</td></tr>
+<tr class="separator:ad0a31cf136e0667740cca60e6b1b57a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -229,15 +245,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a8f8c2be6248af00c24d3985061e1672b"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a8f8c2be6248af00c24d3985061e1672b"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a8f8c2be6248af00c24d3985061e1672b">cl::sycl::detail::get_local_linear_range&lt; group&lt; 3 &gt; &gt;</a> (group&lt; 3 &gt; g)</td></tr>
 <tr class="separator:a8f8c2be6248af00c24d3985061e1672b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8301c0d7db5bff3d503f7cb6ec814a1d"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:a8301c0d7db5bff3d503f7cb6ec814a1d"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a8301c0d7db5bff3d503f7cb6ec814a1d">cl::sycl::detail::get_local_linear_range&lt; intel::sub_group &gt;</a> (intel::sub_group g)</td></tr>
-<tr class="separator:a8301c0d7db5bff3d503f7cb6ec814a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42fa1e24d5feb3051083ebe7165e88f0"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a42fa1e24d5feb3051083ebe7165e88f0"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a42fa1e24d5feb3051083ebe7165e88f0">cl::sycl::detail::get_local_linear_range&lt; ONEAPI::sub_group &gt;</a> (ONEAPI::sub_group g)</td></tr>
+<tr class="separator:a42fa1e24d5feb3051083ebe7165e88f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97c37bb841960b17d4d78a7914734c21"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
 <tr class="memitem:a97c37bb841960b17d4d78a7914734c21"><td class="memTemplItemLeft" align="right" valign="top">Group::linear_id_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a97c37bb841960b17d4d78a7914734c21">cl::sycl::detail::get_local_linear_id</a> (Group g)</td></tr>
 <tr class="separator:a97c37bb841960b17d4d78a7914734c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad38d98fc35fc3db35991c9a9fd55c09d"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:ad38d98fc35fc3db35991c9a9fd55c09d"><td class="memTemplItemLeft" align="right" valign="top">intel::sub_group::linear_id_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ad38d98fc35fc3db35991c9a9fd55c09d">cl::sycl::detail::get_local_linear_id&lt; intel::sub_group &gt;</a> (intel::sub_group g)</td></tr>
-<tr class="separator:ad38d98fc35fc3db35991c9a9fd55c09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2353a9ea8c0397f8d1b8c5ac6abb44db"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a2353a9ea8c0397f8d1b8c5ac6abb44db"><td class="memTemplItemLeft" align="right" valign="top">ONEAPI::sub_group::linear_id_type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a2353a9ea8c0397f8d1b8c5ac6abb44db">cl::sycl::detail::get_local_linear_id&lt; ONEAPI::sub_group &gt;</a> (ONEAPI::sub_group g)</td></tr>
+<tr class="separator:a2353a9ea8c0397f8d1b8c5ac6abb44db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fb4bf7987449ecb261d3d94c727d1f2"><td class="memTemplParams" colspan="2">template&lt;int Dimensions&gt; </td></tr>
 <tr class="memitem:a2fb4bf7987449ecb261d3d94c727d1f2"><td class="memTemplItemLeft" align="right" valign="top">id&lt; Dimensions &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a2fb4bf7987449ecb261d3d94c727d1f2">cl::sycl::detail::linear_id_to_id</a> (range&lt; Dimensions &gt;, size_t linear_id)</td></tr>
 <tr class="separator:a2fb4bf7987449ecb261d3d94c727d1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,121 +269,121 @@ Functions</h2></td></tr>
 <tr class="memitem:a24da86be12421a5e48279a5a6b76e96f"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Function &gt; </td></tr>
 <tr class="memitem:a24da86be12421a5e48279a5a6b76e96f"><td class="memTemplItemLeft" align="right" valign="top">Function&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a24da86be12421a5e48279a5a6b76e96f">cl::sycl::detail::for_each</a> (Group g, Ptr first, Ptr last, Function f)</td></tr>
 <tr class="separator:a24da86be12421a5e48279a5a6b76e96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8b013550121b3c6040a8dab78fe1e89"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
-<tr class="memitem:ac8b013550121b3c6040a8dab78fe1e89"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ac8b013550121b3c6040a8dab78fe1e89">cl::sycl::intel::all_of</a> (Group, bool pred)</td></tr>
-<tr class="separator:ac8b013550121b3c6040a8dab78fe1e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49c7d5923874c23066171a7999f9525"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
-<tr class="memitem:ab49c7d5923874c23066171a7999f9525"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ab49c7d5923874c23066171a7999f9525">cl::sycl::intel::all_of</a> (Group g, T x, Predicate pred)</td></tr>
-<tr class="separator:ab49c7d5923874c23066171a7999f9525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6eeda0a941df333d5bc22a70975b6873"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
-<tr class="memitem:a6eeda0a941df333d5bc22a70975b6873"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a6eeda0a941df333d5bc22a70975b6873">cl::sycl::intel::all_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
-<tr class="separator:a6eeda0a941df333d5bc22a70975b6873"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a420f7984e613623652c2f61442f74127"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
-<tr class="memitem:a420f7984e613623652c2f61442f74127"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a420f7984e613623652c2f61442f74127">cl::sycl::intel::any_of</a> (Group, bool pred)</td></tr>
-<tr class="separator:a420f7984e613623652c2f61442f74127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af11d7cc65efd66a70f73eda3be730f74"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
-<tr class="memitem:af11d7cc65efd66a70f73eda3be730f74"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#af11d7cc65efd66a70f73eda3be730f74">cl::sycl::intel::any_of</a> (Group g, T x, Predicate pred)</td></tr>
-<tr class="separator:af11d7cc65efd66a70f73eda3be730f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cbc9e59bf4d4b2124ff04b749cd2ff2"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
-<tr class="memitem:a6cbc9e59bf4d4b2124ff04b749cd2ff2"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a6cbc9e59bf4d4b2124ff04b749cd2ff2">cl::sycl::intel::any_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
-<tr class="separator:a6cbc9e59bf4d4b2124ff04b749cd2ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0b5ca764bb361ecf0cfb98414c5c1b0"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
-<tr class="memitem:ae0b5ca764bb361ecf0cfb98414c5c1b0"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ae0b5ca764bb361ecf0cfb98414c5c1b0">cl::sycl::intel::none_of</a> (Group, bool pred)</td></tr>
-<tr class="separator:ae0b5ca764bb361ecf0cfb98414c5c1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a763e8321a6fe13be0a0814f64edd5231"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
-<tr class="memitem:a763e8321a6fe13be0a0814f64edd5231"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a763e8321a6fe13be0a0814f64edd5231">cl::sycl::intel::none_of</a> (Group g, T x, Predicate pred)</td></tr>
-<tr class="separator:a763e8321a6fe13be0a0814f64edd5231"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0edc322dd40daccfdeec1d8a2cbc9b4"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
-<tr class="memitem:ae0edc322dd40daccfdeec1d8a2cbc9b4"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ae0edc322dd40daccfdeec1d8a2cbc9b4">cl::sycl::intel::none_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
-<tr class="separator:ae0edc322dd40daccfdeec1d8a2cbc9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7527d19b370ac7ed5b4d081a6d144594"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
-<tr class="memitem:a7527d19b370ac7ed5b4d081a6d144594"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsTriviallyCopyable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a7527d19b370ac7ed5b4d081a6d144594">cl::sycl::intel::broadcast</a> (Group, T x, typename Group::id_type local_id)</td></tr>
-<tr class="separator:a7527d19b370ac7ed5b4d081a6d144594"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af13e04e2dbce8290336e5da68186bbe6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
-<tr class="memitem:af13e04e2dbce8290336e5da68186bbe6"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmetic&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#af13e04e2dbce8290336e5da68186bbe6">cl::sycl::intel::broadcast</a> (Group g, T x, typename Group::id_type local_id)</td></tr>
-<tr class="separator:af13e04e2dbce8290336e5da68186bbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd89dea4be507c70418ffb4fc7ec368"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
-<tr class="memitem:a9dd89dea4be507c70418ffb4fc7ec368"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsTriviallyCopyable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a9dd89dea4be507c70418ffb4fc7ec368">cl::sycl::intel::broadcast</a> (Group g, T x, typename Group::linear_id_type linear_local_id)</td></tr>
-<tr class="separator:a9dd89dea4be507c70418ffb4fc7ec368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21db0baba8292f58295eeefb2d3a80f6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
-<tr class="memitem:a21db0baba8292f58295eeefb2d3a80f6"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmetic&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a21db0baba8292f58295eeefb2d3a80f6">cl::sycl::intel::broadcast</a> (Group g, T x, typename Group::linear_id_type linear_local_id)</td></tr>
-<tr class="separator:a21db0baba8292f58295eeefb2d3a80f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8694da7f2ddafeb263d22ccf40af76b"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
-<tr class="memitem:af8694da7f2ddafeb263d22ccf40af76b"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsTriviallyCopyable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#af8694da7f2ddafeb263d22ccf40af76b">cl::sycl::intel::broadcast</a> (Group g, T x)</td></tr>
-<tr class="separator:af8694da7f2ddafeb263d22ccf40af76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ac55589ce9ef7b870fdccd6d2baa8ad"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
-<tr class="memitem:a3ac55589ce9ef7b870fdccd6d2baa8ad"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmetic&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a3ac55589ce9ef7b870fdccd6d2baa8ad">cl::sycl::intel::broadcast</a> (Group g, T x)</td></tr>
-<tr class="separator:a3ac55589ce9ef7b870fdccd6d2baa8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9f089018367402a4c9b5be926d0d17e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ab9f089018367402a4c9b5be926d0d17e"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ab9f089018367402a4c9b5be926d0d17e">cl::sycl::intel::reduce</a> (Group, T x, BinaryOperation binary_op)</td></tr>
-<tr class="separator:ab9f089018367402a4c9b5be926d0d17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae004ce3a65a23519ea209e02f40f46d6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ae004ce3a65a23519ea209e02f40f46d6"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ae004ce3a65a23519ea209e02f40f46d6">cl::sycl::intel::reduce</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
-<tr class="separator:ae004ce3a65a23519ea209e02f40f46d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb94f19dee3119df825e6d7944f02753"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:aeb94f19dee3119df825e6d7944f02753"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsNonNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aeb94f19dee3119df825e6d7944f02753">cl::sycl::intel::reduce</a> (Group g, T x, BinaryOperation op)</td></tr>
-<tr class="separator:aeb94f19dee3119df825e6d7944f02753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb133e8636ffa83e57d1b6ef549c81f2"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:afb133e8636ffa83e57d1b6ef549c81f2"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#afb133e8636ffa83e57d1b6ef549c81f2">cl::sycl::intel::reduce</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
-<tr class="separator:afb133e8636ffa83e57d1b6ef549c81f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91031dbc111dabd50e8da59da81a12c"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ad91031dbc111dabd50e8da59da81a12c"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ad91031dbc111dabd50e8da59da81a12c">cl::sycl::intel::reduce</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
-<tr class="separator:ad91031dbc111dabd50e8da59da81a12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8f739510db9c004498b01bee6168b06"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ae8f739510db9c004498b01bee6168b06"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsNonNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ae8f739510db9c004498b01bee6168b06">cl::sycl::intel::reduce</a> (Group g, V x, T init, BinaryOperation op)</td></tr>
-<tr class="separator:ae8f739510db9c004498b01bee6168b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe7bb71cff4c139dcc6dea7df5b17388"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:afe7bb71cff4c139dcc6dea7df5b17388"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, typename Ptr::element_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#afe7bb71cff4c139dcc6dea7df5b17388">cl::sycl::intel::reduce</a> (Group g, Ptr first, Ptr last, BinaryOperation binary_op)</td></tr>
-<tr class="separator:afe7bb71cff4c139dcc6dea7df5b17388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74d78a133d2ec1e8440dbdbbb9919038"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a74d78a133d2ec1e8440dbdbbb9919038"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a74d78a133d2ec1e8440dbdbbb9919038">cl::sycl::intel::reduce</a> (Group g, Ptr first, Ptr last, T init, BinaryOperation binary_op)</td></tr>
-<tr class="separator:a74d78a133d2ec1e8440dbdbbb9919038"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8623ba77b7ea4fb96b928ee9ac976e3"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:aa8623ba77b7ea4fb96b928ee9ac976e3"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aa8623ba77b7ea4fb96b928ee9ac976e3">cl::sycl::intel::exclusive_scan</a> (Group, T x, BinaryOperation binary_op)</td></tr>
-<tr class="separator:aa8623ba77b7ea4fb96b928ee9ac976e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fd10da5d127536446e1f6d858010902"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a6fd10da5d127536446e1f6d858010902"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a6fd10da5d127536446e1f6d858010902">cl::sycl::intel::exclusive_scan</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
-<tr class="separator:a6fd10da5d127536446e1f6d858010902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5691c70f7dbadd2b7eaabc82055840a6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a5691c70f7dbadd2b7eaabc82055840a6"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a5691c70f7dbadd2b7eaabc82055840a6">cl::sycl::intel::exclusive_scan</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
-<tr class="separator:a5691c70f7dbadd2b7eaabc82055840a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4ea7a1893163d6cb4d8d6bbb64b0aa3"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:aa4ea7a1893163d6cb4d8d6bbb64b0aa3"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aa4ea7a1893163d6cb4d8d6bbb64b0aa3">cl::sycl::intel::exclusive_scan</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
-<tr class="separator:aa4ea7a1893163d6cb4d8d6bbb64b0aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0416e9c67519cef40e47d2572124e1d"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ab0416e9c67519cef40e47d2572124e1d"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ab0416e9c67519cef40e47d2572124e1d">cl::sycl::intel::exclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, T init, BinaryOperation binary_op)</td></tr>
-<tr class="separator:ab0416e9c67519cef40e47d2572124e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a728660b07bae3a69b7b4244f5fda2bce"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a728660b07bae3a69b7b4244f5fda2bce"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a728660b07bae3a69b7b4244f5fda2bce">cl::sycl::intel::exclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op)</td></tr>
-<tr class="separator:a728660b07bae3a69b7b4244f5fda2bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8c2bb2f4a4de5503dc5eff644e60c5d"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:aa8c2bb2f4a4de5503dc5eff644e60c5d"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aa8c2bb2f4a4de5503dc5eff644e60c5d">cl::sycl::intel::inclusive_scan</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
-<tr class="separator:aa8c2bb2f4a4de5503dc5eff644e60c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ceea53987ddf7522293e9038ee0fb5"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a70ceea53987ddf7522293e9038ee0fb5"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#a70ceea53987ddf7522293e9038ee0fb5">cl::sycl::intel::inclusive_scan</a> (Group, T x, BinaryOperation binary_op)</td></tr>
-<tr class="separator:a70ceea53987ddf7522293e9038ee0fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa00f91323c17f07da0c0ebf5dd5a47c"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </td></tr>
-<tr class="memitem:aaa00f91323c17f07da0c0ebf5dd5a47c"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aaa00f91323c17f07da0c0ebf5dd5a47c">cl::sycl::intel::inclusive_scan</a> (Group g, V x, BinaryOperation binary_op, T init)</td></tr>
-<tr class="separator:aaa00f91323c17f07da0c0ebf5dd5a47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaabf6a3960a57d9a2d9ec7444d4d8521"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </td></tr>
-<tr class="memitem:aaabf6a3960a57d9a2d9ec7444d4d8521"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#aaabf6a3960a57d9a2d9ec7444d4d8521">cl::sycl::intel::inclusive_scan</a> (Group g, V x, BinaryOperation binary_op, T init)</td></tr>
-<tr class="separator:aaabf6a3960a57d9a2d9ec7444d4d8521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd4f6eec081b3e96b0ec39fe2ae53b9e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation , typename T &gt; </td></tr>
-<tr class="memitem:afd4f6eec081b3e96b0ec39fe2ae53b9e"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#afd4f6eec081b3e96b0ec39fe2ae53b9e">cl::sycl::intel::inclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op, T init)</td></tr>
-<tr class="separator:afd4f6eec081b3e96b0ec39fe2ae53b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8779ecc84d4363317da7188fb6f1578"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ae8779ecc84d4363317da7188fb6f1578"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ae8779ecc84d4363317da7188fb6f1578">cl::sycl::intel::inclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op)</td></tr>
-<tr class="separator:ae8779ecc84d4363317da7188fb6f1578"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0571a983a2c3a8060dad1b31a20572a"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
-<tr class="memitem:ab0571a983a2c3a8060dad1b31a20572a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1intel.html#ab0571a983a2c3a8060dad1b31a20572a">cl::sycl::intel::leader</a> (Group g)</td></tr>
-<tr class="separator:ab0571a983a2c3a8060dad1b31a20572a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40b256bae63d1482de2c102445b4b0a"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:ac40b256bae63d1482de2c102445b4b0a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ac40b256bae63d1482de2c102445b4b0a">cl::sycl::ONEAPI::all_of</a> (Group, bool pred)</td></tr>
+<tr class="separator:ac40b256bae63d1482de2c102445b4b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7109baf7b766ff2be0f160a4625ed42"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
+<tr class="memitem:ab7109baf7b766ff2be0f160a4625ed42"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ab7109baf7b766ff2be0f160a4625ed42">cl::sycl::ONEAPI::all_of</a> (Group g, T x, Predicate pred)</td></tr>
+<tr class="separator:ab7109baf7b766ff2be0f160a4625ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac13c1b43e931e0c82f11b80b1cce82e6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
+<tr class="memitem:ac13c1b43e931e0c82f11b80b1cce82e6"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ac13c1b43e931e0c82f11b80b1cce82e6">cl::sycl::ONEAPI::all_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
+<tr class="separator:ac13c1b43e931e0c82f11b80b1cce82e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cfbf4f87c60daef42f301e4b448003b"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a7cfbf4f87c60daef42f301e4b448003b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7cfbf4f87c60daef42f301e4b448003b">cl::sycl::ONEAPI::any_of</a> (Group, bool pred)</td></tr>
+<tr class="separator:a7cfbf4f87c60daef42f301e4b448003b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed5fc6206155b856e50ef34d80da31da"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
+<tr class="memitem:aed5fc6206155b856e50ef34d80da31da"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#aed5fc6206155b856e50ef34d80da31da">cl::sycl::ONEAPI::any_of</a> (Group g, T x, Predicate pred)</td></tr>
+<tr class="separator:aed5fc6206155b856e50ef34d80da31da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd23e8a2382230ef64bec99d6cb7d10"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
+<tr class="memitem:a5fd23e8a2382230ef64bec99d6cb7d10"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a5fd23e8a2382230ef64bec99d6cb7d10">cl::sycl::ONEAPI::any_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
+<tr class="separator:a5fd23e8a2382230ef64bec99d6cb7d10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ff0e65c85fd0205890a829516155a4f"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a1ff0e65c85fd0205890a829516155a4f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a1ff0e65c85fd0205890a829516155a4f">cl::sycl::ONEAPI::none_of</a> (Group, bool pred)</td></tr>
+<tr class="separator:a1ff0e65c85fd0205890a829516155a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18d21145d207a8f5291f2f3d6ee2368e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
+<tr class="memitem:a18d21145d207a8f5291f2f3d6ee2368e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a18d21145d207a8f5291f2f3d6ee2368e">cl::sycl::ONEAPI::none_of</a> (Group g, T x, Predicate pred)</td></tr>
+<tr class="separator:a18d21145d207a8f5291f2f3d6ee2368e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae797453306e41e31e60fcec2ab9acf95"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
+<tr class="memitem:ae797453306e41e31e60fcec2ab9acf95"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ae797453306e41e31e60fcec2ab9acf95">cl::sycl::ONEAPI::none_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
+<tr class="separator:ae797453306e41e31e60fcec2ab9acf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74badfa06c134f62af38a498f68572cd"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a74badfa06c134f62af38a498f68572cd"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsTriviallyCopyable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a74badfa06c134f62af38a498f68572cd">cl::sycl::ONEAPI::broadcast</a> (Group, T x, typename Group::id_type local_id)</td></tr>
+<tr class="separator:a74badfa06c134f62af38a498f68572cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11f06a124dee391e36a13a3b26c9834"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:ae11f06a124dee391e36a13a3b26c9834"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmetic&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ae11f06a124dee391e36a13a3b26c9834">cl::sycl::ONEAPI::broadcast</a> (Group g, T x, typename Group::id_type local_id)</td></tr>
+<tr class="separator:ae11f06a124dee391e36a13a3b26c9834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322cd79e12a2587b095d61ebb7332103"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a322cd79e12a2587b095d61ebb7332103"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsTriviallyCopyable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a322cd79e12a2587b095d61ebb7332103">cl::sycl::ONEAPI::broadcast</a> (Group g, T x, typename Group::linear_id_type linear_local_id)</td></tr>
+<tr class="separator:a322cd79e12a2587b095d61ebb7332103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac96b9fb3d2f5ffae7f6f10b44b26a22b"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:ac96b9fb3d2f5ffae7f6f10b44b26a22b"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmetic&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ac96b9fb3d2f5ffae7f6f10b44b26a22b">cl::sycl::ONEAPI::broadcast</a> (Group g, T x, typename Group::linear_id_type linear_local_id)</td></tr>
+<tr class="separator:ac96b9fb3d2f5ffae7f6f10b44b26a22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074ef7c1360a7125d1d4fdf2976d70f6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a074ef7c1360a7125d1d4fdf2976d70f6"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsTriviallyCopyable&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a074ef7c1360a7125d1d4fdf2976d70f6">cl::sycl::ONEAPI::broadcast</a> (Group g, T x)</td></tr>
+<tr class="separator:a074ef7c1360a7125d1d4fdf2976d70f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b51dfc5678a180307289a3897e44d44"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a7b51dfc5678a180307289a3897e44d44"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmetic&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7b51dfc5678a180307289a3897e44d44">cl::sycl::ONEAPI::broadcast</a> (Group g, T x)</td></tr>
+<tr class="separator:a7b51dfc5678a180307289a3897e44d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a6d018f00f4d8b956855f87df173ec"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a86a6d018f00f4d8b956855f87df173ec"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">cl::sycl::ONEAPI::reduce</a> (Group, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a86a6d018f00f4d8b956855f87df173ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d4078188f4849d957d876f7905a999"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:af9d4078188f4849d957d876f7905a999"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#af9d4078188f4849d957d876f7905a999">cl::sycl::ONEAPI::reduce</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:af9d4078188f4849d957d876f7905a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc64f40e0b7939e6f91fa7b47a7ad5f"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a5dc64f40e0b7939e6f91fa7b47a7ad5f"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsNonNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a5dc64f40e0b7939e6f91fa7b47a7ad5f">cl::sycl::ONEAPI::reduce</a> (Group g, T x, BinaryOperation op)</td></tr>
+<tr class="separator:a5dc64f40e0b7939e6f91fa7b47a7ad5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbb13f6f4b4e5a7fb4c7ff688090c4c"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a9fbb13f6f4b4e5a7fb4c7ff688090c4c"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a9fbb13f6f4b4e5a7fb4c7ff688090c4c">cl::sycl::ONEAPI::reduce</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a9fbb13f6f4b4e5a7fb4c7ff688090c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af851f913522c086843b076be89b9ca63"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:af851f913522c086843b076be89b9ca63"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#af851f913522c086843b076be89b9ca63">cl::sycl::ONEAPI::reduce</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:af851f913522c086843b076be89b9ca63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03bf21fc5de83342c0cb24a817aa835e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a03bf21fc5de83342c0cb24a817aa835e"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsNonNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a03bf21fc5de83342c0cb24a817aa835e">cl::sycl::ONEAPI::reduce</a> (Group g, V x, T init, BinaryOperation op)</td></tr>
+<tr class="separator:a03bf21fc5de83342c0cb24a817aa835e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8733b693d7cbd64d6be9158e3d27d53f"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a8733b693d7cbd64d6be9158e3d27d53f"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, typename Ptr::element_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a8733b693d7cbd64d6be9158e3d27d53f">cl::sycl::ONEAPI::reduce</a> (Group g, Ptr first, Ptr last, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a8733b693d7cbd64d6be9158e3d27d53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da7a875a45643f879335fc3e5ca51d4"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a3da7a875a45643f879335fc3e5ca51d4"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; Ptr, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a3da7a875a45643f879335fc3e5ca51d4">cl::sycl::ONEAPI::reduce</a> (Group g, Ptr first, Ptr last, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a3da7a875a45643f879335fc3e5ca51d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa652e7dc3664a32bf73309d8d958a50e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:aa652e7dc3664a32bf73309d8d958a50e"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#aa652e7dc3664a32bf73309d8d958a50e">cl::sycl::ONEAPI::exclusive_scan</a> (Group, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:aa652e7dc3664a32bf73309d8d958a50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50130b1d102b4acdc5fb30a28b3890f"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:ac50130b1d102b4acdc5fb30a28b3890f"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#ac50130b1d102b4acdc5fb30a28b3890f">cl::sycl::ONEAPI::exclusive_scan</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:ac50130b1d102b4acdc5fb30a28b3890f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7138dcf64583d1006359fb27ed914d"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:acc7138dcf64583d1006359fb27ed914d"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#acc7138dcf64583d1006359fb27ed914d">cl::sycl::ONEAPI::exclusive_scan</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:acc7138dcf64583d1006359fb27ed914d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0d0f99a0e02772f4f0ec7b3de79242"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a8e0d0f99a0e02772f4f0ec7b3de79242"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a8e0d0f99a0e02772f4f0ec7b3de79242">cl::sycl::ONEAPI::exclusive_scan</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a8e0d0f99a0e02772f4f0ec7b3de79242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f794f9adba3dc5a9ed399b360fa931"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a90f794f9adba3dc5a9ed399b360fa931"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a90f794f9adba3dc5a9ed399b360fa931">cl::sycl::ONEAPI::exclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a90f794f9adba3dc5a9ed399b360fa931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6ac2e808cbbc05f23005114d2dbead"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a4b6ac2e808cbbc05f23005114d2dbead"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a4b6ac2e808cbbc05f23005114d2dbead">cl::sycl::ONEAPI::exclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a4b6ac2e808cbbc05f23005114d2dbead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf47ae6ac50122a333425ee8e8b61fba"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:aaf47ae6ac50122a333425ee8e8b61fba"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#aaf47ae6ac50122a333425ee8e8b61fba">cl::sycl::ONEAPI::inclusive_scan</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:aaf47ae6ac50122a333425ee8e8b61fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1d31567d9ce7135e75f4418171f824"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a3a1d31567d9ce7135e75f4418171f824"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a3a1d31567d9ce7135e75f4418171f824">cl::sycl::ONEAPI::inclusive_scan</a> (Group, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a3a1d31567d9ce7135e75f4418171f824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d651ac57315f25e61d64ee8e9693f71"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </td></tr>
+<tr class="memitem:a3d651ac57315f25e61d64ee8e9693f71"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsScalarArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a3d651ac57315f25e61d64ee8e9693f71">cl::sycl::ONEAPI::inclusive_scan</a> (Group g, V x, BinaryOperation binary_op, T init)</td></tr>
+<tr class="separator:a3d651ac57315f25e61d64ee8e9693f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af40d80b37912cb33ef363c3f0f7c12fa"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </td></tr>
+<tr class="memitem:af40d80b37912cb33ef363c3f0f7c12fa"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsVectorArithmeticNativeOp&lt; T, BinaryOperation &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#af40d80b37912cb33ef363c3f0f7c12fa">cl::sycl::ONEAPI::inclusive_scan</a> (Group g, V x, BinaryOperation binary_op, T init)</td></tr>
+<tr class="separator:af40d80b37912cb33ef363c3f0f7c12fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2c4b24811f9c11f237db0a6f991998"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation , typename T &gt; </td></tr>
+<tr class="memitem:a6c2c4b24811f9c11f237db0a6f991998"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a6c2c4b24811f9c11f237db0a6f991998">cl::sycl::ONEAPI::inclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op, T init)</td></tr>
+<tr class="separator:a6c2c4b24811f9c11f237db0a6f991998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e198db96d14c133b8fa355083e26972"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a0e198db96d14c133b8fa355083e26972"><td class="memTemplItemLeft" align="right" valign="top">EnableIfIsPointer&lt; InPtr, OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a0e198db96d14c133b8fa355083e26972">cl::sycl::ONEAPI::inclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a0e198db96d14c133b8fa355083e26972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894fab0977869e968595211b61b7a61b"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a894fab0977869e968595211b61b7a61b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a894fab0977869e968595211b61b7a61b">cl::sycl::ONEAPI::leader</a> (Group g)</td></tr>
+<tr class="separator:a894fab0977869e968595211b61b7a61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8358e9aed72341d13c81ba12a462bec7.html">CL</a></li><li class="navelem"><a class="el" href="dir_dd7d3bcc93139b1cbc3b663242fe4a67.html">sycl</a></li><li class="navelem"><a class="el" href="dir_893b3a32fa17000f148d472f42b26e66.html">intel</a></li><li class="navelem"><a class="el" href="group__algorithm_8hpp.html">group_algorithm.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8358e9aed72341d13c81ba12a462bec7.html">CL</a></li><li class="navelem"><a class="el" href="dir_dd7d3bcc93139b1cbc3b663242fe4a67.html">sycl</a></li><li class="navelem"><a class="el" href="dir_c08ec27d5b39c57d5e5da7196736cd30.html">ONEAPI</a></li><li class="navelem"><a class="el" href="group__algorithm_8hpp.html">group_algorithm.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

@@ -11,7 +11,7 @@ var searchData=
   ['api_2edox',['api.dox',['../api_8dox.html',1,'']]],
   ['array_2ehpp',['array.hpp',['../array_8hpp.html',1,'']]],
   ['aspects_2ehpp',['aspects.hpp',['../aspects_8hpp.html',1,'']]],
-  ['atomic_2ehpp',['atomic.hpp',['../atomic_8hpp.html',1,'(Global Namespace)'],['../intel_2atomic_8hpp.html',1,'(Global Namespace)']]],
+  ['atomic_2ehpp',['atomic.hpp',['../atomic_8hpp.html',1,'(Global Namespace)'],['../ONEAPI_2atomic_8hpp.html',1,'(Global Namespace)']]],
   ['atomic_5faccessor_2ehpp',['atomic_accessor.hpp',['../atomic__accessor_8hpp.html',1,'']]],
   ['atomic_5fenums_2ehpp',['atomic_enums.hpp',['../atomic__enums_8hpp.html',1,'']]],
   ['atomic_5ffence_2ehpp',['atomic_fence.hpp',['../atomic__fence_8hpp.html',1,'']]],

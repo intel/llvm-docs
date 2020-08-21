@@ -1,0 +1,17 @@
+var classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835 =
+[
+    [ "difference_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a1e263a9b23a8aabce4cf22b5b4aec15a", null ],
+    [ "value_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#ab95d728c68bd0ff78b0f8f6c49950caf", null ],
+    [ "fetch_add", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#ab55664e5ec5b26a2bb43dd87627f34d4", null ],
+    [ "fetch_max", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a7b4eeed87839980f91cbc6577832cdcc", null ],
+    [ "fetch_min", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#af8eacb9ed27586faf8b959d2220c2228", null ],
+    [ "fetch_sub", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a4a1bb86b5b2abf66a161f2550b5c17cf", null ],
+    [ "operator+=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a41c835d58fca514ee2ecdaa0d11c86f1", null ],
+    [ "operator-=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#af4175149e1a530bcf3fbbb481cd2a713", null ],
+    [ "default_read_modify_write_order", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#af0b071f13a263b09cd180405ffd20385", null ],
+    [ "default_read_order", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a050e6bce0aa9e69cb91905fa26528299", null ],
+    [ "default_scope", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a25a02d4a3ff6a10cd04d9154b2788e62", null ],
+    [ "default_write_order", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#ae612199e562e7fc17a3d750b329b2439", null ],
+    [ "is_always_lock_free", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#ae161e634a95810967db4a495b3cdda62", null ],
+    [ "required_alignment", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultSco5c47cddad9a175d3e272c4af53626835.html#a887e2083a6df1c163976f351fcfb8a6b", null ]
+];

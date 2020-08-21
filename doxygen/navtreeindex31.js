@@ -1,5 +1,14 @@
 var NAVTREEINDEX31 =
 {
+"structmaxtype_3_01unsigned_01short_01_4.html#a0229f5460524a4ae9b80161f77a3f2b9":[3,0,103,0],
+"structpi__buffer__region__struct.html":[3,0,104],
+"structpi__buffer__region__struct.html#a66152d2bc1b381d4b65d8b46a7dd85a9":[3,0,104,0],
+"structpi__buffer__region__struct.html#af3b978915faa5747caebf01e76a70dde":[3,0,104,1],
+"structpi__device__binaries__struct.html":[3,0,105],
+"structpi__device__binaries__struct.html#a05b9e86a549ae74c18dd9671ac40ce9d":[3,0,105,4],
+"structpi__device__binaries__struct.html#a2ce1e03cf7aa6d02d8e293170ff83e64":[3,0,105,3],
+"structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a":[3,0,105,0],
+"structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1":[3,0,105,2],
 "structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69":[3,0,105,1],
 "structpi__device__binary__struct.html":[3,0,106],
 "structpi__device__binary__struct.html#a101af6f5f71e7c55000dd25e5979ec3f":[3,0,106,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX31 =
 "structrestype__ex_3_01unsigned_01short_00_01char_01_4.html#a1dd58bda42872d36c919684ec360981c":[3,0,218,0],
 "structrestype__ex_3_01unsigned_01short_00_01double_01_4.html":[3,0,219],
 "structrestype__ex_3_01unsigned_01short_00_01double_01_4.html#ae606f926a591717bf25a0ebe6838d243":[3,0,219,0],
-"structrestype__ex_3_01unsigned_01short_00_01float_01_4.html":[3,0,220],
-"structrestype__ex_3_01unsigned_01short_00_01float_01_4.html#aae6c1c830d616f17eab92e135960d8b5":[3,0,220,0],
-"structrestype__ex_3_01unsigned_01short_00_01half_01_4.html":[3,0,221],
-"structrestype__ex_3_01unsigned_01short_00_01half_01_4.html#a894ac8340c0369b687216ea1876aa1d3":[3,0,221,0],
-"structrestype__ex_3_01unsigned_01short_00_01int_01_4.html":[3,0,222],
-"structrestype__ex_3_01unsigned_01short_00_01int_01_4.html#a3394b32ef67938952d221bdcd2eb3560":[3,0,222,0],
-"structrestype__ex_3_01unsigned_01short_00_01long_01long_01_4.html":[3,0,223],
-"structrestype__ex_3_01unsigned_01short_00_01long_01long_01_4.html#a2fb4eafc613459d4e3813e3074e5af7c":[3,0,223,0],
-"structrestype__ex_3_01unsigned_01short_00_01short_01_4.html":[3,0,224],
-"structrestype__ex_3_01unsigned_01short_00_01short_01_4.html#a8979bd34d393af00dd2f2fde3a9bc33a":[3,0,224,0]
+"structrestype__ex_3_01unsigned_01short_00_01float_01_4.html":[3,0,220]
 };

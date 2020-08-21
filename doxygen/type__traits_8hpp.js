@@ -59,7 +59,7 @@ var type__traits_8hpp =
     [ "is_group", "structcl_1_1sycl_1_1detail_1_1is__group.html", null ],
     [ "is_group< group< Dimensions > >", "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html", null ],
     [ "is_sub_group", "structcl_1_1sycl_1_1detail_1_1is__sub__group.html", null ],
-    [ "is_sub_group< intel::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01intel_1_1sub__group_01_4.html", null ],
+    [ "is_sub_group< ONEAPI::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html", null ],
     [ "is_generic_group", "structcl_1_1sycl_1_1detail_1_1is__generic__group.html", null ],
     [ "change_base_type_t", "type__traits_8hpp.html#ace2a54b6c8dfc3a811fe30faa7d39d40", null ],
     [ "const_if_const_AS", "type__traits_8hpp.html#ab0f0b23dbcd157e51dca5fa5bbbc8202", null ],

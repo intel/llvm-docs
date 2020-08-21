@@ -273,7 +273,7 @@ var group__sycl__api =
       [ "detail::image_accessor", "classcl_1_1sycl_1_1handler.html#adbb498cc698f57626f0746b3365a880e", null ],
       [ "detail::queue_impl", "classcl_1_1sycl_1_1handler.html#a3a8c1bacdcf03b3534b9696769e9f0fc", null ],
       [ "detail::stream_impl", "classcl_1_1sycl_1_1handler.html#a5fca0ca308f0eac9343990d58cd54374", null ],
-      [ "intel::detail::reduction_impl", "classcl_1_1sycl_1_1handler.html#a5e67291cf7d3926c9011bf240dd76c48", null ],
+      [ "ONEAPI::detail::reduction_impl", "classcl_1_1sycl_1_1handler.html#a2b6e4d61c88a70fd9ae7aad67769dd16", null ],
       [ "stream", "classcl_1_1sycl_1_1handler.html#ad6cdd83c821525ef93cdeb8332fd7de8", null ]
     ] ],
     [ "id", "classcl_1_1sycl_1_1id.html", [
@@ -440,7 +440,7 @@ var group__sycl__api =
       [ "get_local_range", "classcl_1_1sycl_1_1nd__item.html#a8f7eb6b9b53996cc496b896331e3f86a", null ],
       [ "get_nd_range", "classcl_1_1sycl_1_1nd__item.html#a6f2fbd7076f90c68d645ddfa119e76b5", null ],
       [ "get_offset", "classcl_1_1sycl_1_1nd__item.html#a72dff7096e195bd839353cc2428e2b1c", null ],
-      [ "get_sub_group", "classcl_1_1sycl_1_1nd__item.html#a214df782d496a554006fc9c0f98b4399", null ],
+      [ "get_sub_group", "classcl_1_1sycl_1_1nd__item.html#a9a27fb5839a46721658ffaa01c040534", null ],
       [ "mem_fence", "classcl_1_1sycl_1_1nd__item.html#a38ea2d76be164ddbbf17355814f26874", null ],
       [ "operator!=", "classcl_1_1sycl_1_1nd__item.html#ab10c983042a0c2de4bf9c98be1d05f93", null ],
       [ "operator=", "classcl_1_1sycl_1_1nd__item.html#a7fddc06a2f05bb8ee891bce0f58aa115", null ],
@@ -516,7 +516,7 @@ var group__sycl__api =
       [ "operator=", "classcl_1_1sycl_1_1program.html#a3f05e5d7b985fe6e8a3b6e5654527a62", null ],
       [ "operator=", "classcl_1_1sycl_1_1program.html#a2c22bc80d1143931ef12b2c59daadf80", null ],
       [ "operator==", "classcl_1_1sycl_1_1program.html#a3dd0c8d9c68fb667b23caa8502f64efa", null ],
-      [ "set_spec_constant", "classcl_1_1sycl_1_1program.html#aa796005dbc15489b4c63fdd1a6f05dc0", null ],
+      [ "set_spec_constant", "classcl_1_1sycl_1_1program.html#afe59f2ff848ff4469da0be1119b2681d", null ],
       [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1program.html#a71492293d0386f542d120a1fc3dfbb55", null ]
     ] ],
     [ "property_list", "classcl_1_1sycl_1_1property__list.html", [

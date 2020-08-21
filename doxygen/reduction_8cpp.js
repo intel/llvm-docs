@@ -1,5 +1,5 @@
 var reduction_8cpp =
 [
-    [ "reduComputeWGSize", "reduction_8cpp.html#a6ec2825f342b4844f25074bd41b3c0e5", null ],
-    [ "reduGetMaxWGSize", "reduction_8cpp.html#a1d728e222ada5390d7055e30cbaf6b9e", null ]
+    [ "reduComputeWGSize", "reduction_8cpp.html#a4c46049453ab43445567f64b0ac1953a", null ],
+    [ "reduGetMaxWGSize", "reduction_8cpp.html#a3955af96c1019ee7650326f74848e548", null ]
 ];

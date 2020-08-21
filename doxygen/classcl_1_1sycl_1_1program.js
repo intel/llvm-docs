@@ -31,6 +31,6 @@ var classcl_1_1sycl_1_1program =
     [ "operator=", "classcl_1_1sycl_1_1program.html#a3f05e5d7b985fe6e8a3b6e5654527a62", null ],
     [ "operator=", "classcl_1_1sycl_1_1program.html#a2c22bc80d1143931ef12b2c59daadf80", null ],
     [ "operator==", "classcl_1_1sycl_1_1program.html#a3dd0c8d9c68fb667b23caa8502f64efa", null ],
-    [ "set_spec_constant", "classcl_1_1sycl_1_1program.html#aa796005dbc15489b4c63fdd1a6f05dc0", null ],
+    [ "set_spec_constant", "classcl_1_1sycl_1_1program.html#afe59f2ff848ff4469da0be1119b2681d", null ],
     [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1program.html#a71492293d0386f542d120a1fc3dfbb55", null ]
 ];

@@ -1,11 +1,10 @@
 var namespacecl_1_1sycl =
 [
     [ "detail", "namespacecl_1_1sycl_1_1detail.html", "namespacecl_1_1sycl_1_1detail" ],
-    [ "experimental", "namespacecl_1_1sycl_1_1experimental.html", "namespacecl_1_1sycl_1_1experimental" ],
     [ "ext", "namespacecl_1_1sycl_1_1ext.html", "namespacecl_1_1sycl_1_1ext" ],
     [ "info", "namespacecl_1_1sycl_1_1info.html", "namespacecl_1_1sycl_1_1info" ],
-    [ "intel", "namespacecl_1_1sycl_1_1intel.html", "namespacecl_1_1sycl_1_1intel" ],
     [ "INTEL", "namespacecl_1_1sycl_1_1INTEL.html", "namespacecl_1_1sycl_1_1INTEL" ],
+    [ "ONEAPI", "namespacecl_1_1sycl_1_1ONEAPI.html", "namespacecl_1_1sycl_1_1ONEAPI" ],
     [ "property", "namespacecl_1_1sycl_1_1property.html", "namespacecl_1_1sycl_1_1property" ],
     [ "__precision_manipulator__", "classcl_1_1sycl_1_1____precision__manipulator____.html", "classcl_1_1sycl_1_1____precision__manipulator____" ],
     [ "__width_manipulator__", "classcl_1_1sycl_1_1____width__manipulator____.html", "classcl_1_1sycl_1_1____width__manipulator____" ],
