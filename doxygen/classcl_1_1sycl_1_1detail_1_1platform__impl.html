@@ -142,12 +142,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a07f84f399ecc3955126c78f38794ad4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#a07f84f399ecc3955126c78f38794ad4c">has</a> (<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261e">aspect</a> Aspect) const</td></tr>
 <tr class="memdesc:a07f84f399ecc3955126c78f38794ad4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if all of the SYCL devices on this platform have the given feature.  <a href="#a07f84f399ecc3955126c78f38794ad4c">More...</a><br /></td></tr>
 <tr class="separator:a07f84f399ecc3955126c78f38794ad4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8d1b5104b3568937fc6561cfaf55df"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">device_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#afc8d1b5104b3568937fc6561cfaf55df">getOrMakeDeviceImpl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">RT::PiDevice</a> PiDevice, const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> &gt; &amp;PlatformImpl)</td></tr>
+<tr class="memdesc:afc8d1b5104b3568937fc6561cfaf55df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">device_impl</a> cache to either return a shared_ptr for the <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">device_impl</a> corresponding to the PiDevice or add a new entry to the cache.  <a href="#afc8d1b5104b3568937fc6561cfaf55df">More...</a><br /></td></tr>
+<tr class="separator:afc8d1b5104b3568937fc6561cfaf55df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a368e4f63bd4b21f42bac72739f48fa3f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#a368e4f63bd4b21f42bac72739f48fa3f">get_platforms</a> ()</td></tr>
 <tr class="memdesc:a368e4f63bd4b21f42bac72739f48fa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all available SYCL platforms in the system.  <a href="#a368e4f63bd4b21f42bac72739f48fa3f">More...</a><br /></td></tr>
 <tr class="separator:a368e4f63bd4b21f42bac72739f48fa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d63dfbd084aeb801b813cf6d81e28d"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#a01d63dfbd084aeb801b813cf6d81e28d">getHostPlatformImpl</a> ()</td></tr>
+<tr class="memdesc:a01d63dfbd084aeb801b813cf6d81e28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static functions that help maintain platform uniquess and equality of comparison.  <a href="#a01d63dfbd084aeb801b813cf6d81e28d">More...</a><br /></td></tr>
+<tr class="separator:a01d63dfbd084aeb801b813cf6d81e28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9acab9537730b0d911fb74e58893b56b"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#a9acab9537730b0d911fb74e58893b56b">getOrMakePlatformImpl</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a9cc5baa9e6b7365df9754c64aea0c650">RT::PiPlatform</a> PiPlatform, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;Plugin)</td></tr>
+<tr class="memdesc:a9acab9537730b0d911fb74e58893b56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the cache to see if the specified PiPlatform has been seen before.  <a href="#a9acab9537730b0d911fb74e58893b56b">More...</a><br /></td></tr>
+<tr class="separator:a9acab9537730b0d911fb74e58893b56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa030a7fbf85354c4811af030ce11d4c"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html#aaa030a7fbf85354c4811af030ce11d4c">getPlatformFromPiDevice</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">RT::PiDevice</a> PiDevice, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;Plugin)</td></tr>
+<tr class="memdesc:aaa030a7fbf85354c4811af030ce11d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queries the cache for the specified platform based on an input device.  <a href="#aaa030a7fbf85354c4811af030ce11d4c">More...</a><br /></td></tr>
+<tr class="separator:aaa030a7fbf85354c4811af030ce11d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -380,9 +392,9 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a vector of SYCL devices. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00232">232</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00289">289</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00176">cl::sycl::detail::filterAllowList()</a>, <a class="el" href="pi_8cpp_source.html#l00381">cl::sycl::detail::pi::getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00654">piDevicesGet()</a>.</p>
+<p class="reference">References <a class="el" href="builtins_8hpp_source.html#l01276">cl::sycl::all()</a>, <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00215">cl::sycl::detail::filterAllowList()</a>, <a class="el" href="pi_8cpp_source.html#l00381">cl::sycl::detail::pi::getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00654">piDevicesGet()</a>.</p>
 
 </div>
 </div>
@@ -406,7 +418,7 @@ template&lt;info::platform param&gt; </div>
 <p>Queries this SYCL platform for info. </p>
 <p>The return type depends on information being queried. </p>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00292">292</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00350">350</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8cpp_source.html#l00381">cl::sycl::detail::pi::getPlugin()</a>.</p>
 
@@ -439,9 +451,9 @@ template&lt;info::platform param&gt; </div>
 <p>By default the resulting vector always contains a single SYCL host platform instance. There are means to override this behavior for testing purposes. See environment variables guide for up-to-date instructions.</p>
 <dl class="section return"><dt>Returns</dt><dd>a vector of all available SYCL platforms. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00051">51</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00091">91</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="platform_8cpp_source.html#l00038">cl::sycl::platform::get_devices()</a>, <a class="el" href="force__device_8cpp_source.html#l00024">cl::sycl::detail::get_forced_type()</a>, <a class="el" href="pi_8cpp_source.html#l00259">cl::sycl::detail::pi::initialize()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00024">cl::sycl::detail::IsBannedPlatform()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00470">piPlatformsGet()</a>.</p>
+<p class="reference">References <a class="el" href="platform_8cpp_source.html#l00038">cl::sycl::platform::get_devices()</a>, <a class="el" href="force__device_8cpp_source.html#l00024">cl::sycl::detail::get_forced_type()</a>, <a class="el" href="pi_8cpp_source.html#l00259">cl::sycl::detail::pi::initialize()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00064">cl::sycl::detail::IsBannedPlatform()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00470">piPlatformsGet()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="platform_8cpp_source.html#l00042">cl::sycl::platform::get_platforms()</a>.</p>
 
@@ -480,6 +492,37 @@ template&lt;info::platform param&gt; </div>
 
 </div>
 </div>
+<a id="a01d63dfbd084aeb801b813cf6d81e28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d63dfbd084aeb801b813cf6d81e28d">&#9670;&nbsp;</a></span>getHostPlatformImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a67a535460dbd9b8a87138d7ac9fd2113">PlatformImplPtr</a> cl::sycl::detail::platform_impl::getHostPlatformImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static functions that help maintain platform uniquess and equality of comparison. </p>
+<p>Returns the host platform impl</p>
+<dl class="section return"><dt>Returns</dt><dd>the host platform impl </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00026">26</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a9305c6cda4e3e47dced1a3f7257e6a3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9305c6cda4e3e47dced1a3f7257e6a3c">&#9670;&nbsp;</a></span>getNative()</h2>
 
@@ -498,9 +541,151 @@ template&lt;info::platform param&gt; </div>
 <p>Gets the native handle of the SYCL platform. </p>
 <dl class="section return"><dt>Returns</dt><dd>a native handle. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00283">283</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00341">341</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8cpp_source.html#l00381">cl::sycl::detail::pi::getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00632">piextPlatformGetNativeHandle()</a>.</p>
+
+</div>
+</div>
+<a id="afc8d1b5104b3568937fc6561cfaf55df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8d1b5104b3568937fc6561cfaf55df">&#9670;&nbsp;</a></span>getOrMakeDeviceImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">device_impl</a> &gt; cl::sycl::detail::platform_impl::getOrMakeDeviceImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">RT::PiDevice</a>&#160;</td>
+          <td class="paramname"><em>PiDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>PlatformImpl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Queries the <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">device_impl</a> cache to either return a shared_ptr for the <a class="el" href="classcl_1_1sycl_1_1detail_1_1device__impl.html">device_impl</a> corresponding to the PiDevice or add a new entry to the cache. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PiDevice</td><td>is the PiDevice whose impl is requested</td></tr>
+    <tr><td class="paramname">PlatormImpl</td><td>is the Platform for that Device</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a shared_ptr&lt;device_impl&gt; corresponding to the device </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00270">270</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9acab9537730b0d911fb74e58893b56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9acab9537730b0d911fb74e58893b56b">&#9670;&nbsp;</a></span>getOrMakePlatformImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a67a535460dbd9b8a87138d7ac9fd2113">PlatformImplPtr</a> cl::sycl::detail::platform_impl::getOrMakePlatformImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a9cc5baa9e6b7365df9754c64aea0c650">RT::PiPlatform</a>&#160;</td>
+          <td class="paramname"><em>PiPlatform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;&#160;</td>
+          <td class="paramname"><em>Plugin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queries the cache to see if the specified PiPlatform has been seen before. </p>
+<p>If so, return the cached <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a>, otherwise create a new one and cache it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PiPlatform</td><td>is the PI Platform handle representing the platform </td></tr>
+    <tr><td class="paramname">Plugin</td><td>is the PI plugin providing the backend for the platform </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> representing the PI platform </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00032">32</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aaa030a7fbf85354c4811af030ce11d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa030a7fbf85354c4811af030ce11d4c">&#9670;&nbsp;</a></span>getPlatformFromPiDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a67a535460dbd9b8a87138d7ac9fd2113">PlatformImplPtr</a> cl::sycl::detail::platform_impl::getPlatformFromPiDevice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">RT::PiDevice</a>&#160;</td>
+          <td class="paramname"><em>PiDevice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;&#160;</td>
+          <td class="paramname"><em>Plugin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Queries the cache for the specified platform based on an input device. </p>
+<p>If found, returns the the cached <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a>, otherwise creates a new one and caches it.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PiDevice</td><td>is the PI device handle for the device whose platform is desired </td></tr>
+    <tr><td class="paramname">Plugin</td><td>is the PI plugin providing the backend for the device and platform </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="classcl_1_1sycl_1_1detail_1_1platform__impl.html">platform_impl</a> that contains the input device </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00055">55</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8h_source.html#l00231">PI_DEVICE_INFO_PLATFORM</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00744">piDeviceGetInfo()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="context__impl_8cpp_source.html#l00067">cl::sycl::detail::context_impl::context_impl()</a>, and <a class="el" href="device__impl_8cpp_source.html#l00030">cl::sycl::detail::device_impl::device_impl()</a>.</p>
 
 </div>
 </div>
@@ -556,7 +741,7 @@ template&lt;info::platform param&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true all of the SYCL devices on this platform have the given feature. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00302">302</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00360">360</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
 </div>
 </div>
@@ -585,7 +770,7 @@ template&lt;info::platform param&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if platform supports specified extension. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00273">273</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform__impl_8cpp_source.html#l00331">331</a> of file <a class="el" href="platform__impl_8cpp_source.html">platform_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8cpp_source.html#l00381">cl::sycl::detail::pi::getPlugin()</a>.</p>
 

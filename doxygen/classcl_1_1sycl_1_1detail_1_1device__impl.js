@@ -14,6 +14,7 @@ var classcl_1_1sycl_1_1detail_1_1device__impl =
     [ "get_platform", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a18ebd6bde4817f75e083e7452ccc138b", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a32d4f75d907820b10e4d08a77d37a2e8", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1device__impl.html#aa3ab01881c6a17f4f9fdeeba66788a0c", null ],
+    [ "getHostDeviceImpl", "classcl_1_1sycl_1_1detail_1_1device__impl.html#ab99f0a5f8d2a62dde89d0167a82e3d57", null ],
     [ "getNative", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a53017098724e542f77cfb9f944e371da", null ],
     [ "getPlugin", "classcl_1_1sycl_1_1detail_1_1device__impl.html#af18606417c4104d249d3afb5c54507f3", null ],
     [ "has", "classcl_1_1sycl_1_1detail_1_1device__impl.html#a5a57013e0531de63ee371d9cb0109c96", null ],
