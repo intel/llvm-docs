@@ -1,8 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a9787e9df098f3b32e91dd392d7b8b808":[3,0,2,1,4,0,18,11],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a9f1ff21e7addb36f952460bdf2c954bc":[3,0,2,1,4,0,18,4],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#aa34d2ad1749c10fcfaa34b37c670feba":[3,0,2,1,4,0,18,5],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#aabef92f599f85c6d6e669c2b8939c97e":[3,0,2,1,4,0,18,18],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#aca84f41a3d26646474d3ddc83bf8af38":[3,0,2,1,4,0,18,10],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad7be7756ae2a9899e6f1d70523407af9":[3,0,2,1,4,0,18,19],
@@ -249,5 +246,8 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a51ad2f8a02f30bff3f7cb0cb0514b654":[3,0,2,1,0,7,5],
 "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a78581a66dfc447e44d2bacc1e63910c1":[3,0,2,1,0,7,6],
 "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a85dc441db1e3b2f4ea11e454e9dd0229":[3,0,2,1,0,7,15],
-"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a8fefe62eca2bb08561cefb8a908c1931":[3,0,2,1,0,7,10]
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a8fefe62eca2bb08561cefb8a908c1931":[3,0,2,1,0,7,10],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a964854ae9d8697141cf11f13985e39c4":[3,0,2,1,0,7,1],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a976c38c7405497bfe5dd145ab1680451":[3,0,2,1,0,7,9],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#ab97f14a1acd7c80f746a9c33b306be55":[3,0,2,1,0,7,12]
 };

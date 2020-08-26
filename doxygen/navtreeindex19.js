@@ -1,8 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a2087398ba217bc393e8d9d20682e61d1":[4,0,0,0,1,3,0,4,2],
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a217d87c50234009ab4d8dd08a2fa97d5":[4,0,0,0,1,3,0,4,13],
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a220d53bc7a23df5c8f0eb7351531d191":[4,0,0,0,1,3,0,4,82],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a26f99fa5abef65ae7e4884eef066baf7":[4,0,0,0,1,3,0,4,71],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a26fbc768da96d93116e5d79b23e4ae8b":[4,0,0,0,1,3,0,4,28],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a2794f1350d65c336d5a1107adf7f6846":[4,0,0,0,1,3,0,4,22],
@@ -195,8 +192,8 @@ var NAVTREEINDEX19 =
 "namespace____esimd.html":[3,0,0],
 "namespace____spv.html":[3,0,1],
 "namespace____spv.html":[2,0,1],
-"namespacecl.html":[2,0,2],
 "namespacecl.html":[3,0,2],
+"namespacecl.html":[2,0,2],
 "namespacecl_1_1____host__std.html":[3,0,2,0],
 "namespacecl_1_1____host__std.html":[2,0,2,0],
 "namespacecl_1_1____host__std_1_1detail.html":[3,0,2,0,0],
@@ -215,8 +212,8 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1sycl_1_1ONEAPI.html":[2,0,2,1,9],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[3,0,2,1,4,0],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[2,0,2,1,9,0],
-"namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[2,0,2,1,9,1],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[3,0,2,1,4,1],
+"namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[2,0,2,1,9,1],
 "namespacecl_1_1sycl_1_1access.html":[2,0,2,1,0],
 "namespacecl_1_1sycl_1_1detail.html":[3,0,2,1,0],
 "namespacecl_1_1sycl_1_1detail.html":[2,0,2,1,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX19 =
 "namespacecl_1_1sycl_1_1property.html":[3,0,2,1,5],
 "namespacecl_1_1sycl_1_1property.html":[2,0,2,1,11],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,5,0],
-"namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,11,0]
+"namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,11,0],
+"namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,2,1,5,1],
+"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,11,1],
+"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,5,1,0]
 };

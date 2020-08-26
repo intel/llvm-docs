@@ -1,9 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"structrestype__ex_3_01unsigned_01short_00_01char_01_4.html":[3,0,218],
-"structrestype__ex_3_01unsigned_01short_00_01char_01_4.html#a1dd58bda42872d36c919684ec360981c":[3,0,218,0],
-"structrestype__ex_3_01unsigned_01short_00_01double_01_4.html":[3,0,219],
-"structrestype__ex_3_01unsigned_01short_00_01double_01_4.html#ae606f926a591717bf25a0ebe6838d243":[3,0,219,0],
 "structrestype__ex_3_01unsigned_01short_00_01float_01_4.html":[3,0,220],
 "structrestype__ex_3_01unsigned_01short_00_01float_01_4.html#aae6c1c830d616f17eab92e135960d8b5":[3,0,220,0],
 "structrestype__ex_3_01unsigned_01short_00_01half_01_4.html":[3,0,221],
@@ -153,8 +149,8 @@ var NAVTREEINDEX32 =
 "types_8hpp.html#a27848427d46997732c0ad6186b227f6b":[4,0,0,0,1,46,45],
 "types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886":[4,0,0,0,1,46,47],
 "types_8hpp.html#a2bf12e570712d1c48367f396e982a251":[4,0,0,0,1,46,62],
-"types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,46,23],
 "types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,46,24],
+"types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,46,23],
 "types_8hpp.html#a36448a429dc894e3368752066aa63295":[4,0,0,0,1,46,44],
 "types_8hpp.html#a38a5b62828fad8613b4bdd9913a7c11e":[4,0,0,0,1,46,35],
 "types_8hpp.html#a53cff3eaefbe796306a1d941968a382d":[4,0,0,0,1,46,42],
@@ -249,5 +245,9 @@ var NAVTREEINDEX32 =
 "usm__impl_8cpp.html#a65b09a997fc6a20f8c0dc49b51dd5051":[4,0,2,1,3,0,20],
 "usm__impl_8cpp.html#a675260c4593b8d167359df230591fc82":[4,0,2,1,3,0,9],
 "usm__impl_8cpp.html#a6a8609a1485c85d0f85666276f9ed5c3":[4,0,2,1,3,0,16],
-"usm__impl_8cpp.html#a90e05cdb4ee7ea0b2fef4ea8bfd1adb4":[4,0,2,1,3,0,3]
+"usm__impl_8cpp.html#a90e05cdb4ee7ea0b2fef4ea8bfd1adb4":[4,0,2,1,3,0,3],
+"usm__impl_8cpp.html#a926362a87856ed707139cc8e86f5e973":[4,0,2,1,3,0,1],
+"usm__impl_8cpp.html#a938e4c26916c924ae2b7695ece42215b":[4,0,2,1,3,0,8],
+"usm__impl_8cpp.html#a9a338d59dd7adeb19f5515fab4faf17c":[4,0,2,1,3,0,12],
+"usm__impl_8cpp.html#aa97c1f578e23516d56c4437cef4f09da":[4,0,2,1,3,0,21]
 };

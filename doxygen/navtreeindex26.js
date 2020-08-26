@@ -1,9 +1,5 @@
 var NAVTREEINDEX26 =
 {
-"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1ac1a3150109055d8c8fe83927271248bd":[3,0,1,0,0,9],
-"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1ae7bc41bb91fafef3c0e16adfc9f0bd05":[3,0,1,0,0,2],
-"struct____spv_1_1MemorySemanticsMask.html#ad6be9f078822f83c67c307b660d59807":[3,0,1,0,2],
-"struct____spv_1_1Scope.html":[3,0,1,1],
 "struct____spv_1_1Scope.html#a1ad2cc873d2655edb54eb81f88915f99":[3,0,1,1,2],
 "struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4":[3,0,1,1,0],
 "struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad45dc8fada3e0e533b4df56d5be7720c":[3,0,1,1,0,2],
@@ -249,5 +245,9 @@ var NAVTREEINDEX26 =
 "struct__pi__program.html#ab14ee0c97c0d3ef6adc3c4974d7a1bf2":[3,0,25,16],
 "struct__pi__program.html#ac87e23fa8485dda3baac43d1ecb20fc1":[3,0,25,17],
 "struct__pi__program.html#acb1209c709fae3cc4f7a19802dd2e974":[3,0,25,28],
-"struct__pi__program.html#ad0ec5f905a8611f6e9abd4ef8e3e3808":[3,0,25,33]
+"struct__pi__program.html#ad0ec5f905a8611f6e9abd4ef8e3e3808":[3,0,25,33],
+"struct__pi__program.html#ad1a2f4610a6f9870cb479ccd676b4f8f":[3,0,25,22],
+"struct__pi__program.html#ade63366c16239d4f0e5726ff6a940321":[3,0,25,19],
+"struct__pi__program.html#aed0f636555a6cb95fb520bfa7cb085de":[3,0,25,11],
+"struct__pi__program.html#af256d620344bdd34d8aa60cc058bdad7":[3,0,25,24]
 };

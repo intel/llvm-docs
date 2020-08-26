@@ -1,9 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"structcl_1_1sycl_1_1detail_1_1pi_1_1PiFuncInfo.html":[3,0,2,1,0,2,3],
-"structcl_1_1sycl_1_1detail_1_1remove__AS.html":[3,0,2,1,0,252],
-"structcl_1_1sycl_1_1detail_1_1remove__AS.html#af044265fb3be2f9368d775355c1fb4f5":[3,0,2,1,0,252,0],
-"structcl_1_1sycl_1_1detail_1_1remove__pointer.html":[3,0,2,1,0,253],
 "structcl_1_1sycl_1_1detail_1_1remove__pointer__impl.html":[3,0,2,1,0,254],
 "structcl_1_1sycl_1_1detail_1_1remove__pointer__impl.html#a7fbb0892facd692e2dfc5d48604c75f9":[3,0,2,1,0,254,0],
 "structcl_1_1sycl_1_1detail_1_1remove__pointer__impl_3_01T_01_5_01_4.html":[3,0,2,1,0,256],
@@ -249,5 +245,9 @@ var NAVTREEINDEX30 =
 "structmaxtype.html":[3,0,99],
 "structmaxtype.html#a2dd783fb18378242889f3fed3e65aeb4":[3,0,99,0],
 "structmaxtype_3_01char_01_4.html":[3,0,100],
-"structmaxtype_3_01char_01_4.html#a0ed85827ef2b9e3b0bee13ea63fb5292":[3,0,100,0]
+"structmaxtype_3_01char_01_4.html#a0ed85827ef2b9e3b0bee13ea63fb5292":[3,0,100,0],
+"structmaxtype_3_01short_01_4.html":[3,0,101],
+"structmaxtype_3_01short_01_4.html#a1a10068a96f5065e30a14b4b2cbac479":[3,0,101,0],
+"structmaxtype_3_01unsigned_01char_01_4.html":[3,0,102],
+"structmaxtype_3_01unsigned_01char_01_4.html#ac605c847146a26d2ccfec4f40ad053f1":[3,0,102,0]
 };

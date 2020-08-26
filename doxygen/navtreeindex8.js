@@ -1,8 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ac20bd01ba834cbbe71ecaed47353ffd7":[3,0,2,1,0,282,37],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ac468ca337784ac9f398934c2b6b72869":[3,0,2,1,0,282,10],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#acb0b0dc1da54c4fdbb098e532d08221d":[3,0,2,1,0,282,14],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ad76aa1d011980a674c3a8e3b62bd7579":[3,0,2,1,0,282,34],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ada051f4d3fe945ca82a5f0c0846484bb":[3,0,2,1,0,282,18],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ada6b6c164f12d87d8042f9c2a68d13af":[3,0,2,1,0,282,22],
@@ -226,7 +223,7 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1context__impl.html#a120caa4996ffc7245321b146551c3e4e":[3,0,2,1,0,44,15],
 "classcl_1_1sycl_1_1detail_1_1context__impl.html#a1f1c07cfdfc69c0c69e9616e1d83cf20":[3,0,2,1,0,44,12],
 "classcl_1_1sycl_1_1detail_1_1context__impl.html#a26b6a9e907f22be2c65878a3924306cd":[3,0,2,1,0,44,8],
-"classcl_1_1sycl_1_1detail_1_1context__impl.html#a2fe1eab8924fc3346341a5ebe4f5de2d":[3,0,2,1,0,44,7],
+"classcl_1_1sycl_1_1detail_1_1context__impl.html#a5225eb2d2abe26f3918db08f41d03897":[3,0,2,1,0,44,7],
 "classcl_1_1sycl_1_1detail_1_1context__impl.html#a67187ac9aaae4198d1a239a6d8d8a048":[3,0,2,1,0,44,5],
 "classcl_1_1sycl_1_1detail_1_1context__impl.html#aa160ddd07c0e7c7da0d4a55e7186af9f":[3,0,2,1,0,44,6],
 "classcl_1_1sycl_1_1detail_1_1context__impl.html#aacb598474a77728389fd32b19b3ef3e7":[3,0,2,1,0,44,9],
@@ -249,5 +246,8 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a2850b3b56d3b31d984a79eb71176a2b4":[3,0,2,1,0,57,10],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a29769d01ad3552cbd7a36a7e338e8362":[3,0,2,1,0,57,3],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a32d4f75d907820b10e4d08a77d37a2e8":[3,0,2,1,0,57,12],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a33e33b5cfd5845e208d9f374fdcf40b7":[3,0,2,1,0,57,4]
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a33e33b5cfd5845e208d9f374fdcf40b7":[3,0,2,1,0,57,4],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a3458975bac5112442878b542b2a49580":[3,0,2,1,0,57,6],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a53017098724e542f77cfb9f944e371da":[3,0,2,1,0,57,15],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a5a57013e0531de63ee371d9cb0109c96":[3,0,2,1,0,57,17]
 };

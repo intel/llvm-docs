@@ -21,7 +21,7 @@ var searchData=
   ['kernel_5fwork_5fgroup',['kernel_work_group',['../namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9',1,'cl::sycl::info']]],
   ['kernel_5fwriteable_5fio_5fpipe',['kernel_writeable_io_pipe',['../classcl_1_1sycl_1_1INTEL_1_1kernel__writeable__io__pipe.html',1,'cl::sycl::INTEL']]],
   ['kernelargmask',['KernelArgMask',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a020398b240a8bd554820d790c844b109',1,'cl::sycl::detail::ProgramManager']]],
-  ['kernelbynamet',['KernelByNameT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a3e74e9a3aee109ae2481109623067aaa',1,'cl::sycl::detail::KernelProgramCache']]],
+  ['kernelbynamet',['KernelByNameT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a044fe6aabb1a42c16a12b892661a3b2c',1,'cl::sycl::detail::KernelProgramCache']]],
   ['kernelcachet',['KernelCacheT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ae45b79c025b522795f8677b223a047d8',1,'cl::sycl::detail::KernelProgramCache']]],
   ['kernelinfo',['KernelInfo',['../structcl_1_1sycl_1_1detail_1_1KernelInfo.html',1,'cl::sycl::detail']]],
   ['kernelname',['KernelName',['../struct__pi__kernel.html#a1a9b804d505ecd102a36ed5757c8fda3',1,'_pi_kernel']]],

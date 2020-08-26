@@ -7,7 +7,7 @@ var classcl_1_1sycl_1_1detail_1_1context__impl =
     [ "get", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ac3486d70ee20b8faea1ea43459ed8b4f", null ],
     [ "get_async_handler", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a67187ac9aaae4198d1a239a6d8d8a048", null ],
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1context__impl.html#aa160ddd07c0e7c7da0d4a55e7186af9f", null ],
-    [ "getCachedLibPrograms", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a2fe1eab8924fc3346341a5ebe4f5de2d", null ],
+    [ "getCachedLibPrograms", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a5225eb2d2abe26f3918db08f41d03897", null ],
     [ "getDevices", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a26b6a9e907f22be2c65878a3924306cd", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1context__impl.html#aacb598474a77728389fd32b19b3ef3e7", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1context__impl.html#acaff174f75b243008f81302c9762d5c6", null ],
