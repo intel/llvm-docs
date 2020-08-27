@@ -1,5 +1,13 @@
 var NAVTREEINDEX7 =
 {
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a5ec82fb0932c808b383dba7e6c07f9be":[3,0,2,1,0,64,2],
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a62a7fc89f0ee4604e3ccab9b6b6a343f":[3,0,2,1,0,64,5],
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a9a8a9dec695980471cd52208264a8d72":[3,0,2,1,0,64,6],
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#ab2e25628b39048603a383b51c7e71516":[3,0,2,1,0,64,3],
+"classcl_1_1sycl_1_1detail_1_1GetOp.html":[3,0,2,1,0,106],
+"classcl_1_1sycl_1_1detail_1_1GetOp.html#a5b642964d91271deed56f451f6a46dc7":[3,0,2,1,0,106,2],
+"classcl_1_1sycl_1_1detail_1_1GetOp.html#adece1ca90990901ac5bd7c8a25761296":[3,0,2,1,0,106,0],
+"classcl_1_1sycl_1_1detail_1_1GetOp.html#affe4c7e43b58333cf17b54d2921598b2":[3,0,2,1,0,106,1],
 "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html":[3,0,2,1,0,107],
 "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html#a1817d62695a4a19cb8da8577178475a7":[3,0,2,1,0,107,0],
 "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html#a297eaf20612d7cb27a35a114b4430c08":[3,0,2,1,0,107,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a8c8514fb3201f505e86cbcb89fa8b5c4":[3,0,2,1,0,282,38],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a8dd420f98faf33a0ff15b9c70197e394":[3,0,2,1,0,282,33],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a94d0b8b04842330e1d877c63c00b54b3":[3,0,2,1,0,282,24],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a94d147a229b8024206f678a212abf9d1":[3,0,2,1,0,282,0],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a9d783bf2f982ba963f2b98361879c9bc":[3,0,2,1,0,282,7],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a9e0f68a015646c142383a18897f3e09d":[3,0,2,1,0,282,19],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ab7f034bde7ba591886a64f85ab9e79f1":[3,0,2,1,0,282,31],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#aba2db74c50c45b84aa60cf184155ff6e":[3,0,2,1,0,282,17],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#abb45d6a0138b6072d8c09ce772ede653":[3,0,2,1,0,282,2],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ac20bd01ba834cbbe71ecaed47353ffd7":[3,0,2,1,0,282,37],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ac468ca337784ac9f398934c2b6b72869":[3,0,2,1,0,282,10],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#acb0b0dc1da54c4fdbb098e532d08221d":[3,0,2,1,0,282,14]
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a94d147a229b8024206f678a212abf9d1":[3,0,2,1,0,282,0]
 };
