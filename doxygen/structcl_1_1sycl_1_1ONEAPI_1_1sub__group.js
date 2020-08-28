@@ -4,7 +4,7 @@ var structcl_1_1sycl_1_1ONEAPI_1_1sub__group =
     [ "id_type", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a4c8ea52512678cc6cb138698aacf9730", null ],
     [ "linear_id_type", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#af09b5b0baf1aaeb34c5f8764af2ea3cf", null ],
     [ "range_type", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a921dcfca4009a0af9154ce684840b80d", null ],
-    [ "sub_group", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#af8ee76161013905823583b0b72e1709f", null ],
+    [ "sub_group", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a53c76d7d7b63aa89dd59edf6919e1e08", null ],
     [ "barrier", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a46c890d4ece0b231dd8d47a0b56a4444", null ],
     [ "get_group_id", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#acabe252c2c90420a01e3d641f40477db", null ],
     [ "get_group_linear_id", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a36d337f77e9b3ed152ac458cd6097d64", null ],

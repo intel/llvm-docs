@@ -58,12 +58,12 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "interop_handler.hpp", "interop__handler_8hpp.html", [
       [ "interop_handler", "classcl_1_1sycl_1_1interop__handler.html", "classcl_1_1sycl_1_1interop__handler" ]
     ] ],
-    [ "item.hpp", "item_8hpp.html", null ],
+    [ "item.hpp", "item_8hpp.html", "item_8hpp" ],
     [ "kernel.hpp", "kernel_8hpp.html", [
       [ "hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4" ]
     ] ],
     [ "multi_ptr.hpp", "multi__ptr_8hpp.html", "multi__ptr_8hpp" ],
-    [ "nd_item.hpp", "nd__item_8hpp.html", null ],
+    [ "nd_item.hpp", "nd__item_8hpp.html", "nd__item_8hpp" ],
     [ "nd_range.hpp", "nd__range_8hpp.html", null ],
     [ "pipes.hpp", "pipes_8hpp.html", "pipes_8hpp" ],
     [ "platform.hpp", "platform_8hpp.html", [

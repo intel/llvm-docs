@@ -1,5 +1,15 @@
 var NAVTREEINDEX25 =
 {
+"reduction_8cpp.html#a4c46049453ab43445567f64b0ac1953a":[4,0,2,1,51,0],
+"reduction_8cpp_source.html":[4,0,2,1,51],
+"reduction_8hpp.html":[4,0,0,0,1,5,9],
+"reduction_8hpp.html#a0fbcd4cd703d67fcb4710042d2e1ca05":[4,0,0,0,1,5,9,32],
+"reduction_8hpp.html#a1118b336926914b511787485fb82eed1":[4,0,0,0,1,5,9,16],
+"reduction_8hpp.html#a217c7e07fa61a2c040a362501711afb4":[4,0,0,0,1,5,9,36],
+"reduction_8hpp.html#a2bc3a1753fecee40b3b8494b118c64fb":[4,0,0,0,1,5,9,27],
+"reduction_8hpp.html#a2c0cbdf90c36a04c0356ec975c7dd3fe":[4,0,0,0,1,5,9,13],
+"reduction_8hpp.html#a3459d94dbd7d586cc9d4102b484bdd5e":[4,0,0,0,1,5,9,10],
+"reduction_8hpp.html#a34fe6df41c4e22abab04c7debe70796c":[4,0,0,0,1,5,9,28],
 "reduction_8hpp.html#a37227fd8f918ef1c52615f68881b0882":[4,0,0,0,1,5,9,21],
 "reduction_8hpp.html#a37c7b50c0ee12720c0a09d771f2a7faf":[4,0,0,0,1,5,9,22],
 "reduction_8hpp.html#a3d0d7699d6bc546357eeb7457ee7fadb":[4,0,0,0,1,5,9,7],
@@ -239,15 +249,5 @@ var NAVTREEINDEX25 =
 "structEsimdEmulSys_1_1SetSatur.html":[3,0,3,3],
 "structEsimdEmulSys_1_1SetSatur.html#a50ca5e7dd13d3349cbd427d76a497530":[3,0,3,3,0],
 "structEsimdEmulSys_1_1SetSatur_3_01double_00_01true_01_4.html":[3,0,3,4],
-"structEsimdEmulSys_1_1SetSatur_3_01double_00_01true_01_4.html#a7b0a7193db5d51e74dbfede315680a8a":[3,0,3,4,0],
-"structEsimdEmulSys_1_1SetSatur_3_01float_00_01true_01_4.html":[3,0,3,5],
-"structEsimdEmulSys_1_1SetSatur_3_01float_00_01true_01_4.html#a143a7d3db6170251788a3b3699700805":[3,0,3,5,0],
-"structEsimdEmulSys_1_1satur.html":[3,0,3,0],
-"structEsimdEmulSys_1_1satur.html#a378b175568072efa913f3bdb338b9777":[3,0,3,0,0],
-"structEsimdEmulSys_1_1satur_3_01double_01_4.html":[3,0,3,1],
-"structEsimdEmulSys_1_1satur_3_01double_01_4.html#aee9074c0c2cd6afff09512b63ae64b74":[3,0,3,1,0],
-"structEsimdEmulSys_1_1satur_3_01float_01_4.html":[3,0,3,2],
-"structEsimdEmulSys_1_1satur_3_01float_01_4.html#a0fa012fd6c3f50ae9ec30cd5da20bfaf":[3,0,3,2,0],
-"struct____esimd_1_1Log2.html":[3,0,0,0],
-"struct____esimd_1_1Log2_3_01N_00_01false_01_4.html":[3,0,0,1]
+"structEsimdEmulSys_1_1SetSatur_3_01double_00_01true_01_4.html#a7b0a7193db5d51e74dbfede315680a8a":[3,0,3,4,0]
 };
