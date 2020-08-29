@@ -11,6 +11,8 @@ var searchData=
   ['defaultcontexttype',['DefaultContextType',['../namespacecl_1_1sycl_1_1detail.html#a6c18b72f10a6d49dd9fdf566c27577a5',1,'cl::sycl::detail']]],
   ['defaultfloat',['defaultfloat',['../namespacecl_1_1sycl.html#a37868449914c033754b31396f24a2070',1,'cl::sycl']]],
   ['defaulthostqueue',['DefaultHostQueue',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902',1,'cl::sycl::detail::Scheduler']]],
+  ['depth',['depth',['../structpi__image__region__struct.html#a87c51d99dc1a0c7acf86e07e56df5e58',1,'pi_image_region_struct']]],
+  ['depth_5fscalar',['depth_scalar',['../structpi__buff__rect__region__struct.html#a9f12d060bd89cbeb756c674de7bd960b',1,'pi_buff_rect_region_struct']]],
   ['devdriverver',['devDriverVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#adc4571a02bb3a5e0e9e0f4deb6324c88',1,'cl::sycl::detail::DevDescT']]],
   ['devdriverversize',['devDriverVerSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a742a74f5d8ce4980b91632a0fef21041',1,'cl::sycl::detail::DevDescT']]],
   ['device',['Device',['../struct__pi__context.html#afc9a249b1677570ca35b382d12445025',1,'_pi_context']]],

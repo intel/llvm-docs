@@ -1,5 +1,14 @@
 var NAVTREEINDEX27 =
 {
+"struct__pi__plugin.html#a61f3c14948bd380bdb111988cfedef09":[3,0,24,3],
+"struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d":[3,0,24,2],
+"struct__pi__plugin.html#af620ffb734e20021fbfa88067860e456":[3,0,24,4],
+"struct__pi__plugin_1_1FunctionPointers.html":[3,0,24,0],
+"struct__pi__program.html":[3,0,25],
+"struct__pi__program.html#a019071f4456b2301a42fe00264265fbd":[3,0,25,32],
+"struct__pi__program.html#a07ee027170c3138223814e6f23953c42":[3,0,25,20],
+"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,9],
+"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,5],
 "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854":[3,0,25,10],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16":[3,0,25,3],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a1684fb88863210e92ec87a7ffb479c95":[3,0,25,3,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX27 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1element__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html#a87cb180c1081b93b6bc874deb6b36ca7":[3,0,2,1,3,0,13,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1element__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html":[3,0,2,1,3,0,14],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1element__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html#aad2dbe62e6b88d6ae661cdb84a14eba8":[3,0,2,1,3,0,14,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type.html":[3,0,2,1,3,0,15],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type_3_01Ty_00_01____esimd__void__t_3d7d08b23155dc5e9134f97f43ccf842b.html":[3,0,2,1,3,0,16],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type.html":[3,0,2,1,3,0,17],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html":[3,0,2,1,3,0,18],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html":[3,0,2,1,3,0,19],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__v.html":[3,0,2,1,3,0,20],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type.html":[3,0,2,1,3,0,21],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html":[3,0,2,1,3,0,22],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__v.html":[3,0,2,1,3,0,23],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable.html":[3,0,2,1,3,0,24]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type.html":[3,0,2,1,3,0,15]
 };

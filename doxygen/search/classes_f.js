@@ -1,9 +1,13 @@
 var searchData=
 [
   ['param_5ftraits',['param_traits',['../classcl_1_1sycl_1_1info_1_1param__traits.html',1,'cl::sycl::info']]],
+  ['pi_5fbuff_5frect_5foffset_5fstruct',['pi_buff_rect_offset_struct',['../structpi__buff__rect__offset__struct.html',1,'']]],
+  ['pi_5fbuff_5frect_5fregion_5fstruct',['pi_buff_rect_region_struct',['../structpi__buff__rect__region__struct.html',1,'']]],
   ['pi_5fbuffer_5fregion_5fstruct',['pi_buffer_region_struct',['../structpi__buffer__region__struct.html',1,'']]],
   ['pi_5fdevice_5fbinaries_5fstruct',['pi_device_binaries_struct',['../structpi__device__binaries__struct.html',1,'']]],
   ['pi_5fdevice_5fbinary_5fstruct',['pi_device_binary_struct',['../structpi__device__binary__struct.html',1,'']]],
+  ['pi_5fimage_5foffset_5fstruct',['pi_image_offset_struct',['../structpi__image__offset__struct.html',1,'']]],
+  ['pi_5fimage_5fregion_5fstruct',['pi_image_region_struct',['../structpi__image__region__struct.html',1,'']]],
   ['pifuncinfo',['PiFuncInfo',['../structcl_1_1sycl_1_1detail_1_1pi_1_1PiFuncInfo.html',1,'cl::sycl::detail::pi']]],
   ['pipe',['pipe',['../classcl_1_1sycl_1_1INTEL_1_1pipe.html',1,'cl::sycl::INTEL']]],
   ['platform',['platform',['../classcl_1_1sycl_1_1platform.html',1,'cl::sycl']]],

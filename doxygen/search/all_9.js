@@ -74,6 +74,8 @@ var searchData=
   ['hassetspecconstants',['hasSetSpecConstants',['../classcl_1_1sycl_1_1detail_1_1program__impl.html#af2b95d292dac6348c9cfa8bff7bc5d34',1,'cl::sycl::detail::program_impl']]],
   ['head',['head',['../structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html#afda780593d2e45d62f7c5405936f1c36',1,'cl::sycl::detail::type_list&lt; H, T... &gt;::head()'],['../structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html#a96301d4f14bcc0619c58bacdc2858ad4',1,'cl::sycl::detail::type_list&lt; type_list&lt; H, T... &gt;, T2... &gt;::head()'],['../structcl_1_1sycl_1_1detail_1_1find__type.html#a75afeec6903597b05536fb4a3cb411ae',1,'cl::sycl::detail::find_type::head()'],['../structcl_1_1sycl_1_1detail_1_1value__list_3_01T_00_01H_00_01V_8_8_8_01_4.html#aca1612d2fd4d55bf76d82d8deb4f5730',1,'cl::sycl::detail::value_list&lt; T, H, V... &gt;::head()']]],
   ['head_5ft',['head_t',['../namespacecl_1_1sycl_1_1detail.html#a632ebf5c69d47f046395814262ca8f33',1,'cl::sycl::detail']]],
+  ['height',['height',['../structpi__image__region__struct.html#ad21fe54ca7887a021a490e612f44913b',1,'pi_image_region_struct']]],
+  ['height_5fscalar',['height_scalar',['../structpi__buff__rect__region__struct.html#a8006ac58b893ea7b2c513f9b4133997e',1,'pi_buff_rect_region_struct']]],
   ['helper',['helper',['../structcl_1_1____host__std_1_1detail_1_1helper.html',1,'cl::__host_std::detail']]],
   ['helper_3c_200_20_3e',['helper&lt; 0 &gt;',['../structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html',1,'cl::__host_std::detail']]],
   ['helpers_2ecpp',['helpers.cpp',['../helpers_8cpp.html',1,'']]],

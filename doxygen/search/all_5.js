@@ -66,6 +66,8 @@ var searchData=
   ['denorm_5fmin',['denorm_min',['../structstd_1_1numeric__limits_3_01half_01_4.html#a13da2f4db8560b11d94ca6dafa528a2a',1,'std::numeric_limits&lt; half &gt;']]],
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html',1,'cl::sycl::detail::DepDesc'],['../structcl_1_1sycl_1_1detail_1_1DepDesc.html#a517e13667cc6ba1340423b6bb9b0a8e0',1,'cl::sycl::detail::DepDesc::DepDesc()']]],
   ['depends_5fon',['depends_on',['../classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7',1,'cl::sycl::handler::depends_on(event Event)'],['../classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4',1,'cl::sycl::handler::depends_on(const vector_class&lt; event &gt; &amp;Events)']]],
+  ['depth',['depth',['../structpi__image__region__struct.html#a87c51d99dc1a0c7acf86e07e56df5e58',1,'pi_image_region_struct']]],
+  ['depth_5fscalar',['depth_scalar',['../structpi__buff__rect__region__struct.html#a9f12d060bd89cbeb756c674de7bd960b',1,'pi_buff_rect_region_struct']]],
   ['destroy',['destroy',['../classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a84e3e22e10e15fd8868e62a53a3b2e8c',1,'cl::sycl::detail::aligned_allocator']]],
   ['devdesct',['DevDescT',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html',1,'cl::sycl::detail']]],
   ['devdriverver',['devDriverVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#adc4571a02bb3a5e0e9e0f4deb6324c88',1,'cl::sycl::detail::DevDescT']]],

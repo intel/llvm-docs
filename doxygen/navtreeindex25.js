@@ -1,5 +1,14 @@
 var NAVTREEINDEX25 =
 {
+"queue__impl_8hpp_source.html":[4,0,2,1,50],
+"queue__properties_8hpp.html":[4,0,0,0,1,6,5],
+"queue__properties_8hpp_source.html":[4,0,0,0,1,6,5],
+"range_8hpp.html":[4,0,0,0,1,42],
+"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,42,1],
+"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,42,0],
+"range_8hpp_source.html":[4,0,0,0,1,42],
+"reduction_8cpp.html":[4,0,2,1,51],
+"reduction_8cpp.html#a3955af96c1019ee7650326f74848e548":[4,0,2,1,51,1],
 "reduction_8cpp.html#a4c46049453ab43445567f64b0ac1953a":[4,0,2,1,51,0],
 "reduction_8cpp_source.html":[4,0,2,1,51],
 "reduction_8hpp.html":[4,0,0,0,1,5,9],
@@ -240,14 +249,5 @@ var NAVTREEINDEX25 =
 "stream_8hpp.html#ae5ee318241f0c6c891a706271ec3fda5":[4,0,0,0,1,45,9],
 "stream_8hpp.html#ae6ad908e72dbe7ac2f65b16fbdddc1be":[4,0,0,0,1,45,21],
 "stream_8hpp.html#af0d0bb8b3b5f57bbc46f5110b7480068":[4,0,0,0,1,45,44],
-"stream_8hpp.html#af5f11b77641acbd4d53ca207ec7e6999":[4,0,0,0,1,45,82],
-"stream_8hpp_source.html":[4,0,0,0,1,45],
-"stream__impl_8cpp.html":[4,0,2,1,56],
-"stream__impl_8cpp_source.html":[4,0,2,1,56],
-"stream__impl_8hpp.html":[4,0,2,1,57],
-"stream__impl_8hpp_source.html":[4,0,2,1,57],
-"structEsimdEmulSys_1_1SetSatur.html":[3,0,3,3],
-"structEsimdEmulSys_1_1SetSatur.html#a50ca5e7dd13d3349cbd427d76a497530":[3,0,3,3,0],
-"structEsimdEmulSys_1_1SetSatur_3_01double_00_01true_01_4.html":[3,0,3,4],
-"structEsimdEmulSys_1_1SetSatur_3_01double_00_01true_01_4.html#a7b0a7193db5d51e74dbfede315680a8a":[3,0,3,4,0]
+"stream_8hpp.html#af5f11b77641acbd4d53ca207ec7e6999":[4,0,0,0,1,45,82]
 };

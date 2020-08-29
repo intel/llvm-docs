@@ -1,5 +1,14 @@
 var NAVTREEINDEX28 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type_3_01Ty_00_01____esimd__void__t_3d7d08b23155dc5e9134f97f43ccf842b.html":[3,0,2,1,3,0,16],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type.html":[3,0,2,1,3,0,17],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html":[3,0,2,1,3,0,18],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html":[3,0,2,1,3,0,19],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__v.html":[3,0,2,1,3,0,20],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type.html":[3,0,2,1,3,0,21],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html":[3,0,2,1,3,0,22],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__v.html":[3,0,2,1,3,0,23],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable.html":[3,0,2,1,3,0,24],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable_3_01bool_01_4.html":[3,0,2,1,3,0,25],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable__v.html":[3,0,2,1,3,0,26],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1make__esimd__void.html":[3,0,2,1,3,0,27],
@@ -240,14 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html":[3,0,2,1,0,227],
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html#a2067e161d2459ace54fa45711ad1bdc0":[3,0,2,1,0,227,0],
 "structcl_1_1sycl_1_1detail_1_1NotEqualTo.html":[3,0,2,1,0,229],
-"structcl_1_1sycl_1_1detail_1_1NotEqualTo.html#abc8d38d8a81c8aad8a857d32dd81d5fd":[3,0,2,1,0,229,0],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html":[3,0,2,1,0,232],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a0934e234f2c39b7d90aade2d202d2980":[3,0,2,1,0,232,2],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a5191de605498f3f54293f67f8b41d568":[3,0,2,1,0,232,5],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a79fd0dbeb9f73e5034f33fa63e4ca881":[3,0,2,1,0,232,4],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ada67fc534b599e5bea393b57e9824bd0":[3,0,2,1,0,232,3],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a":[3,0,2,1,0,232,0],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa1686a6c336b71b36d77354cea19a8b52":[3,0,2,1,0,232,0,2],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa22ae0e2b89e5e3d477f988cc36d3272b":[3,0,2,1,0,232,0,4],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa30bb747c98bccdd11b3f89e644c4d0ad":[3,0,2,1,0,232,0,1]
+"structcl_1_1sycl_1_1detail_1_1NotEqualTo.html#abc8d38d8a81c8aad8a857d32dd81d5fd":[3,0,2,1,0,229,0]
 };

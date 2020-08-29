@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['z',['z',['../structcl_1_1sycl_1_1elem.html#a08274fc4fcc20507640de4dae80ef179',1,'cl::sycl::elem']]],
+  ['z',['z',['../structpi__image__offset__struct.html#a078e610dcc33bea8e460b9d52d31866b',1,'pi_image_offset_struct::z()'],['../structcl_1_1sycl_1_1elem.html#a08274fc4fcc20507640de4dae80ef179',1,'cl::sycl::elem::z()']]],
+  ['z_5fscalar',['z_scalar',['../structpi__buff__rect__offset__struct.html#a853a7c8875c160541741700d9122eebd',1,'pi_buff_rect_offset_struct']]],
   ['ze_5fcall',['ZE_CALL',['../pi__level__zero_8cpp.html#a942ae4efbf61ce684eb093c3c07b8a73',1,'pi_level_zero.cpp']]],
   ['ze_5fcall_5fnocheck',['ZE_CALL_NOCHECK',['../pi__level__zero_8cpp.html#a8009409c5f86d03cdbdc2bf11a8756eb',1,'pi_level_zero.cpp']]],
   ['ze_5ferrcase',['ZE_ERRCASE',['../pi__level__zero_8cpp.html#a811e97d9ea03c4cf9bfc979d6d243ab9',1,'pi_level_zero.cpp']]],
