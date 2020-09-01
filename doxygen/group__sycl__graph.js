@@ -75,13 +75,13 @@ var group__sycl__graph =
       [ "MUsers", "classcl_1_1sycl_1_1detail_1_1Command.html#a55c1e8c12a8ff2f25ee8d2329270093f", null ]
     ] ],
     [ "MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html", [
-      [ "MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a637208028b2d731007fa7c89a7eed4c4", null ],
+      [ "MemObjRecord", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#aae4c5827d76024eff29b3b5c325e5241", null ],
       [ "MAllocaCommands", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#ac273fa8bbe1679327416b3c2eec5a9d4", null ],
       [ "MCurContext", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07", null ],
       [ "MHostAccess", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c", null ],
       [ "MMemModified", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c", null ],
-      [ "MReadLeaves", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a6a3e62372c61f59e347984b51d01d68f", null ],
-      [ "MWriteLeaves", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9", null ]
+      [ "MReadLeaves", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#aa305a6853090250692f3a7d44ea3149e", null ],
+      [ "MWriteLeaves", "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3", null ]
     ] ],
     [ "GraphBuilder", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html", [
       [ "GraphBuilder", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#aefdeb14607b39f88cef981ef76a5eaa5", null ],
@@ -121,6 +121,7 @@ var group__sycl__graph =
       [ "enqueueLeavesOfReqUnlocked", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aade0e32407fe42d186a99526f6a00b55", null ],
       [ "getDefaultHostQueue", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258", null ],
       [ "getInstance", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6a372403ed668ccf5f5469a854aa3f5e", null ],
+      [ "getMemObjRecord", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a95468b0ba102b4bfe152461dec8acd63", null ],
       [ "getWaitList", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a140b6282077e7de641b759865921a141", null ],
       [ "lockSharedTimedMutex", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4ca29b68b09ab4a43c40604a0960fd09", null ],
       [ "releaseHostAccessor", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa17761af756131d983574f5558c2f854", null ],

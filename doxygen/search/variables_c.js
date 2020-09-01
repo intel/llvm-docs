@@ -111,7 +111,7 @@ var searchData=
   ['mprops',['MProps',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a18673bde7f63b6400544def4f831e4c5',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['mptr',['MPtr',['../classcl_1_1sycl_1_1detail_1_1CGFill.html#ab673fb218534cc8bbaf19c3264ea6034',1,'cl::sycl::detail::CGFill::MPtr()'],['../classcl_1_1sycl_1_1detail_1_1ArgDesc.html#aaabfc261fff25e3efaeb3fbed6365098',1,'cl::sycl::detail::ArgDesc::MPtr()']]],
   ['mqueue',['MQueue',['../classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a6d94991fda48eb422cce4606dd56940a',1,'cl::sycl::detail::CGHostTask::MQueue()'],['../classcl_1_1sycl_1_1detail_1_1Command.html#a058f3c52750d5e57dfa8543bfdfcdd5c',1,'cl::sycl::detail::Command::MQueue()']]],
-  ['mreadleaves',['MReadLeaves',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a6a3e62372c61f59e347984b51d01d68f',1,'cl::sycl::detail::MemObjRecord']]],
+  ['mreadleaves',['MReadLeaves',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#aa305a6853090250692f3a7d44ea3149e',1,'cl::sycl::detail::MemObjRecord']]],
   ['mrecord',['MRecord',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a15515300405f37fa361db9aa1f8332bb',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['mreleasecmd',['MReleaseCmd',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a2dc0abdd980c367e4df9dda3e0b06f2f',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['mrequirement',['MRequirement',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e',1,'cl::sycl::detail::AllocaCommandBase']]],
@@ -139,5 +139,5 @@ var searchData=
   ['mvalue',['MValue',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a757195a760f4329658632aea3dd1b9e1',1,'cl::sycl::ONEAPI::detail::reducer::MValue()'],['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad7be7756ae2a9899e6f1d70523407af9',1,'cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;::MValue()']]],
   ['mvisited',['MVisited',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a4f5423b989b23434d7dc0aad3ff73a59',1,'cl::sycl::detail::Command::Marks']]],
   ['mwrapperimage',['MWrapperImage',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a9e60b6f0c8be8dd5691fb617168e339f',1,'cl::sycl::detail::AllocaCommandBase']]],
-  ['mwriteleaves',['MWriteLeaves',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a071c7e0b29bcb1cc24da01e47dc2d5c9',1,'cl::sycl::detail::MemObjRecord']]]
+  ['mwriteleaves',['MWriteLeaves',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3',1,'cl::sycl::detail::MemObjRecord']]]
 ];

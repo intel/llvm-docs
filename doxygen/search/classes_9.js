@@ -172,5 +172,6 @@ var searchData=
   ['itembase',['ItemBase',['../structcl_1_1sycl_1_1detail_1_1ItemBase.html',1,'cl::sycl::detail']]],
   ['itembase_3c_20dimensions_2c_20with_5foffset_20_3e',['ItemBase&lt; dimensions, with_offset &gt;',['../structcl_1_1sycl_1_1detail_1_1ItemBase.html',1,'cl::sycl::detail']]],
   ['itembase_3c_20dims_2c_20false_20_3e',['ItemBase&lt; Dims, false &gt;',['../structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html',1,'cl::sycl::detail']]],
-  ['itembase_3c_20dims_2c_20true_20_3e',['ItemBase&lt; Dims, true &gt;',['../structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html',1,'cl::sycl::detail']]]
+  ['itembase_3c_20dims_2c_20true_20_3e',['ItemBase&lt; Dims, true &gt;',['../structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html',1,'cl::sycl::detail']]],
+  ['iteratort',['IteratorT',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html',1,'cl::sycl::detail::LeavesCollection']]]
 ];

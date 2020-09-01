@@ -155,7 +155,7 @@ var hierarchy =
     [ "check_true< VALUE >", "structcheck__true.html", null ],
     [ "check_true< true >", "structcheck__true_3_01true_01_4.html", null ],
     [ "cl::sycl::detail::CircularBuffer< T >", "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html", null ],
-    [ "cl::sycl::detail::CircularBuffer< cl::sycl::detail::Command *>", "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html", null ],
+    [ "cl::sycl::detail::CircularBuffer< Command * >", "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html", null ],
     [ "cl::sycl::detail::CmpCStr", "structcl_1_1sycl_1_1detail_1_1CmpCStr.html", null ],
     [ "cl::sycl::detail::code_location", "structcl_1_1sycl_1_1detail_1_1code__location.html", null ],
     [ "cl::sycl::detail::Command", "classcl_1_1sycl_1_1detail_1_1Command.html", [
@@ -561,6 +561,7 @@ var hierarchy =
     [ "iterator", null, [
       [ "cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::ConstIterator", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html", null ]
     ] ],
+    [ "cl::sycl::detail::LeavesCollection::IteratorT< IsConst >", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html", null ],
     [ "cl::sycl::kernel", "classcl_1_1sycl_1_1kernel.html", null ],
     [ "cl::sycl::detail::kernel_impl", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html", null ],
     [ "cl::sycl::detail::kernel_param_desc_t", "structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html", null ],
@@ -568,6 +569,7 @@ var hierarchy =
     [ "cl::sycl::INTEL::kernel_writeable_io_pipe< name, dataT, min_capacity >", "classcl_1_1sycl_1_1INTEL_1_1kernel__writeable__io__pipe.html", null ],
     [ "cl::sycl::detail::KernelInfo< KernelNameType >", "structcl_1_1sycl_1_1detail_1_1KernelInfo.html", null ],
     [ "cl::sycl::detail::KernelProgramCache", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html", null ],
+    [ "cl::sycl::detail::LeavesCollection", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html", null ],
     [ "cl::sycl::detail::LessEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html", null ],
     [ "cl::sycl::detail::LessThan< T >", "structcl_1_1sycl_1_1detail_1_1LessThan.html", null ],
     [ "_pi_program::LinkedReleaser", "class__pi__program_1_1LinkedReleaser.html", null ],

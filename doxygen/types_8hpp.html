@@ -294,10 +294,14 @@ Macros</h2></td></tr>
 <tr class="separator:a6d61f4c1988e8b3b44325f2b6bc97a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38a5b62828fad8613b4bdd9913a7c11e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a38a5b62828fad8613b4bdd9913a7c11e">DECLARE_SCHAR_CONVERTER</a>(num)</td></tr>
 <tr class="separator:a38a5b62828fad8613b4bdd9913a7c11e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24f0ae4a341448804ff251e9e9b043cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a24f0ae4a341448804ff251e9e9b043cc">DECLARE_BOOL_CONVERTER</a>(num)</td></tr>
+<tr class="separator:a24f0ae4a341448804ff251e9e9b043cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ff38acbcfb5d60b8c78213b88e23abd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a5ff38acbcfb5d60b8c78213b88e23abd">DECLARE_HALF_CONVERTER</a>(base,  num)</td></tr>
 <tr class="separator:a5ff38acbcfb5d60b8c78213b88e23abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a129e985b229a09d2d2cfc96754e0d70a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a129e985b229a09d2d2cfc96754e0d70a">DECLARE_SCALAR_SCHAR_CONVERTER</a></td></tr>
 <tr class="separator:a129e985b229a09d2d2cfc96754e0d70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591b59da2dcbf7baf9476f16c87ea5d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a591b59da2dcbf7baf9476f16c87ea5d8">DECLARE_SCALAR_BOOL_CONVERTER</a></td></tr>
+<tr class="separator:a591b59da2dcbf7baf9476f16c87ea5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87930490fbaec9720f7c00e1a68d8bb3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a87930490fbaec9720f7c00e1a68d8bb3">DECLARE_SCALAR_CONVERTER</a>(base)</td></tr>
 <tr class="separator:a87930490fbaec9720f7c00e1a68d8bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93d55fbee9e7ebf6c76eb344da02de0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a93d55fbee9e7ebf6c76eb344da02de0f">DECLARE_VECTOR_CONVERTERS</a>(base)</td></tr>
@@ -314,6 +318,8 @@ Macros</h2></td></tr>
 <tr class="separator:a53cff3eaefbe796306a1d941968a382d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b43725501fb6815d8959644f19e245a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a7b43725501fb6815d8959644f19e245a">DECLARE_SCHAR_VECTOR_CONVERTERS</a></td></tr>
 <tr class="separator:a7b43725501fb6815d8959644f19e245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69509f4ea178734d86ff8cb705481a29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8hpp.html#a69509f4ea178734d86ff8cb705481a29">DECLARE_BOOL_VECTOR_CONVERTERS</a></td></tr>
+<tr class="separator:a69509f4ea178734d86ff8cb705481a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -644,6 +650,44 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataT_&gt;                                                   \</div><div class="line">  struct TypeChecker&lt;vec&lt;DataT_, num_elements&gt;, DataT_&gt; : std::true_type {};   \</div><div class="line">  template &lt;<span class="keyword">typename</span> DataT_, <span class="keyword">typename</span> T2, <span class="keyword">typename</span> T3,                         \</div><div class="line">            template &lt;typename&gt; <span class="keyword">class </span>T4, int... T5&gt;                           \</div><div class="line">  struct TypeChecker&lt;                                                          \</div><div class="line">      detail::SwizzleOp&lt;vec&lt;DataT_, num_elements&gt;, T2, T3, T4, T5...&gt;, DataT_&gt; \</div><div class="line">      : std::true_type {};                                                     \</div><div class="line">  template &lt;<span class="keyword">typename</span> DataT_, <span class="keyword">typename</span> T2, <span class="keyword">typename</span> T3,                         \</div><div class="line">            template &lt;typename&gt; <span class="keyword">class </span>T4, int... T5&gt;                           \</div><div class="line">  struct TypeChecker&lt;                                                          \</div><div class="line">      detail::SwizzleOp&lt;const vec&lt;DataT_, num_elements&gt;, T2, T3, T4, T5...&gt;,   \</div><div class="line">      DataT_&gt; : std::true_type {};</div></div><!-- fragment -->
 </div>
 </div>
+<a id="a24f0ae4a341448804ff251e9e9b043cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f0ae4a341448804ff251e9e9b043cc">&#9670;&nbsp;</a></span>DECLARE_BOOL_CONVERTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DECLARE_BOOL_CONVERTER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">num</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;bool, num&gt; {                           \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a90a4b89b2210219b4dddfdd599b8d162">detail::select_apply_cl_t</a>&lt;                                \</div><div class="line">        bool, <a class="code" href="types_8hpp.html#a36448a429dc894e3368752066aa63295">GET_CL_TYPE</a>(<span class="keywordtype">char</span>, num), <a class="code" href="types_8hpp.html#a36448a429dc894e3368752066aa63295">GET_CL_TYPE</a>(<span class="keywordtype">short</span>, num),                 \</div><div class="line">        GET_CL_TYPE(<span class="keywordtype">int</span>, num), <a class="code" href="types_8hpp.html#a36448a429dc894e3368752066aa63295">GET_CL_TYPE</a>(<span class="keywordtype">long</span>, num)&gt;;                        \</div><div class="line">  };</div><div class="ttc" id="namespacecl_1_1sycl_1_1detail_html_a90a4b89b2210219b4dddfdd599b8d162"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a90a4b89b2210219b4dddfdd599b8d162">cl::sycl::detail::select_apply_cl_t</a></div><div class="ttdeci">conditional_t&lt; sizeof(T)==1, T8, conditional_t&lt; sizeof(T)==2, T16, conditional_t&lt; sizeof(T)==4, T32, T64 &gt; &gt;&gt; select_apply_cl_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l02074">types.hpp:2074</a></div></div>
+<div class="ttc" id="types_8hpp_html_a36448a429dc894e3368752066aa63295"><div class="ttname"><a href="types_8hpp.html#a36448a429dc894e3368752066aa63295">GET_CL_TYPE</a></div><div class="ttdeci">#define GET_CL_TYPE(target, num)</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l02053">types.hpp:2053</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02120">2120</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a69509f4ea178734d86ff8cb705481a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69509f4ea178734d86ff8cb705481a29">&#9670;&nbsp;</a></span>DECLARE_BOOL_VECTOR_CONVERTERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DECLARE_BOOL_VECTOR_CONVERTERS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_BOOL_CONVERTER(2)                                                    \</div><div class="line">  DECLARE_BOOL_CONVERTER(3)                                                    \</div><div class="line">  DECLARE_BOOL_CONVERTER(4)                                                    \</div><div class="line">  DECLARE_BOOL_CONVERTER(8)                                                    \</div><div class="line">  DECLARE_BOOL_CONVERTER(16)                                                   \</div><div class="line">  DECLARE_SCALAR_BOOL_CONVERTER                                                \</div><div class="line">  }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02229">2229</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
 <a id="ab13518ca32f553a580eaa17cf515c334"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab13518ca32f553a580eaa17cf515c334">&#9670;&nbsp;</a></span>DECLARE_CONVERTER</h2>
 
@@ -724,7 +768,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_FLOAT_CONVERTER(base, 2)                                             \</div><div class="line">  DECLARE_FLOAT_CONVERTER(base, 3)                                             \</div><div class="line">  DECLARE_FLOAT_CONVERTER(base, 4)                                             \</div><div class="line">  DECLARE_FLOAT_CONVERTER(base, 8)                                             \</div><div class="line">  DECLARE_FLOAT_CONVERTER(base, 16)                                            \</div><div class="line">  DECLARE_SCALAR_CONVERTER(base)                                               \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02168">2168</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02182">2182</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -755,7 +799,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;base, num&gt; {                           \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = <a class="code" href="types_8hpp.html#aaf61a9365df41c28b5c0b0b56032731e">GET_CL_HALF_TYPE</a>(base, num);                              \</div><div class="line">  };</div><div class="ttc" id="types_8hpp_html_aaf61a9365df41c28b5c0b0b56032731e"><div class="ttname"><a href="types_8hpp.html#aaf61a9365df41c28b5c0b0b56032731e">GET_CL_HALF_TYPE</a></div><div class="ttdeci">#define GET_CL_HALF_TYPE(target, num)</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l02063">types.hpp:2063</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02120">2120</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02128">2128</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -776,7 +820,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_HALF_CONVERTER(base, 2)                                              \</div><div class="line">  DECLARE_HALF_CONVERTER(base, 3)                                              \</div><div class="line">  DECLARE_HALF_CONVERTER(base, 4)                                              \</div><div class="line">  DECLARE_HALF_CONVERTER(base, 8)                                              \</div><div class="line">  DECLARE_HALF_CONVERTER(base, 16)                                             \</div><div class="line">  template &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;base, 1&gt; {                             \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = <a class="code" href="types_8hpp.html#a7c143f8207744272ec644cb1404dbf43">__half_t</a>;                                                 \</div><div class="line">  };                                                                           \</div><div class="line">  }</div><div class="ttc" id="types_8hpp_html_a7c143f8207744272ec644cb1404dbf43"><div class="ttname"><a href="types_8hpp.html#a7c143f8207744272ec644cb1404dbf43">__half_t</a></div><div class="ttdeci">cl::sycl::detail::half_impl::StorageT __half_t</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l02057">types.hpp:2057</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02179">2179</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02193">2193</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -811,6 +855,22 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a591b59da2dcbf7baf9476f16c87ea5d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591b59da2dcbf7baf9476f16c87ea5d8">&#9670;&nbsp;</a></span>DECLARE_SCALAR_BOOL_CONVERTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DECLARE_SCALAR_BOOL_CONVERTER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;bool, 1&gt; {                             \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = bool;                                                     \</div><div class="line">  };</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02140">2140</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a87930490fbaec9720f7c00e1a68d8bb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a87930490fbaec9720f7c00e1a68d8bb3">&#9670;&nbsp;</a></span>DECLARE_SCALAR_CONVERTER</h2>
 
@@ -828,7 +888,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;base, 1&gt; {                             \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = <a class="code" href="types_8hpp.html#a27848427d46997732c0ad6186b227f6b">GET_SCALAR_CL_TYPE</a>(base);                                 \</div><div class="line">  };</div><div class="ttc" id="types_8hpp_html_a27848427d46997732c0ad6186b227f6b"><div class="ttname"><a href="types_8hpp.html#a27848427d46997732c0ad6186b227f6b">GET_SCALAR_CL_TYPE</a></div><div class="ttdeci">#define GET_SCALAR_CL_TYPE(target)</div><div class="ttdef"><b>Definition:</b> <a href="types_8hpp_source.html#l02054">types.hpp:2054</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02132">2132</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02146">2146</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -845,7 +905,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;<a class="code" href="namespacecl_1_1sycl.html#ab9810b9226a3df7653f393b836e7be7c">schar</a>, 1&gt; {                            \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = <a class="code" href="namespacecl_1_1sycl.html#ab9810b9226a3df7653f393b836e7be7c">schar</a>;                                                    \</div><div class="line">  };</div><div class="ttc" id="namespacecl_1_1sycl_html_ab9810b9226a3df7653f393b836e7be7c"><div class="ttname"><a href="namespacecl_1_1sycl.html#ab9810b9226a3df7653f393b836e7be7c">cl::sycl::schar</a></div><div class="ttdeci">signed char schar</div><div class="ttdef"><b>Definition:</b> <a href="aliases_8hpp_source.html#l00075">aliases.hpp:75</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02126">2126</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02134">2134</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -884,7 +944,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_SCHAR_CONVERTER(2)                                                   \</div><div class="line">  DECLARE_SCHAR_CONVERTER(3)                                                   \</div><div class="line">  DECLARE_SCHAR_CONVERTER(4)                                                   \</div><div class="line">  DECLARE_SCHAR_CONVERTER(8)                                                   \</div><div class="line">  DECLARE_SCHAR_CONVERTER(16)                                                  \</div><div class="line">  DECLARE_SCALAR_SCHAR_CONVERTER                                               \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02205">2205</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02219">2219</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -936,7 +996,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_SIGNED_INTEGRAL_CONVERTER(base, 2)                                   \</div><div class="line">  DECLARE_SIGNED_INTEGRAL_CONVERTER(base, 3)                                   \</div><div class="line">  DECLARE_SIGNED_INTEGRAL_CONVERTER(base, 4)                                   \</div><div class="line">  DECLARE_SIGNED_INTEGRAL_CONVERTER(base, 8)                                   \</div><div class="line">  DECLARE_SIGNED_INTEGRAL_CONVERTER(base, 16)                                  \</div><div class="line">  DECLARE_SCALAR_CONVERTER(base)                                               \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02148">2148</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02162">2162</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -992,7 +1052,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_UNSIGNED_INTEGRAL_CONVERTER(base, 2)                                 \</div><div class="line">  DECLARE_UNSIGNED_INTEGRAL_CONVERTER(base, 3)                                 \</div><div class="line">  DECLARE_UNSIGNED_INTEGRAL_CONVERTER(base, 4)                                 \</div><div class="line">  DECLARE_UNSIGNED_INTEGRAL_CONVERTER(base, 8)                                 \</div><div class="line">  DECLARE_UNSIGNED_INTEGRAL_CONVERTER(base, 16)                                \</div><div class="line">  DECLARE_SCALAR_CONVERTER(base)                                               \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02158">2158</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02172">2172</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1072,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_CONVERTER(base, 2)                                                   \</div><div class="line">  DECLARE_CONVERTER(base, 3)                                                   \</div><div class="line">  DECLARE_CONVERTER(base, 4)                                                   \</div><div class="line">  DECLARE_CONVERTER(base, 8)                                                   \</div><div class="line">  DECLARE_CONVERTER(base, 16)                                                  \</div><div class="line">  DECLARE_SCALAR_CONVERTER(base)                                               \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02138">2138</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02152">2152</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1092,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">namespace </span>detail {                                                           \</div><div class="line">  DECLARE_LONGLONG_CONVERTER(base, 2)                                          \</div><div class="line">  DECLARE_LONGLONG_CONVERTER(base, 3)                                          \</div><div class="line">  DECLARE_LONGLONG_CONVERTER(base, 4)                                          \</div><div class="line">  DECLARE_LONGLONG_CONVERTER(base, 8)                                          \</div><div class="line">  DECLARE_LONGLONG_CONVERTER(base, 16)                                         \</div><div class="line">  template &lt;&gt; <span class="keyword">class </span>BaseCLTypeConverter&lt;base##long, 1&gt; {                       \</div><div class="line">  public:                                                                      \</div><div class="line">    using DataType = base##long;                                               \</div><div class="line">  };                                                                           \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02192">2192</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l02206">2206</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

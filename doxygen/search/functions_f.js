@@ -139,6 +139,6 @@ var searchData=
   ['property_5flist',['property_list',['../classcl_1_1sycl_1_1property__list.html#ab5ac1c5a4cf88ddc9a31c592966d975b',1,'cl::sycl::property_list']]],
   ['propertywithdata',['PropertyWithData',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html#a044201ea79855f62bad57827b1d0802f',1,'cl::sycl::detail::PropertyWithData']]],
   ['propertywithdatabase',['PropertyWithDataBase',['../classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html#a8b53be366ea4ddc3f47f7cc5bfa87226',1,'cl::sycl::detail::PropertyWithDataBase']]],
-  ['push_5fback',['push_back',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a8f79919c75dffb6471ba4bda964e3b16',1,'cl::sycl::detail::CircularBuffer']]],
+  ['push_5fback',['push_back',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a8f79919c75dffb6471ba4bda964e3b16',1,'cl::sycl::detail::CircularBuffer::push_back()'],['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ab15dc435f0dd22fcc21b7c4c4dd4588d',1,'cl::sycl::detail::LeavesCollection::push_back()']]],
   ['push_5ffront',['push_front',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a4cb3516d4ca6581beee09cd6987c2c00',1,'cl::sycl::detail::CircularBuffer']]]
 ];

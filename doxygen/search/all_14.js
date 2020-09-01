@@ -24,6 +24,7 @@ var searchData=
   ['tinyness_5fbefore',['tinyness_before',['../structstd_1_1numeric__limits_3_01half_01_4.html#ab666e7d99991d25601b3887c40dd47d9',1,'std::numeric_limits&lt; half &gt;']]],
   ['to_5fdevice_5ffunc_5fptr',['to_device_func_ptr',['../namespacecl_1_1sycl_1_1ONEAPI.html#aa244f1f5cdc62d266a16ea5ca6fee013',1,'cl::sycl::ONEAPI']]],
   ['todo_20list',['Todo List',['../todo.html',1,'']]],
+  ['tovector',['toVector',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ac12be87d266f2b39aa7c4d5797f5157c',1,'cl::sycl::detail::LeavesCollection']]],
   ['trace',['trace',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#aa9b06e1270bfa6b2b141b9c762198717',1,'cl::sycl::detail::pi']]],
   ['tracelevel',['TraceLevel',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a153495ba443668e0febb9335940a9153',1,'cl::sycl::detail::pi']]],
   ['traps',['traps',['../structstd_1_1numeric__limits_3_01half_01_4.html#a38b53645928636e68b1f6f7f161d9ec2',1,'std::numeric_limits&lt; half &gt;']]],

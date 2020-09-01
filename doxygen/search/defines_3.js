@@ -1,11 +1,14 @@
 var searchData=
 [
+  ['declare_5fbool_5fconverter',['DECLARE_BOOL_CONVERTER',['../types_8hpp.html#a24f0ae4a341448804ff251e9e9b043cc',1,'types.hpp']]],
+  ['declare_5fbool_5fvector_5fconverters',['DECLARE_BOOL_VECTOR_CONVERTERS',['../types_8hpp.html#a69509f4ea178734d86ff8cb705481a29',1,'types.hpp']]],
   ['declare_5fconverter',['DECLARE_CONVERTER',['../types_8hpp.html#ab13518ca32f553a580eaa17cf515c334',1,'types.hpp']]],
   ['declare_5ffloat_5fconverter',['DECLARE_FLOAT_CONVERTER',['../types_8hpp.html#ab46bfc4df5db874aa0a350e91110463f',1,'types.hpp']]],
   ['declare_5ffloat_5fvector_5fconverters',['DECLARE_FLOAT_VECTOR_CONVERTERS',['../types_8hpp.html#ad3373d8fce05b7b4666497e43fc7ad30',1,'types.hpp']]],
   ['declare_5fhalf_5fconverter',['DECLARE_HALF_CONVERTER',['../types_8hpp.html#a5ff38acbcfb5d60b8c78213b88e23abd',1,'types.hpp']]],
   ['declare_5fhalf_5fvector_5fconverters',['DECLARE_HALF_VECTOR_CONVERTERS',['../types_8hpp.html#af414cfadfbccaa9c8bb2f83903715296',1,'types.hpp']]],
   ['declare_5flonglong_5fconverter',['DECLARE_LONGLONG_CONVERTER',['../types_8hpp.html#a6d61f4c1988e8b3b44325f2b6bc97a45',1,'types.hpp']]],
+  ['declare_5fscalar_5fbool_5fconverter',['DECLARE_SCALAR_BOOL_CONVERTER',['../types_8hpp.html#a591b59da2dcbf7baf9476f16c87ea5d8',1,'types.hpp']]],
   ['declare_5fscalar_5fconverter',['DECLARE_SCALAR_CONVERTER',['../types_8hpp.html#a87930490fbaec9720f7c00e1a68d8bb3',1,'types.hpp']]],
   ['declare_5fscalar_5fschar_5fconverter',['DECLARE_SCALAR_SCHAR_CONVERTER',['../types_8hpp.html#a129e985b229a09d2d2cfc96754e0d70a',1,'types.hpp']]],
   ['declare_5fschar_5fconverter',['DECLARE_SCHAR_CONVERTER',['../types_8hpp.html#a38a5b62828fad8613b4bdd9913a7c11e',1,'types.hpp']]],

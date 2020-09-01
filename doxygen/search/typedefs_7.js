@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['gcitt',['GCItT',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html#a2769e1b23229ff90d54d463984dc7f7c',1,'cl::sycl::detail::LeavesCollection::IteratorT']]],
+  ['genericcommandst',['GenericCommandsT',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a78359e39a9ee533c71fb14e1018b8d9c',1,'cl::sycl::detail::LeavesCollection']]],
   ['geo_5fdouble_5flist',['geo_double_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#aa99e025fc6491f9700bd49bea3de9f37',1,'cl::sycl::detail::gtl']]],
   ['geo_5ffloat_5flist',['geo_float_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a123a910b8721229f6b6c48220b04aed1',1,'cl::sycl::detail::gtl']]],
   ['geo_5fhalf_5flist',['geo_half_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a2050d62a5c031bdd8edf63760ece2680',1,'cl::sycl::detail::gtl']]],

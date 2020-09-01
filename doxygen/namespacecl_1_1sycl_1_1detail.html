@@ -514,6 +514,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1LeavesCollection.html">LeavesCollection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper for <a class="el" href="classcl_1_1sycl_1_1detail_1_1CircularBuffer.html">CircularBuffer</a> class along with collection for host accessor's EmptyCommands.  <a href="classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1LessEqualTo.html">LessEqualTo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1detail_1_1LessThan.html">LessThan</a></td></tr>
@@ -2148,6 +2151,10 @@ Functions</h2></td></tr>
 <tr class="separator:a83e686f5f3aeef5b6690991efd3421e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d5a55afb60aa28ac0cec690e5cebd5c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a1d5a55afb60aa28ac0cec690e5cebd5c">getCommand</a> (const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &amp;Event)</td></tr>
 <tr class="separator:a1d5a55afb60aa28ac0cec690e5cebd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c5057b8252144f747e2744de81a3b1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ac1c5057b8252144f747e2744de81a3b1">doOverlap</a> (const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *LHS, const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *RHS)</td></tr>
+<tr class="separator:ac1c5057b8252144f747e2744de81a3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b91d4ddb0ee092fa3788d027851be1"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ad4b91d4ddb0ee092fa3788d027851be1">isHostAccessorCmd</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd)</td></tr>
+<tr class="separator:ad4b91d4ddb0ee092fa3788d027851be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20319e466e426d61d8496eda480d484f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a20319e466e426d61d8496eda480d484f">stableSerializeSpecConstRegistry</a> (const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab834edf6243a91ad1fbd0741e988ab6e">SpecConstRegistryT</a> &amp;Reg, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae4d35b797ef6c3e3dcfc255e1d7f1ff0">SerializedObj</a> &amp;Dst)</td></tr>
 <tr class="separator:a20319e466e426d61d8496eda480d484f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e4ec7ac8700183638264a91cce2d603"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a5e4ec7ac8700183638264a91cce2d603">operator&lt;&lt;</a> (std::ostream &amp;Out, const <a class="el" href="classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html">spec_constant_impl</a> &amp;V)</td></tr>
@@ -7729,12 +7736,54 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01727">1727</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aa5c18ef72771564b7f43c497dc507aeab">cl::sycl::info::context</a>, <a class="el" href="memory__manager_8cpp_source.html#l00451">cl::sycl::detail::MemoryManager::copy()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00577">cl::sycl::detail::MemoryManager::copy_usm()</a>, <a class="el" href="commands_8hpp_source.html#l00213">cl::sycl::detail::Command::DispatchHostTask</a>, <a class="el" href="memory__manager_8cpp_source.html#l00491">cl::sycl::detail::MemoryManager::fill()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00600">cl::sycl::detail::MemoryManager::fill_usm()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00130">for_each()</a>, <a class="el" href="scheduler_8hpp_source.html#l00430">cl::sycl::detail::Scheduler::getDefaultHostQueue()</a>, <a class="el" href="cg_8hpp_source.html#l00178">cl::sycl::detail::CGCopy::getDst()</a>, <a class="el" href="cg_8hpp_source.html#l00240">cl::sycl::detail::CGCopyUSM::getDst()</a>, <a class="el" href="cg_8hpp_source.html#l00262">cl::sycl::detail::CGFillUSM::getDst()</a>, <a class="el" href="cg_8hpp_source.html#l00284">cl::sycl::detail::CGPrefetchUSM::getDst()</a>, <a class="el" href="program__manager_8cpp_source.html#l01039">cl::sycl::detail::ProgramManager::getEliminatedKernelArgMask()</a>, <a class="el" href="commands_8hpp_source.html#l00135">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="cg_8hpp_source.html#l00264">cl::sycl::detail::CGFillUSM::getFill()</a>, <a class="el" href="program__manager_8cpp_source.html#l00049">cl::sycl::detail::ProgramManager::getInstance()</a>, <a class="el" href="scheduler_8cpp_source.html#l00143">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="cg_8hpp_source.html#l00241">cl::sycl::detail::CGCopyUSM::getLength()</a>, <a class="el" href="cg_8hpp_source.html#l00263">cl::sycl::detail::CGFillUSM::getLength()</a>, <a class="el" href="cg_8hpp_source.html#l00285">cl::sycl::detail::CGPrefetchUSM::getLength()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed">cl::sycl::detail::AllocaCommandBase::getMemAllocation()</a>, <a class="el" href="program__manager_8cpp_source.html#l00402">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00158">getPiEvents()</a>, <a class="el" href="cg_8hpp_source.html#l00198">cl::sycl::detail::CGFill::getReqToFill()</a>, <a class="el" href="cg_8hpp_source.html#l00177">cl::sycl::detail::CGCopy::getSrc()</a>, <a class="el" href="cg_8hpp_source.html#l00239">cl::sycl::detail::CGCopyUSM::getSrc()</a>, <a class="el" href="commands_8hpp_source.html#l00324">cl::sycl::detail::AllocaCommandBase::getSYCLMemObj()</a>, <a class="el" href="common_8hpp_source.html#l00163">getSyclObjImpl()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00255">cl::sycl::detail::enqueue_kernel_launch::handleError()</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc">kind_accessor</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00119">cl::sycl::detail::AccessorImplHost::MAccessRange</a>, <a class="el" href="cg_8hpp_source.html#l00126">cl::sycl::detail::CGExecKernel::MArgs</a>, <a class="el" href="cg_8hpp_source.html#l00312">cl::sycl::detail::CGHostTask::MArgs</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00131">cl::sycl::detail::AccessorImplHost::MData</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00126">cl::sycl::detail::AccessorImplHost::MDims</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00127">cl::sycl::detail::AccessorImplHost::MElemSize</a>, <a class="el" href="commands_8hpp_source.html#l00181">cl::sycl::detail::Command::MEvent</a>, <a class="el" href="cg_8hpp_source.html#l00333">cl::sycl::detail::CGBarrier::MEventsWaitWithBarrier</a>, <a class="el" href="cg_8hpp_source.html#l00124">cl::sycl::detail::CGExecKernel::MHostKernel</a>, <a class="el" href="cg_8hpp_source.html#l00307">cl::sycl::detail::CGHostTask::MHostTask</a>, <a class="el" href="cg_8hpp_source.html#l00290">cl::sycl::detail::CGInteropTask::MInteropTask</a>, <a class="el" href="cg_8hpp_source.html#l00127">cl::sycl::detail::CGExecKernel::MKernelName</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00121">cl::sycl::detail::AccessorImplHost::MMemoryRange</a>, <a class="el" href="cg_8hpp_source.html#l00123">cl::sycl::detail::CGExecKernel::MNDRDesc</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00117">cl::sycl::detail::AccessorImplHost::MOffset</a>, <a class="el" href="cg_8hpp_source.html#l00128">cl::sycl::detail::CGExecKernel::MOSModuleHandle</a>, <a class="el" href="cg_8hpp_source.html#l00184">cl::sycl::detail::CGFill::MPattern</a>, <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MPreparedDepsEvents</a>, <a class="el" href="cg__types_8hpp_source.html#l00033">cl::sycl::detail::ArgDesc::MPtr</a>, <a class="el" href="commands_8hpp_source.html#l00182">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="cg_8hpp_source.html#l00309">cl::sycl::detail::CGHostTask::MQueue</a>, <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>, <a class="el" href="cg_8hpp_source.html#l00108">cl::sycl::detail::CG::MRequirements</a>, <a class="el" href="commands_8hpp_source.html#l00275">cl::sycl::detail::Command::MShouldCompleteEventIfPossible</a>, <a class="el" href="cg_8hpp_source.html#l00125">cl::sycl::detail::CGExecKernel::MSyclKernel</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="cg__types_8hpp_source.html#l00032">cl::sycl::detail::ArgDesc::MType</a>, <a class="el" href="pi_8h_source.html#l00085">PI_INVALID_MEM_OBJECT</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00298">PI_KERNEL_INFO_PROGRAM</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03038">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03045">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03808">piEnqueueNativeKernel()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02819">piEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02466">piKernelGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01449">piQueueRelease()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00621">cl::sycl::detail::MemoryManager::prefetch_usm()</a>, <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aaa9c449d4fa44e9e5a41c574ae55ce4d9">cl::sycl::info::program</a>, and <a class="el" href="commands_8cpp_source.html#l00250">cl::sycl::detail::Command::waitForPreparedHostEvents()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00096">cl::sycl::detail::plugin::call()</a>, <a class="el" href="plugin_8hpp_source.html#l00066">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aa5c18ef72771564b7f43c497dc507aeab">cl::sycl::info::context</a>, <a class="el" href="memory__manager_8cpp_source.html#l00451">cl::sycl::detail::MemoryManager::copy()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00577">cl::sycl::detail::MemoryManager::copy_usm()</a>, <a class="el" href="commands_8hpp_source.html#l00213">cl::sycl::detail::Command::DispatchHostTask</a>, <a class="el" href="memory__manager_8cpp_source.html#l00491">cl::sycl::detail::MemoryManager::fill()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00600">cl::sycl::detail::MemoryManager::fill_usm()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00130">for_each()</a>, <a class="el" href="scheduler_8hpp_source.html#l00432">cl::sycl::detail::Scheduler::getDefaultHostQueue()</a>, <a class="el" href="cg_8hpp_source.html#l00178">cl::sycl::detail::CGCopy::getDst()</a>, <a class="el" href="cg_8hpp_source.html#l00240">cl::sycl::detail::CGCopyUSM::getDst()</a>, <a class="el" href="cg_8hpp_source.html#l00262">cl::sycl::detail::CGFillUSM::getDst()</a>, <a class="el" href="cg_8hpp_source.html#l00284">cl::sycl::detail::CGPrefetchUSM::getDst()</a>, <a class="el" href="program__manager_8cpp_source.html#l01039">cl::sycl::detail::ProgramManager::getEliminatedKernelArgMask()</a>, <a class="el" href="commands_8hpp_source.html#l00135">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="cg_8hpp_source.html#l00264">cl::sycl::detail::CGFillUSM::getFill()</a>, <a class="el" href="program__manager_8cpp_source.html#l00049">cl::sycl::detail::ProgramManager::getInstance()</a>, <a class="el" href="scheduler_8cpp_source.html#l00143">cl::sycl::detail::Scheduler::getInstance()</a>, <a class="el" href="cg_8hpp_source.html#l00241">cl::sycl::detail::CGCopyUSM::getLength()</a>, <a class="el" href="cg_8hpp_source.html#l00263">cl::sycl::detail::CGFillUSM::getLength()</a>, <a class="el" href="cg_8hpp_source.html#l00285">cl::sycl::detail::CGPrefetchUSM::getLength()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed">cl::sycl::detail::AllocaCommandBase::getMemAllocation()</a>, <a class="el" href="program__manager_8cpp_source.html#l00402">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, <a class="el" href="commands_8cpp_source.html#l00158">getPiEvents()</a>, <a class="el" href="cg_8hpp_source.html#l00198">cl::sycl::detail::CGFill::getReqToFill()</a>, <a class="el" href="cg_8hpp_source.html#l00177">cl::sycl::detail::CGCopy::getSrc()</a>, <a class="el" href="cg_8hpp_source.html#l00239">cl::sycl::detail::CGCopyUSM::getSrc()</a>, <a class="el" href="commands_8hpp_source.html#l00324">cl::sycl::detail::AllocaCommandBase::getSYCLMemObj()</a>, <a class="el" href="common_8hpp_source.html#l00163">getSyclObjImpl()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00255">cl::sycl::detail::enqueue_kernel_launch::handleError()</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc">kind_accessor</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00119">cl::sycl::detail::AccessorImplHost::MAccessRange</a>, <a class="el" href="cg_8hpp_source.html#l00126">cl::sycl::detail::CGExecKernel::MArgs</a>, <a class="el" href="cg_8hpp_source.html#l00312">cl::sycl::detail::CGHostTask::MArgs</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00131">cl::sycl::detail::AccessorImplHost::MData</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00126">cl::sycl::detail::AccessorImplHost::MDims</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00127">cl::sycl::detail::AccessorImplHost::MElemSize</a>, <a class="el" href="commands_8hpp_source.html#l00181">cl::sycl::detail::Command::MEvent</a>, <a class="el" href="cg_8hpp_source.html#l00333">cl::sycl::detail::CGBarrier::MEventsWaitWithBarrier</a>, <a class="el" href="cg_8hpp_source.html#l00124">cl::sycl::detail::CGExecKernel::MHostKernel</a>, <a class="el" href="cg_8hpp_source.html#l00307">cl::sycl::detail::CGHostTask::MHostTask</a>, <a class="el" href="cg_8hpp_source.html#l00290">cl::sycl::detail::CGInteropTask::MInteropTask</a>, <a class="el" href="cg_8hpp_source.html#l00127">cl::sycl::detail::CGExecKernel::MKernelName</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00121">cl::sycl::detail::AccessorImplHost::MMemoryRange</a>, <a class="el" href="cg_8hpp_source.html#l00123">cl::sycl::detail::CGExecKernel::MNDRDesc</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00117">cl::sycl::detail::AccessorImplHost::MOffset</a>, <a class="el" href="cg_8hpp_source.html#l00128">cl::sycl::detail::CGExecKernel::MOSModuleHandle</a>, <a class="el" href="cg_8hpp_source.html#l00184">cl::sycl::detail::CGFill::MPattern</a>, <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MPreparedDepsEvents</a>, <a class="el" href="cg__types_8hpp_source.html#l00033">cl::sycl::detail::ArgDesc::MPtr</a>, <a class="el" href="commands_8hpp_source.html#l00182">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="cg_8hpp_source.html#l00309">cl::sycl::detail::CGHostTask::MQueue</a>, <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>, <a class="el" href="cg_8hpp_source.html#l00108">cl::sycl::detail::CG::MRequirements</a>, <a class="el" href="commands_8hpp_source.html#l00275">cl::sycl::detail::Command::MShouldCompleteEventIfPossible</a>, <a class="el" href="cg_8hpp_source.html#l00125">cl::sycl::detail::CGExecKernel::MSyclKernel</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="cg__types_8hpp_source.html#l00032">cl::sycl::detail::ArgDesc::MType</a>, <a class="el" href="pi_8h_source.html#l00085">PI_INVALID_MEM_OBJECT</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00298">PI_KERNEL_INFO_PROGRAM</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03038">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03045">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03808">piEnqueueNativeKernel()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02819">piEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02466">piKernelGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01449">piQueueRelease()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00621">cl::sycl::detail::MemoryManager::prefetch_usm()</a>, <a class="el" href="namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aaa9c449d4fa44e9e5a41c574ae55ce4d9">cl::sycl::info::program</a>, and <a class="el" href="commands_8cpp_source.html#l00250">cl::sycl::detail::Command::waitForPreparedHostEvents()</a>.</p>
 
 </div>
 </div>
 <a id="ac1c5057b8252144f747e2744de81a3b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1c5057b8252144f747e2744de81a3b1">&#9670;&nbsp;</a></span>doOverlap()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c5057b8252144f747e2744de81a3b1">&#9670;&nbsp;</a></span>doOverlap() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool cl::sycl::detail::doOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td>
+          <td class="paramname"><em>LHS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">Requirement</a> *&#160;</td>
+          <td class="paramname"><em>RHS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="leaves__collection_8cpp_source.html#l00019">19</a> of file <a class="el" href="leaves__collection_8cpp_source.html">leaves_collection.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="accessor__impl_8hpp_source.html#l00119">cl::sycl::detail::AccessorImplHost::MAccessRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00127">cl::sycl::detail::AccessorImplHost::MElemSize</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00128">cl::sycl::detail::AccessorImplHost::MOffsetInBytes</a>, and <a class="el" href="range_8hpp_source.html#l00057">cl::sycl::range&lt; dimensions &gt;::size()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="leaves__collection_8cpp_source.html#l00063">cl::sycl::detail::LeavesCollection::toVector()</a>.</p>
+
+</div>
+</div>
+<a id="ac1c5057b8252144f747e2744de81a3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c5057b8252144f747e2744de81a3b1">&#9670;&nbsp;</a></span>doOverlap() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7770,11 +7819,11 @@ template&lt;typename T &gt; </div>
 <p>Checks whether two requirements overlap or not. </p>
 <p>This information can be used to prove that executing two kernels that work on different parts of the memory object in parallel is legal. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00034">34</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00036">36</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="accessor__impl_8hpp_source.html#l00119">cl::sycl::detail::AccessorImplHost::MAccessRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00127">cl::sycl::detail::AccessorImplHost::MElemSize</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00128">cl::sycl::detail::AccessorImplHost::MOffsetInBytes</a>, and <a class="el" href="range_8hpp_source.html#l00057">cl::sycl::range&lt; dimensions &gt;::size()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00455">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00448">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>.</p>
 
 </div>
 </div>
@@ -12553,9 +12602,9 @@ template&lt;class Obj &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00109">109</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00111">111</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00832">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00917">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00826">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>.</p>
 
 </div>
 </div>
@@ -12775,9 +12824,9 @@ template&lt;typename CoordT , typename WriteDataT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00241">241</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00234">234</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00508">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00114">cl::sycl::detail::Command::addUser()</a>, <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="commands_8hpp_source.html#l00169">cl::sycl::detail::Command::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00328">cl::sycl::detail::AllocaCommandBase::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00403">cl::sycl::detail::MapMemObject::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00422">cl::sycl::detail::UnMapMemObject::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00324">cl::sycl::detail::AllocaCommandBase::getSYCLMemObj()</a>, <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00048">IsSuitableSubReq()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="scheduler_8hpp_source.html#l00197">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="scheduler_8hpp_source.html#l00206">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="scheduler_8hpp_source.html#l00210">cl::sycl::detail::MemObjRecord::MHostAccess</a>, <a class="el" href="commands_8hpp_source.html#l00348">cl::sycl::detail::AllocaCommandBase::MIsActive</a>, <a class="el" href="commands_8hpp_source.html#l00346">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>, <a class="el" href="commands_8hpp_source.html#l00332">cl::sycl::detail::AllocaCommandBase::MMemAllocation</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="graph__builder_8cpp_source.html#l00041">sameCtx()</a>, and <a class="el" href="stream_8hpp_source.html#l00071">write()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00508">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00114">cl::sycl::detail::Command::addUser()</a>, <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="commands_8hpp_source.html#l00169">cl::sycl::detail::Command::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00328">cl::sycl::detail::AllocaCommandBase::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00403">cl::sycl::detail::MapMemObject::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00422">cl::sycl::detail::UnMapMemObject::getRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00324">cl::sycl::detail::AllocaCommandBase::getSYCLMemObj()</a>, <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00050">IsSuitableSubReq()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="scheduler_8hpp_source.html#l00199">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="scheduler_8hpp_source.html#l00208">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="scheduler_8hpp_source.html#l00212">cl::sycl::detail::MemObjRecord::MHostAccess</a>, <a class="el" href="commands_8hpp_source.html#l00348">cl::sycl::detail::AllocaCommandBase::MIsActive</a>, <a class="el" href="commands_8hpp_source.html#l00346">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>, <a class="el" href="commands_8hpp_source.html#l00332">cl::sycl::detail::AllocaCommandBase::MMemAllocation</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="graph__builder_8cpp_source.html#l00043">sameCtx()</a>, and <a class="el" href="stream_8hpp_source.html#l00071">write()</a>.</p>
 
 </div>
 </div>
@@ -12867,11 +12916,11 @@ template&lt;typename T &gt; </div>
 
 <p>Checks if the required access mode is allowed under the current one. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00053">53</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00055">55</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="stream_8hpp_source.html#l00071">write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00722">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00422">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00716">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00415">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>.</p>
 
 </div>
 </div>
@@ -12991,6 +13040,38 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ad4b91d4ddb0ee092fa3788d027851be1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b91d4ddb0ee092fa3788d027851be1">&#9670;&nbsp;</a></span>isHostAccessorCmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool cl::sycl::detail::isHostAccessorCmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td>
+          <td class="paramname"><em>Cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="leaves__collection_8cpp_source.html#l00033">33</a> of file <a class="el" href="leaves__collection_8cpp_source.html">leaves_collection.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, and <a class="el" href="commands_8hpp_source.html#l00237">cl::sycl::detail::Command::MBlockReason</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="leaves__collection_8cpp_source.html#l00052">cl::sycl::detail::LeavesCollection::push_back()</a>, and <a class="el" href="leaves__collection_8cpp_source.html#l00038">cl::sycl::detail::LeavesCollection::remove()</a>.</p>
+
+</div>
+</div>
 <a id="a83e686f5f3aeef5b6690991efd3421e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83e686f5f3aeef5b6690991efd3421e8">&#9670;&nbsp;</a></span>isInteropHostTask()</h2>
 
@@ -13015,11 +13096,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00711">711</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00705">705</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="cg_8hpp_source.html#l00307">cl::sycl::detail::CGHostTask::MHostTask</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00722">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00716">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>.</p>
 
 </div>
 </div>
@@ -13089,11 +13170,11 @@ template&lt;typename T &gt; </div>
 
 <p>Checks if current requirement is requirement for sub buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00048">48</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00050">50</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="accessor__impl_8hpp_source.html#l00129">cl::sycl::detail::AccessorImplHost::MIsSubBuffer</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00544">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00241">insertMapUnmapForLinkedCmds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00538">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00234">insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -13491,11 +13572,11 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00095">95</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00097">97</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="commands_8hpp_source.html#l00232">cl::sycl::detail::Command::MMarks</a>, and <a class="el" href="commands_8hpp_source.html#l00227">cl::sycl::detail::Command::Marks::MVisited</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00455">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00832">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00917">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00119">printDotRecursive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00448">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00826">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00912">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00121">printDotRecursive()</a>.</p>
 
 </div>
 </div>
@@ -13921,9 +14002,9 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00119">119</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00121">121</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00095">markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00219">cl::sycl::detail::Command::MUsers</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0db86d92eca0ce39ab1992bc0b6ba139">cl::sycl::detail::Command::printDot()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00104">unmarkVisitedNodes()</a>.</p>
+<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00097">markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00219">cl::sycl::detail::Command::MUsers</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0db86d92eca0ce39ab1992bc0b6ba139">cl::sycl::detail::Command::printDot()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00106">unmarkVisitedNodes()</a>.</p>
 
 </div>
 </div>
@@ -14517,9 +14598,9 @@ template&lt;typename DataT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00041">41</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00043">43</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00722">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00455">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00422">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00544">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00241">insertMapUnmapForLinkedCmds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00716">cl::sycl::detail::Scheduler::GraphBuilder::addCG()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00448">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00415">cl::sycl::detail::Scheduler::GraphBuilder::addHostAccessor()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00538">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00234">insertMapUnmapForLinkedCmds()</a>.</p>
 
 </div>
 </div>
@@ -14931,9 +15012,9 @@ template&lt;typename T , typename  = typename std::enable_if&lt;                
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00104">104</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00106">106</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00455">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00119">printDotRecursive()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00448">cl::sycl::detail::Scheduler::GraphBuilder::addCGUpdateHost()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00121">printDotRecursive()</a>.</p>
 
 </div>
 </div>
@@ -15464,7 +15545,7 @@ template&lt;typename ExceptionT , typename RetT &gt; </div>
 
 <p class="reference">References <a class="el" href="accessor_8hpp_source.html#l01173">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt;::get_count()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00083">accessModeToString()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00544">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="accessor_8hpp_source.html#l00794">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::getAdjustedMode()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00241">insertMapUnmapForLinkedCmds()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00053">isAccessModeAllowed()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00517">cl::sycl::detail::MemoryManager::map()</a>, <a class="el" href="esimd__view_8hpp_source.html#l00110">cl::sycl::INTEL::gpu::simd_view&lt; BaseTy, RegionTy &gt;::merge()</a>, <a class="el" href="access_8hpp_source.html#l00097">modeNeedsOldData()</a>, <a class="el" href="stream_8hpp_source.html#l00897">cl::sycl::operator&lt;&lt;()</a>, <a class="el" href="esimd__view_8hpp_source.html#l00075">cl::sycl::INTEL::gpu::simd_view&lt; BaseTy, RegionTy &gt;::operator=()</a>, <a class="el" href="stream_8hpp_source.html#l00478">writeArray()</a>, <a class="el" href="stream_8hpp_source.html#l00373">writeFloatingPoint()</a>, <a class="el" href="stream_8hpp_source.html#l00543">writeGroup()</a>, <a class="el" href="stream_8hpp_source.html#l00580">writeHItem()</a>, <a class="el" href="stream_8hpp_source.html#l00360">writeIntegral()</a>, <a class="el" href="stream_8hpp_source.html#l00487">writeItem()</a>, <a class="el" href="stream_8hpp_source.html#l00526">writeNDItem()</a>, <a class="el" href="stream_8hpp_source.html#l00506">writeNDRange()</a>, and <a class="el" href="stream_8hpp_source.html#l00449">writeVec()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00083">accessModeToString()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00538">cl::sycl::detail::Scheduler::GraphBuilder::findAllocaForReq()</a>, <a class="el" href="accessor_8hpp_source.html#l00794">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::getAdjustedMode()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00234">insertMapUnmapForLinkedCmds()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00055">isAccessModeAllowed()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00517">cl::sycl::detail::MemoryManager::map()</a>, <a class="el" href="esimd__view_8hpp_source.html#l00110">cl::sycl::INTEL::gpu::simd_view&lt; BaseTy, RegionTy &gt;::merge()</a>, <a class="el" href="access_8hpp_source.html#l00097">modeNeedsOldData()</a>, <a class="el" href="stream_8hpp_source.html#l00897">cl::sycl::operator&lt;&lt;()</a>, <a class="el" href="esimd__view_8hpp_source.html#l00075">cl::sycl::INTEL::gpu::simd_view&lt; BaseTy, RegionTy &gt;::operator=()</a>, <a class="el" href="stream_8hpp_source.html#l00478">writeArray()</a>, <a class="el" href="stream_8hpp_source.html#l00373">writeFloatingPoint()</a>, <a class="el" href="stream_8hpp_source.html#l00543">writeGroup()</a>, <a class="el" href="stream_8hpp_source.html#l00580">writeHItem()</a>, <a class="el" href="stream_8hpp_source.html#l00360">writeIntegral()</a>, <a class="el" href="stream_8hpp_source.html#l00487">writeItem()</a>, <a class="el" href="stream_8hpp_source.html#l00526">writeNDItem()</a>, <a class="el" href="stream_8hpp_source.html#l00506">writeNDRange()</a>, and <a class="el" href="stream_8hpp_source.html#l00449">writeVec()</a>.</p>
 
 </div>
 </div>

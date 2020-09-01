@@ -8,6 +8,7 @@ var classcl_1_1sycl_1_1detail_1_1Scheduler =
     [ "enqueueLeavesOfReqUnlocked", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aade0e32407fe42d186a99526f6a00b55", null ],
     [ "getDefaultHostQueue", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258", null ],
     [ "getInstance", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6a372403ed668ccf5f5469a854aa3f5e", null ],
+    [ "getMemObjRecord", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a95468b0ba102b4bfe152461dec8acd63", null ],
     [ "getWaitList", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a140b6282077e7de641b759865921a141", null ],
     [ "lockSharedTimedMutex", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4ca29b68b09ab4a43c40604a0960fd09", null ],
     [ "releaseHostAccessor", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa17761af756131d983574f5558c2f854", null ],

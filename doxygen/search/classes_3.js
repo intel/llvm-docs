@@ -22,7 +22,7 @@ var searchData=
   ['check_5ftrue',['check_true',['../structcheck__true.html',1,'']]],
   ['check_5ftrue_3c_20true_20_3e',['check_true&lt; true &gt;',['../structcheck__true_3_01true_01_4.html',1,'']]],
   ['circularbuffer',['CircularBuffer',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
-  ['circularbuffer_3c_20cl_3a_3asycl_3a_3adetail_3a_3acommand_20_2a_3e',['CircularBuffer&lt; cl::sycl::detail::Command *&gt;',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
+  ['circularbuffer_3c_20command_20_2a_20_3e',['CircularBuffer&lt; Command * &gt;',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html',1,'cl::sycl::detail']]],
   ['cmpcstr',['CmpCStr',['../structcl_1_1sycl_1_1detail_1_1CmpCStr.html',1,'cl::sycl::detail']]],
   ['code_5flocation',['code_location',['../structcl_1_1sycl_1_1detail_1_1code__location.html',1,'cl::sycl::detail']]],
   ['command',['Command',['../classcl_1_1sycl_1_1detail_1_1Command.html',1,'cl::sycl::detail']]],

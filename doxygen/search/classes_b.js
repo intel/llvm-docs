@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['leavescollection',['LeavesCollection',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html',1,'cl::sycl::detail']]],
   ['lessequalto',['LessEqualTo',['../structcl_1_1sycl_1_1detail_1_1LessEqualTo.html',1,'cl::sycl::detail']]],
   ['lessthan',['LessThan',['../structcl_1_1sycl_1_1detail_1_1LessThan.html',1,'cl::sycl::detail']]],
   ['link_5fprogram_5ferror',['link_program_error',['../classcl_1_1sycl_1_1link__program__error.html',1,'cl::sycl']]],

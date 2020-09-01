@@ -189,6 +189,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "kernel_param_desc_t", "structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html", "structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t" ],
     [ "KernelInfo", "structcl_1_1sycl_1_1detail_1_1KernelInfo.html", "structcl_1_1sycl_1_1detail_1_1KernelInfo" ],
     [ "KernelProgramCache", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache" ],
+    [ "LeavesCollection", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html", "classcl_1_1sycl_1_1detail_1_1LeavesCollection" ],
     [ "LessEqualTo", "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html", "structcl_1_1sycl_1_1detail_1_1LessEqualTo" ],
     [ "LessThan", "structcl_1_1sycl_1_1detail_1_1LessThan.html", "structcl_1_1sycl_1_1detail_1_1LessThan" ],
     [ "LocalAccessorBaseDevice", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice.html", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseDevice" ],

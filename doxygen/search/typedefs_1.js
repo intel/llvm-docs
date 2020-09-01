@@ -13,6 +13,7 @@ var searchData=
   ['address_5fspace_5flist',['address_space_list',['../namespacecl_1_1sycl_1_1detail.html#a70f4ef27a74b64b9ffefbb908000da49',1,'cl::sycl::detail']]],
   ['all_5faddress_5fspace_5flist',['all_address_space_list',['../namespacecl_1_1sycl_1_1detail_1_1gvl.html#a91734878d1dd5cf76c3c46c2aaa26e2a',1,'cl::sycl::detail::gvl']]],
   ['alloc',['alloc',['../namespacecl_1_1sycl.html#ae66267614daacfa13a50500b20182352',1,'cl::sycl']]],
+  ['allocatedependencyf',['AllocateDependencyF',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ad10e11f2faa99f86e454a57e7fb24029',1,'cl::sycl::detail::LeavesCollection']]],
   ['allocator_5fpointer_5ft',['allocator_pointer_t',['../namespacecl_1_1sycl_1_1detail.html#a46d52b8379244bff58f0b8f9a84c802a',1,'cl::sycl::detail']]],
   ['allocator_5ftype',['allocator_type',['../classcl_1_1sycl_1_1buffer.html#a5f46645c23214ee24fd78bcbfed9037e',1,'cl::sycl::buffer']]],
   ['allocator_5fvalue_5ftype_5ft',['allocator_value_type_t',['../namespacecl_1_1sycl_1_1detail.html#a926029bc71a4073537d2c0e273e5cd16',1,'cl::sycl::detail']]],
