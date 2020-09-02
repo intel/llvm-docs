@@ -72,7 +72,7 @@ var searchData=
   ['fpga_5femulator_5fselector',['fpga_emulator_selector',['../classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html',1,'cl::sycl::INTEL::fpga_emulator_selector'],['../classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html#a2ea95fc9ccd035e29f48e7d9e206d2d9',1,'cl::sycl::INTEL::fpga_emulator_selector::fpga_emulator_selector()']]],
   ['fpga_5fextensions_2ehpp',['fpga_extensions.hpp',['../fpga__extensions_8hpp.html',1,'']]],
   ['fpga_5flsu_2ehpp',['fpga_lsu.hpp',['../fpga__lsu_8hpp.html',1,'']]],
-  ['fpga_5freg',['fpga_reg',['../namespacecl_1_1sycl_1_1INTEL.html#a64d58315c9a3b8153549a814da5f2d0b',1,'cl::sycl::INTEL::fpga_reg()'],['../namespaceintelfpga.html#aea5aa72e4e41c86f8d63784e1b8b5792',1,'intelfpga::fpga_reg()']]],
+  ['fpga_5freg',['fpga_reg',['../namespacecl_1_1sycl_1_1INTEL.html#a4149c6503f5774f100c6d739506ad22a',1,'cl::sycl::INTEL::fpga_reg()'],['../namespaceintelfpga.html#add6e801dfd6f9bacb55937be6fff7b69',1,'intelfpga::fpga_reg()']]],
   ['fpga_5freg_2ehpp',['fpga_reg.hpp',['../fpga__reg_8hpp.html',1,'']]],
   ['fpga_5fselector',['fpga_selector',['../classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html',1,'cl::sycl::INTEL::fpga_selector'],['../classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html#a52e91fdf360284c188075b28b7130152',1,'cl::sycl::INTEL::fpga_selector::fpga_selector()']]],
   ['fpga_5futils_2ehpp',['fpga_utils.hpp',['../fpga__utils_8hpp.html',1,'']]],

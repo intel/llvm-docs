@@ -1,6 +1,6 @@
 var classcl_1_1sycl_1_1INTEL_1_1lsu =
 [
-    [ "lsu", "classcl_1_1sycl_1_1INTEL_1_1lsu.html#add086eb0c5106c4fdc3d011db8dc484d", null ],
-    [ "load", "classcl_1_1sycl_1_1INTEL_1_1lsu.html#a3598c76b28ce05608d1f56b2ee6913cf", null ],
-    [ "store", "classcl_1_1sycl_1_1INTEL_1_1lsu.html#a6c823ce10c8ddb28d7efe8d1180c246d", null ]
+    [ "lsu", "classcl_1_1sycl_1_1INTEL_1_1lsu.html#a870cac9e726f4b6712e006bd5c922e45", null ],
+    [ "load", "classcl_1_1sycl_1_1INTEL_1_1lsu.html#af87009d10b421ddb62760d545f6beba8", null ],
+    [ "store", "classcl_1_1sycl_1_1INTEL_1_1lsu.html#a352698bdc09f21511a9a2b06a3ac406a", null ]
 ];

@@ -78,7 +78,7 @@ var searchData=
   ['builtins_5finteger_2ecpp',['builtins_integer.cpp',['../builtins__integer_8cpp.html',1,'']]],
   ['builtins_5fmath_2ecpp',['builtins_math.cpp',['../builtins__math_8cpp.html',1,'']]],
   ['builtins_5frelational_2ecpp',['builtins_relational.cpp',['../builtins__relational_8cpp.html',1,'']]],
-  ['burst_5fcoalesce',['BURST_COALESCE',['../namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6',1,'cl::sycl::INTEL::BURST_COALESCE()'],['../namespacecl_1_1sycl_1_1INTEL.html#ab1d81754387aa984ca9aa9e7594d2726',1,'cl::sycl::INTEL::burst_coalesce()']]],
+  ['burst_5fcoalesce',['BURST_COALESCE',['../namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6',1,'cl::sycl::INTEL::BURST_COALESCE()'],['../namespacecl_1_1sycl_1_1INTEL.html#ab130adbada20118197538a2475fdaf22',1,'cl::sycl::INTEL::burst_coalesce()']]],
   ['burst_5fcoalesce_5fimpl',['burst_coalesce_impl',['../structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html',1,'cl::sycl::INTEL']]],
   ['byte',['BYTE',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a3407b861163a8ca3525253a3b91b5f95',1,'__esimd::BYTE()'],['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl::byte()']]],
   ['byte_5ftype',['byte_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1byte__type.html',1,'cl::sycl::INTEL::gpu::details']]],

@@ -58,7 +58,7 @@ var searchData=
   ['signed_5fshort_5flist',['signed_short_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a2aa7370779ebfaf41e8fd01b0b609501',1,'cl::sycl::detail::gtl']]],
   ['size_5ftype',['size_type',['../classcl_1_1sycl_1_1exception__list.html#acdc3af9e05d16fa5553e0daafb026ea4',1,'cl::sycl::exception_list']]],
   ['specconstregistryt',['SpecConstRegistryT',['../namespacecl_1_1sycl_1_1detail.html#ab834edf6243a91ad1fbd0741e988ab6e',1,'cl::sycl::detail']]],
-  ['statically_5fcoalesce',['statically_coalesce',['../namespacecl_1_1sycl_1_1INTEL.html#a88f18555fb6de54ac4d817bae49c4f81',1,'cl::sycl::INTEL']]],
+  ['statically_5fcoalesce',['statically_coalesce',['../namespacecl_1_1sycl_1_1INTEL.html#a8f509476aea52d5abc4d8f31d1dc2b0f',1,'cl::sycl::INTEL']]],
   ['storaget',['StorageT',['../namespacecl_1_1sycl_1_1detail_1_1half__impl.html#aa2ac5b92936289cb1258bf03b8a108c2',1,'cl::sycl::detail::half_impl']]],
   ['streamimplptr',['StreamImplPtr',['../namespacecl_1_1sycl_1_1detail.html#ab57afe61b17444737ae6ea8ff5df7725',1,'cl::sycl::detail']]],
   ['string_5fclass',['string_class',['../namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b',1,'cl::sycl']]],

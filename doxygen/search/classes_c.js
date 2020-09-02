@@ -22,7 +22,6 @@ var searchData=
   ['mapmemobject',['MapMemObject',['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html',1,'cl::sycl::detail']]],
   ['mapping',['Mapping',['../struct__pi__mem_1_1Mapping.html',1,'_pi_mem']]],
   ['marks',['Marks',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html',1,'cl::sycl::detail::Command']]],
-  ['matchtype',['MatchType',['../structcl_1_1sycl_1_1INTEL_1_1MatchType.html',1,'cl::sycl::INTEL']]],
   ['maximum',['maximum',['../structcl_1_1sycl_1_1ONEAPI_1_1maximum.html',1,'cl::sycl::ONEAPI']]],
   ['maxtype',['maxtype',['../structmaxtype.html',1,'']]],
   ['maxtype_3c_20char_20_3e',['maxtype&lt; char &gt;',['../structmaxtype_3_01char_01_4.html',1,'']]],
