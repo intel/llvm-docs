@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"device__info_8hpp.html#a7f46752d53693f535a7fb1eb35295b73":[4,0,2,1,22,41],
 "device__info_8hpp.html#a817bc5c943bc03038205d9af943bb98b":[4,0,2,1,22,91],
 "device__info_8hpp.html#a818674c4f8f07af6129fac479d9fc4a4":[4,0,2,1,22,94],
 "device__info_8hpp.html#a82e51b72a58c550b9bc70fc799f7be81":[4,0,2,1,22,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "esimd__math_8hpp.html#a71cf9b52d8174941533cb57ba53e002a":[4,0,0,0,1,4,0,3,10],
 "esimd__math_8hpp.html#a726aeb61f996f2e85026184dbbf01c14":[4,0,0,0,1,4,0,3,128],
 "esimd__math_8hpp.html#a7555b93dbe6423f00f62d38e91d54897":[4,0,0,0,1,4,0,3,93],
-"esimd__math_8hpp.html#a75c1233961d979355a29874c68d581ab":[4,0,0,0,1,4,0,3,70],
-"esimd__math_8hpp.html#a764d372b586263a117930b490bc5f1f4":[4,0,0,0,1,4,0,3,119]
+"esimd__math_8hpp.html#a75c1233961d979355a29874c68d581ab":[4,0,0,0,1,4,0,3,70]
 };

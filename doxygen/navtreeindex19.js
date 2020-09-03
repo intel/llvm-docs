@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6":[4,0,0,0,1,3,0,13],
 "info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6a282399359d32926c1f44fe18e0189064":[4,0,0,0,1,3,0,13,0],
 "info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6a4f15cdbe3dbdc9ad4f5058cc9cd27f25":[4,0,0,0,1,3,0,13,1],
 "info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6a796b440435ffb2b1d7e43c90ed04f9b3":[4,0,0,0,1,3,0,13,3],
@@ -161,9 +162,9 @@ var NAVTREEINDEX19 =
 "item__base_8hpp.html":[4,0,0,0,1,2,23],
 "item__base_8hpp_source.html":[4,0,0,0,1,2,23],
 "kernel_8cpp.html":[4,0,2,14],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
 "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,3],
 "kernel_8cpp.html#a72e67c3793a817f25283854d0b349c61":[4,0,2,14,4],
 "kernel_8cpp_source.html":[4,0,2,14],
@@ -179,9 +180,9 @@ var NAVTREEINDEX19 =
 "kernel__desc_8hpp_source.html":[4,0,0,0,1,2,24],
 "kernel__impl_8cpp.html":[4,0,2,1,32],
 "kernel__impl_8cpp.html#a0fa9b6316b4a22b17634726e05df14b0":[4,0,2,1,32,6],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,1],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,0],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,2],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,0],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,32,1],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,32,4],
 "kernel__impl_8cpp.html#a5d06cdeae7af18abb18f3c6df02761fc":[4,0,2,1,32,7],
 "kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,1,32,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "multi__ptr_8hpp.html#a5061e873673c1494193817badc55af49":[4,0,0,0,1,33,3],
 "multi__ptr_8hpp.html#a53fa9cb106d17926f9d46f3a9a3e74e5":[4,0,0,0,1,33,16],
 "multi__ptr_8hpp.html#a5a416eb89ed5d1c08942c88e964002d5":[4,0,0,0,1,33,15],
-"multi__ptr_8hpp.html#a65a05379c05b4c72bf5b54d0930fb6ba":[4,0,0,0,1,33,5],
-"multi__ptr_8hpp.html#a6bbacf91aab71bb60f914250d3e25efd":[4,0,0,0,1,33,19]
+"multi__ptr_8hpp.html#a65a05379c05b4c72bf5b54d0930fb6ba":[4,0,0,0,1,33,5]
 };

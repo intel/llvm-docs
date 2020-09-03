@@ -1,5 +1,6 @@
 var NAVTREEINDEX26 =
 {
+"stream_8hpp.html#aa26c10ce0228ce3c9a15234241ffb40a":[4,0,0,0,1,45,72],
 "stream_8hpp.html#aa35a4ac43c3ed912eca2569db245c287":[4,0,0,0,1,45,36],
 "stream_8hpp.html#aa42a2b26c1e601c1f15b14cf64b91446":[4,0,0,0,1,45,59],
 "stream_8hpp.html#aaa3a49394478709dbf228f22e9739446":[4,0,0,0,1,45,32],
@@ -248,6 +249,5 @@ var NAVTREEINDEX26 =
 "struct__pi__mem_1_1Mapping.html#a535cf2a4ef10ef4afb823a545162b40b":[3,0,20,0,1],
 "struct__pi__mem_1_1Mapping.html#a8a12e9a9600c82469ccb7d1151be524b":[3,0,20,0,0],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html":[3,0,20,1,0],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a0291c9a6d657e7ffd9abbac1202e54f9":[3,0,20,1,0,2],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a16b16e2787c2a9524403dc1bead82664":[3,0,20,1,0,12]
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a0291c9a6d657e7ffd9abbac1202e54f9":[3,0,20,1,0,2]
 };

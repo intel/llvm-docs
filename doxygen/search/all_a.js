@@ -364,6 +364,7 @@ var searchData=
   ['isdevicebinarytypesupported',['isDeviceBinaryTypeSupported',['../namespacecl_1_1sycl_1_1detail.html#a474f4027bdd65987004b7c7c4524e0e3',1,'cl::sycl::detail']]],
   ['isdevicelibrequired',['isDeviceLibRequired',['../namespacecl_1_1sycl_1_1detail.html#a1283f354558e8d073c6c2b4b4ff696a3',1,'cl::sycl::detail']]],
   ['isdeviceofpreferredsyclbe',['isDeviceOfPreferredSyclBe',['../namespacecl_1_1sycl.html#a89601b8a9195726705c5aa5386d61f79',1,'cl::sycl']]],
+  ['isenqueueblocked',['isEnqueueBlocked',['../classcl_1_1sycl_1_1detail_1_1Command.html#ab1b1e66f599238f77786e06191955432',1,'cl::sycl::detail::Command']]],
   ['isequal',['isequal',['../namespacecl_1_1sycl.html#a20bcf6525b7a55d625f0da399e77800e',1,'cl::sycl']]],
   ['isesimdaccinit',['IsESIMDAccInit',['../namespacecl_1_1sycl_1_1detail.html#ad07f9e97a2b413bfda6f59a6de5a9f97',1,'cl::sycl::detail']]],
   ['isfilledin',['isFilledIn',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#aef5bbe86207714e29ab0e3cd38f95728',1,'cl::sycl::detail::KernelProgramCache::BuildError']]],

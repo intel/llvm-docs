@@ -36,6 +36,7 @@ var classcl_1_1sycl_1_1detail_1_1Command =
     [ "getQueue", "classcl_1_1sycl_1_1detail_1_1Command.html#ae943f9c76bd856b709f986da7876d5e0", null ],
     [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1Command.html#a37bddda2e1f11135708d5e29fb3b331d", null ],
     [ "getType", "classcl_1_1sycl_1_1detail_1_1Command.html#ac5a1bff88f24c2adb84c97d38ff24463", null ],
+    [ "isEnqueueBlocked", "classcl_1_1sycl_1_1detail_1_1Command.html#ab1b1e66f599238f77786e06191955432", null ],
     [ "isFinished", "classcl_1_1sycl_1_1detail_1_1Command.html#ae3e59f84259cd0c0b14c996c808d0990", null ],
     [ "isSuccessfullyEnqueued", "classcl_1_1sycl_1_1detail_1_1Command.html#a89b079400dcccbdc3f8beca70517c3dd", null ],
     [ "makeTraceEventEpilog", "classcl_1_1sycl_1_1detail_1_1Command.html#a42b5f83a1250912b24546f6aa1c252d5", null ],
