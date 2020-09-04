@@ -1,5 +1,14 @@
 var NAVTREEINDEX7 =
 {
+"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html":[3,0,2,1,0,60],
+"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a45e17f9e2ef40b51b987461e2ee6f1b7":[3,0,2,1,0,60,1],
+"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7c45e819d9ad51b10f1f19bc4f5eef7b":[3,0,2,1,0,60,2],
+"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#aa7808eb7402ec56c6bcd3217dc56c3f6":[3,0,2,1,0,60,4],
+"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#aed67f1c5291737aa9adc40ca825c2404":[3,0,2,1,0,60,0],
+"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#af0d47741a22eff8834f09e25b4f8cc50":[3,0,2,1,0,60,3],
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html":[3,0,2,1,0,64],
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a0dd50d7423c1de8a4c7118a04b717f84":[3,0,2,1,0,64,0],
+"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a247e0d3daf9176e1f769e7be0fdbe242":[3,0,2,1,0,64,4],
 "classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a3edfdf0153fd7278ead2ebea587ce6f3":[3,0,2,1,0,64,1],
 "classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a5ec82fb0932c808b383dba7e6c07f9be":[3,0,2,1,0,64,2],
 "classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a62a7fc89f0ee4604e3ccab9b6b6a343f":[3,0,2,1,0,64,5],
@@ -240,14 +249,5 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ad7e9fb5816706b32c171655d7f26d8b3":[3,0,2,1,0,281,2],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ae434f1caf9eef4d870546eb83d05491c":[3,0,2,1,0,281,1],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#aebc0f2d0db93f80d7b45dea5785694fa":[3,0,2,1,0,281,6],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html":[3,0,2,1,0,282],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a0ae169c7e40bbac53a166e5adc86bab3":[3,0,2,1,0,282,4],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a15515300405f37fa361db9aa1f8332bb":[3,0,2,1,0,282,10],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068":[3,0,2,1,0,282,5],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a741ab88936bba4fc184aed0b1645f171":[3,0,2,1,0,282,2],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a75e7bc6f53234cb0b7afe74caf41d274":[3,0,2,1,0,282,7],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aa8bd364990e90196878f0da9a061e67a":[3,0,2,1,0,282,1],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aab5adbb453e00e71e7667140e9fc6517":[3,0,2,1,0,282,6],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#abde56188bd93c1b50e35df8dda10bd84":[3,0,2,1,0,282,8],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ad8d2f576541c58c6ada6d530d1bea092":[3,0,2,1,0,282,3]
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html":[3,0,2,1,0,282]
 };

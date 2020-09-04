@@ -123,6 +123,10 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html">bit_equal&lt; T, typename detail::enable_if_t&lt; std::is_integral&lt; T &gt;::value &gt; &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html">filter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html">filter_selector_impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html">get_reduction_aux_kernel_name_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html">get_reduction_main_kernel_name_t</a></td></tr>
@@ -251,6 +255,10 @@ Functions</h2></td></tr>
 <tr class="memitem:add7ac407331b58301b8a11ec303c1268"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;!Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#add7ac407331b58301b8a11ec303c1268">reduAuxCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, Reduction &amp;Redu, InputT In, OutputT Out)</td></tr>
 <tr class="memdesc:add7ac407331b58301b8a11ec303c1268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="#add7ac407331b58301b8a11ec303c1268">More...</a><br /></td></tr>
 <tr class="separator:add7ac407331b58301b8a11ec303c1268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4d176a945d5620dea49c45f3ca79e9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a5e4d176a945d5620dea49c45f3ca79e9">tokenize</a> (const std::string &amp;Filter, const std::string &amp;Delim)</td></tr>
+<tr class="separator:a5e4d176a945d5620dea49c45f3ca79e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cd0f815db7ad9f93f4db1c1e94bf9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html">filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a49cd0f815db7ad9f93f4db1c1e94bf9e">create_filter</a> (const std::string &amp;Input)</td></tr>
+<tr class="separator:a49cd0f815db7ad9f93f4db1c1e94bf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3955af96c1019ee7650326f74848e548"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a3955af96c1019ee7650326f74848e548">reduGetMaxWGSize</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
 <tr class="separator:a3955af96c1019ee7650326f74848e548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -612,6 +620,30 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a49cd0f815db7ad9f93f4db1c1e94bf9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49cd0f815db7ad9f93f4db1c1e94bf9e">&#9670;&nbsp;</a></span>create_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html">filter</a> cl::sycl::ONEAPI::detail::create_filter </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>Input</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="filter__selector__impl_8cpp_source.html#l00050">50</a> of file <a class="el" href="filter__selector__impl_8cpp_source.html">filter_selector_impl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="filter__selector__impl_8hpp_source.html#l00025">cl::sycl::ONEAPI::detail::filter::Backend</a>, <a class="el" href="filter__selector__impl_8hpp_source.html#l00027">cl::sycl::ONEAPI::detail::filter::DeviceNum</a>, <a class="el" href="filter__selector__impl_8hpp_source.html#l00026">cl::sycl::ONEAPI::detail::filter::DeviceType</a>, <a class="el" href="filter__selector__impl_8hpp_source.html#l00028">cl::sycl::ONEAPI::detail::filter::HasBackend</a>, <a class="el" href="filter__selector__impl_8hpp_source.html#l00030">cl::sycl::ONEAPI::detail::filter::HasDeviceNum</a>, <a class="el" href="filter__selector__impl_8hpp_source.html#l00029">cl::sycl::ONEAPI::detail::filter::HasDeviceType</a>, <a class="el" href="pi_8h_source.html#l00143">PI_DEVICE_TYPE_ACC</a>, <a class="el" href="pi_8h_source.html#l00140">PI_DEVICE_TYPE_CPU</a>, <a class="el" href="pi_8h_source.html#l00142">PI_DEVICE_TYPE_GPU</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, and <a class="el" href="filter__selector__impl_8cpp_source.html#l00027">tokenize()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="filter__selector__impl_8cpp_source.html#l00107">cl::sycl::ONEAPI::detail::filter_selector_impl::filter_selector_impl()</a>.</p>
+
+</div>
+</div>
 <a id="a3ac8eea5e52fe413ea7d2340d9c028b8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ac8eea5e52fe413ea7d2340d9c028b8">&#9670;&nbsp;</a></span>getLoadOrder()</h2>
 
@@ -1283,6 +1315,38 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 </div><div class="memdoc">
 
 <p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01106">cl::sycl::handler::parallel_for()</a>.</p>
+
+</div>
+</div>
+<a id="a5e4d176a945d5620dea49c45f3ca79e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4d176a945d5620dea49c45f3ca79e9">&#9670;&nbsp;</a></span>tokenize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; cl::sycl::ONEAPI::detail::tokenize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>Filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>Delim</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="filter__selector__impl_8cpp_source.html#l00027">27</a> of file <a class="el" href="filter__selector__impl_8cpp_source.html">filter_selector_impl.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="filter__selector__impl_8cpp_source.html#l00050">create_filter()</a>, and <a class="el" href="filter__selector__impl_8cpp_source.html#l00107">cl::sycl::ONEAPI::detail::filter_selector_impl::filter_selector_impl()</a>.</p>
 
 </div>
 </div>

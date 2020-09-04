@@ -35,6 +35,11 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
       [ "get_event_profiling_info", "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html", "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info" ],
       [ "get_event_info", "structcl_1_1sycl_1_1detail_1_1get__event__info.html", "structcl_1_1sycl_1_1detail_1_1get__event__info" ]
     ] ],
+    [ "filter_selector_impl.cpp", "filter__selector__impl_8cpp.html", "filter__selector__impl_8cpp" ],
+    [ "filter_selector_impl.hpp", "filter__selector__impl_8hpp.html", [
+      [ "filter", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter" ],
+      [ "filter_selector_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl" ]
+    ] ],
     [ "force_device.cpp", "force__device_8cpp.html", "force__device_8cpp" ],
     [ "force_device.hpp", "force__device_8hpp.html", "force__device_8hpp" ],
     [ "handler_proxy.cpp", "handler__proxy_8cpp.html", "handler__proxy_8cpp" ],
@@ -58,7 +63,7 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
       [ "platform_impl", "classcl_1_1sycl_1_1detail_1_1platform__impl.html", "classcl_1_1sycl_1_1detail_1_1platform__impl" ]
     ] ],
     [ "platform_info.hpp", "platform__info_8hpp.html", "platform__info_8hpp" ],
-    [ "platform_util.cpp", "platform__util_8cpp.html", "platform__util_8cpp" ],
+    [ "platform_util.cpp", "platform__util_8cpp.html", null ],
     [ "platform_util.hpp", "platform__util_8hpp.html", [
       [ "PlatformUtil", "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html", "structcl_1_1sycl_1_1detail_1_1PlatformUtil" ]
     ] ],

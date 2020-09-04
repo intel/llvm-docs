@@ -1,5 +1,14 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html#a9e521f4a40a12d824e3782b57360b7e9":[3,0,2,1,0,6,4],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html#ace2816dd046570fa1e7793b8d7fb7791":[3,0,2,1,0,6,2],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html#ad01e67da72b6813bd9c17becf8c74f86":[3,0,2,1,0,6,1],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html":[3,0,2,1,0,7],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a122bb09fb802349d6972169816b5e005":[3,0,2,1,0,7,0],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a18792eec200cef6c2a4d904cde2c54c8":[3,0,2,1,0,7,7],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a193f555c34ad7e2349e039dfb11c3970":[3,0,2,1,0,7,16],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a33bec32fb9b3bb7336b0e9aa32b8a7e4":[3,0,2,1,0,7,4],
+"classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a34602ea22556f1b0fb8f4599cf923ae3":[3,0,2,1,0,7,2],
 "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a381170f0df3345f5853aa84b51b847df":[3,0,2,1,0,7,3],
 "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a51ad2f8a02f30bff3f7cb0cb0514b654":[3,0,2,1,0,7,5],
 "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a78581a66dfc447e44d2bacc1e63910c1":[3,0,2,1,0,7,6],
@@ -240,14 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#a84a9fb2a228084828703a23242392910":[3,0,2,1,0,59,3],
 "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#a90a2c83999414c709cabbb08cc0bd5a6":[3,0,2,1,0,59,2],
 "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#ab3a4efc0803dacbc6b9ef430541393ef":[3,0,2,1,0,59,1],
-"classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#adb02446ac622be2261bab89132f32d55":[3,0,2,1,0,59,0],
-"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html":[3,0,2,1,0,60],
-"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a45e17f9e2ef40b51b987461e2ee6f1b7":[3,0,2,1,0,60,1],
-"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7c45e819d9ad51b10f1f19bc4f5eef7b":[3,0,2,1,0,60,2],
-"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#aa7808eb7402ec56c6bcd3217dc56c3f6":[3,0,2,1,0,60,4],
-"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#aed67f1c5291737aa9adc40ca825c2404":[3,0,2,1,0,60,0],
-"classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#af0d47741a22eff8834f09e25b4f8cc50":[3,0,2,1,0,60,3],
-"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html":[3,0,2,1,0,64],
-"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a0dd50d7423c1de8a4c7118a04b717f84":[3,0,2,1,0,64,0],
-"classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a247e0d3daf9176e1f769e7be0fdbe242":[3,0,2,1,0,64,4]
+"classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#adb02446ac622be2261bab89132f32d55":[3,0,2,1,0,59,0]
 };

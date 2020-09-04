@@ -1,5 +1,15 @@
 var NAVTREEINDEX14 =
 {
+"device__info_8hpp.html#a56687682b615e26d1c789d6c75487829":[4,0,2,1,22,38],
+"device__info_8hpp.html#a58396074567ef45f2622eafba68ebae2":[4,0,2,1,22,60],
+"device__info_8hpp.html#a60465bc6d1edb8bde6dcd790d446591d":[4,0,2,1,22,108],
+"device__info_8hpp.html#a60f2ee1cb8d3d2d1cf78b8aa4d312980":[4,0,2,1,22,111],
+"device__info_8hpp.html#a60ff76a3a90ce08cd37d43b3956c7423":[4,0,2,1,22,74],
+"device__info_8hpp.html#a65ab1605a92c406a270912bd4d517242":[4,0,2,1,22,84],
+"device__info_8hpp.html#a662d6ba8103120e78e4d136e60c06f6b":[4,0,2,1,22,50],
+"device__info_8hpp.html#a7581f593f476d1aa4ed87d40ec9e019a":[4,0,2,1,22,109],
+"device__info_8hpp.html#a7bf3992bfd9b7477a6bcf35f2142785a":[4,0,2,1,22,67],
+"device__info_8hpp.html#a7f3ae8643e880fcbe7f1f87ceb7c39ef":[4,0,2,1,22,106],
 "device__info_8hpp.html#a7f46752d53693f535a7fb1eb35295b73":[4,0,2,1,22,41],
 "device__info_8hpp.html#a817bc5c943bc03038205d9af943bb98b":[4,0,2,1,22,91],
 "device__info_8hpp.html#a818674c4f8f07af6129fac479d9fc4a4":[4,0,2,1,22,94],
@@ -239,15 +249,5 @@ var NAVTREEINDEX14 =
 "esimd__math_8hpp.html#a5cf1485e8c961f149f74fbb642ccdd12":[4,0,0,0,1,4,0,3,52],
 "esimd__math_8hpp.html#a5dad42b3f921115f8bf8cb663110b9ed":[4,0,0,0,1,4,0,3,36],
 "esimd__math_8hpp.html#a5fc925abd690b60f8059cb1b7bf428fe":[4,0,0,0,1,4,0,3,107],
-"esimd__math_8hpp.html#a602eee0ba62cae3fc126a49419ed2907":[4,0,0,0,1,4,0,3,44],
-"esimd__math_8hpp.html#a616473243dd0fbbae25d110107e65f6c":[4,0,0,0,1,4,0,3,83],
-"esimd__math_8hpp.html#a618983bca34ebf57525f58367a536d65":[4,0,0,0,1,4,0,3,43],
-"esimd__math_8hpp.html#a659d45d675098db233f09e97b4a8c5d3":[4,0,0,0,1,4,0,3,112],
-"esimd__math_8hpp.html#a664612c6f4c3dce7b5e2a746a60b58f0":[4,0,0,0,1,4,0,3,104],
-"esimd__math_8hpp.html#a6a54cf0ab13b20621392a96e759f93b5":[4,0,0,0,1,4,0,3,24],
-"esimd__math_8hpp.html#a6c5c02a09d3623be9f4327173b0699af":[4,0,0,0,1,4,0,3,16],
-"esimd__math_8hpp.html#a71cf9b52d8174941533cb57ba53e002a":[4,0,0,0,1,4,0,3,10],
-"esimd__math_8hpp.html#a726aeb61f996f2e85026184dbbf01c14":[4,0,0,0,1,4,0,3,128],
-"esimd__math_8hpp.html#a7555b93dbe6423f00f62d38e91d54897":[4,0,0,0,1,4,0,3,93],
-"esimd__math_8hpp.html#a75c1233961d979355a29874c68d581ab":[4,0,0,0,1,4,0,3,70]
+"esimd__math_8hpp.html#a602eee0ba62cae3fc126a49419ed2907":[4,0,0,0,1,4,0,3,44]
 };

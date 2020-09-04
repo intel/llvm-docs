@@ -43,6 +43,7 @@ var searchData=
   ['reportasyncexception',['reportAsyncException',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285',1,'cl::sycl::detail::queue_impl']]],
   ['require',['require',['../classcl_1_1sycl_1_1handler.html#ae15174598d704c69779e60fdb86da80e',1,'cl::sycl::handler']]],
   ['reschedulecommand',['rescheduleCommand',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#aed85e3c5fdf6b6547b563ec2e8007dc9',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
+  ['reset',['reset',['../classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html#a5e9e8745850b5627ab96cb6d6acc59b1',1,'cl::sycl::ONEAPI::filter_selector::reset()'],['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#aa7935d01fbfe08219c29900728b597d4',1,'cl::sycl::ONEAPI::detail::filter_selector_impl::reset()']]],
   ['resize',['resize',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a381170f0df3345f5853aa84b51b847df',1,'cl::sycl::detail::AccessorImplHost::resize()'],['../classcl_1_1sycl_1_1detail_1_1buffer__impl.html#aa0aee252c8bc6e36b90356fbd4d7ef86',1,'cl::sycl::detail::buffer_impl::resize()']]],
   ['resolvereleasedependencies',['resolveReleaseDependencies',['../classcl_1_1sycl_1_1detail_1_1Command.html#a316bf823b63d25d102b494d1b066e826',1,'cl::sycl::detail::Command']]],
   ['reversebuf',['reverseBuf',['../namespacecl_1_1sycl_1_1detail.html#a61f34025dbddcd699f0fd85ccd2f6730',1,'cl::sycl::detail']]],

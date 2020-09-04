@@ -11,6 +11,8 @@ var namespacecl_1_1sycl_1_1ONEAPI_1_1detail =
     [ "bit_equal< double >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4" ],
     [ "bit_equal< float >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4" ],
     [ "bit_equal< T, typename detail::enable_if_t< std::is_integral< T >::value > >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000" ],
+    [ "filter", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter" ],
+    [ "filter_selector_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl" ],
     [ "get_reduction_aux_kernel_name_t", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t" ],
     [ "get_reduction_main_kernel_name_t", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t" ],
     [ "memory_order_traits", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1memory__order__traits.html", null ],

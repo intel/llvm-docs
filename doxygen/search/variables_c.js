@@ -16,6 +16,7 @@ var searchData=
   ['mapoffset_5f',['mapOffset_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a16b16e2787c2a9524403dc1bead82664',1,'_pi_mem::mem_::buffer_mem_']]],
   ['mapptr_5f',['mapPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a870da0afef4a9f1b6d24f7cdd3cc4d47',1,'_pi_mem::mem_::buffer_mem_']]],
   ['margs',['MArgs',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a72e8ae99281477ce9a7c399ab7c56b2a',1,'cl::sycl::detail::CGExecKernel::MArgs()'],['../classcl_1_1sycl_1_1detail_1_1CGHostTask.html#a521e90ead6d0b5392e35f28565e8ea17',1,'cl::sycl::detail::CGHostTask::MArgs()']]],
+  ['matchesseen',['MatchesSeen',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html#a80ef28141a1c930e7d03d0467c3084b8',1,'cl::sycl::ONEAPI::detail::filter']]],
   ['max_5farray_5fsize',['MAX_ARRAY_SIZE',['../namespacecl_1_1sycl_1_1detail.html#a6d339d0ea9dfaeb97d240e52ccf8e5f3',1,'cl::sycl::detail']]],
   ['max_5fdigits10',['max_digits10',['../structstd_1_1numeric__limits_3_01half_01_4.html#a83c0ec81abd29ba7541a3c13d65ae821',1,'std::numeric_limits&lt; half &gt;']]],
   ['max_5fdimensions',['MAX_DIMENSIONS',['../namespacecl_1_1sycl_1_1detail.html#a96d080b59efbe22a01fdd7cb93b5ede0',1,'cl::sycl::detail']]],

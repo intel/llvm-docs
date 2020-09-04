@@ -240,7 +240,8 @@ var hierarchy =
       [ "cl::sycl::INTEL::platform_selector", "classcl_1_1sycl_1_1INTEL_1_1platform__selector.html", [
         [ "cl::sycl::INTEL::fpga_emulator_selector", "classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html", null ],
         [ "cl::sycl::INTEL::fpga_selector", "classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html", null ]
-      ] ]
+      ] ],
+      [ "cl::sycl::ONEAPI::filter_selector", "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html", null ]
     ] ],
     [ "cl::sycl::detail::pi::DeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html", [
       [ "cl::sycl::detail::RTDeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html", [
@@ -331,6 +332,8 @@ var hierarchy =
         [ "cl::sycl::detail::is_pointer< T >", "structcl_1_1sycl_1_1detail_1_1is__pointer.html", null ]
       ] ]
     ] ],
+    [ "cl::sycl::ONEAPI::detail::filter", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html", null ],
+    [ "cl::sycl::ONEAPI::detail::filter_selector_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html", null ],
     [ "cl::sycl::detail::find_type< TL, C, T >", "structcl_1_1sycl_1_1detail_1_1find__type.html", null ],
     [ "cl::sycl::detail::find_type< empty_type_list, C, T >", "structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html", null ],
     [ "fptype< T >", "structfptype.html", null ],

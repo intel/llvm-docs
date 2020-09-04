@@ -2,7 +2,7 @@ var searchData=
 [
   ['b',['b',['../structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b',1,'cl::sycl::elem']]],
   ['back',['back',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#abad80d35abb80420d44990cd8981e863',1,'cl::sycl::detail::CircularBuffer::back()'],['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a75332f6530913d3a88344d44bd631efb',1,'cl::sycl::detail::CircularBuffer::back() const']]],
-  ['backend',['backend',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336',1,'cl::sycl']]],
+  ['backend',['Backend',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html#afd1ede69453d937bc9ad7492b214b113',1,'cl::sycl::ONEAPI::detail::filter::Backend()'],['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336',1,'cl::sycl::backend()']]],
   ['backend_2ehpp',['backend.hpp',['../backend_8hpp.html',1,'']]],
   ['backend_5ftypes_2ehpp',['backend_types.hpp',['../backend__types_8hpp.html',1,'']]],
   ['barrier',['barrier',['../classcl_1_1sycl_1_1handler.html#aa263b98900a3e67d195b5bc591c50ef3',1,'cl::sycl::handler::barrier()'],['../classcl_1_1sycl_1_1handler.html#a8f112c5b9cbd5db123764bf1eae306bb',1,'cl::sycl::handler::barrier(const vector_class&lt; event &gt; &amp;WaitList)'],['../classcl_1_1sycl_1_1nd__item.html#a25470d2b92e6e8df3d83709969ff876b',1,'cl::sycl::nd_item::barrier()'],['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a46c890d4ece0b231dd8d47a0b56a4444',1,'cl::sycl::ONEAPI::sub_group::barrier()'],['../classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea50ee37fb5951df9f6148bbf9744fef95',1,'cl::sycl::detail::CG::BARRIER()']]],
