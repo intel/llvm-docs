@@ -24,5 +24,7 @@ var struct__pi__context =
     [ "deviceId_", "struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2", null ],
     [ "evBase_", "struct__pi__context.html#ae058668425925400001e631158ae4f20", null ],
     [ "kind_", "struct__pi__context.html#aacdb938710dcd43e1f12123af4043da3", null ],
-    [ "refCount_", "struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1", null ]
+    [ "refCount_", "struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1", null ],
+    [ "ZeCommandListInit", "struct__pi__context.html#af7af59c3a749d29f49a53d6b745e1a49", null ],
+    [ "ZeContext", "struct__pi__context.html#ac48b04d1c06f5a0c46f985421a776ba5", null ]
 ];

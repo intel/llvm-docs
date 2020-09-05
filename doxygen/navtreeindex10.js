@@ -1,5 +1,12 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a9305c6cda4e3e47dced1a3f7257e6a3c":[3,0,2,1,0,232,11],
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a96264223ce64e7944d824070f911e850":[3,0,2,1,0,232,3],
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a9acab9537730b0d911fb74e58893b56b":[3,0,2,1,0,232,13],
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#aaa030a7fbf85354c4811af030ce11d4c":[3,0,2,1,0,232,14],
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#aba033415fa1d12d1bcba9916825af751":[3,0,2,1,0,232,17],
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#abb894d70230a790f196dd051dd38108b":[3,0,2,1,0,232,4],
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#ad78f9542cc0792800e33ce0923d149ea":[3,0,2,1,0,232,0],
 "classcl_1_1sycl_1_1detail_1_1platform__impl.html#ade46fd39139c39bd3ed3b78871d24221":[3,0,2,1,0,232,19],
 "classcl_1_1sycl_1_1detail_1_1platform__impl.html#ae7106e95eb90c5498e4fe06751c89146":[3,0,2,1,0,232,6],
 "classcl_1_1sycl_1_1detail_1_1platform__impl.html#ae86440fd0b8babc4d3dd1375210c912d":[3,0,2,1,0,232,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1h__item.html#a329eb086c26b57a6425e7617b0623f2e":[1,1,10,12],
 "classcl_1_1sycl_1_1h__item.html#a3ad9863c6878a2ae6e41e1ed9935eb4f":[1,1,10,13],
 "classcl_1_1sycl_1_1h__item.html#a5b0e65e06da21f286a00743de67610a4":[1,1,10,11],
-"classcl_1_1sycl_1_1h__item.html#a609ca8ed5e37dee14c15078e87cf780d":[1,1,10,8],
-"classcl_1_1sycl_1_1h__item.html#a6b490fc9f5b0a5fd92b4fcf5b5172011":[1,1,10,4],
-"classcl_1_1sycl_1_1h__item.html#a80e6e90dfec0a349ffd67589c432d3ee":[1,1,10,2],
-"classcl_1_1sycl_1_1h__item.html#a8aa77379a06071ac356c699a491e29f1":[1,1,10,17],
-"classcl_1_1sycl_1_1h__item.html#a8eab777af7af37fba4b3334c18a364eb":[1,1,10,26],
-"classcl_1_1sycl_1_1h__item.html#a93d5f74a05e222e202b76bfb3877d766":[1,1,10,16],
-"classcl_1_1sycl_1_1h__item.html#ab7f50c8761c3abb893e5412f67fefb60":[1,1,10,22],
-"classcl_1_1sycl_1_1h__item.html#ac83c376a726d41bfc604de872d6ee7af":[1,1,10,25]
+"classcl_1_1sycl_1_1h__item.html#a609ca8ed5e37dee14c15078e87cf780d":[1,1,10,8]
 };

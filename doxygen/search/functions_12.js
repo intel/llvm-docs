@@ -90,6 +90,7 @@ var searchData=
   ['store_5fnd_5fitem',['store_nd_item',['../namespacecl_1_1sycl_1_1detail.html#a2882526d45e3fc44fac9075c6b95b1f1',1,'cl::sycl::detail']]],
   ['stream',['stream',['../classcl_1_1sycl_1_1stream.html#ac72ac73caff402d4b1008f2c5350ab8a',1,'cl::sycl::stream']]],
   ['stream_5fimpl',['stream_impl',['../classcl_1_1sycl_1_1detail_1_1stream__impl.html#acc6b99c3a5e8c96b8d165ee24c957e60',1,'cl::sycl::detail::stream_impl']]],
+  ['streambuffers',['StreamBuffers',['../structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#a06f151ef873e6e50543e1b9d54519072',1,'cl::sycl::detail::Scheduler::StreamBuffers']]],
   ['stringifyerrorcode',['stringifyErrorCode',['../namespacecl_1_1sycl_1_1detail.html#a1af53414d9083438c310a1a40bd2500d',1,'cl::sycl::detail']]],
   ['sub_5fgroup',['sub_group',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a53c76d7d7b63aa89dd59edf6919e1e08',1,'cl::sycl::ONEAPI::sub_group']]],
   ['sub_5fsat',['sub_sat',['../namespacecl_1_1sycl.html#a9b1c87c33c18439d635d88bde1c1ef1b',1,'cl::sycl::sub_sat(T x, T y) __NOEXC'],['../namespacecl_1_1sycl.html#ab1d9008120146e46ba948427a7d9ca25',1,'cl::sycl::sub_sat(T x, T y) __NOEXC']]],

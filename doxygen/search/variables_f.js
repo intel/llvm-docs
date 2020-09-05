@@ -38,7 +38,7 @@ var searchData=
   ['pieventcreate',['piEventCreate',['../pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b',1,'pi_level_zero.cpp']]],
   ['pifunctiontable',['PiFunctionTable',['../struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7',1,'_pi_plugin']]],
   ['piversion',['PiVersion',['../struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d',1,'_pi_plugin']]],
-  ['platform',['Platform',['../class__pi__device.html#abaef3c3d43f659c307c93fc152764c39',1,'_pi_device::Platform()'],['../struct__pi__mem.html#a403ef5332404e235a08ea3a1a0c5f97e',1,'_pi_mem::Platform()']]],
+  ['platform',['Platform',['../class__pi__device.html#abaef3c3d43f659c307c93fc152764c39',1,'_pi_device']]],
   ['platformname',['platformName',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#aae121c47457936e32d623c74b9ccf38e',1,'cl::sycl::detail::DevDescT']]],
   ['platformnamesize',['platformNameSize',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a37101c898f24c26f46ee0f1161855798',1,'cl::sycl::detail::DevDescT']]],
   ['platformver',['platformVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a77c93b69532854b35080dc83431ed494',1,'cl::sycl::detail::DevDescT']]],
@@ -55,6 +55,6 @@ var searchData=
   ['propertysetsbegin',['PropertySetsBegin',['../structpi__device__binary__struct.html#ac6b82018fed8ac3d4cc28a65eb8ee33e',1,'pi_device_binary_struct']]],
   ['propertysetsend',['PropertySetsEnd',['../structpi__device__binary__struct.html#aad9bedb5c6973ec8af21c98a1e427935',1,'pi_device_binary_struct']]],
   ['props_5f',['props_',['../struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d',1,'_pi_sampler']]],
-  ['ptr',['ptr',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html#a2db2f42958532fd0c42decb60207bf83',1,'cl::sycl::ONEAPI::detail::atomic_ref_base::ptr()'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()']]],
+  ['ptr',['Ptr',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()'],['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html#a2db2f42958532fd0c42decb60207bf83',1,'cl::sycl::ONEAPI::detail::atomic_ref_base::ptr()']]],
   ['ptr_5f',['ptr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a6fd19a557e066187980772292237aa5e',1,'_pi_mem::mem_::buffer_mem_']]]
 ];

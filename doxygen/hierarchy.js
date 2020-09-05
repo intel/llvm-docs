@@ -465,6 +465,7 @@ var hierarchy =
     [ "cl::sycl::interop< backend::cuda, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html", null ],
     [ "cl::sycl::interop< backend::level_zero, accessor< DataT, Dimensions, AccessMode, access::target::constant_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html", null ],
     [ "cl::sycl::interop< backend::level_zero, accessor< DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html", null ],
+    [ "cl::sycl::interop< backend::level_zero, context >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01context_01_4.html", null ],
     [ "cl::sycl::interop< backend::level_zero, device >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html", null ],
     [ "cl::sycl::interop< backend::level_zero, platform >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html", null ],
     [ "cl::sycl::interop< backend::level_zero, program >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html", null ],
@@ -875,6 +876,7 @@ var hierarchy =
     [ "cl::sycl::INTEL::statically_coalesce_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html", null ],
     [ "cl::sycl::stream", "classcl_1_1sycl_1_1stream.html", null ],
     [ "cl::sycl::detail::stream_impl", "classcl_1_1sycl_1_1detail_1_1stream__impl.html", null ],
+    [ "cl::sycl::detail::Scheduler::StreamBuffers", "structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html", null ],
     [ "cl::sycl::ONEAPI::sub_group", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html", null ],
     [ "_pi_mem::mem_::surface_mem_", "struct__pi__mem_1_1mem___1_1surface__mem__.html", null ],
     [ "cl::sycl::detail::SwizzleOp< VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes >", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html", null ],
@@ -944,7 +946,6 @@ var hierarchy =
     [ "wordtype< T >", "structwordtype.html", null ],
     [ "wordtype< short >", "structwordtype_3_01short_01_4.html", null ],
     [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", null ],
-    [ "ze_module_properties_t", "structze__module__properties__t.html", null ],
     [ "atomic< uintptr_t > *", "classstd_1_1atomic_3_01uintptr__t_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
     [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]

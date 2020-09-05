@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"memory__manager_8cpp.html":[4,0,2,1,39],
+"memory__manager_8cpp.html#a0c48744e18ff526a914917fdafaffaf9":[4,0,2,1,39,1],
+"memory__manager_8cpp.html#a0e4397be0849638751ee3f2e8388a08f":[4,0,2,1,39,4],
+"memory__manager_8cpp.html#a2b0a0e58bb08a84a70762cebf1e239f2":[4,0,2,1,39,3],
+"memory__manager_8cpp.html#a9d5f2a416b7faa1d10ef9d6eb56f47e7":[4,0,2,1,39,0],
 "memory__manager_8cpp.html#aa73b6925367a15cfc26020f963be215f":[4,0,2,1,39,2],
 "memory__manager_8cpp_source.html":[4,0,2,1,39],
 "memory__manager_8hpp.html":[4,0,0,0,1,2,26],
@@ -29,8 +34,8 @@ var NAVTREEINDEX20 =
 "multi__ptr_8hpp.html#af7e097eeab7405149a4be5bbc4489aca":[4,0,0,0,1,33,10],
 "multi__ptr_8hpp.html#af885c454a2e0a70ce76b9d9d20a90e9b":[4,0,0,0,1,33,8],
 "multi__ptr_8hpp_source.html":[4,0,0,0,1,33],
-"namespaceEsimdEmulSys.html":[2,0,3],
 "namespaceEsimdEmulSys.html":[3,0,3],
+"namespaceEsimdEmulSys.html":[2,0,3],
 "namespace____esimd.html":[2,0,0],
 "namespace____esimd.html":[3,0,0],
 "namespace____spv.html":[2,0,1],
@@ -96,8 +101,8 @@ var NAVTREEINDEX20 =
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,5,2],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,2,1,11,2],
-"namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,2,1,11,3],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,2,1,5,3],
+"namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,2,1,11,3],
 "namespacecl_1_1sycl_1_1usm.html":[2,0,2,1,12],
 "namespaceintelfpga.html":[2,0,4],
 "namespacemembers.html":[2,1,0],
@@ -147,8 +152,8 @@ var NAVTREEINDEX20 =
 "namespacemembers_r.html":[2,1,0,17],
 "namespacemembers_s.html":[2,1,0,18],
 "namespacemembers_t.html":[2,1,0,19],
-"namespacemembers_type.html":[2,1,3,0],
 "namespacemembers_type.html":[2,1,3],
+"namespacemembers_type.html":[2,1,3,0],
 "namespacemembers_type_a.html":[2,1,3,1],
 "namespacemembers_type_b.html":[2,1,3,2],
 "namespacemembers_type_c.html":[2,1,3,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "pi_8h.html#a11056869f4074c362c2347033e5d1b92":[4,0,0,0,1,2,28,77],
 "pi_8h.html#a114b582e3c429b82709bd1ee2a07536c":[4,0,0,0,1,2,28,44],
 "pi_8h.html#a11bc63e00a94db3e4e05b5d37aca121f":[4,0,0,0,1,2,28,243],
-"pi_8h.html#a120d5faa8d24b9e34fe0d9f7a1a18e92":[4,0,0,0,1,2,28,177],
-"pi_8h.html#a13e735d9c7ccd70dc9d15ce01169789d":[4,0,0,0,1,2,28,50],
-"pi_8h.html#a140f544327e5cf8c6a6bfc984ef67355":[4,0,0,0,1,2,28,152],
-"pi_8h.html#a1520bebd635620cc853597acda4cb054":[4,0,0,0,1,2,28,239],
-"pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717":[4,0,0,0,1,2,28,128],
-"pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a03a8f5cc04f3825582dd0c691c3a3f14":[4,0,0,0,1,2,28,128,18]
+"pi_8h.html#a120d5faa8d24b9e34fe0d9f7a1a18e92":[4,0,0,0,1,2,28,177]
 };

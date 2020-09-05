@@ -38,6 +38,7 @@ var searchData=
   ['statically_5fcoalesce_5fimpl',['statically_coalesce_impl',['../structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html',1,'cl::sycl::INTEL']]],
   ['stream',['stream',['../classcl_1_1sycl_1_1stream.html',1,'cl::sycl']]],
   ['stream_5fimpl',['stream_impl',['../classcl_1_1sycl_1_1detail_1_1stream__impl.html',1,'cl::sycl::detail']]],
+  ['streambuffers',['StreamBuffers',['../structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html',1,'cl::sycl::detail::Scheduler']]],
   ['sub_5fgroup',['sub_group',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html',1,'cl::sycl::ONEAPI']]],
   ['surface_5fmem_5f',['surface_mem_',['../struct__pi__mem_1_1mem___1_1surface__mem__.html',1,'_pi_mem::mem_']]],
   ['swizzleop',['SwizzleOp',['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html',1,'cl::sycl::detail']]],

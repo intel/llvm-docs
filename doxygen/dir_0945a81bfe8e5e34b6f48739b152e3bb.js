@@ -30,7 +30,9 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     ] ],
     [ "device_info.hpp", "device__info_8hpp.html", "device__info_8hpp" ],
     [ "event_impl.cpp", "event__impl_8cpp.html", "event__impl_8cpp" ],
-    [ "event_impl.hpp", "event__impl_8hpp.html", "event__impl_8hpp" ],
+    [ "event_impl.hpp", "event__impl_8hpp.html", [
+      [ "event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html", "classcl_1_1sycl_1_1detail_1_1event__impl" ]
+    ] ],
     [ "event_info.hpp", "event__info_8hpp.html", [
       [ "get_event_profiling_info", "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html", "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info" ],
       [ "get_event_info", "structcl_1_1sycl_1_1detail_1_1get__event__info.html", "structcl_1_1sycl_1_1detail_1_1get__event__info" ]

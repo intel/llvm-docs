@@ -2,6 +2,7 @@ var level__zero_8hpp =
 [
     [ "interop< backend::level_zero, platform >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4" ],
     [ "interop< backend::level_zero, device >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4" ],
+    [ "interop< backend::level_zero, context >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01context_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01context_01_4" ],
     [ "interop< backend::level_zero, queue >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4" ],
     [ "interop< backend::level_zero, program >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4" ],
     [ "interop< backend::level_zero, accessor< DataT, Dimensions, AccessMode, access::target::global_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html", "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83" ],

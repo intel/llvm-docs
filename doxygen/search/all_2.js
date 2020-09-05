@@ -112,6 +112,7 @@ var searchData=
   ['allocatemembuffer',['allocateMemBuffer',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a79c00febe36c20eaeff46f5e98663ac3',1,'cl::sycl::detail::MemoryManager']]],
   ['allocatememimage',['allocateMemImage',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad5ed0f3b3b5dc655eede7fff9c5c0833',1,'cl::sycl::detail::MemoryManager']]],
   ['allocatememsubbuffer',['allocateMemSubBuffer',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae7e34b2e2df980c15d3b2bed30ac0908',1,'cl::sycl::detail::MemoryManager']]],
+  ['allocatestreambuffers',['allocateStreamBuffers',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#ab5795ad851a992b79c7e1591db6f3216',1,'cl::sycl::detail::Scheduler']]],
   ['allocator_5fpointer_5ft',['allocator_pointer_t',['../namespacecl_1_1sycl_1_1detail.html#a46d52b8379244bff58f0b8f9a84c802a',1,'cl::sycl::detail']]],
   ['allocator_5ftype',['allocator_type',['../classcl_1_1sycl_1_1buffer.html#a5f46645c23214ee24fd78bcbfed9037e',1,'cl::sycl::buffer']]],
   ['allocator_5fvalue_5ftype_5ft',['allocator_value_type_t',['../namespacecl_1_1sycl_1_1detail.html#a926029bc71a4073537d2c0e273e5cd16',1,'cl::sycl::detail']]],

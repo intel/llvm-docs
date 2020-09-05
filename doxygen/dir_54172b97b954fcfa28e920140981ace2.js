@@ -11,5 +11,7 @@ var dir_54172b97b954fcfa28e920140981ace2 =
       [ "IteratorT", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT" ]
     ] ],
     [ "scheduler.cpp", "scheduler_8cpp.html", null ],
-    [ "scheduler.hpp", "scheduler_8hpp.html", null ]
+    [ "scheduler.hpp", "scheduler_8hpp.html", [
+      [ "StreamBuffers", "structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html", "structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers" ]
+    ] ]
 ];

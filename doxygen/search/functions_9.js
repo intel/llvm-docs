@@ -66,6 +66,7 @@ var searchData=
   ['isnan',['isnan',['../namespacecl_1_1sycl.html#a99c399ec52e747f3f416ad0c1f40146b',1,'cl::sycl']]],
   ['isnormal',['isnormal',['../namespacecl_1_1sycl.html#add2d24b316062d3c23cd182c313bb1aa',1,'cl::sycl']]],
   ['isnotequal',['isnotequal',['../namespacecl_1_1sycl.html#a540f8ac29726306820ff225136838571',1,'cl::sycl']]],
+  ['isonlinelinkenabled',['isOnlineLinkEnabled',['../pi__level__zero_8cpp.html#acafc1cc52eda482ed85f6f8e08212461',1,'pi_level_zero.cpp']]],
   ['isordered',['isordered',['../namespacecl_1_1sycl.html#a68c31bc6e48c8fd07f661f513ac2d5e8',1,'cl::sycl']]],
   ['isoutofrange',['isOutOfRange',['../namespacecl_1_1sycl_1_1detail.html#af4e508ca6daca4984f672dfcea172455',1,'cl::sycl::detail']]],
   ['ispowerof2',['isPowerOf2',['../namespace____esimd.html#adcd09b1b839a30e554e843f817ca05b8',1,'__esimd::isPowerOf2(unsigned int n)'],['../namespace____esimd.html#ad52e4aea71df110d280fbbb114f9228a',1,'__esimd::isPowerOf2(unsigned int n, unsigned int limit)']]],

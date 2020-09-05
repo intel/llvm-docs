@@ -1,6 +1,6 @@
 var struct__pi__buffer =
 [
-    [ "_pi_buffer", "struct__pi__buffer.html#afe6f27b638297e2fb9ca69da44a792e9", null ],
+    [ "_pi_buffer", "struct__pi__buffer.html#afb76890ba2ef8e7674ce87f9e618ab29", null ],
     [ "getZeHandle", "struct__pi__buffer.html#aa29dbcda036be9d0886aeb5b5a1545d6", null ],
     [ "getZeHandlePtr", "struct__pi__buffer.html#a03b87538e30969c67f43cb6c73d2c0db", null ],
     [ "isImage", "struct__pi__buffer.html#a7aa1bc51e539792476d875e10dfb6991", null ],

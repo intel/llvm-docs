@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#ab3a4efc0803dacbc6b9ef430541393ef":[3,0,2,1,0,59,1],
+"classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#adb02446ac622be2261bab89132f32d55":[3,0,2,1,0,59,0],
 "classcl_1_1sycl_1_1detail_1_1EmptyCommand.html":[3,0,2,1,0,60],
 "classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a45e17f9e2ef40b51b987461e2ee6f1b7":[3,0,2,1,0,60,1],
 "classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7c45e819d9ad51b10f1f19bc4f5eef7b":[3,0,2,1,0,60,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#a94e5cbd194864921b29753a94d16dc8b":[3,0,2,1,0,281,7],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#aaa04a64f3b7919fe6c76be1a64dd70c9":[3,0,2,1,0,281,4],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ad7e9fb5816706b32c171655d7f26d8b3":[3,0,2,1,0,281,2],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ae434f1caf9eef4d870546eb83d05491c":[3,0,2,1,0,281,1],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#aebc0f2d0db93f80d7b45dea5785694fa":[3,0,2,1,0,281,6],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html":[3,0,2,1,0,282]
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ae434f1caf9eef4d870546eb83d05491c":[3,0,2,1,0,281,1]
 };

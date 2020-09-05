@@ -35,6 +35,8 @@ var searchData=
   ['statically_5fcoalesce',['STATICALLY_COALESCE',['../namespacecl_1_1sycl_1_1INTEL.html#aed846bf9c0acd9b3bc52d02ae53ca5a1',1,'cl::sycl::INTEL']]],
   ['storage_5f',['storage_',['../struct__pi__kernel_1_1arguments.html#aa5e150dedfd765cdc606578f12d249d3',1,'_pi_kernel::arguments']]],
   ['stream_5f',['stream_',['../struct__pi__queue.html#a622784255d6db4ff8f778200b46cb779',1,'_pi_queue']]],
+  ['streambufferspool',['StreamBuffersPool',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3dbc021a6046f12ac370975cc239c92e',1,'cl::sycl::detail::Scheduler']]],
+  ['streambufferspoolmutex',['StreamBuffersPoolMutex',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a8cc93813de15109d99421ada00dd3345',1,'cl::sycl::detail::Scheduler']]],
   ['stride',['Stride',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#abd800933e79e0932652560a4ef62830e',1,'cl::sycl::INTEL::gpu::compute_format_type&lt; simd&lt; Ty, N &gt;, EltTy &gt;::Stride()'],['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html#a80675f6adc306915b650a5df34fc26b5',1,'cl::sycl::INTEL::gpu::compute_format_type&lt; simd_view&lt; BaseTy, RegionTy &gt;, EltTy &gt;::Stride()']]],
   ['stride_5fx',['Stride_x',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html#add9910e1c94df8e7f0e72e6f506ea790',1,'cl::sycl::INTEL::gpu::region_base']]],
   ['stride_5fy',['Stride_y',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html#af6dd086f48bdf400bce320d48107684d',1,'cl::sycl::INTEL::gpu::region_base']]],
