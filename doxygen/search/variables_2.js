@@ -8,6 +8,7 @@ var searchData=
   ['binaryend',['BinaryEnd',['../structpi__device__binary__struct.html#a84557e6cea59b13a7035f8cb7161d05b',1,'pi_device_binary_struct']]],
   ['binarysizeinbytes_5f',['binarySizeInBytes_',['../struct__pi__program.html#a50486172acd1157a2f27f32e04c62181',1,'_pi_program']]],
   ['binarystart',['BinaryStart',['../structpi__device__binary__struct.html#af12b47e9e45eaca89cee25dac0ea9d8b',1,'pi_device_binary_struct']]],
+  ['bucketsizes',['BucketSizes',['../namespacesettings.html#ae46e953ea49dac1ffb4c4e7acdc6c8fc',1,'settings']]],
   ['buf',['Buf',['../structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#aa45497ea640db20648affba21f0ca2cb',1,'cl::sycl::detail::Scheduler::StreamBuffers']]],
   ['buffer',['buffer',['../struct__pi__image__desc.html#ab04ce1edf4fd9d62854d526a1ef26951',1,'_pi_image_desc']]],
   ['buffer_5fdim',['buffer_dim',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a5b3cc079a366b34e271a087087e163b8',1,'cl::sycl::ONEAPI::detail::reduction_impl']]],

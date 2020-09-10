@@ -118,6 +118,7 @@ var hierarchy =
     ] ],
     [ "cl::sycl::detail::Boolean< N >", "structcl_1_1sycl_1_1detail_1_1Boolean.html", null ],
     [ "cl::sycl::detail::Boolean< 1 >", "structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html", null ],
+    [ "Bucket", "classBucket.html", null ],
     [ "cl::sycl::buffer< T, dimensions, AllocatorT, typename >", "classcl_1_1sycl_1_1buffer.html", null ],
     [ "cl::sycl::buffer< char, 1 >", "classcl_1_1sycl_1_1buffer.html", null ],
     [ "_pi_mem::mem_::buffer_mem_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html", null ],
@@ -870,6 +871,7 @@ var hierarchy =
     [ "cl::sycl::INTEL::gpu::details::simd_type< T & >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::details::simd_type< T && >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_6_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::simd_view< BaseTy, RegionTy >", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html", null ],
+    [ "Slab", "classSlab.html", null ],
     [ "cl::sycl::ONEAPI::experimental::spec_constant< T, ID >", "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html", null ],
     [ "cl::sycl::detail::spec_constant_impl", "classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html", null ],
     [ "cl::sycl::detail::SpecConstantInfo< Name >", "structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html", null ],
@@ -898,6 +900,12 @@ var hierarchy =
       ] ]
     ] ],
     [ "cl::sycl::detail::Sync", "classcl_1_1sycl_1_1detail_1_1Sync.html", null ],
+    [ "SystemMemory", "classSystemMemory.html", [
+      [ "USMMemoryAllocBase", "classUSMMemoryAllocBase.html", [
+        [ "USMDeviceMemoryAlloc", "classUSMDeviceMemoryAlloc.html", null ],
+        [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", null ]
+      ] ]
+    ] ],
     [ "cl::sycl::detail::TargetToAS< accessTarget >", "structcl_1_1sycl_1_1detail_1_1TargetToAS.html", null ],
     [ "cl::sycl::detail::TargetToAS< access::target::constant_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html", null ],
     [ "cl::sycl::detail::TargetToAS< access::target::local >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html", null ],
@@ -930,6 +938,9 @@ var hierarchy =
     [ "cl::sycl::detail::type_list< type_list< H, T... >, T2... >", "structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html", null ],
     [ "cl::sycl::detail::type_list<>", "structcl_1_1sycl_1_1detail_1_1type__list_3_4.html", null ],
     [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >", "classcl_1_1sycl_1_1usm__allocator.html", null ],
+    [ "UsmAllocationException", "classUsmAllocationException.html", null ],
+    [ "USMAllocContext", "classUSMAllocContext.html", null ],
+    [ "USMAllocContext::USMAllocImpl", "classUSMAllocContext_1_1USMAllocImpl.html", null ],
     [ "cl::sycl::detail::value_list< T, V >", "structcl_1_1sycl_1_1detail_1_1value__list.html", null ],
     [ "cl::sycl::detail::value_list< T >", "structcl_1_1sycl_1_1detail_1_1value__list_3_01T_01_4.html", null ],
     [ "cl::sycl::detail::value_list< T, H, V... >", "structcl_1_1sycl_1_1detail_1_1value__list_3_01T_00_01H_00_01V_8_8_8_01_4.html", null ],

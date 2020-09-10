@@ -6,5 +6,11 @@ var searchData=
   ['use_5fmutex',['use_mutex',['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html',1,'cl::sycl::property::buffer::use_mutex'],['../classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html',1,'cl::sycl::property::image::use_mutex']]],
   ['use_5fpinned_5fhost_5fmemory',['use_pinned_host_memory',['../classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html',1,'cl::sycl::ext::oneapi::property::buffer']]],
   ['use_5fprimary_5fcontext',['use_primary_context',['../classcl_1_1sycl_1_1property_1_1context_1_1cuda_1_1use__primary__context.html',1,'cl::sycl::property::context::cuda']]],
-  ['usm_5fallocator',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html',1,'cl::sycl']]]
+  ['usm_5fallocator',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html',1,'cl::sycl']]],
+  ['usmallocationexception',['UsmAllocationException',['../classUsmAllocationException.html',1,'']]],
+  ['usmalloccontext',['USMAllocContext',['../classUSMAllocContext.html',1,'']]],
+  ['usmallocimpl',['USMAllocImpl',['../classUSMAllocContext_1_1USMAllocImpl.html',1,'USMAllocContext']]],
+  ['usmdevicememoryalloc',['USMDeviceMemoryAlloc',['../classUSMDeviceMemoryAlloc.html',1,'']]],
+  ['usmmemoryallocbase',['USMMemoryAllocBase',['../classUSMMemoryAllocBase.html',1,'']]],
+  ['usmsharedmemoryalloc',['USMSharedMemoryAlloc',['../classUSMSharedMemoryAlloc.html',1,'']]]
 ];

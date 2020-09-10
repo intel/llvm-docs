@@ -256,6 +256,10 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 , <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a3b0a0407cef08d249d191f0b6ada7595">cl::sycl::detail::SYCLMemObjAllocator</a>
 , <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#a732e4f85d0be2ec99774afa3a405830c">cl::sycl::detail::SYCLMemObjAllocatorHolder&lt; AllocatorT &gt;</a>
 , <a class="el" href="classcl_1_1sycl_1_1usm__allocator.html#a0eca4b84b299d6846696d8c77b494764">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;</a>
+, <a class="el" href="classSystemMemory.html#aec23ceda58eafb18342623deeb2d4462">SystemMemory</a>
+, <a class="el" href="classUSMAllocContext.html#afb16167a534ae853be76a6a6f9c3980b">USMAllocContext</a>
+, <a class="el" href="classUSMAllocContext_1_1USMAllocImpl.html#ab2e7104197500d05d5b37c94c7982d2d">USMAllocContext::USMAllocImpl</a>
+, <a class="el" href="classUSMMemoryAllocBase.html#a8534b8e29a46722878441c0462db5506">USMMemoryAllocBase</a>
 </li>
 <li>allocateBufferObject()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a1b83a62f0aa9caa6626f860ab33008eb">cl::sycl::detail::MemoryManager</a>
@@ -272,6 +276,11 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 </li>
 <li>allocateImageObject()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a901e1d901cff7aff07bf9795bd48f9b7">cl::sycl::detail::MemoryManager</a>
+</li>
+<li>allocateImpl()
+: <a class="el" href="classUSMDeviceMemoryAlloc.html#a0612f511e7ce5328929b9b47ed40b3c2">USMDeviceMemoryAlloc</a>
+, <a class="el" href="classUSMMemoryAllocBase.html#a91e3db8990598986d208ce5b34c7f17e">USMMemoryAllocBase</a>
+, <a class="el" href="classUSMSharedMemoryAlloc.html#adad6696c2d36929f9baba1d8cba2ef28">USMSharedMemoryAlloc</a>
 </li>
 <li>allocateInteropMemObject()
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad5d4586c47b2a546300e0e02a2c2fafe">cl::sycl::detail::MemoryManager</a>
@@ -335,7 +344,7 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="struct__pi__kernel_1_1arguments.html#ae34c341ba210edf6e763e8bcf0f3b083">_pi_kernel::arguments</a>
 </li>
 <li>array()
-: <a class="el" href="classcl_1_1sycl_1_1detail_1_1array.html#aa68f20aceb987946cfd626822aae1e94">cl::sycl::detail::array&lt; dimensions &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1detail_1_1array.html#ade9c363da65ed394e1a8d64e32415913">cl::sycl::detail::array&lt; dimensions &gt;</a>
 </li>
 <li>array_
 : <a class="el" href="struct__pi__mem_1_1mem___1_1surface__mem__.html#a1b561ca49bb4c9fa390fce52c3915dbf">_pi_mem::mem_::surface_mem_</a>
@@ -371,8 +380,8 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html#a8530c3ba340a24c5055c3e97f3759e8a">cl::sycl::detail::pi::DeviceBinaryProperty</a>
 </li>
 <li>async_work_group_copy()
-: <a class="el" href="classcl_1_1sycl_1_1group.html#a7a6c89fc9f08c4878a52c112eab8bdc4">cl::sycl::group&lt; Dimensions &gt;</a>
-, <a class="el" href="classcl_1_1sycl_1_1nd__item.html#a2856a1c59eccd51207127ac3df7b1d8c">cl::sycl::nd_item&lt; dimensions &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1group.html#a035d507c95a4ccb651679b1070780296">cl::sycl::group&lt; Dimensions &gt;</a>
+, <a class="el" href="classcl_1_1sycl_1_1nd__item.html#a0cae292b256692fd4e2a7abad7d4b271">cl::sycl::nd_item&lt; dimensions &gt;</a>
 </li>
 <li>atomic()
 : <a class="el" href="classcl_1_1sycl_1_1atomic.html#afb88208eb8390745f67e95750ff38bed">cl::sycl::atomic&lt; T, addressSpace &gt;</a>
@@ -381,10 +390,10 @@ $(document).ready(function(){initNavTree('functions_a.html','');});
 : <a class="el" href="classcl_1_1sycl_1_1atomic.html#a96fefa2531988a83cd97ce1d30f705c8">cl::sycl::atomic&lt; T, addressSpace &gt;</a>
 </li>
 <li>atomic_combine()
-: <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a868f5f440bca42d44a7117d74f48d663">cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a9f1ff21e7addb36f952460bdf2c954bc">cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;</a>
 </li>
 <li>atomic_ref_base()
-: <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html#a5ce4cc3d0791f38b147de60ffeb5cc65">cl::sycl::ONEAPI::detail::atomic_ref_base&lt; T, DefaultOrder, DefaultScope, AddressSpace &gt;</a>
+: <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html#af0c12741872d4000cf13c24f4b4a8825">cl::sycl::ONEAPI::detail::atomic_ref_base&lt; T, DefaultOrder, DefaultScope, AddressSpace &gt;</a>
 </li>
 <li>atomic_ref_impl()
 : <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a1a1c5022af15aaa1bb92f2b48b3f7337">cl::sycl::ONEAPI::detail::atomic_ref_impl&lt; T *, DefaultOrder, DefaultScope, AddressSpace &gt;</a>

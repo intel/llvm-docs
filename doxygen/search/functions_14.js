@@ -30,5 +30,14 @@ var searchData=
   ['usehostptr',['useHostPtr',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a8dd420f98faf33a0ff15b9c70197e394',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['usespvenv',['UseSpvEnv',['../namespacecl_1_1sycl_1_1detail.html#addb9edfde61bdf52df402caafbf4b097',1,'cl::sycl::detail']]],
   ['usm_5fallocator',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html#aeb3b59b6bd3f30eae58d5782bb73cd97',1,'cl::sycl::usm_allocator::usm_allocator() noexcept=delete'],['../classcl_1_1sycl_1_1usm__allocator.html#ac66956b042faa99f74e689b74def3984',1,'cl::sycl::usm_allocator::usm_allocator(const context &amp;Ctxt, const device &amp;Dev) noexcept'],['../classcl_1_1sycl_1_1usm__allocator.html#a708801290ccdb6d0db269e1f91bb8419',1,'cl::sycl::usm_allocator::usm_allocator(const queue &amp;Q) noexcept'],['../classcl_1_1sycl_1_1usm__allocator.html#a6b14c843534d874d0fcccdc9b6212fc9',1,'cl::sycl::usm_allocator::usm_allocator(const usm_allocator &amp;) noexcept=default'],['../classcl_1_1sycl_1_1usm__allocator.html#a8f37000e7265a242815d314edbb8989a',1,'cl::sycl::usm_allocator::usm_allocator(usm_allocator &amp;&amp;) noexcept=default'],['../classcl_1_1sycl_1_1usm__allocator.html#a4c9fa4d852c469a56211e50967a78499',1,'cl::sycl::usm_allocator::usm_allocator(const usm_allocator&lt; U, AllocKind, Alignment &gt; &amp;Other) noexcept']]],
-  ['usmsetindirectaccess',['USMSetIndirectAccess',['../pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372',1,'pi_opencl.cpp']]]
+  ['usmallocationexception',['UsmAllocationException',['../classUsmAllocationException.html#a7915b238a47308071bdda6ed1abdc98b',1,'UsmAllocationException']]],
+  ['usmalloccontext',['USMAllocContext',['../classUSMAllocContext.html#accc5886dc427023f3ec37a563ce24091',1,'USMAllocContext']]],
+  ['usmallocimpl',['USMAllocImpl',['../classUSMAllocContext_1_1USMAllocImpl.html#a24680a6d0e0734b20b6e0db8ab04c058',1,'USMAllocContext::USMAllocImpl']]],
+  ['usmdeviceallocimpl',['USMDeviceAllocImpl',['../pi__level__zero_8cpp.html#ad88c5df962c7f4bd85f8a4e1f6a60ed3',1,'pi_level_zero.cpp']]],
+  ['usmdevicememoryalloc',['USMDeviceMemoryAlloc',['../classUSMDeviceMemoryAlloc.html#a2a6e6645ed01c478b7e2bd488395a651',1,'USMDeviceMemoryAlloc']]],
+  ['usmfreeimpl',['USMFreeImpl',['../pi__level__zero_8cpp.html#a39e6e2e19bc847fe4d6e8437a09f19cb',1,'pi_level_zero.cpp']]],
+  ['usmmemoryallocbase',['USMMemoryAllocBase',['../classUSMMemoryAllocBase.html#a536e305ac77e7ff0948ea043a3d822b4',1,'USMMemoryAllocBase']]],
+  ['usmsetindirectaccess',['USMSetIndirectAccess',['../pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372',1,'pi_opencl.cpp']]],
+  ['usmsharedallocimpl',['USMSharedAllocImpl',['../pi__level__zero_8cpp.html#a6382d3502924719e3acb3c161cd982c7',1,'pi_level_zero.cpp']]],
+  ['usmsharedmemoryalloc',['USMSharedMemoryAlloc',['../classUSMSharedMemoryAlloc.html#a35cf637e564f015819f4274383655fd9',1,'USMSharedMemoryAlloc']]]
 ];

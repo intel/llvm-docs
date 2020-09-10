@@ -51,6 +51,7 @@ var searchData=
   ['has_5fsignaling_5fnan',['has_signaling_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#ae2c68ea746186c2d4a11de651d34ac5d',1,'std::numeric_limits&lt; half &gt;']]],
   ['has_5fwith_5foffset_5fparameter',['has_with_offset_parameter',['../struct__pi__kernel.html#a4e415474419c9c6b7b29e1e6a55dcaa5',1,'_pi_kernel']]],
   ['hasa',['HasA',['../esimd__enum_8hpp.html#af7f3fe9d26dcab36910f0ca2d7254faf',1,'esimd_enum.hpp']]],
+  ['hasavail',['hasAvail',['../classSlab.html#a5166a5c1c5567ac75dd6148387bf7ef3',1,'Slab']]],
   ['hasb',['HasB',['../esimd__enum_8hpp.html#a7ab0f4c8f66b7a32864e40c2930f1128',1,'esimd_enum.hpp']]],
   ['hasbackend',['HasBackend',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html#acc117372d9aa5eb4cab6267ad79829c1',1,'cl::sycl::ONEAPI::detail::filter']]],
   ['hasdevice',['hasDevice',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#a120caa4996ffc7245321b146551c3e4e',1,'cl::sycl::detail::context_impl']]],

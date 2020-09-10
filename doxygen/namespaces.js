@@ -5,5 +5,6 @@ var namespaces =
     [ "cl", "namespacecl.html", "namespacecl" ],
     [ "EsimdEmulSys", "namespaceEsimdEmulSys.html", null ],
     [ "intelfpga", "namespaceintelfpga.html", null ],
+    [ "settings", "namespacesettings.html", null ],
     [ "std", "namespacestd.html", null ]
 ];

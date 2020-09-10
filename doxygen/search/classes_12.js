@@ -31,6 +31,7 @@ var searchData=
   ['simd_5ftype_3c_20t_20_26_20_3e',['simd_type&lt; T &amp; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_01_4.html',1,'cl::sycl::INTEL::gpu::details']]],
   ['simd_5ftype_3c_20t_20_26_26_20_3e',['simd_type&lt; T &amp;&amp; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01T_01_6_6_01_4.html',1,'cl::sycl::INTEL::gpu::details']]],
   ['simd_5fview',['simd_view',['../classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html',1,'cl::sycl::INTEL::gpu']]],
+  ['slab',['Slab',['../classSlab.html',1,'']]],
   ['spec_5fconst_5ferror',['spec_const_error',['../classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html',1,'cl::sycl::ONEAPI::experimental']]],
   ['spec_5fconstant',['spec_constant',['../classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html',1,'cl::sycl::ONEAPI::experimental']]],
   ['spec_5fconstant_5fimpl',['spec_constant_impl',['../classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html',1,'cl::sycl::detail']]],
@@ -54,5 +55,6 @@ var searchData=
   ['syclmemobjallocatorholder',['SYCLMemObjAllocatorHolder',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html',1,'cl::sycl::detail']]],
   ['syclmemobji',['SYCLMemObjI',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html',1,'cl::sycl::detail']]],
   ['syclmemobjt',['SYCLMemObjT',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html',1,'cl::sycl::detail']]],
-  ['sync',['Sync',['../classcl_1_1sycl_1_1detail_1_1Sync.html',1,'cl::sycl::detail']]]
+  ['sync',['Sync',['../classcl_1_1sycl_1_1detail_1_1Sync.html',1,'cl::sycl::detail']]],
+  ['systemmemory',['SystemMemory',['../classSystemMemory.html',1,'']]]
 ];

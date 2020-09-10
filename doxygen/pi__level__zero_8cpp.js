@@ -1,5 +1,6 @@
 var pi__level__zero_8cpp =
 [
+    [ "UsmAllocationException", "classUsmAllocationException.html", "classUsmAllocationException" ],
     [ "_PI_API", "pi__level__zero_8cpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "ZE_CALL", "pi__level__zero_8cpp.html#a942ae4efbf61ce684eb093c3c07b8a73", null ],
     [ "ZE_CALL_NOCHECK", "pi__level__zero_8cpp.html#a8009409c5f86d03cdbdc2bf11a8756eb", null ],
@@ -114,10 +115,15 @@ var pi__level__zero_8cpp =
     [ "piSamplerGetInfo", "pi__level__zero_8cpp.html#a4a75c9fa6097756ef41160b218c25dee", null ],
     [ "piSamplerRelease", "pi__level__zero_8cpp.html#a3e6c8bb1ca70ed13b07fca70dea76a08", null ],
     [ "piSamplerRetain", "pi__level__zero_8cpp.html#a6551ae9c262ed234fcace964e7a1805d", null ],
+    [ "ShouldUseUSMAllocator", "pi__level__zero_8cpp.html#aa0d9788a220013761c4eb442c39d3ad6", null ],
+    [ "USMDeviceAllocImpl", "pi__level__zero_8cpp.html#ad88c5df962c7f4bd85f8a4e1f6a60ed3", null ],
+    [ "USMFreeImpl", "pi__level__zero_8cpp.html#a39e6e2e19bc847fe4d6e8437a09f19cb", null ],
+    [ "USMSharedAllocImpl", "pi__level__zero_8cpp.html#a6382d3502924719e3acb3c161cd982c7", null ],
     [ "zeModuleDynamicLinkMock", "pi__level__zero_8cpp.html#a3cbf3f86646302f02bbad5b72af5b68b", null ],
     [ "zeModuleGetPropertiesMock", "pi__level__zero_8cpp.html#a3ca3ae243129eba347fd994154760a80", null ],
     [ "zeParseError", "pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815", null ],
     [ "OnceFlag", "pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7", null ],
     [ "piEventCreate", "pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b", null ],
+    [ "UseUSMAllocator", "pi__level__zero_8cpp.html#a3da6fe5aab6b35ba86c353ff7175a443", null ],
     [ "ZE_SUPPORTED_EXTENSIONS", "pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e", null ]
 ];

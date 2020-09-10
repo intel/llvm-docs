@@ -9,6 +9,7 @@ var searchData=
   ['bit_5fxor',['bit_xor',['../namespacecl_1_1sycl_1_1ONEAPI.html#ac10ea002b4bdc8b765cefb1f7fa898a7',1,'cl::sycl::ONEAPI']]],
   ['bool_5fconstant',['bool_constant',['../namespacecl_1_1sycl_1_1detail.html#abe0d3a7302fa94b2522b6182113606fa',1,'cl::sycl::detail']]],
   ['bool_5ft',['bool_t',['../structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#a58b0b874f8de44f1a53b08937cdf7128',1,'cl::sycl::detail::RelConverter&lt; T, typename std::enable_if&lt; TryToGetElementType&lt; T &gt;::value &gt;::type &gt;']]],
+  ['bucketsarraytype',['BucketsArrayType',['../namespacesettings.html#a967f0c9e4563cb2b6f16082cfb40dfc5',1,'settings']]],
   ['buffer_5fallocator',['buffer_allocator',['../namespacecl_1_1sycl.html#a7a19058abadafdeccbb4ef44cdb2b318',1,'cl::sycl']]],
   ['burst_5fcoalesce',['burst_coalesce',['../namespacecl_1_1sycl_1_1INTEL.html#ab130adbada20118197538a2475fdaf22',1,'cl::sycl::INTEL']]],
   ['byte',['byte',['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl']]]

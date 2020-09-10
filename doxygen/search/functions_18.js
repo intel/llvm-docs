@@ -34,9 +34,12 @@ var searchData=
   ['_7ereleaseguard',['~ReleaseGuard',['../classReleaseGuard.html#a92517f8d00406d4719e310842e6f0e33',1,'ReleaseGuard']]],
   ['_7ertdevicebinaryimage',['~RTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#ad2cd7ee2575466d0d54309f4e09b855d',1,'cl::sycl::detail::RTDeviceBinaryImage']]],
   ['_7esampler_5fimpl',['~sampler_impl',['../classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a33f1e852edc3df20a2357cc4d4c324de',1,'cl::sycl::detail::sampler_impl']]],
+  ['_7eslab',['~Slab',['../classSlab.html#af96e888e80223bb28e3a886a641575da',1,'Slab']]],
   ['_7esyclmemobjallocator',['~SYCLMemObjAllocator',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#ae32016bc1ec2a6e4676dc7ab2f70fd2b',1,'cl::sycl::detail::SYCLMemObjAllocator']]],
   ['_7esyclmemobjallocatorholder',['~SYCLMemObjAllocatorHolder',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ad7e9fb5816706b32c171655d7f26d8b3',1,'cl::sycl::detail::SYCLMemObjAllocatorHolder']]],
   ['_7esyclmemobji',['~SYCLMemObjI',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aa8bd364990e90196878f0da9a061e67a',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['_7esyclmemobjt',['~SYCLMemObjT',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a16b3a5b9c3ace3bb121beef1b75a4e28',1,'cl::sycl::detail::SYCLMemObjT']]],
-  ['_7ethreadpool',['~ThreadPool',['../classcl_1_1sycl_1_1detail_1_1ThreadPool.html#ad847a2a2fc5ae7ec7c547815b1d9ee66',1,'cl::sycl::detail::ThreadPool']]]
+  ['_7esystemmemory',['~SystemMemory',['../classSystemMemory.html#acb2bf348d169471cf619583ec49855a2',1,'SystemMemory']]],
+  ['_7ethreadpool',['~ThreadPool',['../classcl_1_1sycl_1_1detail_1_1ThreadPool.html#ad847a2a2fc5ae7ec7c547815b1d9ee66',1,'cl::sycl::detail::ThreadPool']]],
+  ['_7eusmalloccontext',['~USMAllocContext',['../classUSMAllocContext.html#a9391ab5a00278de27a284400b0500751',1,'USMAllocContext']]]
 ];
