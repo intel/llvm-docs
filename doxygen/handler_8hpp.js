@@ -18,6 +18,8 @@ var handler_8hpp =
     [ "lambda_arg_type", "handler_8hpp.html#aacf8c7510a63a5b1b0e97c3d26216ef4", null ],
     [ "argument_helper", "handler_8hpp.html#a0fb12c55b73a022f2aa1397b6fa3a24a", null ],
     [ "checkValueRange", "handler_8hpp.html#a042e58bee12db0078c232dc3a0ad237a", null ],
+    [ "checkValueRange", "handler_8hpp.html#acdc99e5df3b4c69d0b3f6bf7aafab323", null ],
+    [ "checkValueRange", "handler_8hpp.html#ae43fe86c125b16b3adf8fddd66e3a5f2", null ],
     [ "getDeviceFromHandler", "handler_8hpp.html#a4679ea98c7f73f344135382c7b7ab13d", null ],
     [ "member_ptr_helper", "handler_8hpp.html#a43f7210adc907fb76c8fe3b46b659afb", null ],
     [ "reduAuxCGFunc", "handler_8hpp.html#a37c7b50c0ee12720c0a09d771f2a7faf", null ],

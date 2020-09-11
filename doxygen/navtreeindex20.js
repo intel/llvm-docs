@@ -1,7 +1,10 @@
 var NAVTREEINDEX20 =
 {
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
+"item__base_8hpp_source.html":[4,0,0,0,1,2,23],
+"kernel_8cpp.html":[4,0,2,14],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
 "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,3],
 "kernel_8cpp.html#a72e67c3793a817f25283854d0b349c61":[4,0,2,14,4],
 "kernel_8cpp_source.html":[4,0,2,14],
@@ -17,9 +20,9 @@ var NAVTREEINDEX20 =
 "kernel__desc_8hpp_source.html":[4,0,0,0,1,2,24],
 "kernel__impl_8cpp.html":[4,0,2,1,34],
 "kernel__impl_8cpp.html#a0fa9b6316b4a22b17634726e05df14b0":[4,0,2,1,34,6],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,34,1],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,34,0],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,34,2],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,34,1],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,34,4],
 "kernel__impl_8cpp.html#a5d06cdeae7af18abb18f3c6df02761fc":[4,0,2,1,34,7],
 "kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,1,34,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX20 =
 "namespacemembers_w.html":[2,1,0,22],
 "namespacemembers_x.html":[2,1,0,23],
 "namespaces.html":[2,0],
-"namespacesettings.html":[2,0,5],
-"namespacestd.html":[3,0,4],
-"namespacestd.html":[2,0,6],
-"nd__item_8hpp.html":[4,0,0,0,1,34]
+"namespacesettings.html":[2,0,5]
 };

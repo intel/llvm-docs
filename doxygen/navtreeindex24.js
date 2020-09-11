@@ -1,5 +1,8 @@
 var NAVTREEINDEX24 =
 {
+"pi__cuda_8cpp.html#a95159c701d0274885add31d67376f1df":[4,0,1,0,0,18],
+"pi__cuda_8cpp.html#a958ae76c0bb2c2c865854b6196705fc5":[4,0,1,0,0,30],
+"pi__cuda_8cpp.html#a97736ab43459d19df8f8a4e93cc2fad5":[4,0,1,0,0,20],
 "pi__cuda_8cpp.html#a9d0e36d8a19a707b41e6ebcb45c98dc8":[4,0,1,0,0,75],
 "pi__cuda_8cpp.html#aa6d27edcb01d9bed67c0e444e1edcd4d":[4,0,1,0,0,1],
 "pi__cuda_8cpp.html#aa7e2f345b71f7b1c65a8e1400535edc9":[4,0,1,0,0,72],
@@ -246,8 +249,5 @@ var NAVTREEINDEX24 =
 "pi__opencl_8cpp.html#affd635db53886fb71c2a190d06d076cb":[4,0,1,2,0,55],
 "pi__opencl_8cpp.html#affdd71aa5e984ec956d1a3e53821dd31":[4,0,1,2,0,56],
 "pi__opencl_8cpp_source.html":[4,0,1,2,0],
-"pipes_8hpp.html":[4,0,0,0,1,36],
-"pipes_8hpp.html#a67947b4c496c1c01bdf00ac487b1eafd":[4,0,0,0,1,36,0],
-"pipes_8hpp_source.html":[4,0,0,0,1,36],
-"platform_8cpp.html":[4,0,2,15]
+"pipes_8hpp.html":[4,0,0,0,1,36]
 };
