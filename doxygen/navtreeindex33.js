@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"structstd_1_1hash_3_01cl_1_1sycl_1_1buffer_3_01T_00_01dimensions_00_01AllocatorT_01_4_01_4.html#ad77cacfcf2b3bf61e7f9f45d33bcb5ed":[3,0,4,1,0],
 "structstd_1_1hash_3_01cl_1_1sycl_1_1context_01_4.html":[3,0,4,2],
 "structstd_1_1hash_3_01cl_1_1sycl_1_1context_01_4.html#ab9d8ed718bbeb45051ae6edf476ebb1b":[3,0,4,2,0],
 "structstd_1_1hash_3_01cl_1_1sycl_1_1device_01_4.html":[3,0,4,3],
@@ -126,8 +127,8 @@ var NAVTREEINDEX33 =
 "types_8hpp.html#a27848427d46997732c0ad6186b227f6b":[4,0,0,0,1,46,48],
 "types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886":[4,0,0,0,1,46,50],
 "types_8hpp.html#a2bf12e570712d1c48367f396e982a251":[4,0,0,0,1,46,65],
-"types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,46,23],
 "types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,46,24],
+"types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578":[4,0,0,0,1,46,23],
 "types_8hpp.html#a36448a429dc894e3368752066aa63295":[4,0,0,0,1,46,47],
 "types_8hpp.html#a38a5b62828fad8613b4bdd9913a7c11e":[4,0,0,0,1,46,38],
 "types_8hpp.html#a53cff3eaefbe796306a1d941968a382d":[4,0,0,0,1,46,45],
@@ -146,8 +147,8 @@ var NAVTREEINDEX33 =
 "types_8hpp.html#a7b43725501fb6815d8959644f19e245a":[4,0,0,0,1,46,39],
 "types_8hpp.html#a7c143f8207744272ec644cb1404dbf43":[4,0,0,0,1,46,55],
 "types_8hpp.html#a87930490fbaec9720f7c00e1a68d8bb3":[4,0,0,0,1,46,36],
-"types_8hpp.html#a8d03946656f8df2e834f264cde74563f":[4,0,0,0,1,46,22],
 "types_8hpp.html#a8d03946656f8df2e834f264cde74563f":[4,0,0,0,1,46,21],
+"types_8hpp.html#a8d03946656f8df2e834f264cde74563f":[4,0,0,0,1,46,22],
 "types_8hpp.html#a90a4b89b2210219b4dddfdd599b8d162":[4,0,0,0,1,46,67],
 "types_8hpp.html#a924dbfd9f32cff1a80cb23fb3b2b9297":[4,0,0,0,1,46,26],
 "types_8hpp.html#a93d55fbee9e7ebf6c76eb344da02de0f":[4,0,0,0,1,46,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "usm__impl_8hpp.html":[4,0,0,0,1,2,39],
 "usm__impl_8hpp.html#a113e7862e7b76e863015eb10e71ea8ab":[4,0,0,0,1,2,39,2],
 "usm__impl_8hpp.html#a23391345c537d3ea0a603dd3db9595db":[4,0,0,0,1,2,39,1],
-"usm__impl_8hpp.html#a675260c4593b8d167359df230591fc82":[4,0,0,0,1,2,39,0],
-"usm__impl_8hpp_source.html":[4,0,0,0,1,2,39]
+"usm__impl_8hpp.html#a675260c4593b8d167359df230591fc82":[4,0,0,0,1,2,39,0]
 };

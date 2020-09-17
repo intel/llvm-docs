@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"structcl_1_1____host__std_1_1detail_1_1helper.html#a428fba6de30e242312d8bd96e82382c5":[3,0,2,0,0,0,4],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a50beb1bbef372ccc42adcb442c07f1f1":[3,0,2,0,0,0,7],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a7134074f2a537886e37b037df4a93a1f":[3,0,2,0,0,0,8],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a73f25a861498c4521484449292ca0771":[3,0,2,0,0,0,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a5c83d6cf501b21c4c18e84926917a073":[3,0,2,1,4,7,22],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a6a3688a37d5150a2acfb5a876f2110e9":[3,0,2,1,4,7,8],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a7e34d50a69e0f56542427939aa45f4aa":[3,0,2,1,4,7,30],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a91274d4015b7f157241ce34dcde4e3c3":[3,0,2,1,4,7,11],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a921dcfca4009a0af9154ce684840b80d":[3,0,2,1,4,7,3]
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a91274d4015b7f157241ce34dcde4e3c3":[3,0,2,1,4,7,11]
 };

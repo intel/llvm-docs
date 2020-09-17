@@ -288,6 +288,7 @@ var searchData=
   ['getcurrentdsodir',['getCurrentDSODir',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#a00b7cb37e0fdf9d56044258cc5d8d15b',1,'cl::sycl::detail::OSUtil']]],
   ['getdefaulthostqueue',['getDefaultHostQueue',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258',1,'cl::sycl::detail::Scheduler']]],
   ['getdevicefromhandler',['getDeviceFromHandler',['../namespacecl_1_1sycl_1_1detail.html#a4679ea98c7f73f344135382c7b7ab13d',1,'cl::sycl::detail']]],
+  ['getdevicefromnativehandle',['getDeviceFromNativeHandle',['../struct__pi__platform.html#ad95f0299846f7563b32570ed999fd15c',1,'_pi_platform']]],
   ['getdevicefunctionpointerimpl',['getDeviceFunctionPointerImpl',['../namespacecl_1_1sycl_1_1detail.html#a63cf3b0a77f05495485b52c3a8e7c140',1,'cl::sycl::detail']]],
   ['getdeviceimage',['getDeviceImage',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ab7500e7ed0463fcfc2ff787d8d7f2a8a',1,'cl::sycl::detail::ProgramManager']]],
   ['getdevicelibextensionstr',['getDeviceLibExtensionStr',['../namespacecl_1_1sycl_1_1detail.html#ab3e55b79ddbe123667f4f935680db019',1,'cl::sycl::detail']]],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"structcl_1_1sycl_1_1detail_1_1vector__element.html#a61f41488bd354568ad5a5cc11ff44106":[3,0,2,1,0,307,0],
 "structcl_1_1sycl_1_1detail_1_1vector__element__impl.html":[3,0,2,1,0,308],
 "structcl_1_1sycl_1_1detail_1_1vector__element__impl.html#a7d7ef496a52a0cc32418ef583e5feb3e":[3,0,2,1,0,308,0],
 "structcl_1_1sycl_1_1detail_1_1vector__element__impl_3_01vec_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,0,309],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "structpi__image__offset__struct.html":[3,0,110],
 "structpi__image__offset__struct.html#a078e610dcc33bea8e460b9d52d31866b":[3,0,110,2],
 "structpi__image__offset__struct.html#ac94d4063741aab1034f2758c30a9e49f":[3,0,110,0],
-"structpi__image__offset__struct.html#acb1022d48bbd30d8a7b3f6c15865a6a9":[3,0,110,1],
-"structpi__image__region__struct.html":[3,0,111]
+"structpi__image__offset__struct.html#acb1022d48bbd30d8a7b3f6c15865a6a9":[3,0,110,1]
 };
