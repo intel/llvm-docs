@@ -1,5 +1,16 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1event.html#ae003210c3af8178d5a1653c892ec831d":[1,1,6,11],
+"classcl_1_1sycl_1_1event.html#af651e36e8780b75a851c7587cc9c05a7":[1,1,6,16],
+"classcl_1_1sycl_1_1event__error.html":[3,0,2,1,27],
+"classcl_1_1sycl_1_1exception.html":[1,1,7],
+"classcl_1_1sycl_1_1exception.html#a20f9834c3c472344f00cedd99390f834":[1,1,7,1],
+"classcl_1_1sycl_1_1exception.html#a2755752cadc0a065916b3fadd760dad5":[1,1,7,2],
+"classcl_1_1sycl_1_1exception.html#a32caf4741d72b0e8d1ee617a1713f653":[1,1,7,5],
+"classcl_1_1sycl_1_1exception.html#a7ac9890f13cc0b1a1b666caa896db6c4":[1,1,7,3],
+"classcl_1_1sycl_1_1exception.html#a8b1479cf8dda8089c5d8135c4c8a064a":[1,1,7,0],
+"classcl_1_1sycl_1_1exception.html#ad13e77ed941c60a65abd828fbe36a77b":[1,1,7,6],
+"classcl_1_1sycl_1_1exception.html#af4e53a320810b1a1218da32bc27026bc":[1,1,7,4],
 "classcl_1_1sycl_1_1exception__list.html":[1,1,8],
 "classcl_1_1sycl_1_1exception__list.html#a3a8c1bacdcf03b3534b9696769e9f0fc":[1,1,8,9],
 "classcl_1_1sycl_1_1exception__list.html#a6c4e3aeb2e7c89f7b77ed8a3ad989700":[1,1,8,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1item.html#ab150734580e85ba7a7385469ead6fa9f":[1,1,14,5],
 "classcl_1_1sycl_1_1item.html#ac81837c6da141fd98aa22e31ad9fd673":[1,1,14,10],
 "classcl_1_1sycl_1_1item.html#ad90f883e62dca93f6bdd31c1ead4b756":[1,1,14,19],
-"classcl_1_1sycl_1_1item.html#ae36a3df1377dc6cd3f5e562fefb77378":[1,1,14,7],
-"classcl_1_1sycl_1_1item.html#af851bb6e29ba84f3e1fae289508c8d83":[1,1,14,13],
-"classcl_1_1sycl_1_1kernel.html":[1,1,15],
-"classcl_1_1sycl_1_1kernel.html#a0183adaae0863b75a8e1c629d5b436c2":[1,1,15,0],
-"classcl_1_1sycl_1_1kernel.html#a15ac0a1948ca9570150c558764663e4e":[1,1,15,12],
-"classcl_1_1sycl_1_1kernel.html#a27d679d5218b2aa51e1d41a0088ffbc2":[1,1,15,9],
-"classcl_1_1sycl_1_1kernel.html#a38dfaeba5d4f372f9cca596e52a6a872":[1,1,15,11],
-"classcl_1_1sycl_1_1kernel.html#a3cc1ed06a435e41bb9e61bdcd65d09fb":[1,1,15,2],
-"classcl_1_1sycl_1_1kernel.html#a44e9b48f6121c2b483129c733b56273d":[1,1,15,6],
-"classcl_1_1sycl_1_1kernel.html#a5cb83a013dd7ce77ab8cef20d2a5dc94":[1,1,15,13],
-"classcl_1_1sycl_1_1kernel.html#a71492293d0386f542d120a1fc3dfbb55":[1,1,15,15],
-"classcl_1_1sycl_1_1kernel.html#a75a071360a293e0d0eea6e98dd545658":[1,1,15,3]
+"classcl_1_1sycl_1_1item.html#ae36a3df1377dc6cd3f5e562fefb77378":[1,1,14,7]
 };

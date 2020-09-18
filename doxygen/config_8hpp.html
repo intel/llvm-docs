@@ -102,7 +102,9 @@ $(document).ready(function(){initNavTree('config_8hpp.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="backend__types_8hpp_source.html">CL/sycl/backend_types.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="defines_8hpp_source.html">CL/sycl/detail/defines.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="device__filter_8hpp_source.html">CL/sycl/detail/device_filter.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="pi_8hpp_source.html">CL/sycl/detail/pi.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="info__desc_8hpp_source.html">CL/sycl/info/info_desc.hpp</a>&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;array&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
@@ -114,16 +116,23 @@ Include dependency graph for config.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="config_8hpp__incl.png" border="0" usemap="#source_2detail_2config_8hpp" alt=""/></div>
 <map name="source_2detail_2config_8hpp" id="source_2detail_2config_8hpp">
-<area shape="rect" id="node2" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="196,155,380,181"/>
-<area shape="rect" id="node3" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="175,379,348,405"/>
-<area shape="rect" id="node9" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="800,80,941,107"/>
-<area shape="rect" id="node10" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="587,155,768,181"/>
-<area shape="rect" id="node15" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="918,379,1085,405"/>
-<area shape="rect" id="node19" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1257,304,1383,331"/>
-<area shape="rect" id="node27" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1011,304,1181,331"/>
-<area shape="rect" id="node12" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1342,379,1469,405"/>
-<area shape="rect" id="node18" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="731,229,883,256"/>
-<area shape="rect" id="node21" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="622,304,733,331"/>
+<area shape="rect" id="node2" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="167,490,351,517"/>
+<area shape="rect" id="node3" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="233,721,407,748"/>
+<area shape="rect" id="node9" href="device__filter_8hpp.html" title="CL/sycl/detail/device\l_filter.hpp" alt="" coords="77,80,221,121"/>
+<area shape="rect" id="node10" href="info__desc_8hpp.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="1223,169,1401,196"/>
+<area shape="rect" id="node26" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1660,408,1801,435"/>
+<area shape="rect" id="node11" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="1083,490,1264,517"/>
+<area shape="rect" id="node31" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="931,251,1037,278"/>
+<area shape="rect" id="node13" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1517,721,1643,748"/>
+<area shape="rect" id="node16" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="1166,721,1333,748"/>
+<area shape="rect" id="node19" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="881,572,1033,599"/>
+<area shape="rect" id="node20" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1718,647,1845,673"/>
+<area shape="rect" id="node22" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="678,647,789,673"/>
+<area shape="rect" id="node27" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1371,647,1541,673"/>
+<area shape="rect" id="node32" href="array_8hpp.html" title="CL/sycl/detail/array.hpp" alt="" coords="645,408,805,435"/>
+<area shape="rect" id="node33" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="773,483,904,524"/>
+<area shape="rect" id="node34" href="helpers_8hpp.html" title="CL/sycl/detail/helpers.hpp" alt="" coords="908,333,1081,360"/>
+<area shape="rect" id="node35" href="range_8hpp.html" title="CL/sycl/range.hpp" alt="" coords="627,333,755,360"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -132,12 +141,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="config_8hpp__dep__incl.png" border="0" usemap="#source_2detail_2config_8hppdep" alt=""/></div>
 <map name="source_2detail_2config_8hppdep" id="source_2detail_2config_8hppdep">
 <area shape="rect" id="node2" href="config_8cpp.html" title="source/detail/config.cpp" alt="" coords="5,87,165,114"/>
-<area shape="rect" id="node3" href="event__impl_8cpp.html" title="source/detail/event\l_impl.cpp" alt="" coords="190,80,322,121"/>
-<area shape="rect" id="node4" href="pi_8cpp.html" title="Implementation of C++ wrappers for PI interface. " alt="" coords="346,87,481,114"/>
-<area shape="rect" id="node5" href="platform__impl_8cpp.html" title="source/detail/platform\l_impl.cpp" alt="" coords="505,80,652,121"/>
-<area shape="rect" id="node6" href="program__manager_8cpp.html" title="source/detail/program\l_manager/program_manager.cpp" alt="" coords="677,80,889,121"/>
-<area shape="rect" id="node7" href="graph__builder_8cpp.html" title="source/detail/scheduler\l/graph_builder.cpp" alt="" coords="913,80,1069,121"/>
-<area shape="rect" id="node8" href="device_8cpp.html" title="source/device.cpp" alt="" coords="1093,87,1221,114"/>
+<area shape="rect" id="node3" href="device__filter_8cpp.html" title="source/detail/device\l_filter.cpp" alt="" coords="189,80,328,121"/>
+<area shape="rect" id="node4" href="event__impl_8cpp.html" title="source/detail/event\l_impl.cpp" alt="" coords="353,80,485,121"/>
+<area shape="rect" id="node5" href="pi_8cpp.html" title="Implementation of C++ wrappers for PI interface. " alt="" coords="509,87,643,114"/>
+<area shape="rect" id="node6" href="platform__impl_8cpp.html" title="source/detail/platform\l_impl.cpp" alt="" coords="668,80,815,121"/>
+<area shape="rect" id="node7" href="program__manager_8cpp.html" title="source/detail/program\l_manager/program_manager.cpp" alt="" coords="839,80,1051,121"/>
+<area shape="rect" id="node8" href="graph__builder_8cpp.html" title="source/detail/scheduler\l/graph_builder.cpp" alt="" coords="1075,80,1231,121"/>
+<area shape="rect" id="node9" href="device_8cpp.html" title="source/device.cpp" alt="" coords="1256,87,1384,114"/>
+<area shape="rect" id="node10" href="device__selector_8cpp.html" title="source/device_selector.cpp" alt="" coords="1408,87,1589,114"/>
 </map>
 </div>
 </div>
@@ -152,6 +163,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4.html">cl::sycl::detail::SYCLConfig&lt; SYCL_BE &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html">cl::sycl::detail::SYCLConfig&lt; SYCL_PI_TRACE &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4.html">cl::sycl::detail::SYCLConfig&lt; SYCL_DEVICE_FILTER &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -221,7 +234,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="config_8hpp_source.html#l00062">62</a> of file <a class="el" href="config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="config_8hpp_source.html#l00064">64</a> of file <a class="el" href="config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +270,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="config_8hpp_source.html#l00062">62</a> of file <a class="el" href="config_8hpp_source.html">config.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="config_8hpp_source.html#l00064">64</a> of file <a class="el" href="config_8hpp_source.html">config.hpp</a>.</p>
 
 </div>
 </div>

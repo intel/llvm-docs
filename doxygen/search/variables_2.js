@@ -1,7 +1,7 @@
 var searchData=
 [
   ['b',['b',['../structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b',1,'cl::sycl::elem']]],
-  ['backend',['Backend',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html#afd1ede69453d937bc9ad7492b214b113',1,'cl::sycl::ONEAPI::detail::filter']]],
+  ['backend',['Backend',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#abf8d7ca1721e010263c247346764e124',1,'cl::sycl::detail::device_filter']]],
   ['basefield',['BaseField',['../namespacecl_1_1sycl_1_1detail.html#a4e4a5844e6d135d110b40da662a6aa75',1,'cl::sycl::detail']]],
   ['bin',['Bin',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a3c5bccb1fbbb7592fbfe3e2a1e2982f5',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['binary_5f',['binary_',['../struct__pi__program.html#ac87e23fa8485dda3baac43d1ecb20fc1',1,'_pi_program']]],

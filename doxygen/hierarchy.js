@@ -231,6 +231,8 @@ var hierarchy =
     [ "cl::sycl::detail::DevDescT", "structcl_1_1sycl_1_1detail_1_1DevDescT.html", null ],
     [ "cl::sycl::device", "classcl_1_1sycl_1_1device.html", null ],
     [ "cl::sycl::device_event", "classcl_1_1sycl_1_1device__event.html", null ],
+    [ "cl::sycl::detail::device_filter", "structcl_1_1sycl_1_1detail_1_1device__filter.html", null ],
+    [ "cl::sycl::detail::device_filter_list", "classcl_1_1sycl_1_1detail_1_1device__filter__list.html", null ],
     [ "cl::sycl::detail::device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html", null ],
     [ "cl::sycl::device_selector", "classcl_1_1sycl_1_1device__selector.html", [
       [ "cl::sycl::accelerator_selector", "classcl_1_1sycl_1_1accelerator__selector.html", null ],
@@ -333,7 +335,6 @@ var hierarchy =
         [ "cl::sycl::detail::is_pointer< T >", "structcl_1_1sycl_1_1detail_1_1is__pointer.html", null ]
       ] ]
     ] ],
-    [ "cl::sycl::ONEAPI::detail::filter", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html", null ],
     [ "cl::sycl::ONEAPI::detail::filter_selector_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html", null ],
     [ "cl::sycl::detail::find_type< TL, C, T >", "structcl_1_1sycl_1_1detail_1_1find__type.html", null ],
     [ "cl::sycl::detail::find_type< empty_type_list, C, T >", "structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html", null ],
@@ -394,8 +395,8 @@ var hierarchy =
     [ "cl::sycl::group< Dimensions >", "classcl_1_1sycl_1_1group.html", null ],
     [ "cl::sycl::group< dimensions >", "classcl_1_1sycl_1_1group.html", null ],
     [ "cl::sycl::h_item< dimensions >", "classcl_1_1sycl_1_1h__item.html", null ],
-    [ "cl::sycl::detail::host_half_impl::half", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html", null ],
     [ "cl::sycl::detail::half_impl::half", "classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html", null ],
+    [ "cl::sycl::detail::host_half_impl::half", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html", null ],
     [ "cl::sycl::detail::half_impl::half_vec< NumElements >", "structcl_1_1sycl_1_1detail_1_1half__impl_1_1half__vec.html", null ],
     [ "cl::sycl::handler", "classcl_1_1sycl_1_1handler.html", null ],
     [ "std::hash< cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318.html", null ],
@@ -888,6 +889,7 @@ var hierarchy =
     [ "cl::sycl::detail::sycl_to_pi< platform >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01platform_01_4.html", null ],
     [ "cl::sycl::detail::SYCLConfig< Config >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig.html", null ],
     [ "cl::sycl::detail::SYCLConfig< SYCL_BE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4.html", null ],
+    [ "cl::sycl::detail::SYCLConfig< SYCL_DEVICE_FILTER >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4.html", null ],
     [ "cl::sycl::detail::SYCLConfig< SYCL_PI_TRACE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html", null ],
     [ "cl::sycl::detail::SYCLConfigBase< Config >", "classcl_1_1sycl_1_1detail_1_1SYCLConfigBase.html", null ],
     [ "cl::sycl::detail::SYCLMemObjAllocator", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html", [

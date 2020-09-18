@@ -1,5 +1,16 @@
 var NAVTREEINDEX12 =
 {
+"classcl_1_1sycl_1_1item.html#af851bb6e29ba84f3e1fae289508c8d83":[1,1,14,13],
+"classcl_1_1sycl_1_1kernel.html":[1,1,15],
+"classcl_1_1sycl_1_1kernel.html#a0183adaae0863b75a8e1c629d5b436c2":[1,1,15,0],
+"classcl_1_1sycl_1_1kernel.html#a15ac0a1948ca9570150c558764663e4e":[1,1,15,12],
+"classcl_1_1sycl_1_1kernel.html#a27d679d5218b2aa51e1d41a0088ffbc2":[1,1,15,9],
+"classcl_1_1sycl_1_1kernel.html#a38dfaeba5d4f372f9cca596e52a6a872":[1,1,15,11],
+"classcl_1_1sycl_1_1kernel.html#a3cc1ed06a435e41bb9e61bdcd65d09fb":[1,1,15,2],
+"classcl_1_1sycl_1_1kernel.html#a44e9b48f6121c2b483129c733b56273d":[1,1,15,6],
+"classcl_1_1sycl_1_1kernel.html#a5cb83a013dd7ce77ab8cef20d2a5dc94":[1,1,15,13],
+"classcl_1_1sycl_1_1kernel.html#a71492293d0386f542d120a1fc3dfbb55":[1,1,15,15],
+"classcl_1_1sycl_1_1kernel.html#a75a071360a293e0d0eea6e98dd545658":[1,1,15,3],
 "classcl_1_1sycl_1_1kernel.html#a9ad63675c9bcd9ce62c5de4b85e6b7ed":[1,1,15,1],
 "classcl_1_1sycl_1_1kernel.html#a9e3acef84de6c88f560d4844c75436cf":[1,1,15,14],
 "classcl_1_1sycl_1_1kernel.html#aa238d78470ac17226fb0f81ea0e719ef":[1,1,15,7],
@@ -238,16 +249,5 @@ var NAVTREEINDEX12 =
 "classcl_1_1sycl_1_1property__list.html#ab5ac1c5a4cf88ddc9a31c592966d975b":[1,1,21,0],
 "classcl_1_1sycl_1_1property__list.html#ac67fd921694c07f5f3ca569ffe542b5b":[1,1,21,1],
 "classcl_1_1sycl_1_1queue.html":[1,1,22],
-"classcl_1_1sycl_1_1queue.html#a01b66412138f5b2724c3763171089634":[1,1,22,41],
-"classcl_1_1sycl_1_1queue.html#a01d6213fd30826aec4dfa580c5ec7e66":[1,1,22,27],
-"classcl_1_1sycl_1_1queue.html#a089901a695ed39ad3fcecd523ecef3dd":[1,1,22,43],
-"classcl_1_1sycl_1_1queue.html#a0d8abb9c998a175a7e115b0b475cdc76":[1,1,22,57],
-"classcl_1_1sycl_1_1queue.html#a13dae36896e13300f28ab0545ccf104f":[1,1,22,52],
-"classcl_1_1sycl_1_1queue.html#a1ce4d18382d95b5de4509581f76af298":[1,1,22,39],
-"classcl_1_1sycl_1_1queue.html#a1de555f0d30371146d966ee23fedeff6":[1,1,22,10],
-"classcl_1_1sycl_1_1queue.html#a1fd63a0e90929bfdddf4ef0a786fbaf4":[1,1,22,51],
-"classcl_1_1sycl_1_1queue.html#a2f991915c57bfb1d73992fde421d56c8":[1,1,22,16],
-"classcl_1_1sycl_1_1queue.html#a31f819e48aa5eb945147dda5f212535c":[1,1,22,55],
-"classcl_1_1sycl_1_1queue.html#a352a66cbfe7bb8caade69091ab19cf42":[1,1,22,35],
-"classcl_1_1sycl_1_1queue.html#a4e62095771bd8eafd97298291e1acd65":[1,1,22,46]
+"classcl_1_1sycl_1_1queue.html#a01b66412138f5b2724c3763171089634":[1,1,22,41]
 };

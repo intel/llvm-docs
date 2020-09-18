@@ -24,6 +24,7 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
       [ "get_context_info", "structcl_1_1sycl_1_1detail_1_1get__context__info.html", "structcl_1_1sycl_1_1detail_1_1get__context__info" ]
     ] ],
     [ "device_binary_image.cpp", "device__binary__image_8cpp.html", null ],
+    [ "device_filter.cpp", "device__filter_8cpp.html", null ],
     [ "device_impl.cpp", "device__impl_8cpp.html", null ],
     [ "device_impl.hpp", "device__impl_8hpp.html", [
       [ "device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html", "classcl_1_1sycl_1_1detail_1_1device__impl" ]
@@ -38,10 +39,7 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
       [ "get_event_info", "structcl_1_1sycl_1_1detail_1_1get__event__info.html", "structcl_1_1sycl_1_1detail_1_1get__event__info" ]
     ] ],
     [ "filter_selector_impl.cpp", "filter__selector__impl_8cpp.html", "filter__selector__impl_8cpp" ],
-    [ "filter_selector_impl.hpp", "filter__selector__impl_8hpp.html", [
-      [ "filter", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter" ],
-      [ "filter_selector_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl" ]
-    ] ],
+    [ "filter_selector_impl.hpp", "filter__selector__impl_8hpp.html", "filter__selector__impl_8hpp" ],
     [ "force_device.cpp", "force__device_8cpp.html", "force__device_8cpp" ],
     [ "force_device.hpp", "force__device_8hpp.html", "force__device_8hpp" ],
     [ "handler_proxy.cpp", "handler__proxy_8cpp.html", "handler__proxy_8cpp" ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"builtins__math_8cpp.html#a442e1b4ea657d14c6fba55fa01c053db":[4,0,2,1,10,110],
 "builtins__math_8cpp.html#a45a316c8ecf8386a252482c4daa403cb":[4,0,2,1,10,14],
 "builtins__math_8cpp.html#a47b5cfcc2e2e5d4f666d7b977060625d":[4,0,2,1,10,155],
 "builtins__math_8cpp.html#a49c63fc0b23135a272222096f52fc253":[4,0,2,1,10,94],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "classUSMAllocContext_1_1USMAllocImpl.html#aadff48abe43a3ef92e006672b63ba81d":[3,0,238,0,6],
 "classUSMAllocContext_1_1USMAllocImpl.html#ab2e7104197500d05d5b37c94c7982d2d":[3,0,238,0,2],
 "classUSMAllocContext_1_1USMAllocImpl.html#af0133f038275fb75f2cef45aab42f02e":[3,0,238,0,5],
-"classUSMDeviceMemoryAlloc.html":[3,0,239],
-"classUSMDeviceMemoryAlloc.html#a0612f511e7ce5328929b9b47ed40b3c2":[3,0,239,1]
+"classUSMDeviceMemoryAlloc.html":[3,0,239]
 };

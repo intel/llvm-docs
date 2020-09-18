@@ -371,6 +371,7 @@ var searchData=
   ['isfilledin',['isFilledIn',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#aef5bbe86207714e29ab0e3cd38f95728',1,'cl::sycl::detail::KernelProgramCache::BuildError']]],
   ['isfinished',['isFinished',['../classcl_1_1sycl_1_1detail_1_1Command.html#ae3e59f84259cd0c0b14c996c808d0990',1,'cl::sycl::detail::Command']]],
   ['isfinite',['isfinite',['../namespacecl_1_1sycl.html#abb17a5a3b0b8f0f27d48d483660599cf',1,'cl::sycl']]],
+  ['isforceddevice',['isForcedDevice',['../namespacecl_1_1sycl.html#a39e7ffbeea7404110241a2bbcd70a73a',1,'cl::sycl']]],
   ['isglobalbuf',['IsGlobalBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a4d39ed5678d566da9f5dbb77988d10d6',1,'cl::sycl::detail::accessor_common']]],
   ['isgreater',['isgreater',['../namespacecl_1_1sycl.html#a71aa93502b23e4e1a00e72fb7e9f7008',1,'cl::sycl']]],
   ['isgreaterequal',['isgreaterequal',['../namespacecl_1_1sycl.html#ad6e1ce02dd77a787724532ba767b5fa5',1,'cl::sycl']]],

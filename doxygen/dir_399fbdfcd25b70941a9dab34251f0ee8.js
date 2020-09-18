@@ -46,6 +46,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
       [ "RTDeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html", "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage" ],
       [ "DynRTDeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html", "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage" ]
     ] ],
+    [ "device_filter.hpp", "device__filter_8hpp.html", "device__filter_8hpp" ],
     [ "export.hpp", "export_8hpp.html", null ],
     [ "generic_type_lists.hpp", "generic__type__lists_8hpp.html", "generic__type__lists_8hpp" ],
     [ "generic_type_traits.hpp", "generic__type__traits_8hpp.html", "generic__type__traits_8hpp" ],

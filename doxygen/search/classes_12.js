@@ -49,6 +49,7 @@ var searchData=
   ['sycl_5fto_5fpi_3c_20platform_20_3e',['sycl_to_pi&lt; platform &gt;',['../structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01platform_01_4.html',1,'cl::sycl::detail']]],
   ['syclconfig',['SYCLConfig',['../classcl_1_1sycl_1_1detail_1_1SYCLConfig.html',1,'cl::sycl::detail']]],
   ['syclconfig_3c_20sycl_5fbe_20_3e',['SYCLConfig&lt; SYCL_BE &gt;',['../classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4.html',1,'cl::sycl::detail']]],
+  ['syclconfig_3c_20sycl_5fdevice_5ffilter_20_3e',['SYCLConfig&lt; SYCL_DEVICE_FILTER &gt;',['../classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4.html',1,'cl::sycl::detail']]],
   ['syclconfig_3c_20sycl_5fpi_5ftrace_20_3e',['SYCLConfig&lt; SYCL_PI_TRACE &gt;',['../classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html',1,'cl::sycl::detail']]],
   ['syclconfigbase',['SYCLConfigBase',['../classcl_1_1sycl_1_1detail_1_1SYCLConfigBase.html',1,'cl::sycl::detail']]],
   ['syclmemobjallocator',['SYCLMemObjAllocator',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html',1,'cl::sycl::detail']]],

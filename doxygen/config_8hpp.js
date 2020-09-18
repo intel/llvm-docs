@@ -4,6 +4,7 @@ var config_8hpp =
     [ "SYCLConfig", "classcl_1_1sycl_1_1detail_1_1SYCLConfig.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig" ],
     [ "SYCLConfig< SYCL_BE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4" ],
     [ "SYCLConfig< SYCL_PI_TRACE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4" ],
+    [ "SYCLConfig< SYCL_DEVICE_FILTER >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4" ],
     [ "CONFIG", "config_8hpp.html#acaa9617679f6b60fc24220c53822c283", null ],
     [ "CONFIG", "config_8hpp.html#a8331a411b061628ac3915d8a2c52bf95", null ],
     [ "ConfigID", "config_8hpp.html#a1f36acdc3445e874ecb97bb9f6129f01", [

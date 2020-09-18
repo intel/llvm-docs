@@ -16,6 +16,8 @@ var searchData=
   ['device',['device',['../classcl_1_1sycl_1_1device.html',1,'cl::sycl']]],
   ['device_5ferror',['device_error',['../classcl_1_1sycl_1_1device__error.html',1,'cl::sycl']]],
   ['device_5fevent',['device_event',['../classcl_1_1sycl_1_1device__event.html',1,'cl::sycl']]],
+  ['device_5ffilter',['device_filter',['../structcl_1_1sycl_1_1detail_1_1device__filter.html',1,'cl::sycl::detail']]],
+  ['device_5ffilter_5flist',['device_filter_list',['../classcl_1_1sycl_1_1detail_1_1device__filter__list.html',1,'cl::sycl::detail']]],
   ['device_5fimpl',['device_impl',['../classcl_1_1sycl_1_1detail_1_1device__impl.html',1,'cl::sycl::detail']]],
   ['device_5fselector',['device_selector',['../classcl_1_1sycl_1_1device__selector.html',1,'cl::sycl']]],
   ['devicebinaryimage',['DeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html',1,'cl::sycl::detail::pi']]],

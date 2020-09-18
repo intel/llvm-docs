@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"classUSMDeviceMemoryAlloc.html#a0612f511e7ce5328929b9b47ed40b3c2":[3,0,239,1],
 "classUSMDeviceMemoryAlloc.html#a2a6e6645ed01c478b7e2bd488395a651":[3,0,239,0],
 "classUSMMemoryAllocBase.html":[3,0,240],
 "classUSMMemoryAllocBase.html#a34d277e9727c13cbc765a450e83c0b81":[3,0,240,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html#a5e4b9edddb04f5402865b9f6f18d566e":[3,0,2,1,4,0,6,6],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html#a6d302b808e491ad48b57779ff00e8c22":[3,0,2,1,4,0,6,13],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html#a7213e1d1d51d0dab12e6a22499c4b83c":[3,0,2,1,4,0,6,1],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html#a780719112ef01b02655c4b51e629fe06":[3,0,2,1,4,0,6,17],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html#a78fa5c86b2bc61f68ffe1eb61c76038b":[3,0,2,1,4,0,6,14]
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_00_01DefaultOrder_00_01DefaultScobf637c5b8a1db0593f0bc0768e523e3c.html#a780719112ef01b02655c4b51e629fe06":[3,0,2,1,4,0,6,17]
 };

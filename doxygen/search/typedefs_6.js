@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['filter',['filter',['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a15e0fc514ad921d26fe442fe161a8f13',1,'cl::sycl::ONEAPI::detail']]],
   ['find_5flarger_5ftype_5ft',['find_larger_type_t',['../namespacecl_1_1sycl_1_1detail.html#af0a1ad2c8a459cfffd66bf1aa9d30fa4',1,'cl::sycl::detail']]],
   ['find_5fsame_5fsize_5ftype_5ft',['find_same_size_type_t',['../namespacecl_1_1sycl_1_1detail.html#ac2ae0cdfe8bc3710f9984ec548a8f480',1,'cl::sycl::detail']]],
   ['find_5fsmaller_5ftype_5ft',['find_smaller_type_t',['../namespacecl_1_1sycl_1_1detail.html#a3f0e95b9ced53b84b827958e711dd35a',1,'cl::sycl::detail']]],

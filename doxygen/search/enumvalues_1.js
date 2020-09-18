@@ -7,7 +7,7 @@ var searchData=
   ['acquire',['Acquire',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a2b13bf19cb4780fd2e870d35615c923d',1,'__spv::MemorySemanticsMask::Acquire()'],['../namespacecl_1_1sycl_1_1ONEAPI.html#a46f2e11c907d87cb0584eba0dc3f020fa86a4fa105ff51b8c3be84734797d8144',1,'cl::sycl::ONEAPI::acquire()']]],
   ['acquirerelease',['AcquireRelease',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a5fc2f876d685f347e61660379b448400',1,'__spv::MemorySemanticsMask']]],
   ['address_5fbits',['address_bits',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aa7c2ecb69c55eb87bc76205d634a9c9f',1,'cl::sycl::info']]],
-  ['all',['all',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165aa181a603769c1f98ad927e7367c7aa51',1,'cl::sycl::info']]],
+  ['all',['all',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aa181a603769c1f98ad927e7367c7aa51',1,'cl::sycl::all()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165aa181a603769c1f98ad927e7367c7aa51',1,'cl::sycl::info::all()']]],
   ['alloc_5fhost_5fptr',['alloc_host_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a763c09b0a49350a93a408b5e856954bc',1,'_pi_mem::mem_::buffer_mem_']]],
   ['alloca',['ALLOCA',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4ae03a765310e374f5fd4e8b478d670591',1,'cl::sycl::detail::Command']]],
   ['alloca_5fsub_5fbuf',['ALLOCA_SUB_BUF',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a3d4ff687ef7d2d868cb33608892ba56f',1,'cl::sycl::detail::Command']]],

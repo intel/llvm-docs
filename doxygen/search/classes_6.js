@@ -1,7 +1,6 @@
 var searchData=
 [
   ['feature_5fnot_5fsupported',['feature_not_supported',['../classcl_1_1sycl_1_1feature__not__supported.html',1,'cl::sycl']]],
-  ['filter',['filter',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter.html',1,'cl::sycl::ONEAPI::detail']]],
   ['filter_5fselector',['filter_selector',['../classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html',1,'cl::sycl::ONEAPI']]],
   ['filter_5fselector_5fimpl',['filter_selector_impl',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html',1,'cl::sycl::ONEAPI::detail']]],
   ['find_5ftype',['find_type',['../structcl_1_1sycl_1_1detail_1_1find__type.html',1,'cl::sycl::detail']]],
