@@ -1,16 +1,16 @@
 var classcl_1_1sycl_1_1detail_1_1accessor__common =
 [
     [ "AccessorSubscript", "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html", "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript" ],
-    [ "AccType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a388dda10a2a20840fa000963a8f586c4", null ],
-    [ "ConstRefType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a48cdf0c2081c53f5aa46571df1946bf8", null ],
-    [ "PtrType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a39fc708d748b82e15b70c73ccbebc478", null ],
-    [ "RefType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#adbee7dd5ed118afec3df3350587f22f3", null ],
-    [ "AS", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a41da3a67ea03e21211fa5f4c2c9e8518", null ],
-    [ "IsAccessAnyWrite", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a4aae28ab6e52697f2cc2124855f74463", null ],
-    [ "IsAccessReadOnly", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a97aaac7f685b05303dbf0d2039aa03f8", null ],
-    [ "IsAccessReadWrite", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#af0dc1d3e0ac015619c914766451efdcb", null ],
-    [ "IsConstantBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#aa94e7fa38c656ccc85b8c7e329d7d62b", null ],
-    [ "IsGlobalBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a4d39ed5678d566da9f5dbb77988d10d6", null ],
-    [ "IsHostBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a29f0ef1ecc9f529b85951a1767a8050f", null ],
-    [ "IsPlaceH", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a6616e79ad8faab3e307c3287907fb6c2", null ]
+    [ "AccType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a5f038ccc646a13e1669981a66804df22", null ],
+    [ "ConstRefType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a4b4dbadc0b3aef93d96aac1ce8fbfad1", null ],
+    [ "PtrType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a696fa4fd812373003274d0a123502c29", null ],
+    [ "RefType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a73a86a6626efd4895b3a2c555c8b45ed", null ],
+    [ "AS", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#af1fe573a8ce945225b40fd3d65f62e54", null ],
+    [ "IsAccessAnyWrite", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a69d8f690eb7b64a95eeec34af197d12f", null ],
+    [ "IsAccessReadOnly", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a29b848e76d17c7af7774c09b92c62493", null ],
+    [ "IsAccessReadWrite", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#af31ca5d917cbb1b4669a0ab2a41e74c3", null ],
+    [ "IsConstantBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#aca9c9e3f5612d347e4193ba38cfe51d7", null ],
+    [ "IsGlobalBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a0e8243fb5050b4e6cd1ea507c2a9e77b", null ],
+    [ "IsHostBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a2d96fae36ed7dfb305d4bd7667187deb", null ],
+    [ "IsPlaceH", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a79f395af689b9934c183d8d267a92cdc", null ]
 ];

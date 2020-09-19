@@ -1,10 +1,10 @@
 var classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl =
 [
-    [ "accessor_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ac889784cdbd3c400b137a9af9719d652", null ],
+    [ "accessor_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#af1760cc225aa27359fa08ab5f8c45a3a", null ],
     [ "binary_operation", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#adab1d6faeaac28bb23273c65dc20fe1e", null ],
     [ "reducer_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a00d30552f5068a9ee20d29f54fa11e5c", null ],
     [ "result_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#abbcc038b98e7b4f7bf33f8d69c053aa8", null ],
-    [ "rw_accessor_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#af70357b9f9b0ba14935913fbfdd6d02b", null ],
+    [ "rw_accessor_type", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a9d45e129e958e177d5fd73247800e1cb", null ],
     [ "reduction_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ad68e3187a6358597f20cee561df00a91", null ],
     [ "reduction_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a348c7daa17591cb57a9d50ee400eaee9", null ],
     [ "reduction_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a461ee520b1fee031ba0909137c6b8f23", null ],

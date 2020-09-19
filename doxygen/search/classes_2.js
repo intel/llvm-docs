@@ -13,6 +13,7 @@ var searchData=
   ['buffer',['buffer',['../classcl_1_1sycl_1_1buffer.html',1,'cl::sycl']]],
   ['buffer_3c_20char_2c_201_20_3e',['buffer&lt; char, 1 &gt;',['../classcl_1_1sycl_1_1buffer.html',1,'cl::sycl']]],
   ['buffer_5fimpl',['buffer_impl',['../classcl_1_1sycl_1_1detail_1_1buffer__impl.html',1,'cl::sycl::detail']]],
+  ['buffer_5flocation',['buffer_location',['../structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location.html',1,'cl::sycl::INTEL::property']]],
   ['buffer_5fmem_5f',['buffer_mem_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html',1,'_pi_mem::mem_']]],
   ['builder',['Builder',['../classcl_1_1sycl_1_1detail_1_1Builder.html',1,'cl::sycl::detail']]],
   ['builderror',['BuildError',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html',1,'cl::sycl::detail::KernelProgramCache']]],

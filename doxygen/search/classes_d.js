@@ -14,6 +14,8 @@ var searchData=
   ['nextpowerof2',['NextPowerOf2',['../struct____esimd_1_1NextPowerOf2.html',1,'__esimd']]],
   ['nextpowerof2_3c_20n_2c_20k_2c_20false_20_3e',['NextPowerOf2&lt; N, K, false &gt;',['../struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4.html',1,'__esimd']]],
   ['nextpowerof2_3c_20n_2c_20k_2c_20true_20_3e',['NextPowerOf2&lt; N, K, true &gt;',['../struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html',1,'__esimd']]],
+  ['no_5falias',['no_alias',['../structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias.html',1,'cl::sycl::ONEAPI::property']]],
+  ['no_5foffset',['no_offset',['../structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset.html',1,'cl::sycl::ONEAPI::property']]],
   ['noinit',['noinit',['../classcl_1_1sycl_1_1property_1_1noinit.html',1,'cl::sycl::property']]],
   ['notequalto',['NotEqualTo',['../structcl_1_1sycl_1_1detail_1_1NotEqualTo.html',1,'cl::sycl::detail']]],
   ['numeric_5flimits_3c_20half_20_3e',['numeric_limits&lt; half &gt;',['../structstd_1_1numeric__limits_3_01half_01_4.html',1,'std']]]

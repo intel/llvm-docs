@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['accessor_5fproperty_5flist',['accessor_property_list',['../classcl_1_1sycl_1_1property__list.html#af3ed8ff1aef2d76550121fc576b56871',1,'cl::sycl::property_list']]],
   ['operator_21_3d',['operator!=',['../classcl_1_1sycl_1_1usm__allocator.html#aa433a51c578092b9781870f46f5f34ba',1,'cl::sycl::usm_allocator']]],
   ['operator_2a',['operator*',['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af2eadca2e79a2337956557575e044975',1,'cl::sycl::detail::SwizzleOp']]],
   ['operator_2b',['operator+',['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ac58617df18c486fdda51fe6d48c56f4a',1,'cl::sycl::detail::SwizzleOp']]],

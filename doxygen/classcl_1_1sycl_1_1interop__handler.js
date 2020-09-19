@@ -5,5 +5,5 @@ var classcl_1_1sycl_1_1interop__handler =
     [ "interop_handler", "classcl_1_1sycl_1_1interop__handler.html#a01c2d77c9e8734d927d22e8383d90d04", null ],
     [ "get_mem", "classcl_1_1sycl_1_1interop__handler.html#a2f2a9fb0a039ebbd1e184c4ec7607d46", null ],
     [ "get_queue", "classcl_1_1sycl_1_1interop__handler.html#a189cd7d2b8748bc83c47fb42c69f9922", null ],
-    [ "accessor", "classcl_1_1sycl_1_1interop__handler.html#a98f66aa14b67d43ebf8c4e8b42315983", null ]
+    [ "accessor", "classcl_1_1sycl_1_1interop__handler.html#a4fe93ea8d613a9b7224780404781c279", null ]
 ];

@@ -25,7 +25,7 @@ var searchData=
   ['oneapi',['oneapi',['../namespacecl_1_1sycl_1_1ext_1_1oneapi.html',1,'cl::sycl::ext::oneapi'],['../namespacecl_1_1sycl_1_1ONEAPI.html',1,'cl::sycl::ONEAPI']]],
   ['opencl',['opencl',['../namespacecl_1_1sycl_1_1opencl.html',1,'cl::sycl']]],
   ['pi',['pi',['../namespacecl_1_1sycl_1_1detail_1_1pi.html',1,'cl::sycl::detail']]],
-  ['property',['property',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html',1,'cl::sycl::ext::oneapi::property'],['../namespacecl_1_1sycl_1_1property.html',1,'cl::sycl::property']]],
+  ['property',['property',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html',1,'cl::sycl::ext::oneapi::property'],['../namespacecl_1_1sycl_1_1INTEL_1_1property.html',1,'cl::sycl::INTEL::property'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1property.html',1,'cl::sycl::ONEAPI::property'],['../namespacecl_1_1sycl_1_1property.html',1,'cl::sycl::property']]],
   ['queue',['queue',['../namespacecl_1_1sycl_1_1property_1_1queue.html',1,'cl::sycl::property']]],
   ['sub_5fgroup',['sub_group',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html',1,'cl::sycl::detail']]],
   ['sycl',['sycl',['../namespacecl_1_1sycl.html',1,'cl']]],

@@ -1,7 +1,25 @@
 var dir_44c465508f81c3871cd3b8ecbdc75500 =
 [
     [ "accessor_properties.hpp", "accessor__properties_8hpp.html", [
-      [ "noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ]
+      [ "noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ],
+      [ "buffer_location", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location.html", [
+        [ "instance", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance" ]
+      ] ],
+      [ "instance", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance" ],
+      [ "no_offset", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset.html", [
+        [ "instance", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance" ]
+      ] ],
+      [ "instance", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance" ],
+      [ "no_alias", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias.html", [
+        [ "instance", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias_1_1instance.html", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias_1_1instance" ]
+      ] ],
+      [ "instance", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias_1_1instance.html", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias_1_1instance" ],
+      [ "is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ],
+      [ "is_compile_time_property< ONEAPI::property::no_alias >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__alias_01_4.html", null ],
+      [ "is_compile_time_property< INTEL::property::buffer_location >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01INTEL_1_1property_1_1buffer__location_01_4.html", null ],
+      [ "IsCompileTimePropertyInstance< INTEL::property::buffer_location::instance< I > >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html", null ],
+      [ "IsCompileTimePropertyInstance< ONEAPI::property::no_alias::instance<> >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html", null ],
+      [ "IsCompileTimePropertyInstance< ONEAPI::property::no_offset::instance<> >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__offset_1_1instance_3_4_01_4.html", null ]
     ] ],
     [ "all_properties.hpp", "all__properties_8hpp.html", null ],
     [ "buffer_properties.hpp", "buffer__properties_8hpp.html", [

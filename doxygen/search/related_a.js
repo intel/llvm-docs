@@ -1,7 +1,9 @@
 var searchData=
 [
+  ['accessor',['accessor',['../classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#a550e3a86f90efdd09819d64655e62518',1,'cl::sycl::ONEAPI::accessor_property_list']]],
   ['accessorprivateproxy',['AccessorPrivateProxy',['../classcl_1_1sycl_1_1detail_1_1image__accessor.html#a12f3ae6067bda013eded4e74dc92e3a4',1,'cl::sycl::detail::image_accessor::AccessorPrivateProxy()'],['../classcl_1_1sycl_1_1accessor.html#a12f3ae6067bda013eded4e74dc92e3a4',1,'cl::sycl::accessor::AccessorPrivateProxy()'],['../classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#a12f3ae6067bda013eded4e74dc92e3a4',1,'cl::sycl::detail::AccessorBaseHost::AccessorPrivateProxy()']]],
   ['hash',['hash',['../classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a314d491440d416e4bea9f00dbd4d1a48',1,'cl::sycl::detail::host_half_impl::half::hash()'],['../classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html#a314d491440d416e4bea9f00dbd4d1a48',1,'cl::sycl::detail::half_impl::half::hash()']]],
+  ['property_5flist',['property_list',['../classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#aa3f604385180fa3da93414cb5ba91717',1,'cl::sycl::ONEAPI::accessor_property_list']]],
   ['scheduler',['Scheduler',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#afb88c77ea5daaefa6c8fa6bc5b9aa5c1',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['stream',['stream',['../classcl_1_1sycl_1_1handler.html#ad6cdd83c821525ef93cdeb8332fd7de8',1,'cl::sycl::handler']]],
   ['stream_5fimpl',['stream_impl',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae5aea7766fbe6d37849f45208e705cb9',1,'cl::sycl::detail::Scheduler']]],

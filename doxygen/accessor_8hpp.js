@@ -1,5 +1,8 @@
 var accessor_8hpp =
 [
+    [ "IsCxPropertyList", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList" ],
+    [ "IsCxPropertyList< ONEAPI::accessor_property_list< Props... > >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4" ],
+    [ "IsCxPropertyList< ONEAPI::accessor_property_list<> >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4" ],
     [ "accessor_common", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", "classcl_1_1sycl_1_1detail_1_1accessor__common" ],
     [ "AccessorSubscript", "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html", "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript" ],
     [ "IsValidCoordDataT", "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT.html", null ],
@@ -11,6 +14,8 @@ var accessor_8hpp =
     [ "__image_array_slice__", "classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html", "classcl_1_1sycl_1_1detail_1_1____image__array__slice____" ],
     [ "host_accessor", "classcl_1_1sycl_1_1host__accessor.html", "classcl_1_1sycl_1_1host__accessor" ],
     [ "hash< cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318" ],
+    [ "IsPropertyListT", "accessor_8hpp.html#a551ed8f84ca530317e2d8e07333f10c7", null ],
+    [ "IsRunTimePropertyListT", "accessor_8hpp.html#a6510de1f644fe390a0890c04e63a403e", null ],
     [ "convertToArrayOfN", "accessor_8hpp.html#a0a2c24e476a6c391d1012986d36abbf5", null ],
     [ "getDeviceFromHandler", "accessor_8hpp.html#a4679ea98c7f73f344135382c7b7ab13d", null ]
 ];

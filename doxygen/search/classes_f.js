@@ -23,6 +23,7 @@ var searchData=
   ['program_5fimpl',['program_impl',['../classcl_1_1sycl_1_1detail_1_1program__impl.html',1,'cl::sycl::detail']]],
   ['programmanager',['ProgramManager',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html',1,'cl::sycl::detail']]],
   ['property_5flist',['property_list',['../classcl_1_1sycl_1_1property__list.html',1,'cl::sycl']]],
+  ['propertylistbase',['PropertyListBase',['../classcl_1_1sycl_1_1detail_1_1PropertyListBase.html',1,'cl::sycl::detail']]],
   ['propertyrange',['PropertyRange',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['propertywithdata',['PropertyWithData',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html',1,'cl::sycl::detail']]],
   ['propertywithdata_3c_20detail_3a_3abuffercontextbound_20_3e',['PropertyWithData&lt; detail::BufferContextBound &gt;',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html',1,'cl::sycl::detail']]],

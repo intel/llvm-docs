@@ -36,26 +36,28 @@ var hierarchy =
     [ "abstype< char >", "structabstype_3_01char_01_4.html", null ],
     [ "abstype< long long >", "structabstype_3_01long_01long_01_4.html", null ],
     [ "abstype< short >", "structabstype_3_01short_01_4.html", null ],
-    [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
+    [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
       [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", [
+      [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder, ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", [
         [ "cl::sycl::ONEAPI::atomic_accessor< DataT, Dimensions, DefaultOrder, DefaultScope, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html", null ]
       ] ],
+      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder, cl::sycl::ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", [
         [ "cl::sycl::host_accessor< DataT, Dimensions, AccessMode >", "classcl_1_1sycl_1_1host__accessor.html", null ]
       ] ],
       [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", null ]
+      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1accessor.html", null ]
     ] ],
     [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::AccessorBaseHost", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html", [
       [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", null ],
+      [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder, ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
+      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder, cl::sycl::ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1accessor.html", null ],
+      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", null ],
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions+1, AccessMode, access::target::image, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", [
         [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html", null ]
@@ -70,7 +72,7 @@ var hierarchy =
     [ "cl::sycl::detail::AccessorImplDevice< Dims >", "classcl_1_1sycl_1_1detail_1_1AccessorImplDevice.html", null ],
     [ "cl::sycl::detail::AccessorImplHost", "classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html", null ],
     [ "cl::sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1AccessorPrivateProxy.html", null ],
-    [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >::AccessorSubscript< SubDims >", "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html", null ],
+    [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >::AccessorSubscript< SubDims >", "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >", "classcl_1_1sycl_1_1detail_1_1aligned__allocator.html", null ],
     [ "cl::sycl::detail::ArgDesc", "classcl_1_1sycl_1_1detail_1_1ArgDesc.html", null ],
     [ "_pi_kernel::arguments", "struct__pi__kernel_1_1arguments.html", null ],
@@ -121,6 +123,7 @@ var hierarchy =
     [ "Bucket", "classBucket.html", null ],
     [ "cl::sycl::buffer< T, dimensions, AllocatorT, typename >", "classcl_1_1sycl_1_1buffer.html", null ],
     [ "cl::sycl::buffer< char, 1 >", "classcl_1_1sycl_1_1buffer.html", null ],
+    [ "cl::sycl::INTEL::property::buffer_location", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location.html", null ],
     [ "_pi_mem::mem_::buffer_mem_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html", null ],
     [ "cl::sycl::detail::Builder", "classcl_1_1sycl_1_1detail_1_1Builder.html", null ],
     [ "cl::sycl::detail::KernelProgramCache::BuildError", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html", null ],
@@ -320,11 +323,13 @@ var hierarchy =
       [ "cl::sycl::detail::is_pointer_impl< T >", "structcl_1_1sycl_1_1detail_1_1is__pointer__impl.html", null ],
       [ "cl::sycl::detail::is_sub_group< T >", "structcl_1_1sycl_1_1detail_1_1is__sub__group.html", null ],
       [ "cl::sycl::detail::is_vec< typename >", "structcl_1_1sycl_1_1detail_1_1is__vec.html", null ],
+      [ "cl::sycl::detail::IsCompileTimePropertyInstance< T >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html", null ],
       [ "cl::sycl::detail::IsSwizzleOp< typename >", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp.html", null ],
       [ "cl::sycl::INTEL::gpu::is_esimd_arithmetic_type< Ty, class >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type.html", null ],
       [ "cl::sycl::INTEL::gpu::is_simd_type< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type.html", null ],
       [ "cl::sycl::INTEL::gpu::is_simd_view_type< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type.html", null ],
       [ "cl::sycl::INTEL::gpu::is_vectorizable< bool >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable_3_01bool_01_4.html", null ],
+      [ "cl::sycl::ONEAPI::is_compile_time_property< T >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html", null ],
       [ "cl::sycl::detail::is_address_space_compliant_impl< remove_cv_t< T >, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html", [
         [ "cl::sycl::detail::is_address_space_compliant< T, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant.html", null ]
       ] ],
@@ -395,8 +400,8 @@ var hierarchy =
     [ "cl::sycl::group< Dimensions >", "classcl_1_1sycl_1_1group.html", null ],
     [ "cl::sycl::group< dimensions >", "classcl_1_1sycl_1_1group.html", null ],
     [ "cl::sycl::h_item< dimensions >", "classcl_1_1sycl_1_1h__item.html", null ],
-    [ "cl::sycl::detail::half_impl::half", "classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html", null ],
     [ "cl::sycl::detail::host_half_impl::half", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html", null ],
+    [ "cl::sycl::detail::half_impl::half", "classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html", null ],
     [ "cl::sycl::detail::half_impl::half_vec< NumElements >", "structcl_1_1sycl_1_1detail_1_1half__impl_1_1half__vec.html", null ],
     [ "cl::sycl::handler", "classcl_1_1sycl_1_1handler.html", null ],
     [ "std::hash< cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318.html", null ],
@@ -436,6 +441,9 @@ var hierarchy =
     [ "cl::sycl::detail::InitializedVal< 2, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html", null ],
     [ "cl::sycl::detail::InitializedVal< 3, T >", "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html", null ],
     [ "cl::sycl::detail::InlineVariableHelper< T >", "structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html", null ],
+    [ "cl::sycl::INTEL::property::buffer_location::instance< A >", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html", null ],
+    [ "cl::sycl::ONEAPI::property::no_offset::instance< B >", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html", null ],
+    [ "cl::sycl::ONEAPI::property::no_alias::instance< B >", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias_1_1instance.html", null ],
     [ "int_constant", null, [
       [ "cl::sycl::detail::vector_size_impl< T >", "structcl_1_1sycl_1_1detail_1_1vector__size__impl.html", null ],
       [ "cl::sycl::detail::vector_size_impl< vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html", null ],
@@ -551,6 +559,9 @@ var hierarchy =
     [ "cl::sycl::INTEL::gpu::details::is_word_type< sycl::INTEL::gpu::simd< T, N > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__word__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::details::is_word_type< sycl::INTEL::gpu::vector_type< T, N > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1is__word__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html", null ],
     [ "is_word_type< unsigned short >", "structis__word__type_3_01unsigned_01short_01_4.html", null ],
+    [ "cl::sycl::detail::IsCxPropertyList< T >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html", null ],
+    [ "cl::sycl::detail::IsCxPropertyList< ONEAPI::accessor_property_list< Props... > >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html", null ],
+    [ "cl::sycl::detail::IsCxPropertyList< ONEAPI::accessor_property_list<> >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html", null ],
     [ "cl::sycl::detail::IsValidAtomicAddressSpace< AS >", "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html", null ],
     [ "cl::sycl::detail::IsValidAtomicType< T >", "structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html", null ],
     [ "cl::sycl::detail::IsValidCoordDataT< Dim, T >", "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT.html", null ],
@@ -647,6 +658,8 @@ var hierarchy =
     [ "__esimd::NextPowerOf2< N, K, K_gt_eq_N >", "struct____esimd_1_1NextPowerOf2.html", null ],
     [ "__esimd::NextPowerOf2< N, K, false >", "struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4.html", null ],
     [ "__esimd::NextPowerOf2< N, K, true >", "struct____esimd_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::property::no_alias", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__alias.html", null ],
+    [ "cl::sycl::ONEAPI::property::no_offset", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset.html", null ],
     [ "cl::sycl::detail::NotEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1NotEqualTo.html", null ],
     [ "std::numeric_limits< half >", "structstd_1_1numeric__limits_3_01half_01_4.html", null ],
     [ "cl::sycl::detail::OSUtil", "classcl_1_1sycl_1_1detail_1_1OSUtil.html", null ],
@@ -669,7 +682,10 @@ var hierarchy =
     [ "cl::sycl::program", "classcl_1_1sycl_1_1program.html", null ],
     [ "cl::sycl::detail::program_impl", "classcl_1_1sycl_1_1detail_1_1program__impl.html", null ],
     [ "cl::sycl::detail::ProgramManager", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html", null ],
-    [ "cl::sycl::property_list", "classcl_1_1sycl_1_1property__list.html", null ],
+    [ "cl::sycl::detail::PropertyListBase", "classcl_1_1sycl_1_1detail_1_1PropertyListBase.html", [
+      [ "cl::sycl::ONEAPI::accessor_property_list< PropsT >", "classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html", null ],
+      [ "cl::sycl::property_list", "classcl_1_1sycl_1_1property__list.html", null ]
+    ] ],
     [ "cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html", null ],
     [ "cl::sycl::detail::PropertyWithDataBase", "classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html", [
       [ "cl::sycl::detail::PropertyWithData< ID >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", null ],
@@ -921,11 +937,17 @@ var hierarchy =
       [ "cl::sycl::detail::is_same_vector_size_impl< FirstSize >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl_3_01FirstSize_01_4.html", null ],
       [ "cl::sycl::detail::is_sub_group< ONEAPI::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html", null ],
       [ "cl::sycl::detail::is_vec< cl::sycl::vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1is__vec_3_01cl_1_1sycl_1_1vec_3_01T_00_01N_01_4_01_4.html", null ],
+      [ "cl::sycl::detail::IsCompileTimePropertyInstance< INTEL::property::buffer_location::instance< I > >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html", null ],
+      [ "cl::sycl::detail::IsCompileTimePropertyInstance< ONEAPI::property::no_alias::instance<> >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html", null ],
+      [ "cl::sycl::detail::IsCompileTimePropertyInstance< ONEAPI::property::no_offset::instance<> >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__offset_1_1instance_3_4_01_4.html", null ],
       [ "cl::sycl::detail::IsSwizzleOp< cl::sycl::detail::SwizzleOp< VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes... > >", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html", null ],
       [ "cl::sycl::INTEL::gpu::is_esimd_arithmetic_type< Ty, __esimd_void_t< decltype(std::declval< Ty >()+std::declval< Ty >()), decltype(std::declval< Ty >() - std::declval< Ty >()), decltype(std::declval< Ty >() *std::declval< Ty >()), decltype(std::declval< Ty >()/std::declval< Ty >())> >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__esimd__arithmetic__type_3_01Ty_00_01____esimd__void__t_3d7d08b23155dc5e9134f97f43ccf842b.html", null ],
       [ "cl::sycl::INTEL::gpu::is_simd_type< simd< Ty, N > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html", null ],
       [ "cl::sycl::INTEL::gpu::is_simd_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
-      [ "cl::sycl::INTEL::gpu::is_simd_view_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ]
+      [ "cl::sycl::INTEL::gpu::is_simd_view_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
+      [ "cl::sycl::ONEAPI::is_compile_time_property< INTEL::property::buffer_location >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01INTEL_1_1property_1_1buffer__location_01_4.html", null ],
+      [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_alias >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__alias_01_4.html", null ],
+      [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::TryToGetElementType< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetElementType.html", null ],
     [ "cl::sycl::detail::TryToGetNumElements< T, Enable >", "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements.html", null ],

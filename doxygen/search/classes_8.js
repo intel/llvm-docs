@@ -1,7 +1,7 @@
 var searchData=
 [
   ['h_5fitem',['h_item',['../classcl_1_1sycl_1_1h__item.html',1,'cl::sycl']]],
-  ['half',['half',['../classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html',1,'cl::sycl::detail::half_impl::half'],['../classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html',1,'cl::sycl::detail::host_half_impl::half']]],
+  ['half',['half',['../classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html',1,'cl::sycl::detail::host_half_impl::half'],['../classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html',1,'cl::sycl::detail::half_impl::half']]],
   ['half_5fvec',['half_vec',['../structcl_1_1sycl_1_1detail_1_1half__impl_1_1half__vec.html',1,'cl::sycl::detail::half_impl']]],
   ['handler',['handler',['../classcl_1_1sycl_1_1handler.html',1,'cl::sycl']]],
   ['hash_3c_20cl_3a_3asycl_3a_3aaccessor_3c_20datat_2c_20dimensions_2c_20accessmode_2c_20accesstarget_2c_20isplaceholder_20_3e_20_3e',['hash&lt; cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt; &gt;',['../structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318.html',1,'std']]],

@@ -72,6 +72,9 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "pi.h", "pi_8h.html", "pi_8h" ],
     [ "pi.hpp", "pi_8hpp.html", "pi_8hpp" ],
     [ "property_helper.hpp", "property__helper_8hpp.html", "property__helper_8hpp" ],
+    [ "property_list_base.hpp", "property__list__base_8hpp.html", [
+      [ "PropertyListBase", "classcl_1_1sycl_1_1detail_1_1PropertyListBase.html", "classcl_1_1sycl_1_1detail_1_1PropertyListBase" ]
+    ] ],
     [ "spirv.hpp", "spirv_8hpp.html", null ],
     [ "stl_type_traits.hpp", "stl__type__traits_8hpp.html", "stl__type__traits_8hpp" ],
     [ "sycl_fe_intrins.hpp", "sycl__fe__intrins_8hpp.html", null ],

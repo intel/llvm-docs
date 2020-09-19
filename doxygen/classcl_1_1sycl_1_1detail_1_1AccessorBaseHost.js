@@ -11,6 +11,7 @@ var classcl_1_1sycl_1_1detail_1_1AccessorBaseHost =
     [ "getPtr", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#a5be980505c6c060d89bf7f5ad0909a85", null ],
     [ "getPtr", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#ac3ab893216877073f8505f36920447ff", null ],
     [ "getSyclObjImpl", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#af96ce4807ef31dd5dabb478bf3a6eaf3", null ],
+    [ "accessor", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#a4fe93ea8d613a9b7224780404781c279", null ],
     [ "sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#a12f3ae6067bda013eded4e74dc92e3a4", null ],
     [ "impl", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html#a34687a1793d7cb4a830a2fc8097ad8f3", null ]
 ];

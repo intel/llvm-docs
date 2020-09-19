@@ -92,7 +92,7 @@ var searchData=
   ['_5f_5fesimd_5fvload',['__esimd_vload',['../esimd__intrin_8hpp.html#ad0328b4a64e102ba31defb7dacfa3bd1',1,'esimd_intrin.hpp']]],
   ['_5f_5fesimd_5fvstore',['__esimd_vstore',['../esimd__intrin_8hpp.html#ace48f48ac5b52fa19aa37bbee70d087f',1,'esimd_intrin.hpp']]],
   ['_5f_5fesimd_5fwrregion',['__esimd_wrregion',['../esimd__intrin_8hpp.html#a963be9eea6789554331d65f88e14e0d9',1,'esimd_intrin.hpp']]],
-  ['_5f_5fimage_5farray_5fslice_5f_5f',['__image_array_slice__',['../classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#aeb57473342c5a5958beefc89a1fed3f3',1,'cl::sycl::detail::__image_array_slice__']]],
+  ['_5f_5fimage_5farray_5fslice_5f_5f',['__image_array_slice__',['../classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#ab02f0277609ff0e11836061941910978',1,'cl::sycl::detail::__image_array_slice__']]],
   ['_5f_5finit',['__init',['../classcl_1_1sycl_1_1host__accessor.html#ace1c8517112d293b6c88538e8d4de4fc',1,'cl::sycl::host_accessor']]],
   ['_5f_5fprecision_5fmanipulator_5f_5f',['__precision_manipulator__',['../classcl_1_1sycl_1_1____precision__manipulator____.html#a3fe932d125f80a6950f13c735f5ed254',1,'cl::sycl::__precision_manipulator__']]],
   ['_5f_5fspirv_5fatomicand',['__spirv_AtomicAnd',['../atomic_8hpp.html#aa718cd3d846316032fe893c2481421a9',1,'atomic.hpp']]],

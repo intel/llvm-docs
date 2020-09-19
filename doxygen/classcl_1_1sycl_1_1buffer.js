@@ -25,10 +25,10 @@ var classcl_1_1sycl_1_1buffer =
     [ "buffer", "classcl_1_1sycl_1_1buffer.html#a6df756e6434725ba7c2aa01005fec165", null ],
     [ "buffer", "classcl_1_1sycl_1_1buffer.html#a5628828945a9e0d169925f1849c82213", null ],
     [ "~buffer", "classcl_1_1sycl_1_1buffer.html#adc5a30ad32871519046d44b2700c5eb8", null ],
-    [ "get_access", "classcl_1_1sycl_1_1buffer.html#a905f8fe912dce1e6fe2c1551d62badfc", null ],
-    [ "get_access", "classcl_1_1sycl_1_1buffer.html#ae4b41b1ca0a02021f366c06580a936cd", null ],
-    [ "get_access", "classcl_1_1sycl_1_1buffer.html#a888b874b888b687f985ee5177de51281", null ],
-    [ "get_access", "classcl_1_1sycl_1_1buffer.html#a5fa65e2edab9587000df741e198ebae9", null ],
+    [ "get_access", "classcl_1_1sycl_1_1buffer.html#aecb0535c3de79a9523611e3e5678e00d", null ],
+    [ "get_access", "classcl_1_1sycl_1_1buffer.html#a7c50a61dc994588481863ba71efd8c54", null ],
+    [ "get_access", "classcl_1_1sycl_1_1buffer.html#a2649f2dbd89352d61d3a182dc017f3b9", null ],
+    [ "get_access", "classcl_1_1sycl_1_1buffer.html#a151d1073071fca18c6be873d4e40a4ba", null ],
     [ "get_allocator", "classcl_1_1sycl_1_1buffer.html#ab321060ae1f7bc97cde292104c9050e5", null ],
     [ "get_count", "classcl_1_1sycl_1_1buffer.html#ab9d7be5a3f3912edf44b0b3eace7d0f2", null ],
     [ "get_property", "classcl_1_1sycl_1_1buffer.html#aa873b12ea090c7f23d776d198ba4b3bb", null ],
@@ -43,6 +43,6 @@ var classcl_1_1sycl_1_1buffer =
     [ "reinterpret", "classcl_1_1sycl_1_1buffer.html#a0281b09d129644dbc3a25d33be483fd2", null ],
     [ "set_final_data", "classcl_1_1sycl_1_1buffer.html#a98adb8c937a420c8f84b889ae2342ec2", null ],
     [ "set_write_back", "classcl_1_1sycl_1_1buffer.html#a1e2d845259552a1426413d311658614b", null ],
-    [ "accessor", "classcl_1_1sycl_1_1buffer.html#a98f66aa14b67d43ebf8c4e8b42315983", null ],
+    [ "accessor", "classcl_1_1sycl_1_1buffer.html#a4fe93ea8d613a9b7224780404781c279", null ],
     [ "buffer", "classcl_1_1sycl_1_1buffer.html#a4813bfe9f43cf4da706428f00cb77ca2", null ]
 ];
