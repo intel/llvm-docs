@@ -17,6 +17,7 @@ var esimd__memory_8hpp =
     [ "check_atomic", "esimd__memory_8hpp.html#aca8e682732236f9de3af6602f44adbd4", null ],
     [ "ElemsPerAddrEncoding", "esimd__memory_8hpp.html#a60cd0708e824709bbd2adc8a2bf7dec2", null ],
     [ "esimd_barrier", "esimd__memory_8hpp.html#a932780a89e472c1a81ba923a33a4b572", null ],
+    [ "esimd_fence", "esimd__memory_8hpp.html#ab71f6a4f4e1daaa26bc1da58da45390c", null ],
     [ "flat_atomic", "esimd__memory_8hpp.html#a6c2c0fc3f0d52dbc0d44f8bcc6a307f6", null ],
     [ "flat_atomic", "esimd__memory_8hpp.html#ad191373a0f323544d098a865ae427602", null ],
     [ "flat_atomic", "esimd__memory_8hpp.html#ae777ef32dc4dc2ce349d2a4eea98e43f", null ],
@@ -31,10 +32,9 @@ var esimd__memory_8hpp =
     [ "slm_atomic", "esimd__memory_8hpp.html#af0168ae20d15f7b0e1e1e5ba774e61bb", null ],
     [ "slm_block_load", "esimd__memory_8hpp.html#ac176dcece185f05b7239f6fdc7aa7c92", null ],
     [ "slm_block_store", "esimd__memory_8hpp.html#ac01407d8f5e1915f4daf6a70d0bace79", null ],
-    [ "slm_fence", "esimd__memory_8hpp.html#ad1ddcb2d63b62033ee85942f6cfe476a", null ],
     [ "slm_init", "esimd__memory_8hpp.html#a0035bb1790bbb0d5424d87f8b17be58c", null ],
     [ "slm_load", "esimd__memory_8hpp.html#a7444d6ea5f1b78e5b69900e1ca7bebbc", null ],
-    [ "slm_load4", "esimd__memory_8hpp.html#aa260f31797481c92d25a106ccd09c38d", null ],
+    [ "slm_load4", "esimd__memory_8hpp.html#a2daf325ccdb0cd8ec9b4fea049db9d59", null ],
     [ "slm_store", "esimd__memory_8hpp.html#a4752aaa87e3274561ad3656e47dc62f9", null ],
-    [ "slm_store4", "esimd__memory_8hpp.html#a311e381cf89348dc4a994a1a5e18d326", null ]
+    [ "slm_store4", "esimd__memory_8hpp.html#a82355ab97799d25e55698e60452c9970", null ]
 ];
