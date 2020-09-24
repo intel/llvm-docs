@@ -310,6 +310,7 @@ var searchData=
   ['getoffsety',['getOffsetY',['../classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#aa01a3ab89ba3c17433bf271a54067639',1,'cl::sycl::INTEL::gpu::simd_view']]],
   ['getorbuild',['getOrBuild',['../namespacecl_1_1sycl_1_1detail.html#a5bb97fd352dd69e2c791625dcbf7b745',1,'cl::sycl::detail']]],
   ['getorcreatekernel',['getOrCreateKernel',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a74e1adbeefa644a07dc12afc7a80921c',1,'cl::sycl::detail::ProgramManager']]],
+  ['getorcreateplatform',['getOrCreatePlatform',['../pi__level__zero_8cpp.html#a6ff908d333a456425d1027cdb0702361',1,'pi_level_zero.cpp']]],
   ['getorcreatesampler',['getOrCreateSampler',['../classcl_1_1sycl_1_1detail_1_1sampler__impl.html#ac0d5af410f3aad3a5adb19632c00b388',1,'cl::sycl::detail::sampler_impl']]],
   ['getorinsertmemobjrecord',['getOrInsertMemObjRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a71b5ab3219d8cbf4beda76786ba3a0c2',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['getormakedeviceimpl',['getOrMakeDeviceImpl',['../classcl_1_1sycl_1_1detail_1_1platform__impl.html#afc8d1b5104b3568937fc6561cfaf55df',1,'cl::sycl::detail::platform_impl']]],

@@ -12,6 +12,7 @@ var pi__level__zero_8cpp =
     [ "enqueueMemFillHelper", "pi__level__zero_8cpp.html#a2daa6fd82b433d43479179c5cb88b3b9", null ],
     [ "enqueueMemImageCommandHelper", "pi__level__zero_8cpp.html#ac72740529a524c5f7e3d5783c521cff4", null ],
     [ "getImageRegionHelper", "pi__level__zero_8cpp.html#a6df247fa066f3fb25508b1744fabe4c5", null ],
+    [ "getOrCreatePlatform", "pi__level__zero_8cpp.html#a6ff908d333a456425d1027cdb0702361", null ],
     [ "isOnlineLinkEnabled", "pi__level__zero_8cpp.html#acafc1cc52eda482ed85f6f8e08212461", null ],
     [ "mapError", "pi__level__zero_8cpp.html#a41a23a2e2a5ffd7aab6083589edddbd8", null ],
     [ "piclProgramCreateWithSource", "pi__level__zero_8cpp.html#a966a4cfb605eb6f85670df838484a676", null ],

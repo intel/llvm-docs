@@ -1,5 +1,6 @@
 var NAVTREEINDEX27 =
 {
+"struct____spv_1_1MemorySemanticsMask.html#ad6be9f078822f83c67c307b660d59807":[3,0,1,0,2],
 "struct____spv_1_1Scope.html":[3,0,1,1],
 "struct____spv_1_1Scope.html#a1ad2cc873d2655edb54eb81f88915f99":[3,0,1,1,2],
 "struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4":[3,0,1,1,0],
@@ -221,8 +222,8 @@ var NAVTREEINDEX27 =
 "struct__pi__program.html":[3,0,25],
 "struct__pi__program.html#a019071f4456b2301a42fe00264265fbd":[3,0,25,32],
 "struct__pi__program.html#a07ee027170c3138223814e6f23953c42":[3,0,25,20],
-"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,9],
 "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,5],
+"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,9],
 "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854":[3,0,25,10],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16":[3,0,25,3],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a1684fb88863210e92ec87a7ffb479c95":[3,0,25,3,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX27 =
 "struct__pi__program.html#a873725d5107c7fe0ab362184f6af9c10":[3,0,25,25],
 "struct__pi__program.html#a89f30375e3a698425cc2eb360b34e369":[3,0,25,8],
 "struct__pi__program.html#a8d5f620396d9b8bd269ea3c75b7d8773":[3,0,25,35],
-"struct__pi__program.html#a946af28c3e46707c7eb7f43f3177d02b":[3,0,25,15],
-"struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52":[3,0,25,34]
+"struct__pi__program.html#a946af28c3e46707c7eb7f43f3177d02b":[3,0,25,15]
 };
