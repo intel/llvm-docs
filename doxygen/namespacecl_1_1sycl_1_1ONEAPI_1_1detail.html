@@ -830,8 +830,8 @@ template&lt;typename KernelName , typename KernelType , bool UniformWG, class Re
 </div><div class="memdoc">
 
 <p>Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups. </p>
-<p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">ONEAPI::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
-<p>Briefly: aux kernel, <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html">ONEAPI</a>:<a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">reduce()</a>, reproducible results, FP + ADD/MIN/MAX </p>
+<p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7133c606f57b531334964ebc596ee3ff">ONEAPI::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
+<p>Briefly: aux kernel, <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html">ONEAPI</a>:<a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7133c606f57b531334964ebc596ee3ff">reduce()</a>, reproducible results, FP + ADD/MIN/MAX </p>
 
 <p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00888">888</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
@@ -1052,8 +1052,8 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 </div><div class="memdoc">
 
 <p>Implements a command group function that enqueues a kernel that calls user's lambda function KernelFunc and also does one iteration of reduction of elements computed in user's lambda function. </p>
-<p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">ONEAPI::reduce()</a> algorithm to reduce elements in each of work-groups, then it calls fast sycl atomic operations to update user's reduction variable.</p>
-<p>Briefly: calls user's lambda, <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">ONEAPI::reduce()</a> + atomic, INT + ADD/MIN/MAX. </p>
+<p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7133c606f57b531334964ebc596ee3ff">ONEAPI::reduce()</a> algorithm to reduce elements in each of work-groups, then it calls fast sycl atomic operations to update user's reduction variable.</p>
+<p>Briefly: calls user's lambda, <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7133c606f57b531334964ebc596ee3ff">ONEAPI::reduce()</a> + atomic, INT + ADD/MIN/MAX. </p>
 
 <p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00624">624</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
@@ -1164,8 +1164,8 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 </div><div class="memdoc">
 
 <p>Implements a command group function that enqueues a kernel that calls user's lambda function and does one iteration of reduction of elements in each of work-groups. </p>
-<p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">ONEAPI::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
-<p>Briefly: user's lambda, <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html">ONEAPI</a>:<a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a86a6d018f00f4d8b956855f87df173ec">reduce()</a>, FP + ADD/MIN/MAX. </p>
+<p>This version uses <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7133c606f57b531334964ebc596ee3ff">ONEAPI::reduce()</a> algorithm to reduce elements in each of work-groups. At the end of each work-groups the partial sum is written to a global buffer.</p>
+<p>Briefly: user's lambda, <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html">ONEAPI</a>:<a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a7133c606f57b531334964ebc596ee3ff">reduce()</a>, FP + ADD/MIN/MAX. </p>
 
 <p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00741">741</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
