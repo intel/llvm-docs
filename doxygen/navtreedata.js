@@ -70,16 +70,16 @@ var NAVTREEINDEX =
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eae1b1fc93dfd8b4ecdc03d6aae0ec547d",
 "pi_8h.html#a9995c520b89d8b9d3ae445823d568c5aa4e71e168cd1252510f4266c353b53844",
 "pi__cuda_8cpp.html#a002889700b8ed359a401bae09993ac09",
-"pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372",
-"reduction_8hpp_source.html",
-"struct____spv_1_1MemorySemanticsMask.html#ad6be9f078822f83c67c307b660d59807",
-"struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52",
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type_3_01region1d__t_3_01Ty_00_01Size_00_01Stride_01_4_01_4.html#a49772641201487528f1186f9a9e18f40",
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a",
-"structcl_1_1sycl_1_1detail_1_1make__larger.html#a191ad18323e1b24425595335eb31d164",
-"structis__fp__or__dword__type.html#a5b7d5a85b308296123f8c63006304d81",
-"structrestype__ex_3_01short_00_01unsigned_01long_01long_01_4.html#a4d918caea23767d54da6aa106605c399",
-"types_8hpp.html#aaf61a9365df41c28b5c0b0b56032731e"
+"pi__opencl_8cpp.html#a0917d3a7da3d18319665e9aed9ebe918",
+"reduction_8hpp.html#add7ac407331b58301b8a11ec303c1268",
+"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1ac1a3150109055d8c8fe83927271248bd",
+"struct__pi__program.html#a8d5f620396d9b8bd269ea3c75b7d8773",
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html#adbba0a06a516f8ddbf9185e5aaa66d77",
+"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#a79fd0dbeb9f73e5034f33fa63e4ca881",
+"structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#ab02bfda6fa8097e2a80f0cfc01fef305",
+"structis__float__dword_3_01unsigned_01int_00_01float_01_4.html#aae49f686aea4bb29f7b743218536f880",
+"structrestype__ex_3_01short_00_01unsigned_01int_01_4.html#ae553b6349b814d4e3914ba8094d9329a",
+"types_8hpp.html#a9c292d1903462c41f744aac5771fa952"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

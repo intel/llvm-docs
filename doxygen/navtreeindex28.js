@@ -1,5 +1,7 @@
 var NAVTREEINDEX28 =
 {
+"struct__pi__program.html#a8d5f620396d9b8bd269ea3c75b7d8773":[3,0,25,35],
+"struct__pi__program.html#a946af28c3e46707c7eb7f43f3177d02b":[3,0,25,15],
 "struct__pi__program.html#aa8dff35bf5080cad9f47d9ca91996d52":[3,0,25,34],
 "struct__pi__program.html#ab14ee0c97c0d3ef6adc3c4974d7a1bf2":[3,0,25,16],
 "struct__pi__program.html#ac87e23fa8485dda3baac43d1ecb20fc1":[3,0,25,17],
@@ -247,7 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html#add9910e1c94df8e7f0e72e6f506ea790":[3,0,2,1,3,0,28,11],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html#af6dd086f48bdf400bce320d48107684d":[3,0,2,1,3,0,28,12],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html":[3,0,2,1,3,0,29],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html#a2585d2bdee5805efd3f3fd9c48577bd0":[3,0,2,1,3,0,29,1],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html#adbba0a06a516f8ddbf9185e5aaa66d77":[3,0,2,1,3,0,29,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type_3_01region1d__t_3_01Ty_00_01Size_00_01Stride_01_4_01_4.html":[3,0,2,1,3,0,30]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html#a2585d2bdee5805efd3f3fd9c48577bd0":[3,0,2,1,3,0,29,1]
 };
