@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('kernel__impl_8cpp.html','');});
 <code>#include &lt;<a class="el" href="kernel__info_8hpp_source.html">detail/kernel_info.hpp</a>&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;CL/sycl/info/kernel_traits.def&gt;</code><br />
+<code>#include &lt;CL/sycl/info/kernel_device_specific_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/kernel_work_group_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/kernel_sub_group_traits.def&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -113,34 +114,33 @@ Include dependency graph for kernel_impl.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="kernel__impl_8cpp__incl.png" border="0" usemap="#source_2detail_2kernel__impl_8cpp" alt=""/></div>
 <map name="source_2detail_2kernel__impl_8cpp" id="source_2detail_2kernel__impl_8cpp">
-<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="748,669,929,695"/>
-<area shape="rect" id="node18" href="info__desc_8hpp.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="2298,490,2475,517"/>
-<area shape="rect" id="node33" href="program_8hpp.html" title="CL/sycl/program.hpp" alt="" coords="3283,326,3426,353"/>
-<area shape="rect" id="node40" href="context__impl_8hpp.html" title="detail/context_impl.hpp" alt="" coords="966,244,1122,271"/>
-<area shape="rect" id="node46" href="kernel__impl_8hpp.html" title="detail/kernel_impl.hpp" alt="" coords="2086,169,2234,196"/>
-<area shape="rect" id="node50" href="kernel__info_8hpp.html" title="detail/kernel_info.hpp" alt="" coords="1846,95,1991,121"/>
-<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="510,915,637,941"/>
-<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1356,915,1529,941"/>
-<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="2278,915,2445,941"/>
-<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="1021,751,1173,777"/>
-<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="419,833,546,859"/>
-<area shape="rect" id="node16" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="1614,833,1725,859"/>
-<area shape="rect" id="node19" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="209,579,351,606"/>
-<area shape="rect" id="node22" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="2116,579,2223,606"/>
-<area shape="rect" id="node20" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="419,669,589,695"/>
-<area shape="rect" id="node34" href="spec__constant_8hpp.html" title="CL/sycl/ONEAPI/experimental\l/spec_constant.hpp" alt="" coords="1703,483,1903,524"/>
-<area shape="rect" id="node35" href="context_8hpp.html" title="CL/sycl/context.hpp" alt="" coords="2057,408,2196,435"/>
-<area shape="rect" id="node37" href="property__list_8hpp.html" title="CL/sycl/property_list.hpp" alt="" coords="1461,490,1627,517"/>
-<area shape="rect" id="node38" href="kernel__desc_8hpp.html" title="CL/sycl/detail/kernel\l_desc.hpp" alt="" coords="3849,825,3991,867"/>
-<area shape="rect" id="node39" href="kernel_8hpp.html" title="CL/sycl/kernel.hpp" alt="" coords="3467,408,3597,435"/>
-<area shape="rect" id="node36" href="exception__list_8hpp.html" title="CL/sycl/exception_list.hpp" alt="" coords="1355,751,1531,777"/>
-<area shape="rect" id="node41" href="device__impl_8hpp.html" title="detail/device_impl.hpp" alt="" coords="1133,326,1283,353"/>
-<area shape="rect" id="node42" href="platform__impl_8hpp.html" title="detail/platform_impl.hpp" alt="" coords="871,408,1031,435"/>
-<area shape="rect" id="node43" href="kernel__program__cache_8hpp.html" title="detail/kernel_program\l_cache.hpp" alt="" coords="469,319,616,360"/>
-<area shape="rect" id="node45" href="program__manager_8hpp.html" title="detail/program_manager\l/program_manager.hpp" alt="" coords="753,483,914,524"/>
-<area shape="rect" id="node47" href="device_8hpp.html" title="CL/sycl/device.hpp" alt="" coords="2221,408,2355,435"/>
-<area shape="rect" id="node48" href="program__impl_8hpp.html" title="detail/program_impl.hpp" alt="" coords="2645,244,2805,271"/>
-<area shape="rect" id="node49" href="common__info_8hpp.html" title="CL/sycl/detail/common\l_info.hpp" alt="" coords="4269,661,4425,703"/>
+<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="1549,669,1731,695"/>
+<area shape="rect" id="node17" href="info__desc_8hpp.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="2011,490,2189,517"/>
+<area shape="rect" id="node33" href="program_8hpp.html" title="CL/sycl/program.hpp" alt="" coords="3651,326,3794,353"/>
+<area shape="rect" id="node40" href="context__impl_8hpp.html" title="detail/context_impl.hpp" alt="" coords="639,244,795,271"/>
+<area shape="rect" id="node46" href="kernel__impl_8hpp.html" title="detail/kernel_impl.hpp" alt="" coords="1813,169,1961,196"/>
+<area shape="rect" id="node50" href="kernel__info_8hpp.html" title="detail/kernel_info.hpp" alt="" coords="1926,95,2071,121"/>
+<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="990,751,1117,777"/>
+<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1817,900,1991,927"/>
+<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="3377,825,3543,852"/>
+<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="3328,751,3480,777"/>
+<area shape="rect" id="node15" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="1942,825,2053,852"/>
+<area shape="rect" id="node18" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="925,579,1067,606"/>
+<area shape="rect" id="node21" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="3272,579,3379,606"/>
+<area shape="rect" id="node19" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="501,669,670,695"/>
+<area shape="rect" id="node34" href="spec__constant_8hpp.html" title="CL/sycl/ONEAPI/experimental\l/spec_constant.hpp" alt="" coords="4008,483,4208,524"/>
+<area shape="rect" id="node35" href="context_8hpp.html" title="CL/sycl/context.hpp" alt="" coords="3653,408,3792,435"/>
+<area shape="rect" id="node37" href="property__list_8hpp.html" title="CL/sycl/property_list.hpp" alt="" coords="3411,490,3578,517"/>
+<area shape="rect" id="node38" href="kernel__desc_8hpp.html" title="CL/sycl/detail/kernel\l_desc.hpp" alt="" coords="3195,483,3336,524"/>
+<area shape="rect" id="node39" href="kernel_8hpp.html" title="CL/sycl/kernel.hpp" alt="" coords="4111,408,4241,435"/>
+<area shape="rect" id="node36" href="exception__list_8hpp.html" title="CL/sycl/exception_list.hpp" alt="" coords="1192,751,1368,777"/>
+<area shape="rect" id="node41" href="device__impl_8hpp.html" title="detail/device_impl.hpp" alt="" coords="1017,326,1167,353"/>
+<area shape="rect" id="node42" href="platform__impl_8hpp.html" title="detail/platform_impl.hpp" alt="" coords="805,408,965,435"/>
+<area shape="rect" id="node43" href="kernel__program__cache_8hpp.html" title="detail/kernel_program\l_cache.hpp" alt="" coords="533,319,680,360"/>
+<area shape="rect" id="node45" href="program__manager_8hpp.html" title="detail/program_manager\l/program_manager.hpp" alt="" coords="566,483,727,524"/>
+<area shape="rect" id="node47" href="device_8hpp.html" title="CL/sycl/device.hpp" alt="" coords="1877,408,2011,435"/>
+<area shape="rect" id="node48" href="program__impl_8hpp.html" title="detail/program_impl.hpp" alt="" coords="3240,244,3400,271"/>
+<area shape="rect" id="node49" href="common__info_8hpp.html" title="CL/sycl/detail/common\l_info.hpp" alt="" coords="4354,661,4510,703"/>
 </map>
 </div>
 </div>
@@ -162,6 +162,10 @@ Macros</h2></td></tr>
 <tr class="separator:a522cc2c6a59f548ee17c359f636f7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522cc2c6a59f548ee17c359f636f7909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909">PARAM_TRAITS_SPEC</a>(param_type,  param,  ret_type)</td></tr>
 <tr class="separator:a522cc2c6a59f548ee17c359f636f7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a01e05d8be8780e20459af676b03622"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622">PARAM_TRAITS_SPEC_WITH_INPUT</a>(param_type,  param,  ret_type,  in_type)</td></tr>
+<tr class="separator:a6a01e05d8be8780e20459af676b03622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522cc2c6a59f548ee17c359f636f7909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909">PARAM_TRAITS_SPEC</a>(param_type,  param,  ret_type)</td></tr>
+<tr class="separator:a522cc2c6a59f548ee17c359f636f7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522cc2c6a59f548ee17c359f636f7909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909">PARAM_TRAITS_SPEC</a>(param_type,  param,  ret_type)</td></tr>
 <tr class="separator:a522cc2c6a59f548ee17c359f636f7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a01e05d8be8780e20459af676b03622"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622">PARAM_TRAITS_SPEC_WITH_INPUT</a>(param_type,  param,  ret_type,  in_type)</td></tr>
@@ -175,19 +179,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a6f92273f18fd9cb5c7c5939074388684"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a6f92273f18fd9cb5c7c5939074388684"><td class="memTemplItemLeft" align="right" valign="top">program&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6f92273f18fd9cb5c7c5939074388684">cl::sycl::detail::kernel_impl::get_info&lt; info::kernel::program &gt;</a> () const</td></tr>
 <tr class="separator:a6f92273f18fd9cb5c7c5939074388684"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa9b6316b4a22b17634726e05df14b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a0fa9b6316b4a22b17634726e05df14b0">cl::sycl::detail::PARAM_TRAITS_SPEC</a> (kernel_work_group, compile_work_group_size, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) <a class="el" href="kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622">PARAM_TRAITS_SPEC_WITH_INPUT</a>(kernel_sub_group</td></tr>
-<tr class="separator:a0fa9b6316b4a22b17634726e05df14b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2be6035459e0d6f4636a9f6c3b8864"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a3d2be6035459e0d6f4636a9f6c3b8864">cl::sycl::detail::PARAM_TRAITS_SPEC</a> (kernel_device_specific, compile_work_group_size, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) PARAM_TRAITS_SPEC(kernel_device_specific</td></tr>
+<tr class="separator:a3d2be6035459e0d6f4636a9f6c3b8864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24fc703068928b46997e2eb367e84dd5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a24fc703068928b46997e2eb367e84dd5">cl::sycl::detail::PARAM_TRAITS_SPEC_WITH_INPUT</a> (kernel_device_specific, max_sub_group_size, uint32_t, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) <a class="el" href="sampler_8cpp.html#afdc66a412eca5189691b838f8679ec50">PARAM_TRAITS_SPEC</a>(kernel_work_group</td></tr>
+<tr class="separator:a24fc703068928b46997e2eb367e84dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a5d06cdeae7af18abb18f3c6df02761fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a5d06cdeae7af18abb18f3c6df02761fc">cl::sycl::detail::max_sub_group_size</a></td></tr>
-<tr class="separator:a5d06cdeae7af18abb18f3c6df02761fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ddf7276b86332ffdf26ae68ff6d694d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a8ddf7276b86332ffdf26ae68ff6d694d">cl::sycl::detail::uint32_t</a></td></tr>
-<tr class="separator:a8ddf7276b86332ffdf26ae68ff6d694d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb85b4b9286d8dfe4a8fe8260d7265b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#acb85b4b9286d8dfe4a8fe8260d7265b0">cl::sycl::detail::preferred_work_group_size_multiple</a></td></tr>
+<tr class="separator:acb85b4b9286d8dfe4a8fe8260d7265b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa113899ed3b61997010a90871c49bccf"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aa113899ed3b61997010a90871c49bccf">cl::sycl::detail::compile_work_group_size</a></td></tr>
+<tr class="separator:aa113899ed3b61997010a90871c49bccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a522cc2c6a59f548ee17c359f636f7909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,12 +224,49 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00131">131</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00167">167</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a522cc2c6a59f548ee17c359f636f7909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PARAM_TRAITS_SPEC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ret_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> ret_type kernel_impl::get_info&lt;info::param_type::param&gt;(            \</div><div class="line">      const <a class="code" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">device</a> &amp;) <span class="keyword">const</span>;</div><div class="ttc" id="namespacecl_1_1sycl_1_1info_html_ab329ccdc28ac4187f67d14db9cbb6190"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">cl::sycl::info::device</a></div><div class="ttdeci">device</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00043">info_desc.hpp:43</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00167">167</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a522cc2c6a59f548ee17c359f636f7909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,12 +298,12 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> ret_type kernel_impl::get_work_group_info&lt;info::param_type::param&gt;( \</div><div class="line">      const <a class="code" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">device</a> &amp;) <span class="keyword">const</span>;</div><div class="ttc" id="namespacecl_1_1sycl_1_1info_html_ab329ccdc28ac4187f67d14db9cbb6190"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">cl::sycl::info::device</a></div><div class="ttdeci">device</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00043">info_desc.hpp:43</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00131">131</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00167">167</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a522cc2c6a59f548ee17c359f636f7909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,12 +335,55 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> ret_type kernel_impl::get_sub_group_info&lt;info::param_type::param&gt;(  \</div><div class="line">      const <a class="code" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">device</a> &amp;) <span class="keyword">const</span>;</div><div class="ttc" id="namespacecl_1_1sycl_1_1info_html_ab329ccdc28ac4187f67d14db9cbb6190"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">cl::sycl::info::device</a></div><div class="ttdeci">device</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00043">info_desc.hpp:43</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00131">131</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00167">167</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a6a01e05d8be8780e20459af676b03622"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a01e05d8be8780e20459af676b03622">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC_WITH_INPUT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a01e05d8be8780e20459af676b03622">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC_WITH_INPUT <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PARAM_TRAITS_SPEC_WITH_INPUT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ret_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">in_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> ret_type kernel_impl::get_info&lt;info::param_type::param&gt;(            \</div><div class="line">      const <a class="code" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">device</a> &amp;, in_type) <span class="keyword">const</span>;</div><div class="ttc" id="namespacecl_1_1sycl_1_1info_html_ab329ccdc28ac4187f67d14db9cbb6190"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">cl::sycl::info::device</a></div><div class="ttdeci">device</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00043">info_desc.hpp:43</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00170">170</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a01e05d8be8780e20459af676b03622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a01e05d8be8780e20459af676b03622">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC_WITH_INPUT <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,6 +421,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> ret_type kernel_impl::get_sub_group_info&lt;info::param_type::param&gt;(  \</div><div class="line">      const <a class="code" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">device</a> &amp;, in_type) <span class="keyword">const</span>;</div><div class="ttc" id="namespacecl_1_1sycl_1_1info_html_ab329ccdc28ac4187f67d14db9cbb6190"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190">cl::sycl::info::device</a></div><div class="ttdeci">device</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00043">info_desc.hpp:43</a></div></div>
 </div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="kernel__impl_8cpp_source.html#l00170">170</a> of file <a class="el" href="kernel__impl_8cpp_source.html">kernel_impl.cpp</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->

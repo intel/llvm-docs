@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('info__desc_8hpp.html','');});
 <code>#include &lt;CL/sycl/info/context_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/event_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/event_profiling_traits.def&gt;</code><br />
+<code>#include &lt;CL/sycl/info/kernel_device_specific_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/kernel_sub_group_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/kernel_traits.def&gt;</code><br />
 <code>#include &lt;CL/sycl/info/kernel_work_group_traits.def&gt;</code><br />
@@ -118,25 +119,24 @@ Include dependency graph for info_desc.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="info__desc_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2info_2info__desc_8hpp" alt=""/></div>
 <map name="include_2CL_2sycl_2info_2info__desc_8hpp" id="include_2CL_2sycl_2info_2info__desc_8hpp">
-<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="1143,587,1325,613"/>
-<area shape="rect" id="node22" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="722,512,863,539"/>
-<area shape="rect" id="node30" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="959,102,1066,129"/>
-<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1344,811,1471,837"/>
-<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="546,811,719,837"/>
-<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="845,811,1012,837"/>
-<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="766,661,918,688"/>
-<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1169,736,1296,763"/>
-<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="231,736,341,763"/>
-<area shape="rect" id="node23" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="286,587,470,613"/>
-<area shape="rect" id="node26" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="721,736,891,763"/>
-<area shape="rect" id="node31" href="array_8hpp.html" title="CL/sycl/detail/array.hpp" alt="" coords="455,259,615,285"/>
-<area shape="rect" id="node32" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="903,333,1034,375"/>
-<area shape="rect" id="node36" href="helpers_8hpp.html" title="CL/sycl/detail/helpers.hpp" alt="" coords="1006,259,1179,285"/>
-<area shape="rect" id="node40" href="range_8hpp.html" title="CL/sycl/range.hpp" alt="" coords="581,184,709,211"/>
-<area shape="rect" id="node33" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="901,512,1085,539"/>
-<area shape="rect" id="node34" href="generic__type__lists_8hpp.html" title="CL/sycl/detail/generic\l_type_lists.hpp" alt="" coords="835,423,983,464"/>
-<area shape="rect" id="node37" href="spirv__types_8hpp.html" title="CL/__spirv/spirv_types.hpp" alt="" coords="1755,430,1937,457"/>
-<area shape="rect" id="node38" href="spirv__vars_8hpp.html" title="CL/__spirv/spirv_vars.hpp" alt="" coords="1556,430,1731,457"/>
+<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="708,497,889,524"/>
+<area shape="rect" id="node22" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1204,423,1345,449"/>
+<area shape="rect" id="node30" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="439,102,545,129"/>
+<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="521,721,647,748"/>
+<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1171,721,1344,748"/>
+<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="817,721,983,748"/>
+<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="457,572,609,599"/>
+<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="837,647,963,673"/>
+<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="397,647,507,673"/>
+<area shape="rect" id="node23" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="1527,497,1711,524"/>
+<area shape="rect" id="node26" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="1343,647,1513,673"/>
+<area shape="rect" id="node31" href="array_8hpp.html" title="CL/sycl/detail/array.hpp" alt="" coords="73,259,233,285"/>
+<area shape="rect" id="node32" href="type__traits_8hpp.html" title="CL/sycl/detail/type\l_traits.hpp" alt="" coords="299,333,429,375"/>
+<area shape="rect" id="node35" href="helpers_8hpp.html" title="CL/sycl/detail/helpers.hpp" alt="" coords="481,259,655,285"/>
+<area shape="rect" id="node39" href="range_8hpp.html" title="CL/sycl/range.hpp" alt="" coords="135,184,263,211"/>
+<area shape="rect" id="node33" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="656,423,840,449"/>
+<area shape="rect" id="node36" href="spirv__types_8hpp.html" title="CL/__spirv/spirv_types.hpp" alt="" coords="864,423,1045,449"/>
+<area shape="rect" id="node37" href="spirv__vars_8hpp.html" title="CL/__spirv/spirv_vars.hpp" alt="" coords="1578,423,1753,449"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -202,6 +202,8 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1info_1_1param__traits.html">cl::sycl::info::param_traits&lt; T, param &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1info_1_1compatibility__param__traits.html">cl::sycl::info::compatibility_param_traits&lt; T, param &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -215,6 +217,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a522cc2c6a59f548ee17c359f636f7909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="info__desc_8hpp.html#a522cc2c6a59f548ee17c359f636f7909">PARAM_TRAITS_SPEC</a>(param_type,  param,  ret_type)</td></tr>
+<tr class="separator:a522cc2c6a59f548ee17c359f636f7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a01e05d8be8780e20459af676b03622"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="info__desc_8hpp.html#a6a01e05d8be8780e20459af676b03622">PARAM_TRAITS_SPEC_WITH_INPUT</a>(param_type,  param,  ret_type,  in_type)</td></tr>
+<tr class="separator:a6a01e05d8be8780e20459af676b03622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522cc2c6a59f548ee17c359f636f7909"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="info__desc_8hpp.html#a522cc2c6a59f548ee17c359f636f7909">PARAM_TRAITS_SPEC</a>(param_type,  param,  ret_type)</td></tr>
 <tr class="separator:a522cc2c6a59f548ee17c359f636f7909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a01e05d8be8780e20459af676b03622"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="info__desc_8hpp.html#a6a01e05d8be8780e20459af676b03622">PARAM_TRAITS_SPEC_WITH_INPUT</a>(param_type,  param,  ret_type,  in_type)</td></tr>
@@ -434,6 +440,21 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6a796b440435ffb2b1d7e43c90ed04f9b3">cl::sycl::info::kernel_sub_group::compile_sub_group_size</a> = CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL
  }</td></tr>
 <tr class="separator:a4611a29fbdac815e21d471f9fba8f5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c6a672f830994a123ea748064f1ff5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5">cl::sycl::info::kernel_device_specific</a> : cl_kernel_work_group_info { <br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a408f7779a31f0760bb11cec7ace24487">cl::sycl::info::kernel_device_specific::global_work_size</a> = CL_KERNEL_GLOBAL_WORK_SIZE, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5afffb71c6a8897dd2d01f9c13ef174cb4">cl::sycl::info::kernel_device_specific::work_group_size</a> = CL_KERNEL_WORK_GROUP_SIZE, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5af44f9ae6cb6cd32abe3bcafdc0802db5">cl::sycl::info::kernel_device_specific::compile_work_group_size</a> = CL_KERNEL_COMPILE_WORK_GROUP_SIZE, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5aaa4782cc928dc703160debaff5254fc2">cl::sycl::info::kernel_device_specific::preferred_work_group_size_multiple</a>, 
+<br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5ae12e65abf83301f7ca2c0dbc39aa0730">cl::sycl::info::kernel_device_specific::private_mem_size</a> = CL_KERNEL_PRIVATE_MEM_SIZE, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a282399359d32926c1f44fe18e0189064">cl::sycl::info::kernel_device_specific::max_sub_group_size</a> = CL_KERNEL_MAX_SUB_GROUP_SIZE_FOR_NDRANGE, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a4f15cdbe3dbdc9ad4f5058cc9cd27f25">cl::sycl::info::kernel_device_specific::max_num_sub_groups</a> = CL_KERNEL_MAX_NUM_SUB_GROUPS, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5af627003994720d30c79116693a802167">cl::sycl::info::kernel_device_specific::compile_num_sub_groups</a> = CL_KERNEL_COMPILE_NUM_SUB_GROUPS, 
+<br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a796b440435ffb2b1d7e43c90ed04f9b3">cl::sycl::info::kernel_device_specific::compile_sub_group_size</a> = CL_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL
+<br />
+ }</td></tr>
+<tr class="separator:af0c6a672f830994a123ea748064f1ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d3b9bcec2337da0f4a00de2f8252792"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792">cl::sycl::info::program</a> : cl_program_info { <a class="el" href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792a5c18ef72771564b7f43c497dc507aeab">cl::sycl::info::program::context</a> = CL_PROGRAM_CONTEXT, 
 <a class="el" href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792ae0212e54ec3a2a120ca0d321b3a60c78">cl::sycl::info::program::devices</a> = CL_PROGRAM_DEVICES, 
 <a class="el" href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792a40d852658166dc8a786c23023cb20f92">cl::sycl::info::program::reference_count</a> = CL_PROGRAM_REFERENCE_COUNT
@@ -460,8 +481,12 @@ Functions</h2></td></tr>
 <tr class="separator:a668d82cc2bc3cca6777fffe9cbea7bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3bd643d974bc2dd3dc81e8c716807f1"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#ac3bd643d974bc2dd3dc81e8c716807f1">cl::sycl::info::PARAM_TRAITS_SPEC</a> (device, partition_affinity_domains, vector_class&lt; info::partition_affinity_domain &gt;) PARAM_TRAITS_SPEC(device</td></tr>
 <tr class="separator:ac3bd643d974bc2dd3dc81e8c716807f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c574c0b9109e2361472159b031b364f"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a0c574c0b9109e2361472159b031b364f">cl::sycl::info::PARAM_TRAITS_SPEC_WITH_INPUT</a> (kernel_sub_group, max_sub_group_size, uint32_t, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) <a class="el" href="sampler_8cpp.html#afdc66a412eca5189691b838f8679ec50">PARAM_TRAITS_SPEC</a>(kernel_work_group</td></tr>
-<tr class="separator:a0c574c0b9109e2361472159b031b364f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45765b61dc89dba27bfab75e5d3f27bf"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a45765b61dc89dba27bfab75e5d3f27bf">cl::sycl::info::PARAM_TRAITS_SPEC</a> (kernel_device_specific, compile_work_group_size, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) PARAM_TRAITS_SPEC(kernel_device_specific</td></tr>
+<tr class="separator:a45765b61dc89dba27bfab75e5d3f27bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7c13f12a7c787791a36daa86c9c379"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#adb7c13f12a7c787791a36daa86c9c379">cl::sycl::info::PARAM_TRAITS_SPEC_WITH_INPUT</a> (kernel_device_specific, max_sub_group_size, uint32_t, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) PARAM_TRAITS_SPEC_WITH_INPUT(kernel_sub_group</td></tr>
+<tr class="separator:adb7c13f12a7c787791a36daa86c9c379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870e1ec2bf0462a6e06dcbec1ebd4422"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain size_t <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a870e1ec2bf0462a6e06dcbec1ebd4422">cl::sycl::info::PARAM_TRAITS_SPEC</a> (kernel_work_group, compile_work_group_size, <a class="el" href="classcl_1_1sycl_1_1range.html">cl::sycl::range</a>&lt; 3 &gt;) <a class="el" href="kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622">PARAM_TRAITS_SPEC_WITH_INPUT</a>(kernel_sub_group</td></tr>
+<tr class="separator:a870e1ec2bf0462a6e06dcbec1ebd4422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -469,12 +494,16 @@ Variables</h2></td></tr>
 <tr class="separator:af9775be79ea21cf031cf226d918a2481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a806524cd6d26b3dfaa020e7a1e56cc3b"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a806524cd6d26b3dfaa020e7a1e56cc3b">cl::sycl::info::partition_type_affinity_domain</a></td></tr>
 <tr class="separator:a806524cd6d26b3dfaa020e7a1e56cc3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a325370454f473d4a4b49cd812c6795eb"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a325370454f473d4a4b49cd812c6795eb">cl::sycl::info::compile_work_group_size</a></td></tr>
-<tr class="separator:a325370454f473d4a4b49cd812c6795eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1c4c2f8feff6bf1dffe0cf2a6f20af"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#a0c1c4c2f8feff6bf1dffe0cf2a6f20af">cl::sycl::info::preferred_work_group_size_multiple</a></td></tr>
+<tr class="separator:a0c1c4c2f8feff6bf1dffe0cf2a6f20af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e8864b7e9164ad7eb7114b6ee2e1ca"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#ab0e8864b7e9164ad7eb7114b6ee2e1ca">cl::sycl::info::max_sub_group_size</a></td></tr>
+<tr class="separator:ab0e8864b7e9164ad7eb7114b6ee2e1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3be720bd069bd68987f56f64ada244"><td class="memItemLeft" align="right" valign="top">vector_class&lt; info::partition_property &gt; info::partition_affinity_domain size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1info.html#abf3be720bd069bd68987f56f64ada244">cl::sycl::info::uint32_t</a></td></tr>
+<tr class="separator:abf3be720bd069bd68987f56f64ada244"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a522cc2c6a59f548ee17c359f636f7909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,12 +534,48 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>param_traits&lt;param_type, param_type::param&gt; {              \</div><div class="line">  public:                                                                      \</div><div class="line">    using return_type = ret_type;                                              \</div><div class="line">  };</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00245">245</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00260">260</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a522cc2c6a59f548ee17c359f636f7909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522cc2c6a59f548ee17c359f636f7909">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PARAM_TRAITS_SPEC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ret_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt;                                                                  \</div><div class="line">  struct compatibility_param_traits&lt;param_type, param_type::param&gt; {           \</div><div class="line">    static constexpr <span class="keyword">auto</span> value = kernel_device_specific::param;               \</div><div class="line">  };</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00260">260</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a6a01e05d8be8780e20459af676b03622"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a01e05d8be8780e20459af676b03622">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC_WITH_INPUT</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a01e05d8be8780e20459af676b03622">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC_WITH_INPUT <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -547,7 +612,49 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>param_traits&lt;param_type, param_type::param&gt; {              \</div><div class="line">  public:                                                                      \</div><div class="line">    using return_type = ret_type;                                              \</div><div class="line">    using input_type = in_type;                                                \</div><div class="line">  };</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00251">251</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00266">266</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a01e05d8be8780e20459af676b03622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a01e05d8be8780e20459af676b03622">&#9670;&nbsp;</a></span>PARAM_TRAITS_SPEC_WITH_INPUT <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PARAM_TRAITS_SPEC_WITH_INPUT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">param, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ret_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">in_type&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt;                                                                  \</div><div class="line">  struct compatibility_param_traits&lt;param_type, param_type::param&gt; {           \</div><div class="line">    static constexpr <span class="keyword">auto</span> value = kernel_device_specific::param;               \</div><div class="line">  };</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00266">266</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
 
 </div>
 </div>

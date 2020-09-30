@@ -28,7 +28,7 @@ var searchData=
   ['wordtype_3c_20short_20_3e',['wordtype&lt; short &gt;',['../structwordtype_3_01short_01_4.html',1,'']]],
   ['wordtype_3c_20unsigned_20short_20_3e',['wordtype&lt; unsigned short &gt;',['../structwordtype_3_01unsigned_01short_01_4.html',1,'']]],
   ['work_5fgroup',['work_group',['../namespacecl_1_1sycl_1_1ONEAPI.html#ae81f5ba081ad950781944eef129720bfab3e0f839df2b0e6f5abea4204282dc5e',1,'cl::sycl::ONEAPI']]],
-  ['work_5fgroup_5fsize',['work_group_size',['../namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9afffb71c6a8897dd2d01f9c13ef174cb4',1,'cl::sycl::info']]],
+  ['work_5fgroup_5fsize',['work_group_size',['../namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9afffb71c6a8897dd2d01f9c13ef174cb4',1,'cl::sycl::info::work_group_size()'],['../namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5afffb71c6a8897dd2d01f9c13ef174cb4',1,'cl::sycl::info::work_group_size()']]],
   ['work_5fitem',['work_item',['../namespacecl_1_1sycl_1_1ONEAPI.html#ae81f5ba081ad950781944eef129720bfaf06413b595ff48c7478e3f2f4e07cc73',1,'cl::sycl::ONEAPI']]],
   ['workgroup',['Workgroup',['../struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4ad45dc8fada3e0e533b4df56d5be7720c',1,'__spv::Scope']]],
   ['workgroupbarrier',['workGroupBarrier',['../namespacecl_1_1sycl_1_1detail.html#a40a063097235eddf08bf5152dfdca067',1,'cl::sycl::detail']]],

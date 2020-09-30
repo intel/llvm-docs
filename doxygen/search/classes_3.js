@@ -27,6 +27,7 @@ var searchData=
   ['code_5flocation',['code_location',['../structcl_1_1sycl_1_1detail_1_1code__location.html',1,'cl::sycl::detail']]],
   ['command',['Command',['../classcl_1_1sycl_1_1detail_1_1Command.html',1,'cl::sycl::detail']]],
   ['common_5ftype',['common_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html',1,'cl::sycl::INTEL::gpu']]],
+  ['compatibility_5fparam_5ftraits',['compatibility_param_traits',['../structcl_1_1sycl_1_1info_1_1compatibility__param__traits.html',1,'cl::sycl::info']]],
   ['compile_5fprogram_5ferror',['compile_program_error',['../classcl_1_1sycl_1_1compile__program__error.html',1,'cl::sycl']]],
   ['computation_5ftype',['computation_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1computation__type.html',1,'cl::sycl::INTEL::gpu']]],
   ['compute_5fformat_5ftype',['compute_format_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type.html',1,'cl::sycl::INTEL::gpu']]],

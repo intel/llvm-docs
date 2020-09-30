@@ -44,7 +44,7 @@ var searchData=
   ['isaccessmodeallowed',['isAccessModeAllowed',['../namespacecl_1_1sycl_1_1detail.html#ac183d6ea9de3741a2d1578b6a188244b',1,'cl::sycl::detail']]],
   ['isavailable',['isAvailable',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a66a2116094b82c061621586e97be946b',1,'cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange']]],
   ['isbannedplatform',['IsBannedPlatform',['../namespacecl_1_1sycl_1_1detail.html#a2130b5434d2626ef36fbaac83451fdb3',1,'cl::sycl::detail']]],
-  ['iscreatedfromsource',['isCreatedFromSource',['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aeec36084f07c3530421b0e80af9a03cb',1,'cl::sycl::detail::kernel_impl']]],
+  ['iscreatedfromsource',['isCreatedFromSource',['../classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a918531e89dcf4715aab6ce6451842064',1,'cl::sycl::detail::kernel_impl']]],
   ['isdevicebinarytypesupported',['isDeviceBinaryTypeSupported',['../namespacecl_1_1sycl_1_1detail.html#a474f4027bdd65987004b7c7c4524e0e3',1,'cl::sycl::detail']]],
   ['isdevicelibrequired',['isDeviceLibRequired',['../namespacecl_1_1sycl_1_1detail.html#a1283f354558e8d073c6c2b4b4ff696a3',1,'cl::sycl::detail']]],
   ['isdeviceofpreferredsyclbe',['isDeviceOfPreferredSyclBe',['../namespacecl_1_1sycl.html#a89601b8a9195726705c5aa5386d61f79',1,'cl::sycl']]],

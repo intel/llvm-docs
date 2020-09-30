@@ -27,7 +27,7 @@ var searchData=
   ['max_5fitem_5fsize',['MAX_ITEM_SIZE',['../namespacecl_1_1sycl_1_1detail.html#ac06b16e2dd80b89702afe5954bbf78df',1,'cl::sycl::detail']]],
   ['max_5flog_5fsize',['MAX_LOG_SIZE',['../struct__pi__program.html#a5cd306d55644c2e3d22b3745f90cffe6',1,'_pi_program']]],
   ['max_5fparam_5fbytes',['MAX_PARAM_BYTES',['../struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c',1,'_pi_kernel::arguments']]],
-  ['max_5fsub_5fgroup_5fsize',['max_sub_group_size',['../namespacecl_1_1sycl_1_1detail.html#a5d06cdeae7af18abb18f3c6df02761fc',1,'cl::sycl::detail']]],
+  ['max_5fsub_5fgroup_5fsize',['max_sub_group_size',['../namespacecl_1_1sycl_1_1info.html#ab0e8864b7e9164ad7eb7114b6ee2e1ca',1,'cl::sycl::info']]],
   ['maxnumqueues',['MaxNumQueues',['../namespacecl_1_1sycl_1_1detail.html#a0e5e3b393372fa86bd2792b043b634e4',1,'cl::sycl::detail']]],
   ['mblockedcmd',['MBlockedCmd',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a78581a66dfc447e44d2bacc1e63910c1',1,'cl::sycl::detail::AccessorImplHost']]],
   ['mblockreason',['MBlockReason',['../classcl_1_1sycl_1_1detail_1_1Command.html#a11c74a2d1717f958f848aa36d2385a0b',1,'cl::sycl::detail::Command']]],

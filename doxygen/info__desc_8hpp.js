@@ -1,7 +1,10 @@
 var info__desc_8hpp =
 [
     [ "param_traits", "classcl_1_1sycl_1_1info_1_1param__traits.html", null ],
+    [ "compatibility_param_traits", "structcl_1_1sycl_1_1info_1_1compatibility__param__traits.html", null ],
     [ "PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a522cc2c6a59f548ee17c359f636f7909", null ],
+    [ "PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a522cc2c6a59f548ee17c359f636f7909", null ],
+    [ "PARAM_TRAITS_SPEC_WITH_INPUT", "info__desc_8hpp.html#a6a01e05d8be8780e20459af676b03622", null ],
     [ "PARAM_TRAITS_SPEC_WITH_INPUT", "info__desc_8hpp.html#a6a01e05d8be8780e20459af676b03622", null ],
     [ "context", "info__desc_8hpp.html#a51e9e44a5c98627aafbe28dba6844707", [
       [ "reference_count", "info__desc_8hpp.html#a51e9e44a5c98627aafbe28dba6844707a40d852658166dc8a786c23023cb20f92", null ],
@@ -144,6 +147,17 @@ var info__desc_8hpp =
       [ "reference_count", "info__desc_8hpp.html#a14e4029ac742fc0239c4129e0c603e4aa40d852658166dc8a786c23023cb20f92", null ],
       [ "attributes", "info__desc_8hpp.html#a14e4029ac742fc0239c4129e0c603e4aa736b91750e516139acc13c5eb6564f92", null ]
     ] ],
+    [ "kernel_device_specific", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5", [
+      [ "global_work_size", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5a408f7779a31f0760bb11cec7ace24487", null ],
+      [ "work_group_size", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5afffb71c6a8897dd2d01f9c13ef174cb4", null ],
+      [ "compile_work_group_size", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5af44f9ae6cb6cd32abe3bcafdc0802db5", null ],
+      [ "preferred_work_group_size_multiple", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5aaa4782cc928dc703160debaff5254fc2", null ],
+      [ "private_mem_size", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5ae12e65abf83301f7ca2c0dbc39aa0730", null ],
+      [ "max_sub_group_size", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5a282399359d32926c1f44fe18e0189064", null ],
+      [ "max_num_sub_groups", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5a4f15cdbe3dbdc9ad4f5058cc9cd27f25", null ],
+      [ "compile_num_sub_groups", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5af627003994720d30c79116693a802167", null ],
+      [ "compile_sub_group_size", "info__desc_8hpp.html#af0c6a672f830994a123ea748064f1ff5a796b440435ffb2b1d7e43c90ed04f9b3", null ]
+    ] ],
     [ "kernel_sub_group", "info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6", [
       [ "max_sub_group_size", "info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6a282399359d32926c1f44fe18e0189064", null ],
       [ "max_num_sub_groups", "info__desc_8hpp.html#a4611a29fbdac815e21d471f9fba8f5c6a4f15cdbe3dbdc9ad4f5058cc9cd27f25", null ],
@@ -194,10 +208,14 @@ var info__desc_8hpp =
       [ "device", "info__desc_8hpp.html#a298d56c26b4eec2a4d4fb1649e2d1063a913f9c49dcb544e2087cee284f4a00b7", null ],
       [ "reference_count", "info__desc_8hpp.html#a298d56c26b4eec2a4d4fb1649e2d1063a40d852658166dc8a786c23023cb20f92", null ]
     ] ],
+    [ "PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a45765b61dc89dba27bfab75e5d3f27bf", null ],
+    [ "PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a870e1ec2bf0462a6e06dcbec1ebd4422", null ],
     [ "PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a668d82cc2bc3cca6777fffe9cbea7bd8", null ],
     [ "PARAM_TRAITS_SPEC", "info__desc_8hpp.html#ac3bd643d974bc2dd3dc81e8c716807f1", null ],
-    [ "PARAM_TRAITS_SPEC_WITH_INPUT", "info__desc_8hpp.html#a0c574c0b9109e2361472159b031b364f", null ],
-    [ "compile_work_group_size", "info__desc_8hpp.html#a325370454f473d4a4b49cd812c6795eb", null ],
+    [ "PARAM_TRAITS_SPEC_WITH_INPUT", "info__desc_8hpp.html#adb7c13f12a7c787791a36daa86c9c379", null ],
+    [ "max_sub_group_size", "info__desc_8hpp.html#ab0e8864b7e9164ad7eb7114b6ee2e1ca", null ],
     [ "partition_properties", "info__desc_8hpp.html#af9775be79ea21cf031cf226d918a2481", null ],
-    [ "partition_type_affinity_domain", "info__desc_8hpp.html#a806524cd6d26b3dfaa020e7a1e56cc3b", null ]
+    [ "partition_type_affinity_domain", "info__desc_8hpp.html#a806524cd6d26b3dfaa020e7a1e56cc3b", null ],
+    [ "preferred_work_group_size_multiple", "info__desc_8hpp.html#a0c1c4c2f8feff6bf1dffe0cf2a6f20af", null ],
+    [ "uint32_t", "info__desc_8hpp.html#abf3be720bd069bd68987f56f64ada244", null ]
 ];
