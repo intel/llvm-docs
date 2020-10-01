@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4 =
-[
-    [ "type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1details_1_1simd__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html#ad47f68801601eecce986f9d1e95a41f4", null ]
-];

@@ -364,7 +364,6 @@ var searchData=
   ['custream',['CUstream',['../cuda_8hpp.html#ab946c7f02e09efd788a204718015d88a',1,'cuda.hpp']]],
   ['cutoff',['CutOff',['../namespacesettings.html#aa78442f1faa1317ebcaa928ea6d2cc60',1,'settings']]],
   ['detail',['detail',['../namespacecl_1_1____host__std_1_1detail.html',1,'cl::__host_std::detail'],['../namespacecl_1_1sycl_1_1detail.html',1,'cl::sycl::detail'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html',1,'cl::sycl::INTEL::gpu::detail'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html',1,'cl::sycl::ONEAPI::detail']]],
-  ['details',['details',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1details.html',1,'cl::sycl::INTEL::gpu']]],
   ['enqueue_5fkernel_5flaunch',['enqueue_kernel_launch',['../namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html',1,'cl::sycl::detail']]],
   ['experimental',['experimental',['../namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html',1,'cl::sycl::ONEAPI']]],
   ['ext',['ext',['../namespacecl_1_1sycl_1_1ext.html',1,'cl::sycl']]],

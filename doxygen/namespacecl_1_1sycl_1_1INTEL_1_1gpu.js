@@ -1,7 +1,6 @@
 var namespacecl_1_1sycl_1_1INTEL_1_1gpu =
 [
     [ "detail", "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html", "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail" ],
-    [ "details", "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1details.html", "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1details" ],
     [ "AccessorPrivateProxy", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1AccessorPrivateProxy.html", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1AccessorPrivateProxy" ],
     [ "bitcast_helper", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper" ],
     [ "common_type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type" ],

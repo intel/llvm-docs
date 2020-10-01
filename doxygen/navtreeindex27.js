@@ -1,7 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"structEsimdEmulSys_1_1SetSatur_3_01float_00_01true_01_4.html#a143a7d3db6170251788a3b3699700805":[3,0,3,5,0],
-"structEsimdEmulSys_1_1satur.html":[3,0,3,0],
 "structEsimdEmulSys_1_1satur.html#a378b175568072efa913f3bdb338b9777":[3,0,3,0,0],
 "structEsimdEmulSys_1_1satur_3_01double_01_4.html":[3,0,3,1],
 "structEsimdEmulSys_1_1satur_3_01double_01_4.html#aee9074c0c2cd6afff09512b63ae64b74":[3,0,3,1,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX27 =
 "struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7":[3,0,24,1],
 "struct__pi__plugin.html#a61f3c14948bd380bdb111988cfedef09":[3,0,24,3],
 "struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d":[3,0,24,2],
-"struct__pi__plugin.html#af620ffb734e20021fbfa88067860e456":[3,0,24,4]
+"struct__pi__plugin.html#af620ffb734e20021fbfa88067860e456":[3,0,24,4],
+"struct__pi__plugin_1_1FunctionPointers.html":[3,0,24,0],
+"struct__pi__program.html":[3,0,25]
 };

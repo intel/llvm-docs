@@ -1,7 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a2e0ad5af7ca19cbbfc89887e6ca409a4":[3,0,2,1,0,202,1,2],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a51c6459a289134b09c640d3ecda2404c":[3,0,2,1,0,202,1,1],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a8008d8af652ba1f2e8172dc8e2cbfc27":[3,0,2,1,0,202,1,0],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec":[3,0,2,1,0,202,1,4],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a990f4ed1d1f63caffc46eb131876a84a":[3,0,2,1,0,202,1,5],
@@ -249,5 +247,7 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html":[3,0,2,1,0,138],
 "structcl_1_1sycl_1_1detail_1_1is__arithmetic.html":[3,0,2,1,0,140],
 "structcl_1_1sycl_1_1detail_1_1is__contained.html":[3,0,2,1,0,141],
-"structcl_1_1sycl_1_1detail_1_1is__contained_3_01T_00_01empty__type__list_01_4.html":[3,0,2,1,0,142]
+"structcl_1_1sycl_1_1detail_1_1is__contained_3_01T_00_01empty__type__list_01_4.html":[3,0,2,1,0,142],
+"structcl_1_1sycl_1_1detail_1_1is__contained__value.html":[3,0,2,1,0,143],
+"structcl_1_1sycl_1_1detail_1_1is__contained__value_3_01T_00_01V_00_01value__list_3_01T_01_4_01_4.html":[3,0,2,1,0,144]
 };
