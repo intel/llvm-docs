@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad82016f75f13b645c868986261b1a6da":[3,0,2,1,0,235,18],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#add4c87c0f8a7652755eb435a79c4e35d":[3,0,2,1,0,235,8],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d":[3,0,2,1,0,235,12],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae7e34b2e2df980c15d3b2bed30ac0908":[3,0,2,1,0,235,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a9e24e87b08f923ebddaff2b6f69c353d":[3,0,2,1,0,286,49],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aa30edd11b78a68b8a8ee06bded675f71":[3,0,2,1,0,286,12],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aaa058841851dbf8cfff78b097ba14cf2":[3,0,2,1,0,286,28],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aaadd1753dc7e2105ee3a915b2d63b1cf":[3,0,2,1,0,286,20],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aabd2aedf519985f35119a538b5b7debb":[3,0,2,1,0,286,29]
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aaadd1753dc7e2105ee3a915b2d63b1cf":[3,0,2,1,0,286,20]
 };

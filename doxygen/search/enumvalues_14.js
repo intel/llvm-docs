@@ -3,7 +3,7 @@ var searchData=
   ['uncached',['Uncached',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67aab47215a1173a0ee7b4740f249a7ca2c',1,'cl::sycl::INTEL::gpu']]],
   ['undefined',['UNDEFINED',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8aada7af7a9dbcced08692c315ef5049fdb',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['uniformmemory',['UniformMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a63f47c7ceb16c99bcf521934fd4b7043',1,'__spv::MemorySemanticsMask']]],
-  ['unknown',['unknown',['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0eaad921d60486366258809553a3db49a4a',1,'cl::sycl::usm']]],
+  ['unknown',['unknown',['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0eaad921d60486366258809553a3db49a4a',1,'cl::sycl::usm::unknown()'],['../namespacecl_1_1sycl_1_1detail.html#ac7c700b946cf88083b9502a6732e8c14a4f191319b0b2905997aaec7c8ef30d44',1,'cl::sycl::detail::UNKNOWN()']]],
   ['unmap_5fmem_5fobj',['UNMAP_MEM_OBJ',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a86e380379b6676bdc832f51d15440f65',1,'cl::sycl::detail::Command']]],
   ['unnormalized',['unnormalized',['../namespacecl_1_1sycl.html#a7affaf1f828474ac7e461ae6e9831367a7f897d648fc51836310548dd56c5a70d',1,'cl::sycl']]],
   ['unorm_5fint16',['unorm_int16',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea070c4d32c2f66df8af378e9ef930e021',1,'cl::sycl']]],

@@ -37,6 +37,7 @@ var group__sycl__graph =
       [ "getBlockReason", "classcl_1_1sycl_1_1detail_1_1Command.html#a4a0c4f1cdb3da26fc015fdb764469c05", null ],
       [ "getContext", "classcl_1_1sycl_1_1detail_1_1Command.html#a5c3d718aef5df22a68fcf6f54a0fc74b", null ],
       [ "getEvent", "classcl_1_1sycl_1_1detail_1_1Command.html#a661bc9facf831042a7621a8b1a4a0434", null ],
+      [ "getPreparedHostDepsEvents", "classcl_1_1sycl_1_1detail_1_1Command.html#a82f54f0c3ff5b3a69e9ea86fe4470109", null ],
       [ "getQueue", "classcl_1_1sycl_1_1detail_1_1Command.html#ae943f9c76bd856b709f986da7876d5e0", null ],
       [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1Command.html#a37bddda2e1f11135708d5e29fb3b331d", null ],
       [ "getType", "classcl_1_1sycl_1_1detail_1_1Command.html#ac5a1bff88f24c2adb84c97d38ff24463", null ],

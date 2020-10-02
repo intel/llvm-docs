@@ -1,6 +1,7 @@
 var searchData=
 [
   ['map_5fmem_5fobj',['MAP_MEM_OBJ',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4aecafed01df81b9560f8f1ef01227eb90',1,'cl::sycl::detail::Command']]],
+  ['match',['MATCH',['../namespacecl_1_1sycl_1_1detail.html#ac7c700b946cf88083b9502a6732e8c14ae3c10b8768f0b8d767d9fece0848dd0c',1,'cl::sycl::detail']]],
   ['max_5fclock_5ffrequency',['max_clock_frequency',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190adf82af158ea87328fc4baf6980e25b73',1,'cl::sycl::info']]],
   ['max_5fcompute_5funits',['max_compute_units',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a2087398ba217bc393e8d9d20682e61d1',1,'cl::sycl::info']]],
   ['max_5fconstant_5fargs',['max_constant_args',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aea0b83d165847f1e40c384e6b3b2ccc6',1,'cl::sycl::info']]],
