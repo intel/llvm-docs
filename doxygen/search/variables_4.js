@@ -14,7 +14,7 @@ var searchData=
   ['depth',['depth',['../structpi__image__region__struct.html#a87c51d99dc1a0c7acf86e07e56df5e58',1,'pi_image_region_struct']]],
   ['depth_5fscalar',['depth_scalar',['../structpi__buff__rect__region__struct.html#a9f12d060bd89cbeb756c674de7bd960b',1,'pi_buff_rect_region_struct']]],
   ['devdriverver',['DevDriverVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a8bdbac0a0c70958e54826e45a518f346',1,'cl::sycl::detail::DevDescT']]],
-  ['device',['Device',['../classUSMMemoryAllocBase.html#ad673852cbce6f12c6b02410878e217f7',1,'USMMemoryAllocBase::Device()'],['../struct__pi__queue.html#ad3fa3b7d85ac1c43b3246a7bde15b62f',1,'_pi_queue::Device()']]],
+  ['device',['Device',['../classUSMMemoryAllocBase.html#ad673852cbce6f12c6b02410878e217f7',1,'USMMemoryAllocBase::Device()'],['../struct__pi__queue.html#a58a07d5525910b67e36d47e4baf361c2',1,'_pi_queue::Device()']]],
   ['device_5f',['device_',['../struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5',1,'_pi_queue']]],
   ['devicebinaries',['DeviceBinaries',['../structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a',1,'pi_device_binaries_struct']]],
   ['deviceid_5f',['deviceId_',['../struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2',1,'_pi_context']]],

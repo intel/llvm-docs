@@ -37,6 +37,7 @@ var searchData=
   ['pidevicescachemutex',['PiDevicesCacheMutex',['../struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd',1,'_pi_platform']]],
   ['pieventcreate',['piEventCreate',['../pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b',1,'pi_level_zero.cpp']]],
   ['pifunctiontable',['PiFunctionTable',['../struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7',1,'_pi_plugin']]],
+  ['piqueuemutex',['PiQueueMutex',['../struct__pi__queue.html#aee940c7b7baea79adf800e72a6fd32ec',1,'_pi_queue']]],
   ['piversion',['PiVersion',['../struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d',1,'_pi_plugin']]],
   ['platform',['Platform',['../class__pi__device.html#abaef3c3d43f659c307c93fc152764c39',1,'_pi_device']]],
   ['platname',['PlatName',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a0de3d29c678061b5ec73806b437d5339',1,'cl::sycl::detail::DevDescT']]],

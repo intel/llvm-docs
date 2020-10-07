@@ -8,7 +8,6 @@ var searchData=
   ['zecommandlistcache',['ZeCommandListCache',['../class__pi__device.html#a5fa14d6bc0bc43b4a207e6459bd8850f',1,'_pi_device']]],
   ['zecommandlistcachemutex',['ZeCommandListCacheMutex',['../class__pi__device.html#a9330d69f40184e78a32e1ab6420ac76f',1,'_pi_device']]],
   ['zecommandlistfencemap',['ZeCommandListFenceMap',['../struct__pi__queue.html#a107fcab350cdb1513785da02619253b3',1,'_pi_queue']]],
-  ['zecommandlistfencemapmutex',['ZeCommandListFenceMapMutex',['../struct__pi__queue.html#a7bc58453e17dde1d460ff27743a4154c',1,'_pi_queue']]],
   ['zecommandlistinit',['ZeCommandListInit',['../struct__pi__context.html#af7af59c3a749d29f49a53d6b745e1a49',1,'_pi_context']]],
   ['zecommandqueue',['ZeCommandQueue',['../struct__pi__queue.html#ac3f0358d5c57e09a7c653aac91136bc7',1,'_pi_queue']]],
   ['zecomputequeuegroupindex',['ZeComputeQueueGroupIndex',['../class__pi__device.html#a8be1d538c1d09902133f82a13ba33f6a',1,'_pi_device']]],

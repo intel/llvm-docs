@@ -12,15 +12,15 @@ var struct__pi__queue =
     [ "get_reference_count", "struct__pi__queue.html#af2491d242bb245ef26f08b56dbfeddb2", null ],
     [ "increment_reference_count", "struct__pi__queue.html#a1e42c61b4c00cd03ec6f6e85d9a9678f", null ],
     [ "resetCommandListFenceEntry", "struct__pi__queue.html#ad50709dfb73818469392dc56e5e53e1d", null ],
-    [ "Context", "struct__pi__queue.html#a6c2bdb3b70b640d9e41511e931e2b82f", null ],
+    [ "Context", "struct__pi__queue.html#aab82ec00fe6b1afeba8783aab620181d", null ],
     [ "context_", "struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4", null ],
-    [ "Device", "struct__pi__queue.html#ad3fa3b7d85ac1c43b3246a7bde15b62f", null ],
+    [ "Device", "struct__pi__queue.html#a58a07d5525910b67e36d47e4baf361c2", null ],
     [ "device_", "struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5", null ],
     [ "eventCount_", "struct__pi__queue.html#ac5db06e60d422bea7318d8e92cc2dde3", null ],
+    [ "PiQueueMutex", "struct__pi__queue.html#aee940c7b7baea79adf800e72a6fd32ec", null ],
     [ "properties_", "struct__pi__queue.html#af82978db8cafce93f764f5a6be9b8706", null ],
     [ "refCount_", "struct__pi__queue.html#adbd36fbf0364c31d4e901d5f1a9b4b8a", null ],
     [ "stream_", "struct__pi__queue.html#a622784255d6db4ff8f778200b46cb779", null ],
     [ "ZeCommandListFenceMap", "struct__pi__queue.html#a107fcab350cdb1513785da02619253b3", null ],
-    [ "ZeCommandListFenceMapMutex", "struct__pi__queue.html#a7bc58453e17dde1d460ff27743a4154c", null ],
     [ "ZeCommandQueue", "struct__pi__queue.html#ac3f0358d5c57e09a7c653aac91136bc7", null ]
 ];

@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('program__impl_8cpp.html','');});
 <code>#include &lt;<a class="el" href="pi_8h_source.html">CL/sycl/detail/pi.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="kernel_8hpp_source.html">CL/sycl/kernel.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="property__list_8hpp_source.html">CL/sycl/property_list.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="kernel__impl_8hpp_source.html">detail/kernel_impl.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="program__impl_8hpp_source.html">detail/program_impl.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="spec__constant__impl_8hpp_source.html">detail/spec_constant_impl.hpp</a>&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
@@ -113,30 +114,32 @@ Include dependency graph for program_impl.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="program__impl_8cpp__incl.png" border="0" usemap="#source_2detail_2program__impl_8cpp" alt=""/></div>
 <map name="source_2detail_2program__impl_8cpp" id="source_2detail_2program__impl_8cpp">
-<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="2143,505,2324,531"/>
-<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1197,676,1323,703"/>
-<area shape="rect" id="node21" href="kernel__desc_8hpp.html" title="CL/sycl/detail/kernel\l_desc.hpp" alt="" coords="3448,319,3589,360"/>
-<area shape="rect" id="node24" href="kernel_8hpp.html" title="CL/sycl/kernel.hpp" alt="" coords="1332,244,1463,271"/>
-<area shape="rect" id="node36" href="property__list_8hpp.html" title="CL/sycl/property_list.hpp" alt="" coords="2355,326,2522,353"/>
-<area shape="rect" id="node38" href="program__impl_8hpp.html" title="detail/program_impl.hpp" alt="" coords="2825,95,2985,121"/>
-<area shape="rect" id="node46" href="spec__constant__impl_8hpp.html" title="detail/spec_constant\l_impl.hpp" alt="" coords="3405,497,3547,539"/>
-<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1366,751,1493,777"/>
-<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="3217,751,3391,777"/>
-<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="2178,751,2345,777"/>
-<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="2185,594,2337,621"/>
-<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="3006,676,3117,703"/>
-<area shape="rect" id="node22" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="3145,415,3329,442"/>
-<area shape="rect" id="node25" href="info__desc_8hpp.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="1474,326,1651,353"/>
-<area shape="rect" id="node26" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="448,415,589,442"/>
-<area shape="rect" id="node28" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="2076,415,2183,442"/>
-<area shape="rect" id="node37" href="property__list__base_8hpp.html" title="CL/sycl/detail/property\l_list_base.hpp" alt="" coords="2258,408,2411,449"/>
-<area shape="rect" id="node39" href="context_8hpp.html" title="CL/sycl/context.hpp" alt="" coords="2628,244,2767,271"/>
-<area shape="rect" id="node40" href="common__info_8hpp.html" title="CL/sycl/detail/common\l_info.hpp" alt="" coords="2711,587,2867,628"/>
-<area shape="rect" id="node41" href="device_8hpp.html" title="CL/sycl/device.hpp" alt="" coords="1547,244,1682,271"/>
-<area shape="rect" id="node42" href="program_8hpp.html" title="CL/sycl/program.hpp" alt="" coords="2638,169,2781,196"/>
-<area shape="rect" id="node43" href="kernel__impl_8hpp.html" title="detail/kernel_impl.hpp" alt="" coords="1435,169,1583,196"/>
-<area shape="rect" id="node44" href="program__manager_8hpp.html" title="detail/program_manager\l/program_manager.hpp" alt="" coords="2943,319,3105,360"/>
-<area shape="rect" id="node45" href="util_8hpp.html" title="CL/sycl/detail/util.hpp" alt="" coords="3517,594,3665,621"/>
+<area shape="rect" id="node2" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="1056,497,1237,524"/>
+<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="753,661,879,688"/>
+<area shape="rect" id="node21" href="kernel__desc_8hpp.html" title="CL/sycl/detail/kernel\l_desc.hpp" alt="" coords="3507,319,3648,360"/>
+<area shape="rect" id="node24" href="kernel_8hpp.html" title="CL/sycl/kernel.hpp" alt="" coords="2177,244,2308,271"/>
+<area shape="rect" id="node34" href="property__list_8hpp.html" title="CL/sycl/property_list.hpp" alt="" coords="2338,326,2505,353"/>
+<area shape="rect" id="node36" href="kernel__impl_8hpp.html" title="detail/kernel_impl.hpp" alt="" coords="621,169,769,196"/>
+<area shape="rect" id="node42" href="spec__constant__impl_8hpp.html" title="detail/spec_constant\l_impl.hpp" alt="" coords="3071,408,3214,449"/>
+<area shape="rect" id="node44" href="program__impl_8hpp.html" title="detail/program_impl.hpp" alt="" coords="2817,95,2977,121"/>
+<area shape="rect" id="node4" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="658,736,785,763"/>
+<area shape="rect" id="node7" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="3307,736,3480,763"/>
+<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="2798,736,2965,763"/>
+<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="1107,579,1259,606"/>
+<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="2501,661,2611,688"/>
+<area shape="rect" id="node22" href="access_8hpp.html" title="CL/sycl/access/access.hpp" alt="" coords="3441,415,3625,442"/>
+<area shape="rect" id="node25" href="info__desc_8hpp.html" title="CL/sycl/info/info_desc.hpp" alt="" coords="1415,326,1593,353"/>
+<area shape="rect" id="node26" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="549,415,691,442"/>
+<area shape="rect" id="node28" href="id_8hpp.html" title="CL/sycl/id.hpp" alt="" coords="1069,415,1176,442"/>
+<area shape="rect" id="node35" href="property__list__base_8hpp.html" title="CL/sycl/detail/property\l_list_base.hpp" alt="" coords="2031,408,2185,449"/>
+<area shape="rect" id="node37" href="device_8hpp.html" title="CL/sycl/device.hpp" alt="" coords="1521,244,1655,271"/>
+<area shape="rect" id="node38" href="context__impl_8hpp.html" title="detail/context_impl.hpp" alt="" coords="1341,244,1497,271"/>
+<area shape="rect" id="node39" href="device__impl_8hpp.html" title="detail/device_impl.hpp" alt="" coords="494,326,645,353"/>
+<area shape="rect" id="node40" href="program__manager_8hpp.html" title="detail/program_manager\l/program_manager.hpp" alt="" coords="2682,319,2843,360"/>
+<area shape="rect" id="node41" href="util_8hpp.html" title="CL/sycl/detail/util.hpp" alt="" coords="3303,579,3451,606"/>
+<area shape="rect" id="node45" href="context_8hpp.html" title="CL/sycl/context.hpp" alt="" coords="2609,244,2748,271"/>
+<area shape="rect" id="node46" href="common__info_8hpp.html" title="CL/sycl/detail/common\l_info.hpp" alt="" coords="3071,572,3227,613"/>
+<area shape="rect" id="node47" href="program_8hpp.html" title="CL/sycl/program.hpp" alt="" coords="2717,169,2859,196"/>
 </map>
 </div>
 </div>

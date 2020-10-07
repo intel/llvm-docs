@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"esimd__math__intrin_8hpp.html#aaefe28d6582118f489f86936619f3d08":[4,0,0,0,1,4,0,0,2,38],
+"esimd__math__intrin_8hpp.html#ab2f9f4b6c06fee74c0793df8430857a8":[4,0,0,0,1,4,0,0,2,39],
 "esimd__math__intrin_8hpp.html#ab35ece552cd8d0edb989f236b327ef80":[4,0,0,0,1,4,0,0,2,19],
 "esimd__math__intrin_8hpp.html#ab5799b8a7088052b8002275809821556":[4,0,0,0,1,4,0,0,2,7],
 "esimd__math__intrin_8hpp.html#abd02c5a668f05c9e38353e6992858417":[4,0,0,0,1,4,0,0,2,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "functions_func_e.html":[3,3,1,5],
 "functions_func_f.html":[3,3,1,6],
 "functions_func_g.html":[3,3,1,7],
-"functions_func_h.html":[3,3,1,8],
-"functions_func_i.html":[3,3,1,9],
-"functions_func_k.html":[3,3,1,10]
+"functions_func_h.html":[3,3,1,8]
 };

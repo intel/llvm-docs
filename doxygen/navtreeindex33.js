@@ -1,5 +1,10 @@
 var NAVTREEINDEX33 =
 {
+"structrestype__ex_3_01int_00_01long_01long_01_4.html":[3,0,162],
+"structrestype__ex_3_01int_00_01long_01long_01_4.html#a1b75a0854190a202e30a1ad8627c755e":[3,0,162,0],
+"structrestype__ex_3_01int_00_01short_01_4.html":[3,0,163],
+"structrestype__ex_3_01int_00_01short_01_4.html#a606907c1588c011a46d7e0fafada4750":[3,0,163,0],
+"structrestype__ex_3_01int_00_01unsigned_01char_01_4.html":[3,0,164],
 "structrestype__ex_3_01int_00_01unsigned_01char_01_4.html#abc65f8d6b0f75196dc8f7c1ee91ac9c9":[3,0,164,0],
 "structrestype__ex_3_01int_00_01unsigned_01int_01_4.html":[3,0,165],
 "structrestype__ex_3_01int_00_01unsigned_01int_01_4.html#a1a87760fb6e159e1eedf783212c77a6c":[3,0,165,0],
@@ -240,14 +245,9 @@ var NAVTREEINDEX33 =
 "type__list_8hpp.html#af0a1ad2c8a459cfffd66bf1aa9d30fa4":[4,0,0,0,1,2,39,21],
 "type__list_8hpp_source.html":[4,0,0,0,1,2,39],
 "type__traits_8hpp.html":[4,0,0,0,1,2,40],
-"type__traits_8hpp.html#a1943bfb593638dfe2dca4b9dd2222067":[4,0,0,0,1,2,40,63],
-"type__traits_8hpp.html#a59890a8c4313f44261227efb2c1fac48":[4,0,0,0,1,2,40,73],
-"type__traits_8hpp.html#a652fa47f16e177740bc066e77b2fad59":[4,0,0,0,1,2,40,64],
-"type__traits_8hpp.html#a6a3ad499bb621bf651498a91f172ecf8":[4,0,0,0,1,2,40,69],
-"type__traits_8hpp.html#a9480d1d92df8fb08b39c65719fb53dc0":[4,0,0,0,1,2,40,71],
-"type__traits_8hpp.html#a97976495720a89f459051cf6e919f96a":[4,0,0,0,1,2,40,74],
-"type__traits_8hpp.html#aaa2ca0f84e25150a3e149b3115d77446":[4,0,0,0,1,2,40,65],
-"type__traits_8hpp.html#aae22fa563477dc5f26a4e6f04f613cf2":[4,0,0,0,1,2,40,66],
-"type__traits_8hpp.html#ab0f0b23dbcd157e51dca5fa5bbbc8202":[4,0,0,0,1,2,40,62],
-"type__traits_8hpp.html#abbfc9fbc0a39f53321df76e435720253":[4,0,0,0,1,2,40,72]
+"type__traits_8hpp.html#a1943bfb593638dfe2dca4b9dd2222067":[4,0,0,0,1,2,40,66],
+"type__traits_8hpp.html#a59890a8c4313f44261227efb2c1fac48":[4,0,0,0,1,2,40,76],
+"type__traits_8hpp.html#a652fa47f16e177740bc066e77b2fad59":[4,0,0,0,1,2,40,67],
+"type__traits_8hpp.html#a6a3ad499bb621bf651498a91f172ecf8":[4,0,0,0,1,2,40,72],
+"type__traits_8hpp.html#a9480d1d92df8fb08b39c65719fb53dc0":[4,0,0,0,1,2,40,74]
 };
