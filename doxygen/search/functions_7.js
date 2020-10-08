@@ -212,7 +212,7 @@ var searchData=
   ['getallocatorimpl',['getAllocatorImpl',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a0b4d8047092d61400d07da31559e5549',1,'cl::sycl::detail::SYCLMemObjAllocator::getAllocatorImpl()'],['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#a46a377afe1c0c182a2f9a5adafab58d9',1,'cl::sycl::detail::SYCLMemObjAllocatorHolder::getAllocatorImpl()']]],
   ['getallowlistdesc',['getAllowListDesc',['../namespacecl_1_1sycl_1_1detail.html#add8769f9f6844006d72f5c3fad78c904',1,'cl::sycl::detail']]],
   ['getarguments',['getArguments',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#af3b3c5a0d9d90219aecebd4580ceecae',1,'cl::sycl::detail::CGExecKernel']]],
-  ['getavailablecommandlist',['getAvailableCommandList',['../class__pi__device.html#a463569ca79a53d5c3f2ea2b05a23cd80',1,'_pi_device']]],
+  ['getavailablecommandlist',['getAvailableCommandList',['../class__pi__device.html#a1d8fbdcaf8d015ac2f1f8ad0a203caac',1,'_pi_device']]],
   ['getbackend',['getBackend',['../classcl_1_1sycl_1_1detail_1_1plugin.html#a1f79f6e9dcc93f9db95f273ed2801911',1,'cl::sycl::detail::plugin']]],
   ['getbaseregion',['getBaseRegion',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aa24a58b485034263cffdc0e8d74242ff',1,'cl::sycl::INTEL::gpu::getBaseRegion(T Reg)'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a7a7b01ea12a1448f1599c766e4d9ff2c',1,'cl::sycl::INTEL::gpu::getBaseRegion(std::pair&lt; T, U &gt; Reg)']]],
   ['getbinaryimageformat',['getBinaryImageFormat',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a5977eda13527e6a59274e95a6b12dce3',1,'cl::sycl::detail::pi']]],

@@ -128,5 +128,6 @@ var pi__level__zero_8cpp =
     [ "OnceFlag", "pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7", null ],
     [ "piEventCreate", "pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b", null ],
     [ "UseUSMAllocator", "pi__level__zero_8cpp.html#a3da6fe5aab6b35ba86c353ff7175a443", null ],
-    [ "ZE_SUPPORTED_EXTENSIONS", "pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e", null ]
+    [ "ZE_SUPPORTED_EXTENSIONS", "pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e", null ],
+    [ "ZeCommandListBatchSize", "pi__level__zero_8cpp.html#a86e6ea102c115b141e5d3d4eb6bce78d", null ]
 ];

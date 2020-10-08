@@ -5,6 +5,7 @@ var searchData=
   ['ze_5fsupported_5fextensions',['ZE_SUPPORTED_EXTENSIONS',['../pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e',1,'pi_level_zero.cpp']]],
   ['zebuildlog',['ZeBuildLog',['../struct__pi__program.html#a1bae8f9def19a50e7e0c439e3b56dba7',1,'_pi_program']]],
   ['zecommandlist',['ZeCommandList',['../class__pi__event.html#a6ff8db9dffcdd3ac6cf539500de6c737',1,'_pi_event']]],
+  ['zecommandlistbatchsize',['ZeCommandListBatchSize',['../pi__level__zero_8cpp.html#a86e6ea102c115b141e5d3d4eb6bce78d',1,'pi_level_zero.cpp']]],
   ['zecommandlistcache',['ZeCommandListCache',['../class__pi__device.html#a5fa14d6bc0bc43b4a207e6459bd8850f',1,'_pi_device']]],
   ['zecommandlistcachemutex',['ZeCommandListCacheMutex',['../class__pi__device.html#a9330d69f40184e78a32e1ab6420ac76f',1,'_pi_device']]],
   ['zecommandlistfencemap',['ZeCommandListFenceMap',['../struct__pi__queue.html#a107fcab350cdb1513785da02619253b3',1,'_pi_queue']]],
@@ -27,6 +28,9 @@ var searchData=
   ['zemaxcommandlistcache',['ZeMaxCommandListCache',['../struct__pi__platform.html#ae3728a73750613ebe29a038e01dbd24e',1,'_pi_platform']]],
   ['zemem',['ZeMem',['../struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd',1,'_pi_buffer']]],
   ['zemodule',['ZeModule',['../struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8',1,'_pi_program']]],
+  ['zeopencommandlist',['ZeOpenCommandList',['../struct__pi__queue.html#a80d07a4cbb4f6c2add317d1bd34dbe17',1,'_pi_queue']]],
+  ['zeopencommandlistfence',['ZeOpenCommandListFence',['../struct__pi__queue.html#a8060f4822461f53336c2d22f166d33de',1,'_pi_queue']]],
+  ['zeopencommandlistsize',['ZeOpenCommandListSize',['../struct__pi__queue.html#a3f51722a1c7449317bc6ea799ce6f814',1,'_pi_queue']]],
   ['zesampler',['ZeSampler',['../struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673',1,'_pi_sampler']]],
   ['zespecconstants',['ZeSpecConstants',['../struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b',1,'_pi_program']]]
 ];

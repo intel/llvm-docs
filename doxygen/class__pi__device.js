@@ -5,7 +5,7 @@ var class__pi__device =
     [ "get", "class__pi__device.html#a6bb8a1567f31c17c8009624e8916ccb9", null ],
     [ "get_platform", "class__pi__device.html#a088695d930c25590d6a47897fb29bc17", null ],
     [ "get_reference_count", "class__pi__device.html#a7e9c155a94fddc1591bf5e450b1e9d5d", null ],
-    [ "getAvailableCommandList", "class__pi__device.html#a463569ca79a53d5c3f2ea2b05a23cd80", null ],
+    [ "getAvailableCommandList", "class__pi__device.html#a1d8fbdcaf8d015ac2f1f8ad0a203caac", null ],
     [ "initialize", "class__pi__device.html#a56e91984f15ec06679ca3a21c3b4facc", null ],
     [ "IsSubDevice", "class__pi__device.html#a63fa3ab96aa179b3900f2290f0fb6f89", null ],
     [ "Platform", "class__pi__device.html#abaef3c3d43f659c307c93fc152764c39", null ],

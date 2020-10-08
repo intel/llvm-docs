@@ -1,5 +1,13 @@
 var NAVTREEINDEX31 =
 {
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html":[3,0,2,1,0,121],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html#a797357a84022f49852c8cd5436628ce3":[3,0,2,1,0,121,0],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__or_3_01V_01_4_01_4.html":[3,0,2,1,0,122],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__or_3_01V_01_4_01_4.html#aaab3aa8fe522eaf31072a3717b31e6cc":[3,0,2,1,0,122,0],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__xor_3_01V_01_4_01_4.html":[3,0,2,1,0,123],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__xor_3_01V_01_4_01_4.html#a02b992de9f47b543fb96f3bb714b1332":[3,0,2,1,0,123,0],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1maximum_3_01V_01_4_01_4.html":[3,0,2,1,0,124],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1maximum_3_01V_01_4_01_4.html#a344cf78eedfdacc50c89978f9a0efe6a":[3,0,2,1,0,124,0],
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1minimum_3_01V_01_4_01_4.html":[3,0,2,1,0,125],
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1minimum_3_01V_01_4_01_4.html#ac02cdec1d504c9d6da9eb5fec91ffd21":[3,0,2,1,0,125,0],
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html":[3,0,2,1,0,126],
@@ -241,13 +249,5 @@ var NAVTREEINDEX31 =
 "structdwordtype_3_01int_01_4.html#a1cbfa77ffbd77c943d8afa712f9e2169":[3,0,42,0],
 "structdwordtype_3_01unsigned_01int_01_4.html":[3,0,43],
 "structdwordtype_3_01unsigned_01int_01_4.html#a6edcd5c20a0392596706618ca7bac56d":[3,0,43,0],
-"structesimdtype.html":[3,0,44],
-"structesimdtype_3_01char_01_4.html":[3,0,45],
-"structesimdtype_3_01char_01_4.html#aa06222dc5cab97a9cdd7d8f3e6598a61":[3,0,45,0],
-"structesimdtype_3_01double_01_4.html":[3,0,46],
-"structesimdtype_3_01double_01_4.html#a6230b3008663ff0b36c8c0a5579e1295":[3,0,46,0],
-"structesimdtype_3_01float_01_4.html":[3,0,47],
-"structesimdtype_3_01float_01_4.html#a5e75ed789ed475777e2908c8d0f0c67b":[3,0,47,0],
-"structesimdtype_3_01half_01_4.html":[3,0,48],
-"structesimdtype_3_01half_01_4.html#a0be223cb1897610919753786f78212b0":[3,0,48,0]
+"structesimdtype.html":[3,0,44]
 };

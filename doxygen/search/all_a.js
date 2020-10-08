@@ -367,6 +367,7 @@ var searchData=
   ['isaccessreadwrite',['IsAccessReadWrite',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#af31ca5d917cbb1b4669a0ab2a41e74c3',1,'cl::sycl::detail::accessor_common']]],
   ['isavailable',['isAvailable',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a66a2116094b82c061621586e97be946b',1,'cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange']]],
   ['isbannedplatform',['IsBannedPlatform',['../namespacecl_1_1sycl_1_1detail.html#a2130b5434d2626ef36fbaac83451fdb3',1,'cl::sycl::detail']]],
+  ['isbatchingallowed',['isBatchingAllowed',['../struct__pi__queue.html#a49d291550b7eeee8375fbaf9f177c57b',1,'_pi_queue']]],
   ['iscompiletimepropertyinstance',['IsCompileTimePropertyInstance',['../structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html',1,'cl::sycl::detail']]],
   ['iscompiletimepropertyinstance_3c_20intel_3a_3aproperty_3a_3abuffer_5flocation_3a_3ainstance_3c_20i_20_3e_20_3e',['IsCompileTimePropertyInstance&lt; INTEL::property::buffer_location::instance&lt; I &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html',1,'cl::sycl::detail']]],
   ['iscompiletimepropertyinstance_3c_20oneapi_3a_3aproperty_3a_3ano_5falias_3a_3ainstance_3c_3e_20_3e',['IsCompileTimePropertyInstance&lt; ONEAPI::property::no_alias::instance&lt;&gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html',1,'cl::sycl::detail']]],

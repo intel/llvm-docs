@@ -13,6 +13,7 @@ var searchData=
   ['queue_5fimpl_2ehpp',['queue_impl.hpp',['../queue__impl_8hpp.html',1,'']]],
   ['queue_5fprofiling',['queue_profiling',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261eacff13e821b304bffc11e5a8b52b78359',1,'cl::sycl::queue_profiling()'],['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190acff13e821b304bffc11e5a8b52b78359',1,'cl::sycl::info::queue_profiling()']]],
   ['queue_5fproperties_2ehpp',['queue_properties.hpp',['../queue__properties_8hpp.html',1,'']]],
+  ['queuebatchsize',['QueueBatchSize',['../struct__pi__queue.html#a3dc7f39dcfc68ddf0b9d64e100520d06',1,'_pi_queue']]],
   ['queueenableprofiling',['QueueEnableProfiling',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa5901d8ed9c92ee1ba63789e94e5970af',1,'cl::sycl::detail']]],
   ['queueimplptr',['QueueImplPtr',['../classcl_1_1sycl_1_1interop__handler.html#afd4ed4778fa554961fc3128f0b0cfa2b',1,'cl::sycl::interop_handler::QueueImplPtr()'],['../namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8',1,'cl::sycl::detail::QueueImplPtr()']]],
   ['queueorder',['QueueOrder',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06',1,'cl::sycl::detail']]],

@@ -138,6 +138,11 @@ subject to change. Do not rely on these variables in production code.</p>
 <td>Any(*)</td>
 <td>Disable USM allocator in Level Zero plugin (each memory request will go directly to Level Zero runtime)</td>
 </tr>
+<tr>
+<td>SYCL_PI_LEVEL_ZERO_BATCH_SIZE</td>
+<td>Positive integer</td>
+<td>Sets a preferred number of commands to batch into a command list before executing the command list. Values 0 and 1 turn off batching. Default is 4.</td>
+</tr>
 </tbody>
 </table><p><code class="docutils literal notranslate"><span class="pre">(*)</span> <span class="pre">Note:</span> <span class="pre">Any</span> <span class="pre">means</span> <span class="pre">this</span> <span class="pre">environment</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">effective</span> <span class="pre">when</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">any</span> <span class="pre">non-null</span> <span class="pre">value.</span></code></p>
 <div class="section" id="sycl-print-execution-graph-options">

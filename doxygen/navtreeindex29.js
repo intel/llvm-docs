@@ -1,5 +1,13 @@
 var NAVTREEINDEX29 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type.html#acf8981c8102705af65b1b41d28a985eb":[3,0,2,1,3,0,0,35,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01T_01_6_01_4.html":[3,0,2,1,3,0,0,38],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01T_01_6_01_4.html#a8c1fcd61b96ded17e5a9d5e4b4c6860b":[3,0,2,1,3,0,0,38,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01T_01_6_6_01_4.html":[3,0,2,1,3,0,0,39],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01T_01_6_6_01_4.html#a6b782f34dc9013869bd80dc4dbd158d9":[3,0,2,1,3,0,0,39,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01const_01T_01_4.html":[3,0,2,1,3,0,0,36],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01const_01T_01_4.html#a80235350ce5f28d28cbdb41b74eb7aaa":[3,0,2,1,3,0,0,36,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,37],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html#af81725d00b1d82ea376df87e0630dcd9":[3,0,2,1,3,0,0,37,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type.html":[3,0,2,1,3,0,0,40],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type.html#ad6d90c15f5531fbe4dd98ecc9d6454f2":[3,0,2,1,3,0,0,40,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo_3_01info_1_1kernel__device__specific_1_1work__group__size_01_4.html":[3,0,2,1,0,198],
 "structcl_1_1sycl_1_1detail_1_1ItemBase.html":[3,0,2,1,0,199],
 "structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html":[3,0,2,1,0,200],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#a813dc83ca74d4c8f0022b8d1d20dd454":[3,0,2,1,0,200,3],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#aa73e21f1eb62d4b53f63b099f4d9a2da":[3,0,2,1,0,200,1],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#aca7e5d9f9113c66177596d5d3b282d73":[3,0,2,1,0,200,2],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#acddf2d86e1328ea992ff4a3dfce67f86":[3,0,2,1,0,200,5],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#aea2e31969538343225957e59b5e0a819":[3,0,2,1,0,200,0],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#afc396f5b8c820d1669d78054f088fc18":[3,0,2,1,0,200,4],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html":[3,0,2,1,0,201],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#a54633002146b70c00c15f6ba4ea02e9c":[3,0,2,1,0,201,3],
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#a58fa85d6b126c8e31b6f48f46aeaae7d":[3,0,2,1,0,201,5]
+"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#a813dc83ca74d4c8f0022b8d1d20dd454":[3,0,2,1,0,200,3]
 };
