@@ -75,11 +75,11 @@ var NAVTREEINDEX =
 "stream_8hpp.html#adbf7c1f124b7be64e4fea58110a9d453",
 "struct__pi__offload__entry__struct.html#a76a3565f400c268d36cdadc8b893f4c9",
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type.html#acf8981c8102705af65b1b41d28a985eb",
-"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#aa73e21f1eb62d4b53f63b099f4d9a2da",
-"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html",
-"structesimdtype_3_01char_01_4.html",
-"structrestype__ex_3_01int_00_01double_01_4.html",
-"type__list_8hpp.html#af0a1ad2c8a459cfffd66bf1aa9d30fa4"
+"structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html#aea2e31969538343225957e59b5e0a819",
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__or_3_01V_01_4_01_4.html#aaab3aa8fe522eaf31072a3717b31e6cc",
+"structesimdtype_3_01double_01_4.html#a6230b3008663ff0b36c8c0a5579e1295",
+"structrestype__ex_3_01int_00_01float_01_4.html#ae0aeb8d7ddc0e60d6ada78b62311eb1c",
+"type__traits_8hpp.html#a1943bfb593638dfe2dca4b9dd2222067"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
