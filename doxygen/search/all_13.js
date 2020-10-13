@@ -164,7 +164,7 @@ var searchData=
   ['shuffle_5fup',['shuffle_up',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a5c83d6cf501b21c4c18e84926917a073',1,'cl::sycl::ONEAPI::sub_group']]],
   ['shuffle_5fxor',['shuffle_xor',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a44dbff092164f704efda7ac81426d536',1,'cl::sycl::ONEAPI::sub_group']]],
   ['sign',['sign',['../namespacecl_1_1sycl.html#add25092c17b57fbf4a6f93b56426b587',1,'cl::sycl']]],
-  ['signaling_5fnan',['signaling_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#aad242d58df3cb8b5f65c61cc447f23f5',1,'std::numeric_limits&lt; half &gt;']]],
+  ['signaling_5fnan',['signaling_NaN',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a911a7dfdae5ac92ca83179551b4783b2',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['signbit',['signbit',['../namespacecl_1_1sycl.html#ab736e001cf1bb9a90a36477f8f982c50',1,'cl::sycl']]],
   ['signed_5fbasic_5flist',['signed_basic_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#ad1fe3f0e8c949ae0769386a8a6c49cd6',1,'cl::sycl::detail::gtl']]],
   ['signed_5fchar_5flist',['signed_char_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#ac189a74f2084b9df7c9487785f0491fa',1,'cl::sycl::detail::gtl']]],

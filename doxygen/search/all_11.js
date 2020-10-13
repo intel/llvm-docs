@@ -17,6 +17,6 @@ var searchData=
   ['queueenableprofiling',['QueueEnableProfiling',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa5901d8ed9c92ee1ba63789e94e5970af',1,'cl::sycl::detail']]],
   ['queueimplptr',['QueueImplPtr',['../classcl_1_1sycl_1_1interop__handler.html#afd4ed4778fa554961fc3128f0b0cfa2b',1,'cl::sycl::interop_handler::QueueImplPtr()'],['../namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8',1,'cl::sycl::detail::QueueImplPtr()']]],
   ['queueorder',['QueueOrder',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06',1,'cl::sycl::detail']]],
-  ['quiet_5fnan',['quiet_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#ad0f4cf27e831348230b64ec3a5215fa5',1,'std::numeric_limits&lt; half &gt;::quiet_NaN()'],['../namespacecl_1_1sycl_1_1detail.html#aaa5d86c61ed8f44c39b86cac5dedb804',1,'cl::sycl::detail::quiet_NaN()']]],
+  ['quiet_5fnan',['quiet_NaN',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a05f6321993115403941e4a2ff294a22e',1,'std::numeric_limits&lt; cl::sycl::half &gt;::quiet_NaN()'],['../namespacecl_1_1sycl_1_1detail.html#aaa5d86c61ed8f44c39b86cac5dedb804',1,'cl::sycl::detail::quiet_NaN()']]],
   ['qword',['QWORD',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951af2fdaea322db8fa74fa887ca781f72d8',1,'__esimd']]]
 ];

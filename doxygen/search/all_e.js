@@ -76,6 +76,6 @@ var searchData=
   ['numa',['numa',['../namespacecl_1_1sycl_1_1info.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca0dfb2d09aeef6a0220a25c2e2d0fddbd',1,'cl::sycl::info']]],
   ['numchannels',['NumChannels',['../esimd__enum_8hpp.html#a8b54e8b356587effbb9f71a3fb47da60',1,'esimd_enum.hpp']]],
   ['numdevicebinaries',['NumDeviceBinaries',['../structpi__device__binaries__struct.html#a2ce1e03cf7aa6d02d8e293170ff83e64',1,'pi_device_binaries_struct']]],
-  ['numeric_5flimits_3c_20half_20_3e',['numeric_limits&lt; half &gt;',['../structstd_1_1numeric__limits_3_01half_01_4.html',1,'std']]],
+  ['numeric_5flimits_3c_20cl_3a_3asycl_3a_3ahalf_20_3e',['numeric_limits&lt; cl::sycl::half &gt;',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html',1,'std']]],
   ['numworkgroups',['NumWorkGroups',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a35a6dbf8c6b0d99e92e2329c703a9ecd',1,'cl::sycl::detail::NDRDescT']]]
 ];

@@ -18,5 +18,5 @@ var searchData=
   ['no_5foffset',['no_offset',['../structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset.html',1,'cl::sycl::ONEAPI::property']]],
   ['noinit',['noinit',['../classcl_1_1sycl_1_1property_1_1noinit.html',1,'cl::sycl::property']]],
   ['notequalto',['NotEqualTo',['../structcl_1_1sycl_1_1detail_1_1NotEqualTo.html',1,'cl::sycl::detail']]],
-  ['numeric_5flimits_3c_20half_20_3e',['numeric_limits&lt; half &gt;',['../structstd_1_1numeric__limits_3_01half_01_4.html',1,'std']]]
+  ['numeric_5flimits_3c_20cl_3a_3asycl_3a_3ahalf_20_3e',['numeric_limits&lt; cl::sycl::half &gt;',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html',1,'std']]]
 ];

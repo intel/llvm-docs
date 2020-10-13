@@ -14,7 +14,7 @@ var searchData=
   ['degrees',['degrees',['../namespacecl_1_1sycl.html#a69f903bba700fcdb3eded33d1f4f1e6a',1,'cl::sycl::degrees()'],['../namespacecl_1_1____host__std.html#a5160dcaf06f4c8ba26644e58884ef378',1,'cl::__host_std::degrees(s::cl_float radians) __NOEXC'],['../namespacecl_1_1____host__std.html#a2d0a60fff859c9e06e3392155f2477e9',1,'cl::__host_std::degrees(s::cl_double radians) __NOEXC'],['../namespacecl_1_1____host__std.html#a686ed20afbcb68ce4256d1d8f62fefee',1,'cl::__host_std::degrees(s::cl_half radians) __NOEXC']]],
   ['deletezeeventlist',['deleteZeEventList',['../class__pi__event.html#a8df70b8b68df376b3788faad8246de15',1,'_pi_event']]],
   ['demanglekernelname',['demangleKernelName',['../namespacecl_1_1sycl_1_1detail.html#afe9b88aa99ae3546ca5e417610558828',1,'cl::sycl::detail']]],
-  ['denorm_5fmin',['denorm_min',['../structstd_1_1numeric__limits_3_01half_01_4.html#a13da2f4db8560b11d94ca6dafa528a2a',1,'std::numeric_limits&lt; half &gt;']]],
+  ['denorm_5fmin',['denorm_min',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aaf6c0daa3fe860b27c22d800dc06e5e4',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html#a517e13667cc6ba1340423b6bb9b0a8e0',1,'cl::sycl::detail::DepDesc']]],
   ['depends_5fon',['depends_on',['../classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7',1,'cl::sycl::handler::depends_on(event Event)'],['../classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4',1,'cl::sycl::handler::depends_on(const vector_class&lt; event &gt; &amp;Events)']]],
   ['destroy',['destroy',['../classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a84e3e22e10e15fd8868e62a53a3b2e8c',1,'cl::sycl::detail::aligned_allocator']]],

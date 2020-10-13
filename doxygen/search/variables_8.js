@@ -1,13 +1,13 @@
 var searchData=
 [
   ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1INTEL.html#a1cdbe3d4af85e7e311b746e67058f4bf',1,'cl::sycl::INTEL']]],
-  ['has_5fdenorm',['has_denorm',['../structstd_1_1numeric__limits_3_01half_01_4.html#a46367b7c7c302f5e043ce75f931e8207',1,'std::numeric_limits&lt; half &gt;']]],
-  ['has_5fdenorm_5floss',['has_denorm_loss',['../structstd_1_1numeric__limits_3_01half_01_4.html#a99750bacfaef913c3ba44962c8a111fb',1,'std::numeric_limits&lt; half &gt;']]],
+  ['has_5fdenorm',['has_denorm',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#af5802d4a33acf9fb76ea47f5c1871b4a',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
+  ['has_5fdenorm_5floss',['has_denorm_loss',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a67ca0662d42bc70b08141d5505a6f7a3',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['has_5ffast_5fatomics',['has_fast_atomics',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#aeab10e1a3c29719ea33da620b19530cd',1,'cl::sycl::ONEAPI::detail::reduction_impl']]],
   ['has_5ffast_5freduce',['has_fast_reduce',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a87fbab1435ec392915e7226b687af410',1,'cl::sycl::ONEAPI::detail::reduction_impl']]],
-  ['has_5finfinity',['has_infinity',['../structstd_1_1numeric__limits_3_01half_01_4.html#a1ca58c34dbb4fe251dfa69f0694557bc',1,'std::numeric_limits&lt; half &gt;']]],
-  ['has_5fquiet_5fnan',['has_quiet_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#ac3d58676c6384b3c606bc19d556285bd',1,'std::numeric_limits&lt; half &gt;']]],
-  ['has_5fsignaling_5fnan',['has_signaling_NaN',['../structstd_1_1numeric__limits_3_01half_01_4.html#ae2c68ea746186c2d4a11de651d34ac5d',1,'std::numeric_limits&lt; half &gt;']]],
+  ['has_5finfinity',['has_infinity',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a55285710ef38550fbc7dd386c17a3988',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
+  ['has_5fquiet_5fnan',['has_quiet_NaN',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ac2d13d4ab1280e18a5a896801d3a5231',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
+  ['has_5fsignaling_5fnan',['has_signaling_NaN',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ada9913528ef19847762f1da22defd6bd',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['hasbackend',['HasBackend',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#a9229dc485d95205470244c429c3816cb',1,'cl::sycl::detail::device_filter']]],
   ['hasdevicenum',['HasDeviceNum',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#a49208af750615773cec66d3e62250a59',1,'cl::sycl::detail::device_filter']]],
   ['hasdevicetype',['HasDeviceType',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#aab02e00bf523c66e9928652f7366b5c7',1,'cl::sycl::detail::device_filter']]],

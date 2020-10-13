@@ -63,7 +63,7 @@ var searchData=
   ['long_5flist',['long_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a690bd3abef1f4490c2298b3f341a3d38',1,'cl::sycl::detail::gtl']]],
   ['longlong',['longlong',['../namespacecl_1_1sycl.html#a8773823795c2848f066b5873a4435544',1,'cl::sycl']]],
   ['longlong_5flist',['longlong_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a54a65fb2ccf8bee80c25879a7de8156b',1,'cl::sycl::detail::gtl']]],
-  ['lowest',['lowest',['../structstd_1_1numeric__limits_3_01half_01_4.html#a63a9eb79f3d2acee872269e8223e689f',1,'std::numeric_limits&lt; half &gt;']]],
+  ['lowest',['lowest',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a9402a3f529b3e35689dcbe962bfab7d9',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['lshift',['LShift',['../structcl_1_1sycl_1_1detail_1_1LShift.html',1,'cl::sycl::detail']]],
   ['lsu',['lsu',['../classcl_1_1sycl_1_1INTEL_1_1lsu.html',1,'cl::sycl::INTEL::lsu&lt; _mem_access_params &gt;'],['../classcl_1_1sycl_1_1INTEL_1_1lsu.html#a870cac9e726f4b6712e006bd5c922e45',1,'cl::sycl::INTEL::lsu::lsu()']]],
   ['luminance',['luminance',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfaf211946e6417f327f86f921b2845d54e',1,'cl::sycl']]],
