@@ -58,6 +58,7 @@ var searchData=
   ['shuffle_5fdown',['shuffle_down',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#adb62adbd003a56153b03e66bc6c0e0eb',1,'cl::sycl::ONEAPI::sub_group']]],
   ['shuffle_5fup',['shuffle_up',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a5c83d6cf501b21c4c18e84926917a073',1,'cl::sycl::ONEAPI::sub_group']]],
   ['shuffle_5fxor',['shuffle_xor',['../structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a44dbff092164f704efda7ac81426d536',1,'cl::sycl::ONEAPI::sub_group']]],
+  ['shutdown',['shutdown',['../namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124',1,'cl::sycl::detail']]],
   ['sign',['sign',['../namespacecl_1_1sycl.html#add25092c17b57fbf4a6f93b56426b587',1,'cl::sycl']]],
   ['signaling_5fnan',['signaling_NaN',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a911a7dfdae5ac92ca83179551b4783b2',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['signbit',['signbit',['../namespacecl_1_1sycl.html#ab736e001cf1bb9a90a36477f8f982c50',1,'cl::sycl']]],

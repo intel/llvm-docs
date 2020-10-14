@@ -36,6 +36,7 @@ var searchData=
   ['spec_5fconstant',['spec_constant',['../classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html',1,'cl::sycl::ONEAPI::experimental']]],
   ['spec_5fconstant_5fimpl',['spec_constant_impl',['../classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html',1,'cl::sycl::detail']]],
   ['specconstantinfo',['SpecConstantInfo',['../structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html',1,'cl::sycl::detail']]],
+  ['spinlock',['SpinLock',['../classcl_1_1sycl_1_1detail_1_1SpinLock.html',1,'cl::sycl::detail']]],
   ['statically_5fcoalesce_5fimpl',['statically_coalesce_impl',['../structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html',1,'cl::sycl::INTEL']]],
   ['stream',['stream',['../classcl_1_1sycl_1_1stream.html',1,'cl::sycl']]],
   ['stream_5fimpl',['stream_impl',['../classcl_1_1sycl_1_1detail_1_1stream__impl.html',1,'cl::sycl::detail']]],

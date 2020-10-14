@@ -42,6 +42,10 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "filter_selector_impl.hpp", "filter__selector__impl_8hpp.html", "filter__selector__impl_8hpp" ],
     [ "force_device.cpp", "force__device_8cpp.html", "force__device_8cpp" ],
     [ "force_device.hpp", "force__device_8hpp.html", "force__device_8hpp" ],
+    [ "global_handler.cpp", "global__handler_8cpp.html", "global__handler_8cpp" ],
+    [ "global_handler.hpp", "global__handler_8hpp.html", [
+      [ "GlobalHandler", "classcl_1_1sycl_1_1detail_1_1GlobalHandler.html", "classcl_1_1sycl_1_1detail_1_1GlobalHandler" ]
+    ] ],
     [ "handler_proxy.cpp", "handler__proxy_8cpp.html", "handler__proxy_8cpp" ],
     [ "helpers.cpp", "helpers_8cpp.html", "helpers_8cpp" ],
     [ "image_accessor_util.cpp", "image__accessor__util_8cpp.html", "image__accessor__util_8cpp" ],

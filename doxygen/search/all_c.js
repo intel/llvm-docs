@@ -46,6 +46,7 @@ var searchData=
   ['localaccessorimplhost',['LocalAccessorImplHost',['../classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html',1,'cl::sycl::detail::LocalAccessorImplHost'],['../classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a11f112c7d5e3c5906a683c9ccb4454e2',1,'cl::sycl::detail::LocalAccessorImplHost::LocalAccessorImplHost()']]],
   ['localaccessorimplptr',['LocalAccessorImplPtr',['../namespacecl_1_1sycl_1_1detail.html#adb80107e19788baf7fd62eab2be54148',1,'cl::sycl::detail']]],
   ['localsize',['LocalSize',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a0caff7db1b43d03cde7cb3c13d7c5c9e',1,'cl::sycl::detail::NDRDescT']]],
+  ['lock',['lock',['../classcl_1_1sycl_1_1detail_1_1SpinLock.html#a6404992f75bb14e487d525f802c66f4a',1,'cl::sycl::detail::SpinLock']]],
   ['locked',['Locked',['../classcl_1_1sycl_1_1detail_1_1Locked.html',1,'cl::sycl::detail::Locked&lt; T &gt;'],['../classcl_1_1sycl_1_1detail_1_1Locked.html#a2e4af378f85d434dec0e4f0bb210f8df',1,'cl::sycl::detail::Locked::Locked()']]],
   ['locked_2ehpp',['locked.hpp',['../locked_8hpp.html',1,'']]],
   ['locksharedtimedmutex',['lockSharedTimedMutex',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4ca29b68b09ab4a43c40604a0960fd09',1,'cl::sycl::detail::Scheduler']]],

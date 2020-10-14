@@ -162,7 +162,7 @@ var searchData=
   ['is_5fvectorizable',['is_vectorizable',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable.html',1,'cl::sycl::INTEL::gpu']]],
   ['is_5fvectorizable_3c_20bool_20_3e',['is_vectorizable&lt; bool &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable_3_01bool_01_4.html',1,'cl::sycl::INTEL::gpu']]],
   ['is_5fvectorizable_5fv',['is_vectorizable_v',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable__v.html',1,'cl::sycl::INTEL::gpu']]],
-  ['is_5fword_5ftype',['is_word_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__word__type.html',1,'cl::sycl::INTEL::gpu::detail::is_word_type&lt; T &gt;'],['../structis__word__type.html',1,'is_word_type&lt; T &gt;']]],
+  ['is_5fword_5ftype',['is_word_type',['../structis__word__type.html',1,'is_word_type&lt; T &gt;'],['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__word__type.html',1,'cl::sycl::INTEL::gpu::detail::is_word_type&lt; T &gt;']]],
   ['is_5fword_5ftype_3c_20short_20_3e',['is_word_type&lt; short &gt;',['../structis__word__type_3_01short_01_4.html',1,'']]],
   ['is_5fword_5ftype_3c_20sycl_3a_3aintel_3a_3agpu_3a_3asimd_3c_20t_2c_20n_20_3e_20_3e',['is_word_type&lt; sycl::INTEL::gpu::simd&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__word__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
   ['is_5fword_5ftype_3c_20sycl_3a_3aintel_3a_3agpu_3a_3avector_5ftype_3c_20t_2c_20n_20_3e_20_3e',['is_word_type&lt; sycl::INTEL::gpu::vector_type&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__word__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],

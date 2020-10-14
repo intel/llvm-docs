@@ -335,16 +335,7 @@ var pi_8h =
       [ "PI_KERNEL_COMPILE_SUB_GROUP_SIZE_INTEL", "pi_8h.html#a2ec25ca82738fe2f6a98fcfcc5270dffad29aa499c7559b5df6724c57a163cada", null ]
     ] ],
     [ "_pi_mem_advice", "pi_8h.html#a286bf19d79f0e65f8137d269f037798b", [
-      [ "PI_MEM_ADVICE_SET_READ_MOSTLY", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba126a6484df18d012e9e0dc1456319200", null ],
-      [ "PI_MEM_ADVICE_CLEAR_READ_MOSTLY", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba09a20550bc82f320ee88dd2b9afdfa83", null ],
-      [ "PI_MEM_ADVICE_SET_PREFERRED_LOCATION", "pi_8h.html#a286bf19d79f0e65f8137d269f037798baefa9ac40f4a4633e382f2210d39bb662", null ],
-      [ "PI_MEM_ADVICE_CLEAR_PREFERRED_LOCATION", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba1036589d8d0e689297d540221cd8ce90", null ],
-      [ "PI_MEM_ADVICE_SET_ACCESSED_BY", "pi_8h.html#a286bf19d79f0e65f8137d269f037798bacdc2fa77e9a50ea81763db52e5688b6b", null ],
-      [ "PI_MEM_ADVICE_CLEAR_ACCESSED_BY", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba06a7196ddcdb1c15cf627d3aa3a8d5b1", null ],
-      [ "PI_MEM_ADVICE_SET_NON_ATOMIC_MOSTLY", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba58d9060bc6d802ba3a72b3dda4b34f28", null ],
-      [ "PI_MEM_ADVICE_CLEAR_NON_ATOMIC_MOSTLY", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba16b85379800a87d7c4628c34e862bba0", null ],
-      [ "PI_MEM_ADVICE_BIAS_CACHED", "pi_8h.html#a286bf19d79f0e65f8137d269f037798bab66d4268a7737c6c5e89f78203ffe18a", null ],
-      [ "PI_MEM_ADVICE_BIAS_UNCACHED", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba3709b55d63e8cd5726218315cba94783", null ]
+      [ "PI_MEM_ADVISE_UNKNOWN", "pi_8h.html#a286bf19d79f0e65f8137d269f037798ba99f069b3bba384765653fedd8bdb817c", null ]
     ] ],
     [ "_pi_mem_info", "pi_8h.html#af2ce602d590555990cf4caeb4c127732", [
       [ "PI_MEM_ALLOC_TYPE", "pi_8h.html#af2ce602d590555990cf4caeb4c127732a411a13f091c4af2cff5fb892f026dfc4", null ],

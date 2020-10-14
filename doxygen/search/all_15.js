@@ -25,6 +25,7 @@ var searchData=
   ['uniformmemory',['UniformMemory',['../struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a63f47c7ceb16c99bcf521934fd4b7043',1,'__spv::MemorySemanticsMask']]],
   ['unique_5fptr_5fclass',['unique_ptr_class',['../namespacecl_1_1sycl.html#a5e426b5073574b2553fa7fb9a430eb50',1,'cl::sycl']]],
   ['unknown',['UNKNOWN',['../namespacecl_1_1sycl_1_1detail.html#ac7c700b946cf88083b9502a6732e8c14a4f191319b0b2905997aaec7c8ef30d44',1,'cl::sycl::detail::UNKNOWN()'],['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0eaad921d60486366258809553a3db49a4a',1,'cl::sycl::usm::unknown()']]],
+  ['unlock',['unlock',['../classcl_1_1sycl_1_1detail_1_1SpinLock.html#ae22e929c8dd5617b76b343c66d3b11e5',1,'cl::sycl::detail::SpinLock']]],
   ['unmap',['unmap',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c',1,'cl::sycl::detail::MemoryManager::unmap()'],['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a6794d3c49a7d49cb7218d4d327e85f24',1,'_pi_mem::mem_::buffer_mem_::unmap()']]],
   ['unmap_5fmem_5fobj',['UNMAP_MEM_OBJ',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a86e380379b6676bdc832f51d15440f65',1,'cl::sycl::detail::Command']]],
   ['unmapmemobject',['UnMapMemObject',['../classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html',1,'cl::sycl::detail::UnMapMemObject'],['../classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html#a8268c2182a71578df6cabdcdf5599c86',1,'cl::sycl::detail::UnMapMemObject::UnMapMemObject()']]],

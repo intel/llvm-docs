@@ -48,6 +48,7 @@ var searchData=
   ['getspirvmemoryscope_3c_20access_3a_3aaddress_5fspace_3a_3aglobal_5fdevice_5fspace_20_3e',['GetSpirvMemoryScope&lt; access::address_space::global_device_space &gt;',['../structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html',1,'cl::sycl::detail']]],
   ['getspirvmemoryscope_3c_20access_3a_3aaddress_5fspace_3a_3aglobal_5fspace_20_3e',['GetSpirvMemoryScope&lt; access::address_space::global_space &gt;',['../structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html',1,'cl::sycl::detail']]],
   ['getspirvmemoryscope_3c_20access_3a_3aaddress_5fspace_3a_3alocal_5fspace_20_3e',['GetSpirvMemoryScope&lt; access::address_space::local_space &gt;',['../structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html',1,'cl::sycl::detail']]],
+  ['globalhandler',['GlobalHandler',['../classcl_1_1sycl_1_1detail_1_1GlobalHandler.html',1,'cl::sycl::detail']]],
   ['gpu_5fselector',['gpu_selector',['../classcl_1_1sycl_1_1gpu__selector.html',1,'cl::sycl']]],
   ['graphbuilder',['GraphBuilder',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html',1,'cl::sycl::detail::Scheduler']]],
   ['graphprocessor',['GraphProcessor',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html',1,'cl::sycl::detail::Scheduler']]],

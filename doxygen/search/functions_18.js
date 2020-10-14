@@ -29,6 +29,7 @@ var searchData=
   ['_7eplatform_5fimpl',['~platform_impl',['../classcl_1_1sycl_1_1detail_1_1platform__impl.html#a96264223ce64e7944d824070f911e850',1,'cl::sycl::detail::platform_impl']]],
   ['_7eplugin',['~plugin',['../classcl_1_1sycl_1_1detail_1_1plugin.html#ae7846560abde0d7a3144e9c55479dbc2',1,'cl::sycl::detail::plugin']]],
   ['_7eprogram_5fimpl',['~program_impl',['../classcl_1_1sycl_1_1detail_1_1program__impl.html#a825d26d06e48ee844d7d44c223be1555',1,'cl::sycl::detail::program_impl']]],
+  ['_7eprogrammanager',['~ProgramManager',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#aaec85a6a0846894435f4ae01bbc370b6',1,'cl::sycl::detail::ProgramManager']]],
   ['_7epropertywithdatabase',['~PropertyWithDataBase',['../classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html#a75616eb0d86ea9a348e77479b6ef9f3e',1,'cl::sycl::detail::PropertyWithDataBase']]],
   ['_7equeue_5fimpl',['~queue_impl',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html#a4bdbee365712b9476ada470d7cad1678',1,'cl::sycl::detail::queue_impl']]],
   ['_7ereleaseguard',['~ReleaseGuard',['../classReleaseGuard.html#a92517f8d00406d4719e310842e6f0e33',1,'ReleaseGuard']]],

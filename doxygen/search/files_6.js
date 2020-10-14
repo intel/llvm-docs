@@ -2,6 +2,8 @@ var searchData=
 [
   ['generic_5ftype_5flists_2ehpp',['generic_type_lists.hpp',['../generic__type__lists_8hpp.html',1,'']]],
   ['generic_5ftype_5ftraits_2ehpp',['generic_type_traits.hpp',['../generic__type__traits_8hpp.html',1,'']]],
+  ['global_5fhandler_2ecpp',['global_handler.cpp',['../global__handler_8cpp.html',1,'']]],
+  ['global_5fhandler_2ehpp',['global_handler.hpp',['../global__handler_8hpp.html',1,'']]],
   ['graph_5fbuilder_2ecpp',['graph_builder.cpp',['../graph__builder_8cpp.html',1,'']]],
   ['graph_5fprocessor_2ecpp',['graph_processor.cpp',['../graph__processor_8cpp.html',1,'']]],
   ['group_2ehpp',['group.hpp',['../group_8hpp.html',1,'']]],

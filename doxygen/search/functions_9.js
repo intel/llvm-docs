@@ -16,6 +16,7 @@ var searchData=
   ['initializeplugins',['initializePlugins',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#acab66c67ecf6ce5d442f030710a0722a',1,'cl::sycl::detail::pi']]],
   ['initvalue',['initValue',['../namespacecl_1_1sycl_1_1detail.html#a1f241bbf862f5877b46f9b764fcf2127',1,'cl::sycl::detail']]],
   ['insertmapunmapforlinkedcmds',['insertMapUnmapForLinkedCmds',['../namespacecl_1_1sycl_1_1detail.html#aae0a90daa016c8b864c809a7760da289',1,'cl::sycl::detail']]],
+  ['instance',['instance',['../classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a8704d51de5d68886356dcc4fedeb8765',1,'cl::sycl::detail::GlobalHandler']]],
   ['integraltobase',['integralToBase',['../namespacecl_1_1sycl_1_1detail.html#a7dbe671da1e1d530b88ba29b3dc0380f',1,'cl::sycl::detail']]],
   ['interop_5fhandler',['interop_handler',['../classcl_1_1sycl_1_1interop__handler.html#a01c2d77c9e8734d927d22e8383d90d04',1,'cl::sycl::interop_handler']]],
   ['interop_5ftask',['interop_task',['../classcl_1_1sycl_1_1handler.html#a0cd322b2a5abd30dc4496dd110ee9546',1,'cl::sycl::handler']]],

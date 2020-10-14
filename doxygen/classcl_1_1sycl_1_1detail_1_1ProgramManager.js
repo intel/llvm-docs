@@ -1,6 +1,8 @@
 var classcl_1_1sycl_1_1detail_1_1ProgramManager =
 [
     [ "KernelArgMask", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a020398b240a8bd554820d790c844b109", null ],
+    [ "ProgramManager", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ac2b17dfc9f58190558af3da8eb575594", null ],
+    [ "~ProgramManager", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#aaec85a6a0846894435f4ae01bbc370b6", null ],
     [ "addImages", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afed37c794b0fd9dbb7bb4cad149d39b6", null ],
     [ "createPIProgram", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a82801ed99fc95ffa56b128cb9fa2d55e", null ],
     [ "debugPrintBinaryImages", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253", null ],

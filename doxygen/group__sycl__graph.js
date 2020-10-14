@@ -142,7 +142,6 @@ var group__sycl__graph =
       [ "DispatchHostTask", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac24921e3619f5c224cf67dc02a0d6b76", null ],
       [ "stream_impl", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae5aea7766fbe6d37849f45208e705cb9", null ],
       [ "DefaultHostQueue", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902", null ],
-      [ "instance", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a1d8fdc1307c61e081a4e8fc6fe1c885f", null ],
       [ "MGraphBuilder", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e", null ],
       [ "MGraphLock", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa1d2966e63f1bb0716ce1c0c6d270470", null ],
       [ "StreamBuffersPool", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3dbc021a6046f12ac370975cc239c92e", null ],
