@@ -1,5 +1,11 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html":[3,0,2,1,0,191],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html#ae969c40610139462555f55859596bf8e":[3,0,2,1,0,191,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT.html":[3,0,2,1,0,192],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_011_00_01T_01_4.html":[3,0,2,1,0,193],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_011_00_01T_01_4.html#ac9c687e3a00c232981b98861442a405d":[3,0,2,1,0,193,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_012_00_01T_01_4.html":[3,0,2,1,0,194],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_012_00_01T_01_4.html#adcb58d5987ce7dc0b05d97fbc7723f08":[3,0,2,1,0,194,0],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html":[3,0,2,1,0,195],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html#aa14a31495d45f19a8672c8df83fa9fbe":[3,0,2,1,0,195,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,97],
 "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#a5badfd995b080853e3b33a62baa3c5bf":[3,0,2,1,0,97,0],
 "structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#aaebd2033fe583d7e9d53458f1ded8b28":[3,0,2,1,0,97,1],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html":[3,0,2,1,0,98],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html#a44506f6e601c5cafdcf7974b12185ad9":[3,0,2,1,0,98,0],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html":[3,0,2,1,0,99],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html#a98c0a9a82e8b3b3e2d8fa6d8e7583bce":[3,0,2,1,0,99,0],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html":[3,0,2,1,0,100],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html#a39598d93740450732d6876299d7d50d6":[3,0,2,1,0,100,0],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__info.html":[3,0,2,1,0,101]
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html":[3,0,2,1,0,98]
 };

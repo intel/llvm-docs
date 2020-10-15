@@ -35,6 +35,7 @@ var searchData=
   ['_7ereleaseguard',['~ReleaseGuard',['../classReleaseGuard.html#a92517f8d00406d4719e310842e6f0e33',1,'ReleaseGuard']]],
   ['_7ertdevicebinaryimage',['~RTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#ad2cd7ee2575466d0d54309f4e09b855d',1,'cl::sycl::detail::RTDeviceBinaryImage']]],
   ['_7esampler_5fimpl',['~sampler_impl',['../classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a33f1e852edc3df20a2357cc4d4c324de',1,'cl::sycl::detail::sampler_impl']]],
+  ['_7escheduler',['~Scheduler',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae48e3a629d271a28cb280432389b881f',1,'cl::sycl::detail::Scheduler']]],
   ['_7eslab',['~Slab',['../classSlab.html#af96e888e80223bb28e3a886a641575da',1,'Slab']]],
   ['_7esyclmemobjallocator',['~SYCLMemObjAllocator',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#ae32016bc1ec2a6e4676dc7ab2f70fd2b',1,'cl::sycl::detail::SYCLMemObjAllocator']]],
   ['_7esyclmemobjallocatorholder',['~SYCLMemObjAllocatorHolder',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#ad7e9fb5816706b32c171655d7f26d8b3',1,'cl::sycl::detail::SYCLMemObjAllocatorHolder']]],

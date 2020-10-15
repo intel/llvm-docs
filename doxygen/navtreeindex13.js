@@ -1,5 +1,8 @@
 var NAVTREEINDEX13 =
 {
+"classcl_1_1sycl_1_1private__memory.html#a9307d5b09eb1c26041031cbe9f2e71e9":[3,0,2,1,80,1],
+"classcl_1_1sycl_1_1profiling__error.html":[3,0,2,1,81],
+"classcl_1_1sycl_1_1program.html":[1,1,21],
 "classcl_1_1sycl_1_1program.html#a03ccc2ea0ff460ccb3729c88e8506864":[1,1,21,25],
 "classcl_1_1sycl_1_1program.html#a0d2310f117b0b4270c61f81cd2d02a12":[1,1,21,6],
 "classcl_1_1sycl_1_1program.html#a13e4ac956db0d71f33667ba31f2724e2":[1,1,21,26],
@@ -246,8 +249,5 @@ var NAVTREEINDEX13 =
 "common_8hpp_source.html":[4,0,0,0,1,2,9],
 "common__info_8hpp.html":[4,0,0,0,1,2,10],
 "common__info_8hpp.html#af71093bded138b3cf1e5c7d6b8f419fe":[4,0,0,0,1,2,10,0],
-"common__info_8hpp_source.html":[4,0,0,0,1,2,10],
-"config_8cpp.html":[4,0,2,1,14],
-"config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,1,14,6],
-"config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,1,14,8]
+"common__info_8hpp_source.html":[4,0,0,0,1,2,10]
 };

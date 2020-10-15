@@ -1,5 +1,11 @@
 var NAVTREEINDEX27 =
 {
+"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370acec315e3d0975e5cc2811d5d8725f149":[4,0,0,0,1,46,10,9],
+"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370ae041cb6c33cbb477d2edfb08ce67a64a":[4,0,0,0,1,46,10,3],
+"stream_8hpp.html#ab1000b91358825695afcce2a3dc5ca09":[4,0,0,0,1,46,27],
+"stream_8hpp.html#ab159dab52fc0b1871573d1ed859d5f66":[4,0,0,0,1,46,45],
+"stream_8hpp.html#ab188c96334e9d388fcccb65235fa5615":[4,0,0,0,1,46,50],
+"stream_8hpp.html#ab1d3f96e7aa427160da80be28adf95a0":[4,0,0,0,1,46,87],
 "stream_8hpp.html#ab3418d55fb615c30d526e37811868a01":[4,0,0,0,1,46,79],
 "stream_8hpp.html#ab3a27c8313f4849422ba61f4cea5e6a8":[4,0,0,0,1,46,84],
 "stream_8hpp.html#ab663efb5de95e7c495ab96bc3c27c85b":[4,0,0,0,1,46,57],
@@ -243,11 +249,5 @@ var NAVTREEINDEX27 =
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a712ea34ccfa497a90c347d9c4a3e6abd":[3,0,20,1,0,7],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55":[3,0,20,1,0,1],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a763c09b0a49350a93a408b5e856954bc":[3,0,20,1,0,1,3],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a975f7eb1c03d05e028b85bd101c66a27":[3,0,20,1,0,1,1],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55ad318bf011157b5e4bccd36b488ef9607":[3,0,20,1,0,1,2],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55af3d64714d1f6e7f71558d4252e84ab58":[3,0,20,1,0,1,0],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a870da0afef4a9f1b6d24f7cdd3cc4d47":[3,0,20,1,0,13],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a908350845d03f4739a56bf87c795aa93":[3,0,20,1,0,4],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#aa8bebeca206a8233baef6680103a0b26":[3,0,20,1,0,6],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#aac51643c77130af9f87de37928c30cf4":[3,0,20,1,0,14]
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a975f7eb1c03d05e028b85bd101c66a27":[3,0,20,1,0,1,1]
 };

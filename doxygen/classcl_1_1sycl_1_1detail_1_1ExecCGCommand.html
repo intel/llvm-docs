@@ -128,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0dd50d7423c1de8a4c7118a04b717f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2e25628b39048603a383b51c7e71516"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab57afe61b17444737ae6ea8ff5df7725">StreamImplPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#ab2e25628b39048603a383b51c7e71516">getStreams</a> () const</td></tr>
 <tr class="separator:ab2e25628b39048603a383b51c7e71516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e361db6d63e9ee32e5d428f9ce62e27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a8e361db6d63e9ee32e5d428f9ce62e27">clearStreams</a> ()</td></tr>
+<tr class="separator:a8e361db6d63e9ee32e5d428f9ce62e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a247e0d3daf9176e1f769e7be0fdbe242"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a247e0d3daf9176e1f769e7be0fdbe242">printDot</a> (std::ostream &amp;Stream) const final override</td></tr>
 <tr class="separator:a247e0d3daf9176e1f769e7be0fdbe242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3edfdf0153fd7278ead2ebea587ce6f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a3edfdf0153fd7278ead2ebea587ce6f3">emitInstrumentationData</a> () final override</td></tr>
@@ -333,13 +335,36 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01460">1460</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01467">1467</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="commands_8cpp_source.html#l00322">cl::sycl::detail::Command::emitInstrumentationDataProxy()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e361db6d63e9ee32e5d428f9ce62e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e361db6d63e9ee32e5d428f9ce62e27">&#9670;&nbsp;</a></span>clearStreams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::ExecCGCommand::clearStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01210">1210</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed">cl::sycl::detail::AllocaCommandBase::getMemAllocation()</a>, <a class="el" href="cg_8hpp_source.html#l00052">cl::sycl::detail::CG::KERNEL</a>, <a class="el" href="commands_8hpp_source.html#l00185">cl::sycl::detail::Command::MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00190">cl::sycl::detail::Command::MPreparedDepsEvents</a>, <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="commands_8cpp_source.html#l00257">cl::sycl::detail::Command::waitForEvents()</a>, and <a class="el" href="commands_8cpp_source.html#l00252">cl::sycl::detail::Command::waitForPreparedHostEvents()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="graph__builder_8cpp_source.html#l00826">cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00924">cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()</a>.</p>
+
+</div>
+</div>
 <a id="a3edfdf0153fd7278ead2ebea587ce6f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3edfdf0153fd7278ead2ebea587ce6f3">&#9670;&nbsp;</a></span>emitInstrumentationData()</h2>
 
@@ -367,9 +392,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce">cl::sycl::detail::Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01468">1468</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01475">1475</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l01422">cl::sycl::detail::cgTypeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00069">cl::sycl::detail::demangleKernelName()</a>, <a class="el" href="commands_8cpp_source.html#l00072">cl::sycl::detail::deviceToString()</a>, <a class="el" href="cg_8hpp_source.html#l00052">cl::sycl::detail::CG::KERNEL</a>, <a class="el" href="commands_8hpp_source.html#l00263">cl::sycl::detail::Command::MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00275">cl::sycl::detail::Command::MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="commands_8hpp_source.html#l00260">cl::sycl::detail::Command::MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00256">cl::sycl::detail::Command::MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00213">cl::sycl::detail::Command::MType</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l01429">cl::sycl::detail::cgTypeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00069">cl::sycl::detail::demangleKernelName()</a>, <a class="el" href="commands_8cpp_source.html#l00072">cl::sycl::detail::deviceToString()</a>, <a class="el" href="cg_8hpp_source.html#l00052">cl::sycl::detail::CG::KERNEL</a>, <a class="el" href="commands_8hpp_source.html#l00263">cl::sycl::detail::Command::MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00275">cl::sycl::detail::Command::MInstanceID</a>, <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="commands_8hpp_source.html#l00260">cl::sycl::detail::Command::MStreamID</a>, <a class="el" href="commands_8hpp_source.html#l00256">cl::sycl::detail::Command::MTraceEvent</a>, and <a class="el" href="commands_8hpp_source.html#l00213">cl::sycl::detail::Command::MType</a>.</p>
 
 </div>
 </div>
@@ -396,9 +421,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00498">498</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00500">500</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01730">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="commands_8cpp_source.html#l00202">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01737">cl::sycl::detail::DispatchNativeKernel()</a>, and <a class="el" href="commands_8cpp_source.html#l00202">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
 
 </div>
 </div>
@@ -419,7 +444,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01204">1204</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed">cl::sycl::detail::AllocaCommandBase::getMemAllocation()</a>, <a class="el" href="commands_8hpp_source.html#l00185">cl::sycl::detail::Command::MEvent</a>, <a class="el" href="commands_8hpp_source.html#l00190">cl::sycl::detail::Command::MPreparedDepsEvents</a>, <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="commands_8cpp_source.html#l00257">cl::sycl::detail::Command::waitForEvents()</a>, and <a class="el" href="commands_8cpp_source.html#l00252">cl::sycl::detail::Command::waitForPreparedHostEvents()</a>.</p>
+<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00052">cl::sycl::detail::CG::KERNEL</a>.</p>
 
 </div>
 </div>
@@ -449,9 +474,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0db86d92eca0ce39ab1992bc0b6ba139">cl::sycl::detail::Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01557">1557</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01564">1564</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00085">cl::sycl::detail::accessModeToString()</a>, <a class="el" href="commands_8cpp_source.html#l01422">cl::sycl::detail::cgTypeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00069">cl::sycl::detail::demangleKernelName()</a>, <a class="el" href="commands_8cpp_source.html#l00072">cl::sycl::detail::deviceToString()</a>, <a class="el" href="namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a50687cdc4bc36169eb3b2948c9920715">cl::sycl::endl</a>, <a class="el" href="cg_8hpp_source.html#l00052">cl::sycl::detail::CG::KERNEL</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, and <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MQueue</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00085">cl::sycl::detail::accessModeToString()</a>, <a class="el" href="commands_8cpp_source.html#l01429">cl::sycl::detail::cgTypeToString()</a>, <a class="el" href="commands_8cpp_source.html#l00069">cl::sycl::detail::demangleKernelName()</a>, <a class="el" href="commands_8cpp_source.html#l00072">cl::sycl::detail::deviceToString()</a>, <a class="el" href="namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a50687cdc4bc36169eb3b2948c9920715">cl::sycl::endl</a>, <a class="el" href="cg_8hpp_source.html#l00052">cl::sycl::detail::CG::KERNEL</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, and <a class="el" href="commands_8hpp_source.html#l00186">cl::sycl::detail::Command::MQueue</a>.</p>
 
 </div>
 </div>
@@ -476,7 +501,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00518">518</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00520">520</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 </div>
 </div>
@@ -493,7 +518,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00504">504</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00506">506</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00202">cl::sycl::detail::DispatchHostTask::operator()()</a>.</p>
 

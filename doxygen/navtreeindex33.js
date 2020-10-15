@@ -1,5 +1,11 @@
 var NAVTREEINDEX33 =
 {
+"structrestype__ex_3_01half_00_01double_01_4.html":[3,0,147],
+"structrestype__ex_3_01half_00_01double_01_4.html#a4f5ac436d0cc808021316f8aef09776e":[3,0,147,0],
+"structrestype__ex_3_01half_00_01float_01_4.html":[3,0,148],
+"structrestype__ex_3_01half_00_01float_01_4.html#aee2f88224d61113f4ae05845d138ee55":[3,0,148,0],
+"structrestype__ex_3_01half_00_01half_01_4.html":[3,0,149],
+"structrestype__ex_3_01half_00_01half_01_4.html#a31fa54bcae28895cb3f524a0d8fc8eb8":[3,0,149,0],
 "structrestype__ex_3_01half_00_01int_01_4.html":[3,0,150],
 "structrestype__ex_3_01half_00_01int_01_4.html#a23a50f498ac5d040b661aa50a7c92529":[3,0,150,0],
 "structrestype__ex_3_01half_00_01long_01long_01_4.html":[3,0,151],
@@ -243,11 +249,5 @@ var NAVTREEINDEX33 =
 "sycl_8hpp_source.html":[4,0,0,0,2],
 "sycl__fe__intrins_8hpp.html":[4,0,0,0,1,2,36],
 "sycl__fe__intrins_8hpp_source.html":[4,0,0,0,1,2,36],
-"sycl__mem__obj__allocator_8hpp.html":[4,0,0,0,1,2,37],
-"sycl__mem__obj__allocator_8hpp_source.html":[4,0,0,0,1,2,37],
-"sycl__mem__obj__i_8hpp.html":[4,0,0,0,1,2,38],
-"sycl__mem__obj__i_8hpp_source.html":[4,0,0,0,1,2,38],
-"sycl__mem__obj__t_8cpp.html":[4,0,2,1,63],
-"sycl__mem__obj__t_8cpp_source.html":[4,0,2,1,63],
-"sycl__mem__obj__t_8hpp.html":[4,0,0,0,1,2,39]
+"sycl__mem__obj__allocator_8hpp.html":[4,0,0,0,1,2,37]
 };

@@ -134,9 +134,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a830ea7b3a16aa8091f4d0758eb3e88c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a830ea7b3a16aa8091f4d0758eb3e88c1">optimize</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event)</td></tr>
 <tr class="memdesc:a830ea7b3a16aa8091f4d0758eb3e88c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">[Provisional] Optimizes subgraph that consists of command associated with Event passed and its dependencies.  <a href="#a830ea7b3a16aa8091f4d0758eb3e88c1">More...</a><br /></td></tr>
 <tr class="separator:a830ea7b3a16aa8091f4d0758eb3e88c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a976e10ef65ccfb89a0ec2b59ef03b2ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a976e10ef65ccfb89a0ec2b59ef03b2ad">cleanupFinishedCommands</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *FinishedCmd)</td></tr>
-<tr class="memdesc:a976e10ef65ccfb89a0ec2b59ef03b2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes finished non-leaf non-alloca commands from the subgraph (assuming that all its commands have been waited for).  <a href="#a976e10ef65ccfb89a0ec2b59ef03b2ad">More...</a><br /></td></tr>
-<tr class="separator:a976e10ef65ccfb89a0ec2b59ef03b2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd0ca8622c892a027451ab444ffd245"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a9fd0ca8622c892a027451ab444ffd245">cleanupFinishedCommands</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *FinishedCmd, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1stream__impl.html">cl::sycl::detail::stream_impl</a> &gt;&gt; &amp;)</td></tr>
+<tr class="memdesc:a9fd0ca8622c892a027451ab444ffd245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes finished non-leaf non-alloca commands from the subgraph (assuming that all its commands have been waited for).  <a href="#a9fd0ca8622c892a027451ab444ffd245">More...</a><br /></td></tr>
+<tr class="separator:a9fd0ca8622c892a027451ab444ffd245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed85e3c5fdf6b6547b563ec2e8007dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#aed85e3c5fdf6b6547b563ec2e8007dc9">rescheduleCommand</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue)</td></tr>
 <tr class="memdesc:aed85e3c5fdf6b6547b563ec2e8007dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reschedules the command passed using Queue provided.  <a href="#aed85e3c5fdf6b6547b563ec2e8007dc9">More...</a><br /></td></tr>
 <tr class="separator:aed85e3c5fdf6b6547b563ec2e8007dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,9 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afcc5af244cd15911f043246fbb37230a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a">decrementLeafCountersForRecord</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record)</td></tr>
 <tr class="memdesc:afcc5af244cd15911f043246fbb37230a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrements leaf counters for all leaves of the record.  <a href="#afcc5af244cd15911f043246fbb37230a">More...</a><br /></td></tr>
 <tr class="separator:afcc5af244cd15911f043246fbb37230a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb036ad528209f3d547ff77c0918bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a0bb036ad528209f3d547ff77c0918bbc">cleanupCommandsForRecord</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record)</td></tr>
-<tr class="memdesc:a0bb036ad528209f3d547ff77c0918bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes commands that use the given <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html" title="Memory Object Record. ">MemObjRecord</a> from the graph.  <a href="#a0bb036ad528209f3d547ff77c0918bbc">More...</a><br /></td></tr>
-<tr class="separator:a0bb036ad528209f3d547ff77c0918bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6d2b7ab95fd77a2d88498a1f58346c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a4a6d2b7ab95fd77a2d88498a1f58346c">cleanupCommandsForRecord</a> (<a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *Record, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1stream__impl.html">cl::sycl::detail::stream_impl</a> &gt;&gt; &amp;)</td></tr>
+<tr class="memdesc:a4a6d2b7ab95fd77a2d88498a1f58346c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes commands that use the given <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html" title="Memory Object Record. ">MemObjRecord</a> from the graph.  <a href="#a4a6d2b7ab95fd77a2d88498a1f58346c">More...</a><br /></td></tr>
+<tr class="separator:a4a6d2b7ab95fd77a2d88498a1f58346c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa56d71db0c9239e57ea83ac5236b123"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afa56d71db0c9239e57ea83ac5236b123">removeRecordForMemObj</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html">SYCLMemObjI</a> *MemObject)</td></tr>
 <tr class="memdesc:afa56d71db0c9239e57ea83ac5236b123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html" title="Memory Object Record. ">MemObjRecord</a> for the memory object passed.  <a href="#afa56d71db0c9239e57ea83ac5236b123">More...</a><br /></td></tr>
 <tr class="separator:afa56d71db0c9239e57ea83ac5236b123"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,7 +188,7 @@ Friends</h2></td></tr>
 <div class="textblock"><p>Graph builder class. </p>
 <p>The graph builder provides means to change an existing graph (e.g. add or remove edges/nodes). </p>
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00454">454</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00468">468</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aefdeb14607b39f88cef981ef76a5eaa5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefdeb14607b39f88cef981ef76a5eaa5">&#9670;&nbsp;</a></span>GraphBuilder()</h2>
@@ -242,7 +242,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00716">716</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00055">cl::sycl::detail::isAccessModeAllowed()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00705">cl::sycl::detail::isInteropHostTask()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="scheduler_8hpp_source.html#l00208">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="scheduler_8hpp_source.html#l00212">cl::sycl::detail::MemObjRecord::MHostAccess</a>, <a class="el" href="cg_8hpp_source.html#l00309">cl::sycl::detail::CGHostTask::MQueue</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00055">cl::sycl::detail::isAccessModeAllowed()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00705">cl::sycl::detail::isInteropHostTask()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="scheduler_8hpp_source.html#l00209">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="scheduler_8hpp_source.html#l00213">cl::sycl::detail::MemObjRecord::MHostAccess</a>, <a class="el" href="cg_8hpp_source.html#l00310">cl::sycl::detail::CGHostTask::MQueue</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +277,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00448">448</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00036">cl::sycl::detail::doOverlap()</a>, <a class="el" href="commands_8hpp_source.html#l00137">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="graph__builder_8cpp_source.html#l00097">cl::sycl::detail::markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00080">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="scheduler_8hpp_source.html#l00202">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00205">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>, <a class="el" href="leaves__collection_8cpp_source.html#l00063">cl::sycl::detail::LeavesCollection::toVector()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00106">cl::sycl::detail::unmarkVisitedNodes()</a>.</p>
+<p class="reference">References <a class="el" href="graph__builder_8cpp_source.html#l00036">cl::sycl::detail::doOverlap()</a>, <a class="el" href="commands_8hpp_source.html#l00137">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="graph__builder_8cpp_source.html#l00097">cl::sycl::detail::markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00080">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="scheduler_8hpp_source.html#l00203">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00206">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>, <a class="el" href="leaves__collection_8cpp_source.html#l00063">cl::sycl::detail::LeavesCollection::toVector()</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00106">cl::sycl::detail::unmarkVisitedNodes()</a>.</p>
 
 </div>
 </div>
@@ -307,7 +307,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00376">376</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00473">cl::sycl::detail::MemCpyCommandHost::getRequirement()</a>, <a class="el" href="scheduler_8hpp_source.html#l00208">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00131">cl::sycl::detail::AccessorImplHost::MData</a>, <a class="el" href="scheduler_8hpp_source.html#l00216">cl::sycl::detail::MemObjRecord::MMemModified</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00473">cl::sycl::detail::MemCpyCommandHost::getRequirement()</a>, <a class="el" href="scheduler_8hpp_source.html#l00209">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00131">cl::sycl::detail::AccessorImplHost::MData</a>, <a class="el" href="scheduler_8hpp_source.html#l00217">cl::sycl::detail::MemObjRecord::MMemModified</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00415">415</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00137">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00055">cl::sycl::detail::isAccessModeAllowed()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00133">cl::sycl::detail::AccessorImplHost::MBlockedCmd</a>, <a class="el" href="scheduler_8hpp_source.html#l00208">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="scheduler_8hpp_source.html#l00212">cl::sycl::detail::MemObjRecord::MHostAccess</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00137">cl::sycl::detail::Command::getQueue()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00055">cl::sycl::detail::isAccessModeAllowed()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00133">cl::sycl::detail::AccessorImplHost::MBlockedCmd</a>, <a class="el" href="scheduler_8hpp_source.html#l00209">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="scheduler_8hpp_source.html#l00213">cl::sycl::detail::MemObjRecord::MHostAccess</a>, and <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>.</p>
 
 </div>
 </div>
@@ -377,12 +377,12 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00200">200</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00527">cl::sycl::detail::UpdateHostRequirementCommand::getRequirement()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00131">cl::sycl::detail::AccessorImplHost::MData</a>, <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="scheduler_8hpp_source.html#l00202">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, and <a class="el" href="scheduler_8hpp_source.html#l00205">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00529">cl::sycl::detail::UpdateHostRequirementCommand::getRequirement()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00131">cl::sycl::detail::AccessorImplHost::MData</a>, <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="scheduler_8hpp_source.html#l00203">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, and <a class="el" href="scheduler_8hpp_source.html#l00206">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>.</p>
 
 </div>
 </div>
-<a id="a0bb036ad528209f3d547ff77c0918bbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bb036ad528209f3d547ff77c0918bbc">&#9670;&nbsp;</a></span>cleanupCommandsForRecord()</h2>
+<a id="a4a6d2b7ab95fd77a2d88498a1f58346c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6d2b7ab95fd77a2d88498a1f58346c">&#9670;&nbsp;</a></span>cleanupCommandsForRecord()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,8 +391,18 @@ Friends</h2></td></tr>
           <td class="memname">void cl::sycl::detail::Scheduler::GraphBuilder::cleanupCommandsForRecord </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html">MemObjRecord</a> *&#160;</td>
-          <td class="paramname"><em>Record</em></td><td>)</td>
+          <td class="paramname"><em>Record</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1stream__impl.html">cl::sycl::detail::stream_impl</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -401,12 +411,12 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00826">826</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00111">cl::sycl::detail::handleVisitedNodes()</a>, <a class="el" href="scheduler_8hpp_source.html#l00199">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="graph__builder_8cpp_source.html#l00097">cl::sycl::detail::markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00354">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>, <a class="el" href="commands_8hpp_source.html#l00240">cl::sycl::detail::Command::MMarks</a>, <a class="el" href="commands_8hpp_source.html#l00237">cl::sycl::detail::Command::Marks::MToBeDeleted</a>, <a class="el" href="commands_8hpp_source.html#l00227">cl::sycl::detail::Command::MUsers</a>, and <a class="el" href="commands_8hpp_source.html#l00235">cl::sycl::detail::Command::Marks::MVisited</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l01210">cl::sycl::detail::ExecCGCommand::clearStreams()</a>, <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00111">cl::sycl::detail::handleVisitedNodes()</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="graph__builder_8cpp_source.html#l00097">cl::sycl::detail::markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00354">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>, <a class="el" href="commands_8hpp_source.html#l00240">cl::sycl::detail::Command::MMarks</a>, <a class="el" href="commands_8hpp_source.html#l00237">cl::sycl::detail::Command::Marks::MToBeDeleted</a>, <a class="el" href="commands_8hpp_source.html#l00227">cl::sycl::detail::Command::MUsers</a>, and <a class="el" href="commands_8hpp_source.html#l00235">cl::sycl::detail::Command::Marks::MVisited</a>.</p>
 
 </div>
 </div>
-<a id="a976e10ef65ccfb89a0ec2b59ef03b2ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a976e10ef65ccfb89a0ec2b59ef03b2ad">&#9670;&nbsp;</a></span>cleanupFinishedCommands()</h2>
+<a id="a9fd0ca8622c892a027451ab444ffd245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd0ca8622c892a027451ab444ffd245">&#9670;&nbsp;</a></span>cleanupFinishedCommands()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -415,17 +425,27 @@ Friends</h2></td></tr>
           <td class="memname">void cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *&#160;</td>
-          <td class="paramname"><em>FinishedCmd</em></td><td>)</td>
+          <td class="paramname"><em>FinishedCmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1stream__impl.html">cl::sycl::detail::stream_impl</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Removes finished non-leaf non-alloca commands from the subgraph (assuming that all its commands have been waited for). </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00912">912</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00924">924</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00111">cl::sycl::detail::handleVisitedNodes()</a>, <a class="el" href="commands_8hpp_source.html#l00083">cl::sycl::detail::DepDesc::MAllocaCmd</a>, <a class="el" href="graph__builder_8cpp_source.html#l00097">cl::sycl::detail::markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="commands_8hpp_source.html#l00240">cl::sycl::detail::Command::MMarks</a>, <a class="el" href="commands_8hpp_source.html#l00237">cl::sycl::detail::Command::Marks::MToBeDeleted</a>, and <a class="el" href="commands_8hpp_source.html#l00227">cl::sycl::detail::Command::MUsers</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l01210">cl::sycl::detail::ExecCGCommand::clearStreams()</a>, <a class="el" href="commands_8hpp_source.html#l00117">cl::sycl::detail::Command::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00111">cl::sycl::detail::handleVisitedNodes()</a>, <a class="el" href="commands_8hpp_source.html#l00083">cl::sycl::detail::DepDesc::MAllocaCmd</a>, <a class="el" href="graph__builder_8cpp_source.html#l00097">cl::sycl::detail::markNodeAsVisited()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="commands_8hpp_source.html#l00240">cl::sycl::detail::Command::MMarks</a>, <a class="el" href="commands_8hpp_source.html#l00237">cl::sycl::detail::Command::Marks::MToBeDeleted</a>, and <a class="el" href="commands_8hpp_source.html#l00227">cl::sycl::detail::Command::MUsers</a>.</p>
 
 </div>
 </div>
@@ -472,7 +492,7 @@ Friends</h2></td></tr>
 </dl>
 <p>Optionality of Dep is set by Dep.MDepCommand equal to nullptr. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00980">980</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l01004">1004</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8hpp_source.html#l00114">cl::sycl::detail::Command::addUser()</a>, <a class="el" href="commands_8cpp_source.html#l00506">cl::sycl::detail::Command::getContext()</a>, <a class="el" href="commands_8hpp_source.html#l00139">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, <a class="el" href="commands_8hpp_source.html#l00080">cl::sycl::detail::DepDesc::MDepRequirement</a>, <a class="el" href="commands_8hpp_source.html#l00059">cl::sycl::detail::EnqueueResultT::MResult</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>.</p>
 
@@ -500,7 +520,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00816">816</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="scheduler_8hpp_source.html#l00202">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, and <a class="el" href="scheduler_8hpp_source.html#l00205">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="scheduler_8hpp_source.html#l00203">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, and <a class="el" href="scheduler_8hpp_source.html#l00206">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>.</p>
 
 </div>
 </div>
@@ -548,7 +568,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00538">538</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8cpp_source.html#l01326">cl::sycl::detail::EmptyCommand::addRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00114">cl::sycl::detail::Command::addUser()</a>, <a class="el" href="commands_8hpp_source.html#l00330">cl::sycl::detail::AllocaCommandBase::getReleaseCmd()</a>, <a class="el" href="commands_8hpp_source.html#l00336">cl::sycl::detail::AllocaCommandBase::getRequirement()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a0ae169c7e40bbac53a166e5adc86bab3">cl::sycl::detail::SYCLMemObjI::getSize()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00050">cl::sycl::detail::IsSuitableSubReq()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="scheduler_8hpp_source.html#l00199">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="commands_8hpp_source.html#l00245">cl::sycl::detail::Command::MBlockReason</a>, <a class="el" href="scheduler_8hpp_source.html#l00208">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00126">cl::sycl::detail::AccessorImplHost::MDims</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00127">cl::sycl::detail::AccessorImplHost::MElemSize</a>, <a class="el" href="commands_8hpp_source.html#l00248">cl::sycl::detail::Command::MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00356">cl::sycl::detail::AllocaCommandBase::MIsActive</a>, <a class="el" href="commands_8hpp_source.html#l00229">cl::sycl::detail::Command::MIsBlockable</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00138">cl::sycl::detail::AccessorImplHost::MIsESIMDAcc</a>, <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="commands_8hpp_source.html#l00354">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>, <a class="el" href="scheduler_8hpp_source.html#l00216">cl::sycl::detail::MemObjRecord::MMemModified</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00121">cl::sycl::detail::AccessorImplHost::MMemoryRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00128">cl::sycl::detail::AccessorImplHost::MOffsetInBytes</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00205">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="leaves__collection_8cpp_source.html#l00052">cl::sycl::detail::LeavesCollection::push_back()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>, and <a class="el" href="stream_8hpp_source.html#l00071">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00510">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8cpp_source.html#l01333">cl::sycl::detail::EmptyCommand::addRequirement()</a>, <a class="el" href="commands_8hpp_source.html#l00114">cl::sycl::detail::Command::addUser()</a>, <a class="el" href="commands_8hpp_source.html#l00330">cl::sycl::detail::AllocaCommandBase::getReleaseCmd()</a>, <a class="el" href="commands_8hpp_source.html#l00336">cl::sycl::detail::AllocaCommandBase::getRequirement()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a0ae169c7e40bbac53a166e5adc86bab3">cl::sycl::detail::SYCLMemObjI::getSize()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00050">cl::sycl::detail::IsSuitableSubReq()</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00122">cl::sycl::detail::AccessorImplHost::MAccessMode</a>, <a class="el" href="scheduler_8hpp_source.html#l00200">cl::sycl::detail::MemObjRecord::MAllocaCommands</a>, <a class="el" href="commands_8hpp_source.html#l00245">cl::sycl::detail::Command::MBlockReason</a>, <a class="el" href="scheduler_8hpp_source.html#l00209">cl::sycl::detail::MemObjRecord::MCurContext</a>, <a class="el" href="commands_8hpp_source.html#l00225">cl::sycl::detail::Command::MDeps</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00126">cl::sycl::detail::AccessorImplHost::MDims</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00127">cl::sycl::detail::AccessorImplHost::MElemSize</a>, <a class="el" href="commands_8hpp_source.html#l00248">cl::sycl::detail::Command::MEnqueueStatus</a>, <a class="el" href="commands_8hpp_source.html#l00356">cl::sycl::detail::AllocaCommandBase::MIsActive</a>, <a class="el" href="commands_8hpp_source.html#l00229">cl::sycl::detail::Command::MIsBlockable</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00138">cl::sycl::detail::AccessorImplHost::MIsESIMDAcc</a>, <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MLeafCounter</a>, <a class="el" href="commands_8hpp_source.html#l00354">cl::sycl::detail::AllocaCommandBase::MLinkedAllocaCmd</a>, <a class="el" href="scheduler_8hpp_source.html#l00217">cl::sycl::detail::MemObjRecord::MMemModified</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00121">cl::sycl::detail::AccessorImplHost::MMemoryRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00128">cl::sycl::detail::AccessorImplHost::MOffsetInBytes</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00124">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, <a class="el" href="scheduler_8hpp_source.html#l00206">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, <a class="el" href="pi_8h_source.html#l00083">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="leaves__collection_8cpp_source.html#l00052">cl::sycl::detail::LeavesCollection::push_back()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00043">cl::sycl::detail::sameCtx()</a>, and <a class="el" href="stream_8hpp_source.html#l00071">cl::sycl::detail::write()</a>.</p>
 
 </div>
 </div>
@@ -707,7 +727,7 @@ Friends</h2></td></tr>
 
 <p>Removes the <a class="el" href="structcl_1_1sycl_1_1detail_1_1MemObjRecord.html" title="Memory Object Record. ">MemObjRecord</a> for the memory object passed. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00958">958</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00982">982</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="sycl__mem__obj__i_8hpp_source.html#l00070">cl::sycl::detail::SYCLMemObjI::MRecord</a>.</p>
 
@@ -780,7 +800,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="graph__builder_8cpp_source.html#l00186">186</a> of file <a class="el" href="graph__builder_8cpp_source.html">graph_builder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="scheduler_8hpp_source.html#l00202">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="scheduler_8hpp_source.html#l00205">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, and <a class="el" href="leaves__collection_8cpp_source.html#l00038">cl::sycl::detail::LeavesCollection::remove()</a>.</p>
+<p class="reference">References <a class="el" href="scheduler_8hpp_source.html#l00203">cl::sycl::detail::MemObjRecord::MReadLeaves</a>, <a class="el" href="scheduler_8hpp_source.html#l00206">cl::sycl::detail::MemObjRecord::MWriteLeaves</a>, and <a class="el" href="leaves__collection_8cpp_source.html#l00038">cl::sycl::detail::LeavesCollection::remove()</a>.</p>
 
 </div>
 </div>
@@ -805,7 +825,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00585">585</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00603">603</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>
@@ -829,7 +849,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00582">582</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00600">600</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>
@@ -846,7 +866,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00537">537</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00555">555</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 
 </div>
 </div>

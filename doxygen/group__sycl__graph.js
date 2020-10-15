@@ -92,8 +92,8 @@ var group__sycl__graph =
       [ "addCopyBack", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a8750108d9692a254d6f5af9630c07715", null ],
       [ "addHostAccessor", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a5ff76edbb784226afcddcff451138478", null ],
       [ "addNodeToLeaves", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#ac824c17129f8ab5459d82d0add92bfed", null ],
-      [ "cleanupCommandsForRecord", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a0bb036ad528209f3d547ff77c0918bbc", null ],
-      [ "cleanupFinishedCommands", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a976e10ef65ccfb89a0ec2b59ef03b2ad", null ],
+      [ "cleanupCommandsForRecord", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a4a6d2b7ab95fd77a2d88498a1f58346c", null ],
+      [ "cleanupFinishedCommands", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a9fd0ca8622c892a027451ab444ffd245", null ],
       [ "connectDepEvent", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#af26d002e0051ce81139b619ff47f996e", null ],
       [ "decrementLeafCountersForRecord", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a", null ],
       [ "findAllocaForReq", "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#ada54af5552da8a541eef3a9cad5cb21c", null ],
@@ -122,6 +122,7 @@ var group__sycl__graph =
         [ "FlushBuf", "structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#acff516ff54ecdfa15efbf088978659dc", null ]
       ] ],
       [ "Scheduler", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aad4ad62a6e1d3c4eb1a29c1d464357c8", null ],
+      [ "~Scheduler", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae48e3a629d271a28cb280432389b881f", null ],
       [ "addCG", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac0e8ff38f6f6274626f65b2b52227f47", null ],
       [ "addCopyBack", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#af5887b8414f705ee134016e59e14baeb", null ],
       [ "addHostAccessor", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6e184b6920626e812994f0b905a9644a", null ],
@@ -144,7 +145,7 @@ var group__sycl__graph =
       [ "DefaultHostQueue", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902", null ],
       [ "MGraphBuilder", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e", null ],
       [ "MGraphLock", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa1d2966e63f1bb0716ce1c0c6d270470", null ],
-      [ "StreamBuffersPool", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3dbc021a6046f12ac370975cc239c92e", null ],
+      [ "StreamBuffersPool", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3e7f0b212e78ad11f9f8c9dc43b64496", null ],
       [ "StreamBuffersPoolMutex", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a8cc93813de15109d99421ada00dd3345", null ]
     ] ]
 ];
