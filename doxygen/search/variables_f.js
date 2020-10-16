@@ -33,7 +33,7 @@ var searchData=
   ['pi_5fsampler_5fproperties_5ffilter_5fmode',['PI_SAMPLER_PROPERTIES_FILTER_MODE',['../pi_8h.html#ab35e57f15b58d93b5f4f135813b8fc62',1,'pi.h']]],
   ['pi_5fsampler_5fproperties_5fnormalized_5fcoords',['PI_SAMPLER_PROPERTIES_NORMALIZED_COORDS',['../pi_8h.html#a0d95e24a1190611f20fad90040c41452',1,'pi.h']]],
   ['pi_5ftrue',['PI_TRUE',['../pi_8h.html#a39b5f0fc5dbb20bdf9f837230f3c36f4',1,'pi.h']]],
-  ['pidevicescache',['PiDevicesCache',['../struct__pi__platform.html#a631e71ec6594569f6e0f592448167fbf',1,'_pi_platform']]],
+  ['pidevicescache',['PiDevicesCache',['../struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30',1,'_pi_platform']]],
   ['pidevicescachemutex',['PiDevicesCacheMutex',['../struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd',1,'_pi_platform']]],
   ['pieventcreate',['piEventCreate',['../pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b',1,'pi_level_zero.cpp']]],
   ['pifunctiontable',['PiFunctionTable',['../struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7',1,'_pi_plugin']]],

@@ -12,6 +12,7 @@ var classcl_1_1sycl_1_1detail_1_1SYCLMemObjT =
     [ "get_count", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a2591ab433c4401767c88957a109b89e8", null ],
     [ "get_property", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ac468ca337784ac9f398934c2b6b72869", null ],
     [ "getBufSizeForContext", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a33d1b22e048b0c249a9dbe67c5005913", null ],
+    [ "getInteropContext", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ae621d5c9c33884d0a6526e64188f5b82", null ],
     [ "getPlugin", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a3dd283233471b40300a6ad5d8192f457", null ],
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a564cf96f165e8e076b9919a18ce474b7", null ],
     [ "getType", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#acb0b0dc1da54c4fdbb098e532d08221d", null ],

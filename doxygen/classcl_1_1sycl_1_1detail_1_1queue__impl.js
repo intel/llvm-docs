@@ -10,7 +10,7 @@ var classcl_1_1sycl_1_1detail_1_1queue__impl =
     [ "get_device", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a027ac4cd34f1e99c0a5d93b65ddbdd04", null ],
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#aef3c6eec134db176cc0418838f0fea32", null ],
     [ "get_property", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a86aa1c97a3a5a8ca9fe38024363693a1", null ],
-    [ "getContextImplPtr", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a908d0fbd5026bc0fd97311ceb0b07723", null ],
+    [ "getContextImplPtr", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a8ef839a631303cb7b58e409b70582994", null ],
     [ "getExceptionList", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#aaf6474c031184b3702c265150e574957", null ],
     [ "getExclusiveQueueHandleRef", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a6761b743af203217fe665f3c644745df", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0cd087f5c5b75c19dcd906e24214dafc", null ],

@@ -127,10 +127,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a07754b139b2535497050f34c48650d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9913efa9437be0f2688408e058cd1a90"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90">ZeDriverApiVersion</a></td></tr>
 <tr class="separator:a9913efa9437be0f2688408e058cd1a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a631e71ec6594569f6e0f592448167fbf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#a631e71ec6594569f6e0f592448167fbf">PiDevicesCache</a></td></tr>
-<tr class="separator:a631e71ec6594569f6e0f592448167fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bda77c3b82bc918eeac40cff2416c30"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class__pi__device.html">_pi_device</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30">PiDevicesCache</a></td></tr>
+<tr class="separator:a1bda77c3b82bc918eeac40cff2416c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cbb97b97e6a6784198bc3d55358fedd"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd">PiDevicesCacheMutex</a></td></tr>
 <tr class="separator:a0cbb97b97e6a6784198bc3d55358fedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba11b061b3a835003d2583a03d7a9d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#afba11b061b3a835003d2583a03d7a9d2">DeviceCachePopulated</a> = false</td></tr>
+<tr class="separator:afba11b061b3a835003d2583a03d7a9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3728a73750613ebe29a038e01dbd24e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#ae3728a73750613ebe29a038e01dbd24e">ZeMaxCommandListCache</a> = 0</td></tr>
 <tr class="separator:ae3728a73750613ebe29a038e01dbd24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1ce87f343641f4da208d7d772a58bb"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__platform.html#a2b1ce87f343641f4da208d7d772a58bb">ZeGlobalCommandListCount</a> {0}</td></tr>
@@ -186,11 +188,29 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00911">911</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00924">924</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afba11b061b3a835003d2583a03d7a9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba11b061b3a835003d2583a03d7a9d2">&#9670;&nbsp;</a></span>DeviceCachePopulated</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool _pi_platform::DeviceCachePopulated = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00084">84</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00988">populateDeviceCacheIfNeeded()</a>.</p>
+
+</div>
+</div>
 <a id="aa931adfabeee6df1d28fdf2830e366f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa931adfabeee6df1d28fdf2830e366f8">&#9670;&nbsp;</a></span>devices_</h2>
 
@@ -209,21 +229,21 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a631e71ec6594569f6e0f592448167fbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a631e71ec6594569f6e0f592448167fbf">&#9670;&nbsp;</a></span>PiDevicesCache</h2>
+<a id="a1bda77c3b82bc918eeac40cff2416c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bda77c3b82bc918eeac40cff2416c30">&#9670;&nbsp;</a></span>PiDevicesCache</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a>&gt; _pi_platform::PiDevicesCache</td>
+          <td class="memname">std::vector&lt;std::unique_ptr&lt;<a class="el" href="class__pi__device.html">_pi_device</a>&gt; &gt; _pi_platform::PiDevicesCache</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00081">81</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00922">piDevicesGet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00937">piDevicesGet()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01613">piextDeviceCreateWithNativeHandle()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00988">populateDeviceCacheIfNeeded()</a>.</p>
 
 </div>
 </div>
@@ -241,7 +261,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00082">82</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00922">piDevicesGet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00937">piDevicesGet()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01613">piextDeviceCreateWithNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -259,7 +279,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00074">74</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00922">piDevicesGet()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00887">piextPlatformGetNativeHandle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00875">piextPlatformGetNativeHandle()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00988">populateDeviceCacheIfNeeded()</a>.</p>
 
 </div>
 </div>
@@ -277,7 +297,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00078">78</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00761">getOrCreatePlatform()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01017">piDeviceGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00838">piPlatformGetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l01051">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00826">piPlatformGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00678">piPlatformsGet()</a>.</p>
 
 </div>
 </div>
@@ -295,7 +315,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00077">77</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00761">getOrCreatePlatform()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01017">piDeviceGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00838">piPlatformGetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l01051">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00826">piPlatformGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00678">piPlatformsGet()</a>.</p>
 
 </div>
 </div>
@@ -311,7 +331,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00093">93</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00094">94</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
 </div>
 </div>
@@ -327,9 +347,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00089">89</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00090">90</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00761">getOrCreatePlatform()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00678">piPlatformsGet()</a>.</p>
 
 </div>
 </div>

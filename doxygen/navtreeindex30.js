@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html#adfbee15e00d29a6640aaea8ad688f50a":[3,0,2,1,0,189,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html":[3,0,2,1,0,190],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html#acea230fc90dfa6dc1680553c0308e0a4":[3,0,2,1,0,190,0],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html":[3,0,2,1,0,191],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html#ae969c40610139462555f55859596bf8e":[3,0,2,1,0,191,0],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT.html":[3,0,2,1,0,192],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,96],
 "structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,96,0],
 "structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,96,1],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,97],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#a5badfd995b080853e3b33a62baa3c5bf":[3,0,2,1,0,97,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#aaebd2033fe583d7e9d53458f1ded8b28":[3,0,2,1,0,97,1],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html":[3,0,2,1,0,98]
+"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,97]
 };

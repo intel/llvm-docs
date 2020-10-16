@@ -1,5 +1,7 @@
 var NAVTREEINDEX15 =
 {
+"enqueue__kernel_8cpp_source.html":[4,0,2,1,0,0],
+"error__handling_8hpp.html":[4,0,2,1,0,1],
 "error__handling_8hpp.html#a978902656e07ee77f03bd7f9ad8d49f8":[4,0,2,1,0,1,0],
 "error__handling_8hpp_source.html":[4,0,2,1,0,1],
 "esimd_2esimd_8hpp.html":[4,0,0,0,1,4,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX15 =
 "esimd__math__intrin_8hpp.html#a656e9eb163a98d5e5edd3a1695a095a3":[4,0,0,0,1,4,0,0,2,26],
 "esimd__math__intrin_8hpp.html#a66273d8c6158d142b6a76ab3066f451f":[4,0,0,0,1,4,0,0,2,47],
 "esimd__math__intrin_8hpp.html#a6e58b697a1d2a6459970ffa1a50939b4":[4,0,0,0,1,4,0,0,2,25],
-"esimd__math__intrin_8hpp.html#a7124df7f579304c894607d4a78aa9c64":[4,0,0,0,1,4,0,0,2,63],
-"esimd__math__intrin_8hpp.html#a733d126dfde05cbab2ff9a6c682b995b":[4,0,0,0,1,4,0,0,2,12],
-"esimd__math__intrin_8hpp.html#a762bd423571062fd24c786d4988b6f86":[4,0,0,0,1,4,0,0,2,31]
+"esimd__math__intrin_8hpp.html#a7124df7f579304c894607d4a78aa9c64":[4,0,0,0,1,4,0,0,2,63]
 };

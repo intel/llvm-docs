@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a314d491440d416e4bea9f00dbd4d1a48":[3,0,2,1,0,1,0,14],
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a32ae1929243651164b78b81787fde2cb":[3,0,2,1,0,1,0,10],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a338757e2f745a7294c78b023342d9dac":[3,0,2,1,0,1,0,12],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3e560e06664c5aed533dfa03b02ca0e9":[3,0,2,1,0,1,0,0],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a509aceb4263d8f6a7184939efe2b2f81":[3,0,2,1,0,1,0,8],
@@ -214,7 +216,7 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a72030a7fdd11f46d74ec78b85de3f976":[3,0,2,1,0,267,18],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a82286e4c8b2d7860ee18e8e3ec411669":[3,0,2,1,0,267,0],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a86aa1c97a3a5a8ca9fe38024363693a1":[3,0,2,1,0,267,9],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a908d0fbd5026bc0fd97311ceb0b07723":[3,0,2,1,0,267,10],
+"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a8ef839a631303cb7b58e409b70582994":[3,0,2,1,0,267,10],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa165a612388669d38fc22b76c18f2364":[3,0,2,1,0,267,27],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#aaf6474c031184b3702c265150e574957":[3,0,2,1,0,267,11],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab258fa8fe858328b59d036991fb84db3":[3,0,2,1,0,267,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1stream__impl.html#a1c38f5daa08b9a1f9b14f185a4efbf57":[3,0,2,1,0,292,2],
 "classcl_1_1sycl_1_1detail_1_1stream__impl.html#a71e8775705c17f2e6d7b3bc2af18e47d":[3,0,2,1,0,292,3],
 "classcl_1_1sycl_1_1detail_1_1stream__impl.html#acc6b99c3a5e8c96b8d165ee24c957e60":[3,0,2,1,0,292,0],
-"classcl_1_1sycl_1_1detail_1_1stream__impl.html#ae85246431e5b3e859d33e0abf726a3f4":[3,0,2,1,0,292,4],
-"classcl_1_1sycl_1_1detail_1_1stream__impl.html#afa99f3bf0bf4db4ff6bcbd631c80f883":[3,0,2,1,0,292,5],
-"classcl_1_1sycl_1_1device.html":[1,1,4]
+"classcl_1_1sycl_1_1detail_1_1stream__impl.html#ae85246431e5b3e859d33e0abf726a3f4":[3,0,2,1,0,292,4]
 };

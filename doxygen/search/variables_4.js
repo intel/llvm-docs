@@ -17,6 +17,7 @@ var searchData=
   ['device',['Device',['../classUSMMemoryAllocBase.html#ad673852cbce6f12c6b02410878e217f7',1,'USMMemoryAllocBase::Device()'],['../struct__pi__queue.html#a58a07d5525910b67e36d47e4baf361c2',1,'_pi_queue::Device()']]],
   ['device_5f',['device_',['../struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5',1,'_pi_queue']]],
   ['devicebinaries',['DeviceBinaries',['../structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a',1,'pi_device_binaries_struct']]],
+  ['devicecachepopulated',['DeviceCachePopulated',['../struct__pi__platform.html#afba11b061b3a835003d2583a03d7a9d2',1,'_pi_platform']]],
   ['deviceid_5f',['deviceId_',['../struct__pi__context.html#af3c2506d83d7a8d1a3f4bcc22323f4e2',1,'_pi_context']]],
   ['devicelibreqmask',['DeviceLibReqMask',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a96f297f8ce4925dc593c0a22043c8e09',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['devicememalloccontexts',['DeviceMemAllocContexts',['../struct__pi__context.html#a9126a200a75f4beb6618132c5984bc13',1,'_pi_context']]],

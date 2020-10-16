@@ -8,6 +8,7 @@ var classcl_1_1sycl_1_1detail_1_1SYCLMemObjI =
     [ "~SYCLMemObjI", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aa8bd364990e90196878f0da9a061e67a", null ],
     [ "allocateHostMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a741ab88936bba4fc184aed0b1645f171", null ],
     [ "allocateMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ad8d2f576541c58c6ada6d530d1bea092", null ],
+    [ "getInteropContext", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a5cc16409b59dc90986a39345380216fc", null ],
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a0ae169c7e40bbac53a166e5adc86bab3", null ],
     [ "getType", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068", null ],
     [ "releaseHostMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#aab5adbb453e00e71e7667140e9fc6517", null ],

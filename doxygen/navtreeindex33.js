@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"structrestype__ex_3_01float_00_01unsigned_01short_01_4.html#a23167f05d3cdcd1ceb8f71c42523bf2c":[3,0,145,0],
+"structrestype__ex_3_01half_00_01char_01_4.html":[3,0,146],
+"structrestype__ex_3_01half_00_01char_01_4.html#ad391485e7d627b7d5df4a72b3275676d":[3,0,146,0],
 "structrestype__ex_3_01half_00_01double_01_4.html":[3,0,147],
 "structrestype__ex_3_01half_00_01double_01_4.html#a4f5ac436d0cc808021316f8aef09776e":[3,0,147,0],
 "structrestype__ex_3_01half_00_01float_01_4.html":[3,0,148],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "sub__group_8hpp.html#acf635573944d460cde21c5adc0063838":[4,0,0,0,1,5,12,4],
 "sub__group_8hpp_source.html":[4,0,0,0,1,5,12],
 "sycl_8hpp.html":[4,0,0,0,2],
-"sycl_8hpp_source.html":[4,0,0,0,2],
-"sycl__fe__intrins_8hpp.html":[4,0,0,0,1,2,36],
-"sycl__fe__intrins_8hpp_source.html":[4,0,0,0,1,2,36],
-"sycl__mem__obj__allocator_8hpp.html":[4,0,0,0,1,2,37]
+"sycl_8hpp_source.html":[4,0,0,0,2]
 };
