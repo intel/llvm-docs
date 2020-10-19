@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html":[3,0,2,1,0,189],
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html#a8f5cb7539cd063497f3a7a948c2a79e5":[3,0,2,1,0,189,1],
 "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html#adfbee15e00d29a6640aaea8ad688f50a":[3,0,2,1,0,189,0],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html":[3,0,2,1,0,190],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html#acea230fc90dfa6dc1680553c0308e0a4":[3,0,2,1,0,190,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info__string.html":[3,0,2,1,0,95],
 "structcl_1_1sycl_1_1detail_1_1get__device__info__string.html#a388ac160a27861148c5debfb71fb06ec":[3,0,2,1,0,95,0],
 "structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,96],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,96,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,96,1],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,97]
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,96,0]
 };

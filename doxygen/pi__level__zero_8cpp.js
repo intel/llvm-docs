@@ -117,6 +117,7 @@ var pi__level__zero_8cpp =
     [ "piSamplerRelease", "pi__level__zero_8cpp.html#a3e6c8bb1ca70ed13b07fca70dea76a08", null ],
     [ "piSamplerRetain", "pi__level__zero_8cpp.html#a6551ae9c262ed234fcace964e7a1805d", null ],
     [ "populateDeviceCacheIfNeeded", "pi__level__zero_8cpp.html#a20feeda1d88a646e37e1cde32d39d1ad", null ],
+    [ "recycleEventCommandList", "pi__level__zero_8cpp.html#a84c06480f862545c64b9f46bbe486864", null ],
     [ "setEnvVar", "pi__level__zero_8cpp.html#a248a4e96fb322d15f762f0d4925c34d8", null ],
     [ "ShouldUseUSMAllocator", "pi__level__zero_8cpp.html#aa0d9788a220013761c4eb442c39d3ad6", null ],
     [ "USMDeviceAllocImpl", "pi__level__zero_8cpp.html#ad88c5df962c7f4bd85f8a4e1f6a60ed3", null ],

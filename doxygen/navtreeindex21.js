@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"namespacecl_1_1sycl_1_1INTEL_1_1property.html":[3,0,2,1,3,1],
 "namespacecl_1_1sycl_1_1INTEL_1_1property.html":[2,0,2,1,6,1],
 "namespacecl_1_1sycl_1_1ONEAPI.html":[3,0,2,1,4],
 "namespacecl_1_1sycl_1_1ONEAPI.html":[2,0,2,1,9],
@@ -40,12 +41,12 @@ var NAVTREEINDEX21 =
 "namespacecl_1_1sycl_1_1opencl.html":[2,0,2,1,10],
 "namespacecl_1_1sycl_1_1property.html":[3,0,2,1,5],
 "namespacecl_1_1sycl_1_1property.html":[2,0,2,1,11],
-"namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,5,0],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,11,0],
+"namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,5,0],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,2,1,5,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,11,1],
-"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,5,1,0],
+"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,5,2],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,2,1,11,2],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,2,1,5,3],
@@ -62,8 +63,8 @@ var NAVTREEINDEX21 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,6],
-"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func.html":[2,1,1,0],
+"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
@@ -99,8 +100,8 @@ var NAVTREEINDEX21 =
 "namespacemembers_r.html":[2,1,0,17],
 "namespacemembers_s.html":[2,1,0,18],
 "namespacemembers_t.html":[2,1,0,19],
-"namespacemembers_type.html":[2,1,3],
 "namespacemembers_type.html":[2,1,3,0],
+"namespacemembers_type.html":[2,1,3],
 "namespacemembers_type_a.html":[2,1,3,1],
 "namespacemembers_type_b.html":[2,1,3,2],
 "namespacemembers_type_c.html":[2,1,3,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea0fd19a194bdacf27488f1247853157ca":[4,0,0,0,1,2,29,105,5],
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea13d5b70f3008d39e4f9b8d96622b4e70":[4,0,0,0,1,2,29,105,32],
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea14f9413a06287f3018f66d7520e10c6f":[4,0,0,0,1,2,29,105,11],
-"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea1734b5005af08b6eaa4a13b1996a7adb":[4,0,0,0,1,2,29,105,33],
-"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea17eefd815ca7bd92aba77417a8a4c993":[4,0,0,0,1,2,29,105,24]
+"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea1734b5005af08b6eaa4a13b1996a7adb":[4,0,0,0,1,2,29,105,33]
 };

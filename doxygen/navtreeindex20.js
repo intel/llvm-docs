@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0172422d8c3c4ed5a4116131baed67f8":[4,0,0,0,1,3,0,7,6],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a03aa631709a8a1162ede52565f3887d7":[4,0,0,0,1,3,0,7,73],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a05cb235087712878ec261706dab65603":[4,0,0,0,1,3,0,7,7],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0eeabe1249684d58c7bad29611dded8a":[4,0,0,0,1,3,0,7,39],
@@ -123,10 +124,10 @@ var NAVTREEINDEX20 =
 "kernel_8cpp.html#a44287fb286662e49b02663902208ab85":[4,0,2,14,7],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,0],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,1],
-"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
 "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,3],
-"kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,4],
+"kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,14,2],
 "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,5],
+"kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,14,4],
 "kernel_8cpp.html#a9c16a54ec7d6f7c97004c9735dcb3ca1":[4,0,2,14,8],
 "kernel_8cpp.html#aa5d3d4303f841cbb06ce68f233a50b24":[4,0,2,14,6],
 "kernel_8cpp_source.html":[4,0,2,14],
@@ -145,11 +146,11 @@ var NAVTREEINDEX20 =
 "kernel__impl_8cpp.html#a3d2be6035459e0d6f4636a9f6c3b8864":[4,0,2,1,37,8],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,37,0],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,37,1],
-"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,37,3],
 "kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,37,2],
+"kernel__impl_8cpp.html#a522cc2c6a59f548ee17c359f636f7909":[4,0,2,1,37,3],
 "kernel__impl_8cpp.html#a5a6ccab07ef1ff2340b8899388ad7917":[4,0,2,1,37,6],
-"kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,1,37,5],
 "kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,1,37,4],
+"kernel__impl_8cpp.html#a6a01e05d8be8780e20459af676b03622":[4,0,2,1,37,5],
 "kernel__impl_8cpp.html#a6f92273f18fd9cb5c7c5939074388684":[4,0,2,1,37,7],
 "kernel__impl_8cpp.html#aa113899ed3b61997010a90871c49bccf":[4,0,2,1,37,10],
 "kernel__impl_8cpp.html#acb85b4b9286d8dfe4a8fe8260d7265b0":[4,0,2,1,37,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu.html":[3,0,2,1,3,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu.html":[2,0,2,1,6,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html":[3,0,2,1,3,0,0],
-"namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html":[2,0,2,1,6,0,0],
-"namespacecl_1_1sycl_1_1INTEL_1_1property.html":[3,0,2,1,3,1]
+"namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html":[2,0,2,1,6,0,0]
 };
