@@ -311,6 +311,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "TargetToAS", "structcl_1_1sycl_1_1detail_1_1TargetToAS.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS" ],
     [ "TargetToAS< access::target::constant_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4" ],
     [ "TargetToAS< access::target::local >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4" ],
+    [ "TermPositions", "structcl_1_1sycl_1_1detail_1_1TermPositions.html", "structcl_1_1sycl_1_1detail_1_1TermPositions" ],
     [ "ThreadPool", "classcl_1_1sycl_1_1detail_1_1ThreadPool.html", "classcl_1_1sycl_1_1detail_1_1ThreadPool" ],
     [ "TryToGetElementType", "classcl_1_1sycl_1_1detail_1_1TryToGetElementType.html", "classcl_1_1sycl_1_1detail_1_1TryToGetElementType" ],
     [ "TryToGetNumElements", "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements.html", null ],

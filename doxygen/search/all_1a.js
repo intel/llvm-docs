@@ -38,5 +38,6 @@ var searchData=
   ['zeopencommandlistsize',['ZeOpenCommandListSize',['../struct__pi__queue.html#a3f51722a1c7449317bc6ea799ce6f814',1,'_pi_queue']]],
   ['zeparseerror',['zeParseError',['../pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815',1,'pi_level_zero.cpp']]],
   ['zesampler',['ZeSampler',['../struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673',1,'_pi_sampler']]],
-  ['zespecconstants',['ZeSpecConstants',['../struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b',1,'_pi_program']]]
+  ['zespecconstants',['ZeSpecConstants',['../struct__pi__program.html#a79370f1278679d95d0a0c993780d8d4b',1,'_pi_program']]],
+  ['zterm',['ZTerm',['../structcl_1_1sycl_1_1detail_1_1TermPositions.html#a995f1ede3ac8958db3af124d76f4064b',1,'cl::sycl::detail::TermPositions']]]
 ];

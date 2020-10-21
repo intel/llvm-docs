@@ -11,7 +11,7 @@ var struct__pi__mem =
     [ "_pi_mem", "struct__pi__mem.html#a9f5e19416fa6df4b2d61d77f112397c8", null ],
     [ "~_pi_mem", "struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d", null ],
     [ "~_pi_mem", "struct__pi__mem.html#a15063ff84e67289129e03decb8891bcd", null ],
-    [ "_pi_mem", "struct__pi__mem.html#a720810f32bdf0f0aab06c78eefc77520", null ],
+    [ "_pi_mem", "struct__pi__mem.html#a147ef155016bcbaa46a525b09713e863", null ],
     [ "addMapping", "struct__pi__mem.html#a6ebfeb2cb495b3b73139904887ee258c", null ],
     [ "decrement_reference_count", "struct__pi__mem.html#ae957daeff1a6ec53dba7387281407def", null ],
     [ "get_context", "struct__pi__mem.html#a1048ed41565664dbdbad0db2218b2fad", null ],
@@ -29,5 +29,6 @@ var struct__pi__mem =
     [ "MapHostPtr", "struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955", null ],
     [ "mem_", "struct__pi__mem.html#a9907188047f64222c897c4d61964a232", null ],
     [ "mem_type_", "struct__pi__mem.html#aac840f8416b7e278f282ff3523057c77", null ],
+    [ "OnHost", "struct__pi__mem.html#a5aca9887befe72999e0f83080b65577e", null ],
     [ "refCount_", "struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0", null ]
 ];

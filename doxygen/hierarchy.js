@@ -935,6 +935,7 @@ var hierarchy =
     [ "cl::sycl::detail::TargetToAS< accessTarget >", "structcl_1_1sycl_1_1detail_1_1TargetToAS.html", null ],
     [ "cl::sycl::detail::TargetToAS< access::target::constant_buffer >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html", null ],
     [ "cl::sycl::detail::TargetToAS< access::target::local >", "structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1local_01_4.html", null ],
+    [ "cl::sycl::detail::TermPositions", "structcl_1_1sycl_1_1detail_1_1TermPositions.html", null ],
     [ "cl::sycl::detail::ThreadPool", "classcl_1_1sycl_1_1detail_1_1ThreadPool.html", null ],
     [ "true_type", null, [
       [ "cl::sycl::detail::is_address_space_compliant_impl< T *, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01T_01_5_00_01SpaceList_01_4.html", null ],
