@@ -42,6 +42,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "common_info.hpp", "common__info_8hpp.html", "common__info_8hpp" ],
     [ "cuda_definitions.hpp", "cuda__definitions_8hpp.html", "cuda__definitions_8hpp" ],
     [ "defines.hpp", "defines_8hpp.html", "defines_8hpp" ],
+    [ "defines_elementary.hpp", "defines__elementary_8hpp.html", "defines__elementary_8hpp" ],
     [ "device_binary_image.hpp", "device__binary__image_8hpp.html", [
       [ "RTDeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html", "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage" ],
       [ "DynRTDeviceBinaryImage", "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html", "classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage" ]

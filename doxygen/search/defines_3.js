@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['declare_5fbool_5fconverter',['DECLARE_BOOL_CONVERTER',['../types_8hpp.html#a24f0ae4a341448804ff251e9e9b043cc',1,'types.hpp']]],
-  ['declare_5fbool_5fvector_5fconverters',['DECLARE_BOOL_VECTOR_CONVERTERS',['../types_8hpp.html#a69509f4ea178734d86ff8cb705481a29',1,'types.hpp']]],
-  ['declare_5fconverter',['DECLARE_CONVERTER',['../types_8hpp.html#ab13518ca32f553a580eaa17cf515c334',1,'types.hpp']]],
-  ['declare_5ffloat_5fconverter',['DECLARE_FLOAT_CONVERTER',['../types_8hpp.html#ab46bfc4df5db874aa0a350e91110463f',1,'types.hpp']]],
-  ['declare_5ffloat_5fvector_5fconverters',['DECLARE_FLOAT_VECTOR_CONVERTERS',['../types_8hpp.html#ad3373d8fce05b7b4666497e43fc7ad30',1,'types.hpp']]],
-  ['declare_5fhalf_5fconverter',['DECLARE_HALF_CONVERTER',['../types_8hpp.html#a5ff38acbcfb5d60b8c78213b88e23abd',1,'types.hpp']]],
-  ['declare_5fhalf_5fvector_5fconverters',['DECLARE_HALF_VECTOR_CONVERTERS',['../types_8hpp.html#af414cfadfbccaa9c8bb2f83903715296',1,'types.hpp']]],
-  ['declare_5flonglong_5fconverter',['DECLARE_LONGLONG_CONVERTER',['../types_8hpp.html#a6d61f4c1988e8b3b44325f2b6bc97a45',1,'types.hpp']]],
-  ['declare_5fscalar_5fbool_5fconverter',['DECLARE_SCALAR_BOOL_CONVERTER',['../types_8hpp.html#a591b59da2dcbf7baf9476f16c87ea5d8',1,'types.hpp']]],
-  ['declare_5fscalar_5fconverter',['DECLARE_SCALAR_CONVERTER',['../types_8hpp.html#a87930490fbaec9720f7c00e1a68d8bb3',1,'types.hpp']]],
-  ['declare_5fscalar_5fschar_5fconverter',['DECLARE_SCALAR_SCHAR_CONVERTER',['../types_8hpp.html#a129e985b229a09d2d2cfc96754e0d70a',1,'types.hpp']]],
-  ['declare_5fschar_5fconverter',['DECLARE_SCHAR_CONVERTER',['../types_8hpp.html#a38a5b62828fad8613b4bdd9913a7c11e',1,'types.hpp']]],
-  ['declare_5fschar_5fvector_5fconverters',['DECLARE_SCHAR_VECTOR_CONVERTERS',['../types_8hpp.html#a7b43725501fb6815d8959644f19e245a',1,'types.hpp']]],
-  ['declare_5fsigned_5fintegral_5fconverter',['DECLARE_SIGNED_INTEGRAL_CONVERTER',['../types_8hpp.html#a53d122650449fa31f4a12f3c161571b3',1,'types.hpp']]],
-  ['declare_5fsigned_5fintegral_5fvector_5fconverters',['DECLARE_SIGNED_INTEGRAL_VECTOR_CONVERTERS',['../types_8hpp.html#adbd52276a65e059008b8aa11bc14d4d6',1,'types.hpp']]],
-  ['declare_5funsigned_5fintegral_5fconverter',['DECLARE_UNSIGNED_INTEGRAL_CONVERTER',['../types_8hpp.html#ae51509d2097e818fef2e3ae3912f03cf',1,'types.hpp']]],
-  ['declare_5funsigned_5fintegral_5fvector_5fconverters',['DECLARE_UNSIGNED_INTEGRAL_VECTOR_CONVERTERS',['../types_8hpp.html#a67c120b30f24daf9f11bd8971101affe',1,'types.hpp']]],
-  ['declare_5fvector_5fconverters',['DECLARE_VECTOR_CONVERTERS',['../types_8hpp.html#a93d55fbee9e7ebf6c76eb344da02de0f',1,'types.hpp']]],
-  ['declare_5fvector_5flonglong_5fconverters',['DECLARE_VECTOR_LONGLONG_CONVERTERS',['../types_8hpp.html#a53cff3eaefbe796306a1d941968a382d',1,'types.hpp']]],
-  ['def_5fbinop',['DEF_BINOP',['../esimd_2esimd_8hpp.html#a6755e207502267cee2f3ed0c2326b428',1,'DEF_BINOP():&#160;esimd.hpp'],['../esimd__view_8hpp.html#a6755e207502267cee2f3ed0c2326b428',1,'DEF_BINOP():&#160;esimd_view.hpp']]],
-  ['def_5flogic_5fop',['DEF_LOGIC_OP',['../esimd_2esimd_8hpp.html#ae50502d3d5ed5fe93a7f18febd142360',1,'DEF_LOGIC_OP():&#160;esimd.hpp'],['../esimd__view_8hpp.html#ae50502d3d5ed5fe93a7f18febd142360',1,'DEF_LOGIC_OP():&#160;esimd_view.hpp']]],
-  ['def_5frelop',['DEF_RELOP',['../esimd_2esimd_8hpp.html#a8241f63afa29f1b094415697fafce1ee',1,'DEF_RELOP():&#160;esimd.hpp'],['../esimd__view_8hpp.html#a8241f63afa29f1b094415697fafce1ee',1,'DEF_RELOP():&#160;esimd_view.hpp']]]
+  ['esimd_5fhdr_5fconst_5fpi',['ESIMD_HDR_CONST_PI',['../esimd__math_8hpp.html#af13bdedaa65cc2a39c0238b63c110046',1,'esimd_math.hpp']]],
+  ['esimd_5finline',['ESIMD_INLINE',['../esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d',1,'esimd_enum.hpp']]],
+  ['esimd_5fintrinsic_5fdef',['ESIMD_INTRINSIC_DEF',['../esimd__math_8hpp.html#a54e5879690a19ae3ecbc5fa6f71a991e',1,'ESIMD_INTRINSIC_DEF():&#160;esimd_math.hpp'],['../esimd__math_8hpp.html#a1c5a3d9b24732c3916d76cbece7f4260',1,'ESIMD_INTRINSIC_DEF():&#160;esimd_math.hpp'],['../esimd__math_8hpp.html#ab68af386a7f445090ad7c92042c5195f',1,'ESIMD_INTRINSIC_DEF():&#160;esimd_math.hpp']]],
+  ['esimd_5fnodebug',['ESIMD_NODEBUG',['../esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b',1,'esimd_enum.hpp']]],
+  ['esimd_5fnoinline',['ESIMD_NOINLINE',['../esimd__enum_8hpp.html#a1aa89fefbf072e0f1defd36fc9f85ed8',1,'esimd_enum.hpp']]],
+  ['esimd_5fprivate',['ESIMD_PRIVATE',['../esimd__enum_8hpp.html#afd8733f73584ee7148d688ef7228e5f7',1,'esimd_enum.hpp']]],
+  ['esimd_5fregister',['ESIMD_REGISTER',['../esimd__enum_8hpp.html#ac416ad46f1f98918129bc48b3972508a',1,'esimd_enum.hpp']]]
 ];

@@ -2,7 +2,7 @@ var searchData=
 [
   ['call',['call',['../classcl_1_1sycl_1_1detail_1_1HostKernelBase.html#a7118d7f206be73578110be47dbe12cad',1,'cl::sycl::detail::HostKernelBase::call()'],['../classcl_1_1sycl_1_1detail_1_1InteropTask.html#aaa867448bbeb831fe11f03ee9d554a23',1,'cl::sycl::detail::InteropTask::call()'],['../classcl_1_1sycl_1_1detail_1_1HostTask.html#a09c26c38e4b6bc01088b9509214d1080',1,'cl::sycl::detail::HostTask::call()'],['../classcl_1_1sycl_1_1detail_1_1HostTask.html#a4b2c5fccc99730f2c16f228b80f1a91f',1,'cl::sycl::detail::HostTask::call(interop_handle handle)'],['../classcl_1_1sycl_1_1detail_1_1HostKernel.html#ac8ac824b625ab46b7e8d6c85c3c4c311',1,'cl::sycl::detail::HostKernel::call()'],['../classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395',1,'cl::sycl::detail::plugin::call()']]],
   ['call_5fnocheck',['call_nocheck',['../classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295',1,'cl::sycl::detail::plugin']]],
-  ['canreusehostptr',['canReuseHostPtr',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a9d783bf2f982ba963f2b98361879c9bc',1,'cl::sycl::detail::SYCLMemObjT']]],
+  ['canreusehostptr',['canReuseHostPtr',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a41b4b61c374aa55230c43c5be1b88e33',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['capacity',['capacity',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a70a5de078d677a371181416b0fbb2044',1,'cl::sycl::detail::CircularBuffer']]],
   ['cast',['cast',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#ac27959f5fe5bb5ce257f97d5ae39288d',1,'cl::sycl::detail::pi::cast(From value)'],['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a273bcd8bce104798cadaf009f730d073',1,'cl::sycl::detail::pi::cast(cl_device_id)'],['../pi__opencl_8cpp.html#a6943cecba0128e74adc68da1a7321510',1,'cast():&#160;pi_opencl.cpp']]],
   ['cast_5fif_5fhost_5fhalf',['cast_if_host_half',['../namespacecl_1_1sycl_1_1detail.html#afd48cc1bb519169236fcecb36f818f88',1,'cl::sycl::detail::cast_if_host_half(T val)'],['../namespacecl_1_1sycl_1_1detail.html#ad21b7e12b9a98bcc2c619edd469aad12',1,'cl::sycl::detail::cast_if_host_half(half_impl::half val)']]],
@@ -23,7 +23,7 @@ var searchData=
   ['cgtypetostring',['cgTypeToString',['../namespacecl_1_1sycl_1_1detail.html#aab1bfd598a112b6d4dbb5cdfa57119fb',1,'cl::sycl::detail']]],
   ['cgupdatehost',['CGUpdateHost',['../classcl_1_1sycl_1_1detail_1_1CGUpdateHost.html#a05f3d73aa58c3d4dcfcd586e98bc69ee',1,'cl::sycl::detail::CGUpdateHost']]],
   ['check_5fatomic',['check_atomic',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aca8e682732236f9de3af6602f44adbd4',1,'cl::sycl::INTEL::gpu']]],
-  ['check_5fdimension',['check_dimension',['../classcl_1_1sycl_1_1detail_1_1array.html#a6ed8180dfc774f983b2dbecd80676e48',1,'cl::sycl::detail::array']]],
+  ['check_5fdimension',['check_dimension',['../classcl_1_1sycl_1_1detail_1_1array.html#a24306317e6ea043918bced63a60ce7ac',1,'cl::sycl::detail::array']]],
   ['check_5fvector_5fsize',['check_vector_size',['../namespacecl_1_1sycl_1_1detail.html#aa37a2fd35ebd4bc7ecc1882fe3bd8808',1,'cl::sycl::detail']]],
   ['checkany',['checkAny',['../namespacecl_1_1sycl_1_1detail.html#ac780ec345b19ea51440d5816e62d650a',1,'cl::sycl::detail']]],
   ['checkanyimpl',['checkAnyImpl',['../namespacecl_1_1sycl_1_1detail.html#a058573987f256f347f869e9fcb584ccd',1,'cl::sycl::detail::checkAnyImpl(T)'],['../namespacecl_1_1sycl_1_1detail.html#a34b060ce614b48e36cb679e25945d310',1,'cl::sycl::detail::checkAnyImpl(ValT Value, VarT Variant, Args... Arguments)']]],

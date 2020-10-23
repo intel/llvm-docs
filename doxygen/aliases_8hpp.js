@@ -1,10 +1,10 @@
 var aliases_8hpp =
 [
-    [ "MAKE_VECTOR_ALIAS", "aliases_8hpp.html#a7557892713090d3d64b767f86a1a157f", null ],
-    [ "MAKE_VECTOR_ALIASES_FOR_ARITHMETIC_TYPES", "aliases_8hpp.html#ae099f22191a749379a4b348e92bc6ac6", null ],
-    [ "MAKE_VECTOR_ALIASES_FOR_OPENCL_TYPES", "aliases_8hpp.html#ad951fb477449579ae8d6f50409848ad6", null ],
-    [ "MAKE_VECTOR_ALIASES_FOR_SIGNED_AND_UNSIGNED_TYPES", "aliases_8hpp.html#adc3c42d8253ec4fcc3b6422ba6ebcc2f", null ],
-    [ "MAKE_VECTOR_ALIASES_FOR_VECTOR_LENGTH", "aliases_8hpp.html#a563a5f1e19cfb5d73901de2b961c4b45", null ],
+    [ "__SYCL_MAKE_VECTOR_ALIAS", "aliases_8hpp.html#a477eee6b67d24979b9b768cfb65f6491", null ],
+    [ "__SYCL_MAKE_VECTOR_ALIASES_FOR_ARITHMETIC_TYPES", "aliases_8hpp.html#a8468ccc855f5484de80e90a9d6b5881f", null ],
+    [ "__SYCL_MAKE_VECTOR_ALIASES_FOR_OPENCL_TYPES", "aliases_8hpp.html#afe4c4c2804458876274d4b85480331ca", null ],
+    [ "__SYCL_MAKE_VECTOR_ALIASES_FOR_SIGNED_AND_UNSIGNED_TYPES", "aliases_8hpp.html#a173878f7e41312b0697b13b11f8f659e", null ],
+    [ "__SYCL_MAKE_VECTOR_ALIASES_FOR_VECTOR_LENGTH", "aliases_8hpp.html#ae2b7e91a10c399d78ff315befeebb213", null ],
     [ "byte", "aliases_8hpp.html#a7f43bb1dfddcd1a4405a95e74ce0ba57", null ],
     [ "cl_bool", "aliases_8hpp.html#a1d914fc15a40816fc6b797dd5e02c444", null ],
     [ "cl_char", "aliases_8hpp.html#a85e1bfc3d03aadeed679ca0a6cc862ce", null ],

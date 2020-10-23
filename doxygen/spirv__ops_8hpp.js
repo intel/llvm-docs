@@ -5,6 +5,6 @@ var spirv__ops_8hpp =
     [ "__spirv_GroupWaitEvents", "spirv__ops_8hpp.html#a6712ca3d25dc817202ab1ccbebf5c845", null ],
     [ "__spirv_MemoryBarrier", "spirv__ops_8hpp.html#a78115176e44cb41a264cd00b603307dc", null ],
     [ "__spirv_ocl_prefetch", "spirv__ops_8hpp.html#ae348ac93399e5fc151a847069e712f6f", null ],
-    [ "OpGroupAsyncCopyGlobalToLocal", "spirv__ops_8hpp.html#a90af81f36439a4f6cc06c69ffc9526eb", null ],
-    [ "OpGroupAsyncCopyLocalToGlobal", "spirv__ops_8hpp.html#a99ea79f31308819ef1b5a61d785b6ce4", null ]
+    [ "__SYCL_OpGroupAsyncCopyGlobalToLocal", "spirv__ops_8hpp.html#a777c646c5c382e2b05cfea3d17b523f2", null ],
+    [ "__SYCL_OpGroupAsyncCopyLocalToGlobal", "spirv__ops_8hpp.html#afe7abbe4c3a9376baf459ddeb3a1cbd2", null ]
 ];

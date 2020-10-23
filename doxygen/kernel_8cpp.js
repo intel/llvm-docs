@@ -1,12 +1,12 @@
 var kernel_8cpp =
 [
-    [ "PARAM_TRAITS_SPEC", "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909", null ],
-    [ "PARAM_TRAITS_SPEC", "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909", null ],
-    [ "PARAM_TRAITS_SPEC", "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909", null ],
-    [ "PARAM_TRAITS_SPEC", "kernel_8cpp.html#a522cc2c6a59f548ee17c359f636f7909", null ],
-    [ "PARAM_TRAITS_SPEC_WITH_INPUT", "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622", null ],
-    [ "PARAM_TRAITS_SPEC_WITH_INPUT", "kernel_8cpp.html#a6a01e05d8be8780e20459af676b03622", null ],
-    [ "PARAM_TRAITS_SPEC", "kernel_8cpp.html#aa5d3d4303f841cbb06ce68f233a50b24", null ],
-    [ "PARAM_TRAITS_SPEC_WITH_INPUT", "kernel_8cpp.html#a44287fb286662e49b02663902208ab85", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "kernel_8cpp.html#ac535545f91898330c7322596642fd332", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "kernel_8cpp.html#ac535545f91898330c7322596642fd332", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "kernel_8cpp.html#ac535545f91898330c7322596642fd332", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "kernel_8cpp.html#ac535545f91898330c7322596642fd332", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC_WITH_INPUT", "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC_WITH_INPUT", "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "kernel_8cpp.html#ac2f63ef028746455af61de56221a6a65", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC_WITH_INPUT", "kernel_8cpp.html#a3c938ceaddd4fdd854c7c59c504d5edf", null ],
     [ "preferred_work_group_size_multiple", "kernel_8cpp.html#a9c16a54ec7d6f7c97004c9735dcb3ca1", null ]
 ];

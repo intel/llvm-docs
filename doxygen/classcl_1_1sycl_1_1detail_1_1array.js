@@ -7,7 +7,7 @@ var classcl_1_1sycl_1_1detail_1_1array =
     [ "array", "classcl_1_1sycl_1_1detail_1_1array.html#aa68f20aceb987946cfd626822aae1e94", null ],
     [ "array", "classcl_1_1sycl_1_1detail_1_1array.html#a00e134bb0feac5575bac954276b3123d", null ],
     [ "array", "classcl_1_1sycl_1_1detail_1_1array.html#a58e13f623464b526472e7fec8f52a58e", null ],
-    [ "check_dimension", "classcl_1_1sycl_1_1detail_1_1array.html#a6ed8180dfc774f983b2dbecd80676e48", null ],
+    [ "check_dimension", "classcl_1_1sycl_1_1detail_1_1array.html#a24306317e6ea043918bced63a60ce7ac", null ],
     [ "get", "classcl_1_1sycl_1_1detail_1_1array.html#ad31665bd8a3a8ab3e08444478f9f08fc", null ],
     [ "operator cl::sycl::id< dimensions >", "classcl_1_1sycl_1_1detail_1_1array.html#a85a58dcffbb1cb70d17aece95b00f9af", null ],
     [ "operator cl::sycl::range< dimensions >", "classcl_1_1sycl_1_1detail_1_1array.html#a2dd9f7b32120a628de86cd58234208ad", null ],

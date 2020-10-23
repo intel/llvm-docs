@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['esimd_5fhdr_5fconst_5fpi',['ESIMD_HDR_CONST_PI',['../esimd__math_8hpp.html#af13bdedaa65cc2a39c0238b63c110046',1,'esimd_math.hpp']]],
-  ['esimd_5finline',['ESIMD_INLINE',['../esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d',1,'esimd_enum.hpp']]],
-  ['esimd_5fintrinsic_5fdef',['ESIMD_INTRINSIC_DEF',['../esimd__math_8hpp.html#a54e5879690a19ae3ecbc5fa6f71a991e',1,'ESIMD_INTRINSIC_DEF():&#160;esimd_math.hpp'],['../esimd__math_8hpp.html#a1c5a3d9b24732c3916d76cbece7f4260',1,'ESIMD_INTRINSIC_DEF():&#160;esimd_math.hpp'],['../esimd__math_8hpp.html#ab68af386a7f445090ad7c92042c5195f',1,'ESIMD_INTRINSIC_DEF():&#160;esimd_math.hpp']]],
-  ['esimd_5fnodebug',['ESIMD_NODEBUG',['../esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b',1,'esimd_enum.hpp']]],
-  ['esimd_5fnoinline',['ESIMD_NOINLINE',['../esimd__enum_8hpp.html#a1aa89fefbf072e0f1defd36fc9f85ed8',1,'esimd_enum.hpp']]],
-  ['esimd_5fprivate',['ESIMD_PRIVATE',['../esimd__enum_8hpp.html#afd8733f73584ee7148d688ef7228e5f7',1,'esimd_enum.hpp']]],
-  ['esimd_5fregister',['ESIMD_REGISTER',['../esimd__enum_8hpp.html#ac416ad46f1f98918129bc48b3972508a',1,'esimd_enum.hpp']]]
+  ['hasa',['HasA',['../esimd__enum_8hpp.html#af7f3fe9d26dcab36910f0ca2d7254faf',1,'esimd_enum.hpp']]],
+  ['hasb',['HasB',['../esimd__enum_8hpp.html#a7ab0f4c8f66b7a32864e40c2930f1128',1,'esimd_enum.hpp']]],
+  ['hasg',['HasG',['../esimd__enum_8hpp.html#ac34aa6fbd0cadba7a7c892a18741cc16',1,'esimd_enum.hpp']]],
+  ['hasr',['HasR',['../esimd__enum_8hpp.html#ad88decc3ef08dba8bededcfc16f22eae',1,'esimd_enum.hpp']]]
 ];

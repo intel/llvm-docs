@@ -7,7 +7,7 @@ var atomic_8hpp =
     [ "GetSpirvMemoryScope< access::address_space::global_device_space >", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4" ],
     [ "GetSpirvMemoryScope< access::address_space::local_space >", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4" ],
     [ "atomic", "classcl_1_1sycl_1_1atomic.html", "classcl_1_1sycl_1_1atomic" ],
-    [ "STATIC_ASSERT_NOT_FLOAT", "atomic_8hpp.html#a92f676413d20ba1cc534fb333dc503be", null ],
+    [ "__SYCL_STATIC_ASSERT_NOT_FLOAT", "atomic_8hpp.html#a4f863a033b02fc5a4d13a966e92220e4", null ],
     [ "memory_order", "atomic_8hpp.html#a88dc0675485acc0898b7343c6dcfac40", null ],
     [ "memory_order", "atomic_8hpp.html#a2145358fe52a1f70ad8cb1ca7ce89a76", [
       [ "relaxed", "atomic_8hpp.html#a2145358fe52a1f70ad8cb1ca7ce89a76a81f32be24a2a62fc472cc43edc97e65b", null ]

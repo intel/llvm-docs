@@ -1,4 +1,4 @@
 var platform_8cpp =
 [
-    [ "PARAM_TRAITS_SPEC", "platform_8cpp.html#a522cc2c6a59f548ee17c359f636f7909", null ]
+    [ "__SYCL_PARAM_TRAITS_SPEC", "platform_8cpp.html#ac535545f91898330c7322596642fd332", null ]
 ];

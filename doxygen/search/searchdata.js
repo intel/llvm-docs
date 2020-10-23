@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "_abcdefgiklmpqrst",
   8: "_abcdefghiklmnopqrstuvw",
   9: ":_abcdegiosu",
-  10: "_acdeghlmnoprsz",
+  10: "_cdehmnpsz",
   11: "acdlot",
   12: "t"
 };
