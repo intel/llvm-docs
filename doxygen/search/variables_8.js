@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['half_5feps',['half_eps',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a64c7c83cda284973f0569967f91082c8',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
-  ['half_5fmax',['half_max',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a85cfc86c808888613b3af8e1a5a96783',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
-  ['half_5fmin',['half_min',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a1a5726b48f5ca9147e30b702c8c6c07c',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['hardware_5fplatform_5fname',['HARDWARE_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1INTEL.html#a1cdbe3d4af85e7e311b746e67058f4bf',1,'cl::sycl::INTEL']]],
   ['has_5fdenorm',['has_denorm',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ad3be8828cbc70eba840b0f2784000bb5',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],
   ['has_5fdenorm_5floss',['has_denorm_loss',['../structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aaea6ee1ebc7e151bd3ba6ef5209aa7d7',1,'std::numeric_limits&lt; cl::sycl::half &gt;']]],

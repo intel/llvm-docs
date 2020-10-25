@@ -79,7 +79,7 @@ var NAVTREEINDEX =
 "structcl_1_1sycl_1_1detail_1_1get__kernel__info.html",
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01queue_01_4.html#a43f7101ca35b54d798a54dc631fcc95e",
 "structrestype__ex_3_01half_00_01half_01_4.html#a31fa54bcae28895cb3f524a0d8fc8eb8",
-"sycl__mem__obj__i_8hpp_source.html"
+"sycl__mem__obj__t_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
