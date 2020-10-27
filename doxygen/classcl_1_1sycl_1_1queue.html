@@ -285,6 +285,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aabb216122f2c5d743ad6660f80886a52"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1queue.html#aabb216122f2c5d743ad6660f80886a52">parallel_for</a> (<a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; ExecutionRange, const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;DepEvents, <a class="el" href="queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1">_KERNELFUNCPARAM</a>(KernelFunc) <a class="el" href="queue_8hpp.html#a67e15f570b199ff3280ea8c1cdc3e644">_CODELOCPARAM</a>(&amp;CodeLoc))</td></tr>
 <tr class="memdesc:aabb216122f2c5d743ad6660f80886a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">parallel_for version with a kernel represented as a lambda + <a class="el" href="classcl_1_1sycl_1_1nd__range.html" title="Defines the iteration domain of both the work-groups and the overall dispatch. ">nd_range</a> that specifies global, local sizes and offset.  <a href="#aabb216122f2c5d743ad6660f80886a52">More...</a><br /></td></tr>
 <tr class="separator:aabb216122f2c5d743ad6660f80886a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec39afb79e7005e9b09ae7a1c48a08c"><td class="memTemplParams" colspan="2">template&lt;typename KernelName  = detail::auto_name, typename KernelType , int Dims, typename Reduction &gt; </td></tr>
+<tr class="memitem:acec39afb79e7005e9b09ae7a1c48a08c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1queue.html#acec39afb79e7005e9b09ae7a1c48a08c">parallel_for</a> (<a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt; ExecutionRange, Reduction Redu, <a class="el" href="queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1">_KERNELFUNCPARAM</a>(KernelFunc) <a class="el" href="queue_8hpp.html#a67e15f570b199ff3280ea8c1cdc3e644">_CODELOCPARAM</a>(&amp;CodeLoc))</td></tr>
+<tr class="memdesc:acec39afb79e7005e9b09ae7a1c48a08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">parallel_for version with a kernel represented as a lambda + <a class="el" href="classcl_1_1sycl_1_1nd__range.html" title="Defines the iteration domain of both the work-groups and the overall dispatch. ">nd_range</a> that specifies global, local sizes and offset.  <a href="#acec39afb79e7005e9b09ae7a1c48a08c">More...</a><br /></td></tr>
+<tr class="separator:acec39afb79e7005e9b09ae7a1c48a08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8244d40020d5524492549a66cf4396e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1queue.html#af8244d40020d5524492549a66cf4396e">is_in_order</a> () const</td></tr>
 <tr class="memdesc:af8244d40020d5524492549a66cf4396e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the queue is in order or OoO.  <a href="#af8244d40020d5524492549a66cf4396e">More...</a><br /></td></tr>
 <tr class="separator:af8244d40020d5524492549a66cf4396e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1081,7 +1085,7 @@ template&lt;backend BackendName&gt; </div>
 <p>Gets the native handle of the SYCL queue. </p>
 <dl class="section return"><dt>Returns</dt><dd>a native handle, the type of which defined by the backend. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00736">736</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00757">757</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="common_8hpp_source.html#l00185">cl::sycl::detail::createSyclObjFromImpl()</a>, <a class="el" href="handler_8hpp_source.html#l00837">cl::sycl::handler::depends_on()</a>, and <a class="el" href="common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
@@ -1429,7 +1433,7 @@ template&lt;typename PropertyT &gt; </div>
 </div>
 </div>
 <a id="acb27ee1c41ae8ff975e7e322253fe917"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb27ee1c41ae8ff975e7e322253fe917">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[1/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acb27ee1c41ae8ff975e7e322253fe917">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[1/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1481,7 +1485,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="ab0fae91746e12707b246235c0094a96b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0fae91746e12707b246235c0094a96b">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[2/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0fae91746e12707b246235c0094a96b">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[2/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1533,7 +1537,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="aa0a03639455a508296a2f464a8cc6c9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0a03639455a508296a2f464a8cc6c9d">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[3/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a03639455a508296a2f464a8cc6c9d">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[3/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1585,7 +1589,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="a85c5639955ac2cac52b0469838ad32db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85c5639955ac2cac52b0469838ad32db">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[4/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a85c5639955ac2cac52b0469838ad32db">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[4/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1644,7 +1648,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="a868009a8248b56b1ba0c444c374af456"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a868009a8248b56b1ba0c444c374af456">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[5/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a868009a8248b56b1ba0c444c374af456">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[5/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1703,7 +1707,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="a352a66cbfe7bb8caade69091ab19cf42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a352a66cbfe7bb8caade69091ab19cf42">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[6/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a352a66cbfe7bb8caade69091ab19cf42">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[6/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1762,7 +1766,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="aeb8426e7dd2a516366dadd0ce68f8810"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb8426e7dd2a516366dadd0ce68f8810">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[7/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8426e7dd2a516366dadd0ce68f8810">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[7/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1821,7 +1825,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="ab0a9bba6693c73e5391d18f9b84c859f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0a9bba6693c73e5391d18f9b84c859f">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[8/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a9bba6693c73e5391d18f9b84c859f">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[8/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1880,7 +1884,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="af5bce5db5be492467f3e92e4c51c723e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5bce5db5be492467f3e92e4c51c723e">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[9/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af5bce5db5be492467f3e92e4c51c723e">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[9/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1939,7 +1943,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType &gt; <
 </div>
 </div>
 <a id="a1ce4d18382d95b5de4509581f76af298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ce4d18382d95b5de4509581f76af298">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[10/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ce4d18382d95b5de4509581f76af298">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[10/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1998,7 +2002,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 </div>
 </div>
 <a id="a82473f85af862ebd751afabc266a36d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82473f85af862ebd751afabc266a36d1">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[11/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a82473f85af862ebd751afabc266a36d1">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[11/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2064,7 +2068,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 </div>
 </div>
 <a id="a01b66412138f5b2724c3763171089634"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01b66412138f5b2724c3763171089634">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[12/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b66412138f5b2724c3763171089634">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[12/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2130,7 +2134,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 </div>
 </div>
 <a id="ad1e6845be9c7ce965fce626b14f1c0ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1e6845be9c7ce965fce626b14f1c0ac">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[13/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e6845be9c7ce965fce626b14f1c0ac">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[13/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2182,7 +2186,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 </div>
 </div>
 <a id="a089901a695ed39ad3fcecd523ecef3dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a089901a695ed39ad3fcecd523ecef3dd">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[14/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a089901a695ed39ad3fcecd523ecef3dd">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[14/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2241,7 +2245,7 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 </div>
 </div>
 <a id="aabb216122f2c5d743ad6660f80886a52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabb216122f2c5d743ad6660f80886a52">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[15/15]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb216122f2c5d743ad6660f80886a52">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[15/16]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2296,6 +2300,65 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
 <p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00709">709</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="queue_8hpp_source.html#l00390">_CODELOCARG</a>, and <a class="el" href="handler_8hpp_source.html#l00837">cl::sycl::handler::depends_on()</a>.</p>
+
+</div>
+</div>
+<a id="acec39afb79e7005e9b09ae7a1c48a08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec39afb79e7005e9b09ae7a1c48a08c">&#9670;&nbsp;</a></span>parallel_for() <span class="overload">[16/16]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelName  = detail::auto_name, typename KernelType , int Dims, typename Reduction &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1event.html">event</a> cl::sycl::queue::parallel_for </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1nd__range.html">nd_range</a>&lt; Dims &gt;&#160;</td>
+          <td class="paramname"><em>ExecutionRange</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Reduction&#160;</td>
+          <td class="paramname"><em>Redu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1">_KERNELFUNCPARAM</a>(KernelFunc) <a class="el" href="queue_8hpp.html#a67e15f570b199ff3280ea8c1cdc3e644">_CODELOCPARAM</a> &amp;&#160;</td>
+          <td class="paramname"><em>CodeLoc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>parallel_for version with a kernel represented as a lambda + <a class="el" href="classcl_1_1sycl_1_1nd__range.html" title="Defines the iteration domain of both the work-groups and the overall dispatch. ">nd_range</a> that specifies global, local sizes and offset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ExecutionRange</td><td>is a range that specifies the work space of the kernel </td></tr>
+    <tr><td class="paramname">Redu</td><td>is a reduction operation </td></tr>
+    <tr><td class="paramname">KernelFunc</td><td>is the Kernel functor or lambda </td></tr>
+    <tr><td class="paramname">CodeLoc</td><td>contains the code location of user code </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="queue_8hpp_source.html#l00732">732</a> of file <a class="el" href="queue_8hpp_source.html">queue.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="queue_8hpp_source.html#l00390">_CODELOCARG</a>.</p>
 
 </div>
 </div>

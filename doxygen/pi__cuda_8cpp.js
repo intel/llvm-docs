@@ -74,7 +74,7 @@ var pi__cuda_8cpp =
     [ "cuda_piKernelRetain", "pi__cuda_8cpp.html#a5725cedc336d37d7d8ecdc44e413a22f", null ],
     [ "cuda_piKernelSetArg", "pi__cuda_8cpp.html#aa7e2f345b71f7b1c65a8e1400535edc9", null ],
     [ "cuda_piKernelSetExecInfo", "pi__cuda_8cpp.html#a7c3399156dfeb08590b7f4af5f8268a3", null ],
-    [ "cuda_piMemBufferCreate", "pi__cuda_8cpp.html#a6b019255fe91235b23f16439871c9590", null ],
+    [ "cuda_piMemBufferCreate", "pi__cuda_8cpp.html#abd30a9e5150c9b9170127cf29f12d9f8", null ],
     [ "cuda_piMemBufferPartition", "pi__cuda_8cpp.html#a9d0e36d8a19a707b41e6ebcb45c98dc8", null ],
     [ "cuda_piMemGetInfo", "pi__cuda_8cpp.html#ac1b53eaa4e13706ab400f51dbd51b091", null ],
     [ "cuda_piMemImageCreate", "pi__cuda_8cpp.html#a8484a4f8f7fa9cf699c411a2f3036d58", null ],

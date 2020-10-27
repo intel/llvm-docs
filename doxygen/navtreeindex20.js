@@ -1,5 +1,7 @@
 var NAVTREEINDEX20 =
 {
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a2794f1350d65c336d5a1107adf7f6846":[4,0,0,0,1,3,0,7,22],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a2ac737d240fc746cef37129b7569f08e":[4,0,0,0,1,3,0,7,64],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a2af72f100c356273d46284f6fd1dfc08":[4,0,0,0,1,3,0,7,62],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a2b706535abebfe1ef0918595d049a0ba":[4,0,0,0,1,3,0,7,33],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a32d3cc82e659c366219c0c4199aecfb4":[4,0,0,0,1,3,0,7,27],
@@ -110,8 +112,8 @@ var NAVTREEINDEX20 =
 "kernel_8cpp.html#a9c16a54ec7d6f7c97004c9735dcb3ca1":[4,0,2,14,8],
 "kernel_8cpp.html#ac2f63ef028746455af61de56221a6a65":[4,0,2,14,6],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,0],
-"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,3],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,1],
+"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,3],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,2],
 "kernel_8cpp_source.html":[4,0,2,14],
 "kernel_8hpp.html":[4,0,0,0,1,32],
@@ -132,10 +134,10 @@ var NAVTREEINDEX20 =
 "kernel__impl_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,1,37,4],
 "kernel__impl_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,1,37,5],
 "kernel__impl_8cpp.html#aa113899ed3b61997010a90871c49bccf":[4,0,2,1,37,10],
-"kernel__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,37,0],
-"kernel__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,37,3],
 "kernel__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,37,1],
+"kernel__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,37,3],
 "kernel__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,37,2],
+"kernel__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,37,0],
 "kernel__impl_8cpp.html#acb85b4b9286d8dfe4a8fe8260d7265b0":[4,0,2,1,37,11],
 "kernel__impl_8cpp_source.html":[4,0,2,1,37],
 "kernel__impl_8hpp.html":[4,0,2,1,38],
@@ -247,7 +249,5 @@ var NAVTREEINDEX20 =
 "namespacecl_1_1sycl_1_1access.html":[2,0,2,1,0],
 "namespacecl_1_1sycl_1_1detail.html":[3,0,2,1,0],
 "namespacecl_1_1sycl_1_1detail.html":[2,0,2,1,1],
-"namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html":[2,0,2,1,1,0],
-"namespacecl_1_1sycl_1_1detail_1_1gtl.html":[2,0,2,1,1,1],
-"namespacecl_1_1sycl_1_1detail_1_1gvl.html":[2,0,2,1,1,2]
+"namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html":[2,0,2,1,1,0]
 };

@@ -595,6 +595,7 @@ var group__sycl__api =
       [ "parallel_for", "classcl_1_1sycl_1_1queue.html#ad1e6845be9c7ce965fce626b14f1c0ac", null ],
       [ "parallel_for", "classcl_1_1sycl_1_1queue.html#a089901a695ed39ad3fcecd523ecef3dd", null ],
       [ "parallel_for", "classcl_1_1sycl_1_1queue.html#aabb216122f2c5d743ad6660f80886a52", null ],
+      [ "parallel_for", "classcl_1_1sycl_1_1queue.html#acec39afb79e7005e9b09ae7a1c48a08c", null ],
       [ "prefetch", "classcl_1_1sycl_1_1queue.html#a5516a9023e6a5c2def87689808eee11c", null ],
       [ "single_task", "classcl_1_1sycl_1_1queue.html#a4e62095771bd8eafd97298291e1acd65", null ],
       [ "single_task", "classcl_1_1sycl_1_1queue.html#a8f99bcfefc29069a31b3bf82b990f09e", null ],

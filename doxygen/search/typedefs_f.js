@@ -46,6 +46,7 @@ var searchData=
   ['pi_5fmem_5fadvice',['pi_mem_advice',['../pi_8h.html#afd9fe6dda810f0a934a949b1ab86e38c',1,'pi.h']]],
   ['pi_5fmem_5fflags',['pi_mem_flags',['../pi_8h.html#a89d177da59c06caf679bb298cc0b0a02',1,'pi.h']]],
   ['pi_5fmem_5finfo',['pi_mem_info',['../pi_8h.html#a3e0f70c38f3f031577d214f578fd7319',1,'pi.h']]],
+  ['pi_5fmem_5fproperties',['pi_mem_properties',['../pi_8h.html#a3141c5c6718acb7b2183c16161eac80b',1,'pi.h']]],
   ['pi_5fmem_5ftype',['pi_mem_type',['../pi_8h.html#a529ba52573aab3934e712f04bcb46a37',1,'pi.h']]],
   ['pi_5fnative_5fhandle',['pi_native_handle',['../pi_8h.html#a11056869f4074c362c2347033e5d1b92',1,'pi.h']]],
   ['pi_5fplatform',['pi_platform',['../pi_8h.html#acab4ff2636fbb0628e5978bf19e27887',1,'pi.h']]],

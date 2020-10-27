@@ -88,7 +88,7 @@ var pi__level__zero_8cpp =
     [ "piKernelRetain", "pi__level__zero_8cpp.html#ad0b4851ae4b9ddea62173d9fd8f182f5", null ],
     [ "piKernelSetArg", "pi__level__zero_8cpp.html#a3c6810dac1ca7da0e86b15b222ecb71c", null ],
     [ "piKernelSetExecInfo", "pi__level__zero_8cpp.html#a48d330e971e0a6ceeda06b01be453f4a", null ],
-    [ "piMemBufferCreate", "pi__level__zero_8cpp.html#ad84da26f0a7b4dee4a7a254b17629342", null ],
+    [ "piMemBufferCreate", "pi__level__zero_8cpp.html#a0550d2a1ec81bdf1d42946aafe64b897", null ],
     [ "piMemBufferPartition", "pi__level__zero_8cpp.html#aa7005a8502e2cd6f6cc6cd16c51560ce", null ],
     [ "piMemGetInfo", "pi__level__zero_8cpp.html#ae2b3b0b37c21c1f56ca215eff94801b8", null ],
     [ "piMemImageCreate", "pi__level__zero_8cpp.html#aaef9d16606feb71c0656e5833892762d", null ],

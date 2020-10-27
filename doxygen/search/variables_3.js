@@ -2,6 +2,7 @@ var searchData=
 [
   ['cache',['CACHE',['../namespacecl_1_1sycl_1_1INTEL.html#a03684d27452e9c1fb8343e643d10ab84',1,'cl::sycl::INTEL']]],
   ['cast',['cast',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#abdb1239b6e2313d63e121e5d6cb9c94e',1,'cl::sycl::detail::pi']]],
+  ['clcreatebufferwithpropertiesname',['clCreateBufferWithPropertiesName',['../pi__opencl_8cpp.html#ab1820a5e955d1790cf12c64800c42858',1,'pi_opencl.cpp']]],
   ['cldevicememallocname',['clDeviceMemAllocName',['../pi__opencl_8cpp.html#aea06bf6cb4348d692fe4ce6d4bfe3d11',1,'pi_opencl.cpp']]],
   ['clenqueuememadvisename',['clEnqueueMemAdviseName',['../pi__opencl_8cpp.html#affd635db53886fb71c2a190d06d076cb',1,'pi_opencl.cpp']]],
   ['clenqueuememcpyname',['clEnqueueMemcpyName',['../pi__opencl_8cpp.html#affdd71aa5e984ec956d1a3e53821dd31',1,'pi_opencl.cpp']]],
