@@ -143,16 +143,24 @@ classes for layout changes, while <code class="docutils literal notranslate"><sp
 classes. Changing the class layout is a breaking change.</p></li>
 </ul>
 </div>
-<div class="section" id="breaking-abi">
-<h2>Breaking ABI<a class="headerlink" href="#breaking-abi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="changing-abi">
+<h2>Changing ABI<a class="headerlink" href="#changing-abi" title="Permalink to this headline">¶</a></h2>
+<p><strong>Note (October, 2020)</strong>: DPC++ runtime and compiler ABI is currently in frozen
+state. This means that no ABI-breaking changes will be accepted by default.
+Project maintainers may still approve breaking changes in some cases. Please,
+try to avoid any breaking changes until freeze is lifted. If you need to change
+existing functionality, consider adding new APIs instead of replacing them.
+Also, please, avoid any changes, mentioned in the <a class="reference external" href="#intro">Intro</a> section as
+breaking. Refer to the above guide to distinguish breaking and non-breaking
+changes. If not sure, do not hesitate to ask code owners for help.</p>
 <p>Whenever you need to change the existing ABI, please, follow these steps:</p>
 <ol class="simple">
 <li><p>Adjust you PR description to reflect (non-)breaking ABI changes. Make sure
 it is clear, why breaking ABI is necessary.</p></li>
 <li><p>Fix failing ABI tests in your Pull Request. Use aforementioned techniques to
 update test files.</p></li>
-<li><p>If Pull Request introduces a breaking change, update the library version
-according to the policies.</p></li>
+<li><p>~~If Pull Request introduces a breaking change, update the library version~~
+~~according to the policies.~~ <strong>(See note above)</strong></p></li>
 </ol>
 </div>
 </div>
