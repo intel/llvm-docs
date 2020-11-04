@@ -1,7 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"stream_8hpp.html#ab3a27c8313f4849422ba61f4cea5e6a8":[4,0,0,0,1,46,84],
-"stream_8hpp.html#ab663efb5de95e7c495ab96bc3c27c85b":[4,0,0,0,1,46,57],
 "stream_8hpp.html#ab88e647e1bf04d6c6e783f6c7c02d7b5":[4,0,0,0,1,46,33],
 "stream_8hpp.html#abc316989e35e7a7141b006cad07e8030":[4,0,0,0,1,46,22],
 "stream_8hpp.html#ac012efbdb7a0f15ef31696c85bc53b12":[4,0,0,0,1,46,76],
@@ -249,5 +247,7 @@ var NAVTREEINDEX27 =
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a870da0afef4a9f1b6d24f7cdd3cc4d47":[3,0,20,1,0,13],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a908350845d03f4739a56bf87c795aa93":[3,0,20,1,0,4],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aa8bebeca206a8233baef6680103a0b26":[3,0,20,1,0,6],
-"struct__pi__mem_1_1mem___1_1buffer__mem__.html#aac51643c77130af9f87de37928c30cf4":[3,0,20,1,0,14]
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#aac51643c77130af9f87de37928c30cf4":[3,0,20,1,0,14],
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#aaf08e53e244f71e8308de38465256e67":[3,0,20,1,0,9],
+"struct__pi__mem_1_1mem___1_1surface__mem__.html":[3,0,20,1,1]
 };

@@ -81,6 +81,7 @@ var searchData=
   ['classic',['classic',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55af3d64714d1f6e7f71558d4252e84ab58',1,'_pi_mem::mem_::buffer_mem_']]],
   ['clcreatebufferwithpropertiesname',['clCreateBufferWithPropertiesName',['../pi__opencl_8cpp.html#ab1820a5e955d1790cf12c64800c42858',1,'pi_opencl.cpp']]],
   ['cldevicememallocname',['clDeviceMemAllocName',['../pi__opencl_8cpp.html#aea06bf6cb4348d692fe4ce6d4bfe3d11',1,'pi_opencl.cpp']]],
+  ['cleanupafterevent',['cleanupAfterEvent',['../pi__level__zero_8cpp.html#abfbb21cb308519e24c13c96d88c558a4',1,'pi_level_zero.cpp']]],
   ['cleanupcommandsforrecord',['cleanupCommandsForRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a4a6d2b7ab95fd77a2d88498a1f58346c',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['cleanupfinishedcommands',['cleanupFinishedCommands',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa',1,'cl::sycl::detail::Scheduler::cleanupFinishedCommands()'],['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a9fd0ca8622c892a027451ab444ffd245',1,'cl::sycl::detail::Scheduler::GraphBuilder::cleanupFinishedCommands()']]],
   ['clear',['clear',['../classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a6793008d8d2f0e4e13eca5f6db17e6cb',1,'cl::sycl::detail::CircularBuffer']]],

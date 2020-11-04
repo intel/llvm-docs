@@ -1,7 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"namespacecl_1_1sycl_1_1detail_1_1gtl.html":[2,0,2,1,1,1],
-"namespacecl_1_1sycl_1_1detail_1_1gvl.html":[2,0,2,1,1,2],
 "namespacecl_1_1sycl_1_1detail_1_1half__impl.html":[3,0,2,1,0,0],
 "namespacecl_1_1sycl_1_1detail_1_1half__impl.html":[2,0,2,1,1,3],
 "namespacecl_1_1sycl_1_1detail_1_1host__half__impl.html":[3,0,2,1,0,1],
@@ -29,8 +27,8 @@ var NAVTREEINDEX21 =
 "namespacecl_1_1sycl_1_1property.html":[2,0,2,1,11],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,2,1,11,0],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,2,1,5,0],
-"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,11,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,2,1,5,1],
+"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,2,1,11,1],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,2,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,2,1,5,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,2,1,5,2],
@@ -86,8 +84,8 @@ var NAVTREEINDEX21 =
 "namespacemembers_r.html":[2,1,0,17],
 "namespacemembers_s.html":[2,1,0,18],
 "namespacemembers_t.html":[2,1,0,19],
-"namespacemembers_type.html":[2,1,3],
 "namespacemembers_type.html":[2,1,3,0],
+"namespacemembers_type.html":[2,1,3],
 "namespacemembers_type_a.html":[2,1,3,1],
 "namespacemembers_type_b.html":[2,1,3,2],
 "namespacemembers_type_c.html":[2,1,3,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX21 =
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea32980e1c5170b16f06bf3d4a673e29e4":[4,0,0,0,1,2,30,106,56],
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea3419096cf373c1e1351954fc42919512":[4,0,0,0,1,2,30,106,73],
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea3556586056d920c530ff4fcae45ac819":[4,0,0,0,1,2,30,106,58],
-"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea38a5037b02160ec5a4217e7a4a48f770":[4,0,0,0,1,2,30,106,14]
+"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea38a5037b02160ec5a4217e7a4a48f770":[4,0,0,0,1,2,30,106,14],
+"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea3a31ddf3996a2564bb9ac0036b76265a":[4,0,0,0,1,2,30,106,76],
+"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea3e4014eda750f06d4a704b9eb1200b01":[4,0,0,0,1,2,30,106,52]
 };

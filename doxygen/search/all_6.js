@@ -217,7 +217,7 @@ var searchData=
   ['exec_5fkernel',['exec_kernel',['../namespacecl_1_1sycl_1_1info.html#a325a35c99165b9ee10d88acd0ea73c00a8ef8a5e4446de303bfda8dee49b81b86',1,'cl::sycl::info']]],
   ['exec_5fnative_5fkernel',['exec_native_kernel',['../namespacecl_1_1sycl_1_1info.html#a325a35c99165b9ee10d88acd0ea73c00af9aac75a42a777bddf2841ef348171d7',1,'cl::sycl::info']]],
   ['execcgcommand',['ExecCGCommand',['../classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html',1,'cl::sycl::detail::ExecCGCommand'],['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#abde56188bd93c1b50e35df8dda10bd84',1,'cl::sycl::detail::SYCLMemObjI::ExecCGCommand()'],['../classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html#a0dd50d7423c1de8a4c7118a04b717f84',1,'cl::sycl::detail::ExecCGCommand::ExecCGCommand()']]],
-  ['executecommandlist',['executeCommandList',['../struct__pi__queue.html#a3d3ecc5c51c6ae45f67c53079c77b279',1,'_pi_queue']]],
+  ['executecommandlist',['executeCommandList',['../struct__pi__queue.html#ae0c09bcb63b05d67279464a02ea4016f',1,'_pi_queue']]],
   ['executeopencommandlist',['executeOpenCommandList',['../struct__pi__queue.html#a660f50bdb62bb95130d6f5145eeff122',1,'_pi_queue']]],
   ['execution_5fcapabilities',['execution_capabilities',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190afc1fc31ceecfb5079c46662e292a9d3e',1,'cl::sycl::info']]],
   ['execution_5fcapability',['execution_capability',['../namespacecl_1_1sycl_1_1info.html#a325a35c99165b9ee10d88acd0ea73c00',1,'cl::sycl::info']]],
