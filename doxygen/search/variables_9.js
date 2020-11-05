@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['i',['i',['../unioncl_1_1sycl_1_1ONEAPI_1_1Us.html#a8a68b48deeb4217dc889168301289fdf',1,'cl::sycl::ONEAPI::Us::i()'],['../unioncl_1_1sycl_1_1ONEAPI_1_1Uu.html#afc0cdfcd41ba68a7092a1ebfc33b7ad5',1,'cl::sycl::ONEAPI::Uu::i()']]],
   ['image_5farray_5fsize',['image_array_size',['../struct__pi__image__desc.html#ae734422f3acadcca536c56a40e7c2aa4',1,'_pi_image_desc']]],
   ['image_5fchannel_5fdata_5ftype',['image_channel_data_type',['../struct__pi__image__format.html#a8fd4823dfb7f11198827463e807f322e',1,'_pi_image_format']]],
   ['image_5fchannel_5forder',['image_channel_order',['../struct__pi__image__format.html#af7031d0c6183d93c49f73686a7017c91',1,'_pi_image_format']]],

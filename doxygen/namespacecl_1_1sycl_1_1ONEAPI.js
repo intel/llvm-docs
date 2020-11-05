@@ -13,5 +13,7 @@ var namespacecl_1_1sycl_1_1ONEAPI =
     [ "is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ],
     [ "maximum", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", "structcl_1_1sycl_1_1ONEAPI_1_1maximum" ],
     [ "minimum", "structcl_1_1sycl_1_1ONEAPI_1_1minimum.html", "structcl_1_1sycl_1_1ONEAPI_1_1minimum" ],
-    [ "sub_group", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group" ]
+    [ "sub_group", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group" ],
+    [ "Us", "unioncl_1_1sycl_1_1ONEAPI_1_1Us.html", "unioncl_1_1sycl_1_1ONEAPI_1_1Us" ],
+    [ "Uu", "unioncl_1_1sycl_1_1ONEAPI_1_1Uu.html", "unioncl_1_1sycl_1_1ONEAPI_1_1Uu" ]
 ];

@@ -1,5 +1,15 @@
 var NAVTREEINDEX31 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,96,0],
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,96,1],
+"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,97],
+"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#a5badfd995b080853e3b33a62baa3c5bf":[3,0,2,1,0,97,0],
+"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#aaebd2033fe583d7e9d53458f1ded8b28":[3,0,2,1,0,97,1],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html":[3,0,2,1,0,98],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html#a44506f6e601c5cafdcf7974b12185ad9":[3,0,2,1,0,98,0],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html":[3,0,2,1,0,99],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html#a98c0a9a82e8b3b3e2d8fa6d8e7583bce":[3,0,2,1,0,99,0],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html":[3,0,2,1,0,100],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html#a39598d93740450732d6876299d7d50d6":[3,0,2,1,0,100,0],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__info.html":[3,0,2,1,0,101],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01cl__uint_00_01Param_01_4.html":[3,0,2,1,0,102],
@@ -239,15 +249,5 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html":[3,0,2,1,53],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html#a9d1e1ed94185e07d707fe8937ca94174":[3,0,2,1,53,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html":[3,0,2,1,54],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html#af84c96538789a3c3560e4a82dd24c502":[3,0,2,1,54,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html":[3,0,2,1,55],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html#a8b6a7564e4e531423c495966b989d407":[3,0,2,1,55,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01context_01_4.html":[3,0,2,1,56],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01context_01_4.html#a6d51bb6c2bc6c42dcfb9460fe6af8ce1":[3,0,2,1,56,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01device_01_4.html":[3,0,2,1,57],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01device_01_4.html#aa046fedeff54a14a60c8bd02a19904ed":[3,0,2,1,57,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01platform_01_4.html":[3,0,2,1,58],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01platform_01_4.html#a5cffa2ae77f3711d6c5d1bf8752c3a24":[3,0,2,1,58,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01program_01_4.html":[3,0,2,1,59],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01program_01_4.html#a6b56daa6ea959cfcbc66618b6bd199ab":[3,0,2,1,59,0]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html#af84c96538789a3c3560e4a82dd24c502":[3,0,2,1,54,0]
 };

@@ -1,5 +1,15 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html":[3,0,2,1,0,190],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html#acea230fc90dfa6dc1680553c0308e0a4":[3,0,2,1,0,190,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html":[3,0,2,1,0,191],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html#ae969c40610139462555f55859596bf8e":[3,0,2,1,0,191,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT.html":[3,0,2,1,0,192],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_011_00_01T_01_4.html":[3,0,2,1,0,193],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_011_00_01T_01_4.html#ac9c687e3a00c232981b98861442a405d":[3,0,2,1,0,193,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_012_00_01T_01_4.html":[3,0,2,1,0,194],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_012_00_01T_01_4.html#adcb58d5987ce7dc0b05d97fbc7723f08":[3,0,2,1,0,194,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html":[3,0,2,1,0,195],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html#aa14a31495d45f19a8672c8df83fa9fbe":[3,0,2,1,0,195,0],
 "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo.html":[3,0,2,1,0,196],
 "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo_3_01info_1_1kernel__device__specific_1_1compile__work__group__size_01_4.html":[3,0,2,1,0,197],
@@ -239,15 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html#a0297a2a8b2f83f31b8880d18fe1d9d48":[3,0,2,1,0,94,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info__string.html":[3,0,2,1,0,95],
 "structcl_1_1sycl_1_1detail_1_1get__device__info__string.html#a388ac160a27861148c5debfb71fb06ec":[3,0,2,1,0,95,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,96],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,96,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a5168db7739599d4d992a9c420cd5adfd":[3,0,2,1,0,96,1],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html":[3,0,2,1,0,97],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#a5badfd995b080853e3b33a62baa3c5bf":[3,0,2,1,0,97,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__profiling__info.html#aaebd2033fe583d7e9d53458f1ded8b28":[3,0,2,1,0,97,1],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html":[3,0,2,1,0,98],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info.html#a44506f6e601c5cafdcf7974b12185ad9":[3,0,2,1,0,98,0],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html":[3,0,2,1,0,99],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html#a98c0a9a82e8b3b3e2d8fa6d8e7583bce":[3,0,2,1,0,99,0],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html":[3,0,2,1,0,100]
+"structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,96]
 };

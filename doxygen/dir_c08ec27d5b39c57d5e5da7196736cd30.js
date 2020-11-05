@@ -12,6 +12,7 @@ var dir_c08ec27d5b39c57d5e5da7196736cd30 =
     [ "atomic_enums.hpp", "atomic__enums_8hpp.html", "atomic__enums_8hpp" ],
     [ "atomic_fence.hpp", "atomic__fence_8hpp.html", "atomic__fence_8hpp" ],
     [ "atomic_ref.hpp", "atomic__ref_8hpp.html", "atomic__ref_8hpp" ],
+    [ "dot_product.hpp", "dot__product_8hpp.html", "dot__product_8hpp" ],
     [ "filter_selector.hpp", "filter__selector_8hpp.html", [
       [ "filter_selector", "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html", "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector" ]
     ] ],

@@ -13,5 +13,6 @@ var searchData=
   ['device_5fimpl_2ehpp',['device_impl.hpp',['../device__impl_8hpp.html',1,'']]],
   ['device_5finfo_2ehpp',['device_info.hpp',['../device__info_8hpp.html',1,'']]],
   ['device_5fselector_2ecpp',['device_selector.cpp',['../device__selector_8cpp.html',1,'']]],
-  ['device_5fselector_2ehpp',['device_selector.hpp',['../device__selector_8hpp.html',1,'']]]
+  ['device_5fselector_2ehpp',['device_selector.hpp',['../device__selector_8hpp.html',1,'']]],
+  ['dot_5fproduct_2ehpp',['dot_product.hpp',['../dot__product_8hpp.html',1,'']]]
 ];
