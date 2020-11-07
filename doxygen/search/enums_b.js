@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['matchstate',['MatchState',['../namespacecl_1_1sycl_1_1detail.html#ac7c700b946cf88083b9502a6732e8c14',1,'cl::sycl::detail']]],
   ['mem_5ftype',['mem_type',['../struct__pi__mem.html#a67ac70810bd3be2b55e4d31859966b59',1,'_pi_mem']]],
   ['memobjtype',['MemObjType',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#ae9131bc320b7ac1c75a02bb32e9c1b8a',1,'cl::sycl::detail::SYCLMemObjI']]],
   ['memory_5forder',['memory_order',['../namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76',1,'cl::sycl::memory_order()'],['../namespacecl_1_1sycl_1_1ONEAPI.html#a46f2e11c907d87cb0584eba0dc3f020f',1,'cl::sycl::ONEAPI::memory_order()']]],

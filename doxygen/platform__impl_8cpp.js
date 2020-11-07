@@ -2,10 +2,9 @@ var platform__impl_8cpp =
 [
     [ "DevDescT", "structcl_1_1sycl_1_1detail_1_1DevDescT.html", "structcl_1_1sycl_1_1detail_1_1DevDescT" ],
     [ "__SYCL_PARAM_TRAITS_SPEC", "platform__impl_8cpp.html#ac535545f91898330c7322596642fd332", null ],
-    [ "MatchState", "platform__impl_8cpp.html#ac7c700b946cf88083b9502a6732e8c14", [
-      [ "UNKNOWN", "platform__impl_8cpp.html#ac7c700b946cf88083b9502a6732e8c14a4f191319b0b2905997aaec7c8ef30d44", null ],
-      [ "MATCH", "platform__impl_8cpp.html#ac7c700b946cf88083b9502a6732e8c14ae3c10b8768f0b8d767d9fece0848dd0c", null ],
-      [ "NOMATCH", "platform__impl_8cpp.html#ac7c700b946cf88083b9502a6732e8c14a66e690f99f4f0ba4180ba74e62861778", null ]
+    [ "FilterState", "platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dd", [
+      [ "DENIED", "platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda66d5e0b0ce726b4aeb4ddf6c25b6c12b", null ],
+      [ "ALLOWED", "platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda9725825c796122ef40f01b2d8794f902", null ]
     ] ],
     [ "filterAllowList", "platform__impl_8cpp.html#ad0846abb3ec30b307b798fafc62a962d", null ],
     [ "getAllowListDesc", "platform__impl_8cpp.html#add8769f9f6844006d72f5c3fad78c904", null ],

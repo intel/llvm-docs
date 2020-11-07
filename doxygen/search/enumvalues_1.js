@@ -11,6 +11,7 @@ var searchData=
   ['alloc_5fhost_5fptr',['alloc_host_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55a763c09b0a49350a93a408b5e856954bc',1,'_pi_mem::mem_::buffer_mem_']]],
   ['alloca',['ALLOCA',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4ae03a765310e374f5fd4e8b478d670591',1,'cl::sycl::detail::Command']]],
   ['alloca_5fsub_5fbuf',['ALLOCA_SUB_BUF',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a3d4ff687ef7d2d868cb33608892ba56f',1,'cl::sycl::detail::Command']]],
+  ['allowed',['ALLOWED',['../namespacecl_1_1sycl_1_1detail.html#a83338867c0c5dce39d457f35c6c2e2dda9725825c796122ef40f01b2d8794f902',1,'cl::sycl::detail']]],
   ['argb',['argb',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa160d69bb77496bdc5035cf5b53fd273f',1,'cl::sycl']]],
   ['atomic',['atomic',['../namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a23d33884d600e542d097cd3933df2ae4',1,'cl::sycl::access']]],
   ['atomic_5fadd',['ATOMIC_ADD',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#af00991a79c07c9970d93474e2b7bd6e9a3839234661bccd307230771a96a0f59f',1,'cl::sycl::INTEL::gpu']]],

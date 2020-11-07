@@ -27,6 +27,7 @@ var searchData=
   ['filter_5fselector_5fimpl_2ehpp',['filter_selector_impl.hpp',['../filter__selector__impl_8hpp.html',1,'']]],
   ['filterallowlist',['filterAllowList',['../namespacecl_1_1sycl_1_1detail.html#ad0846abb3ec30b307b798fafc62a962d',1,'cl::sycl::detail']]],
   ['filtering_5fmode',['filtering_mode',['../namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59',1,'cl::sycl']]],
+  ['filterstate',['FilterState',['../namespacecl_1_1sycl_1_1detail.html#a83338867c0c5dce39d457f35c6c2e2dd',1,'cl::sycl::detail']]],
   ['find_5flarger_5ftype_5ft',['find_larger_type_t',['../namespacecl_1_1sycl_1_1detail.html#af0a1ad2c8a459cfffd66bf1aa9d30fa4',1,'cl::sycl::detail']]],
   ['find_5fsame_5fsize_5ftype_5ft',['find_same_size_type_t',['../namespacecl_1_1sycl_1_1detail.html#ac2ae0cdfe8bc3710f9984ec548a8f480',1,'cl::sycl::detail']]],
   ['find_5fsmaller_5ftype_5ft',['find_smaller_type_t',['../namespacecl_1_1sycl_1_1detail.html#a3f0e95b9ced53b84b827958e711dd35a',1,'cl::sycl::detail']]],
