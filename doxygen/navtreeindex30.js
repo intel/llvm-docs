@@ -1,5 +1,11 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html#abcec814c332318bca3face510e85d0a8":[3,0,2,1,0,187,0],
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp.html":[3,0,2,1,0,188],
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html":[3,0,2,1,0,189],
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html#a8f5cb7539cd063497f3a7a948c2a79e5":[3,0,2,1,0,189,1],
+"structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html#adfbee15e00d29a6640aaea8ad688f50a":[3,0,2,1,0,189,0],
+"structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html":[3,0,2,1,0,190],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html#acea230fc90dfa6dc1680553c0308e0a4":[3,0,2,1,0,190,0],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html":[3,0,2,1,0,191],
 "structcl_1_1sycl_1_1detail_1_1IsValidAtomicType.html#ae969c40610139462555f55859596bf8e":[3,0,2,1,0,191,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01size__t_01_4_00_01info_1_13191b16e1a18b3afb05e43ff5c7c4594.html":[3,0,2,1,0,92],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01size__t_01_4_00_01info_1_13191b16e1a18b3afb05e43ff5c7c4594.html#a44fff5a9effbc3de2878799ae4d1b398":[3,0,2,1,0,92,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01in75b6f51f6969db253458169249211642.html":[3,0,2,1,0,93],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01in75b6f51f6969db253458169249211642.html#aa498f686e5ad5e68908cfe07025aafb5":[3,0,2,1,0,93,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html":[3,0,2,1,0,94],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html#a0297a2a8b2f83f31b8880d18fe1d9d48":[3,0,2,1,0,94,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info__string.html":[3,0,2,1,0,95],
-"structcl_1_1sycl_1_1detail_1_1get__device__info__string.html#a388ac160a27861148c5debfb71fb06ec":[3,0,2,1,0,95,0],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html":[3,0,2,1,0,96],
-"structcl_1_1sycl_1_1detail_1_1get__event__info.html#a0812193451550a3830865fc7ac0f98ac":[3,0,2,1,0,96,0]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01in75b6f51f6969db253458169249211642.html#aa498f686e5ad5e68908cfe07025aafb5":[3,0,2,1,0,93,0]
 };

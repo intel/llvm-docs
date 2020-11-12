@@ -698,6 +698,22 @@ Functions</h2></td></tr>
 <tr class="memitem:ab6c4675fb657103b60369e86190e77bc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#ab6c4675fb657103b60369e86190e77bc">block_store</a> (AccessorTy acc, uint32_t offset, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; T, n &gt; vals)</td></tr>
 <tr class="memdesc:ab6c4675fb657103b60369e86190e77bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">accessor-based block-store  <a href="#ab6c4675fb657103b60369e86190e77bc">More...</a><br /></td></tr>
 <tr class="separator:ab6c4675fb657103b60369e86190e77bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67c23a7e7588720cb4208b261699c0f"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
+<tr class="memitem:ac67c23a7e7588720cb4208b261699c0f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> std::enable_if&lt;(sizeof(T)&lt;=4) &amp;&amp;(N==1||N==8||N==16) &amp;&amp;!std::is_pointer&lt; AccessorTy &gt;::value, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; T, N &gt; &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#ac67c23a7e7588720cb4208b261699c0f">gather</a> (AccessorTy acc, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0)</td></tr>
+<tr class="memdesc:ac67c23a7e7588720cb4208b261699c0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor-based gather.  <a href="#ac67c23a7e7588720cb4208b261699c0f">More...</a><br /></td></tr>
+<tr class="separator:ac67c23a7e7588720cb4208b261699c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33eee4fcc1206f966a2da54bf5cd507"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
+<tr class="memitem:ab33eee4fcc1206f966a2da54bf5cd507"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> std::enable_if&lt;(sizeof(T)&lt;=4) &amp;&amp;(N==1||N==8||N==16) &amp;&amp;!std::is_pointer&lt; AccessorTy &gt;::value, void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#ab33eee4fcc1206f966a2da54bf5cd507">scatter</a> (AccessorTy acc, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; T, N &gt; vals, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint16_t, N &gt; pred=1)</td></tr>
+<tr class="memdesc:ab33eee4fcc1206f966a2da54bf5cd507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor-based scatter.  <a href="#ab33eee4fcc1206f966a2da54bf5cd507">More...</a><br /></td></tr>
+<tr class="separator:ab33eee4fcc1206f966a2da54bf5cd507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b32dbd63e97261591dbda9f1dd09259"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
+<tr class="memitem:a5b32dbd63e97261591dbda9f1dd09259"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a5b32dbd63e97261591dbda9f1dd09259">scalar_load</a> (AccessorTy acc, uint32_t offset)</td></tr>
+<tr class="memdesc:a5b32dbd63e97261591dbda9f1dd09259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a scalar value from an accessor.  <a href="#a5b32dbd63e97261591dbda9f1dd09259">More...</a><br /></td></tr>
+<tr class="separator:a5b32dbd63e97261591dbda9f1dd09259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622c61090d9850074a6accd767cd50da"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
+<tr class="memitem:a622c61090d9850074a6accd767cd50da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a622c61090d9850074a6accd767cd50da">scalar_store</a> (AccessorTy acc, uint32_t offset, T val)</td></tr>
+<tr class="memdesc:a622c61090d9850074a6accd767cd50da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a scalar value into an accessor.  <a href="#a622c61090d9850074a6accd767cd50da">More...</a><br /></td></tr>
+<tr class="separator:a622c61090d9850074a6accd767cd50da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa15033ca01b47d44332e62a96327016a"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, ChannelMaskType Mask, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
 <tr class="memitem:aa15033ca01b47d44332e62a96327016a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> std::enable_if&lt;(n==16||n==32) &amp;&amp;(sizeof(T)==4), <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="esimd__enum_8hpp.html#a8b54e8b356587effbb9f71a3fb47da60">NumChannels</a>(Mask)&gt; &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aa15033ca01b47d44332e62a96327016a">gather4</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
 <tr class="memdesc:aa15033ca01b47d44332e62a96327016a"><td class="mdescLeft">&#160;</td><td class="mdescRight">flat-address gather4 only allow simd-16 and simd-32  <a href="#aa15033ca01b47d44332e62a96327016a">More...</a><br /></td></tr>
@@ -1186,7 +1202,7 @@ template&lt;typename Ty , int N&gt; </div>
 <tr><td class="fieldname"><a id="a7c16e1bbc350d531e6b9b614a14f99c7a7b75acbf9ce4c9b9305b142279204227"></a>ESIMD_SW_BARRIER&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00424">424</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00572">572</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 </div>
 </div>
@@ -1233,7 +1249,7 @@ template&lt;typename T , int n, CacheHint L1H = CacheHint::None, CacheHint L3H =
 
 <p>flat-address block-load </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00168">168</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00174">174</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
 
@@ -1269,7 +1285,7 @@ template&lt;typename T , int n, typename AccessorTy &gt; </div>
 
 <p>accessor-based block-load </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00184">184</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00190">190</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
 
@@ -1305,7 +1321,7 @@ template&lt;typename T , int n, CacheHint L1H = CacheHint::None, CacheHint L3H =
 
 <p>flat-address block-store </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00206">206</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00212">212</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
 
@@ -1347,9 +1363,9 @@ template&lt;typename T , int n, typename AccessorTy &gt; </div>
 
 <p>accessor-based block-store </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00222">222</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00228">228</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00069">NumChannels</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
+<p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
 
 </div>
 </div>
@@ -1372,7 +1388,7 @@ template&lt;EsimdAtomicOpType Op, typename T , int N, unsigned NumSrc&gt; </div>
 
 <p>check the legality of an atomic call in terms of size and type </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00277">277</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00425">425</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>.</p>
 
@@ -1440,7 +1456,7 @@ template&lt;typename U , typename T , int n&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="esimd__util_8hpp_source.html#l00075">75</a> of file <a class="el" href="esimd__util_8hpp_source.html">esimd_util.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00381">__esimd_flat_read()</a>, and <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00458">__esimd_flat_write()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00467">__esimd_flat_read()</a>, <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00544">__esimd_flat_write()</a>, and <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00151">__esimd_surf_write()</a>.</p>
 
 </div>
 </div>
@@ -2270,9 +2286,9 @@ template&lt;&gt; </div>
 
 <p>generic work-group barrier </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00422">422</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00570">570</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00686">__esimd_barrier()</a>.</p>
+<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00772">__esimd_barrier()</a>.</p>
 
 </div>
 </div>
@@ -3256,9 +3272,9 @@ template&lt;typename T  = void&gt; </div>
 
 <p>esimd_fence sets the memory read/write order </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00436">436</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00584">584</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00688">__esimd_slm_fence()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__memory_8hpp_source.html#l00646">slm_init()</a>, <a class="el" href="defines__elementary_8hpp_source.html#l00032">SYCL_EXTERNAL</a>, and <a class="el" href="info__desc_8hpp_source.html#l00016">cl::sycl::info::uint32_t</a>.</p>
+<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00774">__esimd_slm_fence()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__memory_8hpp_source.html#l00794">slm_init()</a>, <a class="el" href="defines__elementary_8hpp_source.html#l00032">SYCL_EXTERNAL</a>, and <a class="el" href="info__desc_8hpp_source.html#l00016">cl::sycl::info::uint32_t</a>.</p>
 
 </div>
 </div>
@@ -3557,7 +3573,7 @@ template&lt;typename AccessorTy &gt; </div>
 </dl>
 <p>Returns the binding table index value. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00657">657</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00805">805</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp.html#a9fc1b191c043e99d9215c88f594a27a0">__esimd_get_value()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -4325,7 +4341,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="esimd__math_8hpp_source.html#l00592">592</a> of file <a class="el" href="esimd__math_8hpp_source.html">esimd_math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00671">__esimd_dp4()</a>, <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__math_8hpp_source.html#l00698">esimd_dp2()</a>, <a class="el" href="esimd__math_8hpp_source.html#l00720">esimd_dp3()</a>, <a class="el" href="esimd__math_8hpp_source.html#l01930">esimd_dp4()</a>, <a class="el" href="esimd__math_8hpp_source.html#l00767">esimd_dph()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__math_8hpp_source.html#l00809">esimd_line()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00049">GENX_NOSAT</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00049">GENX_SAT</a>, and <a class="el" href="usm__allocator_8cpp.html#a6dce1d51457f0415ec5302d3c05cded5">P</a>.</p>
+<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00757">__esimd_dp4()</a>, <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__math_8hpp_source.html#l00698">esimd_dp2()</a>, <a class="el" href="esimd__math_8hpp_source.html#l00720">esimd_dp3()</a>, <a class="el" href="esimd__math_8hpp_source.html#l01930">esimd_dp4()</a>, <a class="el" href="esimd__math_8hpp_source.html#l00767">esimd_dph()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__math_8hpp_source.html#l00809">esimd_line()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00049">GENX_NOSAT</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00049">GENX_SAT</a>, and <a class="el" href="usm__allocator_8cpp.html#a6dce1d51457f0415ec5302d3c05cded5">P</a>.</p>
 
 </div>
 </div>
@@ -4660,7 +4676,7 @@ template&lt;typename T1 , int n1, typename T2 , int n2, int N = 16&gt; </div>
 </dl>
 <p>Returns the vector value read from memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00760">760</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00908">908</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -4752,7 +4768,7 @@ template&lt;typename T1 , int n1, int N = 16&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00848">848</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00996">996</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>.</p>
 
@@ -4874,7 +4890,7 @@ template&lt;typename T1 , int n1, typename T2 , int n2, typename T3 , int n3, in
 </dl>
 <p>Returns the vector value read from memory. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00709">709</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00857">857</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -4980,7 +4996,7 @@ template&lt;typename T1 , int n1, typename T2 , int n2, int N = 16&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00806">806</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00954">954</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -5781,7 +5797,7 @@ template&lt;EsimdAtomicOpType Op, typename T , int n, CacheHint L1H = CacheHint:
 
 <p>flat-address atomic, zero source operand: inc and dec </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00386">386</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00534">534</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -5829,7 +5845,7 @@ template&lt;EsimdAtomicOpType Op, typename T , int n, CacheHint L1H = CacheHint:
 
 <p>flat-address atomic, one source operand, add/sub/min/max etc </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00398">398</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00546">546</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -5883,14 +5899,14 @@ template&lt;EsimdAtomicOpType Op, typename T , int n, CacheHint L1H = CacheHint:
 
 <p>flat-address atomic, two source operands </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00412">412</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00560">560</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>.</p>
 
 </div>
 </div>
 <a id="a5fed35500b09cc5a305c08c67ea4607e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fed35500b09cc5a305c08c67ea4607e">&#9670;&nbsp;</a></span>gather()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fed35500b09cc5a305c08c67ea4607e">&#9670;&nbsp;</a></span>gather() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5931,6 +5947,66 @@ template&lt;typename T , int n, int ElemsPerAddr = 1, CacheHint L1H = CacheHint:
 
 </div>
 </div>
+<a id="ac67c23a7e7588720cb4208b261699c0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67c23a7e7588720cb4208b261699c0f">&#9670;&nbsp;</a></span>gather() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N, typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> std::enable_if&lt;(sizeof(T) &lt;= 4) &amp;&amp; (N == 1 || N == 8 || N == 16) &amp;&amp; !std::is_pointer&lt;AccessorTy&gt;::value, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt;T, N&gt; &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::INTEL::gpu::gather </td>
+          <td>(</td>
+          <td class="paramtype">AccessorTy&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint32_t, N &gt;&#160;</td>
+          <td class="paramname"><em>offsets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>glob_offset</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accessor-based gather. </p>
+<p>Collects elements located at given offsets in an accessor and returns them as a single <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a> object. An element can be 1, 2 or 4-byte value. Template (compile-time constant) parameters: </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- element type; can only be a 1,2,4-byte integer or <code>float</code>, </td></tr>
+    <tr><td class="paramname">N</td><td>- the number of elements </td></tr>
+    <tr><td class="paramname">AccessorTy</td><td>- <a class="el" href="classcl_1_1sycl_1_1accessor.html">sycl::accessor</a> type </td></tr>
+    <tr><td class="paramname">L1H</td><td>- L1 cache hint </td></tr>
+    <tr><td class="paramname">L3H</td><td>- L3 cache hint</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Formal parameters: </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">acc</td><td>- the accessor to gather from </td></tr>
+    <tr><td class="paramname">offsets</td><td>- per-element offsets </td></tr>
+    <tr><td class="paramname">glob_offset</td><td>- offset added to each individual element's offset to compute actual memory access offset for that element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00269">269</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="esimd__memory__intrin_8hpp_source.html#l00109">__esimd_surf_read()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, and <a class="el" href="info__desc_8hpp_source.html#l00016">cl::sycl::info::uint32_t</a>.</p>
+
+</div>
+</div>
 <a id="aa15033ca01b47d44332e62a96327016a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa15033ca01b47d44332e62a96327016a">&#9670;&nbsp;</a></span>gather4()</h2>
 
@@ -5967,7 +6043,7 @@ template&lt;typename T , int n, ChannelMaskType Mask, CacheHint L1H = CacheHint:
 
 <p>flat-address gather4 only allow simd-16 and simd-32 </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00252">252</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00400">400</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -6185,7 +6261,7 @@ template&lt;typename T , int m, int n, typename AccessorTy , unsigned plane = 0&
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00564">564</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00712">712</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -6233,7 +6309,7 @@ template&lt;typename T , int m, int n, typename AccessorTy , unsigned plane = 0&
 
 <p>Media block store. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00614">614</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00762">762</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 </div>
 </div>
@@ -6419,8 +6495,84 @@ template&lt;typename T0 , typename T1 , int SZ, typename BinaryOperation &gt; </
 
 </div>
 </div>
+<a id="a5b32dbd63e97261591dbda9f1dd09259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b32dbd63e97261591dbda9f1dd09259">&#9670;&nbsp;</a></span>scalar_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> T cl::sycl::INTEL::gpu::scalar_load </td>
+          <td>(</td>
+          <td class="paramtype">AccessorTy&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a scalar value from an accessor. </p>
+
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00376">376</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a622c61090d9850074a6accd767cd50da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622c61090d9850074a6accd767cd50da">&#9670;&nbsp;</a></span>scalar_store()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void cl::sycl::INTEL::gpu::scalar_store </td>
+          <td>(</td>
+          <td class="paramtype">AccessorTy&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Store a scalar value into an accessor. </p>
+
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00384">384</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00069">NumChannels</a>.</p>
+
+</div>
+</div>
 <a id="a2c74d3a59294e5f1b138443f4a60be69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c74d3a59294e5f1b138443f4a60be69">&#9670;&nbsp;</a></span>scatter()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c74d3a59294e5f1b138443f4a60be69">&#9670;&nbsp;</a></span>scatter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6461,9 +6613,83 @@ template&lt;typename T , int n, int ElemsPerAddr = 1, CacheHint L1H = CacheHint:
 
 <p>flat-address scatter </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00127">127</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00133">133</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__intrin_8hpp_source.html#l00264">__esimd_wrregion()</a>, and <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>.</p>
+
+</div>
+</div>
+<a id="ab33eee4fcc1206f966a2da54bf5cd507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33eee4fcc1206f966a2da54bf5cd507">&#9670;&nbsp;</a></span>scatter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N, typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> std::enable_if&lt;(sizeof(T) &lt;= 4) &amp;&amp; (N == 1 || N == 8 || N == 16) &amp;&amp; !std::is_pointer&lt;AccessorTy&gt;::value, void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::INTEL::gpu::scatter </td>
+          <td>(</td>
+          <td class="paramtype">AccessorTy&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; T, N &gt;&#160;</td>
+          <td class="paramname"><em>vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint32_t, N &gt;&#160;</td>
+          <td class="paramname"><em>offsets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>glob_offset</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; uint16_t, N &gt;&#160;</td>
+          <td class="paramname"><em>pred</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Accessor-based scatter. </p>
+<p>Writes elements of a <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a> object into an accessor at given offsets. An element can be 1, 2 or 4-byte value. Template (compile-time constant) parameters: </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>- element type; can only be a 1,2,4-byte integer or <code>float</code>, </td></tr>
+    <tr><td class="paramname">N</td><td>- the number of elements </td></tr>
+    <tr><td class="paramname">AccessorTy</td><td>- <a class="el" href="classcl_1_1sycl_1_1accessor.html">sycl::accessor</a> type </td></tr>
+    <tr><td class="paramname">L1H</td><td>- L1 cache hint </td></tr>
+    <tr><td class="paramname">L3H</td><td>- L3 cache hint</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Formal parameters: </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">acc</td><td>- the accessor to scatter to </td></tr>
+    <tr><td class="paramname">vals</td><td>- values to write </td></tr>
+    <tr><td class="paramname">offsets</td><td>- per-element offsets </td></tr>
+    <tr><td class="paramname">glob_offset</td><td>- offset added to each individual element's offset to compute actual memory access offset for that element </td></tr>
+    <tr><td class="paramname">pred</td><td>- per-element predicates; elements with zero corresponding predicates are not written </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00334">334</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="info__desc_8hpp_source.html#l00016">cl::sycl::info::uint32_t</a>.</p>
 
 </div>
 </div>
@@ -6509,7 +6735,7 @@ template&lt;typename T , int n, ChannelMaskType Mask, CacheHint L1H = CacheHint:
 
 <p>flat-address scatter4 </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00266">266</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00414">414</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>.</p>
 
@@ -6545,7 +6771,7 @@ template&lt;EsimdAtomicOpType Op, typename T , int n&gt; </div>
 
 <p>SLM atomic, zero source operand: inc and dec. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00518">518</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00666">666</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -6587,7 +6813,7 @@ template&lt;EsimdAtomicOpType Op, typename T , int n&gt; </div>
 
 <p>SLM atomic, one source operand, add/sub/min/max etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00526">526</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00674">674</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -6635,7 +6861,7 @@ template&lt;EsimdAtomicOpType Op, typename T , int n&gt; </div>
 
 <p>SLM atomic, two source operands. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00536">536</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00684">684</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -6661,7 +6887,7 @@ template&lt;typename T , int n&gt; </div>
 
 <p>SLM block-load. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00484">484</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00632">632</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
 
@@ -6697,7 +6923,7 @@ template&lt;typename T , int n&gt; </div>
 
 <p>SLM block-store. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00499">499</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00647">647</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, <a class="el" href="esimd__util_8hpp_source.html#l00059">__esimd::isPowerOf2()</a>, and <a class="el" href="esimd__util_8hpp_source.html#l00018">__esimd::OWORD</a>.</p>
 
@@ -6722,9 +6948,9 @@ template&lt;typename T , int n&gt; </div>
 <p>SLM functions. </p>
 <p>declare per-work-group slm size </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00646">646</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00794">794</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="esimd__memory_8hpp_source.html#l00436">esimd_fence()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__memory_8hpp_source.html#l00584">esimd_fence()</a>.</p>
 
 </div>
 </div>
@@ -6758,7 +6984,7 @@ template&lt;typename T , int n&gt; </div>
 
 <p>SLM gather only allow simd-16 and simd-32. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00450">450</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00598">598</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>.</p>
 
@@ -6794,7 +7020,7 @@ template&lt;typename T , int n, ChannelMaskType Mask&gt; </div>
 
 <p>SLM gather4 only allow simd-8, simd-16 and simd-32. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00469">469</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00617">617</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>.</p>
 
@@ -6836,7 +7062,7 @@ template&lt;typename T , int n&gt; </div>
 
 <p>SLM scatter. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00458">458</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00606">606</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00046">ESIMD_INLINE</a>, <a class="el" href="esimd__enum_8hpp_source.html#l00036">ESIMD_NODEBUG</a>, and <a class="el" href="esimd__enum_8hpp_source.html#l00069">NumChannels</a>.</p>
 
@@ -6878,7 +7104,7 @@ template&lt;typename T , int n, ChannelMaskType Mask&gt; </div>
 
 <p>SLM scatter4. </p>
 
-<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00477">477</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__memory_8hpp_source.html#l00625">625</a> of file <a class="el" href="esimd__memory_8hpp_source.html">esimd_memory.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::data()</a>.</p>
 

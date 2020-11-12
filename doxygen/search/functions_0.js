@@ -81,6 +81,8 @@ var searchData=
   ['_5f_5fesimd_5fssshl',['__esimd_ssshl',['../esimd__math__intrin_8hpp.html#aa3df00c2aab03a19efdcd366954a7b5e',1,'esimd_math_intrin.hpp']]],
   ['_5f_5fesimd_5fssshl_5fsat',['__esimd_ssshl_sat',['../esimd__math__intrin_8hpp.html#a7f902d76f142b3953da95646b0f6a944',1,'esimd_math_intrin.hpp']]],
   ['_5f_5fesimd_5fsstrunc_5fsat',['__esimd_sstrunc_sat',['../esimd__math__intrin_8hpp.html#a9212b6f2e7e0fce68151ef93afb3449e',1,'esimd_math_intrin.hpp']]],
+  ['_5f_5fesimd_5fsurf_5fread',['__esimd_surf_read',['../esimd__memory__intrin_8hpp.html#a20a8376c187fa1140f33a09067b7ef26',1,'esimd_memory_intrin.hpp']]],
+  ['_5f_5fesimd_5fsurf_5fwrite',['__esimd_surf_write',['../esimd__memory__intrin_8hpp.html#a852db0c176135062ab01e1e130ab9dbf',1,'esimd_memory_intrin.hpp']]],
   ['_5f_5fesimd_5fsushl',['__esimd_sushl',['../esimd__math__intrin_8hpp.html#a44102b0da33cc3676da43aceb2b272b7',1,'esimd_math_intrin.hpp']]],
   ['_5f_5fesimd_5fsushl_5fsat',['__esimd_sushl_sat',['../esimd__math__intrin_8hpp.html#a776bb300f5974010405b55017fa72f53',1,'esimd_math_intrin.hpp']]],
   ['_5f_5fesimd_5fsutrunc_5fsat',['__esimd_sutrunc_sat',['../esimd__math__intrin_8hpp.html#a85609515e23afe9e6caaab5ac0038e22',1,'esimd_math_intrin.hpp']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gather',['gather',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a5fed35500b09cc5a305c08c67ea4607e',1,'cl::sycl::INTEL::gpu']]],
+  ['gather',['gather',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a5fed35500b09cc5a305c08c67ea4607e',1,'cl::sycl::INTEL::gpu::gather(T *p, simd&lt; uint32_t, n &gt; offsets, simd&lt; uint16_t, n &gt; pred=1)'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#ac67c23a7e7588720cb4208b261699c0f',1,'cl::sycl::INTEL::gpu::gather(AccessorTy acc, simd&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0)']]],
   ['gather4',['gather4',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aa15033ca01b47d44332e62a96327016a',1,'cl::sycl::INTEL::gpu']]],
   ['generatebucketsizes',['generateBucketSizes',['../namespacesettings.html#a7b18449abb607b020268926dc0c0b0cc',1,'settings']]],
   ['genericcommandscapacity',['genericCommandsCapacity',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a83a8e2d635929f36161f1a6771137f4d',1,'cl::sycl::detail::LeavesCollection']]],
