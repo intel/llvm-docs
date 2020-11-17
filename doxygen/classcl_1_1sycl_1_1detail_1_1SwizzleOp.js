@@ -1,6 +1,6 @@
 var classcl_1_1sycl_1_1detail_1_1SwizzleOp =
 [
-    [ "as", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a20c575e160906cf6edb7d55d11e6c42a", null ],
+    [ "as", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a55bab237797496a456fa12c2532a561a", null ],
     [ "convert", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f3cde3c571c5e176e5203950917321f", null ],
     [ "get_count", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a3c0f669b1ecaac4db6da7c20ecd2abcc", null ],
     [ "get_size", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab70ff1aac3269990b5c0ecec42093803", null ],
@@ -48,7 +48,7 @@ var classcl_1_1sycl_1_1detail_1_1SwizzleOp =
     [ "operator|", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a9b55450bba950e9e8175aea92f7e8d87", null ],
     [ "operator||", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aafded46310ddce898a1f9810601ca57c", null ],
     [ "operator||", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab6c17c202b19c6820d644342860f6a67", null ],
-    [ "operator~", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ac09a5431f81f565249be8c11a43afed7", null ],
+    [ "operator~", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8c9d2c0f670aca27e1542cd3e9e28e5c", null ],
     [ "cl::sycl::vec", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a9e24e87b08f923ebddaff2b6f69c353d", null ],
     [ "operator*", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af2eadca2e79a2337956557575e044975", null ],
     [ "operator+", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ac58617df18c486fdda51fe6d48c56f4a", null ],

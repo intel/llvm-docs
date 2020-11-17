@@ -24,5 +24,5 @@ var classcl_1_1sycl_1_1device =
     [ "operator=", "classcl_1_1sycl_1_1device.html#a69e97bbf36b8fc114bd4cda31f2551a3", null ],
     [ "operator==", "classcl_1_1sycl_1_1device.html#af6551090dae841b394331c54e31ac7a3", null ],
     [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1device.html#a71492293d0386f542d120a1fc3dfbb55", null ],
-    [ "detail::getRawSyclObjImpl", "classcl_1_1sycl_1_1device.html#a3596f7433970fcb520ddb4e2d36f9181", null ]
+    [ "detail::getRawSyclObjImpl", "classcl_1_1sycl_1_1device.html#a9989cb46a70557073b0113bb9ff923dd", null ]
 ];

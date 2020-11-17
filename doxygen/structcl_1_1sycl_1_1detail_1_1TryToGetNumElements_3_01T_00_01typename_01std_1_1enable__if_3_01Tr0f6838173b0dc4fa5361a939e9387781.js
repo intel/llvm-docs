@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01std_1_1enable__if_3_01Tr0f6838173b0dc4fa5361a939e9387781 =
-[
-    [ "value", "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01std_1_1enable__if_3_01Tr0f6838173b0dc4fa5361a939e9387781.html#a89fee0a64a023e72b225bce051d48d01", null ]
-];

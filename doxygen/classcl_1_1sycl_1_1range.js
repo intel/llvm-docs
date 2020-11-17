@@ -1,8 +1,8 @@
 var classcl_1_1sycl_1_1range =
 [
-    [ "range", "classcl_1_1sycl_1_1range.html#a28633d6f830a909e888e82224b12be86", null ],
-    [ "range", "classcl_1_1sycl_1_1range.html#a3534fe02681d81db1b34fcd0b7da2835", null ],
-    [ "range", "classcl_1_1sycl_1_1range.html#a9e467a1085b3860a9070fbaf7db3cc42", null ],
+    [ "range", "classcl_1_1sycl_1_1range.html#a42671d929d2f98e1029bcd3f42b2d7ad", null ],
+    [ "range", "classcl_1_1sycl_1_1range.html#ad7564377f35e76f903a9b953e7a5613e", null ],
+    [ "range", "classcl_1_1sycl_1_1range.html#a77c16434bacb265329f52ffa83d439f9", null ],
     [ "range", "classcl_1_1sycl_1_1range.html#a3ef7d8fe1c53436e5dcbeab5a27246ad", null ],
     [ "range", "classcl_1_1sycl_1_1range.html#aaf69cd914d37a9ff5597c9323f8226a1", null ],
     [ "range", "classcl_1_1sycl_1_1range.html#a064e47f4212c2035832c07be5de1d3a9", null ],

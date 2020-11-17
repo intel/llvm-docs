@@ -111,7 +111,7 @@ Collaboration diagram for cl::sycl::INTEL::gpu::simd_view&lt; BaseTy, RegionTy &
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a58fe8ccd470a51fc0bcacbfd97a76bff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a58fe8ccd470a51fc0bcacbfd97a76bff">ShapeTy</a> = typename <a class="el" href="structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html">shape_type</a>&lt; RegionTy &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
+<tr class="memitem:a58fe8ccd470a51fc0bcacbfd97a76bff"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a58fe8ccd470a51fc0bcacbfd97a76bff">ShapeTy</a> = typename <a class="el" href="structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html">shape_type</a>&lt; RegionTy &gt;::type</td></tr>
 <tr class="separator:a58fe8ccd470a51fc0bcacbfd97a76bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc0a8543759fa5ee552ff787c99b7231"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#abc0a8543759fa5ee552ff787c99b7231">value_type</a> = <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; typename ShapeTy::element_type, <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#ad82b3b48896bc464e666d56e7f2d31ef">length</a> &gt;</td></tr>
 <tr class="separator:abc0a8543759fa5ee552ff787c99b7231"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,10 +156,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef2d36b8b981aa0365ba9b4351ad3196"><td class="memTemplParams" colspan="2">template&lt;typename EltTy , int Height, int Width&gt; </td></tr>
 <tr class="memitem:aef2d36b8b981aa0365ba9b4351ad3196"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#aef2d36b8b981aa0365ba9b4351ad3196">format</a> ()</td></tr>
 <tr class="separator:aef2d36b8b981aa0365ba9b4351ad3196"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4219ae4a3a4a1ca1f7a654fb1c8f4fa6"><td class="memTemplParams" colspan="2">template&lt;int Size, int Stride, typename T  = simd_view, typename  = std::enable_if_t&lt;T::is1D()&gt;&gt; </td></tr>
+<tr class="memitem:a4219ae4a3a4a1ca1f7a654fb1c8f4fa6"><td class="memTemplParams" colspan="2">template&lt;int Size, int Stride, typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is1D()&gt;&gt; </td></tr>
 <tr class="memitem:a4219ae4a3a4a1ca1f7a654fb1c8f4fa6"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a4219ae4a3a4a1ca1f7a654fb1c8f4fa6">select</a> (uint16_t Offset=0)</td></tr>
 <tr class="separator:a4219ae4a3a4a1ca1f7a654fb1c8f4fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a5975492b0867d8163315448025f32d"><td class="memTemplParams" colspan="2">template&lt;int SizeY, int StrideY, int SizeX, int StrideX, typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&gt;&gt; </td></tr>
+<tr class="memitem:a2a5975492b0867d8163315448025f32d"><td class="memTemplParams" colspan="2">template&lt;int SizeY, int StrideY, int SizeX, int StrideX, typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is2D()&gt;&gt; </td></tr>
 <tr class="memitem:a2a5975492b0867d8163315448025f32d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a2a5975492b0867d8163315448025f32d">select</a> (uint16_t OffsetY=0, uint16_t OffsetX=0)</td></tr>
 <tr class="separator:a2a5975492b0867d8163315448025f32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a616d566b0275c4203a6f581d19090938"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html">simd_view</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a616d566b0275c4203a6f581d19090938">operator++</a> ()</td></tr>
@@ -170,13 +170,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a46845e206e7ec96cde672d3560f182d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05752f9ad3134d6872fb74933e10a159"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#abc0a8543759fa5ee552ff787c99b7231">value_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a05752f9ad3134d6872fb74933e10a159">operator--</a> (int)</td></tr>
 <tr class="separator:a05752f9ad3134d6872fb74933e10a159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade4537a7fe87f675227c43e512a206c0"><td class="memTemplParams" colspan="2">template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&gt;&gt; </td></tr>
+<tr class="memitem:ade4537a7fe87f675227c43e512a206c0"><td class="memTemplParams" colspan="2">template&lt;typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is2D()&gt;&gt; </td></tr>
 <tr class="memitem:ade4537a7fe87f675227c43e512a206c0"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#ade4537a7fe87f675227c43e512a206c0">row</a> (int i)</td></tr>
 <tr class="separator:ade4537a7fe87f675227c43e512a206c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0cebb6d164564300fe45e9520737b90"><td class="memTemplParams" colspan="2">template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&gt;&gt; </td></tr>
+<tr class="memitem:ae0cebb6d164564300fe45e9520737b90"><td class="memTemplParams" colspan="2">template&lt;typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is2D()&gt;&gt; </td></tr>
 <tr class="memitem:ae0cebb6d164564300fe45e9520737b90"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#ae0cebb6d164564300fe45e9520737b90">column</a> (int i)</td></tr>
 <tr class="separator:ae0cebb6d164564300fe45e9520737b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af18a83b750335ae55531028d73cea1c5"><td class="memTemplParams" colspan="2">template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is1D()&gt;&gt; </td></tr>
+<tr class="memitem:af18a83b750335ae55531028d73cea1c5"><td class="memTemplParams" colspan="2">template&lt;typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is1D()&gt;&gt; </td></tr>
 <tr class="memitem:af18a83b750335ae55531028d73cea1c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a666a8e05548c5a192ef65daf721c1daf">element_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#af18a83b750335ae55531028d73cea1c5">operator[]</a> (int i) const</td></tr>
 <tr class="separator:af18a83b750335ae55531028d73cea1c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6230cfd5c3e4f7f43446711ad1c109bb"><td class="memTemplParams" colspan="2">template&lt;int Rep&gt; </td></tr>
@@ -200,10 +200,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa070704be3e2366b343f3a61d00c8671"><td class="memTemplParams" colspan="2">template&lt;int Rep, int VS, int W, int HS&gt; </td></tr>
 <tr class="memitem:aa070704be3e2366b343f3a61d00c8671"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html">simd</a>&lt; <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a666a8e05548c5a192ef65daf721c1daf">element_type</a>, Rep *W &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#aa070704be3e2366b343f3a61d00c8671">replicate</a> (uint16_t OffsetY, uint16_t OffsetX)</td></tr>
 <tr class="separator:aa070704be3e2366b343f3a61d00c8671"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f72fd7800a5b799410f22bc67a60557"><td class="memTemplParams" colspan="2">template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </td></tr>
+<tr class="memitem:a4f72fd7800a5b799410f22bc67a60557"><td class="memTemplParams" colspan="2">template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = sycl::detail::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </td></tr>
 <tr class="memitem:a4f72fd7800a5b799410f22bc67a60557"><td class="memTemplItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a4f72fd7800a5b799410f22bc67a60557">any</a> ()</td></tr>
 <tr class="separator:a4f72fd7800a5b799410f22bc67a60557"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a6e6db5d030185657a4da35839bf223"><td class="memTemplParams" colspan="2">template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </td></tr>
+<tr class="memitem:a0a6e6db5d030185657a4da35839bf223"><td class="memTemplParams" colspan="2">template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = sycl::detail::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </td></tr>
 <tr class="memitem:a0a6e6db5d030185657a4da35839bf223"><td class="memTemplItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a0a6e6db5d030185657a4da35839bf223">all</a> ()</td></tr>
 <tr class="separator:a0a6e6db5d030185657a4da35839bf223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -279,7 +279,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html">cl::sycl::INTEL::gpu::simd_view</a>&lt; BaseTy, RegionTy &gt;::<a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a58fe8ccd470a51fc0bcacbfd97a76bff">ShapeTy</a> =  typename <a class="el" href="structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html">shape_type</a>&lt;RegionTy&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td>
+          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html">cl::sycl::INTEL::gpu::simd_view</a>&lt; BaseTy, RegionTy &gt;::<a class="el" href="classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a58fe8ccd470a51fc0bcacbfd97a76bff">ShapeTy</a> =  typename <a class="el" href="structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type.html">shape_type</a>&lt;RegionTy&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -472,7 +472,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </div>
+template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = sycl::detail::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -491,7 +491,7 @@ template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00351">351</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00357">357</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -503,7 +503,7 @@ template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std:
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </div>
+template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = sycl::detail::enable_if_t&lt;std::is_integral&lt;T1&gt;::value, T2&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -522,7 +522,7 @@ template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std:
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00341">341</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00346">346</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -534,7 +534,7 @@ template&lt;typename T1  = element_type, typename T2  = BaseTy, typename  = std:
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&gt;&gt; </div>
+template&lt;typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is2D()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -554,7 +554,7 @@ template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00273">273</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00276">276</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -940,7 +940,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00110">110</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00107">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::merge()</a>, <a class="el" href="esimd_2esimd_8hpp_source.html#l00100">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::read()</a>, and <a class="el" href="stream_8hpp_source.html#l00071">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="esimd_2esimd_8hpp_source.html#l00107">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::merge()</a>, <a class="el" href="esimd_2esimd_8hpp_source.html#l00100">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::read()</a>, and <a class="el" href="stream_8hpp_source.html#l00072">cl::sycl::detail::write()</a>.</p>
 
 </div>
 </div>
@@ -998,7 +998,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00246">246</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00247">247</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1028,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00250">250</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00251">251</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1057,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00255">255</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00256">256</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1087,7 +1087,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00259">259</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00260">260</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1119,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00075">75</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00071">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00072">cl::sycl::detail::write()</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1151,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00076">76</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00071">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00072">cl::sycl::detail::write()</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1163,7 @@ template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is1D()&gt;&gt; </div>
+template&lt;typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is1D()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1183,7 +1183,7 @@ template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is1D()&g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00279">279</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00283">283</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1245,7 @@ template&lt;int Rep&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00299">299</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00303">303</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1277,7 +1277,7 @@ template&lt;int Rep, int W&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00304">304</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00308">308</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1319,7 +1319,7 @@ template&lt;int Rep, int W&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00309">309</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00313">313</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1351,7 +1351,7 @@ template&lt;int Rep, int VS, int W&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00314">314</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00318">318</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1393,7 +1393,7 @@ template&lt;int Rep, int VS, int W&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00319">319</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00323">323</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1425,7 +1425,7 @@ template&lt;int Rep, int VS, int W, int HS&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00324">324</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00328">328</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1467,7 @@ template&lt;int Rep, int VS, int W, int HS&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00329">329</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00333">333</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1479,7 @@ template&lt;int Rep, int VS, int W, int HS&gt; </div>
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&gt;&gt; </div>
+template&lt;typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is2D()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1499,7 +1499,7 @@ template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&g
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00267">267</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00269">269</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1511,7 @@ template&lt;typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&g
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;int Size, int Stride, typename T  = simd_view, typename  = std::enable_if_t&lt;T::is1D()&gt;&gt; </div>
+template&lt;int Size, int Stride, typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is1D()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1543,7 +1543,7 @@ template&lt;int Size, int Stride, typename T  = simd_view, typename  = std::enab
 <div class="memtemplate">
 template&lt;typename BaseTy , typename RegionTy &gt; </div>
 <div class="memtemplate">
-template&lt;int SizeY, int StrideY, int SizeX, int StrideX, typename T  = simd_view, typename  = std::enable_if_t&lt;T::is2D()&gt;&gt; </div>
+template&lt;int SizeY, int StrideY, int SizeX, int StrideX, typename T  = simd_view, typename  = sycl::detail::enable_if_t&lt;T::is2D()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1573,7 +1573,7 @@ template&lt;int SizeY, int StrideY, int SizeX, int StrideX, typename T  = simd_v
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00175">175</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00176">176</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>

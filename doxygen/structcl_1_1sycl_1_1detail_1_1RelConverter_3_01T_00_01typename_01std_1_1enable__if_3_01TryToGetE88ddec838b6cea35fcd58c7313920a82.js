@@ -1,7 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82 =
-[
-    [ "bool_t", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#a58b0b874f8de44f1a53b08937cdf7128", null ],
-    [ "ret_t", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#a427660c79ff7b2e86fb8713b82399977", null ],
-    [ "apply", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#a6853ad15b2ba38eb976c235a1f6bbd67", null ],
-    [ "N", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#adb59ea3e0d594e9296a427f4c880a194", null ]
-];

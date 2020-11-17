@@ -122,20 +122,20 @@ Collaboration diagram for cl::sycl::ONEAPI::accessor_property_list&lt; PropsT &g
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a15add881961112b875d1e8412ed22f04"><td class="memTemplParams" colspan="2">template&lt;typename  = typename std::enable_if&lt;AllProperties&lt;PropsT...&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:a15add881961112b875d1e8412ed22f04"><td class="memTemplParams" colspan="2">template&lt;typename  = typename detail::enable_if_t&lt;AllProperties&lt;PropsT...&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:a15add881961112b875d1e8412ed22f04"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#a15add881961112b875d1e8412ed22f04">accessor_property_list</a> (PropsT... Props)</td></tr>
 <tr class="separator:a15add881961112b875d1e8412ed22f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3dc21119f0b86a35f6b6033e126c98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#a5d3dc21119f0b86a35f6b6033e126c98">accessor_property_list</a> (const <a class="el" href="classcl_1_1sycl_1_1property__list.html">sycl::property_list</a> &amp;Props)</td></tr>
 <tr class="separator:a5d3dc21119f0b86a35f6b6033e126c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82acc1e18536b7bcd354e99e4e5fce9"><td class="memTemplParams" colspan="2">template&lt;typename... OtherProps, typename  = typename std::enable_if&lt;                ContainsSameProperties&lt;PropertyContainer&lt;PropsT...&gt;,                                       OtherProps...&gt;::value &amp;&amp;                ContainsSameProperties&lt;PropertyContainer&lt;OtherProps...&gt;,                                       PropsT...&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:ac82acc1e18536b7bcd354e99e4e5fce9"><td class="memTemplParams" colspan="2">template&lt;typename... OtherProps, typename  = typename detail::enable_if_t&lt;                ContainsSameProperties&lt;PropertyContainer&lt;PropsT...&gt;,                                       OtherProps...&gt;::value &amp;&amp;                ContainsSameProperties&lt;PropertyContainer&lt;OtherProps...&gt;,                                       PropsT...&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:ac82acc1e18536b7bcd354e99e4e5fce9"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#ac82acc1e18536b7bcd354e99e4e5fce9">accessor_property_list</a> (const <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html">accessor_property_list</a>&lt; OtherProps... &gt; &amp;OtherList)</td></tr>
 <tr class="separator:ac82acc1e18536b7bcd354e99e4e5fce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec892fec47318a37eb75817db763f7b9"><td class="memTemplParams" colspan="2">template&lt;typename PropT , typename  = typename std::enable_if&lt;                                !is_compile_time_property&lt;PropT&gt;::value&gt;::type&gt; </td></tr>
+<tr class="memitem:aec892fec47318a37eb75817db763f7b9"><td class="memTemplParams" colspan="2">template&lt;typename PropT , typename  = typename detail::enable_if_t&lt;                                !is_compile_time_property&lt;PropT&gt;::value&gt;&gt; </td></tr>
 <tr class="memitem:aec892fec47318a37eb75817db763f7b9"><td class="memTemplItemLeft" align="right" valign="top">PropT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#aec892fec47318a37eb75817db763f7b9">get_property</a> () const</td></tr>
 <tr class="separator:aec892fec47318a37eb75817db763f7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52440661c26b05beeee4d21f662ce5ba"><td class="memTemplParams" colspan="2">template&lt;class PropT &gt; </td></tr>
-<tr class="memitem:a52440661c26b05beeee4d21f662ce5ba"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html">is_compile_time_property</a>&lt; PropT &gt;::value, bool &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#a52440661c26b05beeee4d21f662ce5ba">has_property</a> () const</td></tr>
-<tr class="separator:a52440661c26b05beeee4d21f662ce5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c207d744a9ddf8fe575a87078c2c93"><td class="memTemplParams" colspan="2">template&lt;class PropT &gt; </td></tr>
+<tr class="memitem:ac1c207d744a9ddf8fe575a87078c2c93"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;!<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html">is_compile_time_property</a>&lt; PropT &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#ac1c207d744a9ddf8fe575a87078c2c93">has_property</a> () const</td></tr>
+<tr class="separator:ac1c207d744a9ddf8fe575a87078c2c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -157,27 +157,27 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:af7b480f8c2053492ca68e6aa1d214ec1 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae333be3bf7c9e6fb4c244507bdae2387 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#ae333be3bf7c9e6fb4c244507bdae2387">ctorHelper</a> ()</td></tr>
 <tr class="separator:ae333be3bf7c9e6fb4c244507bdae2387 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84fec3dcb57357ea7de4af7d81082f4f inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename... PropsT, class PropT &gt; </td></tr>
-<tr class="memitem:a84fec3dcb57357ea7de4af7d81082f4f inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a84fec3dcb57357ea7de4af7d81082f4f">ctorHelper</a> (PropT &amp;, PropsT... Props)</td></tr>
-<tr class="separator:a84fec3dcb57357ea7de4af7d81082f4f inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4872646d9f49986444566c2023088ea inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename... PropsT, class PropT &gt; </td></tr>
-<tr class="memitem:ae4872646d9f49986444566c2023088ea inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#ae4872646d9f49986444566c2023088ea">ctorHelper</a> (PropT &amp;Prop, PropsT... Props)</td></tr>
-<tr class="separator:ae4872646d9f49986444566c2023088ea inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500976672ccaef81e93b51651945310b inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename... PropsT, class PropT &gt; </td></tr>
-<tr class="memitem:a500976672ccaef81e93b51651945310b inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value &amp;&amp;!std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a500976672ccaef81e93b51651945310b">ctorHelper</a> (PropT &amp;, PropsT... Props)</td></tr>
-<tr class="separator:a500976672ccaef81e93b51651945310b inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5c5f8da14ee72ba536e91a9c4f7606 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
-<tr class="memitem:a4c5c5f8da14ee72ba536e91a9c4f7606 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value, bool &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a4c5c5f8da14ee72ba536e91a9c4f7606">has_property_helper</a> () const</td></tr>
-<tr class="separator:a4c5c5f8da14ee72ba536e91a9c4f7606 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a772e1325ee46acf327cc431d16be6d inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
-<tr class="memitem:a7a772e1325ee46acf327cc431d16be6d inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value, bool &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a7a772e1325ee46acf327cc431d16be6d">has_property_helper</a> () const</td></tr>
-<tr class="separator:a7a772e1325ee46acf327cc431d16be6d inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9188461bc611b60d6a46bf920b29f4c3 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
-<tr class="memitem:a9188461bc611b60d6a46bf920b29f4c3 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value, PropT &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a9188461bc611b60d6a46bf920b29f4c3">get_property_helper</a> () const</td></tr>
-<tr class="separator:a9188461bc611b60d6a46bf920b29f4c3 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb12f3b68808bc8be04b7793df468ca0 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
-<tr class="memitem:acb12f3b68808bc8be04b7793df468ca0 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value, PropT &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#acb12f3b68808bc8be04b7793df468ca0">get_property_helper</a> () const</td></tr>
-<tr class="separator:acb12f3b68808bc8be04b7793df468ca0 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebac59dbf4dfa17765ba7b3f15133733 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename... PropsT, class PropT &gt; </td></tr>
+<tr class="memitem:aebac59dbf4dfa17765ba7b3f15133733 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#aebac59dbf4dfa17765ba7b3f15133733">ctorHelper</a> (PropT &amp;, PropsT... Props)</td></tr>
+<tr class="separator:aebac59dbf4dfa17765ba7b3f15133733 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171551e1f1a0b8682988f2795fe9ea1f inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename... PropsT, class PropT &gt; </td></tr>
+<tr class="memitem:a171551e1f1a0b8682988f2795fe9ea1f inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a171551e1f1a0b8682988f2795fe9ea1f">ctorHelper</a> (PropT &amp;Prop, PropsT... Props)</td></tr>
+<tr class="separator:a171551e1f1a0b8682988f2795fe9ea1f inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4213506e7860f3678a573f41a236e12b inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename... PropsT, class PropT &gt; </td></tr>
+<tr class="memitem:a4213506e7860f3678a573f41a236e12b inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; !std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value &amp;&amp;!std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a4213506e7860f3678a573f41a236e12b">ctorHelper</a> (PropT &amp;, PropsT... Props)</td></tr>
+<tr class="separator:a4213506e7860f3678a573f41a236e12b inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07eb8bdae938bc5f0640127b2861a7b1 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
+<tr class="memitem:a07eb8bdae938bc5f0640127b2861a7b1 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a07eb8bdae938bc5f0640127b2861a7b1">has_property_helper</a> () const</td></tr>
+<tr class="separator:a07eb8bdae938bc5f0640127b2861a7b1 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a39c205e4acc963d112bb7d637c033 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
+<tr class="memitem:ab7a39c205e4acc963d112bb7d637c033 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#ab7a39c205e4acc963d112bb7d637c033">has_property_helper</a> () const</td></tr>
+<tr class="separator:ab7a39c205e4acc963d112bb7d637c033 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4537407df1dbb37364f7abb596355d3 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
+<tr class="memitem:ab4537407df1dbb37364f7abb596355d3 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1DataLessPropertyBase.html">DataLessPropertyBase</a>, PropT &gt;::value, PropT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#ab4537407df1dbb37364f7abb596355d3">get_property_helper</a> () const</td></tr>
+<tr class="separator:ab4537407df1dbb37364f7abb596355d3 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a306c270da80409f684377a1df2e21803 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplParams" colspan="2">template&lt;typename PropT &gt; </td></tr>
+<tr class="memitem:a306c270da80409f684377a1df2e21803 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_base_of&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html">PropertyWithDataBase</a>, PropT &gt;::value, PropT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a306c270da80409f684377a1df2e21803">get_property_helper</a> () const</td></tr>
+<tr class="separator:a306c270da80409f684377a1df2e21803 inherit pro_methods_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classcl_1_1sycl_1_1detail_1_1PropertyListBase')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html">cl::sycl::detail::PropertyListBase</a></td></tr>
 <tr class="memitem:ab29f37232dfe0d33f8b7e2eb1cc3328c inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memItemLeft" align="right" valign="top">std::bitset&lt; DataLessPropKind::DataLessPropKindSize &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#ab29f37232dfe0d33f8b7e2eb1cc3328c">MDataLessProps</a></td></tr>
 <tr class="separator:ab29f37232dfe0d33f8b7e2eb1cc3328c inherit pro_attribs_classcl_1_1sycl_1_1detail_1_1PropertyListBase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,7 +194,7 @@ class cl::sycl::ONEAPI::accessor_property_list&lt; PropsT &gt;</h3>
 <dd>
 <a class="el" href="classcl_1_1sycl_1_1property__list.html" title="Objects of the property_list class are containers for the SYCL properties. ">property_list</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00044">44</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00042">42</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a15add881961112b875d1e8412ed22f04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15add881961112b875d1e8412ed22f04">&#9670;&nbsp;</a></span>accessor_property_list() <span class="overload">[1/3]</span></h2>
@@ -204,7 +204,7 @@ class cl::sycl::ONEAPI::accessor_property_list&lt; PropsT &gt;</h3>
 <div class="memtemplate">
 template&lt;typename... PropsT&gt; </div>
 <div class="memtemplate">
-template&lt;typename  = typename std::enable_if&lt;AllProperties&lt;PropsT...&gt;::value&gt;::type&gt; </div>
+template&lt;typename  = typename detail::enable_if_t&lt;AllProperties&lt;PropsT...&gt;::value&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -224,7 +224,7 @@ template&lt;typename  = typename std::enable_if&lt;AllProperties&lt;PropsT...&gt
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00160">160</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00159">159</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>
@@ -254,7 +254,7 @@ template&lt;typename... PropsT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00165">165</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00164">164</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +266,7 @@ template&lt;typename... PropsT&gt; </div>
 <div class="memtemplate">
 template&lt;typename... PropsT&gt; </div>
 <div class="memtemplate">
-template&lt;typename... OtherProps, typename  = typename std::enable_if&lt;                ContainsSameProperties&lt;PropertyContainer&lt;PropsT...&gt;,                                       OtherProps...&gt;::value &amp;&amp;                ContainsSameProperties&lt;PropertyContainer&lt;OtherProps...&gt;,                                       PropsT...&gt;::value&gt;::type&gt; </div>
+template&lt;typename... OtherProps, typename  = typename detail::enable_if_t&lt;                ContainsSameProperties&lt;PropertyContainer&lt;PropsT...&gt;,                                       OtherProps...&gt;::value &amp;&amp;                ContainsSameProperties&lt;PropertyContainer&lt;OtherProps...&gt;,                                       PropsT...&gt;::value&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -286,7 +286,7 @@ template&lt;typename... OtherProps, typename  = typename std::enable_if&lt;     
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00175">175</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00174">174</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ template&lt;typename... OtherProps, typename  = typename std::enable_if&lt;     
 <div class="memtemplate">
 template&lt;typename... PropsT&gt; </div>
 <div class="memtemplate">
-template&lt;typename PropT , typename  = typename std::enable_if&lt;                                !is_compile_time_property&lt;PropT&gt;::value&gt;::type&gt; </div>
+template&lt;typename PropT , typename  = typename detail::enable_if_t&lt;                                !is_compile_time_property&lt;PropT&gt;::value&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -318,14 +318,14 @@ template&lt;typename PropT , typename  = typename std::enable_if&lt;            
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00181">181</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00180">180</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>.</p>
 
 </div>
 </div>
-<a id="a52440661c26b05beeee4d21f662ce5ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52440661c26b05beeee4d21f662ce5ba">&#9670;&nbsp;</a></span>has_property()</h2>
+<a id="ac1c207d744a9ddf8fe575a87078c2c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c207d744a9ddf8fe575a87078c2c93">&#9670;&nbsp;</a></span>has_property()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +338,7 @@ template&lt;class PropT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;!<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html">is_compile_time_property</a>&lt;PropT&gt;::value, bool&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html">cl::sycl::ONEAPI::accessor_property_list</a>&lt; PropsT &gt;::has_property </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;!<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html">is_compile_time_property</a>&lt;PropT&gt;::value, bool&gt; <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html">cl::sycl::ONEAPI::accessor_property_list</a>&lt; PropsT &gt;::has_property </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -351,7 +351,7 @@ template&lt;class PropT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00191">191</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00190">190</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>
@@ -380,7 +380,7 @@ template&lt;typename... OtherProps&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00218">218</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00217">217</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>
@@ -408,7 +408,7 @@ template&lt;typename , int , access::mode , access::target , access::placeholder
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00216">216</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00215">215</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +434,7 @@ template&lt;typename... PropsT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00220">220</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="accessor__property__list_8hpp_source.html#l00219">219</a> of file <a class="el" href="accessor__property__list_8hpp_source.html">accessor_property_list.hpp</a>.</p>
 
 </div>
 </div>

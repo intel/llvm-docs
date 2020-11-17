@@ -36,7 +36,7 @@ var esimd__types_8hpp =
     [ "mask_type_t", "esimd__types_8hpp.html#aede170e290d57755a7f30822ace70d2f", null ],
     [ "remove_cvref_t", "esimd__types_8hpp.html#aced0ce346b6cafba1359cbd0533925d9", null ],
     [ "vector_type_t", "esimd__types_8hpp.html#a701ca9f937829d7d22baf4ce9b4e4cd0", null ],
-    [ "bitcast", "esimd__types_8hpp.html#a414d4035a677a0d3914b867f910e54c1", null ],
+    [ "bitcast", "esimd__types_8hpp.html#a7dbe4514498d5858f4f516edb5b791f6", null ],
     [ "convert", "esimd__types_8hpp.html#ac594cb04666aeed36e203be3fd6abd1d", null ],
     [ "is_type", "esimd__types_8hpp.html#aed29dea83b3338945ca48540065c21b8", null ],
     [ "is_type", "esimd__types_8hpp.html#a69cc4f2247c074df2720ef4a5a4b13b1", null ],

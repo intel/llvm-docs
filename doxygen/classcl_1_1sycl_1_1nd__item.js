@@ -27,7 +27,7 @@ var classcl_1_1sycl_1_1nd__item =
     [ "get_nd_range", "classcl_1_1sycl_1_1nd__item.html#a6f2fbd7076f90c68d645ddfa119e76b5", null ],
     [ "get_offset", "classcl_1_1sycl_1_1nd__item.html#a72dff7096e195bd839353cc2428e2b1c", null ],
     [ "get_sub_group", "classcl_1_1sycl_1_1nd__item.html#a9a27fb5839a46721658ffaa01c040534", null ],
-    [ "mem_fence", "classcl_1_1sycl_1_1nd__item.html#a38ea2d76be164ddbbf17355814f26874", null ],
+    [ "mem_fence", "classcl_1_1sycl_1_1nd__item.html#ad215cb8b8e1b4e2a9ea6161eb28eb805", null ],
     [ "operator!=", "classcl_1_1sycl_1_1nd__item.html#ab10c983042a0c2de4bf9c98be1d05f93", null ],
     [ "operator=", "classcl_1_1sycl_1_1nd__item.html#a7fddc06a2f05bb8ee891bce0f58aa115", null ],
     [ "operator=", "classcl_1_1sycl_1_1nd__item.html#acdf82d3ced84c558ff6c2ee2c512b02f", null ],

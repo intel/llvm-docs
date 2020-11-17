@@ -41,7 +41,7 @@ var searchData=
   ['writefloatingpoint',['writeFloatingPoint',['../namespacecl_1_1sycl_1_1detail.html#a141586b5d4e7b4af0b7bef7ab278c432',1,'cl::sycl::detail']]],
   ['writegroup',['writeGroup',['../namespacecl_1_1sycl_1_1detail.html#a6e2ccb305997f3f195ed52c2c1ac5d3a',1,'cl::sycl::detail']]],
   ['writehitem',['writeHItem',['../namespacecl_1_1sycl_1_1detail.html#aacf48a9df3500f8bbd885fcc85ce7b27',1,'cl::sycl::detail']]],
-  ['writeintegral',['writeIntegral',['../namespacecl_1_1sycl_1_1detail.html#a7cfe0cac8ac23fa326c0d9ee2013d1cd',1,'cl::sycl::detail']]],
+  ['writeintegral',['writeIntegral',['../namespacecl_1_1sycl_1_1detail.html#a1b38639df7da836e89d7d69d3ec0b9fe',1,'cl::sycl::detail']]],
   ['writeitem',['writeItem',['../namespacecl_1_1sycl_1_1detail.html#ab663efb5de95e7c495ab96bc3c27c85b',1,'cl::sycl::detail']]],
   ['writenditem',['writeNDItem',['../namespacecl_1_1sycl_1_1detail.html#ac5b6e40b3d1babe7936e106123983aa6',1,'cl::sycl::detail']]],
   ['writendrange',['writeNDRange',['../namespacecl_1_1sycl_1_1detail.html#aa42a2b26c1e601c1f15b14cf64b91446',1,'cl::sycl::detail']]],

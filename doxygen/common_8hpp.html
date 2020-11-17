@@ -104,9 +104,9 @@ $(document).ready(function(){initNavTree('common_8hpp.html','');});
 <code>#include &lt;<a class="el" href="cl_8h_source.html">CL/sycl/detail/cl.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="defines_8hpp_source.html">CL/sycl/detail/defines.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="export_8hpp_source.html">CL/sycl/detail/export.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="stl__type__traits_8hpp_source.html">CL/sycl/detail/stl_type_traits.hpp</a>&gt;</code><br />
 <code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;<a class="el" href="exception_8hpp_source.html">CL/sycl/exception.hpp</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -114,13 +114,14 @@ Include dependency graph for common.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2detail_2common_8hpp" alt=""/></div>
 <map name="include_2CL_2sycl_2detail_2common_8hpp" id="include_2CL_2sycl_2detail_2common_8hpp">
-<area shape="rect" id="node3" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="150,244,277,271"/>
-<area shape="rect" id="node6" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1205,244,1379,271"/>
-<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="550,244,717,271"/>
-<area shape="rect" id="node14" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="680,95,832,121"/>
-<area shape="rect" id="node7" href="defines__elementary_8hpp.html" title="CL/sycl/detail/defines\l_elementary.hpp" alt="" coords="1154,319,1302,360"/>
-<area shape="rect" id="node15" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="387,169,514,196"/>
-<area shape="rect" id="node17" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="877,169,987,196"/>
+<area shape="rect" id="node3" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="150,259,277,285"/>
+<area shape="rect" id="node6" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="1193,259,1367,285"/>
+<area shape="rect" id="node9" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="465,259,631,285"/>
+<area shape="rect" id="node10" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="1365,169,1485,211"/>
+<area shape="rect" id="node17" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="647,95,799,121"/>
+<area shape="rect" id="node7" href="defines__elementary_8hpp.html" title="CL/sycl/detail/defines\l_elementary.hpp" alt="" coords="1142,333,1290,375"/>
+<area shape="rect" id="node18" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="377,177,503,203"/>
+<area shape="rect" id="node20" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="922,177,1033,203"/>
 </map>
 </div>
 </div>
@@ -198,9 +199,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aca24864f8cbfc6d620391f40575fde81"><td class="memTemplParams" colspan="2">template&lt;class Obj &gt; </td></tr>
 <tr class="memitem:aca24864f8cbfc6d620391f40575fde81"><td class="memTemplItemLeft" align="right" valign="top">decltype(Obj::impl)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">cl::sycl::detail::getSyclObjImpl</a> (const Obj &amp;SyclObject)</td></tr>
 <tr class="separator:aca24864f8cbfc6d620391f40575fde81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e35504c6581e111e85415ee377ee59c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a9e35504c6581e111e85415ee377ee59c"><td class="memTemplItemLeft" align="right" valign="top">std::add_pointer&lt; typename decltype(T::impl)::element_type &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a9e35504c6581e111e85415ee377ee59c">cl::sycl::detail::getRawSyclObjImpl</a> (const T &amp;SyclObject)</td></tr>
-<tr class="separator:a9e35504c6581e111e85415ee377ee59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4fd5807cb06ff2dd5025318b3260ad"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a6d4fd5807cb06ff2dd5025318b3260ad"><td class="memTemplItemLeft" align="right" valign="top">detail::add_pointer_t&lt; typename decltype(T::impl)::element_type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">cl::sycl::detail::getRawSyclObjImpl</a> (const T &amp;SyclObject)</td></tr>
+<tr class="separator:a6d4fd5807cb06ff2dd5025318b3260ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf270973bb66a47f8e8aebddd06ac8aa"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:abf270973bb66a47f8e8aebddd06ac8aa"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#abf270973bb66a47f8e8aebddd06ac8aa">cl::sycl::detail::createSyclObjFromImpl</a> (decltype(T::impl) ImplObj)</td></tr>
 <tr class="separator:abf270973bb66a47f8e8aebddd06ac8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>

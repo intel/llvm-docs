@@ -111,9 +111,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade03344b34192f2f35d4f23cc9f443d7"><td class="memTemplParams" colspan="2">template&lt;typename T , int IdxNum = getNumElements(), typename  = EnableIfOneIndex&lt;IdxNum&gt;, typename  = EnableIfScalarType&lt;T&gt;&gt; </td></tr>
 <tr class="memitem:ade03344b34192f2f35d4f23cc9f443d7"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ade03344b34192f2f35d4f23cc9f443d7">operator T</a> () const</td></tr>
 <tr class="separator:ade03344b34192f2f35d4f23cc9f443d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac09a5431f81f565249be8c11a43afed7"><td class="memTemplParams" colspan="2">template&lt;typename T  = DataT&gt; </td></tr>
-<tr class="memitem:ac09a5431f81f565249be8c11a43afed7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; T &gt;::value, <a class="el" href="classcl_1_1sycl_1_1vec.html">vec_t</a> &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ac09a5431f81f565249be8c11a43afed7">operator~</a> ()</td></tr>
-<tr class="separator:ac09a5431f81f565249be8c11a43afed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9d2c0f670aca27e1542cd3e9e28e5c"><td class="memTemplParams" colspan="2">template&lt;typename T  = DataT&gt; </td></tr>
+<tr class="memitem:a8c9d2c0f670aca27e1542cd3e9e28e5c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; std::is_integral&lt; T &gt;::value, <a class="el" href="classcl_1_1sycl_1_1vec.html">vec_t</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8c9d2c0f670aca27e1542cd3e9e28e5c">operator~</a> ()</td></tr>
+<tr class="separator:a8c9d2c0f670aca27e1542cd3e9e28e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0512742844e2483eb980948aae970c32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1vec.html">vec_rel_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a0512742844e2483eb980948aae970c32">operator!</a> ()</td></tr>
 <tr class="separator:a0512742844e2483eb980948aae970c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af95ae85baafeb42f4bbeee83d8f44413"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1vec.html">vec_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af95ae85baafeb42f4bbeee83d8f44413">operator+</a> ()</td></tr>
@@ -183,10 +183,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a773e1095c546fa03e4ce5c41d00f4030"><td class="memTemplParams" colspan="2">template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOperation&gt;&gt; </td></tr>
 <tr class="memitem:a773e1095c546fa03e4ce5c41d00f4030"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">NewLHOp</a>&lt; RhsOperation, <a class="el" href="structcl_1_1sycl_1_1detail_1_1LShift.html">LShift</a>, Indexes... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a773e1095c546fa03e4ce5c41d00f4030">operator&lt;&lt;</a> (const RhsOperation &amp;Rhs) const</td></tr>
 <tr class="separator:a773e1095c546fa03e4ce5c41d00f4030"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf32e63128f9575219686ce23ca22017"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename std::enable_if&lt;sizeof...(T5) ==                                               getNumElements()&gt;::type&gt; </td></tr>
+<tr class="memitem:adf32e63128f9575219686ce23ca22017"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename detail::enable_if_t&lt;sizeof...(T5) == getNumElements()&gt;&gt; </td></tr>
 <tr class="memitem:adf32e63128f9575219686ce23ca22017"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">SwizzleOp</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#adf32e63128f9575219686ce23ca22017">operator=</a> (const <a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">SwizzleOp</a>&lt; T1, T2, T3, T4, T5... &gt; &amp;Rhs)</td></tr>
 <tr class="separator:adf32e63128f9575219686ce23ca22017"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a911d8ba80cf96ff57e78e115fd359290"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename std::enable_if&lt;sizeof...(T5) ==                                               getNumElements()&gt;::type&gt; </td></tr>
+<tr class="memitem:a911d8ba80cf96ff57e78e115fd359290"><td class="memTemplParams" colspan="2">template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename detail::enable_if_t&lt;sizeof...(T5) == getNumElements()&gt;&gt; </td></tr>
 <tr class="memitem:a911d8ba80cf96ff57e78e115fd359290"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">SwizzleOp</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a911d8ba80cf96ff57e78e115fd359290">operator=</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">SwizzleOp</a>&lt; T1, T2, T3, T4, T5... &gt; &amp;&amp;Rhs)</td></tr>
 <tr class="separator:a911d8ba80cf96ff57e78e115fd359290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a884925b67eefb82a1d41c59218a49f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </td></tr>
@@ -243,9 +243,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f3cde3c571c5e176e5203950917321f"><td class="memTemplParams" colspan="2">template&lt;typename convertT , rounding_mode roundingMode&gt; </td></tr>
 <tr class="memitem:a7f3cde3c571c5e176e5203950917321f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1vec.html">vec</a>&lt; convertT, sizeof...(Indexes)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f3cde3c571c5e176e5203950917321f">convert</a> () const</td></tr>
 <tr class="separator:a7f3cde3c571c5e176e5203950917321f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20c575e160906cf6edb7d55d11e6c42a"><td class="memTemplParams" colspan="2">template&lt;typename asT &gt; </td></tr>
-<tr class="memitem:a20c575e160906cf6edb7d55d11e6c42a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; asT::getNumElements()==getNumElements(), asT &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a20c575e160906cf6edb7d55d11e6c42a">as</a> () const</td></tr>
-<tr class="separator:a20c575e160906cf6edb7d55d11e6c42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bab237797496a456fa12c2532a561a"><td class="memTemplParams" colspan="2">template&lt;typename asT &gt; </td></tr>
+<tr class="memitem:a55bab237797496a456fa12c2532a561a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; asT::getNumElements()==getNumElements(), asT &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a55bab237797496a456fa12c2532a561a">as</a> () const</td></tr>
+<tr class="separator:a55bab237797496a456fa12c2532a561a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -272,8 +272,8 @@ class cl::sycl::detail::SwizzleOp&lt; VecT, OperationLeftT, OperationRightT, Ope
 
 <p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l00102">102</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a20c575e160906cf6edb7d55d11e6c42a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20c575e160906cf6edb7d55d11e6c42a">&#9670;&nbsp;</a></span>as()</h2>
+<a id="a55bab237797496a456fa12c2532a561a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bab237797496a456fa12c2532a561a">&#9670;&nbsp;</a></span>as()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +286,7 @@ template&lt;typename asT &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;asT::getNumElements() == getNumElements(), asT&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> <a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">cl::sycl::detail::SwizzleOp</a>&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes &gt;::as </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;asT::getNumElements() == getNumElements(), asT&gt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">cl::sycl::detail::SwizzleOp</a>&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes &gt;::as </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -299,7 +299,7 @@ template&lt;typename asT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01825">1825</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01823">1823</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -330,7 +330,7 @@ template&lt;typename convertT , rounding_mode roundingMode&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01817">1817</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01815">1815</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -359,7 +359,7 @@ template&lt;typename VecT , typename OperationLeftT , typename OperationRightT ,
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01400">1400</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01399">1399</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -390,7 +390,7 @@ template&lt;int Num = getNumElements()&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01401">1401</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01400">1400</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -432,7 +432,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01810">1810</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01808">1808</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -464,7 +464,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01583">1583</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01581">1581</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -496,7 +496,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01591">1591</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01589">1589</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,7 +528,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01759">1759</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01757">1757</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -560,7 +560,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01767">1767</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01765">1765</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +591,7 @@ template&lt;typename T , int IdxNum = getNumElements(), typename  = EnableIfOneI
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01408">1408</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01407">1407</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +620,7 @@ template&lt;typename VecT , typename OperationLeftT , typename OperationRightT ,
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01485">1485</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01483">1483</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -652,7 +652,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01690">1690</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01688">1688</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +684,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01698">1698</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01696">1696</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -716,7 +716,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01526">1526</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01524">1524</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -748,7 +748,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01534">1534</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01532">1532</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -777,7 +777,7 @@ template&lt;typename VecT , typename OperationLeftT , typename OperationRightT ,
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01490">1490</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01488">1488</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -809,7 +809,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01540">1540</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01538">1538</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -841,7 +841,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01548">1548</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01546">1546</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -870,7 +870,7 @@ template&lt;typename VecT , typename OperationLeftT , typename OperationRightT ,
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01495">1495</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01493">1493</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -902,7 +902,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01554">1554</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01552">1552</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -934,7 +934,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01562">1562</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01560">1560</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +966,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01568">1568</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01566">1566</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -998,7 +998,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01576">1576</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01574">1574</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1030,7 +1030,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01745">1745</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01743">1743</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1062,7 +1062,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01753">1753</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01751">1751</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1094,7 +1094,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01639">1639</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01637">1637</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1126,7 +1126,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01647">1647</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01645">1645</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1158,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01718">1718</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01716">1716</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1190,7 +1190,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01726">1726</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01724">1724</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1222,7 +1222,7 @@ template&lt;int IdxNum = getNumElements(), typename  = EnableIfMultipleIndexes&l
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01502">1502</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01500">1500</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1254,7 @@ template&lt;int IdxNum = getNumElements(), typename  = EnableIfOneIndex&lt;IdxNu
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01511">1511</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01509">1509</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1286,7 +1286,7 @@ template&lt;int IdxNum = getNumElements(), typename  = EnableIfOneIndex&lt;IdxNu
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01518">1518</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01516">1516</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1298,7 +1298,7 @@ template&lt;int IdxNum = getNumElements(), typename  = EnableIfOneIndex&lt;IdxNu
 <div class="memtemplate">
 template&lt;typename VecT , typename OperationLeftT , typename OperationRightT , template&lt; typename &gt; class OperationCurrentT, int... Indexes&gt; </div>
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename std::enable_if&lt;sizeof...(T5) ==                                               getNumElements()&gt;::type&gt; </div>
+template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename detail::enable_if_t&lt;sizeof...(T5) == getNumElements()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1318,7 +1318,7 @@ template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01655">1655</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01653">1653</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1330,7 +1330,7 @@ template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt;
 <div class="memtemplate">
 template&lt;typename VecT , typename OperationLeftT , typename OperationRightT , template&lt; typename &gt; class OperationCurrentT, int... Indexes&gt; </div>
 <div class="memtemplate">
-template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename std::enable_if&lt;sizeof...(T5) ==                                               getNumElements()&gt;::type&gt; </div>
+template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt; class T4, int... T5, typename  = typename detail::enable_if_t&lt;sizeof...(T5) == getNumElements()&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1350,7 +1350,7 @@ template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01667">1667</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01665">1665</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1382,7 +1382,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01676">1676</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01674">1674</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1414,7 +1414,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01684">1684</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01682">1682</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1446,7 +1446,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01732">1732</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01730">1730</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1478,7 +1478,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01740">1740</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01738">1738</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1510,7 +1510,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01704">1704</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01702">1702</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1542,7 +1542,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01712">1712</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01710">1710</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1574,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01626">1626</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01624">1624</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1606,7 +1606,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01634">1634</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01632">1632</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1638,7 +1638,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01612">1612</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01610">1610</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1670,7 +1670,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01620">1620</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01618">1618</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1702,7 +1702,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01598">1598</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01596">1596</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1734,7 +1734,7 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01606">1606</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01604">1604</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1766,7 +1766,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01773">1773</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01771">1771</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1798,12 +1798,12 @@ template&lt;typename RhsOperation , typename  = EnableIfNoScalarType&lt;RhsOpera
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01781">1781</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01779">1779</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
-<a id="ac09a5431f81f565249be8c11a43afed7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac09a5431f81f565249be8c11a43afed7">&#9670;&nbsp;</a></span>operator~()</h2>
+<a id="a8c9d2c0f670aca27e1542cd3e9e28e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9d2c0f670aca27e1542cd3e9e28e5c">&#9670;&nbsp;</a></span>operator~()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1816,7 +1816,7 @@ template&lt;typename T  = DataT&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;std::is_integral&lt;T&gt;::value, <a class="el" href="classcl_1_1sycl_1_1vec.html">vec_t</a>&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> <a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">cl::sycl::detail::SwizzleOp</a>&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes &gt;::operator~ </td>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;std::is_integral&lt;T&gt;::value, <a class="el" href="classcl_1_1sycl_1_1vec.html">vec_t</a>&gt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1SwizzleOp.html">cl::sycl::detail::SwizzleOp</a>&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes &gt;::operator~ </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1829,7 +1829,7 @@ template&lt;typename T  = DataT&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01480">1480</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01478">1478</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1858,7 +1858,7 @@ template&lt;typename T1 , int T2&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01890">1890</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01888">1888</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1900,7 +1900,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01414">1414</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01413">1413</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1942,7 +1942,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01421">1421</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01420">1420</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -1984,7 +1984,7 @@ template&lt;typename T , typename  = EnableIfScalarType&lt;T&gt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01428">1428</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01427">1427</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -2012,7 +2012,7 @@ template&lt;typename T1 , typename T2 , typename T3 , template&lt; typename &gt;
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01894">1894</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="types_8hpp_source.html#l01892">1892</a> of file <a class="el" href="types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>

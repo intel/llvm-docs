@@ -26,7 +26,7 @@ var common_8hpp =
     [ "getLinearIndex", "common_8hpp.html#a8307ea7e1e01a679f3df859761943a1f", null ],
     [ "getNextPowerOfTwo", "common_8hpp.html#ad6babf0ff77ef97bffaecc11a2cc10ec", null ],
     [ "getNextPowerOfTwoHelper", "common_8hpp.html#a2ba1c0f09918dc6c9d80bb56c217f5ff", null ],
-    [ "getRawSyclObjImpl", "common_8hpp.html#a9e35504c6581e111e85415ee377ee59c", null ],
+    [ "getRawSyclObjImpl", "common_8hpp.html#a6d4fd5807cb06ff2dd5025318b3260ad", null ],
     [ "getSyclObjImpl", "common_8hpp.html#aca24864f8cbfc6d620391f40575fde81", null ],
     [ "stringifyErrorCode", "common_8hpp.html#a1af53414d9083438c310a1a40bd2500d", null ],
     [ "LastKSId", "common_8hpp.html#a894aa77dab94574a0fa3b2a84416d3ca", null ],

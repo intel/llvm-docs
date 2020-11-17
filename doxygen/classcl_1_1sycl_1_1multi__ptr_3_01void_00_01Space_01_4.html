@@ -114,9 +114,9 @@ Public Types</h2></td></tr>
 <tr class="separator:a339af74db5e37cf2a8c932a3a6ef46ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e9170c83e56155f18a74e76c880bdf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ab4e9170c83e56155f18a74e76c880bdf">difference_type</a> = std::ptrdiff_t</td></tr>
 <tr class="separator:ab4e9170c83e56155f18a74e76c880bdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09bd7e02db3f0cf77caa43da14727c06"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06">pointer_t</a> = typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt; void, Space &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> *</td></tr>
+<tr class="memitem:a09bd7e02db3f0cf77caa43da14727c06"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06">pointer_t</a> = typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt; void, Space &gt;::type *</td></tr>
 <tr class="separator:a09bd7e02db3f0cf77caa43da14727c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a670ec5cbeb71da630f13828d0ba023"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a1a670ec5cbeb71da630f13828d0ba023">const_pointer_t</a> = typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt; void, Space &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> const *</td></tr>
+<tr class="memitem:a1a670ec5cbeb71da630f13828d0ba023"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a1a670ec5cbeb71da630f13828d0ba023">const_pointer_t</a> = typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt; void, Space &gt;::type const *</td></tr>
 <tr class="separator:a1a670ec5cbeb71da630f13828d0ba023"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac64c53f73a1bbe0965263f77931e2b0c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ac64c53f73a1bbe0965263f77931e2b0c">ReturnPtr</a> = <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab0f0b23dbcd157e51dca5fa5bbbc8202">detail::const_if_const_AS</a>&lt; Space, void &gt; *</td></tr>
 <tr class="separator:ac64c53f73a1bbe0965263f77931e2b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,13 +146,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af554d1e79cc0422c53790f7b4b1b5ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a586eea6d20caa105e3698c1f15480d39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a586eea6d20caa105e3698c1f15480d39">operator=</a> (std::nullptr_t)</td></tr>
 <tr class="separator:a586eea6d20caa105e3698c1f15480d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac530448daefb3ad2e4d2bf96bf70eda2"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_space ||                 Space == access::address_space::global_device_space)&gt;::type&gt; </td></tr>
+<tr class="memitem:ac530448daefb3ad2e4d2bf96bf70eda2"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename detail::enable_if_t&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_space ||                 Space == access::address_space::global_device_space)&gt;&gt; </td></tr>
 <tr class="memitem:ac530448daefb3ad2e4d2bf96bf70eda2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ac530448daefb3ad2e4d2bf96bf70eda2">multi_ptr</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; ElementType, dimensions, Mode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598acb1529b5988261a81704f0f39d6c287b">access::target::global_buffer</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a>, PropertyListT &gt; Accessor)</td></tr>
 <tr class="separator:ac530448daefb3ad2e4d2bf96bf70eda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9279ce723a8bcd520877bbaa2c3712ab"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename std::enable_if&lt;          _Space == Space &amp;&amp; Space == access::address_space::local_space&gt;::type&gt; </td></tr>
+<tr class="memitem:a9279ce723a8bcd520877bbaa2c3712ab"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename detail::enable_if_t&lt;                _Space == Space &amp;&amp; Space == access::address_space::local_space&gt;&gt; </td></tr>
 <tr class="memitem:a9279ce723a8bcd520877bbaa2c3712ab"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a9279ce723a8bcd520877bbaa2c3712ab">multi_ptr</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; ElementType, dimensions, Mode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598af5ddaf0ca7929578b408c909429f68f2">access::target::local</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a>, PropertyListT &gt; Accessor)</td></tr>
 <tr class="separator:a9279ce723a8bcd520877bbaa2c3712ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ab2429569a8c0de7521d64af87d0ae"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                Space == access::address_space::constant_space&gt;::type&gt; </td></tr>
+<tr class="memitem:a00ab2429569a8c0de7521d64af87d0ae"><td class="memTemplParams" colspan="2">template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename detail::enable_if_t&lt;          _Space == Space &amp;&amp; Space == access::address_space::constant_space&gt;&gt; </td></tr>
 <tr class="memitem:a00ab2429569a8c0de7521d64af87d0ae"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a00ab2429569a8c0de7521d64af87d0ae">multi_ptr</a> (<a class="el" href="classcl_1_1sycl_1_1accessor.html">accessor</a>&lt; ElementType, dimensions, Mode, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598ade1df516592d6089a5a1d4c9280f257b">access::target::constant_buffer</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a15f2c35ad6e5422c120ea62f6bc14366">access::placeholder::false_t</a>, PropertyListT &gt; Accessor)</td></tr>
 <tr class="separator:a00ab2429569a8c0de7521d64af87d0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a871fc525d345d57632e273f661991"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06">pointer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ac3a871fc525d345d57632e273f661991">get</a> () const</td></tr>
@@ -186,7 +186,7 @@ class cl::sycl::multi_ptr&lt; void, Space &gt;</h3>
 template&lt;access::address_space Space&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">cl::sycl::multi_ptr</a>&lt; void, Space &gt;::<a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a1a670ec5cbeb71da630f13828d0ba023">const_pointer_t</a> =  typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt;void, Space&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> const *</td>
+          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">cl::sycl::multi_ptr</a>&lt; void, Space &gt;::<a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a1a670ec5cbeb71da630f13828d0ba023">const_pointer_t</a> =  typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt;void, Space&gt;::type const *</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -240,7 +240,7 @@ template&lt;access::address_space Space&gt; </div>
 template&lt;access::address_space Space&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">cl::sycl::multi_ptr</a>&lt; void, Space &gt;::<a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06">pointer_t</a> =  typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt;void, Space&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> *</td>
+          <td class="memname">using <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">cl::sycl::multi_ptr</a>&lt; void, Space &gt;::<a class="el" href="classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06">pointer_t</a> =  typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1PtrValueType.html">detail::PtrValueType</a>&lt;void, Space&gt;::type *</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -263,7 +263,7 @@ template&lt;access::address_space Space&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00413">413</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00412">412</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -480,7 +480,7 @@ template&lt;typename ElementType &gt; </div>
 <div class="memtemplate">
 template&lt;access::address_space Space&gt; </div>
 <div class="memtemplate">
-template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_space ||                 Space == access::address_space::global_device_space)&gt;::type&gt; </div>
+template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename detail::enable_if_t&lt;                _Space == Space &amp;&amp;                (Space == access::address_space::global_space ||                 Space == access::address_space::global_device_space)&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -512,7 +512,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, typename P
 <div class="memtemplate">
 template&lt;access::address_space Space&gt; </div>
 <div class="memtemplate">
-template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename std::enable_if&lt;          _Space == Space &amp;&amp; Space == access::address_space::local_space&gt;::type&gt; </div>
+template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename detail::enable_if_t&lt;                _Space == Space &amp;&amp; Space == access::address_space::local_space&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -532,7 +532,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, typename P
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00396">396</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00395">395</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, typename P
 <div class="memtemplate">
 template&lt;access::address_space Space&gt; </div>
 <div class="memtemplate">
-template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename std::enable_if&lt;                _Space == Space &amp;&amp;                Space == access::address_space::constant_space&gt;::type&gt; </div>
+template&lt;typename ElementType , int dimensions, access::mode Mode, typename PropertyListT , access::address_space _Space = Space, typename  = typename detail::enable_if_t&lt;          _Space == Space &amp;&amp; Space == access::address_space::constant_space&gt;&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -564,7 +564,7 @@ template&lt;typename ElementType , int dimensions, access::mode Mode, typename P
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00407">407</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00406">406</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -594,7 +594,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00415">415</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00414">414</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -623,7 +623,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00430">430</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00429">429</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -654,7 +654,7 @@ template&lt;typename ElementType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00422">422</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00421">421</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>
@@ -683,7 +683,7 @@ template&lt;access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00418">418</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="multi__ptr_8hpp_source.html#l00417">417</a> of file <a class="el" href="multi__ptr_8hpp_source.html">multi_ptr.hpp</a>.</p>
 
 </div>
 </div>

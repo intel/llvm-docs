@@ -2,7 +2,7 @@ var classcl_1_1sycl_1_1handler =
 [
     [ "ShouldEnableSetArg", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg" ],
     [ "is_same_type", "classcl_1_1sycl_1_1handler.html#a6d1ff6744816686a4abffc42f4276610", null ],
-    [ "remove_cv_ref_t", "classcl_1_1sycl_1_1handler.html#abb4309b5d4c44824faf2e7fe3ed80632", null ],
+    [ "remove_cv_ref_t", "classcl_1_1sycl_1_1handler.html#aaefeb39ac45bff2a7e4e40308ffc2ffc", null ],
     [ "handler", "classcl_1_1sycl_1_1handler.html#aab6e38c9f1c74a6353d9328a2a6950d6", null ],
     [ "handler", "classcl_1_1sycl_1_1handler.html#a87d56a475a807c51c9f750bb6c8ee15e", null ],
     [ "barrier", "classcl_1_1sycl_1_1handler.html#aa263b98900a3e67d195b5bc591c50ef3", null ],
@@ -47,7 +47,7 @@ var classcl_1_1sycl_1_1handler =
     [ "prefetch", "classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863", null ],
     [ "require", "classcl_1_1sycl_1_1handler.html#ae15174598d704c69779e60fdb86da80e", null ],
     [ "run_on_host_intel", "classcl_1_1sycl_1_1handler.html#a04a8df865df1e1c16280417bf07cdffe", null ],
-    [ "set_arg", "classcl_1_1sycl_1_1handler.html#a1df56095367bb7fc6b8048d672f84ffe", null ],
+    [ "set_arg", "classcl_1_1sycl_1_1handler.html#a93f8f35825802c6e026f2dcd343bb093", null ],
     [ "set_arg", "classcl_1_1sycl_1_1handler.html#aebd7ddca219b45fd8eebbf768f4abff0", null ],
     [ "set_args", "classcl_1_1sycl_1_1handler.html#abc24e638930b88ddd619cf6759183892", null ],
     [ "single_task", "classcl_1_1sycl_1_1handler.html#a725e255af60b5545d5af97e1420856b0", null ],

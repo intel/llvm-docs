@@ -8,7 +8,7 @@ var searchData=
   ['bit_5for',['bit_or',['../namespacecl_1_1sycl_1_1ONEAPI.html#a59bc45ffe9d3727165e4600897669c1e',1,'cl::sycl::ONEAPI']]],
   ['bit_5fxor',['bit_xor',['../namespacecl_1_1sycl_1_1ONEAPI.html#ac10ea002b4bdc8b765cefb1f7fa898a7',1,'cl::sycl::ONEAPI']]],
   ['bool_5fconstant',['bool_constant',['../namespacecl_1_1sycl_1_1detail.html#abe0d3a7302fa94b2522b6182113606fa',1,'cl::sycl::detail']]],
-  ['bool_5ft',['bool_t',['../structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_01TryToGetE88ddec838b6cea35fcd58c7313920a82.html#a58b0b874f8de44f1a53b08937cdf7128',1,'cl::sycl::detail::RelConverter&lt; T, typename std::enable_if&lt; TryToGetElementType&lt; T &gt;::value &gt;::type &gt;']]],
+  ['bool_5ft',['bool_t',['../structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01detail_1_1enable__if__t_3_01Try67aa993d319e97fccaf985dd5209653a.html#a76930db02282688e2fffa7cfd3245b9a',1,'cl::sycl::detail::RelConverter&lt; T, typename detail::enable_if_t&lt; TryToGetElementType&lt; T &gt;::value &gt; &gt;']]],
   ['bucketsarraytype',['BucketsArrayType',['../namespacesettings.html#a967f0c9e4563cb2b6f16082cfb40dfc5',1,'settings']]],
   ['buffer_5fallocator',['buffer_allocator',['../namespacecl_1_1sycl.html#a7a19058abadafdeccbb4ef44cdb2b318',1,'cl::sycl']]],
   ['burst_5fcoalesce',['burst_coalesce',['../namespacecl_1_1sycl_1_1INTEL.html#ab130adbada20118197538a2475fdaf22',1,'cl::sycl::INTEL']]],

@@ -10,7 +10,7 @@ var classcl_1_1sycl_1_1stream =
     [ "operator==", "classcl_1_1sycl_1_1stream.html#ae5b85f3f3c1013a2de5f27d39c0ab95a", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#a43bd9c4bb5d75e1921868e8692b26aa5", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#ad7c333d88c0ba037b0d99e01c53d7cb3", null ],
-    [ "operator<<", "classcl_1_1sycl_1_1stream.html#ae6d3052088dd5e330af85b2a08ff82fe", null ],
+    [ "operator<<", "classcl_1_1sycl_1_1stream.html#a9b5183a2301a0c5cfc8b9df9e7ef625c", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#a82c48cc29bf7d33ff413d33d53c43acd", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#a6444f231fdbf81bec438cf1a847a1816", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#a537681955da5487be698d40fb6f08b82", null ],

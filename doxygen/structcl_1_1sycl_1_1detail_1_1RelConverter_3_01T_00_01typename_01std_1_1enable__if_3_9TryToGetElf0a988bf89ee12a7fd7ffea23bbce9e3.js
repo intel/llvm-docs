@@ -1,6 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3 =
-[
-    [ "R", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#a3382410cf6244f9670de55d2a12cdfea", null ],
-    [ "value_t", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#adde632b55829cfb6201557bc9e749f27", null ],
-    [ "apply", "structcl_1_1sycl_1_1detail_1_1RelConverter_3_01T_00_01typename_01std_1_1enable__if_3_9TryToGetElf0a988bf89ee12a7fd7ffea23bbce9e3.html#af9ca4bfeb6b251cccef43e1a468cb3fc", null ]
-];

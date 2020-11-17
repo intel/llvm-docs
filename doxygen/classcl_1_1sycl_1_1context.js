@@ -24,5 +24,5 @@ var classcl_1_1sycl_1_1context =
     [ "operator=", "classcl_1_1sycl_1_1context.html#a8d46093b44d8de2a700814efb4aed83c", null ],
     [ "operator==", "classcl_1_1sycl_1_1context.html#a0e02518b91db928a0bad711e0ff9521d", null ],
     [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1context.html#a71492293d0386f542d120a1fc3dfbb55", null ],
-    [ "detail::getRawSyclObjImpl", "classcl_1_1sycl_1_1context.html#a3596f7433970fcb520ddb4e2d36f9181", null ]
+    [ "detail::getRawSyclObjImpl", "classcl_1_1sycl_1_1context.html#a9989cb46a70557073b0113bb9ff923dd", null ]
 ];

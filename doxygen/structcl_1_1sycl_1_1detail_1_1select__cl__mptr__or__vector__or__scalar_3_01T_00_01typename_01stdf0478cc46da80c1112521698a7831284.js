@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar_3_01T_00_01typename_01stdf0478cc46da80c1112521698a7831284 =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar_3_01T_00_01typename_01stdf0478cc46da80c1112521698a7831284.html#afe83e5b393d81278c6d44b22750efede", null ]
-];

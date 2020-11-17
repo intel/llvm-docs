@@ -4,10 +4,10 @@ var classcl_1_1sycl_1_1detail_1_1HostKernel =
     [ "~HostKernel", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a0bf4b73e03ba5b3e049f0e8fbba168fd", null ],
     [ "call", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#ac8ac824b625ab46b7e8d6c85c3c4c311", null ],
     [ "getPtr", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a3625559cb0dfc4a45b6c1c5cdedb8c8e", null ],
-    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#ac7c94dcce38515529a9d563eaa85aaad", null ],
-    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#aa04cae8b1a703f0870d13e50c387dd8a", null ],
-    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#afe7d50358cd9e9e3938ed178366bfef4", null ],
-    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a05d2dd13ed75a95b55bb2175cd6db5d8", null ],
-    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a863ffe7eb2603aee784f6f0c1cd73361", null ],
+    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a5ed681a8339907c05368707c1415e201", null ],
+    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a7d8558ba99aa305d38879cccb95876f3", null ],
+    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a79edaf69af1e6266be9106bc258c4260", null ],
+    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a68a3a9f966648b31b5c9351b90fe70fd", null ],
+    [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#a75729da73b4909aa219773cf90222ff0", null ],
     [ "runOnHost", "classcl_1_1sycl_1_1detail_1_1HostKernel.html#acfd731e8ee9af29f70eb6b7feb510d84", null ]
 ];
