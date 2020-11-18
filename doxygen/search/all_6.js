@@ -174,7 +174,6 @@ var searchData=
   ['esimd_5fview_2ehpp',['esimd_view.hpp',['../esimd__view_8hpp.html',1,'']]],
   ['esimdatomicoptype',['EsimdAtomicOpType',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#af00991a79c07c9970d93474e2b7bd6e9',1,'cl::sycl::INTEL::gpu']]],
   ['esimdemulsys',['EsimdEmulSys',['../namespaceEsimdEmulSys.html',1,'']]],
-  ['esimdext',['ESIMDExt',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a1e670f0b058864e33ff29348193adfbd',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['esimdfencemask',['EsimdFenceMask',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a7c16e1bbc350d531e6b9b614a14f99c7',1,'cl::sycl::INTEL::gpu']]],
   ['esimdtype',['esimdtype',['../structesimdtype.html',1,'']]],
   ['esimdtype_3c_20char_20_3e',['esimdtype&lt; char &gt;',['../structesimdtype_3_01char_01_4.html',1,'']]],

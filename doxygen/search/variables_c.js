@@ -86,7 +86,6 @@ var searchData=
   ['minteroptask',['MInteropTask',['../classcl_1_1sycl_1_1detail_1_1CGInteropTask.html#a4a75d580209f572ff7cd406856931990',1,'cl::sycl::detail::CGInteropTask']]],
   ['misactive',['MIsActive',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['misblockable',['MIsBlockable',['../classcl_1_1sycl_1_1detail_1_1Command.html#a5d9548e459c7d2fc7a2b8d90c2428057',1,'cl::sycl::detail::Command']]],
-  ['misesimdacc',['MIsESIMDAcc',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a8fefe62eca2bb08561cefb8a908c1931',1,'cl::sycl::detail::AccessorImplHost']]],
   ['misleaderalloca',['MIsLeaderAlloca',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['missubbuffer',['MIsSubBuffer',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#ac7538104eab816573443cd2fe3dbce47',1,'cl::sycl::detail::AccessorImplHost']]],
   ['mkernelname',['MKernelName',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a50888c8904b33b445ac25758f04a3e65',1,'cl::sycl::detail::CGExecKernel']]],
@@ -141,6 +140,5 @@ var searchData=
   ['mutexzespecconstants',['MutexZeSpecConstants',['../struct__pi__program.html#ad0ec5f905a8611f6e9abd4ef8e3e3808',1,'_pi_program']]],
   ['mvalue',['MValue',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a757195a760f4329658632aea3dd1b9e1',1,'cl::sycl::ONEAPI::detail::reducer::MValue()'],['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad7be7756ae2a9899e6f1d70523407af9',1,'cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;::MValue()']]],
   ['mvisited',['MVisited',['../structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html#a4f5423b989b23434d7dc0aad3ff73a59',1,'cl::sycl::detail::Command::Marks']]],
-  ['mwrapperimage',['MWrapperImage',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a9e60b6f0c8be8dd5691fb617168e339f',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['mwriteleaves',['MWriteLeaves',['../structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3',1,'cl::sycl::detail::MemObjRecord']]]
 ];

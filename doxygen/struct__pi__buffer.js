@@ -8,6 +8,6 @@ var struct__pi__buffer =
     [ "Origin", "struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf", null ],
     [ "Parent", "struct__pi__buffer.html#aabab9f4228e10b2e6f96249bdfc671a9", null ],
     [ "Size", "struct__pi__buffer.html#a35453f1a8090674506c83200ca09303b", null ],
-    [ "SubBuffer", "struct__pi__buffer.html#ae5d305994c71f3f2af5d7b490f035d62", null ],
+    [ "SubBuffer", "struct__pi__buffer.html#a2d07a87c6415886b74a2fd26b5af0843", null ],
     [ "ZeMem", "struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd", null ]
 ];

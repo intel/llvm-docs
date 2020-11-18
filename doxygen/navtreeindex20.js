@@ -1,9 +1,5 @@
 var NAVTREEINDEX20 =
 {
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0eeabe1249684d58c7bad29611dded8a":[4,0,0,0,1,3,0,7,39],
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0fbdc8bcd6c762ac073157f9e77b2437":[4,0,0,0,1,3,0,7,48],
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a146c255959a4d93b5a009f5daeabb6d3":[4,0,0,0,1,3,0,7,43],
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a148905ebf38930dab36309e04801eac7":[4,0,0,0,1,3,0,7,8],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a163aaee413467d48a5da83ae13c592ba":[4,0,0,0,1,3,0,7,30],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a173b3ec8ac32dd6c997450c1f11ba4a1":[4,0,0,0,1,3,0,7,67],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a18c883f57e362180bed8775144145e8b":[4,0,0,0,1,3,0,7,4],
@@ -120,14 +116,14 @@ var NAVTREEINDEX20 =
 "item__base_8hpp_source.html":[4,0,0,0,1,2,25],
 "kernel_8cpp.html":[4,0,2,14],
 "kernel_8cpp.html#a3c938ceaddd4fdd854c7c59c504d5edf":[4,0,2,14,7],
-"kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,14,5],
 "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,14,4],
+"kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,14,5],
 "kernel_8cpp.html#a9c16a54ec7d6f7c97004c9735dcb3ca1":[4,0,2,14,8],
 "kernel_8cpp.html#ac2f63ef028746455af61de56221a6a65":[4,0,2,14,6],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,0],
+"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,1],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,2],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,3],
-"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,1],
 "kernel_8cpp_source.html":[4,0,2,14],
 "kernel_8hpp.html":[4,0,0,0,1,32],
 "kernel_8hpp_source.html":[4,0,0,0,1,32],
@@ -249,5 +245,9 @@ var NAVTREEINDEX20 =
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu.html":[2,0,2,1,6,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html":[3,0,2,1,3,0,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html":[2,0,2,1,6,0,0],
-"namespacecl_1_1sycl_1_1INTEL_1_1property.html":[3,0,2,1,3,1]
+"namespacecl_1_1sycl_1_1INTEL_1_1property.html":[3,0,2,1,3,1],
+"namespacecl_1_1sycl_1_1INTEL_1_1property.html":[2,0,2,1,6,1],
+"namespacecl_1_1sycl_1_1ONEAPI.html":[3,0,2,1,4],
+"namespacecl_1_1sycl_1_1ONEAPI.html":[2,0,2,1,9],
+"namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[3,0,2,1,4,0]
 };

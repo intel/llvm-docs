@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"builtins__math_8cpp.html#a4111e090ebd40c3148325f0da69f8b89":[4,0,2,1,10,148],
 "builtins__math_8cpp.html#a41eb3a60d97bb01a6358b4f16ca892d4":[4,0,2,1,10,85],
 "builtins__math_8cpp.html#a4257f3143ef393a9ee6cfef94c45edd3":[4,0,2,1,10,170],
 "builtins__math_8cpp.html#a42a4a13864b9d2ef54d8e3e534d2eb80":[4,0,2,1,10,59],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "classUSMAllocContext_1_1USMAllocImpl.html#a16dc1dcaff28d86ac4a6189cba4fb0ad":[3,0,237,0,1],
 "classUSMAllocContext_1_1USMAllocImpl.html#a24680a6d0e0734b20b6e0db8ab04c058":[3,0,237,0,0],
 "classUSMAllocContext_1_1USMAllocImpl.html#a76f6ae9f73ef3cac7dfc523bf7a46b3b":[3,0,237,0,3],
-"classUSMAllocContext_1_1USMAllocImpl.html#a8eba849adf6bf5144fe47a84664aa6cf":[3,0,237,0,4]
+"classUSMAllocContext_1_1USMAllocImpl.html#a8eba849adf6bf5144fe47a84664aa6cf":[3,0,237,0,4],
+"classUSMAllocContext_1_1USMAllocImpl.html#aadff48abe43a3ef92e006672b63ba81d":[3,0,237,0,6]
 };

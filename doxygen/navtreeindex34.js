@@ -1,8 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"sub__group_8hpp.html#a26a0dc304181ee2753708514efbadac4":[4,0,0,0,1,5,13,1],
-"sub__group_8hpp.html#a430da6af374a62162fa73455de025696":[4,0,0,0,1,5,13,2],
-"sub__group_8hpp.html#a8a90fbb7e05922d7959de7d32ded5542":[4,0,0,0,1,5,13,3],
 "sub__group_8hpp.html#acf635573944d460cde21c5adc0063838":[4,0,0,0,1,5,13,4],
 "sub__group_8hpp_source.html":[4,0,0,0,1,5,13],
 "sycl_8hpp.html":[4,0,0,0,2],

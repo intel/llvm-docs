@@ -1,9 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"generic__type__traits_8hpp.html#a32194d2c86cc9c685b57f571a7e9fb8b":[4,0,0,0,1,2,18,40],
-"generic__type__traits_8hpp.html#a32b034193b979fdfda71482df74608cb":[4,0,0,0,1,2,18,129],
-"generic__type__traits_8hpp.html#a32d59997e0123fb653cefcc6c781bef8":[4,0,0,0,1,2,18,117],
-"generic__type__traits_8hpp.html#a33e5dc7c680ab19c2a8bcbe2cbf35e08":[4,0,0,0,1,2,18,56],
 "generic__type__traits_8hpp.html#a35309c49d1332df73329ebfca8344710":[4,0,0,0,1,2,18,69],
 "generic__type__traits_8hpp.html#a368c32f0f165b011a2ee167eb586db48":[4,0,0,0,1,2,18,70],
 "generic__type__traits_8hpp.html#a39665d267735ee1d35d7585ee67bd32e":[4,0,0,0,1,2,18,54],
@@ -92,8 +88,8 @@ var NAVTREEINDEX18 =
 "globals_a.html":[4,1,0,1],
 "globals_c.html":[4,1,0,2],
 "globals_d.html":[4,1,0,3],
-"globals_defs.html":[4,1,6],
 "globals_defs.html":[4,1,6,0],
+"globals_defs.html":[4,1,6],
 "globals_defs_c.html":[4,1,6,1],
 "globals_defs_d.html":[4,1,6,2],
 "globals_defs_e.html":[4,1,6,3],
@@ -105,8 +101,8 @@ var NAVTREEINDEX18 =
 "globals_defs_z.html":[4,1,6,9],
 "globals_e.html":[4,1,0,4],
 "globals_enum.html":[4,1,4],
-"globals_eval.html":[4,1,5,0],
 "globals_eval.html":[4,1,5],
+"globals_eval.html":[4,1,5,0],
 "globals_func.html":[4,1,1],
 "globals_func.html":[4,1,1,0],
 "globals_func_a.html":[4,1,1,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX18 =
 "half__type_8hpp.html#ae9cf7595bdf58467e8bcf6700a361cbb":[4,0,0,0,1,25,8],
 "half__type_8hpp.html#afd48cc1bb519169236fcecb36f818f88":[4,0,0,0,1,25,13],
 "half__type_8hpp_source.html":[4,0,0,0,1,25],
-"handler_8cpp.html":[4,0,2,11]
+"handler_8cpp.html":[4,0,2,11],
+"handler_8cpp_source.html":[4,0,2,11],
+"handler_8hpp.html":[4,0,0,0,1,26],
+"handler_8hpp.html#a0e2a8cd39c5325f03f08e50ef55bb73c":[4,0,0,0,1,26,26],
+"handler_8hpp.html#a0fb12c55b73a022f2aa1397b6fa3a24a":[4,0,0,0,1,26,16]
 };

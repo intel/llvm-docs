@@ -52,6 +52,7 @@ var searchData=
   ['isdeviceofpreferredsyclbe',['isDeviceOfPreferredSyclBe',['../namespacecl_1_1sycl.html#a89601b8a9195726705c5aa5386d61f79',1,'cl::sycl']]],
   ['isenqueueblocked',['isEnqueueBlocked',['../classcl_1_1sycl_1_1detail_1_1Command.html#ab1b1e66f599238f77786e06191955432',1,'cl::sycl::detail::Command']]],
   ['isequal',['isequal',['../namespacecl_1_1sycl.html#a20bcf6525b7a55d625f0da399e77800e',1,'cl::sycl']]],
+  ['isesimd',['isESIMD',['../structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a4e57ab20b7eb9eefe68d019a940a3ccb',1,'cl::sycl::detail::KernelInfo']]],
   ['isfilledin',['isFilledIn',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#aef5bbe86207714e29ab0e3cd38f95728',1,'cl::sycl::detail::KernelProgramCache::BuildError']]],
   ['isfinished',['isFinished',['../classcl_1_1sycl_1_1detail_1_1Command.html#ae3e59f84259cd0c0b14c996c808d0990',1,'cl::sycl::detail::Command']]],
   ['isfinite',['isfinite',['../namespacecl_1_1sycl.html#abb17a5a3b0b8f0f27d48d483660599cf',1,'cl::sycl']]],

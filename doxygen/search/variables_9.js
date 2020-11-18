@@ -31,7 +31,6 @@ var searchData=
   ['isaccessreadonly',['IsAccessReadOnly',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a29b848e76d17c7af7774c09b92c62493',1,'cl::sycl::detail::accessor_common']]],
   ['isaccessreadwrite',['IsAccessReadWrite',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#af31ca5d917cbb1b4669a0ab2a41e74c3',1,'cl::sycl::detail::accessor_common']]],
   ['isconstantbuf',['IsConstantBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#aca9c9e3f5612d347e4193ba38cfe51d7',1,'cl::sycl::detail::accessor_common']]],
-  ['isesimdaccinit',['IsESIMDAccInit',['../namespacecl_1_1sycl_1_1detail.html#ad07f9e97a2b413bfda6f59a6de5a9f97',1,'cl::sycl::detail']]],
   ['isglobalbuf',['IsGlobalBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a0e8243fb5050b4e6cd1ea507c2a9e77b',1,'cl::sycl::detail::accessor_common']]],
   ['ishostbuf',['IsHostBuf',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a2d96fae36ed7dfb305d4bd7667187deb',1,'cl::sycl::detail::accessor_common']]],
   ['isplaceh',['IsPlaceH',['../classcl_1_1sycl_1_1detail_1_1accessor__common.html#a79f395af689b9934c183d8d267a92cdc',1,'cl::sycl::detail::accessor_common']]],

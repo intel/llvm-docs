@@ -56,6 +56,7 @@ and a wide range of compute accelerators such as GPU and FPGA.</p>
 <li><p><a class="reference external" href="#use-dpc-toolchain">Use DPC++ toolchain</a></p>
 <ul>
 <li><p><a class="reference external" href="#install-low-level-runtime">Install low level runtime</a></p></li>
+<li><p><a class="reference external" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation">Obtain prerequisites for ahead of time (AOT) compilation</a></p></li>
 <li><p><a class="reference external" href="#test-dpc-toolchain">Test DPC++ toolchain</a></p></li>
 <li><p><a class="reference external" href="#run-simple-dpc-application">Run simple DPC++ application</a></p></li>
 </ul>
@@ -140,8 +141,6 @@ python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
 <li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code> -&gt; Path to build directory</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--cmake-gen</span></code> -&gt; Set build system type (e.g. <code class="docutils literal notranslate"><span class="pre">--cmake-gen</span> <span class="pre">&quot;Unix</span> <span class="pre">Makefiles&quot;</span></code>)</p></li>
 </ul>
-<p>Ahead-of-time compilation for the Intel® processors is enabled by default.
-For more, see <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../opencl-aot/README">opencl-aot documentation</a>.</p>
 <div class="section" id="build-dpc-toolchain-with-libc-library">
 <h3>Build DPC++ toolchain with libc++ library<a class="headerlink" href="#build-dpc-toolchain-with-libc-library" title="Permalink to this headline">¶</a></h3>
 <p>There is experimental support for building and linking DPC++ runtime with
@@ -301,6 +300,65 @@ c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</spa
 </div>
 </li>
 </ol>
+</div>
+<div class="section" id="obtain-prerequisites-for-ahead-of-time-aot-compilation">
+<h3>Obtain prerequisites for ahead of time (AOT) compilation<a class="headerlink" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="CompilerAndRuntimeDesign.md#ahead-of-time-aot-compilation">Ahead of time compilation</a>
+requires ahead of time compiler available in <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. There is
+AOT compiler for each device type:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GPU</span></code>, Level Zero and OpenCL runtimes are supported,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CPU</span></code>, OpenCL runtime is supported,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Accelerator</span></code> (FPGA or FPGA emulation), OpenCL runtime is supported.</p></li>
+</ul>
+<div class="section" id="gpu">
+<h4>GPU<a class="headerlink" href="#gpu" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Linux</p>
+<p>There are two ways how to obtain GPU AOT compiler <code class="docutils literal notranslate"><span class="pre">ocloc</span></code>:</p>
+<ul class="simple">
+<li><p>(Ubuntu) Download and install intel-ocloc_***.deb package from
+<a class="reference external" href="https://github.com/intel/compute-runtime/releases">intel/compute-runtime releases</a>.
+This package should have the same version as Level Zero / OpenCL GPU
+runtimes installed on the system.</p></li>
+<li><p>(other distros) <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> is a part of
+<a class="reference external" href="https://dgpu-docs.intel.com/index.html">Intel® software packages for general purpose GPU capabilities</a>.</p></li>
+</ul>
+</li>
+<li><p>Windows</p>
+<ul class="simple">
+<li><p>GPU AOT compiler <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> is a part of
+<a class="reference external" href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html">Intel® oneAPI Base Toolkit</a>
+(Intel® oneAPI DPC++/C++ Compiler component).<br />Make sure that the following path to <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> binary is available in <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
+environment variable:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;oneAPI</span> <span class="pre">installation</span> <span class="pre">location&gt;/compiler/&lt;version&gt;/windows/lib/ocloc</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="cpu">
+<h4>CPU<a class="headerlink" href="#cpu" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>CPU AOT compiler <code class="docutils literal notranslate"><span class="pre">opencl-aot</span></code> is enabled by default. For more, see
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../opencl-aot/README">opencl-aot documentation</a>.</p></li>
+</ul>
+</div>
+<div class="section" id="accelerator">
+<h4>Accelerator<a class="headerlink" href="#accelerator" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Accelerator AOT compiler <code class="docutils literal notranslate"><span class="pre">aoc</span></code> is a part of
+<a class="reference external" href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/base-toolkit.html">Intel® oneAPI Base Toolkit</a>
+(Intel® oneAPI DPC++/C++ Compiler component).<br />Make sure that these binaries are available in <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">aoc</span></code> from <code class="docutils literal notranslate"><span class="pre">&lt;oneAPI</span> <span class="pre">installation</span> <span class="pre">location&gt;/compiler/&lt;version&gt;/&lt;OS&gt;/lib/oclfpga/bin</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aocl-ioc64</span></code> from <code class="docutils literal notranslate"><span class="pre">&lt;oneAPI</span> <span class="pre">installation</span> <span class="pre">location&gt;/compiler/&lt;version&gt;/&lt;OS&gt;/bin</span></code></p></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="test-dpc-toolchain">
 <h3>Test DPC++ toolchain<a class="headerlink" href="#test-dpc-toolchain" title="Permalink to this headline">¶</a></h3>
@@ -474,7 +532,23 @@ directory.</p>
   simple-sycl-app.cpp -o simple-sycl-app-cuda.exe
 </pre></div>
 </div>
-<p>This <code class="docutils literal notranslate"><span class="pre">simple-sycl-app.exe</span></code> application doesn’t specify SYCL device for
+<p>To build simple-sycl-app ahead of time for GPU, CPU or Accelerator devices,
+specify the target architecture:</p>
+<p><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_gen-unknown-unknown-sycldevice</span></code> for GPU,<br /><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_x86_64-unknown-unknown-sycldevice</span></code> for CPU,<br /><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_fpga-unknown-unknown-sycldevice</span></code> for Accelerator.</p>
+<p>Multiple target architectures are supported.</p>
+<p>E.g., this command builds simple-sycl-app for GPU and CPU devices in
+ahead of time mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>spir64_gen-unknown-unknown-sycldevice,spir64_x86_64-unknown-unknown-sycldevice simple-sycl-app.cpp -o simple-sycl-app-aot.exe
+</pre></div>
+</div>
+<p>Additionally, user can pass specific options of AOT compiler to
+the DPC++ compiler using <code class="docutils literal notranslate"><span class="pre">-Xsycl-target-backend</span></code> option, see
+<a class="reference external" href="CompilerAndRuntimeDesign.md#device-code-formats">Device code formats</a> for
+more. To find available options, execute:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ocloc</span> <span class="pre">compile</span> <span class="pre">--help</span></code> for GPU,
+<code class="docutils literal notranslate"><span class="pre">opencl-aot</span> <span class="pre">--help</span></code> for CPU,
+<code class="docutils literal notranslate"><span class="pre">aoc</span> <span class="pre">-help</span> <span class="pre">-sycl</span></code> for Accelerator.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">simple-sycl-app.exe</span></code> application doesn’t specify SYCL device for
 execution, so SYCL runtime will use <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> logic to select one
 of accelerators available in the system or SYCL host device.
 In this case, the behavior of the <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> can be altered
