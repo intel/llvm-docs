@@ -1,5 +1,10 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html":[3,0,2,1,52],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01program_01_4.html#a759024eabd998e3eaf6e3fdc85996e4c":[3,0,2,1,52,0],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html":[3,0,2,1,53],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html#a9d1e1ed94185e07d707fe8937ca94174":[3,0,2,1,53,0],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html":[3,0,2,1,54],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html#af84c96538789a3c3560e4a82dd24c502":[3,0,2,1,54,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html":[3,0,2,1,55],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html#a8b6a7564e4e531423c495966b989d407":[3,0,2,1,55,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX32 =
 "structrestype__ex_3_01float_00_01int_01_4.html":[3,0,139],
 "structrestype__ex_3_01float_00_01int_01_4.html#a7542d63906fa0d0d1ab8b39739434d23":[3,0,139,0],
 "structrestype__ex_3_01float_00_01long_01long_01_4.html":[3,0,140],
-"structrestype__ex_3_01float_00_01long_01long_01_4.html#ac0edc09b40dfeac29a5c75de53e949c8":[3,0,140,0],
-"structrestype__ex_3_01float_00_01short_01_4.html":[3,0,141],
-"structrestype__ex_3_01float_00_01short_01_4.html#a2184eb944d377d3f8cd98e727d9ad0b4":[3,0,141,0],
-"structrestype__ex_3_01float_00_01unsigned_01char_01_4.html":[3,0,142],
-"structrestype__ex_3_01float_00_01unsigned_01char_01_4.html#afdbf8647596c96e67e88bea39b9a8f76":[3,0,142,0],
-"structrestype__ex_3_01float_00_01unsigned_01int_01_4.html":[3,0,143]
+"structrestype__ex_3_01float_00_01long_01long_01_4.html#ac0edc09b40dfeac29a5c75de53e949c8":[3,0,140,0]
 };

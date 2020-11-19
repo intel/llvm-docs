@@ -8,6 +8,7 @@ var classcl_1_1sycl_1_1detail_1_1SYCLMemObjT =
     [ "allocateHostMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ad620a55b5d8aa07873f34e88c7cbfe80", null ],
     [ "allocateMem", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a4c28f05650896c268da3d43059d87bac", null ],
     [ "canReuseHostPtr", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a41b4b61c374aa55230c43c5be1b88e33", null ],
+    [ "determineHostPtr", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a68075827201e7aec70a2d5ead1bc5be6", null ],
     [ "get_allocator", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a122154478fd782ddd30b92a7580c4f4d", null ],
     [ "get_count", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#af5e3b43cecc0b9e467245d19bd266115", null ],
     [ "get_property", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a104bc4b3eb8972792543ea3a41c75f5a", null ],
