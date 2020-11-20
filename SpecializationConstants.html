@@ -45,10 +45,10 @@ with some restrictions. See this <a class="reference external" href="https://git
 <li><p>must work with separate compilation and linking</p></li>
 <li><p>must support AOT compilation</p></li>
 </ul>
-<p>Implementaion is based on SPIR-V specialization constants. But there is one
-important difference between SYCL and SPIR-V: in SYCL speciazation constants are
-identified by a type ID which is mapped to a symbolic name, in SPIR-V - by an
-ordinal number. This complicates the design, as the compiler</p>
+<p>Implementation is based on SPIR-V specialization constants. But there is one
+important difference between SYCL and SPIR-V: in SYCL specialization constants
+are identified by a type ID which is mapped to a symbolic name, in SPIR-V - by
+an ordinal number. This complicates the design, as the compiler</p>
 <ol class="simple">
 <li><p>needs to propagate symbolic =&gt; numeric ID correspondence to the runtime</p></li>
 <li><p>can assign numeric IDs only when linking due to the separate compilation</p></li>
@@ -99,7 +99,7 @@ types to unique strings. <code class="docutils literal notranslate"><span class=
 recognized by a special LLVM pass later.</p>
 <p>Compilation and subsequent linkage of device code results in a number of
 <code class="docutils literal notranslate"><span class="pre">__sycl_getSpecConstantValue</span></code> calls whose arguments are symbolic spec constant
-IDs. Before generating the a device binary, each linked device code LLVMIR
+IDs. Before generating a device binary, each linked device code LLVMIR
 module undergoes processing by the sycl-post-link tool which can run LLVMIR
 passes before passing the module onto the llvm-spirv translator.</p>
 <p>There is a <code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> LLVMIR pass which</p>
@@ -139,8 +139,8 @@ the spec constant’s type. No maps are generated, and SYCL program can’t chan
 the value of a spec constant.</p>
 </div>
 </div>
-<div class="section" id="llvmir-spir-v-translator">
-<h3>LLVMIR-SPIR-V translator<a class="headerlink" href="#llvmir-spir-v-translator" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="llvm-spir-v-translation">
+<h3>LLVM -&gt; SPIR-V translation<a class="headerlink" href="#llvm-spir-v-translation" title="Permalink to this headline">¶</a></h3>
 <p>Given the <code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstant</span></code> intrinsic calls produced by the
 <code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Function</span> <span class="n">Attrs</span><span class="p">:</span> <span class="n">alwaysinline</span>
@@ -199,7 +199,7 @@ through the value map and invokes the</p>
 
 <span class="n">struct</span> <span class="n">POD</span> <span class="p">{</span>
   <span class="n">A</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
-  <span class="nb">int</span> <span class="n">b</span><span class="p">;</span>
+  <span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">vec</span><span class="o">&lt;</span><span class="nb">int</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -209,7 +209,7 @@ through the value map and invokes the</p>
       <span class="p">{</span> <span class="n">goldi</span><span class="p">,</span> <span class="n">goldf</span> <span class="p">},</span>
       <span class="p">{</span> <span class="n">goldi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">goldf</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">},</span>
     <span class="p">},</span>
-    <span class="n">goldi</span>
+    <span class="p">{</span> <span class="n">goldi</span><span class="p">,</span> <span class="n">goldi</span> <span class="p">}</span>
   <span class="p">};</span>
 
   <span class="n">cl</span><span class="p">::</span><span class="n">sycl</span><span class="p">::</span><span class="n">ONEAPI</span><span class="p">::</span><span class="n">experimental</span><span class="p">::</span><span class="n">spec_constant</span><span class="o">&lt;</span><span class="n">POD</span><span class="p">,</span> <span class="n">MyConst</span><span class="o">&gt;</span> <span class="n">sc</span> <span class="o">=</span>  <span class="n">program4</span><span class="o">.</span><span class="n">set_spec_constant</span><span class="o">&lt;</span><span class="n">MyConst</span><span class="o">&gt;</span><span class="p">(</span><span class="n">gold</span><span class="p">);</span>
@@ -218,94 +218,113 @@ through the value map and invokes the</p>
 </div>
 <div class="section" id="id1">
 <h3>Compiler<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="the-specconstant-pass-changes">
-<h4>The SpecConstant pass changes<a class="headerlink" href="#the-specconstant-pass-changes" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>The SpecConstants pass in the post-link will have the following IR as input (<code class="docutils literal notranslate"><span class="pre">sret</span></code> conversion is omitted for clarity):</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">%</span><span class="n">spec_const</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__sycl_getCompositeSpecConstantValue</span><span class="o">&lt;</span><span class="n">POD</span> <span class="nb">type</span> <span class="n">mangling</span><span class="o">&gt;</span> <span class="p">(</span><span class="s2">&quot;MyConst_mangled&quot;</span><span class="p">)</span>
+<div class="section" id="the-specconstants-pass">
+<h4>The SpecConstants pass<a class="headerlink" href="#the-specconstants-pass" title="Permalink to this headline">¶</a></h4>
+<p>The SpecConstants pass in the post-link will have the following IR as input
+(<code class="docutils literal notranslate"><span class="pre">sret</span></code> conversion is omitted for clarity):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="o">=</span> <span class="nb">type</span> <span class="p">{</span> <span class="p">[</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">],</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="p">}</span>
+<span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="nb">type</span> <span class="p">{</span> <span class="n">i32</span><span class="p">,</span> <span class="nb">float</span> <span class="p">}</span>
+
+<span class="o">%</span><span class="n">spec_const</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__sycl_getCompositeSpecConstantValue</span><span class="o">&lt;</span><span class="n">POD</span> <span class="nb">type</span> <span class="n">mangling</span><span class="o">&gt;</span> <span class="p">(</span><span class="s2">&quot;MyConst_mangled&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">__sycl_getCompositeSpecConstantValue</span></code> is a new “intrinsic”
-(in addition to <code class="docutils literal notranslate"><span class="pre">__sycl_getSpecConstantValue</span></code>) recognized by SpecConstants pass,
-which creates a value of a composite (of non-primitive type) specialization constant.
+<p><code class="docutils literal notranslate"><span class="pre">__sycl_getCompositeSpecConstantValue</span></code> is a new “intrinsic” (in addition to
+<code class="docutils literal notranslate"><span class="pre">__sycl_getSpecConstantValue</span></code>) recognized by the <code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass, which
+creates a value of a composite (of non-primitive type) specialization constant.
 It does not need a default value, because its default value consists of default
-valued of its leaf specialization constants (see below).</p>
-<ul class="simple">
-<li><p>after spec constant enumeration (symbolic -&gt; int ID translation), the SpecConstants pass
-will handle the <code class="docutils literal notranslate"><span class="pre">__sycl_getCompositeSpecConstantValue</span></code>. Given the knowledge of the composite
-specialization constant’s type (<code class="docutils literal notranslate"><span class="pre">%struct.POD</span></code>), the pass will traverse its leaf
-fields and generate 5 “primitive” spec constants using already existing SPIR-V intrinsic:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">gold_POD_a0x</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">10</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
-<span class="o">%</span><span class="n">gold_POD_a0y</span> <span class="o">=</span> <span class="n">call</span> <span class="nb">float</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">11</span><span class="p">,</span> <span class="nb">float</span> <span class="mi">0</span><span class="p">)</span>
-<span class="o">%</span><span class="n">gold_POD_a1x</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">12</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
-<span class="o">%</span><span class="n">gold_POD_a1y</span> <span class="o">=</span> <span class="n">call</span> <span class="nb">float</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">13</span><span class="p">,</span> <span class="nb">float</span> <span class="mi">0</span><span class="p">)</span>
-<span class="o">%</span><span class="n">gold_POD_b</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">14</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+values of its leaf specialization constants (see below).</p>
+<p><code class="docutils literal notranslate"><span class="pre">__sycl_getCompositeSpecConstantValue</span></code> will be replaced with a set of
+<code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstant</span></code> calls for each member of its return type plus one
+<code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstantComposite</span></code> to gather members back into a single composite.
+If any composite member is another composite, then it will be also represented
+by number of <code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstant</span></code> plus one <code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstantComposite</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">gold_POD_A0_x</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">10</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_A0_y</span> <span class="o">=</span> <span class="n">call</span> <span class="nb">float</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">11</span><span class="p">,</span> <span class="nb">float</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A0</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_A0_x</span><span class="p">,</span> <span class="nb">float</span> <span class="o">%</span><span class="n">gold_POD_A0_y</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A1_x</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">12</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_A1_y</span> <span class="o">=</span> <span class="n">call</span> <span class="nb">float</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">13</span><span class="p">,</span> <span class="nb">float</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A1</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_A1_x</span><span class="p">,</span> <span class="nb">float</span> <span class="o">%</span><span class="n">gold_POD_A1_y</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A</span> <span class="o">=</span> <span class="n">call</span> <span class="p">[</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">]</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">%</span><span class="n">gold_POD_A0</span><span class="p">,</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">%</span><span class="n">gold_POD_A1</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_b0</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">14</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_b1</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">15</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_b</span> <span class="o">=</span> <span class="n">call</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_b0</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_b1</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">([</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">]</span> <span class="o">%</span><span class="n">gold_POD_A</span><span class="p">,</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="o">%</span><span class="n">gold_POD_b</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>And 1 “composite”</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">%</span><span class="n">gold_POD</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__spirvCompositeSpecConstant</span><span class="o">&lt;</span><span class="n">POD</span> <span class="nb">type</span> <span class="n">mangling</span><span class="o">&gt;</span><span class="p">(</span><span class="n">i32</span> <span class="mi">10</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">11</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">12</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">13</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">14</span><span class="p">)</span>
+<p>Spec ID for the composite spec constant is not needed, as runtime will never use
+it - it will use IDs of the leaves instead, which are being assigned by the
+<code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass during replacement of SYCL intrinsics with SPIR-V
+intrinsics.
+Besides, the SPIR-V specification does not allow <code class="docutils literal notranslate"><span class="pre">SpecID</span></code> decoration for
+composite spec constants, because its defined by its members instead.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstantComposite</span></code> is a new SPIR-V intrinsic, which represents
+composite specialization constant. Its arguments are LLVM IR values
+corresponding to elements of the composite constant.</p>
+</div>
+<div class="section" id="id2">
+<h4>LLVM -&gt; SPIR-V translation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Given the <code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstantComposite</span></code> intrinsic calls produced by the
+<code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="nb">type</span> <span class="p">{</span> <span class="n">i32</span><span class="p">,</span> <span class="nb">float</span> <span class="p">}</span>
+
+<span class="p">;</span> <span class="n">Function</span> <span class="n">Attrs</span><span class="p">:</span> <span class="n">alwaysinline</span>
+<span class="n">define</span> <span class="n">dso_local</span> <span class="n">spir_func</span> <span class="n">void</span> <span class="nd">@get</span><span class="p">(</span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="o">*</span> <span class="n">sret</span> <span class="o">%</span><span class="n">ret</span><span class="o">.</span><span class="n">ptr</span><span class="p">)</span> <span class="n">local_unnamed_addr</span> <span class="c1">#0 {</span>
+  <span class="p">;</span> <span class="n">args</span> <span class="n">are</span> <span class="s2">&quot;ID&quot;</span> <span class="ow">and</span> <span class="s2">&quot;default value&quot;</span><span class="p">:</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="n">i32</span> <span class="nd">@_Z20__spirv_SpecConstantii</span><span class="p">(</span><span class="n">i32</span> <span class="mi">42</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="nb">float</span> <span class="nd">@_Z20__spirv_SpecConstantif</span><span class="p">(</span><span class="n">i32</span> <span class="mi">43</span><span class="p">,</span> <span class="nb">float</span> <span class="mf">0.000000e+00</span><span class="p">)</span>
+  <span class="o">%</span><span class="n">ret</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="nd">@_Z29__spirv_SpecConstantCompositeif</span><span class="p">(</span><span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">store</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">%</span><span class="n">ret</span><span class="p">,</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="o">*</span> <span class="o">%</span><span class="n">ret</span><span class="o">.</span><span class="n">ptr</span>
+  <span class="n">ret</span> <span class="n">void</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">__spirvCompositeSpecConstant&lt;POD</span> <span class="pre">type</span> <span class="pre">mangling&gt;</span></code> is a new SPIR-V intrinsic which
-represents creation of a composite specialization constant. Its arguments are spec
-constant IDs corresponding to the leaf fields of the POD type of the constant.
-Spec ID for the composite spec constant is not needed, as runtime will never use it - it will use IDs of the leaves instead.
-Yet, the SPIR-V specification does not allow <code class="docutils literal notranslate"><span class="pre">SpecID</span></code> decoration for composite spec constants.</p>
+<p>the translator will generate <code class="docutils literal notranslate"><span class="pre">OpSpecConstant</span></code> and <code class="docutils literal notranslate"><span class="pre">OpSpecConstantComposite</span></code>
+SPIR-V instructions with proper <code class="docutils literal notranslate"><span class="pre">SpecId</span></code> decorations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="n">OpDecorate</span> <span class="o">%</span><span class="n">i32</span> <span class="n">SpecId</span> <span class="mi">42</span>                        <span class="p">;</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="mi">1</span><span class="n">st</span> <span class="n">member</span>
+              <span class="n">OpDecorate</span> <span class="o">%</span><span class="nb">float</span> <span class="n">SpecId</span> <span class="mi">43</span>                      <span class="p">;</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="mi">2</span><span class="n">nd</span> <span class="n">member</span>
+       <span class="o">%</span><span class="n">i32</span> <span class="o">=</span> <span class="n">OpSpecConstant</span> <span class="o">%</span><span class="nb">int</span><span class="o">.</span><span class="n">type</span> <span class="mi">0</span>                       <span class="p">;</span> <span class="mi">1</span><span class="n">st</span> <span class="n">member</span> <span class="k">with</span> <span class="n">default</span> <span class="n">value</span>
+     <span class="o">%</span><span class="nb">float</span> <span class="o">=</span> <span class="n">OpSpecConstant</span> <span class="o">%</span><span class="nb">float</span><span class="o">.</span><span class="n">type</span> <span class="mf">0.0</span>                   <span class="p">;</span> <span class="mi">2</span><span class="n">nd</span> <span class="n">member</span> <span class="k">with</span> <span class="n">default</span> <span class="n">value</span>
+    <span class="o">%</span><span class="n">struct</span> <span class="o">=</span> <span class="n">OpSpecConstantComposite</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">type</span> <span class="o">%</span><span class="n">i32</span> <span class="o">%</span><span class="nb">float</span> <span class="p">;</span> <span class="n">Composite</span> <span class="n">doens</span><span class="s1">&#39;t need IDs or default value</span>
+         <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">OpTypeFunction</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">type</span>
+
+       <span class="o">%</span><span class="n">get</span> <span class="o">=</span> <span class="n">OpFunction</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">type</span> <span class="kc">None</span> <span class="o">%</span><span class="mi">1</span>
+         <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">OpLabel</span>
+              <span class="n">OpReturnValue</span> <span class="o">%</span><span class="n">struct</span>
+              <span class="n">OpFunctionEnd</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="the-post-link-tool-changes">
 <h4>The post-link tool changes<a class="headerlink" href="#the-post-link-tool-changes" title="Permalink to this headline">¶</a></h4>
 <p>For composite specialization constants the post link tool will additionally
-generate linearized list of &lt;leaf spec ID,type,offset,size&gt; tuples (descriptors),
+generate linearized list of &lt;leaf spec ID,offset,size&gt; tuples (descriptors),
 where each tuple describes a leaf field, and store it together with the
 existing meta-information associated with the specialization constants and
 passed to the runtime. Also, for a composite specialization constant there is
 no ID map entry within the meta information, and the composite constant is
 referenced by its symbolic ID. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyConst_mangled</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="nb">int</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">11</span><span class="p">,</span><span class="nb">float</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">12</span><span class="p">,</span><span class="nb">int</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">13</span><span class="p">,</span><span class="nb">float</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">14</span><span class="p">,</span><span class="nb">int</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyConst_mangled</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">11</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">13</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">14</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="id2">
-<h3>LLVMIR-&gt;SPIR-V translator<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>The translator aims to create the following code (pseudo-code)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">gold_POD_a0x</span> <span class="o">=</span> <span class="n">OpSpecConstant</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="p">[</span><span class="n">SpecId</span> <span class="o">=</span> <span class="mi">10</span><span class="p">]</span>
-<span class="o">%</span><span class="n">gold_POD_a0y</span> <span class="o">=</span> <span class="n">OpSpecConstant</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">)</span> <span class="p">[</span><span class="n">SpecId</span> <span class="o">=</span> <span class="mi">11</span><span class="p">]</span>
-<span class="o">%</span><span class="n">gold_POD_a1x</span> <span class="o">=</span> <span class="n">OpSpecConstant</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="p">[</span><span class="n">SpecId</span> <span class="o">=</span> <span class="mi">12</span><span class="p">]</span>
-<span class="o">%</span><span class="n">gold_POD_a1y</span> <span class="o">=</span> <span class="n">OpSpecConstant</span><span class="p">(</span><span class="mf">0.0</span><span class="n">f</span><span class="p">)</span> <span class="p">[</span><span class="n">SpecId</span> <span class="o">=</span> <span class="mi">13</span><span class="p">]</span>
-<span class="o">%</span><span class="n">gold_POD_b</span>   <span class="o">=</span> <span class="n">OpSpecConstant</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="p">[</span><span class="n">SpecId</span> <span class="o">=</span> <span class="mi">14</span><span class="p">]</span>
-
-<span class="o">%</span><span class="n">gold_POD_a0</span> <span class="o">=</span> <span class="n">OpSpecConstantComposite</span><span class="p">(</span>
-  <span class="o">%</span><span class="n">gold_POD_a0x</span> <span class="o">//</span> <span class="n">gold</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">x</span>
-  <span class="o">%</span><span class="n">gold_POD_a0y</span> <span class="o">//</span> <span class="n">gold</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">y</span>
-<span class="p">)</span>
-
-<span class="o">%</span><span class="n">gold_POD_a1</span> <span class="o">=</span> <span class="n">OpSpecConstantComposite</span><span class="p">(</span>
-  <span class="o">%</span><span class="n">gold_POD_a1x</span> <span class="o">//</span> <span class="n">gold</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">x</span>
-  <span class="o">%</span><span class="n">gold_POD_a1y</span> <span class="o">//</span> <span class="n">gold</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">y</span>
-<span class="p">)</span>
-
-<span class="o">%</span><span class="n">gold_POD</span> <span class="o">=</span> <span class="n">OpSpecConstantComposite</span><span class="p">(</span>
-  <span class="o">%</span><span class="n">gold_POD_a0</span><span class="p">,</span>
-  <span class="o">%</span><span class="n">gold_POD_a1</span><span class="p">,</span>
-  <span class="o">%</span><span class="n">gold_POD_b</span>   <span class="o">//</span> <span class="n">gold</span><span class="o">.</span><span class="n">b</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<p>This tuple is needed, because at SYCL runtime level, composite constants are set
+by user as a byte array and we have to break it down to the leaf members of the
+composite and set a value for each leaf as for a separate scalar specialization
+constant. Each tuple contains the following data:</p>
 <ul class="simple">
-<li><p>First, <code class="docutils literal notranslate"><span class="pre">OpSpecConstant</span></code> instructions are created using already existing mechanism for
-primitive spec constants.</p></li>
-<li><p>Then the translator will handle <code class="docutils literal notranslate"><span class="pre">__spirvCompositeSpecConstant*</span></code> intrinsic.
-It will recursively traverse the spec constant type structure in parallel with
-the argument list - which is a list of primitive spec constant SpecIds.
-When traversing, it will create all the intermediate OpSpecConstantComposite
-instructions as well as the root one (<code class="docutils literal notranslate"><span class="pre">%gold_POD</span></code>) using simple depth-first tree
-traversal with stack. This requires mapping from SpecId decoration number to
-&lt;id&gt; of the corresponding OpSpecConstant instruction, but this should be pretty
-straightforward.</p></li>
+<li><p>ID of composite constant leaf, i.e. ID of a scalar specialization constant</p></li>
+<li><p>Offset from the beginning of composite, which points to the location of a
+scalar value within the composite, i.e. the position where scalar
+specialization constant resides within the byte array supplied by the user</p></li>
+<li><p>Size of the scalar specialization constant</p></li>
 </ul>
+</div>
 </div>
 <div class="section" id="id3">
 <h3>SYCL runtime<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>

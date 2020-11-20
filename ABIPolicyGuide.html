@@ -137,10 +137,11 @@ can do it either manually, or by invoking the following command:</p>
 script automatically sorts symbols. This would allow developers to avoid
 large diffs and help maintainers identify the nature of ABI changes.</p>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">test/abi/layout*</span></code> and <code class="docutils literal notranslate"><span class="pre">test/abi/symbol_size*</span></code> are a group of tests to check
-the internal layout of some classes. The <code class="docutils literal notranslate"><span class="pre">layout*</span></code> tests check some of API
-classes for layout changes, while <code class="docutils literal notranslate"><span class="pre">symbol_size</span></code> only checks <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> for API
-classes. Changing the class layout is a breaking change.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test/abi/layout*</span></code> and <code class="docutils literal notranslate"><span class="pre">test/abi/symbol_size_alignment.cpp</span></code> are a group of
+tests to check the internal layout of some classes. The <code class="docutils literal notranslate"><span class="pre">layout*</span></code> tests check
+some of API classes for layout changes, while <code class="docutils literal notranslate"><span class="pre">symbol_size_alignment</span></code> only
+checks <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> and <code class="docutils literal notranslate"><span class="pre">alignof</span></code> for API classes. Changing the class layout is a
+breaking change.</p></li>
 </ul>
 </div>
 <div class="section" id="changing-abi">
