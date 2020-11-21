@@ -20,5 +20,6 @@ var pi__level__zero_8hpp =
     [ "_pi_sampler", "struct__pi__sampler.html", "struct__pi__sampler" ],
     [ "die", "pi__level__zero_8hpp.html#addeb84d9aa94ce57f216c82c6f1c3eae", null ],
     [ "pi_cast", "pi__level__zero_8hpp.html#acca4b7bd49a8623dffb5e76d4128fd43", null ],
-    [ "pi_cast", "pi__level__zero_8hpp.html#afdda4e227622fe8fecd0faeb00cd964d", null ]
+    [ "pi_cast", "pi__level__zero_8hpp.html#afdda4e227622fe8fecd0faeb00cd964d", null ],
+    [ "DynamicBatchStartSize", "pi__level__zero_8hpp.html#afdb5b7893f58b7a952e51f4e0ea1f2cf", null ]
 ];

@@ -81,6 +81,8 @@ var searchData=
   ['address_5fspace_5flist',['address_space_list',['../namespacecl_1_1sycl_1_1detail.html#a70f4ef27a74b64b9ffefbb908000da49',1,'cl::sycl::detail']]],
   ['addressing_5fmode',['addressing_mode',['../namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42df',1,'cl::sycl']]],
   ['adduser',['addUser',['../classcl_1_1sycl_1_1detail_1_1Command.html#adfe0f3989857b65ba6f3a06f64b37d60',1,'cl::sycl::detail::Command']]],
+  ['adjustbatchsizeforfullbatch',['adjustBatchSizeForFullBatch',['../struct__pi__queue.html#a9bb3761c3efd9fa4bf12a345ab3a2b45',1,'_pi_queue']]],
+  ['adjustbatchsizeforpartialbatch',['adjustBatchSizeForPartialBatch',['../struct__pi__queue.html#a58efbc58a34b60cb59f5896bf438e015',1,'_pi_queue']]],
   ['adjusteddim',['AdjustedDim',['../classcl_1_1sycl_1_1accessor.html#a51a6b50afcadf65cc8b8f9e3074bb7fe',1,'cl::sycl::accessor::AdjustedDim()'],['../classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aa47de423a08600aff8814997ea77827c',1,'cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder &gt;::AdjustedDim()'],['../classcl_1_1sycl_1_1host__accessor.html#aca5b114fc96271042b7b77ee2069c7f1',1,'cl::sycl::host_accessor::AdjustedDim()']]],
   ['adjustndrangeperkernel',['adjustNDRangePerKernel',['../namespacecl_1_1sycl_1_1detail.html#a35843ff50f01502809e89173773b75fb',1,'cl::sycl::detail']]],
   ['aliases_2ehpp',['aliases.hpp',['../aliases_8hpp.html',1,'']]],

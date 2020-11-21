@@ -514,7 +514,7 @@ var pi_8h =
     [ "piEventSetCallback", "pi_8h.html#a8f04272d7667fb2e7ffce8cad594304d", null ],
     [ "piEventSetStatus", "pi_8h.html#a9ead20441d27a81bc6b114b9dc8bdfcb", null ],
     [ "piEventsWait", "pi_8h.html#a894b90a8442143d0a17f895cab845108", null ],
-    [ "piextContextCreateWithNativeHandle", "pi_8h.html#a5b5c4fea45e7b936b692c31e10c1389b", null ],
+    [ "piextContextCreateWithNativeHandle", "pi_8h.html#a9e44add674222a23a12805b7342170ce", null ],
     [ "piextContextGetNativeHandle", "pi_8h.html#aa3fb8ea4d33b7f0656afa0fdfedee5d4", null ],
     [ "piextContextSetExtendedDeleter", "pi_8h.html#af778e984ded33ef185b3fae854e51ebf", null ],
     [ "piextDeviceCreateWithNativeHandle", "pi_8h.html#aac9aa7c4ce7b26e19db9d214d1991235", null ],

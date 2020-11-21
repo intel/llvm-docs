@@ -138,6 +138,7 @@ var searchData=
   ['dwordtype',['dwordtype',['../structdwordtype.html',1,'']]],
   ['dwordtype_3c_20int_20_3e',['dwordtype&lt; int &gt;',['../structdwordtype_3_01int_01_4.html',1,'']]],
   ['dwordtype_3c_20unsigned_20int_20_3e',['dwordtype&lt; unsigned int &gt;',['../structdwordtype_3_01unsigned_01int_01_4.html',1,'']]],
+  ['dynamicbatchstartsize',['DynamicBatchStartSize',['../pi__level__zero_8hpp.html#afdb5b7893f58b7a952e51f4e0ea1f2cf',1,'pi_level_zero.hpp']]],
   ['dynrtdevicebinaryimage',['DynRTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html',1,'cl::sycl::detail::DynRTDeviceBinaryImage'],['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#adb02446ac622be2261bab89132f32d55',1,'cl::sycl::detail::DynRTDeviceBinaryImage::DynRTDeviceBinaryImage()']]],
   ['execcgcommand',['ExecCGCommand',['../classcl_1_1sycl_1_1interop__handle.html#a4f69ba37a1747cab3361b014668d20be',1,'cl::sycl::interop_handle']]],
   ['getdevicefromhandler',['getDeviceFromHandler',['../classcl_1_1sycl_1_1handler.html#aa46bc683d37b6005434a0bceb5389f8c',1,'cl::sycl::handler']]],

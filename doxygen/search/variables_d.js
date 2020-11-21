@@ -8,5 +8,7 @@ var searchData=
   ['num_5fmip_5flevels',['num_mip_levels',['../struct__pi__image__desc.html#a47ba6a98f50fa7e00df451d339fa2602',1,'_pi_image_desc']]],
   ['num_5fsamples',['num_samples',['../struct__pi__image__desc.html#a9274a95755b8ccf2d5b3506acb77fb9a',1,'_pi_image_desc']]],
   ['numdevicebinaries',['NumDeviceBinaries',['../structpi__device__binaries__struct.html#a2ce1e03cf7aa6d02d8e293170ff83e64',1,'pi_device_binaries_struct']]],
+  ['numtimesclosedearly',['NumTimesClosedEarly',['../struct__pi__queue.html#a6377db0cb2d99b89298404e43b7f5876',1,'_pi_queue']]],
+  ['numtimesclosedfull',['NumTimesClosedFull',['../struct__pi__queue.html#a68d4f6b845f323d6200bbd6a24f6ac70',1,'_pi_queue']]],
   ['numworkgroups',['NumWorkGroups',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a35a6dbf8c6b0d99e92e2329c703a9ecd',1,'cl::sycl::detail::NDRDescT']]]
 ];

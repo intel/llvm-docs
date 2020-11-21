@@ -62,6 +62,7 @@ var searchData=
   ['use_5fmutex',['use_mutex',['../classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html',1,'cl::sycl::property::image::use_mutex'],['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html',1,'cl::sycl::property::buffer::use_mutex'],['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html#abb0d5dda1b2b15d91c4b56eba704bef2',1,'cl::sycl::property::buffer::use_mutex::use_mutex()'],['../classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html#a3cd14cb6996236a2cb38e43a918ba263',1,'cl::sycl::property::image::use_mutex::use_mutex()']]],
   ['use_5fpinned_5fhost_5fmemory',['use_pinned_host_memory',['../classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html',1,'cl::sycl::ext::oneapi::property::buffer']]],
   ['use_5fprimary_5fcontext',['use_primary_context',['../classcl_1_1sycl_1_1property_1_1context_1_1cuda_1_1use__primary__context.html',1,'cl::sycl::property::context::cuda']]],
+  ['usedynamicbatching',['UseDynamicBatching',['../struct__pi__queue.html#a6af2cdbd7aeab0fcf49544f7a4085b08',1,'_pi_queue']]],
   ['usehostptr',['useHostPtr',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a44e8a88cbc11da0b6442f70d92b1aa22',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['useprimarycontext',['UsePrimaryContext',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa5a4d7f27258e21fbf0d04c360281af39',1,'cl::sycl::detail']]],
   ['user_5fdata',['user_data',['../struct__pi__context_1_1deleter__data.html#a3022094b74324ad16a4c354ab4df373c',1,'_pi_context::deleter_data']]],

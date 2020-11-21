@@ -1,5 +1,15 @@
 var NAVTREEINDEX31 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html#a57ddf755d0c695b8dd3285621bdf3fea":[3,0,2,1,0,88,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_00_01param_01_4.html":[3,0,2,1,0,89],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_00_01param_01_4.html#ac02a8aed654a5f1b0ac2ffe32e7807d1":[3,0,2,1,0,89,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c.html":[3,0,2,1,0,90],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c.html#a4d6d8be54ed0c8beddcd9d9f9b980c79":[3,0,2,1,0,90,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__propert92c98b072c9eff0f2917b3f636f829a4.html":[3,0,2,1,0,91],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__propert92c98b072c9eff0f2917b3f636f829a4.html#a5d8c62a74e49eeb50dc6283701afe4a5":[3,0,2,1,0,91,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01size__t_01_4_00_01info_1_13191b16e1a18b3afb05e43ff5c7c4594.html":[3,0,2,1,0,92],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01size__t_01_4_00_01info_1_13191b16e1a18b3afb05e43ff5c7c4594.html#a44fff5a9effbc3de2878799ae4d1b398":[3,0,2,1,0,92,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01in75b6f51f6969db253458169249211642.html":[3,0,2,1,0,93],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01in75b6f51f6969db253458169249211642.html#aa498f686e5ad5e68908cfe07025aafb5":[3,0,2,1,0,93,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html":[3,0,2,1,0,94],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01info_1_1device_1_1extensions_01_4.html#a0297a2a8b2f83f31b8880d18fe1d9d48":[3,0,2,1,0,94,0],
@@ -239,15 +249,5 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01program_01_4.html":[3,0,2,1,45],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01program_01_4.html#ae42dc6f36297eee2c8815f149be90cb0":[3,0,2,1,45,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html":[3,0,2,1,46],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html#a7a89079fccc01970c51c2f11dc8762f2":[3,0,2,1,46,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html":[3,0,2,1,48],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html#a7cde3937196c36822cb694f8b8256d1e":[3,0,2,1,48,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html":[3,0,2,1,47],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_090703506e1a912e6d946205874647eda.html#a3aa462cb8497155b005a55cecf776faf":[3,0,2,1,47,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01context_01_4.html":[3,0,2,1,49],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01context_01_4.html#aa45fd5e42ac471017351a8912ab976b1":[3,0,2,1,49,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html":[3,0,2,1,50],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01device_01_4.html#ab5d6be889a88ad49f584b0aa763f025d":[3,0,2,1,50,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html":[3,0,2,1,51],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01platform_01_4.html#a226f992d4457e159a946bcfb5a8d76dd":[3,0,2,1,51,0]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html#a7a89079fccc01970c51c2f11dc8762f2":[3,0,2,1,46,0]
 };

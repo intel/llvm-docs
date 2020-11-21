@@ -1,5 +1,15 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html#a4ea04aa5d8c402c4565fe308bb378470":[3,0,2,1,0,137,0],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html":[3,0,2,1,0,181],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html":[3,0,2,1,0,182],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html":[3,0,2,1,0,183],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__offset_1_1instance_3_4_01_4.html":[3,0,2,1,0,184],
+"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html":[3,0,2,1,0,185],
+"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html#a5ed01c123dbcc1e4a116442165056a08":[3,0,2,1,0,185,0],
+"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html":[3,0,2,1,0,186],
+"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html#a985e0d14e5f9002073229aaeb6ad08e1":[3,0,2,1,0,186,0],
+"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html":[3,0,2,1,0,187],
 "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html#abcec814c332318bca3face510e85d0a8":[3,0,2,1,0,187,0],
 "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp.html":[3,0,2,1,0,188],
 "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html":[3,0,2,1,0,189],
@@ -239,15 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01param_01_4.html#a326c3b5b0389ccde34e6425c823a3000":[3,0,2,1,0,85,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1execution__capabil938d1dd09e6f4f569ca0059cc4b619fd.html":[3,0,2,1,0,87],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1execution__capabil938d1dd09e6f4f569ca0059cc4b619fd.html#a1a4f631b7d5cd9ee7ac693dfdc54af35":[3,0,2,1,0,87,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html":[3,0,2,1,0,88],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html#a57ddf755d0c695b8dd3285621bdf3fea":[3,0,2,1,0,88,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_00_01param_01_4.html":[3,0,2,1,0,89],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_00_01param_01_4.html#ac02a8aed654a5f1b0ac2ffe32e7807d1":[3,0,2,1,0,89,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c.html":[3,0,2,1,0,90],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c.html#a4d6d8be54ed0c8beddcd9d9f9b980c79":[3,0,2,1,0,90,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__propert92c98b072c9eff0f2917b3f636f829a4.html":[3,0,2,1,0,91],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__propert92c98b072c9eff0f2917b3f636f829a4.html#a5d8c62a74e49eeb50dc6283701afe4a5":[3,0,2,1,0,91,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01size__t_01_4_00_01info_1_13191b16e1a18b3afb05e43ff5c7c4594.html":[3,0,2,1,0,92],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01size__t_01_4_00_01info_1_13191b16e1a18b3afb05e43ff5c7c4594.html#a44fff5a9effbc3de2878799ae4d1b398":[3,0,2,1,0,92,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01string__class_01_4_00_01in75b6f51f6969db253458169249211642.html":[3,0,2,1,0,93]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html":[3,0,2,1,0,88]
 };

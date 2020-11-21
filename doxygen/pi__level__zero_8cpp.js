@@ -51,7 +51,7 @@ var pi__level__zero_8cpp =
     [ "piEventSetCallback", "pi__level__zero_8cpp.html#a14518a958bc763670686d31317cfb227", null ],
     [ "piEventSetStatus", "pi__level__zero_8cpp.html#a0781eb4aeacb441573364a3e5af2e6b4", null ],
     [ "piEventsWait", "pi__level__zero_8cpp.html#a9cb225c4b80dce858236382d52196866", null ],
-    [ "piextContextCreateWithNativeHandle", "pi__level__zero_8cpp.html#a757d24375e7867b7a9fb1eceaee6e532", null ],
+    [ "piextContextCreateWithNativeHandle", "pi__level__zero_8cpp.html#adb08b274a6830e48aea7b82211146506", null ],
     [ "piextContextGetNativeHandle", "pi__level__zero_8cpp.html#aaeb0e6a6278343fa221cb458c362227f", null ],
     [ "piextContextSetExtendedDeleter", "pi__level__zero_8cpp.html#a0099a1e48e7d5ff6258a2e8305c91385", null ],
     [ "piextDeviceCreateWithNativeHandle", "pi__level__zero_8cpp.html#a11d60be66971d23bc7fcdad81a455c25", null ],

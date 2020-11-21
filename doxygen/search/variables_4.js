@@ -33,5 +33,6 @@ var searchData=
   ['dims',['Dims',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a9a7484635bff0a8f568a0146699d97a2',1,'cl::sycl::detail::NDRDescT']]],
   ['dirsep',['DirSep',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#adb0fd038c22fa4cf2b01f92b72006296',1,'cl::sycl::detail::OSUtil']]],
   ['dot',['Dot',['../namespacecl_1_1____host__std.html#ac5bdf0007bec02e0a301d7936e8e6d19',1,'cl::__host_std']]],
-  ['dummymodulehandle',['DummyModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#ac103c42a32ed4c27ce6f566e7659d184',1,'cl::sycl::detail::OSUtil']]]
+  ['dummymodulehandle',['DummyModuleHandle',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html#ac103c42a32ed4c27ce6f566e7659d184',1,'cl::sycl::detail::OSUtil']]],
+  ['dynamicbatchstartsize',['DynamicBatchStartSize',['../pi__level__zero_8hpp.html#afdb5b7893f58b7a952e51f4e0ea1f2cf',1,'pi_level_zero.hpp']]]
 ];

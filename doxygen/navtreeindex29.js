@@ -1,5 +1,15 @@
 var NAVTREEINDEX29 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html#a0081cbf260ead288c0b55c548244e63c":[3,0,2,1,3,0,0,12,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html":[3,0,2,1,3,0,0,13],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html#a1bace3425b04fa2f19c20197279d06a3":[3,0,2,1,3,0,0,13,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type.html":[3,0,2,1,3,0,0,14],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,15],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html#abef405ccc79f58b5e83cf44ca0022bcf":[3,0,2,1,3,0,0,15,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,16],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html#a0c4c84a0c72a21d516dc2345d7ccdd0d":[3,0,2,1,3,0,0,16,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__df__type.html":[3,0,2,1,3,0,0,17],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__dword__type.html":[3,0,2,1,3,0,0,18],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__dword__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,19],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__dword__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html#ac750786877f09d7530a089878dd3d80a":[3,0,2,1,3,0,0,19,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__dword__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,20],
@@ -239,15 +249,5 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html#a9a4512c9427672c81b65731f3340b0b5":[3,0,2,1,0,135,0],
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html":[3,0,2,1,0,136],
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html#af38b9888ac7e567de49c9c97a984d0d4":[3,0,2,1,0,136,0],
-"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html":[3,0,2,1,0,137],
-"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html#a4ea04aa5d8c402c4565fe308bb378470":[3,0,2,1,0,137,0],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html":[3,0,2,1,0,181],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html":[3,0,2,1,0,182],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html":[3,0,2,1,0,183],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__offset_1_1instance_3_4_01_4.html":[3,0,2,1,0,184],
-"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html":[3,0,2,1,0,185],
-"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html#a5ed01c123dbcc1e4a116442165056a08":[3,0,2,1,0,185,0],
-"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html":[3,0,2,1,0,186],
-"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html#a985e0d14e5f9002073229aaeb6ad08e1":[3,0,2,1,0,186,0],
-"structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html":[3,0,2,1,0,187]
+"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html":[3,0,2,1,0,137]
 };
