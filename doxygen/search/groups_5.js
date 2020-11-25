@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['the_20plugin_20interface',['The Plugin Interface',['../group__sycl__pi.html',1,'']]]
+  ['raw_20send_20apis',['Raw send APIs',['../group__sycl__esimd__raw__send__api.html',1,'']]]
 ];

@@ -22,7 +22,7 @@ var searchData=
   ['cgprefetchusm',['CGPrefetchUSM',['../classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html#a142165c53de870d38b60d21a7612c819',1,'cl::sycl::detail::CGPrefetchUSM']]],
   ['cgtypetostring',['cgTypeToString',['../namespacecl_1_1sycl_1_1detail.html#aab1bfd598a112b6d4dbb5cdfa57119fb',1,'cl::sycl::detail']]],
   ['cgupdatehost',['CGUpdateHost',['../classcl_1_1sycl_1_1detail_1_1CGUpdateHost.html#a05f3d73aa58c3d4dcfcd586e98bc69ee',1,'cl::sycl::detail::CGUpdateHost']]],
-  ['check_5fatomic',['check_atomic',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aca8e682732236f9de3af6602f44adbd4',1,'cl::sycl::INTEL::gpu']]],
+  ['check_5fatomic',['check_atomic',['../group__sycl__esimd.html#gaca8e682732236f9de3af6602f44adbd4',1,'cl::sycl::INTEL::gpu']]],
   ['check_5fdimension',['check_dimension',['../classcl_1_1sycl_1_1detail_1_1array.html#a24306317e6ea043918bced63a60ce7ac',1,'cl::sycl::detail::array']]],
   ['check_5fvector_5fsize',['check_vector_size',['../namespacecl_1_1sycl_1_1detail.html#aa37a2fd35ebd4bc7ecc1882fe3bd8808',1,'cl::sycl::detail']]],
   ['checkany',['checkAny',['../namespacecl_1_1sycl_1_1detail.html#ac780ec345b19ea51440d5816e62d650a',1,'cl::sycl::detail']]],

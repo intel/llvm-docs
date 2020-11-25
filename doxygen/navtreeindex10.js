@@ -249,5 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1stream__impl.html#acc6b99c3a5e8c96b8d165ee24c957e60":[3,0,2,1,0,292,0],
 "classcl_1_1sycl_1_1detail_1_1stream__impl.html#ae85246431e5b3e859d33e0abf726a3f4":[3,0,2,1,0,292,4],
 "classcl_1_1sycl_1_1detail_1_1stream__impl.html#afa99f3bf0bf4db4ff6bcbd631c80f883":[3,0,2,1,0,292,5],
-"classcl_1_1sycl_1_1device.html":[1,1,4]
+"classcl_1_1sycl_1_1device.html":[1,2,4]
 };

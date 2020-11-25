@@ -26,5 +26,5 @@ var classcl_1_1sycl_1_1detail_1_1Scheduler =
     [ "MGraphBuilder", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e", null ],
     [ "MGraphLock", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aa1d2966e63f1bb0716ce1c0c6d270470", null ],
     [ "StreamBuffersPool", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3e7f0b212e78ad11f9f8c9dc43b64496", null ],
-    [ "StreamBuffersPoolMutex", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a8cc93813de15109d99421ada00dd3345", null ]
+    [ "StreamBuffersPoolMutex", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ad076232447dc5700d3821c487e6c4bab", null ]
 ];

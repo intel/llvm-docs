@@ -36,7 +36,7 @@ var searchData=
   ['channelmasktype',['ChannelMaskType',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a618d115f4b5266a64f76c12eb96c52ed',1,'cl::sycl::INTEL::gpu']]],
   ['char',['Char',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8e95e84813830072b7516cfaa7dbc1a9',1,'cl::sycl::detail::PlatformUtil']]],
   ['char_5flist',['char_list',['../namespacecl_1_1sycl_1_1detail_1_1gtl.html#a561c6f1b5c341bff0a8c79a3335e2303',1,'cl::sycl::detail::gtl']]],
-  ['check_5fatomic',['check_atomic',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aca8e682732236f9de3af6602f44adbd4',1,'cl::sycl::INTEL::gpu']]],
+  ['check_5fatomic',['check_atomic',['../group__sycl__esimd.html#gaca8e682732236f9de3af6602f44adbd4',1,'cl::sycl::INTEL::gpu']]],
   ['check_5fdimension',['check_dimension',['../classcl_1_1sycl_1_1detail_1_1array.html#a24306317e6ea043918bced63a60ce7ac',1,'cl::sycl::detail::array']]],
   ['check_5ferr_5fset_5fnull_5fret',['CHECK_ERR_SET_NULL_RET',['../pi__opencl_8cpp.html#a856d2b442db17d79110cea6b01c1af40',1,'pi_opencl.cpp']]],
   ['check_5ffn_5fsignature',['check_fn_signature',['../structcl_1_1sycl_1_1detail_1_1check__fn__signature.html',1,'cl::sycl::detail']]],

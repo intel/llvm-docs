@@ -7,8 +7,6 @@ var esimd__types_8hpp =
     [ "is_vectorizable< bool >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable_3_01bool_01_4.html", null ],
     [ "is_vectorizable_v", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable__v.html", null ],
     [ "vector_type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1vector__type.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1vector__type" ],
-    [ "simd", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd" ],
-    [ "simd_view", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view" ],
     [ "compute_format_type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type.html", null ],
     [ "compute_format_type< simd< Ty, N >, EltTy >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4" ],
     [ "compute_format_type< simd_view< BaseTy, RegionTy >, EltTy >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4" ],

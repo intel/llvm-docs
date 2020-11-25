@@ -1,8 +1,8 @@
 var searchData=
 [
   ['g',['g',['../structcl_1_1sycl_1_1elem.html#a43b1fcb5620d37c29c0bb888c860ad40',1,'cl::sycl::elem']]],
-  ['gather',['gather',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a6b5a8de9a03e06a22dbbe9905369d409',1,'cl::sycl::INTEL::gpu::gather(T *p, simd&lt; uint32_t, n &gt; offsets, simd&lt; uint16_t, n &gt; pred=1)'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aded0eb7bb450e7155f6a635707f044b2',1,'cl::sycl::INTEL::gpu::gather(AccessorTy acc, simd&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0)']]],
-  ['gather4',['gather4',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a7abd112b3b509b1c65732a195207bf09',1,'cl::sycl::INTEL::gpu']]],
+  ['gather',['gather',['../group__sycl__esimd.html#ga6b5a8de9a03e06a22dbbe9905369d409',1,'cl::sycl::INTEL::gpu::gather(T *p, simd&lt; uint32_t, n &gt; offsets, simd&lt; uint16_t, n &gt; pred=1)'],['../group__sycl__esimd.html#gaded0eb7bb450e7155f6a635707f044b2',1,'cl::sycl::INTEL::gpu::gather(AccessorTy acc, simd&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0)']]],
+  ['gather4',['gather4',['../group__sycl__esimd.html#ga7abd112b3b509b1c65732a195207bf09',1,'cl::sycl::INTEL::gpu']]],
   ['gcitt',['GCItT',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html#a2769e1b23229ff90d54d463984dc7f7c',1,'cl::sycl::detail::LeavesCollection::IteratorT']]],
   ['generatebucketsizes',['generateBucketSizes',['../namespacesettings.html#a7b18449abb607b020268926dc0c0b0cc',1,'settings']]],
   ['generic_5ftype_5flists_2ehpp',['generic_type_lists.hpp',['../generic__type__lists_8hpp.html',1,'']]],
