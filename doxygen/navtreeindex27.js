@@ -1,15 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"stream_8hpp.html#a526d77bfbbdc547b67b8d933881da090":[4,0,0,0,1,46,26],
-"stream_8hpp.html#a545592214bd11bf32d6f6db395411b7f":[4,0,0,0,1,46,39],
-"stream_8hpp.html#a5b190eaea413280904b163fbf1372ee4":[4,0,0,0,1,46,69],
-"stream_8hpp.html#a5b64cdfb0fcbc2cc79c04074cc8a7ff5":[4,0,0,0,1,46,14],
-"stream_8hpp.html#a5bd62218edcc9ea0d19db27d2894493c":[4,0,0,0,1,46,16],
-"stream_8hpp.html#a61f34025dbddcd699f0fd85ccd2f6730":[4,0,0,0,1,46,42],
-"stream_8hpp.html#a663a8b57a87e5860efe093c6d75d63e1":[4,0,0,0,1,46,29],
-"stream_8hpp.html#a68bc80027aa5a8875dde00986625db33":[4,0,0,0,1,46,90],
-"stream_8hpp.html#a6917820bc96aa0484d140def082005d4":[4,0,0,0,1,46,65],
-"stream_8hpp.html#a6a0f7a1d54912c0aef6d5e40f2471772":[4,0,0,0,1,46,86],
 "stream_8hpp.html#a6cb0dabb25ba16236b0711c633d75176":[4,0,0,0,1,46,5],
 "stream_8hpp.html#a6d339d0ea9dfaeb97d240e52ccf8e5f3":[4,0,0,0,1,46,73],
 "stream_8hpp.html#a6e2ccb305997f3f195ed52c2c1ac5d3a":[4,0,0,0,1,46,54],
@@ -249,5 +239,15 @@ var NAVTREEINDEX27 =
 "struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d":[3,0,19,0,1],
 "struct__pi__kernel_1_1arguments.html#aa1b075a29d40995b403582d209ca7f14":[3,0,19,0,7],
 "struct__pi__kernel_1_1arguments.html#aa5e150dedfd765cdc606578f12d249d3":[3,0,19,0,15],
-"struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9":[3,0,19,0,13]
+"struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9":[3,0,19,0,13],
+"struct__pi__kernel_1_1arguments.html#ab45f107f6ff96c5b075604f4dd2586e6":[3,0,19,0,5],
+"struct__pi__kernel_1_1arguments.html#ac153603b456fc27c19916362eec6fa9f":[3,0,19,0,11],
+"struct__pi__kernel_1_1arguments.html#ae34c341ba210edf6e763e8bcf0f3b083":[3,0,19,0,3],
+"struct__pi__mem.html":[3,0,20],
+"struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0":[3,0,20,27],
+"struct__pi__mem.html#a1048ed41565664dbdbad0db2218b2fad":[3,0,20,11],
+"struct__pi__mem.html#a147ef155016bcbaa46a525b09713e863":[3,0,20,8],
+"struct__pi__mem.html#a15063ff84e67289129e03decb8891bcd":[3,0,20,7],
+"struct__pi__mem.html#a275e89afd9e097ec16265868d932032f":[3,0,20,12],
+"struct__pi__mem.html#a3aa929377c74539593f2a2c6f6822389":[3,0,20,15]
 };

@@ -50,7 +50,7 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "helpers.cpp", "helpers_8cpp.html", "helpers_8cpp" ],
     [ "image_accessor_util.cpp", "image__accessor__util_8cpp.html", "image__accessor__util_8cpp" ],
     [ "image_impl.cpp", "image__impl_8cpp.html", "image__impl_8cpp" ],
-    [ "kernel_impl.cpp", "kernel__impl_8cpp.html", "kernel__impl_8cpp" ],
+    [ "kernel_impl.cpp", "kernel__impl_8cpp.html", null ],
     [ "kernel_impl.hpp", "kernel__impl_8hpp.html", "kernel__impl_8hpp" ],
     [ "kernel_info.hpp", "kernel__info_8hpp.html", "kernel__info_8hpp" ],
     [ "kernel_program_cache.cpp", "kernel__program__cache_8cpp.html", null ],
