@@ -13,5 +13,7 @@ var dir_54172b97b954fcfa28e920140981ace2 =
     [ "scheduler.cpp", "scheduler_8cpp.html", "scheduler_8cpp" ],
     [ "scheduler.hpp", "scheduler_8hpp.html", [
       [ "StreamBuffers", "structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html", "structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers" ]
-    ] ]
+    ] ],
+    [ "scheduler_helpers.cpp", "scheduler__helpers_8cpp.html", "scheduler__helpers_8cpp" ],
+    [ "scheduler_helpers.hpp", "scheduler__helpers_8hpp.html", "scheduler__helpers_8hpp" ]
 ];

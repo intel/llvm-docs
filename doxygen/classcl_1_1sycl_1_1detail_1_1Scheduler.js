@@ -21,6 +21,7 @@ var classcl_1_1sycl_1_1detail_1_1Scheduler =
     [ "waitForRecordToFinish", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a4bfeba3b1690361a7b7987dbb941e592", null ],
     [ "Command", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a62a7fc89f0ee4604e3ccab9b6b6a343f", null ],
     [ "DispatchHostTask", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ac24921e3619f5c224cf67dc02a0d6b76", null ],
+    [ "initStream", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a8f99db988226e336bff4e17f446b10db", null ],
     [ "stream_impl", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae5aea7766fbe6d37849f45208e705cb9", null ],
     [ "DefaultHostQueue", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902", null ],
     [ "MGraphBuilder", "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e", null ],

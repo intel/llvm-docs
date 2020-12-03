@@ -49,6 +49,7 @@ var searchData=
   ['setcontextimpl',['setContextImpl',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a3b346f45adee9cff19fdbd92c29c31d7',1,'cl::sycl::detail::event_impl']]],
   ['setcontextptr',['setContextPtr',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ab44428de6474c687218af6bea745ce91',1,'cl::sycl::detail::KernelProgramCache']]],
   ['setenvvar',['setEnvVar',['../pi__level__zero_8cpp.html#a248a4e96fb322d15f762f0d4925c34d8',1,'pi_level_zero.cpp']]],
+  ['setflushbufoffset',['SetFlushBufOffset',['../namespacecl_1_1sycl_1_1detail.html#a4643f3a2e8ae78c89d4ba44b8c97f737',1,'cl::sycl::detail']]],
   ['setiterator',['setIterator',['../classSlab.html#ab4c732be9fe460c8c1749118275049e1',1,'Slab']]],
   ['setlogicallocalid',['setLogicalLocalID',['../classcl_1_1sycl_1_1h__item.html#ad9356ff638b71e4d881b6c7cecf50bff',1,'cl::sycl::h_item']]],
   ['setnumworkgroups',['setNumWorkGroups',['../classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a3467001047f91415d332aeb1f3059701',1,'cl::sycl::detail::NDRDescT']]],

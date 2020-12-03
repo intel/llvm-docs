@@ -5,6 +5,7 @@ var searchData=
   ['flags',['flags',['../struct__pi__offload__entry__struct.html#a76a3565f400c268d36cdadc8b893f4c9',1,'_pi_offload_entry_struct']]],
   ['floatfield',['FloatField',['../namespacecl_1_1sycl_1_1detail.html#a93266ef2005b027ab9bb0f64f7d52b23',1,'cl::sycl::detail']]],
   ['flush',['flush',['../namespacecl_1_1sycl.html#a5b190eaea413280904b163fbf1372ee4',1,'cl::sycl']]],
+  ['flush_5fbuf_5foffset_5fsize',['FLUSH_BUF_OFFSET_SIZE',['../namespacecl_1_1sycl_1_1detail.html#a073d76de79e0152921694a421983e351',1,'cl::sycl::detail']]],
   ['flushbuf',['FlushBuf',['../structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#acff516ff54ecdfa15efbf088978659dc',1,'cl::sycl::detail::Scheduler::StreamBuffers']]],
   ['format',['Format',['../structpi__device__binary__struct.html#ad3b8516afd31a369b2d8474a121cbc90',1,'pi_device_binary_struct::Format()'],['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aad75dcd40f639e866c0050fb5b51c6ce',1,'cl::sycl::detail::pi::DeviceBinaryImage::Format()']]],
   ['found',['found',['../structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#afbcb3def8ad7a611db8c2654f186cb68',1,'cl::sycl::detail::make_larger_impl&lt; vec&lt; T, N &gt;, vec&lt; T, N &gt; &gt;']]],

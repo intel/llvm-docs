@@ -111,6 +111,7 @@ var searchData=
   ['max_5fparameter_5fsize',['max_parameter_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a8be1955b7a93031d5873b22f51282bb5',1,'cl::sycl::info']]],
   ['max_5fread_5fimage_5fargs',['max_read_image_args',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a9508de1620158db81895c5bc47c954bf',1,'cl::sycl::info']]],
   ['max_5fsamplers',['max_samplers',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a2b706535abebfe1ef0918595d049a0ba',1,'cl::sycl::info']]],
+  ['max_5fstatement_5fsize',['MAX_STATEMENT_SIZE',['../namespacecl_1_1sycl.html#aec6cdc78a5791de67880431c926fa346',1,'cl::sycl']]],
   ['max_5fsub_5fgroup_5fsize',['max_sub_group_size',['../namespacecl_1_1sycl_1_1info.html#ab0e8864b7e9164ad7eb7114b6ee2e1ca',1,'cl::sycl::info::max_sub_group_size()'],['../namespacecl_1_1sycl_1_1info.html#a4611a29fbdac815e21d471f9fba8f5c6a282399359d32926c1f44fe18e0189064',1,'cl::sycl::info::max_sub_group_size()'],['../namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a282399359d32926c1f44fe18e0189064',1,'cl::sycl::info::max_sub_group_size()']]],
   ['max_5fv',['max_v',['../namespacecl_1_1sycl_1_1detail.html#ad7bbfd66afb7ba87dcfd43c3e0240919',1,'cl::sycl::detail']]],
   ['max_5fwork_5fgroup_5fsize',['max_work_group_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ae94dc84a7270ef41c298c36c71705aa9',1,'cl::sycl::info']]],

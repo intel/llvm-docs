@@ -78,6 +78,7 @@ var searchData=
   ['initializedval_3c_202_2c_20t_20_3e',['InitializedVal&lt; 2, T &gt;',['../structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html',1,'cl::sycl::detail']]],
   ['initializedval_3c_203_2c_20t_20_3e',['InitializedVal&lt; 3, T &gt;',['../structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html',1,'cl::sycl::detail']]],
   ['initializeplugins',['initializePlugins',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#acab66c67ecf6ce5d442f030710a0722a',1,'cl::sycl::detail::pi']]],
+  ['initstream',['initStream',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#a8f99db988226e336bff4e17f446b10db',1,'cl::sycl::detail::Scheduler::initStream()'],['../namespacecl_1_1sycl_1_1detail.html#a9c322d202ad36693885776a35a5abddf',1,'cl::sycl::detail::initStream()']]],
   ['initvalue',['initValue',['../namespacecl_1_1sycl_1_1detail.html#a1f241bbf862f5877b46f9b764fcf2127',1,'cl::sycl::detail']]],
   ['inlinevariablehelper',['InlineVariableHelper',['../structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html',1,'cl::sycl::detail']]],
   ['inorder',['InOrder',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfdaa176ead5f066b47ab35b35fc1f6d437e8',1,'cl::sycl::detail']]],

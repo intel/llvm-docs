@@ -313,6 +313,7 @@ var searchData=
   ['getextfuncfromcontext',['getExtFuncFromContext',['../pi__opencl_8cpp.html#a5cad0a58d3e512c473b53ff773178101',1,'pi_opencl.cpp']]],
   ['getfill',['getFill',['../classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#a2b953e155f674130dfb6c3d5901b24c7',1,'cl::sycl::detail::CGFillUSM']]],
   ['getfiltermutex',['getFilterMutex',['../classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a34404566dfa929fef9194f2f684a77a4',1,'cl::sycl::detail::GlobalHandler']]],
+  ['getflushbufoffset',['GetFlushBufOffset',['../namespacecl_1_1sycl_1_1detail.html#ad6e34790ec846eea265ee55504c2e705',1,'cl::sycl::detail']]],
   ['getformat',['getFormat',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac28251854e81b5ee223d9e15b68614da',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['getformatstr',['getFormatStr',['../namespacecl_1_1sycl_1_1detail.html#a8d920ea65962dbd1901ac90f0c81aeb3',1,'cl::sycl::detail']]],
   ['getfreechunk',['getFreeChunk',['../classSlab.html#aa106e28efd51bfd4ffd81957b632ab1f',1,'Slab']]],

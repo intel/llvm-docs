@@ -1,5 +1,17 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1DepDesc.html#abd074562572052e2c252a03484c5cee3":[3,0,2,1,0,55,2],
+"structcl_1_1sycl_1_1detail_1_1DevDescT.html":[3,0,2,1,0,56],
+"structcl_1_1sycl_1_1detail_1_1DevDescT.html#a0de3d29c678061b5ec73806b437d5339":[3,0,2,1,0,56,2],
+"structcl_1_1sycl_1_1detail_1_1DevDescT.html#a64a41847870f1a0e7a5d5da4407b6256":[3,0,2,1,0,56,1],
+"structcl_1_1sycl_1_1detail_1_1DevDescT.html#a8bdbac0a0c70958e54826e45a518f346":[3,0,2,1,0,56,0],
+"structcl_1_1sycl_1_1detail_1_1DevDescT.html#aa7a6dec067c6c42a1ba5fad5b8a33a32":[3,0,2,1,0,56,3],
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html":[3,0,2,1,0,63],
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277da":[3,0,2,1,0,63,0],
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa04375079fd08ad82a0bd3cfbb712ee30":[3,0,2,1,0,63,0,2],
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa0a7c9fe2f517c23caf1eace1f94addb7":[3,0,2,1,0,63,0,0],
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daa9bdbfe7b23293f67f5f91a5b07f1077c":[3,0,2,1,0,63,0,3],
+"structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277daaca1601739a416250c95ff4718b6c9826":[3,0,2,1,0,63,0,1],
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a6a8695e06aa1d24a384f1ac3decb86f5":[3,0,2,1,0,63,2],
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a7561c535f5efdcd289a3d9929a5db06e":[3,0,2,1,0,63,3],
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a8df7454bd622da6ded7b9a181cf97eb7":[3,0,2,1,0,63,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1find__type.html#a9d6233139bf7c7d1fe4f1c0c758bc7ae":[3,0,2,1,0,67,2],
 "structcl_1_1sycl_1_1detail_1_1find__type.html#ab12bc2af76be051d2080007ae6b72669":[3,0,2,1,0,67,1],
 "structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html":[3,0,2,1,0,68],
-"structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html#a2422151a748b801fd7f8da335e9e85ad":[3,0,2,1,0,68,0],
-"structcl_1_1sycl_1_1detail_1_1get__context__info.html":[3,0,2,1,0,69],
-"structcl_1_1sycl_1_1detail_1_1get__context__info.html#aed1da39df2ab5d95e40f6ff57881b580":[3,0,2,1,0,69,0],
-"structcl_1_1sycl_1_1detail_1_1get__context__info.html#afb5e0f2b83bd4b9dd4dcebe7d7cdfa42":[3,0,2,1,0,69,1],
-"structcl_1_1sycl_1_1detail_1_1get__device__info.html":[3,0,2,1,0,70],
-"structcl_1_1sycl_1_1detail_1_1get__device__info.html#ae51ce11430888973a2febfdc1cc61866":[3,0,2,1,0,70,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01T_00_01info_1_1device_1_1parent__device_01_4.html":[3,0,2,1,0,86],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01T_00_01info_1_1device_1_1parent__device_01_4.html#a0f182a50168d56ba508aed11468c8642":[3,0,2,1,0,86,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html":[3,0,2,1,0,71],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html#acfcd8dac5b3ffdd0fd9e828fde952015":[3,0,2,1,0,71,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html":[3,0,2,1,0,72],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html#a3c22a919abd5b7939735fb162d93f761":[3,0,2,1,0,72,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__device__allocations_01_4.html":[3,0,2,1,0,73]
+"structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html#a2422151a748b801fd7f8da335e9e85ad":[3,0,2,1,0,68,0]
 };
