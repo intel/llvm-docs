@@ -1,5 +1,6 @@
 var NAVTREEINDEX27 =
 {
+"stream_8hpp.html#a4e4a5844e6d135d110b40da662a6aa75":[4,0,0,0,1,46,63],
 "stream_8hpp.html#a526d77bfbbdc547b67b8d933881da090":[4,0,0,0,1,46,27],
 "stream_8hpp.html#a545592214bd11bf32d6f6db395411b7f":[4,0,0,0,1,46,40],
 "stream_8hpp.html#a5b190eaea413280904b163fbf1372ee4":[4,0,0,0,1,46,71],
@@ -248,6 +249,5 @@ var NAVTREEINDEX27 =
 "struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8":[3,0,19,0,6],
 "struct__pi__kernel_1_1arguments.html#a470d38fd59abaa10e15fdbdbcbc0ccaf":[3,0,19,0,8],
 "struct__pi__kernel_1_1arguments.html#a61e2f738a9f355cba598336de7f37b3d":[3,0,19,0,2],
-"struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d":[3,0,19,0,1],
-"struct__pi__kernel_1_1arguments.html#aa1b075a29d40995b403582d209ca7f14":[3,0,19,0,7]
+"struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d":[3,0,19,0,1]
 };
