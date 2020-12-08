@@ -11,6 +11,7 @@ var struct__pi__context =
     [ "_pi_context", "struct__pi__context.html#a1510add9b66ee5fdf84f41b8a197e0e1", null ],
     [ "decrement_reference_count", "struct__pi__context.html#a7299c02da0e3d6f14c31d4019919c466", null ],
     [ "decrementAliveEventsInPool", "struct__pi__context.html#a9d1f159cce85829c96898d9ef3123716", null ],
+    [ "finalize", "struct__pi__context.html#a267920a9c97b33dbc59a034183f3a938", null ],
     [ "get", "struct__pi__context.html#a3d64a8851d139de4d1c29a331b53a962", null ],
     [ "get_device", "struct__pi__context.html#af08cf83490887848df4ada9d3f465916", null ],
     [ "get_reference_count", "struct__pi__context.html#af56ff0c4b9c8cfa11218d62fc91a54f5", null ],

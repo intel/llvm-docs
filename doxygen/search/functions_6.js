@@ -19,6 +19,7 @@ var searchData=
   ['filter_5fselector',['filter_selector',['../classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html#a19bc0403e0c1ba893336d8bdc3cb7992',1,'cl::sycl::ONEAPI::filter_selector']]],
   ['filter_5fselector_5fimpl',['filter_selector_impl',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#a2b302319558c8a2b7a4b1b99bfcc12f3',1,'cl::sycl::ONEAPI::detail::filter_selector_impl']]],
   ['filterallowlist',['filterAllowList',['../namespacecl_1_1sycl_1_1detail.html#ad0846abb3ec30b307b798fafc62a962d',1,'cl::sycl::detail']]],
+  ['finalize',['finalize',['../struct__pi__context.html#a267920a9c97b33dbc59a034183f3a938',1,'_pi_context']]],
   ['findallocaforreq',['findAllocaForReq',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#ada54af5552da8a541eef3a9cad5cb21c',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['finddepforrecord',['findDepForRecord',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afe96f230f3acb23a552c51869726851a',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['findplugins',['findPlugins',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a2272ac12293db6e5e64527c8c3291f33',1,'cl::sycl::detail::pi']]],
