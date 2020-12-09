@@ -1,5 +1,16 @@
 var NAVTREEINDEX28 =
 {
+"struct__pi__kernel.html#afb1f0e36d8ff9b93ad5e6aec68928280":[3,0,19,9],
+"struct__pi__kernel_1_1arguments.html":[3,0,19,0],
+"struct__pi__kernel_1_1arguments.html#a06c967e47bd96dc18048b8d96f5014ca":[3,0,19,0,4],
+"struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c":[3,0,19,0,12],
+"struct__pi__kernel_1_1arguments.html#a13ec3fc0e124184dfad11bcf40b19ef6":[3,0,19,0,10],
+"struct__pi__kernel_1_1arguments.html#a1985c5423dd1546a76a8feffc0bef40b":[3,0,19,0,0],
+"struct__pi__kernel_1_1arguments.html#a230fcd08f58246d38d56a1328a435114":[3,0,19,0,14],
+"struct__pi__kernel_1_1arguments.html#a2f34c5c75b081756a86cd1500b64f866":[3,0,19,0,9],
+"struct__pi__kernel_1_1arguments.html#a357ee4a9e94d6639dd21be2ffa4b83e8":[3,0,19,0,6],
+"struct__pi__kernel_1_1arguments.html#a470d38fd59abaa10e15fdbdbcbc0ccaf":[3,0,19,0,8],
+"struct__pi__kernel_1_1arguments.html#a61e2f738a9f355cba598336de7f37b3d":[3,0,19,0,2],
 "struct__pi__kernel_1_1arguments.html#a7069bbfe22a7f4d783053bd56945b24d":[3,0,19,0,1],
 "struct__pi__kernel_1_1arguments.html#aa1b075a29d40995b403582d209ca7f14":[3,0,19,0,7],
 "struct__pi__kernel_1_1arguments.html#aa5e150dedfd765cdc606578f12d249d3":[3,0,19,0,15],
@@ -238,16 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html":[3,0,2,1,3,0,2],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html#a8a0591e5211979e3de58bbc0c97c0002":[3,0,2,1,3,0,2,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html":[3,0,2,1,3,0,3],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html#a803f02d4b5de9c1f783ea2e3cf6dbb51":[3,0,2,1,3,0,3,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1computation__type.html":[3,0,2,1,3,0,4],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1computation__type.html#ad91cab42c51ae299b697c1a898a5e3b9":[3,0,2,1,3,0,4,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type.html":[3,0,2,1,3,0,5],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html":[3,0,2,1,3,0,6],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#abd800933e79e0932652560a4ef62830e":[3,0,2,1,3,0,6,2],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#abf602a724a73f4935668efe39bc41838":[3,0,2,1,3,0,6,1],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html#afd99edf140b1f651b9128e1e95eb7557":[3,0,2,1,3,0,6,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html":[3,0,2,1,3,0,7],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html#a6c9d19f06c9c177110be8cfbb3b70458":[3,0,2,1,3,0,7,1],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html#a80675f6adc306915b650a5df34fc26b5":[3,0,2,1,3,0,7,3],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_00_01EltTy_01_4.html#a81b3bd3c558ccb48aa2c8a5a00bad551":[3,0,2,1,3,0,7,0]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html#a803f02d4b5de9c1f783ea2e3cf6dbb51":[3,0,2,1,3,0,3,0]
 };

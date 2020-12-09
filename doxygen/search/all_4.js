@@ -144,6 +144,7 @@ var searchData=
   ['compileoptions',['CompileOptions',['../structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd',1,'pi_device_binary_struct']]],
   ['compileorbuild',['compileOrBuild',['../pi__level__zero_8cpp.html#a915bbb39491e005cd01c8fa963219178',1,'pi_level_zero.cpp']]],
   ['complete',['complete',['../namespacecl_1_1sycl_1_1info.html#a14478aa11b108f1b29dfa017770c493bad9a22d7a8178d5b42a8750123cbfe5b1',1,'cl::sycl::info']]],
+  ['compositespecconstidmap',['CompositeSpecConstIDMap',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac1d54e66ae8161afd62881726ee1a5df',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['computation_5ftype',['computation_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1computation__type.html',1,'cl::sycl::INTEL::gpu']]],
   ['compute_5fformat_5ftype',['compute_format_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type.html',1,'cl::sycl::INTEL::gpu']]],
   ['compute_5fformat_5ftype_3c_20simd_3c_20ty_2c_20n_20_3e_2c_20eltty_20_3e',['compute_format_type&lt; simd&lt; Ty, N &gt;, EltTy &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1compute__format__type_3_01simd_3_01Ty_00_01N_01_4_00_01EltTy_01_4.html',1,'cl::sycl::INTEL::gpu']]],

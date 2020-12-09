@@ -17,6 +17,7 @@ var searchData=
   ['platform_5futil_2ecpp',['platform_util.cpp',['../platform__util_8cpp.html',1,'']]],
   ['platform_5futil_2ehpp',['platform_util.hpp',['../platform__util_8hpp.html',1,'']]],
   ['plugin_2ehpp',['plugin.hpp',['../plugin_8hpp.html',1,'']]],
+  ['plugin_5fprinters_2ehpp',['plugin_printers.hpp',['../plugin__printers_8hpp.html',1,'']]],
   ['pointers_2ehpp',['pointers.hpp',['../pointers_8hpp.html',1,'']]],
   ['posix_5fpi_2ecpp',['posix_pi.cpp',['../posix__pi_8cpp.html',1,'']]],
   ['program_2ecpp',['program.cpp',['../program_8cpp.html',1,'']]],

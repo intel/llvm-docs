@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ad88d366fcdd3e8d10e5c8b12154b204a":[3,0,2,1,0,40,24],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ade746ed40d518f96ae0a463ac2d426d5":[3,0,2,1,0,40,23],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ae6b266cd1f8662eb652e8a5fd4917237":[3,0,2,1,0,40,3],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#af78db51ddc09693744e18e42ba3647a1":[3,0,2,1,0,40,19],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#ad8ce5d3a00f912483f7808edfb2d40bf":[3,0,2,1,0,239,1],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#adda52b58b98f0459d92d7e20ace75cb8":[3,0,2,1,0,239,3],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html":[3,0,2,1,0,241],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a1b83a62f0aa9caa6626f860ab33008eb":[3,0,2,1,0,241,1],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a563de04e33f937623b8520d336fde086":[3,0,2,1,0,241,16]
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a1b83a62f0aa9caa6626f860ab33008eb":[3,0,2,1,0,241,1]
 };

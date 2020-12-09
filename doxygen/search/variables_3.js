@@ -21,6 +21,7 @@ var searchData=
   ['commandtype',['CommandType',['../class__pi__event.html#a8e51bce41cd2d0c9f986d780712b7d34',1,'_pi_event']]],
   ['common_5farray',['common_array',['../classcl_1_1sycl_1_1detail_1_1array.html#abab5f23a26dfb12d2c4ded739e7a29e8',1,'cl::sycl::detail::array']]],
   ['compileoptions',['CompileOptions',['../structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd',1,'pi_device_binary_struct']]],
+  ['compositespecconstidmap',['CompositeSpecConstIDMap',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac1d54e66ae8161afd62881726ee1a5df',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['configfromcompiledefenabled',['ConfigFromCompileDefEnabled',['../namespacecl_1_1sycl_1_1detail.html#a36cb99fb3e385f2a9c276ff777e66c37',1,'cl::sycl::detail']]],
   ['configfromenvenabled',['ConfigFromEnvEnabled',['../namespacecl_1_1sycl_1_1detail.html#a245c541983ad2cf1ded65461d01a7dfb',1,'cl::sycl::detail']]],
   ['configfromfileenabled',['ConfigFromFileEnabled',['../namespacecl_1_1sycl_1_1detail.html#a913f2c2f59992d8e823298d3210d408e',1,'cl::sycl::detail']]],

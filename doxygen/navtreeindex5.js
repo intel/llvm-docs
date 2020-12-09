@@ -117,10 +117,11 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#afb8465c71e14a5e7def4283ac1748057":[3,0,2,1,4,0,20,10],
 "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html":[3,0,2,1,4,1,0],
 "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html":[3,0,2,1,4,1,1],
-"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a3ca453a69aa270390dff32989aebd63e":[3,0,2,1,4,1,1,3],
-"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a5f326642c76ad3c47e821e89f0de6fc4":[3,0,2,1,4,1,1,1],
+"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a3ca453a69aa270390dff32989aebd63e":[3,0,2,1,4,1,1,4],
+"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1":[3,0,2,1,4,1,1,1],
+"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8":[3,0,2,1,4,1,1,2],
 "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb":[3,0,2,1,4,1,1,0],
-"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a93d45c933844280399457a60febfd30f":[3,0,2,1,4,1,1,2],
+"classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a93d45c933844280399457a60febfd30f":[3,0,2,1,4,1,1,3],
 "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html":[3,0,2,1,4,6],
 "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html#a08d8a81d35b024459e958fc4f9d6fbd1":[3,0,2,1,4,6,3],
 "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html#a19bc0403e0c1ba893336d8bdc3cb7992":[3,0,2,1,4,6,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1buffer.html#a17e3ea795858a5b6d2ecbd46d396799e":[1,2,2,34],
 "classcl_1_1sycl_1_1buffer.html#a1b840be3d1953894a0c502f60fe26d23":[1,2,2,32],
 "classcl_1_1sycl_1_1buffer.html#a1e2d845259552a1426413d311658614b":[1,2,2,42],
-"classcl_1_1sycl_1_1buffer.html#a2649f2dbd89352d61d3a182dc017f3b9":[1,2,2,27],
-"classcl_1_1sycl_1_1buffer.html#a2dd6c96ec96b1c5e203e43bba8106fe4":[1,2,2,37]
+"classcl_1_1sycl_1_1buffer.html#a2649f2dbd89352d61d3a182dc017f3b9":[1,2,2,27]
 };

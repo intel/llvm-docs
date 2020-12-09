@@ -72,6 +72,7 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
       [ "PlatformUtil", "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html", "structcl_1_1sycl_1_1detail_1_1PlatformUtil" ]
     ] ],
     [ "plugin.hpp", "plugin_8hpp.html", null ],
+    [ "plugin_printers.hpp", "plugin__printers_8hpp.html", "plugin__printers_8hpp" ],
     [ "posix_pi.cpp", "posix__pi_8cpp.html", "posix__pi_8cpp" ],
     [ "program_impl.cpp", "program__impl_8cpp.html", "program__impl_8cpp" ],
     [ "program_impl.hpp", "program__impl_8hpp.html", "program__impl_8hpp" ],
