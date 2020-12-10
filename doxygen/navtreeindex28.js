@@ -1,6 +1,5 @@
 var NAVTREEINDEX28 =
 {
-"struct__pi__kernel.html#afb1f0e36d8ff9b93ad5e6aec68928280":[3,0,19,9],
 "struct__pi__kernel_1_1arguments.html":[3,0,19,0],
 "struct__pi__kernel_1_1arguments.html#a06c967e47bd96dc18048b8d96f5014ca":[3,0,19,0,4],
 "struct__pi__kernel_1_1arguments.html#a0b9ff64e7acc6bdfc33140baf93ae10c":[3,0,19,0,12],
@@ -249,5 +248,6 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html":[3,0,2,1,3,0,2],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html#a8a0591e5211979e3de58bbc0c97c0002":[3,0,2,1,3,0,2,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html":[3,0,2,1,3,0,3],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html#a803f02d4b5de9c1f783ea2e3cf6dbb51":[3,0,2,1,3,0,3,0]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html#a803f02d4b5de9c1f783ea2e3cf6dbb51":[3,0,2,1,3,0,3,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1computation__type.html":[3,0,2,1,3,0,4]
 };

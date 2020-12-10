@@ -25,7 +25,6 @@ var searchData=
   ['kernelbynamet',['KernelByNameT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a044fe6aabb1a42c16a12b892661a3b2c',1,'cl::sycl::detail::KernelProgramCache']]],
   ['kernelcachet',['KernelCacheT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ae45b79c025b522795f8677b223a047d8',1,'cl::sycl::detail::KernelProgramCache']]],
   ['kernelinfo',['KernelInfo',['../structcl_1_1sycl_1_1detail_1_1KernelInfo.html',1,'cl::sycl::detail']]],
-  ['kernelname',['KernelName',['../struct__pi__kernel.html#a1a9b804d505ecd102a36ed5757c8fda3',1,'_pi_kernel']]],
   ['kernelparamoptinfo',['KernelParamOptInfo',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a5ce259269c04321089a8a1cae77654fb',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['kernelprogramcache',['KernelProgramCache',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html',1,'cl::sycl::detail']]],
   ['kernelsetid',['KernelSetId',['../namespacecl_1_1sycl_1_1detail.html#aec49fd62110c9128fa044e38a1c1f9c2',1,'cl::sycl::detail']]],
