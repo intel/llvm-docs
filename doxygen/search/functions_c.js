@@ -21,7 +21,7 @@ var searchData=
   ['malloc_5fhost',['malloc_host',['../namespacecl_1_1sycl.html#a65b09a997fc6a20f8c0dc49b51dd5051',1,'cl::sycl::malloc_host(size_t size, const context &amp;ctxt)'],['../namespacecl_1_1sycl.html#aa97c1f578e23516d56c4437cef4f09da',1,'cl::sycl::malloc_host(size_t size, const queue &amp;q)']]],
   ['malloc_5fshared',['malloc_shared',['../namespacecl_1_1sycl.html#a6305df5d225ae1a1ae79ce16bcb6158a',1,'cl::sycl::malloc_shared(size_t size, const device &amp;dev, const context &amp;ctxt)'],['../namespacecl_1_1sycl.html#ac2861039868cba91e0250e34eb67e4b2',1,'cl::sycl::malloc_shared(size_t size, const queue &amp;q)']]],
   ['map',['map',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d',1,'cl::sycl::detail::MemoryManager']]],
-  ['map_5fto_5fptr',['map_to_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a712ea34ccfa497a90c347d9c4a3e6abd',1,'_pi_mem::mem_::buffer_mem_']]],
+  ['map_5fto_5fptr',['map_to_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#aaf71996c723bf33596860473ee17eae0',1,'_pi_mem::mem_::buffer_mem_']]],
   ['maperror',['mapError',['../pi__level__zero_8cpp.html#a41a23a2e2a5ffd7aab6083589edddbd8',1,'pi_level_zero.cpp']]],
   ['mapmemobject',['MapMemObject',['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d',1,'cl::sycl::detail::MapMemObject']]],
   ['marknodeasvisited',['markNodeAsVisited',['../namespacecl_1_1sycl_1_1detail.html#a4ed11d52e54184938bfbbc566174696b',1,'cl::sycl::detail']]],

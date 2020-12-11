@@ -1,5 +1,9 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html":[3,0,2,1,0,321],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html#a40bd694f83a91e0fac7b4e3f96595a2a":[3,0,2,1,0,321,1],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html#afda780593d2e45d62f7c5405936f1c36":[3,0,2,1,0,321,0],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html":[3,0,2,1,0,322],
 "structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html#a96301d4f14bcc0619c58bacdc2858ad4":[3,0,2,1,0,322,0],
 "structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html#ab28202dcd4bae59f21ef0aa4ec522e0f":[3,0,2,1,0,322,1],
 "structcl_1_1sycl_1_1detail_1_1type__list_3_4.html":[3,0,2,1,0,323],
@@ -245,9 +249,5 @@ var NAVTREEINDEX32 =
 "structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69":[3,0,108,1],
 "structpi__device__binary__struct.html":[3,0,109],
 "structpi__device__binary__struct.html#a101af6f5f71e7c55000dd25e5979ec3f":[3,0,109,5],
-"structpi__device__binary__struct.html#a2ed00a6be873007278f3d4b174caa758":[3,0,109,8],
-"structpi__device__binary__struct.html#a6eb4a6bb0e5ec4d025383ee3cdc98146":[3,0,109,4],
-"structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd":[3,0,109,2],
-"structpi__device__binary__struct.html#a84557e6cea59b13a7035f8cb7161d05b":[3,0,109,0],
-"structpi__device__binary__struct.html#a878e5bebe74c5308b46fc6819a323e72":[3,0,109,10]
+"structpi__device__binary__struct.html#a2ed00a6be873007278f3d4b174caa758":[3,0,109,8]
 };

@@ -1,5 +1,9 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1detail_1_1Boolean.html#abf6c82ad143935cbd27db0d432bf6fe8":[3,0,2,1,0,18,5],
+"structcl_1_1sycl_1_1detail_1_1Boolean.html#ac968595289e22a8f3027cfa8d6e49390":[3,0,2,1,0,18,6],
+"structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html":[3,0,2,1,0,19],
+"structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html#a3b77dcfd5b4b4f6f0417193b278bb249":[3,0,2,1,0,19,0],
 "structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html#a89342d50e578af941d3e2693c37c3cad":[3,0,2,1,0,19,2],
 "structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html#aeaab19ce893bca65c8c9dc71f44ce5ae":[3,0,2,1,0,19,1],
 "structcl_1_1sycl_1_1detail_1_1CmpCStr.html":[3,0,2,1,0,41],
@@ -245,9 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01const_01volatile_01T_00_01R_01_4.html#a3fe276a0b368b4ac97ec5124f0bc3f78":[3,0,2,1,0,51,0],
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html":[3,0,2,1,0,52],
 "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers__impl_3_01volatile_01T_00_01R_01_4.html#af22caf370843420b5d37ee1d32a13f20":[3,0,2,1,0,52,0],
-"structcl_1_1sycl_1_1detail_1_1device__filter.html":[3,0,2,1,0,57],
-"structcl_1_1sycl_1_1detail_1_1device__filter.html#a0172fa611e24addf179bd8be5852e211":[3,0,2,1,0,57,5],
-"structcl_1_1sycl_1_1detail_1_1device__filter.html#a3bad81f25c5a31216885b916a81ae6de":[3,0,2,1,0,57,0],
-"structcl_1_1sycl_1_1detail_1_1device__filter.html#a49208af750615773cec66d3e62250a59":[3,0,2,1,0,57,7],
-"structcl_1_1sycl_1_1detail_1_1device__filter.html#a731fa943dd32b4ddd9dfcde5ff2e2dd0":[3,0,2,1,0,57,1]
+"structcl_1_1sycl_1_1detail_1_1device__filter.html":[3,0,2,1,0,57]
 };

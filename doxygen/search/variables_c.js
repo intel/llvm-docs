@@ -11,7 +11,7 @@ var searchData=
   ['mallocator',['MAllocator',['../classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#ad76aa1d011980a674c3a8e3b62bd7579',1,'cl::sycl::detail::SYCLMemObjT']]],
   ['manifestend',['ManifestEnd',['../structpi__device__binary__struct.html#ae3149612f8f60cfc3bed1c63cc94233e',1,'pi_device_binary_struct']]],
   ['manifeststart',['ManifestStart',['../structpi__device__binary__struct.html#a878e5bebe74c5308b46fc6819a323e72',1,'pi_device_binary_struct']]],
-  ['mapflags_5f',['mapFlags_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a33a319d704db0c7f5f4e278243461e83',1,'_pi_mem::mem_::buffer_mem_']]],
+  ['mapflags_5f',['mapFlags_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a8b2fd9a0f22b1b234da617fd3f39edd5',1,'_pi_mem::mem_::buffer_mem_']]],
   ['maphostptr',['MapHostPtr',['../struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955',1,'_pi_mem']]],
   ['mapoffset_5f',['mapOffset_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a16b16e2787c2a9524403dc1bead82664',1,'_pi_mem::mem_::buffer_mem_']]],
   ['mapptr_5f',['mapPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a870da0afef4a9f1b6d24f7cdd3cc4d47',1,'_pi_mem::mem_::buffer_mem_']]],

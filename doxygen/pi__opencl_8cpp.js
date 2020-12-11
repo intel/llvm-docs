@@ -9,7 +9,7 @@ var pi__opencl_8cpp =
     [ "piclProgramCreateWithSource", "pi__opencl_8cpp.html#ac5fb4aa49b8c4a3ad5cf0bd08a201e7e", null ],
     [ "piContextCreate", "pi__opencl_8cpp.html#a812679cbe8893dbb9610a5faab2b3c90", null ],
     [ "piDevicesGet", "pi__opencl_8cpp.html#a69b24df8aa852caaedbbb5f3f31d9fd5", null ],
-    [ "piEnqueueMemBufferMap", "pi__opencl_8cpp.html#af802e60387d9bfde27bc885e8d660baa", null ],
+    [ "piEnqueueMemBufferMap", "pi__opencl_8cpp.html#a8ca253fa71a4da4cfe4696168a973f1a", null ],
     [ "piEventCreate", "pi__opencl_8cpp.html#a5f29450c93b62f34c598e7c0d07510d1", null ],
     [ "piextContextCreateWithNativeHandle", "pi__opencl_8cpp.html#abd934a9982d2f3eaac886510e997d2b0", null ],
     [ "piextContextGetNativeHandle", "pi__opencl_8cpp.html#aa3fb8ea4d33b7f0656afa0fdfedee5d4", null ],

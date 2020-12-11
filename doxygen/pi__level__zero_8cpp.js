@@ -32,7 +32,7 @@ var pi__level__zero_8cpp =
     [ "piEnqueueMemBufferCopy", "pi__level__zero_8cpp.html#a1b6c561e5ee07680897f72e41e98dfda", null ],
     [ "piEnqueueMemBufferCopyRect", "pi__level__zero_8cpp.html#a9f47320f18b6ce1f4a87a9ce9833709c", null ],
     [ "piEnqueueMemBufferFill", "pi__level__zero_8cpp.html#a52ef16c7a368f7e6ee40721d1ff55b91", null ],
-    [ "piEnqueueMemBufferMap", "pi__level__zero_8cpp.html#ac0dfa26a935a81a0c8e8b705c92c2c47", null ],
+    [ "piEnqueueMemBufferMap", "pi__level__zero_8cpp.html#abd3b5868f5a49fbd73bee41cc0bda1b2", null ],
     [ "piEnqueueMemBufferRead", "pi__level__zero_8cpp.html#a386615ab8879c1f5afbc4c6d1da601f8", null ],
     [ "piEnqueueMemBufferReadRect", "pi__level__zero_8cpp.html#aa6a0d4a581cfb3c3726e7dcd0d026354", null ],
     [ "piEnqueueMemBufferWrite", "pi__level__zero_8cpp.html#a6dc855dc35b58eb568fadd92162f3317", null ],
