@@ -37,6 +37,7 @@ var searchData=
   ['get_5fkernel_5finfo_3c_20string_5fclass_2c_20param_20_3e',['get_kernel_info&lt; string_class, Param &gt;',['../structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01string__class_00_01Param_01_4.html',1,'cl::sycl::detail']]],
   ['get_5fkernel_5fname_5ft',['get_kernel_name_t',['../structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html',1,'cl::sycl::detail']]],
   ['get_5fkernel_5fname_5ft_3c_20detail_3a_3aauto_5fname_2c_20type_20_3e',['get_kernel_name_t&lt; detail::auto_name, Type &gt;',['../structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4.html',1,'cl::sycl::detail']]],
+  ['get_5fkernel_5fwrapper_5fname_5ft',['get_kernel_wrapper_name_t',['../structcl_1_1sycl_1_1detail_1_1get__kernel__wrapper__name__t.html',1,'cl::sycl::detail']]],
   ['get_5fplatform_5finfo',['get_platform_info',['../structcl_1_1sycl_1_1detail_1_1get__platform__info.html',1,'cl::sycl::detail']]],
   ['get_5fplatform_5finfo_3c_20string_5fclass_2c_20param_20_3e',['get_platform_info&lt; string_class, param &gt;',['../structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01string__class_00_01param_01_4.html',1,'cl::sycl::detail']]],
   ['get_5fplatform_5finfo_3c_20vector_5fclass_3c_20string_5fclass_20_3e_2c_20info_3a_3aplatform_3a_3aextensions_20_3e',['get_platform_info&lt; vector_class&lt; string_class &gt;, info::platform::extensions &gt;',['../structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01vector__class_3_01string__class_01_4_00_0139c6283becf050188b9336488ce1727c.html',1,'cl::sycl::detail']]],

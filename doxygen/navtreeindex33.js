@@ -1,5 +1,13 @@
 var NAVTREEINDEX33 =
 {
+"structpi__device__binaries__struct.html#a05b9e86a549ae74c18dd9671ac40ce9d":[3,0,108,4],
+"structpi__device__binaries__struct.html#a2ce1e03cf7aa6d02d8e293170ff83e64":[3,0,108,3],
+"structpi__device__binaries__struct.html#a498ee2e4d68539d06c562797333ee03a":[3,0,108,0],
+"structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1":[3,0,108,2],
+"structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69":[3,0,108,1],
+"structpi__device__binary__struct.html":[3,0,109],
+"structpi__device__binary__struct.html#a101af6f5f71e7c55000dd25e5979ec3f":[3,0,109,5],
+"structpi__device__binary__struct.html#a2ed00a6be873007278f3d4b174caa758":[3,0,109,8],
 "structpi__device__binary__struct.html#a6eb4a6bb0e5ec4d025383ee3cdc98146":[3,0,109,4],
 "structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd":[3,0,109,2],
 "structpi__device__binary__struct.html#a84557e6cea59b13a7035f8cb7161d05b":[3,0,109,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX33 =
 "structrestype__ex_3_01unsigned_01long_01long_00_01unsigned_01short_01_4.html":[3,0,222],
 "structrestype__ex_3_01unsigned_01long_01long_00_01unsigned_01short_01_4.html#ac5a8a7bda6bb7113f5ca7a8f39362a27":[3,0,222,0],
 "structrestype__ex_3_01unsigned_01short_00_01char_01_4.html":[3,0,223],
-"structrestype__ex_3_01unsigned_01short_00_01char_01_4.html#a1dd58bda42872d36c919684ec360981c":[3,0,223,0],
-"structrestype__ex_3_01unsigned_01short_00_01double_01_4.html":[3,0,224],
-"structrestype__ex_3_01unsigned_01short_00_01double_01_4.html#ae606f926a591717bf25a0ebe6838d243":[3,0,224,0],
-"structrestype__ex_3_01unsigned_01short_00_01float_01_4.html":[3,0,225],
-"structrestype__ex_3_01unsigned_01short_00_01float_01_4.html#aae6c1c830d616f17eab92e135960d8b5":[3,0,225,0],
-"structrestype__ex_3_01unsigned_01short_00_01half_01_4.html":[3,0,226],
-"structrestype__ex_3_01unsigned_01short_00_01half_01_4.html#a894ac8340c0369b687216ea1876aa1d3":[3,0,226,0],
-"structrestype__ex_3_01unsigned_01short_00_01int_01_4.html":[3,0,227],
-"structrestype__ex_3_01unsigned_01short_00_01int_01_4.html#a3394b32ef67938952d221bdcd2eb3560":[3,0,227,0]
+"structrestype__ex_3_01unsigned_01short_00_01char_01_4.html#a1dd58bda42872d36c919684ec360981c":[3,0,223,0]
 };

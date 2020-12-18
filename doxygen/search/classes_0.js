@@ -5,6 +5,7 @@ var searchData=
   ['_5f_5fcopyptr2acc',['__copyPtr2Acc',['../class____copyPtr2Acc.html',1,'']]],
   ['_5f_5ffill',['__fill',['../class____fill.html',1,'']]],
   ['_5f_5fimage_5farray_5fslice_5f_5f',['__image_array_slice__',['../classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html',1,'cl::sycl::detail']]],
+  ['_5f_5fpf_5fkernel_5fwrapper',['__pf_kernel_wrapper',['../classcl_1_1sycl_1_1detail_1_1____pf__kernel__wrapper.html',1,'cl::sycl::detail']]],
   ['_5f_5fprecision_5fmanipulator_5f_5f',['__precision_manipulator__',['../classcl_1_1sycl_1_1____precision__manipulator____.html',1,'cl::sycl']]],
   ['_5f_5fsycl_5freduction_5faux_5fkernel',['__sycl_reduction_aux_kernel',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__aux__kernel.html',1,'cl::sycl::ONEAPI::detail']]],
   ['_5f_5fsycl_5freduction_5fmain_5fkernel',['__sycl_reduction_main_kernel',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html',1,'cl::sycl::ONEAPI::detail']]],

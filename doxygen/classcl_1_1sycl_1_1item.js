@@ -19,5 +19,6 @@ var classcl_1_1sycl_1_1item =
     [ "operator=", "classcl_1_1sycl_1_1item.html#a69b6672ac943d5a672cc5e4a3d8d3141", null ],
     [ "operator==", "classcl_1_1sycl_1_1item.html#a5f04bc790a2083be4949d7c5ba20d4cb", null ],
     [ "operator[]", "classcl_1_1sycl_1_1item.html#aab8d12cc69780cfd06d7739c153c0ab5", null ],
-    [ "detail::Builder", "classcl_1_1sycl_1_1item.html#ad90f883e62dca93f6bdd31c1ead4b756", null ]
+    [ "detail::Builder", "classcl_1_1sycl_1_1item.html#ad90f883e62dca93f6bdd31c1ead4b756", null ],
+    [ "handler", "classcl_1_1sycl_1_1item.html#a72db39b889f34257a4c691d6acd383ab", null ]
 ];

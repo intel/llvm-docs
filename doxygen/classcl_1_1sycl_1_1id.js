@@ -12,5 +12,6 @@ var classcl_1_1sycl_1_1id =
     [ "id", "classcl_1_1sycl_1_1id.html#aeb330d8ce5d2405329cebe7ebdb3cbb1", null ],
     [ "operator EnableIfT<", "classcl_1_1sycl_1_1id.html#a4d2142fc824fd5e66fb80d813195dbaf", null ],
     [ "operator range< dimensions >", "classcl_1_1sycl_1_1id.html#aa6424f5cedb2ed8a761e3cab85972f68", null ],
-    [ "size_t", "classcl_1_1sycl_1_1id.html#a12d927e69b724255239355b6f502f242", null ]
+    [ "size_t", "classcl_1_1sycl_1_1id.html#a12d927e69b724255239355b6f502f242", null ],
+    [ "handler", "classcl_1_1sycl_1_1id.html#a72db39b889f34257a4c691d6acd383ab", null ]
 ];

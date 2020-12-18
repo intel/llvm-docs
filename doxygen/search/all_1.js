@@ -139,6 +139,7 @@ var searchData=
   ['_5f_5fopencl_5fglobal_5fhost_5fas_5f_5f',['__OPENCL_GLOBAL_HOST_AS__',['../access_8hpp.html#ae5e09b2c6f47c9739c788db15d346eff',1,'access.hpp']]],
   ['_5f_5fopencl_5flocal_5fas_5f_5f',['__OPENCL_LOCAL_AS__',['../access_8hpp.html#a4760784b0355ee3818bbf0a66a7430ae',1,'access.hpp']]],
   ['_5f_5fopencl_5fprivate_5fas_5f_5f',['__OPENCL_PRIVATE_AS__',['../access_8hpp.html#a11fdf1bd2a48ce97f29b47765bde5088',1,'access.hpp']]],
+  ['_5f_5fpf_5fkernel_5fwrapper',['__pf_kernel_wrapper',['../classcl_1_1sycl_1_1detail_1_1____pf__kernel__wrapper.html',1,'cl::sycl::detail']]],
   ['_5f_5fprecision_5fmanipulator_5f_5f',['__precision_manipulator__',['../classcl_1_1sycl_1_1____precision__manipulator____.html',1,'cl::sycl::__precision_manipulator__'],['../classcl_1_1sycl_1_1____precision__manipulator____.html#a3fe932d125f80a6950f13c735f5ed254',1,'cl::sycl::__precision_manipulator__::__precision_manipulator__()']]],
   ['_5f_5fspirv_5fatomicand',['__spirv_AtomicAnd',['../atomic_8hpp.html#aa718cd3d846316032fe893c2481421a9',1,'atomic.hpp']]],
   ['_5f_5fspirv_5fatomicexchange',['__spirv_AtomicExchange',['../atomic_8hpp.html#a16bd8803af5537a5471cb34b7989b841',1,'atomic.hpp']]],

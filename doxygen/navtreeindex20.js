@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"info__desc_8hpp.html#a806524cd6d26b3dfaa020e7a1e56cc3b":[4,0,0,0,1,3,0,32],
+"info__desc_8hpp.html#a888e999cd335944dfbae8bc949b8aa6f":[4,0,0,0,1,3,0,11],
+"info__desc_8hpp.html#a888e999cd335944dfbae8bc949b8aa6fa1c2215f8145b8a68dcb5b72abb77c05d":[4,0,0,0,1,3,0,11,0],
+"info__desc_8hpp.html#a888e999cd335944dfbae8bc949b8aa6fa86443f0d367ba2434ee11958c89f85e9":[4,0,0,0,1,3,0,11,1],
+"info__desc_8hpp.html#a888e999cd335944dfbae8bc949b8aa6fadfac728d996ea99618fb8a5dfb2e48d4":[4,0,0,0,1,3,0,11,2],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5":[4,0,0,0,1,3,0,14],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a06ad287ea83b37a6f9db3d8d10d72c8f":[4,0,0,0,1,3,0,14,2],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,3,0,14,0],
@@ -126,8 +131,8 @@ var NAVTREEINDEX20 =
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190afe373d69771aca74db47fccb0126c6f7":[4,0,0,0,1,3,0,7,35],
 "info__desc_8hpp.html#ab5328bb2718ce81ccc33d22d18e7c9cc":[4,0,0,0,1,3,0,27],
 "info__desc_8hpp.html#abf3be720bd069bd68987f56f64ada244":[4,0,0,0,1,3,0,34],
-"info__desc_8hpp.html#ac535545f91898330c7322596642fd332":[4,0,0,0,1,3,0,2],
 "info__desc_8hpp.html#ac535545f91898330c7322596642fd332":[4,0,0,0,1,3,0,3],
+"info__desc_8hpp.html#ac535545f91898330c7322596642fd332":[4,0,0,0,1,3,0,2],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001":[4,0,0,0,1,3,0,19],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001a334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,3,0,19,0],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001a9c70933aff6b2a6d08c687a6cbb6b765":[4,0,0,0,1,3,0,19,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "memory__manager_8hpp.html#ab3344d056975e3c60daac83b7487bb0f":[4,0,0,0,1,2,28,1],
 "memory__manager_8hpp.html#ae666f00e7fc733aa20add2a77a262c9c":[4,0,0,0,1,2,28,2],
 "memory__manager_8hpp_source.html":[4,0,0,0,1,2,28],
-"modules.html":[1],
-"multi__ptr_8hpp.html":[4,0,0,0,1,33],
-"multi__ptr_8hpp.html#a1c7d6716e0051fef3004262eb4de8538":[4,0,0,0,1,33,6],
-"multi__ptr_8hpp.html#a1fa0d7a4e9b9905734abceeb41f52e91":[4,0,0,0,1,33,11],
-"multi__ptr_8hpp.html#a23b0e916e7ee58b2bbe385bb5e084200":[4,0,0,0,1,33,18],
-"multi__ptr_8hpp.html#a2b8e885bcf380cd7b312f187bdd1a7f9":[4,0,0,0,1,33,14]
+"modules.html":[1]
 };

@@ -1,5 +1,10 @@
 var NAVTREEINDEX29 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html#a52322881a741846baefcd40beb8f52a0":[3,0,2,1,3,5,0],
+"structcl_1_1sycl_1_1INTEL_1_1cache.html":[3,0,2,1,3,6],
+"structcl_1_1sycl_1_1INTEL_1_1cache.html#a6af4c8ff3f6c7f92cbe18c3de320a55c":[3,0,2,1,3,6,0],
+"structcl_1_1sycl_1_1INTEL_1_1cache.html#a988c8266886e8ef736c203bbf696d5c1":[3,0,2,1,3,6,1],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html":[3,0,2,1,3,0,2],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html#a8a0591e5211979e3de58bbc0c97c0002":[3,0,2,1,3,0,2,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html":[3,0,2,1,3,0,3],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html#a803f02d4b5de9c1f783ea2e3cf6dbb51":[3,0,2,1,3,0,3,0],
@@ -237,17 +242,12 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#ade397b91f31339a2638434ff48f19d94":[3,0,2,1,4,13,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#aef711d87164ccbdded7dd530abf7c749":[3,0,2,1,4,13,17],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#af09b5b0baf1aaeb34c5f8764af2ea3cf":[3,0,2,1,4,13,2],
-"structcl_1_1sycl_1_1detail_1_1Assigner.html":[3,0,2,1,0,14],
-"structcl_1_1sycl_1_1detail_1_1Assigner.html#a58e16b7e75a06644b195c8a38e13bc16":[3,0,2,1,0,14,0],
-"structcl_1_1sycl_1_1detail_1_1Assigner.html#ae698e7db2f58e13513e418ab572be79a":[3,0,2,1,0,14,1],
-"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html":[3,0,2,1,0,15],
-"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#a73198fd8665b3f20d550b8785a98c7b0":[3,0,2,1,0,15,0],
-"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#aa2371ef607a8c70849d5361c1c25a9af":[3,0,2,1,0,15,1],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html":[3,0,2,1,0,18],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#a09dfeeb34872bc23b22a90752e511f74":[3,0,2,1,0,18,2],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#a0de3dbf10e9618d0f22f7334809340f1":[3,0,2,1,0,18,3],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#a1e9c18900b9203225f0356e84e3c1afd":[3,0,2,1,0,18,4],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#a6a87d59629d6587e15b7f2814f5df5c7":[3,0,2,1,0,18,7],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#ab2e2abcc43a59ccbc200c9ba012f876a":[3,0,2,1,0,18,1],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#ab72d94131c56e2bab31a5c4bece9fbc0":[3,0,2,1,0,18,0]
+"structcl_1_1sycl_1_1detail_1_1Assigner.html":[3,0,2,1,0,15],
+"structcl_1_1sycl_1_1detail_1_1Assigner.html#a58e16b7e75a06644b195c8a38e13bc16":[3,0,2,1,0,15,0],
+"structcl_1_1sycl_1_1detail_1_1Assigner.html#ae698e7db2f58e13513e418ab572be79a":[3,0,2,1,0,15,1],
+"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html":[3,0,2,1,0,16],
+"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#a73198fd8665b3f20d550b8785a98c7b0":[3,0,2,1,0,16,0],
+"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#aa2371ef607a8c70849d5361c1c25a9af":[3,0,2,1,0,16,1],
+"structcl_1_1sycl_1_1detail_1_1Boolean.html":[3,0,2,1,0,19],
+"structcl_1_1sycl_1_1detail_1_1Boolean.html#a09dfeeb34872bc23b22a90752e511f74":[3,0,2,1,0,19,2]
 };

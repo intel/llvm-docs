@@ -9,5 +9,7 @@ var classcl_1_1sycl_1_1range =
     [ "operator id< dimensions >", "classcl_1_1sycl_1_1range.html#a28e7fc27aca51a1b02b0591c4d685963", null ],
     [ "operator=", "classcl_1_1sycl_1_1range.html#aac4df02c094cdbdfb336c8407c471d87", null ],
     [ "operator=", "classcl_1_1sycl_1_1range.html#a7316b12f769321825500e2965732e588", null ],
-    [ "size", "classcl_1_1sycl_1_1range.html#af952e02a526c0134e18ba20c84de9858", null ]
+    [ "size", "classcl_1_1sycl_1_1range.html#af952e02a526c0134e18ba20c84de9858", null ],
+    [ "detail::Builder", "classcl_1_1sycl_1_1range.html#ad90f883e62dca93f6bdd31c1ead4b756", null ],
+    [ "handler", "classcl_1_1sycl_1_1range.html#a72db39b889f34257a4c691d6acd383ab", null ]
 ];

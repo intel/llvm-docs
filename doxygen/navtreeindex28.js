@@ -1,5 +1,10 @@
 var NAVTREEINDEX28 =
 {
+"struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba":[3,0,19,28],
+"struct__pi__kernel.html#ade707fb649357321fa55ed8765ea6030":[3,0,19,3],
+"struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339":[3,0,19,24],
+"struct__pi__kernel.html#ae34356df9814bec0543bbc7bffcf4728":[3,0,19,14],
+"struct__pi__kernel.html#ae34fd39afe4bc5dd3dd1ddd868b084f8":[3,0,19,8],
 "struct__pi__kernel.html#aee626d969a1e970d9802f8fe04c32a63":[3,0,19,29],
 "struct__pi__kernel.html#aef7e7a0ffabf3ead806217e8e7bd0dbc":[3,0,19,21],
 "struct__pi__kernel.html#afaaa478565588b1504f7980cd38c7033":[3,0,19,18],
@@ -112,8 +117,8 @@ var NAVTREEINDEX28 =
 "struct__pi__program.html":[3,0,25],
 "struct__pi__program.html#a019071f4456b2301a42fe00264265fbd":[3,0,25,32],
 "struct__pi__program.html#a07ee027170c3138223814e6f23953c42":[3,0,25,20],
-"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,9],
 "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,5],
+"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,25,9],
 "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854":[3,0,25,10],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16":[3,0,25,3],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a1684fb88863210e92ec87a7ffb479c95":[3,0,25,3,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX28 =
 "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html#abd39517e544ed75631bb95796e9b6971":[3,0,2,1,3,3,0],
 "structcl_1_1sycl_1_1INTEL_1_1__MatchType.html":[3,0,2,1,3,4],
 "structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html":[3,0,2,1,3,5],
-"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html#a1b684a71d471a1dab62171b198f3e358":[3,0,2,1,3,5,1],
-"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html#a52322881a741846baefcd40beb8f52a0":[3,0,2,1,3,5,0],
-"structcl_1_1sycl_1_1INTEL_1_1cache.html":[3,0,2,1,3,6],
-"structcl_1_1sycl_1_1INTEL_1_1cache.html#a6af4c8ff3f6c7f92cbe18c3de320a55c":[3,0,2,1,3,6,0],
-"structcl_1_1sycl_1_1INTEL_1_1cache.html#a988c8266886e8ef736c203bbf696d5c1":[3,0,2,1,3,6,1],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1bitcast__helper.html":[3,0,2,1,3,0,2]
+"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html#a1b684a71d471a1dab62171b198f3e358":[3,0,2,1,3,5,1]
 };

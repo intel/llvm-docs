@@ -298,7 +298,8 @@ var group__sycl__api =
       [ "id", "classcl_1_1sycl_1_1id.html#aeb330d8ce5d2405329cebe7ebdb3cbb1", null ],
       [ "operator EnableIfT<", "classcl_1_1sycl_1_1id.html#a4d2142fc824fd5e66fb80d813195dbaf", null ],
       [ "operator range< dimensions >", "classcl_1_1sycl_1_1id.html#aa6424f5cedb2ed8a761e3cab85972f68", null ],
-      [ "size_t", "classcl_1_1sycl_1_1id.html#a12d927e69b724255239355b6f502f242", null ]
+      [ "size_t", "classcl_1_1sycl_1_1id.html#a12d927e69b724255239355b6f502f242", null ],
+      [ "handler", "classcl_1_1sycl_1_1id.html#a72db39b889f34257a4c691d6acd383ab", null ]
     ] ],
     [ "image", "classcl_1_1sycl_1_1image.html", [
       [ "image", "classcl_1_1sycl_1_1image.html#a2a11dd14f6107c7eeb9d87a29b744da1", null ],
@@ -355,7 +356,8 @@ var group__sycl__api =
       [ "operator=", "classcl_1_1sycl_1_1item.html#a69b6672ac943d5a672cc5e4a3d8d3141", null ],
       [ "operator==", "classcl_1_1sycl_1_1item.html#a5f04bc790a2083be4949d7c5ba20d4cb", null ],
       [ "operator[]", "classcl_1_1sycl_1_1item.html#aab8d12cc69780cfd06d7739c153c0ab5", null ],
-      [ "detail::Builder", "classcl_1_1sycl_1_1item.html#ad90f883e62dca93f6bdd31c1ead4b756", null ]
+      [ "detail::Builder", "classcl_1_1sycl_1_1item.html#ad90f883e62dca93f6bdd31c1ead4b756", null ],
+      [ "handler", "classcl_1_1sycl_1_1item.html#a72db39b889f34257a4c691d6acd383ab", null ]
     ] ],
     [ "kernel", "classcl_1_1sycl_1_1kernel.html", [
       [ "kernel", "classcl_1_1sycl_1_1kernel.html#a0183adaae0863b75a8e1c629d5b436c2", null ],
@@ -622,7 +624,9 @@ var group__sycl__api =
       [ "operator id< dimensions >", "classcl_1_1sycl_1_1range.html#a28e7fc27aca51a1b02b0591c4d685963", null ],
       [ "operator=", "classcl_1_1sycl_1_1range.html#aac4df02c094cdbdfb336c8407c471d87", null ],
       [ "operator=", "classcl_1_1sycl_1_1range.html#a7316b12f769321825500e2965732e588", null ],
-      [ "size", "classcl_1_1sycl_1_1range.html#af952e02a526c0134e18ba20c84de9858", null ]
+      [ "size", "classcl_1_1sycl_1_1range.html#af952e02a526c0134e18ba20c84de9858", null ],
+      [ "detail::Builder", "classcl_1_1sycl_1_1range.html#ad90f883e62dca93f6bdd31c1ead4b756", null ],
+      [ "handler", "classcl_1_1sycl_1_1range.html#a72db39b889f34257a4c691d6acd383ab", null ]
     ] ],
     [ "sampler", "classcl_1_1sycl_1_1sampler.html", [
       [ "sampler", "classcl_1_1sycl_1_1sampler.html#a458d0dab42af781e16b96cb8ad9bc745", null ],
