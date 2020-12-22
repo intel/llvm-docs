@@ -65,6 +65,7 @@ var searchData=
   ['device_2ecpp',['device.cpp',['../device_8cpp.html',1,'']]],
   ['device_2ehpp',['device.hpp',['../device_8hpp.html',1,'']]],
   ['device_5f',['device_',['../struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5',1,'_pi_queue']]],
+  ['device_5farch',['device_arch',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html',1,'cl::sycl::INTEL::device_arch'],['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#ac32be0f3fe2e5667d207357e3c63a3f3',1,'cl::sycl::INTEL::device_arch::device_arch()']]],
   ['device_5fbinary_5fimage_2ecpp',['device_binary_image.cpp',['../device__binary__image_8cpp.html',1,'']]],
   ['device_5fbinary_5fimage_2ehpp',['device_binary_image.hpp',['../device__binary__image_8hpp.html',1,'']]],
   ['device_5ferror',['device_error',['../classcl_1_1sycl_1_1device__error.html',1,'cl::sycl::device_error'],['../classcl_1_1sycl_1_1device__error.html#ab41c5ec097e879da75830d0649de6897',1,'cl::sycl::device_error::device_error()=default'],['../classcl_1_1sycl_1_1device__error.html#ae39ca672397c78baaff83efccb104187',1,'cl::sycl::device_error::device_error(const char *Msg, cl_int Err)'],['../classcl_1_1sycl_1_1device__error.html#aac4cd456b35fc59c69dc5cfdea92aeb6',1,'cl::sycl::device_error::device_error(const string_class &amp;Msg, cl_int Err)']]],

@@ -12,5 +12,5 @@ var searchData=
   ['bucketsarraytype',['BucketsArrayType',['../namespacesettings.html#a967f0c9e4563cb2b6f16082cfb40dfc5',1,'settings']]],
   ['buffer_5fallocator',['buffer_allocator',['../namespacecl_1_1sycl.html#a7a19058abadafdeccbb4ef44cdb2b318',1,'cl::sycl']]],
   ['burst_5fcoalesce',['burst_coalesce',['../namespacecl_1_1sycl_1_1INTEL.html#ab130adbada20118197538a2475fdaf22',1,'cl::sycl::INTEL']]],
-  ['byte',['byte',['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl']]]
+  ['byte',['byte',['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl::byte()'],['../namespacecl_1_1sycl_1_1INTEL.html#a36bbf3471189a1daee766e6106a2ec4e',1,'cl::sycl::INTEL::byte()']]]
 ];

@@ -2,6 +2,7 @@ var pi__level__zero_8cpp =
 [
     [ "UsmAllocationException", "classUsmAllocationException.html", "classUsmAllocationException" ],
     [ "_PI_API", "pi__level__zero_8cpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
+    [ "PI_ASSERT", "pi__level__zero_8cpp.html#a3392fee03dd9766c99bbf6b36aa01e77", null ],
     [ "ZE_CALL", "pi__level__zero_8cpp.html#a942ae4efbf61ce684eb093c3c07b8a73", null ],
     [ "ZE_CALL_NOCHECK", "pi__level__zero_8cpp.html#a8009409c5f86d03cdbdc2bf11a8756eb", null ],
     [ "ZE_ERRCASE", "pi__level__zero_8cpp.html#a811e97d9ea03c4cf9bfc979d6d243ab9", null ],
@@ -13,7 +14,7 @@ var pi__level__zero_8cpp =
     [ "enqueueMemCopyRectHelper", "pi__level__zero_8cpp.html#aa58916760c0cd47f608737d4ab5ce2af", null ],
     [ "enqueueMemFillHelper", "pi__level__zero_8cpp.html#a2daa6fd82b433d43479179c5cb88b3b9", null ],
     [ "enqueueMemImageCommandHelper", "pi__level__zero_8cpp.html#ac72740529a524c5f7e3d5783c521cff4", null ],
-    [ "getImageRegionHelper", "pi__level__zero_8cpp.html#a6df247fa066f3fb25508b1744fabe4c5", null ],
+    [ "getImageRegionHelper", "pi__level__zero_8cpp.html#adb49714d97c1585b65a6407453fdf73a", null ],
     [ "isOnlineLinkEnabled", "pi__level__zero_8cpp.html#acafc1cc52eda482ed85f6f8e08212461", null ],
     [ "mapError", "pi__level__zero_8cpp.html#a41a23a2e2a5ffd7aab6083589edddbd8", null ],
     [ "piclProgramCreateWithSource", "pi__level__zero_8cpp.html#a966a4cfb605eb6f85670df838484a676", null ],

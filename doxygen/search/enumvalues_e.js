@@ -6,6 +6,7 @@ var searchData=
   ['online_5flinker',['online_linker',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea6eac88ab4945becf3d3ddeeaee00e2a0',1,'cl::sycl']]],
   ['ooo',['OOO',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06af1254165ff2e284b1b555d99d1c67e64',1,'cl::sycl::detail']]],
   ['opencl',['opencl',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a93195db1ad73788fe96193503a7d8887',1,'cl::sycl']]],
+  ['opencl_5fc',['opencl_c',['../namespacecl_1_1sycl_1_1INTEL.html#ad66300105b63574892a741b0cf0a6b60a4a196ed426a0217f8a9ab38abe926150',1,'cl::sycl::INTEL']]],
   ['opencl_5fc_5fversion',['opencl_c_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a82aeb1c67f59db3c5704c12572c32832',1,'cl::sycl::info']]],
   ['ordered',['Ordered',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06a3cd18dea8eb934f6d0ce3484af28e2a7',1,'cl::sycl::detail']]],
   ['oword',['OWORD',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a9f6ea8d65486568b05ca13ddc33c74a3',1,'__esimd']]]

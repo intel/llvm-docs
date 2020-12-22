@@ -1,4 +1,6 @@
 var searchData=
 [
+  ['online_5fcompile_5ferror',['online_compile_error',['../classcl_1_1sycl_1_1INTEL_1_1online__compile__error.html',1,'cl::sycl::INTEL']]],
+  ['online_5fcompiler',['online_compiler',['../classcl_1_1sycl_1_1INTEL_1_1online__compiler.html',1,'cl::sycl::INTEL']]],
   ['osutil',['OSUtil',['../classcl_1_1sycl_1_1detail_1_1OSUtil.html',1,'cl::sycl::detail']]]
 ];

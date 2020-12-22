@@ -11,6 +11,7 @@ var dir_9ef0c7d587d5a11e7de2506af69e84b3 =
       [ "_GetValue", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue" ],
       [ "_GetValue< _Type, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4" ]
     ] ],
+    [ "online_compiler.hpp", "online__compiler_8hpp.html", "online__compiler_8hpp" ],
     [ "pipes.hpp", "INTEL_2pipes_8hpp.html", [
       [ "pipe", "classcl_1_1sycl_1_1INTEL_1_1pipe.html", "classcl_1_1sycl_1_1INTEL_1_1pipe" ],
       [ "kernel_readable_io_pipe", "classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html", "classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe" ],

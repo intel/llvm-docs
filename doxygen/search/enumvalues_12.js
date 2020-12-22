@@ -14,6 +14,7 @@ var searchData=
   ['snorm_5fint16',['snorm_int16',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aead733e5fef86c49a97ab675846fc32277',1,'cl::sycl']]],
   ['snorm_5fint8',['snorm_int8',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aead4c65045d7c2cb3055c3773d2029a0c1',1,'cl::sycl']]],
   ['soft_5ffloat',['soft_float',['../namespacecl_1_1sycl_1_1info.html#aa4672985de741157d890c44156da2273a6e6513399f942d48c430159b1fbe93ec',1,'cl::sycl::info']]],
+  ['spir_5fv',['spir_v',['../namespacecl_1_1sycl_1_1INTEL.html#a9a3ed9dc3b767641de5af080c251d34ca4e01b95158a0dd8ab3941df67f4c6774',1,'cl::sycl::INTEL']]],
   ['start',['START',['../namespacecl_1_1sycl_1_1detail.html#a1f36acdc3445e874ecb97bb9f6129f01a3248d3bb7d45b52dc5f8dfded07fdfe0',1,'cl::sycl::detail']]],
   ['streaming',['Streaming',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67aac21d502848247aa2f578d0f718f5d1d',1,'cl::sycl::INTEL::gpu']]],
   ['sub_5fgroup',['sub_group',['../namespacecl_1_1sycl_1_1ONEAPI.html#ae81f5ba081ad950781944eef129720bfa651f1a87340bd311aa665c6e56f1df7c',1,'cl::sycl::ONEAPI']]],

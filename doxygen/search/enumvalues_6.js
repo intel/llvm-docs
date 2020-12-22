@@ -10,5 +10,6 @@ var searchData=
   ['fp16',['fp16',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::fp16()'],['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea196d2105b63d84fb802c5a3a64b2f617',1,'cl::sycl::fp16()']]],
   ['fp32',['fp32',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea4e1bd87474ad81110395b71013094b35',1,'cl::sycl']]],
   ['fp64',['fp64',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea36dd759373a12bd5960718d0c482a2d4',1,'cl::sycl']]],
+  ['fpga_5fany',['fpga_any',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a6ad50c43c69ef41a40abcbbdb8074859a4aac4064853435b2c8e6f5c89e021d77',1,'cl::sycl::INTEL::device_arch']]],
   ['function_5fname',['function_name',['../namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aae82f83ed7c80ba9065e07ee379ce7a56',1,'cl::sycl::info']]]
 ];

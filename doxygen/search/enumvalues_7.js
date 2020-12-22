@@ -14,5 +14,14 @@ var searchData=
   ['global_5fspace',['global_space',['../namespacecl_1_1sycl_1_1access.html#a4d49b23bd01f94213f7820fba6d5be69a8b6e19b80779e1f75b1c5f54a800dca4',1,'cl::sycl::access::global_space()'],['../namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa8b6e19b80779e1f75b1c5f54a800dca4',1,'cl::sycl::access::global_space()']]],
   ['global_5fwork_5fsize',['global_work_size',['../namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9a408f7779a31f0760bb11cec7ace24487',1,'cl::sycl::info::global_work_size()'],['../namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5a408f7779a31f0760bb11cec7ace24487',1,'cl::sycl::info::global_work_size()']]],
   ['gpu',['gpu',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea0aa0be2a866411d9ff03515227454947',1,'cl::sycl::gpu()'],['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165a0aa0be2a866411d9ff03515227454947',1,'cl::sycl::info::gpu()']]],
+  ['gpu_5fany',['gpu_any',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a0a2c12e524597f814a7df8af42e2190a',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fcfl',['gpu_cfl',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a39507214e5cd89f9c875c330cbff15a8',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fgen11',['gpu_gen11',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a976ee5f65cd4a2991b26d0a11b0cc6a0',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fgen12',['gpu_gen12',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980aba07ba6cd3c857dcc318a68e92a962ba',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fgen9',['gpu_gen9',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a9d0aaa51168878b085b2e29534a13058',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fgen9_5f5',['gpu_gen9_5',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a52cdcecb0ac1d72d0baa4686b7d19e26',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5ficl',['gpu_icl',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a8091d34d9ebcf229861148abc0728c3e',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fkbl',['gpu_kbl',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980a8010e260f184be1623095d8548782988',1,'cl::sycl::INTEL::device_arch']]],
+  ['gpu_5fskl',['gpu_skl',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html#a492d5d7b0e42816020bd1ae4bc3bb980aa0779203367a41a278a7f4f3cef6812a',1,'cl::sycl::INTEL::device_arch']]],
   ['grf',['GRF',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951aa336fcc5f3186c774795aaec472e6185',1,'__esimd']]]
 ];

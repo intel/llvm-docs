@@ -85,7 +85,7 @@ var searchData=
   ['builtins_5frelational_2ecpp',['builtins_relational.cpp',['../builtins__relational_8cpp.html',1,'']]],
   ['burst_5fcoalesce',['BURST_COALESCE',['../namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6',1,'cl::sycl::INTEL::BURST_COALESCE()'],['../namespacecl_1_1sycl_1_1INTEL.html#ab130adbada20118197538a2475fdaf22',1,'cl::sycl::INTEL::burst_coalesce()']]],
   ['burst_5fcoalesce_5fimpl',['burst_coalesce_impl',['../structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html',1,'cl::sycl::INTEL']]],
-  ['byte',['BYTE',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a3407b861163a8ca3525253a3b91b5f95',1,'__esimd::BYTE()'],['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl::byte()']]],
+  ['byte',['BYTE',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a3407b861163a8ca3525253a3b91b5f95',1,'__esimd::BYTE()'],['../namespacecl_1_1sycl.html#a7f43bb1dfddcd1a4405a95e74ce0ba57',1,'cl::sycl::byte()'],['../namespacecl_1_1sycl_1_1INTEL.html#a36bbf3471189a1daee766e6106a2ec4e',1,'cl::sycl::INTEL::byte()']]],
   ['byte_5ftype',['byte_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type.html',1,'cl::sycl::INTEL::gpu::detail']]],
   ['byte_5ftype_3c_20int_20_3e',['byte_type&lt; int &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01int_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
   ['byte_5ftype_3c_20short_20_3e',['byte_type&lt; short &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01short_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],

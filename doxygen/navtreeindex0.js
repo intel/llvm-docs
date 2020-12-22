@@ -1,7 +1,7 @@
 var NAVTREEINDEX0 =
 {
-"INTEL_2pipes_8hpp.html":[4,0,0,0,1,4,7],
-"INTEL_2pipes_8hpp_source.html":[4,0,0,0,1,4,7],
+"INTEL_2pipes_8hpp.html":[4,0,0,0,1,4,8],
+"INTEL_2pipes_8hpp_source.html":[4,0,0,0,1,4,8],
 "ONEAPI_2atomic_8hpp.html":[4,0,0,0,1,5,2],
 "ONEAPI_2atomic_8hpp_source.html":[4,0,0,0,1,5,2],
 "ONEAPI_2experimental_2builtins_8hpp.html":[4,0,0,0,1,5,0,0],

@@ -14,6 +14,7 @@ var searchData=
   ['depdesc',['DepDesc',['../structcl_1_1sycl_1_1detail_1_1DepDesc.html',1,'cl::sycl::detail']]],
   ['devdesct',['DevDescT',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html',1,'cl::sycl::detail']]],
   ['device',['device',['../classcl_1_1sycl_1_1device.html',1,'cl::sycl']]],
+  ['device_5farch',['device_arch',['../classcl_1_1sycl_1_1INTEL_1_1device__arch.html',1,'cl::sycl::INTEL']]],
   ['device_5ferror',['device_error',['../classcl_1_1sycl_1_1device__error.html',1,'cl::sycl']]],
   ['device_5fevent',['device_event',['../classcl_1_1sycl_1_1device__event.html',1,'cl::sycl']]],
   ['device_5ffilter',['device_filter',['../structcl_1_1sycl_1_1detail_1_1device__filter.html',1,'cl::sycl::detail']]],

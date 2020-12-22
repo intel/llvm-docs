@@ -238,6 +238,7 @@ var hierarchy =
     [ "cl::sycl::detail::DepDesc", "structcl_1_1sycl_1_1detail_1_1DepDesc.html", null ],
     [ "cl::sycl::detail::DevDescT", "structcl_1_1sycl_1_1detail_1_1DevDescT.html", null ],
     [ "cl::sycl::device", "classcl_1_1sycl_1_1device.html", null ],
+    [ "cl::sycl::INTEL::device_arch", "classcl_1_1sycl_1_1INTEL_1_1device__arch.html", null ],
     [ "cl::sycl::device_event", "classcl_1_1sycl_1_1device__event.html", null ],
     [ "cl::sycl::detail::device_filter", "structcl_1_1sycl_1_1detail_1_1device__filter.html", null ],
     [ "cl::sycl::detail::device_filter_list", "classcl_1_1sycl_1_1detail_1_1device__filter__list.html", null ],
@@ -310,6 +311,7 @@ var hierarchy =
           [ "cl::sycl::platform_error", "classcl_1_1sycl_1_1platform__error.html", null ],
           [ "cl::sycl::profiling_error", "classcl_1_1sycl_1_1profiling__error.html", null ]
         ] ],
+        [ "cl::sycl::INTEL::online_compile_error", "classcl_1_1sycl_1_1INTEL_1_1online__compile__error.html", null ],
         [ "cl::sycl::runtime_error", "classcl_1_1sycl_1_1runtime__error.html", [
           [ "cl::sycl::accessor_error", "classcl_1_1sycl_1_1accessor__error.html", null ],
           [ "cl::sycl::event_error", "classcl_1_1sycl_1_1event__error.html", null ],
@@ -671,6 +673,7 @@ var hierarchy =
     [ "cl::sycl::ONEAPI::property::no_offset", "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset.html", null ],
     [ "cl::sycl::detail::NotEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1NotEqualTo.html", null ],
     [ "std::numeric_limits< cl::sycl::half >", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html", null ],
+    [ "cl::sycl::INTEL::online_compiler< Lang >", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html", null ],
     [ "cl::sycl::detail::OSUtil", "classcl_1_1sycl_1_1detail_1_1OSUtil.html", null ],
     [ "cl::sycl::info::param_traits< T, param >", "classcl_1_1sycl_1_1info_1_1param__traits.html", null ],
     [ "pi_buff_rect_offset_struct", "structpi__buff__rect__offset__struct.html", null ],
