@@ -28,6 +28,7 @@ var searchData=
   ['pi_5fmem_5fflags_5fhost_5fptr_5falloc',['PI_MEM_FLAGS_HOST_PTR_ALLOC',['../pi_8h.html#a2562e15b06c77655f7e4f6d05df12706',1,'pi.h']]],
   ['pi_5fmem_5fflags_5fhost_5fptr_5fcopy',['PI_MEM_FLAGS_HOST_PTR_COPY',['../pi_8h.html#a74816d868e1dba07680aa80db3cf31dd',1,'pi.h']]],
   ['pi_5fmem_5fflags_5fhost_5fptr_5fuse',['PI_MEM_FLAGS_HOST_PTR_USE',['../pi_8h.html#a9493f815921f58c6e410def36d93bf10',1,'pi.h']]],
+  ['pi_5fmem_5fproperties_5fchannel',['PI_MEM_PROPERTIES_CHANNEL',['../pi_8h.html#aff80421bb0038564a1c52140d7e85ab9',1,'pi.h']]],
   ['pi_5fqueue_5fon_5fdevice',['PI_QUEUE_ON_DEVICE',['../pi_8h.html#a4af3feaac9c439f33d41b0806e43d100',1,'pi.h']]],
   ['pi_5fqueue_5fon_5fdevice_5fdefault',['PI_QUEUE_ON_DEVICE_DEFAULT',['../pi_8h.html#aeee7184062eede93cfad0d190aed01cb',1,'pi.h']]],
   ['pi_5fqueue_5fout_5fof_5forder_5fexec_5fmode_5fenable',['PI_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE',['../pi_8h.html#a768ec1723a191c3c77224965b5997a83',1,'pi.h']]],

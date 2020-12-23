@@ -35,6 +35,7 @@ var searchData=
   ['propertywithdata_3c_20detail_3a_3abufferusemutex_20_3e',['PropertyWithData&lt; detail::BufferUseMutex &gt;',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html',1,'cl::sycl::detail']]],
   ['propertywithdata_3c_20detail_3a_3aimagecontextbound_20_3e',['PropertyWithData&lt; detail::ImageContextBound &gt;',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html',1,'cl::sycl::detail']]],
   ['propertywithdata_3c_20detail_3a_3aimageusemutex_20_3e',['PropertyWithData&lt; detail::ImageUseMutex &gt;',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html',1,'cl::sycl::detail']]],
+  ['propertywithdata_3c_20detail_3a_3apropwithdatakind_3a_3abuffermemchannel_20_3e',['PropertyWithData&lt; detail::PropWithDataKind::BufferMemChannel &gt;',['../classcl_1_1sycl_1_1detail_1_1PropertyWithData.html',1,'cl::sycl::detail']]],
   ['propertywithdatabase',['PropertyWithDataBase',['../classcl_1_1sycl_1_1detail_1_1PropertyWithDataBase.html',1,'cl::sycl::detail']]],
   ['ptrvaluetype',['PtrValueType',['../structcl_1_1sycl_1_1detail_1_1PtrValueType.html',1,'cl::sycl::detail']]],
   ['ptrvaluetype_3c_20const_20void_2c_20space_20_3e',['PtrValueType&lt; const void, Space &gt;',['../structcl_1_1sycl_1_1detail_1_1PtrValueType.html',1,'cl::sycl::detail']]],

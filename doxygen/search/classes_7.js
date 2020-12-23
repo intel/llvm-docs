@@ -2,6 +2,7 @@ var searchData=
 [
   ['get_5fcontext_5finfo',['get_context_info',['../structcl_1_1sycl_1_1detail_1_1get__context__info.html',1,'cl::sycl::detail']]],
   ['get_5fdevice_5finfo',['get_device_info',['../structcl_1_1sycl_1_1detail_1_1get__device__info.html',1,'cl::sycl::detail']]],
+  ['get_5fdevice_5finfo_3c_20bool_2c_20info_3a_3adevice_3a_3aext_5fintel_5fmem_5fchannel_20_3e',['get_device_info&lt; bool, info::device::ext_intel_mem_channel &gt;',['../structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1ext__intel__mem__channel_01_4.html',1,'cl::sycl::detail']]],
   ['get_5fdevice_5finfo_3c_20bool_2c_20info_3a_3adevice_3a_3akernel_5fkernel_5fpipe_5fsupport_20_3e',['get_device_info&lt; bool, info::device::kernel_kernel_pipe_support &gt;',['../structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html',1,'cl::sycl::detail']]],
   ['get_5fdevice_5finfo_3c_20bool_2c_20info_3a_3adevice_3a_3aqueue_5fprofiling_20_3e',['get_device_info&lt; bool, info::device::queue_profiling &gt;',['../structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html',1,'cl::sycl::detail']]],
   ['get_5fdevice_5finfo_3c_20bool_2c_20info_3a_3adevice_3a_3ausm_5fdevice_5fallocations_20_3e',['get_device_info&lt; bool, info::device::usm_device_allocations &gt;',['../structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__device__allocations_01_4.html',1,'cl::sycl::detail']]],

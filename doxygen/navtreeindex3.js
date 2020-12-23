@@ -1,5 +1,13 @@
 var NAVTREEINDEX3 =
 {
+"builtins__math_8cpp.html#a3805048bd8472ba630e3587e064e00fd":[4,0,2,1,10,20],
+"builtins__math_8cpp.html#a380b5664bdc24e5d95316e93ff9a0c6f":[4,0,2,1,10,51],
+"builtins__math_8cpp.html#a3b2d286de4a47c3558bed5b8370d06ec":[4,0,2,1,10,99],
+"builtins__math_8cpp.html#a3bc72556526cdf22ed2d2b74003038d2":[4,0,2,1,10,163],
+"builtins__math_8cpp.html#a3db12343596ae8a8bb18bb402575e6f0":[4,0,2,1,10,179],
+"builtins__math_8cpp.html#a3fe2342ca764fd8c745e0f9749326a02":[4,0,2,1,10,72],
+"builtins__math_8cpp.html#a40cabd96145867ec89dac6d9508954b9":[4,0,2,1,10,119],
+"builtins__math_8cpp.html#a4111e090ebd40c3148325f0da69f8b89":[4,0,2,1,10,148],
 "builtins__math_8cpp.html#a41eb3a60d97bb01a6358b4f16ca892d4":[4,0,2,1,10,85],
 "builtins__math_8cpp.html#a4257f3143ef393a9ee6cfef94c45edd3":[4,0,2,1,10,170],
 "builtins__math_8cpp.html#a42a4a13864b9d2ef54d8e3e534d2eb80":[4,0,2,1,10,59],
@@ -238,16 +246,8 @@ var NAVTREEINDEX3 =
 "classSystemMemory.html#a5b4abfc3646ebac373044ac4bc4e680e":[3,0,235,2],
 "classSystemMemory.html#acb2bf348d169471cf619583ec49855a2":[3,0,235,0],
 "classSystemMemory.html#aec23ceda58eafb18342623deeb2d4462":[3,0,235,1],
-"classUSMAllocContext.html":[3,0,237],
-"classUSMAllocContext.html#a45c721cd496e881d47dd32067f02619b":[3,0,237,5],
-"classUSMAllocContext.html#a5768981db315cd66c1c37d3e963d3a60":[3,0,237,4],
-"classUSMAllocContext.html#a9391ab5a00278de27a284400b0500751":[3,0,237,2],
-"classUSMAllocContext.html#accc5886dc427023f3ec37a563ce24091":[3,0,237,1],
-"classUSMAllocContext.html#afb16167a534ae853be76a6a6f9c3980b":[3,0,237,3],
-"classUSMAllocContext_1_1USMAllocImpl.html":[3,0,237,0],
-"classUSMAllocContext_1_1USMAllocImpl.html#a16dc1dcaff28d86ac4a6189cba4fb0ad":[3,0,237,0,1],
-"classUSMAllocContext_1_1USMAllocImpl.html#a24680a6d0e0734b20b6e0db8ab04c058":[3,0,237,0,0],
-"classUSMAllocContext_1_1USMAllocImpl.html#a76f6ae9f73ef3cac7dfc523bf7a46b3b":[3,0,237,0,3],
-"classUSMAllocContext_1_1USMAllocImpl.html#a8eba849adf6bf5144fe47a84664aa6cf":[3,0,237,0,4],
-"classUSMAllocContext_1_1USMAllocImpl.html#aadff48abe43a3ef92e006672b63ba81d":[3,0,237,0,6]
+"classUSMAllocContext.html":[3,0,238],
+"classUSMAllocContext.html#a45c721cd496e881d47dd32067f02619b":[3,0,238,5],
+"classUSMAllocContext.html#a5768981db315cd66c1c37d3e963d3a60":[3,0,238,4],
+"classUSMAllocContext.html#a9391ab5a00278de27a284400b0500751":[3,0,238,2]
 };

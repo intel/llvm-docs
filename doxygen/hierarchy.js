@@ -356,6 +356,7 @@ var hierarchy =
     [ "_pi_plugin::FunctionPointers", "struct__pi__plugin_1_1FunctionPointers.html", null ],
     [ "cl::sycl::detail::get_context_info< param >", "structcl_1_1sycl_1_1detail_1_1get__context__info.html", null ],
     [ "cl::sycl::detail::get_device_info< T, param >", "structcl_1_1sycl_1_1detail_1_1get__device__info.html", null ],
+    [ "cl::sycl::detail::get_device_info< bool, info::device::ext_intel_mem_channel >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1ext__intel__mem__channel_01_4.html", null ],
     [ "cl::sycl::detail::get_device_info< bool, info::device::kernel_kernel_pipe_support >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html", null ],
     [ "cl::sycl::detail::get_device_info< bool, info::device::queue_profiling >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html", null ],
     [ "cl::sycl::detail::get_device_info< bool, info::device::usm_device_allocations >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__device__allocations_01_4.html", null ],
@@ -635,6 +636,7 @@ var hierarchy =
     [ "cl::sycl::detail::make_unsigned_impl< T, enable_if_t<!is_contained< T, gtl::integer_list >::value, T > >", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_9is__contained_3_07ab07014fed00ccca14dfc34322099d2.html", null ],
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
     [ "cl::sycl::detail::Command::Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", null ],
+    [ "cl::sycl::marray< Type, NumElements >", "classcl_1_1sycl_1_1marray.html", null ],
     [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
     [ "maxtype< T >", "structmaxtype.html", null ],
     [ "maxtype< char >", "structmaxtype_3_01char_01_4.html", null ],
@@ -717,6 +719,9 @@ var hierarchy =
       ] ],
       [ "cl::sycl::detail::PropertyWithData< detail::ImageUseMutex >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", [
         [ "cl::sycl::property::image::use_mutex", "classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html", null ]
+      ] ],
+      [ "cl::sycl::detail::PropertyWithData< detail::PropWithDataKind::BufferMemChannel >", "classcl_1_1sycl_1_1detail_1_1PropertyWithData.html", [
+        [ "cl::sycl::property::buffer::mem_channel", "classcl_1_1sycl_1_1property_1_1buffer_1_1mem__channel.html", null ]
       ] ]
     ] ],
     [ "cl::sycl::detail::PtrValueType< ElementType, addressSpace >", "structcl_1_1sycl_1_1detail_1_1PtrValueType.html", null ],
@@ -980,6 +985,7 @@ var hierarchy =
     [ "cl::sycl::detail::TryToGetPointerT< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetPointerT.html", null ],
     [ "cl::sycl::detail::TryToGetPointerVecT< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetPointerVecT.html", null ],
     [ "cl::sycl::detail::TryToGetVectorT< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetVectorT.html", null ],
+    [ "type", "classstd_1_1conditional_1_1type.html", null ],
     [ "cl::sycl::detail::type_list< T >", "structcl_1_1sycl_1_1detail_1_1type__list.html", null ],
     [ "cl::sycl::detail::type_list< H, T... >", "structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html", null ],
     [ "cl::sycl::detail::type_list< type_list< H, T... >, T2... >", "structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html", null ],

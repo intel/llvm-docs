@@ -229,7 +229,14 @@ var pi_8h =
       [ "PI_DEVICE_INFO_USM_DEVICE_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea999877255baead0c6ead1c3668437e5a", null ],
       [ "PI_DEVICE_INFO_USM_SINGLE_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea19f60da42bf18e434bc133abeaf7c570", null ],
       [ "PI_DEVICE_INFO_USM_CROSS_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea5b2a629a108aa31c19807a147b88c227", null ],
-      [ "PI_DEVICE_INFO_USM_SYSTEM_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eabb803c6d8b9507150b6de2b0d9b5a3e3", null ]
+      [ "PI_DEVICE_INFO_USM_SYSTEM_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eabb803c6d8b9507150b6de2b0d9b5a3e3", null ],
+      [ "PI_DEVICE_INFO_PCI_ADDRESS", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea90837b87fc065d71de1faf563b622414", null ],
+      [ "PI_DEVICE_INFO_GPU_EU_COUNT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea2240d9b4853db6c9b70da4743246db9f", null ],
+      [ "PI_DEVICE_INFO_GPU_EU_SIMD_WIDTH", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea4daa1048efbf954afa505503b1b5052f", null ],
+      [ "PI_DEVICE_INFO_GPU_SLICES", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea074c00e00d052d53a2a9ebe340ca7a48", null ],
+      [ "PI_DEVICE_INFO_GPU_SUBSLICES_PER_SLICE", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eafc544a026d76683341a150ea98d28113", null ],
+      [ "PI_DEVICE_INFO_GPU_EU_COUNT_PER_SUBSLICE", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea9d98dffed7ec7adcf636ae603b67e1e2", null ],
+      [ "PI_DEVICE_INFO_MAX_MEM_BANDWIDTH", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea06adc8577a982414c106aa4b29eb5c0f", null ]
     ] ],
     [ "_pi_device_local_mem_type", "pi_8h.html#ac9435d7fcc630cad9edbf944ed3b2957", [
       [ "PI_DEVICE_LOCAL_MEM_TYPE_LOCAL", "pi_8h.html#ac9435d7fcc630cad9edbf944ed3b2957ac0c7d583fc6511952975b58161bebccd", null ],
@@ -608,6 +615,7 @@ var pi_8h =
     [ "PI_MEM_FLAGS_HOST_PTR_ALLOC", "pi_8h.html#a2562e15b06c77655f7e4f6d05df12706", null ],
     [ "PI_MEM_FLAGS_HOST_PTR_COPY", "pi_8h.html#a74816d868e1dba07680aa80db3cf31dd", null ],
     [ "PI_MEM_FLAGS_HOST_PTR_USE", "pi_8h.html#a9493f815921f58c6e410def36d93bf10", null ],
+    [ "PI_MEM_PROPERTIES_CHANNEL", "pi_8h.html#aff80421bb0038564a1c52140d7e85ab9", null ],
     [ "PI_QUEUE_ON_DEVICE", "pi_8h.html#a4af3feaac9c439f33d41b0806e43d100", null ],
     [ "PI_QUEUE_ON_DEVICE_DEFAULT", "pi_8h.html#aeee7184062eede93cfad0d190aed01cb", null ],
     [ "PI_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE", "pi_8h.html#a768ec1723a191c3c77224965b5997a83", null ],

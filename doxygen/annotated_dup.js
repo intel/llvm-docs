@@ -236,6 +236,7 @@ var annotated_dup =
     [ "restype_ex< unsigned short, unsigned short >", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01short_01_4.html", "structrestype__ex_3_01unsigned_01short_00_01unsigned_01short_01_4" ],
     [ "Slab", "classSlab.html", "classSlab" ],
     [ "SystemMemory", "classSystemMemory.html", "classSystemMemory" ],
+    [ "type", "classstd_1_1conditional_1_1type.html", null ],
     [ "UsmAllocationException", "classUsmAllocationException.html", "classUsmAllocationException" ],
     [ "USMAllocContext", "classUSMAllocContext.html", "classUSMAllocContext" ],
     [ "USMDeviceMemoryAlloc", "classUSMDeviceMemoryAlloc.html", "classUSMDeviceMemoryAlloc" ],

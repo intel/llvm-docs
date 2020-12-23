@@ -69,6 +69,7 @@ var namespacecl_1_1sycl =
     [ "kernel", "classcl_1_1sycl_1_1kernel.html", "classcl_1_1sycl_1_1kernel" ],
     [ "kernel_error", "classcl_1_1sycl_1_1kernel__error.html", null ],
     [ "link_program_error", "classcl_1_1sycl_1_1link__program__error.html", null ],
+    [ "marray", "classcl_1_1sycl_1_1marray.html", "classcl_1_1sycl_1_1marray" ],
     [ "memory_allocation_error", "classcl_1_1sycl_1_1memory__allocation__error.html", null ],
     [ "mode_tag_t", "structcl_1_1sycl_1_1mode__tag__t.html", "structcl_1_1sycl_1_1mode__tag__t" ],
     [ "mode_target_tag_t", "structcl_1_1sycl_1_1mode__target__tag__t.html", "structcl_1_1sycl_1_1mode__target__tag__t" ],

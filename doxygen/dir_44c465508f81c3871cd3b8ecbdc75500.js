@@ -26,6 +26,7 @@ var dir_44c465508f81c3871cd3b8ecbdc75500 =
       [ "use_host_ptr", "classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html", null ],
       [ "use_mutex", "classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html", "classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex" ],
       [ "context_bound", "classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound.html", "classcl_1_1sycl_1_1property_1_1buffer_1_1context__bound" ],
+      [ "mem_channel", "classcl_1_1sycl_1_1property_1_1buffer_1_1mem__channel.html", "classcl_1_1sycl_1_1property_1_1buffer_1_1mem__channel" ],
       [ "use_pinned_host_memory", "classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html", null ]
     ] ],
     [ "context_properties.hpp", "context__properties_8hpp.html", [

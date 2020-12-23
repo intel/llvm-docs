@@ -18,6 +18,14 @@ var aspects_8hpp =
       [ "usm_host_allocations", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea1f662c5dce6a25abcb7d2c926e3a0827", null ],
       [ "usm_shared_allocations", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea757940ac6b3936d6a82b0570ee118a7d", null ],
       [ "usm_restricted_shared_allocations", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea220d53bc7a23df5c8f0eb7351531d191", null ],
-      [ "usm_system_allocator", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261eac46b424deab98bed9ab77e13a15bef39", null ]
+      [ "usm_system_allocator", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261eac46b424deab98bed9ab77e13a15bef39", null ],
+      [ "ext_intel_pci_address", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea1323f315edc0202a8d3a8d0297829081", null ],
+      [ "ext_intel_gpu_eu_count", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea57e39fd889bb0eccd9e4bfaace50e9e1", null ],
+      [ "ext_intel_gpu_eu_simd_width", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261eab9ce7f7a217e10088566b1aec5d41da8", null ],
+      [ "ext_intel_gpu_slices", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261eae4fde6a413332578c59a9f34ee7b932c", null ],
+      [ "ext_intel_gpu_subslices_per_slice", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261eaff44a93fba7e8adf9a44a1af62c69b59", null ],
+      [ "ext_intel_gpu_eu_count_per_subslice", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea5df6f689fdab25052f8840b0dc7205f6", null ],
+      [ "ext_intel_max_mem_bandwidth", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea4d2cabd4dba12aa15b6f495ded149a4f", null ],
+      [ "ext_intel_mem_channel", "aspects_8hpp.html#a0c5593ca4fbd8828493d37b723b9261ea28ceaa6aabc248e3b7d988f20001c0c0", null ]
     ] ]
 ];

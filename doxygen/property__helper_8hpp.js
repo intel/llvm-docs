@@ -19,6 +19,7 @@ var property__helper_8hpp =
       [ "BufferContextBound", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816a63acc6f79b34c70f4e866d5fdbc4da31", null ],
       [ "ImageUseMutex", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816a5c348b713b0661e79681bfe6664759c9", null ],
       [ "ImageContextBound", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816aa0bcefd99b3b6c504e56581554306108", null ],
+      [ "BufferMemChannel", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816a704faea6c04e11fe815f98157a1a51b2", null ],
       [ "PropWithDataKindSize", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816aad75ee4da8cd4e573b6c2addcb8a8b2b", null ]
     ] ]
 ];

@@ -347,7 +347,17 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a1f662c5dce6a25abcb7d2c926e3a0827">cl::sycl::info::device::usm_host_allocations</a> = PI_USM_HOST_SUPPORT, 
 <a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a757940ac6b3936d6a82b0570ee118a7d">cl::sycl::info::device::usm_shared_allocations</a> = PI_USM_SINGLE_SHARED_SUPPORT, 
 <a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a220d53bc7a23df5c8f0eb7351531d191">cl::sycl::info::device::usm_restricted_shared_allocations</a> = PI_USM_CROSS_SHARED_SUPPORT, 
-<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ac46b424deab98bed9ab77e13a15bef39">cl::sycl::info::device::usm_system_allocator</a> = PI_USM_SYSTEM_SHARED_SUPPORT
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ac46b424deab98bed9ab77e13a15bef39">cl::sycl::info::device::usm_system_allocator</a> = PI_USM_SYSTEM_SHARED_SUPPORT, 
+<br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a1323f315edc0202a8d3a8d0297829081">cl::sycl::info::device::ext_intel_pci_address</a> = PI_DEVICE_INFO_PCI_ADDRESS, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a57e39fd889bb0eccd9e4bfaace50e9e1">cl::sycl::info::device::ext_intel_gpu_eu_count</a> = PI_DEVICE_INFO_GPU_EU_COUNT, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ab9ce7f7a217e10088566b1aec5d41da8">cl::sycl::info::device::ext_intel_gpu_eu_simd_width</a> = PI_DEVICE_INFO_GPU_EU_SIMD_WIDTH, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190ae4fde6a413332578c59a9f34ee7b932c">cl::sycl::info::device::ext_intel_gpu_slices</a> = PI_DEVICE_INFO_GPU_SLICES, 
+<br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190aff44a93fba7e8adf9a44a1af62c69b59">cl::sycl::info::device::ext_intel_gpu_subslices_per_slice</a> = PI_DEVICE_INFO_GPU_SUBSLICES_PER_SLICE, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a5df6f689fdab25052f8840b0dc7205f6">cl::sycl::info::device::ext_intel_gpu_eu_count_per_subslice</a>, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a4d2cabd4dba12aa15b6f495ded149a4f">cl::sycl::info::device::ext_intel_max_mem_bandwidth</a> = PI_DEVICE_INFO_MAX_MEM_BANDWIDTH, 
+<a class="el" href="namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a28ceaa6aabc248e3b7d988f20001c0c0">cl::sycl::info::device::ext_intel_mem_channel</a> = PI_MEM_PROPERTIES_CHANNEL
 <br />
  }</td></tr>
 <tr class="separator:ab329ccdc28ac4187f67d14db9cbb6190"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -534,7 +544,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>param_traits&lt;param_type, param_type::param&gt; {              \</div><div class="line">  public:                                                                      \</div><div class="line">    using return_type = ret_type;                                              \</div><div class="line">  };</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00260">260</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00271">271</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
 
 </div>
 </div>
@@ -570,7 +580,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt;                                                                  \</div><div class="line">  struct compatibility_param_traits&lt;param_type, param_type::param&gt; {           \</div><div class="line">    static constexpr <span class="keyword">auto</span> value = kernel_device_specific::param;               \</div><div class="line">  };</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00260">260</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00271">271</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
 
 </div>
 </div>
@@ -612,7 +622,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">class </span>param_traits&lt;param_type, param_type::param&gt; {              \</div><div class="line">  public:                                                                      \</div><div class="line">    using return_type = ret_type;                                              \</div><div class="line">    using input_type = in_type;                                                \</div><div class="line">  };</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00266">266</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00277">277</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
 
 </div>
 </div>
@@ -654,7 +664,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;&gt;                                                                  \</div><div class="line">  struct compatibility_param_traits&lt;param_type, param_type::param&gt; {           \</div><div class="line">    static constexpr <span class="keyword">auto</span> value = kernel_device_specific::param;               \</div><div class="line">  };</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00266">266</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="info__desc_8hpp_source.html#l00277">277</a> of file <a class="el" href="info__desc_8hpp_source.html">info_desc.hpp</a>.</p>
 
 </div>
 </div>

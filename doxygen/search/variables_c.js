@@ -87,6 +87,7 @@ var searchData=
   ['minteroptask',['MInteropTask',['../classcl_1_1sycl_1_1detail_1_1CGInteropTask.html#a4a75d580209f572ff7cd406856931990',1,'cl::sycl::detail::CGInteropTask']]],
   ['misactive',['MIsActive',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['misblockable',['MIsBlockable',['../classcl_1_1sycl_1_1detail_1_1Command.html#a5d9548e459c7d2fc7a2b8d90c2428057',1,'cl::sycl::detail::Command']]],
+  ['misesimdacc',['MIsESIMDAcc',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#a8fefe62eca2bb08561cefb8a908c1931',1,'cl::sycl::detail::AccessorImplHost']]],
   ['misleaderalloca',['MIsLeaderAlloca',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661',1,'cl::sycl::detail::AllocaCommandBase']]],
   ['missubbuffer',['MIsSubBuffer',['../classcl_1_1sycl_1_1detail_1_1AccessorImplHost.html#ac7538104eab816573443cd2fe3dbce47',1,'cl::sycl::detail::AccessorImplHost']]],
   ['mkernelname',['MKernelName',['../classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a50888c8904b33b445ac25758f04a3e65',1,'cl::sycl::detail::CGExecKernel']]],

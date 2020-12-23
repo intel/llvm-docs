@@ -4,5 +4,6 @@ var searchData=
   ['sycl_5fconfig_5ffile_5fname',['SYCL_CONFIG_FILE_NAME',['../config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930',1,'config.cpp']]],
   ['sycl_5fesimd_5ffunction',['SYCL_ESIMD_FUNCTION',['../esimd_8hpp.html#af8d6f47b7d994e34c4b84ce8969b0e06',1,'esimd.hpp']]],
   ['sycl_5fesimd_5fkernel',['SYCL_ESIMD_KERNEL',['../esimd_8hpp.html#a66d006896c3f92463b86a4652b9b1483',1,'esimd.hpp']]],
+  ['sycl_5fext_5fintel_5fdevice_5finfo',['SYCL_EXT_INTEL_DEVICE_INFO',['../feature__test_8hpp.html#add88ac33e211b801bbda720336486cda',1,'feature_test.hpp']]],
   ['sycl_5fexternal',['SYCL_EXTERNAL',['../defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901',1,'defines_elementary.hpp']]]
 ];

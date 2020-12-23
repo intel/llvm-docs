@@ -12,6 +12,7 @@ var searchData=
   ['trytogetpointert',['TryToGetPointerT',['../classcl_1_1sycl_1_1detail_1_1TryToGetPointerT.html',1,'cl::sycl::detail']]],
   ['trytogetpointervect',['TryToGetPointerVecT',['../classcl_1_1sycl_1_1detail_1_1TryToGetPointerVecT.html',1,'cl::sycl::detail']]],
   ['trytogetvectort',['TryToGetVectorT',['../classcl_1_1sycl_1_1detail_1_1TryToGetVectorT.html',1,'cl::sycl::detail']]],
+  ['type',['type',['../classstd_1_1conditional_1_1type.html',1,'']]],
   ['type_5flist',['type_list',['../structcl_1_1sycl_1_1detail_1_1type__list.html',1,'cl::sycl::detail']]],
   ['type_5flist_3c_20h_2c_20t_2e_2e_2e_20_3e',['type_list&lt; H, T... &gt;',['../structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html',1,'cl::sycl::detail']]],
   ['type_5flist_3c_20type_5flist_3c_20h_2c_20t_2e_2e_2e_20_3e_2c_20t2_2e_2e_2e_20_3e',['type_list&lt; type_list&lt; H, T... &gt;, T2... &gt;',['../structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html',1,'cl::sycl::detail']]],

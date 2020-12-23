@@ -95,7 +95,15 @@ var info__desc_8hpp =
       [ "usm_host_allocations", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a1f662c5dce6a25abcb7d2c926e3a0827", null ],
       [ "usm_shared_allocations", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a757940ac6b3936d6a82b0570ee118a7d", null ],
       [ "usm_restricted_shared_allocations", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a220d53bc7a23df5c8f0eb7351531d191", null ],
-      [ "usm_system_allocator", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ac46b424deab98bed9ab77e13a15bef39", null ]
+      [ "usm_system_allocator", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ac46b424deab98bed9ab77e13a15bef39", null ],
+      [ "ext_intel_pci_address", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a1323f315edc0202a8d3a8d0297829081", null ],
+      [ "ext_intel_gpu_eu_count", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a57e39fd889bb0eccd9e4bfaace50e9e1", null ],
+      [ "ext_intel_gpu_eu_simd_width", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab9ce7f7a217e10088566b1aec5d41da8", null ],
+      [ "ext_intel_gpu_slices", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ae4fde6a413332578c59a9f34ee7b932c", null ],
+      [ "ext_intel_gpu_subslices_per_slice", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aff44a93fba7e8adf9a44a1af62c69b59", null ],
+      [ "ext_intel_gpu_eu_count_per_subslice", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a5df6f689fdab25052f8840b0dc7205f6", null ],
+      [ "ext_intel_max_mem_bandwidth", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a4d2cabd4dba12aa15b6f495ded149a4f", null ],
+      [ "ext_intel_mem_channel", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a28ceaa6aabc248e3b7d988f20001c0c0", null ]
     ] ],
     [ "device_type", "info__desc_8hpp.html#a952e2d85fd3f1f3eeca7d883c6526165", [
       [ "cpu", "info__desc_8hpp.html#a952e2d85fd3f1f3eeca7d883c6526165ad9747e2da342bdb995f6389533ad1a3d", null ],

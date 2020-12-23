@@ -46,6 +46,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
       [ "feature_not_supported", "classcl_1_1sycl_1_1feature__not__supported.html", null ]
     ] ],
     [ "exception_list.hpp", "exception__list_8hpp.html", "exception__list_8hpp" ],
+    [ "feature_test.hpp", "feature__test_8hpp.html", "feature__test_8hpp" ],
     [ "group.hpp", "group_8hpp.html", "group_8hpp" ],
     [ "h_item.hpp", "h__item_8hpp.html", null ],
     [ "half_type.hpp", "half__type_8hpp.html", "half__type_8hpp" ],
@@ -62,6 +63,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "kernel.hpp", "kernel_8hpp.html", [
       [ "hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4" ]
     ] ],
+    [ "marray.hpp", "marray_8hpp.html", "marray_8hpp" ],
     [ "multi_ptr.hpp", "multi__ptr_8hpp.html", "multi__ptr_8hpp" ],
     [ "nd_item.hpp", "nd__item_8hpp.html", "nd__item_8hpp" ],
     [ "nd_range.hpp", "nd__range_8hpp.html", null ],

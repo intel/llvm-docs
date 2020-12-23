@@ -8,6 +8,7 @@ var pi__opencl_8cpp =
     [ "getExtFuncFromContext", "pi__opencl_8cpp.html#a5cad0a58d3e512c473b53ff773178101", null ],
     [ "piclProgramCreateWithSource", "pi__opencl_8cpp.html#ac5fb4aa49b8c4a3ad5cf0bd08a201e7e", null ],
     [ "piContextCreate", "pi__opencl_8cpp.html#a812679cbe8893dbb9610a5faab2b3c90", null ],
+    [ "piDeviceGetInfo", "pi__opencl_8cpp.html#ab1691b8ba9724f7d65c9438dc9678f83", null ],
     [ "piDevicesGet", "pi__opencl_8cpp.html#a69b24df8aa852caaedbbb5f3f31d9fd5", null ],
     [ "piEnqueueMemBufferMap", "pi__opencl_8cpp.html#a8ca253fa71a4da4cfe4696168a973f1a", null ],
     [ "piEventCreate", "pi__opencl_8cpp.html#a5f29450c93b62f34c598e7c0d07510d1", null ],

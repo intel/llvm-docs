@@ -103,11 +103,13 @@ $(document).ready(function(){initNavTree('pi__opencl_8cpp.html','');});
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="cl_8h_source.html">CL/sycl/detail/cl.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="pi_8h_source.html">CL/sycl/detail/pi.h</a>&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;cassert&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -148,6 +150,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a15b08defea4026996014917341fb1372"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372">USMSetIndirectAccess</a> (<a class="el" href="pi_8h.html#a3df90f0addfc2b7dc26a23d8d76ab14a">pi_kernel</a> kernel)</td></tr>
 <tr class="memdesc:a15b08defea4026996014917341fb1372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables indirect access of pointers in kernels.  <a href="#a15b08defea4026996014917341fb1372">More...</a><br /></td></tr>
 <tr class="separator:a15b08defea4026996014917341fb1372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1691b8ba9724f7d65c9438dc9678f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#ab1691b8ba9724f7d65c9438dc9678f83">piDeviceGetInfo</a> (<a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> device, <a class="el" href="pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4e">pi_device_info</a> paramName, size_t paramValueSize, void *paramValue, size_t *paramValueSizeRet)</td></tr>
+<tr class="separator:ab1691b8ba9724f7d65c9438dc9678f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c358eae6f8f0527d7ca1a90fce2ab12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a4c358eae6f8f0527d7ca1a90fce2ab12">piPlatformsGet</a> (<a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> num_entries, <a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a> *platforms, <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> *num_platforms)</td></tr>
 <tr class="separator:a4c358eae6f8f0527d7ca1a90fce2ab12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60a901e32f2bbcbaa6f8c8e8b2bf7029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pi__opencl_8cpp.html#a60a901e32f2bbcbaa6f8c8e8b2bf7029">piextPlatformCreateWithNativeHandle</a> (<a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> nativeHandle, <a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a> *platform)</td></tr>
@@ -333,7 +337,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -369,9 +373,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (err != CL_SUCCESS) {                                                     \</div><div class="line">    if (ptr != <span class="keyword">nullptr</span>)                                                        \</div><div class="line">      *ptr = <span class="keyword">nullptr</span>;                                                          \</div><div class="line">    return cast&lt;pi_result&gt;(reterr);                                            \</div><div class="line">  }</div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00028">28</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00030">30</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00330">piProgramCreate()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00283">piQueueCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00355">piProgramCreate()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00308">piQueueCreate()</a>.</p>
 
 </div>
 </div>
@@ -387,7 +391,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00048">48</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00050">50</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +408,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01076">1076</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01104">1104</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -427,9 +431,9 @@ template&lt;class To , class From &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00038">38</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00040">40</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00605">piProgramLink()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00633">piProgramLink()</a>.</p>
 
 </div>
 </div>
@@ -469,11 +473,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00071">71</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00073">73</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_CONTEXT</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00820">piextKernelSetArgPointer()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01080">piextProgramSetSpecializationConstant()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00522">piMemBufferCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00848">piextKernelSetArgPointer()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01108">piextProgramSetSpecializationConstant()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00547">piMemBufferCreate()</a>.</p>
 
 </div>
 </div>
@@ -521,11 +525,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00578">578</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00606">606</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00330">cl::sycl::detail::program_impl::get_binaries()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00330">cl::sycl::detail::program_impl::get_binaries()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -579,11 +583,63 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00498">498</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00523">523</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
+
+</div>
+</div>
+<a id="ab1691b8ba9724f7d65c9438dc9678f83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1691b8ba9724f7d65c9438dc9678f83">&#9670;&nbsp;</a></span>piDeviceGetInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> piDeviceGetInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4e">pi_device_info</a>&#160;</td>
+          <td class="paramname"><em>paramName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>paramValueSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>paramValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>paramValueSizeRet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00167">167</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00271">PI_DEVICE_INFO_GPU_EU_COUNT</a>, <a class="el" href="pi_8h_source.html#l00275">PI_DEVICE_INFO_GPU_EU_COUNT_PER_SUBSLICE</a>, <a class="el" href="pi_8h_source.html#l00272">PI_DEVICE_INFO_GPU_EU_SIMD_WIDTH</a>, <a class="el" href="pi_8h_source.html#l00273">PI_DEVICE_INFO_GPU_SLICES</a>, <a class="el" href="pi_8h_source.html#l00274">PI_DEVICE_INFO_GPU_SUBSLICES_PER_SLICE</a>, <a class="el" href="pi_8h_source.html#l00276">PI_DEVICE_INFO_MAX_MEM_BANDWIDTH</a>, <a class="el" href="pi_8h_source.html#l00270">PI_DEVICE_INFO_PCI_ADDRESS</a>, and <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00030">cl::sycl::detail::device_impl::device_impl()</a>, <a class="el" href="device__info_8hpp_source.html#l00101">cl::sycl::detail::get_device_info&lt; T, param &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00112">cl::sycl::detail::get_device_info&lt; platform, param &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00128">cl::sycl::detail::get_device_info_string&lt; param &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00158">cl::sycl::detail::get_device_info&lt; id&lt; 3 &gt;, param &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00170">cl::sycl::detail::get_device_info&lt; vector_class&lt; info::fp_config &gt;, param &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00215">cl::sycl::detail::get_device_info&lt; vector_class&lt; info::fp_config &gt;, info::device::single_fp_config &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00227">cl::sycl::detail::get_device_info&lt; bool, info::device::queue_profiling &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00240">cl::sycl::detail::get_device_info&lt; vector_class&lt; info::execution_capability &gt;, info::device::execution_capabilities &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00279">cl::sycl::detail::get_device_info&lt; vector_class&lt; info::partition_property &gt;, info::device::partition_properties &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00310">cl::sycl::detail::get_device_info&lt; vector_class&lt; info::partition_affinity_domain &gt;, info::device::partition_affinity_domains &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00325">cl::sycl::detail::get_device_info&lt; info::partition_affinity_domain, info::device::partition_type_affinity_domain &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00358">cl::sycl::detail::get_device_info&lt; info::partition_property, info::device::partition_type_property &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00380">cl::sycl::detail::get_device_info&lt; vector_class&lt; size_t &gt;, info::device::sub_group_sizes &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00421">cl::sycl::detail::get_device_info&lt; id&lt; 3 &gt;, info::device::max_work_item_sizes &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00432">cl::sycl::detail::get_device_info&lt; device, info::device::parent_device &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00950">cl::sycl::detail::get_device_info&lt; bool, info::device::usm_device_allocations &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00962">cl::sycl::detail::get_device_info&lt; bool, info::device::usm_host_allocations &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00974">cl::sycl::detail::get_device_info&lt; bool, info::device::usm_shared_allocations &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l00986">cl::sycl::detail::get_device_info&lt; bool, info::device::usm_restricted_shared_allocations &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l01002">cl::sycl::detail::get_device_info&lt; bool, info::device::usm_system_allocator &gt;::get()</a>, <a class="el" href="device__info_8hpp_source.html#l01013">cl::sycl::detail::get_device_info&lt; bool, info::device::ext_intel_mem_channel &gt;::get()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00059">cl::sycl::detail::platform_impl::getPlatformFromPiDevice()</a>, <a class="el" href="program__manager_8cpp_source.html#l00478">cl::sycl::detail::ProgramManager::getProgramBuildLog()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00025">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkGroupSize()</a>, <a class="el" href="enqueue__kernel_8cpp_source.html#l00250">cl::sycl::detail::enqueue_kernel_launch::handleInvalidWorkItemSize()</a>, <a class="el" href="device__impl_8cpp_source.html#l00218">cl::sycl::detail::device_impl::has()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -631,11 +687,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00188">188</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00213">213</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00306">cl::sycl::detail::platform_impl::get_devices()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00306">cl::sycl::detail::platform_impl::get_devices()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -713,11 +769,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00669">669</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00697">697</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00587">cl::sycl::detail::MemoryManager::map()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00587">cl::sycl::detail::MemoryManager::map()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -747,11 +803,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00654">654</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00682">682</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -806,11 +862,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>PI_SUCCESS if successfully created pi_context from the handle. PI_OUT_OF_HOST_MEMORY if can't allocate memory for the pi_context object. PI_INVALID_VALUE if numDevices == 0 or devices is NULL but backend doesn't have API to query a list of devices from the context native handle. PI_UNKNOWN_ERROR in case of another error. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00513">513</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00538">538</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="level__zero_8cpp_source.html#l00050">cl::sycl::level_zero::make_context()</a>, <a class="el" href="opencl_8cpp_source.html#l00049">cl::sycl::opencl::make_context()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="level__zero_8cpp_source.html#l00050">cl::sycl::level_zero::make_context()</a>, <a class="el" href="opencl_8cpp_source.html#l00049">cl::sycl::opencl::make_context()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -849,11 +905,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01126">1126</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01154">1154</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="context__impl_8cpp_source.html#l00164">cl::sycl::detail::context_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="context__impl_8cpp_source.html#l00164">cl::sycl::detail::context_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -900,11 +956,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00276">276</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00301">301</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00030">cl::sycl::detail::device_impl::device_impl()</a>, <a class="el" href="level__zero_8cpp_source.html#l00035">cl::sycl::level_zero::make_device()</a>, <a class="el" href="opencl_8cpp_source.html#l00036">cl::sycl::opencl::make_device()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00030">cl::sycl::detail::device_impl::device_impl()</a>, <a class="el" href="level__zero_8cpp_source.html#l00035">cl::sycl::level_zero::make_device()</a>, <a class="el" href="opencl_8cpp_source.html#l00036">cl::sycl::opencl::make_device()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -943,11 +999,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01121">1121</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01149">1149</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00211">cl::sycl::detail::device_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="device__impl_8cpp_source.html#l00211">cl::sycl::detail::device_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -991,11 +1047,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 
 <p>Selects the most appropriate device binary based on runtime information and the IR characteristics. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00205">205</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00230">230</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00642">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64</a>, <a class="el" href="pi_8h_source.html#l00647">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64_FPGA</a>, <a class="el" href="pi_8h_source.html#l00646">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64_GEN</a>, <a class="el" href="pi_8h_source.html#l00645">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64_X86_64</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_BINARY</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00650">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64</a>, <a class="el" href="pi_8h_source.html#l00655">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64_FPGA</a>, <a class="el" href="pi_8h_source.html#l00654">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64_GEN</a>, <a class="el" href="pi_8h_source.html#l00653">__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64_X86_64</a>, <a class="el" href="pi_8h_source.html#l00082">PI_INVALID_BINARY</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00620">cl::sycl::detail::ProgramManager::ProgramManager()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00620">cl::sycl::detail::ProgramManager::ProgramManager()</a>.</p>
 
 </div>
 </div>
@@ -1035,11 +1091,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00662">662</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00690">690</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1092,11 +1148,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 <li><code>program</code>. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00461">461</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00486">486</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00236">PI_DEVICE_INFO_PLATFORM</a>, and <a class="el" href="pi_8h_source.html#l00080">PI_INVALID_DEVICE</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00237">PI_DEVICE_INFO_PLATFORM</a>, and <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_DEVICE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="function__pointer_8cpp_source.html#l00017">cl::sycl::detail::getDeviceFunctionPointerImpl()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="function__pointer_8cpp_source.html#l00017">cl::sycl::detail::getDeviceFunctionPointerImpl()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1144,11 +1200,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 </dl>
 <p>PI_SUCCESS </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01109">1109</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01137">1137</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01126">piextContextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01121">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01136">piextMemGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01116">piextPlatformGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01140">piextProgramGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01131">piextQueueGetNativeHandle()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01154">piextContextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01149">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01164">piextMemGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01144">piextPlatformGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01168">piextProgramGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01159">piextQueueGetNativeHandle()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1184,9 +1240,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00447">447</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00472">472</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="commands_8cpp_source.html#l01616">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="commands_8cpp_source.html#l01631">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
 
 </div>
 </div>
@@ -1240,11 +1296,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00820">820</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00848">848</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00058">clSetKernelArgMemPointerName</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00071">getExtFuncFromContext()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00060">clSetKernelArgMemPointerName</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00073">getExtFuncFromContext()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="commands_8cpp_source.html#l01616">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="commands_8cpp_source.html#l01631">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
 
 </div>
 </div>
@@ -1280,9 +1336,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00454">454</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00479">479</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="commands_8cpp_source.html#l01616">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="commands_8cpp_source.html#l01631">cl::sycl::detail::ReverseRangeDimensionsForKernel()</a>.</p>
 
 </div>
 </div>
@@ -1322,11 +1378,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00571">571</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00599">599</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1365,11 +1421,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01136">1136</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01164">1164</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1409,11 +1465,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00180">180</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00205">205</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="level__zero_8cpp_source.html#l00022">cl::sycl::level_zero::make_platform()</a>, <a class="el" href="opencl_8cpp_source.html#l00022">cl::sycl::opencl::make_platform()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="level__zero_8cpp_source.html#l00022">cl::sycl::level_zero::make_platform()</a>, <a class="el" href="opencl_8cpp_source.html#l00022">cl::sycl::opencl::make_platform()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1452,11 +1508,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01116">1116</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01144">1144</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00358">cl::sycl::detail::platform_impl::getNative()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00358">cl::sycl::detail::platform_impl::getNative()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1503,11 +1559,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00408">408</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00433">433</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00117">cl::sycl::detail::program_impl::program_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00117">cl::sycl::detail::program_impl::program_impl()</a>.</p>
 
 </div>
 </div>
@@ -1546,11 +1602,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01140">1140</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01168">1168</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00577">cl::sycl::detail::program_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00577">cl::sycl::detail::program_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1603,11 +1659,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01080">1080</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01108">1108</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00064">clSetProgramSpecializationConstantName</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00071">getExtFuncFromContext()</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00066">clSetProgramSpecializationConstantName</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00073">getExtFuncFromContext()</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00522">cl::sycl::detail::program_impl::flush_spec_constants()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01145">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00522">cl::sycl::detail::program_impl::flush_spec_constants()</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l01173">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1654,11 +1710,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00323">323</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00348">348</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="level__zero_8cpp_source.html#l00079">cl::sycl::level_zero::make_queue()</a>, <a class="el" href="opencl_8cpp_source.html#l00073">cl::sycl::opencl::make_queue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="level__zero_8cpp_source.html#l00079">cl::sycl::level_zero::make_queue()</a>, <a class="el" href="opencl_8cpp_source.html#l00073">cl::sycl::opencl::make_queue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1697,11 +1753,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01131">1131</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01159">1159</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00258">cl::sycl::detail::queue_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00258">cl::sycl::detail::queue_impl::getNative()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1768,11 +1824,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00731">731</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00759">759</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1832,9 +1888,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00982">982</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01010">1010</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00081">cl::sycl::detail::queue_impl::mem_advise()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue__impl_8cpp_source.html#l00081">cl::sycl::detail::queue_impl::mem_advise()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1915,9 +1971,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00899">899</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00927">927</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00647">cl::sycl::detail::MemoryManager::copy_usm()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00647">cl::sycl::detail::MemoryManager::copy_usm()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -1991,9 +2047,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00860">860</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00888">888</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00670">cl::sycl::detail::MemoryManager::fill_usm()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00670">cl::sycl::detail::MemoryManager::fill_usm()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2067,9 +2123,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00938">938</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00966">966</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00691">cl::sycl::detail::MemoryManager::prefetch_usm()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00691">cl::sycl::detail::MemoryManager::prefetch_usm()</a>.</p>
 
 </div>
 </div>
@@ -2108,11 +2164,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00799">799</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00827">827</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2180,9 +2236,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01034">1034</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01062">1062</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00299">cl::sycl::get_pointer_device()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">cl::sycl::get_pointer_type()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00299">cl::sycl::get_pointer_device()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">cl::sycl::get_pointer_type()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2242,11 +2298,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00697">697</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00725">725</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2313,11 +2369,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00767">767</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00795">795</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2353,11 +2409,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00623">623</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00651">651</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00330">cl::sycl::detail::program_impl::get_binaries()</a>, <a class="el" href="program__manager_8cpp_source.html#l00418">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00330">cl::sycl::detail::program_impl::get_binaries()</a>, <a class="el" href="program__manager_8cpp_source.html#l00418">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2439,11 +2495,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 </dl>
 <p>All queries expect a return of 4 bytes in param_value_size, param_value_size_ret, and a uint32_t value should to be written in param_value ptr. Note: This behaviour differs from OpenCL. OpenCL returns size_t. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00632">632</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00660">660</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, and <a class="el" href="info__desc_8hpp_source.html#l00016">cl::sycl::info::uint32_t</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>, and <a class="el" href="info__desc_8hpp_source.html#l00016">cl::sycl::info::uint32_t</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="kernel__info_8hpp_source.html#l00077">cl::sycl::detail::get_kernel_device_specific_info&lt; T, Param &gt;::get()</a>, <a class="el" href="kernel__info_8hpp_source.html#l00172">cl::sycl::detail::get_kernel_device_specific_info_with_input&lt; Param &gt;::get()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kernel__info_8hpp_source.html#l00077">cl::sycl::detail::get_kernel_device_specific_info&lt; T, Param &gt;::get()</a>, <a class="el" href="kernel__info_8hpp_source.html#l00172">cl::sycl::detail::get_kernel_device_specific_info_with_input&lt; Param &gt;::get()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2497,11 +2553,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
 </dl>
 <p>If param_name is PI_USM_INDIRECT_ACCESS, the value will be a ptr to the pi_bool value PI_TRUE If param_name is PI_USM_PTRS, the value will be an array of ptrs </p>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01064">1064</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01092">1092</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00440">PI_TRUE</a>, <a class="el" href="pi_8h_source.html#l01150">PI_USM_INDIRECT_ACCESS</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00123">USMSetIndirectAccess()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00449">PI_TRUE</a>, <a class="el" href="pi_8h_source.html#l01158">PI_USM_INDIRECT_ACCESS</a>, and <a class="el" href="pi__opencl_8cpp_source.html#l00125">USMSetIndirectAccess()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00330">cl::sycl::detail::program_impl::get_binaries()</a>, <a class="el" href="program__manager_8cpp_source.html#l00418">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, <a class="el" href="kernel__impl_8cpp_source.html#l00019">cl::sycl::detail::kernel_impl::kernel_impl()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00330">cl::sycl::detail::program_impl::get_binaries()</a>, <a class="el" href="program__manager_8cpp_source.html#l00418">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, <a class="el" href="kernel__impl_8cpp_source.html#l00019">cl::sycl::detail::kernel_impl::kernel_impl()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2555,11 +2611,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00522">522</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00547">547</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00056">clCreateBufferWithPropertiesName</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00071">getExtFuncFromContext()</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00058">clCreateBufferWithPropertiesName</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00073">getExtFuncFromContext()</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00164">cl::sycl::detail::MemoryManager::allocateBufferObject()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00164">cl::sycl::detail::MemoryManager::allocateBufferObject()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2607,11 +2663,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00559">559</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00587">587</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00214">cl::sycl::detail::MemoryManager::allocateMemSubBuffer()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00214">cl::sycl::detail::MemoryManager::allocateMemSubBuffer()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2665,11 +2721,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00545">545</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00573">573</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00147">cl::sycl::detail::MemoryManager::allocateImageObject()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00147">cl::sycl::detail::MemoryManager::allocateImageObject()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2705,11 +2761,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00165">165</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00190">190</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00095">cl::sycl::detail::platform_impl::get_platforms()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="platform__impl_8cpp_source.html#l00095">cl::sycl::detail::platform_impl::get_platforms()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2729,9 +2785,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01145">1145</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l01173">1173</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp.html#a202ce1284dfe832d706747e1649ff93e">_PI_CL</a>, <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00578">piclProgramCreateWithSource()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00498">piContextCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01761">piContextGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01833">piContextRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01825">piContextRetain()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01135">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01590">piDevicePartition()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01110">piDeviceRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01100">piDeviceRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00188">piDevicesGet()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03799">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03806">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03257">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04091">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04111">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04198">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00669">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03850">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03868">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04048">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04069">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04642">piEnqueueMemImageCopy()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04661">piEnqueueMemImageFill()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04595">piEnqueueMemImageRead()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04617">piEnqueueMemImageWrite()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04318">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04717">piEnqueueNativeKernel()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00654">piEventCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03431">piEventGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03469">piEventGetProfilingInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03618">piEventRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03613">piEventRetain()</a>, <a class="el" href="pi_8h.html#a8f04272d7667fb2e7ffce8cad594304d">piEventSetCallback()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03608">piEventSetStatus()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03568">piEventsWait()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00513">piextContextCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01126">piextContextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00276">piextDeviceCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01121">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00205">piextDeviceSelectBinary()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00662">piextEventCreateWithNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03640">piextEventGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00461">piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01109">piextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00447">piextKernelSetArgMemObj()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00820">piextKernelSetArgPointer()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00454">piextKernelSetArgSampler()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00571">piextMemCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01136">piextMemGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00180">piextPlatformCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01116">piextPlatformGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00408">piextProgramCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01140">piextProgramGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01080">piextProgramSetSpecializationConstant()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00323">piextQueueCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01131">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00731">piextUSMDeviceAlloc()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00982">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00899">piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00860">piextUSMEnqueueMemset()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00938">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00799">piextUSMFree()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01034">piextUSMGetMemAllocInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00697">piextUSMHostAlloc()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00767">piextUSMSharedAlloc()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00623">piKernelCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03146">piKernelGetGroupInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03090">piKernelGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00632">piKernelGetSubGroupInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03239">piKernelRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03229">piKernelRetain()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03035">piKernelSetArg()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01064">piKernelSetExecInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00522">piMemBufferCreate()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00559">piMemBufferPartition()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02096">piMemGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00545">piMemImageCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04411">piMemImageGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02111">piMemRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02104">piMemRetain()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00904">piPlatformGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00165">piPlatformsGet()</a>, <a class="el" href="pi_8h.html#a7b97b450acfc8ecd2c2fadb25e2b9ca4">piProgramBuild()</a>, <a class="el" href="pi_8h.html#aadbd51a1ca700a237e638ee31774149a">piProgramCompile()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00330">piProgramCreate()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00590">piProgramCreateWithBinary()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02772">piProgramGetBuildInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02392">piProgramGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00605">piProgramLink()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02819">piProgramRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02813">piProgramRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00283">piQueueCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01972">piQueueFinish()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01904">piQueueGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01945">piQueueRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01937">piQueueRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00416">piSamplerCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03771">piSamplerGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03786">piSamplerRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03779">piSamplerRetain()</a>, <a class="el" href="pi_8h_source.html#l01603">_pi_plugin::PiVersion</a>, and <a class="el" href="pi_8h_source.html#l01605">_pi_plugin::PluginVersion</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp.html#a202ce1284dfe832d706747e1649ff93e">_PI_CL</a>, <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00606">piclProgramCreateWithSource()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00523">piContextCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01805">piContextGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01877">piContextRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01869">piContextRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00167">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01634">piDevicePartition()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01118">piDeviceRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01108">piDeviceRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00213">piDevicesGet()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03843">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03850">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03301">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04135">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04155">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04242">piEnqueueMemBufferFill()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00697">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03894">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03912">piEnqueueMemBufferReadRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04092">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04113">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04686">piEnqueueMemImageCopy()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04705">piEnqueueMemImageFill()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04639">piEnqueueMemImageRead()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04661">piEnqueueMemImageWrite()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04362">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04761">piEnqueueNativeKernel()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00682">piEventCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03475">piEventGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03513">piEventGetProfilingInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03662">piEventRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03657">piEventRetain()</a>, <a class="el" href="pi_8h.html#a8f04272d7667fb2e7ffce8cad594304d">piEventSetCallback()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03652">piEventSetStatus()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03612">piEventsWait()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00538">piextContextCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01154">piextContextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00301">piextDeviceCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01149">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00230">piextDeviceSelectBinary()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00690">piextEventCreateWithNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03684">piextEventGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00486">piextGetDeviceFunctionPointer()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01137">piextGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00472">piextKernelSetArgMemObj()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00848">piextKernelSetArgPointer()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00479">piextKernelSetArgSampler()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00599">piextMemCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01164">piextMemGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00205">piextPlatformCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01144">piextPlatformGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00433">piextProgramCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01168">piextProgramGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01108">piextProgramSetSpecializationConstant()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00348">piextQueueCreateWithNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01159">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00759">piextUSMDeviceAlloc()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01010">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00927">piextUSMEnqueueMemcpy()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00888">piextUSMEnqueueMemset()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00966">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00827">piextUSMFree()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01062">piextUSMGetMemAllocInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00725">piextUSMHostAlloc()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00795">piextUSMSharedAlloc()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00651">piKernelCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03190">piKernelGetGroupInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03134">piKernelGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00660">piKernelGetSubGroupInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03283">piKernelRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03273">piKernelRetain()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03079">piKernelSetArg()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01092">piKernelSetExecInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00547">piMemBufferCreate()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00587">piMemBufferPartition()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02140">piMemGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00573">piMemImageCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04455">piMemImageGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02155">piMemRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02148">piMemRetain()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00912">piPlatformGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00190">piPlatformsGet()</a>, <a class="el" href="pi_8h.html#a7b97b450acfc8ecd2c2fadb25e2b9ca4">piProgramBuild()</a>, <a class="el" href="pi_8h.html#aadbd51a1ca700a237e638ee31774149a">piProgramCompile()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00355">piProgramCreate()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00618">piProgramCreateWithBinary()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02816">piProgramGetBuildInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02436">piProgramGetInfo()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00633">piProgramLink()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02863">piProgramRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02857">piProgramRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00308">piQueueCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02016">piQueueFinish()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01948">piQueueGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01989">piQueueRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01981">piQueueRetain()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00441">piSamplerCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03815">piSamplerGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03830">piSamplerRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03823">piSamplerRetain()</a>, <a class="el" href="pi_8h_source.html#l01611">_pi_plugin::PiVersion</a>, and <a class="el" href="pi_8h_source.html#l01613">_pi_plugin::PluginVersion</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pi_8cpp_source.html#l00265">cl::sycl::detail::pi::bindPlugin()</a>.</p>
 
@@ -2775,11 +2831,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00330">330</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00355">355</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00028">CHECK_ERR_SET_NULL_RET</a>, <a class="el" href="pi_8h_source.html#l00077">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00030">CHECK_ERR_SET_NULL_RET</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_VALUE</a>, and <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00083">cl::sycl::detail::createSpirvProgram()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00083">cl::sycl::detail::createSpirvProgram()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2839,11 +2895,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00590">590</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00618">618</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00054">cl::sycl::detail::createBinaryProgram()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00054">cl::sycl::detail::createBinaryProgram()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -2915,11 +2971,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00605">605</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00633">633</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00038">cast()</a>, and <a class="el" href="pi_8h_source.html#l00074">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00040">cast()</a>, and <a class="el" href="pi_8h_source.html#l00075">PI_INVALID_OPERATION</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00726">cl::sycl::detail::getDeviceLibPrograms()</a>, <a class="el" href="program__impl_8cpp_source.html#l00287">cl::sycl::detail::program_impl::link()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00045">cl::sycl::detail::program_impl::program_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00726">cl::sycl::detail::getDeviceLibPrograms()</a>, <a class="el" href="program__impl_8cpp_source.html#l00287">cl::sycl::detail::program_impl::link()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>, and <a class="el" href="program__impl_8cpp_source.html#l00045">cl::sycl::detail::program_impl::program_impl()</a>.</p>
 
 </div>
 </div>
@@ -2961,11 +3017,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00283">283</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00308">308</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00028">CHECK_ERR_SET_NULL_RET</a>.</p>
+<p class="reference">References <a class="el" href="pi__opencl_8cpp_source.html#l00030">CHECK_ERR_SET_NULL_RET</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue__impl_8hpp_source.html#l00242">cl::sycl::detail::queue_impl::createQueue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue__impl_8hpp_source.html#l00242">cl::sycl::detail::queue_impl::createQueue()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3001,11 +3057,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00416">416</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00441">441</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00458">PI_SAMPLER_ADDRESSING_MODE_CLAMP</a>, <a class="el" href="pi_8h_source.html#l00463">PI_SAMPLER_FILTER_MODE_NEAREST</a>, <a class="el" href="pi_8h_source.html#l00447">PI_SAMPLER_INFO_ADDRESSING_MODE</a>, <a class="el" href="pi_8h_source.html#l00448">PI_SAMPLER_INFO_FILTER_MODE</a>, <a class="el" href="pi_8h_source.html#l00446">PI_SAMPLER_INFO_NORMALIZED_COORDS</a>, and <a class="el" href="pi_8h_source.html#l00440">PI_TRUE</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00467">PI_SAMPLER_ADDRESSING_MODE_CLAMP</a>, <a class="el" href="pi_8h_source.html#l00472">PI_SAMPLER_FILTER_MODE_NEAREST</a>, <a class="el" href="pi_8h_source.html#l00456">PI_SAMPLER_INFO_ADDRESSING_MODE</a>, <a class="el" href="pi_8h_source.html#l00457">PI_SAMPLER_INFO_FILTER_MODE</a>, <a class="el" href="pi_8h_source.html#l00455">PI_SAMPLER_INFO_NORMALIZED_COORDS</a>, and <a class="el" href="pi_8h_source.html#l00449">PI_TRUE</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="sampler__impl_8cpp_source.html#l00050">cl::sycl::detail::sampler_impl::getOrCreateSampler()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04470">piPluginInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="sampler__impl_8cpp_source.html#l00050">cl::sycl::detail::sampler_impl::getOrCreateSampler()</a>, and <a class="el" href="pi__cuda_8cpp_source.html#l04480">piPluginInit()</a>.</p>
 
 </div>
 </div>
@@ -3042,11 +3098,11 @@ template&lt;const char * FuncName, typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00123">123</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00125">125</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00072">PI_SUCCESS</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01064">piKernelSetExecInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01092">piKernelSetExecInfo()</a>.</p>
 
 </div>
 </div>
@@ -3063,9 +3119,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;clCreateBufferWithPropertiesINTEL&quot;</span></div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00056">56</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00058">58</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00522">piMemBufferCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00547">piMemBufferCreate()</a>.</p>
 
 </div>
 </div>
@@ -3081,7 +3137,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00053">53</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00055">55</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3097,7 +3153,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00062">62</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00064">64</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3113,7 +3169,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00060">60</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00062">62</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3129,7 +3185,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00059">59</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00061">61</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3145,7 +3201,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00061">61</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00063">63</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3161,7 +3217,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00063">63</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00065">65</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3177,7 +3233,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00052">52</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00054">54</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3193,7 +3249,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00055">55</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00057">57</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3209,9 +3265,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00058">58</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00060">60</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00820">piextKernelSetArgPointer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l00848">piextKernelSetArgPointer()</a>.</p>
 
 </div>
 </div>
@@ -3227,9 +3283,9 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">    <span class="stringliteral">&quot;clSetProgramSpecializationConstant&quot;</span></div></div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00064">64</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00066">66</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01080">piextProgramSetSpecializationConstant()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__opencl_8cpp_source.html#l01108">piextProgramSetSpecializationConstant()</a>.</p>
 
 </div>
 </div>
@@ -3245,7 +3301,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00054">54</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00056">56</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
@@ -3261,7 +3317,7 @@ template&lt;const char * FuncName, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00035">35</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__opencl_8cpp_source.html#l00037">37</a> of file <a class="el" href="pi__opencl_8cpp_source.html">pi_opencl.cpp</a>.</p>
 
 </div>
 </div>
