@@ -20,8 +20,8 @@ var classcl_1_1sycl_1_1marray =
     [ "operator[]", "classcl_1_1sycl_1_1marray.html#a41b24b3e531a9513575e212fafdb4e6f", null ],
     [ "operator[]", "classcl_1_1sycl_1_1marray.html#a00c2ef22271aa4b3adbd375551c101ba", null ],
     [ "size", "classcl_1_1sycl_1_1marray.html#a6eddf63ea48f53a692499325a1d8b693", null ],
-    [ "operator!", "classcl_1_1sycl_1_1marray.html#a7ea63d5547c9f62c0c292b04d8cd372d", null ],
-    [ "operator+", "classcl_1_1sycl_1_1marray.html#a6c93b07f47342b3449c9a5164857c212", null ],
-    [ "operator-", "classcl_1_1sycl_1_1marray.html#a98ca37fb21d31cd29fe2997ec65a6d36", null ],
-    [ "operator~", "classcl_1_1sycl_1_1marray.html#a8a0e77d78df4ad9bfd94d42a6d4349f5", null ]
+    [ "operator!", "classcl_1_1sycl_1_1marray.html#a488dcbf087a5184a97db4f067d267b1c", null ],
+    [ "operator+", "classcl_1_1sycl_1_1marray.html#a89b688a99231f9b6800a7490c34a046d", null ],
+    [ "operator-", "classcl_1_1sycl_1_1marray.html#a72887ff657a9f3598e004b724f19b4b9", null ],
+    [ "operator~", "classcl_1_1sycl_1_1marray.html#a0ab4956291525f9bcbd15786b0b2ec5b", null ]
 ];

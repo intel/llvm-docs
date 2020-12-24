@@ -42,6 +42,7 @@ var searchData=
   ['is_5frecorded',['is_recorded',['../class__pi__event.html#a3de149cef2c3b8bacd7598c835d2c1e1',1,'_pi_event']]],
   ['is_5fstarted',['is_started',['../class__pi__event.html#a934372cc42188ff0ce139630bc4c8b22',1,'_pi_event']]],
   ['is_5fsub_5fbuffer',['is_sub_buffer',['../classcl_1_1sycl_1_1buffer.html#a9fef31cee2233ac5b0781f13ad78ee3a',1,'cl::sycl::buffer::is_sub_buffer()'],['../struct__pi__mem.html#a95c2aae50881caf61d311fe75a2ee87b',1,'_pi_mem::is_sub_buffer()']]],
+  ['is_5fsycl_5fpartition_5fproperty',['is_sycl_partition_property',['../namespacecl_1_1sycl_1_1detail.html#a3090937819dfbca8c5b8cd55824dff14',1,'cl::sycl::detail']]],
   ['is_5ftype',['is_type',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aed29dea83b3338945ca48540065c21b8',1,'cl::sycl::INTEL::gpu::is_type()'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a69cc4f2247c074df2720ef4a5a4b13b1',1,'cl::sycl::INTEL::gpu::is_type()']]],
   ['isaccessmodeallowed',['isAccessModeAllowed',['../namespacecl_1_1sycl_1_1detail.html#ac183d6ea9de3741a2d1578b6a188244b',1,'cl::sycl::detail']]],
   ['isavailable',['isAvailable',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a66a2116094b82c061621586e97be946b',1,'cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange']]],

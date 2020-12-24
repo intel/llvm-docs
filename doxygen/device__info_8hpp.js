@@ -127,6 +127,7 @@ var device__info_8hpp =
     [ "get_device_info_host< info::device::vendor_id >", "device__info_8hpp.html#aaa3be4334b7611a281fbc55c9e73a2c6", null ],
     [ "get_device_info_host< info::device::version >", "device__info_8hpp.html#a3c7c099984fc81257d244a997af7433b", null ],
     [ "get_native_vector_width", "device__info_8hpp.html#af56ae8f29d1090f5f165cc0ab2048994", null ],
+    [ "is_sycl_partition_property", "device__info_8hpp.html#a3090937819dfbca8c5b8cd55824dff14", null ],
     [ "read_domain_bitfield", "device__info_8hpp.html#af58bfb9415c4375f2068cfa043101ac5", null ],
     [ "read_execution_bitfield", "device__info_8hpp.html#aafcac60dacf92c63e30e7f270729605a", null ],
     [ "read_fp_bitfield", "device__info_8hpp.html#a8c46329bfd501a7525ed900f210ddb17", null ]
