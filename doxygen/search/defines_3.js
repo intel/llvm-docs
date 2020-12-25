@@ -6,5 +6,7 @@ var searchData=
   ['esimd_5fnodebug',['ESIMD_NODEBUG',['../esimd__enum_8hpp.html#a95a7074f3171fabab766cc8186106a7b',1,'esimd_enum.hpp']]],
   ['esimd_5fnoinline',['ESIMD_NOINLINE',['../esimd__enum_8hpp.html#a1aa89fefbf072e0f1defd36fc9f85ed8',1,'esimd_enum.hpp']]],
   ['esimd_5fprivate',['ESIMD_PRIVATE',['../esimd__enum_8hpp.html#afd8733f73584ee7148d688ef7228e5f7',1,'esimd_enum.hpp']]],
-  ['esimd_5fregister',['ESIMD_REGISTER',['../esimd__enum_8hpp.html#ac416ad46f1f98918129bc48b3972508a',1,'esimd_enum.hpp']]]
+  ['esimd_5fregister',['ESIMD_REGISTER',['../esimd__enum_8hpp.html#ac416ad46f1f98918129bc48b3972508a',1,'esimd_enum.hpp']]],
+  ['esimd_5fsbarrier_5fsignal',['ESIMD_SBARRIER_SIGNAL',['../esimd__enum_8hpp.html#a0a57f014d36abd50bfa3ffa2c1998e85',1,'esimd_enum.hpp']]],
+  ['esimd_5fsbarrier_5fwait',['ESIMD_SBARRIER_WAIT',['../esimd__enum_8hpp.html#a81f6d89dba8e7e890b2e7eddd8d724f4',1,'esimd_enum.hpp']]]
 ];

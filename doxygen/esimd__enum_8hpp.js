@@ -5,6 +5,8 @@ var esimd__enum_8hpp =
     [ "ESIMD_NOINLINE", "esimd__enum_8hpp.html#a1aa89fefbf072e0f1defd36fc9f85ed8", null ],
     [ "ESIMD_PRIVATE", "esimd__enum_8hpp.html#afd8733f73584ee7148d688ef7228e5f7", null ],
     [ "ESIMD_REGISTER", "esimd__enum_8hpp.html#ac416ad46f1f98918129bc48b3972508a", null ],
+    [ "ESIMD_SBARRIER_SIGNAL", "esimd__enum_8hpp.html#a0a57f014d36abd50bfa3ffa2c1998e85", null ],
+    [ "ESIMD_SBARRIER_WAIT", "esimd__enum_8hpp.html#a81f6d89dba8e7e890b2e7eddd8d724f4", null ],
     [ "HasA", "esimd__enum_8hpp.html#af7f3fe9d26dcab36910f0ca2d7254faf", null ],
     [ "HasB", "esimd__enum_8hpp.html#a7ab0f4c8f66b7a32864e40c2930f1128", null ],
     [ "HasG", "esimd__enum_8hpp.html#ac34aa6fbd0cadba7a7c892a18741cc16", null ],
@@ -58,5 +60,9 @@ var esimd__enum_8hpp =
       [ "ATOMIC_FMIN", "esimd__enum_8hpp.html#af00991a79c07c9970d93474e2b7bd6e9a768458137a99aa915a7812eecf600602", null ],
       [ "ATOMIC_FCMPWR", "esimd__enum_8hpp.html#af00991a79c07c9970d93474e2b7bd6e9a77036d93b8326deb8b6fbe2aaf77366c", null ],
       [ "ATOMIC_PREDEC", "esimd__enum_8hpp.html#af00991a79c07c9970d93474e2b7bd6e9ae99eef3be39a56c9aac581c65a508a8f", null ]
+    ] ],
+    [ "EsimdSbarrierType", "esimd__enum_8hpp.html#adb616c23238b825fdcd1b6cf77ded0f8", [
+      [ "WAIT", "esimd__enum_8hpp.html#adb616c23238b825fdcd1b6cf77ded0f8ad5cc6a0064b5c25ba37826aa3fda910c", null ],
+      [ "SIGNAL", "esimd__enum_8hpp.html#adb616c23238b825fdcd1b6cf77ded0f8ac023ee28e6cb71d64feec71f0cbac067", null ]
     ] ]
 ];

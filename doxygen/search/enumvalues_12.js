@@ -7,6 +7,7 @@ var searchData=
   ['short',['Short',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa30bb747c98bccdd11b3f89e644c4d0ad',1,'cl::sycl::detail::PlatformUtil']]],
   ['showbase',['showbase',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a0facc1862d43dc9dab11fa6b9995e0bd',1,'cl::sycl']]],
   ['showpos',['showpos',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a5f438397f3deeb8db30329d5f4dd1e02',1,'cl::sycl']]],
+  ['signal',['SIGNAL',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#adb616c23238b825fdcd1b6cf77ded0f8ac023ee28e6cb71d64feec71f0cbac067',1,'cl::sycl::INTEL::gpu']]],
   ['signed_5fint16',['signed_int16',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea71ebc5e6f75e026d0d8c4f8b382a9303',1,'cl::sycl']]],
   ['signed_5fint32',['signed_int32',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aeae80b65ecd07b33b4ae6e747af1e2c0a7',1,'cl::sycl']]],
   ['signed_5fint8',['signed_int8',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7aea8562a2d0630b3d8f925faaf9b40977c1',1,'cl::sycl']]],

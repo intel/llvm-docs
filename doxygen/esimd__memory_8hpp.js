@@ -23,6 +23,7 @@ var esimd__memory_8hpp =
     [ "esimd_raw_send_store", "esimd__memory_8hpp.html#gad68de41aa2c13027a76634b53c58b4f8", null ],
     [ "esimd_raw_sends_load", "esimd__memory_8hpp.html#gaf8fd723bf7e56917518ed3fa4f91df51", null ],
     [ "esimd_raw_sends_store", "esimd__memory_8hpp.html#gae1de7b7042a15ac6ef4c9ce90d780bb3", null ],
+    [ "esimd_sbarrier", "esimd__memory_8hpp.html#af72aaf2b9e7bc9a63fca7a4b47e013bf", null ],
     [ "flat_atomic", "esimd__memory_8hpp.html#gad7a16df36cb318d808876d018e02e9c6", null ],
     [ "flat_atomic", "esimd__memory_8hpp.html#ga2bc2ebb6d2ebb8784d8478e64cf75b46", null ],
     [ "flat_atomic", "esimd__memory_8hpp.html#ga6646e1f40aeb55d2ed526d4a3efbdecd", null ],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['wait',['WAIT',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#adb616c23238b825fdcd1b6cf77ded0f8ad5cc6a0064b5c25ba37826aa3fda910c',1,'cl::sycl::INTEL::gpu']]],
   ['word',['WORD',['../namespace____esimd.html#a9233803d97590e06af43def404fcf951a75bb707ca749d9afd47f2b34b01cd576',1,'__esimd']]],
   ['work_5fgroup',['work_group',['../namespacecl_1_1sycl_1_1ONEAPI.html#ae81f5ba081ad950781944eef129720bfab3e0f839df2b0e6f5abea4204282dc5e',1,'cl::sycl::ONEAPI']]],
   ['work_5fgroup_5fsize',['work_group_size',['../namespacecl_1_1sycl_1_1info.html#a397dc54289355e6eb13486572f9438d9afffb71c6a8897dd2d01f9c13ef174cb4',1,'cl::sycl::info::work_group_size()'],['../namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5afffb71c6a8897dd2d01f9c13ef174cb4',1,'cl::sycl::info::work_group_size()']]],

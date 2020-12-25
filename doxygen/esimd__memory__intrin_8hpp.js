@@ -24,6 +24,7 @@ var esimd__memory__intrin_8hpp =
     [ "__esimd_raw_send_store", "esimd__memory__intrin_8hpp.html#aeec351c8b622232ceb2ddd35f3ba7342", null ],
     [ "__esimd_raw_sends_load", "esimd__memory__intrin_8hpp.html#ab7596dda0d2efef0924dbd3316fa7a18", null ],
     [ "__esimd_raw_sends_store", "esimd__memory__intrin_8hpp.html#a2e7139d6293bbb71933c56f3fe4b975b", null ],
+    [ "__esimd_sbarrier", "esimd__memory__intrin_8hpp.html#aa47d5aeec4493a5140017c969f0f06cb", null ],
     [ "__esimd_slm_atomic0", "esimd__memory__intrin_8hpp.html#ad5c240069c215d45aa9a9df57c2ecc21", null ],
     [ "__esimd_slm_atomic1", "esimd__memory__intrin_8hpp.html#ae77ab4284a0c91c1f1bce6639767a0f0", null ],
     [ "__esimd_slm_atomic2", "esimd__memory__intrin_8hpp.html#a442f3740ddd2a839b5814cea2238ea35", null ],

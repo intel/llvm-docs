@@ -4,7 +4,7 @@ var classcl_1_1sycl_1_1detail_1_1AllocaCommandBase =
     [ "emitInstrumentationData", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a6f22dcfda6f3161b3f563635c4626705", null ],
     [ "getMemAllocation", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed", null ],
     [ "getReleaseCmd", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#ac49d47abc8cfd53d70a58da9f44afc52", null ],
-    [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a56e5711875e3fe53481f8cfa2910e128", null ],
+    [ "getRequirement", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a20850519594e8b6d66044a439c62c099", null ],
     [ "getSYCLMemObj", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54182d49730f7d82e111295afaa9ae18", null ],
     [ "MIsActive", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6", null ],
     [ "MIsLeaderAlloca", "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661", null ],
