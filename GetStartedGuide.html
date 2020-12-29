@@ -131,7 +131,8 @@ python <span class="nv">$DPCPP_HOME</span>/llvm/buildbot/compile.py
 python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
 </pre></div>
 </div>
-<p>You can use the following flags with <code class="docutils literal notranslate"><span class="pre">configure.py</span></code>:</p>
+<p>You can use the following flags with <code class="docutils literal notranslate"><span class="pre">configure.py</span></code> (full list of available
+flags can be found by launching the script with <code class="docutils literal notranslate"><span class="pre">--help</span></code>):</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">--system-ocl</span></code> -&gt; Don’t download OpenCL headers and library via CMake but use the system ones</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--no-werror</span></code> -&gt; Don’t treat warnings as errors when compiling llvm</p></li>
@@ -141,6 +142,12 @@ python <span class="nv">%DPCPP_HOME%</span>\llvm\buildbot\compile.py
 <li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code> -&gt; Path to build directory</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--cmake-gen</span></code> -&gt; Set build system type (e.g. <code class="docutils literal notranslate"><span class="pre">--cmake-gen</span> <span class="pre">&quot;Unix</span> <span class="pre">Makefiles&quot;</span></code>)</p></li>
 </ul>
+<p><strong>Please note</strong> that no data about flags is being shared between <code class="docutils literal notranslate"><span class="pre">configure.py</span></code> and
+<code class="docutils literal notranslate"><span class="pre">compile.py</span></code> scripts, which means that if you configured your build to be
+placed in non-default directory using <code class="docutils literal notranslate"><span class="pre">-o</span></code> flag, you must also specify this flag
+and the same path in <code class="docutils literal notranslate"><span class="pre">compile.py</span></code> options. This allows you, for example, to
+configure several different builds and then build just one of them which is
+needed at the moment.</p>
 <div class="section" id="build-dpc-toolchain-with-libc-library">
 <h3>Build DPC++ toolchain with libc++ library<a class="headerlink" href="#build-dpc-toolchain-with-libc-library" title="Permalink to this headline">¶</a></h3>
 <p>There is experimental support for building and linking DPC++ runtime with
