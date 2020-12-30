@@ -1,5 +1,9 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1detail_1_1program__impl.html#afe137dd2819614ad149f9673157c8d62":[3,0,2,1,0,258,9],
+"classcl_1_1sycl_1_1detail_1_1queue__impl.html":[3,0,2,1,0,270],
+"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a009d7d9a5abb945200c6feaedfed9b5e":[3,0,2,1,0,270,19],
+"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a027ac4cd34f1e99c0a5d93b65ddbdd04":[3,0,2,1,0,270,7],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0cd087f5c5b75c19dcd906e24214dafc":[3,0,2,1,0,270,13],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a11352fdc3ffe169c84c612b057964f13":[3,0,2,1,0,270,1],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54":[3,0,2,1,0,270,4],
@@ -117,11 +121,12 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1exception.html":[1,2,7],
 "classcl_1_1sycl_1_1exception.html#a20f9834c3c472344f00cedd99390f834":[1,2,7,1],
 "classcl_1_1sycl_1_1exception.html#a2755752cadc0a065916b3fadd760dad5":[1,2,7,2],
-"classcl_1_1sycl_1_1exception.html#a32caf4741d72b0e8d1ee617a1713f653":[1,2,7,5],
-"classcl_1_1sycl_1_1exception.html#a7ac9890f13cc0b1a1b666caa896db6c4":[1,2,7,3],
-"classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e":[1,2,7,6],
+"classcl_1_1sycl_1_1exception.html#a32caf4741d72b0e8d1ee617a1713f653":[1,2,7,6],
+"classcl_1_1sycl_1_1exception.html#a7ac9890f13cc0b1a1b666caa896db6c4":[1,2,7,4],
+"classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e":[1,2,7,7],
 "classcl_1_1sycl_1_1exception.html#a8b1479cf8dda8089c5d8135c4c8a064a":[1,2,7,0],
-"classcl_1_1sycl_1_1exception.html#af4e53a320810b1a1218da32bc27026bc":[1,2,7,4],
+"classcl_1_1sycl_1_1exception.html#aa326bac3c0b44811d3c7633621c6d6ba":[1,2,7,3],
+"classcl_1_1sycl_1_1exception.html#af4e53a320810b1a1218da32bc27026bc":[1,2,7,5],
 "classcl_1_1sycl_1_1exception__list.html":[1,2,8],
 "classcl_1_1sycl_1_1exception__list.html#a3a8c1bacdcf03b3534b9696769e9f0fc":[1,2,8,9],
 "classcl_1_1sycl_1_1exception__list.html#a6c4e3aeb2e7c89f7b77ed8a3ad989700":[1,2,8,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1handler.html#aab6e38c9f1c74a6353d9328a2a6950d6":[1,2,11,3],
 "classcl_1_1sycl_1_1handler.html#aaefeb39ac45bff2a7e4e40308ffc2ffc":[1,2,11,2],
 "classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540":[1,2,11,20],
-"classcl_1_1sycl_1_1handler.html#abc24e638930b88ddd619cf6759183892":[1,2,11,49],
-"classcl_1_1sycl_1_1handler.html#ad5a22feb8adda7a95632c517f5d27fb7":[1,2,11,14],
-"classcl_1_1sycl_1_1handler.html#ad5c06b0a1e77b4d9b0cc0a341a93eb76":[1,2,11,29],
-"classcl_1_1sycl_1_1handler.html#ad6cdd83c821525ef93cdeb8332fd7de8":[1,2,11,62],
-"classcl_1_1sycl_1_1handler.html#adbb498cc698f57626f0746b3365a880e":[1,2,11,58],
-"classcl_1_1sycl_1_1handler.html#addbbab5eb387f10ff4b033122df43a90":[1,2,11,24]
+"classcl_1_1sycl_1_1handler.html#abc24e638930b88ddd619cf6759183892":[1,2,11,49]
 };

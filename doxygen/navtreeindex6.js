@@ -1,5 +1,9 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3b877b05b5ee646d71d28db583d99c59":[1,2,1,1,22],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a4cc3463685f9304b4e85909da4bdffbc":[1,2,1,1,18],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a593d3582c70c8e2c9fc50bf9bc41770f":[1,2,1,1,0],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8":[1,2,1,1,21],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a66402e855b1684ff96ef15a7886e5ce9":[1,2,1,1,20],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a6d18ff74570ff27c2771918bd85e34f2":[1,2,1,1,14],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7907072e2a19d4108f77d070774f62ed":[1,2,1,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1CGFill.html":[3,0,2,1,0,28],
 "classcl_1_1sycl_1_1detail_1_1CGFill.html#a0a53384b65f847657f9ae353c196c805":[3,0,2,1,0,28,0],
 "classcl_1_1sycl_1_1detail_1_1CGFill.html#a93ade093956d8670747ad3a0c44dcf3a":[3,0,2,1,0,28,2],
-"classcl_1_1sycl_1_1detail_1_1CGFill.html#ab673fb218534cc8bbaf19c3264ea6034":[3,0,2,1,0,28,3],
-"classcl_1_1sycl_1_1detail_1_1CGFill.html#ab869fd38317e88f23422a2406b06f4bf":[3,0,2,1,0,28,1],
-"classcl_1_1sycl_1_1detail_1_1CGFillUSM.html":[3,0,2,1,0,29],
-"classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#a2b953e155f674130dfb6c3d5901b24c7":[3,0,2,1,0,29,2],
-"classcl_1_1sycl_1_1detail_1_1CGFillUSM.html#a5775b2cf06aa45f81b4a01371a964eb9":[3,0,2,1,0,29,3]
+"classcl_1_1sycl_1_1detail_1_1CGFill.html#ab673fb218534cc8bbaf19c3264ea6034":[3,0,2,1,0,28,3]
 };

@@ -1,6 +1,9 @@
 var searchData=
 [
   ['object',['Object',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a41596e4f89393cfa5c76cc9b983e4ae2',1,'_pi_program']]],
+  ['ocloc_5fversion_5f1_5f0',['OCLOC_VERSION_1_0',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032a706169a5a88475b33a6df6bc35321c10',1,'ocloc_api.h']]],
+  ['ocloc_5fversion_5fcurrent',['OCLOC_VERSION_CURRENT',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032a3f4b5608aece4db4b700e6a53cdcabe8',1,'ocloc_api.h']]],
+  ['ocloc_5fversion_5fforce_5fuint32',['OCLOC_VERSION_FORCE_UINT32',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032aff83d473b37aa57458b525953f8d864d',1,'ocloc_api.h']]],
   ['oct',['oct',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1cdbdf89f2d1bd3dd9e698b2b320cb86',1,'cl::sycl']]],
   ['online_5fcompiler',['online_compiler',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ead09fec1f234c40f63b2caa649928bffd',1,'cl::sycl']]],
   ['online_5flinker',['online_linker',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea6eac88ab4945becf3d3ddeeaee00e2a0',1,'cl::sycl']]],

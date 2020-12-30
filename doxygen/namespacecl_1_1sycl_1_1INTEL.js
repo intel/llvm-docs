@@ -13,7 +13,7 @@ var namespacecl_1_1sycl_1_1INTEL =
     [ "kernel_readable_io_pipe", "classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html", "classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe" ],
     [ "kernel_writeable_io_pipe", "classcl_1_1sycl_1_1INTEL_1_1kernel__writeable__io__pipe.html", "classcl_1_1sycl_1_1INTEL_1_1kernel__writeable__io__pipe" ],
     [ "lsu", "classcl_1_1sycl_1_1INTEL_1_1lsu.html", "classcl_1_1sycl_1_1INTEL_1_1lsu" ],
-    [ "online_compile_error", "classcl_1_1sycl_1_1INTEL_1_1online__compile__error.html", null ],
+    [ "online_compile_error", "classcl_1_1sycl_1_1INTEL_1_1online__compile__error.html", "classcl_1_1sycl_1_1INTEL_1_1online__compile__error" ],
     [ "online_compiler", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html", "classcl_1_1sycl_1_1INTEL_1_1online__compiler" ],
     [ "pipe", "classcl_1_1sycl_1_1INTEL_1_1pipe.html", "classcl_1_1sycl_1_1INTEL_1_1pipe" ],
     [ "platform_selector", "classcl_1_1sycl_1_1INTEL_1_1platform__selector.html", "classcl_1_1sycl_1_1INTEL_1_1platform__selector" ],

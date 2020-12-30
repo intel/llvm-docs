@@ -6,7 +6,7 @@ var searchData=
   ['cl',['cl',['../namespacecl.html',1,'']]],
   ['context',['context',['../namespacecl_1_1sycl_1_1property_1_1context.html',1,'cl::sycl::property']]],
   ['cuda',['cuda',['../namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html',1,'cl::sycl::property::context']]],
-  ['detail',['detail',['../namespacecl_1_1____host__std_1_1detail.html',1,'cl::__host_std::detail'],['../namespacecl_1_1sycl_1_1detail.html',1,'cl::sycl::detail'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html',1,'cl::sycl::INTEL::gpu::detail'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html',1,'cl::sycl::ONEAPI::detail']]],
+  ['detail',['detail',['../namespacecl_1_1____host__std_1_1detail.html',1,'cl::__host_std::detail'],['../namespacecl_1_1sycl_1_1detail.html',1,'cl::sycl::detail'],['../namespacecl_1_1sycl_1_1INTEL_1_1detail.html',1,'cl::sycl::INTEL::detail'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail.html',1,'cl::sycl::INTEL::gpu::detail'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html',1,'cl::sycl::ONEAPI::detail']]],
   ['enqueue_5fkernel_5flaunch',['enqueue_kernel_launch',['../namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html',1,'cl::sycl::detail']]],
   ['experimental',['experimental',['../namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html',1,'cl::sycl::ONEAPI']]],
   ['ext',['ext',['../namespacecl_1_1sycl_1_1ext.html',1,'cl::sycl']]],

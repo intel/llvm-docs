@@ -5,5 +5,5 @@ var searchData=
   ['offsetperindex_5f',['offsetPerIndex_',['../struct__pi__kernel_1_1arguments.html#ab0fe8de1ed6f870ccf327f31abf2cdf9',1,'_pi_kernel::arguments']]],
   ['onceflag',['OnceFlag',['../pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7',1,'pi_level_zero.cpp']]],
   ['onhost',['OnHost',['../struct__pi__mem.html#a5aca9887befe72999e0f83080b65577e',1,'_pi_mem']]],
-  ['origin',['Origin',['../struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf',1,'_pi_buffer::Origin()'],['../structpi__buffer__region__struct.html#a66152d2bc1b381d4b65d8b46a7dd85a9',1,'pi_buffer_region_struct::origin()']]]
+  ['origin',['origin',['../structpi__buffer__region__struct.html#a66152d2bc1b381d4b65d8b46a7dd85a9',1,'pi_buffer_region_struct::origin()'],['../struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf',1,'_pi_buffer::Origin()']]]
 ];

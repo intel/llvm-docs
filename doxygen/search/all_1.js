@@ -295,6 +295,7 @@ var searchData=
   ['_5fgetvalue_3c_20_5ftype_2c_20_5ft1_2c_20_5ft_2e_2e_2e_20_3e',['_GetValue&lt; _Type, _T1, _T... &gt;',['../structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html',1,'cl::sycl::INTEL']]],
   ['_5fkernelfuncparam',['_KERNELFUNCPARAM',['../handler_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1',1,'_KERNELFUNCPARAM():&#160;handler.hpp'],['../queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1',1,'_KERNELFUNCPARAM():&#160;queue.hpp']]],
   ['_5fmatchtype',['_MatchType',['../structcl_1_1sycl_1_1INTEL_1_1__MatchType.html',1,'cl::sycl::INTEL']]],
+  ['_5focloc_5fversion_5ft',['_ocloc_version_t',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032',1,'ocloc_api.h']]],
   ['_5fpi_5fapi',['_PI_API',['../pi_8h.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi.h'],['../pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi.hpp'],['../pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi.hpp'],['../pi__level__zero_8cpp.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi_level_zero.cpp'],['../namespacecl_1_1sycl_1_1detail.html#af79d714ab880f512a35ef6b25c48ebd0a5e7a8f4120d8c29b610baae2d5097c7a',1,'cl::sycl::detail::_PI_API()']]],
   ['_5fpi_5fbuffer',['_pi_buffer',['../struct__pi__buffer.html',1,'_pi_buffer'],['../struct__pi__buffer.html#a710475165eeca399c7448a0295f8c6dd',1,'_pi_buffer::_pi_buffer()']]],
   ['_5fpi_5fbuffer_5fcreate_5ftype',['_pi_buffer_create_type',['../pi_8h.html#a74a9f7b33ccc69844585637720ff8e58',1,'pi.h']]],
