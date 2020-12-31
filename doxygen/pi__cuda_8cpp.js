@@ -101,6 +101,7 @@ var pi__cuda_8cpp =
     [ "cuda_piSamplerGetInfo", "pi__cuda_8cpp.html#a76bb2e4b83c968acf98fcee4a46f16d1", null ],
     [ "cuda_piSamplerRelease", "pi__cuda_8cpp.html#ae8692733dcad37d1eee0be3b473da87e", null ],
     [ "cuda_piSamplerRetain", "pi__cuda_8cpp.html#ab9691c420f3ea23da5ea6458421ad5ad", null ],
+    [ "cuda_piTearDown", "pi__cuda_8cpp.html#ade7fa950f0afe2f7d0041172b97ce0fd", null ],
     [ "die", "pi__cuda_8cpp.html#abc198fc7f3887cb0deaea2abcbee3d2d", null ],
     [ "enqueueEventWait", "pi__cuda_8cpp.html#a79eda25f391043dec763dfa29c9acf6c", null ],
     [ "getKernelNames", "pi__cuda_8cpp.html#a10e2beeb4e4ab8cad7ca4d0644b15ae0", null ],

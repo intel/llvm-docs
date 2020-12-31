@@ -120,7 +120,13 @@ constructor and destructor.</p></li>
 </div>
 <div class="section" id="plugins">
 <h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
+<p>Plugin lifetime is managed by utilizing piPluginInit() and piTearDown().
+GlobalHandler::shutdown() will tear down all registered globals before SYCL RT
+library is unloaded. It will invoke piTearDown() and unload() for each
+plugin. piTearDown() is going to perform any necessary tear-down process at the
+plugin PI level. These two APIs allow on-demand plugin lifetime management. SYCL
+RT can control the beginning and the end of the plugin.</p>
+<p><img alt="_images/plugin-lifetime.jpg" src="_images/plugin-lifetime.jpg" /></p>
 </div>
 <div class="section" id="low-level-runtimes">
 <h2>Low-level runtimes<a class="headerlink" href="#low-level-runtimes" title="Permalink to this headline">¶</a></h2>

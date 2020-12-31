@@ -62,6 +62,8 @@ var pi_8hpp =
     [ "operator<<", "pi_8hpp.html#af3dde3983ba4223609bcdd344ab66084", null ],
     [ "platformInfoToString", "pi_8hpp.html#a7f46f068db2e8af69c378715c6dc642d", null ],
     [ "trace", "pi_8hpp.html#aa9b06e1270bfa6b2b141b9c762198717", null ],
+    [ "unloadOsLibrary", "pi_8hpp.html#a6465c13a65281b447f8f97560d0dc563", null ],
+    [ "unloadPlugin", "pi_8hpp.html#a3fa6d7e63cf0b782be8455ecedb3fcc8", null ],
     [ "cast", "pi_8hpp.html#abdb1239b6e2313d63e121e5d6cb9c94e", null ],
     [ "GlobalPlugin", "pi_8hpp.html#ac267da9935c76d2d2b9859739e8c0017", null ]
 ];

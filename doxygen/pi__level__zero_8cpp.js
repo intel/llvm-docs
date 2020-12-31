@@ -118,6 +118,7 @@ var pi__level__zero_8cpp =
     [ "piSamplerGetInfo", "pi__level__zero_8cpp.html#a4a75c9fa6097756ef41160b218c25dee", null ],
     [ "piSamplerRelease", "pi__level__zero_8cpp.html#a3e6c8bb1ca70ed13b07fca70dea76a08", null ],
     [ "piSamplerRetain", "pi__level__zero_8cpp.html#a6551ae9c262ed234fcace964e7a1805d", null ],
+    [ "piTearDown", "pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49", null ],
     [ "populateDeviceCacheIfNeeded", "pi__level__zero_8cpp.html#a20feeda1d88a646e37e1cde32d39d1ad", null ],
     [ "setEnvVar", "pi__level__zero_8cpp.html#a248a4e96fb322d15f762f0d4925c34d8", null ],
     [ "ShouldUseUSMAllocator", "pi__level__zero_8cpp.html#aa0d9788a220013761c4eb442c39d3ad6", null ],
@@ -129,6 +130,9 @@ var pi__level__zero_8cpp =
     [ "zeParseError", "pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815", null ],
     [ "OnceFlag", "pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7", null ],
     [ "piEventCreate", "pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b", null ],
+    [ "PiPlatformCachePopulated", "pi__level__zero_8cpp.html#acb6c584d4b9adc275f85b35cc08f5767", null ],
+    [ "PiPlatformsCache", "pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410", null ],
+    [ "PiPlatformsCacheMutex", "pi__level__zero_8cpp.html#a191dd320ac89153a9e73691172523ae6", null ],
     [ "UseUSMAllocator", "pi__level__zero_8cpp.html#a3da6fe5aab6b35ba86c353ff7175a443", null ],
     [ "ZE_SUPPORTED_EXTENSIONS", "pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e", null ],
     [ "ZeCommandListBatchSize", "pi__level__zero_8cpp.html#a86e6ea102c115b141e5d3d4eb6bce78d", null ]

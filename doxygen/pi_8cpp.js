@@ -20,5 +20,6 @@ var pi_8cpp =
     [ "operator<<", "pi_8cpp.html#af3dde3983ba4223609bcdd344ab66084", null ],
     [ "platformInfoToString", "pi_8cpp.html#a7f46f068db2e8af69c378715c6dc642d", null ],
     [ "trace", "pi_8cpp.html#aa9b06e1270bfa6b2b141b9c762198717", null ],
+    [ "unloadPlugin", "pi_8cpp.html#a3fa6d7e63cf0b782be8455ecedb3fcc8", null ],
     [ "XPTIInitDone", "pi_8cpp.html#a7ebb67d911d0fd533044b2f6646f9c9f", null ]
 ];

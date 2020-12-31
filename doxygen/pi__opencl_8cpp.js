@@ -54,6 +54,7 @@ var pi__opencl_8cpp =
     [ "piProgramLink", "pi__opencl_8cpp.html#a9d26c70a9073a60bf3ac25c2910245bf", null ],
     [ "piQueueCreate", "pi__opencl_8cpp.html#a9ddf05bdc678ca69911fe8d537eda90c", null ],
     [ "piSamplerCreate", "pi__opencl_8cpp.html#a9a2edb3f2bed516c1e5467a5c7ce7b73", null ],
+    [ "piTearDown", "pi__opencl_8cpp.html#a5ac98e3290841a01e0de5131b5935c49", null ],
     [ "USMSetIndirectAccess", "pi__opencl_8cpp.html#a15b08defea4026996014917341fb1372", null ],
     [ "clCreateBufferWithPropertiesName", "pi__opencl_8cpp.html#ab1820a5e955d1790cf12c64800c42858", null ],
     [ "clDeviceMemAllocName", "pi__opencl_8cpp.html#aea06bf6cb4348d692fe4ce6d4bfe3d11", null ],

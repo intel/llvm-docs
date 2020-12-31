@@ -362,6 +362,7 @@ var searchData=
   ['cuda_5fpisamplergetinfo',['cuda_piSamplerGetInfo',['../pi__cuda_8cpp.html#a76bb2e4b83c968acf98fcee4a46f16d1',1,'pi_cuda.cpp']]],
   ['cuda_5fpisamplerrelease',['cuda_piSamplerRelease',['../pi__cuda_8cpp.html#ae8692733dcad37d1eee0be3b473da87e',1,'pi_cuda.cpp']]],
   ['cuda_5fpisamplerretain',['cuda_piSamplerRetain',['../pi__cuda_8cpp.html#ab9691c420f3ea23da5ea6458421ad5ad',1,'pi_cuda.cpp']]],
+  ['cuda_5fpiteardown',['cuda_piTearDown',['../pi__cuda_8cpp.html#ade7fa950f0afe2f7d0041172b97ce0fd',1,'pi_cuda.cpp']]],
   ['cudacontextt',['CUDAContextT',['../namespacecl_1_1sycl_1_1detail.html#a3e65b92996d59ada3452ecba0fd88524',1,'cl::sycl::detail']]],
   ['cudevice',['CUdevice',['../cuda_8hpp.html#acd81b70eb9968392bb5cdf582af8eab4',1,'cuda.hpp']]],
   ['cudeviceptr',['CUdeviceptr',['../cuda_8hpp.html#a5e264ce2ad6a38761e7e04921ef771de',1,'cuda.hpp']]],

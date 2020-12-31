@@ -201,6 +201,7 @@ var searchData=
   ['cuda_5fpisamplergetinfo',['cuda_piSamplerGetInfo',['../pi__cuda_8cpp.html#a76bb2e4b83c968acf98fcee4a46f16d1',1,'pi_cuda.cpp']]],
   ['cuda_5fpisamplerrelease',['cuda_piSamplerRelease',['../pi__cuda_8cpp.html#ae8692733dcad37d1eee0be3b473da87e',1,'pi_cuda.cpp']]],
   ['cuda_5fpisamplerretain',['cuda_piSamplerRetain',['../pi__cuda_8cpp.html#ab9691c420f3ea23da5ea6458421ad5ad',1,'pi_cuda.cpp']]],
+  ['cuda_5fpiteardown',['cuda_piTearDown',['../pi__cuda_8cpp.html#ade7fa950f0afe2f7d0041172b97ce0fd',1,'pi_cuda.cpp']]],
   ['current',['current',['../structcl_1_1sycl_1_1detail_1_1code__location.html#ae7e89caff975d6bee93809104e4d0256',1,'cl::sycl::detail::code_location']]],
   ['get_5finfo_3c_20info_3a_3acontext_3a_3adevices_20_3e',['get_info&lt; info::context::devices &gt;',['../namespacecl_1_1sycl_1_1detail.html#ae7fb9f0fe4b823a35d66dbdb4955d646',1,'cl::sycl::detail']]],
   ['get_5finfo_3c_20info_3a_3acontext_3a_3aplatform_20_3e',['get_info&lt; info::context::platform &gt;',['../namespacecl_1_1sycl_1_1detail.html#a27fbde4f0674ab61dff45d7da1fe1150',1,'cl::sycl::detail']]],

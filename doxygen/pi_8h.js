@@ -594,6 +594,7 @@ var pi_8h =
     [ "piSamplerGetInfo", "pi_8h.html#ac159b7c107a2d2710429d64beb7fede4", null ],
     [ "piSamplerRelease", "pi_8h.html#afacd40d8e7f6b0bea89b43762d8e0aed", null ],
     [ "piSamplerRetain", "pi_8h.html#a464ea0d74ce0b168bef7592ff8828d15", null ],
+    [ "piTearDown", "pi_8h.html#a5ac98e3290841a01e0de5131b5935c49", null ],
     [ "PI_DEVICE_AFFINITY_DOMAIN_NEXT_PARTITIONABLE", "pi_8h.html#a1520bebd635620cc853597acda4cb054", null ],
     [ "PI_DEVICE_AFFINITY_DOMAIN_NUMA", "pi_8h.html#aa5458183299dd1c97e8539e520128c32", null ],
     [ "PI_DEVICE_BINARIES_VERSION", "pi_8h.html#ad1a2d91a925be3dbdb0a0d13d9e65308", null ],
