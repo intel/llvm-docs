@@ -197,7 +197,7 @@ class cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; 
 <p>Also, for many types with known identity the operation '<a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a57949dca12b105405eac31feb2b6170b" title="Atomic ADD operation: *ReduVarPtr += MValue;. ">atomic_combine()</a>' is implemented here, which allows to use more efficient version of kernels using those operations, which are based on functionality provided by <a class="el" href="classcl_1_1sycl_1_1atomic.html">sycl::atomic</a> class.</p>
 <p>For example, it is known that 0 is identity for <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a3dfa832925e63034196e96feb9547af0">ONEAPI::plus</a> operations accepting native scalar types to which scalar 0 is convertible. Also, for int32/64 types the <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a57949dca12b105405eac31feb2b6170b" title="Atomic ADD operation: *ReduVarPtr += MValue;. ">atomic_combine()</a> is lowered to <a class="el" href="classcl_1_1sycl_1_1atomic.html#a1cce4038112df1989eba8dc194b08739">sycl::atomic::fetch_add()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00184">184</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00185">185</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a125c28e0477f7fd5d43a0d341d3dd525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a125c28e0477f7fd5d43a0d341d3dd525">&#9670;&nbsp;</a></span>reducer() <span class="overload">[1/2]</span></h2>
@@ -224,7 +224,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00187">187</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00188">188</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -264,7 +264,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00188">188</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00189">189</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic ADD operation: *ReduVarPtr += MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00284">284</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00285">285</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00277">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_add()</a>.</p>
 
@@ -335,7 +335,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic BITWISE OR operation: *ReduVarPtr |= MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00294">294</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00295">295</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00295">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_or()</a>.</p>
 
@@ -371,7 +371,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic BITWISE XOR operation: *ReduVarPtr ^= MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00304">304</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00305">305</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00301">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_xor()</a>.</p>
 
@@ -407,7 +407,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic BITWISE AND operation: *ReduVarPtr &amp;= MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00314">314</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00315">315</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00289">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_and()</a>.</p>
 
@@ -443,7 +443,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic MIN operation: *ReduVarPtr = ONEAPI::minimum(*ReduVarPtr, MValue);. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00324">324</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00325">325</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00307">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_min()</a>.</p>
 
@@ -479,7 +479,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic MAX operation: *ReduVarPtr = ONEAPI::maximum(*ReduVarPtr, MValue);. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00334">334</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00335">335</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00313">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_max()</a>.</p>
 
@@ -511,7 +511,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00190">190</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00191">191</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +544,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns zero as identity for ADD, OR, XOR operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00198">198</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00199">199</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +577,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns one as identify for MULTIPLY operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00205">205</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00206">206</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -610,7 +610,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns bit image consisting of all ones as identity for AND operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00212">212</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00213">213</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -643,7 +643,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns maximal possible value as identity for MIN operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00219">219</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00220">220</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,7 +676,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns minimal possible value as identity for MAX operations. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00228">228</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00229">229</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -708,7 +708,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00274">274</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00275">275</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -740,7 +740,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00247">247</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00248">248</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +772,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00238">238</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00239">239</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -804,7 +804,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00265">265</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00266">266</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -836,7 +836,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00256">256</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00257">257</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -855,7 +855,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00339">339</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00340">340</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>

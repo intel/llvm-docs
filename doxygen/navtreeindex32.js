@@ -1,5 +1,10 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01param_01_4.html#a326c3b5b0389ccde34e6425c823a3000":[3,0,2,1,0,87,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1execution__capabil938d1dd09e6f4f569ca0059cc4b619fd.html":[3,0,2,1,0,89],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1execution__capabil938d1dd09e6f4f569ca0059cc4b619fd.html#a1a4f631b7d5cd9ee7ac693dfdc54af35":[3,0,2,1,0,89,0],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html":[3,0,2,1,0,90],
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html#a57ddf755d0c695b8dd3285621bdf3fea":[3,0,2,1,0,90,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_00_01param_01_4.html":[3,0,2,1,0,91],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_00_01param_01_4.html#ac02a8aed654a5f1b0ac2ffe32e7807d1":[3,0,2,1,0,91,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1partition__affinitcfb66e35c161f55e75673e11a73d084c.html":[3,0,2,1,0,92],
@@ -244,10 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1elem.html#af725ee9ffa643d5b8637582f51440a0b":[3,0,2,1,25,1],
 "structcl_1_1sycl_1_1elem.html#af900fbbf12553b8206da4d996599b44f":[3,0,2,1,25,14],
 "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html":[1,2,11,0],
-"structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html#a01096b8ddcb1a1d6989e77e843116056":[1,2,11,0,0],
-"structcl_1_1sycl_1_1info_1_1compatibility__param__traits.html":[3,0,2,1,2,0],
-"structcl_1_1sycl_1_1interop.html":[3,0,2,1,39],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01accessor_3_01DataT_00_01Dimensions_00_01Acc637bad91ed5432401a3db57882822f56.html":[3,0,2,1,41],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01accessor_3_01DataT_00_01Dimensions_00_01Acc637bad91ed5432401a3db57882822f56.html#a6f03d507bf3645b31c3a718eaadfe51f":[3,0,2,1,41,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01accessor_3_01DataT_00_01Dimensions_00_01Accd46d425579798c62f6f7d532db57aaa4.html":[3,0,2,1,40]
+"structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html#a01096b8ddcb1a1d6989e77e843116056":[1,2,11,0,0]
 };

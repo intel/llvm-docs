@@ -105,7 +105,7 @@ var searchData=
   ['hostaccessorcommandst',['HostAccessorCommandsT',['../classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a5a3168f5ea7a9a4315cfc07cab1b0313',1,'cl::sycl::detail::LeavesCollection']]],
   ['hostentriesbegin',['HostEntriesBegin',['../structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69',1,'pi_device_binaries_struct']]],
   ['hostentriesend',['HostEntriesEnd',['../structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1',1,'pi_device_binaries_struct']]],
-  ['hostkernel',['HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html',1,'cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims &gt;'],['../classcl_1_1sycl_1_1detail_1_1HostKernel.html#ab00a049eb9cb0fc4f86ae1c8ef091a85',1,'cl::sycl::detail::HostKernel::HostKernel()']]],
+  ['hostkernel',['HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html',1,'cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;'],['../classcl_1_1sycl_1_1detail_1_1HostKernel.html#a76cff4b43e9d54ceac32a58fbf35075f',1,'cl::sycl::detail::HostKernel::HostKernel()']]],
   ['hostkernelbase',['HostKernelBase',['../classcl_1_1sycl_1_1detail_1_1HostKernelBase.html',1,'cl::sycl::detail']]],
   ['hostprofilinginfo',['HostProfilingInfo',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html',1,'cl::sycl::detail']]],
   ['hostptr_5f',['hostPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a1b6cdff933ec7aa1dccf602551ebfab0',1,'_pi_mem::mem_::buffer_mem_']]],

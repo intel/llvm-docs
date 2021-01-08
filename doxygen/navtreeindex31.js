@@ -1,5 +1,9 @@
 var NAVTREEINDEX31 =
 {
+"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html#a4ea04aa5d8c402c4565fe308bb378470":[3,0,2,1,0,140,0],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html":[3,0,2,1,0,184],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html":[3,0,2,1,0,185],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html":[3,0,2,1,0,186],
 "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__offset_1_1instance_3_4_01_4.html":[3,0,2,1,0,187],
 "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html":[3,0,2,1,0,188],
 "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html#a5ed01c123dbcc1e4a116442165056a08":[3,0,2,1,0,188,0],
@@ -44,11 +48,12 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#aba2b43dfd701172dc94f5e4fd2302205":[3,0,2,1,0,207,2],
 "structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html#ad881aa8557cfc6641a9bf54296147aab":[3,0,2,1,0,207,0],
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html":[3,0,2,1,0,210],
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a07610af1bc13ad3f6eee0ba3daf04a66":[3,0,2,1,0,210,0],
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a12bf383c142454cedeecd3a7d23cd8fd":[3,0,2,1,0,210,2],
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a4e57ab20b7eb9eefe68d019a940a3ccb":[3,0,2,1,0,210,4],
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a6118dbffd8bdd468dd88cb28ef5154cf":[3,0,2,1,0,210,3],
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#ac2346de7dcbce27917f934216348a8da":[3,0,2,1,0,210,1],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a07610af1bc13ad3f6eee0ba3daf04a66":[3,0,2,1,0,210,1],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a12bf383c142454cedeecd3a7d23cd8fd":[3,0,2,1,0,210,3],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a40b6b97a55f30c469b1203a6c1ecf13c":[3,0,2,1,0,210,0],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a4e57ab20b7eb9eefe68d019a940a3ccb":[3,0,2,1,0,210,5],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a6118dbffd8bdd468dd88cb28ef5154cf":[3,0,2,1,0,210,4],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#ac2346de7dcbce27917f934216348a8da":[3,0,2,1,0,210,2],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html":[3,0,2,1,0,211,0],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68":[3,0,2,1,0,211,0,1],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ae8665653a1132b94504bae878da2e92b":[3,0,2,1,0,211,0,2],
@@ -244,10 +249,5 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01platform_00_01param_01_4.html#a26af13589fb5bc7a68e3cf3fe1fc4aae":[3,0,2,1,0,85,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01info_1_1device_1_1version_01_4.html":[3,0,2,1,0,86],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01info_1_1device_1_1version_01_4.html#acf4161887941fc6ff578ab2dc5202f70":[3,0,2,1,0,86,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01param_01_4.html":[3,0,2,1,0,87],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01param_01_4.html#a326c3b5b0389ccde34e6425c823a3000":[3,0,2,1,0,87,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1execution__capabil938d1dd09e6f4f569ca0059cc4b619fd.html":[3,0,2,1,0,89],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1execution__capabil938d1dd09e6f4f569ca0059cc4b619fd.html#a1a4f631b7d5cd9ee7ac693dfdc54af35":[3,0,2,1,0,89,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html":[3,0,2,1,0,90],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01vector__class_3_01info_1_1fp__config_01_4_004309b247c176f41cc00f3b3abc0f4761.html#a57ddf755d0c695b8dd3285621bdf3fea":[3,0,2,1,0,90,0]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01string__class_00_01param_01_4.html":[3,0,2,1,0,87]
 };

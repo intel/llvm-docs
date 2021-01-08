@@ -6,7 +6,7 @@ var classcl_1_1sycl_1_1detail_1_1ProgramManager =
     [ "addImages", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afed37c794b0fd9dbb7bb4cad149d39b6", null ],
     [ "createPIProgram", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a82801ed99fc95ffa56b128cb9fa2d55e", null ],
     [ "debugPrintBinaryImages", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253", null ],
-    [ "flushSpecConstants", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#acd55908b158f9bf3e70789f1b9749026", null ],
+    [ "flushSpecConstants", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#af4d4b2dd632041b7803add4dd42ef332", null ],
     [ "getBuiltPIProgram", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a4f6e9da0bd1864bb1c001c35912c2d06", null ],
     [ "getDeviceImage", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ab7500e7ed0463fcfc2ff787d8d7f2a8a", null ],
     [ "getDeviceLibReqMask", "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#ae24464726cb11cc3f589ba4f6117a7dd", null ],

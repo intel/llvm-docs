@@ -61,6 +61,9 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     ] ],
     [ "item.hpp", "item_8hpp.html", "item_8hpp" ],
     [ "kernel.hpp", "kernel_8hpp.html", [
+      [ "auto_name", "classcl_1_1sycl_1_1detail_1_1auto__name.html", null ],
+      [ "get_kernel_name_t", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t" ],
+      [ "get_kernel_name_t< detail::auto_name, Type >", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4" ],
       [ "hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4" ]
     ] ],
     [ "marray.hpp", "marray_8hpp.html", "marray_8hpp" ],

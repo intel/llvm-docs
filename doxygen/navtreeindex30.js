@@ -1,5 +1,9 @@
 var NAVTREEINDEX30 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html#a0081cbf260ead288c0b55c548244e63c":[3,0,2,1,3,0,0,12,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html":[3,0,2,1,3,0,0,13],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html#a1bace3425b04fa2f19c20197279d06a3":[3,0,2,1,3,0,0,13,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type.html":[3,0,2,1,3,0,0,14],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,15],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1simd_3_01T_00_01N_01_4_01_4.html#abef405ccc79f58b5e83cf44ca0022bcf":[3,0,2,1,3,0,0,15,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type_3_01sycl_1_1INTEL_1_1gpu_1_1vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,2,1,3,0,0,16],
@@ -245,9 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html#a9a4512c9427672c81b65731f3340b0b5":[3,0,2,1,0,138,0],
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html":[3,0,2,1,0,139],
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html#af38b9888ac7e567de49c9c97a984d0d4":[3,0,2,1,0,139,0],
-"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html":[3,0,2,1,0,140],
-"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html#a4ea04aa5d8c402c4565fe308bb378470":[3,0,2,1,0,140,0],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html":[3,0,2,1,0,184],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html":[3,0,2,1,0,185],
-"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html":[3,0,2,1,0,186]
+"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html":[3,0,2,1,0,140]
 };

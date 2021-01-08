@@ -90,7 +90,7 @@ var searchData=
   ['operator_7e',['operator~',['../classcl_1_1sycl_1_1marray.html#a0ab4956291525f9bcbd15786b0b2ec5b',1,'cl::sycl::marray::operator~()'],['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8c9d2c0f670aca27e1542cd3e9e28e5c',1,'cl::sycl::detail::SwizzleOp::operator~()']]],
   ['optimize',['optimize',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#acb686904cb0bb9c18687b4d573fd0c94',1,'cl::sycl::detail::Scheduler::GraphBuilder::optimize()'],['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a830ea7b3a16aa8091f4d0758eb3e88c1',1,'cl::sycl::detail::Scheduler::GraphBuilder::optimize(EventImplPtr Event)']]],
   ['ordered',['Ordered',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06a3cd18dea8eb934f6d0ce3484af28e2a7',1,'cl::sycl::detail']]],
-  ['origin',['Origin',['../struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf',1,'_pi_buffer::Origin()'],['../structpi__buffer__region__struct.html#a66152d2bc1b381d4b65d8b46a7dd85a9',1,'pi_buffer_region_struct::origin()']]],
+  ['origin',['origin',['../structpi__buffer__region__struct.html#a66152d2bc1b381d4b65d8b46a7dd85a9',1,'pi_buffer_region_struct::origin()'],['../struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf',1,'_pi_buffer::Origin()']]],
   ['os_5futil_2ecpp',['os_util.cpp',['../os__util_8cpp.html',1,'']]],
   ['os_5futil_2ehpp',['os_util.hpp',['../os__util_8hpp.html',1,'']]],
   ['osmodulehandle',['OSModuleHandle',['../namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e',1,'cl::sycl::detail']]],

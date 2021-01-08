@@ -435,7 +435,7 @@ var hierarchy =
     [ "hftype< T >", "structhftype.html", null ],
     [ "hftype< half >", "structhftype_3_01half_01_4.html", null ],
     [ "cl::sycl::detail::HostKernelBase", "classcl_1_1sycl_1_1detail_1_1HostKernelBase.html", [
-      [ "cl::sycl::detail::HostKernel< KernelType, KernelArgType, Dims >", "classcl_1_1sycl_1_1detail_1_1HostKernel.html", null ]
+      [ "cl::sycl::detail::HostKernel< KernelType, KernelArgType, Dims, KernelName >", "classcl_1_1sycl_1_1detail_1_1HostKernel.html", null ]
     ] ],
     [ "cl::sycl::detail::HostProfilingInfo", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html", null ],
     [ "cl::sycl::detail::HostTask", "classcl_1_1sycl_1_1detail_1_1HostTask.html", null ],

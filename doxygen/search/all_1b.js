@@ -18,7 +18,7 @@ var searchData=
   ['_7edevicebinaryimage',['~DeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a3230e42a4ca6ddf451ef66922283ebe1',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
   ['_7edynrtdevicebinaryimage',['~DynRTDeviceBinaryImage',['../classcl_1_1sycl_1_1detail_1_1DynRTDeviceBinaryImage.html#ab3a4efc0803dacbc6b9ef430541393ef',1,'cl::sycl::detail::DynRTDeviceBinaryImage']]],
   ['_7eevent_5fimpl',['~event_impl',['../classcl_1_1sycl_1_1detail_1_1event__impl.html#a8325d8b974d6b646148433414377190d',1,'cl::sycl::detail::event_impl']]],
-  ['_7ehostkernel',['~HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html#a0bf4b73e03ba5b3e049f0e8fbba168fd',1,'cl::sycl::detail::HostKernel']]],
+  ['_7ehostkernel',['~HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html#a05bc539e45ddc30407cdbb1e43960dd5',1,'cl::sycl::detail::HostKernel']]],
   ['_7ehostkernelbase',['~HostKernelBase',['../classcl_1_1sycl_1_1detail_1_1HostKernelBase.html#aae4b3b0f89dd300448549d59b664c09b',1,'cl::sycl::detail::HostKernelBase']]],
   ['_7eimage',['~image',['../classcl_1_1sycl_1_1image.html#aa0e6bb1c5b7fe356e0e28b790a29f261',1,'cl::sycl::image']]],
   ['_7eimage_5fimpl',['~image_impl',['../classcl_1_1sycl_1_1detail_1_1image__impl.html#a50d630485e9fee7b3b6bd530be521d2b',1,'cl::sycl::detail::image_impl']]],
