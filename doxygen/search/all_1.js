@@ -359,5 +359,6 @@ var searchData=
   ['_5fpi_5fusm_5fmem_5fproperties',['_pi_usm_mem_properties',['../pi_8h.html#a6379a64bbf4ee298047d0fb3dd6f054a',1,'pi.h']]],
   ['_5fpi_5fusm_5fmigration_5fflags',['_pi_usm_migration_flags',['../pi_8h.html#a5aace8bff3702d6735960d10cdccc3ec',1,'pi.h']]],
   ['_5fpi_5fusm_5ftype',['_pi_usm_type',['../pi_8h.html#a57c877a8b4170a2a4e9958cce2266278',1,'pi.h']]],
+  ['_5fpi_5fze_5fevent_5flist_5ft',['_pi_ze_event_list_t',['../struct__pi__ze__event__list__t.html',1,'']]],
   ['_5fuse_5fmath_5fdefines',['_USE_MATH_DEFINES',['../builtins__common_8cpp.html#a525335710b53cb064ca56b936120431e',1,'_USE_MATH_DEFINES():&#160;builtins_common.cpp'],['../builtins__math_8cpp.html#a525335710b53cb064ca56b936120431e',1,'_USE_MATH_DEFINES():&#160;builtins_math.cpp']]]
 ];

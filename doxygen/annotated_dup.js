@@ -28,6 +28,7 @@ var annotated_dup =
     [ "_pi_program", "struct__pi__program.html", "struct__pi__program" ],
     [ "_pi_queue", "struct__pi__queue.html", "struct__pi__queue" ],
     [ "_pi_sampler", "struct__pi__sampler.html", "struct__pi__sampler" ],
+    [ "_pi_ze_event_list_t", "struct__pi__ze__event__list__t.html", "struct__pi__ze__event__list__t" ],
     [ "abstype", "structabstype.html", "structabstype" ],
     [ "abstype< char >", "structabstype_3_01char_01_4.html", "structabstype_3_01char_01_4" ],
     [ "abstype< long long >", "structabstype_3_01long_01long_01_4.html", "structabstype_3_01long_01long_01_4" ],

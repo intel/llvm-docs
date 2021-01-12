@@ -3,9 +3,7 @@ var class__pi__event =
     [ "native_type", "class__pi__event.html#ac549290d5c62e02b448abae26886e003", null ],
     [ "~_pi_event", "class__pi__event.html#a96f44545671bb46bf43d39a8c8dba8af", null ],
     [ "_pi_event", "class__pi__event.html#a974d7d88ff54a1ede837b70139eeea9c", null ],
-    [ "createZeEventList", "class__pi__event.html#aa2303aed7793172c27d535cb751bab31", null ],
     [ "decrement_reference_count", "class__pi__event.html#af500cdc448b2881e2b5fdec7076c6748", null ],
-    [ "deleteZeEventList", "class__pi__event.html#a8df70b8b68df376b3788faad8246de15", null ],
     [ "get", "class__pi__event.html#aeade40d027ff1b1fb63ec63ae905a405", null ],
     [ "get_command_type", "class__pi__event.html#a4edb4638fe40265060d062242fad8eee", null ],
     [ "get_context", "class__pi__event.html#a460cc421c3a23abebc5402d49357a9fb", null ],
@@ -29,6 +27,7 @@ var class__pi__event =
     [ "CommandType", "class__pi__event.html#a8e51bce41cd2d0c9f986d780712b7d34", null ],
     [ "Context", "class__pi__event.html#a135c8a28d6e5276efd69f8b737caf352", null ],
     [ "Queue", "class__pi__event.html#a154355e4fbbe0f7429fbdd501ad1cdfd", null ],
+    [ "WaitList", "class__pi__event.html#ac68766bff82e01efeb3ee2eb37101cc9", null ],
     [ "ZeCommandList", "class__pi__event.html#a6ff8db9dffcdd3ac6cf539500de6c737", null ],
     [ "ZeEvent", "class__pi__event.html#a9e64fcc343513732b925a18061feb4e3", null ],
     [ "ZeEventPool", "class__pi__event.html#a8026479792c71218860bb811bd375f13", null ]

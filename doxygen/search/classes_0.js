@@ -31,5 +31,6 @@ var searchData=
   ['_5fpi_5fplugin',['_pi_plugin',['../struct__pi__plugin.html',1,'']]],
   ['_5fpi_5fprogram',['_pi_program',['../struct__pi__program.html',1,'']]],
   ['_5fpi_5fqueue',['_pi_queue',['../struct__pi__queue.html',1,'']]],
-  ['_5fpi_5fsampler',['_pi_sampler',['../struct__pi__sampler.html',1,'']]]
+  ['_5fpi_5fsampler',['_pi_sampler',['../struct__pi__sampler.html',1,'']]],
+  ['_5fpi_5fze_5fevent_5flist_5ft',['_pi_ze_event_list_t',['../struct__pi__ze__event__list__t.html',1,'']]]
 ];

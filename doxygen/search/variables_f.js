@@ -40,12 +40,14 @@ var searchData=
   ['pidevicescache',['PiDevicesCache',['../struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30',1,'_pi_platform']]],
   ['pidevicescachemutex',['PiDevicesCacheMutex',['../struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd',1,'_pi_platform']]],
   ['pieventcreate',['piEventCreate',['../pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b',1,'pi_level_zero.cpp']]],
+  ['pieventlist',['PiEventList',['../struct__pi__ze__event__list__t.html#a5b2c42fd19476bf1a179ebb16ac1fce8',1,'_pi_ze_event_list_t']]],
   ['pifunctiontable',['PiFunctionTable',['../struct__pi__plugin.html#a0f06fe9b3fa838b087ca2be15548d5b7',1,'_pi_plugin']]],
   ['piplatformcachepopulated',['PiPlatformCachePopulated',['../pi__level__zero_8cpp.html#acb6c584d4b9adc275f85b35cc08f5767',1,'pi_level_zero.cpp']]],
   ['piplatformscache',['PiPlatformsCache',['../pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410',1,'pi_level_zero.cpp']]],
   ['piplatformscachemutex',['PiPlatformsCacheMutex',['../pi__level__zero_8cpp.html#a191dd320ac89153a9e73691172523ae6',1,'pi_level_zero.cpp']]],
   ['piqueuemutex',['PiQueueMutex',['../struct__pi__queue.html#aee940c7b7baea79adf800e72a6fd32ec',1,'_pi_queue']]],
   ['piversion',['PiVersion',['../struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d',1,'_pi_plugin']]],
+  ['pizeeventlistmutex',['PiZeEventListMutex',['../struct__pi__ze__event__list__t.html#a367b565957f8d976faec6135b7c4a506',1,'_pi_ze_event_list_t']]],
   ['platform',['Platform',['../class__pi__device.html#abaef3c3d43f659c307c93fc152764c39',1,'_pi_device']]],
   ['platname',['PlatName',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#a0de3d29c678061b5ec73806b437d5339',1,'cl::sycl::detail::DevDescT']]],
   ['platver',['PlatVer',['../structcl_1_1sycl_1_1detail_1_1DevDescT.html#aa7a6dec067c6c42a1ba5fad5b8a33a32',1,'cl::sycl::detail::DevDescT']]],
@@ -62,6 +64,6 @@ var searchData=
   ['propertysetsbegin',['PropertySetsBegin',['../structpi__device__binary__struct.html#ac6b82018fed8ac3d4cc28a65eb8ee33e',1,'pi_device_binary_struct']]],
   ['propertysetsend',['PropertySetsEnd',['../structpi__device__binary__struct.html#aad9bedb5c6973ec8af21c98a1e427935',1,'pi_device_binary_struct']]],
   ['props_5f',['props_',['../struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d',1,'_pi_sampler']]],
-  ['ptr',['ptr',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html#a2db2f42958532fd0c42decb60207bf83',1,'cl::sycl::ONEAPI::detail::atomic_ref_base::ptr()'],['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()']]],
+  ['ptr',['Ptr',['../structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec',1,'cl::sycl::detail::KernelProgramCache::BuildResult::Ptr()'],['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__base.html#a2db2f42958532fd0c42decb60207bf83',1,'cl::sycl::ONEAPI::detail::atomic_ref_base::ptr()']]],
   ['ptr_5f',['ptr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a6fd19a557e066187980772292237aa5e',1,'_pi_mem::mem_::buffer_mem_']]]
 ];

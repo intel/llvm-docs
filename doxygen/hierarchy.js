@@ -33,6 +33,7 @@ var hierarchy =
     [ "_pi_offload_entry_struct", "struct__pi__offload__entry__struct.html", null ],
     [ "_pi_platform", "struct__pi__platform.html", null ],
     [ "_pi_plugin", "struct__pi__plugin.html", null ],
+    [ "_pi_ze_event_list_t", "struct__pi__ze__event__list__t.html", null ],
     [ "abstype< T >", "structabstype.html", null ],
     [ "abstype< char >", "structabstype_3_01char_01_4.html", null ],
     [ "abstype< long long >", "structabstype_3_01long_01long_01_4.html", null ],

@@ -12,6 +12,7 @@ var pi__level__zero_8hpp =
     [ "Mapping", "struct__pi__mem_1_1Mapping.html", "struct__pi__mem_1_1Mapping" ],
     [ "_pi_buffer", "struct__pi__buffer.html", "struct__pi__buffer" ],
     [ "_pi_image", "struct__pi__image.html", "struct__pi__image" ],
+    [ "_pi_ze_event_list_t", "struct__pi__ze__event__list__t.html", "struct__pi__ze__event__list__t" ],
     [ "_pi_event", "class__pi__event.html", "class__pi__event" ],
     [ "_pi_program", "struct__pi__program.html", "struct__pi__program" ],
     [ "LinkedReleaser", "class__pi__program_1_1LinkedReleaser.html", "class__pi__program_1_1LinkedReleaser" ],
