@@ -1,6 +1,6 @@
 var classcl_1_1sycl_1_1detail_1_1SwizzleOp =
 [
-    [ "as", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a55bab237797496a456fa12c2532a561a", null ],
+    [ "as", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a923ce2ab42bbbee51e6f6b5cb65c4bce", null ],
     [ "convert", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f3cde3c571c5e176e5203950917321f", null ],
     [ "get_count", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a3c0f669b1ecaac4db6da7c20ecd2abcc", null ],
     [ "get_size", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ab70ff1aac3269990b5c0ecec42093803", null ],
