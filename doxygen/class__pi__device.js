@@ -2,6 +2,7 @@ var class__pi__device =
 [
     [ "_pi_device", "class__pi__device.html#a627746d796788070558a11165b761246", null ],
     [ "_pi_device", "class__pi__device.html#aa60b52067ba928a43fc749e3fc7ffc3c", null ],
+    [ "~_pi_device", "class__pi__device.html#a1821c28a3ad00fa2dd3a7ee4dd3915f3", null ],
     [ "get", "class__pi__device.html#a6bb8a1567f31c17c8009624e8916ccb9", null ],
     [ "get_platform", "class__pi__device.html#a088695d930c25590d6a47897fb29bc17", null ],
     [ "get_reference_count", "class__pi__device.html#a7e9c155a94fddc1591bf5e450b1e9d5d", null ],

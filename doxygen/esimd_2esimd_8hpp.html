@@ -172,8 +172,10 @@ Macros</h2></td></tr>
 <tr class="separator:a6755e207502267cee2f3ed0c2326b428"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8241f63afa29f1b094415697fafce1ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esimd_2esimd_8hpp.html#a8241f63afa29f1b094415697fafce1ee">DEF_RELOP</a>(RELOP)</td></tr>
 <tr class="separator:a8241f63afa29f1b094415697fafce1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae50502d3d5ed5fe93a7f18febd142360"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esimd_2esimd_8hpp.html#ae50502d3d5ed5fe93a7f18febd142360">DEF_LOGIC_OP</a>(LOGIC_OP,  OPASSIGN)</td></tr>
-<tr class="separator:ae50502d3d5ed5fe93a7f18febd142360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a755ec775ffa5d133842e10321f98ce61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esimd_2esimd_8hpp.html#a755ec775ffa5d133842e10321f98ce61">DEF_BITWISE_OP</a>(BITWISE_OP,  OPASSIGN)</td></tr>
+<tr class="separator:a755ec775ffa5d133842e10321f98ce61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac943051728fb4ff8619f46af73e798"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esimd_2esimd_8hpp.html#acac943051728fb4ff8619f46af73e798">DEF_UNARY_OP</a>(UNARY_OP)</td></tr>
+<tr class="separator:acac943051728fb4ff8619f46af73e798"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -216,17 +218,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae50502d3d5ed5fe93a7f18febd142360"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae50502d3d5ed5fe93a7f18febd142360">&#9670;&nbsp;</a></span>DEF_LOGIC_OP</h2>
+<a id="a755ec775ffa5d133842e10321f98ce61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a755ec775ffa5d133842e10321f98ce61">&#9670;&nbsp;</a></span>DEF_BITWISE_OP</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEF_LOGIC_OP</td>
+          <td class="memname">#define DEF_BITWISE_OP</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">LOGIC_OP, </td>
+          <td class="paramname">BITWISE_OP, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -241,7 +243,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <span class="keyword">friend</span> simd <span class="keyword">operator</span> LOGIC_OP(<span class="keyword">const</span> simd &amp;X, <span class="keyword">const</span> simd &amp;Y) {   \</div><div class="line">    static_assert(std::is_integral&lt;Ty&gt;(), <span class="stringliteral">&quot;not integeral type&quot;</span>);               \</div><div class="line">    auto V2 = X.data() LOGIC_OP Y.data();                                      \</div><div class="line">    return simd(V2);                                                           \</div><div class="line">  }                                                                            \</div><div class="line">  ESIMD_INLINE <span class="keyword">friend</span> simd &amp;<span class="keyword">operator</span> OPASSIGN(simd &amp;LHS, <span class="keyword">const</span> simd &amp;RHS) {    \</div><div class="line">    static_assert(std::is_integral&lt;Ty&gt;(), <span class="stringliteral">&quot;not integeral type&quot;</span>);               \</div><div class="line">    auto V2 = LHS.data() LOGIC_OP RHS.data();                                  \</div><div class="line">    LHS.write(convert&lt;vector_type&gt;(V2));                                       \</div><div class="line">    return LHS;                                                                \</div><div class="line">  }                                                                            \</div><div class="line">  ESIMD_INLINE <span class="keyword">friend</span> simd &amp;<span class="keyword">operator</span> OPASSIGN(simd &amp;LHS, <span class="keyword">const</span> Ty &amp;RHS) {      \</div><div class="line">    LHS OPASSIGN simd(RHS);                                                    \</div><div class="line">    return LHS;                                                                \</div><div class="line">  }</div><div class="ttc" id="esimd__enum_8hpp_html_af37725df7e5fcb9d9fbd21438c617c6d"><div class="ttname"><a href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a></div><div class="ttdeci">#define ESIMD_INLINE</div><div class="ttdef"><b>Definition:</b> <a href="esimd__enum_8hpp_source.html#l00046">esimd_enum.hpp:46</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <span class="keyword">friend</span> simd <span class="keyword">operator</span> BITWISE_OP(<span class="keyword">const</span> simd &amp;X, <span class="keyword">const</span> simd &amp;Y) { \</div><div class="line">    static_assert(std::is_integral&lt;Ty&gt;(), <span class="stringliteral">&quot;not integeral type&quot;</span>);               \</div><div class="line">    auto V2 = X.data() BITWISE_OP Y.data();                                    \</div><div class="line">    return simd(V2);                                                           \</div><div class="line">  }                                                                            \</div><div class="line">  ESIMD_INLINE <span class="keyword">friend</span> simd &amp;<span class="keyword">operator</span> OPASSIGN(simd &amp;LHS, <span class="keyword">const</span> simd &amp;RHS) {    \</div><div class="line">    static_assert(std::is_integral&lt;Ty&gt;(), <span class="stringliteral">&quot;not integeral type&quot;</span>);               \</div><div class="line">    auto V2 = LHS.data() BITWISE_OP RHS.data();                                \</div><div class="line">    LHS.write(convert&lt;vector_type&gt;(V2));                                       \</div><div class="line">    return LHS;                                                                \</div><div class="line">  }                                                                            \</div><div class="line">  ESIMD_INLINE <span class="keyword">friend</span> simd &amp;<span class="keyword">operator</span> OPASSIGN(simd &amp;LHS, <span class="keyword">const</span> Ty &amp;RHS) {      \</div><div class="line">    LHS OPASSIGN simd(RHS);                                                    \</div><div class="line">    return LHS;                                                                \</div><div class="line">  }</div><div class="ttc" id="esimd__enum_8hpp_html_af37725df7e5fcb9d9fbd21438c617c6d"><div class="ttname"><a href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a></div><div class="ttdeci">#define ESIMD_INLINE</div><div class="ttdef"><b>Definition:</b> <a href="esimd__enum_8hpp_source.html#l00046">esimd_enum.hpp:46</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="esimd_2esimd_8hpp_source.html#l00237">237</a> of file <a class="el" href="esimd_2esimd_8hpp_source.html">esimd.hpp</a>.</p>
 
@@ -265,6 +267,26 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <span class="keyword">friend</span> simd&lt;uint16_t, N&gt; <span class="keyword">operator</span> RELOP(<span class="keyword">const</span> simd &amp;X,          \</div><div class="line">                                                       <span class="keyword">const</span> simd &amp;Y) {        \</div><div class="line">    auto R = X.data() RELOP Y.data();                                          \</div><div class="line">    mask_type_t&lt;N&gt; M(1);                                                       \</div><div class="line">    return M &amp; convert&lt;mask_type_t&lt;N&gt;&gt;(R);                                     \</div><div class="line">  }</div><div class="ttc" id="esimd__enum_8hpp_html_af37725df7e5fcb9d9fbd21438c617c6d"><div class="ttname"><a href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a></div><div class="ttdeci">#define ESIMD_INLINE</div><div class="ttdef"><b>Definition:</b> <a href="esimd__enum_8hpp_source.html#l00046">esimd_enum.hpp:46</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="esimd_2esimd_8hpp_source.html#l00220">220</a> of file <a class="el" href="esimd_2esimd_8hpp_source.html">esimd.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acac943051728fb4ff8619f46af73e798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac943051728fb4ff8619f46af73e798">&#9670;&nbsp;</a></span>DEF_UNARY_OP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEF_UNARY_OP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">UNARY_OP</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">simd <span class="keyword">operator</span> UNARY_OP() {                                                   \</div><div class="line">    auto V = UNARY_OP(data());                                                 \</div><div class="line">    return simd(V);                                                            \</div><div class="line">  }</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="esimd_2esimd_8hpp_source.html#l00282">282</a> of file <a class="el" href="esimd_2esimd_8hpp_source.html">esimd.hpp</a>.</p>
 
 </div>
 </div>
@@ -297,7 +319,7 @@ template&lt;typename Ty , int N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd_2esimd_8hpp_source.html#l00461">461</a> of file <a class="el" href="esimd_2esimd_8hpp_source.html">esimd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd_2esimd_8hpp_source.html#l00475">475</a> of file <a class="el" href="esimd_2esimd_8hpp_source.html">esimd.hpp</a>.</p>
 
 </div>
 </div>
