@@ -24,7 +24,7 @@ var classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view =
     [ "is2D", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a22bb3bfa146e090b663498e4d933fe6f", null ],
     [ "merge", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a4a8a02d8d59e43e368e58a7f46b17782", null ],
     [ "merge", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a17f8b5d9d68f1f90f2402975187e1dd7", null ],
-    [ "operator value_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a29715d86e86891997fd9017f8b9a76a0", null ],
+    [ "operator simd< ToTy, length >", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#aa22817803989eb3c720ae5de7f8bed26", null ],
     [ "operator++", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a616d566b0275c4203a6f581d19090938", null ],
     [ "operator++", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a5ebf0e3168f072a141c7405c6d7b17d6", null ],
     [ "operator--", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a46845e206e7ec96cde672d3560f182d8", null ],

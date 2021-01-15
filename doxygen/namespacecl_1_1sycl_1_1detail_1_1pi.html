@@ -247,9 +247,12 @@ Functions</h2></td></tr>
 <tr class="separator:af711a6be690263643fde5c294353258e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684743b5a0750004d8dc6f68fe8a7cd1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a684743b5a0750004d8dc6f68fe8a7cd1">asUint32</a> (const void *Addr)</td></tr>
 <tr class="separator:a684743b5a0750004d8dc6f68fe8a7cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34c1e97823d012c33600cd281d634e7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad34c1e97823d012c33600cd281d634e7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad34c1e97823d012c33600cd281d634e7">print</a> (T val)</td></tr>
-<tr class="separator:ad34c1e97823d012c33600cd281d634e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c9d02a462044d9245ff73a936e5cc9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af6c9d02a462044d9245ff73a936e5cc9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_pointer&lt; T &gt;::value, void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#af6c9d02a462044d9245ff73a936e5cc9">print</a> (T val)</td></tr>
+<tr class="separator:af6c9d02a462044d9245ff73a936e5cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98b089ff2917af66b20033110282a75"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa98b089ff2917af66b20033110282a75"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_pointer&lt; T &gt;::value, void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#aa98b089ff2917af66b20033110282a75">print</a> (T val)</td></tr>
+<tr class="separator:aa98b089ff2917af66b20033110282a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1a956a0e46889555ec96c666209614"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a3c1a956a0e46889555ec96c666209614"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a3c1a956a0e46889555ec96c666209614">print</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a9cc5baa9e6b7365df9754c64aea0c650">PiPlatform</a> val)</td></tr>
 <tr class="separator:a3c1a956a0e46889555ec96c666209614"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1445,8 +1448,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ad34c1e97823d012c33600cd281d634e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad34c1e97823d012c33600cd281d634e7">&#9670;&nbsp;</a></span>print() <span class="overload">[1/16]</span></h2>
+<a id="af6c9d02a462044d9245ff73a936e5cc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c9d02a462044d9245ff73a936e5cc9">&#9670;&nbsp;</a></span>print() <span class="overload">[1/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1457,7 +1460,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cl::sycl::detail::pi::print </td>
+          <td class="memname">std::enable_if&lt;!std::is_pointer&lt;T&gt;::value, void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::detail::pi::print </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
@@ -1471,14 +1474,44 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00020">20</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00024">24</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pi_8hpp_source.html#l00267">cl::sycl::detail::pi::DeviceBinaryImage::DeviceBinaryImage()</a>, <a class="el" href="device__binary__image_8hpp_source.html#l00036">cl::sycl::detail::RTDeviceBinaryImage::print()</a>, and <a class="el" href="device__binary__image_8hpp_source.html#l00053">cl::sycl::detail::DynRTDeviceBinaryImage::print()</a>.</p>
 
 </div>
 </div>
+<a id="aa98b089ff2917af66b20033110282a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98b089ff2917af66b20033110282a75">&#9670;&nbsp;</a></span>print() <span class="overload">[2/17]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;std::is_pointer&lt;T&gt;::value, void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::detail::pi::print </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00030">30</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a3c1a956a0e46889555ec96c666209614"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c1a956a0e46889555ec96c666209614">&#9670;&nbsp;</a></span>print() <span class="overload">[2/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1a956a0e46889555ec96c666209614">&#9670;&nbsp;</a></span>print() <span class="overload">[3/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1503,12 +1536,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00024">24</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00035">35</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ac980256c08ef52f75c29738eda465857"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac980256c08ef52f75c29738eda465857">&#9670;&nbsp;</a></span>print() <span class="overload">[3/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac980256c08ef52f75c29738eda465857">&#9670;&nbsp;</a></span>print() <span class="overload">[4/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1533,12 +1566,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00028">28</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00039">39</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aeca755505415940f969fdb189b44c74a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeca755505415940f969fdb189b44c74a">&#9670;&nbsp;</a></span>print() <span class="overload">[4/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca755505415940f969fdb189b44c74a">&#9670;&nbsp;</a></span>print() <span class="overload">[5/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1563,12 +1596,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00032">32</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00043">43</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ab771db0b94069e95f02a20e50e26f63e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab771db0b94069e95f02a20e50e26f63e">&#9670;&nbsp;</a></span>print() <span class="overload">[5/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab771db0b94069e95f02a20e50e26f63e">&#9670;&nbsp;</a></span>print() <span class="overload">[6/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1593,12 +1626,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00036">36</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00047">47</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a147cf052a8f4518098cc302f8b10bdaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a147cf052a8f4518098cc302f8b10bdaf">&#9670;&nbsp;</a></span>print() <span class="overload">[6/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a147cf052a8f4518098cc302f8b10bdaf">&#9670;&nbsp;</a></span>print() <span class="overload">[7/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1623,12 +1656,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00045">45</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00056">56</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a64fd2db4cac1daa4ef9c94363769d71a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64fd2db4cac1daa4ef9c94363769d71a">&#9670;&nbsp;</a></span>print() <span class="overload">[7/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64fd2db4cac1daa4ef9c94363769d71a">&#9670;&nbsp;</a></span>print() <span class="overload">[8/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1653,12 +1686,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00054">54</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00065">65</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aecac19db1a041bec34703e7cdbed625a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecac19db1a041bec34703e7cdbed625a">&#9670;&nbsp;</a></span>print() <span class="overload">[8/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aecac19db1a041bec34703e7cdbed625a">&#9670;&nbsp;</a></span>print() <span class="overload">[9/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1683,12 +1716,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00059">59</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00070">70</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="abbef011d48198ecd7cdcb0c406fafcab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbef011d48198ecd7cdcb0c406fafcab">&#9670;&nbsp;</a></span>print() <span class="overload">[9/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abbef011d48198ecd7cdcb0c406fafcab">&#9670;&nbsp;</a></span>print() <span class="overload">[10/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1713,12 +1746,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00065">65</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00076">76</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a6939c3baf458f43468a3232e1f3188fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6939c3baf458f43468a3232e1f3188fb">&#9670;&nbsp;</a></span>print() <span class="overload">[10/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6939c3baf458f43468a3232e1f3188fb">&#9670;&nbsp;</a></span>print() <span class="overload">[11/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1743,12 +1776,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00070">70</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00081">81</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="abcd66152d4516981ed18677ba64e1f37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcd66152d4516981ed18677ba64e1f37">&#9670;&nbsp;</a></span>print() <span class="overload">[11/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd66152d4516981ed18677ba64e1f37">&#9670;&nbsp;</a></span>print() <span class="overload">[12/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1773,12 +1806,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00075">75</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00086">86</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ab77990845b811c61d4b33736e1a55236"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77990845b811c61d4b33736e1a55236">&#9670;&nbsp;</a></span>print() <span class="overload">[12/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77990845b811c61d4b33736e1a55236">&#9670;&nbsp;</a></span>print() <span class="overload">[13/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1803,12 +1836,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00080">80</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00091">91</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a330da1831c2a44e7e7abdd324ec6d2ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a330da1831c2a44e7e7abdd324ec6d2ed">&#9670;&nbsp;</a></span>print() <span class="overload">[13/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a330da1831c2a44e7e7abdd324ec6d2ed">&#9670;&nbsp;</a></span>print() <span class="overload">[14/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1833,14 +1866,14 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00090">90</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00101">101</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
 
 </div>
 </div>
 <a id="af9140033de4eb3329b82b105e9ca398a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9140033de4eb3329b82b105e9ca398a">&#9670;&nbsp;</a></span>print() <span class="overload">[14/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af9140033de4eb3329b82b105e9ca398a">&#9670;&nbsp;</a></span>print() <span class="overload">[15/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1865,12 +1898,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00099">99</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00110">110</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a844652cd2aee8ecaf87190b979b8c608"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a844652cd2aee8ecaf87190b979b8c608">&#9670;&nbsp;</a></span>print() <span class="overload">[15/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a844652cd2aee8ecaf87190b979b8c608">&#9670;&nbsp;</a></span>print() <span class="overload">[16/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1895,12 +1928,12 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00103">103</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00114">114</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ae4dc44e931bc6ab3150aecfe7cbdbd77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4dc44e931bc6ab3150aecfe7cbdbd77">&#9670;&nbsp;</a></span>print() <span class="overload">[16/16]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4dc44e931bc6ab3150aecfe7cbdbd77">&#9670;&nbsp;</a></span>print() <span class="overload">[17/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1925,9 +1958,9 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00107">107</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00118">118</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="plugin__printers_8hpp_source.html#l00113">printArgs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="plugin__printers_8hpp_source.html#l00124">printArgs()</a>.</p>
 
 </div>
 </div>
@@ -1955,7 +1988,7 @@ template&lt;&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00111">111</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00122">122</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>.</p>
 
@@ -1989,9 +2022,9 @@ template&lt;typename Arg0 , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00113">113</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00124">124</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin__printers_8hpp_source.html#l00107">print()</a>.</p>
+<p class="reference">References <a class="el" href="plugin__printers_8hpp_source.html#l00118">print()</a>.</p>
 
 </div>
 </div>
@@ -2019,7 +2052,7 @@ template&lt;typename Arg0 , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00160">160</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00171">171</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>.</p>
 
@@ -2053,7 +2086,7 @@ template&lt;typename Arg0 , typename... Args&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00162">162</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plugin__printers_8hpp_source.html#l00173">173</a> of file <a class="el" href="plugin__printers_8hpp_source.html">plugin_printers.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3dfa0cc175b9c0f1b6a831c399e269772661">cl::sycl::a</a>.</p>
 

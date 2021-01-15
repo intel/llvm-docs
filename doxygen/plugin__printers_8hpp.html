@@ -98,23 +98,24 @@ $(document).ready(function(){initNavTree('plugin__printers_8hpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="pi_8hpp_source.html">CL/sycl/detail/pi.hpp</a>&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for plugin_printers.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="plugin__printers_8hpp__incl.png" border="0" usemap="#source_2detail_2plugin__printers_8hpp" alt=""/></div>
 <map name="source_2detail_2plugin__printers_8hpp" id="source_2detail_2plugin__printers_8hpp">
-<area shape="rect" id="node2" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1293,95,1435,121"/>
-<area shape="rect" id="node3" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="300,169,484,196"/>
-<area shape="rect" id="node11" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="841,169,1023,196"/>
-<area shape="rect" id="node16" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="1027,408,1194,435"/>
-<area shape="rect" id="node23" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1250,326,1377,353"/>
-<area shape="rect" id="node30" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="853,326,1022,353"/>
-<area shape="rect" id="node4" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="551,408,724,435"/>
-<area shape="rect" id="node5" href="defines__elementary_8hpp.html" title="CL/sycl/detail/defines\l_elementary.hpp" alt="" coords="499,483,647,524"/>
-<area shape="rect" id="node13" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1363,408,1490,435"/>
-<area shape="rect" id="node17" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="708,319,828,360"/>
-<area shape="rect" id="node22" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="781,244,933,271"/>
-<area shape="rect" id="node25" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="421,326,531,353"/>
+<area shape="rect" id="node2" href="pi_8hpp.html" title="C++ wrapper of extern &quot;C&quot; PI interfaces. " alt="" coords="1253,95,1395,121"/>
+<area shape="rect" id="node3" href="backend__types_8hpp.html" title="CL/sycl/backend_types.hpp" alt="" coords="1009,169,1193,196"/>
+<area shape="rect" id="node11" href="common_8hpp.html" title="CL/sycl/detail/common.hpp" alt="" coords="576,169,757,196"/>
+<area shape="rect" id="node16" href="export_8hpp.html" title="CL/sycl/detail/export.hpp" alt="" coords="937,408,1103,435"/>
+<area shape="rect" id="node23" href="pi_8h.html" title="CL/sycl/detail/pi.h" alt="" coords="1203,333,1330,360"/>
+<area shape="rect" id="node30" href="os__util_8hpp.html" title="CL/sycl/detail/os_util.hpp" alt="" coords="806,333,975,360"/>
+<area shape="rect" id="node4" href="defines_8hpp.html" title="CL/sycl/detail/defines.hpp" alt="" coords="479,408,652,435"/>
+<area shape="rect" id="node5" href="defines__elementary_8hpp.html" title="CL/sycl/detail/defines\l_elementary.hpp" alt="" coords="427,483,575,524"/>
+<area shape="rect" id="node13" href="cl_8h.html" title="CL/sycl/detail/cl.h" alt="" coords="1127,408,1254,435"/>
+<area shape="rect" id="node17" href="stl__type__traits_8hpp.html" title="CL/sycl/detail/stl\l_type_traits.hpp" alt="" coords="232,244,352,285"/>
+<area shape="rect" id="node22" href="exception_8hpp.html" title="CL/sycl/exception.hpp" alt="" coords="376,251,528,278"/>
+<area shape="rect" id="node25" href="stl_8hpp.html" title="CL/sycl/stl.hpp" alt="" coords="227,333,338,360"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -203,9 +204,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad34c1e97823d012c33600cd281d634e7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad34c1e97823d012c33600cd281d634e7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad34c1e97823d012c33600cd281d634e7">cl::sycl::detail::pi::print</a> (T val)</td></tr>
-<tr class="separator:ad34c1e97823d012c33600cd281d634e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c9d02a462044d9245ff73a936e5cc9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af6c9d02a462044d9245ff73a936e5cc9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_pointer&lt; T &gt;::value, void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#af6c9d02a462044d9245ff73a936e5cc9">cl::sycl::detail::pi::print</a> (T val)</td></tr>
+<tr class="separator:af6c9d02a462044d9245ff73a936e5cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98b089ff2917af66b20033110282a75"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa98b089ff2917af66b20033110282a75"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_pointer&lt; T &gt;::value, void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#aa98b089ff2917af66b20033110282a75">cl::sycl::detail::pi::print</a> (T val)</td></tr>
+<tr class="separator:aa98b089ff2917af66b20033110282a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c1a956a0e46889555ec96c666209614"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a3c1a956a0e46889555ec96c666209614"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a3c1a956a0e46889555ec96c666209614">cl::sycl::detail::pi::print</a> (PiPlatform val)</td></tr>
 <tr class="separator:a3c1a956a0e46889555ec96c666209614"><td class="memSeparator" colspan="2">&#160;</td></tr>
