@@ -2,7 +2,7 @@ var classcl_1_1sycl_1_1INTEL_1_1online__compiler =
 [
     [ "online_compiler", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#a943229d4c5dd2137d76da14dad062ce4", null ],
     [ "online_compiler", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#a67e0d3996eed0def24fcc277733f2964", null ],
-    [ "online_compiler", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#ac6cad48625ad083fef7e1a664797eeb4", null ],
+    [ "online_compiler", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#ad075d9e4e366fa6ca72069601255dbee", null ],
     [ "compile", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#a910afbf0e22a69eeb2bdab82b8b2cad4", null ],
     [ "compile", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#a6bd9d85c035af7206e99dbb8de8e515d", null ],
     [ "compile", "classcl_1_1sycl_1_1INTEL_1_1online__compiler.html#a0686e8965cb631703e96d0f96a09b49d", null ],
