@@ -174,9 +174,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a0a466d0e6d60430707847048e55fcccc"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, int M, int VStride, int Width, int Stride, int ParentWidth = 0&gt; </td></tr>
 <tr class="memitem:a0a466d0e6d60430707847048e55fcccc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> sycl::INTEL::gpu::vector_type_t&lt; T, M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="esimd__intrin_8hpp.html#a0a466d0e6d60430707847048e55fcccc">__esimd_rdregion</a> (sycl::INTEL::gpu::vector_type_t&lt; T, N &gt; Input, uint16_t Offset)</td></tr>
 <tr class="separator:a0a466d0e6d60430707847048e55fcccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac249b248ae9e738d152e5dc5e1813edc"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, int M, int ParentWidth = 0&gt; </td></tr>
+<tr class="memitem:ac249b248ae9e738d152e5dc5e1813edc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> sycl::INTEL::gpu::vector_type_t&lt; T, M &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="esimd__intrin_8hpp.html#ac249b248ae9e738d152e5dc5e1813edc">__esimd_rdindirect</a> (sycl::INTEL::gpu::vector_type_t&lt; T, N &gt; Input, sycl::INTEL::gpu::vector_type_t&lt; uint16_t, M &gt; Offset)</td></tr>
+<tr class="separator:ac249b248ae9e738d152e5dc5e1813edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a963be9eea6789554331d65f88e14e0d9"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, int M, int VStride, int Width, int Stride, int ParentWidth = 0&gt; </td></tr>
 <tr class="memitem:a963be9eea6789554331d65f88e14e0d9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> sycl::INTEL::gpu::vector_type_t&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="esimd__intrin_8hpp.html#a963be9eea6789554331d65f88e14e0d9">__esimd_wrregion</a> (sycl::INTEL::gpu::vector_type_t&lt; T, N &gt; OldVal, sycl::INTEL::gpu::vector_type_t&lt; T, M &gt; NewVal, uint16_t Offset, sycl::INTEL::gpu::mask_type_t&lt; M &gt; Mask=1)</td></tr>
 <tr class="separator:a963be9eea6789554331d65f88e14e0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684b8a391d521ec8bef8ec7f64108ecc"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, int M, int ParentWidth = 0&gt; </td></tr>
+<tr class="memitem:a684b8a391d521ec8bef8ec7f64108ecc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> sycl::INTEL::gpu::vector_type_t&lt; T, N &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="esimd__intrin_8hpp.html#a684b8a391d521ec8bef8ec7f64108ecc">__esimd_wrindirect</a> (sycl::INTEL::gpu::vector_type_t&lt; T, N &gt; OldVal, sycl::INTEL::gpu::vector_type_t&lt; T, M &gt; NewVal, sycl::INTEL::gpu::vector_type_t&lt; uint16_t, M &gt; Offset, sycl::INTEL::gpu::mask_type_t&lt; M &gt; Mask=1)</td></tr>
+<tr class="separator:a684b8a391d521ec8bef8ec7f64108ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe059d81c0dba7691ca50e6f89ae007"><td class="memTemplParams" colspan="2">template&lt;typename BT , int BN, typename RTy &gt; </td></tr>
 <tr class="memitem:a3fe059d81c0dba7691ca50e6f89ae007"><td class="memTemplItemLeft" align="right" valign="top">vector_type_t&lt; typename RTy::element_type, RTy::length &gt; <a class="el" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a3fe059d81c0dba7691ca50e6f89ae007">cl::sycl::INTEL::gpu::readRegion</a> (const vector_type_t&lt; BT, BN &gt; &amp;Base, RTy Region)</td></tr>
 <tr class="memdesc:a3fe059d81c0dba7691ca50e6f89ae007"><td class="mdescLeft">&#160;</td><td class="mdescRight">read from a basic region of a vector, return a vector  <a href="namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a3fe059d81c0dba7691ca50e6f89ae007">More...</a><br /></td></tr>
@@ -217,7 +223,7 @@ template&lt;typename T , int N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00172">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00184">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
 
 </div>
 </div>
@@ -239,7 +245,41 @@ template&lt;typename T , int N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00172">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00184">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
+
+</div>
+</div>
+<a id="ac249b248ae9e738d152e5dc5e1813edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac249b248ae9e738d152e5dc5e1813edc">&#9670;&nbsp;</a></span>__esimd_rdindirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N, int M, int ParentWidth = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> sycl::INTEL::gpu::vector_type_t&lt; T, M &gt; __esimd_rdindirect </td>
+          <td>(</td>
+          <td class="paramtype">sycl::INTEL::gpu::vector_type_t&lt; T, N &gt;&#160;</td>
+          <td class="paramname"><em>Input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sycl::INTEL::gpu::vector_type_t&lt; uint16_t, M &gt;&#160;</td>
+          <td class="paramname"><em>Offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="esimd__intrin_8hpp_source.html#l00278">278</a> of file <a class="el" href="esimd__intrin_8hpp_source.html">esimd_intrin.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="defines__elementary_8hpp_source.html#l00034">SYCL_EXTERNAL</a>.</p>
 
 </div>
 </div>
@@ -271,11 +311,11 @@ template&lt;typename T , int N, int M, int VStride, int Width, int Stride, int P
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__intrin_8hpp_source.html#l00247">247</a> of file <a class="el" href="esimd__intrin_8hpp_source.html">esimd_intrin.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__intrin_8hpp_source.html#l00259">259</a> of file <a class="el" href="esimd__intrin_8hpp_source.html">esimd_intrin.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="defines__elementary_8hpp_source.html#l00034">SYCL_EXTERNAL</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="esimd__memory_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::gather()</a>, <a class="el" href="esimd__intrin_8hpp_source.html#l00150">cl::sycl::INTEL::gpu::readRegion()</a>, and <a class="el" href="esimd_2esimd_8hpp_source.html#l00168">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__memory_8hpp_source.html#l00091">cl::sycl::INTEL::gpu::gather()</a>, <a class="el" href="esimd__intrin_8hpp_source.html#l00162">cl::sycl::INTEL::gpu::readRegion()</a>, and <a class="el" href="esimd_2esimd_8hpp_source.html#l00168">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +337,7 @@ template&lt;typename T , int N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00172">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00184">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
 
 </div>
 </div>
@@ -329,7 +369,51 @@ template&lt;typename T , int N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00172">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="esimd__intrin_8hpp_source.html#l00184">cl::sycl::INTEL::gpu::readRegion()</a>.</p>
+
+</div>
+</div>
+<a id="a684b8a391d521ec8bef8ec7f64108ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684b8a391d521ec8bef8ec7f64108ecc">&#9670;&nbsp;</a></span>__esimd_wrindirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N, int M, int ParentWidth = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> sycl::INTEL::gpu::vector_type_t&lt; T, N &gt; __esimd_wrindirect </td>
+          <td>(</td>
+          <td class="paramtype">sycl::INTEL::gpu::vector_type_t&lt; T, N &gt;&#160;</td>
+          <td class="paramname"><em>OldVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sycl::INTEL::gpu::vector_type_t&lt; T, M &gt;&#160;</td>
+          <td class="paramname"><em>NewVal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sycl::INTEL::gpu::vector_type_t&lt; uint16_t, M &gt;&#160;</td>
+          <td class="paramname"><em>Offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sycl::INTEL::gpu::mask_type_t&lt; M &gt;&#160;</td>
+          <td class="paramname"><em>Mask</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="esimd__intrin_8hpp_source.html#l00316">316</a> of file <a class="el" href="esimd__intrin_8hpp_source.html">esimd_intrin.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,9 +457,11 @@ template&lt;typename T , int N, int M, int VStride, int Width, int Stride, int P
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="esimd__intrin_8hpp_source.html#l00267">267</a> of file <a class="el" href="esimd__intrin_8hpp_source.html">esimd_intrin.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__intrin_8hpp_source.html#l00293">293</a> of file <a class="el" href="esimd__intrin_8hpp_source.html">esimd_intrin.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="esimd_2esimd_8hpp_source.html#l00122">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::merge()</a>, <a class="el" href="esimd__memory_8hpp_source.html#l00133">cl::sycl::INTEL::gpu::scatter()</a>, and <a class="el" href="esimd_2esimd_8hpp_source.html#l00377">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::writeRegion()</a>.</p>
+<p class="reference">References <a class="el" href="defines__elementary_8hpp_source.html#l00034">SYCL_EXTERNAL</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="esimd_2esimd_8hpp_source.html#l00122">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::merge()</a>, <a class="el" href="esimd__memory_8hpp_source.html#l00133">cl::sycl::INTEL::gpu::scatter()</a>, and <a class="el" href="esimd_2esimd_8hpp_source.html#l00400">cl::sycl::INTEL::gpu::simd&lt; Ty, N &gt;::writeRegion()</a>.</p>
 
 </div>
 </div>

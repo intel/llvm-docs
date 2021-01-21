@@ -1,5 +1,8 @@
 var NAVTREEINDEX5 =
 {
+"classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#ac82acc1e18536b7bcd354e99e4e5fce9":[1,2,20,2],
+"classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#aec892fec47318a37eb75817db763f7b9":[1,2,20,3],
+"classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html":[3,0,2,1,4,4],
 "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a1440ca52e03e5a0527b0fa11c415eaad":[3,0,2,1,4,4,2],
 "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a2a741eb2f5e00608b32483bfe43c2225":[3,0,2,1,4,4,4],
 "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a33851bb428b7af720df16b38e4641a60":[3,0,2,1,4,4,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a06eb43690877da45e2816f66bd0fc50f":[1,2,1,1,1],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a1c7b17c3d857af4681c5dcee86f948a3":[1,2,1,1,17],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a314d912a8f8847cf4ca74d873cccd179":[1,2,1,1,6],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3300db3e66965ecd2ba727615420037c":[1,2,1,1,5],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3506c044759d10b13aba846d008a68e5":[1,2,1,1,11],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3b877b05b5ee646d71d28db583d99c59":[1,2,1,1,22],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a4cc3463685f9304b4e85909da4bdffbc":[1,2,1,1,18]
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3300db3e66965ecd2ba727615420037c":[1,2,1,1,5]
 };
