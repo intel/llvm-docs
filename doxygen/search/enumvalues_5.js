@@ -1,7 +1,6 @@
 var searchData=
 [
   ['empty_5ftask',['EMPTY_TASK',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a8b89dcf5970cfadfe9a498bf10802b84',1,'cl::sycl::detail::Command']]],
-  ['end',['END',['../namespacecl_1_1sycl_1_1detail.html#a1f36acdc3445e874ecb97bb9f6129f01a08ab1821680b5ccf09a02e788b2b6dd8',1,'cl::sycl::detail']]],
   ['endl',['endl',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a50687cdc4bc36169eb3b2948c9920715',1,'cl::sycl']]],
   ['error_5fcorrection_5fsupport',['error_correction_support',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a419c736fc210de1c55decd67e8ac9f61',1,'cl::sycl::info']]],
   ['esimd_5fa_5fenable',['ESIMD_A_ENABLE',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a618d115f4b5266a64f76c12eb96c52eda86796e80c615fc592eda25e03cbb6a23',1,'cl::sycl::INTEL::gpu']]],

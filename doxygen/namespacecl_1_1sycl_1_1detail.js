@@ -301,7 +301,6 @@ var namespacecl_1_1sycl_1_1detail =
     [ "sycl_to_pi< bool >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01bool_01_4.html", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01bool_01_4" ],
     [ "sycl_to_pi< device >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01device_01_4.html", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01device_01_4" ],
     [ "sycl_to_pi< platform >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01platform_01_4.html", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01platform_01_4" ],
-    [ "SYCLConfig", "classcl_1_1sycl_1_1detail_1_1SYCLConfig.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig" ],
     [ "SYCLConfig< SYCL_BE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4" ],
     [ "SYCLConfig< SYCL_DEVICE_FILTER >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4" ],
     [ "SYCLConfig< SYCL_PI_TRACE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4" ],

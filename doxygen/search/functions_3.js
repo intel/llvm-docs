@@ -62,6 +62,7 @@ var searchData=
   ['compile_5fwith_5fsource',['compile_with_source',['../classcl_1_1sycl_1_1program.html#a353f88ae1ec605f2363a29c750d2e527',1,'cl::sycl::program::compile_with_source()'],['../classcl_1_1sycl_1_1detail_1_1program__impl.html#a782f462edfc74dfdd53a5bb71e7c548b',1,'cl::sycl::detail::program_impl::compile_with_source()']]],
   ['compileorbuild',['compileOrBuild',['../pi__level__zero_8cpp.html#a915bbb39491e005cd01c8fa963219178',1,'pi_level_zero.cpp']]],
   ['compiletospirv',['compileToSPIRV',['../namespacecl_1_1sycl_1_1INTEL_1_1detail.html#a03c9d741e7f1bdcbc4e247baa492a908',1,'cl::sycl::INTEL::detail']]],
+  ['config',['CONFIG',['../namespacecl_1_1sycl_1_1detail.html#a40418bd9505d31ca1b1758734f6db726',1,'cl::sycl::detail']]],
   ['connectdepevent',['connectDepEvent',['../classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#af26d002e0051ce81139b619ff47f996e',1,'cl::sycl::detail::Scheduler::GraphBuilder']]],
   ['constiterator',['ConstIterator',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html#a171b81f2d15521f401a43858f84af24b',1,'cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::ConstIterator']]],
   ['construct',['construct',['../classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a5e16b67266920dd4934ae8531de2d878',1,'cl::sycl::detail::aligned_allocator']]],
