@@ -75,12 +75,13 @@ var NAVTREEINDEX =
 "property__helper_8hpp_source.html",
 "stream_8hpp.html#a9ed468717741aba25a1ae4940fc3dc0b",
 "struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21",
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1dword__type.html#aa09e649bebebc2ee437d58b3da312dbc",
-"structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html#ad89c48ea4e06621f8b8761015bfa1013",
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html#addb77f1714d4d62da94e8c0994f54ad3",
-"structcl_1_1sycl_1_1elem.html#a5cfcdcdca9ada16b8ec61188feeeb428",
-"structrestype__ex_3_01char_00_01unsigned_01char_01_4.html",
-"structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6"
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1dword__type.html",
+"structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html",
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html",
+"structcl_1_1sycl_1_1elem.html#a4e98019ca25c4f2462c546b633cd823a",
+"structrestype__ex_3_01char_00_01short_01_4.html#a3ea2a6c1da21f9a8b36fe346c057acd4",
+"structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html",
+"windows__pi_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

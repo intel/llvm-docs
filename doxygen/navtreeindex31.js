@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html":[3,0,2,1,0,119],
 "structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html#ad89c48ea4e06621f8b8761015bfa1013":[3,0,2,1,0,119,0],
 "structcl_1_1sycl_1_1detail_1_1GreaterThan.html":[3,0,2,1,0,120],
 "structcl_1_1sycl_1_1detail_1_1GreaterThan.html#a7300190f9829d83d3a9483847b30d3bd":[3,0,2,1,0,120,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__shared__allocations_01_4.html":[3,0,2,1,0,78],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__shared__allocations_01_4.html#a3c4a0bf590bdeb77165a7220e7d7e745":[3,0,2,1,0,78,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html":[3,0,2,1,0,79],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html#ad9dbc2f0523a505d314a754320dda212":[3,0,2,1,0,79,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html":[3,0,2,1,0,80]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html#ad9dbc2f0523a505d314a754320dda212":[3,0,2,1,0,79,0]
 };

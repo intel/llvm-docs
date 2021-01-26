@@ -149,12 +149,13 @@ var NAVTREEINDEX29 =
 "struct__pi__sampler.html#ab63729c9eb971e27cb169fe49b3095d1":[3,0,27,0],
 "struct__pi__sampler.html#acf9ba2b7b6813be0c4aa77991aade07d":[3,0,27,3],
 "struct__pi__ze__event__list__t.html":[3,0,28],
-"struct__pi__ze__event__list__t.html#a367b565957f8d976faec6135b7c4a506":[3,0,28,4],
-"struct__pi__ze__event__list__t.html#a5b2c42fd19476bf1a179ebb16ac1fce8":[3,0,28,3],
-"struct__pi__ze__event__list__t.html#a6ef7a55b77f2837247186ff805100e2b":[3,0,28,2],
-"struct__pi__ze__event__list__t.html#ac9b3b772e2b24a6c6c98f5b0175a3859":[3,0,28,5],
-"struct__pi__ze__event__list__t.html#adff70995dd82eddb20e6fdcf8d3cfea7":[3,0,28,1],
-"struct__pi__ze__event__list__t.html#aefe7db0b9ce49af4d3728257dbdbd2cc":[3,0,28,0],
+"struct__pi__ze__event__list__t.html#a367b565957f8d976faec6135b7c4a506":[3,0,28,5],
+"struct__pi__ze__event__list__t.html#a3b941d06364e85c0058fd727e8d3d1e0":[3,0,28,1],
+"struct__pi__ze__event__list__t.html#a5688967d2c82ead816dfb93154a11346":[3,0,28,0],
+"struct__pi__ze__event__list__t.html#a5b2c42fd19476bf1a179ebb16ac1fce8":[3,0,28,4],
+"struct__pi__ze__event__list__t.html#a6ef7a55b77f2837247186ff805100e2b":[3,0,28,3],
+"struct__pi__ze__event__list__t.html#ac9b3b772e2b24a6c6c98f5b0175a3859":[3,0,28,6],
+"struct__pi__ze__event__list__t.html#adff70995dd82eddb20e6fdcf8d3cfea7":[3,0,28,2],
 "structabstype.html":[3,0,29],
 "structabstype.html#a0d8ce106725e67abba28bee0f7a68f8d":[3,0,29,0],
 "structabstype_3_01char_01_4.html":[3,0,30],
@@ -248,6 +249,5 @@ var NAVTREEINDEX29 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01uint_01_4.html":[3,0,2,1,3,0,0,3],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01uint_01_4.html#ac022b335c96e2cef4b00939755892301":[3,0,2,1,3,0,0,3,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01ushort_01_4.html":[3,0,2,1,3,0,0,4],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01ushort_01_4.html#af9dc80cec8fc4af9b5066d8086832dfa":[3,0,2,1,3,0,0,4,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1dword__type.html":[3,0,2,1,3,0,0,5]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01ushort_01_4.html#af9dc80cec8fc4af9b5066d8086832dfa":[3,0,2,1,3,0,0,4,0]
 };

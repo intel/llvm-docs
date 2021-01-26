@@ -236,32 +236,34 @@ tar -zxvf oclcpu_rt_&lt;cpu_version&gt;.tar.gz
 </pre></div>
 </div>
 </li>
-<li><p>Extract TBB libraries. For example, for the archive tbb-&lt;tbb_version&gt;-lin.tgz</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /opt/intel/tbb_&lt;tbb_version&gt;
-<span class="nb">cd</span> /opt/intel/tbb_&lt;tbb_version&gt;
-tar -zxvf tbb*lin.tgz
+<li><p>Extract or build TBB libraries using links in
+<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf">the dependency configuration file</a>. For example,
+for the archive oneapi-tbb-&lt;tbb_version&gt;-lin.tgz:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p /opt/intel
+<span class="nb">cd</span> /opt/intel
+tar -zxvf oneapi-tbb*lin.tgz
 </pre></div>
 </div>
 </li>
 <li><p>Copy files from or create symbolic links to TBB libraries in OpenCL RT
 folder:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenCL FPGA emulation RT</span>
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so
   /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so
   /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so.12
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so.12
   /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so.2
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so.2
   /opt/intel/oclfpgaemu_&lt;fpga_version&gt;/x64
 <span class="c1"># OpenCL CPU RT</span>
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbb.so.12
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbb.so.12
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
-ln -s /opt/intel/tbb_&lt;tbb_version&gt;/tbb/lib/intel64/gcc4.8/libtbbmalloc.so.2
+ln -s /opt/intel/oneapi-tbb-&lt;tbb_version&gt;/lib/intel64/gcc4.8/libtbbmalloc.so.2
   /opt/intel/oclcpuexp_&lt;cpu_version&gt;/x64
 </pre></div>
 </div>
@@ -287,9 +289,9 @@ not working properly.</p></li>
 <code class="docutils literal notranslate"><span class="pre">FPGA</span></code> emulation using links in
 <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf">the dependency configuration file</a>.  For
 example, to <code class="docutils literal notranslate"><span class="pre">c:\oclcpu_rt_&lt;cpu_version&gt;</span></code>.</p></li>
-<li><p>Extract the archive with TBB runtime using links in
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf">the dependency configuration file</a>.  For
-example, to <code class="docutils literal notranslate"><span class="pre">c:\tbb_&lt;tbb_version&gt;</span></code>.</p></li>
+<li><p>Extract the archive with TBB runtime or build it from sources using links
+in <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../buildbot/dependency.conf">the dependency configuration file</a>.  For
+example, to <code class="docutils literal notranslate"><span class="pre">c:\oneapi-tbb-&lt;tbb_version&gt;</span></code>.</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code> as <code class="docutils literal notranslate"><span class="pre">Administrator</span></code>. To do that click <code class="docutils literal notranslate"><span class="pre">Start</span></code> button,
 type <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code>, click the Right mouse button on it, then click
 <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">As</span> <span class="pre">Administrator</span></code>, then click <code class="docutils literal notranslate"><span class="pre">Yes</span></code> to confirm.</p></li>
@@ -299,10 +301,10 @@ extracted files are in <code class="docutils literal notranslate"><span class="p
 command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install OpenCL FPGA emulation RT</span>
 <span class="c1"># Answer N to clean previous OCL_ICD_FILENAMES configuration</span>
-c:<span class="se">\o</span>clfpga_rt_&lt;fpga_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\t</span>bb_&lt;tbb_version&gt;<span class="se">\t</span>bb<span class="se">\b</span>in<span class="se">\i</span>ntel64<span class="se">\v</span>c14
+c:<span class="se">\o</span>clfpga_rt_&lt;fpga_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\o</span>neapi-tbb-&lt;tbb_version&gt;<span class="se">\r</span>edist<span class="se">\i</span>ntel64<span class="se">\v</span>c14
 <span class="c1"># Install OpenCL CPU RT</span>
 <span class="c1"># Answer Y to setup CPU RT side-bi-side with FPGA RT</span>
-c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\t</span>bb_&lt;tbb_version&gt;<span class="se">\t</span>bb<span class="se">\b</span>in<span class="se">\i</span>ntel64<span class="se">\v</span>c14
+c:<span class="se">\o</span>clcpu_rt_&lt;cpu_version&gt;<span class="se">\i</span>nstall.bat c:<span class="se">\o</span>neapi-tbb-&lt;tbb_version&gt;<span class="se">\r</span>edist<span class="se">\i</span>ntel64<span class="se">\v</span>c14
 </pre></div>
 </div>
 </li>
