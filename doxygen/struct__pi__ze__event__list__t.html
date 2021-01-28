@@ -117,8 +117,8 @@ Collaboration diagram for _pi_ze_event_list_t:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5688967d2c82ead816dfb93154a11346"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__ze__event__list__t.html#a5688967d2c82ead816dfb93154a11346">createAndRetainPiZeEventList</a> (<a class="el" href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a> EventListLength, const <a class="el" href="pi_8h.html#a6cb8d5181350af7ff4015dbc9a792e21">pi_event</a> *EventList, <a class="el" href="pi_8h.html#a915b799604abdb91a836cf4237f12870">pi_queue</a> CurQueue)</td></tr>
 <tr class="separator:a5688967d2c82ead816dfb93154a11346"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff70995dd82eddb20e6fdcf8d3cfea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__ze__event__list__t.html#adff70995dd82eddb20e6fdcf8d3cfea7">releaseAndDestroyPiZeEventList</a> ()</td></tr>
-<tr class="separator:adff70995dd82eddb20e6fdcf8d3cfea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8deee13a15eece8117dc540043e3c9ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__ze__event__list__t.html#a8deee13a15eece8117dc540043e3c9ad">collectEventsForReleaseAndDestroyPiZeEventList</a> (std::list&lt; <a class="el" href="pi_8h.html#a6cb8d5181350af7ff4015dbc9a792e21">pi_event</a> &gt; &amp;EventsToBeReleased)</td></tr>
+<tr class="separator:a8deee13a15eece8117dc540043e3c9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b941d06364e85c0058fd727e8d3d1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__pi__ze__event__list__t.html">_pi_ze_event_list_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__ze__event__list__t.html#a3b941d06364e85c0058fd727e8d3d1e0">operator=</a> (const <a class="el" href="struct__pi__ze__event__list__t.html">_pi_ze_event_list_t</a> &amp;other)</td></tr>
 <tr class="separator:a3b941d06364e85c0058fd727e8d3d1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -137,6 +137,30 @@ Public Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00484">484</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8deee13a15eece8117dc540043e3c9ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8deee13a15eece8117dc540043e3c9ad">&#9670;&nbsp;</a></span>collectEventsForReleaseAndDestroyPiZeEventList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> _pi_ze_event_list_t::collectEventsForReleaseAndDestroyPiZeEventList </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; <a class="el" href="pi_8h.html#a6cb8d5181350af7ff4015dbc9a792e21">pi_event</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>EventsToBeReleased</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00830">830</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l03759">cleanupAfterEvent()</a>.</p>
+
+</div>
+</div>
 <a id="a5688967d2c82ead816dfb93154a11346"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5688967d2c82ead816dfb93154a11346">&#9670;&nbsp;</a></span>createAndRetainPiZeEventList()</h2>
 
@@ -171,9 +195,9 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00763">763</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l00739">_pi_queue::executeOpenCommandList()</a>, <a class="el" href="pi_8h_source.html#l00084">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03860">piEventRetain()</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00312">_pi_queue::PiQueueMutex</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00545">_pi_event::Queue</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00408">ZE_CALL_NOCHECK</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00534">_pi_event::ZeEvent</a>.</p>
+<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l00739">_pi_queue::executeOpenCommandList()</a>, <a class="el" href="pi_8h_source.html#l00084">PI_OUT_OF_HOST_MEMORY</a>, <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03879">piEventRetain()</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00312">_pi_queue::PiQueueMutex</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00547">_pi_event::Queue</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00408">ZE_CALL_NOCHECK</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00536">_pi_event::ZeEvent</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l04146">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04197">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04367">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04698">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04071">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03496">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04439">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04543">piEnqueueMemUnmap()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05305">piextUSMEnqueuePrefetch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l04167">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04218">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04388">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04719">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04090">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03498">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04460">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04564">piEnqueueMemUnmap()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05326">piextUSMEnqueuePrefetch()</a>.</p>
 
 </div>
 </div>
@@ -201,32 +225,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00519">519</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00521">521</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__level__zero_8hpp_source.html#l00494">Length</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00489">PiEventList</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00486">ZeEventList</a>.</p>
-
-</div>
-</div>
-<a id="adff70995dd82eddb20e6fdcf8d3cfea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adff70995dd82eddb20e6fdcf8d3cfea7">&#9670;&nbsp;</a></span>releaseAndDestroyPiZeEventList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> _pi_ze_event_list_t::releaseAndDestroyPiZeEventList </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00830">830</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00073">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l03865">piEventRelease()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l03757">cleanupAfterEvent()</a>.</p>
 
 </div>
 </div>
@@ -245,7 +246,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00494">494</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00519">operator=()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00820">printZeEventList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00521">operator=()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00820">printZeEventList()</a>.</p>
 
 </div>
 </div>
@@ -263,7 +264,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00489">489</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00519">operator=()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00521">operator=()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +298,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00486">486</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00519">operator=()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00820">printZeEventList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00521">operator=()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00820">printZeEventList()</a>.</p>
 
 </div>
 </div>
