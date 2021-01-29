@@ -69,7 +69,7 @@ var pi__cuda_8cpp =
     [ "cuda_piKernelCreate", "pi__cuda_8cpp.html#ae90c499143d4947018e8b8ed929a1ca9", null ],
     [ "cuda_piKernelGetGroupInfo", "pi__cuda_8cpp.html#a3daa06b349de2dcb1015c37801a43c8a", null ],
     [ "cuda_piKernelGetInfo", "pi__cuda_8cpp.html#ae100b5a124f7d9c4d672b578c83fbd4a", null ],
-    [ "cuda_piKernelGetSubGroupInfo", "pi__cuda_8cpp.html#ac60820e15d791f639d3e4909c0aa6749", null ],
+    [ "cuda_piKernelGetSubGroupInfo", "pi__cuda_8cpp.html#add76a44f7d7e05d2ff98002af240b7ad", null ],
     [ "cuda_piKernelRelease", "pi__cuda_8cpp.html#a86fbf17588e1e53e61b498b52b3471e2", null ],
     [ "cuda_piKernelRetain", "pi__cuda_8cpp.html#a5725cedc336d37d7d8ecdc44e413a22f", null ],
     [ "cuda_piKernelSetArg", "pi__cuda_8cpp.html#aa7e2f345b71f7b1c65a8e1400535edc9", null ],

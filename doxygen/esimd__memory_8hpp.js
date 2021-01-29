@@ -42,7 +42,7 @@ var esimd__memory_8hpp =
     [ "slm_atomic", "esimd__memory_8hpp.html#gaff00dfc029be5c0f65836613622136c8", null ],
     [ "slm_block_load", "esimd__memory_8hpp.html#gac176dcece185f05b7239f6fdc7aa7c92", null ],
     [ "slm_block_store", "esimd__memory_8hpp.html#gac01407d8f5e1915f4daf6a70d0bace79", null ],
-    [ "slm_init", "esimd__memory_8hpp.html#ga0035bb1790bbb0d5424d87f8b17be58c", null ],
+    [ "slm_init", "esimd__memory_8hpp.html#ga4bf073fd136ce89b34823f1c88c495e7", null ],
     [ "slm_load", "esimd__memory_8hpp.html#ga571aa43aa8c48ef881f2231293fc2232", null ],
     [ "slm_load4", "esimd__memory_8hpp.html#ga9457528d988ced2889f0ec23480b5679", null ],
     [ "slm_store", "esimd__memory_8hpp.html#gaab39e8d66bb6ca4b82d3149e1a23405b", null ],
