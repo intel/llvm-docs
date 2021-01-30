@@ -39,7 +39,7 @@ var builtins_8hpp =
     [ "cos", "builtins_8hpp.html#aa05a7722609ad43657e97c33cf9d39d4", null ],
     [ "cosh", "builtins_8hpp.html#a69dc5a5cbaa2b5a2f3b50fecaaea5bba", null ],
     [ "cospi", "builtins_8hpp.html#a085cb6247527637372d6d7da251dfcf4", null ],
-    [ "cross", "builtins_8hpp.html#a9a0bfe8fcfedbd93fd7458e76936d82d", null ],
+    [ "cross", "builtins_8hpp.html#a4f8cc25f863c97fb5bf7a45767a88786", null ],
     [ "ctz", "builtins_8hpp.html#a2934f8ba1864ae9e771a0a104fcd3e7b", null ],
     [ "degrees", "builtins_8hpp.html#a69f903bba700fcdb3eded33d1f4f1e6a", null ],
     [ "distance", "builtins_8hpp.html#ac2640834a09b89276f8f96b7e528504b", null ],
