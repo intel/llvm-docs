@@ -12,6 +12,7 @@ var classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage =
     [ "getFormat", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac28251854e81b5ee223d9e15b68614da", null ],
     [ "getKernelParamOptInfo", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#af4667aee799124902b2e9b3d4d424684", null ],
     [ "getLinkOptions", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ad0c6cedf588260a96748ff1867266262", null ],
+    [ "getProperty", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a407a91a8287933a62b6aa4b084ca26d3", null ],
     [ "getScalarSpecConstants", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aa57bf5b4e943ec8786d1292114d3e343", null ],
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ab25030f048e6145b3beab9bc94f5af65", null ],
     [ "init", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a91c3cb418038889ea7963d8ba716e646", null ],

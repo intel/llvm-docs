@@ -148,6 +148,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac28251854e81b5ee223d9e15b68614da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#ad44af765a4b1350439d932473980d5f9">pi::PiDeviceBinaryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac28251854e81b5ee223d9e15b68614da">getFormat</a> () const</td></tr>
 <tr class="memdesc:ac28251854e81b5ee223d9e15b68614da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the format of the binary image.  <a href="#ac28251854e81b5ee223d9e15b68614da">More...</a><br /></td></tr>
 <tr class="separator:ac28251854e81b5ee223d9e15b68614da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407a91a8287933a62b6aa4b084ca26d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a9c1346135a0b734389bee23db5445de8">pi_device_binary_property</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a407a91a8287933a62b6aa4b084ca26d3">getProperty</a> (const <a class="el" href="classchar.html">char</a> *PropName) const</td></tr>
+<tr class="memdesc:a407a91a8287933a62b6aa4b084ca26d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a single property from SYCL_MISC_PROP category.  <a href="#a407a91a8287933a62b6aa4b084ca26d3">More...</a><br /></td></tr>
+<tr class="separator:a407a91a8287933a62b6aa4b084ca26d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa57bf5b4e943ec8786d1292114d3e343"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html">PropertyRange</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aa57bf5b4e943ec8786d1292114d3e343">getScalarSpecConstants</a> () const</td></tr>
 <tr class="memdesc:aa57bf5b4e943ec8786d1292114d3e343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the iterator range over scalar specialization constants in this binary image.  <a href="#aa57bf5b4e943ec8786d1292114d3e343">More...</a><br /></td></tr>
 <tr class="separator:aa57bf5b4e943ec8786d1292114d3e343"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,7 +270,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00323">323</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00326">326</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +328,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00327">327</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00330">330</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00619">cl::sycl::detail::ProgramManager::ProgramManager()</a>.</p>
 
@@ -386,7 +389,7 @@ Protected Attributes</h2></td></tr>
 <p>Gets the iterator range over composite specialization constants in this binary image. </p>
 <p>For each property pointed to by an iterator within the range, the name of the property is the specialization constant symbolic ID and the value is a list of tuples of 32-bit unsigned integer values, which encode scalar specialization constants, that form the composite one. Each tuple consists of ID of scalar specialization constant, its location within a composite (offset in bytes from the beginning) and its size. For example, for the following structure: struct A { int a; float b; }; struct POD { A a[2]; int b; }; List of tuples will look like: { ID0, 0, 4 }, // .a[0].a { ID1, 4, 4 }, // .a[0].b { ID2, 8, 4 }, // .a[1].a { ID3, 12, 4 }, // .a[1].b { ID4, 16, 4 }, // .b </p>
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00316">316</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00319">319</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00531">cl::sycl::detail::program_impl::flush_spec_constants()</a>.</p>
 
@@ -415,7 +418,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00319">319</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00322">322</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01054">cl::sycl::detail::ProgramManager::getDeviceLibReqMask()</a>.</p>
 
@@ -475,7 +478,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00320">320</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00323">323</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>
@@ -508,6 +511,30 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a407a91a8287933a62b6aa4b084ca26d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407a91a8287933a62b6aa4b084ca26d3">&#9670;&nbsp;</a></span>getProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="pi_8h.html#a9c1346135a0b734389bee23db5445de8">pi_device_binary_property</a> cl::sycl::detail::pi::DeviceBinaryImage::getProperty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classchar.html">char</a> *&#160;</td>
+          <td class="paramname"><em>PropName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a single property from SYCL_MISC_PROP category. </p>
+
+<p class="definition">Definition at line <a class="el" href="pi_8cpp_source.html#l00569">569</a> of file <a class="el" href="pi_8cpp_source.html">pi.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00674">__SYCL_PI_PROPERTY_SET_SYCL_MISC_PROP</a>, <a class="el" href="pi_8hpp_source.html#l00246">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::begin()</a>, <a class="el" href="pi_8hpp_source.html#l00247">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::end()</a>, and <a class="el" href="pi_8hpp_source.html#l00249">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::isAvailable()</a>.</p>
+
+</div>
+</div>
 <a id="aa57bf5b4e943ec8786d1292114d3e343"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa57bf5b4e943ec8786d1292114d3e343">&#9670;&nbsp;</a></span>getScalarSpecConstants()</h2>
 
@@ -534,7 +561,7 @@ Protected Attributes</h2></td></tr>
 <p>Gets the iterator range over scalar specialization constants in this binary image. </p>
 <p>For each property pointed to by an iterator within the range, the name of the property is the specialization constant symbolic ID and the value is 32-bit unsigned integer ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00297">297</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00300">300</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__impl_8cpp_source.html#l00531">cl::sycl::detail::program_impl::flush_spec_constants()</a>.</p>
 
@@ -593,9 +620,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8cpp_source.html#l00588">588</a> of file <a class="el" href="pi_8cpp_source.html">pi.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8cpp_source.html#l00604">604</a> of file <a class="el" href="pi_8cpp_source.html">pi.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00667">__SYCL_PI_PROPERTY_SET_COMPOSITE_SPEC_CONST_MAP</a>, <a class="el" href="pi_8h_source.html#l00670">__SYCL_PI_PROPERTY_SET_DEVICELIB_REQ_MASK</a>, <a class="el" href="pi_8h_source.html#l00672">__SYCL_PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO</a>, <a class="el" href="pi_8h_source.html#l00663">__SYCL_PI_PROPERTY_SET_SCALAR_SPEC_CONST_MAP</a>, <a class="el" href="pi_8h_source.html#l00711">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="pi_8h_source.html#l00687">pi_device_binary_struct::Format</a>, <a class="el" href="pi_8cpp_source.html#l00568">cl::sycl::detail::pi::getBinaryImageFormat()</a>, and <a class="el" href="pi_8h_source.html#l00624">PI_DEVICE_BINARY_TYPE_NONE</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00667">__SYCL_PI_PROPERTY_SET_COMPOSITE_SPEC_CONST_MAP</a>, <a class="el" href="pi_8h_source.html#l00670">__SYCL_PI_PROPERTY_SET_DEVICELIB_REQ_MASK</a>, <a class="el" href="pi_8h_source.html#l00672">__SYCL_PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO</a>, <a class="el" href="pi_8h_source.html#l00663">__SYCL_PI_PROPERTY_SET_SCALAR_SPEC_CONST_MAP</a>, <a class="el" href="pi_8h_source.html#l00713">pi_device_binary_struct::BinaryStart</a>, <a class="el" href="pi_8h_source.html#l00689">pi_device_binary_struct::Format</a>, <a class="el" href="pi_8cpp_source.html#l00584">cl::sycl::detail::pi::getBinaryImageFormat()</a>, and <a class="el" href="pi_8h_source.html#l00624">PI_DEVICE_BINARY_TYPE_NONE</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="device__binary__image_8cpp_source.html#l00019">cl::sycl::detail::DynRTDeviceBinaryImage::DynRTDeviceBinaryImage()</a>.</p>
 
@@ -653,7 +680,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00329">329</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00332">332</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="device__binary__image_8cpp_source.html#l00019">cl::sycl::detail::DynRTDeviceBinaryImage::DynRTDeviceBinaryImage()</a>, and <a class="el" href="device__binary__image_8cpp_source.html#l00045">cl::sycl::detail::DynRTDeviceBinaryImage::~DynRTDeviceBinaryImage()</a>.</p>
 
@@ -679,7 +706,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00332">332</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00335">335</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +730,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00333">333</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00336">336</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +754,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00330">330</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00333">333</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +778,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00334">334</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00337">337</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>
@@ -775,7 +802,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00331">331</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi_8hpp_source.html#l00334">334</a> of file <a class="el" href="pi_8hpp_source.html">pi.hpp</a>.</p>
 
 </div>
 </div>

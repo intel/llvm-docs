@@ -270,6 +270,7 @@ var searchData=
   ['_5f_5fsycl_5fpi_5fproperty_5fset_5fdevicelib_5freq_5fmask',['__SYCL_PI_PROPERTY_SET_DEVICELIB_REQ_MASK',['../pi_8h.html#a168b1d3ff39191de28d569818760d282',1,'pi.h']]],
   ['_5f_5fsycl_5fpi_5fproperty_5fset_5fkernel_5fparam_5fopt_5finfo',['__SYCL_PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO',['../pi_8h.html#a17def9eec80cfd553155b7df05274f76',1,'pi.h']]],
   ['_5f_5fsycl_5fpi_5fproperty_5fset_5fscalar_5fspec_5fconst_5fmap',['__SYCL_PI_PROPERTY_SET_SCALAR_SPEC_CONST_MAP',['../pi_8h.html#a50650fb7f58d193c00e9843fadc97cf9',1,'pi.h']]],
+  ['_5f_5fsycl_5fpi_5fproperty_5fset_5fsycl_5fmisc_5fprop',['__SYCL_PI_PROPERTY_SET_SYCL_MISC_PROP',['../pi_8h.html#aee763d43843b48dfe6e77a015d75997f',1,'pi.h']]],
   ['_5f_5fsycl_5fppcat',['__SYCL_PPCAT',['../detail_2builtins_8hpp.html#aa39e7e212e1c6f1aab65ccc5fc1da50c',1,'builtins.hpp']]],
   ['_5f_5fsycl_5fppcat_5fnx',['__SYCL_PPCAT_NX',['../detail_2builtins_8hpp.html#ad4b58a3f20d8503373f992d5ae521f3f',1,'builtins.hpp']]],
   ['_5f_5fsycl_5freduction_5faux_5fkernel',['__sycl_reduction_aux_kernel',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__aux__kernel.html',1,'cl::sycl::ONEAPI::detail']]],

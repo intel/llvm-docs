@@ -25,6 +25,7 @@ var pi_8h =
     [ "__SYCL_PI_PROPERTY_SET_DEVICELIB_REQ_MASK", "pi_8h.html#a168b1d3ff39191de28d569818760d282", null ],
     [ "__SYCL_PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO", "pi_8h.html#a17def9eec80cfd553155b7df05274f76", null ],
     [ "__SYCL_PI_PROPERTY_SET_SCALAR_SPEC_CONST_MAP", "pi_8h.html#a50650fb7f58d193c00e9843fadc97cf9", null ],
+    [ "__SYCL_PI_PROPERTY_SET_SYCL_MISC_PROP", "pi_8h.html#aee763d43843b48dfe6e77a015d75997f", null ],
     [ "_PI_API", "pi_8h.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "_PI_CONCAT", "pi_8h.html#a172d9589d78935e5c3d601f04a9a3663", null ],
     [ "_PI_H_VERSION_MAJOR", "pi_8h.html#a51ab31f9fc2fffb8cd8ddbf47ac13c96", null ],

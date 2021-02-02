@@ -1,5 +1,8 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_924bb0f5c56d5c05f22392a8e7eb7dbf.html#aef5a7b6247feefe87ce8149bc73a97bb":[3,0,2,1,0,318,0],
+"structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_b43c8e8fffa3308e69a5629adf68172b.html":[3,0,2,1,0,317],
+"structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_b43c8e8fffa3308e69a5629adf68172b.html#a46ec970987e6398ba11d3f3b791582d7":[3,0,2,1,0,317,0],
 "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html":[3,0,2,1,0,9,0],
 "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html#af8f0c701405821d365b60a3919c67510":[3,0,2,1,0,9,0,0],
 "structcl_1_1sycl_1_1detail_1_1change__base__type.html":[3,0,2,1,0,34],
@@ -246,8 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1nan__types.html":[3,0,2,1,0,245],
 "structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g09da3cb615edab2f6ab0bf7a52860646.html":[3,0,2,1,0,247],
 "structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g09da3cb615edab2f6ab0bf7a52860646.html#ae34b1183782c56a2d5fd384d8cdb2837":[3,0,2,1,0,247,1],
-"structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g09da3cb615edab2f6ab0bf7a52860646.html#ae3869a9a75f97770c86a90b9cce662a8":[3,0,2,1,0,247,0],
-"structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g0c79ebac53851faf996337b56e7ddedd.html":[3,0,2,1,0,248],
-"structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g0c79ebac53851faf996337b56e7ddedd.html#a54a30e75d49ce54ef4fc94824649f455":[3,0,2,1,0,248,0],
-"structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g0c79ebac53851faf996337b56e7ddedd.html#af0a19025377948573b3e05a27de432eb":[3,0,2,1,0,248,1]
+"structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g09da3cb615edab2f6ab0bf7a52860646.html#ae3869a9a75f97770c86a90b9cce662a8":[3,0,2,1,0,247,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"structcheck__true.html#ae4d343c116ca4456abe69261a2f17c40":[3,0,38,0],
+"structcheck__true_3_01true_01_4.html":[3,0,39],
+"structcheck__true_3_01true_01_4.html#a2e12d0f3e266774b6e11e6285103d423":[3,0,39,0],
 "structcl_1_1____host__std_1_1detail_1_1helper.html":[3,0,2,0,0,0],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a200150106dd820b6356382592dfae4a4":[3,0,2,0,0,0,1],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a26d77c3a4389b5a8c752b7e645415c00":[3,0,2,0,0,0,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html#ae8039bccec338a083cc6a2de734fbd45":[3,0,2,1,4,2,1,0,1],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html":[3,0,2,1,4,13],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a0a3bfb3ed16e586a1711c590cb146991":[3,0,2,1,4,13,23],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a1d0e78305d9f8565e7acfda64b1870b0":[3,0,2,1,4,13,26],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a283637c5f4af83e289ab89b0f71d6162":[3,0,2,1,4,13,16],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a283fc6a2552d38f98653eb08425656ea":[3,0,2,1,4,13,13],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a36d337f77e9b3ed152ac458cd6097d64":[3,0,2,1,4,13,7]
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a1d0e78305d9f8565e7acfda64b1870b0":[3,0,2,1,4,13,26]
 };

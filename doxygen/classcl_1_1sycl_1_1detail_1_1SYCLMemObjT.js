@@ -30,6 +30,7 @@ var classcl_1_1sycl_1_1detail_1_1SYCLMemObjT =
     [ "set_final_data", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a677d75960bbfb9d1618e1c3597722f5f", null ],
     [ "set_final_data", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#adffce0a7a4846b11cb4255fea2ff91a8", null ],
     [ "set_final_data", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a63d62490f9961309d1a719ebcc769df7", null ],
+    [ "set_final_data", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a9689dba1d7ca0d5f6c4fd1d171e7fb6e", null ],
     [ "set_final_data_from_storage", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a9347354e3973c6b15e79457d106aba1c", null ],
     [ "set_write_back", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a043023c34e0de882d7125361af80a07a", null ],
     [ "setAlign", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjT.html#a9efa4fc782eb7a45c2fe0c2aeff32b82", null ],
