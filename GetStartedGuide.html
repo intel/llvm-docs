@@ -371,37 +371,6 @@ environment variable:</p>
 </div>
 <div class="section" id="test-dpc-toolchain">
 <h3>Test DPC++ toolchain<a class="headerlink" href="#test-dpc-toolchain" title="Permalink to this headline">¶</a></h3>
-<p>Every product change should be accompanied with corresponding test modification
-(adding new test(s), extending, removing or modifying existing test(s)).</p>
-<p>There are 3 types of tests which are used for DPC++ toolchain validation:</p>
-<ul class="simple">
-<li><p>DPC++ in-tree LIT tests including <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../llvm/test">check-llvm</a>,
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../clang/test">check-clang</a>, <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../llvm-spirv/test">check-llvm-spirv</a> and
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../sycl/test">check-sycl</a> targets stored in this repository. These tests
-should not have hardware (e.g. GPU, FPGA, etc.) or external software
-dependencies (e.g. OpenCL, Level Zero, CUDA runtimes). All tests not following
-this approach should be moved to DPC++ end-to-end or SYCL-CTS tests.
-However, the tests for a feature under active development requiring atomic
-change for tests and product can be put to
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../../sycl/test/on-device">sycl/test/on-device</a> temporarily. It is developer
-responsibility to move the tests to DPC++ E2E test suite or SYCL-CTS once
-the feature is stabilized.</p></li>
-<li><p>DPC++ end-to-end (E2E) tests which are extension to
-<a class="reference external" href="https://github.com/intel/llvm-test-suite/tree/intel/SYCL">LLVM* test suite</a>.
-A test which requires full stack including backend runtimes (e.g. OpenCL,
-Level Zero or CUDA) should be put to DPC++ E2E test suite following
-<a class="reference external" href="https://github.com/intel/llvm-test-suite/blob/intel/CONTRIBUTING">CONTRIBUTING</a>.</p></li>
-<li><p>SYCL-CTS are official
-<a class="reference external" href="https://github.com/KhronosGroup/SYCL-CTS">Khronos* SYCL* conformance tests</a>.
-They verify SYCL specification compatibility. All implementation details or
-extensions are out of scope for the tests. If SYCL specification has changed
-(SYCL CTS tests conflict with recent version of SYCL specification) or change
-is required in the way the tests are built with DPC++ compiler (defined in
-<a class="reference external" href="https://github.com/KhronosGroup/SYCL-CTS/blob/SYCL-1.2.1/master/cmake/FindIntel_SYCL.cmake">FindIntel_SYCL</a>)
-pull request should be created under
-<a class="reference external" href="https://github.com/KhronosGroup/SYCL-CTS">KhronosGroup/SYCL-CTS</a> with required
-patch.</p></li>
-</ul>
 <div class="section" id="run-in-tree-lit-tests">
 <h4>Run in-tree LIT tests<a class="headerlink" href="#run-in-tree-lit-tests" title="Permalink to this headline">¶</a></h4>
 <p>To verify that built DPC++ toolchain is working correctly, run:</p>
