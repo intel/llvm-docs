@@ -476,7 +476,11 @@ var hierarchy =
       [ "cl::sycl::INTEL::gpu::detail::is_word_type< T >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__word__type.html", null ],
       [ "cl::sycl::INTEL::gpu::is_simd_v< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__v.html", null ],
       [ "cl::sycl::INTEL::gpu::is_simd_view_v< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__v.html", null ],
-      [ "cl::sycl::INTEL::gpu::is_vectorizable_v< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable__v.html", null ]
+      [ "cl::sycl::INTEL::gpu::is_vectorizable_v< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable__v.html", null ],
+      [ "cl::sycl::ONEAPI::detail::has_known_identity_impl< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1has__known__identity__impl.html", null ],
+      [ "cl::sycl::ONEAPI::detail::has_known_identity_impl< std::decay< BinaryOperation >::type, std::decay< AccumulatorT >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1has__known__identity__impl.html", [
+        [ "cl::sycl::ONEAPI::has_known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1has__known__identity.html", null ]
+      ] ]
     ] ],
     [ "cl::sycl::interop< name, SYCLObjectT >", "structcl_1_1sycl_1_1interop.html", null ],
     [ "cl::sycl::interop< backend::cuda, accessor< DataT, Dimensions, AccessMode, access::target::constant_buffer, access::placeholder::false_t > >", "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01accessor_3_01DataT_00_01Dimensions_00_01Accd46d425579798c62f6f7d532db57aaa4.html", null ],
@@ -599,6 +603,17 @@ var hierarchy =
     [ "cl::sycl::INTEL::kernel_writeable_io_pipe< _name, _dataT, _min_capacity >", "classcl_1_1sycl_1_1INTEL_1_1kernel__writeable__io__pipe.html", null ],
     [ "cl::sycl::detail::KernelInfo< KernelNameType >", "structcl_1_1sycl_1_1detail_1_1KernelInfo.html", null ],
     [ "cl::sycl::detail::KernelProgramCache", "classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, AccumulatorT, typename >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsMaximumIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat5d6cc9aa9bc76aecc96aeff661829736.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsMinimumIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulatb98a2748092cd2edc90c9f63f96ba941.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsOneIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat60e47192ece495c25d821b13daa3e860.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsOnesIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat86d4a315b7a28f3f97c71e6b28bb28b2.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsZeroIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat377b45c82f44c166b2af9ea0191a0224.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, half, typename std::enable_if< IsOneIdentityOp< half, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_096c03ad93c3a652158038df4c49dddeb.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, half, typename std::enable_if< IsZeroIdentityOp< half, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_09c506e78d754d5bae53aae2ee053efa5.html", null ],
+    [ "cl::sycl::ONEAPI::detail::known_identity_impl< std::decay< BinaryOperation >::type, std::decay< AccumulatorT >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl.html", [
+      [ "cl::sycl::ONEAPI::known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1known__identity.html", null ]
+    ] ],
     [ "cl::sycl::detail::LeavesCollection", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html", null ],
     [ "cl::sycl::detail::LessEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html", null ],
     [ "cl::sycl::detail::LessThan< T >", "structcl_1_1sycl_1_1detail_1_1LessThan.html", null ],

@@ -2,7 +2,7 @@ var structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4 =
 [
     [ "denorm_min", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aaf6c0daa3fe860b27c22d800dc06e5e4", null ],
     [ "epsilon", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a4db6a2a832121381db1e6686e300fc80", null ],
-    [ "infinity", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a66e9daa00bcc6810208df130a5dde4d2", null ],
+    [ "infinity", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a1a28f7a13d6a8e978bf76518838e231a", null ],
     [ "lowest", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a9402a3f529b3e35689dcbe962bfab7d9", null ],
     [ "max", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aac7730e34a5ce776dd6d1575e7404352", null ],
     [ "min", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#a6779e3ec3fc95b6c6976e8aceb5d3605", null ],

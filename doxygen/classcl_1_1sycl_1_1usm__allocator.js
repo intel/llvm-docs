@@ -13,8 +13,8 @@ var classcl_1_1sycl_1_1usm__allocator =
     [ "usm_allocator", "classcl_1_1sycl_1_1usm__allocator.html#a4c9fa4d852c469a56211e50967a78499", null ],
     [ "allocate", "classcl_1_1sycl_1_1usm__allocator.html#a0eca4b84b299d6846696d8c77b494764", null ],
     [ "deallocate", "classcl_1_1sycl_1_1usm__allocator.html#a5473bd8372f1f7d9c8d63059c029f596", null ],
-    [ "operator=", "classcl_1_1sycl_1_1usm__allocator.html#a84dd60bc19ec1ac7ee5cfe98866cb350", null ],
-    [ "operator=", "classcl_1_1sycl_1_1usm__allocator.html#a0f2535a63457b4448452e04461c51c1a", null ],
+    [ "operator=", "classcl_1_1sycl_1_1usm__allocator.html#a6b2ee64b29703fcb5bfa27921e4ab0ce", null ],
+    [ "operator=", "classcl_1_1sycl_1_1usm__allocator.html#af3d6e2a7c944a805c108c832a1669854", null ],
     [ "operator!=", "classcl_1_1sycl_1_1usm__allocator.html#aa433a51c578092b9781870f46f5f34ba", null ],
     [ "operator==", "classcl_1_1sycl_1_1usm__allocator.html#a2bfeff118901efc7ef7204aff224e175", null ],
     [ "usm_allocator", "classcl_1_1sycl_1_1usm__allocator.html#aec7ce7aae6c590129a2fdd34f7461985", null ]

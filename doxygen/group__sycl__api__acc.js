@@ -63,7 +63,9 @@ var group__sycl__api__acc =
       [ "RefType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a314d912a8f8847cf4ca74d873cccd179", null ],
       [ "value_type", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#affbea3f1ed18d49cfa7d60d8fbcf690f", null ],
       [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#acac61d7dfca2abeb08fa2be4ec4c2e8b", null ],
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a5480dcb923757901804b7873cc4480e6", null ],
       [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7928217b66778d723cf211ca3ddae858", null ],
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ae19ed0aee052b874ee4b7bc2ce6a8cb1", null ],
       [ "get_count", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac2f63501af136046ed39f9addb13f604", null ],
       [ "get_pointer", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3506c044759d10b13aba846d008a68e5", null ],
       [ "get_range", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8150f9414685815dd00717ece3089d0b", null ],
@@ -83,13 +85,16 @@ var group__sycl__api__acc =
       [ "padding", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa", null ]
     ] ],
     [ "accessor< DataT, Dimensions, AccessMode, access::target::image, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html", [
-      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#a946b74cc9ddf2d54346647af6bea6856", null ]
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#a946b74cc9ddf2d54346647af6bea6856", null ],
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#aed6e2f8291b213df677a5d36ad4667c8", null ]
     ] ],
     [ "accessor< DataT, Dimensions, AccessMode, access::target::host_image, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html", [
-      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html#a31e33f8d677f8ca202ede49467d33735", null ]
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html#a31e33f8d677f8ca202ede49467d33735", null ],
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html#a3cebb9ddd78f23aef86520a98f2eea63", null ]
     ] ],
     [ "accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html", [
       [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#a3cc33a4b8b54470a2c8059284051e646", null ],
+      [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#abd02a4a6e27d9847dbf57c651c2e551e", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#a066e6987587803e1e0a9b2bd3626ff5e", null ]
     ] ]
 ];

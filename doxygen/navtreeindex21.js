@@ -1,5 +1,11 @@
 var NAVTREEINDEX21 =
 {
+"info__desc_8hpp.html#ab0e8864b7e9164ad7eb7114b6ee2e1ca":[4,0,0,0,1,3,0,30],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190":[4,0,0,0,1,3,0,7],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0172422d8c3c4ed5a4116131baed67f8":[4,0,0,0,1,3,0,7,6],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a03aa631709a8a1162ede52565f3887d7":[4,0,0,0,1,3,0,7,73],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a05cb235087712878ec261706dab65603":[4,0,0,0,1,3,0,7,7],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0eeabe1249684d58c7bad29611dded8a":[4,0,0,0,1,3,0,7,39],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a0fbdc8bcd6c762ac073157f9e77b2437":[4,0,0,0,1,3,0,7,48],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a1323f315edc0202a8d3a8d0297829081":[4,0,0,0,1,3,0,7,84],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a146c255959a4d93b5a009f5daeabb6d3":[4,0,0,0,1,3,0,7,43],
@@ -132,9 +138,9 @@ var NAVTREEINDEX21 =
 "kernel_8cpp.html#a9c16a54ec7d6f7c97004c9735dcb3ca1":[4,0,2,14,8],
 "kernel_8cpp.html#ac2f63ef028746455af61de56221a6a65":[4,0,2,14,6],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,2],
-"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,3],
-"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,0],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,1],
+"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,0],
+"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,3],
 "kernel_8cpp_source.html":[4,0,2,14],
 "kernel_8hpp.html":[4,0,0,0,1,33],
 "kernel_8hpp_source.html":[4,0,0,0,1,33],
@@ -243,11 +249,5 @@ var NAVTREEINDEX21 =
 "multi__ptr_8hpp_source.html":[4,0,0,0,1,35],
 "namespaceEsimdEmulSys.html":[2,0,3],
 "namespaceEsimdEmulSys.html":[3,0,3],
-"namespace____esimd.html":[3,0,0],
-"namespace____esimd.html":[2,0,0],
-"namespace____spv.html":[3,0,1],
-"namespace____spv.html":[2,0,1],
-"namespacecl.html":[3,0,2],
-"namespacecl.html":[2,0,2],
-"namespacecl_1_1____host__std.html":[3,0,2,0]
+"namespace____esimd.html":[3,0,0]
 };

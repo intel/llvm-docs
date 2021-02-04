@@ -63,7 +63,7 @@ var types_8hpp =
     [ "is_sint_to_float", "types_8hpp.html#a17f4f2560657d87e14043024fac9aec4", null ],
     [ "is_sint_to_from_uint", "types_8hpp.html#aaa6d870c23a2b8f8382d8e000efad34a", null ],
     [ "is_sint_to_sint", "types_8hpp.html#a9c292d1903462c41f744aac5771fa952", null ],
-    [ "is_standard_type", "types_8hpp.html#af8fc0ef9a397c3760a17836885309e49", null ],
+    [ "is_standard_type", "types_8hpp.html#a6fe72c13780323dc473102daa8fccf81", null ],
     [ "is_uint_to_float", "types_8hpp.html#a697b9f9495692af21c24f483d09213d4", null ],
     [ "is_uint_to_uint", "types_8hpp.html#a2bf12e570712d1c48367f396e982a251", null ],
     [ "rel_t", "types_8hpp.html#aa158840fc1e63fe593ba06c24cf2315c", null ],

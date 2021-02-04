@@ -6,6 +6,7 @@ var half__type_8hpp =
     [ "hash< cl::sycl::half >", "structstd_1_1hash_3_01cl_1_1sycl_1_1half_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1half_01_4" ],
     [ "numeric_limits< cl::sycl::half >", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html", "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4" ],
     [ "__SYCL_CONSTEXPR_ON_DEVICE", "half__type_8hpp.html#a19881648e4886cadb220083b3d884cb4", null ],
+    [ "_CPP14_CONSTEXPR", "half__type_8hpp.html#a59e4baa41c8f0478b4f9d172d9e1e014", null ],
     [ "BIsRepresentationT", "half__type_8hpp.html#a246852439b33d020098e8eb187d6c7a8", null ],
     [ "StorageT", "half__type_8hpp.html#aa2ac5b92936289cb1258bf03b8a108c2", null ],
     [ "Vec16StorageT", "half__type_8hpp.html#ae9cf7595bdf58467e8bcf6700a361cbb", null ],

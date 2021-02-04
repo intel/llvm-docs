@@ -62,7 +62,7 @@ var searchData=
   ['is_5fsint_5fto_5ffloat',['is_sint_to_float',['../namespacecl_1_1sycl_1_1detail.html#a17f4f2560657d87e14043024fac9aec4',1,'cl::sycl::detail']]],
   ['is_5fsint_5fto_5ffrom_5fuint',['is_sint_to_from_uint',['../namespacecl_1_1sycl_1_1detail.html#aaa6d870c23a2b8f8382d8e000efad34a',1,'cl::sycl::detail']]],
   ['is_5fsint_5fto_5fsint',['is_sint_to_sint',['../namespacecl_1_1sycl_1_1detail.html#a9c292d1903462c41f744aac5771fa952',1,'cl::sycl::detail']]],
-  ['is_5fstandard_5ftype',['is_standard_type',['../namespacecl_1_1sycl_1_1detail.html#af8fc0ef9a397c3760a17836885309e49',1,'cl::sycl::detail']]],
+  ['is_5fstandard_5ftype',['is_standard_type',['../namespacecl_1_1sycl_1_1detail.html#a6fe72c13780323dc473102daa8fccf81',1,'cl::sycl::detail']]],
   ['is_5fsugeninteger',['is_sugeninteger',['../namespacecl_1_1sycl_1_1detail.html#ad267505d5fdf08d5cd26c82d7dd796e5',1,'cl::sycl::detail']]],
   ['is_5fucharn',['is_ucharn',['../namespacecl_1_1sycl_1_1detail.html#a134acacd3b0f7d53950469b2392d0661',1,'cl::sycl::detail']]],
   ['is_5fugenchar',['is_ugenchar',['../namespacecl_1_1sycl_1_1detail.html#ada15f953a3784daff648a331893f89c8',1,'cl::sycl::detail']]],
