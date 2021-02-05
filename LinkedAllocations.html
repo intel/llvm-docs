@@ -96,7 +96,7 @@ linked and unlinked allocations is summarized in the table below.</p>
 <tbody>
 <tr>
 <td>Native memory object creation</td>
-<td>Created with COPY_HOST_PTR if a host pointer is available and the first access mode does not discard the data.</td>
+<td>Created without a host pointer, then initialized as a separate memory transfer operation if a host pointer is available and the first access mode does not discard the data.</td>
 <td>Created with USE_HOST_PTR if a suitable host pointer is available, regardless of the first access mode.</td>
 </tr>
 <tr>

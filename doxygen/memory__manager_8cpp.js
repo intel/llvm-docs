@@ -5,7 +5,7 @@ var memory__manager_8cpp =
     [ "copyD2H", "memory__manager_8cpp.html#a0c48744e18ff526a914917fdafaffaf9", null ],
     [ "copyH2D", "memory__manager_8cpp.html#aa73b6925367a15cfc26020f963be215f", null ],
     [ "copyH2H", "memory__manager_8cpp.html#a2b0a0e58bb08a84a70762cebf1e239f2", null ],
-    [ "getMemObjCreationFlags", "memory__manager_8cpp.html#afc7d4ecfd0aa285901892dafedc6f94c", null ],
+    [ "getMemObjCreationFlags", "memory__manager_8cpp.html#a064a7c679e7b24dea8333ecf6eb1881b", null ],
     [ "prepTermPositions", "memory__manager_8cpp.html#ad3c06789128922f344cd3e37762908a5", null ],
     [ "waitForEvents", "memory__manager_8cpp.html#a0e4397be0849638751ee3f2e8388a08f", null ]
 ];
