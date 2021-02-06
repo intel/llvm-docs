@@ -5,6 +5,7 @@ var searchData=
   ['element_5ftype_3c_20simd_3c_20ty_2c_20n_20_3e_20_3e',['element_type&lt; simd&lt; Ty, N &gt; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1element__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html',1,'cl::sycl::INTEL::gpu']]],
   ['element_5ftype_3c_20simd_5fview_3c_20basety_2c_20regionty_20_3e_20_3e',['element_type&lt; simd_view&lt; BaseTy, RegionTy &gt; &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1element__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html',1,'cl::sycl::INTEL::gpu']]],
   ['emptycommand',['EmptyCommand',['../classcl_1_1sycl_1_1detail_1_1EmptyCommand.html',1,'cl::sycl::detail']]],
+  ['emptyreductionpredicate',['EmptyReductionPredicate',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate.html',1,'cl::sycl::ONEAPI::detail']]],
   ['enable_5fprofiling',['enable_profiling',['../classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html',1,'cl::sycl::property::queue']]],
   ['enqueueresultt',['EnqueueResultT',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html',1,'cl::sycl::detail']]],
   ['equalto',['EqualTo',['../structcl_1_1sycl_1_1detail_1_1EqualTo.html',1,'cl::sycl::detail']]],

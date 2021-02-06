@@ -11,6 +11,7 @@ var handler_8hpp =
     [ "check_fn_signature", "structcl_1_1sycl_1_1detail_1_1check__fn__signature.html", null ],
     [ "check_fn_signature< F, RetT(Args...)>", "structcl_1_1sycl_1_1detail_1_1check__fn__signature_3_01F_00_01RetT_07Args_8_8_8_08_4.html", "structcl_1_1sycl_1_1detail_1_1check__fn__signature_3_01F_00_01RetT_07Args_8_8_8_08_4" ],
     [ "reduction_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl" ],
+    [ "AreAllButLastReductions", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions" ],
     [ "ShouldEnableSetArg", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg" ],
     [ "__SYCL_NONCONST_FUNCTOR__", "handler_8hpp.html#af7cb6628b45f7f1a9ba69f2843febe17", null ],
     [ "_KERNELFUNCPARAM", "handler_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1", null ],
@@ -22,8 +23,12 @@ var handler_8hpp =
     [ "getDeviceFromHandler", "handler_8hpp.html#a4679ea98c7f73f344135382c7b7ab13d", null ],
     [ "member_ptr_helper", "handler_8hpp.html#a43f7210adc907fb76c8fe3b46b659afb", null ],
     [ "reduAuxCGFunc", "handler_8hpp.html#a37c7b50c0ee12720c0a09d771f2a7faf", null ],
+    [ "reduAuxCGFunc", "handler_8hpp.html#afe6b013b8680321776e8cbb8bdab8f84", null ],
     [ "reduCGFunc", "handler_8hpp.html#aa82993adde102ded5bac7919ab02bd0e", null ],
     [ "reduCGFunc", "handler_8hpp.html#aa785281ba708736f7e9842f2741462ad", null ],
+    [ "reduCGFunc", "handler_8hpp.html#a75e3022c2d6eecf4038137e64748696a", null ],
     [ "reduGetMaxWGSize", "handler_8hpp.html#a217c7e07fa61a2c040a362501711afb4", null ],
+    [ "reduGetMemPerWorkItem", "handler_8hpp.html#a1c2751ba7d3012d52ddb9168d34d7a1f", null ],
+    [ "tuple_select_elements", "handler_8hpp.html#a074c1a9538a468b7afc2763b054790f4", null ],
     [ "argument_helper", "handler_8hpp.html#a0e2a8cd39c5325f03f08e50ef55bb73c", null ]
 ];

@@ -47,6 +47,7 @@ var searchData=
   ['writenditem',['writeNDItem',['../namespacecl_1_1sycl_1_1detail.html#aa0e0d8ceb2f0c7b30bb44cc136bb1045',1,'cl::sycl::detail']]],
   ['writendrange',['writeNDRange',['../namespacecl_1_1sycl_1_1detail.html#acdd142a346181427d680524f6a757b8a',1,'cl::sycl::detail']]],
   ['writepixel',['writePixel',['../namespacecl_1_1sycl_1_1detail.html#a8ed428c232a454f6d3cf02e4e4e73597',1,'cl::sycl::detail']]],
+  ['writeredusumstooutaccs',['writeReduSumsToOutAccs',['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a478544b50cd05b19f2e852533743272d',1,'cl::sycl::ONEAPI::detail']]],
   ['writeregion',['writeRegion',['../classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#ac42b58957cee4bedeae39b144f4da2e1',1,'cl::sycl::INTEL::gpu::simd::writeRegion(RTy Region, const vector_type_t&lt; typename RTy::element_type, RTy::length &gt; &amp;Val)'],['../classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#ac0275f3def42671fef81c74b24e601ce',1,'cl::sycl::INTEL::gpu::simd::writeRegion(std::pair&lt; TR, UR &gt; Region, const vector_type_t&lt; typename TR::element_type, TR::length &gt; &amp;Val)']]],
   ['writethrough',['WriteThrough',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a23180acf9c2cb288d880c9c7c7c79e67aacb7820573f20d69befb56e41f440549',1,'cl::sycl::INTEL::gpu']]],
   ['writevec',['writeVec',['../namespacecl_1_1sycl_1_1detail.html#a0227771370163a3d0fd26a2846ea3a8c',1,'cl::sycl::detail']]]

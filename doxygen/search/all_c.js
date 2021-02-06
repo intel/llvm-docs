@@ -36,6 +36,7 @@ var searchData=
   ['loadoslibrary',['loadOsLibrary',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a492fcb5eea191575bbfb650e8ac4f392',1,'cl::sycl::detail::pi']]],
   ['loadplugin',['loadPlugin',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#aec8cc975c45bbd1adc7cacbf1cd7107f',1,'cl::sycl::detail::pi']]],
   ['local',['local',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598af5ddaf0ca7929578b408c909429f68f2',1,'cl::sycl::access::local()'],['../namespacecl_1_1sycl_1_1info.html#ad3cf44d11f60b23508e91d1ed61ad001af5ddaf0ca7929578b408c909429f68f2',1,'cl::sycl::info::local()']]],
+  ['local_5faccessor_5ftype',['local_accessor_type',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a6814fd728a93df80bae227e69a60c640',1,'cl::sycl::ONEAPI::detail::reduction_impl']]],
   ['local_5fmem_5fsize',['local_mem_size',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a735f7e0da765dcc1dfc4d3454a9aba14',1,'cl::sycl::info']]],
   ['local_5fmem_5ftype',['local_mem_type',['../namespacecl_1_1sycl_1_1info.html#ad3cf44d11f60b23508e91d1ed61ad001',1,'cl::sycl::info::local_mem_type()'],['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a65f9a150cd584ee5dd60ce5450b93ebd',1,'cl::sycl::info::local_mem_type()']]],
   ['local_5fptr',['local_ptr',['../namespacecl_1_1sycl.html#a12634ddedf53a9d91884e902b4f282c2',1,'cl::sycl']]],

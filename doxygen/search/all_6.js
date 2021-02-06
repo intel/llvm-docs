@@ -18,6 +18,7 @@ var searchData=
   ['empty_5ftask',['EMPTY_TASK',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a8b89dcf5970cfadfe9a498bf10802b84',1,'cl::sycl::detail::Command']]],
   ['empty_5ftype_5flist',['empty_type_list',['../namespacecl_1_1sycl_1_1detail.html#a02a128fb2e7e85058225bf09341576e5',1,'cl::sycl::detail']]],
   ['emptycommand',['EmptyCommand',['../classcl_1_1sycl_1_1detail_1_1EmptyCommand.html',1,'cl::sycl::detail::EmptyCommand'],['../classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#aed67f1c5291737aa9adc40ca825c2404',1,'cl::sycl::detail::EmptyCommand::EmptyCommand()']]],
+  ['emptyreductionpredicate',['EmptyReductionPredicate',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate.html',1,'cl::sycl::ONEAPI::detail']]],
   ['emulation_5fplatform_5fname',['EMULATION_PLATFORM_NAME',['../namespacecl_1_1sycl_1_1INTEL.html#ab1ff29a4a5bef037095559df0f5d6640',1,'cl::sycl::INTEL']]],
   ['enable_5fif_5fis_5ffunction_5fpointer_5ft',['enable_if_is_function_pointer_t',['../namespacecl_1_1sycl_1_1ONEAPI.html#aa1e68ce5c3f8c1c69bd99627601d67d4',1,'cl::sycl::ONEAPI']]],
   ['enable_5fif_5ft',['enable_if_t',['../namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383',1,'cl::sycl::detail']]],

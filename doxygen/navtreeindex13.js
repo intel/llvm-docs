@@ -1,5 +1,12 @@
 var NAVTREEINDEX13 =
 {
+"classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#aad97a6bfb41a81f722199dfd7a7ea0d2":[3,0,2,1,74,16],
+"classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#aaff1e9e01eeeaaed44d2ce952508c263":[3,0,2,1,74,12],
+"classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#ad56fc02072dac92ab4a7455589fb38f5":[3,0,2,1,74,9],
+"classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#af8374896796ef91f868da52996619968":[3,0,2,1,74,7],
+"classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html":[3,0,2,1,75],
+"classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a00ab2429569a8c0de7521d64af87d0ae":[3,0,2,1,75,14],
+"classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a055ef69f744cb1d92f89acea50ce3196":[3,0,2,1,75,17],
 "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06":[3,0,2,1,75,3],
 "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a1a670ec5cbeb71da630f13828d0ba023":[3,0,2,1,75,0],
 "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a339af74db5e37cf2a8c932a3a6ef46ae":[3,0,2,1,75,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX13 =
 "classcl_1_1sycl_1_1sampler.html#a447a902e2b40e03b20ee6dae64dd9d68":[1,2,26,10],
 "classcl_1_1sycl_1_1sampler.html#a458d0dab42af781e16b96cb8ad9bc745":[1,2,26,0],
 "classcl_1_1sycl_1_1sampler.html#a4a3328b644cc43b95f0d6c3d086cb2cd":[1,2,26,5],
-"classcl_1_1sycl_1_1sampler.html#a543fa9bd7f3a5ee7f0598dd926dd57ca":[1,2,26,4],
-"classcl_1_1sycl_1_1sampler.html#a58eab1abb326b53999543153f69df7d9":[1,2,26,2],
-"classcl_1_1sycl_1_1sampler.html#a672a33c89c7037d2e26319dabcfdcc0a":[1,2,26,12],
-"classcl_1_1sycl_1_1sampler.html#a6d3075d3b8c2ddc05eb97c6bafe9a912":[1,2,26,6],
-"classcl_1_1sycl_1_1sampler.html#a880316242c56cc50a9072fd89c477dfd":[1,2,26,11],
-"classcl_1_1sycl_1_1sampler.html#a9b9ab6109aea7c5966a7ce67ea0c3a09":[1,2,26,8],
-"classcl_1_1sycl_1_1sampler.html#a9dbd42d9d8082f8327826aa249d83897":[1,2,26,1],
-"classcl_1_1sycl_1_1sampler.html#abca7290d5e90ef14f1743d5b4adb0688":[1,2,26,7]
+"classcl_1_1sycl_1_1sampler.html#a543fa9bd7f3a5ee7f0598dd926dd57ca":[1,2,26,4]
 };

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DPC++ Runtime: cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, OutputT &gt; Struct Template Reference</title>
+<title>DPC++ Runtime: cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, T3 &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,43 +93,44 @@ $(document).ready(function(){initNavTree('structcl_1_1sycl_1_1ONEAPI_1_1detail_1
 <a href="#pub-types">Public Types</a> &#124;
 <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, OutputT &gt; Struct Template Reference</div>  </div>
+<div class="title">cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, T3 &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Helper structs to get additional kernel name types based on given <code>Name</code> and <code>Type</code> types: if <code>Name</code> is undefined (is a <code>auto_name</code>) then <code>Type</code> becomes the <code>Name</code>.  
+<p>Helper structs to get additional kernel name types based on given <code>Name</code> and additional template parameters helping to distinguish kernels.  
  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="reduction_8hpp_source.html">CL/sycl/ONEAPI/reduction.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a57c9ed4a79b96232207aaa8883bddf37"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#a57c9ed4a79b96232207aaa8883bddf37">name</a> = <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html">__sycl_reduction_main_kernel</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html">sycl::detail::get_kernel_name_t</a>&lt; Name, Type &gt;::<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#a57c9ed4a79b96232207aaa8883bddf37">name</a>, B1, B2, OutputT &gt;</td></tr>
-<tr class="separator:a57c9ed4a79b96232207aaa8883bddf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab137efe6889171c68ba03e0aa743fea4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#ab137efe6889171c68ba03e0aa743fea4">name</a> = <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html">__sycl_reduction_main_kernel</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html">sycl::detail::get_kernel_name_t</a>&lt; Name, Type &gt;::<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#ab137efe6889171c68ba03e0aa743fea4">name</a>, B1, B2, T3 &gt;</td></tr>
+<tr class="separator:ab137efe6889171c68ba03e0aa743fea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename Name, typename Type, bool B1, bool B2, typename OutputT&gt;<br />
-struct cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, OutputT &gt;</h3>
+<div class="textblock"><h3>template&lt;typename Name, typename Type, bool B1, bool B2, typename T3&gt;<br />
+struct cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, T3 &gt;</h3>
 
-<p>Helper structs to get additional kernel name types based on given <code>Name</code> and <code>Type</code> types: if <code>Name</code> is undefined (is a <code>auto_name</code>) then <code>Type</code> becomes the <code>Name</code>. </p>
+<p>Helper structs to get additional kernel name types based on given <code>Name</code> and additional template parameters helping to distinguish kernels. </p>
+<p>If <code>Name</code> is undefined (is <code>auto_name</code>) then <code>Type</code> becomes the <code>Name</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00648">648</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00692">692</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a57c9ed4a79b96232207aaa8883bddf37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57c9ed4a79b96232207aaa8883bddf37">&#9670;&nbsp;</a></span>name</h2>
+<a id="ab137efe6889171c68ba03e0aa743fea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab137efe6889171c68ba03e0aa743fea4">&#9670;&nbsp;</a></span>name</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename Name , typename Type , bool B1, bool B2, typename OutputT &gt; </div>
+template&lt;typename Name , typename Type , bool B1, bool B2, typename T3 &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html">cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t</a>&lt; Name, Type, B1, B2, OutputT &gt;::<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#a57c9ed4a79b96232207aaa8883bddf37">name</a> =  <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html">__sycl_reduction_main_kernel</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html">sycl::detail::get_kernel_name_t</a>&lt;Name, Type&gt;::<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#a57c9ed4a79b96232207aaa8883bddf37">name</a>, B1, B2, OutputT&gt;</td>
+          <td class="memname">using <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html">cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t</a>&lt; Name, Type, B1, B2, T3 &gt;::<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#ab137efe6889171c68ba03e0aa743fea4">name</a> =  <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html">__sycl_reduction_main_kernel</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html">sycl::detail::get_kernel_name_t</a>&lt;Name, Type&gt;::<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#ab137efe6889171c68ba03e0aa743fea4">name</a>, B1, B2, T3&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00651">651</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00694">694</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>

@@ -32,6 +32,7 @@ var classcl_1_1sycl_1_1handler =
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#ad5c06b0a1e77b4d9b0cc0a341a93eb76", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a5fbf788d14e280fe00c0625fbd682eed", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#af9ed219ba103a46359e9a9a48ffdbdb2", null ],
+    [ "parallel_for", "classcl_1_1sycl_1_1handler.html#aadd0bebb1b380bf3733e8d889b1d85da", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a5c87396f2312a10cd760c8eb132cf197", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a8b4924bfca94f90fc3a158bf6992a24c", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a1286d152a25c9e362b1c6a8ab16f37bc", null ],

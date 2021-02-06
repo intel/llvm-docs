@@ -28,6 +28,8 @@ var searchData=
   ['allocacommand',['AllocaCommand',['../classcl_1_1sycl_1_1detail_1_1AllocaCommand.html',1,'cl::sycl::detail']]],
   ['allocacommandbase',['AllocaCommandBase',['../classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html',1,'cl::sycl::detail']]],
   ['allocasubbufcommand',['AllocaSubBufCommand',['../classcl_1_1sycl_1_1detail_1_1AllocaSubBufCommand.html',1,'cl::sycl::detail']]],
+  ['areallbutlastreductions',['AreAllButLastReductions',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html',1,'cl::sycl::ONEAPI::detail']]],
+  ['areallbutlastreductions_3c_20t_20_3e',['AreAllButLastReductions&lt; T &gt;',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions_3_01T_01_4.html',1,'cl::sycl::ONEAPI::detail']]],
   ['argdesc',['ArgDesc',['../classcl_1_1sycl_1_1detail_1_1ArgDesc.html',1,'cl::sycl::detail']]],
   ['arguments',['arguments',['../struct__pi__kernel_1_1arguments.html',1,'_pi_kernel']]],
   ['array',['array',['../classcl_1_1sycl_1_1detail_1_1array.html',1,'cl::sycl::detail']]],
