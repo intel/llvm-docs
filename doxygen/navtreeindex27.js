@@ -1,6 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"plugin__printers_8hpp.html#abbef011d48198ecd7cdcb0c406fafcab":[4,0,2,1,52,14],
 "plugin__printers_8hpp.html#abcd66152d4516981ed18677ba64e1f37":[4,0,2,1,52,16],
 "plugin__printers_8hpp.html#ac980256c08ef52f75c29738eda465857":[4,0,2,1,52,8],
 "plugin__printers_8hpp.html#acb1f6afa12015f310d9077603a896c3d":[4,0,2,1,52,25],
@@ -249,5 +248,6 @@ var NAVTREEINDEX27 =
 "spinlock_8hpp.html":[4,0,0,0,1,2,34],
 "spinlock_8hpp_source.html":[4,0,0,0,1,2,34],
 "spirv_8hpp.html":[4,0,0,0,1,2,35],
-"spirv_8hpp_source.html":[4,0,0,0,1,2,35]
+"spirv_8hpp_source.html":[4,0,0,0,1,2,35],
+"spirv__ops_8cpp.html":[4,0,2,19]
 };

@@ -1,6 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3":[1,3,1,6],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,3,1,4],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,3,1,3],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07":[1,3,1,2],
@@ -249,5 +248,6 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1is__contained__value.html":[3,0,2,1,0,150],
 "structcl_1_1sycl_1_1detail_1_1is__contained__value_3_01T_00_01V_00_01value__list_3_01T_01_4_01_4.html":[3,0,2,1,0,151],
 "structcl_1_1sycl_1_1detail_1_1is__empty__type__list.html":[3,0,2,1,0,152],
-"structcl_1_1sycl_1_1detail_1_1is__floating__point.html":[3,0,2,1,0,153]
+"structcl_1_1sycl_1_1detail_1_1is__floating__point.html":[3,0,2,1,0,153],
+"structcl_1_1sycl_1_1detail_1_1is__floating__point__impl.html":[3,0,2,1,0,154]
 };

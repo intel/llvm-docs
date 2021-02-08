@@ -77,7 +77,6 @@ var searchData=
   ['map',['map',['../classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ae4cc49829ab25d78f34eb5028d82bf0d',1,'cl::sycl::detail::MemoryManager']]],
   ['map_5fmem_5fobj',['MAP_MEM_OBJ',['../classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4aecafed01df81b9560f8f1ef01227eb90',1,'cl::sycl::detail::Command']]],
   ['map_5fto_5fptr',['map_to_ptr',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#aaf71996c723bf33596860473ee17eae0',1,'_pi_mem::mem_::buffer_mem_']]],
-  ['maperror',['mapError',['../pi__level__zero_8cpp.html#a41a23a2e2a5ffd7aab6083589edddbd8',1,'pi_level_zero.cpp']]],
   ['mapflags_5f',['mapFlags_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a8b2fd9a0f22b1b234da617fd3f39edd5',1,'_pi_mem::mem_::buffer_mem_']]],
   ['maphostptr',['MapHostPtr',['../struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955',1,'_pi_mem']]],
   ['mapmemobject',['MapMemObject',['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html',1,'cl::sycl::detail::MapMemObject'],['../classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d',1,'cl::sycl::detail::MapMemObject::MapMemObject()']]],
