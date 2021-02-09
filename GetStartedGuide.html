@@ -51,6 +51,7 @@ and a wide range of compute accelerators such as GPU and FPGA.</p>
 <ul>
 <li><p><a class="reference external" href="#build-dpc-toolchain-with-libc-library">Build DPC++ toolchain with libc++ library</a></p></li>
 <li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">Build DPC++ toolchain with support for NVIDIA CUDA</a></p></li>
+<li><p><a class="reference external" href="#build-doxygen-documentation">Build Doxygen documentation</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="#use-dpc-toolchain">Use DPC++ toolchain</a></p>
@@ -59,11 +60,13 @@ and a wide range of compute accelerators such as GPU and FPGA.</p>
 <li><p><a class="reference external" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation">Obtain prerequisites for ahead of time (AOT) compilation</a></p></li>
 <li><p><a class="reference external" href="#test-dpc-toolchain">Test DPC++ toolchain</a></p></li>
 <li><p><a class="reference external" href="#run-simple-dpc-application">Run simple DPC++ application</a></p></li>
+<li><p><a class="reference external" href="#code-the-program-for-a-specific-gpu">Code the program for a specific GPU</a></p></li>
+<li><p><a class="reference external" href="#using-the-dpc-toolchain-on-cuda-platforms">Using the DPC++ toolchain on CUDA platforms</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="#c-standard">C++ standard</a></p></li>
 <li><p><a class="reference external" href="#known-issues-and-limitations">Known Issues and Limitations</a></p></li>
-<li><p><a class="reference external" href="#cuda-backend-limitations">CUDA backend limitations</a></p></li>
+<li><p><a class="reference external" href="#cuda-back-end-limitations">CUDA back-end limitations</a></p></li>
 <li><p><a class="reference external" href="#find-more">Find More</a></p></li>
 </ul>
 </div>
@@ -159,6 +162,13 @@ should be used.</p>
 <span class="o">-</span><span class="n">DSYCL_LIBCXX_LIBRARY_PATH</span><span class="o">=&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="ow">and</span> <span class="n">libc</span><span class="o">++</span><span class="n">abi</span> <span class="n">libraries</span><span class="o">&gt;</span>
 </pre></div>
 </div>
+<p>You can also use configure script to enable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">%</span><span class="n">DPCPP_HOME</span><span class="o">%</span>\<span class="n">llvm</span>\<span class="n">buildbot</span>\<span class="n">configure</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">use</span><span class="o">-</span><span class="n">libcxx</span> \
+<span class="o">--</span><span class="n">libcxx</span><span class="o">-</span><span class="n">include</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="n">headers</span><span class="o">&gt;</span> \
+<span class="o">--</span><span class="n">libcxx</span><span class="o">-</span><span class="n">library</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">libc</span><span class="o">++</span> <span class="ow">and</span> <span class="n">libc</span><span class="o">++</span> <span class="n">abi</span> <span class="n">libraries</span><span class="o">&gt;</span>
+<span class="n">python</span> <span class="o">%</span><span class="n">DPCPP_HOME</span><span class="o">%</span>\<span class="n">llvm</span>\<span class="n">buildbot</span>\<span class="nb">compile</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="build-dpc-toolchain-with-support-for-nvidia-cuda">
 <h3>Build DPC++ toolchain with support for NVIDIA CUDA<a class="headerlink" href="#build-dpc-toolchain-with-support-for-nvidia-cuda" title="Permalink to this headline">¶</a></h3>
@@ -174,6 +184,23 @@ a Titan RTX GPU (SM 71), but it should work on any GPU compatible with SM 50 or
 above. The default SM for the NVIDIA CUDA backend is 5.0. Users can specify
 lower values, but some features may not be supported.</p>
 </div>
+<div class="section" id="build-doxygen-documentation">
+<h3>Build Doxygen documentation<a class="headerlink" href="#build-doxygen-documentation" title="Permalink to this headline">¶</a></h3>
+<p>Building Doxygen documentation is similar to building the product itself. First,
+the following tools need to be installed:</p>
+<ul class="simple">
+<li><p>doxygen</p></li>
+<li><p>graphviz</p></li>
+</ul>
+<p>Then you’ll need to add the following options to your CMake configuration
+command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DLLVM_ENABLE_DOXYGEN</span><span class="o">=</span><span class="n">ON</span>
+</pre></div>
+</div>
+<p>After CMake cache is generated, build the documentation with <code class="docutils literal notranslate"><span class="pre">doxygen-sycl</span></code>
+target. It will be put to <code class="docutils literal notranslate"><span class="pre">$DPCPP_HOME/llvm/build/tools/sycl/doc/html</span></code>
+directory.</p>
+</div>
 <div class="section" id="deployment">
 <h3>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h3>
 <p>TODO: add instructions how to deploy built DPC++ toolchain.</p>
@@ -181,22 +208,6 @@ lower values, but some features may not be supported.</p>
 </div>
 <div class="section" id="use-dpc-toolchain">
 <h2>Use DPC++ toolchain<a class="headerlink" href="#use-dpc-toolchain" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="using-the-dpc-toolchain-on-cuda-platforms">
-<h3>Using the DPC++ toolchain on CUDA platforms<a class="headerlink" href="#using-the-dpc-toolchain-on-cuda-platforms" title="Permalink to this headline">¶</a></h3>
-<p>The DPC++ toolchain support on CUDA platforms is still in an experimental phase.
-Currently, the DPC++ toolchain relies on having a recent OpenCL implementation
-on the system in order to link applications to the DPC++ runtime.
-The OpenCL implementation is not used at runtime if only the CUDA backend is
-used in the application, but must be installed.</p>
-<p>The OpenCL implementation provided by the CUDA SDK is OpenCL 1.2, which is
-too old to link with the DPC++ runtime and lacks some symbols.</p>
-<p>We recommend installing the low level CPU runtime, following the instructions
-in the next section.</p>
-<p>Instead of installing the low level CPU runtime, it is possible to build and
-install the
-<a class="reference external" href="https://github.com/KhronosGroup/OpenCL-ICD-Loader">Khronos ICD loader</a>,
-which contains all the symbols required.</p>
-</div>
 <div class="section" id="install-low-level-runtime">
 <h3>Install low level runtime<a class="headerlink" href="#install-low-level-runtime" title="Permalink to this headline">¶</a></h3>
 <p>To run DPC++ applications on OpenCL devices, OpenCL implementation(s) must be
@@ -413,23 +424,6 @@ file to obtain test sources and instructions how build and execute the tests.</p
 </div>
 </div>
 </div>
-<div class="section" id="build-doxygen-documentation">
-<h3>Build Doxygen documentation<a class="headerlink" href="#build-doxygen-documentation" title="Permalink to this headline">¶</a></h3>
-<p>Building Doxygen documentation is similar to building the product itself. First,
-the following tools need to be installed:</p>
-<ul class="simple">
-<li><p>doxygen</p></li>
-<li><p>graphviz</p></li>
-</ul>
-<p>Then you’ll need to add the following options to your CMake configuration
-command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">DLLVM_ENABLE_DOXYGEN</span><span class="o">=</span><span class="n">ON</span>
-</pre></div>
-</div>
-<p>After CMake cache is generated, build the documentation with <code class="docutils literal notranslate"><span class="pre">doxygen-sycl</span></code>
-target. It will be put to <code class="docutils literal notranslate"><span class="pre">$DPCPP_HOME/llvm/build/tools/sycl/doc/html</span></code>
-directory.</p>
-</div>
 <div class="section" id="run-simple-dpc-application">
 <h3>Run simple DPC++ application<a class="headerlink" href="#run-simple-dpc-application" title="Permalink to this headline">¶</a></h3>
 <p>A simple DPC++ or SYCL* program consists of following parts:</p>
@@ -615,6 +609,22 @@ there is none.</p>
 <span class="p">};</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="using-the-dpc-toolchain-on-cuda-platforms">
+<h3>Using the DPC++ toolchain on CUDA platforms<a class="headerlink" href="#using-the-dpc-toolchain-on-cuda-platforms" title="Permalink to this headline">¶</a></h3>
+<p>The DPC++ toolchain support on CUDA platforms is still in an experimental phase.
+Currently, the DPC++ toolchain relies on having a recent OpenCL implementation
+on the system in order to link applications to the DPC++ runtime.
+The OpenCL implementation is not used at runtime if only the CUDA backend is
+used in the application, but must be installed.</p>
+<p>The OpenCL implementation provided by the CUDA SDK is OpenCL 1.2, which is
+too old to link with the DPC++ runtime and lacks some symbols.</p>
+<p>We recommend installing the low level CPU runtime, following the instructions
+in the next section.</p>
+<p>Instead of installing the low level CPU runtime, it is possible to build and
+install the
+<a class="reference external" href="https://github.com/KhronosGroup/OpenCL-ICD-Loader">Khronos ICD loader</a>,
+which contains all the symbols required.</p>
 </div>
 </div>
 <div class="section" id="c-standard">
