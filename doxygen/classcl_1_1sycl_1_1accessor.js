@@ -2,7 +2,7 @@ var classcl_1_1sycl_1_1accessor =
 [
     [ "AccessorCommonT", "classcl_1_1sycl_1_1accessor.html#a5c94417c31e2f0fa7904a114d94ddc47", null ],
     [ "AccessorSubscript", "classcl_1_1sycl_1_1accessor.html#af27fcb21aeffb8c1c540f5baeca429eb", null ],
-    [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor.html#a790103abf013fc3d47481d78c6df0345", null ],
+    [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor.html#adc41fa96d237b7ccdd15c89b643b5bef", null ],
     [ "const_reference", "classcl_1_1sycl_1_1accessor.html#a9615ab96e20f6407477d3cf742dd0c7a", null ],
     [ "ConstRefType", "classcl_1_1sycl_1_1accessor.html#a0f3653431f61518189d9f464d581a182", null ],
     [ "PtrType", "classcl_1_1sycl_1_1accessor.html#a1beed72d1ea68a47506756019bd13a73", null ],

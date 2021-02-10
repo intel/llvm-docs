@@ -296,7 +296,6 @@ var searchData=
   ['_5fbool',['_Bool',['../kernel__desc_8hpp.html#aeaff0db5524987a2f50d71ac0162ceb2',1,'kernel_desc.hpp']]],
   ['_5fcodelocarg',['_CODELOCARG',['../queue_8hpp.html#a28a32ee91beeaca8a96bb82b34c92ab6',1,'queue.hpp']]],
   ['_5fcodelocparam',['_CODELOCPARAM',['../queue_8hpp.html#a67e15f570b199ff3280ea8c1cdc3e644',1,'queue.hpp']]],
-  ['_5fcpp14_5fconstexpr',['_CPP14_CONSTEXPR',['../half__type_8hpp.html#a59e4baa41c8f0478b4f9d172d9e1e014',1,'half_type.hpp']]],
   ['_5fgetvalue',['_GetValue',['../structcl_1_1sycl_1_1INTEL_1_1__GetValue.html',1,'cl::sycl::INTEL']]],
   ['_5fgetvalue_3c_20_5ftype_2c_20_5ft1_2c_20_5ft_2e_2e_2e_20_3e',['_GetValue&lt; _Type, _T1, _T... &gt;',['../structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html',1,'cl::sycl::INTEL']]],
   ['_5fkernelfuncparam',['_KERNELFUNCPARAM',['../handler_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1',1,'_KERNELFUNCPARAM():&#160;handler.hpp'],['../queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1',1,'_KERNELFUNCPARAM():&#160;queue.hpp']]],

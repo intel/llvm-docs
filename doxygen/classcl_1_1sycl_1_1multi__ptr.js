@@ -1,11 +1,11 @@
 var classcl_1_1sycl_1_1multi__ptr =
 [
-    [ "const_pointer_t", "classcl_1_1sycl_1_1multi__ptr.html#a3676886c724d57d6359f3f7a02b12dbd", null ],
-    [ "const_reference_t", "classcl_1_1sycl_1_1multi__ptr.html#afc810bbf1950d7f654f89b83197e9f47", null ],
+    [ "const_pointer_t", "classcl_1_1sycl_1_1multi__ptr.html#ad353d562fb6d71f7054be181a6d43667", null ],
+    [ "const_reference_t", "classcl_1_1sycl_1_1multi__ptr.html#accf635b916c4195733128b956b0b8ea2", null ],
     [ "difference_type", "classcl_1_1sycl_1_1multi__ptr.html#a953961d47ccf052f29f50558c896c61c", null ],
     [ "element_type", "classcl_1_1sycl_1_1multi__ptr.html#aaedf3fc69414478a8bdd4959cc3f972a", null ],
-    [ "pointer_t", "classcl_1_1sycl_1_1multi__ptr.html#a94390ddd466bc231671ec649cea2dd6c", null ],
-    [ "reference_t", "classcl_1_1sycl_1_1multi__ptr.html#a2f2d1f1d13ecd8c4af0270585326b9d6", null ],
+    [ "pointer_t", "classcl_1_1sycl_1_1multi__ptr.html#aa709b10a32de456656d655dec9b0a3ee", null ],
+    [ "reference_t", "classcl_1_1sycl_1_1multi__ptr.html#a2779ac3ed56afc49c20be8e69f4f77a6", null ],
     [ "ReturnConstRef", "classcl_1_1sycl_1_1multi__ptr.html#a5f89f67f5a6589e14a797b3d192cc746", null ],
     [ "ReturnPtr", "classcl_1_1sycl_1_1multi__ptr.html#af21dc45e887501aef17c986219da5bae", null ],
     [ "ReturnRef", "classcl_1_1sycl_1_1multi__ptr.html#afda9140b5575a8ab8132748b7b8febb0", null ],

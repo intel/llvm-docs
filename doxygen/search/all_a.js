@@ -316,6 +316,7 @@ var searchData=
   ['is_5fsub_5fgroup_3c_20oneapi_3a_3asub_5fgroup_20_3e',['is_sub_group&lt; ONEAPI::sub_group &gt;',['../structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html',1,'cl::sycl::detail']]],
   ['is_5fsugeninteger',['is_sugeninteger',['../namespacecl_1_1sycl_1_1detail.html#ad267505d5fdf08d5cd26c82d7dd796e5',1,'cl::sycl::detail']]],
   ['is_5fsycl_5fpartition_5fproperty',['is_sycl_partition_property',['../namespacecl_1_1sycl_1_1detail.html#a3090937819dfbca8c5b8cd55824dff14',1,'cl::sycl::detail']]],
+  ['is_5ftransparent',['is_transparent',['../structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4_1_1is__transparent.html',1,'cl::sycl::ONEAPI::maximum&lt; void &gt;::is_transparent'],['../structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4_1_1is__transparent.html',1,'cl::sycl::ONEAPI::minimum&lt; void &gt;::is_transparent']]],
   ['is_5ftype',['is_type',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aed29dea83b3338945ca48540065c21b8',1,'cl::sycl::INTEL::gpu::is_type()'],['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#a69cc4f2247c074df2720ef4a5a4b13b1',1,'cl::sycl::INTEL::gpu::is_type()']]],
   ['is_5ftype_5fsize_5fdouble_5fof',['is_type_size_double_of',['../structcl_1_1sycl_1_1detail_1_1is__type__size__double__of.html',1,'cl::sycl::detail']]],
   ['is_5ftype_5fsize_5fequal',['is_type_size_equal',['../structcl_1_1sycl_1_1detail_1_1is__type__size__equal.html',1,'cl::sycl::detail']]],

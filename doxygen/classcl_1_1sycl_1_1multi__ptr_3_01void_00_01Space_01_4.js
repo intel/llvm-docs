@@ -1,9 +1,9 @@
 var classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4 =
 [
-    [ "const_pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a1a670ec5cbeb71da630f13828d0ba023", null ],
+    [ "const_pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a24de877c900d0bda71e7886dab01b14d", null ],
     [ "difference_type", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ab4e9170c83e56155f18a74e76c880bdf", null ],
     [ "element_type", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a339af74db5e37cf2a8c932a3a6ef46ae", null ],
-    [ "pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a09bd7e02db3f0cf77caa43da14727c06", null ],
+    [ "pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#a0c75be047ca1f00182c50b896551fa42", null ],
     [ "ReturnPtr", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ac64c53f73a1bbe0965263f77931e2b0c", null ],
     [ "multi_ptr", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#af2f85cbfbfc686c2daa6cc9f07058bd1", null ],
     [ "multi_ptr", "classcl_1_1sycl_1_1multi__ptr_3_01void_00_01Space_01_4.html#ae4d22398a8e2a7493d0f3397e49439d1", null ],

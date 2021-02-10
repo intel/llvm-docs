@@ -1,6 +1,5 @@
 var NAVTREEINDEX30 =
 {
-"struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4":[3,0,26,17],
 "struct__pi__queue.html#aab82ec00fe6b1afeba8783aab620181d":[3,0,26,16],
 "struct__pi__queue.html#aadff72e7ebef5034c4239580d2b6b04f":[3,0,26,6],
 "struct__pi__queue.html#ac3f0358d5c57e09a7c653aac91136bc7":[3,0,26,30],
@@ -249,5 +248,6 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#a24ad7e0490b88957e7c3a7222cc11828":[3,0,2,1,3,17,0],
 "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#af99d460206a1cc7ddb9d91976bf97829":[3,0,2,1,3,17,1],
 "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location.html":[3,0,2,1,3,1,0],
-"structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html":[3,0,2,1,3,1,0,0]
+"structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html":[3,0,2,1,3,1,0,0],
+"structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html#a9343db9ef6932d777dfe4e51a4c25437":[3,0,2,1,3,1,0,0,1]
 };

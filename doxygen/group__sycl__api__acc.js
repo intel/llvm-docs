@@ -3,7 +3,7 @@ var group__sycl__api__acc =
     [ "accessor", "classcl_1_1sycl_1_1accessor.html", [
       [ "AccessorCommonT", "classcl_1_1sycl_1_1accessor.html#a5c94417c31e2f0fa7904a114d94ddc47", null ],
       [ "AccessorSubscript", "classcl_1_1sycl_1_1accessor.html#af27fcb21aeffb8c1c540f5baeca429eb", null ],
-      [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor.html#a790103abf013fc3d47481d78c6df0345", null ],
+      [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor.html#adc41fa96d237b7ccdd15c89b643b5bef", null ],
       [ "const_reference", "classcl_1_1sycl_1_1accessor.html#a9615ab96e20f6407477d3cf742dd0c7a", null ],
       [ "ConstRefType", "classcl_1_1sycl_1_1accessor.html#a0f3653431f61518189d9f464d581a182", null ],
       [ "PtrType", "classcl_1_1sycl_1_1accessor.html#a1beed72d1ea68a47506756019bd13a73", null ],
@@ -56,7 +56,7 @@ var group__sycl__api__acc =
     [ "accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", [
       [ "AccessorCommonT", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a593d3582c70c8e2c9fc50bf9bc41770f", null ],
       [ "AccessorSubscript", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a06eb43690877da45e2816f66bd0fc50f", null ],
-      [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#afd6c3ee73d4bfb6ccc3c6c14bc6f646e", null ],
+      [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3710c4c0eb11fbb3abefec7e238e92f5", null ],
       [ "const_reference", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7907072e2a19d4108f77d070774f62ed", null ],
       [ "PtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8fb033561947b165b31e8e76a9e06f9a", null ],
       [ "reference", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3300db3e66965ecd2ba727615420037c", null ],

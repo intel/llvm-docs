@@ -142,7 +142,6 @@ var searchData=
   ['_5fbool',['_Bool',['../kernel__desc_8hpp.html#aeaff0db5524987a2f50d71ac0162ceb2',1,'kernel_desc.hpp']]],
   ['_5fcodelocarg',['_CODELOCARG',['../queue_8hpp.html#a28a32ee91beeaca8a96bb82b34c92ab6',1,'queue.hpp']]],
   ['_5fcodelocparam',['_CODELOCPARAM',['../queue_8hpp.html#a67e15f570b199ff3280ea8c1cdc3e644',1,'queue.hpp']]],
-  ['_5fcpp14_5fconstexpr',['_CPP14_CONSTEXPR',['../half__type_8hpp.html#a59e4baa41c8f0478b4f9d172d9e1e014',1,'half_type.hpp']]],
   ['_5fkernelfuncparam',['_KERNELFUNCPARAM',['../handler_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1',1,'_KERNELFUNCPARAM():&#160;handler.hpp'],['../queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1',1,'_KERNELFUNCPARAM():&#160;queue.hpp']]],
   ['_5fpi_5fapi',['_PI_API',['../pi_8h.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi.h'],['../pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi.hpp'],['../pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi.hpp'],['../pi__level__zero_8cpp.html#a30efcb92adfb3e8888cfe462bb133516',1,'_PI_API():&#160;pi_level_zero.cpp']]],
   ['_5fpi_5fcl',['_PI_CL',['../pi__cuda_8cpp.html#aa6d27edcb01d9bed67c0e444e1edcd4d',1,'_PI_CL():&#160;pi_cuda.cpp'],['../pi__opencl_8cpp.html#a202ce1284dfe832d706747e1649ff93e',1,'_PI_CL():&#160;pi_opencl.cpp']]],

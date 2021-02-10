@@ -1,6 +1,5 @@
 var NAVTREEINDEX26 =
 {
-"pi__level__zero_8cpp.html#a14d22687913312d9b9b2a07c5a4e4664":[4,0,1,1,0,83],
 "pi__level__zero_8cpp.html#a1798053118f7dc9b8df9af146b92f421":[4,0,1,1,0,104],
 "pi__level__zero_8cpp.html#a18bb2233cfafa80e3aacc21b0686416b":[4,0,1,1,0,102],
 "pi__level__zero_8cpp.html#a18ef846408ee73ae5dbb8c4978d1ec41":[4,0,1,1,0,122],
@@ -249,5 +248,6 @@ var NAVTREEINDEX26 =
 "plugin__printers_8hpp.html#aa98b089ff2917af66b20033110282a75":[4,0,2,1,52,6],
 "plugin__printers_8hpp.html#ab771db0b94069e95f02a20e50e26f63e":[4,0,2,1,52,10],
 "plugin__printers_8hpp.html#ab77990845b811c61d4b33736e1a55236":[4,0,2,1,52,17],
-"plugin__printers_8hpp.html#abbef011d48198ecd7cdcb0c406fafcab":[4,0,2,1,52,14]
+"plugin__printers_8hpp.html#abbef011d48198ecd7cdcb0c406fafcab":[4,0,2,1,52,14],
+"plugin__printers_8hpp.html#abcd66152d4516981ed18677ba64e1f37":[4,0,2,1,52,16]
 };

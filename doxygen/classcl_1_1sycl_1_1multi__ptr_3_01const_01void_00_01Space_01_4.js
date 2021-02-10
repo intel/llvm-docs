@@ -1,9 +1,9 @@
 var classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4 =
 [
-    [ "const_pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a837fec1986e610cf308872b735b1a506", null ],
+    [ "const_pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a0c00a9b0fde1a3d5578546f70db7ae39", null ],
     [ "difference_type", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a8ff6769d257f93b8ae7b9cd7ae65b740", null ],
     [ "element_type", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a15831e034df0f5135c341d3d3b3f54a1", null ],
-    [ "pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a1c5c833d5c8697c5d883acf0ed38425a", null ],
+    [ "pointer_t", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a3d173b2bbc745dd20e1caa0ae9dae481", null ],
     [ "multi_ptr", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a4d094ade012431534ea3e3cb492fa0c4", null ],
     [ "multi_ptr", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a747ee243bd11b5f71c0bba2cdd2338c9", null ],
     [ "multi_ptr", "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a223e68ab1e45ea21644194886b2c6d3c", null ],

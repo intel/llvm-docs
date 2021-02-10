@@ -10,7 +10,7 @@ var classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half =
     [ "operator++", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#af35573536053798c14a1fc305292ac26", null ],
     [ "operator++", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a2f6818902e27f2fbdc5ba82c85ec0e26", null ],
     [ "operator+=", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a509aceb4263d8f6a7184939efe2b2f81", null ],
-    [ "operator-", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a6307f2479b2937076cbabebaa087c8af", null ],
+    [ "operator-", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a0c9b983368474d42ee7f2d6c216cd688", null ],
     [ "operator--", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#aeb66b9f4807d3b82200f6abf8cee8b8a", null ],
     [ "operator--", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a32ae1929243651164b78b81787fde2cb", null ],
     [ "operator-=", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a7fe956e558def3759be74a59da171810", null ],

@@ -2,7 +2,7 @@ var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01a
 [
     [ "AccessorCommonT", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a593d3582c70c8e2c9fc50bf9bc41770f", null ],
     [ "AccessorSubscript", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a06eb43690877da45e2816f66bd0fc50f", null ],
-    [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#afd6c3ee73d4bfb6ccc3c6c14bc6f646e", null ],
+    [ "ConcreteASPtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3710c4c0eb11fbb3abefec7e238e92f5", null ],
     [ "const_reference", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7907072e2a19d4108f77d070774f62ed", null ],
     [ "PtrType", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8fb033561947b165b31e8e76a9e06f9a", null ],
     [ "reference", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3300db3e66965ecd2ba727615420037c", null ],
