@@ -1,5 +1,10 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html":[3,0,2,1,0,151],
+"structcl_1_1sycl_1_1detail_1_1is__arithmetic.html":[3,0,2,1,0,153],
+"structcl_1_1sycl_1_1detail_1_1is__bool.html":[3,0,2,1,0,154],
+"structcl_1_1sycl_1_1detail_1_1is__contained.html":[3,0,2,1,0,155],
+"structcl_1_1sycl_1_1detail_1_1is__contained_3_01T_00_01empty__type__list_01_4.html":[3,0,2,1,0,156],
 "structcl_1_1sycl_1_1detail_1_1is__contained__value.html":[3,0,2,1,0,157],
 "structcl_1_1sycl_1_1detail_1_1is__contained__value_3_01T_00_01V_00_01value__list_3_01T_01_4_01_4.html":[3,0,2,1,0,158],
 "structcl_1_1sycl_1_1detail_1_1is__empty__type__list.html":[3,0,2,1,0,159],
@@ -244,10 +249,5 @@ var NAVTREEINDEX33 =
 "structesimdtype_3_01double_01_4.html#a6230b3008663ff0b36c8c0a5579e1295":[3,0,47,0],
 "structesimdtype_3_01float_01_4.html":[3,0,48],
 "structesimdtype_3_01float_01_4.html#a5e75ed789ed475777e2908c8d0f0c67b":[3,0,48,0],
-"structesimdtype_3_01half_01_4.html":[3,0,49],
-"structesimdtype_3_01half_01_4.html#a0be223cb1897610919753786f78212b0":[3,0,49,0],
-"structesimdtype_3_01int_01_4.html":[3,0,50],
-"structesimdtype_3_01int_01_4.html#af092d5d0ecb80bca77ccab238b26c50c":[3,0,50,0],
-"structesimdtype_3_01long_01long_01_4.html":[3,0,51],
-"structesimdtype_3_01long_01long_01_4.html#a8c2161d5b7adbdb914a4b95c172232e9":[3,0,51,0]
+"structesimdtype_3_01half_01_4.html":[3,0,49]
 };
