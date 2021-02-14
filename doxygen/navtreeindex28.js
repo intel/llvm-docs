@@ -1,9 +1,5 @@
 var NAVTREEINDEX28 =
 {
-"spinlock_8hpp_source.html":[4,0,0,0,1,2,34],
-"spirv_8hpp.html":[4,0,0,0,1,2,35],
-"spirv_8hpp_source.html":[4,0,0,0,1,2,35],
-"spirv__ops_8cpp.html":[4,0,2,19],
 "spirv__ops_8cpp.html#a0649355f6b1290e7c6c2e15ab14b5879":[4,0,2,19,2],
 "spirv__ops_8cpp.html#a39d8b08b1a558206fe1e2cbba94b7cba":[4,0,2,19,0],
 "spirv__ops_8cpp.html#a85beef2415b20f2a7383f90280c99ae3":[4,0,2,19,1],
@@ -249,5 +245,9 @@ var NAVTREEINDEX28 =
 "struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084a386bba5a5dc4fac215c9cf0b9a29b352":[3,0,11,2,0],
 "struct__pi__context.html#a6430473c9764aff7a51cad02d6f9d084aacf0d09710ee2f2dd6c1124d35d8d842":[3,0,11,2,1],
 "struct__pi__context.html#a7299c02da0e3d6f14c31d4019919c466":[3,0,11,6],
-"struct__pi__context.html#a7638a706fbe3b2c84e8ff2f643297609":[3,0,11,17]
+"struct__pi__context.html#a7638a706fbe3b2c84e8ff2f643297609":[3,0,11,18],
+"struct__pi__context.html#a7f2b9fc69db23537259267800cd8e4ea":[3,0,11,4],
+"struct__pi__context.html#a8764718259af9ea016e3d2faeced5c70":[3,0,11,19],
+"struct__pi__context.html#a8b54d1772fed20fed015cc5fefac8cc7":[3,0,11,14],
+"struct__pi__context.html#a9126a200a75f4beb6618132c5984bc13":[3,0,11,21]
 };

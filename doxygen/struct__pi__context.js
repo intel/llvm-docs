@@ -15,6 +15,7 @@ var struct__pi__context =
     [ "get", "struct__pi__context.html#a3d64a8851d139de4d1c29a331b53a962", null ],
     [ "get_device", "struct__pi__context.html#af08cf83490887848df4ada9d3f465916", null ],
     [ "get_reference_count", "struct__pi__context.html#af56ff0c4b9c8cfa11218d62fc91a54f5", null ],
+    [ "getAvailableCommandList", "struct__pi__context.html#aa8f7b062f4ec2ef1b2dc7a1d82e5f7a5", null ],
     [ "getFreeSlotInExistingOrNewPool", "struct__pi__context.html#ad7bb9fb3e56a0c1dc0d84011f6f1cf4b", null ],
     [ "increment_reference_count", "struct__pi__context.html#a8b54d1772fed20fed015cc5fefac8cc7", null ],
     [ "initialize", "struct__pi__context.html#aeede8226c5635e30d9b221563986bef2", null ],
@@ -29,6 +30,8 @@ var struct__pi__context =
     [ "kind_", "struct__pi__context.html#aacdb938710dcd43e1f12123af4043da3", null ],
     [ "refCount_", "struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1", null ],
     [ "SharedMemAllocContexts", "struct__pi__context.html#aa7db1b2da6c0596fc1a02e1eed76dbc0", null ],
+    [ "ZeCommandListCache", "struct__pi__context.html#aaaba727e0d79012659a1208de8efaa9b", null ],
+    [ "ZeCommandListCacheMutex", "struct__pi__context.html#aa58099223b9ae42d4895a8434728a4e0", null ],
     [ "ZeCommandListInit", "struct__pi__context.html#af7af59c3a749d29f49a53d6b745e1a49", null ],
     [ "ZeContext", "struct__pi__context.html#ac48b04d1c06f5a0c46f985421a776ba5", null ]
 ];

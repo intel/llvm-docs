@@ -1,9 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html":[1,2,1,2],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#a946b74cc9ddf2d54346647af6bea6856":[1,2,1,2,0],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#aed6e2f8291b213df677a5d36ad4667c8":[1,2,1,2,1],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html":[1,2,1,1],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa":[1,2,1,1,28],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a06eb43690877da45e2816f66bd0fc50f":[1,2,1,1,1],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a1c7b17c3d857af4681c5dcee86f948a3":[1,2,1,1,19],
@@ -249,5 +245,9 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a11a808c798eb926073554e3a5a0245f1":[3,0,2,1,0,27,6],
 "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a12815f26140ef9dcd7b8adc10a96e0eb":[3,0,2,1,0,27,0],
 "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a2246379773465ec79b9ac0f152847f7c":[3,0,2,1,0,27,4],
-"classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a3e6b63cd7bc6a139f2ed216df676bcd0":[3,0,2,1,0,27,1]
+"classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a3e6b63cd7bc6a139f2ed216df676bcd0":[3,0,2,1,0,27,1],
+"classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a50888c8904b33b445ac25758f04a3e65":[3,0,2,1,0,27,7],
+"classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a6a6211bb1d8aac3c9df95c9b848c5a60":[3,0,2,1,0,27,11],
+"classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a72e8ae99281477ce9a7c399ab7c56b2a":[3,0,2,1,0,27,5],
+"classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#aa762d154fc9c25c29d10cc5b5666d06b":[3,0,2,1,0,27,8]
 };

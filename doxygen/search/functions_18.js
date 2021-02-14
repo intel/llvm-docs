@@ -1,7 +1,6 @@
 var searchData=
 [
   ['_7e_5fpi_5fcontext',['~_pi_context',['../struct__pi__context.html#a7f2b9fc69db23537259267800cd8e4ea',1,'_pi_context']]],
-  ['_7e_5fpi_5fdevice',['~_pi_device',['../class__pi__device.html#a1821c28a3ad00fa2dd3a7ee4dd3915f3',1,'_pi_device']]],
   ['_7e_5fpi_5fevent',['~_pi_event',['../class__pi__event.html#a96f44545671bb46bf43d39a8c8dba8af',1,'_pi_event']]],
   ['_7e_5fpi_5fkernel',['~_pi_kernel',['../struct__pi__kernel.html#a08bfff65a06c87506fc6049ce73202f4',1,'_pi_kernel']]],
   ['_7e_5fpi_5fmem',['~_pi_mem',['../struct__pi__mem.html#aebc26c331e43a45f182812a7f2ee797d',1,'_pi_mem::~_pi_mem()'],['../struct__pi__mem.html#a15063ff84e67289129e03decb8891bcd',1,'_pi_mem::~_pi_mem()=default']]],

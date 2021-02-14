@@ -1,6 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html":[3,0,2,1,0,218,0],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68":[3,0,2,1,0,218,0,1],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ae8665653a1132b94504bae878da2e92b":[3,0,2,1,0,218,0,2],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#aef5bbe86207714e29ab0e3cd38f95728":[3,0,2,1,0,218,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html#a14ab1e7c32480e21017b206531479e78":[3,0,2,1,0,140,0],
 "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant.html":[3,0,2,1,0,149],
 "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html":[3,0,2,1,0,150],
-"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01T_01_5_00_01SpaceList_01_4.html":[3,0,2,1,0,152]
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01T_01_5_00_01SpaceList_01_4.html":[3,0,2,1,0,152],
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html":[3,0,2,1,0,151]
 };

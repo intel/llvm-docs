@@ -1,6 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#a24ad7e0490b88957e7c3a7222cc11828":[3,0,2,1,3,17,0],
 "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#af99d460206a1cc7ddb9d91976bf97829":[3,0,2,1,3,17,1],
 "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location.html":[3,0,2,1,3,1,0],
 "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html":[3,0,2,1,3,1,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a40b6b97a55f30c469b1203a6c1ecf13c":[3,0,2,1,0,217,0],
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a4e57ab20b7eb9eefe68d019a940a3ccb":[3,0,2,1,0,217,5],
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a6118dbffd8bdd468dd88cb28ef5154cf":[3,0,2,1,0,217,4],
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#ac2346de7dcbce27917f934216348a8da":[3,0,2,1,0,217,2]
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#ac2346de7dcbce27917f934216348a8da":[3,0,2,1,0,217,2],
+"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html":[3,0,2,1,0,218,0]
 };

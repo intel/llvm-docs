@@ -1,9 +1,5 @@
 var NAVTREEINDEX5 =
 {
-"classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#ac82acc1e18536b7bcd354e99e4e5fce9":[1,2,20,2],
-"classcl_1_1sycl_1_1ONEAPI_1_1accessor__property__list.html#aec892fec47318a37eb75817db763f7b9":[1,2,20,3],
-"classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html":[3,0,2,1,4,4],
-"classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a1440ca52e03e5a0527b0fa11c415eaad":[3,0,2,1,4,4,2],
 "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a2a741eb2f5e00608b32483bfe43c2225":[3,0,2,1,4,4,4],
 "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a33851bb428b7af720df16b38e4641a60":[3,0,2,1,4,4,0],
 "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html#a71a0dde49c9c4d755530d0b9cde6d2ee":[3,0,2,1,4,4,3],
@@ -249,5 +245,9 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html":[1,2,1,4],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#a066e6987587803e1e0a9b2bd3626ff5e":[1,2,1,4,2],
 "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#a3cc33a4b8b54470a2c8059284051e646":[1,2,1,4,0],
-"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#abd02a4a6e27d9847dbf57c651c2e551e":[1,2,1,4,1]
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html#abd02a4a6e27d9847dbf57c651c2e551e":[1,2,1,4,1],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html":[1,2,1,2],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#a946b74cc9ddf2d54346647af6bea6856":[1,2,1,2,0],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#aed6e2f8291b213df677a5d36ad4667c8":[1,2,1,2,1],
+"classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html":[1,2,1,1]
 };
