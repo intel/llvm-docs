@@ -1,5 +1,7 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01T_01_5_00_01SpaceList_01_4.html":[3,0,2,1,0,152],
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html":[3,0,2,1,0,151],
 "structcl_1_1sycl_1_1detail_1_1is__arithmetic.html":[3,0,2,1,0,153],
 "structcl_1_1sycl_1_1detail_1_1is__bool.html":[3,0,2,1,0,154],
 "structcl_1_1sycl_1_1detail_1_1is__contained.html":[3,0,2,1,0,155],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "structesimdtype_3_01double_01_4.html":[3,0,47],
 "structesimdtype_3_01double_01_4.html#a6230b3008663ff0b36c8c0a5579e1295":[3,0,47,0],
 "structesimdtype_3_01float_01_4.html":[3,0,48],
-"structesimdtype_3_01float_01_4.html#a5e75ed789ed475777e2908c8d0f0c67b":[3,0,48,0],
-"structesimdtype_3_01half_01_4.html":[3,0,49],
-"structesimdtype_3_01half_01_4.html#a0be223cb1897610919753786f78212b0":[3,0,49,0]
+"structesimdtype_3_01float_01_4.html#a5e75ed789ed475777e2908c8d0f0c67b":[3,0,48,0]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"esimd__memory_8hpp.html#a7c16e1bbc350d531e6b9b614a14f99c7a7b75acbf9ce4c9b9305b142279204227":[4,0,0,0,1,4,0,4,0,7],
+"esimd__memory_8hpp.html#a7c16e1bbc350d531e6b9b614a14f99c7a952d1c5e8c1c20119e60244f51d5b750":[4,0,0,0,1,4,0,4,0,4],
 "esimd__memory_8hpp.html#a7c16e1bbc350d531e6b9b614a14f99c7a95b8d2e13b2d66a7bd1b7aef57c09250":[4,0,0,0,1,4,0,4,0,6],
 "esimd__memory_8hpp.html#af72aaf2b9e7bc9a63fca7a4b47e013bf":[4,0,0,0,1,4,0,4,14],
 "esimd__memory_8hpp.html#ga2bc2ebb6d2ebb8784d8478e64cf75b46":[4,0,0,0,1,4,0,4,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,7],
 "functions_func.html":[3,3,1],
-"functions_func.html":[3,3,1,0],
-"functions_func_0x7e.html":[3,3,1,22],
-"functions_func_a.html":[3,3,1,1]
+"functions_func.html":[3,3,1,0]
 };

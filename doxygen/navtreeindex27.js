@@ -1,5 +1,7 @@
 var NAVTREEINDEX27 =
 {
+"plugin__printers_8hpp.html#ab77990845b811c61d4b33736e1a55236":[4,0,2,1,52,17],
+"plugin__printers_8hpp.html#abbef011d48198ecd7cdcb0c406fafcab":[4,0,2,1,52,14],
 "plugin__printers_8hpp.html#abcd66152d4516981ed18677ba64e1f37":[4,0,2,1,52,16],
 "plugin__printers_8hpp.html#ac980256c08ef52f75c29738eda465857":[4,0,2,1,52,8],
 "plugin__printers_8hpp.html#acb1f6afa12015f310d9077603a896c3d":[4,0,2,1,52,25],
@@ -133,8 +135,8 @@ var NAVTREEINDEX27 =
 "queue__properties_8hpp.html":[4,0,0,0,1,6,5],
 "queue__properties_8hpp_source.html":[4,0,0,0,1,6,5],
 "range_8hpp.html":[4,0,0,0,1,45],
-"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,45,1],
 "range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,45,0],
+"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,45,1],
 "range_8hpp_source.html":[4,0,0,0,1,45],
 "reduction_8cpp.html":[4,0,2,1,58],
 "reduction_8cpp.html#a3955af96c1019ee7650326f74848e548":[4,0,2,1,58,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX27 =
 "spec__constant__impl_8hpp_source.html":[4,0,2,1,62],
 "spinlock_8hpp.html":[4,0,0,0,1,2,34],
 "spinlock_8hpp_source.html":[4,0,0,0,1,2,34],
-"spirv_8hpp.html":[4,0,0,0,1,2,35],
-"spirv_8hpp_source.html":[4,0,0,0,1,2,35],
-"spirv__ops_8cpp.html":[4,0,2,19]
+"spirv_8hpp.html":[4,0,0,0,1,2,35]
 };
