@@ -1,5 +1,7 @@
 var struct__pi__queue =
 [
+    [ "command_list_fence_t", "struct__pi__queue_1_1command__list__fence__t.html", "struct__pi__queue_1_1command__list__fence__t" ],
+    [ "command_list_fence_map_t", "struct__pi__queue.html#a6701cca573626edb85029595a326fc12", null ],
     [ "native_type", "struct__pi__queue.html#a5b36b50f8d42c52a3aa9ee5eda0bd790", null ],
     [ "_pi_queue", "struct__pi__queue.html#a63d30619190103a7bead8c063e4bf470", null ],
     [ "~_pi_queue", "struct__pi__queue.html#ae01364b9dfd939bdc3b3c0b4962e6bd2", null ],
@@ -15,7 +17,7 @@ var struct__pi__queue =
     [ "get_reference_count", "struct__pi__queue.html#af2491d242bb245ef26f08b56dbfeddb2", null ],
     [ "increment_reference_count", "struct__pi__queue.html#a1e42c61b4c00cd03ec6f6e85d9a9678f", null ],
     [ "isBatchingAllowed", "struct__pi__queue.html#a49d291550b7eeee8375fbaf9f177c57b", null ],
-    [ "resetCommandListFenceEntry", "struct__pi__queue.html#ad50709dfb73818469392dc56e5e53e1d", null ],
+    [ "resetCommandListFenceEntry", "struct__pi__queue.html#a42d6b96250f206b876e3338cd2a69cde", null ],
     [ "Context", "struct__pi__queue.html#aab82ec00fe6b1afeba8783aab620181d", null ],
     [ "context_", "struct__pi__queue.html#aa0b09af6796a703c1cb97e3c4bd749d4", null ],
     [ "Device", "struct__pi__queue.html#a58a07d5525910b67e36d47e4baf361c2", null ],
@@ -29,7 +31,7 @@ var struct__pi__queue =
     [ "refCount_", "struct__pi__queue.html#adbd36fbf0364c31d4e901d5f1a9b4b8a", null ],
     [ "stream_", "struct__pi__queue.html#a622784255d6db4ff8f778200b46cb779", null ],
     [ "UseDynamicBatching", "struct__pi__queue.html#a6af2cdbd7aeab0fcf49544f7a4085b08", null ],
-    [ "ZeCommandListFenceMap", "struct__pi__queue.html#a107fcab350cdb1513785da02619253b3", null ],
+    [ "ZeCommandListFenceMap", "struct__pi__queue.html#a3e7c9d64a3ea67dd5ecf2891328d9b66", null ],
     [ "ZeCommandQueue", "struct__pi__queue.html#ac3f0358d5c57e09a7c653aac91136bc7", null ],
     [ "ZeOpenCommandList", "struct__pi__queue.html#a80d07a4cbb4f6c2add317d1bd34dbe17", null ],
     [ "ZeOpenCommandListFence", "struct__pi__queue.html#a8060f4822461f53336c2d22f166d33de", null ],

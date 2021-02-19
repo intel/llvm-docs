@@ -26,6 +26,7 @@ var searchData=
   ['cmpcstr',['CmpCStr',['../structcl_1_1sycl_1_1detail_1_1CmpCStr.html',1,'cl::sycl::detail']]],
   ['code_5flocation',['code_location',['../structcl_1_1sycl_1_1detail_1_1code__location.html',1,'cl::sycl::detail']]],
   ['command',['Command',['../classcl_1_1sycl_1_1detail_1_1Command.html',1,'cl::sycl::detail']]],
+  ['command_5flist_5ffence_5ft',['command_list_fence_t',['../struct__pi__queue_1_1command__list__fence__t.html',1,'_pi_queue']]],
   ['common_5ftype',['common_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html',1,'cl::sycl::INTEL::gpu']]],
   ['compatibility_5fparam_5ftraits',['compatibility_param_traits',['../structcl_1_1sycl_1_1info_1_1compatibility__param__traits.html',1,'cl::sycl::info']]],
   ['compile_5fprogram_5ferror',['compile_program_error',['../classcl_1_1sycl_1_1compile__program__error.html',1,'cl::sycl']]],

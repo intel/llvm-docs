@@ -8,6 +8,7 @@ var pi__level__zero_8hpp =
     [ "_pi_device", "class__pi__device.html", "class__pi__device" ],
     [ "_pi_context", "struct__pi__context.html", "struct__pi__context" ],
     [ "_pi_queue", "struct__pi__queue.html", "struct__pi__queue" ],
+    [ "command_list_fence_t", "struct__pi__queue_1_1command__list__fence__t.html", "struct__pi__queue_1_1command__list__fence__t" ],
     [ "_pi_mem", "struct__pi__mem.html", "struct__pi__mem" ],
     [ "Mapping", "struct__pi__mem_1_1Mapping.html", "struct__pi__mem_1_1Mapping" ],
     [ "_pi_buffer", "struct__pi__buffer.html", "struct__pi__buffer" ],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a07610af1bc13ad3f6eee0ba3daf04a66":[3,0,2,1,0,217,1],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a12bf383c142454cedeecd3a7d23cd8fd":[3,0,2,1,0,217,3],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a40b6b97a55f30c469b1203a6c1ecf13c":[3,0,2,1,0,217,0],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a4e57ab20b7eb9eefe68d019a940a3ccb":[3,0,2,1,0,217,5],
+"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a6118dbffd8bdd468dd88cb28ef5154cf":[3,0,2,1,0,217,4],
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#ac2346de7dcbce27917f934216348a8da":[3,0,2,1,0,217,2],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html":[3,0,2,1,0,218,0],
 "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68":[3,0,2,1,0,218,0,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1maximum_3_01V_01_4_01_4.html#a344cf78eedfdacc50c89978f9a0efe6a":[3,0,2,1,0,137,0],
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1minimum_3_01V_01_4_01_4.html":[3,0,2,1,0,138],
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1minimum_3_01V_01_4_01_4.html#ac02cdec1d504c9d6da9eb5fec91ffd21":[3,0,2,1,0,138,0],
-"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html":[3,0,2,1,0,139],
-"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html#a6100e96ef4e4d5ea26cee27206b0df18":[3,0,2,1,0,139,0],
-"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html":[3,0,2,1,0,140],
-"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html#a14ab1e7c32480e21017b206531479e78":[3,0,2,1,0,140,0],
-"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant.html":[3,0,2,1,0,149],
-"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html":[3,0,2,1,0,150]
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html":[3,0,2,1,0,139]
 };

@@ -15,6 +15,7 @@ var searchData=
   ['cl_5fulong',['cl_ulong',['../namespacecl_1_1sycl.html#ab856eba71a03c43af810c80a11860202',1,'cl::sycl']]],
   ['cl_5fushort',['cl_ushort',['../namespacecl_1_1sycl.html#ae572567ca007eed2a0d67d700a5a18f1',1,'cl::sycl']]],
   ['clsetprogramspecializationconstant_5ffn',['clSetProgramSpecializationConstant_fn',['../pi__opencl_8cpp.html#a6adb57f04a7f087cb902f2cadae76550',1,'pi_opencl.cpp']]],
+  ['command_5flist_5ffence_5fmap_5ft',['command_list_fence_map_t',['../struct__pi__queue.html#a6701cca573626edb85029595a326fc12',1,'_pi_queue']]],
   ['common_5frel_5fret_5ft',['common_rel_ret_t',['../namespacecl_1_1sycl_1_1detail.html#a65bb96243da5397603945a135428ab03',1,'cl::sycl::detail']]],
   ['compute_5fformat_5ftype_5f2d_5ft',['compute_format_type_2d_t',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#aea9b35239d6cce2c5a9b0a98c94a96f6',1,'cl::sycl::INTEL::gpu']]],
   ['compute_5fformat_5ftype_5ft',['compute_format_type_t',['../namespacecl_1_1sycl_1_1INTEL_1_1gpu.html#ad83b43f621e018702263cea87ffb944b',1,'cl::sycl::INTEL::gpu']]],

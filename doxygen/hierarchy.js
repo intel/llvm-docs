@@ -185,6 +185,7 @@ var hierarchy =
       [ "cl::sycl::detail::UnMapMemObject", "classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html", null ],
       [ "cl::sycl::detail::UpdateHostRequirementCommand", "classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html", null ]
     ] ],
+    [ "_pi_queue::command_list_fence_t", "struct__pi__queue_1_1command__list__fence__t.html", null ],
     [ "cl::sycl::INTEL::gpu::common_type< T1, T2, typename >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1common__type.html", null ],
     [ "cl::sycl::info::compatibility_param_traits< T, param >", "structcl_1_1sycl_1_1info_1_1compatibility__param__traits.html", null ],
     [ "cl::sycl::INTEL::gpu::computation_type< T1, T2 >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1computation__type.html", null ],
@@ -765,8 +766,8 @@ var hierarchy =
     ] ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
-    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html", null ],
     [ "cl::sycl::ONEAPI::detail::reduction_impl_base", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl__base.html", [

@@ -1,5 +1,10 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html#a6100e96ef4e4d5ea26cee27206b0df18":[3,0,2,1,0,139,0],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html":[3,0,2,1,0,140],
+"structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1plus_3_01V_01_4_01_4.html#a14ab1e7c32480e21017b206531479e78":[3,0,2,1,0,140,0],
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant.html":[3,0,2,1,0,149],
+"structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html":[3,0,2,1,0,150],
 "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01T_01_5_00_01SpaceList_01_4.html":[3,0,2,1,0,152],
 "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html":[3,0,2,1,0,151],
 "structcl_1_1sycl_1_1detail_1_1is__arithmetic.html":[3,0,2,1,0,153],
@@ -244,10 +249,5 @@ var NAVTREEINDEX33 =
 "structdwordtype_3_01unsigned_01int_01_4.html":[3,0,44],
 "structdwordtype_3_01unsigned_01int_01_4.html#a6edcd5c20a0392596706618ca7bac56d":[3,0,44,0],
 "structesimdtype.html":[3,0,45],
-"structesimdtype_3_01char_01_4.html":[3,0,46],
-"structesimdtype_3_01char_01_4.html#aa06222dc5cab97a9cdd7d8f3e6598a61":[3,0,46,0],
-"structesimdtype_3_01double_01_4.html":[3,0,47],
-"structesimdtype_3_01double_01_4.html#a6230b3008663ff0b36c8c0a5579e1295":[3,0,47,0],
-"structesimdtype_3_01float_01_4.html":[3,0,48],
-"structesimdtype_3_01float_01_4.html#a5e75ed789ed475777e2908c8d0f0c67b":[3,0,48,0]
+"structesimdtype_3_01char_01_4.html":[3,0,46]
 };
