@@ -1,7 +1,7 @@
 var helpers_8hpp =
 [
     [ "Builder", "classcl_1_1sycl_1_1detail_1_1Builder.html", "classcl_1_1sycl_1_1detail_1_1Builder" ],
-    [ "bit_cast", "helpers_8hpp.html#aa111e5bde83c3614b6333105b92170da", null ],
+    [ "bit_cast", "helpers_8hpp.html#a12dbff993dcea2ade2c11b3663025de7", null ],
     [ "declptr", "helpers_8hpp.html#a94fcfd6c842253756aed06f0d5dd3640", null ],
     [ "get_or_store", "helpers_8hpp.html#a1ffc46f84cc6d60ca5dbb7f4ee801a53", null ],
     [ "getOrWaitEvents", "helpers_8hpp.html#a7d5939f060c37ee122f2f0854eed809c", null ],

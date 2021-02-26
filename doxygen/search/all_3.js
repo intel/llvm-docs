@@ -22,7 +22,7 @@ var searchData=
   ['bindplugin',['bindPlugin',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a5d29befedd23d01289e250d88c88a410',1,'cl::sycl::detail::pi']]],
   ['bisrepresentationt',['BIsRepresentationT',['../namespacecl_1_1sycl_1_1detail_1_1half__impl.html#a246852439b33d020098e8eb187d6c7a8',1,'cl::sycl::detail::half_impl']]],
   ['bit_5fand',['bit_and',['../namespacecl_1_1sycl_1_1ONEAPI.html#ab51d840c02321df6619c7a3e54700dd3',1,'cl::sycl::ONEAPI']]],
-  ['bit_5fcast',['bit_cast',['../namespacecl_1_1sycl_1_1detail.html#aa111e5bde83c3614b6333105b92170da',1,'cl::sycl::detail']]],
+  ['bit_5fcast',['bit_cast',['../namespacecl_1_1sycl_1_1detail.html#a12dbff993dcea2ade2c11b3663025de7',1,'cl::sycl::detail']]],
   ['bit_5fequal',['bit_equal',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html',1,'cl::sycl::ONEAPI::detail']]],
   ['bit_5fequal_3c_20double_20_3e',['bit_equal&lt; double &gt;',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html',1,'cl::sycl::ONEAPI::detail']]],
   ['bit_5fequal_3c_20float_20_3e',['bit_equal&lt; float &gt;',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html',1,'cl::sycl::ONEAPI::detail']]],
