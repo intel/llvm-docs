@@ -148,7 +148,7 @@ var searchData=
   ['is_5fsimd_5fview_5fv',['is_simd_view_v',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__simd__view__v.html',1,'cl::sycl::INTEL::gpu']]],
   ['is_5fsub_5fgroup',['is_sub_group',['../structcl_1_1sycl_1_1detail_1_1is__sub__group.html',1,'cl::sycl::detail']]],
   ['is_5fsub_5fgroup_3c_20oneapi_3a_3asub_5fgroup_20_3e',['is_sub_group&lt; ONEAPI::sub_group &gt;',['../structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html',1,'cl::sycl::detail']]],
-  ['is_5ftransparent',['is_transparent',['../structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4_1_1is__transparent.html',1,'cl::sycl::ONEAPI::maximum&lt; void &gt;::is_transparent'],['../structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4_1_1is__transparent.html',1,'cl::sycl::ONEAPI::minimum&lt; void &gt;::is_transparent']]],
+  ['is_5ftransparent',['is_transparent',['../structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4_1_1is__transparent.html',1,'cl::sycl::ONEAPI::minimum&lt; void &gt;::is_transparent'],['../structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4_1_1is__transparent.html',1,'cl::sycl::ONEAPI::maximum&lt; void &gt;::is_transparent']]],
   ['is_5ftype_5fsize_5fdouble_5fof',['is_type_size_double_of',['../structcl_1_1sycl_1_1detail_1_1is__type__size__double__of.html',1,'cl::sycl::detail']]],
   ['is_5ftype_5fsize_5fequal',['is_type_size_equal',['../structcl_1_1sycl_1_1detail_1_1is__type__size__equal.html',1,'cl::sycl::detail']]],
   ['is_5ftype_5fsize_5fgreater',['is_type_size_greater',['../structcl_1_1sycl_1_1detail_1_1is__type__size__greater.html',1,'cl::sycl::detail']]],

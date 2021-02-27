@@ -79,9 +79,9 @@ var NAVTREEINDEX =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1shape__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html",
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a07610af1bc13ad3f6eee0ba3daf04a66",
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1multiplies_3_01V_01_4_01_4.html#a6100e96ef4e4d5ea26cee27206b0df18",
-"structesimdtype_3_01char_01_4.html#aa06222dc5cab97a9cdd7d8f3e6598a61",
-"structrestype__ex_3_01int_00_01double_01_4.html#ab31cd52d1c71b15568b02b75d2b2f528",
-"type__list_8hpp_source.html"
+"structesimdtype.html",
+"structrestype__ex_3_01int_00_01char_01_4.html#ab6762058669d45daa3e739f30a2f1996",
+"type__list_8hpp.html#ad2c4325df0c03a4200bfa0b48e6133ec"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

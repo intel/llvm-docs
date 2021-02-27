@@ -497,7 +497,9 @@ var hierarchy =
       [ "cl::sycl::INTEL::gpu::is_vectorizable_v< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1is__vectorizable__v.html", null ],
       [ "cl::sycl::ONEAPI::detail::has_known_identity_impl< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1has__known__identity__impl.html", null ],
       [ "cl::sycl::ONEAPI::detail::has_known_identity_impl< std::decay< BinaryOperation >::type, std::decay< AccumulatorT >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1has__known__identity__impl.html", [
-        [ "cl::sycl::ONEAPI::has_known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1has__known__identity.html", null ]
+        [ "cl::sycl::ONEAPI::has_known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1has__known__identity.html", [
+          [ "cl::sycl::has_known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1has__known__identity.html", null ]
+        ] ]
       ] ]
     ] ],
     [ "cl::sycl::interop< name, SYCLObjectT >", "structcl_1_1sycl_1_1interop.html", null ],
@@ -587,8 +589,8 @@ var hierarchy =
     [ "cl::sycl::detail::is_same_vector_size< T, Args >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size.html", null ],
     [ "cl::sycl::detail::is_same_vector_size_impl< FirstSize, Args >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl.html", null ],
     [ "cl::sycl::detail::is_same_vector_size_impl< FirstSize, T, Args... >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl_3_01FirstSize_00_01T_00_01Args_8_8_8_01_4.html", null ],
-    [ "cl::sycl::ONEAPI::maximum< void >::is_transparent", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4_1_1is__transparent.html", null ],
     [ "cl::sycl::ONEAPI::minimum< void >::is_transparent", "structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4_1_1is__transparent.html", null ],
+    [ "cl::sycl::ONEAPI::maximum< void >::is_transparent", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4_1_1is__transparent.html", null ],
     [ "is_ushort_type< T >", "structis__ushort__type.html", null ],
     [ "is_ushort_type< unsigned short >", "structis__ushort__type_3_01unsigned_01short_01_4.html", null ],
     [ "is_word_type< T >", "structis__word__type.html", null ],
@@ -634,7 +636,9 @@ var hierarchy =
     [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, half, typename std::enable_if< IsOneIdentityOp< half, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_096c03ad93c3a652158038df4c49dddeb.html", null ],
     [ "cl::sycl::ONEAPI::detail::known_identity_impl< BinaryOperation, half, typename std::enable_if< IsZeroIdentityOp< half, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_09c506e78d754d5bae53aae2ee053efa5.html", null ],
     [ "cl::sycl::ONEAPI::detail::known_identity_impl< std::decay< BinaryOperation >::type, std::decay< AccumulatorT >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl.html", [
-      [ "cl::sycl::ONEAPI::known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1known__identity.html", null ]
+      [ "cl::sycl::ONEAPI::known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1known__identity.html", [
+        [ "cl::sycl::known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1known__identity.html", null ]
+      ] ]
     ] ],
     [ "cl::sycl::detail::LeavesCollection", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html", null ],
     [ "cl::sycl::detail::LessEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html", null ],
