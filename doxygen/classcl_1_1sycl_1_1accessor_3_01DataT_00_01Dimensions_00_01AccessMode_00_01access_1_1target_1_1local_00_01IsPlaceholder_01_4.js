@@ -23,10 +23,10 @@ var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01a
     [ "operator!=", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a4cc3463685f9304b4e85909da4bdffbc", null ],
     [ "operator==", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ab91466b61d6f66645080639bc275bcac", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a66402e855b1684ff96ef15a7886e5ce9", null ],
-    [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3b877b05b5ee646d71d28db583d99c59", null ],
+    [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aec5a310abc8dc5903b0b93a80b0ace4f", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7a4c716552d304f864a9adf608fe9110", null ],
-    [ "AdjustedDim", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aa47de423a08600aff8814997ea77827c", null ],
+    [ "AdjustedDim", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac54611403aa3e9c953006c0c3e0f7b8d", null ],
     [ "padding", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa", null ]
 ];

@@ -17,7 +17,7 @@ var classcl_1_1sycl_1_1detail_1_1CG =
       [ "CODEPLAY_INTEROP_TASK", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eea5cb8f7c48a81efc87a5400ab8304f7f8", null ],
       [ "CODEPLAY_HOST_TASK", "classcl_1_1sycl_1_1detail_1_1CG.html#ae11c46d4ce80a1602482a9982e8ca7eead9c25fb4fc5b6b68246f8f590082e061", null ]
     ] ],
-    [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#a35e4fd1e0383a2ddfb91e73f22abf29c", null ],
+    [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ab93fcd8a7fdfe7e29a4306d663b8fa62", null ],
     [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#aea503c1c8f0394eede77a1fdf985d02a", null ],
     [ "~CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ad909df45d32dc55331140b813f60700b", null ],
     [ "getType", "classcl_1_1sycl_1_1detail_1_1CG.html#a41fca13e6a5f79e319806715fa48b743", null ],

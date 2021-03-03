@@ -36,7 +36,7 @@ var struct__pi__program =
     [ "HasImportsAndIsLinked", "struct__pi__program.html#afec59a76fa9df65aaa6e7e5a62bf4e3a", null ],
     [ "infoLog_", "struct__pi__program.html#acb1209c709fae3cc4f7a19802dd2e974", null ],
     [ "LinkedPrograms", "struct__pi__program.html#afe9c67f0986969c97bca91ab4706dea9", null ],
-    [ "MAX_LOG_SIZE", "struct__pi__program.html#a5cd306d55644c2e3d22b3745f90cffe6", null ],
+    [ "MAX_LOG_SIZE", "struct__pi__program.html#a68c74ca88a43d7ebb83d301effb35619", null ],
     [ "module_", "struct__pi__program.html#a2b33b22a97125a60fadc84bffdf6569d", null ],
     [ "MutexHasImportsAndIsLinked", "struct__pi__program.html#a019071f4456b2301a42fe00264265fbd", null ],
     [ "MutexZeSpecConstants", "struct__pi__program.html#ad0ec5f905a8611f6e9abd4ef8e3e3808", null ],

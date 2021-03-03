@@ -33,6 +33,6 @@ var atomic_8hpp =
     [ "atomic_fetch_xor", "atomic_8hpp.html#a70d2bad67cdf6071c8ae96a9bb3d4d36", null ],
     [ "atomic_load", "atomic_8hpp.html#af3574f37ddf6daaa4fbfc01940d946d1", null ],
     [ "atomic_store", "atomic_8hpp.html#a964b6f49d8cbce86677e3363956b6149", null ],
-    [ "getStdMemoryOrder", "atomic_8hpp.html#a265cd77091f90dca97b6f39f53d2e3c6", null ],
-    [ "getStdMemoryOrder", "atomic_8hpp.html#a4a845b4f2f4c8228ae80ef094cf5467d", null ]
+    [ "getStdMemoryOrder", "atomic_8hpp.html#a4a845b4f2f4c8228ae80ef094cf5467d", null ],
+    [ "getStdMemoryOrder", "atomic_8hpp.html#a265cd77091f90dca97b6f39f53d2e3c6", null ]
 ];

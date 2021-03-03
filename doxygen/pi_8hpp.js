@@ -47,8 +47,8 @@ var pi_8hpp =
       [ "PI_TRACE_ALL", "pi_8hpp.html#a153495ba443668e0febb9335940a9153ab4bd67aabb9d0fae49da62798b3fa1c7", null ]
     ] ],
     [ "assertion", "pi_8hpp.html#ab5c96c471fc77fc3d6cefa49a7f9549d", null ],
-    [ "cast", "pi_8hpp.html#ac27959f5fe5bb5ce257f97d5ae39288d", null ],
     [ "cast", "pi_8hpp.html#a273bcd8bce104798cadaf009f730d073", null ],
+    [ "cast", "pi_8hpp.html#ac27959f5fe5bb5ce257f97d5ae39288d", null ],
     [ "contextSetExtendedDeleter", "pi_8hpp.html#a133dc735ecf261301767f73e7d007022", null ],
     [ "die", "pi_8hpp.html#abc198fc7f3887cb0deaea2abcbee3d2d", null ],
     [ "emitFunctionBeginTrace", "pi_8hpp.html#ae61ba170f7f8ad42b4f0d4575b2ccab2", null ],

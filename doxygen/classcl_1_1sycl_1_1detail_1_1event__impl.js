@@ -10,7 +10,7 @@ var classcl_1_1sycl_1_1detail_1_1event__impl =
     [ "getCommand", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2", null ],
     [ "getContextImpl", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a39cb94fe708fcdaf47c7b20ef3184535", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a4f6d659834d145816fcefb48508fc878", null ],
-    [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a8813ecb8382394b4cfb2148c380f7637", null ],
+    [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1event__impl.html#ab0a0f1be056f09df3cc8d63e050d1617", null ],
     [ "getHostProfilingInfo", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f", null ],
     [ "getNative", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a91d671ead5bd093dc0432c4df45ee0cc", null ],
     [ "getPlugin", "classcl_1_1sycl_1_1detail_1_1event__impl.html#ae28649efc6298a1a68a00924b51fd559", null ],

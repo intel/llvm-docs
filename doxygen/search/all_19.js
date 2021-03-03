@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['y',['y',['../structpi__image__offset__struct.html#acb1022d48bbd30d8a7b3f6c15865a6a9',1,'pi_image_offset_struct::y()'],['../structcl_1_1sycl_1_1elem.html#a5cfcdcdca9ada16b8ec61188feeeb428',1,'cl::sycl::elem::y()']]],
-  ['y_5fscalar',['y_scalar',['../structpi__buff__rect__offset__struct.html#aea7e1b5cf8ca5a8ca90626024f1cf867',1,'pi_buff_rect_offset_struct']]],
-  ['yterm',['YTerm',['../structcl_1_1sycl_1_1detail_1_1TermPositions.html#a3a4ad716cb3f2d524dd33672c991a005',1,'cl::sycl::detail::TermPositions']]]
+  ['x_4974',['x',['../structpi__image__offset__struct.html#ac94d4063741aab1034f2758c30a9e49f',1,'pi_image_offset_struct::x()'],['../structcl_1_1sycl_1_1elem.html#a089abc6a7d823616e5091e5ff293f088',1,'cl::sycl::elem::x()']]],
+  ['x_5fbytes_4975',['x_bytes',['../structpi__buff__rect__offset__struct.html#a3ee51903a6b2674d24300a1e472bb56f',1,'pi_buff_rect_offset_struct']]],
+  ['xptiinitdone_4976',['XPTIInitDone',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a7ebb67d911d0fd533044b2f6646f9c9f',1,'cl::sycl::detail::pi']]],
+  ['xterm_4977',['XTerm',['../structcl_1_1sycl_1_1detail_1_1TermPositions.html#a733f043bb59b36efdfafd786840ef188',1,'cl::sycl::detail::TermPositions']]]
 ];

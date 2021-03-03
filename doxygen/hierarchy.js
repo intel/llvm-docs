@@ -13,53 +13,45 @@ var hierarchy =
     [ "cl::sycl::__width_manipulator__", "classcl_1_1sycl_1_1____width__manipulator____.html", null ],
     [ "cl::sycl::INTEL::_GetValue< _Type, _T >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", null ],
     [ "cl::sycl::INTEL::_GetValue< _Type, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html", null ],
+    [ "_pi_context", "struct__pi__context.html", null ],
+    [ "_pi_device", "class__pi__device.html", null ],
     [ "_pi_device_binary_property_set_struct", "struct__pi__device__binary__property__set__struct.html", null ],
     [ "_pi_device_binary_property_struct", "struct__pi__device__binary__property__struct.html", null ],
+    [ "_pi_event", "class__pi__event.html", null ],
     [ "_pi_image_desc", "struct__pi__image__desc.html", null ],
     [ "_pi_image_format", "struct__pi__image__format.html", null ],
-    [ "_pi_object", "struct__pi__object.html", [
-      [ "_pi_context", "struct__pi__context.html", null ],
-      [ "_pi_device", "class__pi__device.html", null ],
-      [ "_pi_event", "class__pi__event.html", null ],
-      [ "_pi_kernel", "struct__pi__kernel.html", null ],
-      [ "_pi_mem", "struct__pi__mem.html", [
-        [ "_pi_buffer", "struct__pi__buffer.html", null ],
-        [ "_pi_image", "struct__pi__image.html", null ]
-      ] ],
-      [ "_pi_program", "struct__pi__program.html", null ],
-      [ "_pi_queue", "struct__pi__queue.html", null ],
-      [ "_pi_sampler", "struct__pi__sampler.html", null ]
+    [ "_pi_kernel", "struct__pi__kernel.html", null ],
+    [ "_pi_mem", "struct__pi__mem.html", [
+      [ "_pi_buffer", "struct__pi__buffer.html", null ],
+      [ "_pi_image", "struct__pi__image.html", null ]
     ] ],
+    [ "_pi_object", "struct__pi__object.html", null ],
     [ "_pi_offload_entry_struct", "struct__pi__offload__entry__struct.html", null ],
     [ "_pi_platform", "struct__pi__platform.html", null ],
     [ "_pi_plugin", "struct__pi__plugin.html", null ],
+    [ "_pi_program", "struct__pi__program.html", null ],
+    [ "_pi_queue", "struct__pi__queue.html", null ],
+    [ "_pi_sampler", "struct__pi__sampler.html", null ],
     [ "_pi_ze_event_list_t", "struct__pi__ze__event__list__t.html", null ],
     [ "abstype< T >", "structabstype.html", null ],
     [ "abstype< char >", "structabstype_3_01char_01_4.html", null ],
     [ "abstype< long long >", "structabstype_3_01long_01long_01_4.html", null ],
     [ "abstype< short >", "structabstype_3_01short_01_4.html", null ],
-    [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
-      [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder, ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", [
-        [ "cl::sycl::ONEAPI::atomic_accessor< DataT, Dimensions, DefaultOrder, DefaultScope, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html", null ]
-      ] ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder, cl::sycl::ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", [
-        [ "cl::sycl::host_accessor< DataT, Dimensions, AccessMode >", "classcl_1_1sycl_1_1host__accessor.html", null ]
-      ] ],
-      [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1accessor.html", null ]
+    [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1accessor.html", null ],
+    [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
+    [ "cl::sycl::accessor< DataT, 1, access_mode::read_write, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", [
+      [ "cl::sycl::host_accessor< DataT, Dimensions, AccessMode >", "classcl_1_1sycl_1_1host__accessor.html", null ]
     ] ],
+    [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, access::target::global_buffer, access::placeholder::false_t, ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", [
+      [ "cl::sycl::ONEAPI::atomic_accessor< DataT, Dimensions, DefaultOrder, DefaultScope, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1atomic__accessor.html", null ]
+    ] ],
+    [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder, cl::sycl::ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
+    [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
+    [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", null ],
     [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::AccessorBaseHost", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html", [
-      [ "cl::sycl::accessor< char, 1, cl::sycl::access::mode::read_write, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, access::mode::read_write, AccessTarget, IsPlaceholder, ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder, cl::sycl::ONEAPI::accessor_property_list<> >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< unsigned, 1, cl::sycl::access::mode::atomic, cl::sycl::access::target::global_buffer, cl::sycl::access::placeholder::false_t >", "classcl_1_1sycl_1_1accessor.html", null ],
-      [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT >", "classcl_1_1sycl_1_1accessor.html", null ],
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", null ],
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions+1, AccessMode, access::target::image, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", [
         [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1i792244d136b5269238adc156a97673c8.html", null ]
@@ -80,16 +72,7 @@ var hierarchy =
     [ "cl::sycl::ONEAPI::detail::AreAllButLastReductions< T >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions_3_01T_01_4.html", null ],
     [ "cl::sycl::detail::ArgDesc", "classcl_1_1sycl_1_1detail_1_1ArgDesc.html", null ],
     [ "_pi_kernel::arguments", "struct__pi__kernel_1_1arguments.html", null ],
-    [ "cl::sycl::detail::array< dimensions >", "classcl_1_1sycl_1_1detail_1_1array.html", [
-      [ "cl::sycl::id< dimensions >", "classcl_1_1sycl_1_1id.html", null ],
-      [ "cl::sycl::range< dimensions >", "classcl_1_1sycl_1_1range.html", null ],
-      [ "cl::sycl::id< 3 >", "classcl_1_1sycl_1_1id.html", null ],
-      [ "cl::sycl::id< Dimensions >", "classcl_1_1sycl_1_1id.html", null ],
-      [ "cl::sycl::id< Dims >", "classcl_1_1sycl_1_1id.html", null ],
-      [ "cl::sycl::range< 3 >", "classcl_1_1sycl_1_1range.html", null ],
-      [ "cl::sycl::range< Dimensions >", "classcl_1_1sycl_1_1range.html", null ],
-      [ "cl::sycl::range< Dims >", "classcl_1_1sycl_1_1range.html", null ]
-    ] ],
+    [ "cl::sycl::detail::array< dimensions >", "classcl_1_1sycl_1_1detail_1_1array.html", null ],
     [ "cl::sycl::detail::Assigner< Num >", "structcl_1_1sycl_1_1detail_1_1Assigner.html", null ],
     [ "cl::sycl::detail::Assigner< 0 >", "structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html", null ],
     [ "cl::sycl::atomic< T, addressSpace >", "classcl_1_1sycl_1_1atomic.html", null ],
@@ -256,6 +239,9 @@ var hierarchy =
     [ "cl::sycl::device_event", "classcl_1_1sycl_1_1device__event.html", null ],
     [ "cl::sycl::detail::device_filter", "structcl_1_1sycl_1_1detail_1_1device__filter.html", null ],
     [ "cl::sycl::detail::device_filter_list", "classcl_1_1sycl_1_1detail_1_1device__filter__list.html", null ],
+    [ "cl::sycl::detail::device_image_plain", "classcl_1_1sycl_1_1detail_1_1device__image__plain.html", [
+      [ "cl::sycl::device_image< State >", "classcl_1_1sycl_1_1device__image.html", null ]
+    ] ],
     [ "cl::sycl::detail::device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html", null ],
     [ "cl::sycl::device_selector", "classcl_1_1sycl_1_1device__selector.html", [
       [ "cl::sycl::accelerator_selector", "classcl_1_1sycl_1_1accelerator__selector.html", null ],
@@ -429,7 +415,7 @@ var hierarchy =
     [ "cl::sycl::detail::GreaterEqualTo< T >", "structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html", null ],
     [ "cl::sycl::detail::GreaterThan< T >", "structcl_1_1sycl_1_1detail_1_1GreaterThan.html", null ],
     [ "cl::sycl::group< Dimensions >", "classcl_1_1sycl_1_1group.html", null ],
-    [ "cl::sycl::group< dimensions >", "classcl_1_1sycl_1_1group.html", null ],
+    [ "cl::sycl::group< 1 >", "classcl_1_1sycl_1_1group.html", null ],
     [ "cl::sycl::h_item< dimensions >", "classcl_1_1sycl_1_1h__item.html", null ],
     [ "cl::sycl::detail::half_impl::half", "classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html", null ],
     [ "cl::sycl::detail::host_half_impl::half", "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html", null ],
@@ -458,6 +444,11 @@ var hierarchy =
     ] ],
     [ "cl::sycl::detail::HostProfilingInfo", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html", null ],
     [ "cl::sycl::detail::HostTask", "classcl_1_1sycl_1_1detail_1_1HostTask.html", null ],
+    [ "cl::sycl::id< dimensions >", "classcl_1_1sycl_1_1id.html", null ],
+    [ "cl::sycl::id< 1 >", "classcl_1_1sycl_1_1id.html", null ],
+    [ "cl::sycl::id< 3 >", "classcl_1_1sycl_1_1id.html", null ],
+    [ "cl::sycl::id< Dimensions >", "classcl_1_1sycl_1_1id.html", null ],
+    [ "cl::sycl::id< Dims >", "classcl_1_1sycl_1_1id.html", null ],
     [ "cl::sycl::detail::identity< T, BinaryOperation >", "structcl_1_1sycl_1_1detail_1_1identity.html", null ],
     [ "cl::sycl::detail::identity< T, ONEAPI::bit_and< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html", null ],
     [ "cl::sycl::detail::identity< T, ONEAPI::bit_or< V > >", "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__or_3_01V_01_4_01_4.html", null ],
@@ -610,9 +601,11 @@ var hierarchy =
     [ "cl::sycl::detail::IsValidCoordDataT< 2, T >", "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_012_00_01T_01_4.html", null ],
     [ "cl::sycl::detail::IsValidCoordDataT< 3, T >", "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html", null ],
     [ "cl::sycl::item< dimensions, with_offset >", "classcl_1_1sycl_1_1item.html", null ],
+    [ "cl::sycl::item< 1, false >", "classcl_1_1sycl_1_1item.html", null ],
+    [ "cl::sycl::item< 1, true >", "classcl_1_1sycl_1_1item.html", null ],
     [ "cl::sycl::item< dimensions, false >", "classcl_1_1sycl_1_1item.html", null ],
-    [ "cl::sycl::item< dimensions, true >", "classcl_1_1sycl_1_1item.html", null ],
     [ "cl::sycl::detail::ItemBase< Dims, WithOffset >", "structcl_1_1sycl_1_1detail_1_1ItemBase.html", null ],
+    [ "cl::sycl::detail::ItemBase< 1, true >", "structcl_1_1sycl_1_1detail_1_1ItemBase.html", null ],
     [ "cl::sycl::detail::ItemBase< dimensions, with_offset >", "structcl_1_1sycl_1_1detail_1_1ItemBase.html", null ],
     [ "cl::sycl::detail::ItemBase< Dims, false >", "structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01false_01_4.html", null ],
     [ "cl::sycl::detail::ItemBase< Dims, true >", "structcl_1_1sycl_1_1detail_1_1ItemBase_3_01Dims_00_01true_01_4.html", null ],
@@ -621,6 +614,10 @@ var hierarchy =
     ] ],
     [ "cl::sycl::detail::LeavesCollection::IteratorT< IsConst >", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html", null ],
     [ "cl::sycl::kernel", "classcl_1_1sycl_1_1kernel.html", null ],
+    [ "cl::sycl::detail::kernel_bundle_plain", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html", [
+      [ "cl::sycl::kernel_bundle< State >", "classcl_1_1sycl_1_1kernel__bundle.html", null ]
+    ] ],
+    [ "cl::sycl::kernel_id", "classcl_1_1sycl_1_1kernel__id.html", null ],
     [ "cl::sycl::detail::kernel_impl", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html", null ],
     [ "cl::sycl::detail::kernel_param_desc_t", "structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html", null ],
     [ "cl::sycl::INTEL::kernel_readable_io_pipe< _name, _dataT, _min_capacity >", "classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html", null ],
@@ -770,13 +767,17 @@ var hierarchy =
     ] ],
     [ "cl::sycl::queue", "classcl_1_1sycl_1_1queue.html", null ],
     [ "cl::sycl::detail::queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", null ],
+    [ "cl::sycl::range< dimensions >", "classcl_1_1sycl_1_1range.html", null ],
+    [ "cl::sycl::range< 1 >", "classcl_1_1sycl_1_1range.html", null ],
+    [ "cl::sycl::range< 3 >", "classcl_1_1sycl_1_1range.html", null ],
+    [ "cl::sycl::range< Dimensions >", "classcl_1_1sycl_1_1range.html", null ],
+    [ "cl::sycl::range< Dims >", "classcl_1_1sycl_1_1range.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
     [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html", null ],
-    [ "cl::sycl::ONEAPI::detail::reduction_impl_base", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl__base.html", [
-      [ "cl::sycl::ONEAPI::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", null ]
-    ] ],
+    [ "cl::sycl::ONEAPI::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", null ],
+    [ "cl::sycl::ONEAPI::detail::reduction_impl_base", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl__base.html", null ],
     [ "cl::sycl::INTEL::gpu::region_base< Is2D, T, SizeY, StrideY, SizeX, StrideX >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1region__base.html", null ],
     [ "cl::sycl::detail::RelationalReturnType< T >", "structcl_1_1sycl_1_1detail_1_1RelationalReturnType.html", null ],
     [ "cl::sycl::detail::RelationalTestForSignBitType< T >", "structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html", null ],
@@ -962,6 +963,7 @@ var hierarchy =
     [ "cl::sycl::detail::sycl_to_pi< bool >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01bool_01_4.html", null ],
     [ "cl::sycl::detail::sycl_to_pi< device >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01device_01_4.html", null ],
     [ "cl::sycl::detail::sycl_to_pi< platform >", "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01platform_01_4.html", null ],
+    [ "cl::sycl::detail::SYCLConfig< Config >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig.html", null ],
     [ "cl::sycl::detail::SYCLConfig< SYCL_BE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__BE_01_4.html", null ],
     [ "cl::sycl::detail::SYCLConfig< SYCL_DEVICE_FILTER >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__DEVICE__FILTER_01_4.html", null ],
     [ "cl::sycl::detail::SYCLConfig< SYCL_PI_TRACE >", "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html", null ],
@@ -1049,5 +1051,7 @@ var hierarchy =
     [ "wordtype< unsigned short >", "structwordtype_3_01unsigned_01short_01_4.html", null ],
     [ "atomic< uintptr_t > *", "classstd_1_1atomic_3_01uintptr__t_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
-    [ "static constexpr int", "classstatic_01constexpr_01int.html", null ]
+    [ "constexpr static bool", "classconstexpr_01static_01bool.html", null ],
+    [ "constexpr static int", "classconstexpr_01static_01int.html", null ],
+    [ "static constexpr bool", "classstatic_01constexpr_01bool.html", null ]
 ];

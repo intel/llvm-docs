@@ -45,7 +45,7 @@ var classcl_1_1sycl_1_1detail_1_1Command =
     [ "makeTraceEventProlog", "classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d", null ],
     [ "printDot", "classcl_1_1sycl_1_1detail_1_1Command.html#a0db86d92eca0ce39ab1992bc0b6ba139", null ],
     [ "processDepEvent", "classcl_1_1sycl_1_1detail_1_1Command.html#a24a79100299762eaca79ce4505e9a23a", null ],
-    [ "resolveReleaseDependencies", "classcl_1_1sycl_1_1detail_1_1Command.html#a316bf823b63d25d102b494d1b066e826", null ],
+    [ "resolveReleaseDependencies", "classcl_1_1sycl_1_1detail_1_1Command.html#ae897c243df69509be0433f127cb29975", null ],
     [ "waitForEvents", "classcl_1_1sycl_1_1detail_1_1Command.html#ad85d220f8fc9ac8ee620101d40d8dc8c", null ],
     [ "waitForPreparedHostEvents", "classcl_1_1sycl_1_1detail_1_1Command.html#af5b5ba98ed4ab34128737b2974d56160", null ],
     [ "DispatchHostTask", "classcl_1_1sycl_1_1detail_1_1Command.html#ac24921e3619f5c224cf67dc02a0d6b76", null ],

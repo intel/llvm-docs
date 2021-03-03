@@ -130,6 +130,6 @@ var generic__type__traits_8hpp =
     [ "msbMask", "generic__type__traits_8hpp.html#a0b099db7e27151c68848504badcff650", null ],
     [ "quiet_NaN", "generic__type__traits_8hpp.html#aaa5d86c61ed8f44c39b86cac5dedb804", null ],
     [ "TryToGetPointer", "generic__type__traits_8hpp.html#a32b034193b979fdfda71482df74608cb", null ],
-    [ "TryToGetPointer", "generic__type__traits_8hpp.html#a7d820a37a378872b16fa8b150b3e98d0", null ],
-    [ "TryToGetPointer", "generic__type__traits_8hpp.html#a0ae01c4a811df5d84d9dabbc67fa45cf", null ]
+    [ "TryToGetPointer", "generic__type__traits_8hpp.html#a0ae01c4a811df5d84d9dabbc67fa45cf", null ],
+    [ "TryToGetPointer", "generic__type__traits_8hpp.html#a7d820a37a378872b16fa8b150b3e98d0", null ]
 ];

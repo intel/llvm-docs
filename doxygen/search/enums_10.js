@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['target',['target',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598',1,'cl::sycl::access']]],
-  ['tracelevel',['TraceLevel',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a153495ba443668e0febb9335940a9153',1,'cl::sycl::detail::pi']]],
-  ['typeindex',['TypeIndex',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a',1,'cl::sycl::detail::PlatformUtil']]]
+  ['source_5flanguage_9466',['source_language',['../namespacecl_1_1sycl_1_1INTEL.html#ad66300105b63574892a741b0cf0a6b60',1,'cl::sycl::INTEL']]],
+  ['state_9467',['state',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16',1,'_pi_program']]],
+  ['stream_5fmanipulator_9468',['stream_manipulator',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370',1,'cl::sycl']]]
 ];

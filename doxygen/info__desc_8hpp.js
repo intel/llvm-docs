@@ -215,15 +215,5 @@ var info__desc_8hpp =
       [ "context", "info__desc_8hpp.html#a298d56c26b4eec2a4d4fb1649e2d1063a5c18ef72771564b7f43c497dc507aeab", null ],
       [ "device", "info__desc_8hpp.html#a298d56c26b4eec2a4d4fb1649e2d1063a913f9c49dcb544e2087cee284f4a00b7", null ],
       [ "reference_count", "info__desc_8hpp.html#a298d56c26b4eec2a4d4fb1649e2d1063a40d852658166dc8a786c23023cb20f92", null ]
-    ] ],
-    [ "__SYCL_PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a105249c28bbf60eecbfb23271bc7988f", null ],
-    [ "__SYCL_PARAM_TRAITS_SPEC", "info__desc_8hpp.html#aa21083e3a27ceebfd73cc20c071531d8", null ],
-    [ "__SYCL_PARAM_TRAITS_SPEC", "info__desc_8hpp.html#ab5328bb2718ce81ccc33d22d18e7c9cc", null ],
-    [ "__SYCL_PARAM_TRAITS_SPEC", "info__desc_8hpp.html#a2c782de28e25a7435f27ce8dd66e9f1f", null ],
-    [ "__SYCL_PARAM_TRAITS_SPEC_WITH_INPUT", "info__desc_8hpp.html#a18c50d3fc02c8e53007042cafd239585", null ],
-    [ "max_sub_group_size", "info__desc_8hpp.html#ab0e8864b7e9164ad7eb7114b6ee2e1ca", null ],
-    [ "partition_properties", "info__desc_8hpp.html#af9775be79ea21cf031cf226d918a2481", null ],
-    [ "partition_type_affinity_domain", "info__desc_8hpp.html#a806524cd6d26b3dfaa020e7a1e56cc3b", null ],
-    [ "preferred_work_group_size_multiple", "info__desc_8hpp.html#a0c1c4c2f8feff6bf1dffe0cf2a6f20af", null ],
-    [ "uint32_t", "info__desc_8hpp.html#abf3be720bd069bd68987f56f64ada244", null ]
+    ] ]
 ];

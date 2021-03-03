@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['source_5flanguage',['source_language',['../namespacecl_1_1sycl_1_1INTEL.html#ad66300105b63574892a741b0cf0a6b60',1,'cl::sycl::INTEL']]],
-  ['state',['state',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16',1,'_pi_program']]],
-  ['stream_5fmanipulator',['stream_manipulator',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370',1,'cl::sycl']]]
+  ['resultt_9464',['ResultT',['../structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a490f15a16d1df3475a63e2781a8277da',1,'cl::sycl::detail::EnqueueResultT']]],
+  ['rounding_5fmode_9465',['rounding_mode',['../namespacecl_1_1sycl.html#a16ab217f4d07c904f763adf0a270d1c0',1,'cl::sycl']]]
 ];

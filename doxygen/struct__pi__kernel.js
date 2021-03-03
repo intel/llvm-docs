@@ -22,7 +22,7 @@ var struct__pi__kernel =
     [ "set_implicit_offset_arg", "struct__pi__kernel.html#abf0577ba8782e08b1b882ae6546f79b2", null ],
     [ "set_kernel_arg", "struct__pi__kernel.html#ab78df1842f39dfb883077e5c60d4bbbc", null ],
     [ "set_kernel_local_arg", "struct__pi__kernel.html#aef7e7a0ffabf3ead806217e8e7bd0dbc", null ],
-    [ "args_", "struct__pi__kernel.html#a0bd7ab24061ba5800b90de4795d84e2c", null ],
+    [ "args_", "struct__pi__kernel.html#a16379a7210f3373a0929af81ba2a5b91", null ],
     [ "context_", "struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb", null ],
     [ "function_", "struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339", null ],
     [ "functionWithOffsetParam_", "struct__pi__kernel.html#a8242ec7d4f228dc10873fc7733cf596f", null ],

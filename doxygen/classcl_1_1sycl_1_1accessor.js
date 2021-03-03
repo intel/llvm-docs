@@ -49,6 +49,13 @@ var classcl_1_1sycl_1_1accessor =
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a04522a732fd0ee8de1482a04f48d3614", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#ac5f36dd4d43e0ab413bbf0a56fa37c90", null ],
     [ "sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1accessor.html#a12f3ae6067bda013eded4e74dc92e3a4", null ],
-    [ "AdjustedDim", "classcl_1_1sycl_1_1accessor.html#a51a6b50afcadf65cc8b8f9e3074bb7fe", null ],
+    [ "AdjustedDim", "classcl_1_1sycl_1_1accessor.html#ae519f64271d104987f32db4156e8174a", null ],
+    [ "AS", "classcl_1_1sycl_1_1accessor.html#a747a108e90106d63c1c7d841a43e6d3f", null ],
+    [ "IsAccessAnyWrite", "classcl_1_1sycl_1_1accessor.html#aa61d8c5d2038fefa3c07ebda3a670021", null ],
+    [ "IsAccessReadOnly", "classcl_1_1sycl_1_1accessor.html#adcd7acd5704463583e8822eeb669b1a4", null ],
+    [ "IsConstantBuf", "classcl_1_1sycl_1_1accessor.html#a70b4b03f3781b1c335146ddd39ee3a62", null ],
+    [ "IsGlobalBuf", "classcl_1_1sycl_1_1accessor.html#a1d0e4631cd0b54346f184437e8c643aa", null ],
+    [ "IsHostBuf", "classcl_1_1sycl_1_1accessor.html#a2d402edb3c792923855f16a2b2079df6", null ],
+    [ "IsPlaceH", "classcl_1_1sycl_1_1accessor.html#a268314c85e297755fef518c9650d6c38", null ],
     [ "padding", "classcl_1_1sycl_1_1accessor.html#a15466be08385142dbf5825628e6a0c5f", null ]
 ];

@@ -27,9 +27,9 @@ var builtins_8hpp =
     [ "cbrt", "builtins_8hpp.html#a479987252b4c8950e91d764b783b631f", null ],
     [ "ceil", "builtins_8hpp.html#a9e9abfc8658a7b17a6afeeede25ce13c", null ],
     [ "clamp", "builtins_8hpp.html#a5703b22c64aab4772a6d216afff0662c", null ],
-    [ "clamp", "builtins_8hpp.html#a55a96b8054c5bf44e7e867a3a43c13ed", null ],
     [ "clamp", "builtins_8hpp.html#a0e13873ec6ce5961178aac39c8b8b79f", null ],
     [ "clamp", "builtins_8hpp.html#adcab7ae615997a224c91835902c1bf33", null ],
+    [ "clamp", "builtins_8hpp.html#a55a96b8054c5bf44e7e867a3a43c13ed", null ],
     [ "clamp", "builtins_8hpp.html#aa27d480311b7e9efadd4077d0ce14413", null ],
     [ "clamp", "builtins_8hpp.html#a93d3269ca266723f53e39146a90e9348", null ],
     [ "clz", "builtins_8hpp.html#a31223fd2406127244bc2bd4e40c4ea4e", null ],
@@ -190,10 +190,10 @@ var builtins_8hpp =
     [ "tgamma", "builtins_8hpp.html#ad60f4c86551834290997eb40439eba77", null ],
     [ "trunc", "builtins_8hpp.html#ade43894da670759748f2b69b17de4c02", null ],
     [ "upsample", "builtins_8hpp.html#a609a476004f44abaefe8c0a1202dc274", null ],
-    [ "upsample", "builtins_8hpp.html#a6b286c9e1d51fc00c3e7790a3b7dfad8", null ],
     [ "upsample", "builtins_8hpp.html#ad2e1dd90225d38261ca9e6d2e25bae02", null ],
-    [ "upsample", "builtins_8hpp.html#ac59ecccdbcedf8319b804a81e8f3ca73", null ],
     [ "upsample", "builtins_8hpp.html#a7ea11b6797f0ef62e087ad7a188ae15d", null ],
+    [ "upsample", "builtins_8hpp.html#a6b286c9e1d51fc00c3e7790a3b7dfad8", null ],
+    [ "upsample", "builtins_8hpp.html#ac59ecccdbcedf8319b804a81e8f3ca73", null ],
     [ "upsample", "builtins_8hpp.html#a5ef3b1865b90c985a180ef7cebafa78a", null ],
     [ "__NOEXC", "builtins_8hpp.html#a2c2373f6263f259f4300fd4ffe31d784", null ]
 ];

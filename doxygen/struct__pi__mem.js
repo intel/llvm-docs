@@ -27,8 +27,8 @@ var struct__pi__mem =
     [ "Context", "struct__pi__mem.html#a5bf995c6c739c8f80ab38cb06c3c2987", null ],
     [ "context_", "struct__pi__mem.html#afeb0ef34df3b78485d184900007b2a21", null ],
     [ "MapHostPtr", "struct__pi__mem.html#a80835690887d8a5aeb8ba2831cb2f955", null ],
-    [ "mem_", "struct__pi__mem.html#a9907188047f64222c897c4d61964a232", null ],
-    [ "mem_type_", "struct__pi__mem.html#aac840f8416b7e278f282ff3523057c77", null ],
+    [ "mem_", "struct__pi__mem.html#a8d4c4e99e90ade32c0be0a0fae751106", null ],
+    [ "mem_type_", "struct__pi__mem.html#ae08b824facf3703fc94de854e66fd2fb", null ],
     [ "OnHost", "struct__pi__mem.html#a5aca9887befe72999e0f83080b65577e", null ],
     [ "refCount_", "struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0", null ]
 ];

@@ -11,5 +11,5 @@ var classcl_1_1sycl_1_1host__accessor =
     [ "host_accessor", "classcl_1_1sycl_1_1host__accessor.html#a5713494f649194293e319d9fe6364862", null ],
     [ "__init", "classcl_1_1sycl_1_1host__accessor.html#ace1c8517112d293b6c88538e8d4de4fc", null ],
     [ "IsSameAsBuffer", "classcl_1_1sycl_1_1host__accessor.html#ad8883d82a6ebbd05b2b918a5564eda63", null ],
-    [ "AdjustedDim", "classcl_1_1sycl_1_1host__accessor.html#aca5b114fc96271042b7b77ee2069c7f1", null ]
+    [ "AdjustedDim", "classcl_1_1sycl_1_1host__accessor.html#a92c8657c6fb762728679d8a6b0879619", null ]
 ];

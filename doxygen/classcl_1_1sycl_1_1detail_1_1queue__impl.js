@@ -24,8 +24,8 @@ var classcl_1_1sycl_1_1detail_1_1queue__impl =
     [ "memset", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab258fa8fe858328b59d036991fb84db3", null ],
     [ "reportAsyncException", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285", null ],
     [ "stopThreadPool", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418", null ],
-    [ "submit", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab7b1b7e75c3d3713a2793c049a5c0cd9", null ],
     [ "submit", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a654009de12b9d7fc032484ea0b610b1e", null ],
+    [ "submit", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab7b1b7e75c3d3713a2793c049a5c0cd9", null ],
     [ "throw_asynchronous", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c6e3a913c64c15cc3874a06f2ca38da", null ],
     [ "wait", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#ae0f2111e2e0be91fc0e6072d05380fbf", null ],
     [ "wait_and_throw", "classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa165a612388669d38fc22b76c18f2364", null ]

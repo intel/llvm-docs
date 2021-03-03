@@ -14,7 +14,7 @@ var struct__pi__mem_1_1mem___1_1buffer__mem__ =
     [ "get_size", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aa8bebeca206a8233baef6680103a0b26", null ],
     [ "map_to_ptr", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aaf71996c723bf33596860473ee17eae0", null ],
     [ "unmap", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a6794d3c49a7d49cb7218d4d327e85f24", null ],
-    [ "allocMode_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aaf08e53e244f71e8308de38465256e67", null ],
+    [ "allocMode_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aa18734352ad73faa17cc1bf31d6d7c30", null ],
     [ "hostPtr_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a1b6cdff933ec7aa1dccf602551ebfab0", null ],
     [ "mapFlags_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a8b2fd9a0f22b1b234da617fd3f39edd5", null ],
     [ "mapOffset_", "struct__pi__mem_1_1mem___1_1buffer__mem__.html#a16b16e2787c2a9524403dc1bead82664", null ],

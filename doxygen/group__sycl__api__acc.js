@@ -50,7 +50,14 @@ var group__sycl__api__acc =
       [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a04522a732fd0ee8de1482a04f48d3614", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor.html#ac5f36dd4d43e0ab413bbf0a56fa37c90", null ],
       [ "sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1accessor.html#a12f3ae6067bda013eded4e74dc92e3a4", null ],
-      [ "AdjustedDim", "classcl_1_1sycl_1_1accessor.html#a51a6b50afcadf65cc8b8f9e3074bb7fe", null ],
+      [ "AdjustedDim", "classcl_1_1sycl_1_1accessor.html#ae519f64271d104987f32db4156e8174a", null ],
+      [ "AS", "classcl_1_1sycl_1_1accessor.html#a747a108e90106d63c1c7d841a43e6d3f", null ],
+      [ "IsAccessAnyWrite", "classcl_1_1sycl_1_1accessor.html#aa61d8c5d2038fefa3c07ebda3a670021", null ],
+      [ "IsAccessReadOnly", "classcl_1_1sycl_1_1accessor.html#adcd7acd5704463583e8822eeb669b1a4", null ],
+      [ "IsConstantBuf", "classcl_1_1sycl_1_1accessor.html#a70b4b03f3781b1c335146ddd39ee3a62", null ],
+      [ "IsGlobalBuf", "classcl_1_1sycl_1_1accessor.html#a1d0e4631cd0b54346f184437e8c643aa", null ],
+      [ "IsHostBuf", "classcl_1_1sycl_1_1accessor.html#a2d402edb3c792923855f16a2b2079df6", null ],
+      [ "IsPlaceH", "classcl_1_1sycl_1_1accessor.html#a268314c85e297755fef518c9650d6c38", null ],
       [ "padding", "classcl_1_1sycl_1_1accessor.html#a15466be08385142dbf5825628e6a0c5f", null ]
     ] ],
     [ "accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", [
@@ -77,11 +84,11 @@ var group__sycl__api__acc =
       [ "operator!=", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a4cc3463685f9304b4e85909da4bdffbc", null ],
       [ "operator==", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ab91466b61d6f66645080639bc275bcac", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a66402e855b1684ff96ef15a7886e5ce9", null ],
-      [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3b877b05b5ee646d71d28db583d99c59", null ],
+      [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aec5a310abc8dc5903b0b93a80b0ace4f", null ],
       [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7a4c716552d304f864a9adf608fe9110", null ],
-      [ "AdjustedDim", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aa47de423a08600aff8814997ea77827c", null ],
+      [ "AdjustedDim", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac54611403aa3e9c953006c0c3e0f7b8d", null ],
       [ "padding", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa", null ]
     ] ],
     [ "accessor< DataT, Dimensions, AccessMode, access::target::image, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html", [

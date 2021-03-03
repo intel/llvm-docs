@@ -13,8 +13,8 @@ var half__type_8hpp =
     [ "Vec3StorageT", "half__type_8hpp.html#ace6bad0c312bf2cccaf8d6e907db32e3", null ],
     [ "Vec4StorageT", "half__type_8hpp.html#a1b68d15fe9d3cd4a4de58783e3bde4be", null ],
     [ "Vec8StorageT", "half__type_8hpp.html#a72ecf31ada5282f7d519bccd1a3cf67a", null ],
-    [ "cast_if_host_half", "half__type_8hpp.html#afd48cc1bb519169236fcecb36f818f88", null ],
     [ "cast_if_host_half", "half__type_8hpp.html#ad21b7e12b9a98bcc2c619edd469aad12", null ],
+    [ "cast_if_host_half", "half__type_8hpp.html#afd48cc1bb519169236fcecb36f818f88", null ],
     [ "operator<<", "half__type_8hpp.html#ad988ba3b2941902e4f4da5fabdcac684", null ],
     [ "operator>>", "half__type_8hpp.html#a4b6e33905c8f348b78bd68d72f80c60b", null ]
 ];

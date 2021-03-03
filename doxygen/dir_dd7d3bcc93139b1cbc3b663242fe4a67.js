@@ -66,6 +66,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
       [ "get_kernel_name_t< detail::auto_name, Type >", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4" ],
       [ "hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4" ]
     ] ],
+    [ "kernel_bundle.hpp", "kernel__bundle_8hpp.html", "kernel__bundle_8hpp" ],
     [ "marray.hpp", "marray_8hpp.html", "marray_8hpp" ],
     [ "multi_ptr.hpp", "multi__ptr_8hpp.html", "multi__ptr_8hpp" ],
     [ "nd_item.hpp", "nd__item_8hpp.html", "nd__item_8hpp" ],
