@@ -1,6 +1,5 @@
 var NAVTREEINDEX19 =
 {
-"generic__type__lists_8hpp.html#aee7d3fc920b08c3ecaef0f9f7c99bab0":[4,0,0,0,1,2,17,72],
 "generic__type__lists_8hpp.html#af122395eac24135428196ecf171b26ad":[4,0,0,0,1,2,17,105],
 "generic__type__lists_8hpp.html#af4ba6aa34457faf481c784d6f0f5d5cc":[4,0,0,0,1,2,17,36],
 "generic__type__lists_8hpp.html#af50f32cb94dfcccc744b32ff204d2c49":[4,0,0,0,1,2,17,54],
@@ -118,13 +117,13 @@ var NAVTREEINDEX19 =
 "global__handler_8cpp_source.html":[4,0,2,1,32],
 "global__handler_8hpp.html":[4,0,2,1,33],
 "global__handler_8hpp_source.html":[4,0,2,1,33],
-"globals.html":[4,1,0,0],
 "globals.html":[4,1,0],
+"globals.html":[4,1,0,0],
 "globals_a.html":[4,1,0,1],
 "globals_c.html":[4,1,0,2],
 "globals_d.html":[4,1,0,3],
-"globals_defs.html":[4,1,6],
 "globals_defs.html":[4,1,6,0],
+"globals_defs.html":[4,1,6],
 "globals_defs_c.html":[4,1,6,1],
 "globals_defs_d.html":[4,1,6,2],
 "globals_defs_e.html":[4,1,6,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX19 =
 "group__algorithm_8hpp_source.html":[4,0,0,0,1,5,11],
 "group__sycl__api.html":[1,2],
 "group__sycl__api__acc.html":[1,2,1],
-"group__sycl__api__dev__sel.html":[1,2,0]
+"group__sycl__api__dev__sel.html":[1,2,0],
+"group__sycl__esimd.html":[1,1]
 };

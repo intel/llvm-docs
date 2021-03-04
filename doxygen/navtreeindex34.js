@@ -1,6 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html":[3,0,2,1,0,335],
 "structcl_1_1sycl_1_1detail_1_1vector__element.html":[3,0,2,1,0,336],
 "structcl_1_1sycl_1_1detail_1_1vector__element.html#a61f41488bd354568ad5a5cc11ff44106":[3,0,2,1,0,336,0],
 "structcl_1_1sycl_1_1detail_1_1vector__element__impl.html":[3,0,2,1,0,337],
@@ -249,5 +248,6 @@ var NAVTREEINDEX34 =
 "structpi__device__binary__struct.html#ac6b82018fed8ac3d4cc28a65eb8ee33e":[3,0,110,11],
 "structpi__device__binary__struct.html#ad3b8516afd31a369b2d8474a121cbc90":[3,0,110,6],
 "structpi__device__binary__struct.html#ae3149612f8f60cfc3bed1c63cc94233e":[3,0,110,9],
-"structpi__device__binary__struct.html#aecd218b85c8c7499aa5c22e900de30dc":[3,0,110,7]
+"structpi__device__binary__struct.html#aecd218b85c8c7499aa5c22e900de30dc":[3,0,110,7],
+"structpi__device__binary__struct.html#af12b47e9e45eaca89cee25dac0ea9d8b":[3,0,110,1]
 };

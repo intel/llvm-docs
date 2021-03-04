@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['datalesspropkind_9418',['DataLessPropKind',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfda',1,'cl::sycl::detail']]],
-  ['device_9419',['device',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190',1,'cl::sycl::info']]],
-  ['device_5ftype_9420',['device_type',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165',1,'cl::sycl::info']]],
-  ['devicelibext_9421',['DeviceLibExt',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cce',1,'cl::sycl::detail']]]
+  ['datalesspropkind_9416',['DataLessPropKind',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfda',1,'cl::sycl::detail']]],
+  ['device_9417',['device',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190',1,'cl::sycl::info']]],
+  ['device_5ftype_9418',['device_type',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165',1,'cl::sycl::info']]],
+  ['devicelibext_9419',['DeviceLibExt',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cce',1,'cl::sycl::detail']]]
 ];
