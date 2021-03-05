@@ -24,7 +24,7 @@ var searchData=
   ['stream_5fimpl_2ecpp_6274',['stream_impl.cpp',['../stream__impl_8cpp.html',1,'']]],
   ['stream_5fimpl_2ehpp_6275',['stream_impl.hpp',['../stream__impl_8hpp.html',1,'']]],
   ['sub_5fgroup_2ehpp_6276',['sub_group.hpp',['../sub__group_8hpp.html',1,'']]],
-  ['sycl_2ehpp_6277',['sycl.hpp',['../sycl_8hpp.html',1,'']]],
+  ['sycl_2ehpp_6277',['sycl.hpp',['../CL_2sycl_8hpp.html',1,'(Global Namespace)'],['../sycl_2sycl_8hpp.html',1,'(Global Namespace)']]],
   ['sycl_5ffe_5fintrins_2ehpp_6278',['sycl_fe_intrins.hpp',['../sycl__fe__intrins_8hpp.html',1,'']]],
   ['sycl_5fmem_5fobj_5fallocator_2ehpp_6279',['sycl_mem_obj_allocator.hpp',['../sycl__mem__obj__allocator_8hpp.html',1,'']]],
   ['sycl_5fmem_5fobj_5fi_2ehpp_6280',['sycl_mem_obj_i.hpp',['../sycl__mem__obj__i_8hpp.html',1,'']]],

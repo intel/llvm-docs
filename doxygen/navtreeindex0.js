@@ -1,5 +1,7 @@
 var NAVTREEINDEX0 =
 {
+"CL_2sycl_8hpp.html":[4,0,0,0,2],
+"CL_2sycl_8hpp_source.html":[4,0,0,0,2],
 "INTEL_2pipes_8hpp.html":[4,0,0,0,1,4,8],
 "INTEL_2pipes_8hpp_source.html":[4,0,0,0,1,4,8],
 "ONEAPI_2atomic_8hpp.html":[4,0,0,0,1,5,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "builtins_8hpp.html#a183a166aaee7d3fb967b9c368517a0c5":[4,0,0,0,1,15,19],
 "builtins_8hpp.html#a18e6c52e682f4ac71f8cdf77fc9b86d2":[4,0,0,0,1,15,129],
 "builtins_8hpp.html#a190dab570b8d79d35b94c002df81ddd5":[4,0,0,0,1,15,89],
-"builtins_8hpp.html#a1a6940f26c6735cb8463f619cddb3923":[4,0,0,0,1,15,51],
-"builtins_8hpp.html#a1aa8d47d9be469180f4d0cf1e9238beb":[4,0,0,0,1,15,43],
-"builtins_8hpp.html#a1e3236ac9ad6ed7c91afc835e4081df5":[4,0,0,0,1,15,177]
+"builtins_8hpp.html#a1a6940f26c6735cb8463f619cddb3923":[4,0,0,0,1,15,51]
 };

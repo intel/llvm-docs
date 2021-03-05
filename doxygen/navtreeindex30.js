@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a870da0afef4a9f1b6d24f7cdd3cc4d47":[3,0,20,1,0,13],
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a8b2fd9a0f22b1b234da617fd3f39edd5":[3,0,20,1,0,11],
+"struct__pi__mem_1_1mem___1_1buffer__mem__.html#a908350845d03f4739a56bf87c795aa93":[3,0,20,1,0,4],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aa18734352ad73faa17cc1bf31d6d7c30":[3,0,20,1,0,9],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aa8bebeca206a8233baef6680103a0b26":[3,0,20,1,0,6],
 "struct__pi__mem_1_1mem___1_1buffer__mem__.html#aac51643c77130af9f87de37928c30cf4":[3,0,20,1,0,14],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__prod.html#a78eb190b643ec16639c3596b42096fff":[3,0,2,1,3,0,0,10,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__max.html":[3,0,2,1,3,0,0,11],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__max.html#a1380ccdfcfb2ca7793b136f1f1bd28b1":[3,0,2,1,3,0,0,11,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html":[3,0,2,1,3,0,0,12],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html#a0081cbf260ead288c0b55c548244e63c":[3,0,2,1,3,0,0,12,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html":[3,0,2,1,3,0,0,13],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html#a1bace3425b04fa2f19c20197279d06a3":[3,0,2,1,3,0,0,13,0]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html":[3,0,2,1,3,0,0,12]
 };

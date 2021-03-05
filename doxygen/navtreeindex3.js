@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"builtins__math_8cpp.html#a36bedc7cea22576a86d278b0a5a669b0":[4,0,2,1,11,126],
+"builtins__math_8cpp.html#a3703f6d7f9cb5743828218615b9cf859":[4,0,2,1,11,62],
 "builtins__math_8cpp.html#a3805048bd8472ba630e3587e064e00fd":[4,0,2,1,11,19],
 "builtins__math_8cpp.html#a380b5664bdc24e5d95316e93ff9a0c6f":[4,0,2,1,11,51],
 "builtins__math_8cpp.html#a3b2d286de4a47c3558bed5b8370d06ec":[4,0,2,1,11,99],
@@ -247,7 +249,5 @@ var NAVTREEINDEX3 =
 "classSystemMemory.html#acb2bf348d169471cf619583ec49855a2":[3,0,236,0],
 "classSystemMemory.html#aec23ceda58eafb18342623deeb2d4462":[3,0,236,1],
 "classUSMAllocContext.html":[3,0,239],
-"classUSMAllocContext.html#a45c721cd496e881d47dd32067f02619b":[3,0,239,5],
-"classUSMAllocContext.html#a5768981db315cd66c1c37d3e963d3a60":[3,0,239,4],
-"classUSMAllocContext.html#a9391ab5a00278de27a284400b0500751":[3,0,239,2]
+"classUSMAllocContext.html#a45c721cd496e881d47dd32067f02619b":[3,0,239,5]
 };

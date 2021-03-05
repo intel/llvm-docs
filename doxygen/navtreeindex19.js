@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"generic__type__lists_8hpp.html#ae553f9ac21c94dce30e0c98134e98e0f":[4,0,0,0,1,2,17,98],
+"generic__type__lists_8hpp.html#ae85c41581cdd5d74dbc3880f38ac70bd":[4,0,0,0,1,2,17,81],
+"generic__type__lists_8hpp.html#aee7d3fc920b08c3ecaef0f9f7c99bab0":[4,0,0,0,1,2,17,72],
 "generic__type__lists_8hpp.html#af122395eac24135428196ecf171b26ad":[4,0,0,0,1,2,17,105],
 "generic__type__lists_8hpp.html#af4ba6aa34457faf481c784d6f0f5d5cc":[4,0,0,0,1,2,17,36],
 "generic__type__lists_8hpp.html#af50f32cb94dfcccc744b32ff204d2c49":[4,0,0,0,1,2,17,54],
@@ -136,12 +139,12 @@ var NAVTREEINDEX19 =
 "globals_defs_z.html":[4,1,6,10],
 "globals_e.html":[4,1,0,4],
 "globals_enum.html":[4,1,4],
-"globals_eval.html":[4,1,5],
 "globals_eval.html":[4,1,5,0],
+"globals_eval.html":[4,1,5],
 "globals_eval_p.html":[4,1,5,1],
 "globals_f.html":[4,1,0,5],
-"globals_func.html":[4,1,1],
 "globals_func.html":[4,1,1,0],
+"globals_func.html":[4,1,1],
 "globals_func_a.html":[4,1,1,1],
 "globals_func_c.html":[4,1,1,2],
 "globals_func_d.html":[4,1,1,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX19 =
 "group__algorithm_8hpp.html#af993ec82ace51d3df587d1f791640cbb":[4,0,0,0,1,5,11,24],
 "group__algorithm_8hpp.html#afa4edc58b4688fe3f95be790fa07a817":[4,0,0,0,1,5,11,28],
 "group__algorithm_8hpp_source.html":[4,0,0,0,1,5,11],
-"group__sycl__api.html":[1,2],
-"group__sycl__api__acc.html":[1,2,1],
-"group__sycl__api__dev__sel.html":[1,2,0],
-"group__sycl__esimd.html":[1,1]
+"group__sycl__api.html":[1,2]
 };

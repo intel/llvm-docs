@@ -304,7 +304,7 @@ var searchData=
   ['surface_5fmem_5f_4664',['surface_mem_',['../struct__pi__mem_1_1mem___1_1surface__mem__.html',1,'_pi_mem::mem_::surface_mem_'],['../union__pi__mem_1_1mem__.html#ad996cf1020d48d6188d30ad68a97e7a7',1,'_pi_mem::mem_::surface_mem_()']]],
   ['surfobj_5f_4665',['surfObj_',['../struct__pi__mem_1_1mem___1_1surface__mem__.html#abc0d607ac380f8f6eca4ec612ac334bc',1,'_pi_mem::mem_::surface_mem_']]],
   ['swizzleop_4666',['SwizzleOp',['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html',1,'cl::sycl::detail::SwizzleOp&lt; VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes &gt;'],['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8ee07a7d7a7b71fc5d0e1074fe9ab66a',1,'cl::sycl::detail::SwizzleOp::SwizzleOp()']]],
-  ['sycl_2ehpp_4667',['sycl.hpp',['../sycl_8hpp.html',1,'']]],
+  ['sycl_2ehpp_4667',['sycl.hpp',['../CL_2sycl_8hpp.html',1,'(Global Namespace)'],['../sycl_2sycl_8hpp.html',1,'(Global Namespace)']]],
   ['sycl_5fconfig_5ffile_5fname_4668',['SYCL_CONFIG_FILE_NAME',['../config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930',1,'config.cpp']]],
   ['sycl_5fesimd_5ffunction_4669',['SYCL_ESIMD_FUNCTION',['../esimd_8hpp.html#af8d6f47b7d994e34c4b84ce8969b0e06',1,'esimd.hpp']]],
   ['sycl_5fesimd_5fkernel_4670',['SYCL_ESIMD_KERNEL',['../esimd_8hpp.html#a66d006896c3f92463b86a4652b9b1483',1,'esimd.hpp']]],
