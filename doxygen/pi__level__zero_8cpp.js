@@ -131,7 +131,6 @@ var pi__level__zero_8cpp =
     [ "zeModuleGetPropertiesMock", "pi__level__zero_8cpp.html#a3ca3ae243129eba347fd994154760a80", null ],
     [ "zeParseError", "pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815", null ],
     [ "FilterEventWaitList", "pi__level__zero_8cpp.html#a8e490756ef7d53d45dec5a92b78a802b", null ],
-    [ "OnceFlag", "pi__level__zero_8cpp.html#ad7260eabab91e0bfa26073f0d6fe30e7", null ],
     [ "piEventCreate", "pi__level__zero_8cpp.html#ae34697094cfe8eaa05ef1a9842fbec3b", null ],
     [ "PiPlatformCachePopulated", "pi__level__zero_8cpp.html#acb6c584d4b9adc275f85b35cc08f5767", null ],
     [ "PiPlatformsCache", "pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410", null ],

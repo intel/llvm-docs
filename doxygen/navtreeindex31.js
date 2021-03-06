@@ -1,6 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html#a0081cbf260ead288c0b55c548244e63c":[3,0,2,1,3,0,0,12,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html":[3,0,2,1,3,0,0,13],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__sum.html#a1bace3425b04fa2f19c20197279d06a3":[3,0,2,1,3,0,0,13,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__byte__type.html":[3,0,2,1,3,0,0,14],
@@ -249,5 +248,6 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#a267681cba46d5f3908b99a7e9a55712b":[3,0,2,1,0,57,0],
 "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1global__device__space_01_4.html":[3,0,2,1,0,58],
 "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1global__device__space_01_4.html#a8509ef6413ff4dbfeaf022b6226b0992":[3,0,2,1,0,58,0],
-"structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1global__host__space_01_4.html":[3,0,2,1,0,59]
+"structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1global__host__space_01_4.html":[3,0,2,1,0,59],
+"structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1global__host__space_01_4.html#a171e5be12e988e530ff8bed430e1d045":[3,0,2,1,0,59,0]
 };

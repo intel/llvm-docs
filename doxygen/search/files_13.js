@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['usm_2ehpp_6287',['usm.hpp',['../usm_8hpp.html',1,'']]],
-  ['usm_5fallocator_2ecpp_6288',['usm_allocator.cpp',['../usm__allocator_8cpp.html',1,'']]],
-  ['usm_5fallocator_2ehpp_6289',['usm_allocator.hpp',['../include_2CL_2sycl_2usm_2usm__allocator_8hpp.html',1,'(Global Namespace)'],['../plugins_2level__zero_2usm__allocator_8hpp.html',1,'(Global Namespace)']]],
-  ['usm_5fenums_2ehpp_6290',['usm_enums.hpp',['../usm__enums_8hpp.html',1,'']]],
-  ['usm_5fimpl_2ecpp_6291',['usm_impl.cpp',['../usm__impl_8cpp.html',1,'']]],
-  ['usm_5fimpl_2ehpp_6292',['usm_impl.hpp',['../usm__impl_8hpp.html',1,'']]],
-  ['util_2ecpp_6293',['util.cpp',['../util_8cpp.html',1,'']]],
-  ['util_2ehpp_6294',['util.hpp',['../util_8hpp.html',1,'']]]
+  ['usm_2ehpp_6289',['usm.hpp',['../usm_8hpp.html',1,'']]],
+  ['usm_5fallocator_2ecpp_6290',['usm_allocator.cpp',['../usm__allocator_8cpp.html',1,'']]],
+  ['usm_5fallocator_2ehpp_6291',['usm_allocator.hpp',['../include_2CL_2sycl_2usm_2usm__allocator_8hpp.html',1,'(Global Namespace)'],['../plugins_2level__zero_2usm__allocator_8hpp.html',1,'(Global Namespace)']]],
+  ['usm_5fenums_2ehpp_6292',['usm_enums.hpp',['../usm__enums_8hpp.html',1,'']]],
+  ['usm_5fimpl_2ecpp_6293',['usm_impl.cpp',['../usm__impl_8cpp.html',1,'']]],
+  ['usm_5fimpl_2ehpp_6294',['usm_impl.hpp',['../usm__impl_8hpp.html',1,'']]],
+  ['util_2ecpp_6295',['util.cpp',['../util_8cpp.html',1,'']]],
+  ['util_2ehpp_6296',['util.hpp',['../util_8hpp.html',1,'']]]
 ];
