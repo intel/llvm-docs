@@ -28,7 +28,7 @@ var searchData=
   ['kernel_5fwriteable_5fio_5fpipe_2761',['kernel_writeable_io_pipe',['../classcl_1_1sycl_1_1INTEL_1_1kernel__writeable__io__pipe.html',1,'cl::sycl::INTEL']]],
   ['kernelargmask_2762',['KernelArgMask',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a020398b240a8bd554820d790c844b109',1,'cl::sycl::detail::ProgramManager']]],
   ['kernelbundleimplptr_2763',['KernelBundleImplPtr',['../namespacecl_1_1sycl_1_1detail.html#a3f5f99f023fc03ad7998963c7a310e84',1,'cl::sycl::detail']]],
-  ['kernelbynamet_2764',['KernelByNameT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a044fe6aabb1a42c16a12b892661a3b2c',1,'cl::sycl::detail::KernelProgramCache']]],
+  ['kernelbynamet_2764',['KernelByNameT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a3e74e9a3aee109ae2481109623067aaa',1,'cl::sycl::detail::KernelProgramCache']]],
   ['kernelcachet_2765',['KernelCacheT',['../classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ae45b79c025b522795f8677b223a047d8',1,'cl::sycl::detail::KernelProgramCache']]],
   ['kernelinfo_2766',['KernelInfo',['../structcl_1_1sycl_1_1detail_1_1KernelInfo.html',1,'cl::sycl::detail']]],
   ['kernelparamoptinfo_2767',['KernelParamOptInfo',['../classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a5ce259269c04321089a8a1cae77654fb',1,'cl::sycl::detail::pi::DeviceBinaryImage']]],
