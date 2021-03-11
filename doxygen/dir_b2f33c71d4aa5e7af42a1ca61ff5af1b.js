@@ -15,6 +15,7 @@ var dir_b2f33c71d4aa5e7af42a1ca61ff5af1b =
     [ "interop_handle.cpp", "interop__handle_8cpp.html", null ],
     [ "interop_handler.cpp", "interop__handler_8cpp.html", null ],
     [ "kernel.cpp", "kernel_8cpp.html", "kernel_8cpp" ],
+    [ "kernel_bundle.cpp", "kernel__bundle_8cpp.html", "kernel__bundle_8cpp" ],
     [ "platform.cpp", "platform_8cpp.html", "platform_8cpp" ],
     [ "program.cpp", "program_8cpp.html", "program_8cpp" ],
     [ "queue.cpp", "queue_8cpp.html", "queue_8cpp" ],

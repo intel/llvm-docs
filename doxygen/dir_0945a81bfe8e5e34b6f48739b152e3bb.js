@@ -26,6 +26,11 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     ] ],
     [ "device_binary_image.cpp", "device__binary__image_8cpp.html", null ],
     [ "device_filter.cpp", "device__filter_8cpp.html", null ],
+    [ "device_image_impl.hpp", "device__image__impl_8hpp.html", [
+      [ "LessByNameComp", "structcl_1_1sycl_1_1detail_1_1LessByNameComp.html", "structcl_1_1sycl_1_1detail_1_1LessByNameComp" ],
+      [ "device_image_impl", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html", "classcl_1_1sycl_1_1detail_1_1device__image__impl" ],
+      [ "SpecConstIDOffset", "structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstIDOffset.html", "structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstIDOffset" ]
+    ] ],
     [ "device_impl.cpp", "device__impl_8cpp.html", null ],
     [ "device_impl.hpp", "device__impl_8hpp.html", [
       [ "device_impl", "classcl_1_1sycl_1_1detail_1_1device__impl.html", "classcl_1_1sycl_1_1detail_1_1device__impl" ]
@@ -51,6 +56,12 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "helpers.cpp", "helpers_8cpp.html", "helpers_8cpp" ],
     [ "image_accessor_util.cpp", "image__accessor__util_8cpp.html", "image__accessor__util_8cpp" ],
     [ "image_impl.cpp", "image__impl_8cpp.html", "image__impl_8cpp" ],
+    [ "kernel_bundle_impl.hpp", "kernel__bundle__impl_8hpp.html", [
+      [ "kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl" ]
+    ] ],
+    [ "kernel_id_impl.hpp", "kernel__id__impl_8hpp.html", [
+      [ "kernel_id_impl", "classcl_1_1sycl_1_1detail_1_1kernel__id__impl.html", "classcl_1_1sycl_1_1detail_1_1kernel__id__impl" ]
+    ] ],
     [ "kernel_impl.cpp", "kernel__impl_8cpp.html", null ],
     [ "kernel_impl.hpp", "kernel__impl_8hpp.html", "kernel__impl_8hpp" ],
     [ "kernel_info.hpp", "kernel__info_8hpp.html", "kernel__info_8hpp" ],
