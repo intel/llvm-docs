@@ -208,6 +208,9 @@ var hierarchy =
       [ "cl::sycl::detail::DataLessProperty< detail::ImageUseHostPtr >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
         [ "cl::sycl::property::image::use_host_ptr", "classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html", null ]
       ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::InitializeToIdentity >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::reduction::initialize_to_identity", "classcl_1_1sycl_1_1property_1_1reduction_1_1initialize__to__identity.html", null ]
+      ] ],
       [ "cl::sycl::detail::DataLessProperty< detail::InOrder >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
         [ "cl::sycl::property::queue::in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ]
       ] ],

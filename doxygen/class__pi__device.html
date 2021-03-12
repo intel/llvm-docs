@@ -110,19 +110,20 @@ Collaboration diagram for _pi_device:</div>
 <div class="dyncontent">
 <div class="center"><img src="class__pi__device__coll__graph.png" border="0" usemap="#__pi__device_coll__map" alt="Collaboration graph"/></div>
 <map name="__pi__device_coll__map" id="__pi__device_coll__map">
-<area shape="rect" title="PI device mapping to a CUdevice." alt="" coords="888,143,979,169"/>
-<area shape="rect" title=" " alt="" coords="449,15,600,41"/>
-<area shape="rect" title=" " alt="" coords="487,65,562,92"/>
-<area shape="rect" title=" " alt="" coords="439,116,611,143"/>
-<area shape="rect" title=" " alt="" coords="61,184,111,211"/>
-<area shape="rect" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="473,308,577,335"/>
-<area shape="rect" title=" " alt="" coords="407,359,643,385"/>
-<area shape="rect" title=" " alt="" coords="13,243,159,269"/>
-<area shape="rect" title=" " alt="" coords="5,294,167,335"/>
-<area shape="rect" title=" " alt="" coords="54,360,118,387"/>
-<area shape="rect" title=" " alt="" coords="67,411,105,437"/>
-<area shape="rect" title=" " alt="" coords="57,464,115,491"/>
-<area shape="rect" title=" " alt="" coords="29,515,143,541"/>
+<area shape="rect" title="PI device mapping to a CUdevice." alt="" coords="888,175,979,201"/>
+<area shape="rect" title=" " alt="" coords="443,23,606,49"/>
+<area shape="rect" title=" " alt="" coords="449,73,600,100"/>
+<area shape="rect" title=" " alt="" coords="487,124,562,151"/>
+<area shape="rect" title=" " alt="" coords="439,175,611,201"/>
+<area shape="rect" title=" " alt="" coords="61,243,111,269"/>
+<area shape="rect" href="struct__pi__platform.html" title="A PI platform stores all known PI devices, in the CUDA plugin this is just a vector of available devi..." alt="" coords="473,367,577,393"/>
+<area shape="rect" title=" " alt="" coords="407,417,643,444"/>
+<area shape="rect" title=" " alt="" coords="13,301,159,328"/>
+<area shape="rect" title=" " alt="" coords="5,353,167,394"/>
+<area shape="rect" title=" " alt="" coords="54,419,118,445"/>
+<area shape="rect" title=" " alt="" coords="67,469,105,496"/>
+<area shape="rect" title=" " alt="" coords="57,523,115,549"/>
+<area shape="rect" title=" " alt="" coords="29,573,143,600"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -147,6 +148,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a8be1d538c1d09902133f82a13ba33f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa28a24fe6d68823714cb23c57e428290"><td class="memItemLeft" align="right" valign="top">ze_device_handle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__pi__device.html#aa28a24fe6d68823714cb23c57e428290">ZeDevice</a></td></tr>
 <tr class="separator:aa28a24fe6d68823714cb23c57e428290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dec9013f0cfa2f088cdc8b4d844871c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__pi__device.html#a4dec9013f0cfa2f088cdc8b4d844871c">SubDevices</a></td></tr>
+<tr class="separator:a4dec9013f0cfa2f088cdc8b4d844871c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaef3c3d43f659c307c93fc152764c39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#acab4ff2636fbb0628e5978bf19e27887">pi_platform</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__pi__device.html#abaef3c3d43f659c307c93fc152764c39">Platform</a></td></tr>
 <tr class="separator:abaef3c3d43f659c307c93fc152764c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63fa3ab96aa179b3900f2290f0fb6f89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__pi__device.html#a63fa3ab96aa179b3900f2290f0fb6f89">IsSubDevice</a></td></tr>
@@ -270,7 +273,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__cuda_8hpp_source.html#l00078">78</a> of file <a class="el" href="pi__cuda_8hpp_source.html">pi_cuda.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01643">cuda_piContextRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02704">cuda_piProgramCreateWithBinary()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01189">piDevicesGet()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01908">piextDeviceCreateWithNativeHandle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l01643">cuda_piContextRelease()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02704">cuda_piProgramCreateWithBinary()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01792">piDevicePartition()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01189">piDevicesGet()</a>.</p>
 
 </div>
 </div>
@@ -345,9 +348,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00456">456</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi_8h_source.html#l00107">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00114">ZE_CALL</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00151">ZeComputeQueueGroupIndex</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00157">ZeDevice</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00169">ZeDeviceComputeProperties</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00168">ZeDeviceProperties</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l01792">piDevicePartition()</a>.</p>
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00107">PI_ERROR_UNKNOWN</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00114">ZE_CALL</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00151">ZeComputeQueueGroupIndex</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00157">ZeDevice</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00175">ZeDeviceComputeProperties</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00174">ZeDeviceProperties</a>.</p>
 
 </div>
 </div>
@@ -364,7 +365,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00165">165</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00171">171</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01283">piDeviceRelease()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01273">piDeviceRetain()</a>.</p>
 
@@ -382,9 +383,27 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00160">160</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00166">166</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00560">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01792">piDevicePartition()</a>.</p>
+
+</div>
+</div>
+<a id="a4dec9013f0cfa2f088cdc8b4d844871c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dec9013f0cfa2f088cdc8b4d844871c">&#9670;&nbsp;</a></span>SubDevices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="pi_8h.html#a8b79ef610a9f68553f1960b6ae9b4ae1">pi_device</a>&gt; _pi_device::SubDevices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00163">163</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l01792">piDevicePartition()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +421,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00151">151</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02071">piQueueCreate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02086">piQueueCreate()</a>.</p>
 
 </div>
 </div>
@@ -420,7 +439,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00157">157</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l02963">compileOrBuild()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00560">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01792">piDevicePartition()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01897">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05464">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03407">piKernelGetGroupInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02376">piMemImageCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02787">piProgramLink()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02071">piQueueCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03957">piSamplerCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05127">USMDeviceAllocImpl()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05152">USMSharedAllocImpl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l02978">compileOrBuild()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00560">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01792">piDevicePartition()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01916">piextDeviceGetNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05479">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03422">piKernelGetGroupInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02391">piMemImageCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02802">piProgramLink()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02086">piQueueCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03972">piSamplerCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05142">USMDeviceAllocImpl()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05167">USMSharedAllocImpl()</a>.</p>
 
 </div>
 </div>
@@ -436,7 +455,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00169">169</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00175">175</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>.</p>
 
@@ -454,9 +473,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00168">168</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00174">174</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l03726">piEventGetProfilingInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00456">initialize()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l01300">piDeviceGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l03741">piEventGetProfilingInfo()</a>.</p>
 
 </div>
 </div>

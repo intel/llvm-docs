@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DPC++ Runtime: include/CL/sycl/ONEAPI/reduction.hpp File Reference</title>
+<title>DPC++ Runtime: include/CL/sycl/reduction.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,90 +95,82 @@ $(document).ready(function(){initNavTree('reduction_8hpp.html',''); initResizabl
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">reduction.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="accessor__property__list_8hpp_source.html">CL/sycl/ONEAPI/accessor_property_list.hpp</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="group__algorithm_8hpp_source.html">CL/sycl/ONEAPI/group_algorithm.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="accessor_8hpp_source.html">CL/sycl/accessor.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="atomic_8hpp_source.html">CL/sycl/atomic.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="handler_8hpp_source.html">CL/sycl/handler.hpp</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="kernel_8hpp_source.html">CL/sycl/kernel.hpp</a>&gt;</code><br />
-<code>#include &lt;tuple&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ONEAPI_2reduction_8hpp_source.html">CL/sycl/ONEAPI/reduction.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for reduction.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="reduction_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2ONEAPI_2reduction_8hpp" alt=""/></div>
-<map name="include_2CL_2sycl_2ONEAPI_2reduction_8hpp" id="include_2CL_2sycl_2ONEAPI_2reduction_8hpp">
-<area shape="rect" title=" " alt="" coords="2711,5,2883,47"/>
-<area shape="rect" href="accessor__property__list_8hpp.html" title=" " alt="" coords="4149,676,4331,717"/>
-<area shape="rect" href="group__algorithm_8hpp.html" title=" " alt="" coords="980,244,1143,285"/>
-<area shape="rect" href="accessor_8hpp.html" title=" " alt="" coords="3562,415,3718,442"/>
-<area shape="rect" href="atomic_8hpp.html" title=" " alt="" coords="1525,505,1670,531"/>
-<area shape="rect" href="handler_8hpp.html" title=" " alt="" coords="2723,95,2871,121"/>
-<area shape="rect" href="kernel_8hpp.html" title=" " alt="" coords="2151,333,2291,360"/>
-<area shape="rect" title=" " alt="" coords="4501,169,4555,196"/>
-<area shape="rect" href="access_8hpp.html" title=" " alt="" coords="2928,862,3120,889"/>
-<area shape="rect" href="common_8hpp.html" title=" " alt="" coords="3578,944,3777,971"/>
-<area shape="rect" href="property__list__base_8hpp.html" title=" " alt="" coords="3925,855,4093,896"/>
-<area shape="rect" href="property__list_8hpp.html" title=" " alt="" coords="3918,773,4101,799"/>
-<area shape="rect" href="export_8hpp.html" title=" " alt="" coords="2747,1093,2930,1120"/>
-<area shape="rect" href="exception_8hpp.html" title=" " alt="" coords="4325,1019,4489,1045"/>
-<area shape="rect" href="stl_8hpp.html" title=" " alt="" coords="4671,1093,4787,1120"/>
-<area shape="rect" title=" " alt="" coords="13,1168,99,1195"/>
-<area shape="rect" href="spirv__ops_8hpp.html" title=" " alt="" coords="973,594,1155,621"/>
-<area shape="rect" href="spirv__types_8hpp.html" title=" " alt="" coords="1669,773,1864,799"/>
-<area shape="rect" href="spirv__vars_8hpp.html" title=" " alt="" coords="1100,773,1287,799"/>
-<area shape="rect" href="ONEAPI_2atomic_8hpp.html" title=" " alt="" coords="486,333,685,360"/>
-<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="425,505,644,531"/>
-<area shape="rect" href="sub__group_8hpp.html" title=" " alt="" coords="1238,408,1386,449"/>
-<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="2157,765,2299,807"/>
-<area shape="rect" href="spirv_8hpp.html" title=" " alt="" coords="1226,505,1398,531"/>
-<area shape="rect" href="group_8hpp.html" title=" " alt="" coords="1847,505,1985,531"/>
-<area shape="rect" href="nd__item_8hpp.html" title=" " alt="" coords="1783,333,1937,360"/>
-<area shape="rect" href="generic__type__traits_8hpp.html" title=" " alt="" coords="3119,676,3281,717"/>
-<area shape="rect" title=" " alt="" coords="871,862,963,889"/>
-<area shape="rect" href="helpers_8hpp.html" title=" " alt="" coords="1801,683,1991,710"/>
-<area shape="rect" href="id_8hpp.html" title=" " alt="" coords="2335,594,2447,621"/>
-<area shape="rect" title=" " alt="" coords="3235,773,3293,799"/>
-<area shape="rect" href="pointers_8hpp.html" title=" " alt="" coords="3029,594,3182,621"/>
-<area shape="rect" href="item_8hpp.html" title=" " alt="" coords="2009,505,2140,531"/>
-<area shape="rect" href="nd__range_8hpp.html" title=" " alt="" coords="1563,415,1723,442"/>
-<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="4210,594,4347,621"/>
-<area shape="rect" href="accessor__impl_8hpp.html" title=" " alt="" coords="2823,497,2993,539"/>
-<area shape="rect" href="handler__proxy_8hpp.html" title=" " alt="" coords="2825,676,2988,717"/>
-<area shape="rect" href="image__accessor__util_8hpp.html" title=" " alt="" coords="3652,497,3807,539"/>
-<area shape="rect" href="image_8hpp.html" title=" " alt="" coords="3764,594,3905,621"/>
-<area shape="rect" href="sampler_8hpp.html" title=" " alt="" coords="3516,683,3668,710"/>
-<area shape="rect" href="image__ocl__types_8hpp.html" title=" " alt="" coords="3473,497,3628,539"/>
-<area shape="rect" href="accessor__properties_8hpp.html" title=" " alt="" coords="4423,587,4607,628"/>
-<area shape="rect" href="property__list__conversion_8hpp.html" title=" " alt="" coords="3980,587,4135,628"/>
-<area shape="rect" title=" " alt="" coords="1585,594,1652,621"/>
-<area shape="rect" href="event_8hpp.html" title=" " alt="" coords="4301,862,4438,889"/>
-<area shape="rect" href="context_8hpp.html" title=" " alt="" coords="4457,683,4607,710"/>
-<area shape="rect" href="cg_8hpp.html" title=" " alt="" coords="2394,169,2550,196"/>
-<area shape="rect" href="cg__types_8hpp.html" title=" " alt="" coords="2246,251,2445,278"/>
-<area shape="rect" href="interop__handle_8hpp.html" title=" " alt="" coords="2948,333,3145,360"/>
-<area shape="rect" href="os__util_8hpp.html" title=" " alt="" coords="93,944,277,971"/>
+<div class="center"><img src="reduction_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2reduction_8hpp" alt=""/></div>
+<map name="include_2CL_2sycl_2reduction_8hpp" id="include_2CL_2sycl_2reduction_8hpp">
+<area shape="rect" title=" " alt="" coords="3260,5,3472,32"/>
+<area shape="rect" href="ONEAPI_2reduction_8hpp.html" title=" " alt="" coords="3259,80,3473,107"/>
+<area shape="rect" href="accessor__property__list_8hpp.html" title=" " alt="" coords="3761,736,3944,777"/>
+<area shape="rect" href="group__algorithm_8hpp.html" title=" " alt="" coords="642,304,805,345"/>
+<area shape="rect" href="accessor_8hpp.html" title=" " alt="" coords="3288,475,3444,502"/>
+<area shape="rect" href="atomic_8hpp.html" title=" " alt="" coords="1263,565,1408,591"/>
+<area shape="rect" href="handler_8hpp.html" title=" " alt="" coords="3292,155,3440,181"/>
+<area shape="rect" href="kernel_8hpp.html" title=" " alt="" coords="1923,393,2063,420"/>
+<area shape="rect" title=" " alt="" coords="4801,229,4856,256"/>
+<area shape="rect" href="access_8hpp.html" title=" " alt="" coords="2709,922,2901,949"/>
+<area shape="rect" href="common_8hpp.html" title=" " alt="" coords="3311,1004,3509,1031"/>
+<area shape="rect" href="property__list__base_8hpp.html" title=" " alt="" coords="3862,915,4030,956"/>
+<area shape="rect" href="property__list_8hpp.html" title=" " alt="" coords="3976,833,4159,859"/>
+<area shape="rect" href="export_8hpp.html" title=" " alt="" coords="3016,1153,3199,1180"/>
+<area shape="rect" href="exception_8hpp.html" title=" " alt="" coords="4105,1079,4269,1105"/>
+<area shape="rect" href="stl_8hpp.html" title=" " alt="" coords="4579,1153,4695,1180"/>
+<area shape="rect" title=" " alt="" coords="4593,1228,4680,1255"/>
+<area shape="rect" href="spirv__ops_8hpp.html" title=" " alt="" coords="751,654,933,681"/>
+<area shape="rect" href="spirv__types_8hpp.html" title=" " alt="" coords="1206,833,1401,859"/>
+<area shape="rect" href="spirv__vars_8hpp.html" title=" " alt="" coords="619,833,806,859"/>
+<area shape="rect" href="ONEAPI_2atomic_8hpp.html" title=" " alt="" coords="285,393,484,420"/>
+<area shape="rect" href="functional_8hpp.html" title=" " alt="" coords="214,565,433,591"/>
+<area shape="rect" href="sub__group_8hpp.html" title=" " alt="" coords="1007,468,1155,509"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1953,825,2096,867"/>
+<area shape="rect" href="spirv_8hpp.html" title=" " alt="" coords="964,565,1136,591"/>
+<area shape="rect" href="group_8hpp.html" title=" " alt="" coords="1535,565,1672,591"/>
+<area shape="rect" href="nd__item_8hpp.html" title=" " alt="" coords="1492,393,1645,420"/>
+<area shape="rect" href="generic__type__traits_8hpp.html" title=" " alt="" coords="2857,736,3019,777"/>
+<area shape="rect" title=" " alt="" coords="1072,922,1164,949"/>
+<area shape="rect" href="helpers_8hpp.html" title=" " alt="" coords="1307,743,1497,770"/>
+<area shape="rect" href="id_8hpp.html" title=" " alt="" coords="1961,654,2073,681"/>
+<area shape="rect" href="pointers_8hpp.html" title=" " alt="" coords="2705,654,2859,681"/>
+<area shape="rect" href="item_8hpp.html" title=" " alt="" coords="2051,565,2182,591"/>
+<area shape="rect" href="nd__range_8hpp.html" title=" " alt="" coords="1542,475,1702,502"/>
+<area shape="rect" href="buffer_8hpp.html" title=" " alt="" coords="4196,654,4333,681"/>
+<area shape="rect" href="accessor__impl_8hpp.html" title=" " alt="" coords="2611,557,2782,599"/>
+<area shape="rect" href="handler__proxy_8hpp.html" title=" " alt="" coords="3473,825,3635,867"/>
+<area shape="rect" href="image__accessor__util_8hpp.html" title=" " alt="" coords="3110,557,3265,599"/>
+<area shape="rect" href="image_8hpp.html" title=" " alt="" coords="3750,654,3891,681"/>
+<area shape="rect" href="sampler_8hpp.html" title=" " alt="" coords="3195,743,3347,770"/>
+<area shape="rect" href="image__ocl__types_8hpp.html" title=" " alt="" coords="3289,557,3443,599"/>
+<area shape="rect" href="accessor__properties_8hpp.html" title=" " alt="" coords="3390,647,3574,688"/>
+<area shape="rect" href="property__list__conversion_8hpp.html" title=" " alt="" coords="3966,647,4121,688"/>
+<area shape="rect" title=" " alt="" coords="1313,654,1379,681"/>
+<area shape="rect" href="event_8hpp.html" title=" " alt="" coords="4156,922,4293,949"/>
+<area shape="rect" href="context_8hpp.html" title=" " alt="" coords="4273,743,4422,770"/>
+<area shape="rect" href="cg_8hpp.html" title=" " alt="" coords="2179,229,2335,256"/>
+<area shape="rect" href="cg__types_8hpp.html" title=" " alt="" coords="2027,311,2225,338"/>
+<area shape="rect" href="interop__handle_8hpp.html" title=" " alt="" coords="2822,393,3019,420"/>
+<area shape="rect" href="os__util_8hpp.html" title=" " alt="" coords="4339,1004,4523,1031"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="reduction_8hpp__dep__incl.png" border="0" usemap="#include_2CL_2sycl_2ONEAPI_2reduction_8hppdep" alt=""/></div>
-<map name="include_2CL_2sycl_2ONEAPI_2reduction_8hppdep" id="include_2CL_2sycl_2ONEAPI_2reduction_8hppdep">
-<area shape="rect" title=" " alt="" coords="513,5,685,47"/>
-<area shape="rect" href="CL_2sycl_8hpp.html" title=" " alt="" coords="427,95,574,121"/>
-<area shape="rect" href="reduction_8cpp.html" title=" " alt="" coords="599,95,797,121"/>
-<area shape="rect" href="level__zero_8hpp.html" title=" " alt="" coords="5,169,183,211"/>
-<area shape="rect" href="fpga__device__selector_8hpp.html" title=" " alt="" coords="207,169,397,211"/>
-<area shape="rect" href="sycl_2sycl_8hpp.html" title=" " alt="" coords="422,177,579,203"/>
-<area shape="rect" href="level__zero_8cpp.html" title=" " alt="" coords="604,169,763,211"/>
-<area shape="rect" href="opencl_8cpp.html" title=" " alt="" coords="787,177,985,203"/>
-<area shape="rect" href="fpga__extensions_8hpp.html" title=" " alt="" coords="221,259,383,300"/>
+<div class="center"><img src="reduction_8hpp__dep__incl.png" border="0" usemap="#include_2CL_2sycl_2reduction_8hppdep" alt=""/></div>
+<map name="include_2CL_2sycl_2reduction_8hppdep" id="include_2CL_2sycl_2reduction_8hppdep">
+<area shape="rect" title=" " alt="" coords="395,5,607,32"/>
+<area shape="rect" href="CL_2sycl_8hpp.html" title=" " alt="" coords="427,80,574,107"/>
+<area shape="rect" href="level__zero_8hpp.html" title=" " alt="" coords="5,155,183,196"/>
+<area shape="rect" href="fpga__device__selector_8hpp.html" title=" " alt="" coords="207,155,397,196"/>
+<area shape="rect" href="sycl_2sycl_8hpp.html" title=" " alt="" coords="422,162,579,189"/>
+<area shape="rect" href="level__zero_8cpp.html" title=" " alt="" coords="604,155,763,196"/>
+<area shape="rect" href="opencl_8cpp.html" title=" " alt="" coords="787,162,985,189"/>
+<area shape="rect" href="fpga__extensions_8hpp.html" title=" " alt="" coords="221,244,383,285"/>
 </map>
 </div>
 </div>
@@ -186,75 +178,6 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1has__known__identity__impl.html">cl::sycl::ONEAPI::detail::has_known_identity_impl&lt; BinaryOperation, AccumulatorT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, AccumulatorT, typename &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat377b45c82f44c166b2af9ea0191a0224.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, AccumulatorT, typename std::enable_if&lt; IsZeroIdentityOp&lt; AccumulatorT, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns zero as identity for ADD, OR, XOR operations.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat377b45c82f44c166b2af9ea0191a0224.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_09c506e78d754d5bae53aae2ee053efa5.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, half, typename std::enable_if&lt; IsZeroIdentityOp&lt; half, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat60e47192ece495c25d821b13daa3e860.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, AccumulatorT, typename std::enable_if&lt; IsOneIdentityOp&lt; AccumulatorT, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one as identify for MULTIPLY operations.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat60e47192ece495c25d821b13daa3e860.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_096c03ad93c3a652158038df4c49dddeb.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, half, typename std::enable_if&lt; IsOneIdentityOp&lt; half, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat86d4a315b7a28f3f97c71e6b28bb28b2.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, AccumulatorT, typename std::enable_if&lt; IsOnesIdentityOp&lt; AccumulatorT, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns bit image consisting of all ones as identity for AND operations.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat86d4a315b7a28f3f97c71e6b28bb28b2.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulatb98a2748092cd2edc90c9f63f96ba941.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, AccumulatorT, typename std::enable_if&lt; IsMinimumIdentityOp&lt; AccumulatorT, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns maximal possible value as identity for MIN operations.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulatb98a2748092cd2edc90c9f63f96ba941.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat5d6cc9aa9bc76aecc96aeff661829736.html">cl::sycl::ONEAPI::detail::known_identity_impl&lt; BinaryOperation, AccumulatorT, typename std::enable_if&lt; IsMaximumIdentityOp&lt; AccumulatorT, BinaryOperation &gt;::value &gt;::type &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns minimal possible value as identity for MAX operations.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat5d6cc9aa9bc76aecc96aeff661829736.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html">cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, Subst &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class that is used to represent objects that are passed to user's lambda functions and representing users' reduction variable.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html">cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialization of the generic class 'reducer'.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl__base.html">cl::sycl::ONEAPI::detail::reduction_impl_base</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base non-template class which is a base class for all reduction implementation classes.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl__base.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html">cl::sycl::ONEAPI::detail::AreAllButLastReductions&lt; FirstT, RestT &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predicate returning true if all template type parameters except the last one are reductions.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions_3_01T_01_4.html">cl::sycl::ONEAPI::detail::AreAllButLastReductions&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper specialization of <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html" title="Predicate returning true if all template type parameters except the last one are reductions.">AreAllButLastReductions</a> for one element only.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions_3_01T_01_4.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">cl::sycl::ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, AccMode, IsPlaceholder &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class encapsulates the reduction variable/accessor, the reduction operator and an optional operator identity.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html">cl::sycl::ONEAPI::detail::__sycl_reduction_main_kernel&lt; T1, B1, B2, T2 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the forward declaration for the classes that help to create names for additional kernels.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__aux__kernel.html">cl::sycl::ONEAPI::detail::__sycl_reduction_aux_kernel&lt; T1, B1, B2, T2 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html">cl::sycl::ONEAPI::detail::get_reduction_main_kernel_name_t&lt; Name, Type, B1, B2, T3 &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper structs to get additional kernel name types based on given <code>Name</code> and additional template parameters helping to distinguish kernels.  <a href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html">cl::sycl::ONEAPI::detail::get_reduction_aux_kernel_name_t&lt; Name, Type, B1, B2, T3 &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate.html">cl::sycl::ONEAPI::detail::IsRWReductionPredicate</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func.html">cl::sycl::ONEAPI::detail::IsRWReductionPredicate::Func&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate.html">cl::sycl::ONEAPI::detail::IsNonUsmReductionPredicate</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html">cl::sycl::ONEAPI::detail::IsNonUsmReductionPredicate::Func&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate.html">cl::sycl::ONEAPI::detail::EmptyReductionPredicate</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate_1_1Func.html">cl::sycl::ONEAPI::detail::EmptyReductionPredicate::Func&lt; T &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement.html">cl::sycl::ONEAPI::detail::FilterElement&lt; Cond, I &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1has__known__identity.html">cl::sycl::ONEAPI::has_known_identity&lt; BinaryOperation, AccumulatorT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1known__identity.html">cl::sycl::ONEAPI::known_identity&lt; BinaryOperation, AccumulatorT &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">cl::sycl::has_known_identity&lt; BinaryOperation, AccumulatorT &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcl_1_1sycl_1_1known__identity.html">cl::sycl::known_identity&lt; BinaryOperation, AccumulatorT &gt;</a></td></tr>
@@ -267,214 +190,40 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacecl_1_1sycl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html">cl::sycl</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1ONEAPI"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html">cl::sycl::ONEAPI</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacecl_1_1sycl_1_1ONEAPI_1_1detail"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html">cl::sycl::ONEAPI::detail</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aabee428d481733a0d40614f0c256a9a7"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:aabee428d481733a0d40614f0c256a9a7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aabee428d481733a0d40614f0c256a9a7">cl::sycl::ONEAPI::detail::IsReduPlus</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, ONEAPI::plus&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, ONEAPI::plus&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:aabee428d481733a0d40614f0c256a9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbdb6da3f711dd51910eddd88da3e37c"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:abbdb6da3f711dd51910eddd88da3e37c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#abbdb6da3f711dd51910eddd88da3e37c">cl::sycl::ONEAPI::detail::IsReduMultiplies</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, std::multiplies&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, std::multiplies&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:abbdb6da3f711dd51910eddd88da3e37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f7c6b03ba0c33e73c29af3ace08726"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a47f7c6b03ba0c33e73c29af3ace08726"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a47f7c6b03ba0c33e73c29af3ace08726">cl::sycl::ONEAPI::detail::IsReduMinimum</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, ONEAPI::minimum&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, ONEAPI::minimum&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:a47f7c6b03ba0c33e73c29af3ace08726"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49c47eb6a505d0e10caa89e83ecf287"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ae49c47eb6a505d0e10caa89e83ecf287"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ae49c47eb6a505d0e10caa89e83ecf287">cl::sycl::ONEAPI::detail::IsReduMaximum</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, ONEAPI::maximum&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, ONEAPI::maximum&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:ae49c47eb6a505d0e10caa89e83ecf287"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92361e67765cf6e58472b997fc7ac205"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a92361e67765cf6e58472b997fc7ac205"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a92361e67765cf6e58472b997fc7ac205">cl::sycl::ONEAPI::detail::IsReduBitOR</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, ONEAPI::bit_or&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, ONEAPI::bit_or&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:a92361e67765cf6e58472b997fc7ac205"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a221889a8a75fcfa30f935e7bca046012"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a221889a8a75fcfa30f935e7bca046012"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a221889a8a75fcfa30f935e7bca046012">cl::sycl::ONEAPI::detail::IsReduBitXOR</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, ONEAPI::bit_xor&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, ONEAPI::bit_xor&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:a221889a8a75fcfa30f935e7bca046012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1437f8eaa10b6ecc68ff175dc19a2de5"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a1437f8eaa10b6ecc68ff175dc19a2de5"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a1437f8eaa10b6ecc68ff175dc19a2de5">cl::sycl::ONEAPI::detail::IsReduBitAND</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; std::is_same&lt; BinaryOperation, ONEAPI::bit_and&lt; T &gt; &gt;::value||std::is_same&lt; BinaryOperation, ONEAPI::bit_and&lt; void &gt; &gt;::value &gt;</td></tr>
-<tr class="separator:a1437f8eaa10b6ecc68ff175dc19a2de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12d4d36f7719a7bb9bdaf33e38737636"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a12d4d36f7719a7bb9bdaf33e38737636"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a12d4d36f7719a7bb9bdaf33e38737636">cl::sycl::ONEAPI::detail::IsReduOptForFastAtomicFetch</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; is_sgeninteger&lt; T &gt;::value &amp;&amp;sycl::detail::IsValidAtomicType&lt; T &gt;::value &amp;&amp;(IsReduPlus&lt; T, BinaryOperation &gt;::value||IsReduMinimum&lt; T, BinaryOperation &gt;::value||IsReduMaximum&lt; T, BinaryOperation &gt;::value||IsReduBitOR&lt; T, BinaryOperation &gt;::value||IsReduBitXOR&lt; T, BinaryOperation &gt;::value||IsReduBitAND&lt; T, BinaryOperation &gt;::value)&gt;</td></tr>
-<tr class="separator:a12d4d36f7719a7bb9bdaf33e38737636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad32b845558637284e2308e46e77d87d7"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ad32b845558637284e2308e46e77d87d7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ad32b845558637284e2308e46e77d87d7">cl::sycl::ONEAPI::detail::IsReduOptForFastReduce</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt;((is_sgeninteger&lt; T &gt;::value &amp;&amp;(sizeof(T)==32||sizeof(T)==64))||is_sgenfloat&lt; T &gt;::value) &amp;&amp;(IsReduPlus&lt; T, BinaryOperation &gt;::value||IsReduMinimum&lt; T, BinaryOperation &gt;::value||IsReduMaximum&lt; T, BinaryOperation &gt;::value)&gt;</td></tr>
-<tr class="separator:ad32b845558637284e2308e46e77d87d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad191b65be9ba2ac5ac1e0fe42ee5c810"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ad191b65be9ba2ac5ac1e0fe42ee5c810"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ad191b65be9ba2ac5ac1e0fe42ee5c810">cl::sycl::ONEAPI::detail::IsZeroIdentityOp</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt;(is_sgeninteger&lt; T &gt;::value &amp;&amp;(IsReduPlus&lt; T, BinaryOperation &gt;::value||IsReduBitOR&lt; T, BinaryOperation &gt;::value||IsReduBitXOR&lt; T, BinaryOperation &gt;::value))||(is_sgenfloat&lt; T &gt;::value &amp;&amp;IsReduPlus&lt; T, BinaryOperation &gt;::value)&gt;</td></tr>
-<tr class="separator:ad191b65be9ba2ac5ac1e0fe42ee5c810"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a93eb15621a955980afae05a70e1fd"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a65a93eb15621a955980afae05a70e1fd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a65a93eb15621a955980afae05a70e1fd">cl::sycl::ONEAPI::detail::IsOneIdentityOp</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt;(is_sgeninteger&lt; T &gt;::value||is_sgenfloat&lt; T &gt;::value) &amp;&amp;IsReduMultiplies&lt; T, BinaryOperation &gt;::value &gt;</td></tr>
-<tr class="separator:a65a93eb15621a955980afae05a70e1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab484969b156dd348363e9ffb9c729fbb"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:ab484969b156dd348363e9ffb9c729fbb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ab484969b156dd348363e9ffb9c729fbb">cl::sycl::ONEAPI::detail::IsOnesIdentityOp</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; is_sgeninteger&lt; T &gt;::value &amp;&amp;IsReduBitAND&lt; T, BinaryOperation &gt;::value &gt;</td></tr>
-<tr class="separator:ab484969b156dd348363e9ffb9c729fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23b04366f008e877564e827b3df189f2"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a23b04366f008e877564e827b3df189f2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a23b04366f008e877564e827b3df189f2">cl::sycl::ONEAPI::detail::IsMinimumIdentityOp</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt;(is_sgeninteger&lt; T &gt;::value||is_sgenfloat&lt; T &gt;::value) &amp;&amp;IsReduMinimum&lt; T, BinaryOperation &gt;::value &gt;</td></tr>
-<tr class="separator:a23b04366f008e877564e827b3df189f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9869c929efa98386fd09f7ea86d6332"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:af9869c929efa98386fd09f7ea86d6332"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#af9869c929efa98386fd09f7ea86d6332">cl::sycl::ONEAPI::detail::IsMaximumIdentityOp</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt;(is_sgeninteger&lt; T &gt;::value||is_sgenfloat&lt; T &gt;::value) &amp;&amp;IsReduMaximum&lt; T, BinaryOperation &gt;::value &gt;</td></tr>
-<tr class="separator:af9869c929efa98386fd09f7ea86d6332"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d0d7699d6bc546357eeb7457ee7fadb"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a3d0d7699d6bc546357eeb7457ee7fadb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a3d0d7699d6bc546357eeb7457ee7fadb">cl::sycl::ONEAPI::detail::IsKnownIdentityOp</a> = <a class="el" href="classbool__constant.html">bool_constant</a>&lt; IsZeroIdentityOp&lt; T, BinaryOperation &gt;::value||IsOneIdentityOp&lt; T, BinaryOperation &gt;::value||IsOnesIdentityOp&lt; T, BinaryOperation &gt;::value||IsMinimumIdentityOp&lt; T, BinaryOperation &gt;::value||IsMaximumIdentityOp&lt; T, BinaryOperation &gt;::value &gt;</td></tr>
-<tr class="separator:a3d0d7699d6bc546357eeb7457ee7fadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a217c7e07fa61a2c040a362501711afb4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a217c7e07fa61a2c040a362501711afb4">cl::sycl::ONEAPI::detail::reduGetMaxWGSize</a> (shared_ptr_class&lt; queue_impl &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
-<tr class="separator:a217c7e07fa61a2c040a362501711afb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c46049453ab43445567f64b0ac1953a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a4c46049453ab43445567f64b0ac1953a">cl::sycl::ONEAPI::detail::reduComputeWGSize</a> (size_t NWorkItems, size_t MaxWGSize, size_t &amp;NWorkGroups)</td></tr>
-<tr class="separator:a4c46049453ab43445567f64b0ac1953a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc3a1753fecee40b3b8494b118c64fb"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool IsPow2WG, typename OutputT &gt; </td></tr>
-<tr class="memitem:a2bc3a1753fecee40b3b8494b118c64fb"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; Reduction::has_fast_reduce &amp;&amp;Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a2bc3a1753fecee40b3b8494b118c64fb">cl::sycl::ONEAPI::detail::reduCGFuncImpl</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, Reduction &amp;, OutputT Out)</td></tr>
-<tr class="memdesc:a2bc3a1753fecee40b3b8494b118c64fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function KernelFunc and also does one iteration of reduction of elements computed in user's lambda function.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a2bc3a1753fecee40b3b8494b118c64fb">More...</a><br /></td></tr>
-<tr class="separator:a2bc3a1753fecee40b3b8494b118c64fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8af65798365e0c04b8947572b816423"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool IsPow2WG, typename OutputT &gt; </td></tr>
-<tr class="memitem:ab8af65798365e0c04b8947572b816423"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!Reduction::has_fast_reduce &amp;&amp;Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ab8af65798365e0c04b8947572b816423">cl::sycl::ONEAPI::detail::reduCGFuncImpl</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, Reduction &amp;, OutputT Out)</td></tr>
-<tr class="memdesc:ab8af65798365e0c04b8947572b816423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function KernelFunc and also does one iteration of reduction of elements computed in user's lambda function.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ab8af65798365e0c04b8947572b816423">More...</a><br /></td></tr>
-<tr class="separator:ab8af65798365e0c04b8947572b816423"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa82993adde102ded5bac7919ab02bd0e"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , typename OutputT &gt; </td></tr>
-<tr class="memitem:aa82993adde102ded5bac7919ab02bd0e"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aa82993adde102ded5bac7919ab02bd0e">cl::sycl::ONEAPI::detail::reduCGFunc</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, Reduction &amp;Redu, OutputT Out)</td></tr>
-<tr class="separator:aa82993adde102ded5bac7919ab02bd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb60e7c7a1bca5b0c2313b9a3311fda3"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool IsPow2WG, typename OutputT &gt; </td></tr>
-<tr class="memitem:aeb60e7c7a1bca5b0c2313b9a3311fda3"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aeb60e7c7a1bca5b0c2313b9a3311fda3">cl::sycl::ONEAPI::detail::reduCGFuncImpl</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, Reduction &amp;, OutputT Out)</td></tr>
-<tr class="memdesc:aeb60e7c7a1bca5b0c2313b9a3311fda3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function and does one iteration of reduction of elements in each of work-groups.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aeb60e7c7a1bca5b0c2313b9a3311fda3">More...</a><br /></td></tr>
-<tr class="separator:aeb60e7c7a1bca5b0c2313b9a3311fda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87db5cea97149f5229b276e5e4495df4"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction , bool IsPow2WG, typename OutputT &gt; </td></tr>
-<tr class="memitem:a87db5cea97149f5229b276e5e4495df4"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a87db5cea97149f5229b276e5e4495df4">cl::sycl::ONEAPI::detail::reduCGFuncImpl</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, Reduction &amp;Redu, OutputT Out)</td></tr>
-<tr class="memdesc:a87db5cea97149f5229b276e5e4495df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that calls user's lambda function.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a87db5cea97149f5229b276e5e4495df4">More...</a><br /></td></tr>
-<tr class="separator:a87db5cea97149f5229b276e5e4495df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa785281ba708736f7e9842f2741462ad"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, class Reduction &gt; </td></tr>
-<tr class="memitem:aa785281ba708736f7e9842f2741462ad"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aa785281ba708736f7e9842f2741462ad">cl::sycl::ONEAPI::detail::reduCGFunc</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, Reduction &amp;Redu)</td></tr>
-<tr class="separator:aa785281ba708736f7e9842f2741462ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a751a0716712a4169b7c000703a6a5ad0"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , bool UniformWG, class Reduction , typename InputT , typename OutputT &gt; </td></tr>
-<tr class="memitem:a751a0716712a4169b7c000703a6a5ad0"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt; Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a751a0716712a4169b7c000703a6a5ad0">cl::sycl::ONEAPI::detail::reduAuxCGFuncImpl</a> (handler &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, Reduction &amp;, InputT In, OutputT Out)</td></tr>
-<tr class="memdesc:a751a0716712a4169b7c000703a6a5ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a751a0716712a4169b7c000703a6a5ad0">More...</a><br /></td></tr>
-<tr class="separator:a751a0716712a4169b7c000703a6a5ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add7ac407331b58301b8a11ec303c1268"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , bool UniformPow2WG, class Reduction , typename InputT , typename OutputT &gt; </td></tr>
-<tr class="memitem:add7ac407331b58301b8a11ec303c1268"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!Reduction::has_fast_reduce &amp;&amp;!Reduction::has_fast_atomics &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#add7ac407331b58301b8a11ec303c1268">cl::sycl::ONEAPI::detail::reduAuxCGFuncImpl</a> (handler &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, Reduction &amp;Redu, InputT In, OutputT Out)</td></tr>
-<tr class="memdesc:add7ac407331b58301b8a11ec303c1268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#add7ac407331b58301b8a11ec303c1268">More...</a><br /></td></tr>
-<tr class="separator:add7ac407331b58301b8a11ec303c1268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37c7b50c0ee12720c0a09d771f2a7faf"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , class Reduction &gt; </td></tr>
-<tr class="memitem:a37c7b50c0ee12720c0a09d771f2a7faf"><td class="memTemplItemLeft" align="right" valign="top">enable_if_t&lt;!Reduction::has_fast_atomics, size_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a37c7b50c0ee12720c0a09d771f2a7faf">cl::sycl::ONEAPI::detail::reduAuxCGFunc</a> (handler &amp;CGH, size_t NWorkItems, size_t MaxWGSize, Reduction &amp;Redu)</td></tr>
-<tr class="memdesc:a37c7b50c0ee12720c0a09d771f2a7faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a command group function that enqueues a kernel that does one iteration of reduction of elements in each of work-groups.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a37c7b50c0ee12720c0a09d771f2a7faf">More...</a><br /></td></tr>
-<tr class="separator:a37c7b50c0ee12720c0a09d771f2a7faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24b2ce7975f38e956049f0b0bfab67b5"><td class="memTemplParams" colspan="2">template&lt;typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a24b2ce7975f38e956049f0b0bfab67b5"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a24b2ce7975f38e956049f0b0bfab67b5">cl::sycl::ONEAPI::detail::createReduLocalAccs</a> (size_t Size, handler &amp;CGH, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="memdesc:a24b2ce7975f38e956049f0b0bfab67b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the given 'Reductions' types pack and indices enumerating only the reductions for which a local accessors are needed, this function creates those local accessors and returns a tuple consisting of them.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a24b2ce7975f38e956049f0b0bfab67b5">More...</a><br /></td></tr>
-<tr class="separator:a24b2ce7975f38e956049f0b0bfab67b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f6d87a2d419aaa0dc096c438d8260f9"><td class="memTemplParams" colspan="2">template&lt;bool IsOneWG, typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a2f6d87a2d419aaa0dc096c438d8260f9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a2f6d87a2d419aaa0dc096c438d8260f9">cl::sycl::ONEAPI::detail::createReduOutAccs</a> (size_t NWorkGroups, handler &amp;CGH, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="memdesc:a2f6d87a2d419aaa0dc096c438d8260f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the given 'Reductions' types pack and indices enumerating them this function either creates new temporary accessors for partial sums (if IsOneWG is false) or returns user's accessor/USM-pointer if (IsOneWG is true).  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a2f6d87a2d419aaa0dc096c438d8260f9">More...</a><br /></td></tr>
-<tr class="separator:a2f6d87a2d419aaa0dc096c438d8260f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0174d9eaf6a0628192b10b9c2a44a6fd"><td class="memTemplParams" colspan="2">template&lt;typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a0174d9eaf6a0628192b10b9c2a44a6fd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a0174d9eaf6a0628192b10b9c2a44a6fd">cl::sycl::ONEAPI::detail::getReadAccsToPreviousPartialReds</a> (handler &amp;CGH, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="memdesc:a0174d9eaf6a0628192b10b9c2a44a6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the given 'Reductions' types pack and indices enumerating them this function returns accessors to buffers holding partial sums generated in the previous kernel invocation.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a0174d9eaf6a0628192b10b9c2a44a6fd">More...</a><br /></td></tr>
-<tr class="separator:a0174d9eaf6a0628192b10b9c2a44a6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5889f3973f4dc439f59e30edca974d2"><td class="memTemplParams" colspan="2">template&lt;typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:ac5889f3973f4dc439f59e30edca974d2"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; typename Reductions::result_type... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ac5889f3973f4dc439f59e30edca974d2">cl::sycl::ONEAPI::detail::getReduIdentities</a> (std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:ac5889f3973f4dc439f59e30edca974d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d65ed67e72d8acecfd1aaf51378c2bb"><td class="memTemplParams" colspan="2">template&lt;typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a9d65ed67e72d8acecfd1aaf51378c2bb"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; typename Reductions::binary_operation... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a9d65ed67e72d8acecfd1aaf51378c2bb">cl::sycl::ONEAPI::detail::getReduBOPs</a> (std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a9d65ed67e72d8acecfd1aaf51378c2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96c649028c7327b2546f9d3e533c3df3"><td class="memTemplParams" colspan="2">template&lt;typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a96c649028c7327b2546f9d3e533c3df3"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; typename Reductions::reducer_type... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a96c649028c7327b2546f9d3e533c3df3">cl::sycl::ONEAPI::detail::createReducers</a> (std::tuple&lt; typename Reductions::result_type... &gt; Identities, std::tuple&lt; typename Reductions::binary_operation... &gt; BOPsTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a96c649028c7327b2546f9d3e533c3df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfeae454f699397e3f4ea8afdd04b117"><td class="memTemplParams" colspan="2">template&lt;typename KernelType , int Dims, typename... ReducerT, size_t... Is&gt; </td></tr>
-<tr class="memitem:abfeae454f699397e3f4ea8afdd04b117"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#abfeae454f699397e3f4ea8afdd04b117">cl::sycl::ONEAPI::detail::callReduUserKernelFunc</a> (KernelType KernelFunc, nd_item&lt; Dims &gt; NDIt, std::tuple&lt; ReducerT... &gt; &amp;Reducers, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:abfeae454f699397e3f4ea8afdd04b117"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a258c1a7a4c4277b986119adc3aa6377a"><td class="memTemplParams" colspan="2">template&lt;bool Pow2WG, typename... LocalAccT, typename... ReducerT, typename... ResultT, size_t... Is&gt; </td></tr>
-<tr class="memitem:a258c1a7a4c4277b986119adc3aa6377a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a258c1a7a4c4277b986119adc3aa6377a">cl::sycl::ONEAPI::detail::initReduLocalAccs</a> (size_t LID, size_t WGSize, std::tuple&lt; LocalAccT... &gt; LocalAccs, const std::tuple&lt; ReducerT... &gt; &amp;Reducers, const std::tuple&lt; ResultT... &gt; Identities, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a258c1a7a4c4277b986119adc3aa6377a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e08d43ddc818b5349ff9a1327cdfe57"><td class="memTemplParams" colspan="2">template&lt;bool UniformPow2WG, typename... LocalAccT, typename... InputAccT, typename... ResultT, size_t... Is&gt; </td></tr>
-<tr class="memitem:a3e08d43ddc818b5349ff9a1327cdfe57"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a3e08d43ddc818b5349ff9a1327cdfe57">cl::sycl::ONEAPI::detail::initReduLocalAccs</a> (size_t LID, size_t GID, size_t NWorkItems, size_t WGSize, std::tuple&lt; InputAccT... &gt; LocalAccs, std::tuple&lt; LocalAccT... &gt; InputAccs, const std::tuple&lt; ResultT... &gt; Identities, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a3e08d43ddc818b5349ff9a1327cdfe57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a494002ba6678898ce0899173e4f7b8ea"><td class="memTemplParams" colspan="2">template&lt;typename... LocalAccT, typename... BOPsT, size_t... Is&gt; </td></tr>
-<tr class="memitem:a494002ba6678898ce0899173e4f7b8ea"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a494002ba6678898ce0899173e4f7b8ea">cl::sycl::ONEAPI::detail::reduceReduLocalAccs</a> (size_t IndexA, size_t IndexB, std::tuple&lt; LocalAccT... &gt; LocalAccs, std::tuple&lt; BOPsT... &gt; BOPs, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a494002ba6678898ce0899173e4f7b8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a478544b50cd05b19f2e852533743272d"><td class="memTemplParams" colspan="2">template&lt;bool Pow2WG, typename... Reductions, typename... OutAccT, typename... LocalAccT, typename... BOPsT, size_t... Is, size_t... RWIs&gt; </td></tr>
-<tr class="memitem:a478544b50cd05b19f2e852533743272d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a478544b50cd05b19f2e852533743272d">cl::sycl::ONEAPI::detail::writeReduSumsToOutAccs</a> (size_t OutAccIndex, size_t WGSize, std::tuple&lt; Reductions... &gt; *, std::tuple&lt; OutAccT... &gt; OutAccs, std::tuple&lt; LocalAccT... &gt; LocalAccs, std::tuple&lt; BOPsT... &gt; BOPs, std::index_sequence&lt; Is... &gt;, std::index_sequence&lt; RWIs... &gt;)</td></tr>
-<tr class="separator:a478544b50cd05b19f2e852533743272d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a7242698377fedc4af6ec44ae91a502"><td class="memItemLeft" align="right" valign="top">constexpr std::index_sequence&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a0a7242698377fedc4af6ec44ae91a502">cl::sycl::ONEAPI::detail::concat_sequences</a> (std::index_sequence&lt;&gt;)</td></tr>
-<tr class="separator:a0a7242698377fedc4af6ec44ae91a502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c437b056efe47249297578bb9327602"><td class="memTemplParams" colspan="2">template&lt;size_t I&gt; </td></tr>
-<tr class="memitem:a4c437b056efe47249297578bb9327602"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::index_sequence&lt; I &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a4c437b056efe47249297578bb9327602">cl::sycl::ONEAPI::detail::concat_sequences</a> (std::index_sequence&lt; I &gt;)</td></tr>
-<tr class="separator:a4c437b056efe47249297578bb9327602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c3e7fdb892cbab34f159c491f61737"><td class="memTemplParams" colspan="2">template&lt;size_t... Is, size_t... Js&gt; </td></tr>
-<tr class="memitem:ad4c3e7fdb892cbab34f159c491f61737"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::index_sequence&lt; Is..., Js... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ad4c3e7fdb892cbab34f159c491f61737">cl::sycl::ONEAPI::detail::concat_sequences</a> (std::index_sequence&lt; Is... &gt;, std::index_sequence&lt; Js... &gt;)</td></tr>
-<tr class="separator:ad4c3e7fdb892cbab34f159c491f61737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6241aafefa9161c2bbd776376c5b7a38"><td class="memTemplParams" colspan="2">template&lt;size_t... Is, size_t... Js, class... Rs&gt; </td></tr>
-<tr class="memitem:a6241aafefa9161c2bbd776376c5b7a38"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a6241aafefa9161c2bbd776376c5b7a38">cl::sycl::ONEAPI::detail::concat_sequences</a> (std::index_sequence&lt; Is... &gt;, std::index_sequence&lt; Js... &gt;, Rs...)</td></tr>
-<tr class="separator:a6241aafefa9161c2bbd776376c5b7a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e445a393068cdb0011c300613326461"><td class="memTemplParams" colspan="2">template&lt;typename... T, typename FunctorT , size_t... Is, std::enable_if_t&lt;(sizeof...(Is) &gt; 0), int &gt; Z = 0&gt; </td></tr>
-<tr class="memitem:a9e445a393068cdb0011c300613326461"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a9e445a393068cdb0011c300613326461">cl::sycl::ONEAPI::detail::filterSequenceHelper</a> (FunctorT, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="memdesc:a9e445a393068cdb0011c300613326461"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each index 'I' from the given indices pack 'Is' this function initially creates a number of short index_sequences, where each of such short index sequences is either empty (if the given Functor returns false for the type T[I]) or 1 element 'I' (otherwise).  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a9e445a393068cdb0011c300613326461">More...</a><br /></td></tr>
-<tr class="separator:a9e445a393068cdb0011c300613326461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae3c137b243116203dc5a3bc48ed3300"><td class="memTemplParams" colspan="2">template&lt;typename... T, typename FunctorT , size_t... Is&gt; </td></tr>
-<tr class="memitem:aae3c137b243116203dc5a3bc48ed3300"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aae3c137b243116203dc5a3bc48ed3300">cl::sycl::ONEAPI::detail::filterSequence</a> (FunctorT F, std::index_sequence&lt; Is... &gt; Indices)</td></tr>
-<tr class="memdesc:aae3c137b243116203dc5a3bc48ed3300"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each index 'I' from the given indices pack 'Is' this function returns an index sequence consisting of only those 'I's for which the 'FunctorT' applied to 'T[I]' returns true.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aae3c137b243116203dc5a3bc48ed3300">More...</a><br /></td></tr>
-<tr class="separator:aae3c137b243116203dc5a3bc48ed3300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e64e9a547e8478e5711be4cdb39da23"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , bool Pow2WG, bool IsOneWG, typename KernelType , int Dims, typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a5e64e9a547e8478e5711be4cdb39da23"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a5e64e9a547e8478e5711be4cdb39da23">cl::sycl::ONEAPI::detail::reduCGFuncImpl</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt; ReduIndices)</td></tr>
-<tr class="separator:a5e64e9a547e8478e5711be4cdb39da23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75e3022c2d6eecf4038137e64748696a"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , int Dims, typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a75e3022c2d6eecf4038137e64748696a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a75e3022c2d6eecf4038137e64748696a">cl::sycl::ONEAPI::detail::reduCGFunc</a> (handler &amp;CGH, KernelType KernelFunc, const nd_range&lt; Dims &gt; &amp;Range, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a75e3022c2d6eecf4038137e64748696a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af75414cabc5c4f5eb801977a7dc89df9"><td class="memTemplParams" colspan="2">template&lt;typename HandlerT &gt; </td></tr>
-<tr class="memitem:af75414cabc5c4f5eb801977a7dc89df9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same&lt; HandlerT, handler &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#af75414cabc5c4f5eb801977a7dc89df9">cl::sycl::ONEAPI::detail::associateReduAccsWithHandlerHelper</a> (HandlerT &amp;)</td></tr>
-<tr class="separator:af75414cabc5c4f5eb801977a7dc89df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0be89110391883f041f2a66e3161450f"><td class="memTemplParams" colspan="2">template&lt;typename ReductionT &gt; </td></tr>
-<tr class="memitem:a0be89110391883f041f2a66e3161450f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a0be89110391883f041f2a66e3161450f">cl::sycl::ONEAPI::detail::associateReduAccsWithHandlerHelper</a> (handler &amp;CGH, ReductionT &amp;Redu)</td></tr>
-<tr class="separator:a0be89110391883f041f2a66e3161450f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad08ed92651c3fd45b9878fc66c7f17ac"><td class="memTemplParams" colspan="2">template&lt;typename ReductionT , typename... RestT, enable_if_t&lt;(sizeof...(RestT) &gt; 0), int &gt; Z = 0&gt; </td></tr>
-<tr class="memitem:ad08ed92651c3fd45b9878fc66c7f17ac"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ad08ed92651c3fd45b9878fc66c7f17ac">cl::sycl::ONEAPI::detail::associateReduAccsWithHandlerHelper</a> (handler &amp;CGH, ReductionT &amp;Redu, RestT &amp;... Rest)</td></tr>
-<tr class="separator:ad08ed92651c3fd45b9878fc66c7f17ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35b299e83b6d33c777f34a9af646047d"><td class="memTemplParams" colspan="2">template&lt;typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a35b299e83b6d33c777f34a9af646047d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a35b299e83b6d33c777f34a9af646047d">cl::sycl::ONEAPI::detail::associateReduAccsWithHandler</a> (handler &amp;CGH, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a35b299e83b6d33c777f34a9af646047d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a444b5c315d7b252cb7b436565b1dc0e9"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , bool UniformPow2WG, bool IsOneWG, typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:a444b5c315d7b252cb7b436565b1dc0e9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a444b5c315d7b252cb7b436565b1dc0e9">cl::sycl::ONEAPI::detail::reduAuxCGFuncImpl</a> (handler &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt; ReduIndices)</td></tr>
-<tr class="separator:a444b5c315d7b252cb7b436565b1dc0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe6b013b8680321776e8cbb8bdab8f84"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , typename... Reductions, size_t... Is&gt; </td></tr>
-<tr class="memitem:afe6b013b8680321776e8cbb8bdab8f84"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#afe6b013b8680321776e8cbb8bdab8f84">cl::sycl::ONEAPI::detail::reduAuxCGFunc</a> (handler &amp;CGH, size_t NWorkItems, size_t MaxWGSize, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:afe6b013b8680321776e8cbb8bdab8f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a1cc1b337dfe646c2175ca2b66d0dd4"><td class="memTemplParams" colspan="2">template&lt;typename Reduction &gt; </td></tr>
-<tr class="memitem:a5a1cc1b337dfe646c2175ca2b66d0dd4"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a5a1cc1b337dfe646c2175ca2b66d0dd4">cl::sycl::ONEAPI::detail::reduGetMemPerWorkItemHelper</a> (Reduction &amp;)</td></tr>
-<tr class="separator:a5a1cc1b337dfe646c2175ca2b66d0dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18d800d9a48659220f21d794e3e0677b"><td class="memTemplParams" colspan="2">template&lt;typename Reduction , typename... RestT&gt; </td></tr>
-<tr class="memitem:a18d800d9a48659220f21d794e3e0677b"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a18d800d9a48659220f21d794e3e0677b">cl::sycl::ONEAPI::detail::reduGetMemPerWorkItemHelper</a> (Reduction &amp;, RestT... Rest)</td></tr>
-<tr class="separator:a18d800d9a48659220f21d794e3e0677b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c2751ba7d3012d52ddb9168d34d7a1f"><td class="memTemplParams" colspan="2">template&lt;typename... ReductionT, size_t... Is&gt; </td></tr>
-<tr class="memitem:a1c2751ba7d3012d52ddb9168d34d7a1f"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a1c2751ba7d3012d52ddb9168d34d7a1f">cl::sycl::ONEAPI::detail::reduGetMemPerWorkItem</a> (std::tuple&lt; ReductionT... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="separator:a1c2751ba7d3012d52ddb9168d34d7a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a074c1a9538a468b7afc2763b054790f4"><td class="memTemplParams" colspan="2">template&lt;typename TupleT , std::size_t... Is&gt; </td></tr>
-<tr class="memitem:a074c1a9538a468b7afc2763b054790f4"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; std::tuple_element_t&lt; Is, TupleT &gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a074c1a9538a468b7afc2763b054790f4">cl::sycl::ONEAPI::detail::tuple_select_elements</a> (TupleT Tuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="memdesc:a074c1a9538a468b7afc2763b054790f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function: for the given tuple.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a074c1a9538a468b7afc2763b054790f4">More...</a><br /></td></tr>
-<tr class="separator:a074c1a9538a468b7afc2763b054790f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fbcd4cd703d67fcb4710042d2e1ca05"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation , int Dims, access::mode AccMode, access::placeholder IsPH&gt; </td></tr>
-<tr class="memitem:a0fbcd4cd703d67fcb4710042d2e1ca05"><td class="memTemplItemLeft" align="right" valign="top">detail::reduction_impl&lt; T, BinaryOperation, Dims, false, AccMode, IsPH &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a0fbcd4cd703d67fcb4710042d2e1ca05">cl::sycl::ONEAPI::reduction</a> (accessor&lt; T, Dims, AccMode, access::target::global_buffer, IsPH &gt; &amp;Acc, const T &amp;Identity, BinaryOperation BOp)</td></tr>
-<tr class="memdesc:a0fbcd4cd703d67fcb4710042d2e1ca05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an object implementing the reduction functionality.  <a href="namespacecl_1_1sycl_1_1ONEAPI.html#a0fbcd4cd703d67fcb4710042d2e1ca05">More...</a><br /></td></tr>
-<tr class="separator:a0fbcd4cd703d67fcb4710042d2e1ca05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a590a603572e51896b5cad9ab5e0a38c7"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation , int Dims, access::mode AccMode, access::placeholder IsPH&gt; </td></tr>
-<tr class="memitem:a590a603572e51896b5cad9ab5e0a38c7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; detail::IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value, detail::reduction_impl&lt; T, BinaryOperation, Dims, false, AccMode, IsPH &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a590a603572e51896b5cad9ab5e0a38c7">cl::sycl::ONEAPI::reduction</a> (accessor&lt; T, Dims, AccMode, access::target::global_buffer, IsPH &gt; &amp;Acc, BinaryOperation)</td></tr>
-<tr class="memdesc:a590a603572e51896b5cad9ab5e0a38c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an object implementing the reduction functionality.  <a href="namespacecl_1_1sycl_1_1ONEAPI.html#a590a603572e51896b5cad9ab5e0a38c7">More...</a><br /></td></tr>
-<tr class="separator:a590a603572e51896b5cad9ab5e0a38c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5933bf55796d7564ca38e8414e7f3796"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:a5933bf55796d7564ca38e8414e7f3796"><td class="memTemplItemLeft" align="right" valign="top">detail::reduction_impl&lt; T, BinaryOperation, 0, true, access::mode::read_write &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a5933bf55796d7564ca38e8414e7f3796">cl::sycl::ONEAPI::reduction</a> (T *VarPtr, const T &amp;Identity, BinaryOperation BOp)</td></tr>
-<tr class="memdesc:a5933bf55796d7564ca38e8414e7f3796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an object implementing the reduction functionality.  <a href="namespacecl_1_1sycl_1_1ONEAPI.html#a5933bf55796d7564ca38e8414e7f3796">More...</a><br /></td></tr>
-<tr class="separator:a5933bf55796d7564ca38e8414e7f3796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaafbb856b8429da4f13f936f6628b00c"><td class="memTemplParams" colspan="2">template&lt;typename T , class BinaryOperation &gt; </td></tr>
-<tr class="memitem:aaafbb856b8429da4f13f936f6628b00c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; detail::IsKnownIdentityOp&lt; T, BinaryOperation &gt;::value, detail::reduction_impl&lt; T, BinaryOperation, 0, true, access::mode::read_write &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#aaafbb856b8429da4f13f936f6628b00c">cl::sycl::ONEAPI::reduction</a> (T *VarPtr, BinaryOperation)</td></tr>
-<tr class="memdesc:aaafbb856b8429da4f13f936f6628b00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an object implementing the reduction functionality.  <a href="namespacecl_1_1sycl_1_1ONEAPI.html#aaafbb856b8429da4f13f936f6628b00c">More...</a><br /></td></tr>
-<tr class="separator:aaafbb856b8429da4f13f936f6628b00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa460226efe07f07a4097bfcdcfaefd0e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:aa460226efe07f07a4097bfcdcfaefd0e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; has_known_identity&lt; BinaryOperation, T &gt;::value, ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, 1, false, access::mode::read_write, access::placeholder::true_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aa460226efe07f07a4097bfcdcfaefd0e">cl::sycl::reduction</a> (buffer&lt; T, 1, AllocatorT &gt; Var, handler &amp;CGH, BinaryOperation, const property_list &amp;PropList={})</td></tr>
+<tr class="memdesc:aa460226efe07f07a4097bfcdcfaefd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#aa460226efe07f07a4097bfcdcfaefd0e">More...</a><br /></td></tr>
+<tr class="separator:aa460226efe07f07a4097bfcdcfaefd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57de43e26af4ee1360ebb27c578cd639"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a57de43e26af4ee1360ebb27c578cd639"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!has_known_identity&lt; BinaryOperation, T &gt;::value, ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, 1, false, access::mode::read_write, access::placeholder::true_t &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a57de43e26af4ee1360ebb27c578cd639">cl::sycl::reduction</a> (buffer&lt; T, 1, AllocatorT &gt;, handler &amp;, BinaryOperation, const property_list &amp;PropList={})</td></tr>
+<tr class="memdesc:a57de43e26af4ee1360ebb27c578cd639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#a57de43e26af4ee1360ebb27c578cd639">More...</a><br /></td></tr>
+<tr class="separator:a57de43e26af4ee1360ebb27c578cd639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c500a59eb4cece576eb0b60b74a7fc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a09c500a59eb4cece576eb0b60b74a7fc"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; has_known_identity&lt; BinaryOperation, T &gt;::value, ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, 0, true, access::mode::read_write &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a09c500a59eb4cece576eb0b60b74a7fc">cl::sycl::reduction</a> (T *Var, BinaryOperation, const property_list &amp;PropList={})</td></tr>
+<tr class="memdesc:a09c500a59eb4cece576eb0b60b74a7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#a09c500a59eb4cece576eb0b60b74a7fc">More...</a><br /></td></tr>
+<tr class="separator:a09c500a59eb4cece576eb0b60b74a7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6239d19024b7d40f2f99dec7d7368ea"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:aa6239d19024b7d40f2f99dec7d7368ea"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!has_known_identity&lt; BinaryOperation, T &gt;::value, ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, 0, true, access::mode::read_write &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aa6239d19024b7d40f2f99dec7d7368ea">cl::sycl::reduction</a> (T *, BinaryOperation, const property_list &amp;PropList={})</td></tr>
+<tr class="memdesc:aa6239d19024b7d40f2f99dec7d7368ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#aa6239d19024b7d40f2f99dec7d7368ea">More...</a><br /></td></tr>
+<tr class="separator:aa6239d19024b7d40f2f99dec7d7368ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="memTemplItemLeft" align="right" valign="top">ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, 1, false, access::mode::read_write, access::placeholder::true_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#acc50baaab8bdf26b7476ea8d4ce7d0bb">cl::sycl::reduction</a> (buffer&lt; T, 1, AllocatorT &gt; Var, handler &amp;CGH, const T &amp;Identity, BinaryOperation Combiner, const property_list &amp;PropList={})</td></tr>
+<tr class="memdesc:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction identity value <code>Identity</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#acc50baaab8bdf26b7476ea8d4ce7d0bb">More...</a><br /></td></tr>
+<tr class="separator:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae122b9569a06d05061d0f177b9de6cf6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:ae122b9569a06d05061d0f177b9de6cf6"><td class="memTemplItemLeft" align="right" valign="top">ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, 0, true, access::mode::read_write &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae122b9569a06d05061d0f177b9de6cf6">cl::sycl::reduction</a> (T *Var, const T &amp;Identity, BinaryOperation Combiner, const property_list &amp;PropList={})</td></tr>
+<tr class="memdesc:ae122b9569a06d05061d0f177b9de6cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, reduction identity value <code>Identity</code>, binary operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#ae122b9569a06d05061d0f177b9de6cf6">More...</a><br /></td></tr>
+<tr class="separator:ae122b9569a06d05061d0f177b9de6cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8358e9aed72341d13c81ba12a462bec7.html">CL</a></li><li class="navelem"><a class="el" href="dir_dd7d3bcc93139b1cbc3b663242fe4a67.html">sycl</a></li><li class="navelem"><a class="el" href="dir_c08ec27d5b39c57d5e5da7196736cd30.html">ONEAPI</a></li><li class="navelem"><a class="el" href="reduction_8hpp.html">reduction.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8358e9aed72341d13c81ba12a462bec7.html">CL</a></li><li class="navelem"><a class="el" href="dir_dd7d3bcc93139b1cbc3b663242fe4a67.html">sycl</a></li><li class="navelem"><a class="el" href="reduction_8hpp.html">reduction.hpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

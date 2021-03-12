@@ -8,6 +8,7 @@ var class__pi__device =
     [ "initialize", "class__pi__device.html#a56e91984f15ec06679ca3a21c3b4facc", null ],
     [ "IsSubDevice", "class__pi__device.html#a63fa3ab96aa179b3900f2290f0fb6f89", null ],
     [ "Platform", "class__pi__device.html#abaef3c3d43f659c307c93fc152764c39", null ],
+    [ "SubDevices", "class__pi__device.html#a4dec9013f0cfa2f088cdc8b4d844871c", null ],
     [ "ZeComputeQueueGroupIndex", "class__pi__device.html#a8be1d538c1d09902133f82a13ba33f6a", null ],
     [ "ZeDevice", "class__pi__device.html#aa28a24fe6d68823714cb23c57e428290", null ],
     [ "ZeDeviceComputeProperties", "class__pi__device.html#a6e87b3dd2c77cdeb53ba5a328ec919b6", null ],

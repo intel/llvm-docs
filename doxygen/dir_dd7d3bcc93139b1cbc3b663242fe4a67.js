@@ -81,6 +81,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "property_list_conversion.hpp", "property__list__conversion_8hpp.html", null ],
     [ "queue.hpp", "queue_8hpp.html", "queue_8hpp" ],
     [ "range.hpp", "range_8hpp.html", "range_8hpp" ],
+    [ "reduction.hpp", "reduction_8hpp.html", "reduction_8hpp" ],
     [ "sampler.hpp", "sampler_8hpp.html", "sampler_8hpp" ],
     [ "stl.hpp", "stl_8hpp.html", "stl_8hpp" ],
     [ "stream.hpp", "stream_8hpp.html", "stream_8hpp" ],

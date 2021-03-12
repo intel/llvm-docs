@@ -12,6 +12,8 @@ var classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00
     [ "getIdentity", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a0cb4af1cd66b97b7059b38b9aa157338", null ],
     [ "operator&=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a24ce87a28ee46344193d561b5d9b534c", null ],
     [ "operator*=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#abb77b278747e4de59113795a9c6212cc", null ],
+    [ "operator++", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a63bc97054fd279297a9ba7904e1c68d0", null ],
+    [ "operator++", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a5691c43fa7b15b990447d56c82f6fad3", null ],
     [ "operator+=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ae13af1e1811cc42f1ff9d1a667dfbb01", null ],
     [ "operator^=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#acc22256b8a789235111305d5343fa262", null ],
     [ "operator|=", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad0942b5416fb218c9361fcb494047efb", null ],

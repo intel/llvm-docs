@@ -40,5 +40,8 @@ var dir_44c465508f81c3871cd3b8ecbdc75500 =
     [ "queue_properties.hpp", "queue__properties_8hpp.html", [
       [ "in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ],
       [ "enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ]
+    ] ],
+    [ "reduction_properties.hpp", "reduction__properties_8hpp.html", [
+      [ "initialize_to_identity", "classcl_1_1sycl_1_1property_1_1reduction_1_1initialize__to__identity.html", null ]
     ] ]
 ];

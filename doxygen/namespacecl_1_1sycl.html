@@ -1292,6 +1292,30 @@ Functions</h2></td></tr>
 <tr class="memitem:ae5eda9603fbd094902b548f829351870"><td class="memTemplParams" colspan="2">template&lt;int Dims&gt; </td></tr>
 <tr class="memitem:ae5eda9603fbd094902b548f829351870"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1nd__item.html">nd_item</a>&lt; Dims &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae5eda9603fbd094902b548f829351870">this_nd_item</a> ()</td></tr>
 <tr class="separator:ae5eda9603fbd094902b548f829351870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa460226efe07f07a4097bfcdcfaefd0e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:aa460226efe07f07a4097bfcdcfaefd0e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt; BinaryOperation, T &gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, 1, false, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aa460226efe07f07a4097bfcdcfaefd0e">reduction</a> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; T, 1, AllocatorT &gt; Var, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, BinaryOperation, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memdesc:aa460226efe07f07a4097bfcdcfaefd0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#aa460226efe07f07a4097bfcdcfaefd0e">More...</a><br /></td></tr>
+<tr class="separator:aa460226efe07f07a4097bfcdcfaefd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57de43e26af4ee1360ebb27c578cd639"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a57de43e26af4ee1360ebb27c578cd639"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!<a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt; BinaryOperation, T &gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, 1, false, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a57de43e26af4ee1360ebb27c578cd639">reduction</a> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; T, 1, AllocatorT &gt;, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;, BinaryOperation, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memdesc:a57de43e26af4ee1360ebb27c578cd639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#a57de43e26af4ee1360ebb27c578cd639">More...</a><br /></td></tr>
+<tr class="separator:a57de43e26af4ee1360ebb27c578cd639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c500a59eb4cece576eb0b60b74a7fc"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:a09c500a59eb4cece576eb0b60b74a7fc"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt; BinaryOperation, T &gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, 0, true, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a09c500a59eb4cece576eb0b60b74a7fc">reduction</a> (T *Var, BinaryOperation, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memdesc:a09c500a59eb4cece576eb0b60b74a7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#a09c500a59eb4cece576eb0b60b74a7fc">More...</a><br /></td></tr>
+<tr class="separator:a09c500a59eb4cece576eb0b60b74a7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6239d19024b7d40f2f99dec7d7368ea"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:aa6239d19024b7d40f2f99dec7d7368ea"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!<a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt; BinaryOperation, T &gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, 0, true, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aa6239d19024b7d40f2f99dec7d7368ea">reduction</a> (T *, BinaryOperation, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memdesc:aa6239d19024b7d40f2f99dec7d7368ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#aa6239d19024b7d40f2f99dec7d7368ea">More...</a><br /></td></tr>
+<tr class="separator:aa6239d19024b7d40f2f99dec7d7368ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, 1, false, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#acc50baaab8bdf26b7476ea8d4ce7d0bb">reduction</a> (<a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; T, 1, AllocatorT &gt; Var, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, const T &amp;Identity, BinaryOperation Combiner, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memdesc:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction identity value <code>Identity</code>, reduction operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#acc50baaab8bdf26b7476ea8d4ce7d0bb">More...</a><br /></td></tr>
+<tr class="separator:acc50baaab8bdf26b7476ea8d4ce7d0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae122b9569a06d05061d0f177b9de6cf6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename BinaryOperation &gt; </td></tr>
+<tr class="memitem:ae122b9569a06d05061d0f177b9de6cf6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, 0, true, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae122b9569a06d05061d0f177b9de6cf6">reduction</a> (T *Var, const T &amp;Identity, BinaryOperation Combiner, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList={})</td></tr>
+<tr class="memdesc:ae122b9569a06d05061d0f177b9de6cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, reduction identity value <code>Identity</code>, binary operation <code>Combiner</code>, and optional reduction properties.  <a href="namespacecl_1_1sycl.html#ae122b9569a06d05061d0f177b9de6cf6">More...</a><br /></td></tr>
+<tr class="separator:ae122b9569a06d05061d0f177b9de6cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab7129c40cbde88f63706b1fb5bc1936"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... ArgsT&gt; </td></tr>
 <tr class="memitem:aab7129c40cbde88f63706b1fb5bc1936"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a5e426b5073574b2553fa7fb9a430eb50">unique_ptr_class</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aab7129c40cbde88f63706b1fb5bc1936">make_unique_ptr</a> (ArgsT &amp;&amp;... Args)</td></tr>
 <tr class="separator:aab7129c40cbde88f63706b1fb5bc1936"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -5950,7 +5974,7 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00299">299</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00124">cl::sycl::context::get_devices()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">get_pointer_type()</a>, <a class="el" href="common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00118">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00076">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01457">PI_MEM_ALLOC_DEVICE</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05517">piextUSMGetMemAllocInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00124">cl::sycl::context::get_devices()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">get_pointer_type()</a>, <a class="el" href="common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00118">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00076">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01457">PI_MEM_ALLOC_DEVICE</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05532">piextUSMGetMemAllocInfo()</a>.</p>
 
 </div>
 </div>
@@ -5992,7 +6016,7 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00249">249</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00118">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01454">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01463">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01462">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01464">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05517">piextUSMGetMemAllocInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00118">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01454">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01463">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01462">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01464">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05532">piextUSMGetMemAllocInfo()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00299">get_pointer_device()</a>.</p>
 
@@ -9975,6 +9999,278 @@ template&lt;typename T &gt; </div>
 <p class="reference">References <a class="el" href="builtins_8hpp_source.html#l00517">degrees()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="builtins_8hpp_source.html#l00517">degrees()</a>.</p>
+
+</div>
+</div>
+<a id="aa460226efe07f07a4097bfcdcfaefd0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa460226efe07f07a4097bfcdcfaefd0e">&#9670;&nbsp;</a></span>reduction() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt;BinaryOperation, T&gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt;T, BinaryOperation, 1, false, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a>&gt; &gt; cl::sycl::reduction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; T, 1, AllocatorT &gt;&#160;</td>
+          <td class="paramname"><em>Var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
+          <td class="paramname"><em>CGH</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00046">46</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="acc50baaab8bdf26b7476ea8d4ce7d0bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc50baaab8bdf26b7476ea8d4ce7d0bb">&#9670;&nbsp;</a></span>reduction() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt;T, BinaryOperation, 1, false, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a>&gt; cl::sycl::reduction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; T, 1, AllocatorT &gt;&#160;</td>
+          <td class="paramname"><em>Var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
+          <td class="paramname"><em>CGH</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Identity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>Combiner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction identity value <code>Identity</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00113">113</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a57de43e26af4ee1360ebb27c578cd639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57de43e26af4ee1360ebb27c578cd639">&#9670;&nbsp;</a></span>reduction() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;!<a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt;BinaryOperation, T&gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt;T, BinaryOperation, 1, false, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>, <a class="el" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a>&gt; &gt; cl::sycl::reduction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1buffer.html">buffer</a>&lt; T, 1, AllocatorT &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
+<p>The reduction algorithm may be less efficient for this variant as the reduction identity is not known statically and it is not provided by user. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00065">65</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa6239d19024b7d40f2f99dec7d7368ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6239d19024b7d40f2f99dec7d7368ea">&#9670;&nbsp;</a></span>reduction() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;!<a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt;BinaryOperation, T&gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt;T, BinaryOperation, 0, true, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>&gt; &gt; cl::sycl::reduction </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
+<p>The reduction algorithm may be less efficient for this variant as the reduction identity is not known statically and it is not provided by user. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00098">98</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a09c500a59eb4cece576eb0b60b74a7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c500a59eb4cece576eb0b60b74a7fc">&#9670;&nbsp;</a></span>reduction() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structcl_1_1sycl_1_1has__known__identity.html">has_known_identity</a>&lt;BinaryOperation, T&gt;::value, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt;T, BinaryOperation, 0, true, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>&gt; &gt; cl::sycl::reduction </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>Var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00081">81</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae122b9569a06d05061d0f177b9de6cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae122b9569a06d05061d0f177b9de6cf6">&#9670;&nbsp;</a></span>reduction() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">ONEAPI::detail::reduction_impl</a>&lt;T, BinaryOperation, 0, true, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17a06ad287ea83b37a6f9db3d8d10d72c8f">access::mode::read_write</a>&gt; cl::sycl::reduction </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>Var</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Identity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>Combiner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>PropList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, reduction identity value <code>Identity</code>, binary operation <code>Combiner</code>, and optional reduction properties. </p>
+
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00129">129</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>

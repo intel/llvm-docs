@@ -408,9 +408,10 @@ var searchData=
   ['program_1082',['program',['../classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a3ca453a69aa270390dff32989aebd63e',1,'cl::sycl::ONEAPI::experimental::spec_constant']]],
   ['property_1083',['property',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html',1,'cl::sycl::ext::oneapi::property'],['../namespacecl_1_1sycl_1_1INTEL_1_1property.html',1,'cl::sycl::INTEL::property'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1property.html',1,'cl::sycl::ONEAPI::property'],['../namespacecl_1_1sycl_1_1property.html',1,'cl::sycl::property']]],
   ['queue_1084',['queue',['../namespacecl_1_1sycl_1_1property_1_1queue.html',1,'cl::sycl::property']]],
-  ['sub_5fgroup_1085',['sub_group',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html',1,'cl::sycl::detail']]],
-  ['sycl_1086',['sycl',['../namespacecl_1_1sycl.html',1,'cl']]],
-  ['cuda_20plugin_1087',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]],
-  ['usm_1088',['usm',['../namespacecl_1_1sycl_1_1detail_1_1usm.html',1,'cl::sycl::detail::usm'],['../namespacecl_1_1sycl_1_1usm.html',1,'cl::sycl::usm']]],
-  ['vec_1089',['vec',['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a9e24e87b08f923ebddaff2b6f69c353d',1,'cl::sycl::detail::SwizzleOp']]]
+  ['reduction_1085',['reduction',['../namespacecl_1_1sycl_1_1property_1_1reduction.html',1,'cl::sycl::property']]],
+  ['sub_5fgroup_1086',['sub_group',['../namespacecl_1_1sycl_1_1detail_1_1sub__group.html',1,'cl::sycl::detail']]],
+  ['sycl_1087',['sycl',['../namespacecl_1_1sycl.html',1,'cl']]],
+  ['cuda_20plugin_1088',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]],
+  ['usm_1089',['usm',['../namespacecl_1_1sycl_1_1detail_1_1usm.html',1,'cl::sycl::detail::usm'],['../namespacecl_1_1sycl_1_1usm.html',1,'cl::sycl::usm']]],
+  ['vec_1090',['vec',['../classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a9e24e87b08f923ebddaff2b6f69c353d',1,'cl::sycl::detail::SwizzleOp']]]
 ];
