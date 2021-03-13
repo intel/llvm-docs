@@ -13,6 +13,7 @@ var classcl_1_1sycl_1_1program =
     [ "compile_with_kernel_type", "classcl_1_1sycl_1_1program.html#a1ea2cea6ee603aca30f448cb4e6c8e47", null ],
     [ "compile_with_source", "classcl_1_1sycl_1_1program.html#a353f88ae1ec605f2363a29c750d2e527", null ],
     [ "get", "classcl_1_1sycl_1_1program.html#ae86b3cfa4dbff2156dd1485c1a88d42f", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1program.html#afab248ea43cd9d167fa5c700aef038fb", null ],
     [ "get_binaries", "classcl_1_1sycl_1_1program.html#aa26f2c7fb8d3556b9727fc3b99cb1cf7", null ],
     [ "get_build_options", "classcl_1_1sycl_1_1program.html#abe6bda06f0e7ce8d744669a23cda4e52", null ],
     [ "get_compile_options", "classcl_1_1sycl_1_1program.html#a8fa2fc745b9a4fea1c80ef4e438d440d", null ],

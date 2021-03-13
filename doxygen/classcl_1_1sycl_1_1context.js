@@ -12,6 +12,7 @@ var classcl_1_1sycl_1_1context =
     [ "context", "classcl_1_1sycl_1_1context.html#a3b03cfe931f6b947844fb99f5d35d3dc", null ],
     [ "context", "classcl_1_1sycl_1_1context.html#ad290a3fa9e6483a47407935519512d02", null ],
     [ "get", "classcl_1_1sycl_1_1context.html#a33f0a7e828fd867d7e31ae1bc122aca1", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1context.html#a6c61c7620982126adcead76b71153c28", null ],
     [ "get_devices", "classcl_1_1sycl_1_1context.html#a029fc5e61786a9a3d5e59916d5ba3f67", null ],
     [ "get_info", "classcl_1_1sycl_1_1context.html#aa0d2f30f8a540d88cbb1f0122812a764", null ],
     [ "get_native", "classcl_1_1sycl_1_1context.html#ace1a143235a0d6a1e0391a22a6121ad6", null ],

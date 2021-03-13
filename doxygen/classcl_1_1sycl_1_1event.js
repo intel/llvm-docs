@@ -5,6 +5,7 @@ var classcl_1_1sycl_1_1event =
     [ "event", "classcl_1_1sycl_1_1event.html#ad71fdb1ee22236c24a8d7ffe0cd6aac2", null ],
     [ "event", "classcl_1_1sycl_1_1event.html#a7aff1b8a53057db612c9a044245984f8", null ],
     [ "get", "classcl_1_1sycl_1_1event.html#a43b3cb7427ec80c878fcf67cb0350abd", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1event.html#a0ad755ebee13139c75aafb781e690601", null ],
     [ "get_info", "classcl_1_1sycl_1_1event.html#a92989abfb996fa7ed38a5b7d68bcf75d", null ],
     [ "get_native", "classcl_1_1sycl_1_1event.html#a3f94858013e74bb28ead74f12c6fe76f", null ],
     [ "get_profiling_info", "classcl_1_1sycl_1_1event.html#a17d6a9b43054c87a71eaa50da6b529c4", null ],

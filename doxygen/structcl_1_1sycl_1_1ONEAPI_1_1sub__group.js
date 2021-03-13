@@ -18,6 +18,7 @@ var structcl_1_1sycl_1_1ONEAPI_1_1sub__group =
     [ "load", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#ac768efa9c272dd4d204412187e94e151", null ],
     [ "load", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a283637c5f4af83e289ab89b0f71d6162", null ],
     [ "load", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#aef711d87164ccbdded7dd530abf7c749", null ],
+    [ "load", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#af86c79e6075f543c8efe1f5151290da3", null ],
     [ "shuffle", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#aa79568ede1925f77fa78c808b6216b97", null ],
     [ "shuffle_down", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#adb62adbd003a56153b03e66bc6c0e0eb", null ],
     [ "shuffle_up", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a5c83d6cf501b21c4c18e84926917a073", null ],
@@ -27,5 +28,6 @@ var structcl_1_1sycl_1_1ONEAPI_1_1sub__group =
     [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a9a2baeece741b95085f633a7d6529fa2", null ],
     [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#ac92d1847a211b3c136dc222e9797c9dd", null ],
     [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a1d0e78305d9f8565e7acfda64b1870b0", null ],
+    [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a63743a2e54c7dbba10dc6c2a39f96faa", null ],
     [ "dimensions", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a7e34d50a69e0f56542427939aa45f4aa", null ]
 ];

@@ -9,6 +9,7 @@ var classcl_1_1sycl_1_1device =
     [ "create_sub_devices", "classcl_1_1sycl_1_1device.html#a8180702aa59ab7d8627a99c3ab433876", null ],
     [ "create_sub_devices", "classcl_1_1sycl_1_1device.html#a07d74001ee13bfd6879e800b77b00ca8", null ],
     [ "get", "classcl_1_1sycl_1_1device.html#a98597359400b806fb646064d16ca97e0", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1device.html#a5329f6a022b781021bc9311b68ee81a5", null ],
     [ "get_devices", "classcl_1_1sycl_1_1device.html#a5d3465dc404d74f4975ab496c68ddc90", null ],
     [ "get_info", "classcl_1_1sycl_1_1device.html#ae1faacc7295978a148966656f4b4ee06", null ],
     [ "get_native", "classcl_1_1sycl_1_1device.html#a84b4d6bb4a886820ab93ca1726eda6f7", null ],

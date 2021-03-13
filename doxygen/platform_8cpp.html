@@ -103,6 +103,7 @@ $(document).ready(function(){initNavTree('platform_8cpp.html',''); initResizable
 <code>#include &lt;<a class="el" href="device__selector_8hpp_source.html">CL/sycl/device_selector.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="info__desc_8hpp_source.html">CL/sycl/info/info_desc.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="platform_8hpp_source.html">CL/sycl/platform.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="backend__impl_8hpp_source.html">detail/backend_impl.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="force__device_8hpp_source.html">detail/force_device.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="platform__impl_8hpp_source.html">detail/platform_impl.hpp</a>&gt;</code><br />
 <code>#include &lt;CL/sycl/info/platform_traits.def&gt;</code><br />
@@ -111,56 +112,56 @@ Include dependency graph for platform.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="platform_8cpp__incl.png" border="0" usemap="#source_2platform_8cpp" alt=""/></div>
 <map name="source_2platform_8cpp" id="source_2platform_8cpp">
-<area shape="rect" title=" " alt="" coords="432,5,584,32"/>
-<area shape="rect" href="device_8hpp.html" title=" " alt="" coords="437,155,579,181"/>
-<area shape="rect" href="info__desc_8hpp.html" title=" " alt="" coords="1691,229,1882,256"/>
-<area shape="rect" title=" " alt="" coords="640,304,797,345"/>
-<area shape="rect" href="platform_8hpp.html" title=" " alt="" coords="321,229,477,256"/>
-<area shape="rect" href="device__selector_8hpp.html" title=" " alt="" coords="478,550,679,577"/>
-<area shape="rect" href="force__device_8hpp.html" title=" " alt="" coords="186,155,361,181"/>
-<area shape="rect" href="platform__impl_8hpp.html" title=" " alt="" coords="2798,80,2981,107"/>
-<area shape="rect" href="aspects_8hpp.html" title=" " alt="" coords="94,229,245,256"/>
-<area shape="rect" href="backend__types_8hpp.html" title=" " alt="" coords="2816,393,3013,420"/>
-<area shape="rect" href="common_8hpp.html" title=" " alt="" coords="2593,393,2791,420"/>
-<area shape="rect" href="export_8hpp.html" title=" " alt="" coords="2363,632,2546,659"/>
-<area shape="rect" title=" " alt="" coords="144,632,221,659"/>
-<area shape="rect" href="stl_8hpp.html" title=" " alt="" coords="703,550,819,577"/>
-<area shape="rect" title=" " alt="" coords="251,311,311,338"/>
-<area shape="rect" href="defines_8hpp.html" title=" " alt="" coords="321,632,509,659"/>
-<area shape="rect" href="defines__elementary_8hpp.html" title=" " alt="" coords="265,707,425,748"/>
-<area shape="rect" title=" " alt="" coords="449,714,516,741"/>
-<area shape="rect" title=" " alt="" coords="3038,468,3111,495"/>
-<area shape="rect" title=" " alt="" coords="2837,468,2917,495"/>
-<area shape="rect" title=" " alt="" coords="2941,468,3013,495"/>
-<area shape="rect" title=" " alt="" coords="3192,632,3251,659"/>
-<area shape="rect" title=" " alt="" coords="2843,632,2973,659"/>
-<area shape="rect" href="cl_8h.html" title=" " alt="" coords="2631,632,2767,659"/>
-<area shape="rect" href="stl__type__traits_8hpp.html" title=" " alt="" coords="222,543,351,584"/>
-<area shape="rect" title=" " alt="" coords="3065,632,3132,659"/>
-<area shape="rect" href="exception_8hpp.html" title=" " alt="" coords="2379,468,2543,495"/>
-<area shape="rect" href="pi_8h.html" title=" " alt="" coords="2995,550,3133,577"/>
-<area shape="rect" title=" " alt="" coords="814,632,901,659"/>
-<area shape="rect" title=" " alt="" coords="3398,632,3549,659"/>
-<area shape="rect" title=" " alt="" coords="703,632,790,659"/>
-<area shape="rect" title=" " alt="" coords="1239,632,1303,659"/>
-<area shape="rect" title=" " alt="" coords="1961,632,2023,659"/>
-<area shape="rect" href="pi_8hpp.html" title=" " alt="" coords="3257,311,3410,338"/>
-<area shape="rect" href="id_8hpp.html" title=" " alt="" coords="2613,311,2725,338"/>
-<area shape="rect" title=" " alt="" coords="1715,304,1859,345"/>
-<area shape="rect" title=" " alt="" coords="1883,304,2034,345"/>
-<area shape="rect" title=" " alt="" coords="2059,304,2197,345"/>
-<area shape="rect" title=" " alt="" coords="2222,304,2370,345"/>
-<area shape="rect" title=" " alt="" coords="2395,304,2589,345"/>
-<area shape="rect" title=" " alt="" coords="821,304,984,345"/>
-<area shape="rect" title=" " alt="" coords="1008,304,1149,345"/>
-<area shape="rect" title=" " alt="" coords="1173,304,1344,345"/>
-<area shape="rect" title=" " alt="" coords="1369,304,1525,345"/>
-<area shape="rect" title=" " alt="" coords="1549,304,1691,345"/>
-<area shape="rect" href="os__util_8hpp.html" title=" " alt="" coords="2787,550,2971,577"/>
-<area shape="rect" title=" " alt="" coords="3288,393,3357,420"/>
-<area shape="rect" title=" " alt="" coords="3088,393,3163,420"/>
-<area shape="rect" href="platform__info_8hpp.html" title=" " alt="" coords="2927,155,3105,181"/>
-<area shape="rect" href="plugin_8hpp.html" title=" " alt="" coords="3065,229,3196,256"/>
+<area shape="rect" title=" " alt="" coords="585,5,737,32"/>
+<area shape="rect" href="device_8hpp.html" title=" " alt="" coords="453,155,595,181"/>
+<area shape="rect" href="info__desc_8hpp.html" title=" " alt="" coords="1667,229,1858,256"/>
+<area shape="rect" title=" " alt="" coords="2655,304,2812,345"/>
+<area shape="rect" href="platform_8hpp.html" title=" " alt="" coords="502,229,658,256"/>
+<area shape="rect" href="device__selector_8hpp.html" title=" " alt="" coords="1643,550,1845,577"/>
+<area shape="rect" href="backend__impl_8hpp.html" title=" " alt="" coords="3179,80,3360,107"/>
+<area shape="rect" href="force__device_8hpp.html" title=" " alt="" coords="22,155,197,181"/>
+<area shape="rect" href="platform__impl_8hpp.html" title=" " alt="" coords="2809,80,2991,107"/>
+<area shape="rect" href="aspects_8hpp.html" title=" " alt="" coords="174,229,325,256"/>
+<area shape="rect" href="backend__types_8hpp.html" title=" " alt="" coords="3301,393,3499,420"/>
+<area shape="rect" href="common_8hpp.html" title=" " alt="" coords="2331,393,2530,420"/>
+<area shape="rect" href="export_8hpp.html" title=" " alt="" coords="2126,632,2309,659"/>
+<area shape="rect" title=" " alt="" coords="175,632,252,659"/>
+<area shape="rect" href="stl_8hpp.html" title=" " alt="" coords="1869,550,1985,577"/>
+<area shape="rect" title=" " alt="" coords="389,311,449,338"/>
+<area shape="rect" href="defines_8hpp.html" title=" " alt="" coords="1581,632,1769,659"/>
+<area shape="rect" href="defines__elementary_8hpp.html" title=" " alt="" coords="1525,707,1685,748"/>
+<area shape="rect" title=" " alt="" coords="1709,714,1776,741"/>
+<area shape="rect" title=" " alt="" coords="3321,468,3394,495"/>
+<area shape="rect" title=" " alt="" coords="3064,468,3144,495"/>
+<area shape="rect" title=" " alt="" coords="3419,468,3491,495"/>
+<area shape="rect" title=" " alt="" coords="2985,632,3044,659"/>
+<area shape="rect" title=" " alt="" coords="2333,632,2462,659"/>
+<area shape="rect" href="cl_8h.html" title=" " alt="" coords="2661,632,2797,659"/>
+<area shape="rect" href="stl__type__traits_8hpp.html" title=" " alt="" coords="225,543,354,584"/>
+<area shape="rect" title=" " alt="" coords="2861,632,2928,659"/>
+<area shape="rect" href="exception_8hpp.html" title=" " alt="" coords="2087,468,2251,495"/>
+<area shape="rect" href="pi_8h.html" title=" " alt="" coords="2429,550,2566,577"/>
+<area shape="rect" title=" " alt="" coords="2009,632,2095,659"/>
+<area shape="rect" title=" " alt="" coords="1883,632,1970,659"/>
+<area shape="rect" title=" " alt="" coords="2573,632,2637,659"/>
+<area shape="rect" title=" " alt="" coords="2486,632,2549,659"/>
+<area shape="rect" href="pi_8hpp.html" title=" " alt="" coords="3090,311,3243,338"/>
+<area shape="rect" href="id_8hpp.html" title=" " alt="" coords="2468,311,2580,338"/>
+<area shape="rect" title=" " alt="" coords="1519,304,1663,345"/>
+<area shape="rect" title=" " alt="" coords="1687,304,1838,345"/>
+<area shape="rect" title=" " alt="" coords="1863,304,2001,345"/>
+<area shape="rect" title=" " alt="" coords="2026,304,2174,345"/>
+<area shape="rect" title=" " alt="" coords="2199,304,2393,345"/>
+<area shape="rect" title=" " alt="" coords="625,304,788,345"/>
+<area shape="rect" title=" " alt="" coords="812,304,953,345"/>
+<area shape="rect" title=" " alt="" coords="977,304,1148,345"/>
+<area shape="rect" title=" " alt="" coords="1173,304,1329,345"/>
+<area shape="rect" title=" " alt="" coords="1353,304,1495,345"/>
+<area shape="rect" href="os__util_8hpp.html" title=" " alt="" coords="2641,550,2825,577"/>
+<area shape="rect" title=" " alt="" coords="2619,393,2688,420"/>
+<area shape="rect" title=" " alt="" coords="2712,393,2787,420"/>
+<area shape="rect" href="platform__info_8hpp.html" title=" " alt="" coords="2937,155,3116,181"/>
+<area shape="rect" href="plugin_8hpp.html" title=" " alt="" coords="2988,229,3119,256"/>
 </map>
 </div>
 </div>
@@ -214,7 +215,7 @@ Macros</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> __SYCL_EXPORT ret_type                                              \</div>
 <div class="line">  platform::get_info&lt;info::param_type::param&gt;() <span class="keyword">const</span>;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00058">58</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="platform_8cpp_source.html#l00059">59</a> of file <a class="el" href="platform_8cpp_source.html">platform.cpp</a>.</p>
 
 </div>
 </div>

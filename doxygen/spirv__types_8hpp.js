@@ -1,6 +1,7 @@
 var spirv__types_8hpp =
 [
     [ "Scope", "struct____spv_1_1Scope.html", "struct____spv_1_1Scope" ],
+    [ "StorageClass", "struct____spv_1_1StorageClass.html", "struct____spv_1_1StorageClass" ],
     [ "MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", "struct____spv_1_1MemorySemanticsMask" ],
     [ "__SYCL_SPV_IMAGE_TYPE", "spirv__types_8hpp.html#a81f5fd65f4263343cfc1410946074d3a", null ],
     [ "__SYCL_SPV_SAMPLED_AND_IMAGE_TYPE", "spirv__types_8hpp.html#a041d866cd978af7af4a7817cf00891b5", null ],

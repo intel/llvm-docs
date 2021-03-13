@@ -1,5 +1,9 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a58874719ea981e3902e60a19ee48eed2":[3,0,2,1,0,312,6],
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#ac41b3c69f8623a62054792f0a68e9e41":[3,0,2,1,0,312,5],
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#accaafeab1d40cfd90a40d11d2724ad9b":[3,0,2,1,0,312,2],
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#ae32016bc1ec2a6e4676dc7ab2f70fd2b":[3,0,2,1,0,312,0],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#aeaca38089aaa148363a2ef893d874dc6":[3,0,2,1,0,312,3],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html":[3,0,2,1,0,313],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocatorHolder.html#a46a377afe1c0c182a2f9a5adafab58d9":[3,0,2,1,0,313,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html#a8634c0ba401df5a5f3e485a3f17d345b":[3,0,2,1,0,5,0,4],
 "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html#a8ecdb71187a804aca21c93306a2767b7":[3,0,2,1,0,5,0,1],
 "classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html#aca9dca2c11f04f61bb746872427c8371":[3,0,2,1,0,5,0,2],
-"classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html#adbd5c13cb3822836ec719f399998383e":[3,0,2,1,0,5,0,3],
-"classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html#af9787b71a3f05b76552853f266909d3c":[3,0,2,1,0,5,0,0],
-"classcl_1_1sycl_1_1detail_1_1aligned__allocator.html":[3,0,2,1,0,9],
-"classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a08023f0366bb4109a4b54c5cab96d0a6":[3,0,2,1,0,9,1],
-"classcl_1_1sycl_1_1detail_1_1aligned__allocator.html#a5e16b67266920dd4934ae8531de2d878":[3,0,2,1,0,9,12]
+"classcl_1_1sycl_1_1detail_1_1accessor__common_1_1AccessorSubscript.html#adbd5c13cb3822836ec719f399998383e":[3,0,2,1,0,5,0,3]
 };

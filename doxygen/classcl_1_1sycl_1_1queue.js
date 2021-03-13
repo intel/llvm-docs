@@ -15,6 +15,7 @@ var classcl_1_1sycl_1_1queue =
     [ "queue", "classcl_1_1sycl_1_1queue.html#a8dcb9e750fefa241890d191546cdc67a", null ],
     [ "fill", "classcl_1_1sycl_1_1queue.html#a885877f9ae12cb55d61a24d2a179dbba", null ],
     [ "get", "classcl_1_1sycl_1_1queue.html#a8edb4ea02ee6c99c98287f336bd32874", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1queue.html#a5e63e95af49ba50358e68b2eab6962ea", null ],
     [ "get_context", "classcl_1_1sycl_1_1queue.html#aca23a41f6aa537c7038be5bf7ae135e3", null ],
     [ "get_device", "classcl_1_1sycl_1_1queue.html#a2f991915c57bfb1d73992fde421d56c8", null ],
     [ "get_info", "classcl_1_1sycl_1_1queue.html#ae877ebb3989aa206124871b849b04813", null ],

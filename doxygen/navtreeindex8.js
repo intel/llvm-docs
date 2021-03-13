@@ -1,5 +1,9 @@
 var NAVTREEINDEX8 =
 {
+"classcl_1_1sycl_1_1detail_1_1GetScalarOp.html#aeee22176b2c2e7be400f4cbee4b85742":[3,0,2,1,0,122,2],
+"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html":[3,0,2,1,0,127],
+"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a34404566dfa929fef9194f2f684a77a4":[3,0,2,1,0,127,3],
+"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a3a55cb015f627fb704249ebbe8dd6ac5":[3,0,2,1,0,127,7],
 "classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a3ef9b2116d357d97f3e8aab7fbc4f520":[3,0,2,1,0,127,2],
 "classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a6356c13a9832a45f21d30dcd7aa0a2e5":[3,0,2,1,0,127,1],
 "classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a7861ee1569802186a619778efc85af13":[3,0,2,1,0,127,11],
@@ -245,9 +249,5 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1SYCLConfig_3_01SYCL__PI__TRACE_01_4.html#ac0a6eb7806028a75bb4095b68e755b4e":[3,0,2,1,0,310,0],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html":[3,0,2,1,0,312],
 "classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a0b4d8047092d61400d07da31559e5549":[3,0,2,1,0,312,4],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a3b0a0407cef08d249d191f0b6ada7595":[3,0,2,1,0,312,1],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a58874719ea981e3902e60a19ee48eed2":[3,0,2,1,0,312,6],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#ac41b3c69f8623a62054792f0a68e9e41":[3,0,2,1,0,312,5],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#accaafeab1d40cfd90a40d11d2724ad9b":[3,0,2,1,0,312,2],
-"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#ae32016bc1ec2a6e4676dc7ab2f70fd2b":[3,0,2,1,0,312,0]
+"classcl_1_1sycl_1_1detail_1_1SYCLMemObjAllocator.html#a3b0a0407cef08d249d191f0b6ada7595":[3,0,2,1,0,312,1]
 };
