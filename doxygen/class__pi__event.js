@@ -23,6 +23,7 @@ var class__pi__event =
     [ "release", "class__pi__event.html#aa9ace9cc52d7f9a5f66121f1eca86cce", null ],
     [ "start", "class__pi__event.html#a888ed5b68e7e812448439dda1cb9dbc3", null ],
     [ "wait", "class__pi__event.html#a4c26466908c0791106777bde099eb723", null ],
+    [ "CleanedUp", "class__pi__event.html#a1ca91f69213f8fd75a2d8a78a6a8f558", null ],
     [ "CommandData", "class__pi__event.html#a5993746ca407e835220191dc4cf48f39", null ],
     [ "CommandType", "class__pi__event.html#a8e51bce41cd2d0c9f986d780712b7d34", null ],
     [ "Context", "class__pi__event.html#a135c8a28d6e5276efd69f8b737caf352", null ],

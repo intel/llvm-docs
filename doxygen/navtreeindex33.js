@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1LogicalAnd.html#ab3e76a798c1a1df27c207a1ce1a7fa30":[3,0,2,1,0,232,0],
+"structcl_1_1sycl_1_1detail_1_1LogicalOr.html":[3,0,2,1,0,233],
+"structcl_1_1sycl_1_1detail_1_1LogicalOr.html#a4b8e7e4c1bb71116990b320bd0434d8d":[3,0,2,1,0,233,0],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html":[1,3,1],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3":[1,3,1,6],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,3,1,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1is__generic__group.html":[3,0,2,1,0,165],
 "structcl_1_1sycl_1_1detail_1_1is__group.html":[3,0,2,1,0,166],
 "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html":[3,0,2,1,0,167],
-"structcl_1_1sycl_1_1detail_1_1is__integral.html":[3,0,2,1,0,168],
-"structcl_1_1sycl_1_1detail_1_1is__native__op.html":[3,0,2,1,0,169],
-"structcl_1_1sycl_1_1detail_1_1is__native__op.html#a9204b57a5c232158218dbedd9ee63472":[3,0,2,1,0,169,0],
-"structcl_1_1sycl_1_1detail_1_1is__output__iterator.html":[3,0,2,1,0,170]
+"structcl_1_1sycl_1_1detail_1_1is__integral.html":[3,0,2,1,0,168]
 };

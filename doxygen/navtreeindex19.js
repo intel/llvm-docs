@@ -1,5 +1,8 @@
 var NAVTREEINDEX19 =
 {
+"functions_vars_g.html":[3,3,2,6],
+"functions_vars_h.html":[3,3,2,7],
+"functions_vars_i.html":[3,3,2,8],
 "functions_vars_k.html":[3,3,2,9],
 "functions_vars_l.html":[3,3,2,10],
 "functions_vars_m.html":[3,3,2,11],
@@ -246,8 +249,5 @@ var NAVTREEINDEX19 =
 "globals_c.html":[4,1,0,2],
 "globals_d.html":[4,1,0,3],
 "globals_defs.html":[4,1,6],
-"globals_defs.html":[4,1,6,0],
-"globals_defs_c.html":[4,1,6,1],
-"globals_defs_d.html":[4,1,6,2],
-"globals_defs_e.html":[4,1,6,3]
+"globals_defs.html":[4,1,6,0]
 };

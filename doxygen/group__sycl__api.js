@@ -45,6 +45,8 @@ var group__sycl__api =
       [ "operator=", "classcl_1_1sycl_1_1buffer.html#afed36df5b13bed5c889847ca6b8997e1", null ],
       [ "operator=", "classcl_1_1sycl_1_1buffer.html#a2dd6c96ec96b1c5e203e43bba8106fe4", null ],
       [ "operator==", "classcl_1_1sycl_1_1buffer.html#a094695d66b02a206e2f4dc24094d9ed6", null ],
+      [ "reinterpret", "classcl_1_1sycl_1_1buffer.html#a29ccfb73a867a6684af39f5fd5692d2a", null ],
+      [ "reinterpret", "classcl_1_1sycl_1_1buffer.html#a78a7c7e19f5bb392d87c4cff0b8b4ffa", null ],
       [ "reinterpret", "classcl_1_1sycl_1_1buffer.html#a0281b09d129644dbc3a25d33be483fd2", null ],
       [ "set_final_data", "classcl_1_1sycl_1_1buffer.html#a98adb8c937a420c8f84b889ae2342ec2", null ],
       [ "set_write_back", "classcl_1_1sycl_1_1buffer.html#a1e2d845259552a1426413d311658614b", null ],

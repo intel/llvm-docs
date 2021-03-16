@@ -1,5 +1,8 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1detail_1_1is__native__op.html":[3,0,2,1,0,169],
+"structcl_1_1sycl_1_1detail_1_1is__native__op.html#a9204b57a5c232158218dbedd9ee63472":[3,0,2,1,0,169,0],
+"structcl_1_1sycl_1_1detail_1_1is__output__iterator.html":[3,0,2,1,0,170],
 "structcl_1_1sycl_1_1detail_1_1is__output__iterator.html#a773bcc38adac557a00242f925bc388f9":[3,0,2,1,0,170,0],
 "structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4.html":[3,0,2,1,0,171],
 "structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4.html#a1c040e7acd77cbf98d8d3e730d5b372d":[3,0,2,1,0,171,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX34 =
 "structesimdtype_3_01signed_01char_01_4.html":[3,0,53],
 "structesimdtype_3_01signed_01char_01_4.html#a1c77e203ee9a454fc69912fe570e1e95":[3,0,53,0],
 "structesimdtype_3_01unsigned_01char_01_4.html":[3,0,54],
-"structesimdtype_3_01unsigned_01char_01_4.html#accb05da715dc0f2ab868d64a34333e0c":[3,0,54,0],
-"structesimdtype_3_01unsigned_01int_01_4.html":[3,0,55],
-"structesimdtype_3_01unsigned_01int_01_4.html#a7f6eb5d074579aff47a3edac6db00511":[3,0,55,0],
-"structesimdtype_3_01unsigned_01long_01_4.html":[3,0,56]
+"structesimdtype_3_01unsigned_01char_01_4.html#accb05da715dc0f2ab868d64a34333e0c":[3,0,54,0]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX30 =
 {
+"struct__pi__device__binary__property__set__struct.html#ad40793d809f022073b2cc29a778e2c09":[3,0,13,2],
+"struct__pi__device__binary__property__struct.html":[3,0,14],
+"struct__pi__device__binary__property__struct.html#a1e4d76502460314305ef5b65dea3a8e6":[3,0,14,1],
 "struct__pi__device__binary__property__struct.html#a585416d56b0dc499e89b023729ad32df":[3,0,14,3],
 "struct__pi__device__binary__property__struct.html#a73a37247e15474a26eff40807e2fb0b2":[3,0,14,0],
 "struct__pi__device__binary__property__struct.html#a9f719a2b9e43f53f227aab1092e37556":[3,0,14,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX30 =
 "struct__pi__sampler.html#a15895558567d7b432347ec0240fbdb75":[3,0,27,7],
 "struct__pi__sampler.html#a39b8ed2fef76d1a4c482c8b472fb648d":[3,0,27,4],
 "struct__pi__sampler.html#a585c48b1b91197261c7c1538f6f2c9f7":[3,0,27,2],
-"struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d":[3,0,27,6],
-"struct__pi__sampler.html#a9c348292d97da1ef286fb7bdbe7ae48a":[3,0,27,5],
-"struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673":[3,0,27,8],
-"struct__pi__sampler.html#aaff4c24bc8bc4b729bf79cbae2f7f1f6":[3,0,27,1]
+"struct__pi__sampler.html#a7aed49e9e09d324a3c75f1f8ae74741d":[3,0,27,6]
 };

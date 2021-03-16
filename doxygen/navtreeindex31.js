@@ -1,5 +1,8 @@
 var NAVTREEINDEX31 =
 {
+"struct__pi__sampler.html#a9c348292d97da1ef286fb7bdbe7ae48a":[3,0,27,5],
+"struct__pi__sampler.html#aa00f20aad28e2ded069c829cf059f673":[3,0,27,8],
+"struct__pi__sampler.html#aaff4c24bc8bc4b729bf79cbae2f7f1f6":[3,0,27,1],
 "struct__pi__sampler.html#ab63729c9eb971e27cb169fe49b3095d1":[3,0,27,0],
 "struct__pi__sampler.html#acf9ba2b7b6813be0c4aa77991aade07d":[3,0,27,3],
 "struct__pi__ze__event__list__t.html":[3,0,28],
@@ -246,8 +249,5 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate.html":[3,0,2,1,4,0,19],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html":[3,0,2,1,4,0,19,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html#afb434aca376af58048fc1da55977ebff":[3,0,2,1,4,0,19,0,0],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate.html":[3,0,2,1,4,0,20],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func.html":[3,0,2,1,4,0,20,0],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func.html#ab581df1a82513da4359bd65fe221d09a":[3,0,2,1,4,0,20,0,0],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html":[3,0,2,1,4,0,9]
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate.html":[3,0,2,1,4,0,20]
 };

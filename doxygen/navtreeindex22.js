@@ -1,5 +1,8 @@
 var NAVTREEINDEX22 =
 {
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a9b5554059e54d65bbbbe80892ade14a9":[4,0,0,0,1,3,0,7,9],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aa454d1c5114e7b085e5e21e7be5e18de":[4,0,0,0,1,3,0,7,32],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aa6474ef1a7514c0b0d89cac06ef81a6c":[4,0,0,0,1,3,0,7,23],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aa79465f17d0f639f44a4e801ee0404bc":[4,0,0,0,1,3,0,7,70],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aa7c2ecb69c55eb87bc76205d634a9c9f":[4,0,0,0,1,3,0,7,21],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aaa45085f0e282cdfc60b3336159be71f":[4,0,0,0,1,3,0,7,17],
@@ -32,8 +35,8 @@ var NAVTREEINDEX22 =
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190afc1fc31ceecfb5079c46662e292a9d3e":[4,0,0,0,1,3,0,7,54],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190afe373d69771aca74db47fccb0126c6f7":[4,0,0,0,1,3,0,7,35],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aff44a93fba7e8adf9a44a1af62c69b59":[4,0,0,0,1,3,0,7,88],
-"info__desc_8hpp.html#ac535545f91898330c7322596642fd332":[4,0,0,0,1,3,0,2],
 "info__desc_8hpp.html#ac535545f91898330c7322596642fd332":[4,0,0,0,1,3,0,3],
+"info__desc_8hpp.html#ac535545f91898330c7322596642fd332":[4,0,0,0,1,3,0,2],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001":[4,0,0,0,1,3,0,19],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001a334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,3,0,19,0],
 "info__desc_8hpp.html#ad3cf44d11f60b23508e91d1ed61ad001a9c70933aff6b2a6d08c687a6cbb6b765":[4,0,0,0,1,3,0,19,2],
@@ -69,10 +72,10 @@ var NAVTREEINDEX22 =
 "kernel_8cpp.html":[4,0,2,14],
 "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,14,4],
 "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,14,5],
-"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,0],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,1],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,2],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,3],
+"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,14,0],
 "kernel_8cpp_source.html":[4,0,2,14],
 "kernel_8hpp.html":[4,0,0,0,1,33],
 "kernel_8hpp_source.html":[4,0,0,0,1,33],
@@ -246,8 +249,5 @@ var NAVTREEINDEX22 =
 "namespacecl.html":[3,0,2],
 "namespacecl_1_1____host__std.html":[2,0,2,0],
 "namespacecl_1_1____host__std.html":[3,0,2,0],
-"namespacecl_1_1____host__std_1_1detail.html":[2,0,2,0,0],
-"namespacecl_1_1____host__std_1_1detail.html":[3,0,2,0,0],
-"namespacecl_1_1sycl.html":[2,0,2,1],
-"namespacecl_1_1sycl.html":[3,0,2,1]
+"namespacecl_1_1____host__std_1_1detail.html":[2,0,2,0,0]
 };

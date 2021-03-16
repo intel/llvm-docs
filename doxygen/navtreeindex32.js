@@ -1,5 +1,8 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func.html":[3,0,2,1,4,0,20,0],
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func.html#ab581df1a82513da4359bd65fe221d09a":[3,0,2,1,4,0,20,0,0],
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html":[3,0,2,1,4,0,9],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html":[3,0,2,1,4,0,12],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html#af3357d1effbae69d60d2e91bc94b19c2":[3,0,2,1,4,0,12,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html":[3,0,2,1,4,0,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1LessEqualTo.html#a8699d9862c9b8ae6a8661f4ab8ed226e":[3,0,2,1,0,226,0],
 "structcl_1_1sycl_1_1detail_1_1LessThan.html":[3,0,2,1,0,227],
 "structcl_1_1sycl_1_1detail_1_1LessThan.html#aecda6a7dcdc75a919896fdc368e1235b":[3,0,2,1,0,227,0],
-"structcl_1_1sycl_1_1detail_1_1LogicalAnd.html":[3,0,2,1,0,232],
-"structcl_1_1sycl_1_1detail_1_1LogicalAnd.html#ab3e76a798c1a1df27c207a1ce1a7fa30":[3,0,2,1,0,232,0],
-"structcl_1_1sycl_1_1detail_1_1LogicalOr.html":[3,0,2,1,0,233],
-"structcl_1_1sycl_1_1detail_1_1LogicalOr.html#a4b8e7e4c1bb71116990b320bd0434d8d":[3,0,2,1,0,233,0]
+"structcl_1_1sycl_1_1detail_1_1LogicalAnd.html":[3,0,2,1,0,232]
 };

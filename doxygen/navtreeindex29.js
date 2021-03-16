@@ -1,5 +1,8 @@
 var NAVTREEINDEX29 =
 {
+"stl__type__traits_8hpp.html#af6a7d47c2630372e20c96c4a8ffc988d":[4,0,0,0,1,2,36,9],
+"stl__type__traits_8hpp_source.html":[4,0,0,0,1,2,36],
+"stream_8cpp.html":[4,0,2,21],
 "stream_8cpp.html#aec6cdc78a5791de67880431c926fa346":[4,0,2,21,0],
 "stream_8cpp_source.html":[4,0,2,21],
 "stream_8hpp.html":[4,0,0,0,1,50],
@@ -246,8 +249,5 @@ var NAVTREEINDEX29 =
 "struct__pi__context_1_1deleter__data.html#ae6cd408cfa859b56d3c075c3805da818":[3,0,11,0,1],
 "struct__pi__device__binary__property__set__struct.html":[3,0,13],
 "struct__pi__device__binary__property__set__struct.html#a8994dfc511293a09a928998e785aec99":[3,0,13,0],
-"struct__pi__device__binary__property__set__struct.html#aafd7497540be2a3d067d430f2652e05b":[3,0,13,1],
-"struct__pi__device__binary__property__set__struct.html#ad40793d809f022073b2cc29a778e2c09":[3,0,13,2],
-"struct__pi__device__binary__property__struct.html":[3,0,14],
-"struct__pi__device__binary__property__struct.html#a1e4d76502460314305ef5b65dea3a8e6":[3,0,14,1]
+"struct__pi__device__binary__property__set__struct.html#aafd7497540be2a3d067d430f2652e05b":[3,0,13,1]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX14 =
 {
+"classcl_1_1sycl_1_1nd__item.html#af56bc7bc03beea10e019950936be3189":[1,2,20,2],
+"classcl_1_1sycl_1_1nd__item.html#af8033693a26cbb79f07a05a252e7bf0c":[1,2,20,12],
+"classcl_1_1sycl_1_1nd__item.html#af92b451ad44714db07f7dd55f9362b13":[1,2,20,9],
 "classcl_1_1sycl_1_1nd__range.html":[1,2,21],
 "classcl_1_1sycl_1_1nd__range.html#a4aca42bad1b8d706a64ce13920bb661d":[1,2,21,11],
 "classcl_1_1sycl_1_1nd__range.html#a50ea98b2c11c1cfde298a2887c729602":[1,2,21,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX14 =
 "classcl_1_1sycl_1_1usm__allocator.html#af3d6e2a7c944a805c108c832a1669854":[3,0,2,1,96,14],
 "classcl_1_1sycl_1_1vec.html":[1,2,30],
 "classes.html":[3,1],
-"classstd_1_1conditional_1_1type.html":[3,0,237],
-"commands_8cpp.html":[4,0,2,1,3,0],
-"commands_8cpp.html#a1a3478d21ad44f2d6d9593d3e46116f5":[4,0,2,1,3,0,6],
-"commands_8cpp.html#a35843ff50f01502809e89173773b75fb":[4,0,2,1,3,0,2]
+"classstd_1_1conditional_1_1type.html":[3,0,237]
 };
