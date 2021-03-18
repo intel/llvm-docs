@@ -4396,7 +4396,7 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="line"><a name="l04302"></a><span class="lineno"> 4302</span>&#160;  ze_command_list_handle_t ZeCommandList = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l04303"></a><span class="lineno"> 4303</span>&#160;  ze_fence_handle_t ZeFence = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l04304"></a><span class="lineno"> 4304</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">auto</span> Res = Queue-&gt;<a class="code" href="struct__pi__queue.html#aab82ec00fe6b1afeba8783aab620181d">Context</a>-&gt;<a class="code" href="struct__pi__context.html#aa8f7b062f4ec2ef1b2dc7a1d82e5f7a5">getAvailableCommandList</a>(Queue, &amp;ZeCommandList,</div>
-<div class="line"><a name="l04305"></a><span class="lineno"> 4305</span>&#160;                                                         &amp;ZeFence, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l04305"></a><span class="lineno"> 4305</span>&#160;                                                         &amp;ZeFence))</div>
 <div class="line"><a name="l04306"></a><span class="lineno"> 4306</span>&#160;    <span class="keywordflow">return</span> Res;</div>
 <div class="line"><a name="l04307"></a><span class="lineno"> 4307</span>&#160; </div>
 <div class="line"><a name="l04308"></a><span class="lineno"> 4308</span>&#160;  ze_event_handle_t ZeEvent = <span class="keyword">nullptr</span>;</div>
@@ -4421,8 +4421,8 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="line"><a name="l04327"></a><span class="lineno"> 4327</span>&#160;          pi_cast&lt;std::uintptr_t&gt;(ZeEvent));</div>
 <div class="line"><a name="l04328"></a><span class="lineno"> 4328</span>&#160;  <a class="code" href="pi__level__zero_8cpp.html#a18ef846408ee73ae5dbb8c4978d1ec41">printZeEventList</a>(WaitList);</div>
 <div class="line"><a name="l04329"></a><span class="lineno"> 4329</span>&#160; </div>
-<div class="line"><a name="l04330"></a><span class="lineno"> 4330</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">auto</span> Res = Queue-&gt;<a class="code" href="struct__pi__queue.html#ae0c09bcb63b05d67279464a02ea4016f">executeCommandList</a>(ZeCommandList, ZeFence,</div>
-<div class="line"><a name="l04331"></a><span class="lineno"> 4331</span>&#160;                                           BlockingWrite, <span class="keyword">true</span>))</div>
+<div class="line"><a name="l04330"></a><span class="lineno"> 4330</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">auto</span> Res =</div>
+<div class="line"><a name="l04331"></a><span class="lineno"> 4331</span>&#160;          Queue-&gt;<a class="code" href="struct__pi__queue.html#ae0c09bcb63b05d67279464a02ea4016f">executeCommandList</a>(ZeCommandList, ZeFence, BlockingWrite))</div>
 <div class="line"><a name="l04332"></a><span class="lineno"> 4332</span>&#160;    <span class="keywordflow">return</span> Res;</div>
 <div class="line"><a name="l04333"></a><span class="lineno"> 4333</span>&#160; </div>
 <div class="line"><a name="l04334"></a><span class="lineno"> 4334</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a94809a014464a857cf2ec1035988b322">PI_SUCCESS</a>;</div>
