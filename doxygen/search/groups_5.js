@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raw_20send_20apis_10576',['Raw send APIs',['../group__sycl__esimd__raw__send__api.html',1,'']]]
+  ['raw_20send_20apis_10606',['Raw send APIs',['../group__sycl__esimd__raw__send__api.html',1,'']]]
 ];

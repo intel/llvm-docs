@@ -8,6 +8,9 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "array.hpp", "array_8hpp.html", [
       [ "array", "classcl_1_1sycl_1_1detail_1_1array.html", "classcl_1_1sycl_1_1detail_1_1array" ]
     ] ],
+    [ "backend_traits.hpp", "backend__traits_8hpp.html", [
+      [ "InteropFeatureSupportMap", "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html", "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap" ]
+    ] ],
     [ "boolean.hpp", "boolean_8hpp.html", [
       [ "Assigner", "structcl_1_1sycl_1_1detail_1_1Assigner.html", "structcl_1_1sycl_1_1detail_1_1Assigner" ],
       [ "Assigner< 0 >", "structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html", "structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4" ],

@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dimensions_00_01AllocatorT_01_4_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dimensions_00_01AllocatorT_01_4_01_4.html#a76ab2fc4ad69532ed74f891394236839", null ]
+];

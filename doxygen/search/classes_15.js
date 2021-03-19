@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['value_5flist_6058',['value_list',['../structcl_1_1sycl_1_1detail_1_1value__list.html',1,'cl::sycl::detail']]],
-  ['value_5flist_3c_20t_20_3e_6059',['value_list&lt; T &gt;',['../structcl_1_1sycl_1_1detail_1_1value__list_3_01T_01_4.html',1,'cl::sycl::detail']]],
-  ['value_5flist_3c_20t_2c_20h_2c_20v_2e_2e_2e_20_3e_6060',['value_list&lt; T, H, V... &gt;',['../structcl_1_1sycl_1_1detail_1_1value__list_3_01T_00_01H_00_01V_8_8_8_01_4.html',1,'cl::sycl::detail']]],
-  ['vec_6061',['vec',['../classcl_1_1sycl_1_1vec.html',1,'cl::sycl']]],
-  ['vector_5falignment_6062',['vector_alignment',['../structcl_1_1sycl_1_1detail_1_1vector__alignment.html',1,'cl::sycl::detail']]],
-  ['vector_5falignment_5fimpl_6063',['vector_alignment_impl',['../structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html',1,'cl::sycl::detail']]],
-  ['vector_5falignment_5fimpl_3c_20remove_5fcv_5ft_3c_20remove_5freference_5ft_3c_20t_20_3e_20_3e_2c_20n_20_3e_6064',['vector_alignment_impl&lt; remove_cv_t&lt; remove_reference_t&lt; T &gt; &gt;, N &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html',1,'cl::sycl::detail']]],
-  ['vector_5felement_6065',['vector_element',['../structcl_1_1sycl_1_1detail_1_1vector__element.html',1,'cl::sycl::detail']]],
-  ['vector_5felement_5fimpl_6066',['vector_element_impl',['../structcl_1_1sycl_1_1detail_1_1vector__element__impl.html',1,'cl::sycl::detail']]],
-  ['vector_5felement_5fimpl_3c_20vec_3c_20t_2c_20n_20_3e_20_3e_6067',['vector_element_impl&lt; vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__element__impl_3_01vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]],
-  ['vector_5fsize_6068',['vector_size',['../structcl_1_1sycl_1_1detail_1_1vector__size.html',1,'cl::sycl::detail']]],
-  ['vector_5fsize_5fimpl_6069',['vector_size_impl',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl.html',1,'cl::sycl::detail']]],
-  ['vector_5fsize_5fimpl_3c_20remove_5fcv_5ft_3c_20remove_5freference_5ft_3c_20t_20_3e_20_3e_20_3e_6070',['vector_size_impl&lt; remove_cv_t&lt; remove_reference_t&lt; T &gt; &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl.html',1,'cl::sycl::detail']]],
-  ['vector_5fsize_5fimpl_3c_20vec_3c_20t_2c_20n_20_3e_20_3e_6071',['vector_size_impl&lt; vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]],
-  ['vector_5ftype_6072',['vector_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1vector__type.html',1,'cl::sycl::INTEL::gpu']]]
+  ['value_5flist_6077',['value_list',['../structcl_1_1sycl_1_1detail_1_1value__list.html',1,'cl::sycl::detail']]],
+  ['value_5flist_3c_20t_20_3e_6078',['value_list&lt; T &gt;',['../structcl_1_1sycl_1_1detail_1_1value__list_3_01T_01_4.html',1,'cl::sycl::detail']]],
+  ['value_5flist_3c_20t_2c_20h_2c_20v_2e_2e_2e_20_3e_6079',['value_list&lt; T, H, V... &gt;',['../structcl_1_1sycl_1_1detail_1_1value__list_3_01T_00_01H_00_01V_8_8_8_01_4.html',1,'cl::sycl::detail']]],
+  ['vec_6080',['vec',['../classcl_1_1sycl_1_1vec.html',1,'cl::sycl']]],
+  ['vector_5falignment_6081',['vector_alignment',['../structcl_1_1sycl_1_1detail_1_1vector__alignment.html',1,'cl::sycl::detail']]],
+  ['vector_5falignment_5fimpl_6082',['vector_alignment_impl',['../structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html',1,'cl::sycl::detail']]],
+  ['vector_5falignment_5fimpl_3c_20remove_5fcv_5ft_3c_20remove_5freference_5ft_3c_20t_20_3e_20_3e_2c_20n_20_3e_6083',['vector_alignment_impl&lt; remove_cv_t&lt; remove_reference_t&lt; T &gt; &gt;, N &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html',1,'cl::sycl::detail']]],
+  ['vector_5felement_6084',['vector_element',['../structcl_1_1sycl_1_1detail_1_1vector__element.html',1,'cl::sycl::detail']]],
+  ['vector_5felement_5fimpl_6085',['vector_element_impl',['../structcl_1_1sycl_1_1detail_1_1vector__element__impl.html',1,'cl::sycl::detail']]],
+  ['vector_5felement_5fimpl_3c_20vec_3c_20t_2c_20n_20_3e_20_3e_6086',['vector_element_impl&lt; vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__element__impl_3_01vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]],
+  ['vector_5fsize_6087',['vector_size',['../structcl_1_1sycl_1_1detail_1_1vector__size.html',1,'cl::sycl::detail']]],
+  ['vector_5fsize_5fimpl_6088',['vector_size_impl',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl.html',1,'cl::sycl::detail']]],
+  ['vector_5fsize_5fimpl_3c_20remove_5fcv_5ft_3c_20remove_5freference_5ft_3c_20t_20_3e_20_3e_20_3e_6089',['vector_size_impl&lt; remove_cv_t&lt; remove_reference_t&lt; T &gt; &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl.html',1,'cl::sycl::detail']]],
+  ['vector_5fsize_5fimpl_3c_20vec_3c_20t_2c_20n_20_3e_20_3e_6090',['vector_size_impl&lt; vec&lt; T, N &gt; &gt;',['../structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html',1,'cl::sycl::detail']]],
+  ['vector_5ftype_6091',['vector_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1vector__type.html',1,'cl::sycl::INTEL::gpu']]]
 ];
