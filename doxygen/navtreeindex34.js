@@ -1,5 +1,9 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01cl__uint_00_01Param_01_4.html#a7ab18ead742911c811ebbb08621eb58b":[3,0,2,1,0,113,0],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01string__class_00_01Param_01_4.html":[3,0,2,1,0,114],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01string__class_00_01Param_01_4.html#ae90102f64c0d36693fb447e79d545d23":[3,0,2,1,0,114,0],
+"structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html":[3,0,2,1,0,115],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html#aba75cbed27925b72365b950168aebf5e":[3,0,2,1,0,115,0],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4.html":[3,0,2,1,0,116],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4.html#a23fb40c3b8b04bd9e4b26041b7fce6c6":[3,0,2,1,0,116,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX34 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html":[3,0,2,1,55],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01queue_01_4.html#a9d1e1ed94185e07d707fe8937ca94174":[3,0,2,1,55,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html":[3,0,2,1,56],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html#af84c96538789a3c3560e4a82dd24c502":[3,0,2,1,56,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html":[3,0,2,1,57],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ab8b442ea49af5a2a944861243ca2da32.html#a8b6a7564e4e531423c495966b989d407":[3,0,2,1,57,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dimensions_00_01AllocatorT_01_4_01_4.html":[3,0,2,1,58],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dimensions_00_01AllocatorT_01_4_01_4.html#a76ab2fc4ad69532ed74f891394236839":[3,0,2,1,58,0]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01A34170fcbab0e245baf1aaaa92a8e2590.html#af84c96538789a3c3560e4a82dd24c502":[3,0,2,1,56,0]
 };

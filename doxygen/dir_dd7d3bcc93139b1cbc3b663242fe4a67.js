@@ -48,6 +48,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "exception_list.hpp", "exception__list_8hpp.html", "exception__list_8hpp" ],
     [ "feature_test.hpp", "feature__test_8hpp.html", "feature__test_8hpp" ],
     [ "group.hpp", "group_8hpp.html", "group_8hpp" ],
+    [ "group_local_memory.hpp", "group__local__memory_8hpp.html", "group__local__memory_8hpp" ],
     [ "h_item.hpp", "h__item_8hpp.html", null ],
     [ "half_type.hpp", "half__type_8hpp.html", "half__type_8hpp" ],
     [ "handler.hpp", "handler_8hpp.html", "handler_8hpp" ],

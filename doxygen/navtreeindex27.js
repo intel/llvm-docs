@@ -1,5 +1,9 @@
 var NAVTREEINDEX27 =
 {
+"pi__level__zero_8cpp.html#a0099a1e48e7d5ff6258a2e8305c91385":[4,0,1,1,0,54],
+"pi__level__zero_8cpp.html#a02c591b92b746d8bc5a52ef2b640e714":[4,0,1,1,0,64],
+"pi__level__zero_8cpp.html#a0439f488f47e1f30a680bf6917f2d785":[4,0,1,1,0,22],
+"pi__level__zero_8cpp.html#a0550d2a1ec81bdf1d42946aafe64b897":[4,0,1,1,0,90],
 "pi__level__zero_8cpp.html#a0656054be032907869315f9572d01aa1":[4,0,1,1,0,95],
 "pi__level__zero_8cpp.html#a06c541888417560fa13d2fa9401ca6d2":[4,0,1,1,0,71],
 "pi__level__zero_8cpp.html#a0781eb4aeacb441573364a3e5af2e6b4":[4,0,1,1,0,50],
@@ -209,14 +213,14 @@ var NAVTREEINDEX27 =
 "pi__opencl_8cpp.html#afc3c5e8ff3e0643a80f89bc0a7c8c8cd":[4,0,1,2,0,38],
 "pi__opencl_8cpp.html#affdd71aa5e984ec956d1a3e53821dd31":[4,0,1,2,0,58],
 "pi__opencl_8cpp_source.html":[4,0,1,2,0],
-"pipes_8hpp.html":[4,0,0,0,1,39],
-"pipes_8hpp.html#a67947b4c496c1c01bdf00ac487b1eafd":[4,0,0,0,1,39,0],
-"pipes_8hpp_source.html":[4,0,0,0,1,39],
+"pipes_8hpp.html":[4,0,0,0,1,40],
+"pipes_8hpp.html#a67947b4c496c1c01bdf00ac487b1eafd":[4,0,0,0,1,40,0],
+"pipes_8hpp_source.html":[4,0,0,0,1,40],
 "platform_8cpp.html":[4,0,2,17],
 "platform_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,17,0],
 "platform_8cpp_source.html":[4,0,2,17],
-"platform_8hpp.html":[4,0,0,0,1,40],
-"platform_8hpp_source.html":[4,0,0,0,1,40],
+"platform_8hpp.html":[4,0,0,0,1,41],
+"platform_8hpp_source.html":[4,0,0,0,1,41],
 "platform__impl_8cpp.html":[4,0,2,1,50],
 "platform__impl_8cpp.html#a2130b5434d2626ef36fbaac83451fdb3":[4,0,2,1,50,6],
 "platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dd":[4,0,2,1,50,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX27 =
 "plugin_8hpp_source.html":[4,0,2,1,55],
 "plugin__printers_8hpp.html":[4,0,2,1,56],
 "plugin__printers_8hpp.html#a147cf052a8f4518098cc302f8b10bdaf":[4,0,2,1,56,8],
-"plugin__printers_8hpp.html#a330da1831c2a44e7e7abdd324ec6d2ed":[4,0,2,1,56,18],
-"plugin__printers_8hpp.html#a3c1a956a0e46889555ec96c666209614":[4,0,2,1,56,17],
-"plugin__printers_8hpp.html#a64fd2db4cac1daa4ef9c94363769d71a":[4,0,2,1,56,11],
-"plugin__printers_8hpp.html#a6939c3baf458f43468a3232e1f3188fb":[4,0,2,1,56,13],
-"plugin__printers_8hpp.html#a768d19c936938f4eef7309875fa2f4a3":[4,0,2,1,56,25]
+"plugin__printers_8hpp.html#a330da1831c2a44e7e7abdd324ec6d2ed":[4,0,2,1,56,18]
 };

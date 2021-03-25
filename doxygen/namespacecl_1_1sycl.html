@@ -1175,6 +1175,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a9988e164184b386e580267e9a08829df"><td class="memTemplParams" colspan="2">template&lt;int Dims&gt; </td></tr>
 <tr class="memitem:a9988e164184b386e580267e9a08829df"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1group.html">group</a>&lt; Dims &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9988e164184b386e580267e9a08829df">this_group</a> ()</td></tr>
 <tr class="separator:a9988e164184b386e580267e9a08829df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6771b0a9414cf6b3b359b97770a2430"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Group &gt; </td></tr>
+<tr class="memitem:ab6771b0a9414cf6b3b359b97770a2430"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_trivially_destructible&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__group.html">detail::is_group</a>&lt; Group &gt;::value, <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt; T, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa619fb1f3a892c810ac284e01782c8531">access::address_space::local_space</a> &gt; &gt; <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ab6771b0a9414cf6b3b359b97770a2430">group_local_memory_for_overwrite</a> (Group g)</td></tr>
+<tr class="separator:ab6771b0a9414cf6b3b359b97770a2430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50b3b6b903a67413ab6bca95138f1bb8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Group , typename... Args&gt; </td></tr>
+<tr class="memitem:a50b3b6b903a67413ab6bca95138f1bb8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_trivially_destructible&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__group.html">detail::is_group</a>&lt; Group &gt;::value, <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt; T, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa619fb1f3a892c810ac284e01782c8531">access::address_space::local_space</a> &gt; &gt; <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a50b3b6b903a67413ab6bca95138f1bb8">group_local_memory</a> (Group g, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:a50b3b6b903a67413ab6bca95138f1bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac70abbf3b03ed041f6b6f22802b175"><td class="memTemplParams" colspan="2">template&lt;int Dims&gt; </td></tr>
 <tr class="memitem:adac70abbf3b03ed041f6b6f22802b175"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1id.html">id</a>&lt; Dims &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#adac70abbf3b03ed041f6b6f22802b175">this_id</a> ()</td></tr>
 <tr class="separator:adac70abbf3b03ed041f6b6f22802b175"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6043,6 +6049,64 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
 <p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00079">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01454">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01463">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01462">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01464">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05575">piextUSMGetMemAllocInfo()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00299">get_pointer_device()</a>.</p>
+
+</div>
+</div>
+<a id="a50b3b6b903a67413ab6bca95138f1bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50b3b6b903a67413ab6bca95138f1bb8">&#9670;&nbsp;</a></span>group_local_memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Group , typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;std::is_trivially_destructible&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__group.html">detail::is_group</a>&lt;Group&gt;::value, <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt;T, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa619fb1f3a892c810ac284e01782c8531">access::address_space::local_space</a>&gt; &gt; <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> cl::sycl::group_local_memory </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Args &amp;&amp;...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__local__memory_8hpp_source.html#l00046">46</a> of file <a class="el" href="group__local__memory_8hpp_source.html">group_local_memory.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="global__handler_8cpp_source.html#l00161">cl::sycl::detail::__attribute__()</a>, <a class="el" href="pi_8h_source.html#l00076">PI_INVALID_OPERATION</a>, and <a class="el" href="group_8hpp_source.html#l00031">cl::sycl::detail::workGroupBarrier()</a>.</p>
+
+</div>
+</div>
+<a id="ab6771b0a9414cf6b3b359b97770a2430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6771b0a9414cf6b3b359b97770a2430">&#9670;&nbsp;</a></span>group_local_memory_for_overwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename Group &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;std::is_trivially_destructible&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__group.html">detail::is_group</a>&lt;Group&gt;::value, <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt;T, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa619fb1f3a892c810ac284e01782c8531">access::address_space::local_space</a>&gt; &gt; <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> cl::sycl::group_local_memory_for_overwrite </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__local__memory_8hpp_source.html#l00029">29</a> of file <a class="el" href="group__local__memory_8hpp_source.html">group_local_memory.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="global__handler_8cpp_source.html#l00161">cl::sycl::detail::__attribute__()</a>, and <a class="el" href="pi_8h_source.html#l00076">PI_INVALID_OPERATION</a>.</p>
 
 </div>
 </div>

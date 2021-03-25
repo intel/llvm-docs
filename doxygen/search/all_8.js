@@ -521,5 +521,8 @@ var searchData=
   ['group_3c_201_20_3e_2150',['group&lt; 1 &gt;',['../classcl_1_1sycl_1_1group.html',1,'cl::sycl']]],
   ['group_3c_20dimensions_20_3e_2151',['group&lt; dimensions &gt;',['../classcl_1_1sycl_1_1h__item.html#a1439893f2f4ad7149be5f67f831216a4',1,'cl::sycl::h_item']]],
   ['group_5falgorithm_2ehpp_2152',['group_algorithm.hpp',['../group__algorithm_8hpp.html',1,'']]],
-  ['groupoperation_2153',['GroupOperation',['../namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753',1,'__spv']]]
+  ['group_5flocal_5fmemory_2153',['group_local_memory',['../namespacecl_1_1sycl.html#a50b3b6b903a67413ab6bca95138f1bb8',1,'cl::sycl']]],
+  ['group_5flocal_5fmemory_2ehpp_2154',['group_local_memory.hpp',['../group__local__memory_8hpp.html',1,'']]],
+  ['group_5flocal_5fmemory_5ffor_5foverwrite_2155',['group_local_memory_for_overwrite',['../namespacecl_1_1sycl.html#ab6771b0a9414cf6b3b359b97770a2430',1,'cl::sycl']]],
+  ['groupoperation_2156',['GroupOperation',['../namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753',1,'__spv']]]
 ];
