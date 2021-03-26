@@ -2,6 +2,7 @@ var defines__elementary_8hpp =
 [
     [ "__has_attribute", "defines__elementary_8hpp.html#a54d2d7742701f3f112afbcd8d4f9ccdb", null ],
     [ "__has_builtin", "defines__elementary_8hpp.html#a447121dcab4275b7839a56082b7a1ab8", null ],
+    [ "__SYCL2020_DEPRECATED", "defines__elementary_8hpp.html#ac02b2c3d65e385d087c513c04c358f7a", null ],
     [ "__SYCL_ALWAYS_INLINE", "defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c", null ],
     [ "__SYCL_DEPRECATED", "defines__elementary_8hpp.html#ab4a96e525ccaf88ee209bf2e85fb7d5a", null ],
     [ "__SYCL_FALLTHROUGH", "defines__elementary_8hpp.html#a3421410eeda4031741fb35f730199ba5", null ],

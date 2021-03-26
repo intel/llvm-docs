@@ -108,91 +108,89 @@ $(document).ready(function(){initNavTree('spec__constant_8hpp_source.html',''); 
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// https://github.com/codeplaysoftware/standards-proposals/blob/master/spec-constant/index.md</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// TODO:</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// 1) implement the SPIR-V interop part of the proposal</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// 2) support arbitrary spec constant type; only primitive types are</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//    supported currently</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// 3) move to the new upcoming spec constant specification (then 1 above is not</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//    needed)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// 2) move to the new upcoming spec constant specification (then 1 above is not</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//    needed)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stl__type__traits_8hpp.html">CL/sycl/detail/stl_type_traits.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="sycl__fe__intrins_8hpp.html">CL/sycl/detail/sycl_fe_intrins.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exception_8hpp.html">CL/sycl/exception.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a>(<a class="code" href="namespacecl.html">cl</a>) {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>sycl {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792">program</a>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span>ONEAPI {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>experimental {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html">spec_const_error</a> : <span class="keyword">public</span> <a class="code" href="classcl_1_1sycl_1_1compile__program__error.html">compile_program_error</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">using</span> compile_program_error::compile_program_error;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">   35</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ID = T&gt; <span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">spec_constant</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb">   37</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb">spec_constant</a>() {}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifndef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// Implementation defined constructor.</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">spec_constant</a>(T Cst) : Val(Cst) {}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  T Val;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">char</span> padding[<span class="keyword">sizeof</span>(T)];</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a3ca453a69aa270390dff32989aebd63e">   48</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1program.html">cl::sycl::program</a>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V = T&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t&lt;std::is_arithmetic&lt;V&gt;::value</a>, V&gt;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">   53</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">get</a>()<span class="keyword"> const </span>{ <span class="comment">// explicit access.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_unique_stable_name(ID);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> __sycl_getSpecConstantValue&lt;T&gt;(TName);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> Val;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V = T&gt;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t&lt;std::is_class&lt;V&gt;::value</a> &amp;&amp;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                         std::is_pod&lt;V&gt;::value,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                     V&gt;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">   66</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">get</a>()<span class="keyword"> const </span>{ <span class="comment">// explicit access.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_unique_stable_name(ID);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> __sycl_getCompositeSpecConstantValue&lt;T&gt;(TName);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> Val;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a93d45c933844280399457a60febfd30f">   75</a></span>&#160;  <span class="keyword">operator</span> T()<span class="keyword"> const </span>{ <span class="comment">// implicit conversion.</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcl_1_1sycl_1_1program.html#ae86b3cfa4dbff2156dd1485c1a88d42f">get</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">// namespace experimental</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace ONEAPI</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="stl__type__traits_8hpp.html">CL/sycl/detail/stl_type_traits.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="sycl__fe__intrins_8hpp.html">CL/sycl/detail/sycl_fe_intrins.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exception_8hpp.html">CL/sycl/exception.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<a class="code" href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a>(<a class="code" href="namespacecl.html">cl</a>) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>sycl {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">class </span><a class="code" href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792">program</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>ONEAPI {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>experimental {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html">spec_const_error</a> : <span class="keyword">public</span> <a class="code" href="classcl_1_1sycl_1_1compile__program__error.html">compile_program_error</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">using</span> compile_program_error::compile_program_error;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">   33</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ID = T&gt; <span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">spec_constant</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb">   35</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb">spec_constant</a>() {}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifndef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// Implementation defined constructor.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">spec_constant</a>(T Cst) : Val(Cst) {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  T Val;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">char</span> padding[<span class="keyword">sizeof</span>(T)];</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a3ca453a69aa270390dff32989aebd63e">   46</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1program.html">cl::sycl::program</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V = T&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t&lt;std::is_arithmetic&lt;V&gt;::value</a>, V&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">   51</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">get</a>()<span class="keyword"> const </span>{ <span class="comment">// explicit access.</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_unique_stable_name(ID);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> __sycl_getScalarSpecConstantValue&lt;T&gt;(TName);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> Val;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V = T&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t&lt;std::is_class&lt;V&gt;::value</a> &amp;&amp;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                         std::is_pod&lt;V&gt;::value,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                     V&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">   64</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">get</a>()<span class="keyword"> const </span>{ <span class="comment">// explicit access.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_unique_stable_name(ID);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> __sycl_getCompositeSpecConstantValue&lt;T&gt;(TName);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> Val;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a93d45c933844280399457a60febfd30f">   73</a></span>&#160;  <span class="keyword">operator</span> T()<span class="keyword"> const </span>{ <span class="comment">// implicit conversion.</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcl_1_1sycl_1_1program.html#ae86b3cfa4dbff2156dd1485c1a88d42f">get</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// namespace experimental</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">// namespace ONEAPI</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasscl_1_1sycl_1_1program_html"><div class="ttname"><a href="classcl_1_1sycl_1_1program.html">cl::sycl::program</a></div><div class="ttdoc">Provides an abstraction of a SYCL program.</div><div class="ttdef"><b>Definition:</b> <a href="program_8hpp_source.html#l00039">program.hpp:39</a></div></div>
 <div class="ttc" id="astl__type__traits_8hpp_html"><div class="ttname"><a href="stl__type__traits_8hpp.html">stl_type_traits.hpp</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">cl::sycl::ONEAPI::experimental::spec_constant</a></div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00035">spec_constant.hpp:35</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html">cl::sycl::ONEAPI::experimental::spec_constant</a></div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00033">spec_constant.hpp:33</a></div></div>
 <div class="ttc" id="asycl__fe__intrins_8hpp_html"><div class="ttname"><a href="sycl__fe__intrins_8hpp.html">sycl_fe_intrins.hpp</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">---— Error handling, matching OpenCL plugin semantics.</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1compile__program__error_html"><div class="ttname"><a href="classcl_1_1sycl_1_1compile__program__error.html">cl::sycl::compile_program_error</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00092">exception.hpp:92</a></div></div>
 <div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html_a435380342616cd1b5944ff9645ffe8b1"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">cl::sycl::ONEAPI::experimental::spec_constant::get</a></div><div class="ttdeci">sycl::detail::enable_if_t&lt; std::is_arithmetic&lt; V &gt;::value, V &gt; get() const</div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00053">spec_constant.hpp:53</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html_a6de4c787c2302367f7b6b5beea9413a8"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">cl::sycl::ONEAPI::experimental::spec_constant::get</a></div><div class="ttdeci">sycl::detail::enable_if_t&lt; std::is_class&lt; V &gt;::value &amp;&amp;std::is_pod&lt; V &gt;::value, V &gt; get() const</div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00066">spec_constant.hpp:66</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html_a435380342616cd1b5944ff9645ffe8b1"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">cl::sycl::ONEAPI::experimental::spec_constant::get</a></div><div class="ttdeci">sycl::detail::enable_if_t&lt; std::is_arithmetic&lt; V &gt;::value, V &gt; get() const</div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00051">spec_constant.hpp:51</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html_a6de4c787c2302367f7b6b5beea9413a8"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">cl::sycl::ONEAPI::experimental::spec_constant::get</a></div><div class="ttdeci">sycl::detail::enable_if_t&lt; std::is_class&lt; V &gt;::value &amp;&amp;std::is_pod&lt; V &gt;::value, V &gt; get() const</div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00064">spec_constant.hpp:64</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_af45cb3f9724853d5ea66e37de686a383"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">cl::sycl::detail::enable_if_t</a></div><div class="ttdeci">typename std::enable_if&lt; B, T &gt;::type enable_if_t</div><div class="ttdef"><b>Definition:</b> <a href="stl__type__traits_8hpp_source.html#l00024">stl_type_traits.hpp:24</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html_a8a21f730c1b66999d7689a4fd82b2acb"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb">cl::sycl::ONEAPI::experimental::spec_constant::spec_constant</a></div><div class="ttdeci">spec_constant()</div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00037">spec_constant.hpp:37</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error_html"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html">cl::sycl::ONEAPI::experimental::spec_const_error</a></div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00031">spec_constant.hpp:31</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant_html_a8a21f730c1b66999d7689a4fd82b2acb"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a8a21f730c1b66999d7689a4fd82b2acb">cl::sycl::ONEAPI::experimental::spec_constant::spec_constant</a></div><div class="ttdeci">spec_constant()</div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00035">spec_constant.hpp:35</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error_html"><div class="ttname"><a href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__const__error.html">cl::sycl::ONEAPI::experimental::spec_const_error</a></div><div class="ttdef"><b>Definition:</b> <a href="spec__constant_8hpp_source.html#l00029">spec_constant.hpp:29</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1program_html_ae86b3cfa4dbff2156dd1485c1a88d42f"><div class="ttname"><a href="classcl_1_1sycl_1_1program.html#ae86b3cfa4dbff2156dd1485c1a88d42f">cl::sycl::program::get</a></div><div class="ttdeci">cl_program get() const</div><div class="ttdoc">Returns a valid cl_program instance.</div><div class="ttdef"><b>Definition:</b> <a href="program_8cpp_source.html#l00057">program.cpp:57</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1info_html_a3d3b9bcec2337da0f4a00de2f8252792"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#a3d3b9bcec2337da0f4a00de2f8252792">cl::sycl::info::program</a></div><div class="ttdeci">program</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00242">info_desc.hpp:242</a></div></div>
 <div class="ttc" id="adefines__elementary_8hpp_html_af014229c51476c8c275e6e94d0549384"><div class="ttname"><a href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a></div><div class="ttdeci">#define __SYCL_INLINE_NAMESPACE(X)</div><div class="ttdef"><b>Definition:</b> <a href="defines__elementary_8hpp_source.html#l00012">defines_elementary.hpp:12</a></div></div>

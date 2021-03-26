@@ -7,20 +7,18 @@ var classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage =
     [ "dump", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac2f464da03c9ada02ec1770514898104", null ],
     [ "get", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a62350dfcfc1d3e8ed8733f1a1d0c717c", null ],
     [ "getCompileOptions", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a96be6fc973be6400cd5a210e4cb87427", null ],
-    [ "getCompositeSpecConstants", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aef1ae130e717a85ed9a8c76c059fb8bc", null ],
     [ "getDeviceLibReqMask", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a121bde47ef2fe3dca3674f01ca14d5fd", null ],
     [ "getFormat", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac28251854e81b5ee223d9e15b68614da", null ],
     [ "getKernelParamOptInfo", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#af4667aee799124902b2e9b3d4d424684", null ],
     [ "getLinkOptions", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ad0c6cedf588260a96748ff1867266262", null ],
     [ "getProperty", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a407a91a8287933a62b6aa4b084ca26d3", null ],
-    [ "getScalarSpecConstants", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aa57bf5b4e943ec8786d1292114d3e343", null ],
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ab25030f048e6145b3beab9bc94f5af65", null ],
+    [ "getSpecConstants", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a77e1b1c1b1d3ffc8175c77fc5e07d2de", null ],
     [ "init", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a91c3cb418038889ea7963d8ba716e646", null ],
     [ "print", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a7220d02ef11dc216ffc77270f4cb9f13", null ],
     [ "Bin", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a3c5bccb1fbbb7592fbfe3e2a1e2982f5", null ],
-    [ "CompositeSpecConstIDMap", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ac1d54e66ae8161afd62881726ee1a5df", null ],
     [ "DeviceLibReqMask", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a96f297f8ce4925dc593c0a22043c8e09", null ],
     [ "Format", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#aad75dcd40f639e866c0050fb5b51c6ce", null ],
     [ "KernelParamOptInfo", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a5ce259269c04321089a8a1cae77654fb", null ],
-    [ "ScalarSpecConstIDMap", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a7a128242a0720a2fb4a33013254f724e", null ]
+    [ "SpecConstIDMap", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a6047c6c497aa49ac7bd00a6325407c49", null ]
 ];

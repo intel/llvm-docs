@@ -161,69 +161,71 @@ $(document).ready(function(){initNavTree('sampler_8hpp_source.html',''); initRes
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          <a class="code" href="namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42df">addressing_mode</a> addressingMode, <a class="code" href="namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59">filtering_mode</a> filteringMode,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList = {});</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>(cl_sampler clSampler, <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> &amp;syclContext);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>(<a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;&amp;rhs) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;operator=(<a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;&amp;rhs) = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="usm__allocator_8cpp.html#a761a3720e595d8db641e26a52d9d16eb">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="namespacecl_1_1sycl.html#a5061e873673c1494193817badc55af49">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> propertyT&gt; <span class="keywordtype">bool</span> has_property() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> propertyT&gt; propertyT get_property() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42df">addressing_mode</a> get_addressing_mode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59">filtering_mode</a> get_filtering_mode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a7affaf1f828474ac7e461ae6e9831367">coordinate_normalization_mode</a> get_coordinate_normalization_mode() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html">detail::sampler_impl</a> impl;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> __init(<a class="code" href="spirv__types_8hpp.html#aa8b8d03ccae0846a82d453abd2802a52">__ocl_sampler_t</a> Sampler) { impl.m_Sampler = Sampler; }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">char</span> padding[<span class="keyword">sizeof</span>(std::shared_ptr&lt;detail::sampler_impl&gt;) - <span class="keyword">sizeof</span>(impl)];</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  std::shared_ptr&lt;detail::sampler_impl&gt; impl;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Obj&gt;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">friend</span> decltype(Obj::impl) <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">detail::getSyclObjImpl</a>(<span class="keyword">const</span> Obj &amp;SyclObject);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataT, <span class="keywordtype">int</span> Dimensions, <a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17">cl::sycl::access::mode</a> AccessMode,</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <a class="code" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598">cl::sycl::access::target</a> AccessTarget, <a class="code" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9">access::placeholder</a> IsPlaceholder&gt;</div>
-<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1sampler.html#adbb498cc698f57626f0746b3365a880e">  121</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1detail_1_1image__accessor.html">detail::image_accessor</a>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestd.html">std</a> {</div>
-<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html">  127</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>hash&lt;<a class="code" href="namespacecl.html">cl</a>::sycl::sampler&gt; {</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6">  128</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6">operator()</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">cl::sycl::sampler</a> &amp;<a class="code" href="namespacecl_1_1sycl.html">s</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    (void)<a class="code" href="namespacecl_1_1sycl.html">s</a>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> hash&lt;std::shared_ptr&lt;cl::sycl::detail::sampler_impl&gt;&gt;()(</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">cl::sycl::detail::getSyclObjImpl</a>(<a class="code" href="namespacecl_1_1sycl.html">s</a>));</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  }</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;} <span class="comment">// namespace std</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="defines__elementary_8hpp.html#ac02b2c3d65e385d087c513c04c358f7a">__SYCL2020_DEPRECATED</a>(<span class="stringliteral">&quot;OpenCL interop APIs are deprecated&quot;</span>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>(cl_sampler clSampler, <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> &amp;syclContext);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>(<a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;&amp;rhs) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;operator=(<a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;&amp;rhs) = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="usm__allocator_8cpp.html#a761a3720e595d8db641e26a52d9d16eb">operator==</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="namespacecl_1_1sycl.html#a5061e873673c1494193817badc55af49">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a> &amp;rhs) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> propertyT&gt; <span class="keywordtype">bool</span> has_property() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> propertyT&gt; propertyT get_property() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42df">addressing_mode</a> get_addressing_mode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59">filtering_mode</a> get_filtering_mode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a7affaf1f828474ac7e461ae6e9831367">coordinate_normalization_mode</a> get_coordinate_normalization_mode() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html">detail::sampler_impl</a> impl;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">void</span> __init(<a class="code" href="spirv__types_8hpp.html#aa8b8d03ccae0846a82d453abd2802a52">__ocl_sampler_t</a> Sampler) { impl.m_Sampler = Sampler; }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordtype">char</span> padding[<span class="keyword">sizeof</span>(std::shared_ptr&lt;detail::sampler_impl&gt;) - <span class="keyword">sizeof</span>(impl)];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1sampler.html">sampler</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  std::shared_ptr&lt;detail::sampler_impl&gt; impl;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Obj&gt;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keyword">friend</span> decltype(Obj::impl) <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">detail::getSyclObjImpl</a>(<span class="keyword">const</span> Obj &amp;SyclObject);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> DataT, <span class="keywordtype">int</span> Dimensions, <a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17">cl::sycl::access::mode</a> AccessMode,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598">cl::sycl::access::target</a> AccessTarget, <a class="code" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9">access::placeholder</a> IsPlaceholder&gt;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1sampler.html#adbb498cc698f57626f0746b3365a880e">  122</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1detail_1_1image__accessor.html">detail::image_accessor</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestd.html">std</a> {</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html">  128</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>hash&lt;<a class="code" href="namespacecl.html">cl</a>::sycl::sampler&gt; {</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6">  129</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6">operator()</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1sampler.html">cl::sycl::sampler</a> &amp;<a class="code" href="namespacecl_1_1sycl.html">s</a>)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    (void)<a class="code" href="namespacecl_1_1sycl.html">s</a>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> hash&lt;std::shared_ptr&lt;cl::sycl::detail::sampler_impl&gt;&gt;()(</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">cl::sycl::detail::getSyclObjImpl</a>(<a class="code" href="namespacecl_1_1sycl.html">s</a>));</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;};</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;} <span class="comment">// namespace std</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aproperty__list_8hpp_html"><div class="ttname"><a href="property__list_8hpp.html">property_list.hpp</a></div></div>
-<div class="ttc" id="astructstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4_html_a4c888fcff16bb7b1271698f29f5b22e6"><div class="ttname"><a href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6">std::hash&lt; cl::sycl::sampler &gt;::operator()</a></div><div class="ttdeci">size_t operator()(const cl::sycl::sampler &amp;s) const</div><div class="ttdef"><b>Definition:</b> <a href="sampler_8hpp_source.html#l00128">sampler.hpp:128</a></div></div>
+<div class="ttc" id="astructstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4_html_a4c888fcff16bb7b1271698f29f5b22e6"><div class="ttname"><a href="structstd_1_1hash_3_01cl_1_1sycl_1_1sampler_01_4.html#a4c888fcff16bb7b1271698f29f5b22e6">std::hash&lt; cl::sycl::sampler &gt;::operator()</a></div><div class="ttdeci">size_t operator()(const cl::sycl::sampler &amp;s) const</div><div class="ttdef"><b>Definition:</b> <a href="sampler_8hpp_source.html#l00129">sampler.hpp:129</a></div></div>
+<div class="ttc" id="adefines__elementary_8hpp_html_ac02b2c3d65e385d087c513c04c358f7a"><div class="ttname"><a href="defines__elementary_8hpp.html#ac02b2c3d65e385d087c513c04c358f7a">__SYCL2020_DEPRECATED</a></div><div class="ttdeci">#define __SYCL2020_DEPRECATED(message)</div><div class="ttdef"><b>Definition:</b> <a href="defines__elementary_8hpp_source.html#l00058">defines_elementary.hpp:58</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_a0dc52cf013f2b67be7fa2d6b0bbcdd59a9a932b3cb396238423eb2f33ec17d6aa"><div class="ttname"><a href="namespacecl_1_1sycl.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59a9a932b3cb396238423eb2f33ec17d6aa">cl::sycl::filtering_mode::linear</a></div><div class="ttdeci">@ linear</div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1access_html_af1c616691dbceeaca9cdd537a8ab0af9"><div class="ttname"><a href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9">cl::sycl::access::placeholder</a></div><div class="ttdeci">placeholder</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00042">access.hpp:42</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_a5061e873673c1494193817badc55af49"><div class="ttname"><a href="namespacecl_1_1sycl.html#a5061e873673c1494193817badc55af49">cl::sycl::operator!=</a></div><div class="ttdeci">bool operator!=(const multi_ptr&lt; ElementType, Space &gt; &amp;lhs, const multi_ptr&lt; ElementType, Space &gt; &amp;rhs)</div><div class="ttdef"><b>Definition:</b> <a href="multi__ptr_8hpp_source.html#l00605">multi_ptr.hpp:605</a></div></div>

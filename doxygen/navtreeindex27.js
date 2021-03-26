@@ -1,7 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"pi__level__zero_8cpp.html#a0099a1e48e7d5ff6258a2e8305c91385":[4,0,1,1,0,54],
-"pi__level__zero_8cpp.html#a02c591b92b746d8bc5a52ef2b640e714":[4,0,1,1,0,64],
 "pi__level__zero_8cpp.html#a0439f488f47e1f30a680bf6917f2d785":[4,0,1,1,0,22],
 "pi__level__zero_8cpp.html#a0550d2a1ec81bdf1d42946aafe64b897":[4,0,1,1,0,90],
 "pi__level__zero_8cpp.html#a0656054be032907869315f9572d01aa1":[4,0,1,1,0,95],
@@ -249,5 +247,7 @@ var NAVTREEINDEX27 =
 "plugin_8hpp_source.html":[4,0,2,1,55],
 "plugin__printers_8hpp.html":[4,0,2,1,56],
 "plugin__printers_8hpp.html#a147cf052a8f4518098cc302f8b10bdaf":[4,0,2,1,56,8],
-"plugin__printers_8hpp.html#a330da1831c2a44e7e7abdd324ec6d2ed":[4,0,2,1,56,18]
+"plugin__printers_8hpp.html#a330da1831c2a44e7e7abdd324ec6d2ed":[4,0,2,1,56,18],
+"plugin__printers_8hpp.html#a3c1a956a0e46889555ec96c666209614":[4,0,2,1,56,17],
+"plugin__printers_8hpp.html#a64fd2db4cac1daa4ef9c94363769d71a":[4,0,2,1,56,11]
 };
