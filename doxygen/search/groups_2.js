@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['dpc_2b_2b_20user_20api_10602',['DPC++ User API',['../group__sycl__api.html',1,'']]],
-  ['device_20selectors_10603',['Device selectors',['../group__sycl__api__dev__sel.html',1,'']]],
-  ['dpc_2b_2b_20explicit_20simd_20api_10604',['DPC++ Explicit SIMD API',['../group__sycl__esimd.html',1,'']]],
-  ['dpc_2b_2b_20execution_20graph_10605',['DPC++ Execution Graph',['../group__sycl__graph.html',1,'']]]
+  ['dpc_2b_2b_20user_20api_10608',['DPC++ User API',['../group__sycl__api.html',1,'']]],
+  ['device_20selectors_10609',['Device selectors',['../group__sycl__api__dev__sel.html',1,'']]],
+  ['dpc_2b_2b_20explicit_20simd_20api_10610',['DPC++ Explicit SIMD API',['../group__sycl__esimd.html',1,'']]],
+  ['dpc_2b_2b_20execution_20graph_10611',['DPC++ Execution Graph',['../group__sycl__graph.html',1,'']]]
 ];

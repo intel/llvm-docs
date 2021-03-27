@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"generic__type__traits_8hpp.html#aedad0ba5065b3b2a9bf2aa284d11af37":[4,0,0,0,1,2,19,57],
 "generic__type__traits_8hpp.html#aedd7316965b8efd253f9421396aa382e":[4,0,0,0,1,2,19,59],
 "generic__type__traits_8hpp.html#af1bdedfbcbdc1edd02bd28d4421135bd":[4,0,0,0,1,2,19,125],
 "generic__type__traits_8hpp.html#af2b70b3d94d8e14b4ddb3ab134f4e8a3":[4,0,0,0,1,2,19,44],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "handler__proxy_8cpp.html#a8d5e397ffe5aede6b455150254459c91":[4,0,2,1,36,0],
 "handler__proxy_8cpp_source.html":[4,0,2,1,36],
 "handler__proxy_8hpp.html":[4,0,0,0,1,2,20],
-"handler__proxy_8hpp.html#a8d5e397ffe5aede6b455150254459c91":[4,0,0,0,1,2,20,0],
-"handler__proxy_8hpp_source.html":[4,0,0,0,1,2,20]
+"handler__proxy_8hpp.html#a8d5e397ffe5aede6b455150254459c91":[4,0,0,0,1,2,20,0]
 };
