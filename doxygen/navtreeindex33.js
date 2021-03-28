@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_012_00_01T_01_4.html#ad78c518bc5399f622cbb00b5d93a71bd":[3,0,2,1,0,209,0],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html":[3,0,2,1,0,210],
 "structcl_1_1sycl_1_1detail_1_1IsValidCoordDataT_3_013_00_01T_01_4.html#a8afcb098f3fc06c0b8aed3c54ae63e36":[3,0,2,1,0,210,0],
 "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo.html":[3,0,2,1,0,211],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html":[3,0,2,1,0,110],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info_3_01cl_1_1sycl_1_1range_3_013_01_4_00_01Param_01_4.html#a98c0a9a82e8b3b3e2d8fa6d8e7583bce":[3,0,2,1,0,110,0],
 "structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html":[3,0,2,1,0,111],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html#a39598d93740450732d6876299d7d50d6":[3,0,2,1,0,111,0],
-"structcl_1_1sycl_1_1detail_1_1get__kernel__info.html":[3,0,2,1,0,112]
+"structcl_1_1sycl_1_1detail_1_1get__kernel__device__specific__info__with__input.html#a39598d93740450732d6876299d7d50d6":[3,0,2,1,0,111,0]
 };

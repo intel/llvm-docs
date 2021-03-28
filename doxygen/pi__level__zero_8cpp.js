@@ -137,5 +137,6 @@ var pi__level__zero_8cpp =
     [ "PiPlatformsCacheMutex", "pi__level__zero_8cpp.html#a191dd320ac89153a9e73691172523ae6", null ],
     [ "UseUSMAllocator", "pi__level__zero_8cpp.html#a3da6fe5aab6b35ba86c353ff7175a443", null ],
     [ "ZE_SUPPORTED_EXTENSIONS", "pi__level__zero_8cpp.html#aa9ffb1127df2fc9a89170f7861cfa14e", null ],
-    [ "ZeCommandListBatchSize", "pi__level__zero_8cpp.html#a86e6ea102c115b141e5d3d4eb6bce78d", null ]
+    [ "ZeCommandListBatchSize", "pi__level__zero_8cpp.html#a86e6ea102c115b141e5d3d4eb6bce78d", null ],
+    [ "ZeMaxCommandListCacheSize", "pi__level__zero_8cpp.html#a6fefcd25a08bcecc6e072cb62471e0ed", null ]
 ];

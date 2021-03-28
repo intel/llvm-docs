@@ -27,7 +27,7 @@ var searchData=
   ['zeimage_8875',['ZeImage',['../struct__pi__image.html#a7dde00c93d80c18236d919908811b889',1,'_pi_image']]],
   ['zeimagedesc_8876',['ZeImageDesc',['../struct__pi__image.html#a7e2b8f25023362dcab5a79c816c77104',1,'_pi_image']]],
   ['zekernel_8877',['ZeKernel',['../struct__pi__kernel.html#a2a69000010873d5ca19eae3fadb9701a',1,'_pi_kernel']]],
-  ['zemaxcommandlistcache_8878',['ZeMaxCommandListCache',['../struct__pi__platform.html#ae3728a73750613ebe29a038e01dbd24e',1,'_pi_platform']]],
+  ['zemaxcommandlistcachesize_8878',['ZeMaxCommandListCacheSize',['../pi__level__zero_8cpp.html#a6fefcd25a08bcecc6e072cb62471e0ed',1,'pi_level_zero.cpp']]],
   ['zemem_8879',['ZeMem',['../struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd',1,'_pi_buffer']]],
   ['zemodule_8880',['ZeModule',['../struct__pi__program.html#a7deb46fc8c6b760511f88a688a433bb8',1,'_pi_program']]],
   ['zeopencommandlist_8881',['ZeOpenCommandList',['../struct__pi__queue.html#a80d07a4cbb4f6c2add317d1bd34dbe17',1,'_pi_queue']]],

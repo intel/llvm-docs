@@ -1,5 +1,6 @@
 var NAVTREEINDEX36 =
 {
+"structrestype__ex_3_01float_00_01long_01long_01_4.html#ac0edc09b40dfeac29a5c75de53e949c8":[3,0,141,0],
 "structrestype__ex_3_01float_00_01short_01_4.html":[3,0,142],
 "structrestype__ex_3_01float_00_01short_01_4.html#a2184eb944d377d3f8cd98e727d9ad0b4":[3,0,142,0],
 "structrestype__ex_3_01float_00_01unsigned_01char_01_4.html":[3,0,143],
@@ -248,6 +249,5 @@ var NAVTREEINDEX36 =
 "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#af328b3a10b8b1840696177c0439d9aba":[3,0,4,13,30],
 "structwordtype.html":[3,0,243],
 "structwordtype_3_01short_01_4.html":[3,0,244],
-"structwordtype_3_01short_01_4.html#aa3dcc250fa5728db117f5596b2baced6":[3,0,244,0],
-"structwordtype_3_01unsigned_01short_01_4.html":[3,0,245]
+"structwordtype_3_01short_01_4.html#aa3dcc250fa5728db117f5596b2baced6":[3,0,244,0]
 };

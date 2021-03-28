@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"struct__pi__context.html#a9126a200a75f4beb6618132c5984bc13":[3,0,11,21],
 "struct__pi__context.html#a913e4375f2189c877259df14dd1f0a13":[3,0,11,16],
 "struct__pi__context.html#a9add6be7ca001dd60539fe59ea66f1fd":[3,0,11,22],
 "struct__pi__context.html#aa23acc6682d7ace1594590cbd9c935ed":[3,0,11,17],
@@ -172,17 +173,17 @@ var NAVTREEINDEX30 =
 "struct__pi__offload__entry__struct.html#a76a3565f400c268d36cdadc8b893f4c9":[3,0,22,1],
 "struct__pi__offload__entry__struct.html#a7e1080b75d3ca8a3b603bbf010e1c1d4":[3,0,22,0],
 "struct__pi__platform.html":[3,0,23],
-"struct__pi__platform.html#a07754b139b2535497050f34c48650d73":[3,0,23,8],
-"struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd":[3,0,23,5],
-"struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30":[3,0,23,4],
-"struct__pi__platform.html#a2b1ce87f343641f4da208d7d772a58bb":[3,0,23,9],
+"struct__pi__platform.html#a07754b139b2535497050f34c48650d73":[3,0,23,9],
+"struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd":[3,0,23,6],
+"struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30":[3,0,23,5],
+"struct__pi__platform.html#a2b1ce87f343641f4da208d7d772a58bb":[3,0,23,10],
+"struct__pi__platform.html#a2cb1eaecdccbeeca05c36d129498198b":[3,0,23,2],
 "struct__pi__platform.html#a6e3d1a923247c6bc99e9e74c05cce70d":[3,0,23,0],
-"struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90":[3,0,23,7],
-"struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8":[3,0,23,3],
-"struct__pi__platform.html#ac538d7ae8f84c2475c1f4a80f9af6643":[3,0,23,6],
+"struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90":[3,0,23,8],
+"struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8":[3,0,23,4],
+"struct__pi__platform.html#ac538d7ae8f84c2475c1f4a80f9af6643":[3,0,23,7],
 "struct__pi__platform.html#ad95f0299846f7563b32570ed999fd15c":[3,0,23,1],
-"struct__pi__platform.html#ae3728a73750613ebe29a038e01dbd24e":[3,0,23,10],
-"struct__pi__platform.html#afba11b061b3a835003d2583a03d7a9d2":[3,0,23,2],
+"struct__pi__platform.html#afba11b061b3a835003d2583a03d7a9d2":[3,0,23,3],
 "struct__pi__plugin.html":[3,0,24],
 "struct__pi__plugin.html#a61f3c14948bd380bdb111988cfedef09":[3,0,24,3],
 "struct__pi__plugin.html#ab5bc6c32ff3f95e054861ba76cf3ae5d":[3,0,24,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "struct__pi__queue.html#a6377db0cb2d99b89298404e43b7f5876":[3,0,26,23],
 "struct__pi__queue.html#a63d30619190103a7bead8c063e4bf470":[3,0,26,3],
 "struct__pi__queue.html#a660f50bdb62bb95130d6f5145eeff122":[3,0,26,10],
-"struct__pi__queue.html#a6701cca573626edb85029595a326fc12":[3,0,26,1],
-"struct__pi__queue.html#a68d4f6b845f323d6200bbd6a24f6ac70":[3,0,26,24]
+"struct__pi__queue.html#a6701cca573626edb85029595a326fc12":[3,0,26,1]
 };
