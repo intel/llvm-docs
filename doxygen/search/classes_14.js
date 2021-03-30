@@ -1,18 +1,18 @@
 var searchData=
 [
-  ['unmapmemobject_6066',['UnMapMemObject',['../classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html',1,'cl::sycl::detail']]],
-  ['updatehostrequirementcommand_6067',['UpdateHostRequirementCommand',['../classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html',1,'cl::sycl::detail']]],
-  ['us_6068',['Us',['../unioncl_1_1sycl_1_1ONEAPI_1_1Us.html',1,'cl::sycl::ONEAPI']]],
-  ['use_5fhost_5fptr_6069',['use_host_ptr',['../classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html',1,'cl::sycl::property::image::use_host_ptr'],['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html',1,'cl::sycl::property::buffer::use_host_ptr']]],
-  ['use_5fmutex_6070',['use_mutex',['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html',1,'cl::sycl::property::buffer::use_mutex'],['../classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html',1,'cl::sycl::property::image::use_mutex']]],
-  ['use_5fpinned_5fhost_5fmemory_6071',['use_pinned_host_memory',['../classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html',1,'cl::sycl::ext::oneapi::property::buffer']]],
-  ['use_5fprimary_5fcontext_6072',['use_primary_context',['../classcl_1_1sycl_1_1property_1_1context_1_1cuda_1_1use__primary__context.html',1,'cl::sycl::property::context::cuda']]],
-  ['usm_5fallocator_6073',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html',1,'cl::sycl']]],
-  ['usmallocationexception_6074',['UsmAllocationException',['../classUsmAllocationException.html',1,'']]],
-  ['usmalloccontext_6075',['USMAllocContext',['../classUSMAllocContext.html',1,'']]],
-  ['usmallocimpl_6076',['USMAllocImpl',['../classUSMAllocContext_1_1USMAllocImpl.html',1,'USMAllocContext']]],
-  ['usmdevicememoryalloc_6077',['USMDeviceMemoryAlloc',['../classUSMDeviceMemoryAlloc.html',1,'']]],
-  ['usmmemoryallocbase_6078',['USMMemoryAllocBase',['../classUSMMemoryAllocBase.html',1,'']]],
-  ['usmsharedmemoryalloc_6079',['USMSharedMemoryAlloc',['../classUSMSharedMemoryAlloc.html',1,'']]],
-  ['uu_6080',['Uu',['../unioncl_1_1sycl_1_1ONEAPI_1_1Uu.html',1,'cl::sycl::ONEAPI']]]
+  ['unmapmemobject_6076',['UnMapMemObject',['../classcl_1_1sycl_1_1detail_1_1UnMapMemObject.html',1,'cl::sycl::detail']]],
+  ['updatehostrequirementcommand_6077',['UpdateHostRequirementCommand',['../classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html',1,'cl::sycl::detail']]],
+  ['us_6078',['Us',['../unioncl_1_1sycl_1_1ONEAPI_1_1Us.html',1,'cl::sycl::ONEAPI']]],
+  ['use_5fhost_5fptr_6079',['use_host_ptr',['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__host__ptr.html',1,'cl::sycl::property::buffer::use_host_ptr'],['../classcl_1_1sycl_1_1property_1_1image_1_1use__host__ptr.html',1,'cl::sycl::property::image::use_host_ptr']]],
+  ['use_5fmutex_6080',['use_mutex',['../classcl_1_1sycl_1_1property_1_1image_1_1use__mutex.html',1,'cl::sycl::property::image::use_mutex'],['../classcl_1_1sycl_1_1property_1_1buffer_1_1use__mutex.html',1,'cl::sycl::property::buffer::use_mutex']]],
+  ['use_5fpinned_5fhost_5fmemory_6081',['use_pinned_host_memory',['../classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html',1,'cl::sycl::ext::oneapi::property::buffer']]],
+  ['use_5fprimary_5fcontext_6082',['use_primary_context',['../classcl_1_1sycl_1_1property_1_1context_1_1cuda_1_1use__primary__context.html',1,'cl::sycl::property::context::cuda']]],
+  ['usm_5fallocator_6083',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html',1,'cl::sycl']]],
+  ['usmallocationexception_6084',['UsmAllocationException',['../classUsmAllocationException.html',1,'']]],
+  ['usmalloccontext_6085',['USMAllocContext',['../classUSMAllocContext.html',1,'']]],
+  ['usmallocimpl_6086',['USMAllocImpl',['../classUSMAllocContext_1_1USMAllocImpl.html',1,'USMAllocContext']]],
+  ['usmdevicememoryalloc_6087',['USMDeviceMemoryAlloc',['../classUSMDeviceMemoryAlloc.html',1,'']]],
+  ['usmmemoryallocbase_6088',['USMMemoryAllocBase',['../classUSMMemoryAllocBase.html',1,'']]],
+  ['usmsharedmemoryalloc_6089',['USMSharedMemoryAlloc',['../classUSMSharedMemoryAlloc.html',1,'']]],
+  ['uu_6090',['Uu',['../unioncl_1_1sycl_1_1ONEAPI_1_1Uu.html',1,'cl::sycl::ONEAPI']]]
 ];

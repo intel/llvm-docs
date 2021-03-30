@@ -88,6 +88,7 @@ var hierarchy =
       [ "cl::sycl::ONEAPI::detail::atomic_ref_impl< T *, DefaultOrder, DefaultScope, AddressSpace >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::auto_name", "classcl_1_1sycl_1_1detail_1_1auto__name.html", null ],
+    [ "cl::sycl::backend_traits< Backend >", "classcl_1_1sycl_1_1backend__traits.html", null ],
     [ "cl::sycl::detail::BaseCLTypeConverter< T, N >", "classcl_1_1sycl_1_1detail_1_1BaseCLTypeConverter.html", null ],
     [ "cl::sycl::ONEAPI::detail::bit_equal< T, typename >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html", null ],
     [ "cl::sycl::ONEAPI::detail::bit_equal< double >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html", null ],

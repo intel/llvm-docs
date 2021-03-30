@@ -16,6 +16,7 @@ var namespacecl_1_1sycl =
     [ "accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4" ],
     [ "accessor_error", "classcl_1_1sycl_1_1accessor__error.html", null ],
     [ "atomic", "classcl_1_1sycl_1_1atomic.html", "classcl_1_1sycl_1_1atomic" ],
+    [ "backend_traits", "classcl_1_1sycl_1_1backend__traits.html", "classcl_1_1sycl_1_1backend__traits" ],
     [ "buffer", "classcl_1_1sycl_1_1buffer.html", "classcl_1_1sycl_1_1buffer" ],
     [ "compile_program_error", "classcl_1_1sycl_1_1compile__program__error.html", null ],
     [ "context", "classcl_1_1sycl_1_1context.html", "classcl_1_1sycl_1_1context" ],
