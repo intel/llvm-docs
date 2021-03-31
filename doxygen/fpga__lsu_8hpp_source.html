@@ -145,84 +145,96 @@ $(document).ready(function(){initNavTree('fpga__lsu_8hpp_source.html',''); initR
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html">lsu</a>() = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#af87009d10b421ddb62760d545f6beba8">   50</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _T&gt; <span class="keyword">static</span> _T <a class="code" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#af87009d10b421ddb62760d545f6beba8">load</a>(<a class="code" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::global_ptr&lt;_T&gt;</a> Ptr) {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    check_load();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#if defined(__SYCL_DEVICE_ONLY__) &amp;&amp; __has_builtin(__builtin_intel_fpga_mem)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> *__builtin_intel_fpga_mem((_T *)Ptr,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                     _burst_coalesce | _cache |</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                         _dont_statically_coalesce | _prefetch,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                     _cache_val);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> *Ptr;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a352698bdc09f21511a9a2b06a3ac406a">   62</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _T&gt; <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a352698bdc09f21511a9a2b06a3ac406a">store</a>(<a class="code" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::global_ptr&lt;_T&gt;</a> Ptr, _T Val) {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    check_store();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if defined(__SYCL_DEVICE_ONLY__) &amp;&amp; __has_builtin(__builtin_intel_fpga_mem)</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    *__builtin_intel_fpga_mem((_T *)Ptr,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                              _burst_coalesce | _cache |</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                  _dont_statically_coalesce | _prefetch,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                              _cache_val) = Val;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    *Ptr = Val;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">static</span> constexpr int32_t _burst_coalesce_val =</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html">burst_coalesce_impl</a>, _mem_access_params...&gt;::value;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _burst_coalesce =</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      _burst_coalesce_val == 1 ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6">BURST_COALESCE</a> : 0;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">static</span> constexpr int32_t _cache_val =</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1cache.html">cache</a>, _mem_access_params...&gt;::value;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _cache = (_cache_val &gt; 0) ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#a03684d27452e9c1fb8343e643d10ab84">CACHE</a> : 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _T, access::address_space _space&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a04da5f26e4e82551dd5e61c2cb99eae0">   51</a></span>&#160;  <span class="keyword">static</span> _T <a class="code" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a04da5f26e4e82551dd5e61c2cb99eae0">load</a>(<a class="code" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::multi_ptr&lt;_T, _space&gt;</a> Ptr) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    check_space&lt;_space&gt;();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    check_load();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#if defined(__SYCL_DEVICE_ONLY__) &amp;&amp; __has_builtin(__builtin_intel_fpga_mem)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> *__builtin_intel_fpga_mem((_T *)Ptr,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                     _burst_coalesce | _cache |</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                         _dont_statically_coalesce | _prefetch,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                     _cache_val);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> *Ptr;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> _T, access::address_space _space&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a2706a0276cea4752f6db77ffa7959749">   65</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a2706a0276cea4752f6db77ffa7959749">store</a>(<a class="code" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::multi_ptr&lt;_T, _space&gt;</a> Ptr, _T Val) {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    check_space&lt;_space&gt;();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    check_store();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#if defined(__SYCL_DEVICE_ONLY__) &amp;&amp; __has_builtin(__builtin_intel_fpga_mem)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    *__builtin_intel_fpga_mem((_T *)Ptr,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                              _burst_coalesce | _cache |</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                  _dont_statically_coalesce | _prefetch,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                              _cache_val) = Val;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    *Ptr = Val;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">static</span> constexpr int32_t _burst_coalesce_val =</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html">burst_coalesce_impl</a>, _mem_access_params...&gt;::value;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _burst_coalesce =</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      _burst_coalesce_val == 1 ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6">BURST_COALESCE</a> : 0;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> constexpr int32_t _statically_coalesce_val =</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html">statically_coalesce_impl</a>, _mem_access_params...&gt;::value;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _dont_statically_coalesce =</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      _statically_coalesce_val == 0 ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#aed846bf9c0acd9b3bc52d02ae53ca5a1">STATICALLY_COALESCE</a> : 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">static</span> constexpr int32_t _prefetch_val =</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html">prefetch_impl</a>, _mem_access_params...&gt;::value;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _prefetch = _prefetch_val ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#ae162b57897edc99f8b5a05e28d757d6d">PREFETCH</a> : 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> constexpr int32_t _cache_val =</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1cache.html">cache</a>, _mem_access_params...&gt;::value;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _cache = (_cache_val &gt; 0) ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#a03684d27452e9c1fb8343e643d10ab84">CACHE</a> : 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">static</span> constexpr int32_t _statically_coalesce_val =</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html">statically_coalesce_impl</a>, _mem_access_params...&gt;::value;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _dont_statically_coalesce =</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      _statically_coalesce_val == 0 ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#aed846bf9c0acd9b3bc52d02ae53ca5a1">STATICALLY_COALESCE</a> : 0;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  static_assert(_cache_val &gt;= 0, <span class="stringliteral">&quot;cache size parameter must be non-negative&quot;</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> check_load() {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    static_assert(_cache == 0 || _burst_coalesce == <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6">BURST_COALESCE</a>,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                  <span class="stringliteral">&quot;unable to implement a cache without a burst coalescer&quot;</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    static_assert(_prefetch == 0 || _burst_coalesce == 0,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                  <span class="stringliteral">&quot;unable to implement a prefetcher and a burst coalescer &quot;</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                  <span class="stringliteral">&quot;simulataneously&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    static_assert(</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        _prefetch == 0 || _cache == 0,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="stringliteral">&quot;unable to implement a prefetcher and a cache simulataneously&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> check_store() {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    static_assert(_cache == 0, <span class="stringliteral">&quot;unable to implement a store LSU with a cache.&quot;</span>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    static_assert(_prefetch == 0,</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                  <span class="stringliteral">&quot;unable to implement a store LSU with a prefetcher.&quot;</span>);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;};</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} <span class="comment">// namespace INTEL</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">static</span> constexpr int32_t _prefetch_val =</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <a class="code" href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">_GetValue</a>&lt;<a class="code" href="structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html">prefetch_impl</a>, _mem_access_params...&gt;::value;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">static</span> constexpr uint8_t _prefetch = _prefetch_val ? <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#ae162b57897edc99f8b5a05e28d757d6d">PREFETCH</a> : 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  static_assert(_cache_val &gt;= 0, <span class="stringliteral">&quot;cache size parameter must be non-negative&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">template</span> &lt;access::address_space _space&gt; <span class="keyword">static</span> <span class="keywordtype">void</span> check_space() {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    static_assert(_space == access::address_space::global_space ||</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                      _space == access::address_space::global_device_space ||</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                      _space == access::address_space::global_host_space,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                  <span class="stringliteral">&quot;lsu controls are only supported for global_ptr, &quot;</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                  <span class="stringliteral">&quot;device_ptr, and host_ptr objects&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> check_load() {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    static_assert(_cache == 0 || _burst_coalesce == <a class="code" href="namespacecl_1_1sycl_1_1INTEL.html#a953e4b33ff94c1103839b9381185d4e6">BURST_COALESCE</a>,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                  <span class="stringliteral">&quot;unable to implement a cache without a burst coalescer&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    static_assert(_prefetch == 0 || _burst_coalesce == 0,</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                  <span class="stringliteral">&quot;unable to implement a prefetcher and a burst coalescer &quot;</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                  <span class="stringliteral">&quot;simulataneously&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    static_assert(</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        _prefetch == 0 || _cache == 0,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="stringliteral">&quot;unable to implement a prefetcher and a cache simulataneously&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> check_store() {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    static_assert(_cache == 0, <span class="stringliteral">&quot;unable to implement a store LSU with a cache.&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    static_assert(_prefetch == 0,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                  <span class="stringliteral">&quot;unable to implement a store LSU with a prefetcher.&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;} <span class="comment">// namespace INTEL</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecl_1_1sycl_1_1INTEL_html_a03684d27452e9c1fb8343e643d10ab84"><div class="ttname"><a href="namespacecl_1_1sycl_1_1INTEL.html#a03684d27452e9c1fb8343e643d10ab84">cl::sycl::INTEL::CACHE</a></div><div class="ttdeci">constexpr uint8_t CACHE</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00018">fpga_lsu.hpp:18</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1INTEL_1_1lsu_html"><div class="ttname"><a href="classcl_1_1sycl_1_1INTEL_1_1lsu.html">cl::sycl::INTEL::lsu</a></div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00046">fpga_lsu.hpp:46</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1multi__ptr_html"><div class="ttname"><a href="classcl_1_1sycl_1_1multi__ptr.html">cl::sycl::multi_ptr</a></div><div class="ttdoc">Provides constructors for address space qualified and non address space qualified pointers to allow i...</div><div class="ttdef"><b>Definition:</b> <a href="atomic_8hpp_source.html#l00033">atomic.hpp:33</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1INTEL_html_ae162b57897edc99f8b5a05e28d757d6d"><div class="ttname"><a href="namespacecl_1_1sycl_1_1INTEL.html#ae162b57897edc99f8b5a05e28d757d6d">cl::sycl::INTEL::PREFETCH</a></div><div class="ttdeci">constexpr uint8_t PREFETCH</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00020">fpga_lsu.hpp:20</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1INTEL_1_1lsu_html_a352698bdc09f21511a9a2b06a3ac406a"><div class="ttname"><a href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a352698bdc09f21511a9a2b06a3ac406a">cl::sycl::INTEL::lsu::store</a></div><div class="ttdeci">static void store(sycl::global_ptr&lt; _T &gt; Ptr, _T Val)</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00062">fpga_lsu.hpp:62</a></div></div>
 <div class="ttc" id="adefines_8hpp_html"><div class="ttname"><a href="defines_8hpp.html">defines.hpp</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">---— Error handling, matching OpenCL plugin semantics.</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1INTEL_1_1lsu_html_a2706a0276cea4752f6db77ffa7959749"><div class="ttname"><a href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a2706a0276cea4752f6db77ffa7959749">cl::sycl::INTEL::lsu::store</a></div><div class="ttdeci">static void store(sycl::multi_ptr&lt; _T, _space &gt; Ptr, _T Val)</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00065">fpga_lsu.hpp:65</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl_html"><div class="ttname"><a href="structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html">cl::sycl::INTEL::statically_coalesce_impl</a></div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00037">fpga_lsu.hpp:37</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1INTEL_html_aed846bf9c0acd9b3bc52d02ae53ca5a1"><div class="ttname"><a href="namespacecl_1_1sycl_1_1INTEL.html#aed846bf9c0acd9b3bc52d02ae53ca5a1">cl::sycl::INTEL::STATICALLY_COALESCE</a></div><div class="ttdeci">constexpr uint8_t STATICALLY_COALESCE</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00019">fpga_lsu.hpp:19</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1INTEL_1_1__GetValue_html"><div class="ttname"><a href="structcl_1_1sycl_1_1INTEL_1_1__GetValue.html">cl::sycl::INTEL::_GetValue</a></div><div class="ttdef"><b>Definition:</b> <a href="fpga__utils_8hpp_source.html#l00022">fpga_utils.hpp:22</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1INTEL_1_1lsu_html_a04da5f26e4e82551dd5e61c2cb99eae0"><div class="ttname"><a href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a04da5f26e4e82551dd5e61c2cb99eae0">cl::sycl::INTEL::lsu::load</a></div><div class="ttdeci">static _T load(sycl::multi_ptr&lt; _T, _space &gt; Ptr)</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00051">fpga_lsu.hpp:51</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1INTEL_1_1cache_html"><div class="ttname"><a href="structcl_1_1sycl_1_1INTEL_1_1cache.html">cl::sycl::INTEL::cache</a></div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00027">fpga_lsu.hpp:27</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1INTEL_1_1lsu_html_af87009d10b421ddb62760d545f6beba8"><div class="ttname"><a href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#af87009d10b421ddb62760d545f6beba8">cl::sycl::INTEL::lsu::load</a></div><div class="ttdeci">static _T load(sycl::global_ptr&lt; _T &gt; Ptr)</div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00050">fpga_lsu.hpp:50</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl_html"><div class="ttname"><a href="structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html">cl::sycl::INTEL::burst_coalesce_impl</a></div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00022">fpga_lsu.hpp:22</a></div></div>
 <div class="ttc" id="afpga__utils_8hpp_html"><div class="ttname"><a href="fpga__utils_8hpp.html">fpga_utils.hpp</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1INTEL_1_1prefetch__impl_html"><div class="ttname"><a href="structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html">cl::sycl::INTEL::prefetch_impl</a></div><div class="ttdef"><b>Definition:</b> <a href="fpga__lsu_8hpp_source.html#l00032">fpga_lsu.hpp:32</a></div></div>

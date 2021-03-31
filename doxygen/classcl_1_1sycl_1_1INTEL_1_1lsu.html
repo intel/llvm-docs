@@ -110,12 +110,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af87009d10b421ddb62760d545f6beba8"><td class="memTemplParams" colspan="2">template&lt;typename _T &gt; </td></tr>
-<tr class="memitem:af87009d10b421ddb62760d545f6beba8"><td class="memTemplItemLeft" align="right" valign="top">static _T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#af87009d10b421ddb62760d545f6beba8">load</a> (<a class="el" href="namespacecl_1_1sycl.html#a468f3f32b6cf383665cbc2e3c6bb89b9">sycl::global_ptr</a>&lt; _T &gt; Ptr)</td></tr>
-<tr class="separator:af87009d10b421ddb62760d545f6beba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a352698bdc09f21511a9a2b06a3ac406a"><td class="memTemplParams" colspan="2">template&lt;typename _T &gt; </td></tr>
-<tr class="memitem:a352698bdc09f21511a9a2b06a3ac406a"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a352698bdc09f21511a9a2b06a3ac406a">store</a> (<a class="el" href="namespacecl_1_1sycl.html#a468f3f32b6cf383665cbc2e3c6bb89b9">sycl::global_ptr</a>&lt; _T &gt; Ptr, _T Val)</td></tr>
-<tr class="separator:a352698bdc09f21511a9a2b06a3ac406a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04da5f26e4e82551dd5e61c2cb99eae0"><td class="memTemplParams" colspan="2">template&lt;typename _T , access::address_space _space&gt; </td></tr>
+<tr class="memitem:a04da5f26e4e82551dd5e61c2cb99eae0"><td class="memTemplItemLeft" align="right" valign="top">static _T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a04da5f26e4e82551dd5e61c2cb99eae0">load</a> (<a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::multi_ptr</a>&lt; _T, _space &gt; Ptr)</td></tr>
+<tr class="separator:a04da5f26e4e82551dd5e61c2cb99eae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2706a0276cea4752f6db77ffa7959749"><td class="memTemplParams" colspan="2">template&lt;typename _T , access::address_space _space&gt; </td></tr>
+<tr class="memitem:a2706a0276cea4752f6db77ffa7959749"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html#a2706a0276cea4752f6db77ffa7959749">store</a> (<a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::multi_ptr</a>&lt; _T, _space &gt; Ptr, _T Val)</td></tr>
+<tr class="separator:a2706a0276cea4752f6db77ffa7959749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class... _mem_access_params&gt;<br />
@@ -152,15 +152,15 @@ template&lt;class... _mem_access_params&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af87009d10b421ddb62760d545f6beba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af87009d10b421ddb62760d545f6beba8">&#9670;&nbsp;</a></span>load()</h2>
+<a id="a04da5f26e4e82551dd5e61c2cb99eae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04da5f26e4e82551dd5e61c2cb99eae0">&#9670;&nbsp;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class... _mem_access_params&gt; </div>
 <div class="memtemplate">
-template&lt;typename _T &gt; </div>
+template&lt;typename _T , access::address_space _space&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -168,7 +168,7 @@ template&lt;typename _T &gt; </div>
         <tr>
           <td class="memname">static _T <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html">cl::sycl::INTEL::lsu</a>&lt; _mem_access_params &gt;::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a468f3f32b6cf383665cbc2e3c6bb89b9">sycl::global_ptr</a>&lt; _T &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::multi_ptr</a>&lt; _T, _space &gt;&#160;</td>
           <td class="paramname"><em>Ptr</em></td><td>)</td>
           <td></td>
         </tr>
@@ -180,19 +180,19 @@ template&lt;typename _T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga__lsu_8hpp_source.html#l00050">50</a> of file <a class="el" href="fpga__lsu_8hpp_source.html">fpga_lsu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga__lsu_8hpp_source.html#l00051">51</a> of file <a class="el" href="fpga__lsu_8hpp_source.html">fpga_lsu.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a352698bdc09f21511a9a2b06a3ac406a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a352698bdc09f21511a9a2b06a3ac406a">&#9670;&nbsp;</a></span>store()</h2>
+<a id="a2706a0276cea4752f6db77ffa7959749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2706a0276cea4752f6db77ffa7959749">&#9670;&nbsp;</a></span>store()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class... _mem_access_params&gt; </div>
 <div class="memtemplate">
-template&lt;typename _T &gt; </div>
+template&lt;typename _T , access::address_space _space&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -200,7 +200,7 @@ template&lt;typename _T &gt; </div>
         <tr>
           <td class="memname">static void <a class="el" href="classcl_1_1sycl_1_1INTEL_1_1lsu.html">cl::sycl::INTEL::lsu</a>&lt; _mem_access_params &gt;::store </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a468f3f32b6cf383665cbc2e3c6bb89b9">sycl::global_ptr</a>&lt; _T &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">sycl::multi_ptr</a>&lt; _T, _space &gt;&#160;</td>
           <td class="paramname"><em>Ptr</em>, </td>
         </tr>
         <tr>
@@ -222,7 +222,7 @@ template&lt;typename _T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga__lsu_8hpp_source.html#l00062">62</a> of file <a class="el" href="fpga__lsu_8hpp_source.html">fpga_lsu.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga__lsu_8hpp_source.html#l00065">65</a> of file <a class="el" href="fpga__lsu_8hpp_source.html">fpga_lsu.hpp</a>.</p>
 
 </div>
 </div>
