@@ -5,7 +5,7 @@ var kernel__bundle_8hpp =
     [ "kernel_bundle_plain", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain" ],
     [ "DeviceImageImplPtr", "kernel__bundle_8hpp.html#af937791ac4fabd0f2a1a1576fec9b6df", null ],
     [ "DevImgSelectorImpl", "kernel__bundle_8hpp.html#aad6c54f073223ac3513e74cf1ca5a762", null ],
-    [ "KernelBundleImplPtr", "kernel__bundle_8hpp.html#a3f5f99f023fc03ad7998963c7a310e84", null ],
+    [ "KernelBundleImplPtr", "kernel__bundle_8hpp.html#aa55ff9a68f668b5cd2113448fc4213ed", null ],
     [ "bundle_state", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0", [
       [ "input", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0aa43c1b0aa53a0c908810c06ab1ff3967", null ],
       [ "object", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0aa8cfde6331bd59eb2ac96f8911c4b666", null ],
@@ -13,9 +13,10 @@ var kernel__bundle_8hpp =
     ] ],
     [ "build", "kernel__bundle_8hpp.html#aea933a1de7560efce853aaf9d6acd66e", null ],
     [ "build", "kernel__bundle_8hpp.html#ada9f6df5384b58bbb680aba8eec3d387", null ],
+    [ "build_impl", "kernel__bundle_8hpp.html#a3a194f465b82857b8e0e9a2c9246f908", null ],
     [ "compile", "kernel__bundle_8hpp.html#adb68b4a0f7ae33751bcc958904396250", null ],
     [ "compile", "kernel__bundle_8hpp.html#ac868cad0e949a42913fe6ba31bc636b9", null ],
-    [ "compile_impl", "kernel__bundle_8hpp.html#a9e496f3b9efe4ee29423d60e0f3d5a15", null ],
+    [ "compile_impl", "kernel__bundle_8hpp.html#a3531916d9a100ddaec5c176cbbe2e459", null ],
     [ "find_device_intersection", "kernel__bundle_8hpp.html#a80ffab683ac3d37fba680db3398c50db", null ],
     [ "get_kernel_bundle", "kernel__bundle_8hpp.html#a70c467373c0c89e1b66aa3ed95790772", null ],
     [ "get_kernel_bundle", "kernel__bundle_8hpp.html#a6eeb167cd9f59fd840d079b8302d3b1e", null ],
@@ -41,9 +42,10 @@ var kernel__bundle_8hpp =
     [ "is_compatible", "kernel__bundle_8hpp.html#a669f044d3a15bcb121123ff7ddca7e45", null ],
     [ "is_compatible", "kernel__bundle_8hpp.html#a2c9b016640b236210243515736b7dc8d", null ],
     [ "join", "kernel__bundle_8hpp.html#a0a6ac9492181b925a45a629fc9eccdf5", null ],
-    [ "join_impl", "kernel__bundle_8hpp.html#a3f92925541571839f190484deb7fd30b", null ],
+    [ "join_impl", "kernel__bundle_8hpp.html#ac96411a062aa3bb106b95a13e3292929", null ],
     [ "link", "kernel__bundle_8hpp.html#a48a4cbcec9655ddd201445f1f00da2de", null ],
     [ "link", "kernel__bundle_8hpp.html#ab1b7cd04dbcc78266359f0a4c90c6917", null ],
     [ "link", "kernel__bundle_8hpp.html#a3ad8d848abec76e936ce6dd81adb4a4d", null ],
-    [ "link", "kernel__bundle_8hpp.html#a3507ddc35f35bdadad53ddd380f06ec9", null ]
+    [ "link", "kernel__bundle_8hpp.html#a3507ddc35f35bdadad53ddd380f06ec9", null ],
+    [ "link_impl", "kernel__bundle_8hpp.html#afa03fbc820a7e6789c7403d97f07be0e", null ]
 ];

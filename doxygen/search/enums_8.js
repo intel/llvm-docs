@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['image_5fchannel_5forder_9577',['image_channel_order',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df',1,'cl::sycl']]],
-  ['image_5fchannel_5ftype_9578',['image_channel_type',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae',1,'cl::sycl']]]
+  ['image_5fchannel_5forder_9639',['image_channel_order',['../namespacecl_1_1sycl.html#a8557ea72c6739001cf30a301567cf3df',1,'cl::sycl']]],
+  ['image_5fchannel_5ftype_9640',['image_channel_type',['../namespacecl_1_1sycl.html#a78b713c5436596506d5232e591a3b7ae',1,'cl::sycl']]]
 ];

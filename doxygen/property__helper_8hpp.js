@@ -12,8 +12,8 @@ var property__helper_8hpp =
       [ "NoInit", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa48cba976be91ce108242cc0e9858d6da", null ],
       [ "BufferUsePinnedHostMemory", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa7bef9f39ce7182fc2abe59496515918a", null ],
       [ "UsePrimaryContext", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa5a4d7f27258e21fbf0d04c360281af39", null ],
-      [ "DataLessPropKindSize", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa3e52d3421431774d908abb15de3620ac", null ],
-      [ "InitializeToIdentity", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa6a5117fc47073fcf86c51ec49bf88381", null ]
+      [ "InitializeToIdentity", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa6a5117fc47073fcf86c51ec49bf88381", null ],
+      [ "DataLessPropKindSize", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa3e52d3421431774d908abb15de3620ac", null ]
     ] ],
     [ "PropWithDataKind", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816", [
       [ "BufferUseMutex", "property__helper_8hpp.html#ab239bf63c30d37433cefe089d9c3a816a5b52b0b96ba95ea748d5e974a039d89d", null ],

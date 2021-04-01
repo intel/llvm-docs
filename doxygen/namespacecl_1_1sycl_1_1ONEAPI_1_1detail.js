@@ -24,9 +24,6 @@ var namespacecl_1_1sycl_1_1ONEAPI_1_1detail =
     [ "IsNonUsmReductionPredicate", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate.html", [
       [ "Func", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func" ]
     ] ],
-    [ "IsRWReductionPredicate", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate.html", [
-      [ "Func", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsRWReductionPredicate_1_1Func" ]
-    ] ],
     [ "known_identity_impl", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl.html", null ],
     [ "known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsMaximumIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat5d6cc9aa9bc76aecc96aeff661829736.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat5d6cc9aa9bc76aecc96aeff661829736" ],
     [ "known_identity_impl< BinaryOperation, AccumulatorT, typename std::enable_if< IsMinimumIdentityOp< AccumulatorT, BinaryOperation >::value >::type >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulatb98a2748092cd2edc90c9f63f96ba941.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulatb98a2748092cd2edc90c9f63f96ba941" ],

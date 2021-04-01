@@ -28,9 +28,7 @@ var classcl_1_1sycl_1_1handler =
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a1bf95dcc744853e18aa81de7c44d1462", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#af8d12e14c96f7fb5fad4897694aa8e6b", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a710a56f0785983f0e4f3943679e0f3a7", null ],
-    [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a662d829d74d69f8805b7d0fae6d67643", null ],
-    [ "parallel_for", "classcl_1_1sycl_1_1handler.html#ad5c06b0a1e77b4d9b0cc0a341a93eb76", null ],
-    [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a5fbf788d14e280fe00c0625fbd682eed", null ],
+    [ "parallel_for", "classcl_1_1sycl_1_1handler.html#ab57969f51b93ad25e9236e553160331f", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#af9ed219ba103a46359e9a9a48ffdbdb2", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#aadd0bebb1b380bf3733e8d889b1d85da", null ],
     [ "parallel_for", "classcl_1_1sycl_1_1handler.html#a5c87396f2312a10cd760c8eb132cf197", null ],
@@ -55,6 +53,7 @@ var classcl_1_1sycl_1_1handler =
     [ "single_task", "classcl_1_1sycl_1_1handler.html#aa68d8445ce652ee6f2df4ce661513a81", null ],
     [ "single_task", "classcl_1_1sycl_1_1handler.html#a725e255af60b5545d5af97e1420856b0", null ],
     [ "update_host", "classcl_1_1sycl_1_1handler.html#a2e0250574969ee1bf7743596662c847e", null ],
+    [ "use_kernel_bundle", "classcl_1_1sycl_1_1handler.html#afd4e8ab1956f2f591030f1d5fe24ba6c", null ],
     [ "::MockHandler", "classcl_1_1sycl_1_1handler.html#aaabb994ca2bdbf38e10d7742a7e97f8f", null ],
     [ "accessor", "classcl_1_1sycl_1_1handler.html#a4fe93ea8d613a9b7224780404781c279", null ],
     [ "detail::associateWithHandler", "classcl_1_1sycl_1_1handler.html#ae548b3b019349fdb34b6be5d88d2165a", null ],
@@ -62,6 +61,6 @@ var classcl_1_1sycl_1_1handler =
     [ "detail::image_accessor", "classcl_1_1sycl_1_1handler.html#adbb498cc698f57626f0746b3365a880e", null ],
     [ "detail::queue_impl", "classcl_1_1sycl_1_1handler.html#a3a8c1bacdcf03b3534b9696769e9f0fc", null ],
     [ "detail::stream_impl", "classcl_1_1sycl_1_1handler.html#a5fca0ca308f0eac9343990d58cd54374", null ],
-    [ "ONEAPI::detail::reduction_impl", "classcl_1_1sycl_1_1handler.html#a2b6e4d61c88a70fd9ae7aad67769dd16", null ],
+    [ "ONEAPI::detail::reduction_impl", "classcl_1_1sycl_1_1handler.html#aec6e9e21b78a55768ad630d545b83a0e", null ],
     [ "stream", "classcl_1_1sycl_1_1handler.html#ad6cdd83c821525ef93cdeb8332fd7de8", null ]
 ];

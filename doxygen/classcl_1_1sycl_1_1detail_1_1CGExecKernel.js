@@ -3,6 +3,7 @@ var classcl_1_1sycl_1_1detail_1_1CGExecKernel =
     [ "CGExecKernel", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#ac1cb1345a8310e85d24a3702c9a6a840", null ],
     [ "clearStreams", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a3e6b63cd7bc6a139f2ed216df676bcd0", null ],
     [ "getArguments", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#af3b3c5a0d9d90219aecebd4580ceecae", null ],
+    [ "getKernelBundle", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#ab50cd8e7ccff0f18c90b0c0272860d3a", null ],
     [ "getKernelName", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#afabed8486656080502d4eed6828712ec", null ],
     [ "getStreams", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a2246379773465ec79b9ac0f152847f7c", null ],
     [ "MArgs", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html#a72e8ae99281477ce9a7c399ab7c56b2a", null ],

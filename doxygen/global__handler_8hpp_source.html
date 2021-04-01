@@ -138,36 +138,39 @@ $(document).ready(function(){initNavTree('global__handler_8hpp_source.html','');
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  std::mutex &amp;getFilterMutex();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  std::vector&lt;plugin&gt; &amp;getPlugins();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1device__filter__list.html">device_filter_list</a> &amp;getDeviceFilterList(<span class="keyword">const</span> std::string &amp;InitValue);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">shutdown</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// Constructor and destructor are declared out-of-line to allow incomplete</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">// types as template arguments to unique_ptr.</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1GlobalHandler.html">GlobalHandler</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  ~<a class="code" href="classcl_1_1sycl_1_1detail_1_1GlobalHandler.html">GlobalHandler</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1SpinLock.html">SpinLock</a> MFieldsLock;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="comment">// Do not forget to update shutdown() function if needed.</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::unique_ptr&lt;Scheduler&gt; MScheduler;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  std::unique_ptr&lt;ProgramManager&gt; MProgramManager;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::unique_ptr&lt;Sync&gt; MSync;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  std::unique_ptr&lt;std::vector&lt;PlatformImplPtr&gt;&gt; MPlatformCache;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  std::unique_ptr&lt;std::mutex&gt; MPlatformMapMutex;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  std::unique_ptr&lt;std::mutex&gt; MFilterMutex;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  std::unique_ptr&lt;std::vector&lt;plugin&gt;&gt; MPlugins;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  std::unique_ptr&lt;device_filter_list&gt; MDeviceFilterList;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  std::mutex &amp;getHandlerExtendedMembersMutex();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">void</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">shutdown</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">// Constructor and destructor are declared out-of-line to allow incomplete</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="comment">// types as template arguments to unique_ptr.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1GlobalHandler.html">GlobalHandler</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  ~<a class="code" href="classcl_1_1sycl_1_1detail_1_1GlobalHandler.html">GlobalHandler</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1SpinLock.html">SpinLock</a> MFieldsLock;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">// Do not forget to update shutdown() function if needed.</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  std::unique_ptr&lt;Scheduler&gt; MScheduler;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::unique_ptr&lt;ProgramManager&gt; MProgramManager;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  std::unique_ptr&lt;Sync&gt; MSync;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  std::unique_ptr&lt;std::vector&lt;PlatformImplPtr&gt;&gt; MPlatformCache;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  std::unique_ptr&lt;std::mutex&gt; MPlatformMapMutex;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  std::unique_ptr&lt;std::mutex&gt; MFilterMutex;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  std::unique_ptr&lt;std::vector&lt;plugin&gt;&gt; MPlugins;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  std::unique_ptr&lt;device_filter_list&gt; MDeviceFilterList;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">// The mutex for synchronizing accesses to handlers extended members</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  std::unique_ptr&lt;std::mutex&gt; MHandlerExtendedMembersMutex;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1Scheduler_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">cl::sycl::detail::Scheduler</a></div><div class="ttdoc">DPC++ graph scheduler class.</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8hpp_source.html#l00358">scheduler.hpp:358</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1Sync_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1Sync.html">cl::sycl::detail::Sync</a></div><div class="ttdoc">Groups and provides access to all the locks used the SYCL runtime.</div><div class="ttdef"><b>Definition:</b> <a href="util_8hpp_source.html#l00024">util.hpp:24</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1SpinLock_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1SpinLock.html">cl::sycl::detail::SpinLock</a></div><div class="ttdoc">SpinLock is a synchronization primitive, that uses atomic variable and causes thread trying acquire l...</div><div class="ttdef"><b>Definition:</b> <a href="spinlock_8hpp_source.html#l00027">spinlock.hpp:27</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a9f94841af0069345de116d9b6bf66124"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">cl::sycl::detail::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdef"><b>Definition:</b> <a href="global__handler_8cpp_source.html#l00117">global_handler.cpp:117</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a9f94841af0069345de116d9b6bf66124"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">cl::sycl::detail::shutdown</a></div><div class="ttdeci">void shutdown()</div><div class="ttdef"><b>Definition:</b> <a href="global__handler_8cpp_source.html#l00128">global_handler.cpp:128</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1GlobalHandler_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1GlobalHandler.html">cl::sycl::detail::GlobalHandler</a></div><div class="ttdoc">Wrapper class for global data structures with non-trivial destructors.</div><div class="ttdef"><b>Definition:</b> <a href="global__handler_8hpp_source.html#l00040">global_handler.hpp:40</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__filter__list_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__filter__list.html">cl::sycl::detail::device_filter_list</a></div><div class="ttdef"><b>Definition:</b> <a href="device__filter_8hpp_source.html#l00037">device_filter.hpp:37</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">---— Error handling, matching OpenCL plugin semantics.</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>

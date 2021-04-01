@@ -19,19 +19,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     ] ],
     [ "buffer_impl.hpp", "buffer__impl_8hpp.html", "buffer__impl_8hpp" ],
     [ "builtins.hpp", "detail_2builtins_8hpp.html", "detail_2builtins_8hpp" ],
-    [ "cg.hpp", "cg_8hpp.html", [
-      [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html", "classcl_1_1sycl_1_1detail_1_1CG" ],
-      [ "CGExecKernel", "classcl_1_1sycl_1_1detail_1_1CGExecKernel.html", "classcl_1_1sycl_1_1detail_1_1CGExecKernel" ],
-      [ "CGCopy", "classcl_1_1sycl_1_1detail_1_1CGCopy.html", "classcl_1_1sycl_1_1detail_1_1CGCopy" ],
-      [ "CGFill", "classcl_1_1sycl_1_1detail_1_1CGFill.html", "classcl_1_1sycl_1_1detail_1_1CGFill" ],
-      [ "CGUpdateHost", "classcl_1_1sycl_1_1detail_1_1CGUpdateHost.html", "classcl_1_1sycl_1_1detail_1_1CGUpdateHost" ],
-      [ "CGCopyUSM", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM" ],
-      [ "CGFillUSM", "classcl_1_1sycl_1_1detail_1_1CGFillUSM.html", "classcl_1_1sycl_1_1detail_1_1CGFillUSM" ],
-      [ "CGPrefetchUSM", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM" ],
-      [ "CGInteropTask", "classcl_1_1sycl_1_1detail_1_1CGInteropTask.html", "classcl_1_1sycl_1_1detail_1_1CGInteropTask" ],
-      [ "CGHostTask", "classcl_1_1sycl_1_1detail_1_1CGHostTask.html", "classcl_1_1sycl_1_1detail_1_1CGHostTask" ],
-      [ "CGBarrier", "classcl_1_1sycl_1_1detail_1_1CGBarrier.html", "classcl_1_1sycl_1_1detail_1_1CGBarrier" ]
-    ] ],
+    [ "cg.hpp", "cg_8hpp.html", "cg_8hpp" ],
     [ "cg_types.hpp", "cg__types_8hpp.html", [
       [ "ArgDesc", "classcl_1_1sycl_1_1detail_1_1ArgDesc.html", "classcl_1_1sycl_1_1detail_1_1ArgDesc" ],
       [ "NDRDescT", "classcl_1_1sycl_1_1detail_1_1NDRDescT.html", "classcl_1_1sycl_1_1detail_1_1NDRDescT" ],
