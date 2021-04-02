@@ -1,5 +1,11 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3e560e06664c5aed533dfa03b02ca0e9":[3,0,2,1,0,1,0,0],
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3f8ae6ac0efdcb3fad9156bb3c6bd5b6":[3,0,2,1,0,1,0,4],
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a4ef9ca81d2a6300695e3efc936066137":[3,0,2,1,0,1,0,2],
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a509aceb4263d8f6a7184939efe2b2f81":[3,0,2,1,0,1,0,9],
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a5750a10a4a7ffce77c318bcc14fe4afa":[3,0,2,1,0,1,0,15],
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a6ff431d3354e7a16f2b42f805302c284":[3,0,2,1,0,1,0,1],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a7fe956e558def3759be74a59da171810":[3,0,2,1,0,1,0,13],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#ab29be38a5b1bcacea88905d37c1b4405":[3,0,2,1,0,1,0,6],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#ac0b905b098379fd4fe7b924edda50b08":[3,0,2,1,0,1,0,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1detail_1_1program__impl.html#afad92bd6f3e23c9192a6e37c28cdc9f5":[3,0,2,1,0,276,1],
 "classcl_1_1sycl_1_1detail_1_1program__impl.html#afe137dd2819614ad149f9673157c8d62":[3,0,2,1,0,276,9],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html":[3,0,2,1,0,281],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a009d7d9a5abb945200c6feaedfed9b5e":[3,0,2,1,0,281,19],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a027ac4cd34f1e99c0a5d93b65ddbdd04":[3,0,2,1,0,281,7],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a0cd087f5c5b75c19dcd906e24214dafc":[3,0,2,1,0,281,13],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a11352fdc3ffe169c84c612b057964f13":[3,0,2,1,0,281,1],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1ad6c8d6afc28d509bf7d9c3f4da9b54":[3,0,2,1,0,281,4],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c55cb2cc1e445bd7fe6ae4931e8fe88":[3,0,2,1,0,281,17],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c6e3a913c64c15cc3874a06f2ca38da":[3,0,2,1,0,281,26]
+"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a009d7d9a5abb945200c6feaedfed9b5e":[3,0,2,1,0,281,19]
 };

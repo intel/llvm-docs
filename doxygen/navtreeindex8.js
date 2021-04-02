@@ -1,5 +1,11 @@
 var NAVTREEINDEX8 =
 {
+"classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce":[1,3,0,12],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a89b079400dcccbdc3f8beca70517c3dd":[1,3,0,26],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a9308486edfa6d82815466ec0512cb133":[1,3,0,5],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a94b8d77da7c09799a1b9913639fcc31d":[1,3,0,28],
+"classcl_1_1sycl_1_1detail_1_1Command.html#aab71c1106d244e530278da63ed11f5f9":[1,3,0,40],
+"classcl_1_1sycl_1_1detail_1_1Command.html#ab1b1e66f599238f77786e06191955432":[1,3,0,24],
 "classcl_1_1sycl_1_1detail_1_1Command.html#aba092a301276f444590739782a63fff5":[1,3,0,54],
 "classcl_1_1sycl_1_1detail_1_1Command.html#abd75de32d432e4c9f0cb65ade0ad41dc":[1,3,0,45],
 "classcl_1_1sycl_1_1detail_1_1Command.html#abde6c3c8d02acee274c2724870a6f3bf":[1,3,0,18],
@@ -243,11 +249,5 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253":[3,0,2,1,0,277,8],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a066900235b68c866aa58db9b479fd21f":[3,0,2,1,0,277,19],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a10cc552efb8087c7ee5b06fdcf29a3f9":[3,0,2,1,0,277,18],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a1a99948fee821bc116c7ba3065c7262f":[3,0,2,1,0,277,11],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a26093759ed264e3186feeac6177a0cde":[3,0,2,1,0,277,16],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a44b3c505c19258835bdfc5a50a8ca1fd":[3,0,2,1,0,277,21],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a4f6e9da0bd1864bb1c001c35912c2d06":[3,0,2,1,0,277,10],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a6104597b7bd096c9ff4b1e96e8485a47":[3,0,2,1,0,277,6],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a698a18a1a6a4c86e87ea7b69cd64b049":[3,0,2,1,0,277,4],
-"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a74e1adbeefa644a07dc12afc7a80921c":[3,0,2,1,0,277,17]
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a1a99948fee821bc116c7ba3065c7262f":[3,0,2,1,0,277,11]
 };

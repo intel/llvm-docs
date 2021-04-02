@@ -8,8 +8,6 @@ var handler_8hpp =
     [ "image_accessor", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", "classcl_1_1sycl_1_1detail_1_1image__accessor" ],
     [ "__pf_kernel_wrapper", "classcl_1_1sycl_1_1detail_1_1____pf__kernel__wrapper.html", null ],
     [ "get_kernel_wrapper_name_t", "structcl_1_1sycl_1_1detail_1_1get__kernel__wrapper__name__t.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__wrapper__name__t" ],
-    [ "check_fn_signature", "structcl_1_1sycl_1_1detail_1_1check__fn__signature.html", null ],
-    [ "check_fn_signature< F, RetT(Args...)>", "structcl_1_1sycl_1_1detail_1_1check__fn__signature_3_01F_00_01RetT_07Args_8_8_8_08_4.html", "structcl_1_1sycl_1_1detail_1_1check__fn__signature_3_01F_00_01RetT_07Args_8_8_8_08_4" ],
     [ "reduction_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl" ],
     [ "AreAllButLastReductions", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions" ],
     [ "ShouldEnableSetArg", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg" ],

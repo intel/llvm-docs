@@ -412,6 +412,7 @@ var group__sycl__api =
       [ "native_specialization_constant", "classcl_1_1sycl_1_1kernel__bundle.html#ace43bd05e3d8a9113687e357b2784e30", null ],
       [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1kernel__bundle.html#a71492293d0386f542d120a1fc3dfbb55", null ]
     ] ],
+    [ "kernel_handler", "classcl_1_1sycl_1_1kernel__handler.html", null ],
     [ "marray", "classcl_1_1sycl_1_1marray.html", [
       [ "const_iterator", "classcl_1_1sycl_1_1marray.html#a7f3d1d51fd3fb88af54944fdf3fabdda", null ],
       [ "const_reference", "classcl_1_1sycl_1_1marray.html#a30b9e3a5c6160fe39b2eda4a83e3782f", null ],
@@ -704,6 +705,14 @@ var group__sycl__api =
       [ "operator=", "classcl_1_1sycl_1_1sampler.html#a880316242c56cc50a9072fd89c477dfd", null ],
       [ "operator==", "classcl_1_1sycl_1_1sampler.html#a672a33c89c7037d2e26319dabcfdcc0a", null ],
       [ "detail::image_accessor", "classcl_1_1sycl_1_1sampler.html#adbb498cc698f57626f0746b3365a880e", null ]
+    ] ],
+    [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html", [
+      [ "value_type", "classcl_1_1sycl_1_1specialization__id.html#ac47870e3eca8415b3b11db5aa9f599aa", null ],
+      [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html#accfaca97dc93d03ec624b896c50ea087", null ],
+      [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html#aa3c51d21ed2eae0605e5956b7e201c25", null ],
+      [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html#a6a23b2dd3b8f39deeb0af7309541efb1", null ],
+      [ "operator=", "classcl_1_1sycl_1_1specialization__id.html#a157bfa5ffa07be869e9b13459914b819", null ],
+      [ "operator=", "classcl_1_1sycl_1_1specialization__id.html#a4a02ff4002fa9eece914631dfdc8ea0b", null ]
     ] ],
     [ "stream", "classcl_1_1sycl_1_1stream.html", [
       [ "stream", "classcl_1_1sycl_1_1stream.html#ac72ac73caff402d4b1008f2c5350ab8a", null ],

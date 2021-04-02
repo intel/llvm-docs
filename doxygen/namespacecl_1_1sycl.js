@@ -74,6 +74,7 @@ var namespacecl_1_1sycl =
     [ "kernel", "classcl_1_1sycl_1_1kernel.html", "classcl_1_1sycl_1_1kernel" ],
     [ "kernel_bundle", "classcl_1_1sycl_1_1kernel__bundle.html", "classcl_1_1sycl_1_1kernel__bundle" ],
     [ "kernel_error", "classcl_1_1sycl_1_1kernel__error.html", null ],
+    [ "kernel_handler", "classcl_1_1sycl_1_1kernel__handler.html", null ],
     [ "kernel_id", "classcl_1_1sycl_1_1kernel__id.html", "classcl_1_1sycl_1_1kernel__id" ],
     [ "known_identity", "structcl_1_1sycl_1_1known__identity.html", null ],
     [ "link_program_error", "classcl_1_1sycl_1_1link__program__error.html", null ],
@@ -97,6 +98,7 @@ var namespacecl_1_1sycl =
     [ "range", "classcl_1_1sycl_1_1range.html", "classcl_1_1sycl_1_1range" ],
     [ "runtime_error", "classcl_1_1sycl_1_1runtime__error.html", "classcl_1_1sycl_1_1runtime__error" ],
     [ "sampler", "classcl_1_1sycl_1_1sampler.html", "classcl_1_1sycl_1_1sampler" ],
+    [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html", "classcl_1_1sycl_1_1specialization__id" ],
     [ "stream", "classcl_1_1sycl_1_1stream.html", "classcl_1_1sycl_1_1stream" ],
     [ "usm_allocator", "classcl_1_1sycl_1_1usm__allocator.html", "classcl_1_1sycl_1_1usm__allocator" ],
     [ "vec", "classcl_1_1sycl_1_1vec.html", null ]

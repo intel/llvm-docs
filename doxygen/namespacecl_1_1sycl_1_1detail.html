@@ -1368,10 +1368,14 @@ Enumerations</h2></td></tr>
 <tr class="memitem:aae0b2cf58081e898ab5b4bc4fe0abb81"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#aae0b2cf58081e898ab5b4bc4fe0abb81">ExtendedMembersType</a> : unsigned int { <a class="el" href="namespacecl_1_1sycl_1_1detail.html#aae0b2cf58081e898ab5b4bc4fe0abb81a68ff0837c698d19a4bc3a0f9fd0beca2">ExtendedMembersType::HANDLER_KERNEL_BUNDLE</a> = 0
  }</td></tr>
 <tr class="separator:aae0b2cf58081e898ab5b4bc4fe0abb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab40cf6b53fff657f60c2ad7ded29712a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712a">kernel_param_kind_t</a> { <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc">kernel_param_kind_t::kind_accessor</a> = 0, 
+<tr class="memitem:ab40cf6b53fff657f60c2ad7ded29712a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712a">kernel_param_kind_t</a> { <br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc">kernel_param_kind_t::kind_accessor</a> = 0, 
 <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa804d646aee6ffb43decdc5ca71c12fba">kernel_param_kind_t::kind_std_layout</a> = 1, 
 <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa7fd1bdac15933981ada28fffd6c40372">kernel_param_kind_t::kind_sampler</a> = 2, 
-<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa4978aa503ec00be00af860d6e8ba41ef">kernel_param_kind_t::kind_pointer</a> = 3
+<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa4978aa503ec00be00af860d6e8ba41ef">kernel_param_kind_t::kind_pointer</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aac2051d9dcb0094ae11cbbfc3ae954d7c">kernel_param_kind_t::kind_specialization_constants_buffer</a> = 4
+<br />
  }</td></tr>
 <tr class="separator:ab40cf6b53fff657f60c2ad7ded29712a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af79d714ab880f512a35ef6b25c48ebd0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af79d714ab880f512a35ef6b25c48ebd0">PiApiKind</a> { <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af79d714ab880f512a35ef6b25c48ebd0a5e7a8f4120d8c29b610baae2d5097c7a">PiApiKind::_PI_API</a>
@@ -1477,6 +1481,24 @@ Functions</h2></td></tr>
 <tr class="separator:abdbb09cf15abd6ed922773deea18807b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6391752349a8ab0014fac6433703455b"><td class="memItemLeft" align="right" valign="top">constexpr unsigned <a class="el" href="classchar.html">char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6391752349a8ab0014fac6433703455b">getCGTypeVersion</a> (unsigned int Type)</td></tr>
 <tr class="separator:a6391752349a8ab0014fac6433703455b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3396c039dbcafbfd2499adef34716409"><td class="memTemplParams" colspan="2">template&lt;typename F , typename... Args&gt; </td></tr>
+<tr class="memitem:a3396c039dbcafbfd2499adef34716409"><td class="memTemplItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a3396c039dbcafbfd2499adef34716409">check_kernel_lambda_takes_args</a> ()</td></tr>
+<tr class="separator:a3396c039dbcafbfd2499adef34716409"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a414bfdce9572837294359d4993a3c9"><td class="memTemplParams" colspan="2">template&lt;typename KernelType , typename LambdaArgType , typename std::enable_if_t&lt; std::is_same&lt; LambdaArgType, void &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a6a414bfdce9572837294359d4993a3c9"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6a414bfdce9572837294359d4993a3c9">isKernelLambdaCallableWithKernelHandlerImpl</a> ()</td></tr>
+<tr class="separator:a6a414bfdce9572837294359d4993a3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b6fecbb05171470d5e2f66329a63d6"><td class="memTemplParams" colspan="2">template&lt;typename KernelType &gt; </td></tr>
+<tr class="memitem:a15b6fecbb05171470d5e2f66329a63d6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a15b6fecbb05171470d5e2f66329a63d6">isKernelLambdaCallableWithKernelHandler</a> ()</td></tr>
+<tr class="separator:a15b6fecbb05171470d5e2f66329a63d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8856af982c39af4cd702f88d4340920"><td class="memTemplParams" colspan="2">template&lt;typename KernelType , typename LambdaArgType &gt; </td></tr>
+<tr class="memitem:ae8856af982c39af4cd702f88d4340920"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae8856af982c39af4cd702f88d4340920">isKernelLambdaCallableWithKernelHandler</a> ()</td></tr>
+<tr class="separator:ae8856af982c39af4cd702f88d4340920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a939d7d93edee30890e3c30f5bba413db"><td class="memTemplParams" colspan="2">template&lt;typename KernelType , typename std::enable_if_t&lt; isKernelLambdaCallableWithKernelHandler&lt; KernelType &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a939d7d93edee30890e3c30f5bba413db"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a939d7d93edee30890e3c30f5bba413db">runKernelWithoutArg</a> (KernelType KernelName)</td></tr>
+<tr class="separator:a939d7d93edee30890e3c30f5bba413db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a869380b3d982bbb3991b98c525b4b2e8"><td class="memTemplParams" colspan="2">template&lt;typename ArgType , typename KernelType , typename std::enable_if_t&lt; isKernelLambdaCallableWithKernelHandler&lt; KernelType, ArgType &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a869380b3d982bbb3991b98c525b4b2e8"><td class="memTemplItemLeft" align="right" valign="top">constexpr void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a869380b3d982bbb3991b98c525b4b2e8">runKernelWithArg</a> (KernelType KernelName, ArgType Arg)</td></tr>
+<tr class="separator:a869380b3d982bbb3991b98c525b4b2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1af53414d9083438c310a1a40bd2500d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classchar.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a1af53414d9083438c310a1a40bd2500d">stringifyErrorCode</a> (<a class="el" href="namespacecl_1_1sycl.html#a2e2f7596dc075c417d85bce4e2c40eae">cl_int</a> error)</td></tr>
 <tr class="separator:a1af53414d9083438c310a1a40bd2500d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f75e2913b8907c160a99776cf2ef886"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6f75e2913b8907c160a99776cf2ef886">codeToString</a> (<a class="el" href="namespacecl_1_1sycl.html#a2e2f7596dc075c417d85bce4e2c40eae">cl_int</a> code)</td></tr>
@@ -4775,7 +4797,7 @@ template&lt;typename F , typename SuggestedArgType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00109">109</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00110">110</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -5780,6 +5802,7 @@ template&lt;class... &gt; </div>
 <tr><td class="fieldname"><a id="ab40cf6b53fff657f60c2ad7ded29712aa804d646aee6ffb43decdc5ca71c12fba"></a>kind_std_layout&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab40cf6b53fff657f60c2ad7ded29712aa7fd1bdac15933981ada28fffd6c40372"></a>kind_sampler&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab40cf6b53fff657f60c2ad7ded29712aa4978aa503ec00be00af860d6e8ba41ef"></a>kind_pointer&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab40cf6b53fff657f60c2ad7ded29712aac2051d9dcb0094ae11cbbfc3ae954d7c"></a>kind_specialization_constants_buffer&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="kernel__desc_8hpp_source.html#l00025">25</a> of file <a class="el" href="kernel__desc_8hpp_source.html">kernel_desc.hpp</a>.</p>
@@ -5910,7 +5933,7 @@ template&lt;class... &gt; </div>
 
 <p class="reference">References <a class="el" href="stream_8hpp_source.html#l00098">write()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00524">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8cpp_source.html#l01364">cl::sycl::detail::EmptyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00973">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00781">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00861">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01089">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01170">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01382">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01562">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01224">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l00519">cl::sycl::detail::Command::addDep()</a>, <a class="el" href="commands_8cpp_source.html#l01359">cl::sycl::detail::EmptyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00968">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00776">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00856">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01028">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01084">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01165">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01377">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01557">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
 
 </div>
 </div>
@@ -5974,9 +5997,9 @@ template&lt;class... &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01607">1607</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01602">1602</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5af44f9ae6cb6cd32abe3bcafdc0802db5">cl::sycl::info::compile_work_group_size</a>, <a class="el" href="cg__types_8hpp_source.html#l00122">cl::sycl::detail::NDRDescT::Dims</a>, <a class="el" href="device__impl_8hpp_source.html#l00061">cl::sycl::detail::device_impl::getHandleRef()</a>, <a class="el" href="device__impl_8hpp_source.html#l00122">cl::sycl::detail::device_impl::getPlugin()</a>, <a class="el" href="cg__types_8hpp_source.html#l00115">cl::sycl::detail::NDRDescT::GlobalSize</a>, <a class="el" href="cg__types_8hpp_source.html#l00116">cl::sycl::detail::NDRDescT::LocalSize</a>, <a class="el" href="cg__types_8hpp_source.html#l00121">cl::sycl::detail::NDRDescT::NumWorkGroups</a>, and <a class="el" href="cg__types_8hpp_source.html#l00056">cl::sycl::detail::NDRDescT::set()</a>.</p>
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1info.html#af0c6a672f830994a123ea748064f1ff5af44f9ae6cb6cd32abe3bcafdc0802db5">cl::sycl::info::compile_work_group_size</a>, <a class="el" href="cg__types_8hpp_source.html#l00123">cl::sycl::detail::NDRDescT::Dims</a>, <a class="el" href="device__impl_8hpp_source.html#l00061">cl::sycl::detail::device_impl::getHandleRef()</a>, <a class="el" href="device__impl_8hpp_source.html#l00122">cl::sycl::detail::device_impl::getPlugin()</a>, <a class="el" href="cg__types_8hpp_source.html#l00116">cl::sycl::detail::NDRDescT::GlobalSize</a>, <a class="el" href="cg__types_8hpp_source.html#l00117">cl::sycl::detail::NDRDescT::LocalSize</a>, <a class="el" href="cg__types_8hpp_source.html#l00122">cl::sycl::detail::NDRDescT::NumWorkGroups</a>, and <a class="el" href="cg__types_8hpp_source.html#l00057">cl::sycl::detail::NDRDescT::set()</a>.</p>
 
 </div>
 </div>
@@ -6118,7 +6141,7 @@ template&lt;int ArrayLength&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="handler__proxy_8cpp_source.html#l00017">17</a> of file <a class="el" href="handler__proxy_8cpp_source.html">handler_proxy.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l01963">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::image, IsPlaceholder &gt;::accessor()</a>, <a class="el" href="accessor_8hpp_source.html#l02070">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder &gt;::accessor()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00760">cl::sycl::ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, IsPlaceholder &gt;::getWriteAccForPartialReds()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00490">cl::sycl::ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, IsPlaceholder &gt;::reduction_impl()</a>, and <a class="el" href="handler_8hpp_source.html#l00974">cl::sycl::handler::require()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="accessor_8hpp_source.html#l01963">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::image, IsPlaceholder &gt;::accessor()</a>, <a class="el" href="accessor_8hpp_source.html#l02070">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::image_array, IsPlaceholder &gt;::accessor()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00760">cl::sycl::ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, IsPlaceholder &gt;::getWriteAccForPartialReds()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00490">cl::sycl::ONEAPI::detail::reduction_impl&lt; T, BinaryOperation, Dims, IsUSM, IsPlaceholder &gt;::reduction_impl()</a>, and <a class="el" href="handler_8hpp_source.html#l01079">cl::sycl::handler::require()</a>.</p>
 
 </div>
 </div>
@@ -6272,11 +6295,40 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01427">1427</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01422">1422</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="cg_8hpp_source.html#l00166">cl::sycl::detail::CG::CODEPLAY_HOST_TASK</a>, <a class="el" href="cg_8hpp_source.html#l00156">cl::sycl::detail::CG::COPY_ACC_TO_ACC</a>, <a class="el" href="cg_8hpp_source.html#l00154">cl::sycl::detail::CG::COPY_ACC_TO_PTR</a>, <a class="el" href="cg_8hpp_source.html#l00155">cl::sycl::detail::CG::COPY_PTR_TO_ACC</a>, <a class="el" href="cg_8hpp_source.html#l00162">cl::sycl::detail::CG::COPY_USM</a>, <a class="el" href="cg_8hpp_source.html#l00159">cl::sycl::detail::CG::FILL</a>, <a class="el" href="cg_8hpp_source.html#l00163">cl::sycl::detail::CG::FILL_USM</a>, <a class="el" href="cg_8hpp_source.html#l00153">cl::sycl::detail::CG::KERNEL</a>, <a class="el" href="cg_8hpp_source.html#l00164">cl::sycl::detail::CG::PREFETCH_USM</a>, and <a class="el" href="cg_8hpp_source.html#l00160">cl::sycl::detail::CG::UPDATE_HOST</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01473">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01562">cl::sycl::detail::ExecCGCommand::printDot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01468">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01557">cl::sycl::detail::ExecCGCommand::printDot()</a>.</p>
+
+</div>
+</div>
+<a id="a3396c039dbcafbfd2499adef34716409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3396c039dbcafbfd2499adef34716409">&#9670;&nbsp;</a></span>check_kernel_lambda_takes_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr bool cl::sycl::detail::check_kernel_lambda_takes_args </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg__types_8hpp_source.html#l00148">148</a> of file <a class="el" href="cg__types_8hpp_source.html">cg_types.hpp</a>.</p>
 
 </div>
 </div>
@@ -6613,7 +6665,7 @@ template&lt;int Dims&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00192">192</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00172">172</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -6635,7 +6687,7 @@ template&lt;int Dims, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00173">173</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00153">153</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -6657,7 +6709,7 @@ template&lt;int Dims, typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00210">210</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00190">190</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -6805,7 +6857,7 @@ template&lt;int Dims, typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l01160">1160</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01997">piextDeviceSelectBinary()</a>.</p>
+<p class="reference">References <a class="el" href="device__binary__image_8hpp_source.html#l00034">cl::sycl::detail::RTDeviceBinaryImage::getRawData()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02035">piextDeviceSelectBinary()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01181">cl::sycl::detail::ProgramManager::getSYCLDeviceImagesWithCompatibleState()</a>.</p>
 
@@ -7660,7 +7712,7 @@ template&lt;typename ChannelType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00415">415</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04607">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04626">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05164">piEnqueueMemImageCopy()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00241">prepTermPositions()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00237">cl::sycl::detail::TermPositions::XTerm</a>, <a class="el" href="memory__manager_8cpp_source.html#l00238">cl::sycl::detail::TermPositions::YTerm</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00239">cl::sycl::detail::TermPositions::ZTerm</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04666">piEnqueueMemBufferCopy()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04685">piEnqueueMemBufferCopyRect()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05266">piEnqueueMemImageCopy()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00241">prepTermPositions()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00237">cl::sycl::detail::TermPositions::XTerm</a>, <a class="el" href="memory__manager_8cpp_source.html#l00238">cl::sycl::detail::TermPositions::YTerm</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00239">cl::sycl::detail::TermPositions::ZTerm</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00515">cl::sycl::detail::MemoryManager::copy()</a>.</p>
 
@@ -7784,7 +7836,7 @@ template&lt;typename ChannelType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00338">338</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04383">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04398">piEnqueueMemBufferReadRect()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00241">prepTermPositions()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00237">cl::sycl::detail::TermPositions::XTerm</a>, <a class="el" href="memory__manager_8cpp_source.html#l00238">cl::sycl::detail::TermPositions::YTerm</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00239">cl::sycl::detail::TermPositions::ZTerm</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04435">piEnqueueMemBufferRead()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04450">piEnqueueMemBufferReadRect()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00241">prepTermPositions()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00237">cl::sycl::detail::TermPositions::XTerm</a>, <a class="el" href="memory__manager_8cpp_source.html#l00238">cl::sycl::detail::TermPositions::YTerm</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00239">cl::sycl::detail::TermPositions::ZTerm</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00515">cl::sycl::detail::MemoryManager::copy()</a>.</p>
 
@@ -7908,7 +7960,7 @@ template&lt;typename ChannelType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00266">266</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04570">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04588">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00241">prepTermPositions()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00237">cl::sycl::detail::TermPositions::XTerm</a>, <a class="el" href="memory__manager_8cpp_source.html#l00238">cl::sycl::detail::TermPositions::YTerm</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00239">cl::sycl::detail::TermPositions::ZTerm</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html#a2e818e0ee30e8745469057cff4d24068">cl::sycl::detail::SYCLMemObjI::getType()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04629">piEnqueueMemBufferWrite()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04647">piEnqueueMemBufferWriteRect()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00241">prepTermPositions()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00237">cl::sycl::detail::TermPositions::XTerm</a>, <a class="el" href="memory__manager_8cpp_source.html#l00238">cl::sycl::detail::TermPositions::YTerm</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00239">cl::sycl::detail::TermPositions::ZTerm</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00515">cl::sycl::detail::MemoryManager::copy()</a>.</p>
 
@@ -8094,7 +8146,7 @@ template&lt;typename ChannelType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00055">55</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, <a class="el" href="pi_8h_source.html#l00294">PI_CONTEXT_INFO_NUM_DEVICES</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02109">piContextGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02744">piProgramCreateWithBinary()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, <a class="el" href="pi_8h_source.html#l00294">PI_CONTEXT_INFO_NUM_DEVICES</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02147">piContextGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02782">piProgramCreateWithBinary()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00292">cl::sycl::detail::ProgramManager::createPIProgram()</a>.</p>
 
@@ -8172,7 +8224,7 @@ template&lt;typename ChannelType &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="program__manager_8cpp_source.html#l00084">84</a> of file <a class="el" href="program__manager_8cpp_source.html">program_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02723">piProgramCreate()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02761">piProgramCreate()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l00292">cl::sycl::detail::ProgramManager::createPIProgram()</a>, and <a class="el" href="program__manager_8cpp_source.html#l00565">loadDeviceLib()</a>.</p>
 
@@ -8281,7 +8333,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l00070">70</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01473">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01562">cl::sycl::detail::ExecCGCommand::printDot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01468">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, and <a class="el" href="commands_8cpp_source.html#l01557">cl::sycl::detail::ExecCGCommand::printDot()</a>.</p>
 
 </div>
 </div>
@@ -8313,7 +8365,7 @@ template&lt;typename T &gt; </div>
 
 <p class="reference">References <a class="el" href="device_8cpp_source.html#l00093">cl::sycl::device::is_accelerator()</a>, <a class="el" href="device_8cpp_source.html#l00089">cl::sycl::device::is_cpu()</a>, <a class="el" href="device_8cpp_source.html#l00091">cl::sycl::device::is_gpu()</a>, and <a class="el" href="device_8cpp_source.html#l00087">cl::sycl::device::is_host()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01340">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00888">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00713">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01000">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01057">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01121">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01261">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01473">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01408">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00973">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00781">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00861">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01033">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01089">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01170">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01382">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01562">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01224">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="commands_8cpp_source.html#l01335">cl::sycl::detail::EmptyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00883">cl::sycl::detail::ReleaseCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00708">cl::sycl::detail::AllocaCommandBase::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00995">cl::sycl::detail::MapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01052">cl::sycl::detail::UnMapMemObject::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01116">cl::sycl::detail::MemCpyCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01256">cl::sycl::detail::MemCpyCommandHost::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01468">cl::sycl::detail::ExecCGCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l01403">cl::sycl::detail::UpdateHostRequirementCommand::emitInstrumentationData()</a>, <a class="el" href="commands_8cpp_source.html#l00968">cl::sycl::detail::ReleaseCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00776">cl::sycl::detail::AllocaCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l00856">cl::sycl::detail::AllocaSubBufCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01028">cl::sycl::detail::MapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01084">cl::sycl::detail::UnMapMemObject::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01165">cl::sycl::detail::MemCpyCommand::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01377">cl::sycl::detail::MemCpyCommandHost::printDot()</a>, <a class="el" href="commands_8cpp_source.html#l01557">cl::sycl::detail::ExecCGCommand::printDot()</a>, and <a class="el" href="commands_8cpp_source.html#l01219">cl::sycl::detail::UpdateHostRequirementCommand::printDot()</a>.</p>
 
 </div>
 </div>
@@ -8363,9 +8415,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01720">1720</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01721">1721</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cg__types_8hpp_source.html#l00156">cl::sycl::detail::HostTask::call()</a>, and <a class="el" href="accessor__impl_8hpp_source.html#l00118">cl::sycl::detail::AccessorImplHost::MData</a>.</p>
+<p class="reference">References <a class="el" href="cg__types_8hpp_source.html#l00248">cl::sycl::detail::HostTask::call()</a>, and <a class="el" href="accessor__impl_8hpp_source.html#l00118">cl::sycl::detail::AccessorImplHost::MData</a>.</p>
 
 </div>
 </div>
@@ -12708,7 +12760,7 @@ template&lt;typename DataT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="function__pointer_8cpp_source.html#l00017">17</a> of file <a class="el" href="function__pointer_8cpp_source.html">function_pointer.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, <a class="el" href="usm__allocator_8cpp.html#a6dce1d51457f0415ec5302d3c05cded5">P</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05272">piextGetDeviceFunctionPointer()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, <a class="el" href="usm__allocator_8cpp.html#a6dce1d51457f0415ec5302d3c05cded5">P</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05374">piextGetDeviceFunctionPointer()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="function__pointer_8hpp_source.html#l00069">cl::sycl::ONEAPI::get_device_func_ptr()</a>.</p>
 
@@ -12986,7 +13038,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="image__impl_8cpp_source.html#l00251">251</a> of file <a class="el" href="image__impl_8cpp_source.html">image_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04928">piMemImageGetInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05027">piMemImageGetInfo()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="image__impl_8cpp_source.html#l00260">cl::sycl::detail::image_impl&lt; Dimensions &gt;::image_impl()</a>.</p>
 
@@ -13820,7 +13872,7 @@ template&lt;class Obj &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="common_8hpp_source.html#l00169">169</a> of file <a class="el" href="common_8hpp_source.html">common.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>, <a class="el" href="program__manager_8cpp_source.html#l01255">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>, <a class="el" href="program__manager_8cpp_source.html#l01463">cl::sycl::detail::ProgramManager::build()</a>, <a class="el" href="commands_8cpp_source.html#l00308">cl::sycl::detail::Command::Command()</a>, <a class="el" href="program__manager_8cpp_source.html#l01160">compatibleWithDevice()</a>, <a class="el" href="program__manager_8cpp_source.html#l01357">cl::sycl::detail::ProgramManager::compile()</a>, <a class="el" href="context_8cpp_source.html#l00054">cl::sycl::context::context()</a>, <a class="el" href="context__impl_8cpp_source.html#l00035">cl::sycl::detail::context_impl::context_impl()</a>, <a class="el" href="pi_8cpp_source.html#l00123">cl::sycl::detail::pi::contextSetExtendedDeleter()</a>, <a class="el" href="handler_8hpp_source.html#l01840">cl::sycl::handler::copy()</a>, <a class="el" href="program__manager_8cpp_source.html#l00055">createBinaryProgram()</a>, <a class="el" href="program__manager_8cpp_source.html#l00292">cl::sycl::detail::ProgramManager::createPIProgram()</a>, <a class="el" href="handler_8hpp_source.html#l00986">cl::sycl::handler::depends_on()</a>, <a class="el" href="handler_8hpp_source.html#l01992">cl::sycl::handler::fill()</a>, <a class="el" href="program__impl_8cpp_source.html#l00529">cl::sycl::detail::program_impl::flush_spec_constants()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00276">cl::sycl::detail::kernel_bundle_impl::get_bundle_state()</a>, <a class="el" href="device_8cpp_source.html#l00050">cl::sycl::device::get_devices()</a>, <a class="el" href="kernel__impl_8hpp_source.html#l00222">cl::sycl::detail::kernel_impl::get_info()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00188">cl::sycl::detail::kernel_bundle_impl::get_kernel()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00162">cl::sycl::detail::kernel_bundle_impl::get_kernel_ids()</a>, <a class="el" href="interop__handler_8hpp_source.html#l00041">cl::sycl::interop_handler::get_mem()</a>, <a class="el" href="interop__handle_8hpp_source.html#l00052">cl::sycl::interop_handle::get_native_mem()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00299">cl::sycl::get_pointer_device()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">cl::sycl::get_pointer_type()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00257">cl::sycl::detail::kernel_bundle_impl::get_specialization_constant_raw_value()</a>, <a class="el" href="program__manager_8cpp_source.html#l00350">cl::sycl::detail::ProgramManager::getBuiltPIProgram()</a>, <a class="el" href="function__pointer_8cpp_source.html#l00017">getDeviceFunctionPointerImpl()</a>, <a class="el" href="program__manager_8cpp_source.html#l00460">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, <a class="el" href="sampler__impl_8cpp_source.html#l00050">cl::sycl::detail::sampler_impl::getOrCreateSampler()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00176">cl::sycl::detail::Scheduler::GraphBuilder::getOrInsertMemObjRecord()</a>, <a class="el" href="helpers_8cpp_source.html#l00021">getOrWaitEvents()</a>, <a class="el" href="context__impl_8cpp_source.html#l00162">cl::sycl::detail::context_impl::hasDevice()</a>, <a class="el" href="image__impl_8cpp_source.html#l00260">cl::sycl::detail::image_impl&lt; Dimensions &gt;::image_impl()</a>, <a class="el" href="scheduler__helpers_8cpp_source.html#l00019">initStream()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00068">IsBannedPlatform()</a>, <a class="el" href="program__manager_8cpp_source.html#l00233">isDeviceBinaryTypeSupported()</a>, <a class="el" href="device__selector_8cpp_source.html#l00032">cl::sycl::isDeviceOfPreferredSyclBe()</a>, <a class="el" href="device__selector_8cpp_source.html#l00041">cl::sycl::isForcedDevice()</a>, <a class="el" href="kernel__bundle_8hpp_source.html#l00509">cl::sycl::join()</a>, <a class="el" href="program__manager_8cpp_source.html#l01409">cl::sycl::detail::ProgramManager::link()</a>, <a class="el" href="level__zero_8cpp_source.html#l00044">cl::sycl::level_zero::make_context()</a>, <a class="el" href="level__zero_8cpp_source.html#l00029">cl::sycl::level_zero::make_device()</a>, <a class="el" href="opencl_8cpp_source.html#l00040">cl::sycl::opencl::make_program()</a>, <a class="el" href="level__zero_8cpp_source.html#l00070">cl::sycl::level_zero::make_program()</a>, <a class="el" href="opencl_8cpp_source.html#l00051">cl::sycl::opencl::make_queue()</a>, <a class="el" href="backend_8cpp_source.html#l00071">make_queue()</a>, <a class="el" href="level__zero_8cpp_source.html#l00081">cl::sycl::level_zero::make_queue()</a>, <a class="el" href="commands_8cpp_source.html#l01106">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01247">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, <a class="el" href="filter__selector__impl_8cpp_source.html#l00118">cl::sycl::ONEAPI::detail::filter_selector_impl::operator()()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00031">cl::sycl::detail::LessByHash&lt; T &gt;::operator()()</a>, <a class="el" href="sampler_8hpp_source.html#l00129">std::hash&lt; cl::sycl::sampler &gt;::operator()()</a>, <a class="el" href="platform_8hpp_source.html#l00149">std::hash&lt; cl::sycl::platform &gt;::operator()()</a>, <a class="el" href="event_8hpp_source.html#l00156">std::hash&lt; cl::sycl::event &gt;::operator()()</a>, <a class="el" href="kernel_8hpp_source.html#l00185">std::hash&lt; cl::sycl::kernel &gt;::operator()()</a>, <a class="el" href="commands_8cpp_source.html#l00203">cl::sycl::detail::DispatchHostTask::operator()()</a>, <a class="el" href="device_8hpp_source.html#l00221">std::hash&lt; cl::sycl::device &gt;::operator()()</a>, <a class="el" href="context_8hpp_source.html#l00247">std::hash&lt; cl::sycl::context &gt;::operator()()</a>, <a class="el" href="image_8hpp_source.html#l00316">std::hash&lt; cl::sycl::image&lt; Dimensions, AllocatorT &gt; &gt;::operator()()</a>, <a class="el" href="program_8hpp_source.html#l00425">std::hash&lt; cl::sycl::program &gt;::operator()()</a>, <a class="el" href="buffer_8hpp_source.html#l00492">std::hash&lt; cl::sycl::buffer&lt; T, dimensions, AllocatorT &gt; &gt;::operator()()</a>, <a class="el" href="queue_8hpp_source.html#l00825">std::hash&lt; cl::sycl::queue &gt;::operator()()</a>, <a class="el" href="stream_8hpp_source.html#l01110">std::hash&lt; cl::sycl::stream &gt;::operator()()</a>, <a class="el" href="accessor_8hpp_source.html#l02330">std::hash&lt; cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt; &gt;::operator()()</a>, <a class="el" href="handler_8hpp_source.html#l01527">cl::sycl::handler::parallel_for()</a>, <a class="el" href="handler_8hpp_source.html#l01715">cl::sycl::handler::parallel_for_work_group()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00045">prepareUSMEvent()</a>, <a class="el" href="program_8cpp_source.html#l00033">cl::sycl::program::program()</a>, <a class="el" href="queue_8cpp_source.html#l00022">cl::sycl::queue::queue()</a>, <a class="el" href="sampler__impl_8cpp_source.html#l00024">cl::sycl::detail::sampler_impl::sampler_impl()</a>, <a class="el" href="scheduler_8cpp_source.html#l00301">cl::sycl::detail::Scheduler::Scheduler()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00249">cl::sycl::detail::kernel_bundle_impl::set_specialization_constant_raw_value()</a>, <a class="el" href="handler_8hpp_source.html#l01494">cl::sycl::handler::single_task()</a>, <a class="el" href="stream_8cpp_source.html#l00020">cl::sycl::stream::stream()</a>, <a class="el" href="handler_8hpp_source.html#l01965">cl::sycl::handler::update_host()</a>, <a class="el" href="handler_8hpp_source.html#l00960">cl::sycl::handler::use_kernel_bundle()</a>, <a class="el" href="helpers_8cpp_source.html#l00036">waitEvents()</a>, <a class="el" href="device__image__impl_8hpp_source.html#l00144">cl::sycl::detail::device_image_impl::~device_image_impl()</a>, and <a class="el" href="sampler__impl_8cpp_source.html#l00041">cl::sycl::detail::sampler_impl::~sampler_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>, <a class="el" href="program__manager_8cpp_source.html#l01255">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>, <a class="el" href="program__manager_8cpp_source.html#l01463">cl::sycl::detail::ProgramManager::build()</a>, <a class="el" href="commands_8cpp_source.html#l00308">cl::sycl::detail::Command::Command()</a>, <a class="el" href="program__manager_8cpp_source.html#l01160">compatibleWithDevice()</a>, <a class="el" href="program__manager_8cpp_source.html#l01357">cl::sycl::detail::ProgramManager::compile()</a>, <a class="el" href="context_8cpp_source.html#l00054">cl::sycl::context::context()</a>, <a class="el" href="context__impl_8cpp_source.html#l00035">cl::sycl::detail::context_impl::context_impl()</a>, <a class="el" href="pi_8cpp_source.html#l00123">cl::sycl::detail::pi::contextSetExtendedDeleter()</a>, <a class="el" href="handler_8hpp_source.html#l01945">cl::sycl::handler::copy()</a>, <a class="el" href="program__manager_8cpp_source.html#l00055">createBinaryProgram()</a>, <a class="el" href="program__manager_8cpp_source.html#l00292">cl::sycl::detail::ProgramManager::createPIProgram()</a>, <a class="el" href="handler_8hpp_source.html#l01091">cl::sycl::handler::depends_on()</a>, <a class="el" href="handler_8hpp_source.html#l02097">cl::sycl::handler::fill()</a>, <a class="el" href="program__impl_8cpp_source.html#l00529">cl::sycl::detail::program_impl::flush_spec_constants()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00276">cl::sycl::detail::kernel_bundle_impl::get_bundle_state()</a>, <a class="el" href="device_8cpp_source.html#l00050">cl::sycl::device::get_devices()</a>, <a class="el" href="kernel__impl_8hpp_source.html#l00222">cl::sycl::detail::kernel_impl::get_info()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00188">cl::sycl::detail::kernel_bundle_impl::get_kernel()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00162">cl::sycl::detail::kernel_bundle_impl::get_kernel_ids()</a>, <a class="el" href="interop__handler_8hpp_source.html#l00041">cl::sycl::interop_handler::get_mem()</a>, <a class="el" href="interop__handle_8hpp_source.html#l00052">cl::sycl::interop_handle::get_native_mem()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00299">cl::sycl::get_pointer_device()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">cl::sycl::get_pointer_type()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00257">cl::sycl::detail::kernel_bundle_impl::get_specialization_constant_raw_value()</a>, <a class="el" href="program__manager_8cpp_source.html#l00350">cl::sycl::detail::ProgramManager::getBuiltPIProgram()</a>, <a class="el" href="function__pointer_8cpp_source.html#l00017">getDeviceFunctionPointerImpl()</a>, <a class="el" href="program__manager_8cpp_source.html#l00460">cl::sycl::detail::ProgramManager::getOrCreateKernel()</a>, <a class="el" href="sampler__impl_8cpp_source.html#l00050">cl::sycl::detail::sampler_impl::getOrCreateSampler()</a>, <a class="el" href="graph__builder_8cpp_source.html#l00176">cl::sycl::detail::Scheduler::GraphBuilder::getOrInsertMemObjRecord()</a>, <a class="el" href="helpers_8cpp_source.html#l00021">getOrWaitEvents()</a>, <a class="el" href="context__impl_8cpp_source.html#l00162">cl::sycl::detail::context_impl::hasDevice()</a>, <a class="el" href="image__impl_8cpp_source.html#l00260">cl::sycl::detail::image_impl&lt; Dimensions &gt;::image_impl()</a>, <a class="el" href="scheduler__helpers_8cpp_source.html#l00019">initStream()</a>, <a class="el" href="platform__impl_8cpp_source.html#l00068">IsBannedPlatform()</a>, <a class="el" href="program__manager_8cpp_source.html#l00233">isDeviceBinaryTypeSupported()</a>, <a class="el" href="device__selector_8cpp_source.html#l00032">cl::sycl::isDeviceOfPreferredSyclBe()</a>, <a class="el" href="device__selector_8cpp_source.html#l00041">cl::sycl::isForcedDevice()</a>, <a class="el" href="kernel__bundle_8hpp_source.html#l00509">cl::sycl::join()</a>, <a class="el" href="program__manager_8cpp_source.html#l01409">cl::sycl::detail::ProgramManager::link()</a>, <a class="el" href="level__zero_8cpp_source.html#l00044">cl::sycl::level_zero::make_context()</a>, <a class="el" href="level__zero_8cpp_source.html#l00029">cl::sycl::level_zero::make_device()</a>, <a class="el" href="opencl_8cpp_source.html#l00040">cl::sycl::opencl::make_program()</a>, <a class="el" href="level__zero_8cpp_source.html#l00070">cl::sycl::level_zero::make_program()</a>, <a class="el" href="opencl_8cpp_source.html#l00051">cl::sycl::opencl::make_queue()</a>, <a class="el" href="backend_8cpp_source.html#l00071">make_queue()</a>, <a class="el" href="level__zero_8cpp_source.html#l00081">cl::sycl::level_zero::make_queue()</a>, <a class="el" href="commands_8cpp_source.html#l01101">cl::sycl::detail::MemCpyCommand::MemCpyCommand()</a>, <a class="el" href="commands_8cpp_source.html#l01242">cl::sycl::detail::MemCpyCommandHost::MemCpyCommandHost()</a>, <a class="el" href="filter__selector__impl_8cpp_source.html#l00118">cl::sycl::ONEAPI::detail::filter_selector_impl::operator()()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00031">cl::sycl::detail::LessByHash&lt; T &gt;::operator()()</a>, <a class="el" href="sampler_8hpp_source.html#l00129">std::hash&lt; cl::sycl::sampler &gt;::operator()()</a>, <a class="el" href="platform_8hpp_source.html#l00149">std::hash&lt; cl::sycl::platform &gt;::operator()()</a>, <a class="el" href="event_8hpp_source.html#l00156">std::hash&lt; cl::sycl::event &gt;::operator()()</a>, <a class="el" href="kernel_8hpp_source.html#l00185">std::hash&lt; cl::sycl::kernel &gt;::operator()()</a>, <a class="el" href="commands_8cpp_source.html#l00203">cl::sycl::detail::DispatchHostTask::operator()()</a>, <a class="el" href="device_8hpp_source.html#l00221">std::hash&lt; cl::sycl::device &gt;::operator()()</a>, <a class="el" href="context_8hpp_source.html#l00247">std::hash&lt; cl::sycl::context &gt;::operator()()</a>, <a class="el" href="image_8hpp_source.html#l00316">std::hash&lt; cl::sycl::image&lt; Dimensions, AllocatorT &gt; &gt;::operator()()</a>, <a class="el" href="program_8hpp_source.html#l00425">std::hash&lt; cl::sycl::program &gt;::operator()()</a>, <a class="el" href="buffer_8hpp_source.html#l00492">std::hash&lt; cl::sycl::buffer&lt; T, dimensions, AllocatorT &gt; &gt;::operator()()</a>, <a class="el" href="queue_8hpp_source.html#l00825">std::hash&lt; cl::sycl::queue &gt;::operator()()</a>, <a class="el" href="stream_8hpp_source.html#l01110">std::hash&lt; cl::sycl::stream &gt;::operator()()</a>, <a class="el" href="accessor_8hpp_source.html#l02330">std::hash&lt; cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder &gt; &gt;::operator()()</a>, <a class="el" href="handler_8hpp_source.html#l01632">cl::sycl::handler::parallel_for()</a>, <a class="el" href="handler_8hpp_source.html#l01820">cl::sycl::handler::parallel_for_work_group()</a>, <a class="el" href="queue__impl_8cpp_source.html#l00045">prepareUSMEvent()</a>, <a class="el" href="program_8cpp_source.html#l00033">cl::sycl::program::program()</a>, <a class="el" href="queue_8cpp_source.html#l00022">cl::sycl::queue::queue()</a>, <a class="el" href="sampler__impl_8cpp_source.html#l00024">cl::sycl::detail::sampler_impl::sampler_impl()</a>, <a class="el" href="scheduler_8cpp_source.html#l00301">cl::sycl::detail::Scheduler::Scheduler()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00249">cl::sycl::detail::kernel_bundle_impl::set_specialization_constant_raw_value()</a>, <a class="el" href="handler_8hpp_source.html#l01599">cl::sycl::handler::single_task()</a>, <a class="el" href="stream_8cpp_source.html#l00020">cl::sycl::stream::stream()</a>, <a class="el" href="handler_8hpp_source.html#l02070">cl::sycl::handler::update_host()</a>, <a class="el" href="handler_8hpp_source.html#l01065">cl::sycl::handler::use_kernel_bundle()</a>, <a class="el" href="helpers_8cpp_source.html#l00036">waitEvents()</a>, <a class="el" href="device__image__impl_8hpp_source.html#l00144">cl::sycl::detail::device_image_impl::~device_image_impl()</a>, and <a class="el" href="sampler__impl_8cpp_source.html#l00041">cl::sycl::detail::sampler_impl::~sampler_impl()</a>.</p>
 
 </div>
 </div>
@@ -14669,6 +14721,97 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a15b6fecbb05171470d5e2f66329a63d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b6fecbb05171470d5e2f66329a63d6">&#9670;&nbsp;</a></span>isKernelLambdaCallableWithKernelHandler() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool cl::sycl::detail::isKernelLambdaCallableWithKernelHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg__types_8hpp_source.html#l00175">175</a> of file <a class="el" href="cg__types_8hpp_source.html">cg_types.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae8856af982c39af4cd702f88d4340920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8856af982c39af4cd702f88d4340920">&#9670;&nbsp;</a></span>isKernelLambdaCallableWithKernelHandler() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelType , typename LambdaArgType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool cl::sycl::detail::isKernelLambdaCallableWithKernelHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg__types_8hpp_source.html#l00180">180</a> of file <a class="el" href="cg__types_8hpp_source.html">cg_types.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="cg__types_8hpp_source.html#l00160">isKernelLambdaCallableWithKernelHandlerImpl()</a>.</p>
+
+</div>
+</div>
+<a id="a6a414bfdce9572837294359d4993a3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a414bfdce9572837294359d4993a3c9">&#9670;&nbsp;</a></span>isKernelLambdaCallableWithKernelHandlerImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelType , typename LambdaArgType , typename std::enable_if_t&lt; std::is_same&lt; LambdaArgType, void &gt;::value &gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool cl::sycl::detail::isKernelLambdaCallableWithKernelHandlerImpl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg__types_8hpp_source.html#l00160">160</a> of file <a class="el" href="cg__types_8hpp_source.html">cg_types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00180">isKernelLambdaCallableWithKernelHandler()</a>.</p>
+
+</div>
+</div>
 <a id="af4e508ca6daca4984f672dfcea172455"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4e508ca6daca4984f672dfcea172455">&#9670;&nbsp;</a></span>isOutOfRange()</h2>
 
@@ -15223,7 +15366,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="backend_8cpp_source.html#l00058">58</a> of file <a class="el" href="backend_8cpp_source.html">backend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02154">piextContextCreateWithNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02192">piextContextCreateWithNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -15255,7 +15398,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="backend_8cpp_source.html#l00046">46</a> of file <a class="el" href="backend_8cpp_source.html">backend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02054">piextDeviceCreateWithNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02092">piextDeviceCreateWithNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -15293,7 +15436,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="backend_8cpp_source.html#l00085">85</a> of file <a class="el" href="backend_8cpp_source.html">backend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04124">piextEventCreateWithNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04166">piextEventCreateWithNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -15325,7 +15468,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="backend_8cpp_source.html#l00034">34</a> of file <a class="el" href="backend_8cpp_source.html">backend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01268">piextPlatformCreateWithNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l01283">piextPlatformCreateWithNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -15369,7 +15512,7 @@ template&lt;int Dimensions&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="backend_8cpp_source.html#l00071">71</a> of file <a class="el" href="backend_8cpp_source.html">backend.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02391">piextQueueCreateWithNativeHandle()</a>.</p>
+<p class="reference">References <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, <a class="el" href="common_8hpp_source.html#l00169">getSyclObjImpl()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02429">piextQueueCreateWithNativeHandle()</a>.</p>
 
 </div>
 </div>
@@ -15548,7 +15691,7 @@ template&lt;typename RetType , typename Func , typename Arg &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="helpers_8hpp_source.html#l00040">40</a> of file <a class="el" href="helpers_8hpp_source.html">helpers.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00737">_pi_program::_pi_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00581">_pi_kernel::arguments::add_arg()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00095">cl::sycl::detail::MemoryManager::allocateHostMemory()</a>, <a class="el" href="helpers_8hpp_source.html#l00053">bit_cast()</a>, <a class="el" href="online__compiler_8cpp_source.html#l00077">cl::sycl::INTEL::detail::compileToSPIRV()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00641">cl::sycl::detail::MemoryManager::copy_usm()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00487">copyH2H()</a>, <a class="el" href="device__image__impl_8hpp_source.html#l00101">cl::sycl::detail::device_image_impl::get_specialization_constant_raw_value()</a>, <a class="el" href="half__type_8cpp_source.html#l00065">half2Float()</a>, <a class="el" href="sycl__mem__obj__t_8hpp_source.html#l00212">cl::sycl::detail::SYCLMemObjT::handleHostData()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04727">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04832">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02410">piMemBufferCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02808">piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00605">_pi_kernel::arguments::set_implicit_offset()</a>, and <a class="el" href="device__image__impl_8hpp_source.html#l00086">cl::sycl::detail::device_image_impl::set_specialization_constant_raw_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8hpp_source.html#l00743">_pi_program::_pi_program()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00581">_pi_kernel::arguments::add_arg()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00095">cl::sycl::detail::MemoryManager::allocateHostMemory()</a>, <a class="el" href="helpers_8hpp_source.html#l00053">bit_cast()</a>, <a class="el" href="online__compiler_8cpp_source.html#l00077">cl::sycl::INTEL::detail::compileToSPIRV()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00641">cl::sycl::detail::MemoryManager::copy_usm()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00487">copyH2H()</a>, <a class="el" href="device__image__impl_8hpp_source.html#l00101">cl::sycl::detail::device_image_impl::get_specialization_constant_raw_value()</a>, <a class="el" href="half__type_8cpp_source.html#l00065">half2Float()</a>, <a class="el" href="sycl__mem__obj__t_8hpp_source.html#l00212">cl::sycl::detail::SYCLMemObjT::handleHostData()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04789">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04913">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02448">piMemBufferCreate()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02846">piProgramGetInfo()</a>, <a class="el" href="pi__cuda_8hpp_source.html#l00605">_pi_kernel::arguments::set_implicit_offset()</a>, and <a class="el" href="device__image__impl_8hpp_source.html#l00086">cl::sycl::detail::device_image_impl::set_specialization_constant_raw_value()</a>.</p>
 
 </div>
 </div>
@@ -16038,7 +16181,7 @@ template&lt;&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="program__impl_8cpp_source.html#l00496">496</a> of file <a class="el" href="program__impl_8cpp_source.html">program_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, <a class="el" href="pi_8h_source.html#l00086">PI_INVALID_PROGRAM</a>, <a class="el" href="pi_8h_source.html#l00281">PI_PROGRAM_INFO_REFERENCE_COUNT</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02808">piProgramGetInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="backend_8cpp_source.html#l00023">getPlugin()</a>, <a class="el" href="pi_8h_source.html#l00086">PI_INVALID_PROGRAM</a>, <a class="el" href="pi_8h_source.html#l00281">PI_PROGRAM_INFO_REFERENCE_COUNT</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02846">piProgramGetInfo()</a>.</p>
 
 </div>
 </div>
@@ -16103,7 +16246,7 @@ template&lt;&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="queue__impl_8cpp_source.html#l00027">27</a> of file <a class="el" href="queue__impl_8cpp_source.html">queue_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8cpp_source.html#l00411">cl::sycl::detail::pi::getPlugin()</a>, <a class="el" href="pi_8h_source.html#l00304">PI_QUEUE_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02267">piQueueGetInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="pi_8cpp_source.html#l00411">cl::sycl::detail::pi::getPlugin()</a>, <a class="el" href="pi_8h_source.html#l00304">PI_QUEUE_INFO_REFERENCE_COUNT</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02305">piQueueGetInfo()</a>.</p>
 
 </div>
 </div>
@@ -16487,9 +16630,83 @@ template&lt;typename DataT &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01635">1635</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01630">1630</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cg__types_8hpp_source.html#l00122">cl::sycl::detail::NDRDescT::Dims</a>, <a class="el" href="cg__types_8hpp_source.html#l00117">cl::sycl::detail::NDRDescT::GlobalOffset</a>, <a class="el" href="cg__types_8hpp_source.html#l00115">cl::sycl::detail::NDRDescT::GlobalSize</a>, and <a class="el" href="cg__types_8hpp_source.html#l00116">cl::sycl::detail::NDRDescT::LocalSize</a>.</p>
+<p class="reference">References <a class="el" href="cg__types_8hpp_source.html#l00123">cl::sycl::detail::NDRDescT::Dims</a>, <a class="el" href="cg__types_8hpp_source.html#l00118">cl::sycl::detail::NDRDescT::GlobalOffset</a>, <a class="el" href="cg__types_8hpp_source.html#l00116">cl::sycl::detail::NDRDescT::GlobalSize</a>, and <a class="el" href="cg__types_8hpp_source.html#l00117">cl::sycl::detail::NDRDescT::LocalSize</a>.</p>
+
+</div>
+</div>
+<a id="a869380b3d982bbb3991b98c525b4b2e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869380b3d982bbb3991b98c525b4b2e8">&#9670;&nbsp;</a></span>runKernelWithArg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgType , typename KernelType , typename std::enable_if_t&lt; isKernelLambdaCallableWithKernelHandler&lt; KernelType, ArgType &gt;()&gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cl::sycl::detail::runKernelWithArg </td>
+          <td>(</td>
+          <td class="paramtype">KernelType&#160;</td>
+          <td class="paramname"><em>KernelName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgType&#160;</td>
+          <td class="paramname"><em>Arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg__types_8hpp_source.html#l00205">205</a> of file <a class="el" href="cg__types_8hpp_source.html">cg_types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00330">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
+
+</div>
+</div>
+<a id="a939d7d93edee30890e3c30f5bba413db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939d7d93edee30890e3c30f5bba413db">&#9670;&nbsp;</a></span>runKernelWithoutArg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename KernelType , typename std::enable_if_t&lt; isKernelLambdaCallableWithKernelHandler&lt; KernelType &gt;()&gt; *  = nullptr&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr void cl::sycl::detail::runKernelWithoutArg </td>
+          <td>(</td>
+          <td class="paramtype">KernelType&#160;</td>
+          <td class="paramname"><em>KernelName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cg__types_8hpp_source.html#l00190">190</a> of file <a class="el" href="cg__types_8hpp_source.html">cg_types.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00291">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
 
 </div>
 </div>
@@ -16718,7 +16935,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="global__handler_8cpp_source.html#l00128">128</a> of file <a class="el" href="global__handler_8cpp_source.html">global_handler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l05845">piTearDown()</a>.</p>
+<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l05963">piTearDown()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="global__handler_8cpp_source.html#l00172">__attribute__()</a>.</p>
 
@@ -16814,7 +17031,7 @@ template&lt;int Dims&gt; </div>
 
 <p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00090">get_or_store()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00295">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00387">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
 
 </div>
 </div>
@@ -16840,7 +17057,7 @@ template&lt;int Dims&gt; </div>
 
 <p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00090">get_or_store()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00205">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00297">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
 
 </div>
 </div>
@@ -16866,7 +17083,7 @@ template&lt;int Dims&gt; </div>
 
 <p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00090">get_or_store()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00205">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00297">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
 
 </div>
 </div>
@@ -16892,7 +17109,7 @@ template&lt;int Dims&gt; </div>
 
 <p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00090">get_or_store()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00295">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="cg__types_8hpp_source.html#l00387">cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;::runOnHost()</a>.</p>
 
 </div>
 </div>
@@ -17400,7 +17617,7 @@ template&lt;typename T , int VecLength&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00023">23</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04028">piEventsWait()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04069">piEventsWait()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="memory__manager_8cpp_source.html#l00073">cl::sycl::detail::MemoryManager::allocate()</a>, <a class="el" href="memory__manager_8cpp_source.html#l00206">cl::sycl::detail::MemoryManager::allocateMemSubBuffer()</a>, <a class="el" href="commands_8cpp_source.html#l00203">cl::sycl::detail::DispatchHostTask::operator()()</a>, and <a class="el" href="memory__manager_8cpp_source.html#l00037">cl::sycl::detail::MemoryManager::release()</a>.</p>
 
@@ -18134,7 +18351,7 @@ template&lt;typename F , typename SuggestedArgType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00103">103</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l00104">104</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,11 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a26093759ed264e3186feeac6177a0cde":[3,0,2,1,0,277,16],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a44b3c505c19258835bdfc5a50a8ca1fd":[3,0,2,1,0,277,21],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a4f6e9da0bd1864bb1c001c35912c2d06":[3,0,2,1,0,277,10],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a6104597b7bd096c9ff4b1e96e8485a47":[3,0,2,1,0,277,6],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a698a18a1a6a4c86e87ea7b69cd64b049":[3,0,2,1,0,277,4],
+"classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a74e1adbeefa644a07dc12afc7a80921c":[3,0,2,1,0,277,17],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a8137263465d57a558898944c168e7239":[3,0,2,1,0,277,23],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a82801ed99fc95ffa56b128cb9fa2d55e":[3,0,2,1,0,277,7],
 "classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a8741c6349eecf28bf2fb4a6ac25d5027":[3,0,2,1,0,277,5],
@@ -243,11 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ade03344b34192f2f35d4f23cc9f443d7":[3,0,2,1,0,307,5],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#adf32e63128f9575219686ce23ca22017":[3,0,2,1,0,307,30],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ae2927f6e964e60e2dcd81fc969f2a708":[3,0,2,1,0,307,39],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ae7e7ad97571f7e7dce14d226c7235559":[3,0,2,1,0,307,34],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ae96bf6ca98e090bc84aeee8424c4ea53":[3,0,2,1,0,307,36],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aedac98bcb984ace78ba63057073addeb":[3,0,2,1,0,307,42],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aee89b923ed04e319a137f83c966b910f":[3,0,2,1,0,307,23],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aef4aa71c6669ecaf173b484a6f2f2101":[3,0,2,1,0,307,24],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af2eadca2e79a2337956557575e044975":[3,0,2,1,0,307,50],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af95ae85baafeb42f4bbeee83d8f44413":[3,0,2,1,0,307,15]
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ae7e7ad97571f7e7dce14d226c7235559":[3,0,2,1,0,307,34]
 };

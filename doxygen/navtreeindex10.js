@@ -1,5 +1,11 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#ae96bf6ca98e090bc84aeee8424c4ea53":[3,0,2,1,0,307,36],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aedac98bcb984ace78ba63057073addeb":[3,0,2,1,0,307,42],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aee89b923ed04e319a137f83c966b910f":[3,0,2,1,0,307,23],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#aef4aa71c6669ecaf173b484a6f2f2101":[3,0,2,1,0,307,24],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af2eadca2e79a2337956557575e044975":[3,0,2,1,0,307,50],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af95ae85baafeb42f4bbeee83d8f44413":[3,0,2,1,0,307,15],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#af98634a2eb3d7e7c3efadb6cccfcd0d7":[3,0,2,1,0,307,9],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#afe8e53582217cd59495343cf0793c385":[3,0,2,1,0,307,4],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#afeef956cbc2b00999ec301e1cbc8459b":[3,0,2,1,0,307,14],
@@ -243,11 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a2f6818902e27f2fbdc5ba82c85ec0e26":[3,0,2,1,0,1,0,8],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a314d491440d416e4bea9f00dbd4d1a48":[3,0,2,1,0,1,0,16],
 "classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a32ae1929243651164b78b81787fde2cb":[3,0,2,1,0,1,0,12],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a338757e2f745a7294c78b023342d9dac":[3,0,2,1,0,1,0,14],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3e560e06664c5aed533dfa03b02ca0e9":[3,0,2,1,0,1,0,0],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3f8ae6ac0efdcb3fad9156bb3c6bd5b6":[3,0,2,1,0,1,0,4],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a4ef9ca81d2a6300695e3efc936066137":[3,0,2,1,0,1,0,2],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a509aceb4263d8f6a7184939efe2b2f81":[3,0,2,1,0,1,0,9],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a5750a10a4a7ffce77c318bcc14fe4afa":[3,0,2,1,0,1,0,15],
-"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a6ff431d3354e7a16f2b42f805302c284":[3,0,2,1,0,1,0,1]
+"classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a338757e2f745a7294c78b023342d9dac":[3,0,2,1,0,1,0,14]
 };

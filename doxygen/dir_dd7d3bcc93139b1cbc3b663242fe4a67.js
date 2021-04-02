@@ -68,6 +68,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
       [ "hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4" ]
     ] ],
     [ "kernel_bundle.hpp", "kernel__bundle_8hpp.html", "kernel__bundle_8hpp" ],
+    [ "kernel_handler.hpp", "kernel__handler_8hpp.html", null ],
     [ "marray.hpp", "marray_8hpp.html", "marray_8hpp" ],
     [ "multi_ptr.hpp", "multi__ptr_8hpp.html", "multi__ptr_8hpp" ],
     [ "nd_item.hpp", "nd__item_8hpp.html", "nd__item_8hpp" ],
@@ -84,6 +85,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "range.hpp", "range_8hpp.html", "range_8hpp" ],
     [ "reduction.hpp", "reduction_8hpp.html", "reduction_8hpp" ],
     [ "sampler.hpp", "sampler_8hpp.html", "sampler_8hpp" ],
+    [ "specialization_id.hpp", "specialization__id_8hpp.html", null ],
     [ "stl.hpp", "stl_8hpp.html", "stl_8hpp" ],
     [ "stream.hpp", "stream_8hpp.html", "stream_8hpp" ],
     [ "types.hpp", "types_8hpp.html", "types_8hpp" ],

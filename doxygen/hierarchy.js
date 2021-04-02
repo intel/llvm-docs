@@ -627,6 +627,7 @@ var hierarchy =
     [ "cl::sycl::detail::kernel_bundle_plain", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html", [
       [ "cl::sycl::kernel_bundle< State >", "classcl_1_1sycl_1_1kernel__bundle.html", null ]
     ] ],
+    [ "cl::sycl::kernel_handler", "classcl_1_1sycl_1_1kernel__handler.html", null ],
     [ "cl::sycl::kernel_id", "classcl_1_1sycl_1_1kernel__id.html", null ],
     [ "cl::sycl::detail::kernel_id_impl", "classcl_1_1sycl_1_1detail_1_1kernel__id__impl.html", null ],
     [ "cl::sycl::detail::kernel_impl", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html", null ],
@@ -785,8 +786,8 @@ var hierarchy =
     [ "cl::sycl::range< 3 >", "classcl_1_1sycl_1_1range.html", null ],
     [ "cl::sycl::range< Dimensions >", "classcl_1_1sycl_1_1range.html", null ],
     [ "cl::sycl::range< Dims >", "classcl_1_1sycl_1_1range.html", null ],
-    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::detail::aligned_allocator< T >::rebind< U >", "structcl_1_1sycl_1_1detail_1_1aligned__allocator_1_1rebind.html", null ],
+    [ "cl::sycl::usm_allocator< T, AllocKind, Alignment >::rebind< U >", "structcl_1_1sycl_1_1usm__allocator_1_1rebind.html", null ],
     [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, Subst >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html", null ],
     [ "cl::sycl::ONEAPI::detail::reducer< T, BinaryOperation, enable_if_t< IsKnownIdentityOp< T, BinaryOperation >::value > >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html", null ],
     [ "cl::sycl::ONEAPI::detail::reduction_impl< T, BinaryOperation, Dims, IsUSM, IsPlaceholder >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", null ],
@@ -965,6 +966,7 @@ var hierarchy =
     [ "cl::sycl::detail::spec_constant_impl", "classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html", null ],
     [ "cl::sycl::detail::SpecConstantInfo< Name >", "structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html", null ],
     [ "cl::sycl::detail::device_image_impl::SpecConstDescT", "structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html", null ],
+    [ "cl::sycl::specialization_id< T >", "classcl_1_1sycl_1_1specialization__id.html", null ],
     [ "cl::sycl::detail::SpinLock", "classcl_1_1sycl_1_1detail_1_1SpinLock.html", null ],
     [ "cl::sycl::INTEL::statically_coalesce_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html", null ],
     [ "__spv::StorageClass", "struct____spv_1_1StorageClass.html", null ],
