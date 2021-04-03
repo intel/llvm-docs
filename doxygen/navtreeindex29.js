@@ -1,5 +1,6 @@
 var NAVTREEINDEX29 =
 {
+"sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42df":[4,0,0,0,1,50,2],
 "sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42dfa301defc6e7425fc63ef35c7827d43b44":[4,0,0,0,1,50,2,0],
 "sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42dfa32cf6da134a8b268cf4ab6b79a9a5ad9":[4,0,0,0,1,50,2,1],
 "sampler_8hpp.html#a1b4377b5144c86548305fcdc66aa42dfa334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,50,2,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX29 =
 "struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a084c344d13c124f5b25f77b18c9ff737":[3,0,1,0,0,6],
 "struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a2b13bf19cb4780fd2e870d35615c923d":[3,0,1,0,0,1],
 "struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a4b746289bd31f6898b9f7dfccc20cea1":[3,0,1,0,0,0],
-"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a56b4a304a05af381e2e06c0357083dae":[3,0,1,0,0,8],
-"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a5fc2f876d685f347e61660379b448400":[3,0,1,0,0,3]
+"struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1a56b4a304a05af381e2e06c0357083dae":[3,0,1,0,0,8]
 };

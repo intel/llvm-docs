@@ -1,7 +1,7 @@
 var searchData=
 [
   ['filtereventwaitlist_8543',['FilterEventWaitList',['../pi__level__zero_8cpp.html#a8e490756ef7d53d45dec5a92b78a802b',1,'pi_level_zero.cpp']]],
-  ['fixed_8544',['fixed',['../namespacecl_1_1sycl.html#ac36f97886a0165a7456ca6197ec27dd6',1,'cl::sycl::fixed()'],['../namespacecl_1_1sycl_1_1detail.html#a3e5cb282980136e0132064e0a3974290',1,'cl::sycl::detail::Fixed()']]],
+  ['fixed_8544',['Fixed',['../namespacecl_1_1sycl_1_1detail.html#a3e5cb282980136e0132064e0a3974290',1,'cl::sycl::detail::Fixed()'],['../namespacecl_1_1sycl.html#ac36f97886a0165a7456ca6197ec27dd6',1,'cl::sycl::fixed()']]],
   ['flag_5fvalue_8545',['flag_value',['../struct____spv_1_1Scope.html#ad2791ef82982e203428179c77703ecda',1,'__spv::Scope::flag_value()'],['../struct____spv_1_1StorageClass.html#a09ffab62d368c83ba43cc41a216ab9aa',1,'__spv::StorageClass::flag_value()'],['../struct____spv_1_1MemorySemanticsMask.html#a2c5d6c7282da8f0837c79981fe7a4cf8',1,'__spv::MemorySemanticsMask::flag_value()']]],
   ['flags_8546',['flags',['../struct__pi__offload__entry__struct.html#a76a3565f400c268d36cdadc8b893f4c9',1,'_pi_offload_entry_struct']]],
   ['floatfield_8547',['FloatField',['../namespacecl_1_1sycl_1_1detail.html#a93266ef2005b027ab9bb0f64f7d52b23',1,'cl::sycl::detail']]],
