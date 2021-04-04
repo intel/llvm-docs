@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>ABI Policy Guide &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,9 +36,9 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="abi-policy-guide">
+  <section id="abi-policy-guide">
 <h1>ABI Policy Guide<a class="headerlink" href="#abi-policy-guide" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="intro">
+<section id="intro">
 <h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
 <p>Application Binary Interface is a contract between binary modules, that defines
 how structures and routines are accessed in machine code. Changing the ABI may
@@ -64,8 +65,8 @@ members).</p></li>
 <li><p>Adding or removing base classes.</p></li>
 </ol>
 <p>Adding a new exported symbol is considered to be non-breaking change.</p>
-</div>
-<div class="section" id="abi-versioning-policy">
+</section>
+<section id="abi-versioning-policy">
 <h2>ABI Versioning Policy<a class="headerlink" href="#abi-versioning-policy" title="Permalink to this headline">¶</a></h2>
 <p>The release version of the DPC++ runtime library follows
 <a class="reference external" href="https://semver.org/">Semantic Versioning</a> scheme: <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code>. <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code>
@@ -77,8 +78,8 @@ uplift <code class="docutils literal notranslate"><span class="pre">V</span></co
 <code class="docutils literal notranslate"><span class="pre">V</span></code> part of library version. If <code class="docutils literal notranslate"><span class="pre">V</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> on release date, then <code class="docutils literal notranslate"><span class="pre">MAJOR_VERSION</span></code>
 is uplifted and <code class="docutils literal notranslate"><span class="pre">V</span></code> is set to zero. <code class="docutils literal notranslate"><span class="pre">MAJOR</span></code>, <code class="docutils literal notranslate"><span class="pre">MINOR</span></code>, and <code class="docutils literal notranslate"><span class="pre">PATCH</span></code> versions are
 not updated between releases.</p>
-</div>
-<div class="section" id="sycl-export-macro">
+</section>
+<section id="sycl-export-macro">
 <h2><code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> Macro<a class="headerlink" href="#sycl-export-macro" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">__SYCL_EXPORT</span></code> provides facilities for fine-grained control over exported
 symbols. Mark symbols that are supposed to be accessible by the user and that
@@ -115,8 +116,8 @@ is accessible by the user (buffer and image inherit from this class).</p></li>
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="automated-abi-changes-testing">
+</section>
+<section id="automated-abi-changes-testing">
 <h2>Automated ABI Changes Testing<a class="headerlink" href="#automated-abi-changes-testing" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>The automated tests deal with the most commonly occurring problems, but they
@@ -143,8 +144,8 @@ some of API classes for layout changes, while <code class="docutils literal notr
 checks <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> and <code class="docutils literal notranslate"><span class="pre">alignof</span></code> for API classes. Changing the class layout is a
 breaking change.</p></li>
 </ul>
-</div>
-<div class="section" id="changing-abi">
+</section>
+<section id="changing-abi">
 <h2>Changing ABI<a class="headerlink" href="#changing-abi" title="Permalink to this headline">¶</a></h2>
 <p><strong>Note (October, 2020)</strong>: DPC++ runtime and compiler ABI is currently in frozen
 state. This means that no ABI-breaking changes will be accepted by default.
@@ -163,8 +164,8 @@ update test files.</p></li>
 <li><p>~~If Pull Request introduces a breaking change, update the library version~~
 ~~according to the policies.~~ <strong>(See note above)</strong></p></li>
 </ol>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>

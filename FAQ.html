@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Frequently Asked Questions &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,7 +36,7 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="frequently-asked-questions">
+  <section id="frequently-asked-questions">
 <h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h1>
 <p><strong>Table of contents</strong></p>
 <ol class="simple">
@@ -44,9 +45,9 @@
 <li><p><a class="reference external" href="#common-issues">Common issues</a></p></li>
 <li><p><a class="reference external" href="#device-specific-questions-and-issues">Device specific questions and issues</a></p></li>
 </ol>
-<div class="section" id="developing-with-dpc">
+<section id="developing-with-dpc">
 <h2>Developing with DPC++<a class="headerlink" href="#developing-with-dpc" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="q-what-do-i-need-to-start-developing-with-dpc">
+<section id="q-what-do-i-need-to-start-developing-with-dpc">
 <h3>Q: What do I need to start developing with DPC++?<a class="headerlink" href="#q-what-do-i-need-to-start-developing-with-dpc" title="Permalink to this headline">¶</a></h3>
 <p><strong>A:</strong> To get the full DPC++ experience you need oneAPI DPC++ compiler. DPC++
 compiler provides you with both host and device side compilation. Another
@@ -60,8 +61,8 @@ gives you the ability to use any C++17 compiler. You will need to link your
 application with the DPC++ Runtime library and provide a path to the SYCL
 headers directory. Please, refer to your compiler manual to learn about
 specific build options.</p>
-</div>
-<div class="section" id="q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications">
+</section>
+<section id="q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications">
 <h3>Q: How are DPC++ compilation phases different from those of a usual C++ compiler? Can I customize this flow for my applications?<a class="headerlink" href="#q-how-are-dpc-compilation-phases-different-from-those-of-a-usual-c-compiler-can-i-customize-this-flow-for-my-applications" title="Permalink to this headline">¶</a></h3>
 <p><strong>A:</strong> Due to the fact that both host and device code need to be compiled and
 linked into the final binary, the compilation steps sequence is more
@@ -82,20 +83,20 @@ code and the integration header into a host object file;</p></li>
 internals as such, we welcome you to study our
 <a class="reference internal" href="CompilerAndRuntimeDesign.html"><span class="doc">DPC++ Compiler and Runtime architecture design</span></a>
 document.</p>
-</div>
-</div>
-<div class="section" id="using-applications-built-with-dpc">
+</section>
+</section>
+<section id="using-applications-built-with-dpc">
 <h2>Using applications built with DPC++<a class="headerlink" href="#using-applications-built-with-dpc" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="q-what-happens-if-i-run-my-application-on-a-machine-without-opencl">
+<section id="q-what-happens-if-i-run-my-application-on-a-machine-without-opencl">
 <h3>Q: What happens if I run my application on a machine without OpenCL?<a class="headerlink" href="#q-what-happens-if-i-run-my-application-on-a-machine-without-opencl" title="Permalink to this headline">¶</a></h3>
 <p><strong>A:</strong> If you use the default SYCL device selector (or any other selector that
 allows host device), then a fallback to the host device will take place.
 Otherwise, an exception will be thrown.</p>
-</div>
-</div>
-<div class="section" id="common-issues">
+</section>
+</section>
+<section id="common-issues">
 <h2>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library">
+<section id="q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library">
 <h3>Q: DPC++ application complains about missing libsycl.so (or sycl.dll) library.<a class="headerlink" href="#q-dpc-application-complains-about-missing-libsycl-so-or-sycl-dll-library" title="Permalink to this headline">¶</a></h3>
 <p>Linux:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./app
@@ -111,8 +112,8 @@ While compiler driver is able to find the library and link against it, your
 operating system may struggle. Make sure that the location of the DPC++ Runtime
 library is listed in the correct environment variable: <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code>
 (for Linux) or <code class="docutils literal notranslate"><span class="pre">LIB</span></code> (for Windows).</p>
-</div>
-<div class="section" id="q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions">
+</section>
+<section id="q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions">
 <h3>Q: DPC++ Compiler fails to compile device code that uses STD functions.<a class="headerlink" href="#q-dpc-compiler-fails-to-compile-device-code-that-uses-std-functions" title="Permalink to this headline">¶</a></h3>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In file included from example.cpp:1:
@@ -154,11 +155,11 @@ beyond those explicitly mentioned as usable in kernels in this spec.</p>
 that you have to explicitly specify built-in namespace (i.e. <code class="docutils literal notranslate"><span class="pre">cl::sycl::fmin</span></code>).
 The full list of SYCL math built-ins is provided in section 4.13.3 of the
 specification.</p>
-</div>
-</div>
-<div class="section" id="device-specific-questions-and-issues">
+</section>
+</section>
+<section id="device-specific-questions-and-issues">
 <h2>Device specific questions and issues<a class="headerlink" href="#device-specific-questions-and-issues" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="q-what-devices-are-supported-by-dpc-compiler">
+<section id="q-what-devices-are-supported-by-dpc-compiler">
 <h3>Q: What devices are supported by DPC++ compiler?<a class="headerlink" href="#q-what-devices-are-supported-by-dpc-compiler" title="Permalink to this headline">¶</a></h3>
 <p><strong>A:</strong> By design, DPC++ and SYCL are closely connected to OpenCL, which is used
 to offload code to specialized devices. DPC++ compiler currently makes use of
@@ -173,8 +174,8 @@ debugging tools of your choice for the host device code.</p>
 <p>Furthermore, developers can extend capabilities of the DPC++ Runtime to
 non-OpenCL devices by writing correspondent plugins. To learn more, please
 check out our <a class="reference internal" href="PluginInterface.html"><span class="doc">Plugin Interface Guide</span></a>.</p>
-</div>
-<div class="section" id="q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices">
+</section>
+<section id="q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices">
 <h3>Q: DPC++ applications hang on Intel GPUs while working well on other devices<a class="headerlink" href="#q-dpc-applications-hang-on-intel-gpus-while-working-well-on-other-devices" title="Permalink to this headline">¶</a></h3>
 <p><strong>A:</strong> One of the common reasons is Intel GPUs feature called “hang check”.
 If your workload runs for more than a certain amount of time, it will be killed
@@ -184,9 +185,9 @@ other apps on your system may contain bugs, and disabling “hang check” may l
 to real hangs.</strong></p>
 <p>You can find out more about hang check and how to disable it on
 <a class="reference external" href="https://software.intel.com/en-us/articles/installation-guide-for-intel-oneapi-toolkits">this page</a>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
       </div>

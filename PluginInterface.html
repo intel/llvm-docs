@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>The DPC++ Runtime Plugin Interface. &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,9 +36,9 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="the-dpc-runtime-plugin-interface">
+  <section id="the-dpc-runtime-plugin-interface">
 <h1>The DPC++ Runtime Plugin Interface.<a class="headerlink" href="#the-dpc-runtime-plugin-interface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
+<section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>The DPC++ Runtime Plugin Interface (PI) is an interface layer between the
 device-agnostic part of DPC++ runtime and the device-specific runtime layers
@@ -64,15 +65,15 @@ match unless the differences are explicitly specified in this document. While
 PI has roots in OpenCL, it does have many differences, and the gap is likely
 to grow, for example in areas of memory model and management, program
 management.</p>
-</div>
-<div class="section" id="discovery-and-linkage-of-pi-implementations">
+</section>
+<section id="discovery-and-linkage-of-pi-implementations">
 <h2>Discovery and linkage of PI implementations<a class="headerlink" href="#discovery-and-linkage-of-pi-implementations" title="Permalink to this headline">¶</a></h2>
 <p><img alt="PI implementation discovery" src="_images/PluginDiscovery.svg" /></p>
 <p>Device discovery phase enumerates all available devices and their features by
 querying underlying plugins found in the system. This process is performed when
 all attached platforms or devices are queried in an application; for example,
 during device selection.</p>
-<div class="section" id="plugin-discovery">
+<section id="plugin-discovery">
 <h3>Plugin discovery<a class="headerlink" href="#plugin-discovery" title="Permalink to this headline">¶</a></h3>
 <p>Plugins are physically dynamic libraries or shared objects.
 The process to discover plugins follows the following guidelines.</p>
@@ -100,7 +101,7 @@ lists the device selector’s selected device information.
 SYCL_PI_TRACE=0x02 provides trace of all PI calls made from the DPC++ runtime
 with arguments and returned values.
 SYCL_PI_TRACE=-1 lists all PI Traces above and more debug messages.</p>
-<div class="section" id="plugin-binary-interface">
+<section id="plugin-binary-interface">
 <h4>Plugin binary interface<a class="headerlink" href="#plugin-binary-interface" title="Permalink to this headline">¶</a></h4>
 <p>Plugins should implement all the Interface APIs required for the PI Version
 it supports. There is <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../include/CL/sycl/detail/pi.def">pi.def</a>/
@@ -114,8 +115,8 @@ to be supported by Plugins. This will also require adding functionality to SYCL
 Runtime to work with such limited functionality plugins.</p>
 <p>(TBD - list and describe the symbols that a plugin must implement in order to
 be picked up by the DPC++ runtime for offload.)</p>
-</div>
-<div class="section" id="binding-a-plugin">
+</section>
+<section id="binding-a-plugin">
 <h4>Binding a Plugin<a class="headerlink" href="#binding-a-plugin" title="Permalink to this headline">¶</a></h4>
 <p>The DPC++ Runtime loads all discovered Plugins and tries to bind them by calling
 piPluginInit API for each loaded Plugin. The Plugins return the information of
@@ -132,8 +133,8 @@ specific Plugin or Backend using the env SYCL_BE. The correspondence between
 a plugin and a SYCL_BE value is currently hardcoded in the runtime.
 ( TBD: Make this a part of configuration file).
 Eg: SYCL_BE=PI_OPENCL corresponds to OpenCL Plugin.</p>
-</div>
-<div class="section" id="opencl-plugin">
+</section>
+<section id="opencl-plugin">
 <h4>OpenCL plugin<a class="headerlink" href="#opencl-plugin" title="Permalink to this headline">¶</a></h4>
 <p>OpenCL plugin is a usual plugin from DPC++ runtime standpoint, but its loading
 and initialization involves a nested discovery process which finds out available
@@ -142,17 +143,17 @@ ICD-compatible way (e.g. listed in files under /etc/OpenCL/vendors on
 Linux) or not, and the OpenCL plugin can hook up with both.</p>
 <p>TBD - implement and describe the nested OpenCL implementation discovery process
 performed by the OpenCL plugin</p>
-</div>
-</div>
-<div class="section" id="device-enumeration-by-plugins">
+</section>
+</section>
+<section id="device-enumeration-by-plugins">
 <h3>Device enumeration by plugins<a class="headerlink" href="#device-enumeration-by-plugins" title="Permalink to this headline">¶</a></h3>
 <p>Devices from all bound plugins are queried and listed as and when required, eg:
 during device selection in device_selector.
 The trace shows the PI API calls made when using SYCL_PI_TRACE=-1.
 (TBD - Add the trace to list all available devices when plugins are successfully
 bound.)</p>
-</div>
-<div class="section" id="plugin-unloading">
+</section>
+<section id="plugin-unloading">
 <h3>Plugin Unloading<a class="headerlink" href="#plugin-unloading" title="Permalink to this headline">¶</a></h3>
 <p>The plugins not chosen to be connected to should be unloaded. piInitializePlugins()
 can be called to load and bound the necessary plugins. In addition, piTearDown()
@@ -169,9 +170,9 @@ from memory.</p>
 destructor. Pointer variables with heap memory allocation is a good example
 to be created at the global scope. A std::vector object is not. piTearDown
 will take care of deallocation of these global variables safely.</p>
-</div>
-</div>
-<div class="section" id="pi-api-specification">
+</section>
+</section>
+<section id="pi-api-specification">
 <h2>PI API Specification<a class="headerlink" href="#pi-api-specification" title="Permalink to this headline">¶</a></h2>
 <p>PI interface is logically divided into few subsets:</p>
 <ul class="simple">
@@ -188,7 +189,7 @@ runtimes such as OpenCL.</p></li>
 </ul>
 <p>See <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/../include/CL/sycl/detail/pi.h">pi.h</a> header for the full list and
 descriptions of PI APIs.</p>
-<div class="section" id="the-core-opencl-based-pi-apis">
+<section id="the-core-opencl-based-pi-apis">
 <h3>The Core OpenCL-based PI APIs<a class="headerlink" href="#the-core-opencl-based-pi-apis" title="Permalink to this headline">¶</a></h3>
 <p>This subset defines functions representing core functionality,
 such as device memory management, kernel creation and parameter setting,
@@ -199,8 +200,8 @@ semantics of the corresponding OpenCL functions, for example:</p>
 <span class="n">piKernelSetArg</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="the-extension-pi-apis">
+</section>
+<section id="the-extension-pi-apis">
 <h3>The Extension PI APIs<a class="headerlink" href="#the-extension-pi-apis" title="Permalink to this headline">¶</a></h3>
 <p>Those APIs don’t have OpenCL counter parts and require full specification. For
 example, the function below selects the most appropriate device binary based
@@ -221,8 +222,8 @@ corresponding device binary descriptor type defined in the
 <code class="docutils literal notranslate"><span class="pre">clang-offload-wrapper</span></code> tool which wraps device binaries into a host
 object for further linkage. The wrapped binaries reside inside this descriptor
 in a data section.</p>
-</div>
-<div class="section" id="the-interoperability-pi-apis">
+</section>
+<section id="the-interoperability-pi-apis">
 <h3>The Interoperability PI APIs<a class="headerlink" href="#the-interoperability-pi-apis" title="Permalink to this headline">¶</a></h3>
 <p>These are APIs needed to implement DPC++ runtime interoperability with
 underlying “native” device runtimes such as OpenCL.
@@ -250,15 +251,15 @@ native handles. Eg:</p>
   <span class="n">pi_device</span> <span class="o">*</span><span class="n">device</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="pi-extension-mechanism">
+</section>
+<section id="pi-extension-mechanism">
 <h3>PI Extension mechanism<a class="headerlink" href="#pi-extension-mechanism" title="Permalink to this headline">¶</a></h3>
 <p>TBD This section describes a mechanism for DPC++ or other runtimes to detect
 availability of and obtain interfaces beyond those defined by the PI dispatch.</p>
 <p>TBD Add API to query PI version supported by plugin at runtime.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
       </div>

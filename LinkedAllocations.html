@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Linked allocations &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,9 +33,9 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="linked-allocations">
+  <section id="linked-allocations">
 <h1>Linked allocations<a class="headerlink" href="#linked-allocations" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="brief-overview-of-allocations-for-memory-objects">
+<section id="brief-overview-of-allocations-for-memory-objects">
 <h2>Brief overview of allocations for memory objects<a class="headerlink" href="#brief-overview-of-allocations-for-memory-objects" title="Permalink to this headline">¶</a></h2>
 <p>A SYCL memory object (<code class="docutils literal notranslate"><span class="pre">buffer</span></code>/<code class="docutils literal notranslate"><span class="pre">image</span></code>) can be accessed in multiple contexts
 throughout its lifetime. Since this is dynamic information that is unknown
@@ -70,8 +71,8 @@ data pointer provided by the user:</p>
 </div>
 <p>Or because a mapped host pointer obtained from a native device memory object
 is used in its place (as is the case for linked commands, covered below).</p>
-</div>
-<div class="section" id="linked-allocation-commands">
+</section>
+<section id="linked-allocation-commands">
 <h2>Linked allocation commands<a class="headerlink" href="#linked-allocation-commands" title="Permalink to this headline">¶</a></h2>
 <p>Whenever an allocation command is created for a memory object, it can be created
 as “linked” to another one if they satisfy these requirements:</p>
@@ -110,8 +111,8 @@ linked and unlinked allocations is summarized in the table below.</p>
 <td>Only one allocation from the pair can be active at a time, the switch is done with map/unmap operations. Device-to-device transfer where one of the device allocations is linked is done with the host allocation from the pair as an intermediary (e.g. for transfer from unlinked device allocation A to linked device allocation B: map B -&gt; read A to the host allocation -&gt; unmap B).</td>
 </tr>
 </tbody>
-</table></div>
-<div class="section" id="command-linking-approach">
+</table></section>
+<section id="command-linking-approach">
 <h2>Command linking approach<a class="headerlink" href="#command-linking-approach" title="Permalink to this headline">¶</a></h2>
 <p>Whenever two allocation commands are considered for linking, the decision is
 made based on the following criterion: the commands are linked if and only if
@@ -126,8 +127,8 @@ allocations (e.g. no host pointer is available for the device allocation),
 it might be possible to exploit that later in the application for another device
 that does support host unified memory.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>

@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Preprocessor Macros &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,10 +36,10 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="preprocessor-macros">
+  <section id="preprocessor-macros">
 <h1>Preprocessor Macros<a class="headerlink" href="#preprocessor-macros" title="Permalink to this headline">¶</a></h1>
 <p>This file describes macros that have effect on SYCL compiler and run-time.</p>
-<div class="section" id="restrict-write-access-to-constant-ptr">
+<section id="restrict-write-access-to-constant-ptr">
 <h2>RESTRICT_WRITE_ACCESS_TO_CONSTANT_PTR<a class="headerlink" href="#restrict-write-access-to-constant-ptr" title="Permalink to this headline">¶</a></h2>
 <p>The spec assumes that the SYCL implementation does address space deduction.
 However, for our implementation, the deduction is performed in the middle end,
@@ -54,30 +55,30 @@ front-end.
 This behavior is not following the SYCL spec since <code class="docutils literal notranslate"><span class="pre">constant_ptr</span></code> conversions to
 the underlying pointer types return pointers without any additional qualifiers
 so it’s disabled by default.</p>
-</div>
-<div class="section" id="disable-sycl-instrumentation-metadata">
+</section>
+<section id="disable-sycl-instrumentation-metadata">
 <h2><code class="docutils literal notranslate"><span class="pre">DISABLE_SYCL_INSTRUMENTATION_METADATA</span></code><a class="headerlink" href="#disable-sycl-instrumentation-metadata" title="Permalink to this headline">¶</a></h2>
 <p>This macro is used to disable passing of code location information to public
 methods.</p>
-</div>
-<div class="section" id="sycl2020-disable-deprecation-warnings">
+</section>
+<section id="sycl2020-disable-deprecation-warnings">
 <h2>SYCL2020_DISABLE_DEPRECATION_WARNINGS<a class="headerlink" href="#sycl2020-disable-deprecation-warnings" title="Permalink to this headline">¶</a></h2>
 <p>Disables warnings coming from usage of SYCL 1.2.1 APIs, that are deprecated in
 SYCL 2020.</p>
-</div>
-<div class="section" id="sycl-disable-deprecation-warnings">
+</section>
+<section id="sycl-disable-deprecation-warnings">
 <h2>SYCL_DISABLE_DEPRECATION_WARNINGS<a class="headerlink" href="#sycl-disable-deprecation-warnings" title="Permalink to this headline">¶</a></h2>
 <p>Disables all deprecation warnings in SYCL runtime headers, including SYCL 1.2.1 deprecations.</p>
-</div>
-<div class="section" id="version-macros">
+</section>
+<section id="version-macros">
 <h2>Version macros<a class="headerlink" href="#version-macros" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_MAJOR_VERSION</span></code> is set to SYCL runtime library major version.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_MINOR_VERSION</span></code> is set to SYCL runtime library minor version.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_PATCH_VERSION</span></code> is set to SYCL runtime library patch version.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>

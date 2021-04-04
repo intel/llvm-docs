@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>SYCL Kernel Parameter Handling and Array Support &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,9 +36,9 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="sycl-kernel-parameter-handling-and-array-support">
+  <section id="sycl-kernel-parameter-handling-and-array-support">
 <h1>SYCL Kernel Parameter Handling and Array Support<a class="headerlink" href="#sycl-kernel-parameter-handling-and-array-support" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This document describes how parameters of SYCL kernels are passed
 from host to device. Support for arrays as kernel parameters was added
@@ -63,8 +64,8 @@ lambda object as in any other lambda object.</p>
 The last three sections provide additional details of array support.
 The implementation of this design is confined to four classes in the
 file <code class="docutils literal notranslate"><span class="pre">SemaSYCL.cpp</span></code>.</p>
-</div>
-<div class="section" id="a-sycl-kernel">
+</section>
+<section id="a-sycl-kernel">
 <h2>A SYCL Kernel<a class="headerlink" href="#a-sycl-kernel" title="Permalink to this headline">¶</a></h2>
 <p>The SYCL constructs <code class="docutils literal notranslate"><span class="pre">single_task</span></code>, <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">parallel_for_work_group</span></code> each take a function object or a lambda function
@@ -72,8 +73,8 @@ as one of their arguments. The code within the function object or
 lambda function is executed on the device.
 To enable execution of the kernel on OpenCL devices, the lambda/function object
 is converted into the format of an OpenCL kernel.</p>
-</div>
-<div class="section" id="sycl-kernel-code-generation">
+</section>
+<section id="sycl-kernel-code-generation">
 <h2>SYCL Kernel Code Generation<a class="headerlink" href="#sycl-kernel-code-generation" title="Permalink to this headline">¶</a></h2>
 <p>Consider a source code example that captures an int, a struct and an accessor
 by value:</p>
@@ -195,8 +196,8 @@ object which contains three values:</p>
 </ol>
 <p>The previous sections described how kernel arguments are handled today.
 The next three sections describe support for arrays.</p>
-</div>
-<div class="section" id="fix-1-kernel-arguments-that-are-standard-layout-arrays">
+</section>
+<section id="fix-1-kernel-arguments-that-are-standard-layout-arrays">
 <h2>Fix 1: Kernel Arguments that are Standard-Layout Arrays<a class="headerlink" href="#fix-1-kernel-arguments-that-are-standard-layout-arrays" title="Permalink to this headline">¶</a></h2>
 <p>As described earlier, each variable captured by a lambda that comprises a
 SYCL kernel becomes a parameter of the kernel caller function.
@@ -264,8 +265,8 @@ are copied into the array within the local capture object.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fix-2-kernel-arguments-that-are-arrays-of-accessors">
+</section>
+<section id="fix-2-kernel-arguments-that-are-arrays-of-accessors">
 <h2>Fix 2: Kernel Arguments that are Arrays of Accessors<a class="headerlink" href="#fix-2-kernel-arguments-that-are-arrays-of-accessors" title="Permalink to this headline">¶</a></h2>
 <p>Arrays of accessors are supported in a manner similar to that of a plain
 accessor. For each accessor array element, the four values required to
@@ -337,8 +338,8 @@ of each accessor array element in ascending index value.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="fix-3-accessor-arrays-within-structs">
+</section>
+<section id="fix-3-accessor-arrays-within-structs">
 <h2>Fix 3: Accessor Arrays within Structs<a class="headerlink" href="#fix-3-accessor-arrays-within-structs" title="Permalink to this headline">¶</a></h2>
 <p>Kernel parameters that are structs are traversed member
 by member, recursively, to enumerate member structs that are one of
@@ -433,8 +434,8 @@ in a manner similar to other instances of accessor arrays.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>

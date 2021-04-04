@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>A brief overview of kernel and program caching mechanism. &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,9 +36,9 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="a-brief-overview-of-kernel-and-program-caching-mechanism">
+  <section id="a-brief-overview-of-kernel-and-program-caching-mechanism">
 <h1>A brief overview of kernel and program caching mechanism.<a class="headerlink" href="#a-brief-overview-of-kernel-and-program-caching-mechanism" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="rationale-behind-caching">
+<section id="rationale-behind-caching">
 <h2>Rationale behind caching<a class="headerlink" href="#rationale-behind-caching" title="Permalink to this headline">¶</a></h2>
 <p>During SYCL program execution SYCL runtime will create internal objects
 representing kernels and programs, it may also invoke JIT compiler to bring
@@ -113,8 +114,8 @@ on disk for device code built for specific HW/SW configuration).</p>
 <p><a name="what-is-program">1</a>: Here “program” means an internal SYCL runtime
 object corresponding to a device code module or native binary defining a set of
 SYCL kernels and/or device functions.</p>
-</div>
-<div class="section" id="data-structure-of-cache">
+</section>
+<section id="data-structure-of-cache">
 <h2>Data structure of cache<a class="headerlink" href="#data-structure-of-cache" title="Permalink to this headline">¶</a></h2>
 <p>The cache is split into two levels:</p>
 <ul class="simple">
@@ -123,7 +124,7 @@ which has been already loaded and built for target device.</p></li>
 <li><p>persistent (on-disk) cache which is used to store device binaries between
 application executions.</p></li>
 </ul>
-<div class="section" id="in-memory-cache">
+<section id="in-memory-cache">
 <h3>In-memory cache<a class="headerlink" href="#in-memory-cache" title="Permalink to this headline">¶</a></h3>
 <p>The cache stores underlying PI objects behind <code class="docutils literal notranslate"><span class="pre">cl::sycl::program</span></code> and
 <code class="docutils literal notranslate"><span class="pre">cl::sycl::kernel</span></code> user-level objects in a per-context data storage. The storage
@@ -158,8 +159,8 @@ configuration will invalidate cache and manual cache cleanup should be done.</p>
 <p><a name="what-is-kname">3</a>: Kernel name is a kernel ID mangled class’ name
 which is provided to methods of <code class="docutils literal notranslate"><span class="pre">cl::sycl::handler</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code> or
 <code class="docutils literal notranslate"><span class="pre">single_task</span></code>).</p>
-</div>
-<div class="section" id="persistent-cache">
+</section>
+<section id="persistent-cache">
 <h3>Persistent cache<a class="headerlink" href="#persistent-cache" title="Permalink to this headline">¶</a></h3>
 <p>The cache works behind in-memory cache and stores the same underlying PI
 object behind <code class="docutils literal notranslate"><span class="pre">cl::sycl::program</span></code> user-level objects in a per-context data
@@ -201,9 +202,9 @@ pi_device_binary_struct::LinkOptions);</p></li>
 SYCL_PROGRAM_LINK_OPTIONS);</p></li>
 <li><p>options passed through SYCL API.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="cache-configuration">
+</section>
+</section>
+<section id="cache-configuration">
 <h2>Cache configuration<a class="headerlink" href="#cache-configuration" title="Permalink to this headline">¶</a></h2>
 <p>There is set of configuration parameters which can be set as environment variables or parameters in <code class="docutils literal notranslate"><span class="pre">sycl.conf</span></code>  and affect cache behavior:
 | Environment variable | Values | Description |
@@ -214,8 +215,8 @@ SYCL_PROGRAM_LINK_OPTIONS);</p></li>
 | <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_THRESHOLD</span></code> | Positive integer | Cache eviction threshold in days (default value is 7 for 1 week). Set to 0 for disabling time-based cache eviction. |
 | <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</span></code> | Positive integer | Minimum size of device code image in kilobytes which is reasonable to cache on disk because disk access operation may take more time than do JIT compilation for it. Default value is 0 to cache all images. |
 | <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</span></code> | Positive integer | Maximum size of device image in megabytes which is cached. Too big kernels may overload disk too fast. Default value is 0 to cache all images. |</p>
-</div>
-<div class="section" id="implementation-details">
+</section>
+<section id="implementation-details">
 <h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
 <p>The caches are represented with instance of <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/source/detail/kernel_program_cache.hpp"><code class="docutils literal notranslate"><span class="pre">KernelProgramCache</span></code></a>
 class. The runtime creates one instance of the class per distinct SYCL context
@@ -223,7 +224,7 @@ class. The runtime creates one instance of the class per distinct SYCL context
 “distinct”, as it corresponds to the same underlying internal object
 representing a context).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">KernelProgramCache</span></code> is essentially a pair of maps as described above.</p>
-<div class="section" id="when-does-the-cache-come-at-work">
+<section id="when-does-the-cache-come-at-work">
 <h3>When does the cache come at work?<a class="headerlink" href="#when-does-the-cache-come-at-work" title="Permalink to this headline">¶</a></h3>
 <p>The cache is used when one submits a kernel for execution or builds program with
 SYCL API. That means that the cache works when either user explicitly calls
@@ -253,8 +254,8 @@ variables (plus a mutex for proper work of condition variable).</p>
 <p><em>GetCache</em> function returns a reference to mapping <code class="docutils literal notranslate"><span class="pre">key-&gt;value</span></code> out of locked
 instance of cache. We will see rationale behind it a bit later.</p>
 <p><em>Build</em> function actually builds the kernel or program.</p>
-</div>
-<div class="section" id="thread-safety">
+</section>
+<section id="thread-safety">
 <h3>Thread-safety<a class="headerlink" href="#thread-safety" title="Permalink to this headline">¶</a></h3>
 <p>Why do we need thread safety here? It is quite possible to have a use-case when
 the <code class="docutils literal notranslate"><span class="pre">cl::sycl::context</span></code> is shared across multiple threads (e.g. via sharing a
@@ -304,13 +305,13 @@ will return the mapping to be employed that includes the 3 components: kernel
 name, device as well as any specialization constants values. These get added to
 <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> and are cached. The <code class="docutils literal notranslate"><span class="pre">BuildResult</span></code> structure is specialized with
 either <code class="docutils literal notranslate"><span class="pre">PiKernel</span></code> or <code class="docutils literal notranslate"><span class="pre">PiProgram</span></code><sup><a class="reference external" href="#remove-pointer">1</a></sup>.</p>
-</div>
-<div class="section" id="hash-function">
+</section>
+<section id="hash-function">
 <h3>Hash function<a class="headerlink" href="#hash-function" title="Permalink to this headline">¶</a></h3>
 <p>STL hash function specialized for std::string is going to be used:
 <code class="docutils literal notranslate"><span class="pre">template&lt;&gt;</span>&#160; <span class="pre">struct</span> <span class="pre">hash&lt;std::string&gt;</span></code></p>
-</div>
-<div class="section" id="core-of-caching-mechanism">
+</section>
+<section id="core-of-caching-mechanism">
 <h3>Core of caching mechanism<a class="headerlink" href="#core-of-caching-mechanism" title="Permalink to this headline">¶</a></h3>
 <p>Now, let us see how ‘getOrBuild’ function works.
 First, we fetch the cache with sequential calls to Acquire and GetCache
@@ -336,8 +337,8 @@ failure).</p>
 the sake of simplicity here.</p>
 <p><a name="exception-data">2</a>: Actually, we store contents of the exception:
 its message and error code.</p>
-</div>
-<div class="section" id="persistent-cache-storage-structure">
+</section>
+<section id="persistent-cache-storage-structure">
 <h3>Persistent cache storage structure<a class="headerlink" href="#persistent-cache-storage-structure" title="Permalink to this headline">¶</a></h3>
 <p>The device code image are stored on file system using structure below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">cache_root</span><span class="o">&gt;/</span>
@@ -362,8 +363,8 @@ its message and error code.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;n&gt;.src</span></code> contains full values for build parameters (device information, specialization constant values, build options, device image) which is used to resolve hash collisions and analysis of cached items.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;n&gt;.bin</span></code> contains built device code.</p></li>
 </ul>
-</div>
-<div class="section" id="inter-process-safety">
+</section>
+<section id="inter-process-safety">
 <h3>Inter-process safety<a class="headerlink" href="#inter-process-safety" title="Permalink to this headline">¶</a></h3>
 <p>For on-disk cache there might be access collisions for accessing the same file
 from different instances of SYCL applications:</p>
@@ -389,20 +390,20 @@ user/OS tools are able to manage files.</p>
 <p><a name="advisory-lock">1.</a> Advisory locks work only when a process
 explicitly acquires and releases locks, and are ignored if a process is not aware
 of locks.</p>
-</div>
-<div class="section" id="cache-eviction-mechanism">
+</section>
+<section id="cache-eviction-mechanism">
 <h3>Cache eviction mechanism<a class="headerlink" href="#cache-eviction-mechanism" title="Permalink to this headline">¶</a></h3>
 <p>Cache eviction mechanism is required to avoid resources overfloat both for
 memory and disk. The general idea is to delete items following cache size or
 LRU (least recently used) strategy both for in-memory and persistent cache.</p>
-<div class="section" id="in-memory-cache-eviction">
+<section id="in-memory-cache-eviction">
 <h4>In-memory cache eviction<a class="headerlink" href="#in-memory-cache-eviction" title="Permalink to this headline">¶</a></h4>
 <p>It is initiated on program/kernel maps access/add item operation. When cache
 size exceeds storage threshold the items which are least recently used are
 deleted.
 TODO: add detailed description of in-memory cache eviction mechanism.</p>
-</div>
-<div class="section" id="persistent-cache-eviction">
+</section>
+<section id="persistent-cache-eviction">
 <h4>Persistent cache eviction<a class="headerlink" href="#persistent-cache-eviction" title="Permalink to this headline">¶</a></h4>
 <p>Persistent cache eviction is going to be applied based on file last access (read/write) date (access
 time). On SYCL application shutdown phase cache eviction process is initiated
@@ -417,10 +418,10 @@ directory while they are unlocked and empty;</p></li>
 </ul>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="cache-limitations">
+</section>
+</section>
+</section>
+<section id="cache-limitations">
 <h2>Cache limitations<a class="headerlink" href="#cache-limitations" title="Permalink to this headline">¶</a></h2>
 <p>The caching isn’t done when:</p>
 <ul class="simple">
@@ -428,8 +429,8 @@ directory while they are unlocked and empty;</p></li>
 <li><p>when program is a result of linking multiple programs;</p></li>
 <li><p>program is built using interoperability methods.</p></li>
 </ul>
-</div>
-<div class="section" id="points-of-improvement-things-to-do">
+</section>
+<section id="points-of-improvement-things-to-do">
 <h2>Points of improvement (things to do)<a class="headerlink" href="#points-of-improvement-things-to-do" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Employ the same built object for multiple devices of the same ISA,
@@ -439,8 +440,8 @@ an improvement request for plugins. By now it is assumed that two devices with t
 <li><p>Improve testing: cover real use-cases. See currently covered cases <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/unittests/kernel-and-program/Cache.cpp">here</a>.</p></li>
 <li><p>Implement tool for exploring cache items (initially it is possible using OS utilities).</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>

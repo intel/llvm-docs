@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>oneAPI DPC++ Compiler and Runtime architecture design &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,15 +36,15 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="oneapi-dpc-compiler-and-runtime-architecture-design">
+  <section id="oneapi-dpc-compiler-and-runtime-architecture-design">
 <h1>oneAPI DPC++ Compiler and Runtime architecture design<a class="headerlink" href="#oneapi-dpc-compiler-and-runtime-architecture-design" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
+<section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This document describes the architecture of the DPC++ compiler and runtime
 library. For DPC++ specification see
 <a class="reference external" href="https://spec.oneapi.com/versions/latest/elements/dpcpp/source/index.html">spec</a>.</p>
-</div>
-<div class="section" id="dpc-compiler-architecture">
+</section>
+<section id="dpc-compiler-architecture">
 <h2>DPC++ Compiler architecture<a class="headerlink" href="#dpc-compiler-architecture" title="Permalink to this headline">¶</a></h2>
 <p>DPC++ application compilation flow:</p>
 <p><img alt="High level component diagram for DPC++ Compiler" src="_images/Compiler-HLD.svg" /></p>
@@ -102,7 +103,7 @@ compiler to produce SYCL heterogeneous applications. Second, even if the
 same clang compiler is used for the host compilation, information provided in the
 integration header is used (included) by the SYCL runtime implementation, so the
 header must be available before the host compilation starts.</em></p>
-<div class="section" id="sycl-support-in-clang-front-end">
+<section id="sycl-support-in-clang-front-end">
 <h3>SYCL support in Clang front-end<a class="headerlink" href="#sycl-support-in-clang-front-end" title="Permalink to this headline">¶</a></h3>
 <p>SYCL support in Clang front-end can be split into the following components:</p>
 <ul class="simple">
@@ -115,7 +116,7 @@ device code.</p></li>
 <li><p>Integration header generation. This component emits information required for
 binding host and device parts of the SYCL code via OpenCL API.</p></li>
 </ul>
-<div class="section" id="device-code-outlining">
+<section id="device-code-outlining">
 <h4>Device code outlining<a class="headerlink" href="#device-code-outlining" title="Permalink to this headline">¶</a></h4>
 <p>Here is a code example of a SYCL program that demonstrates compiler outlining
 work:</p>
@@ -147,8 +148,8 @@ mark code passed to <code class="docutils literal notranslate"><span class="pre"
 The runtime library can’t mark foo as “device” code - this is a compiler
 job: to traverse all symbols accessible from kernel functions and add them to
 the “device part” of the code marking them with the new SYCL device attribute.</p>
-</div>
-<div class="section" id="lowering-of-lambda-function-objects-and-named-function-objects">
+</section>
+<section id="lowering-of-lambda-function-objects-and-named-function-objects">
 <h4>Lowering of lambda function objects and named function objects<a class="headerlink" href="#lowering-of-lambda-function-objects-and-named-function-objects" title="Permalink to this headline">¶</a></h4>
 <p>All SYCL memory objects shared between host and device (buffers/images,
 these objects map to OpenCL buffers and images) must be accessed through special
@@ -195,9 +196,9 @@ previous code snippet above looks like this:</p>
 nodes. Additional details of kernel parameter passing may be found in the
 document
 <a class="reference internal" href="KernelParameterPassing.html"><span class="doc">SYCL Kernel Parameter Handling and Array Support</span></a>.</p>
-</div>
-</div>
-<div class="section" id="sycl-support-in-the-driver">
+</section>
+</section>
+<section id="sycl-support-in-the-driver">
 <h3>SYCL support in the driver<a class="headerlink" href="#sycl-support-in-the-driver" title="Permalink to this headline">¶</a></h3>
 <p>SYCL offload support in the driver is based on the clang driver concepts and
 defines:</p>
@@ -274,7 +275,7 @@ construct a wrapper object which embeds all those files.</p></li>
 </ul>
 <p>Note that the graph does not change when more rows (clusters) or columns
 (e.g. a “manifest” file) are added to the table.</p>
-<div class="section" id="enable-sycl-offload">
+<section id="enable-sycl-offload">
 <h4>Enable SYCL offload<a class="headerlink" href="#enable-sycl-offload" title="Permalink to this headline">¶</a></h4>
 <p>To enable compilation following single-source multiple compiler-passes (SMCP)
 technique which is described in the SYCL specification, a special option
@@ -287,8 +288,8 @@ assumed, and single device compiler for this target is invoked.</p>
 <p>The option <code class="docutils literal notranslate"><span class="pre">-sycl-std</span></code> allows specifying which version of
 the SYCL standard will be used for the compilation.
 The default value for this option is <code class="docutils literal notranslate"><span class="pre">1.2.1</span></code>.</p>
-</div>
-<div class="section" id="ahead-of-time-aot-compilation">
+</section>
+<section id="ahead-of-time-aot-compilation">
 <h4>Ahead of time (AOT) compilation<a class="headerlink" href="#ahead-of-time-aot-compilation" title="Permalink to this headline">¶</a></h4>
 <p>Ahead-of-time compilation is the process of invoking the back-end at compile
 time to produce the final binary, as opposed to just-in-time (JIT) compilation
@@ -297,8 +298,8 @@ when final code generation is deferred until application runtime time.</p>
 and final device code can be tested before deploying.</p>
 <p>JIT compilation provides portability of device code and target specific
 optimizations.</p>
-</div>
-<div class="section" id="list-of-native-targets">
+</section>
+<section id="list-of-native-targets">
 <h4>List of native targets<a class="headerlink" href="#list-of-native-targets" title="Permalink to this headline">¶</a></h4>
 <p>The ahead-of-time compilation mode implies that there must be a way to specify
 a set of target architectures for which to compile device code. By default, the
@@ -312,8 +313,8 @@ target triples. This basically tells the driver which device compilers must be
 invoked to compile the SYCL kernel code. By default, the JIT compilation
 approach is assumed and device code is compiled for a single target triple -
 <code class="docutils literal notranslate"><span class="pre">[spir,spir64]-*-*</span></code>.</p>
-</div>
-<div class="section" id="device-code-formats">
+</section>
+<section id="device-code-formats">
 <h4>Device code formats<a class="headerlink" href="#device-code-formats" title="Permalink to this headline">¶</a></h4>
 <p>Each target may support a number of code forms, each device compiler defines
 and understands mnemonics designating a particular code form, for example
@@ -333,8 +334,8 @@ device compilation, like SPIR-V → visa → ISA. But if e.g. <code class="docut
 <code class="docutils literal notranslate"><span class="pre">gen9:visa3.3</span></code> are needed at the same time, then some mechanism is needed.
 Should it be a dedicated target triple for each needed visa version or Gen
 generation?</p>
-</div>
-<div class="section" id="separate-compilation-and-linking">
+</section>
+<section id="separate-compilation-and-linking">
 <h4>Separate Compilation and Linking<a class="headerlink" href="#separate-compilation-and-linking" title="Permalink to this headline">¶</a></h4>
 <p>The compiler supports such features as</p>
 <ul class="simple">
@@ -362,8 +363,8 @@ decision is that SPIR-V doesn’t support linking template functions, which coul
 be defined in multiple modules and linker must resolve multiple definitions.
 LLVM IR uses function attributes to satisfy “one definition rule”, which have
 no counterparts in SPIR-V.</em></p>
-</div>
-<div class="section" id="fat-binary-creation-details">
+</section>
+<section id="fat-binary-creation-details">
 <h4>Fat binary creation details<a class="headerlink" href="#fat-binary-creation-details" title="Permalink to this headline">¶</a></h4>
 <p>“Fat binary” is a result of the final host linking step - this is a host binary
 with device binary(s) embedded. When run, it automatically registers
@@ -390,8 +391,8 @@ registration function passing it as a parameter.</p></li>
 </ol>
 <p>The offload descriptor type hierarchy is described in the <code class="docutils literal notranslate"><span class="pre">pi.h</span></code> header. The
 top-level structure is <code class="docutils literal notranslate"><span class="pre">pi_device_binaries_struct</span></code>.</p>
-</div>
-<div class="section" id="device-link">
+</section>
+<section id="device-link">
 <h4>Device Link<a class="headerlink" href="#device-link" title="Permalink to this headline">¶</a></h4>
 <p>The -fsycl-link flag instructs the compiler to fully link device code without
 fully linking host code. The result of such a compile is a fat object that
@@ -427,8 +428,8 @@ the driver. It detects if a module includes kernels and is invoked as follows:</
 </pre></div>
 </div>
 <p>It returns 0 if no kernels are present and 1 otherwise.</p>
-</div>
-<div class="section" id="device-code-post-link-step">
+</section>
+<section id="device-code-post-link-step">
 <h4>Device code post-link step<a class="headerlink" href="#device-code-post-link-step" title="Permalink to this headline">¶</a></h4>
 <p>At link time all the device code is always linked into a single LLVM IR module.
 <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool performs a number of final transformations on this LLVM IR
@@ -459,7 +460,7 @@ diagram the tool is applied to <code class="docutils literal notranslate"><span 
 input/output type is <code class="docutils literal notranslate"><span class="pre">TY_tempfilelist</span></code>. The second invocation of the
 <code class="docutils literal notranslate"><span class="pre">file-table-tform</span></code> takes two inputs - the file table and a file list coming
 either from <code class="docutils literal notranslate"><span class="pre">llvm-spirv</span></code> or from the AOT backend.</p>
-<div class="section" id="device-code-splitting">
+<section id="device-code-splitting">
 <h5>Device code splitting<a class="headerlink" href="#device-code-splitting" title="Permalink to this headline">¶</a></h5>
 <p>Putting all device code into a single SPIR-V module does not work well in the
 following cases:</p>
@@ -505,17 +506,17 @@ unit)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">per_kernel</span></code> - enables emitting a separate module for each kernel</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">off</span></code> - disables device code split</p></li>
 </ul>
-</div>
-<div class="section" id="symbol-table-generation">
+</section>
+<section id="symbol-table-generation">
 <h5>Symbol table generation<a class="headerlink" href="#symbol-table-generation" title="Permalink to this headline">¶</a></h5>
 <p>TBD</p>
-</div>
-<div class="section" id="specialization-constants-lowering">
+</section>
+<section id="specialization-constants-lowering">
 <h5>Specialization constants lowering<a class="headerlink" href="#specialization-constants-lowering" title="Permalink to this headline">¶</a></h5>
 <p>See <a class="reference internal" href="SpecializationConstants.html"><span class="doc">corresponding documentation</span></a></p>
-</div>
-</div>
-<div class="section" id="cuda-support">
+</section>
+</section>
+<section id="cuda-support">
 <h4>CUDA support<a class="headerlink" href="#cuda-support" title="Permalink to this headline">¶</a></h4>
 <p>The driver supports compilation to NVPTX when the
 <code class="docutils literal notranslate"><span class="pre">nvptx64-nvidia-cuda-sycldevice</span></code> is passed to <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>.</p>
@@ -524,7 +525,7 @@ objects never goes through SPIR-V. Instead it is passed directly in bitcode form
 down to the NVPTX Back End. All produced bitcode depends on two libraries,
 <code class="docutils literal notranslate"><span class="pre">libdevice.bc</span></code> (provided by the CUDA SDK) and <code class="docutils literal notranslate"><span class="pre">libspirv-nvptx64--nvidiacl.bc</span></code>
 (built by the libclc project).</p>
-<div class="section" id="device-code-post-link-step-for-cuda">
+<section id="device-code-post-link-step-for-cuda">
 <h5>Device code post-link step for CUDA<a class="headerlink" href="#device-code-post-link-step-for-cuda" title="Permalink to this headline">¶</a></h5>
 <p>During the “PTX target processing” in the device linking step <a class="reference external" href="#device-code-post-link-step">Device
 code post-link step</a>, the llvm bitcode
@@ -535,16 +536,16 @@ tool (part of the CUDA SDK). The PTX file and cubin are assembled
 together using <code class="docutils literal notranslate"><span class="pre">fatbinary</span></code> to produce a CUDA fatbin. The CUDA fatbin
 is then passed to the offload wrapper tool.</p>
 <p><img alt="NVPTX AOT build" src="_images/DevicePTXProcessing.svg" /></p>
-</div>
-<div class="section" id="checking-if-the-compiler-is-targeting-nvptx">
+</section>
+<section id="checking-if-the-compiler-is-targeting-nvptx">
 <h5>Checking if the compiler is targeting NVPTX<a class="headerlink" href="#checking-if-the-compiler-is-targeting-nvptx" title="Permalink to this headline">¶</a></h5>
 <p>When the SYCL compiler is in device mode and targeting the NVPTX backend,
 compiler defines the macro <code class="docutils literal notranslate"><span class="pre">__SYCL_NVPTX__</span></code>.
 This macro can safely be used to enable NVPTX specific code path in SYCL
 kernels.</p>
 <p><em>Note: this macro is defined only during the device compilation phase.</em></p>
-</div>
-<div class="section" id="nvptx-builtins">
+</section>
+<section id="nvptx-builtins">
 <h5>NVPTX Builtins<a class="headerlink" href="#nvptx-builtins" title="Permalink to this headline">¶</a></h5>
 <p>When the SYCL compiler is in device mode and targeting the NVPTX backend, the
 compiler exposes NVPTX builtins supported by clang.</p>
@@ -562,8 +563,8 @@ targets or the host.</em></p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="local-memory-support">
+</section>
+<section id="local-memory-support">
 <h5>Local memory support<a class="headerlink" href="#local-memory-support" title="Permalink to this headline">¶</a></h5>
 <p>In CUDA, users can only allocate one chunk of host allocated shared memory
 (which maps to SYCL’s local accessors). This chunk of memory is allocated as an
@@ -605,8 +606,8 @@ define void @SYCL_generated_kernel(i32 %local_ptr_offset, i32 %arg, i32 %local_p
 implementation will internally set the argument as the offset with respect to
 the accumulated size of used local memory. This approach preserves the existing
 PI interface.</p>
-</div>
-<div class="section" id="global-offset-support">
+</section>
+<section id="global-offset-support">
 <h5>Global offset support<a class="headerlink" href="#global-offset-support" title="Permalink to this headline">¶</a></h5>
 <p>The CUDA API does not natively support the global offset parameter
 expected by the SYCL.</p>
@@ -689,10 +690,10 @@ entry:
 </pre></div>
 </div>
 <p>Note: Kernel naming is not fully stable for now.</p>
-</div>
-</div>
-</div>
-<div class="section" id="integration-with-spir-v-format">
+</section>
+</section>
+</section>
+<section id="integration-with-spir-v-format">
 <h3>Integration with SPIR-V format<a class="headerlink" href="#integration-with-spir-v-format" title="Permalink to this headline">¶</a></h3>
 <p>This section explains how to generate SPIR-V specific types and operations from
 C++ classes and functions.</p>
@@ -766,7 +767,7 @@ into SPIR-V operation <code class="docutils literal notranslate"><span class="pr
                            <span class="n">dst</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">numElements</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">E</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="section" id="some-details-and-agreements-on-using-spir-v-special-types-and-operations">
+<section id="some-details-and-agreements-on-using-spir-v-special-types-and-operations">
 <h4>Some details and agreements on using SPIR-V special types and operations<a class="headerlink" href="#some-details-and-agreements-on-using-spir-v-special-types-and-operations" title="Permalink to this headline">¶</a></h4>
 <p>The SPIR-V specific C++ enumerators and classes are declared in the file:
 <code class="docutils literal notranslate"><span class="pre">sycl/include/CL/__spirv/spirv_types.hpp</span></code>.</p>
@@ -774,9 +775,9 @@ into SPIR-V operation <code class="docutils literal notranslate"><span class="pr
 <code class="docutils literal notranslate"><span class="pre">sycl/include/CL/__spirv/spirv_ops.hpp</span></code>.</p>
 <p>The SPIR-V specific functions are implemented in for the SYCL host device here:
 <code class="docutils literal notranslate"><span class="pre">sycl/source/spirv_ops.cpp</span></code>.</p>
-</div>
-</div>
-<div class="section" id="address-spaces-handling">
+</section>
+</section>
+<section id="address-spaces-handling">
 <h3>Address spaces handling<a class="headerlink" href="#address-spaces-handling" title="Permalink to this headline">¶</a></h3>
 <p>SYCL specification uses C++ classes to represent pointers to disjoint memory
 regions on an accelerator to enable compilation with standard C++ toolchain and
@@ -891,20 +892,20 @@ space attributes in SYCL mode:</p>
 SYCL implementation. An OpenCL constant pointer can not be casted to a pointer
 with any other address space (including default).</p>
 </div></blockquote>
-</div>
-<div class="section" id="compiler-runtime-interface">
+</section>
+<section id="compiler-runtime-interface">
 <h3>Compiler/Runtime interface<a class="headerlink" href="#compiler-runtime-interface" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="dpc-runtime-architecture">
+</section>
+</section>
+<section id="dpc-runtime-architecture">
 <h2>DPC++ Runtime architecture<a class="headerlink" href="#dpc-runtime-architecture" title="Permalink to this headline">¶</a></h2>
 <p><em>TBD</em></p>
-</div>
-<div class="section" id="dpc-language-extensions-to-sycl">
+</section>
+<section id="dpc-language-extensions-to-sycl">
 <h2>DPC++ Language extensions to SYCL<a class="headerlink" href="#dpc-language-extensions-to-sycl" title="Permalink to this headline">¶</a></h2>
 <p>List of language extensions can be found at <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/extensions">extensions</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>

@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Specialization constants &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,11 +36,11 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="specialization-constants">
+  <section id="specialization-constants">
 <h1>Specialization constants<a class="headerlink" href="#specialization-constants" title="Permalink to this headline">¶</a></h1>
 <p>DPC++ implements this <a class="reference external" href="https://github.com/codeplaysoftware/standards-proposals/blob/master/spec-constant/index">proposal</a>
 with some restrictions. See this <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/extensions/SpecConstants/README">document</a> for more details.</p>
-<div class="section" id="requirements">
+<section id="requirements">
 <h2>Requirements:<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>must work with separate compilation and linking</p></li>
@@ -102,12 +103,12 @@ an ordinal number. This complicates the design, as the compiler</p>
 <span class="o">//</span> <span class="o">...</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="design">
+</section>
+<section id="design">
 <h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
 <p>This document describes both arithmetic and POD types support, because their
 handling is mostly unified except a few details.</p>
-<div class="section" id="dpc-headers">
+<section id="dpc-headers">
 <h3>DPC++ Headers<a class="headerlink" href="#dpc-headers" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">spec_constant</span></code> class, which represents a specialization constant in DPC++ also
 performs the following tasks:</p>
@@ -154,10 +155,10 @@ calls whose arguments are symbolic spec constant IDs. Before generating a device
 binary, each linked device code LLVM IR module undergoes processing by
 <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool which can run LLVM IR passes before passing the module
 onto the SPIR-V translator.</p>
-</div>
-<div class="section" id="dpc-compiler">
+</section>
+<section id="dpc-compiler">
 <h3>DPC++ Compiler<a class="headerlink" href="#dpc-compiler" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="sycl-post-link-tool">
+<section id="sycl-post-link-tool">
 <h4>sycl-post-link tool<a class="headerlink" href="#sycl-post-link-tool" title="Permalink to this headline">¶</a></h4>
 <p>As it is stated above, the only place where we can properly handle
 specialization constants is somewhere during or after linking device code from
@@ -170,7 +171,7 @@ different translation units, so it happens in <code class="docutils literal notr
 mapping, which is later being used by DPC++ RT to set specialization constant
 values provided by user.</p></li>
 </ol>
-<div class="section" id="assignment-of-numeric-ids-to-specialization-constants">
+<section id="assignment-of-numeric-ids-to-specialization-constants">
 <h5>Assignment of numeric IDs to specialization constants<a class="headerlink" href="#assignment-of-numeric-ids-to-specialization-constants" title="Permalink to this headline">¶</a></h5>
 <p>This task is achieved by maintaining a map, which for each encountered symbolic
 ID of a specialization constant holds a list of numeric IDs, which are used to
@@ -214,8 +215,8 @@ contains another composite within it, that nested composite is also being
 “flattened” and its leafs are considered to be leafs of the parent
 specialization constants. This done by depth-first search through the composite
 elements.</p>
-</div>
-<div class="section" id="transformation-of-llvm-ir-to-spir-v-friendly-ir-form">
+</section>
+<section id="transformation-of-llvm-ir-to-spir-v-friendly-ir-form">
 <h5>Transformation of LLVM IR to SPIR-V friendly IR form<a class="headerlink" href="#transformation-of-llvm-ir-to-spir-v-friendly-ir-form" title="Permalink to this headline">¶</a></h5>
 <p>SPIR-V friendly IR form is a special representation of LLVM IR, where some
 function are named in particular way in order to be recognizable by the SPIR-V
@@ -268,15 +269,15 @@ each leaf of the composite type, plus number of
 <span class="o">%</span><span class="n">gold</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">([</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">]</span> <span class="o">%</span><span class="n">gold_POD_A</span><span class="p">,</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="o">%</span><span class="n">gold_POD_b</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="ahead-of-time-compilation">
+<section id="ahead-of-time-compilation">
 <h6>Ahead of time compilation<a class="headerlink" href="#ahead-of-time-compilation" title="Permalink to this headline">¶</a></h6>
 <p>With AOT everything is simplified - the <code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass simply replaces
 the <code class="docutils literal notranslate"><span class="pre">__sycl_getScalarSpecConstantValue</span></code> calls with constants - default values of
 the spec constant’s type. No maps are generated, and DPC++ program can’t change
 the value of a spec constant.</p>
-</div>
-</div>
-<div class="section" id="collecting-spec-constants-info-and-communicating-it-to-dpc-rt">
+</section>
+</section>
+<section id="collecting-spec-constants-info-and-communicating-it-to-dpc-rt">
 <h5>Collecting spec constants info and communicating it to DPC++ RT<a class="headerlink" href="#collecting-spec-constants-info-and-communicating-it-to-dpc-rt" title="Permalink to this headline">¶</a></h5>
 <p>For each encountered specialization constants <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> emits a property,
 which encodes information required by DPC++ RT to set the value of a
@@ -374,9 +375,9 @@ For scalar specialization constants it will always be 0.</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="spirv-llvm-translator">
+</section>
+</section>
+<section id="spirv-llvm-translator">
 <h4>SPIRV-LLVM-Translator<a class="headerlink" href="#spirv-llvm-translator" title="Permalink to this headline">¶</a></h4>
 <p>Given the <code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstant</span></code> intrinsic calls produced by the
 <code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass:</p>
@@ -423,8 +424,8 @@ For scalar specialization constants it will always be 0.</p></li>
               <span class="n">OpFunctionEnd</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="dpc-fe-integration-header-generation">
+</section>
+<section id="dpc-fe-integration-header-generation">
 <h4>DPC++ FE: Integration header generation<a class="headerlink" href="#dpc-fe-integration-header-generation" title="Permalink to this headline">¶</a></h4>
 <p>Information required for DPC++ RT in order to set value of a specialization
 constant is provided by the compiler for each symbolic ID of specialization
@@ -448,15 +449,15 @@ specialization constant:</p>
 integration header at all, but since the host part of the program can be
 compiled with a third-party C++ 14-compatible compiler, which is unaware of the
 clang-specific built-ins, it can result in build errors.</p>
-</div>
-</div>
-<div class="section" id="dpc-runtime">
+</section>
+</section>
+<section id="dpc-runtime">
 <h3>DPC++ runtime<a class="headerlink" href="#dpc-runtime" title="Permalink to this headline">¶</a></h3>
 <p>For each device binary compiler generates a map
-&lt;Symbolic ID&gt; =&gt; &lt;list of spec constant descriptors&gt; (“ID map”). DPC++
+&lt;Symbolic ID&gt; =&gt; &lt;list of spec constant descriptors&gt; (”ID map”). DPC++
 runtime imports that map when loading device binaries.
 It also maintains another map &lt;Spec const symbolic ID&gt; =&gt; &lt;its value&gt;
-(“value map”) per <code class="docutils literal notranslate"><span class="pre">sycl::program</span></code> object. The value map is updated upon
+(”value map”) per <code class="docutils literal notranslate"><span class="pre">sycl::program</span></code> object. The value map is updated upon
 <code class="docutils literal notranslate"><span class="pre">program::set_spec_constant&lt;IDType&gt;(val)</span></code> calls from the app.</p>
 <p>Before invoking JIT compilation of a program, the runtime “flushes”
 specialization constants: it iterates through the value map and invokes</p>
@@ -470,9 +471,9 @@ specialization constants: it iterates through the value map and invokes</p>
 <code class="docutils literal notranslate"><span class="pre">spec_size</span></code> are taken from the descriptor, <code class="docutils literal notranslate"><span class="pre">spec_value</span></code> is calculated based on
 address of the specialization constant provided by user and <code class="docutils literal notranslate"><span class="pre">offset</span></code> field of
 the descriptor.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
       </div>

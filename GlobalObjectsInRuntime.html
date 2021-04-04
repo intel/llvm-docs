@@ -3,7 +3,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Global objects in DPC++ runtime &#8212; oneAPI DPC++ Compiler  documentation</title>
     <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -35,9 +36,9 @@
       <div class="content" role="main">
         
         
-  <div class="section" id="global-objects-in-dpc-runtime">
+  <section id="global-objects-in-dpc-runtime">
 <h1>Global objects in DPC++ runtime<a class="headerlink" href="#global-objects-in-dpc-runtime" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="intro">
+<section id="intro">
 <h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
 <p>C++ standard does not specify the order in which global objects are constructed
 or destroyed. If global objects somehow interact with each other, there’s a
@@ -66,10 +67,10 @@ behavior from C++ standard point of view. There are a few places in the runtime,
 where global objects arise: scheduler, program manager, plugins, low-level
 runtimes. To prevent crashes in such scenarios, the DPC++ runtime must ensure
 global objects lifetime is long enough.</p>
-</div>
-<div class="section" id="dpc-runtime">
+</section>
+<section id="dpc-runtime">
 <h2>DPC++ runtime<a class="headerlink" href="#dpc-runtime" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="general-idea">
+<section id="general-idea">
 <h3>General idea<a class="headerlink" href="#general-idea" title="Permalink to this headline">¶</a></h3>
 <p>Different platforms may handle global initialization and deinitialization
 differently (for example, see <a class="reference external" href="https://itanium-cxx-abi.github.io/cxx-abi/abi.html#dso-dtor">Itanium ABI</a>). So, handling global objects
@@ -85,8 +86,8 @@ no unwanted initialization happens before object is requested.</p>
 <p>Deinitialization is platform-specific. Upon application shutdown, the DPC++
 runtime frees memory pointed by <code class="docutils literal notranslate"><span class="pre">GlobalHandler</span></code> global pointer, which triggers
 destruction of nested <code class="docutils literal notranslate"><span class="pre">std::unique_ptr</span></code>s.</p>
-</div>
-<div class="section" id="linux">
+</section>
+<section id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
 <p>On Linux DPC++ runtime uses <code class="docutils literal notranslate"><span class="pre">__attribute__((destructor))</span></code> property with low
 priority value 110. This approach does not guarantee, that <code class="docutils literal notranslate"><span class="pre">GlobalHandler</span></code>
@@ -99,15 +100,15 @@ executed before runtime shutdown mechanisms.</p>
 that global objects live long enough. But some global objects allocate heap
 memory. If user application uses <code class="docutils literal notranslate"><span class="pre">dlopen</span></code> and <code class="docutils literal notranslate"><span class="pre">dlclose</span></code> on <code class="docutils literal notranslate"><span class="pre">libsycl.so</span></code> many
 times, the memory leak may impact code performance.</p>
-</div>
-<div class="section" id="windows">
+</section>
+<section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>To identify shutdown moment on Windows, DPC++ runtime uses default <code class="docutils literal notranslate"><span class="pre">DllMain</span></code>
 function with <code class="docutils literal notranslate"><span class="pre">DLL_PROCESS_DETACH</span></code> reason. This guarantees, that global objects
 deinitialization happens right before <code class="docutils literal notranslate"><span class="pre">sycl.dll</span></code> is unloaded from process
 address space.</p>
-</div>
-<div class="section" id="recommendations-for-dpc-runtime-developers">
+</section>
+<section id="recommendations-for-dpc-runtime-developers">
 <h3>Recommendations for DPC++ runtime developers<a class="headerlink" href="#recommendations-for-dpc-runtime-developers" title="Permalink to this headline">¶</a></h3>
 <p>There are a few things to keep in mind, when developing DPC++ runtime:</p>
 <ul class="simple">
@@ -119,9 +120,9 @@ are not wrapped with <code class="docutils literal notranslate"><span class="pre
 <code class="docutils literal notranslate"><span class="pre">GlobalHandler</span></code> or consider using <code class="docutils literal notranslate"><span class="pre">sycl::detail::SpinLock</span></code>, which has trivial
 constructor and destructor.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="plugins">
+</section>
+</section>
+<section id="plugins">
 <h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
 <p>Plugin lifetime is managed by utilizing piPluginInit() and piTearDown().
 GlobalHandler::shutdown() will tear down all registered globals before SYCL RT
@@ -130,14 +131,14 @@ plugin. piTearDown() is going to perform any necessary tear-down process at the
 plugin PI level. These two APIs allow on-demand plugin lifetime management. SYCL
 RT can control the beginning and the end of the plugin.</p>
 <p><img alt="_images/plugin-lifetime.jpg" src="_images/plugin-lifetime.jpg" /></p>
-</div>
-<div class="section" id="low-level-runtimes">
+</section>
+<section id="low-level-runtimes">
 <h2>Low-level runtimes<a class="headerlink" href="#low-level-runtimes" title="Permalink to this headline">¶</a></h2>
 <p>Generally, DPC++ runtime has no control over its dependencies. Such libraries
 can have global objects of their own. If you observe problems with dependency
 library, please, report it to library maintainers.</p>
-</div>
-</div>
+</section>
+</section>
 
 
       </div>
