@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"structrestype__ex_3_01unsigned_01long_01long_00_01unsigned_01long_01long_01_4.html":[3,0,222],
 "structrestype__ex_3_01unsigned_01long_01long_00_01unsigned_01long_01long_01_4.html#a02357b32d05f93b4562c75d863b52a36":[3,0,222,0],
 "structrestype__ex_3_01unsigned_01long_01long_00_01unsigned_01short_01_4.html":[3,0,223],
 "structrestype__ex_3_01unsigned_01long_01long_00_01unsigned_01short_01_4.html#ac5a8a7bda6bb7113f5ca7a8f39362a27":[3,0,223,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "usm__allocator_8cpp.html#aa78442f1faa1317ebcaa928ea6d2cc60":[4,0,1,1,2,12],
 "usm__allocator_8cpp.html#ae46e953ea49dac1ffb4c4e7acdc6c8fc":[4,0,1,1,2,11],
 "usm__allocator_8cpp_source.html":[4,0,1,1,2],
-"usm__enums_8hpp.html":[4,0,0,0,1,7,1],
-"usm__enums_8hpp.html#a6af7b613a7092386eaad216e9c9c1f0e":[4,0,0,0,1,7,1,0]
+"usm__enums_8hpp.html":[4,0,0,0,1,7,1]
 };

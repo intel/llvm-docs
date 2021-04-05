@@ -1,5 +1,6 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1detail_1_1sycl__to__pi.html#a6b3bc6fe26cc494444478a882340f478":[3,0,2,1,0,308,0],
 "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01bool_01_4.html":[3,0,2,1,0,309],
 "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01bool_01_4.html#a0085db7b1b37b39507993d2e86d8a9fc":[3,0,2,1,0,309,0],
 "structcl_1_1sycl_1_1detail_1_1sycl__to__pi_3_01device_01_4.html":[3,0,2,1,0,310],
@@ -248,6 +249,5 @@ var NAVTREEINDEX35 =
 "structpi__buff__rect__offset__struct.html#a853a7c8875c160541741700d9122eebd":[3,0,106,2],
 "structpi__buff__rect__offset__struct.html#aea7e1b5cf8ca5a8ca90626024f1cf867":[3,0,106,1],
 "structpi__buff__rect__region__struct.html":[3,0,107],
-"structpi__buff__rect__region__struct.html#a058ae3789afe35d3894ddee5eb2ea084":[3,0,107,2],
-"structpi__buff__rect__region__struct.html#a8006ac58b893ea7b2c513f9b4133997e":[3,0,107,1]
+"structpi__buff__rect__region__struct.html#a058ae3789afe35d3894ddee5eb2ea084":[3,0,107,2]
 };
