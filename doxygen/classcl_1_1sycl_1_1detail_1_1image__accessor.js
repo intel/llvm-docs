@@ -13,5 +13,5 @@ var classcl_1_1sycl_1_1detail_1_1image__accessor =
     [ "read", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a2a2dcd09742d97f423c4edc2ee205054", null ],
     [ "write", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a25b22d00a8fec9c9da461486847de9af", null ],
     [ "__image_array_slice__", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a5f21982bc6aa211c8bd51f38c89434b7", null ],
-    [ "sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#a12f3ae6067bda013eded4e74dc92e3a4", null ]
+    [ "sycl::INTEL::gpu::detail::AccessorPrivateProxy", "classcl_1_1sycl_1_1detail_1_1image__accessor.html#ab23ae4f889eb306cfbb84f546a8bd9ec", null ]
 ];

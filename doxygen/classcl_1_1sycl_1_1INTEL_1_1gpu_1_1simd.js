@@ -1,7 +1,7 @@
 var classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd =
 [
     [ "element_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a09cdbf36eee0fa6919f5abffc9af11ed", null ],
-    [ "vector_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#aefc9cc34d00a64d0564a3f2bcaca907b", null ],
+    [ "vector_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#abbadf8f9193c3dea1f2b787618766b2a", null ],
     [ "simd", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#aa8495db82f5f4082a4390470ae299df0", null ],
     [ "simd", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a91c47d6e7aa34f198d2af570a87a2b2a", null ],
     [ "simd", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a581fa5be8c28d6378f1bb05d08971ba4", null ],

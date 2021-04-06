@@ -75,6 +75,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
       [ "SYCLMemObjI", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI.html", "classcl_1_1sycl_1_1detail_1_1SYCLMemObjI" ]
     ] ],
     [ "sycl_mem_obj_t.hpp", "sycl__mem__obj__t_8hpp.html", "sycl__mem__obj__t_8hpp" ],
+    [ "tuple.hpp", "tuple_8hpp.html", "tuple_8hpp" ],
     [ "type_list.hpp", "type__list_8hpp.html", "type__list_8hpp" ],
     [ "type_traits.hpp", "type__traits_8hpp.html", "type__traits_8hpp" ],
     [ "usm_impl.hpp", "usm__impl_8hpp.html", "usm__impl_8hpp" ],

@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__fp__or__dword__type_3_01sycl_1_1INTEL_1_1gpu_1288ce2b8822720a359f1319f6c99b68a =
-[
-    [ "value", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__fp__or__dword__type_3_01sycl_1_1INTEL_1_1gpu_1288ce2b8822720a359f1319f6c99b68a.html#a3055862981ff95518d2f28803e999e7a", null ]
-];

@@ -1,0 +1,9 @@
+var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7 =
+[
+    [ "type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7.html#a456dc364f2841743793138d4da345ef4", null ],
+    [ "Prod", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7.html#ab70baa83c36aab1e9ddc949b981bb016", null ],
+    [ "SizeX", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7.html#aef4cc0b1d008c4821753f6502f2db4cc", null ],
+    [ "SizeY", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7.html#a007a1e440d3e9e67cfd8255a5e21db72", null ],
+    [ "StrideX", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7.html#a2ed48697529aa147a6d5be27be6816d0", null ],
+    [ "StrideY", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type__2d_3_01simd_3_01Ty_00_01N_078bc39e70b462d4d4881e89aca4272b7.html#a89eb35bb01ed74b275c026837910f387", null ]
+];

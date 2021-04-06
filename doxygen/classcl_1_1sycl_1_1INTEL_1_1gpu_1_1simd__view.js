@@ -4,7 +4,7 @@ var classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view =
     [ "region_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a9c0e8c6461074dfe597712a9ebb22669", null ],
     [ "ShapeTy", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a58fe8ccd470a51fc0bcacbfd97a76bff", null ],
     [ "value_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#abc0a8543759fa5ee552ff787c99b7231", null ],
-    [ "vector_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a25800e6fa0ef3aa193eb2ae318c3e76e", null ],
+    [ "vector_type", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a6e60d1a0b596da0dc5e5206a01f52fa5", null ],
     [ "simd_view", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a3322ab5c66f6fba14f173d9bfd1c3619", null ],
     [ "simd_view", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a266b09c500cd84eb93711f1d6e7e5740", null ],
     [ "simd_view", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html#a8e27acc9dc23956c86ba9e70ba0cfa29", null ],

@@ -1,8 +1,8 @@
 var group__sycl__esimd__slm =
 [
-    [ "slm_atomic", "group__sycl__esimd__slm.html#gaff00dfc029be5c0f65836613622136c8", null ],
-    [ "slm_atomic", "group__sycl__esimd__slm.html#ga2efcaaf62ac3478cc742eb7f575ded8f", null ],
-    [ "slm_atomic", "group__sycl__esimd__slm.html#ga8bdc8eefa6a0aa23ec733aa3d03682b1", null ],
+    [ "slm_atomic", "group__sycl__esimd__slm.html#gac903bcde4537c07bd8c79749a462a3be", null ],
+    [ "slm_atomic", "group__sycl__esimd__slm.html#ga67101a36c2964c79033658e938231551", null ],
+    [ "slm_atomic", "group__sycl__esimd__slm.html#ga521882dac39de9ed1b57c4381e1e74da", null ],
     [ "slm_block_load", "group__sycl__esimd__slm.html#gac176dcece185f05b7239f6fdc7aa7c92", null ],
     [ "slm_block_store", "group__sycl__esimd__slm.html#gac01407d8f5e1915f4daf6a70d0bace79", null ],
     [ "slm_init", "group__sycl__esimd__slm.html#ga4bf073fd136ce89b34823f1c88c495e7", null ],

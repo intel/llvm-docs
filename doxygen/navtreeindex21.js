@@ -1,6 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"group__sycl__pi.html":[1,0],
 "group__sycl__pi__cuda.html":[1,0,0],
 "group__sycl__pi__level__zero.html":[1,0,1],
 "group__sycl__pi__ocl.html":[1,0,2],
@@ -86,8 +85,8 @@ var NAVTREEINDEX21 =
 "host__profiling__info_8hpp_source.html":[4,0,0,0,1,2,22],
 "id_8hpp.html":[4,0,0,0,1,29],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,29,0],
-"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,29,1],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,29,2],
+"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,29,1],
 "id_8hpp.html#aa40b71b8dd6ff6fdbf2cea604b3793c3":[4,0,0,0,1,29,5],
 "id_8hpp.html#aa8953bc09b85c70fd186496488a89a76":[4,0,0,0,1,29,4],
 "id_8hpp.html#aa999c9ff2be6ea85802409903755f482":[4,0,0,0,1,29,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX21 =
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a06ad287ea83b37a6f9db3d8d10d72c8f":[4,0,0,0,1,3,0,14,2],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,3,0,14,0],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5abefe72871b2de8f4f0e20108517e31fe":[4,0,0,0,1,3,0,14,1],
+"info__desc_8hpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,0,0,1,3,0,5],
 "info__desc_8hpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,0,0,1,3,0,4]
 };

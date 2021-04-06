@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01long_01long_00_01unsigned_01char_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01long_01long_00_01unsigned_01char_01_4.html#a0b09bc9659405d55f169a35c70c72077", null ]
+];

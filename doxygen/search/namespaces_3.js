@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['intelfpga_6194',['intelfpga',['../namespaceintelfpga.html',1,'']]]
+  ['settings_6235',['settings',['../namespacesettings.html',1,'']]],
+  ['std_6236',['std',['../namespacestd.html',1,'']]]
 ];

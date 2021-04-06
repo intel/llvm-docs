@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__float__dword_3_01float_00_01unsigned_01int_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__float__dword_3_01float_00_01unsigned_01int_01_4.html#a03fd684eb8098cd96d8f1cfa6c9a68f0", null ]
+];

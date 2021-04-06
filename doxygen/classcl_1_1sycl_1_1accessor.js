@@ -48,7 +48,7 @@ var classcl_1_1sycl_1_1accessor =
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#aed397653192b4203e7da4ffede5d730e", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#a04522a732fd0ee8de1482a04f48d3614", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor.html#ac5f36dd4d43e0ab413bbf0a56fa37c90", null ],
-    [ "sycl::INTEL::gpu::AccessorPrivateProxy", "classcl_1_1sycl_1_1accessor.html#a12f3ae6067bda013eded4e74dc92e3a4", null ],
+    [ "sycl::INTEL::gpu::detail::AccessorPrivateProxy", "classcl_1_1sycl_1_1accessor.html#ab23ae4f889eb306cfbb84f546a8bd9ec", null ],
     [ "AdjustedDim", "classcl_1_1sycl_1_1accessor.html#ae519f64271d104987f32db4156e8174a", null ],
     [ "AS", "classcl_1_1sycl_1_1accessor.html#a747a108e90106d63c1c7d841a43e6d3f", null ],
     [ "IsAccessAnyWrite", "classcl_1_1sycl_1_1accessor.html#aa61d8c5d2038fefa3c07ebda3a670021", null ],
