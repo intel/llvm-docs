@@ -7,6 +7,7 @@ var classcl_1_1sycl_1_1detail_1_1accessor__common =
     [ "RefType", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a73a86a6626efd4895b3a2c555c8b45ed", null ],
     [ "AS", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a747a108e90106d63c1c7d841a43e6d3f", null ],
     [ "IsAccessAnyWrite", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#aa61d8c5d2038fefa3c07ebda3a670021", null ],
+    [ "IsAccessAtomic", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#abf48f62f876660d2fd8f5b28e44e5dee", null ],
     [ "IsAccessReadOnly", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#adcd7acd5704463583e8822eeb669b1a4", null ],
     [ "IsAccessReadWrite", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a46fd4eca0d4871bc23013a03bc1ea06a", null ],
     [ "IsConstantBuf", "classcl_1_1sycl_1_1detail_1_1accessor__common.html#a70b4b03f3781b1c335146ddd39ee3a62", null ],

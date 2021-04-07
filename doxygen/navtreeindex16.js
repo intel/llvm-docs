@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"device__filter_8hpp_source.html":[4,0,0,0,1,2,16],
+"device__image__impl_8hpp.html":[4,0,2,1,23],
 "device__image__impl_8hpp_source.html":[4,0,2,1,23],
 "device__impl_8cpp.html":[4,0,2,1,24],
 "device__impl_8cpp_source.html":[4,0,2,1,24],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "esimd__intrin_8hpp.html#aa830df63925f69dd69e0e0d84ec73601":[4,0,0,0,1,4,0,0,1,6],
 "esimd__intrin_8hpp.html#ab057e6a163f6e42e446d949bfdba14a8":[4,0,0,0,1,4,0,0,1,5],
 "esimd__intrin_8hpp.html#abd2474ad8487fdbb81b4a96e80fef62d":[4,0,0,0,1,4,0,0,1,3],
-"esimd__intrin_8hpp.html#af857ee0002517e8bae1339faba060d43":[4,0,0,0,1,4,0,0,1,1],
-"esimd__intrin_8hpp_source.html":[4,0,0,0,1,4,0,0,1],
-"esimd__math_8hpp.html":[4,0,0,0,1,4,0,3]
+"esimd__intrin_8hpp.html#af857ee0002517e8bae1339faba060d43":[4,0,0,0,1,4,0,0,1,1]
 };

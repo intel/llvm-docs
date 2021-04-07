@@ -1,5 +1,7 @@
 var NAVTREEINDEX36 =
 {
+"structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01vector__class_3_01string__class_01_4_00_0139c6283becf050188b9336488ce1727c.html#a485d32f373cdced048d4ce6633c9eab8":[3,0,1,1,0,123,0],
+"structcl_1_1sycl_1_1detail_1_1half__impl_1_1half__vec.html":[3,0,1,1,0,0,1],
 "structcl_1_1sycl_1_1detail_1_1half__impl_1_1half__vec.html#acd6d4be7f66302bbe507a1ba2eab89c9":[3,0,1,1,0,0,1,0],
 "structcl_1_1sycl_1_1detail_1_1identity.html":[3,0,1,1,0,138],
 "structcl_1_1sycl_1_1detail_1_1identity_3_01T_00_01ONEAPI_1_1bit__and_3_01V_01_4_01_4.html":[3,0,1,1,0,139],
@@ -247,7 +249,5 @@ var NAVTREEINDEX36 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01event_01_4.html#ad03da7c7526a380e70747aa474685ecf":[3,0,1,1,47,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01program_01_4.html":[3,0,1,1,48],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01program_01_4.html#ae42dc6f36297eee2c8815f149be90cb0":[3,0,1,1,48,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html":[3,0,1,1,49],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html#a7a89079fccc01970c51c2f11dc8762f2":[3,0,1,1,49,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1level__zero_00_01accessor_3_01DataT_00_01Dimensions_08ede0fb71d604d8bc6b0e1d392433d83.html":[3,0,1,1,51]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1cuda_00_01queue_01_4.html":[3,0,1,1,49]
 };

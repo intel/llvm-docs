@@ -1,5 +1,7 @@
 var NAVTREEINDEX21 =
 {
+"group__sycl__graph.html":[1,3],
+"group__sycl__pi.html":[1,0],
 "group__sycl__pi__cuda.html":[1,0,0],
 "group__sycl__pi__level__zero.html":[1,0,1],
 "group__sycl__pi__ocl.html":[1,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX21 =
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5":[4,0,0,0,1,3,0,14],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a06ad287ea83b37a6f9db3d8d10d72c8f":[4,0,0,0,1,3,0,14,2],
 "info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5a334c4a4c42fdb79d7ebc3e73b517e6f8":[4,0,0,0,1,3,0,14,0],
-"info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5abefe72871b2de8f4f0e20108517e31fe":[4,0,0,0,1,3,0,14,1],
-"info__desc_8hpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,0,0,1,3,0,5],
-"info__desc_8hpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,0,0,1,3,0,4]
+"info__desc_8hpp.html#a8986fcccc4479065bdbf37d9b9d8def5abefe72871b2de8f4f0e20108517e31fe":[4,0,0,0,1,3,0,14,1]
 };

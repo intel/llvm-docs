@@ -1,5 +1,7 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01short_01_4.html":[3,0,1,1,3,0,1,0,102],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01short_01_4.html#ab09ad2e145952af069cb08255de5a18d":[3,0,1,1,3,0,1,0,102,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01unsigned_01char_01_4.html":[3,0,1,1,3,0,1,0,103],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01unsigned_01char_01_4.html#a2583b2d74b6141090b62f7d924576c36":[3,0,1,1,3,0,1,0,103,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01unsigned_01int_01_4.html":[3,0,1,1,3,0,1,0,104],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html#af3357d1effbae69d60d2e91bc94b19c2":[3,0,1,1,4,0,12,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html":[3,0,1,1,4,0,10],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html#a470050c82acec60d6dfd27e50e52621d":[3,0,1,1,4,0,10,0],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html":[3,0,1,1,4,0,11],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html#a87af85858dace5eeedd5718ea06d2823":[3,0,1,1,4,0,11,0],
-"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html":[3,0,1,1,4,0,16]
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html":[3,0,1,1,4,0,11]
 };

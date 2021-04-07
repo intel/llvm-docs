@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"kernel__info_8hpp.html#a1808b8f1faaa487a0b5420a28fe0a793":[4,0,2,1,44,17],
+"kernel__info_8hpp.html#a321e865a033205ea7ea42002fc49b799":[4,0,2,1,44,14],
 "kernel__info_8hpp.html#a324aca909c73af6d7d38ff44a1ee8a00":[4,0,2,1,44,20],
 "kernel__info_8hpp.html#a78ffea5e0086de0e01bea3f57f64bd8c":[4,0,2,1,44,13],
 "kernel__info_8hpp.html#a839b5f5388e6ea50f6f3edf4353ac791":[4,0,2,1,44,18],
@@ -112,8 +114,8 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail.html":[3,0,1,1,3,0,1,0],
 "namespacecl_1_1sycl_1_1INTEL_1_1property.html":[2,0,1,1,6,2],
 "namespacecl_1_1sycl_1_1INTEL_1_1property.html":[3,0,1,1,3,1],
-"namespacecl_1_1sycl_1_1ONEAPI.html":[3,0,1,1,4],
 "namespacecl_1_1sycl_1_1ONEAPI.html":[2,0,1,1,9],
+"namespacecl_1_1sycl_1_1ONEAPI.html":[3,0,1,1,4],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[2,0,1,1,9,0],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[3,0,1,1,4,0],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[2,0,1,1,9,1],
@@ -153,8 +155,8 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1property.html":[3,0,1,1,5],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,1,1,11,0],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,1,1,5,0],
-"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,1,1,11,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,1,1,5,1],
+"namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,1,1,11,1],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,1,1,5,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,1,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,1,1,5,2],
@@ -165,8 +167,8 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1property_1_1reduction.html":[2,0,1,1,11,4],
 "namespacecl_1_1sycl_1_1usm.html":[2,0,1,1,12],
 "namespaceintelfpga.html":[2,0,2],
-"namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
+"namespacemembers.html":[2,1,0],
 "namespacemembers_a.html":[2,1,0,1],
 "namespacemembers_b.html":[2,1,0,2],
 "namespacemembers_c.html":[2,1,0,3],
@@ -175,8 +177,8 @@ var NAVTREEINDEX23 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,6],
-"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func.html":[2,1,1],
+"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "namespacesettings.html":[2,0,3],
 "namespacestd.html":[3,0,2],
 "namespacestd.html":[2,0,4],
-"nd__item_8hpp.html":[4,0,0,0,1,39],
-"nd__item_8hpp.html#a2882526d45e3fc44fac9075c6b95b1f1":[4,0,0,0,1,39,0],
-"nd__item_8hpp.html#ae5eda9603fbd094902b548f829351870":[4,0,0,0,1,39,1]
+"nd__item_8hpp.html":[4,0,0,0,1,39]
 };

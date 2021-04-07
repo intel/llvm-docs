@@ -1,5 +1,7 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html#a87af85858dace5eeedd5718ea06d2823":[3,0,1,1,4,0,11,0],
+"structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html":[3,0,1,1,4,0,16],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html#a714925cd1eae8ff467b692f13cfd25bf":[3,0,1,1,4,0,16,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html":[3,0,1,1,4,0,17],
 "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html#ab137efe6889171c68ba03e0aa743fea4":[3,0,1,1,4,0,17,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX34 =
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a4e57ab20b7eb9eefe68d019a940a3ccb":[3,0,1,1,0,228,5],
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a6118dbffd8bdd468dd88cb28ef5154cf":[3,0,1,1,0,228,4],
 "structcl_1_1sycl_1_1detail_1_1KernelInfo.html#ac2346de7dcbce27917f934216348a8da":[3,0,1,1,0,228,2],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html":[3,0,1,1,0,229,0],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ad924f5afc1119a71ce86acc89f511d68":[3,0,1,1,0,229,0,1],
-"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ae8665653a1132b94504bae878da2e92b":[3,0,1,1,0,229,0,2]
+"structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html":[3,0,1,1,0,229,0]
 };
