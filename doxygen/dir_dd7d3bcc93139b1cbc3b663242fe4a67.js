@@ -29,22 +29,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "event.hpp", "event_8hpp.html", [
       [ "hash< cl::sycl::event >", "structstd_1_1hash_3_01cl_1_1sycl_1_1event_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1event_01_4" ]
     ] ],
-    [ "exception.hpp", "exception_8hpp.html", [
-      [ "runtime_error", "classcl_1_1sycl_1_1runtime__error.html", "classcl_1_1sycl_1_1runtime__error" ],
-      [ "kernel_error", "classcl_1_1sycl_1_1kernel__error.html", null ],
-      [ "accessor_error", "classcl_1_1sycl_1_1accessor__error.html", null ],
-      [ "nd_range_error", "classcl_1_1sycl_1_1nd__range__error.html", null ],
-      [ "event_error", "classcl_1_1sycl_1_1event__error.html", null ],
-      [ "invalid_parameter_error", "classcl_1_1sycl_1_1invalid__parameter__error.html", null ],
-      [ "device_error", "classcl_1_1sycl_1_1device__error.html", "classcl_1_1sycl_1_1device__error" ],
-      [ "compile_program_error", "classcl_1_1sycl_1_1compile__program__error.html", null ],
-      [ "link_program_error", "classcl_1_1sycl_1_1link__program__error.html", null ],
-      [ "invalid_object_error", "classcl_1_1sycl_1_1invalid__object__error.html", null ],
-      [ "memory_allocation_error", "classcl_1_1sycl_1_1memory__allocation__error.html", null ],
-      [ "platform_error", "classcl_1_1sycl_1_1platform__error.html", null ],
-      [ "profiling_error", "classcl_1_1sycl_1_1profiling__error.html", null ],
-      [ "feature_not_supported", "classcl_1_1sycl_1_1feature__not__supported.html", null ]
-    ] ],
+    [ "exception.hpp", "exception_8hpp.html", "exception_8hpp" ],
     [ "exception_list.hpp", "exception__list_8hpp.html", "exception__list_8hpp" ],
     [ "feature_test.hpp", "feature__test_8hpp.html", "feature__test_8hpp" ],
     [ "group.hpp", "group_8hpp.html", "group_8hpp" ],

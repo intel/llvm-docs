@@ -141,6 +141,8 @@ var group__sycl__api =
     ] ],
     [ "exception", "classcl_1_1sycl_1_1exception.html", [
       [ "exception", "classcl_1_1sycl_1_1exception.html#a8b1479cf8dda8089c5d8135c4c8a064a", null ],
+      [ "exception", "classcl_1_1sycl_1_1exception.html#a64fe234b1febc722835c2baec5daf31e", null ],
+      [ "exception", "classcl_1_1sycl_1_1exception.html#a7615f3465414d8551af331fd98ed147f", null ],
       [ "exception", "classcl_1_1sycl_1_1exception.html#a20f9834c3c472344f00cedd99390f834", null ],
       [ "exception", "classcl_1_1sycl_1_1exception.html#a2755752cadc0a065916b3fadd760dad5", null ],
       [ "exception", "classcl_1_1sycl_1_1exception.html#aa326bac3c0b44811d3c7633621c6d6ba", null ],

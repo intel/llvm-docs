@@ -8,7 +8,7 @@ var dir_b2f33c71d4aa5e7af42a1ca61ff5af1b =
     [ "device.cpp", "device_8cpp.html", "device_8cpp" ],
     [ "device_selector.cpp", "device__selector_8cpp.html", "device__selector_8cpp" ],
     [ "event.cpp", "event_8cpp.html", "event_8cpp" ],
-    [ "exception.cpp", "exception_8cpp.html", null ],
+    [ "exception.cpp", "exception_8cpp.html", "exception_8cpp" ],
     [ "exception_list.cpp", "exception__list_8cpp.html", null ],
     [ "function_pointer.cpp", "function__pointer_8cpp.html", "function__pointer_8cpp" ],
     [ "half_type.cpp", "half__type_8cpp.html", "half__type_8cpp" ],

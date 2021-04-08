@@ -894,7 +894,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160; </div>
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>, int, <a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17">access::mode</a>, <a class="code" href="namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598">access::target</a>, <a class="code" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9">access::placeholder</a>,</div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;            <span class="keyword">typename</span>&gt;</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>accessor;</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>;</div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160; </div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;<span class="preprocessor">#ifndef __SYCL_DEVICE_ONLY__</span></div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;  <span class="keyword">using</span> AccessorBaseHost::impl;</div>
@@ -902,7 +902,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160; </div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;  <span class="comment">// Default constructor for objects later initialized with __init member.</span></div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;  accessor()</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>()</div>
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    : impl({}, detail::InitializedVal&lt;AdjustedDim, range&gt;::template get&lt;0&gt;(),</div>
 <div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;            detail::InitializedVal&lt;AdjustedDim, range&gt;::template get&lt;0&gt;()) {}</div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160; </div>
@@ -1114,9 +1114,9 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;                detail::IsRunTimePropertyListT&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                (IsGlobalBuf || IsConstantBuf || IsHostBuf)&gt;&gt;</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;  accessor(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, TagT,</div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, TagT,</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;           <span class="keyword">const</span> property_list &amp;PropertyList = {})</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;      : accessor(BufferRef, PropertyList) {}</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, PropertyList) {}</div>
 <div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160; </div>
 <div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
 <div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;            <span class="keyword">typename</span> TagT, <span class="keyword">typename</span>... PropTypes,</div>
@@ -1124,10 +1124,10 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;                detail::IsCxPropertyList&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;                (IsGlobalBuf || IsConstantBuf || IsHostBuf)&gt;&gt;</div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;  accessor(</div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(</div>
 <div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;      buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, TagT,</div>
 <div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;      <span class="keyword">const</span> ONEAPI::accessor_property_list&lt;PropTypes...&gt; &amp;PropertyList = {})</div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;      : accessor(BufferRef, PropertyList) {}</div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, PropertyList) {}</div>
 <div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160; </div>
 <div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
@@ -1190,9 +1190,9 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;                detail::IsRunTimePropertyListT&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; !IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;                (IsGlobalBuf || IsConstantBuf || IsHostBuf)&gt;&gt;</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  accessor(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
 <div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;           TagT, <span class="keyword">const</span> property_list &amp;PropertyList = {})</div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;      : accessor(BufferRef, CommandGroupHandler, PropertyList) {}</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, CommandGroupHandler, PropertyList) {}</div>
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160; </div>
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;            <span class="keyword">typename</span> TagT, <span class="keyword">typename</span>... PropTypes,</div>
@@ -1200,11 +1200,11 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                detail::IsCxPropertyList&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; !IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;                (IsGlobalBuf || IsConstantBuf || IsHostBuf)&gt;&gt;</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;  accessor(</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(</div>
 <div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;      buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;      TagT,</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;      <span class="keyword">const</span> ONEAPI::accessor_property_list&lt;PropTypes...&gt; &amp;PropertyList = {})</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;      : accessor(BufferRef, CommandGroupHandler, PropertyList) {}</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, CommandGroupHandler, PropertyList) {}</div>
 <div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160; </div>
 <div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160; </div>
@@ -1242,7 +1242,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;  accessor(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef,</div>
 <div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;           range&lt;Dimensions&gt; AccessRange, TagT,</div>
 <div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;           <span class="keyword">const</span> property_list &amp;PropertyList = {})</div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;      : accessor(BufferRef, AccessRange, {}, PropertyList) {}</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, AccessRange, {}, PropertyList) {}</div>
 <div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160; </div>
 <div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
 <div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;            <span class="keyword">typename</span> TagT, <span class="keyword">typename</span>... PropTypes,</div>
@@ -1250,11 +1250,11 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;                detail::IsCxPropertyList&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;                (IsGlobalBuf || IsConstantBuf)&gt;&gt;</div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;  accessor(</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(</div>
 <div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;      buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, range&lt;Dimensions&gt; AccessRange,</div>
 <div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;      TagT,</div>
 <div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;      <span class="keyword">const</span> ONEAPI::accessor_property_list&lt;PropTypes...&gt; &amp;PropertyList = {})</div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;      : accessor(BufferRef, AccessRange, {}, PropertyList) {}</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, AccessRange, {}, PropertyList) {}</div>
 <div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160; </div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
@@ -1292,7 +1292,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;  accessor(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
 <div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;           range&lt;Dimensions&gt; AccessRange, TagT,</div>
 <div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;           <span class="keyword">const</span> property_list &amp;PropertyList = {})</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;      : accessor(BufferRef, CommandGroupHandler, AccessRange, {},</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, CommandGroupHandler, AccessRange, {},</div>
 <div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;                 PropertyList) {}</div>
 <div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160; </div>
 <div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
@@ -1301,11 +1301,11 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;                detail::IsCxPropertyList&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; !IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;                (IsGlobalBuf || IsConstantBuf || IsHostBuf)&gt;&gt;</div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  accessor(</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(</div>
 <div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;      buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;      range&lt;Dimensions&gt; AccessRange, TagT,</div>
 <div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;      <span class="keyword">const</span> ONEAPI::accessor_property_list&lt;PropTypes...&gt; &amp;PropertyList = {})</div>
-<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;      : accessor(BufferRef, CommandGroupHandler, AccessRange, {},</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, CommandGroupHandler, AccessRange, {},</div>
 <div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;                 PropertyList) {}</div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160; </div>
@@ -1376,7 +1376,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;  accessor(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef,</div>
 <div class="line"><a name="l01384"></a><span class="lineno"> 1384</span>&#160;           range&lt;Dimensions&gt; AccessRange, id&lt;Dimensions&gt; AccessOffset, TagT,</div>
 <div class="line"><a name="l01385"></a><span class="lineno"> 1385</span>&#160;           <span class="keyword">const</span> property_list &amp;PropertyList = {})</div>
-<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;      : accessor(BufferRef, AccessRange, AccessOffset, PropertyList) {}</div>
+<div class="line"><a name="l01386"></a><span class="lineno"> 1386</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, AccessRange, AccessOffset, PropertyList) {}</div>
 <div class="line"><a name="l01387"></a><span class="lineno"> 1387</span>&#160; </div>
 <div class="line"><a name="l01388"></a><span class="lineno"> 1388</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
 <div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;            <span class="keyword">typename</span> TagT, <span class="keyword">typename</span>... PropTypes,</div>
@@ -1384,11 +1384,11 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;                detail::IsCxPropertyList&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;                (IsGlobalBuf || IsConstantBuf)&gt;&gt;</div>
-<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;  accessor(</div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(</div>
 <div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160;      buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, range&lt;Dimensions&gt; AccessRange,</div>
 <div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;      id&lt;Dimensions&gt; AccessOffset, TagT,</div>
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;      <span class="keyword">const</span> ONEAPI::accessor_property_list&lt;PropTypes...&gt; &amp;PropertyList = {})</div>
-<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;      : accessor(BufferRef, AccessRange, AccessOffset, PropertyList) {}</div>
+<div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, AccessRange, AccessOffset, PropertyList) {}</div>
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160; </div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
@@ -1456,7 +1456,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;  accessor(buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;           range&lt;Dimensions&gt; AccessRange, id&lt;Dimensions&gt; AccessOffset, TagT,</div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;           <span class="keyword">const</span> property_list &amp;PropertyList = {})</div>
-<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;      : accessor(BufferRef, CommandGroupHandler, AccessRange, AccessOffset,</div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, CommandGroupHandler, AccessRange, AccessOffset,</div>
 <div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;                 PropertyList) {}</div>
 <div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160; </div>
 <div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = DataT, <span class="keywordtype">int</span> Dims = Dimensions, <span class="keyword">typename</span> AllocatorT,</div>
@@ -1465,11 +1465,11 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="line"><a name="l01472"></a><span class="lineno"> 1472</span>&#160;                detail::IsCxPropertyList&lt;PropertyListT&gt;::value &amp;&amp;</div>
 <div class="line"><a name="l01473"></a><span class="lineno"> 1473</span>&#160;                IsSameAsBuffer&lt;T, Dims&gt;() &amp;&amp; IsValidTag&lt;TagT&gt;() &amp;&amp; !IsPlaceH &amp;&amp;</div>
 <div class="line"><a name="l01474"></a><span class="lineno"> 1474</span>&#160;                (IsGlobalBuf || IsConstantBuf || IsHostBuf)&gt;&gt;</div>
-<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;  accessor(</div>
+<div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(</div>
 <div class="line"><a name="l01476"></a><span class="lineno"> 1476</span>&#160;      buffer&lt;T, Dims, AllocatorT&gt; &amp;BufferRef, handler &amp;CommandGroupHandler,</div>
 <div class="line"><a name="l01477"></a><span class="lineno"> 1477</span>&#160;      range&lt;Dimensions&gt; AccessRange, id&lt;Dimensions&gt; AccessOffset, TagT,</div>
 <div class="line"><a name="l01478"></a><span class="lineno"> 1478</span>&#160;      <span class="keyword">const</span> ONEAPI::accessor_property_list&lt;PropTypes...&gt; &amp;PropertyList = {})</div>
-<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;      : accessor(BufferRef, CommandGroupHandler, AccessRange, AccessOffset,</div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;      : <a class="code" href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">accessor</a>(BufferRef, CommandGroupHandler, AccessRange, AccessOffset,</div>
 <div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;                 PropertyList) {}</div>
 <div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160; </div>
@@ -2328,7 +2328,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a8d5e397ffe5aede6b455150254459c91"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a8d5e397ffe5aede6b455150254459c91">cl::sycl::detail::associateWithHandler</a></div><div class="ttdeci">void associateWithHandler(handler &amp;, AccessorBaseHost *, access::target)</div><div class="ttdef"><b>Definition:</b> <a href="handler__proxy_8cpp_source.html#l00017">handler_proxy.cpp:17</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4_html_a946b74cc9ddf2d54346647af6bea6856"><div class="ttname"><a href="classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1image_00_01IsPlaceholder_01_4.html#a946b74cc9ddf2d54346647af6bea6856">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::image, IsPlaceholder &gt;::accessor</a></div><div class="ttdeci">accessor(cl::sycl::image&lt; Dimensions, AllocatorT &gt; &amp;Image, handler &amp;CommandGroupHandler)</div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l01975">accessor.hpp:1975</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1invalid__object__error_html"><div class="ttname"><a href="classcl_1_1sycl_1_1invalid__object__error.html">cl::sycl::invalid_object_error</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00098">exception.hpp:98</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1invalid__object__error_html"><div class="ttname"><a href="classcl_1_1sycl_1_1invalid__object__error.html">cl::sycl::invalid_object_error</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00104">exception.hpp:104</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_a0c5593ca4fbd8828493d37b723b9261ea0aa0be2a866411d9ff03515227454947"><div class="ttname"><a href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea0aa0be2a866411d9ff03515227454947">cl::sycl::aspect::gpu</a></div><div class="ttdeci">@ gpu</div></div>
 <div class="ttc" id="aproperty__list_8hpp_html"><div class="ttname"><a href="property__list_8hpp.html">property_list.hpp</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1accessor_html_aae6a8d0681662e2dfc04fac07c66f2ca"><div class="ttname"><a href="classcl_1_1sycl_1_1accessor.html#aae6a8d0681662e2dfc04fac07c66f2ca">cl::sycl::accessor::get_pointer</a></div><div class="ttdeci">constant_ptr&lt; DataT &gt; get_pointer() const</div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l01597">accessor.hpp:1597</a></div></div>
@@ -2448,7 +2448,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="ttc" id="aclasscl_1_1sycl_1_1accessor_html_ac6ab59810294ad4462742ad6e79df4dc"><div class="ttname"><a href="classcl_1_1sycl_1_1accessor.html#ac6ab59810294ad4462742ad6e79df4dc">cl::sycl::accessor::accessor</a></div><div class="ttdeci">accessor(buffer&lt; T, Dims, AllocatorT &gt; &amp;BufferRef, range&lt; Dimensions &gt; AccessRange, id&lt; Dimensions &gt; AccessOffset, const ONEAPI::accessor_property_list&lt; PropTypes... &gt; &amp;PropertyList={})</div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l01353">accessor.hpp:1353</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1handler_html"><div class="ttname"><a href="classcl_1_1sycl_1_1handler.html">cl::sycl::handler</a></div><div class="ttdoc">Command group handler class.</div><div class="ttdef"><b>Definition:</b> <a href="handler_8hpp_source.html#l00310">handler.hpp:310</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1image_html"><div class="ttname"><a href="classcl_1_1sycl_1_1image.html">cl::sycl::image</a></div><div class="ttdoc">Defines a shared image data.</div><div class="ttdef"><b>Definition:</b> <a href="image__impl_8hpp_source.html#l00029">image_impl.hpp:29</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1feature__not__supported_html"><div class="ttname"><a href="classcl_1_1sycl_1_1feature__not__supported.html">cl::sycl::feature_not_supported</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00110">exception.hpp:110</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1feature__not__supported_html"><div class="ttname"><a href="classcl_1_1sycl_1_1feature__not__supported.html">cl::sycl::feature_not_supported</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00116">exception.hpp:116</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1accessor_html_a14c3f1a038eb6e7dd2ee8dd7a2a4b597"><div class="ttname"><a href="classcl_1_1sycl_1_1accessor.html#a14c3f1a038eb6e7dd2ee8dd7a2a4b597">cl::sycl::accessor::get_pointer</a></div><div class="ttdeci">DataT * get_pointer() const</div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l01581">accessor.hpp:1581</a></div></div>
 <div class="ttc" id="aimage__ocl__types_8hpp_html"><div class="ttname"><a href="image__ocl__types_8hpp.html">image_ocl_types.hpp</a></div></div>
 <div class="ttc" id="aaccessor__impl_8hpp_html"><div class="ttname"><a href="accessor__impl_8hpp.html">accessor_impl.hpp</a></div></div>
@@ -2519,6 +2519,7 @@ $(document).ready(function(){initNavTree('accessor_8hpp_source.html',''); initRe
 <div class="ttc" id="aclasscl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4_html_a6d18ff74570ff27c2771918bd85e34f2"><div class="ttname"><a href="classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a6d18ff74570ff27c2771918bd85e34f2">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder &gt;::getLinearIndex</a></div><div class="ttdeci">size_t getLinearIndex(id&lt; Dims &gt; Id) const</div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l01838">accessor.hpp:1838</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1atomic_html"><div class="ttname"><a href="classcl_1_1sycl_1_1atomic.html">cl::sycl::atomic</a></div><div class="ttdef"><b>Definition:</b> <a href="atomic_8hpp_source.html#l00175">atomic.hpp:175</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1host__accessor_html_ace1c8517112d293b6c88538e8d4de4fc"><div class="ttname"><a href="classcl_1_1sycl_1_1host__accessor.html#ace1c8517112d293b6c88538e8d4de4fc">cl::sycl::host_accessor::__init</a></div><div class="ttdeci">void __init(typename accessor&lt; DataT, Dimensions, AccessMode, target::host_buffer, access::placeholder::false_t &gt;::ConcreteASPtrType Ptr, range&lt; AdjustedDim &gt; AccessRange, range&lt; AdjustedDim &gt; MemRange, id&lt; AdjustedDim &gt; Offset)</div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l02139">accessor.hpp:2139</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_html_a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b"><div class="ttname"><a href="namespacecl_1_1sycl.html#a96f353c1d5d9d8192ef124ea43b68dc8a9efcb42ee143be09c45d33ed2fba175b">cl::sycl::errc::accessor</a></div><div class="ttdeci">@ accessor</div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1DecoratedType_html"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1DecoratedType.html">cl::sycl::detail::DecoratedType</a></div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00150">access.hpp:150</a></div></div>
 <div class="ttc" id="aspirv__types_8hpp_html"><div class="ttname"><a href="spirv__types_8hpp.html">spirv_types.hpp</a></div></div>
 <div class="ttc" id="aproperty__list__conversion_8hpp_html"><div class="ttname"><a href="property__list__conversion_8hpp.html">property_list_conversion.hpp</a></div></div>

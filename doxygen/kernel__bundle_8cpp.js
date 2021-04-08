@@ -2,6 +2,7 @@ var kernel__bundle_8cpp =
 [
     [ "build_impl", "kernel__bundle_8cpp.html#a3a194f465b82857b8e0e9a2c9246f908", null ],
     [ "compile_impl", "kernel__bundle_8cpp.html#a3531916d9a100ddaec5c176cbbe2e459", null ],
+    [ "find_device_intersection", "kernel__bundle_8cpp.html#a5c903b0fe09cd7b39b8d136edee94583", null ],
     [ "get_kernel_bundle_impl", "kernel__bundle_8cpp.html#a2c88f91a85d733a1521e5511803dd552", null ],
     [ "get_kernel_bundle_impl", "kernel__bundle_8cpp.html#a8f1dd038058bba0394725e0c293e95fa", null ],
     [ "get_kernel_bundle_impl", "kernel__bundle_8cpp.html#ad34b8958b06d428394612df523d82211", null ],

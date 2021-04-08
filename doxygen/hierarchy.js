@@ -283,7 +283,11 @@ var hierarchy =
     [ "cl::sycl::INTEL::gpu::detail::element_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1element__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
     [ "cl::sycl::ONEAPI::detail::EmptyReductionPredicate", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate.html", null ],
     [ "cl::sycl::detail::EnqueueResultT", "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html", null ],
+    [ "cl::sycl::detail::EqualByNameComp", "structcl_1_1sycl_1_1detail_1_1EqualByNameComp.html", null ],
     [ "cl::sycl::detail::EqualTo< T >", "structcl_1_1sycl_1_1detail_1_1EqualTo.html", null ],
+    [ "error_category", null, [
+      [ "cl::sycl::detail::SYCLCategory", "classcl_1_1sycl_1_1detail_1_1SYCLCategory.html", null ]
+    ] ],
     [ "cl::sycl::INTEL::gpu::detail::esimd_apply_prod< T0, T1, SZ >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__prod.html", null ],
     [ "cl::sycl::INTEL::gpu::detail::esimd_apply_reduced_max< T0, T1, SZ >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__max.html", null ],
     [ "cl::sycl::INTEL::gpu::detail::esimd_apply_reduced_min< T0, T1, SZ >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1esimd__apply__reduced__min.html", null ],
@@ -432,10 +436,13 @@ var hierarchy =
     [ "std::hash< cl::sycl::buffer< T, dimensions, AllocatorT > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1buffer_3_01T_00_01dimensions_00_01AllocatorT_01_4_01_4.html", null ],
     [ "std::hash< cl::sycl::context >", "structstd_1_1hash_3_01cl_1_1sycl_1_1context_01_4.html", null ],
     [ "std::hash< cl::sycl::device >", "structstd_1_1hash_3_01cl_1_1sycl_1_1device_01_4.html", null ],
+    [ "std::hash< cl::sycl::device_image< State > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1device__image_3_01State_01_4_01_4.html", null ],
     [ "std::hash< cl::sycl::event >", "structstd_1_1hash_3_01cl_1_1sycl_1_1event_01_4.html", null ],
     [ "std::hash< cl::sycl::half >", "structstd_1_1hash_3_01cl_1_1sycl_1_1half_01_4.html", null ],
     [ "std::hash< cl::sycl::image< Dimensions, AllocatorT > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1image_3_01Dimensions_00_01AllocatorT_01_4_01_4.html", null ],
     [ "std::hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", null ],
+    [ "std::hash< cl::sycl::kernel_bundle< State > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel__bundle_3_01State_01_4_01_4.html", null ],
+    [ "std::hash< cl::sycl::kernel_id >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel__id_01_4.html", null ],
     [ "std::hash< cl::sycl::platform >", "structstd_1_1hash_3_01cl_1_1sycl_1_1platform_01_4.html", null ],
     [ "std::hash< cl::sycl::program >", "structstd_1_1hash_3_01cl_1_1sycl_1_1program_01_4.html", null ],
     [ "std::hash< cl::sycl::queue >", "structstd_1_1hash_3_01cl_1_1sycl_1_1queue_01_4.html", null ],
@@ -1032,7 +1039,8 @@ var hierarchy =
       [ "cl::sycl::INTEL::gpu::detail::is_simd_view_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< INTEL::property::buffer_location >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01INTEL_1_1property_1_1buffer__location_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_alias >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__alias_01_4.html", null ],
-      [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ]
+      [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ],
+      [ "std::is_error_condition_enum< cl::sycl::errc >", "structstd_1_1is__error__condition__enum_3_01cl_1_1sycl_1_1errc_01_4.html", null ]
     ] ],
     [ "cl::sycl::detail::TryToGetElementType< T >", "classcl_1_1sycl_1_1detail_1_1TryToGetElementType.html", null ],
     [ "cl::sycl::detail::TryToGetNumElements< T, Enable >", "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements.html", null ],
