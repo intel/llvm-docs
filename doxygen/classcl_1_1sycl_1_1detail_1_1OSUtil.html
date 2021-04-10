@@ -136,6 +136,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a950ca63648eb5c4e7c693a2064a8325a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a950ca63648eb5c4e7c693a2064a8325a">alignedFree</a> (void *Ptr)</td></tr>
 <tr class="memdesc:a950ca63648eb5c4e7c693a2064a8325a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocates the memory referenced by <code>Ptr</code>.  <a href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a950ca63648eb5c4e7c693a2064a8325a">More...</a><br /></td></tr>
 <tr class="separator:a950ca63648eb5c4e7c693a2064a8325a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792b0e598d342119073f85c87aaa6bd2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a792b0e598d342119073f85c87aaa6bd2">makeDir</a> (const <a class="el" href="classchar.html">char</a> *Dir)</td></tr>
+<tr class="memdesc:a792b0e598d342119073f85c87aaa6bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make directory recursively and returns zero code on success.  <a href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a792b0e598d342119073f85c87aaa6bd2">More...</a><br /></td></tr>
+<tr class="separator:a792b0e598d342119073f85c87aaa6bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c14431c25cb56c9630a6aaa67d2572"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a33c14431c25cb56c9630a6aaa67d2572">isPathPresent</a> (const std::string &amp;Path)</td></tr>
+<tr class="memdesc:a33c14431c25cb56c9630a6aaa67d2572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if specified path is present.  <a href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a33c14431c25cb56c9630a6aaa67d2572">More...</a><br /></td></tr>
+<tr class="separator:a33c14431c25cb56c9630a6aaa67d2572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -151,7 +157,7 @@ Static Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Groups the OS-dependent services. </p>
 
-<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00049">49</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00051">51</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a94c049ca9c19afbb843459e67af57ba7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94c049ca9c19afbb843459e67af57ba7">&#9670;&nbsp;</a></span>alignedAlloc()</h2>
@@ -189,7 +195,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Allocates <code>NumBytes</code> bytes of uninitialized storage whose alignment is specified by <code>Alignment</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00240">240</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00255">255</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="usm_8hpp_source.html#l00145">cl::sycl::aligned_alloc()</a>.</p>
 
@@ -221,7 +227,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Deallocates the memory referenced by <code>Ptr</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00253">253</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00268">268</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>.</p>
 
@@ -307,7 +313,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Returns the amount of RAM available for the operating system. </p>
 
-<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00223">223</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00238">238</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
 
 </div>
 </div>
@@ -339,6 +345,70 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a33c14431c25cb56c9630a6aaa67d2572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c14431c25cb56c9630a6aaa67d2572">&#9670;&nbsp;</a></span>isPathPresent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool cl::sycl::detail::OSUtil::isPathPresent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>Path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if specified path is present. </p>
+
+<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00090">90</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="persistent__device__code__cache_8cpp_source.html#l00127">cl::sycl::detail::PersistentDeviceCodeCache::getItemFromDisc()</a>, and <a class="el" href="persistent__device__code__cache_8cpp_source.html#l00070">cl::sycl::detail::PersistentDeviceCodeCache::putItemToDisc()</a>.</p>
+
+</div>
+</div>
+<a id="a792b0e598d342119073f85c87aaa6bd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792b0e598d342119073f85c87aaa6bd2">&#9670;&nbsp;</a></span>makeDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cl::sycl::detail::OSUtil::makeDir </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classchar.html">char</a> *&#160;</td>
+          <td class="paramname"><em>Dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Make directory recursively and returns zero code on success. </p>
+
+<p class="definition">Definition at line <a class="el" href="os__util_8cpp_source.html#l00280">280</a> of file <a class="el" href="os__util_8cpp_source.html">os_util.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="persistent__device__code__cache_8cpp_source.html#l00070">cl::sycl::detail::PersistentDeviceCodeCache::putItemToDisc()</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="adb0fd038c22fa4cf2b01f92b72006296"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb0fd038c22fa4cf2b01f92b72006296">&#9670;&nbsp;</a></span>DirSep</h2>
@@ -360,7 +430,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00071">71</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00073">73</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
 
 </div>
 </div>
@@ -387,7 +457,7 @@ Static Public Attributes</h2></td></tr>
 <p>Dummy module handle to designate non-existing module for a device binary image loaded from file e.g. </p>
 <p>via SYCL_USE_KERNEL_SPV env var. </p>
 
-<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00066">66</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00068">68</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +483,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Module handle for the executable module - it is assumed there is always single one at most. </p>
 
-<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00062">62</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="os__util_8hpp_source.html#l00064">64</a> of file <a class="el" href="os__util_8hpp_source.html">os_util.hpp</a>.</p>
 
 </div>
 </div>

@@ -174,6 +174,46 @@ subject to change. Do not rely on these variables in production code.</p>
 <td>Integer</td>
 <td>Enforce host unified memory support or lack of it for the execution graph builder. If set to 0, it is enforced as not supported by all devices. If set to 1, it is enforced as supported by all devices.</td>
 </tr>
+<tr>
+<td>SYCL_CACHE_DIR</td>
+<td>Path</td>
+<td>Path to persistent cache root directory. Default values are <code>%AppData%\libsycl_cache</code> for Windows and <code>$XDG_CACHE_HOME/libsycl_cache</code> on Linux, if XDG_CACHE_HOME is not set then <code>$HOME/.cache/libsycl_cache</code>.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_TRACE</td>
+<td>Any(*)</td>
+<td>Enables printing messages to std::cerr when non-blocking failures happen (e.g. unable to access cache item file). Default values if off.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_DISABLE_PERSISTENT</td>
+<td>Any(*)</td>
+<td>Switches persistent cache switch off. Default value is ON.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_EVICTION_DISABLE</td>
+<td>Any(*)</td>
+<td>Switches cache eviction off. Default value is ON.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_MAX_SIZE</td>
+<td>Positive integer</td>
+<td>Cache eviction is triggered once total size of cached images exceeds the value in megabytes (default - 8 192 for 8 GB). Set to 0 to disable size-based cache eviction.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_THRESHOLD</td>
+<td>Positive integer</td>
+<td>Cache eviction threshold in days (default value is 7 for 1 week). Set to 0 for disabling time-based cache eviction.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</td>
+<td>Positive integer</td>
+<td>Minimum size of device code image in bytes which is reasonable to cache on disk because disk access operation may take more time than do JIT compilation for it. Default value is 0 to cache all images.</td>
+</tr>
+<tr>
+<td>SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</td>
+<td>Positive integer</td>
+<td>Maximum size of device image in bytes which is cached. Too big kernels may overload disk too fast. Default value is 1 GB.</td>
+</tr>
 </tbody>
 </table><p><code class="docutils literal notranslate"><span class="pre">(*)</span> <span class="pre">Note:</span> <span class="pre">Any</span> <span class="pre">means</span> <span class="pre">this</span> <span class="pre">environment</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">effective</span> <span class="pre">when</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">any</span> <span class="pre">non-null</span> <span class="pre">value.</span></code></p>
 <section id="sycl-print-execution-graph-options">

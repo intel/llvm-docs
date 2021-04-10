@@ -114,69 +114,85 @@ $(document).ready(function(){initNavTree('os__util_8hpp_source.html',''); initRe
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_WINDOWS</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// Windows platform</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifdef _WIN64</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// 64-bit Windows platform</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// 32-bit Windows platform</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif // _WIN64</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#elif __linux__</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// Linux platform</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_LINUX</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_POSIX_SUPPORT</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#elif defined(__APPLE__) &amp;&amp; defined(__MACH__)</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Apple OSX</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_DARWIN</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_POSIX_SUPPORT</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#error &quot;Unsupported compiler or OS&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // _WIN32</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a>(<a class="code" href="namespacecl.html">cl</a>) {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span>sycl {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span>detail {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">   46</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> = intptr_t;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html">   49</a></span>&#160;<span class="keyword">class </span>__SYCL_EXPORT <a class="code" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html">OSUtil</a> {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">static</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> getOSModuleHandle(<span class="keyword">const</span> <span class="keywordtype">void</span> *VirtAddr);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">static</span> std::string getCurrentDSODir();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">static</span> std::string getDirName(<span class="keyword">const</span> <span class="keywordtype">char</span> *Path);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a9edaca3fced53dd24240c77c016be876">   62</a></span>&#160;  <span class="keyword">static</span> constexpr <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> ExeModuleHandle = -1;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#ac103c42a32ed4c27ce6f566e7659d184">   66</a></span>&#160;  <span class="keyword">static</span> constexpr <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> DummyModuleHandle = -2;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#ifdef __SYCL_RT_OS_WINDOWS</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span> *DirSep = <span class="stringliteral">&quot;\\&quot;</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#adb0fd038c22fa4cf2b01f92b72006296">   71</a></span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span> *DirSep = <span class="stringliteral">&quot;/&quot;</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">size_t</span> getOSMemSize();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1usm.html#a675260c4593b8d167359df230591fc82">alignedAlloc</a>(<span class="keywordtype">size_t</span> Alignment, <span class="keywordtype">size_t</span> NumBytes);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> alignedFree(<span class="keywordtype">void</span> *Ptr);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_WINDOWS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Windows platform</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifdef _WIN64</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// 64-bit Windows platform</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// 32-bit Windows platform</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif // _WIN64</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#elif __linux__</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Linux platform</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_LINUX</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_POSIX_SUPPORT</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#elif defined(__APPLE__) &amp;&amp; defined(__MACH__)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// Apple OSX</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_DARWIN</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define __SYCL_RT_OS_POSIX_SUPPORT</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#error &quot;Unsupported compiler or OS&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // _WIN32</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a>(<a class="code" href="namespacecl.html">cl</a>) {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span>sycl {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>detail {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">   48</a></span>&#160;<span class="keyword">using</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> = intptr_t;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html">   51</a></span>&#160;<span class="keyword">class </span>__SYCL_EXPORT <a class="code" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html">OSUtil</a> {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">static</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> getOSModuleHandle(<span class="keyword">const</span> <span class="keywordtype">void</span> *VirtAddr);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">static</span> std::string getCurrentDSODir();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">static</span> std::string <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a4fee3c8d03f15fb775c2ea8c4a92df58">getDirName</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *Path);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a9edaca3fced53dd24240c77c016be876">   64</a></span>&#160;  <span class="keyword">static</span> constexpr <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> ExeModuleHandle = -1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#ac103c42a32ed4c27ce6f566e7659d184">   68</a></span>&#160;  <span class="keyword">static</span> constexpr <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">OSModuleHandle</a> DummyModuleHandle = -2;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#ifdef __SYCL_RT_OS_WINDOWS</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span> *DirSep = <span class="stringliteral">&quot;\\&quot;</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#adb0fd038c22fa4cf2b01f92b72006296">   73</a></span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span> *DirSep = <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">size_t</span> getOSMemSize();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> *<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1usm.html#a675260c4593b8d167359df230591fc82">alignedAlloc</a>(<span class="keywordtype">size_t</span> Alignment, <span class="keywordtype">size_t</span> NumBytes);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> alignedFree(<span class="keywordtype">void</span> *Ptr);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> makeDir(<span class="keyword">const</span> <span class="keywordtype">char</span> *Dir);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a33c14431c25cb56c9630a6aaa67d2572">   90</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a33c14431c25cb56c9630a6aaa67d2572">isPathPresent</a>(<span class="keyword">const</span> std::string &amp;Path) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#ifdef __SYCL_RT_OS_WINDOWS</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">struct </span>_stat Stat;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> !_stat(Path.c_str(), &amp;Stat);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">struct </span>stat Stat;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> !stat(Path.c_str(), &amp;Stat);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a4fee3c8d03f15fb775c2ea8c4a92df58"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a4fee3c8d03f15fb775c2ea8c4a92df58">cl::sycl::detail::getDirName</a></div><div class="ttdeci">std::string getDirName(const char *Path)</div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_1_1usm_html_a675260c4593b8d167359df230591fc82"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail_1_1usm.html#a675260c4593b8d167359df230591fc82">cl::sycl::detail::usm::alignedAlloc</a></div><div class="ttdeci">void * alignedAlloc(size_t Alignment, size_t Bytes, const context &amp;Ctxt, const device &amp;Dev, cl::sycl::usm::alloc Kind)</div><div class="ttdef"><b>Definition:</b> <a href="usm__impl_8cpp_source.html#l00074">usm_impl.cpp:74</a></div></div>
 <div class="ttc" id="aexport_8hpp_html"><div class="ttname"><a href="export_8hpp.html">export.hpp</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1OSUtil_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1OSUtil.html">cl::sycl::detail::OSUtil</a></div><div class="ttdoc">Groups the OS-dependent services.</div><div class="ttdef"><b>Definition:</b> <a href="os__util_8hpp_source.html#l00049">os_util.hpp:49</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1OSUtil_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1OSUtil.html">cl::sycl::detail::OSUtil</a></div><div class="ttdoc">Groups the OS-dependent services.</div><div class="ttdef"><b>Definition:</b> <a href="os__util_8hpp_source.html#l00051">os_util.hpp:51</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1OSUtil_html_a33c14431c25cb56c9630a6aaa67d2572"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1OSUtil.html#a33c14431c25cb56c9630a6aaa67d2572">cl::sycl::detail::OSUtil::isPathPresent</a></div><div class="ttdeci">static bool isPathPresent(const std::string &amp;Path)</div><div class="ttdoc">Checks if specified path is present.</div><div class="ttdef"><b>Definition:</b> <a href="os__util_8hpp_source.html#l00090">os_util.hpp:90</a></div></div>
 <div class="ttc" id="adefines_8hpp_html"><div class="ttname"><a href="defines_8hpp.html">defines.hpp</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">---— Error handling, matching OpenCL plugin semantics.</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_aec90012b596acd79e65ed3df89dd7c1e"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">cl::sycl::detail::OSModuleHandle</a></div><div class="ttdeci">intptr_t OSModuleHandle</div><div class="ttdoc">Uniquely identifies an operating system module (executable or a dynamic library)</div><div class="ttdef"><b>Definition:</b> <a href="os__util_8hpp_source.html#l00046">os_util.hpp:46</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_aec90012b596acd79e65ed3df89dd7c1e"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#aec90012b596acd79e65ed3df89dd7c1e">cl::sycl::detail::OSModuleHandle</a></div><div class="ttdeci">intptr_t OSModuleHandle</div><div class="ttdoc">Uniquely identifies an operating system module (executable or a dynamic library)</div><div class="ttdef"><b>Definition:</b> <a href="os__util_8hpp_source.html#l00048">os_util.hpp:48</a></div></div>
 <div class="ttc" id="adefines__elementary_8hpp_html_af014229c51476c8c275e6e94d0549384"><div class="ttname"><a href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a></div><div class="ttdeci">#define __SYCL_INLINE_NAMESPACE(X)</div><div class="ttdef"><b>Definition:</b> <a href="defines__elementary_8hpp_source.html#l00012">defines_elementary.hpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -206,15 +206,8 @@ SYCL_PROGRAM_LINK_OPTIONS);</p></li>
 </section>
 <section id="cache-configuration">
 <h2>Cache configuration<a class="headerlink" href="#cache-configuration" title="Permalink to this headline">¶</a></h2>
-<p>There is set of configuration parameters which can be set as environment variables or parameters in <code class="docutils literal notranslate"><span class="pre">sycl.conf</span></code>  and affect cache behavior:
-| Environment variable | Values | Description |
-| ——————– | —— | ———– |
-| <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_DIR</span></code>| Path | Path to persistent cache root directory. Default values are <code class="docutils literal notranslate"><span class="pre">%AppData%\Intel\sycl_program_cache</span></code> for Windows and <code class="docutils literal notranslate"><span class="pre">$HOME/intel/sycl_program_cache</span></code> on Linux. |
-| <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_ENABLED</span></code> | ON, OFF | Switches persistent cache switch  on or off. Default value is ON. |
-| <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_SIZE</span></code> | Positive integer | Cache eviction is triggered once total size of cached images exceeds the value in megabytes (default - 8 192 for 8 GB). Set to 0 to disable size-based cache eviction. |
-| <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_THRESHOLD</span></code> | Positive integer | Cache eviction threshold in days (default value is 7 for 1 week). Set to 0 for disabling time-based cache eviction. |
-| <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</span></code> | Positive integer | Minimum size of device code image in kilobytes which is reasonable to cache on disk because disk access operation may take more time than do JIT compilation for it. Default value is 0 to cache all images. |
-| <code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</span></code> | Positive integer | Maximum size of device image in megabytes which is cached. Too big kernels may overload disk too fast. Default value is 0 to cache all images. |</p>
+<p>The environment variables which affect cache behavior are described in
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/EnvironmentVariables">EnvironmentVariables.md</a>.</p>
 </section>
 <section id="implementation-details">
 <h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
