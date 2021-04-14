@@ -195,8 +195,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a58efbc58a34b60cb59f5896bf438e015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42d6b96250f206b876e3338cd2a69cde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a42d6b96250f206b876e3338cd2a69cde">resetCommandListFenceEntry</a> (command_list_fence_map_t::value_type &amp;ZeCommandList, bool MakeAvailable)</td></tr>
 <tr class="separator:a42d6b96250f206b876e3338cd2a69cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0c09bcb63b05d67279464a02ea4016f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#ae0c09bcb63b05d67279464a02ea4016f">executeCommandList</a> (ze_command_list_handle_t ZeCommandList, ze_fence_handle_t ZeFence, bool IsBlocking=false, bool OKToBatchCommand=false)</td></tr>
-<tr class="separator:ae0c09bcb63b05d67279464a02ea4016f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f26976e6d538a4b7582e90e0dd9859c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a8f26976e6d538a4b7582e90e0dd9859c">executeCommandList</a> (ze_command_list_handle_t ZeCommandList, ze_fence_handle_t ZeFence, <a class="el" href="pi_8h.html#a6cb8d5181350af7ff4015dbc9a792e21">pi_event</a> Event, bool IsBlocking=false, bool OKToBatchCommand=false)</td></tr>
+<tr class="separator:a8f26976e6d538a4b7582e90e0dd9859c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a660f50bdb62bb95130d6f5145eeff122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct__pi__queue.html#a660f50bdb62bb95130d6f5145eeff122">executeOpenCommandList</a> ()</td></tr>
 <tr class="separator:a660f50bdb62bb95130d6f5145eeff122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -468,7 +468,7 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pi__level__zero_8hpp_source.html#l00362">NumTimesClosedEarly</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00363">NumTimesClosedFull</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00351">QueueBatchSize</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00356">UseDynamicBatching</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00896">executeOpenCommandList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00898">executeOpenCommandList()</a>.</p>
 
 </div>
 </div>
@@ -503,8 +503,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0c09bcb63b05d67279464a02ea4016f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0c09bcb63b05d67279464a02ea4016f">&#9670;&nbsp;</a></span>executeCommandList()</h2>
+<a id="a8f26976e6d538a4b7582e90e0dd9859c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f26976e6d538a4b7582e90e0dd9859c">&#9670;&nbsp;</a></span>executeCommandList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,6 +520,12 @@ Public Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">ze_fence_handle_t&#160;</td>
           <td class="paramname"><em>ZeFence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a6cb8d5181350af7ff4015dbc9a792e21">pi_event</a>&#160;</td>
+          <td class="paramname"><em>Event</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -543,9 +549,9 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00842">842</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00052">die()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00671">getZeCommandListIsCopyList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00892">isBatchingAllowed()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00351">QueueBatchSize</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00115">ZE_CALL</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00312">ZeComputeCommandQueue</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00315">ZeCopyCommandQueue</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00341">ZeOpenCommandList</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00342">ZeOpenCommandListFence</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00343">ZeOpenCommandListSize</a>.</p>
+<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00052">die()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00671">getZeCommandListIsCopyList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00894">isBatchingAllowed()</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00338">LastCommandEvent</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00351">QueueBatchSize</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00115">ZE_CALL</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00312">ZeComputeCommandQueue</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00315">ZeCopyCommandQueue</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00341">ZeOpenCommandList</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00342">ZeOpenCommandListFence</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00343">ZeOpenCommandListSize</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l04475">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04534">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04713">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05089">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00896">executeOpenCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04329">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04397">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03716">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04792">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04916">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05775">piextUSMEnqueueMemAdvise()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05708">piextUSMEnqueuePrefetch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l04472">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04529">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04707">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05078">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00898">executeOpenCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04330">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04396">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03718">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04784">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04907">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05762">piextUSMEnqueueMemAdvise()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05696">piextUSMEnqueuePrefetch()</a>.</p>
 
 </div>
 </div>
@@ -564,11 +570,11 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00896">896</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00898">898</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00341">ZeOpenCommandList</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00342">ZeOpenCommandListFence</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00343">ZeOpenCommandListSize</a>.</p>
+<p class="reference">References <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00338">LastCommandEvent</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00341">ZeOpenCommandList</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00342">ZeOpenCommandListFence</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00343">ZeOpenCommandListSize</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02390">piQueueFinish()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02392">piQueueFinish()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -764,7 +770,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00892">892</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pi__level__zero_8cpp_source.html#l00894">894</a> of file <a class="el" href="pi__level__zero_8cpp_source.html">pi_level_zero.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi__level__zero_8hpp_source.html#l00351">QueueBatchSize</a>.</p>
 
@@ -791,7 +797,7 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00527">PI_QUEUE_OUT_OF_ORDER_EXEC_MODE_ENABLE</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00389">PiQueueProperties</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00921">_pi_ze_event_list_t::createAndRetainPiZeEventList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04792">piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04916">piEnqueueMemUnmap()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00923">_pi_ze_event_list_t::createAndRetainPiZeEventList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04784">piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04907">piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -825,7 +831,7 @@ Public Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="pi__level__zero_8hpp_source.html#l00320">Context</a>, <a class="el" href="pi_8h_source.html#l00074">PI_SUCCESS</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00115">ZE_CALL</a>, <a class="el" href="pi__level__zero_8hpp_source.html#l00230">_pi_context::ZeCommandListCacheMutex</a>, and <a class="el" href="pi__level__zero_8hpp_source.html#l00234">_pi_context::ZeCopyCommandListCache</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -844,7 +850,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00320">320</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00482">createEventAndAssociateQueue()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04475">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04534">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04713">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05089">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04329">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04397">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03716">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04792">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04916">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03887">piEventGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04129">piEventRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05775">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05708">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02299">piQueueGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00610">resetCommandListFenceEntry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00482">createEventAndAssociateQueue()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04472">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04529">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04707">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05078">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04330">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04396">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03718">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04784">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04907">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03888">piEventGetInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04130">piEventRelease()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05762">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05696">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02301">piQueueGetInfo()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00610">resetCommandListFenceEntry()</a>.</p>
 
 </div>
 </div>
@@ -880,7 +886,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00325">325</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03925">piEventGetProfilingInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05775">piextUSMEnqueueMemAdvise()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02299">piQueueGetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03926">piEventGetProfilingInfo()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05762">piextUSMEnqueueMemAdvise()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02301">piQueueGetInfo()</a>.</p>
 
 </div>
 </div>
@@ -934,7 +940,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00338">338</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00921">_pi_ze_event_list_t::createAndRetainPiZeEventList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04475">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04534">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04713">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05089">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04329">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04397">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03716">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04792">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04916">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05775">piextUSMEnqueueMemAdvise()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l05708">piextUSMEnqueuePrefetch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00923">_pi_ze_event_list_t::createAndRetainPiZeEventList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00898">executeOpenCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04330">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04784">piEnqueueMemBufferMap()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l04907">piEnqueueMemUnmap()</a>.</p>
 
 </div>
 </div>
@@ -952,7 +958,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00362">362</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -970,7 +976,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00363">363</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -988,7 +994,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00332">332</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l04475">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04534">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04713">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05089">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04329">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04397">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03716">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04792">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05287">piEnqueueMemImageFill()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04916">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05350">piEnqueueNativeKernel()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02408">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05775">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05708">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02390">piQueueFinish()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02332">piQueueRetain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l04472">enqueueMemCopyHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04529">enqueueMemCopyRectHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04707">enqueueMemFillHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05078">enqueueMemImageCommandHelper()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04330">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04396">piEnqueueEventsWaitWithBarrier()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l03718">piEnqueueKernelLaunch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04784">piEnqueueMemBufferMap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05275">piEnqueueMemImageFill()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04907">piEnqueueMemUnmap()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05338">piEnqueueNativeKernel()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02410">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05762">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l05696">piextUSMEnqueuePrefetch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02392">piQueueFinish()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02334">piQueueRetain()</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1048,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00351">351</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00892">isBatchingAllowed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00799">adjustBatchSizeForFullBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00820">adjustBatchSizeForPartialBatch()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00894">isBatchingAllowed()</a>.</p>
 
 </div>
 </div>
@@ -1114,7 +1120,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00383">383</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00671">getZeCommandListIsCopyList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00671">getZeCommandListIsCopyList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1138,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00312">312</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04329">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02408">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02390">piQueueFinish()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04330">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02410">piextQueueGetNativeHandle()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02392">piQueueFinish()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1156,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00315">315</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04329">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02390">piQueueFinish()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02340">piQueueRelease()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l04330">piEnqueueEventsWait()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l02392">piQueueFinish()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l02342">piQueueRelease()</a>.</p>
 
 </div>
 </div>
@@ -1168,7 +1174,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00341">341</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00896">executeOpenCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00898">executeOpenCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1192,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00342">342</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00896">executeOpenCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, <a class="el" href="pi__level__zero_8cpp_source.html#l00898">executeOpenCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00682">_pi_context::getAvailableCommandList()</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1210,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="pi__level__zero_8hpp_source.html#l00343">343</a> of file <a class="el" href="pi__level__zero_8hpp_source.html">pi_level_zero.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00896">executeOpenCommandList()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__level__zero_8cpp_source.html#l00842">executeCommandList()</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l00898">executeOpenCommandList()</a>.</p>
 
 </div>
 </div>

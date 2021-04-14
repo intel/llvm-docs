@@ -9,7 +9,7 @@ var struct__pi__queue =
     [ "adjustBatchSizeForFullBatch", "struct__pi__queue.html#a9bb3761c3efd9fa4bf12a345ab3a2b45", null ],
     [ "adjustBatchSizeForPartialBatch", "struct__pi__queue.html#a58efbc58a34b60cb59f5896bf438e015", null ],
     [ "decrement_reference_count", "struct__pi__queue.html#aadff72e7ebef5034c4239580d2b6b04f", null ],
-    [ "executeCommandList", "struct__pi__queue.html#ae0c09bcb63b05d67279464a02ea4016f", null ],
+    [ "executeCommandList", "struct__pi__queue.html#a8f26976e6d538a4b7582e90e0dd9859c", null ],
     [ "executeOpenCommandList", "struct__pi__queue.html#a660f50bdb62bb95130d6f5145eeff122", null ],
     [ "get", "struct__pi__queue.html#a8f41bafbe5a8231accf14f4444ec76c6", null ],
     [ "get_context", "struct__pi__queue.html#a06f5c8883c7ab5f6e2da68d189d9c50f", null ],

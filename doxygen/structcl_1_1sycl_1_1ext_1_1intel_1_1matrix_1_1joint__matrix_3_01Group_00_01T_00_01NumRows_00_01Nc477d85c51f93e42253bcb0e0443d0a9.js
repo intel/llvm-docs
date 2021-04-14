@@ -1,0 +1,11 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9 =
+[
+    [ "joint_matrix", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#a185d6f80f1beadffb3bf2916525606a1", null ],
+    [ "isSmall", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#a734b9ebbef18030d5bbbf83269ad5f62", null ],
+    [ "layout", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#ac75956059ed1787a5f475bb81d183b1c", null ],
+    [ "raw_storage", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#a2478cde816ee119106551c8885a56b51", null ],
+    [ "size", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#ae951809e1345c4a288c092f6e53ea8e5", null ],
+    [ "stride", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#a7410cd57f54f6b7f37ce89ec01b87032", null ],
+    [ "tcols", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#a82ee1653e6f08ef74b2429e1c29d8354", null ],
+    [ "trows", "structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_01NumRows_00_01Nc477d85c51f93e42253bcb0e0443d0a9.html#ab815322d66a2050f2a8f934fa4537048", null ]
+];

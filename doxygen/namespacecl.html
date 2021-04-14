@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('namespacecl.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>---&mdash; Error handling, matching OpenCL plugin semantics.  
+<p>We provide new interfaces for matrix muliply in this patch:  
 <a href="namespacecl.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -110,7 +110,18 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>---&mdash; Error handling, matching OpenCL plugin semantics. </p>
+<div class="textblock"><p>We provide new interfaces for matrix muliply in this patch: </p>
+<p>---&mdash; Error handling, matching OpenCL plugin semantics.</p>
+<ol type="1">
+<li>A new class called joint_matrix is introduced, and the user needs to specify the type of the elements, sizes, and the memory layout.</li>
+<li>joint_matrix_load is used for loading data from main memory to tiles of AMX or kernel's local memory.</li>
+<li>joint_matrix_store is used for storing data tiles of AMX or kernel's local memory to main memory.</li>
+<li>joint_matrix_mad is used for the matrix multiply and add function. It performs the multiply operation on the matrices A and B, accumulates the result with C and returns the result.</li>
+</ol>
+<p>The following operation can be realized with the interfaces: C = A*B+C</p><ol type="1">
+<li>All cases where A(int8, any-size, row_major), B(int8, any-size, packed_b), C(int32, any-size, row_major)</li>
+<li>All cases where A(bf16, any-size, row_major), B(bf16, any-size, packed_b), C(float, any-size, row_major) </li>
+</ol>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

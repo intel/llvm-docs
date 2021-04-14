@@ -164,7 +164,11 @@ var NAVTREEINDEX12 =
 "classcl_1_1sycl_1_1exception__list.html#ad30e71f0dac0d9934aae408e71c12d4b":[1,2,8,6],
 "classcl_1_1sycl_1_1exception__list.html#af6ca8cc3b554fe4b3c05ee42220daf67":[1,2,8,1],
 "classcl_1_1sycl_1_1exception__list.html#afab85d4c36b00f85b5c59ae53de3bfd4":[1,2,8,0],
-"classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html":[3,0,1,1,1,0,0,0,0],
+"classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html":[3,0,1,1,1,0,0,1],
+"classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html#a7df0df4df52e85a78e604e6659bf534e":[3,0,1,1,1,0,0,1,0],
+"classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html#a930a1ac3f9d6cc4eebd3df423fb356ec":[3,0,1,1,1,0,0,1,2],
+"classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html#acfb95b593d4187af61ff0d8842958eb8":[3,0,1,1,1,0,0,1,1],
+"classcl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer_1_1use__pinned__host__memory.html":[3,0,1,1,1,1,0,0,0],
 "classcl_1_1sycl_1_1feature__not__supported.html":[3,0,1,1,32],
 "classcl_1_1sycl_1_1gpu__selector.html":[1,2,0,2],
 "classcl_1_1sycl_1_1gpu__selector.html#a779c05344908da1d0741094280f949d0":[1,2,0,2,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX12 =
 "classcl_1_1sycl_1_1handler.html#a27950d7477807980f668aec8df17f5d0":[1,2,11,24],
 "classcl_1_1sycl_1_1handler.html#a29d402737cbdce196b0278d6b3e6de84":[1,2,11,12],
 "classcl_1_1sycl_1_1handler.html#a2e0250574969ee1bf7743596662c847e":[1,2,11,52],
-"classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863":[1,2,11,43],
-"classcl_1_1sycl_1_1handler.html#a386591bd9bd6a952393ce61d8d48ce5c":[1,2,11,21],
-"classcl_1_1sycl_1_1handler.html#a3a8c1bacdcf03b3534b9696769e9f0fc":[1,2,11,59],
-"classcl_1_1sycl_1_1handler.html#a3df44e513e2361d48bba3415378e53e1":[1,2,11,42],
-"classcl_1_1sycl_1_1handler.html#a4fe93ea8d613a9b7224780404781c279":[1,2,11,55]
+"classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863":[1,2,11,43]
 };

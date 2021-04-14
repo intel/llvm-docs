@@ -1,6 +1,7 @@
 var dir_c08ec27d5b39c57d5e5da7196736cd30 =
 [
     [ "experimental", "dir_198914f834d09a4821a1aa5d70386455.html", "dir_198914f834d09a4821a1aa5d70386455" ],
+    [ "intel_matrix", "dir_f37aaeb6912fd13b99b5bf81c6acb312.html", "dir_f37aaeb6912fd13b99b5bf81c6acb312" ],
     [ "accessor_property_list.hpp", "accessor__property__list_8hpp.html", [
       [ "IsCompileTimePropertyInstance", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html", null ],
       [ "is_compile_time_property", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html", null ]
