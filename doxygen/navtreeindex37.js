@@ -1,5 +1,10 @@
 var NAVTREEINDEX37 =
 {
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a7a6ad953939e3477e765de5460448c7e":[3,0,1,1,0,341,6],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a7e72004b2680f4d0cb3933562f4b8b96":[3,0,1,1,0,341,7],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a81e9c6c0727d1db7a34e39d7b4a3186f":[3,0,1,1,0,341,13],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a8ca9aed83c405bee33391cd400e13b10":[3,0,1,1,0,341,5],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#aab680aca2798f1bcc2e9a65299f15609":[3,0,1,1,0,341,14],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#abd06683b198c8bc915862e89928df81d":[3,0,1,1,0,341,9],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#ac791342140fc297a88757ffb981ea99f":[3,0,1,1,0,341,1],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#ad14af3060870036c81a0d447dfdb392c":[3,0,1,1,0,341,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX37 =
 "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aaac5cc8243b135966e6af755147731d3":[3,0,2,17,13],
 "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aaea6ee1ebc7e151bd3ba6ef5209aa7d7":[3,0,2,17,12],
 "structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ab0a4d7e527789b01be50e281825e4e25":[3,0,2,17,8],
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ab266b19cacad716e9a27d4802421c2f1":[3,0,2,17,4],
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ab4393d1e0ef9c4b9b70a250291dd7db0":[3,0,2,17,26],
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ab573df670df2604f8fb6608a87871653":[3,0,2,17,15],
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ac607f2285704fef24f8c9483521c0c45":[3,0,2,17,23],
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#aca15295e1697e2fec7dfd2838d42ceb1":[3,0,2,17,18],
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#acc5dcab5865674bab1e45fe21233aece":[3,0,2,17,7]
+"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ab266b19cacad716e9a27d4802421c2f1":[3,0,2,17,4]
 };

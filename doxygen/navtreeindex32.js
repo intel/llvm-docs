@@ -1,5 +1,10 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01int_01_4.html":[3,0,1,1,3,0,0,3],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01int_01_4.html#a5f53289b9d0a750feb9096a18fdb3e85":[3,0,1,1,3,0,0,3,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01short_01_4.html":[3,0,1,1,3,0,0,4],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01short_01_4.html#ac4495434e0658e6abe8f70e534d02b4f":[3,0,1,1,3,0,0,4,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01uint_01_4.html":[3,0,1,1,3,0,0,5],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01uint_01_4.html#ac022b335c96e2cef4b00939755892301":[3,0,1,1,3,0,0,5,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01ushort_01_4.html":[3,0,1,1,3,0,0,6],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01ushort_01_4.html#af9dc80cec8fc4af9b5066d8086832dfa":[3,0,1,1,3,0,0,6,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01char_01_4.html":[3,0,1,1,3,0,1,0,55],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01char_01_4.html#a74d8d25784ef7a303095466a31df1645":[3,0,1,1,3,0,1,0,55,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01int_01_4.html":[3,0,1,1,3,0,1,0,56],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01int_01_4.html#aac9fc9e671f7225174b71d55acadad62":[3,0,1,1,3,0,1,0,56,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01long_01long_01_4.html":[3,0,1,1,3,0,1,0,57],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01long_01long_01_4.html#a8436e90eb23ecd54754d345abe6c9164":[3,0,1,1,3,0,1,0,57,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01short_01_4.html":[3,0,1,1,3,0,1,0,58],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01short_01_4.html#a165663d9cdaf427236b38e6d15b6f34f":[3,0,1,1,3,0,1,0,58,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01unsigned_01char_01_4.html":[3,0,1,1,3,0,1,0,59]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01int_01_4.html#aac9fc9e671f7225174b71d55acadad62":[3,0,1,1,3,0,1,0,56,0]
 };

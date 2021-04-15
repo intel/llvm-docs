@@ -1,5 +1,10 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01long_01long_01_4.html#ad1b4cc0c6e57c28e1a20519075ebef6b":[3,0,1,1,3,0,1,0,182,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01short_01_4.html":[3,0,1,1,3,0,1,0,183],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01short_01_4.html#af68200095d6563c485b0346e4049bffa":[3,0,1,1,3,0,1,0,183,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01short_00_01char_01_4.html":[3,0,1,1,3,0,1,0,184],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01short_00_01char_01_4.html#a72ed0d8f6894cddb79cb15f853c4abe6":[3,0,1,1,3,0,1,0,184,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01short_00_01double_01_4.html":[3,0,1,1,3,0,1,0,185],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01short_00_01double_01_4.html#aac2059af3db0dd73ca0c4fc46ec5cbb1":[3,0,1,1,3,0,1,0,185,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01short_00_01float_01_4.html":[3,0,1,1,3,0,1,0,186],
@@ -244,10 +249,5 @@ var NAVTREEINDEX34 =
 "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html#ab53f6879305765bc9826b4e8243fb77e":[3,0,1,1,0,130,0],
 "structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html":[3,0,1,1,0,132],
 "structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html#ad89c48ea4e06621f8b8761015bfa1013":[3,0,1,1,0,132,0],
-"structcl_1_1sycl_1_1detail_1_1GreaterThan.html":[3,0,1,1,0,133],
-"structcl_1_1sycl_1_1detail_1_1GreaterThan.html#a7300190f9829d83d3a9483847b30d3bd":[3,0,1,1,0,133,0],
-"structcl_1_1sycl_1_1detail_1_1HashCStr.html":[3,0,1,1,0,134],
-"structcl_1_1sycl_1_1detail_1_1HashCStr.html#aa8199e35f72819bbe45013517a8caf05":[3,0,1,1,0,134,0],
-"structcl_1_1sycl_1_1detail_1_1InitializedVal.html":[3,0,1,1,0,149],
-"structcl_1_1sycl_1_1detail_1_1InitializedVal.html#a1561594dd0adac0308585e75f3039198":[3,0,1,1,0,149,0]
+"structcl_1_1sycl_1_1detail_1_1GreaterThan.html":[3,0,1,1,0,133]
 };

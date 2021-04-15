@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['feature_5fnot_5fsupported_5531',['feature_not_supported',['../classcl_1_1sycl_1_1feature__not__supported.html',1,'cl::sycl']]],
-  ['filter_5fselector_5532',['filter_selector',['../classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html',1,'cl::sycl::ONEAPI']]],
-  ['filter_5fselector_5fimpl_5533',['filter_selector_impl',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html',1,'cl::sycl::ONEAPI::detail']]],
-  ['filterelement_5534',['FilterElement',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement.html',1,'cl::sycl::ONEAPI::detail']]],
-  ['find_5ftype_5535',['find_type',['../structcl_1_1sycl_1_1detail_1_1find__type.html',1,'cl::sycl::detail']]],
-  ['find_5ftype_3c_20empty_5ftype_5flist_2c_20c_2c_20t_20_3e_5536',['find_type&lt; empty_type_list, C, T &gt;',['../structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html',1,'cl::sycl::detail']]],
-  ['fpga_5femulator_5fselector_5537',['fpga_emulator_selector',['../classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html',1,'cl::sycl::INTEL']]],
-  ['fpga_5fselector_5538',['fpga_selector',['../classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html',1,'cl::sycl::INTEL']]],
-  ['fptype_5539',['fptype',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1fptype.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
-  ['fptype_3c_20float_20_3e_5540',['fptype&lt; float &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1fptype_3_01float_01_4.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
-  ['func_5541',['Func',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html',1,'cl::sycl::ONEAPI::detail::IsNonUsmReductionPredicate::Func&lt; T &gt;'],['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate_1_1Func.html',1,'cl::sycl::ONEAPI::detail::EmptyReductionPredicate::Func&lt; T &gt;']]],
-  ['functionpointers_5542',['FunctionPointers',['../struct__pi__plugin_1_1FunctionPointers.html',1,'_pi_plugin']]]
+  ['feature_5fnot_5fsupported_5536',['feature_not_supported',['../classcl_1_1sycl_1_1feature__not__supported.html',1,'cl::sycl']]],
+  ['filter_5fselector_5537',['filter_selector',['../classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html',1,'cl::sycl::ONEAPI']]],
+  ['filter_5fselector_5fimpl_5538',['filter_selector_impl',['../classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html',1,'cl::sycl::ONEAPI::detail']]],
+  ['filterelement_5539',['FilterElement',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement.html',1,'cl::sycl::ONEAPI::detail']]],
+  ['find_5ftype_5540',['find_type',['../structcl_1_1sycl_1_1detail_1_1find__type.html',1,'cl::sycl::detail']]],
+  ['find_5ftype_3c_20empty_5ftype_5flist_2c_20c_2c_20t_20_3e_5541',['find_type&lt; empty_type_list, C, T &gt;',['../structcl_1_1sycl_1_1detail_1_1find__type_3_01empty__type__list_00_01C_00_01T_01_4.html',1,'cl::sycl::detail']]],
+  ['fpga_5femulator_5fselector_5542',['fpga_emulator_selector',['../classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html',1,'cl::sycl::INTEL']]],
+  ['fpga_5fselector_5543',['fpga_selector',['../classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html',1,'cl::sycl::INTEL']]],
+  ['fptype_5544',['fptype',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1fptype.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
+  ['fptype_3c_20float_20_3e_5545',['fptype&lt; float &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1fptype_3_01float_01_4.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
+  ['func_5546',['Func',['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html',1,'cl::sycl::ONEAPI::detail::IsNonUsmReductionPredicate::Func&lt; T &gt;'],['../structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1EmptyReductionPredicate_1_1Func.html',1,'cl::sycl::ONEAPI::detail::EmptyReductionPredicate::Func&lt; T &gt;']]],
+  ['functionpointers_5547',['FunctionPointers',['../struct__pi__plugin_1_1FunctionPointers.html',1,'_pi_plugin']]]
 ];
