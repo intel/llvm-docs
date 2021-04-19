@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"namespacecl_1_1sycl_1_1usm.html":[2,0,1,1,12],
+"namespaceintelfpga.html":[2,0,2],
 "namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
 "namespacemembers_a.html":[2,1,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea2240d9b4853db6c9b70da4743246db9f":[4,0,0,0,1,2,31,108,85],
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea28098c3362d1364b4ed4b205121bba84":[4,0,0,0,1,2,31,108,53],
 "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea2ab48549c783834ba93ee61ed3b461ea":[4,0,0,0,1,2,31,108,27],
-"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea2b2d51e53d269e0affb6adf365cef8e2":[4,0,0,0,1,2,31,108,48],
-"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea32980e1c5170b16f06bf3d4a673e29e4":[4,0,0,0,1,2,31,108,56],
-"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea3419096cf373c1e1351954fc42919512":[4,0,0,0,1,2,31,108,73]
+"pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea2b2d51e53d269e0affb6adf365cef8e2":[4,0,0,0,1,2,31,108,48]
 };

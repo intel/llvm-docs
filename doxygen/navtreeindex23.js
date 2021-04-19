@@ -1,5 +1,7 @@
 var NAVTREEINDEX23 =
 {
+"kernel__bundle_8hpp.html#a634b1e186e0a57d98d465543f7b80a87":[4,0,0,0,1,35,20],
+"kernel__bundle_8hpp.html#a669f044d3a15bcb121123ff7ddca7e45":[4,0,0,0,1,35,38],
 "kernel__bundle_8hpp.html#a66ee5aa20a31f33908c9d1e378112787":[4,0,0,0,1,35,37],
 "kernel__bundle_8hpp.html#a67aec65fa0b28fb1d93247e9a8021451":[4,0,0,0,1,35,28],
 "kernel__bundle_8hpp.html#a683a9dd881dd0bf27bb9677ca25a94eb":[4,0,0,0,1,35,32],
@@ -247,7 +249,5 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,1,1,5,3],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,1,1,11,3],
 "namespacecl_1_1sycl_1_1property_1_1reduction.html":[3,0,1,1,5,4],
-"namespacecl_1_1sycl_1_1property_1_1reduction.html":[2,0,1,1,11,4],
-"namespacecl_1_1sycl_1_1usm.html":[2,0,1,1,12],
-"namespaceintelfpga.html":[2,0,2]
+"namespacecl_1_1sycl_1_1property_1_1reduction.html":[2,0,1,1,11,4]
 };

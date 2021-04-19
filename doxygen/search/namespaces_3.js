@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['settings_6319',['settings',['../namespacesettings.html',1,'']]],
-  ['std_6320',['std',['../namespacestd.html',1,'']]]
+  ['settings_6320',['settings',['../namespacesettings.html',1,'']]],
+  ['std_6321',['std',['../namespacestd.html',1,'']]]
 ];

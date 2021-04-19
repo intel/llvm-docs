@@ -1,5 +1,7 @@
 var NAVTREEINDEX31 =
 {
+"struct__pi__kernel_1_1arguments.html#ac153603b456fc27c19916362eec6fa9f":[3,0,17,0,11],
+"struct__pi__kernel_1_1arguments.html#ae34c341ba210edf6e763e8bcf0f3b083":[3,0,17,0,3],
 "struct__pi__mem.html":[3,0,18],
 "struct__pi__mem.html#a053c712d3983e00f30f097f96d3c10a0":[3,0,18,27],
 "struct__pi__mem.html#a1048ed41565664dbdbad0db2218b2fad":[3,0,18,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX31 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40cadbcd229e9a292484f6e342444b86bf19":[3,0,1,1,3,0,0,67,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40cafae3d2792496cf117cf8d3b16f7f32a8":[3,0,1,1,3,0,0,67,4],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper.html":[3,0,1,1,3,0,0,1],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper.html#a5ad77b2e0db3dd6fbbadf3890ce54c22":[3,0,1,1,3,0,0,1,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type.html":[3,0,1,1,3,0,0,2],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type.html#af9b95f591e99d0fe7c959e0eb3346abf":[3,0,1,1,3,0,0,2,0]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper.html#a5ad77b2e0db3dd6fbbadf3890ce54c22":[3,0,1,1,3,0,0,1,0]
 };
