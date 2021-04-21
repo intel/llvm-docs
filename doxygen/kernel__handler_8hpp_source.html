@@ -106,73 +106,74 @@ $(document).ready(function(){initNavTree('kernel__handler_8hpp_source.html','');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<a class="code" href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a>(<a class="code" href="namespacecl.html">cl</a>) {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>sycl {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>detail {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// This guard is needed because the libsycl.so can compiled with C++ &lt;=14</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// while the code requires C++17. This code is not supposed to be used by the</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// libsycl.so so it should not be a problem.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#if __cplusplus &gt; 201402L</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;auto &amp;S&gt; <span class="keyword">struct </span>specialization_id_name_generator {};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1kernel__handler.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1kernel__handler.html">kernel_handler</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#if __cplusplus &gt; 201402L</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">template</span> &lt;auto &amp;S&gt;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a0a16b917d121cb9ae8f53c93569594d9">std::remove_reference_t</a>&lt;decltype(S)&gt; get_specialization_constant() {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span> getSpecializationConstantOnDevice&lt;S&gt;();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// TODO: add support of host device</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classcl_1_1sycl_1_1feature__not__supported.html">cl::sycl::feature_not_supported</a>(</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="stringliteral">&quot;kernel_handler::get_specialization_constant() is not yet supported by &quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="stringliteral">&quot;host device.&quot;</span>,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717ac0b20865d2c8f3a70ec43905a8ebf6da">PI_INVALID_OPERATION</a>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif // __cplusplus &gt; 201402L</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> __init_specialization_constants_buffer(</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordtype">char</span> *SpecializationConstantsBuffer = <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    MSpecializationConstantsBuffer = SpecializationConstantsBuffer;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">template</span> &lt;auto &amp;S, <span class="keyword">typename</span> T = std::remove_reference_t&lt;decltype(S)&gt;,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            std::enable_if_t&lt;std::is_fundamental_v&lt;T&gt;&gt; * = <span class="keywordtype">nullptr</span>&gt;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  T getSpecializationConstantOnDevice() {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *SymbolicID = __builtin_unique_stable_name(</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        detail::specialization_id_name_generator&lt;S&gt;);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> __sycl_getScalar2020SpecConstantValue&lt;T&gt;(</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        SymbolicID, &amp;S, MSpecializationConstantsBuffer);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">template</span> &lt;auto &amp;S, <span class="keyword">typename</span> T = std::remove_reference_t&lt;decltype(S)&gt;,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            std::enable_if_t&lt;std::is_compound_v&lt;T&gt;&gt; * = <span class="keywordtype">nullptr</span>&gt;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  T getSpecializationConstantOnDevice() {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *SymbolicID = __builtin_unique_stable_name(</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        detail::specialization_id_name_generator&lt;S&gt;);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> __sycl_getComposite2020SpecConstantValue&lt;T&gt;(</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        SymbolicID, &amp;S, MSpecializationConstantsBuffer);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">char</span> *MSpecializationConstantsBuffer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="kernel__desc_8hpp.html">CL/sycl/detail/kernel_desc.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exception_8hpp.html">CL/sycl/exception.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a>(<a class="code" href="namespacecl.html">cl</a>) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>sycl {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1kernel__handler.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classcl_1_1sycl_1_1kernel__handler.html">kernel_handler</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#if __cplusplus &gt; 201402L</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">template</span> &lt;auto &amp;S&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a0a16b917d121cb9ae8f53c93569594d9">std::remove_reference_t</a>&lt;decltype(S)&gt;::value_type</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  get_specialization_constant() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> getSpecializationConstantOnDevice&lt;S&gt;();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// TODO: add support of host device</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classcl_1_1sycl_1_1feature__not__supported.html">cl::sycl::feature_not_supported</a>(</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="stringliteral">&quot;kernel_handler::get_specialization_constant() is not yet supported by &quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="stringliteral">&quot;host device.&quot;</span>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717ac0b20865d2c8f3a70ec43905a8ebf6da">PI_INVALID_OPERATION</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // __cplusplus &gt; 201402L</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> __init_specialization_constants_buffer(</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordtype">char</span> *SpecializationConstantsBuffer = <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    MSpecializationConstantsBuffer = SpecializationConstantsBuffer;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">auto</span> &amp;S,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">typename</span> T = <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a0a16b917d121cb9ae8f53c93569594d9">std::remove_reference_t</a>&lt;decltype(S)&gt;::value_type,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      std::enable_if_t&lt;std::is_fundamental_v&lt;T&gt;&gt; * = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  T getSpecializationConstantOnDevice() {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *SymbolicID = __builtin_unique_stable_name(</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        detail::specialization_id_name_generator&lt;S&gt;);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> __sycl_getScalar2020SpecConstantValue&lt;T&gt;(</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        SymbolicID, &amp;S, MSpecializationConstantsBuffer);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">template</span> &lt;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">auto</span> &amp;S,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">typename</span> T = <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a0a16b917d121cb9ae8f53c93569594d9">std::remove_reference_t</a>&lt;decltype(S)&gt;::value_type,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      std::enable_if_t&lt;std::is_compound_v&lt;T&gt;&gt; * = <span class="keyword">nullptr</span>&gt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  T getSpecializationConstantOnDevice() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *SymbolicID = __builtin_unique_stable_name(</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        detail::specialization_id_name_generator&lt;S&gt;);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> __sycl_getComposite2020SpecConstantValue&lt;T&gt;(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        SymbolicID, &amp;S, MSpecializationConstantsBuffer);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">char</span> *MSpecializationConstantsBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="api_8h_html_a15a332a6c4c1701b7e20d5bf0afef717ac0b20865d2c8f3a70ec43905a8ebf6da"><div class="ttname"><a href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717ac0b20865d2c8f3a70ec43905a8ebf6da">PI_INVALID_OPERATION</a></div><div class="ttdeci">@ PI_INVALID_OPERATION</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00076">pi.h:76</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a0a16b917d121cb9ae8f53c93569594d9"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a0a16b917d121cb9ae8f53c93569594d9">cl::sycl::detail::remove_reference_t</a></div><div class="ttdeci">typename std::remove_reference&lt; T &gt;::type remove_reference_t</div><div class="ttdef"><b>Definition:</b> <a href="stl__type__traits_8hpp_source.html#l00035">stl_type_traits.hpp:35</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">We provide new interfaces for matrix muliply in this patch:</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1kernel__handler_html"><div class="ttname"><a href="classcl_1_1sycl_1_1kernel__handler.html">cl::sycl::kernel_handler</a></div><div class="ttdoc">Reading the value of a specialization constant.</div><div class="ttdef"><b>Definition:</b> <a href="kernel__handler_8hpp_source.html#l00027">kernel_handler.hpp:27</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1kernel__handler_html"><div class="ttname"><a href="classcl_1_1sycl_1_1kernel__handler.html">cl::sycl::kernel_handler</a></div><div class="ttdoc">Reading the value of a specialization constant.</div><div class="ttdef"><b>Definition:</b> <a href="kernel__handler_8hpp_source.html#l00021">kernel_handler.hpp:21</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1feature__not__supported_html"><div class="ttname"><a href="classcl_1_1sycl_1_1feature__not__supported.html">cl::sycl::feature_not_supported</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00116">exception.hpp:116</a></div></div>
+<div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
+<div class="ttc" id="akernel__desc_8hpp_html"><div class="ttname"><a href="kernel__desc_8hpp.html">kernel_desc.hpp</a></div></div>
 <div class="ttc" id="adefines__elementary_8hpp_html_af014229c51476c8c275e6e94d0549384"><div class="ttname"><a href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a></div><div class="ttdeci">#define __SYCL_INLINE_NAMESPACE(X)</div><div class="ttdef"><b>Definition:</b> <a href="defines__elementary_8hpp_source.html#l00012">defines_elementary.hpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

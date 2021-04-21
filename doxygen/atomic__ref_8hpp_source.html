@@ -192,16 +192,16 @@ $(document).ready(function(){initNavTree('atomic__ref_8hpp_source.html',''); ini
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html">   95</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span><a class="code" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html">bit_equal</a>&lt;float&gt; {</div>
 <div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html#a87af85858dace5eeedd5718ea06d2823">   96</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html#a87af85858dace5eeedd5718ea06d2823">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;lhs, <span class="keyword">const</span> <span class="keywordtype">float</span> &amp;rhs) {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">auto</span> LhsInt = detail::bit_cast&lt;uint32_t&gt;(lhs);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">auto</span> RhsInt = detail::bit_cast&lt;uint32_t&gt;(rhs);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">auto</span> LhsInt = sycl::bit_cast&lt;uint32_t&gt;(lhs);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">auto</span> RhsInt = sycl::bit_cast&lt;uint32_t&gt;(rhs);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> LhsInt == RhsInt;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html">  103</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span><a class="code" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal.html">bit_equal</a>&lt;double&gt; {</div>
 <div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html#a470050c82acec60d6dfd27e50e52621d">  104</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01double_01_4.html#a470050c82acec60d6dfd27e50e52621d">operator()</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> &amp;lhs, <span class="keyword">const</span> <span class="keywordtype">double</span> &amp;rhs) {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">auto</span> LhsInt = detail::bit_cast&lt;uint64_t&gt;(lhs);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">auto</span> RhsInt = detail::bit_cast&lt;uint64_t&gt;(rhs);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">auto</span> LhsInt = sycl::bit_cast&lt;uint64_t&gt;(lhs);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">auto</span> RhsInt = sycl::bit_cast&lt;uint64_t&gt;(rhs);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> LhsInt == RhsInt;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>

@@ -714,7 +714,8 @@ var group__sycl__api =
       [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html#aa3c51d21ed2eae0605e5956b7e201c25", null ],
       [ "specialization_id", "classcl_1_1sycl_1_1specialization__id.html#a6a23b2dd3b8f39deeb0af7309541efb1", null ],
       [ "operator=", "classcl_1_1sycl_1_1specialization__id.html#a157bfa5ffa07be869e9b13459914b819", null ],
-      [ "operator=", "classcl_1_1sycl_1_1specialization__id.html#a4a02ff4002fa9eece914631dfdc8ea0b", null ]
+      [ "operator=", "classcl_1_1sycl_1_1specialization__id.html#a4a02ff4002fa9eece914631dfdc8ea0b", null ],
+      [ "kernel_bundle", "classcl_1_1sycl_1_1specialization__id.html#a0d3b8750c7828de8da5fdd57340ce29e", null ]
     ] ],
     [ "stream", "classcl_1_1sycl_1_1stream.html", [
       [ "stream", "classcl_1_1sycl_1_1stream.html#ac72ac73caff402d4b1008f2c5350ab8a", null ],

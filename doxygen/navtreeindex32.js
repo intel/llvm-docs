@@ -1,5 +1,17 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4.html#a64e87923a248d59db0ec994d942f39d9":[3,0,1,1,3,0,0,65,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html":[3,0,1,1,3,0,0,66],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1NextPowerOf2_3_01N_00_01K_00_01true_01_4.html#a1613b37704b98a10f65d919ed4228ccc":[3,0,1,1,3,0,0,66,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html":[3,0,1,1,3,0,0,67],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40ca0cdf71a5295ad2423edfc8ce68f71969":[3,0,1,1,3,0,0,67,2],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40ca6474bb10ab0d18c9d52c77f5b876c4a0":[3,0,1,1,3,0,0,67,3],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40caac1e3b111d697bce78084534fadbc292":[3,0,1,1,3,0,0,67,1],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40caaf934b0c91253107a26ff6174af01fb1":[3,0,1,1,3,0,0,67,5],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40cadbcd229e9a292484f6e342444b86bf19":[3,0,1,1,3,0,0,67,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1OperandSize.html#acb9252835ab89b781106472aab94d40cafae3d2792496cf117cf8d3b16f7f32a8":[3,0,1,1,3,0,0,67,4],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper.html":[3,0,1,1,3,0,0,1],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper.html#a5ad77b2e0db3dd6fbbadf3890ce54c22":[3,0,1,1,3,0,0,1,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type.html":[3,0,1,1,3,0,0,2],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type.html#af9b95f591e99d0fe7c959e0eb3346abf":[3,0,1,1,3,0,0,2,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type_3_01int_01_4.html":[3,0,1,1,3,0,0,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__or__dword__type_3_01int_01_4.html":[3,0,1,1,3,0,1,0,48],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__or__dword__type_3_01int_01_4.html#ae9f2cc16e925eae846f636f742aea86e":[3,0,1,1,3,0,1,0,48,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__or__dword__type_3_01unsigned_01int_01_4.html":[3,0,1,1,3,0,1,0,49],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__or__dword__type_3_01unsigned_01int_01_4.html#a264427d93d21b3dffefaca0f6d80f99b":[3,0,1,1,3,0,1,0,49,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__type.html":[3,0,1,1,3,0,1,0,50],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__type.html#a6b915c739d7bd6f16e60c93eb7b0a2fd":[3,0,1,1,3,0,1,0,50,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__type_3_01float_01_4.html":[3,0,1,1,3,0,1,0,51],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__type_3_01float_01_4.html#a4a895125466afcb9a6d897de9c7d6f63":[3,0,1,1,3,0,1,0,51,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__hf__type.html":[3,0,1,1,3,0,1,0,52],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__hf__type.html#a96531b9de2668ee048cfbe7dbf7a93f4":[3,0,1,1,3,0,1,0,52,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__hf__type_3_01half_01_4.html":[3,0,1,1,3,0,1,0,53],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__hf__type_3_01half_01_4.html#a595e7c3f177d3b23b8d9d7ac3ae43d79":[3,0,1,1,3,0,1,0,53,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype.html":[3,0,1,1,3,0,1,0,54],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype.html#a25e5de1b3d508428aa72ed816c8cf2e6":[3,0,1,1,3,0,1,0,54,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01char_01_4.html":[3,0,1,1,3,0,1,0,55],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__inttype_3_01char_01_4.html#a74d8d25784ef7a303095466a31df1645":[3,0,1,1,3,0,1,0,55,0]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1is__fp__or__dword__type_3_01unsigned_01int_01_4.html#a264427d93d21b3dffefaca0f6d80f99b":[3,0,1,1,3,0,1,0,49,0]
 };

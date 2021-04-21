@@ -1,5 +1,17 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01float_01_4.html#aea823842576c89ab4320aeaf22b04f93":[3,0,1,1,3,0,1,0,175,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01half_01_4.html":[3,0,1,1,3,0,1,0,176],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01half_01_4.html#a3f19b2c0ed22fc06a5561fae155cc37b":[3,0,1,1,3,0,1,0,176,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01int_01_4.html":[3,0,1,1,3,0,1,0,177],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01int_01_4.html#a67bede4d33f76dc699f17ce4c7c5e74a":[3,0,1,1,3,0,1,0,177,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01long_01long_01_4.html":[3,0,1,1,3,0,1,0,178],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01long_01long_01_4.html#addc7035dbf36476560551d124a4e0e0c":[3,0,1,1,3,0,1,0,178,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01short_01_4.html":[3,0,1,1,3,0,1,0,179],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01short_01_4.html#a5b68aaa39083ecd7ca6dab83474b4c25":[3,0,1,1,3,0,1,0,179,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01char_01_4.html":[3,0,1,1,3,0,1,0,180],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01char_01_4.html#ada6f9efc61697803762c1cc9e23b203a":[3,0,1,1,3,0,1,0,180,0],
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01int_01_4.html":[3,0,1,1,3,0,1,0,181],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01int_01_4.html#acd6300010d8598175382ce61b6374876":[3,0,1,1,3,0,1,0,181,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01long_01long_01_4.html":[3,0,1,1,3,0,1,0,182],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1restype__ex_3_01unsigned_01long_01long_00_01unsigned_01long_01long_01_4.html#ad1b4cc0c6e57c28e1a20519075ebef6b":[3,0,1,1,3,0,1,0,182,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX34 =
 "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html#a9030b73cdcc7adcb0431352117f821d1":[3,0,1,1,0,73,1],
 "structcl_1_1sycl_1_1detail_1_1EqualByNameComp.html":[3,0,1,1,0,74],
 "structcl_1_1sycl_1_1detail_1_1EqualByNameComp.html#a6b26cc0ffbd58debfbd66dc9572e0360":[3,0,1,1,0,74,0],
-"structcl_1_1sycl_1_1detail_1_1EqualTo.html":[3,0,1,1,0,75],
-"structcl_1_1sycl_1_1detail_1_1EqualTo.html#a696e430769194f2ddb33c7f7b365a89f":[3,0,1,1,0,75,0],
-"structcl_1_1sycl_1_1detail_1_1ExtendedMemberT.html":[3,0,1,1,0,78],
-"structcl_1_1sycl_1_1detail_1_1ExtendedMemberT.html#a38de9e8358aea6b84e4f412337776a8f":[3,0,1,1,0,78,1],
-"structcl_1_1sycl_1_1detail_1_1ExtendedMemberT.html#a7831b4201db45312398f0ebf227f04b6":[3,0,1,1,0,78,0],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope.html":[3,0,1,1,0,127],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html":[3,0,1,1,0,128],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__device__space_01_4.html#a513fd614d8c40c9c286596c62ed6ae79":[3,0,1,1,0,128,0],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html":[3,0,1,1,0,129],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html#a1f2f9409aa5c0ef331a729843ea688de":[3,0,1,1,0,129,0],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html":[3,0,1,1,0,130],
-"structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html#ab53f6879305765bc9826b4e8243fb77e":[3,0,1,1,0,130,0],
-"structcl_1_1sycl_1_1detail_1_1GreaterEqualTo.html":[3,0,1,1,0,132]
+"structcl_1_1sycl_1_1detail_1_1EqualTo.html":[3,0,1,1,0,75]
 };

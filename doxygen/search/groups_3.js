@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['level_20zero_20plugin_10932',['Level Zero Plugin',['../group__sycl__pi__level__zero.html',1,'']]]
+  ['level_20zero_20plugin_10949',['Level Zero Plugin',['../group__sycl__pi__level__zero.html',1,'']]]
 ];

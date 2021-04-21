@@ -16,11 +16,12 @@ var classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl =
     [ "get_devices", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#aca60dced28cf4b48c3d6d15878ae6b23", null ],
     [ "get_kernel", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a88b3ec9eff14b7033556a11a082a483d", null ],
     [ "get_kernel_ids", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a4cec4a1cc1ad77e41b2cc97634a55959", null ],
-    [ "get_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#ad10082bfe515b55a678da114e6755f95", null ],
+    [ "get_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#aa3701699266fcbe36284a275e319da8e", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a0e0e1d22740caebfd0bb4e8a97f39388", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#ad16ad1526119d63c382ffb600569f768", null ],
-    [ "has_specialization_constant", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#af86bb1534afb5b22c36f3685e5e8a05a", null ],
+    [ "has_specialization_constant", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a3655f8347e5fdc512bfa8d557abc1852", null ],
+    [ "is_specialization_constant_set", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a3d6c6eaaaf82bd9396486f5fc45ae2fa", null ],
     [ "native_specialization_constant", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a6f6415f54bc6acb847cba944ebfd3a30", null ],
-    [ "set_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a64ba01dcc604894269647cdf9358ad9d", null ],
+    [ "set_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a940503cb480177fa04163c1e0c55d83e", null ],
     [ "size", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a44de8d917d0ada20ca8f6e20144a2590", null ]
 ];

@@ -1,5 +1,10 @@
 var NAVTREEINDEX5 =
 {
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a72d96766f5288206fbc71b6486142ab4":[1,1,2,29],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a7ddf07540737c2aa5f0260fe2ad87d91":[1,1,2,35],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a7ed9ee11d42a81e467858906824a77cc":[1,1,2,17],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a8d739e567a8e55135843a1e12136eeab":[1,1,2,8],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a91c47d6e7aa34f198d2af570a87a2b2a":[1,1,2,3],
 "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a98ad3b8d71c867b41eded09982eb0bac":[1,1,2,30],
 "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a9d4d67f6138772fae0f5482379f36762":[1,1,2,18],
 "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a9da045609e290eaa0292f512895c9a01":[1,1,2,21],
@@ -244,10 +249,5 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#acc22256b8a789235111305d5343fa262":[3,0,1,1,4,0,33,15],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad0942b5416fb218c9361fcb494047efb":[3,0,1,1,4,0,33,16],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad694122637c07d09a65702185edc8aff":[3,0,1,1,4,0,33,6],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad79ba4dbd3978714fe71e94e2521a5dd":[3,0,1,1,4,0,33,3],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad7be7756ae2a9899e6f1d70523407af9":[3,0,1,1,4,0,33,17],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ae13af1e1811cc42f1ff9d1a667dfbb01":[3,0,1,1,4,0,33,14],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html":[3,0,1,1,4,0,34],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a00ffff92c1a479e6498e7f7bd6272a6c":[3,0,1,1,4,0,34,32],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a05fa2a19ac2cde9da57178cadcf5b030":[3,0,1,1,4,0,34,23]
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#ad79ba4dbd3978714fe71e94e2521a5dd":[3,0,1,1,4,0,33,3]
 };
