@@ -2,6 +2,7 @@ var annotated_dup =
 [
     [ "__spv", "namespace____spv.html", "namespace____spv" ],
     [ "cl", "namespacecl.html", "namespacecl" ],
+    [ "settings", "namespacesettings.html", "namespacesettings" ],
     [ "std", "namespacestd.html", "namespacestd" ],
     [ "__copyAcc2Acc", "class____copyAcc2Acc.html", null ],
     [ "__copyAcc2Ptr", "class____copyAcc2Ptr.html", null ],
@@ -43,6 +44,7 @@ var annotated_dup =
     [ "UsmAllocationException", "classUsmAllocationException.html", "classUsmAllocationException" ],
     [ "USMAllocContext", "classUSMAllocContext.html", "classUSMAllocContext" ],
     [ "USMDeviceMemoryAlloc", "classUSMDeviceMemoryAlloc.html", "classUSMDeviceMemoryAlloc" ],
+    [ "USMHostMemoryAlloc", "classUSMHostMemoryAlloc.html", "classUSMHostMemoryAlloc" ],
     [ "USMMemoryAllocBase", "classUSMMemoryAllocBase.html", "classUSMMemoryAllocBase" ],
     [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", "classUSMSharedMemoryAlloc" ]
 ];

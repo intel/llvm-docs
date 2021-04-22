@@ -16,6 +16,7 @@ var pi__cuda_8cpp =
     [ "cuda_piDeviceRetain", "pi__cuda_8cpp.html#a89307f65cd7a33134bc20a1c06ae7335", null ],
     [ "cuda_piDevicesGet", "pi__cuda_8cpp.html#a6cda6564b9002f577b335c7a6899a149", null ],
     [ "cuda_piEnqueueEventsWait", "pi__cuda_8cpp.html#a2497913392249b469d0614a3e2571cd4", null ],
+    [ "cuda_piEnqueueEventsWaitWithBarrier", "pi__cuda_8cpp.html#ab4006c5813daf93f8648cad7b305a8dc", null ],
     [ "cuda_piEnqueueKernelLaunch", "pi__cuda_8cpp.html#a476546da0fe98b9547a97579722a862c", null ],
     [ "cuda_piEnqueueMemBufferCopy", "pi__cuda_8cpp.html#a2098707c7656a5c473ce28c499d57d70", null ],
     [ "cuda_piEnqueueMemBufferCopyRect", "pi__cuda_8cpp.html#a95159c701d0274885add31d67376f1df", null ],

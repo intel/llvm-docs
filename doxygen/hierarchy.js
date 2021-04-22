@@ -956,6 +956,7 @@ var hierarchy =
     [ "cl::sycl::detail::select_cl_vector_or_scalar< T, Enable >", "structcl_1_1sycl_1_1detail_1_1select__cl__vector__or__scalar.html", null ],
     [ "cl::sycl::detail::select_cl_vector_or_scalar< T, typename detail::enable_if_t< is_vgentype< T >::value > >", "structcl_1_1sycl_1_1detail_1_1select__cl__vector__or__scalar_3_01T_00_01typename_01detail_1_1enac1ed1b57b436740a2cef0ff2bcec2de4.html", null ],
     [ "cl::sycl::detail::select_cl_vector_or_scalar< T, typename detail::enable_if_t<!is_vgentype< T >::value > >", "structcl_1_1sycl_1_1detail_1_1select__cl__vector__or__scalar_3_01T_00_01typename_01detail_1_1enab4a6e86aefb5158df6bb1fce2521f86c.html", null ],
+    [ "settings::SetLimits", "classsettings_1_1SetLimits.html", null ],
     [ "cl::sycl::INTEL::gpu::emu::detail::SetSatur< T1, B >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1SetSatur.html", null ],
     [ "cl::sycl::INTEL::gpu::emu::detail::SetSatur< double, true >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1SetSatur_3_01double_00_01true_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::emu::detail::SetSatur< float, true >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1SetSatur_3_01float_00_01true_01_4.html", null ],
@@ -1014,6 +1015,7 @@ var hierarchy =
     [ "SystemMemory", "classSystemMemory.html", [
       [ "USMMemoryAllocBase", "classUSMMemoryAllocBase.html", [
         [ "USMDeviceMemoryAlloc", "classUSMDeviceMemoryAlloc.html", null ],
+        [ "USMHostMemoryAlloc", "classUSMHostMemoryAlloc.html", null ],
         [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", null ]
       ] ]
     ] ],

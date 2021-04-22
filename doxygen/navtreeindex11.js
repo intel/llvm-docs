@@ -1,5 +1,12 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#a77f0615418eaa4f780457b96c0f920ce":[3,0,1,1,0,76,6],
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#a8325d8b974d6b646148433414377190d":[3,0,1,1,0,76,3],
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c":[3,0,1,1,0,76,20],
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#a91d671ead5bd093dc0432c4df45ee0cc":[3,0,1,1,0,76,12],
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#a9aeaa30df68ed76f504e758a83d740b3":[3,0,1,1,0,76,18],
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#aa064a42bbf3a18961b6957c145fb1753":[3,0,1,1,0,76,2],
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#ab0a0f1be056f09df3cc8d63e050d1617":[3,0,1,1,0,76,10],
 "classcl_1_1sycl_1_1detail_1_1event__impl.html#ab2f3826fd4b4919b3f88c3e48db465ec":[3,0,1,1,0,76,1],
 "classcl_1_1sycl_1_1detail_1_1event__impl.html#acded2e50dbc2cdfc480f9dc2b1f04614":[3,0,1,1,0,76,14],
 "classcl_1_1sycl_1_1detail_1_1event__impl.html#ae28649efc6298a1a68a00924b51fd559":[3,0,1,1,0,76,13],
@@ -242,12 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1detail_1_1plugin.html#ae1fcf6ac82513a356d9fad74261ef9c4":[1,0,5,10],
 "classcl_1_1sycl_1_1detail_1_1plugin.html#ae73b219e833a476492c80345e6f4973b":[1,0,5,3],
 "classcl_1_1sycl_1_1detail_1_1plugin.html#ae7846560abde0d7a3144e9c55479dbc2":[1,0,5,4],
-"classcl_1_1sycl_1_1detail_1_1plugin.html#aeaa69fb83a0955dfa917dbba4cfa45a6":[1,0,5,14],
-"classcl_1_1sycl_1_1detail_1_1plugin.html#af360ab867da0b340615c97823bed306d":[1,0,5,15],
-"classcl_1_1sycl_1_1detail_1_1program__impl.html":[3,0,1,1,0,281],
-"classcl_1_1sycl_1_1detail_1_1program__impl.html#a1b927aa855aab8ddb17ac2a2979991c6":[3,0,1,1,0,281,3],
-"classcl_1_1sycl_1_1detail_1_1program__impl.html#a1cf094d15bf1212af809f76fc3a1d3a5":[3,0,1,1,0,281,26],
-"classcl_1_1sycl_1_1detail_1_1program__impl.html#a2497782eeb8a10313fc389926d177021":[3,0,1,1,0,281,4],
-"classcl_1_1sycl_1_1detail_1_1program__impl.html#a25eaca926b414cb927cfa6b22c0af8d5":[3,0,1,1,0,281,2],
-"classcl_1_1sycl_1_1detail_1_1program__impl.html#a2aeeb43905cbd6ab9eb32d2d1a0175a1":[3,0,1,1,0,281,16]
+"classcl_1_1sycl_1_1detail_1_1plugin.html#aeaa69fb83a0955dfa917dbba4cfa45a6":[1,0,5,14]
 };

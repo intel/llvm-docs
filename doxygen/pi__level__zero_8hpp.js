@@ -5,6 +5,7 @@ var pi__level__zero_8hpp =
     [ "USMMemoryAllocBase", "classUSMMemoryAllocBase.html", "classUSMMemoryAllocBase" ],
     [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", "classUSMSharedMemoryAlloc" ],
     [ "USMDeviceMemoryAlloc", "classUSMDeviceMemoryAlloc.html", "classUSMDeviceMemoryAlloc" ],
+    [ "USMHostMemoryAlloc", "classUSMHostMemoryAlloc.html", "classUSMHostMemoryAlloc" ],
     [ "_pi_device", "class__pi__device.html", "class__pi__device" ],
     [ "_pi_context", "struct__pi__context.html", "struct__pi__context" ],
     [ "_pi_queue", "struct__pi__queue.html", "struct__pi__queue" ],

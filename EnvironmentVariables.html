@@ -140,6 +140,11 @@ subject to change. Do not rely on these variables in production code.</p>
 <td>Disable USM allocator in Level Zero plugin (each memory request will go directly to Level Zero runtime)</td>
 </tr>
 <tr>
+<td>SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR</td>
+<td>MaxPoolableSize,Capacity,MaxPoolSize</td>
+<td>Values specified as positive integers. Defaults are 1, 4, 256. MaxPoolableSize is the maximum allocation size in MB that may be pooled. Capacity is the number of allocations in each size range that are freed by the program but retained in the pool for reallocation. Size ranges follow this pattern: 32, 48, 64, 96, 128, 192, and so on, i.e., powers of 2, with one range in between. MaxPoolSize is the maximum size of the pool in MB.</td>
+</tr>
+<tr>
 <td>SYCL_PI_LEVEL_ZERO_BATCH_SIZE</td>
 <td>Integer</td>
 <td>Sets a preferred number of commands to batch into a command list before executing the command list. A value of 0 causes the batch size to be adjusted dynamically. A value greater than 0 specifies fixed size batching, with the batch size set to the specified value. The default is 0.</td>

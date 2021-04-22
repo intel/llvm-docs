@@ -106,18 +106,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a24eed1098f21095989cf1025b28d2058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e87dc119109b90ca52eae53629aec7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#a34e87dc119109b90ca52eae53629aec7">getChunk</a> ()</td></tr>
 <tr class="separator:a34e87dc119109b90ca52eae53629aec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34a206d47118a1bf844d103bb172e26"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#aa34a206d47118a1bf844d103bb172e26">getSlab</a> ()</td></tr>
+<tr class="separator:aa34a206d47118a1bf844d103bb172e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e54fc83161a766fc837c9534fc1fec8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#a6e54fc83161a766fc837c9534fc1fec8">getSize</a> () const</td></tr>
 <tr class="separator:a6e54fc83161a766fc837c9534fc1fec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f9fcc71727388ffae9e14cea66601b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#a6f9fcc71727388ffae9e14cea66601b9">freeChunk</a> (void *Ptr, <a class="el" href="classSlab.html">Slab</a> &amp;<a class="el" href="classSlab.html">Slab</a>)</td></tr>
 <tr class="separator:a6f9fcc71727388ffae9e14cea66601b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cfa13820b53891e81a2548e94fe2ff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#a9cfa13820b53891e81a2548e94fe2ff1">freeSlab</a> (void *Ptr, <a class="el" href="classSlab.html">Slab</a> &amp;<a class="el" href="classSlab.html">Slab</a>)</td></tr>
+<tr class="separator:a9cfa13820b53891e81a2548e94fe2ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac796f8ead8693acee2520b9981eeda1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSystemMemory.html">SystemMemory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#ac796f8ead8693acee2520b9981eeda1c">getMemHandle</a> ()</td></tr>
 <tr class="separator:ac796f8ead8693acee2520b9981eeda1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8500386b0656cd503656e89e08bf31a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUSMAllocContext_1_1USMAllocImpl.html">USMAllocContext::USMAllocImpl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#ab8500386b0656cd503656e89e08bf31a">getUsmAllocCtx</a> ()</td></tr>
 <tr class="separator:ab8500386b0656cd503656e89e08bf31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0c619dfaaac359686dc36dda8d89eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBucket.html#abf0c619dfaaac359686dc36dda8d89eb">CanPool</a> ()</td></tr>
+<tr class="separator:abf0c619dfaaac359686dc36dda8d89eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00163">163</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00251">251</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a24eed1098f21095989cf1025b28d2058"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24eed1098f21095989cf1025b28d2058">&#9670;&nbsp;</a></span>Bucket()</h2>
@@ -153,11 +159,34 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00180">180</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00268">268</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abf0c619dfaaac359686dc36dda8d89eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0c619dfaaac359686dc36dda8d89eb">&#9670;&nbsp;</a></span>CanPool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Bucket::CanPool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00581">581</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="usm__allocator_8cpp_source.html#l00114">settings::SetLimits::CurPoolSize</a>, <a class="el" href="usm__allocator_8cpp_source.html#l00104">settings::PoolLock</a>, and <a class="el" href="namespacesettings.html#a4c6b1b43322b7ae7d811f43af0128736">settings::USMPoolSettings</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00501">freeSlab()</a>.</p>
+
+</div>
+</div>
 <a id="a6f9fcc71727388ffae9e14cea66601b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f9fcc71727388ffae9e14cea66601b9">&#9670;&nbsp;</a></span>freeChunk()</h2>
 
@@ -184,11 +213,45 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00389">389</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00542">542</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm__allocator_8cpp_source.html#l00338">Slab::freeChunk()</a>.</p>
+<p class="reference">References <a class="el" href="usm__allocator_8cpp_source.html#l00450">Slab::freeChunk()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00466">USMAllocContext::USMAllocImpl::deallocate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00649">USMAllocContext::USMAllocImpl::deallocate()</a>.</p>
+
+</div>
+</div>
+<a id="a9cfa13820b53891e81a2548e94fe2ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cfa13820b53891e81a2548e94fe2ff1">&#9670;&nbsp;</a></span>freeSlab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bucket::freeSlab </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>Ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSlab.html">Slab</a> &amp;&#160;</td>
+          <td class="paramname"><em>Slab</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00501">501</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="usm__allocator_8cpp_source.html#l00581">CanPool()</a>, and <a class="el" href="usm__allocator_8cpp_source.html#l00225">Slab::getIterator()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00649">USMAllocContext::USMAllocImpl::deallocate()</a>.</p>
 
 </div>
 </div>
@@ -207,9 +270,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00372">372</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00525">525</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00425">USMAllocContext::USMAllocImpl::allocate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00596">USMAllocContext::USMAllocImpl::allocate()</a>.</p>
 
 </div>
 </div>
@@ -228,11 +291,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00423">423</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00594">594</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm__allocator_8cpp_source.html#l00223">USMAllocContext::USMAllocImpl::getMemHandle()</a>.</p>
+<p class="reference">References <a class="el" href="usm__allocator_8cpp_source.html#l00331">USMAllocContext::USMAllocImpl::getMemHandle()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00254">Slab::~Slab()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00364">Slab::~Slab()</a>.</p>
 
 </div>
 </div>
@@ -259,9 +322,30 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00185">185</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00278">278</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00292">Slab::getChunkSize()</a>, and <a class="el" href="usm__allocator_8cpp_source.html#l00238">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00649">USMAllocContext::USMAllocImpl::deallocate()</a>, <a class="el" href="usm__allocator_8cpp_source.html#l00404">Slab::getChunkSize()</a>, and <a class="el" href="usm__allocator_8cpp_source.html#l00346">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a id="aa34a206d47118a1bf844d103bb172e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa34a206d47118a1bf844d103bb172e26">&#9670;&nbsp;</a></span>getSlab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * Bucket::getSlab </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00489">489</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__allocator_8cpp_source.html#l00596">USMAllocContext::USMAllocImpl::allocate()</a>.</p>
 
 </div>
 </div>
@@ -288,7 +372,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00189">189</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__allocator_8cpp_source.html#l00287">287</a> of file <a class="el" href="usm__allocator_8cpp_source.html">usm_allocator.cpp</a>.</p>
 
 </div>
 </div>

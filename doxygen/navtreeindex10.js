@@ -1,5 +1,12 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a72530a3ad82ee175453f82e1d8e3a6a0":[3,0,1,1,0,312,8],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a742865cae5032daa9eb045a5882f42ee":[3,0,1,1,0,312,41],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a773e1095c546fa03e4ce5c41d00f4030":[3,0,1,1,0,312,25],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7eff1b7e176e7b86484f0c18e421d166":[3,0,1,1,0,312,10],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f13812a6ecda1cbc5e8233751c9b627":[3,0,1,1,0,312,20],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f3cde3c571c5e176e5203950917321f":[3,0,1,1,0,312,1],
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8c9d2c0f670aca27e1542cd3e9e28e5c":[3,0,1,1,0,312,48],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8ee07a7d7a7b71fc5d0e1074fe9ab66a":[3,0,1,1,0,312,53],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a911d8ba80cf96ff57e78e115fd359290":[3,0,1,1,0,312,33],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a9212b08d89d0fc91763054cbf5beb864":[3,0,1,1,0,312,16],
@@ -242,12 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1event__impl.html#a4f6d659834d145816fcefb48508fc878":[3,0,1,1,0,76,9],
 "classcl_1_1sycl_1_1detail_1_1event__impl.html#a5187067f9cfaf955d840bf12a8896db8":[3,0,1,1,0,76,0],
 "classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673":[3,0,1,1,0,76,15],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2":[3,0,1,1,0,76,7],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#a77f0615418eaa4f780457b96c0f920ce":[3,0,1,1,0,76,6],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#a8325d8b974d6b646148433414377190d":[3,0,1,1,0,76,3],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#a8dec4cecc4eaa7ece9ea7cb3a7aaf57c":[3,0,1,1,0,76,20],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#a91d671ead5bd093dc0432c4df45ee0cc":[3,0,1,1,0,76,12],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#a9aeaa30df68ed76f504e758a83d740b3":[3,0,1,1,0,76,18],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#aa064a42bbf3a18961b6957c145fb1753":[3,0,1,1,0,76,2],
-"classcl_1_1sycl_1_1detail_1_1event__impl.html#ab0a0f1be056f09df3cc8d63e050d1617":[3,0,1,1,0,76,10]
+"classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2":[3,0,1,1,0,76,7]
 };

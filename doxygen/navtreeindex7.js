@@ -1,5 +1,12 @@
 var NAVTREEINDEX7 =
 {
+"classcl_1_1sycl_1_1context.html#a2f985d8794caf74b7fb2665e31c3475f":[1,2,3,17],
+"classcl_1_1sycl_1_1context.html#a33f0a7e828fd867d7e31ae1bc122aca1":[1,2,3,11],
+"classcl_1_1sycl_1_1context.html#a3b03cfe931f6b947844fb99f5d35d3dc":[1,2,3,9],
+"classcl_1_1sycl_1_1context.html#a4c97caef4d1b41b51dd35e0d0f7492f1":[1,2,3,2],
+"classcl_1_1sycl_1_1context.html#a4dd9b3c6400d24a533fd2b4e2b60a5bc":[1,2,3,5],
+"classcl_1_1sycl_1_1context.html#a52195c8ee54ea7eaeadf12c1c69c9220":[1,2,3,6],
+"classcl_1_1sycl_1_1context.html#a5c3c09cdb03c1b43beac5a1bfaf1e8ed":[1,2,3,18],
 "classcl_1_1sycl_1_1context.html#a6be99e5775bfd0206a4c4cc4b1a9dcd8":[1,2,3,7],
 "classcl_1_1sycl_1_1context.html#a6c61c7620982126adcead76b71153c28":[1,2,3,12],
 "classcl_1_1sycl_1_1context.html#a6d49ab248375dd94d73de3952a661b55":[1,2,3,21],
@@ -242,12 +249,5 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1Command.html#a580605145fcb791deed414ea55228238":[1,3,0,42],
 "classcl_1_1sycl_1_1detail_1_1Command.html#a5aa15b74c02c23cf2aa94be0c560ba1a":[1,3,0,10],
 "classcl_1_1sycl_1_1detail_1_1Command.html#a5d9548e459c7d2fc7a2b8d90c2428057":[1,3,0,46],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a623108e04c3143dac085adac4edbd4ef":[1,3,0,19],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a63d94f8dc12b566122e1eb1a962ec01a":[1,3,0,49],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a65cb5498ed29b3f483655d70515fdf0d":[1,3,0,56],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4":[1,3,0,2],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a17cfc04bdd6c79656e2dae66bd3ea69f":[1,3,0,2,4],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a21bcd12ce6f4a1cfce54e2ff69b6e886":[1,3,0,2,0],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a3d4ff687ef7d2d868cb33608892ba56f":[1,3,0,2,3],
-"classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4a6ea18adaced89f0cacb69c4e1110a785":[1,3,0,2,7]
+"classcl_1_1sycl_1_1detail_1_1Command.html#a623108e04c3143dac085adac4edbd4ef":[1,3,0,19]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX12 =
 {
+"classcl_1_1sycl_1_1detail_1_1plugin.html#af360ab867da0b340615c97823bed306d":[1,0,5,15],
+"classcl_1_1sycl_1_1detail_1_1program__impl.html":[3,0,1,1,0,281],
+"classcl_1_1sycl_1_1detail_1_1program__impl.html#a1b927aa855aab8ddb17ac2a2979991c6":[3,0,1,1,0,281,3],
+"classcl_1_1sycl_1_1detail_1_1program__impl.html#a1cf094d15bf1212af809f76fc3a1d3a5":[3,0,1,1,0,281,26],
+"classcl_1_1sycl_1_1detail_1_1program__impl.html#a2497782eeb8a10313fc389926d177021":[3,0,1,1,0,281,4],
+"classcl_1_1sycl_1_1detail_1_1program__impl.html#a25eaca926b414cb927cfa6b22c0af8d5":[3,0,1,1,0,281,2],
+"classcl_1_1sycl_1_1detail_1_1program__impl.html#a2aeeb43905cbd6ab9eb32d2d1a0175a1":[3,0,1,1,0,281,16],
 "classcl_1_1sycl_1_1detail_1_1program__impl.html#a347496ee85036a08b248197e1e7db1c7":[3,0,1,1,0,281,11],
 "classcl_1_1sycl_1_1detail_1_1program__impl.html#a35cc9661a3e45de1c850e0dad7c7038c":[3,0,1,1,0,281,25],
 "classcl_1_1sycl_1_1detail_1_1program__impl.html#a44f692c02e27771433ad7bcfa763bbb4":[3,0,1,1,0,281,28],
@@ -242,12 +249,5 @@ var NAVTREEINDEX12 =
 "classcl_1_1sycl_1_1h__item.html#ab7f50c8761c3abb893e5412f67fefb60":[1,2,10,22],
 "classcl_1_1sycl_1_1h__item.html#ac83c376a726d41bfc604de872d6ee7af":[1,2,10,25],
 "classcl_1_1sycl_1_1h__item.html#aca9e8ac337c72255eed3c6595d340c3c":[1,2,10,10],
-"classcl_1_1sycl_1_1h__item.html#aced8c879b2cb3caf0d7e98421e7b3267":[1,2,10,19],
-"classcl_1_1sycl_1_1h__item.html#ad90f883e62dca93f6bdd31c1ead4b756":[1,2,10,28],
-"classcl_1_1sycl_1_1h__item.html#ad9356ff638b71e4d881b6c7cecf50bff":[1,2,10,27],
-"classcl_1_1sycl_1_1h__item.html#ad96f5447b996eb2e18f50da66df03bb8":[1,2,10,23],
-"classcl_1_1sycl_1_1h__item.html#adb78ba454c739ee7efa4d12b80e46dda":[1,2,10,14],
-"classcl_1_1sycl_1_1h__item.html#ae13fb1606186e8eee6701916875d0c47":[1,2,10,18],
-"classcl_1_1sycl_1_1h__item.html#af1c85cf3077c749b8d972baea6335fd4":[1,2,10,1],
-"classcl_1_1sycl_1_1h__item.html#af265cc8e48e3b0b94d7c707eef72340d":[1,2,10,5]
+"classcl_1_1sycl_1_1h__item.html#aced8c879b2cb3caf0d7e98421e7b3267":[1,2,10,19]
 };

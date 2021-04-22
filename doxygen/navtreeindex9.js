@@ -1,5 +1,12 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a4e850dc5fce7b6e679fe815ff144a044":[3,0,1,1,0,274,4],
+"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#a9a7484635bff0a8f568a0146699d97a2":[3,0,1,1,0,274,6],
+"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#ad531c2ee2d7db2f42a8fe142953d05e1":[3,0,1,1,0,274,7],
+"classcl_1_1sycl_1_1detail_1_1NDRDescT.html#af835ff9556deb75a20d147747e642f79":[3,0,1,1,0,274,8],
+"classcl_1_1sycl_1_1detail_1_1OSUtil.html":[3,0,1,1,0,276],
+"classcl_1_1sycl_1_1detail_1_1OSUtil.html#a00b7cb37e0fdf9d56044258cc5d8d15b":[3,0,1,1,0,276,2],
+"classcl_1_1sycl_1_1detail_1_1OSUtil.html#a0661374eee54c7934f50479d07a3bd65":[3,0,1,1,0,276,5],
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html#a33c14431c25cb56c9630a6aaa67d2572":[3,0,1,1,0,276,6],
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html#a792b0e598d342119073f85c87aaa6bd2":[3,0,1,1,0,276,7],
 "classcl_1_1sycl_1_1detail_1_1OSUtil.html#a94c049ca9c19afbb843459e67af57ba7":[3,0,1,1,0,276,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a533343b50fce37062e2c7d7daacedbd6":[3,0,1,1,0,312,21],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a5440afbd46932c028b5b446880bb9970":[3,0,1,1,0,312,11],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a5ca5ebb069325bf6cfde1f6d63aa6d5b":[3,0,1,1,0,312,43],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a64ddc1ea941846b93221772c0447a941":[3,0,1,1,0,312,26],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a72530a3ad82ee175453f82e1d8e3a6a0":[3,0,1,1,0,312,8],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a742865cae5032daa9eb045a5882f42ee":[3,0,1,1,0,312,41],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a773e1095c546fa03e4ce5c41d00f4030":[3,0,1,1,0,312,25],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7eff1b7e176e7b86484f0c18e421d166":[3,0,1,1,0,312,10],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f13812a6ecda1cbc5e8233751c9b627":[3,0,1,1,0,312,20],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a7f3cde3c571c5e176e5203950917321f":[3,0,1,1,0,312,1],
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a8c9d2c0f670aca27e1542cd3e9e28e5c":[3,0,1,1,0,312,48]
+"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a64ddc1ea941846b93221772c0447a941":[3,0,1,1,0,312,26]
 };

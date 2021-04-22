@@ -27,6 +27,7 @@ var struct__pi__context =
     [ "DeviceMemAllocContexts", "struct__pi__context.html#a9126a200a75f4beb6618132c5984bc13", null ],
     [ "Devices", "struct__pi__context.html#a9add6be7ca001dd60539fe59ea66f1fd", null ],
     [ "evBase_", "struct__pi__context.html#ae058668425925400001e631158ae4f20", null ],
+    [ "HostMemAllocContext", "struct__pi__context.html#ab9dca6f6065de7775e7520fa4d8dca3f", null ],
     [ "kind_", "struct__pi__context.html#ac8117de9a1bd39e0e848a3fb2d639e03", null ],
     [ "OwnZeContext", "struct__pi__context.html#a911b3d26f34fe105a8709c7fc878bd4a", null ],
     [ "refCount_", "struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1", null ],
