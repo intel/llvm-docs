@@ -111,20 +111,20 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a9c0b6cdd17a5d04e1806a5395a73a20a"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix::matrix_layout Layout&gt; </td></tr>
-<tr class="memitem:a9c0b6cdd17a5d04e1806a5395a73a20a"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>)||(NumCols *sizeof(T)/4 &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a9c0b6cdd17a5d04e1806a5395a73a20a">submatrix_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt; jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
+<tr class="memitem:a9c0b6cdd17a5d04e1806a5395a73a20a"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; matrix::tile_size)||(NumCols *sizeof(T)/4 &gt; matrix::tile_size), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a9c0b6cdd17a5d04e1806a5395a73a20a">submatrix_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt; jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
 <tr class="separator:a9c0b6cdd17a5d04e1806a5395a73a20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a21aef9d6b576224c56b0e037e2344"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix::matrix_layout Layout&gt; </td></tr>
-<tr class="memitem:a41a21aef9d6b576224c56b0e037e2344"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows&lt;=<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>) &amp;&amp;(NumCols *sizeof(T)/4&lt;=<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a41a21aef9d6b576224c56b0e037e2344">submatrix_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt; &amp;jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
+<tr class="memitem:a41a21aef9d6b576224c56b0e037e2344"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows&lt;=matrix::tile_size) &amp;&amp;(NumCols *sizeof(T)/4&lt;=matrix::tile_size), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a41a21aef9d6b576224c56b0e037e2344">submatrix_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt; &amp;jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
 <tr class="separator:a41a21aef9d6b576224c56b0e037e2344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e5da7a5207804e14bb213153c87d299"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a8e5da7a5207804e14bb213153c87d299">submatrix_mad</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; int8_t &gt; &amp;sub_ma, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; int8_t &gt; &amp;sub_mb, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; int32_t &gt; &amp;sub_mc)</td></tr>
 <tr class="separator:a8e5da7a5207804e14bb213153c87d299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a514f6d83d708d345b589cdd2fbed0212"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a514f6d83d708d345b589cdd2fbed0212">submatrix_mad</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; unsigned short &gt; &amp;sub_ma, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; unsigned short &gt; &amp;sub_mb, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; float &gt; &amp;sub_mc)</td></tr>
 <tr class="separator:a514f6d83d708d345b589cdd2fbed0212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a712ab635fe19dc37ecfc105313f64d2c"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </td></tr>
-<tr class="memitem:a712ab635fe19dc37ecfc105313f64d2c"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>)||(NumCols *sizeof(T)/4 &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a712ab635fe19dc37ecfc105313f64d2c">submatrix_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
+<tr class="memitem:a712ab635fe19dc37ecfc105313f64d2c"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; matrix::tile_size)||(NumCols *sizeof(T)/4 &gt; matrix::tile_size), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a712ab635fe19dc37ecfc105313f64d2c">submatrix_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
 <tr class="separator:a712ab635fe19dc37ecfc105313f64d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37526a37ea88a19e24a7fce4ee44a199"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </td></tr>
-<tr class="memitem:a37526a37ea88a19e24a7fce4ee44a199"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows&lt;=<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>) &amp;&amp;(NumCols *sizeof(T)/4&lt;=<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a37526a37ea88a19e24a7fce4ee44a199">submatrix_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
+<tr class="memitem:a37526a37ea88a19e24a7fce4ee44a199"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows&lt;=matrix::tile_size) &amp;&amp;(NumCols *sizeof(T)/4&lt;=matrix::tile_size), void &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html#a37526a37ea88a19e24a7fce4ee44a199">submatrix_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;sub_m, <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;jm, uint32_t row, uint32_t col, size_t stride, <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a> layout, bool shouldreload)</td></tr>
 <tr class="separator:a37526a37ea88a19e24a7fce4ee44a199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -145,7 +145,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &lt;= <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>) &amp;&amp; (NumCols * sizeof(T) / 4 &lt;= <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_load </td>
+          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &lt;= matrix::tile_size) &amp;&amp; (NumCols * sizeof(T) / 4 &lt;= matrix::tile_size), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>sub_m</em>, </td>
@@ -153,7 +153,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt; &amp;&#160;</td>
           <td class="paramname"><em>jm</em>, </td>
         </tr>
         <tr>
@@ -177,7 +177,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a>&#160;</td>
           <td class="paramname"><em>layout</em>, </td>
         </tr>
         <tr>
@@ -199,7 +199,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00229">229</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00232">232</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>) || (NumCols * sizeof(T) / 4 &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_load </td>
+          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; matrix::tile_size) || (NumCols * sizeof(T) / 4 &gt; matrix::tile_size), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>sub_m</em>, </td>
@@ -223,7 +223,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols, Layout &gt;&#160;</td>
           <td class="paramname"><em>jm</em>, </td>
         </tr>
         <tr>
@@ -247,7 +247,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a>&#160;</td>
           <td class="paramname"><em>layout</em>, </td>
         </tr>
         <tr>
@@ -269,7 +269,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00209">209</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00212">212</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,7 +313,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00253">253</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00257">257</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols, matrix
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00262">262</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00266">266</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
 </div>
 </div>
@@ -373,7 +373,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>) || (NumCols * sizeof(T) / 4 &gt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_store </td>
+          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &gt; matrix::tile_size) || (NumCols * sizeof(T) / 4 &gt; matrix::tile_size), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_store </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>sub_m</em>, </td>
@@ -381,7 +381,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;&#160;</td>
           <td class="paramname"><em>jm</em>, </td>
         </tr>
         <tr>
@@ -405,7 +405,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a>&#160;</td>
           <td class="paramname"><em>layout</em>, </td>
         </tr>
         <tr>
@@ -427,7 +427,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00275">275</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00279">279</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
 </div>
 </div>
@@ -443,7 +443,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &lt;= <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>) &amp;&amp; (NumCols * sizeof(T) / 4 &lt;= <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad2ec00475a39be76d906b423c9e311b4">matrix::tile_size</a>), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_store </td>
+          <td class="memname">static <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a> std::enable_if&lt;(NumRows &lt;= matrix::tile_size) &amp;&amp; (NumCols * sizeof(T) / 4 &lt;= matrix::tile_size), void&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::ext::intel::detail::submatrix_store </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">detail::submatrix</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>sub_m</em>, </td>
@@ -451,7 +451,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html">matrix::joint_matrix</a>&lt; Group, T, NumRows, NumCols &gt; &amp;&#160;</td>
           <td class="paramname"><em>jm</em>, </td>
         </tr>
         <tr>
@@ -475,7 +475,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1matrix.html#ad770da35adc7eff3b4986fa8c9de2204">matrix::matrix_layout</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a83e42bd05273a505954e55af7262dff4">matrix::matrix_layout</a>&#160;</td>
           <td class="paramname"><em>layout</em>, </td>
         </tr>
         <tr>
@@ -497,7 +497,7 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00293">293</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00297">297</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
 </div>
 </div>
@@ -522,9 +522,9 @@ template&lt;typename Group , typename T , size_t NumRows, size_t NumCols&gt; </d
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00049">49</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="matrix-amx_8hpp_source.html#l00050">50</a> of file <a class="el" href="matrix-amx_8hpp_source.html">matrix-amx.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="matrix-amx_8hpp_source.html#l00130">cl::sycl::ext::intel::matrix::joint_matrix&lt; Group, T, NumRows, NumCols, Layout, Enabled &gt;::joint_matrix()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="matrix-amx_8hpp_source.html#l00131">cl::sycl::ext::intel::experimental::matrix::joint_matrix&lt; Group, T, NumRows, NumCols, Layout, Enabled &gt;::joint_matrix()</a>.</p>
 
 </div>
 </div>

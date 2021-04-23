@@ -19,14 +19,14 @@ var classcl_1_1sycl_1_1detail_1_1CG =
       [ "FILL_USM", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a5d1025f00ce039627cd01a97e08a6eb1", null ],
       [ "PREFETCH_USM", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a789955d1c8083d18f9bf4c01e2c0884a", null ],
       [ "CODEPLAY_INTEROP_TASK", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a5cb8f7c48a81efc87a5400ab8304f7f8", null ],
-      [ "CODEPLAY_HOST_TASK", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ad9c25fb4fc5b6b68246f8f590082e061", null ],
-      [ "KERNEL_V1", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208aa730e904662fdf34ed854e40876734ee", null ]
+      [ "CODEPLAY_HOST_TASK", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ad9c25fb4fc5b6b68246f8f590082e061", null ]
     ] ],
     [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ab93fcd8a7fdfe7e29a4306d663b8fa62", null ],
     [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#aea503c1c8f0394eede77a1fdf985d02a", null ],
     [ "~CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ad909df45d32dc55331140b813f60700b", null ],
     [ "getExtendedMembers", "classcl_1_1sycl_1_1detail_1_1CG.html#a714235046eae08d1898eea0be1f9bd4a", null ],
     [ "getType", "classcl_1_1sycl_1_1detail_1_1CG.html#a41fca13e6a5f79e319806715fa48b743", null ],
+    [ "getVersion", "classcl_1_1sycl_1_1detail_1_1CG.html#ac6f98fbf6b1b5610be92d4d36f9dde6b", null ],
     [ "MColumn", "classcl_1_1sycl_1_1detail_1_1CG.html#a6628c8c2ca6833f9cef8a650361bccda", null ],
     [ "MEvents", "classcl_1_1sycl_1_1detail_1_1CG.html#aed39ca43cc8e1592955f1d425e641acf", null ],
     [ "MFileName", "classcl_1_1sycl_1_1detail_1_1CG.html#a5092dfc352e9f617c2bf1f3e76c0d83a", null ],

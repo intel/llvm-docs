@@ -92,7 +92,6 @@ var namespacecl_1_1sycl =
     [ "platform_error", "classcl_1_1sycl_1_1platform__error.html", null ],
     [ "private_memory", "classcl_1_1sycl_1_1private__memory.html", "classcl_1_1sycl_1_1private__memory" ],
     [ "profiling_error", "classcl_1_1sycl_1_1profiling__error.html", null ],
-    [ "program", "classcl_1_1sycl_1_1program.html", "classcl_1_1sycl_1_1program" ],
     [ "property_list", "classcl_1_1sycl_1_1property__list.html", "classcl_1_1sycl_1_1property__list" ],
     [ "queue", "classcl_1_1sycl_1_1queue.html", "classcl_1_1sycl_1_1queue" ],
     [ "range", "classcl_1_1sycl_1_1range.html", "classcl_1_1sycl_1_1range" ],

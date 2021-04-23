@@ -370,14 +370,15 @@ var group__sycl__api =
       [ "handler", "classcl_1_1sycl_1_1item.html#a72db39b889f34257a4c691d6acd383ab", null ]
     ] ],
     [ "kernel", "classcl_1_1sycl_1_1kernel.html", [
-      [ "kernel", "classcl_1_1sycl_1_1kernel.html#a0183adaae0863b75a8e1c629d5b436c2", null ],
       [ "kernel", "classcl_1_1sycl_1_1kernel.html#a9ad63675c9bcd9ce62c5de4b85e6b7ed", null ],
       [ "kernel", "classcl_1_1sycl_1_1kernel.html#a3cc1ed06a435e41bb9e61bdcd65d09fb", null ],
-      [ "get", "classcl_1_1sycl_1_1kernel.html#a75a071360a293e0d0eea6e98dd545658", null ],
+      [ "__SYCL2020_DEPRECATED", "classcl_1_1sycl_1_1kernel.html#a268d6b883c3c62a24c2cdabce25e4a63", null ],
+      [ "__SYCL2020_DEPRECATED", "classcl_1_1sycl_1_1kernel.html#a168d550bbc525a696a0c6b313e5b00a0", null ],
       [ "get_context", "classcl_1_1sycl_1_1kernel.html#aeff8c6f5fb50f1a7d90c3bb49b1c1635", null ],
       [ "get_info", "classcl_1_1sycl_1_1kernel.html#aeef5b4353a35936c99c2f5e92a6e4d17", null ],
       [ "get_info", "classcl_1_1sycl_1_1kernel.html#a61d784a6a2ef0490c87f54f1bae5f3f0", null ],
       [ "get_info", "classcl_1_1sycl_1_1kernel.html#aea2d21b6835eb14c23a488d07a800a0b", null ],
+      [ "get_native", "classcl_1_1sycl_1_1kernel.html#af6daa77c1d642415ac6e5af7c4fe9532", null ],
       [ "get_program", "classcl_1_1sycl_1_1kernel.html#a44e9b48f6121c2b483129c733b56273d", null ],
       [ "get_sub_group_info", "classcl_1_1sycl_1_1kernel.html#abab604fc3c235d43af6c78a7241b9f79", null ],
       [ "get_sub_group_info", "classcl_1_1sycl_1_1kernel.html#a7afdb00ba6ef5fe604dc37b52d1182b6", null ],
@@ -387,7 +388,8 @@ var group__sycl__api =
       [ "operator=", "classcl_1_1sycl_1_1kernel.html#a15ac0a1948ca9570150c558764663e4e", null ],
       [ "operator=", "classcl_1_1sycl_1_1kernel.html#a5cb83a013dd7ce77ab8cef20d2a5dc94", null ],
       [ "operator==", "classcl_1_1sycl_1_1kernel.html#a9e3acef84de6c88f560d4844c75436cf", null ],
-      [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1kernel.html#a71492293d0386f542d120a1fc3dfbb55", null ]
+      [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1kernel.html#a71492293d0386f542d120a1fc3dfbb55", null ],
+      [ "SyclContext", "classcl_1_1sycl_1_1kernel.html#afc8e93bb0de4d5def021777ebcd70501", null ]
     ] ],
     [ "kernel_id", "classcl_1_1sycl_1_1kernel__id.html", [
       [ "kernel_id", "classcl_1_1sycl_1_1kernel__id.html#a101e513db13c65966f3a78e082813e76", null ],
@@ -409,6 +411,7 @@ var group__sycl__api =
       [ "get_devices", "classcl_1_1sycl_1_1kernel__bundle.html#a24f3a2feb9fd910b4dfcaa96d00771de", null ],
       [ "get_kernel", "classcl_1_1sycl_1_1kernel__bundle.html#a69b871921c3ef7c03099d0dcbb9ecbc1", null ],
       [ "get_kernel_ids", "classcl_1_1sycl_1_1kernel__bundle.html#a3e68e35151af14705dd7cccb2596edb7", null ],
+      [ "get_native", "classcl_1_1sycl_1_1kernel__bundle.html#a4ce82e6bce5f0da5907f821510ab229d", null ],
       [ "has_kernel", "classcl_1_1sycl_1_1kernel__bundle.html#a60b246247123a5219354f9dc59c54179", null ],
       [ "has_kernel", "classcl_1_1sycl_1_1kernel__bundle.html#a3824dd244ec9a2f4623da3f142f4ad50", null ],
       [ "native_specialization_constant", "classcl_1_1sycl_1_1kernel__bundle.html#ace43bd05e3d8a9113687e357b2784e30", null ],
@@ -569,45 +572,6 @@ var group__sycl__api =
       [ "operator==", "classcl_1_1sycl_1_1platform.html#a4c8c8228ee6fb036fa37b6bbe9386a87", null ],
       [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1platform.html#a71492293d0386f542d120a1fc3dfbb55", null ]
     ] ],
-    [ "program", "classcl_1_1sycl_1_1program.html", [
-      [ "program", "classcl_1_1sycl_1_1program.html#a961883f892c3c224eac3d908ebfcde6d", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#a63b2de4549d6f4141f83e8ef0243a42d", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#a6409a91d6d6218626c7a3c5ee684cbe6", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#ac0cbb214a9ec9e8055ba84e55e706e8d", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#a94d70ff2328556d76785cd4069b17564", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#a94ad567dc78b353a842ca8a2f1d99e5c", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#a0d2310f117b0b4270c61f81cd2d02a12", null ],
-      [ "program", "classcl_1_1sycl_1_1program.html#a6a8e0f5e8e85d87cf97a42ff528c72b9", null ],
-      [ "build_with_kernel_type", "classcl_1_1sycl_1_1program.html#a719aeddee6da448ddcffc1d8b3628b9c", null ],
-      [ "build_with_source", "classcl_1_1sycl_1_1program.html#a894107dbebdd9480e6cebbdccf89bdbc", null ],
-      [ "compile_with_kernel_type", "classcl_1_1sycl_1_1program.html#a1ea2cea6ee603aca30f448cb4e6c8e47", null ],
-      [ "compile_with_source", "classcl_1_1sycl_1_1program.html#a353f88ae1ec605f2363a29c750d2e527", null ],
-      [ "get", "classcl_1_1sycl_1_1program.html#ae86b3cfa4dbff2156dd1485c1a88d42f", null ],
-      [ "get_backend", "classcl_1_1sycl_1_1program.html#afab248ea43cd9d167fa5c700aef038fb", null ],
-      [ "get_binaries", "classcl_1_1sycl_1_1program.html#aa26f2c7fb8d3556b9727fc3b99cb1cf7", null ],
-      [ "get_build_options", "classcl_1_1sycl_1_1program.html#abe6bda06f0e7ce8d744669a23cda4e52", null ],
-      [ "get_compile_options", "classcl_1_1sycl_1_1program.html#a8fa2fc745b9a4fea1c80ef4e438d440d", null ],
-      [ "get_context", "classcl_1_1sycl_1_1program.html#ab978ea0fd25f4844355e959acd19e30b", null ],
-      [ "get_devices", "classcl_1_1sycl_1_1program.html#a6d067f549eb5a0afb69e6ca7771e469d", null ],
-      [ "get_info", "classcl_1_1sycl_1_1program.html#a782f92499681573bba6883b91614bb1a", null ],
-      [ "get_kernel", "classcl_1_1sycl_1_1program.html#a66001da30147f4582e8436e9fe4a3404", null ],
-      [ "get_kernel", "classcl_1_1sycl_1_1program.html#a97395b8e594e0c323095e26506ba2f36", null ],
-      [ "get_link_options", "classcl_1_1sycl_1_1program.html#a3818d7c7f142bb245cdae198a107d29a", null ],
-      [ "get_native", "classcl_1_1sycl_1_1program.html#aac347f6c2e357827a3fac8be3dee602b", null ],
-      [ "get_property", "classcl_1_1sycl_1_1program.html#a5df6e6cfbe648da8be55f7f69aa61052", null ],
-      [ "get_state", "classcl_1_1sycl_1_1program.html#ad6a80548fddd3a70f3d763ea433e58b4", null ],
-      [ "has_kernel", "classcl_1_1sycl_1_1program.html#a03ccc2ea0ff460ccb3729c88e8506864", null ],
-      [ "has_kernel", "classcl_1_1sycl_1_1program.html#a13e4ac956db0d71f33667ba31f2724e2", null ],
-      [ "has_property", "classcl_1_1sycl_1_1program.html#ad2878d17583067b07cde69a21fb5cc51", null ],
-      [ "is_host", "classcl_1_1sycl_1_1program.html#a52de7223f772e3d98b7a700ec0f146b7", null ],
-      [ "link", "classcl_1_1sycl_1_1program.html#ad7ce9c33a3a57e413334d331a66f9246", null ],
-      [ "operator!=", "classcl_1_1sycl_1_1program.html#a887e9df44a536d2ea695900a523d81fb", null ],
-      [ "operator=", "classcl_1_1sycl_1_1program.html#a3f05e5d7b985fe6e8a3b6e5654527a62", null ],
-      [ "operator=", "classcl_1_1sycl_1_1program.html#a2c22bc80d1143931ef12b2c59daadf80", null ],
-      [ "operator==", "classcl_1_1sycl_1_1program.html#a3dd0c8d9c68fb667b23caa8502f64efa", null ],
-      [ "set_spec_constant", "classcl_1_1sycl_1_1program.html#afe59f2ff848ff4469da0be1119b2681d", null ],
-      [ "detail::createSyclObjFromImpl", "classcl_1_1sycl_1_1program.html#a71492293d0386f542d120a1fc3dfbb55", null ]
-    ] ],
     [ "property_list", "classcl_1_1sycl_1_1property__list.html", [
       [ "property_list", "classcl_1_1sycl_1_1property__list.html#ab5ac1c5a4cf88ddc9a31c592966d975b", null ],
       [ "get_property", "classcl_1_1sycl_1_1property__list.html#ac67fd921694c07f5f3ca569ffe542b5b", null ],
@@ -745,5 +709,6 @@ var group__sycl__api =
       [ "operator<<", "classcl_1_1sycl_1_1stream.html#a63a4f2375d31ed82a03255f48b18f8d5", null ],
       [ "operator<<", "classcl_1_1sycl_1_1stream.html#aa1be5d827ee50a6428db7ad835afd51d", null ]
     ] ],
-    [ "vec", "classcl_1_1sycl_1_1vec.html", null ]
+    [ "vec", "classcl_1_1sycl_1_1vec.html", null ],
+    [ "__SYCL2020_DEPRECATED", "group__sycl__api.html#ga98bc9d7bbe01b4ad8088269110633ba7", null ]
 ];

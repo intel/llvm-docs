@@ -16,6 +16,7 @@ var classcl_1_1sycl_1_1detail_1_1device__image__impl =
     [ "get_spec_const_data_ref", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ab32cc2d720eef00d42db3b01d06c97ca", null ],
     [ "get_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a37bc4e298c33e0459a1679d18362405f", null ],
     [ "get_state", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a06f68e9704e62109ac68d0c773989dcb", null ],
+    [ "getNative", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a31225c7e57cba28d80941ca3b3f4988f", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a8886a8988f124997474ed3fe43308c4d", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a77652970566a1c51f1bcb5c6bd30c937", null ],
     [ "has_specialization_constant", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a2bbfa97746102339bb310e21e717aa84", null ],

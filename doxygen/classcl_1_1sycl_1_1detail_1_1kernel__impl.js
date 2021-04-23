@@ -17,6 +17,7 @@ var classcl_1_1sycl_1_1detail_1_1kernel__impl =
     [ "getDeviceImage", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aea20cd85ab3d395a1108d5940e77e7c6", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a2b368c5dded1c129ecf00082038273e7", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#ac93553b4392b36facd7ed918f31ed740", null ],
+    [ "getNative", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a080838e580cf7ddb3a1799a091d00d3b", null ],
     [ "getPlugin", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a5295e23899d13a92666f2404711c22cd", null ],
     [ "is_host", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aa9d1d3a87f501042ec44561a35798a83", null ],
     [ "isCreatedFromSource", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a918531e89dcf4715aab6ce6451842064", null ],

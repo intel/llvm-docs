@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html#a50da0d2527299e8614e4ffccfc0bc135", null ]
+];

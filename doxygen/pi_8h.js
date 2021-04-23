@@ -375,10 +375,17 @@ var pi_8h =
       [ "PI_PROFILING_INFO_COMMAND_START", "pi_8h.html#a571c87247e08fd8e646caa8c86c5f3d2a263b61a039b1f3777fb0f0375741c6ee", null ],
       [ "PI_PROFILING_INFO_COMMAND_END", "pi_8h.html#a571c87247e08fd8e646caa8c86c5f3d2a17474c66026579866f12cfab0487853e", null ]
     ] ],
+    [ "_pi_program_binary_type", "pi_8h.html#af5f2d5ad7a9bb5269aa93b6fcdf6aaaf", [
+      [ "PI_PROGRAM_BINARY_TYPE_NONE", "pi_8h.html#af5f2d5ad7a9bb5269aa93b6fcdf6aaafadf403657b8405d7cd844b98352251085", null ],
+      [ "PI_PROGRAM_BINARY_TYPE_COMPILED_OBJECT", "pi_8h.html#af5f2d5ad7a9bb5269aa93b6fcdf6aaafad58481c151f86a10161f4a2a0f274978", null ],
+      [ "PI_PROGRAM_BINARY_TYPE_LIBRARY", "pi_8h.html#af5f2d5ad7a9bb5269aa93b6fcdf6aaafa6c5543bed723d1dfa7f349173f6b06b7", null ],
+      [ "PI_PROGRAM_BINARY_TYPE_EXECUTABLE", "pi_8h.html#af5f2d5ad7a9bb5269aa93b6fcdf6aaafac3e86728de2c54401a38f65b347428f9", null ]
+    ] ],
     [ "_pi_program_build_info", "pi_8h.html#affb012a387665b7fe650f322575cae0e", [
       [ "PI_PROGRAM_BUILD_INFO_STATUS", "pi_8h.html#affb012a387665b7fe650f322575cae0eaaf8dd9b1935610112703d14c7a26efdb", null ],
       [ "PI_PROGRAM_BUILD_INFO_OPTIONS", "pi_8h.html#affb012a387665b7fe650f322575cae0ea4ea32091d1731cadafb9a0399a6f4d93", null ],
-      [ "PI_PROGRAM_BUILD_INFO_LOG", "pi_8h.html#affb012a387665b7fe650f322575cae0ea31edae857f37769754ee0bf310815f7b", null ]
+      [ "PI_PROGRAM_BUILD_INFO_LOG", "pi_8h.html#affb012a387665b7fe650f322575cae0ea31edae857f37769754ee0bf310815f7b", null ],
+      [ "PI_PROGRAM_BUILD_INFO_BINARY_TYPE", "pi_8h.html#affb012a387665b7fe650f322575cae0eaa6b3936d7b6eabc5291dfd43cd2b374f", null ]
     ] ],
     [ "_pi_program_build_status", "pi_8h.html#a26d1b35f455d23f0e3b640b0c90bb1e7", [
       [ "PI_PROGRAM_BUILD_STATUS_NONE", "pi_8h.html#a26d1b35f455d23f0e3b640b0c90bb1e7af8062e397c30a583f76682a24460665a", null ],
@@ -537,6 +544,8 @@ var pi_8h =
     [ "piextEventCreateWithNativeHandle", "pi_8h.html#aaa356b1bb1c72597e95106167b74ec2d", null ],
     [ "piextEventGetNativeHandle", "pi_8h.html#a51c971f0beede2c7037ff2d9e271e418", null ],
     [ "piextGetDeviceFunctionPointer", "pi_8h.html#aeac83a44281d25a7780138c4312bfea4", null ],
+    [ "piextKernelCreateWithNativeHandle", "pi_8h.html#a7ed130fa63a894bcd1db24367ac67a76", null ],
+    [ "piextKernelGetNativeHandle", "pi_8h.html#ac90f4db7591e92f428b93bcec6049122", null ],
     [ "piextKernelSetArgMemObj", "pi_8h.html#afb7744d7e6636f8d7805e5b082df30bc", null ],
     [ "piextKernelSetArgPointer", "pi_8h.html#ae1ef844cab36a9fa7606161ef7e3d2a3", null ],
     [ "piextKernelSetArgSampler", "pi_8h.html#a43005a5be1bb3e5377aa2c024585eab3", null ],

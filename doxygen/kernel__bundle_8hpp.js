@@ -1,5 +1,6 @@
 var kernel__bundle_8hpp =
 [
+    [ "backend_traits", "classcl_1_1sycl_1_1backend__traits.html", "classcl_1_1sycl_1_1backend__traits" ],
     [ "device_image_plain", "classcl_1_1sycl_1_1detail_1_1device__image__plain.html", "classcl_1_1sycl_1_1detail_1_1device__image__plain" ],
     [ "device_image", "classcl_1_1sycl_1_1device__image.html", "classcl_1_1sycl_1_1device__image" ],
     [ "kernel_bundle_plain", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain" ],

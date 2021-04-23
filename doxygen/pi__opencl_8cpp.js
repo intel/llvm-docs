@@ -20,6 +20,8 @@ var pi__opencl_8cpp =
     [ "piextEventCreateWithNativeHandle", "pi__opencl_8cpp.html#af3f06cd73fa47ae2991cf0f4b06cd3f3", null ],
     [ "piextGetDeviceFunctionPointer", "pi__opencl_8cpp.html#a02edeed25c4a9c60960b21f0b0cb0902", null ],
     [ "piextGetNativeHandle", "pi__opencl_8cpp.html#af6a8058f33a11be0117391a671edba07", null ],
+    [ "piextKernelCreateWithNativeHandle", "pi__opencl_8cpp.html#ad258a2c08ef690d5cbd9f6a08e7db85c", null ],
+    [ "piextKernelGetNativeHandle", "pi__opencl_8cpp.html#ac90f4db7591e92f428b93bcec6049122", null ],
     [ "piextKernelSetArgMemObj", "pi__opencl_8cpp.html#afb7744d7e6636f8d7805e5b082df30bc", null ],
     [ "piextKernelSetArgPointer", "pi__opencl_8cpp.html#ae1ef844cab36a9fa7606161ef7e3d2a3", null ],
     [ "piextKernelSetArgSampler", "pi__opencl_8cpp.html#a43005a5be1bb3e5377aa2c024585eab3", null ],

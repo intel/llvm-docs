@@ -1,5 +1,5 @@
 var classcl_1_1sycl_1_1backend__traits =
 [
-    [ "input_type", "classcl_1_1sycl_1_1backend__traits.html#aa54535ab540a79f35327cb45a7943e83", null ],
-    [ "return_type", "classcl_1_1sycl_1_1backend__traits.html#a6ce26c89041d055a3dcfef37a8ce026c", null ]
+    [ "input_type", "classcl_1_1sycl_1_1backend__traits.html#a51d73e3172faf0ef4a62a3f362c67a75", null ],
+    [ "return_type", "classcl_1_1sycl_1_1backend__traits.html#adab476fb02169a421359d3ca5590cc63", null ]
 ];

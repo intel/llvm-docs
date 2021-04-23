@@ -1,6 +1,7 @@
 var classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl =
 [
     [ "kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#afd134b11508fc0d252bb57a5e7f2efc3", null ],
+    [ "kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#abf65b7eb89d212b7315fc85f1e96568e", null ],
     [ "kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#aad5c36ad00606fc2e6050eac7e1dd80a", null ],
     [ "kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a77524aecd1b59e4482e22229de1b45e1", null ],
     [ "kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a6adc1457d243097171500aee1afb8a17", null ],

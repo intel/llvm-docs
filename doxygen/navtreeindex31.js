@@ -1,12 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"struct__pi__kernel.html#ab78df1842f39dfb883077e5c60d4bbbc":[3,0,18,20],
-"struct__pi__kernel.html#abf0577ba8782e08b1b882ae6546f79b2":[3,0,18,19],
-"struct__pi__kernel.html#ac4353f0f9307461674a7ea3e72404940":[3,0,18,11],
-"struct__pi__kernel.html#acbe725b178f9972d7a98563a0fad2768":[3,0,18,26],
-"struct__pi__kernel.html#ad42826cd20b4f5138bb59fb526f14f39":[3,0,18,7],
-"struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba":[3,0,18,28],
-"struct__pi__kernel.html#ade707fb649357321fa55ed8765ea6030":[3,0,18,3],
 "struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339":[3,0,18,24],
 "struct__pi__kernel.html#ae34356df9814bec0543bbc7bffcf4728":[3,0,18,14],
 "struct__pi__kernel.html#ae34fd39afe4bc5dd3dd1ddd868b084f8":[3,0,18,8],
@@ -122,8 +115,8 @@ var NAVTREEINDEX31 =
 "struct__pi__program.html":[3,0,24],
 "struct__pi__program.html#a019071f4456b2301a42fe00264265fbd":[3,0,24,32],
 "struct__pi__program.html#a07ee027170c3138223814e6f23953c42":[3,0,24,20],
-"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,24,5],
 "struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,24,9],
+"struct__pi__program.html#a0ba1213f41b4f3e4787b0a0bfe5106a0":[3,0,24,5],
 "struct__pi__program.html#a0e92fdd9653e5f3ff2677eb45a241854":[3,0,24,10],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16":[3,0,24,3],
 "struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a1684fb88863210e92ec87a7ffb479c95":[3,0,24,3,0],
@@ -249,5 +242,12 @@ var NAVTREEINDEX31 =
 "structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html#aad8d110478d50e8287ffa20d7f123b59":[3,0,1,0,0,1,1],
 "structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html#ab64e706fb1f97bef278b62347ab251fc":[3,0,1,0,0,1,8],
 "structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html#afdc180281c105b161eb56fa4d87a3401":[3,0,1,0,0,1,2],
-"structcl_1_1sycl_1_1INTEL_1_1__GetValue.html":[3,0,1,1,3,2]
+"structcl_1_1sycl_1_1INTEL_1_1__GetValue.html":[3,0,1,1,3,2],
+"structcl_1_1sycl_1_1INTEL_1_1__GetValue.html#ae0ca3b837c3cfe20dccd6370067cdc62":[3,0,1,1,3,2,0],
+"structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html":[3,0,1,1,3,3],
+"structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html#abd39517e544ed75631bb95796e9b6971":[3,0,1,1,3,3,0],
+"structcl_1_1sycl_1_1INTEL_1_1__MatchType.html":[3,0,1,1,3,4],
+"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html":[3,0,1,1,3,5],
+"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html#a1b684a71d471a1dab62171b198f3e358":[3,0,1,1,3,5,1],
+"structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html#a52322881a741846baefcd40beb8f52a0":[3,0,1,1,3,5,0]
 };
