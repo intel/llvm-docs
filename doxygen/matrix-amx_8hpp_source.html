@@ -480,49 +480,50 @@ $(document).ready(function(){initNavTree('matrix-amx_8hpp_source.html',''); init
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        (LayoutA == matrix_layout::row_major) &amp;&amp;</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        (LayoutB == matrix_layout::packed_b) &amp;&amp;</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        (LayoutC == matrix_layout::row_major),</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    void&gt;::type</div>
-<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#ae9542023e47fb9e99da3579e49ae3f86">  409</a></span>&#160;joint_matrix_mad(Group sg,</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    joint_matrix&lt;Group, T2, NumRowsC, NumColsC, LayoutC&gt;&gt;::type</div>
+<div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html#a73434bbf1665981098a86d5918a1d3a1">  409</a></span>&#160;joint_matrix_mad(Group sg,</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                 joint_matrix&lt;Group, T1, NumRowsA, NumColsA, LayoutA&gt; &amp;jmA,</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                 joint_matrix&lt;Group, T1, NumRowsB, NumColsB, LayoutB&gt; &amp;jmB,</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                 joint_matrix&lt;Group, T2, NumRowsC, NumColsC, LayoutC&gt; &amp;jmC) {</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  constexpr size_t epd = detail::elems_per_dword&lt;T1&gt;::value;</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="comment">// If A is large and C is small, in joint_matrix_load, we do memcpy for A, and</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="comment">// we do tileload for C whose shape is not tile_size*tile_size*4. In</span></div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="comment">// joint_matrix_mad, we do tileload for A and shape is tile_size*tile_size*4.</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="comment">// So we need to reshape C before we do dpbssd.</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  bool Cshouldreload = jmC.isSmall &amp;&amp; !jmA.isSmall &amp;&amp; !jmB.isSmall;</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  bool Ashouldreload = jmA.isSmall &amp;&amp; !jmB.isSmall;</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  bool Bshouldreload = jmB.isSmall &amp;&amp; !jmA.isSmall;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  for (int m = 0; m &lt; jmC.trows; ++m) {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    for (int n = 0; n &lt; jmC.tcols; ++n) {</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;      detail::submatrix&lt;T2&gt; sub_c;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;      <span class="comment">// AMX: 8 register tiles : 1k byte size, SMmaxxSKmax =16x64</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;      submatrix_load(sub_c, jmC, m * tile_size, n * tile_size, jmC.stride,</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                     matrix_layout::row_major, Cshouldreload);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      for (int k = 0; k &lt; jmA.tcols; ++k) { <span class="comment">// K-&gt;int8_t</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        detail::submatrix&lt;T1&gt; sub_a;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        detail::submatrix&lt;T1&gt; sub_b;</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        submatrix_load(sub_a, jmA, m * tile_size, k * tile_size * epd,</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                       jmA.stride, matrix_layout::packed_a, Ashouldreload);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="comment">// Assume we alreay in vnni format.</span></div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        submatrix_load(sub_b, jmB, k * tile_size, n * tile_size * epd,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                       jmB.stride, matrix_layout::packed_b, Bshouldreload);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        submatrix_mad(sub_a, sub_b, sub_c);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;      }</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;      submatrix_store(sub_c, jmC, m * tile_size, n * tile_size, jmC.stride,</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                      matrix_layout::row_major, Cshouldreload);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    }</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  }</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  return;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;} <span class="comment">// namespace experimental::matrix</span></div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;} <span class="comment">// namespace intel</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;} <span class="comment">// namespace ext</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  joint_matrix&lt;Group, T2, NumRowsC, NumColsC, LayoutC&gt; res(jmC);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  constexpr size_t epd = detail::elems_per_dword&lt;T1&gt;::value;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="comment">// If A is large and C is small, in joint_matrix_load, we do memcpy for A, and</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <span class="comment">// we do tileload for C whose shape is not tile_size*tile_size*4. In</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="comment">// joint_matrix_mad, we do tileload for A and shape is tile_size*tile_size*4.</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  <span class="comment">// So we need to reshape C before we do dpbssd.</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  bool Cshouldreload = res.isSmall &amp;&amp; !jmA.isSmall &amp;&amp; !jmB.isSmall;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  bool Ashouldreload = jmA.isSmall &amp;&amp; !jmB.isSmall;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  bool Bshouldreload = jmB.isSmall &amp;&amp; !jmA.isSmall;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  for (int m = 0; m &lt; res.trows; ++m) {</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    for (int n = 0; n &lt; res.tcols; ++n) {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;      detail::submatrix&lt;T2&gt; sub_c;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;      <span class="comment">// AMX: 8 register tiles : 1k byte size, SMmaxxSKmax =16x64</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      submatrix_load(sub_c, res, m * tile_size, n * tile_size, res.stride,</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                     matrix_layout::row_major, Cshouldreload);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      for (int k = 0; k &lt; jmA.tcols; ++k) { <span class="comment">// K-&gt;int8_t</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        detail::submatrix&lt;T1&gt; sub_a;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        detail::submatrix&lt;T1&gt; sub_b;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        submatrix_load(sub_a, jmA, m * tile_size, k * tile_size * epd,</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                       jmA.stride, matrix_layout::packed_a, Ashouldreload);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="comment">// Assume we alreay in vnni format.</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        submatrix_load(sub_b, jmB, k * tile_size, n * tile_size * epd,</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                       jmB.stride, matrix_layout::packed_b, Bshouldreload);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        submatrix_mad(sub_a, sub_b, sub_c);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;      }</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;      submatrix_store(sub_c, res, m * tile_size, n * tile_size, res.stride,</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                      matrix_layout::row_major, Cshouldreload);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;    }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  }</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  return res;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;} <span class="comment">// namespace experimental::matrix</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;} <span class="comment">// namespace intel</span></div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;} <span class="comment">// namespace ext</span></div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasscl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix_html"><div class="ttname"><a href="classcl_1_1sycl_1_1ext_1_1intel_1_1detail_1_1submatrix.html">cl::sycl::ext::intel::detail::submatrix</a></div><div class="ttdef"><b>Definition:</b> <a href="matrix-amx_8hpp_source.html#l00043">matrix-amx.hpp:43</a></div></div>

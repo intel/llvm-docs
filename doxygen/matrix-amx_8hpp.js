@@ -14,7 +14,7 @@ var matrix_amx_8hpp =
     ] ],
     [ "joint_matrix_load", "matrix-amx_8hpp.html#ac3577ff4b758df571d1e8436e8ade47d", null ],
     [ "joint_matrix_load", "matrix-amx_8hpp.html#ae53b6c7caf9d600db279f88531b9626a", null ],
-    [ "joint_matrix_mad", "matrix-amx_8hpp.html#ae9542023e47fb9e99da3579e49ae3f86", null ],
+    [ "joint_matrix_mad", "matrix-amx_8hpp.html#a73434bbf1665981098a86d5918a1d3a1", null ],
     [ "joint_matrix_store", "matrix-amx_8hpp.html#a7c629262e35ac0e2235e5332898bd0f8", null ],
     [ "joint_matrix_store", "matrix-amx_8hpp.html#a4b8235c9c50b8143f06b45e845ed658a", null ],
     [ "submatrix_load", "matrix-amx_8hpp.html#a41a21aef9d6b576224c56b0e037e2344", null ],
