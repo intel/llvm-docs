@@ -344,6 +344,15 @@ var hierarchy =
     [ "cl::sycl::exception_list", "classcl_1_1sycl_1_1exception__list.html", null ],
     [ "cl::sycl::detail::ExtendedMemberT", "structcl_1_1sycl_1_1detail_1_1ExtendedMemberT.html", null ],
     [ "false_type", null, [
+      [ "cl::sycl::__is_span_impl< std::remove_cv_t< _Tp > >", "structcl_1_1sycl_1_1____is__span__impl.html", [
+        [ "cl::sycl::__is_span< _Tp >", "structcl_1_1sycl_1_1____is__span.html", null ]
+      ] ],
+      [ "cl::sycl::__is_std_array_impl< std::remove_cv_t< _Tp > >", "structcl_1_1sycl_1_1____is__std__array__impl.html", [
+        [ "cl::sycl::__is_std_array< _Tp >", "structcl_1_1sycl_1_1____is__std__array.html", null ]
+      ] ],
+      [ "cl::sycl::__is_span_compatible_container< _Tp, _ElementType, class >", "structcl_1_1sycl_1_1____is__span__compatible__container.html", null ],
+      [ "cl::sycl::__is_span_impl< _Tp >", "structcl_1_1sycl_1_1____is__span__impl.html", null ],
+      [ "cl::sycl::__is_std_array_impl< _Tp >", "structcl_1_1sycl_1_1____is__std__array__impl.html", null ],
       [ "cl::sycl::detail::is_address_space_compliant_impl< T, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html", null ],
       [ "cl::sycl::detail::is_contained< T, empty_type_list >", "structcl_1_1sycl_1_1detail_1_1is__contained_3_01T_00_01empty__type__list_01_4.html", null ],
       [ "cl::sycl::detail::is_contained_value< T, V, value_list< T > >", "structcl_1_1sycl_1_1detail_1_1is__contained__value_3_01T_00_01V_00_01value__list_3_01T_01_4_01_4.html", null ],
@@ -984,6 +993,8 @@ var hierarchy =
     [ "cl::sycl::INTEL::gpu::detail::simd_type< T && >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1simd__type_3_01T_01_6_6_01_4.html", null ],
     [ "cl::sycl::INTEL::gpu::simd_view< BaseTy, RegionTy >", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd__view.html", null ],
     [ "Slab", "classSlab.html", null ],
+    [ "cl::sycl::span< _Tp, _Extent >", "classcl_1_1sycl_1_1span.html", null ],
+    [ "cl::sycl::span< _Tp, dynamic_extent >", "classcl_1_1sycl_1_1span_3_01__Tp_00_01dynamic__extent_01_4.html", null ],
     [ "cl::sycl::ONEAPI::experimental::spec_constant< T, ID >", "classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html", null ],
     [ "cl::sycl::detail::spec_constant_impl", "classcl_1_1sycl_1_1detail_1_1spec__constant__impl.html", null ],
     [ "cl::sycl::detail::SpecConstantInfo< Name >", "structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html", null ],
@@ -1031,6 +1042,9 @@ var hierarchy =
     [ "cl::sycl::detail::TermPositions", "structcl_1_1sycl_1_1detail_1_1TermPositions.html", null ],
     [ "cl::sycl::detail::ThreadPool", "classcl_1_1sycl_1_1detail_1_1ThreadPool.html", null ],
     [ "true_type", null, [
+      [ "cl::sycl::__is_span_compatible_container< _Tp, _ElementType, std::void_t< typename std::enable_if<!__is_span< _Tp >::value, std::nullptr_t >::type, typename std::enable_if<!__is_std_array< _Tp >::value, std::nullptr_t >::type, typename std::enable_if<!std::is_array_v< _Tp >, std::nullptr_t >::type, decltype(data(std::declval< _Tp >())), decltype(size(std::declval< _Tp >())), typename std::enable_if< std::is_convertible_v< std::remove_pointer_t< decltype(data(std::declval< _Tp & >()))>(*)[], _ElementType(*)[]>, std::nullptr_t >::type > >", "structcl_1_1sycl_1_1____is__span__compatible__container_3_01__Tp_00_01__ElementType_00_01std_1_1769f1e3f4a157b3d6f88cd6a49b389a4.html", null ],
+      [ "cl::sycl::__is_span_impl< span< _Tp, _Extent > >", "structcl_1_1sycl_1_1____is__span__impl_3_01span_3_01__Tp_00_01__Extent_01_4_01_4.html", null ],
+      [ "cl::sycl::__is_std_array_impl< std::array< _Tp, _Sz > >", "structcl_1_1sycl_1_1____is__std__array__impl_3_01std_1_1array_3_01__Tp_00_01__Sz_01_4_01_4.html", null ],
       [ "cl::sycl::detail::is_address_space_compliant_impl< T *, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01T_01_5_00_01SpaceList_01_4.html", null ],
       [ "cl::sycl::detail::is_floating_point_impl< half >", "structcl_1_1sycl_1_1detail_1_1is__floating__point__impl_3_01half_01_4.html", null ],
       [ "cl::sycl::detail::is_group< group< Dimensions > >", "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html", null ],

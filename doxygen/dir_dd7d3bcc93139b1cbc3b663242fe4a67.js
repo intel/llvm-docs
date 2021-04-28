@@ -75,6 +75,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "specialization_id.hpp", "specialization__id_8hpp.html", null ],
     [ "stl.hpp", "stl_8hpp.html", "stl_8hpp" ],
     [ "stream.hpp", "stream_8hpp.html", "stream_8hpp" ],
+    [ "sycl_span.hpp", "sycl__span_8hpp.html", "sycl__span_8hpp" ],
     [ "types.hpp", "types_8hpp.html", "types_8hpp" ],
     [ "usm.hpp", "usm_8hpp.html", "usm_8hpp" ],
     [ "version.hpp", "version_8hpp.html", "version_8hpp" ]

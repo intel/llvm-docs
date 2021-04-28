@@ -1,0 +1,25 @@
+var sycl__span_8hpp =
+[
+    [ "span", "classcl_1_1sycl_1_1span.html", "classcl_1_1sycl_1_1span" ],
+    [ "__is_span_impl", "structcl_1_1sycl_1_1____is__span__impl.html", null ],
+    [ "__is_span_impl< span< _Tp, _Extent > >", "structcl_1_1sycl_1_1____is__span__impl_3_01span_3_01__Tp_00_01__Extent_01_4_01_4.html", null ],
+    [ "__is_span", "structcl_1_1sycl_1_1____is__span.html", null ],
+    [ "__is_std_array_impl", "structcl_1_1sycl_1_1____is__std__array__impl.html", null ],
+    [ "__is_std_array_impl< std::array< _Tp, _Sz > >", "structcl_1_1sycl_1_1____is__std__array__impl_3_01std_1_1array_3_01__Tp_00_01__Sz_01_4_01_4.html", null ],
+    [ "__is_std_array", "structcl_1_1sycl_1_1____is__std__array.html", null ],
+    [ "__is_span_compatible_container", "structcl_1_1sycl_1_1____is__span__compatible__container.html", null ],
+    [ "__is_span_compatible_container< _Tp, _ElementType, std::void_t< typename std::enable_if<!__is_span< _Tp >::value, std::nullptr_t >::type, typename std::enable_if<!__is_std_array< _Tp >::value, std::nullptr_t >::type, typename std::enable_if<!std::is_array_v< _Tp >, std::nullptr_t >::type, decltype(data(std::declval< _Tp >())), decltype(size(std::declval< _Tp >())), typename std::enable_if< std::is_convertible_v< std::remove_pointer_t< decltype(data(std::declval< _Tp & >()))>(*)[], _ElementType(*)[]>, std::nullptr_t >::type > >", "structcl_1_1sycl_1_1____is__span__compatible__container_3_01__Tp_00_01__ElementType_00_01std_1_1769f1e3f4a157b3d6f88cd6a49b389a4.html", null ],
+    [ "span", "classcl_1_1sycl_1_1span.html", "classcl_1_1sycl_1_1span" ],
+    [ "span< _Tp, dynamic_extent >", "classcl_1_1sycl_1_1span_3_01__Tp_00_01dynamic__extent_01_4.html", "classcl_1_1sycl_1_1span_3_01__Tp_00_01dynamic__extent_01_4" ],
+    [ "_SYCL_SPAN_ASSERT", "sycl__span_8hpp.html#a39414147469b9ec6bb4f153e602412f6", null ],
+    [ "_SYCL_SPAN_INLINE_VISIBILITY", "sycl__span_8hpp.html#a17cc8064def6f8eeabc18eebdfd8f6b0", null ],
+    [ "_SYCL_SPAN_TEMPLATE_VIS", "sycl__span_8hpp.html#aa2d2d0a039ae65e7cbeca26218084069", null ],
+    [ "as_bytes", "sycl__span_8hpp.html#a92beea6d4d514145c458ff45186158ff", null ],
+    [ "as_writable_bytes", "sycl__span_8hpp.html#a35104e8a94af63bb6cd4abd3666b0a89", null ],
+    [ "span", "sycl__span_8hpp.html#a7270e8cd0904874854f97c56b120cb08", null ],
+    [ "span", "sycl__span_8hpp.html#a7bec064b116fa70a71d6b10636071c7a", null ],
+    [ "span", "sycl__span_8hpp.html#aae57b84f82f5acaa8930e9cedb511c97", null ],
+    [ "span", "sycl__span_8hpp.html#a32c4a3281d3870ae5456ae02bf6802d3", null ],
+    [ "span", "sycl__span_8hpp.html#a277fdcf83e8475758b998e182be54a1e", null ],
+    [ "dynamic_extent", "sycl__span_8hpp.html#a19c15b28452b45c6b5959d6aaa8f81ce", null ]
+];
