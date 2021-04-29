@@ -18,6 +18,6 @@ var classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain =
     [ "native_specialization_constant", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html#acbf71438102b419475cba66c915a9376", null ],
     [ "operator!=", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html#a91c3a6fe3a01c5503ec6bca4e6859c2e", null ],
     [ "operator==", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html#ae12a62ba50c490127ad1b762bb3bc954", null ],
-    [ "set_specialization_constant_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html#a2fdb4fc2bfa33264be7468f86149942e", null ],
+    [ "set_specialization_constant_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html#a0aeabd8f586853a16a13dfd9ed66b220", null ],
     [ "impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html#aa092c73be3ca6e1feaa350555f7bf69d", null ]
 ];

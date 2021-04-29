@@ -326,44 +326,48 @@ $(document).ready(function(){initNavTree('device__image__impl_8hpp_source.html',
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <span class="keyword">auto</span> *It = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>std::uint32_t *<span class="keyword">&gt;</span>(&amp;Descriptors[8]);</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keyword">auto</span> *End = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>std::uint32_t *<span class="keyword">&gt;</span>(&amp;Descriptors[0] +</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                                                            Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>());</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">while</span> (It != End) {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;          <span class="comment">// The map is not locked here because updateSpecConstSymMap() is only</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          <span class="comment">// supposed to be called from c&#39;tor.</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;          MSpecConstSymMap[std::string{SCName}].push_back(</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;              SpecConstDescT{<span class="comment">/*ID*/</span> It[0], <span class="comment">/*CompositeOffset*/</span> It[1],</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                             <span class="comment">/*Size*/</span> It[2], BlobOffset});</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          BlobOffset += <span class="comment">/*Size*/</span> It[2];</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          It += NumElements;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      MSpecConstsBlob.resize(BlobOffset);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keyword">const</span> RTDeviceBinaryImage *MBinImage = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707">context</a> MContext;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  std::vector&lt;device&gt; MDevices;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0">bundle_state</a> MState;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// Native program handler which this device image represents</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <a class="code" href="struct__pi__program.html">RT::PiProgram</a> MProgram = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="comment">// List of kernel ids available in this image, elements should be sorted</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// according to LessByNameComp</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  std::vector&lt;kernel_id&gt; MKernelIDs;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// A mutex for sycnhronizing access to spec constants blob. Mutable because</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// needs to be locked in the const method for getting spec constant value.</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keyword">mutable</span> std::mutex MSpecConstAccessMtx;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="comment">// Binary blob which can have values of all specialization constants in the</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="comment">// image</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  std::vector&lt;unsigned char&gt; MSpecConstsBlob;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="comment">// Contains map of spec const names to their descriptions + offsets in</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="comment">// the MSpecConstsBlob</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  std::map&lt;std::string, std::vector&lt;SpecConstDescT&gt;&gt; MSpecConstSymMap;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;};</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordtype">unsigned</span> PrevOffset = 0;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">while</span> (It != End) {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          <span class="comment">// Make sure that alignment is correct in blob.</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;          BlobOffset += <span class="comment">/*Offset*/</span> It[1] - PrevOffset;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;          PrevOffset = It[1];</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          <span class="comment">// The map is not locked here because updateSpecConstSymMap() is only</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          <span class="comment">// supposed to be called from c&#39;tor.</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          MSpecConstSymMap[std::string{SCName}].push_back(</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;              SpecConstDescT{<span class="comment">/*ID*/</span> It[0], <span class="comment">/*CompositeOffset*/</span> It[1],</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                             <span class="comment">/*Size*/</span> It[2], BlobOffset});</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;          BlobOffset += <span class="comment">/*Size*/</span> It[2];</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;          It += NumElements;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      MSpecConstsBlob.resize(BlobOffset);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">const</span> RTDeviceBinaryImage *MBinImage = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707">context</a> MContext;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  std::vector&lt;device&gt; MDevices;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0">bundle_state</a> MState;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">// Native program handler which this device image represents</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <a class="code" href="struct__pi__program.html">RT::PiProgram</a> MProgram = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// List of kernel ids available in this image, elements should be sorted</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// according to LessByNameComp</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  std::vector&lt;kernel_id&gt; MKernelIDs;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="comment">// A mutex for sycnhronizing access to spec constants blob. Mutable because</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="comment">// needs to be locked in the const method for getting spec constant value.</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keyword">mutable</span> std::mutex MSpecConstAccessMtx;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="comment">// Binary blob which can have values of all specialization constants in the</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="comment">// image</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  std::vector&lt;unsigned char&gt; MSpecConstsBlob;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">// Contains map of spec const names to their descriptions + offsets in</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="comment">// the MSpecConstsBlob</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  std::map&lt;std::string, std::vector&lt;SpecConstDescT&gt;&gt; MSpecConstSymMap;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;};</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_a38fa608accd2408999f91babb50ad0c0"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a38fa608accd2408999f91babb50ad0c0">cl::sycl::detail::device_image_impl::get_devices</a></div><div class="ttdeci">const std::vector&lt; device &gt; &amp; get_devices() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00152">device_image_impl.hpp:152</a></div></div>
