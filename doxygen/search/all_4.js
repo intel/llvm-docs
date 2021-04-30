@@ -336,7 +336,7 @@ var searchData=
   ['cuda_5fpiexteventcreatewithnativehandle_1046',['cuda_piextEventCreateWithNativeHandle',['../pi__cuda_8cpp.html#a58267ae57889dad9b18512a3aa1c070d',1,'pi_cuda.cpp']]],
   ['cuda_5fpiexteventgetnativehandle_1047',['cuda_piextEventGetNativeHandle',['../pi__cuda_8cpp.html#afb4c3110d82542efe902eb90abb4f1e1',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextgetdevicefunctionpointer_1048',['cuda_piextGetDeviceFunctionPointer',['../pi__cuda_8cpp.html#ad0c490c2b6f57d8b1ab9fdb7ae1e1c46',1,'pi_cuda.cpp']]],
-  ['cuda_5fpiextkernelcreatewithnativehandle_1049',['cuda_piextKernelCreateWithNativeHandle',['../pi__cuda_8cpp.html#a455db82757554e57b2c013ab1d2f663f',1,'pi_cuda.cpp']]],
+  ['cuda_5fpiextkernelcreatewithnativehandle_1049',['cuda_piextKernelCreateWithNativeHandle',['../pi__cuda_8cpp.html#a6a5033f3cdf2ecd2cbaa4a354b7c1aa0',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextkernelsetargmemobj_1050',['cuda_piextKernelSetArgMemObj',['../pi__cuda_8cpp.html#a026730f5ae8e64f32ed23749f60ea14e',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextkernelsetargpointer_1051',['cuda_piextKernelSetArgPointer',['../pi__cuda_8cpp.html#a2f2a203a078d4b3878f665f2ca483894',1,'pi_cuda.cpp']]],
   ['cuda_5fpiextkernelsetargsampler_1052',['cuda_piextKernelSetArgSampler',['../pi__cuda_8cpp.html#a3680f9fc0c96f3448816ae58f5aef6eb',1,'pi_cuda.cpp']]],
