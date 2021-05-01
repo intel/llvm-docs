@@ -1,5 +1,6 @@
 var NAVTREEINDEX28 =
 {
+"pi__cuda_8cpp.html#aeb2ab9c55e1b2a67745d98c9cf9508a0":[4,0,1,0,0,35],
 "pi__cuda_8cpp.html#aec9ae3a2f7bb96d32b8386e5d7fd705c":[4,0,1,0,0,90],
 "pi__cuda_8cpp.html#aecbe462ce1fa0674107e55a8a2da1156":[4,0,1,0,0,6],
 "pi__cuda_8cpp.html#aef496a2ec0c171bd5f4ed183ef76b5df":[4,0,1,0,0,61],
@@ -248,6 +249,5 @@ var NAVTREEINDEX28 =
 "platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda66d5e0b0ce726b4aeb4ddf6c25b6c12b":[4,0,2,1,52,2,0],
 "platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda9725825c796122ef40f01b2d8794f902":[4,0,2,1,52,2,1],
 "platform__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,52,1],
-"platform__impl_8cpp.html#ad0846abb3ec30b307b798fafc62a962d":[4,0,2,1,52,3],
-"platform__impl_8cpp.html#add8769f9f6844006d72f5c3fad78c904":[4,0,2,1,52,5]
+"platform__impl_8cpp.html#ad0846abb3ec30b307b798fafc62a962d":[4,0,2,1,52,3]
 };

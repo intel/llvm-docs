@@ -129,7 +129,7 @@ var searchData=
   ['interop_3c_20backend_3a_3aopencl_2c_20platform_20_3e_2498',['interop&lt; backend::opencl, platform &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01platform_01_4.html',1,'cl::sycl']]],
   ['interop_3c_20backend_3a_3aopencl_2c_20program_20_3e_2499',['interop&lt; backend::opencl, program &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01program_01_4.html',1,'cl::sycl']]],
   ['interop_3c_20backend_3a_3aopencl_2c_20queue_20_3e_2500',['interop&lt; backend::opencl, queue &gt;',['../structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01queue_01_4.html',1,'cl::sycl']]],
-  ['interop_5fhandle_2501',['interop_handle',['../classcl_1_1sycl_1_1interop__handle.html',1,'cl::sycl']]],
+  ['interop_5fhandle_2501',['interop_handle',['../classcl_1_1sycl_1_1interop__handle.html',1,'cl::sycl::interop_handle'],['../classcl_1_1sycl_1_1interop__handle.html#a57276ba316b1f4efc3331215e7fc5189',1,'cl::sycl::interop_handle::interop_handle()']]],
   ['interop_5fhandle_2ecpp_2502',['interop_handle.cpp',['../interop__handle_8cpp.html',1,'']]],
   ['interop_5fhandle_2ehpp_2503',['interop_handle.hpp',['../interop__handle_8hpp.html',1,'']]],
   ['interop_5fhandler_2504',['interop_handler',['../classcl_1_1sycl_1_1interop__handler.html',1,'cl::sycl::interop_handler'],['../classcl_1_1sycl_1_1interop__handler.html#a01c2d77c9e8734d927d22e8383d90d04',1,'cl::sycl::interop_handler::interop_handler()']]],

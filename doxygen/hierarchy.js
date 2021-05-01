@@ -93,7 +93,7 @@ var hierarchy =
     [ "cl::sycl::detail::BackendInput< backend::opencl, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel_01_4.html", null ],
     [ "cl::sycl::detail::BackendInput< backend::opencl, kernel_bundle< State > >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html", null ],
     [ "cl::sycl::detail::BackendReturn< Backend, T >", "structcl_1_1sycl_1_1detail_1_1BackendReturn.html", null ],
-    [ "cl::sycl::detail::BackendReturn< backend::level_zero, kernel >", "classcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html", null ],
+    [ "cl::sycl::detail::BackendReturn< backend::level_zero, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html", null ],
     [ "cl::sycl::detail::BackendReturn< backend::opencl, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel_01_4.html", null ],
     [ "cl::sycl::detail::BackendReturn< backend::opencl, kernel_bundle< State > >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html", null ],
     [ "cl::sycl::detail::BaseCLTypeConverter< T, N >", "classcl_1_1sycl_1_1detail_1_1BaseCLTypeConverter.html", null ],

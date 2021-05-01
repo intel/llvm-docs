@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"classcl_1_1sycl_1_1queue.html#ac2845668f9066c6f34926488374deda3":[1,2,26,11],
 "classcl_1_1sycl_1_1queue.html#aca23a41f6aa537c7038be5bf7ae135e3":[1,2,26,16],
 "classcl_1_1sycl_1_1queue.html#acb27ee1c41ae8ff975e7e322253fe917":[1,2,26,35],
 "classcl_1_1sycl_1_1queue.html#acc295e6b1df3c1f9ad860ae339b425a6":[1,2,26,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "config_8cpp.html":[4,0,2,1,16],
 "config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,1,16,4],
 "config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,1,16,6],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,16,0],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,16,2]
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,16,1]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"multi__ptr_8hpp.html#ad863aa15de96a21adfce097d7705ba3e":[4,0,0,0,1,39,6],
 "multi__ptr_8hpp.html#aeca5674e3e364765dab55fd7d173df22":[4,0,0,0,1,39,12],
 "multi__ptr_8hpp.html#af37316b0b89ba1a59f06ed35b512c352":[4,0,0,0,1,39,13],
 "multi__ptr_8hpp.html#af7e097eeab7405149a4be5bbc4489aca":[4,0,0,0,1,39,10],
@@ -50,10 +51,10 @@ var NAVTREEINDEX24 =
 "namespacecl_1_1sycl_1_1detail_1_1pi.html":[3,0,1,1,0,2],
 "namespacecl_1_1sycl_1_1detail_1_1sub__group.html":[2,0,1,1,1,6],
 "namespacecl_1_1sycl_1_1detail_1_1usm.html":[2,0,1,1,1,7],
-"namespacecl_1_1sycl_1_1ext.html":[3,0,1,1,1],
 "namespacecl_1_1sycl_1_1ext.html":[2,0,1,1,2],
-"namespacecl_1_1sycl_1_1ext_1_1intel.html":[2,0,1,1,2,0],
+"namespacecl_1_1sycl_1_1ext.html":[3,0,1,1,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel.html":[3,0,1,1,1,0],
+"namespacecl_1_1sycl_1_1ext_1_1intel.html":[2,0,1,1,2,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html":[2,0,1,1,2,0,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1detail.html":[3,0,1,1,1,0,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental.html":[2,0,1,1,2,0,1],
@@ -138,8 +139,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_r.html":[2,1,0,18],
 "namespacemembers_s.html":[2,1,0,19],
 "namespacemembers_t.html":[2,1,0,20],
-"namespacemembers_type.html":[2,1,3,0],
 "namespacemembers_type.html":[2,1,3],
+"namespacemembers_type.html":[2,1,3,0],
 "namespacemembers_type_a.html":[2,1,3,1],
 "namespacemembers_type_b.html":[2,1,3,2],
 "namespacemembers_type_c.html":[2,1,3,3],
@@ -170,8 +171,8 @@ var NAVTREEINDEX24 =
 "namespaces.html":[2,0],
 "namespacesettings.html":[3,0,2],
 "namespacesettings.html":[2,0,3],
-"namespacestd.html":[2,0,4],
 "namespacestd.html":[3,0,3],
+"namespacestd.html":[2,0,4],
 "nd__item_8hpp.html":[4,0,0,0,1,40],
 "nd__item_8hpp.html#a2882526d45e3fc44fac9075c6b95b1f1":[4,0,0,0,1,40,0],
 "nd__item_8hpp.html#ae5eda9603fbd094902b548f829351870":[4,0,0,0,1,40,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "pi_8cpp.html#abc3549c65cf7bfcca09a931b3aa5779b":[4,0,2,1,51,6],
 "pi_8cpp.html#aca711f16e058b99fa411043bfafbc4aa":[4,0,2,1,51,12],
 "pi_8cpp.html#acab66c67ecf6ce5d442f030710a0722a":[4,0,2,1,51,13],
-"pi_8cpp.html#ad72dcb49ab1986b67b0e6a4ac6ca6f3e":[4,0,2,1,51,11],
-"pi_8cpp.html#ae61ba170f7f8ad42b4f0d4575b2ccab2":[4,0,2,1,51,5]
+"pi_8cpp.html#ad72dcb49ab1986b67b0e6a4ac6ca6f3e":[4,0,2,1,51,11]
 };

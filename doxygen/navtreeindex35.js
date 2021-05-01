@@ -1,5 +1,6 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html#a0fb23bf3fea393998c3155ec95b71c82":[3,0,1,1,4,2,1,0,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html#ae8039bccec338a083cc6a2de734fbd45":[3,0,1,1,4,2,1,0,1],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html":[3,0,1,1,4,17],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a0a3bfb3ed16e586a1711c590cb146991":[3,0,1,1,4,17,23],
@@ -52,6 +53,8 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html#a7ea348df081009d836137381fc98a33f":[3,0,1,1,0,20,0],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn.html":[3,0,1,1,0,21],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn.html#a4725b6d4adafe04776572581bf4edda4":[3,0,1,1,0,21,0],
+"structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html":[3,0,1,1,0,22],
+"structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html#a4a3dc321366363af7d01d3dbf5faec07":[3,0,1,1,0,22,0],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel_01_4.html":[3,0,1,1,0,23],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel_01_4.html#a20fc2e2727ad4cf42b212b1a2b5af693":[3,0,1,1,0,23,0],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html":[3,0,1,1,0,24],
@@ -246,8 +249,5 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3":[1,3,1,6],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,3,1,4],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,3,1,3],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07":[1,3,1,2],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#aa305a6853090250692f3a7d44ea3149e":[1,3,1,5],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#aae4c5827d76024eff29b3b5c325e5241":[1,3,1,0],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#ac273fa8bbe1679327416b3c2eec5a9d4":[1,3,1,1]
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07":[1,3,1,2]
 };

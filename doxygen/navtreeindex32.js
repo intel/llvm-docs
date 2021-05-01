@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"struct__pi__queue.html#a48f3b7ea338b733c4ccba49e3f7e9cf3":[3,0,25,15],
 "struct__pi__queue.html#a49d291550b7eeee8375fbaf9f177c57b":[3,0,25,17],
 "struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5":[3,0,25,23],
 "struct__pi__queue.html#a58a07d5525910b67e36d47e4baf361c2":[3,0,25,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1SetSatur_3_01float_00_01true_01_4.html#a9a0a61fa54614c3c3883eef7c022ce79":[3,0,1,1,3,0,1,0,200,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1abstype.html":[3,0,1,1,3,0,1,0,0],
 "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1abstype.html#aff574218c542031b04d2a0753f47dba4":[3,0,1,1,3,0,1,0,0,0],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1abstype_3_01char_01_4.html":[3,0,1,1,3,0,1,0,1],
-"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1abstype_3_01char_01_4.html#afbc6ce6fef57df6c603a36280b7a46b0":[3,0,1,1,3,0,1,0,1,0]
+"structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1abstype_3_01char_01_4.html":[3,0,1,1,3,0,1,0,1]
 };

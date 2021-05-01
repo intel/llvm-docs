@@ -22,7 +22,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "BackendInput< backend::opencl, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel_01_4" ],
     [ "BackendInput< backend::opencl, kernel_bundle< State > >", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4" ],
     [ "BackendReturn", "structcl_1_1sycl_1_1detail_1_1BackendReturn.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn" ],
-    [ "BackendReturn< backend::level_zero, kernel >", "classcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html", null ],
+    [ "BackendReturn< backend::level_zero, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4" ],
     [ "BackendReturn< backend::opencl, kernel >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel_01_4" ],
     [ "BackendReturn< backend::opencl, kernel_bundle< State > >", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4" ],
     [ "BaseCLTypeConverter", "classcl_1_1sycl_1_1detail_1_1BaseCLTypeConverter.html", null ],

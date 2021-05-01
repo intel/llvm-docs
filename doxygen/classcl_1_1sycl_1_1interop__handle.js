@@ -1,5 +1,7 @@
 var classcl_1_1sycl_1_1interop__handle =
 [
+    [ "interop_handle", "classcl_1_1sycl_1_1interop__handle.html#a57276ba316b1f4efc3331215e7fc5189", null ],
+    [ "get_backend", "classcl_1_1sycl_1_1interop__handle.html#a9b3094e26697e3e3410ee92fa2ada550", null ],
     [ "get_native_context", "classcl_1_1sycl_1_1interop__handle.html#a668e8d6447ffd22a8d6869d4287aa63e", null ],
     [ "get_native_device", "classcl_1_1sycl_1_1interop__handle.html#a023b91f807fbcb983610b346b78e3709", null ],
     [ "get_native_mem", "classcl_1_1sycl_1_1interop__handle.html#a84dd0e0b64fad37ed57a75b5ae7d2a66", null ],
