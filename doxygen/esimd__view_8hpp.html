@@ -264,7 +264,7 @@ Macros</h2></td></tr>
 <div class="line">  simd_view &amp;<span class="keyword">operator</span> OPASSIGN(<span class="keyword">const</span> value_type &amp;RHS) {                        \</div>
 <div class="line">    static_assert(std::is_integral&lt;element_type&gt;(), <span class="stringliteral">&quot;not integeral type&quot;</span>);     \</div>
 <div class="line">    auto V2 = <a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>().data() BITWISE_OP RHS.data();                             \</div>
-<div class="line">    auto V3 = convert&lt;vector_type&gt;(V2);                                        \</div>
+<div class="line">    auto V3 = detail::convert&lt;vector_type&gt;(V2);                                \</div>
 <div class="line">    write(V3);                                                                 \</div>
 <div class="line">    return *<span class="keyword">this</span>;                                                              \</div>
 <div class="line">  }                                                                            \</div>
@@ -272,7 +272,7 @@ Macros</h2></td></tr>
 <div class="line">    return (*<span class="keyword">this</span> OPASSIGN RHS.read());                                        \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00246">246</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00248">248</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -295,20 +295,20 @@ Macros</h2></td></tr>
 <div class="line">      <span class="keyword">const</span> simd_view &amp;X, <span class="keyword">const</span> value_type &amp;Y) {                               \</div>
 <div class="line">    auto R = X.read().data() RELOP Y.data();                                   \</div>
 <div class="line">    mask_type_t&lt;length&gt; M(1);                                                  \</div>
-<div class="line">    return M &amp; convert&lt;mask_type_t&lt;length&gt;&gt;(R);                                \</div>
+<div class="line">    return M &amp; detail::convert&lt;mask_type_t&lt;length&gt;&gt;(R);                        \</div>
 <div class="line">  }                                                                            \</div>
 <div class="line">  ESIMD_INLINE <span class="keyword">friend</span> simd&lt;uint16_t, length&gt; <span class="keyword">operator</span> RELOP(                   \</div>
 <div class="line">      <span class="keyword">const</span> value_type &amp;X, <span class="keyword">const</span> simd_view &amp;Y) {                               \</div>
 <div class="line">    auto R = X.data() RELOP Y.read().data();                                   \</div>
 <div class="line">    mask_type_t&lt;length&gt; M(1);                                                  \</div>
-<div class="line">    return M &amp; convert&lt;mask_type_t&lt;length&gt;&gt;(R);                                \</div>
+<div class="line">    return M &amp; detail::convert&lt;mask_type_t&lt;length&gt;&gt;(R);                        \</div>
 <div class="line">  }                                                                            \</div>
 <div class="line">  ESIMD_INLINE <span class="keyword">friend</span> simd&lt;uint16_t, length&gt; <span class="keyword">operator</span> RELOP(                   \</div>
 <div class="line">      <span class="keyword">const</span> simd_view &amp;X, <span class="keyword">const</span> simd_view &amp;Y) {                                \</div>
 <div class="line">    return (X RELOP Y.read());                                                 \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00219">219</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00221">221</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ Macros</h2></td></tr>
 <div class="line">    return simd&lt;element_type, length&gt;(V);                                      \</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00281">281</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="esimd__view_8hpp_source.html#l00283">283</a> of file <a class="el" href="esimd__view_8hpp_source.html">esimd_view.hpp</a>.</p>
 
 </div>
 </div>

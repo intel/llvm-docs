@@ -33,8 +33,8 @@ var classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd =
     [ "select", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a98ad3b8d71c867b41eded09982eb0bac", null ],
     [ "select", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#aafac72a8d03f60fd9d8740f17200c53f", null ],
     [ "write", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#aef2f3a35ab55125d261fcbfbe26eead9", null ],
-    [ "writeRegion", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#ac42b58957cee4bedeae39b144f4da2e1", null ],
-    [ "writeRegion", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#ac0275f3def42671fef81c74b24e601ce", null ],
+    [ "writeRegion", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a878c152cc7e1805109afd5328fcde0fb", null ],
+    [ "writeRegion", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a99e85fdab740791f10acd12f560956c2", null ],
     [ "simd_view", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a7ddf07540737c2aa5f0260fe2ad87d91", null ],
     [ "length", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#afd72439690aeff23dbf63689e821a207", null ]
 ];
