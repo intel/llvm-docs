@@ -1,5 +1,6 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html":[3,0,1,1,4,2,1,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html#a0fb23bf3fea393998c3155ec95b71c82":[3,0,1,1,4,2,1,0,0],
 "structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html#ae8039bccec338a083cc6a2de734fbd45":[3,0,1,1,4,2,1,0,1],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html":[3,0,1,1,4,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html":[1,3,1],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a08dc6b8a1fd4480cf327fc681e70fdb3":[1,3,1,6],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a2122c4b5399def1b97b461fd2220d86c":[1,3,1,4],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,3,1,3],
-"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a3bacf330726da8b4fc14d5d0ca074c07":[1,3,1,2]
+"structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#a346ab03f837f7831c9bf3e6f7846102c":[1,3,1,3]
 };
