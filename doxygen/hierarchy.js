@@ -51,6 +51,7 @@ var hierarchy =
     [ "cl::sycl::detail::accessor_common< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1accessor__common.html", [
       [ "cl::sycl::accessor< DataT, Dimensions, AccessMode, access::target::local, IsPlaceholder >", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html", null ]
     ] ],
+    [ "cl::sycl::INTEL::gpu::detail::accessor_mode_cap", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1accessor__mode__cap.html", null ],
     [ "cl::sycl::detail::AccessorBaseHost", "classcl_1_1sycl_1_1detail_1_1AccessorBaseHost.html", [
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", null ],
       [ "cl::sycl::detail::image_accessor< DataT, Dimensions+1, AccessMode, access::target::image, IsPlaceholder >", "classcl_1_1sycl_1_1detail_1_1image__accessor.html", [
@@ -194,6 +195,9 @@ var hierarchy =
       [ "cl::sycl::detail::vector_alignment_impl< remove_cv_t< remove_reference_t< T > >, N >", "structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html", [
         [ "cl::sycl::detail::vector_alignment< T, N >", "structcl_1_1sycl_1_1detail_1_1vector__alignment.html", null ]
       ] ]
+    ] ],
+    [ "conditional_t", null, [
+      [ "cl::sycl::INTEL::gpu::detail::is_sycl_accessor_with< T, Capability, AccessTarget >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor__with.html", null ]
     ] ],
     [ "cl::sycl::context", "classcl_1_1sycl_1_1context.html", null ],
     [ "cl::sycl::detail::context_impl", "classcl_1_1sycl_1_1detail_1_1context__impl.html", null ],
@@ -366,6 +370,7 @@ var hierarchy =
       [ "cl::sycl::INTEL::gpu::detail::is_esimd_arithmetic_type< Ty, class >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__esimd__arithmetic__type.html", null ],
       [ "cl::sycl::INTEL::gpu::detail::is_simd_type< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__type.html", null ],
       [ "cl::sycl::INTEL::gpu::detail::is_simd_view_type< Ty >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__view__type.html", null ],
+      [ "cl::sycl::INTEL::gpu::detail::is_sycl_accessor< T >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor.html", null ],
       [ "cl::sycl::INTEL::gpu::detail::is_vectorizable< bool >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__vectorizable_3_01bool_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< T >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html", null ],
       [ "cl::sycl::detail::is_address_space_compliant_impl< remove_cv_t< T >, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html", [
@@ -1068,6 +1073,7 @@ var hierarchy =
       [ "cl::sycl::INTEL::gpu::detail::is_simd_type< simd< Ty, N > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html", null ],
       [ "cl::sycl::INTEL::gpu::detail::is_simd_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
       [ "cl::sycl::INTEL::gpu::detail::is_simd_view_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
+      [ "cl::sycl::INTEL::gpu::detail::is_sycl_accessor< sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor_3_01sycl_1_1accessor_3_01DataT_94143a1b52dfd2cbb9d86c9a18c07b93.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< INTEL::property::buffer_location >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01INTEL_1_1property_1_1buffer__location_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_alias >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__alias_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ],

@@ -1,5 +1,6 @@
 var namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail =
 [
+    [ "accessor_mode_cap", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1accessor__mode__cap.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1accessor__mode__cap" ],
     [ "AccessorPrivateProxy", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html", "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy" ],
     [ "bitcast_helper", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1bitcast__helper" ],
     [ "byte_type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1byte__type" ],
@@ -54,6 +55,9 @@ var namespacecl_1_1sycl_1_1INTEL_1_1gpu_1_1detail =
     [ "is_simd_view_type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__view__type.html", null ],
     [ "is_simd_view_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__view__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
     [ "is_simd_view_v", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__simd__view__v.html", null ],
+    [ "is_sycl_accessor", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor" ],
+    [ "is_sycl_accessor< sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT > >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor_3_01sycl_1_1accessor_3_01DataT_94143a1b52dfd2cbb9d86c9a18c07b93.html", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor_3_01sycl_1_1accessor_3_01DataT_94143a1b52dfd2cbb9d86c9a18c07b93" ],
+    [ "is_sycl_accessor_with", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor__with.html", null ],
     [ "is_vectorizable", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__vectorizable.html", null ],
     [ "is_vectorizable< bool >", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__vectorizable_3_01bool_01_4.html", null ],
     [ "is_vectorizable_v", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__vectorizable__v.html", null ],

@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['word_5ftype_6369',['word_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type.html',1,'cl::sycl::INTEL::gpu::detail']]],
-  ['word_5ftype_3c_20char_20_3e_6370',['word_type&lt; char &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01char_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
-  ['word_5ftype_3c_20int_20_3e_6371',['word_type&lt; int &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01int_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
-  ['word_5ftype_3c_20uchar_20_3e_6372',['word_type&lt; uchar &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01uchar_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
-  ['word_5ftype_3c_20uint_20_3e_6373',['word_type&lt; uint &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01uint_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
-  ['wordtype_6374',['wordtype',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1wordtype.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
-  ['wordtype_3c_20short_20_3e_6375',['wordtype&lt; short &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1wordtype_3_01short_01_4.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
-  ['wordtype_3c_20unsigned_20short_20_3e_6376',['wordtype&lt; unsigned short &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1wordtype_3_01unsigned_01short_01_4.html',1,'cl::sycl::INTEL::gpu::emu::detail']]]
+  ['word_5ftype_6385',['word_type',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type.html',1,'cl::sycl::INTEL::gpu::detail']]],
+  ['word_5ftype_3c_20char_20_3e_6386',['word_type&lt; char &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01char_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
+  ['word_5ftype_3c_20int_20_3e_6387',['word_type&lt; int &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01int_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
+  ['word_5ftype_3c_20uchar_20_3e_6388',['word_type&lt; uchar &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01uchar_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
+  ['word_5ftype_3c_20uint_20_3e_6389',['word_type&lt; uint &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1word__type_3_01uint_01_4.html',1,'cl::sycl::INTEL::gpu::detail']]],
+  ['wordtype_6390',['wordtype',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1wordtype.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
+  ['wordtype_3c_20short_20_3e_6391',['wordtype&lt; short &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1wordtype_3_01short_01_4.html',1,'cl::sycl::INTEL::gpu::emu::detail']]],
+  ['wordtype_3c_20unsigned_20short_20_3e_6392',['wordtype&lt; unsigned short &gt;',['../structcl_1_1sycl_1_1INTEL_1_1gpu_1_1emu_1_1detail_1_1wordtype_3_01unsigned_01short_01_4.html',1,'cl::sycl::INTEL::gpu::emu::detail']]]
 ];

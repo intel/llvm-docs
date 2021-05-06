@@ -245,9 +245,9 @@ var NAVTREEINDEX4 =
 "classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html#a2ea95fc9ccd035e29f48e7d9e206d2d9":[3,0,1,1,3,8,0],
 "classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html":[3,0,1,1,3,9],
 "classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html#a52e91fdf360284c188075b28b7130152":[3,0,1,1,3,9,0],
-"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html":[3,0,1,1,3,0,0,0],
-"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html#a0543136b71932737a2274f5248593267":[3,0,1,1,3,0,0,0,0],
-"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html#af2390c2de5e61555f0333ebf7fba52d7":[3,0,1,1,3,0,0,0,1],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html":[3,0,1,1,3,0,0,1],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html#a0543136b71932737a2274f5248593267":[3,0,1,1,3,0,0,1,0],
+"classcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1AccessorPrivateProxy.html#af2390c2de5e61555f0333ebf7fba52d7":[3,0,1,1,3,0,0,1,1],
 "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html":[1,1,2],
 "classcl_1_1sycl_1_1INTEL_1_1gpu_1_1simd.html#a032babee7f8fe368fa7f3cd9953f1366":[1,1,2,6]
 };

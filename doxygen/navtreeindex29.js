@@ -1,5 +1,14 @@
 var NAVTREEINDEX29 =
 {
+"platform_8hpp.html":[4,0,0,0,1,43],
+"platform_8hpp_source.html":[4,0,0,0,1,43],
+"platform__impl_8cpp.html":[4,0,2,1,52],
+"platform__impl_8cpp.html#a2130b5434d2626ef36fbaac83451fdb3":[4,0,2,1,52,7],
+"platform__impl_8cpp.html#a566c9b2871cd4d536970f6eb5cf2655d":[4,0,2,1,52,4],
+"platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dd":[4,0,2,1,52,2],
+"platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda66d5e0b0ce726b4aeb4ddf6c25b6c12b":[4,0,2,1,52,2,0],
+"platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda9725825c796122ef40f01b2d8794f902":[4,0,2,1,52,2,1],
+"platform__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,52,1],
 "platform__impl_8cpp.html#ad0846abb3ec30b307b798fafc62a962d":[4,0,2,1,52,3],
 "platform__impl_8cpp.html#add8769f9f6844006d72f5c3fad78c904":[4,0,2,1,52,5],
 "platform__impl_8cpp.html#af25f43d603bea1c31df2f11db0ff0905":[4,0,2,1,52,6],
@@ -191,8 +200,8 @@ var NAVTREEINDEX29 =
 "reduction__properties_8hpp.html":[4,0,0,0,1,6,6],
 "reduction__properties_8hpp_source.html":[4,0,0,0,1,6,6],
 "sampler_8cpp.html":[4,0,2,20],
-"sampler_8cpp.html#abaa786f3aead61c55512054cbc09ae89":[4,0,2,20,0],
 "sampler_8cpp.html#abaa786f3aead61c55512054cbc09ae89":[4,0,2,20,1],
+"sampler_8cpp.html#abaa786f3aead61c55512054cbc09ae89":[4,0,2,20,0],
 "sampler_8cpp_source.html":[4,0,2,20],
 "sampler_8hpp.html":[4,0,0,0,1,51],
 "sampler_8hpp.html#a0dc52cf013f2b67be7fa2d6b0bbcdd59":[4,0,0,0,1,51,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX29 =
 "spinlock_8hpp_source.html":[4,0,0,0,1,2,35],
 "spirv_8hpp.html":[4,0,0,0,1,2,36],
 "spirv_8hpp_source.html":[4,0,0,0,1,2,36],
-"spirv__ops_8cpp.html":[4,0,2,21],
-"spirv__ops_8cpp.html#a0649355f6b1290e7c6c2e15ab14b5879":[4,0,2,21,2],
-"spirv__ops_8cpp.html#a39d8b08b1a558206fe1e2cbba94b7cba":[4,0,2,21,0],
-"spirv__ops_8cpp.html#a85beef2415b20f2a7383f90280c99ae3":[4,0,2,21,1],
-"spirv__ops_8cpp.html#ae348ac93399e5fc151a847069e712f6f":[4,0,2,21,3],
-"spirv__ops_8cpp_source.html":[4,0,2,21],
-"spirv__ops_8hpp.html":[4,0,0,0,0,0],
-"spirv__ops_8hpp.html#a6712ca3d25dc817202ab1ccbebf5c845":[4,0,0,0,0,0,2],
-"spirv__ops_8hpp.html#a67648b07633fff0f0c256d272f1ecdf8":[4,0,0,0,0,0,1],
-"spirv__ops_8hpp.html#a777c646c5c382e2b05cfea3d17b523f2":[4,0,0,0,0,0,5]
+"spirv__ops_8cpp.html":[4,0,2,21]
 };

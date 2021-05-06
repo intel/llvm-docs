@@ -1,5 +1,14 @@
 var NAVTREEINDEX28 =
 {
+"pi__cuda_8cpp.html#ad5521d01c5b758c6fccd73e8594e19d0":[4,0,1,0,0,82],
+"pi__cuda_8cpp.html#add76a44f7d7e05d2ff98002af240b7ad":[4,0,1,0,0,71],
+"pi__cuda_8cpp.html#ade7fa950f0afe2f7d0041172b97ce0fd":[4,0,1,0,0,103],
+"pi__cuda_8cpp.html#ae0e894aa4638c01b99c4d813d8a1a8d9":[4,0,1,0,0,25],
+"pi__cuda_8cpp.html#ae100b5a124f7d9c4d672b578c83fbd4a":[4,0,1,0,0,70],
+"pi__cuda_8cpp.html#ae706bc52d81ef45789bbb61a7a04f7a5":[4,0,1,0,0,67],
+"pi__cuda_8cpp.html#ae802d41b86d3dab80e240a43e839a810":[4,0,1,0,0,11],
+"pi__cuda_8cpp.html#ae8692733dcad37d1eee0be3b473da87e":[4,0,1,0,0,101],
+"pi__cuda_8cpp.html#ae90c499143d4947018e8b8ed929a1ca9":[4,0,1,0,0,68],
 "pi__cuda_8cpp.html#ae9e906a922fd122d45ac7d4c2d5356d1":[4,0,1,0,0,84],
 "pi__cuda_8cpp.html#aeb2ab9c55e1b2a67745d98c9cf9508a0":[4,0,1,0,0,35],
 "pi__cuda_8cpp.html#aec9ae3a2f7bb96d32b8386e5d7fd705c":[4,0,1,0,0,90],
@@ -240,14 +249,5 @@ var NAVTREEINDEX28 =
 "pipes_8hpp_source.html":[4,0,0,0,1,42],
 "platform_8cpp.html":[4,0,2,17],
 "platform_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,17,0],
-"platform_8cpp_source.html":[4,0,2,17],
-"platform_8hpp.html":[4,0,0,0,1,43],
-"platform_8hpp_source.html":[4,0,0,0,1,43],
-"platform__impl_8cpp.html":[4,0,2,1,52],
-"platform__impl_8cpp.html#a2130b5434d2626ef36fbaac83451fdb3":[4,0,2,1,52,7],
-"platform__impl_8cpp.html#a566c9b2871cd4d536970f6eb5cf2655d":[4,0,2,1,52,4],
-"platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dd":[4,0,2,1,52,2],
-"platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda66d5e0b0ce726b4aeb4ddf6c25b6c12b":[4,0,2,1,52,2,0],
-"platform__impl_8cpp.html#a83338867c0c5dce39d457f35c6c2e2dda9725825c796122ef40f01b2d8794f902":[4,0,2,1,52,2,1],
-"platform__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,52,1]
+"platform_8cpp_source.html":[4,0,2,17]
 };
