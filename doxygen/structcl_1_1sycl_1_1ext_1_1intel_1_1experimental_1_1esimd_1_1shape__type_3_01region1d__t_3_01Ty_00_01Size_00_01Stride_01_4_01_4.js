@@ -1,0 +1,5 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01region1d__t_3_01Ty_00_01Size_00_01Stride_01_4_01_4 =
+[
+    [ "element_type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01region1d__t_3_01Ty_00_01Size_00_01Stride_01_4_01_4.html#a5482c476f705bc0ccd71c07ab6cf08e5", null ],
+    [ "type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01region1d__t_3_01Ty_00_01Size_00_01Stride_01_4_01_4.html#a9de0a77ec7f029d40c6ca9fa2a6056d3", null ]
+];

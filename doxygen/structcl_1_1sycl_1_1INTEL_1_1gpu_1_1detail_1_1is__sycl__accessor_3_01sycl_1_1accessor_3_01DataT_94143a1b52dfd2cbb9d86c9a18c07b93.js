@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor_3_01sycl_1_1accessor_3_01DataT_94143a1b52dfd2cbb9d86c9a18c07b93 =
-[
-    [ "mode", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor_3_01sycl_1_1accessor_3_01DataT_94143a1b52dfd2cbb9d86c9a18c07b93.html#a227fc704fc620dcbba4a2a3830e0ffca", null ],
-    [ "target", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__sycl__accessor_3_01sycl_1_1accessor_3_01DataT_94143a1b52dfd2cbb9d86c9a18c07b93.html#ace239d9f5ac72fc0b033b54dcc46f5b8", null ]
-];

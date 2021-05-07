@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__esimd__vector_3_01sycl_1_1INTEL_1_1gpu_1_1deta4c8a4b5ba246cae05df612e33cae899d =
-[
-    [ "value", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1is__esimd__vector_3_01sycl_1_1INTEL_1_1gpu_1_1deta4c8a4b5ba246cae05df612e33cae899d.html#ad58daad43045fe2691b1e5328dbd5d62", null ]
-];

@@ -3,6 +3,8 @@ var backend_8hpp =
     [ "BackendInput", "structcl_1_1sycl_1_1detail_1_1BackendInput.html", "structcl_1_1sycl_1_1detail_1_1BackendInput" ],
     [ "BackendReturn", "structcl_1_1sycl_1_1detail_1_1BackendReturn.html", "structcl_1_1sycl_1_1detail_1_1BackendReturn" ],
     [ "backend_traits", "classcl_1_1sycl_1_1backend__traits.html", "classcl_1_1sycl_1_1backend__traits" ],
+    [ "backend_input_t", "backend_8hpp.html#a9434164dabbe1089da0964f8d8ebdb0e", null ],
+    [ "backend_return_t", "backend_8hpp.html#a26f419bb807dc7762b3fdb499790e133", null ],
     [ "get_native", "backend_8hpp.html#a90fc62c6959ab24fb80451e2b30eabc5", null ],
     [ "get_native", "backend_8hpp.html#aaa52a010a7e1c7341aba2a6640952034", null ],
     [ "make_buffer", "backend_8hpp.html#a5b7d91f2f414295733499cbfd22a8f65", null ],

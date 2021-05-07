@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__fp__or__dword__type_3a8e9184383220b1e2959cbeebc1bfac6 =
+[
+    [ "value", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__fp__or__dword__type_3a8e9184383220b1e2959cbeebc1bfac6.html#a715368e353f47aac91c7518f4cc2f62c", null ]
+];

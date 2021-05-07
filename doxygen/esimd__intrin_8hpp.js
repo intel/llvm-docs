@@ -1,14 +1,15 @@
 var esimd__intrin_8hpp =
 [
-    [ "__SIGD", "esimd__intrin_8hpp.html#a5eb6978f3a42d93f5a9032021abdefde", null ],
-    [ "__esimd_all", "esimd__intrin_8hpp.html#aacdb4aac02e21e36e0ba3962aafaa6b0", null ],
-    [ "__esimd_any", "esimd__intrin_8hpp.html#a596056d466bcae9d732540e3156a3cc4", null ],
-    [ "__esimd_rdindirect", "esimd__intrin_8hpp.html#a44f9e14f407c79381ded9fee555ad1fa", null ],
-    [ "__esimd_rdregion", "esimd__intrin_8hpp.html#a35418d7e302b87fa5a115fc22c44afea", null ],
-    [ "__esimd_vload", "esimd__intrin_8hpp.html#a812d825e0c5ecd6cdcf44145a3f75abb", null ],
-    [ "__esimd_vstore", "esimd__intrin_8hpp.html#a3b0c9a5bf1d3689cc376a452056ad9cd", null ],
-    [ "__esimd_wrindirect", "esimd__intrin_8hpp.html#a4639c67c888e361bc0ea9efc9df43e64", null ],
-    [ "__esimd_wrregion", "esimd__intrin_8hpp.html#a5872beeefb96052010415fdd56aad1b1", null ],
-    [ "readRegion", "esimd__intrin_8hpp.html#a8de8b86aae9a2b92b6133c2d3c6b3d45", null ],
-    [ "readRegion", "esimd__intrin_8hpp.html#a5123ab3ca0771eb3037bd6a7ee4510f9", null ]
+    [ "__SEIEE", "esimd__intrin_8hpp.html#a9a675d2e072a1d0bd3a2b00b372b4949", null ],
+    [ "__SEIEED", "esimd__intrin_8hpp.html#a5eb3da7e74c668c68b751aa008432d65", null ],
+    [ "__esimd_all", "esimd__intrin_8hpp.html#aa93301d49594cdbfded1f3e6e6fbfc18", null ],
+    [ "__esimd_any", "esimd__intrin_8hpp.html#a793edfcb92aa209708072229939e5609", null ],
+    [ "__esimd_rdindirect", "esimd__intrin_8hpp.html#a1317262e8a40916a3f96248890cfa1b3", null ],
+    [ "__esimd_rdregion", "esimd__intrin_8hpp.html#a8c74a795798b472745b267d8b3cc8911", null ],
+    [ "__esimd_vload", "esimd__intrin_8hpp.html#a5e42832a66a11940943e49fa33757da9", null ],
+    [ "__esimd_vstore", "esimd__intrin_8hpp.html#a877bb7b6110977a09302ec36ab9d41aa", null ],
+    [ "__esimd_wrindirect", "esimd__intrin_8hpp.html#a17e4bf2e30ed90e2aa50706f1bb4d310", null ],
+    [ "__esimd_wrregion", "esimd__intrin_8hpp.html#aa0473c0bcd53bee079d2e337338843b5", null ],
+    [ "readRegion", "esimd__intrin_8hpp.html#a849c020b7132bd2bcaf9e631250e30c0", null ],
+    [ "readRegion", "esimd__intrin_8hpp.html#ae7e10ae5fa1812fb5e8a8bd8fecb08cd", null ]
 ];

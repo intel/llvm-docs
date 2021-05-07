@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01char_01_4 =
+[
+    [ "type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01char_01_4.html#a3e3fb20e2ca3d3fa61e8ee35adca6eea", null ]
+];

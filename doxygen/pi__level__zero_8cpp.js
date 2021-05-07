@@ -122,7 +122,6 @@ var pi__level__zero_8cpp =
     [ "piSamplerRelease", "pi__level__zero_8cpp.html#a3e6c8bb1ca70ed13b07fca70dea76a08", null ],
     [ "piSamplerRetain", "pi__level__zero_8cpp.html#a6551ae9c262ed234fcace964e7a1805d", null ],
     [ "piTearDown", "pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49", null ],
-    [ "populateDeviceCacheIfNeeded", "pi__level__zero_8cpp.html#a20feeda1d88a646e37e1cde32d39d1ad", null ],
     [ "printZeEventList", "pi__level__zero_8cpp.html#a18ef846408ee73ae5dbb8c4978d1ec41", null ],
     [ "setEnvVar", "pi__level__zero_8cpp.html#a248a4e96fb322d15f762f0d4925c34d8", null ],
     [ "ShouldUseUSMAllocator", "pi__level__zero_8cpp.html#aa0d9788a220013761c4eb442c39d3ad6", null ],

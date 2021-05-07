@@ -1,0 +1,5 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor_3_01syc6ff2b2f529475e44f9a2aded0d5eee0 =
+[
+    [ "mode", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor_3_01syc6ff2b2f529475e44f9a2aded0d5eee0.html#ada6f68f53d92f09fcdefd08b3b9db7ea", null ],
+    [ "target", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor_3_01syc6ff2b2f529475e44f9a2aded0d5eee0.html#a011e19e3d50841ce37e00784c122d6ac", null ]
+];

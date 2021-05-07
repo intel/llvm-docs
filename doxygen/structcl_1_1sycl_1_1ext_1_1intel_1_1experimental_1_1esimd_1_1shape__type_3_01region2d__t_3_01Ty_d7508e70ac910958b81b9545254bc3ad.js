@@ -1,0 +1,5 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01region2d__t_3_01Ty_d7508e70ac910958b81b9545254bc3ad =
+[
+    [ "element_type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01region2d__t_3_01Ty_d7508e70ac910958b81b9545254bc3ad.html#a9c3386de3549a0fedd8c6bf01e314bbb", null ],
+    [ "type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01region2d__t_3_01Ty_d7508e70ac910958b81b9545254bc3ad.html#a3a23cb798e7715fefe27c1043a4c2287", null ]
+];

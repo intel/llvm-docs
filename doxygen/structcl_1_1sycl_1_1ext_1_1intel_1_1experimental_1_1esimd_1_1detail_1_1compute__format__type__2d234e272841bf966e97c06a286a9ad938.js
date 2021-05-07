@@ -1,0 +1,9 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938 =
+[
+    [ "type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a88bac9a50af31264cd9af8707b717d72", null ],
+    [ "Prod", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#aeb442c0a845319041e4e9b558facc60f", null ],
+    [ "SizeX", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a5d876a690beb5577b7e32c10e6f15e00", null ],
+    [ "SizeY", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a97c506c5e49a22cfd4fb5617b54f1660", null ],
+    [ "StrideX", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#ad93f22a21d081a6cd512cabba7dccbb8", null ],
+    [ "StrideY", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#abb21c5cbc0c42f04740691a7d415b0c4", null ]
+];

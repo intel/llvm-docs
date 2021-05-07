@@ -1,7 +1,7 @@
 var group__sycl__esimd__raw__send__api =
 [
-    [ "esimd_raw_send_load", "group__sycl__esimd__raw__send__api.html#gac3eb0063aba29e73cb00695fc5e13e64", null ],
-    [ "esimd_raw_send_store", "group__sycl__esimd__raw__send__api.html#gad68de41aa2c13027a76634b53c58b4f8", null ],
-    [ "esimd_raw_sends_load", "group__sycl__esimd__raw__send__api.html#gaf8fd723bf7e56917518ed3fa4f91df51", null ],
-    [ "esimd_raw_sends_store", "group__sycl__esimd__raw__send__api.html#gae1de7b7042a15ac6ef4c9ce90d780bb3", null ]
+    [ "esimd_raw_send_load", "group__sycl__esimd__raw__send__api.html#gafce6152722112a4c186aa338f72ec5c7", null ],
+    [ "esimd_raw_send_store", "group__sycl__esimd__raw__send__api.html#ga7df83e11341cb360daa12b5334b7046f", null ],
+    [ "esimd_raw_sends_load", "group__sycl__esimd__raw__send__api.html#ga6bfd13237b551ce8dc5daa04112a2703", null ],
+    [ "esimd_raw_sends_store", "group__sycl__esimd__raw__send__api.html#ga913ead1b4a84d7548ed8005c45d754ef", null ]
 ];

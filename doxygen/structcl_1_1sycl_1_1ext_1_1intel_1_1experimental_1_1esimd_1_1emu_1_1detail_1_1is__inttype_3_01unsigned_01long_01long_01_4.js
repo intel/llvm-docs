@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__inttype_3_01unsigned_01long_01long_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__inttype_3_01unsigned_01long_01long_01_4.html#a6a9f3846d7b23f54d15e6e919c4bc9eb", null ]
+];

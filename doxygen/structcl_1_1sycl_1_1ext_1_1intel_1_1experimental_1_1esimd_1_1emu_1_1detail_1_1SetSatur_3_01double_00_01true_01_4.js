@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1SetSatur_3_01double_00_01true_01_4 =
+[
+    [ "set", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1SetSatur_3_01double_00_01true_01_4.html#a256f71c0580099b70ac904d085d22a9a", null ]
+];

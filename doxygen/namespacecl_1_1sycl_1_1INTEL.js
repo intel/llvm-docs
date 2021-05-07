@@ -1,6 +1,5 @@
 var namespacecl_1_1sycl_1_1INTEL =
 [
-    [ "gpu", "namespacecl_1_1sycl_1_1INTEL_1_1gpu.html", "namespacecl_1_1sycl_1_1INTEL_1_1gpu" ],
     [ "property", "namespacecl_1_1sycl_1_1INTEL_1_1property.html", "namespacecl_1_1sycl_1_1INTEL_1_1property" ],
     [ "_GetValue", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue" ],
     [ "_GetValue< _Type, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4" ],

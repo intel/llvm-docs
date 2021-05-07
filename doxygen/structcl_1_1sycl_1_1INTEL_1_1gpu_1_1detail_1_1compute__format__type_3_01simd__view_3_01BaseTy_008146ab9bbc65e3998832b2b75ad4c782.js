@@ -1,7 +1,0 @@
-var structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type_3_01simd__view_3_01BaseTy_008146ab9bbc65e3998832b2b75ad4c782 =
-[
-    [ "ShapeTy", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type_3_01simd__view_3_01BaseTy_008146ab9bbc65e3998832b2b75ad4c782.html#a95f87bdd2a973fba76e37b1b0fd12728", null ],
-    [ "type", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type_3_01simd__view_3_01BaseTy_008146ab9bbc65e3998832b2b75ad4c782.html#ab6d65657688477e6c15eeeb1edf34b72", null ],
-    [ "Size", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type_3_01simd__view_3_01BaseTy_008146ab9bbc65e3998832b2b75ad4c782.html#a12791e180142c6a5e8e2598ccf42484f", null ],
-    [ "Stride", "structcl_1_1sycl_1_1INTEL_1_1gpu_1_1detail_1_1compute__format__type_3_01simd__view_3_01BaseTy_008146ab9bbc65e3998832b2b75ad4c782.html#a0c3be31d58159758d0fdb2b869869e96", null ]
-];

@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__byte__type_3_01unsigned_01char_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__byte__type_3_01unsigned_01char_01_4.html#a8a0afd232fc97117258644f8c7eafdb6", null ]
+];

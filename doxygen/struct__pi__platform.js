@@ -3,6 +3,7 @@ var struct__pi__platform =
     [ "_pi_platform", "struct__pi__platform.html#a6e3d1a923247c6bc99e9e74c05cce70d", null ],
     [ "getDeviceFromNativeHandle", "struct__pi__platform.html#ad95f0299846f7563b32570ed999fd15c", null ],
     [ "initialize", "struct__pi__platform.html#a2cb1eaecdccbeeca05c36d129498198b", null ],
+    [ "populateDeviceCacheIfNeeded", "struct__pi__platform.html#ad08dab38aebb4e9242a0d8d9ca5ddfc2", null ],
     [ "DeviceCachePopulated", "struct__pi__platform.html#afba11b061b3a835003d2583a03d7a9d2", null ],
     [ "devices_", "struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8", null ],
     [ "PiDevicesCache", "struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30", null ],

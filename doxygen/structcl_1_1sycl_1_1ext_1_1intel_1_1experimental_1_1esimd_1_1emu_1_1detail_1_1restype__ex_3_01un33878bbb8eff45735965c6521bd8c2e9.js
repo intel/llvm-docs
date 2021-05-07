@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un33878bbb8eff45735965c6521bd8c2e9 =
+[
+    [ "type", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un33878bbb8eff45735965c6521bd8c2e9.html#a4143200582ce9aaf9f593e32f3a4b159", null ]
+];

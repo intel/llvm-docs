@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__qword__type_3_01vector__type_3_01T_00_01N_01_4_01_4 =
+[
+    [ "value", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__qword__type_3_01vector__type_3_01T_00_01N_01_4_01_4.html#affd503138aaf7987cc2879e74d1cddb2", null ]
+];

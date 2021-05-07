@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4 =
+[
+    [ "get", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1NextPowerOf2_3_01N_00_01K_00_01false_01_4.html#a653a58bf69d3f19de6c3a7c79c85694f", null ]
+];
