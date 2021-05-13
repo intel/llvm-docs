@@ -1,5 +1,8 @@
 var NAVTREEINDEX29 =
 {
+"pipes_8hpp.html#a67947b4c496c1c01bdf00ac487b1eafd":[4,0,0,0,1,42,0],
+"pipes_8hpp_source.html":[4,0,0,0,1,42],
+"platform_8cpp.html":[4,0,2,17],
 "platform_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,17,0],
 "platform_8cpp_source.html":[4,0,2,17],
 "platform_8hpp.html":[4,0,0,0,1,43],
@@ -184,8 +187,8 @@ var NAVTREEINDEX29 =
 "queue__properties_8hpp.html":[4,0,0,0,1,6,5],
 "queue__properties_8hpp_source.html":[4,0,0,0,1,6,5],
 "range_8hpp.html":[4,0,0,0,1,49],
-"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,49,1],
 "range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,49,0],
+"range_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,49,1],
 "range_8hpp_source.html":[4,0,0,0,1,49],
 "reduction_8cpp.html":[4,0,2,1,64],
 "reduction_8cpp.html#a3955af96c1019ee7650326f74848e548":[4,0,2,1,64,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX29 =
 "spec__constant__impl_8hpp.html#ab834edf6243a91ad1fbd0741e988ab6e":[4,0,2,1,68,1],
 "spec__constant__impl_8hpp_source.html":[4,0,2,1,68],
 "specialization__id_8hpp.html":[4,0,0,0,1,52],
-"specialization__id_8hpp_source.html":[4,0,0,0,1,52],
-"spinlock_8hpp.html":[4,0,0,0,1,2,35],
-"spinlock_8hpp_source.html":[4,0,0,0,1,2,35],
-"spirv_8hpp.html":[4,0,0,0,1,2,36]
+"specialization__id_8hpp_source.html":[4,0,0,0,1,52]
 };

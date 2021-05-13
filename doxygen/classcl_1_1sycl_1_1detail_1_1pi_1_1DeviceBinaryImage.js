@@ -14,6 +14,7 @@ var classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage =
     [ "getProperty", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a407a91a8287933a62b6aa4b084ca26d3", null ],
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ab25030f048e6145b3beab9bc94f5af65", null ],
     [ "getSpecConstants", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a77e1b1c1b1d3ffc8175c77fc5e07d2de", null ],
+    [ "getSpecConstantsDefaultValues", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#ad896c315a786e8b0db2f311446d54f7b", null ],
     [ "init", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a91c3cb418038889ea7963d8ba716e646", null ],
     [ "print", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a7220d02ef11dc216ffc77270f4cb9f13", null ],
     [ "Bin", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a3c5bccb1fbbb7592fbfe3e2a1e2982f5", null ],

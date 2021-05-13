@@ -316,75 +316,89 @@ $(document).ready(function(){initNavTree('device__image__impl_8hpp_source.html',
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;          MBinImage-&gt;getSpecConstants();</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;      <span class="keyword">using</span> SCItTy = <a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html">pi::DeviceBinaryImage::PropertyRange::ConstIterator</a>;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="comment">// This variable is used to calculate spec constant value offset in a</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="comment">// flat byte array.</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      <span class="keywordtype">unsigned</span> BlobOffset = 0;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="keywordflow">for</span> (SCItTy SCIt : SCRange) {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *SCName = (*SCIt)-&gt;Name;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      <span class="comment">// get default values for specialization constants</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html">pi::DeviceBinaryImage::PropertyRange</a> &amp;SCDefValRange =</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;          MBinImage-&gt;getSpecConstantsDefaultValues();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      <span class="keywordtype">bool</span> HasDefaultValues = SCDefValRange.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a8cd2da62c97acdfcbc67b52afab85bc8">begin</a>() != SCDefValRange.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a23e903c0a641f5d057bc774d4177c185">end</a>();</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html">pi::ByteArray</a> Descriptors =</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html">pi::DeviceBinaryProperty</a>(*SCIt).<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html#a33d6f62d2bdedff63b51040726ef18e2">asByteArray</a>();</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        assert(Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>() &gt; 8 &amp;&amp; <span class="stringliteral">&quot;Unexpected property size&quot;</span>);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="comment">// Expected layout is vector of 3-component tuples (flattened into a</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// vector of scalars), where each tuple consists of: ID of a scalar spec</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="comment">// constant, (which might be a member of the composite); offset, which</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">// is used to calculate location of scalar member within the composite</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// or zero for scalar spec constants; size of a spec constant</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        constexpr <span class="keywordtype">size_t</span> NumElements = 3;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        assert(((Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>() - 8) / <span class="keyword">sizeof</span>(std::uint32_t)) %</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                       NumElements ==</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                   0 &amp;&amp;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;               <span class="stringliteral">&quot;unexpected layout of composite spec const descriptors&quot;</span>);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">auto</span> *It = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>std::uint32_t *<span class="keyword">&gt;</span>(&amp;Descriptors[8]);</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">auto</span> *End = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>std::uint32_t *<span class="keyword">&gt;</span>(&amp;Descriptors[0] +</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                                                            Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>());</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">unsigned</span> PrevOffset = 0;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">while</span> (It != End) {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          <span class="comment">// Make sure that alignment is correct in blob.</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;          BlobOffset += <span class="comment">/*Offset*/</span> It[1] - PrevOffset;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;          PrevOffset = It[1];</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;          <span class="comment">// The map is not locked here because updateSpecConstSymMap() is only</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          <span class="comment">// supposed to be called from c&#39;tor.</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;          MSpecConstSymMap[std::string{SCName}].push_back(</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;              SpecConstDescT{<span class="comment">/*ID*/</span> It[0], <span class="comment">/*CompositeOffset*/</span> It[1],</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                             <span class="comment">/*Size*/</span> It[2], BlobOffset});</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;          BlobOffset += <span class="comment">/*Size*/</span> It[2];</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;          It += NumElements;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      MSpecConstsBlob.resize(BlobOffset);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="keyword">const</span> RTDeviceBinaryImage *MBinImage = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707">context</a> MContext;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  std::vector&lt;device&gt; MDevices;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0">bundle_state</a> MState;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="comment">// Native program handler which this device image represents</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <a class="code" href="struct__pi__program.html">RT::PiProgram</a> MProgram = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="comment">// List of kernel ids available in this image, elements should be sorted</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="comment">// according to LessByNameComp</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  std::vector&lt;kernel_id&gt; MKernelIDs;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="comment">// A mutex for sycnhronizing access to spec constants blob. Mutable because</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">// needs to be locked in the const method for getting spec constant value.</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keyword">mutable</span> std::mutex MSpecConstAccessMtx;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="comment">// Binary blob which can have values of all specialization constants in the</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="comment">// image</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  std::vector&lt;unsigned char&gt; MSpecConstsBlob;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="comment">// Buffer containing binary blob which can have values of all specialization</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">// constants in the image, it is using for storing non-native specialization</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">// constants</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <a class="code" href="struct__pi__mem.html">RT::PiMem</a> MSpecConstsBuffer = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="comment">// Contains map of spec const names to their descriptions + offsets in</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="comment">// the MSpecConstsBlob</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  std::map&lt;std::string, std::vector&lt;SpecConstDescT&gt;&gt; MSpecConstSymMap;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;};</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="comment">// This variable is used to calculate spec constant value offset in a</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="comment">// flat byte array.</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;      <span class="keywordtype">unsigned</span> BlobOffset = 0;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <span class="keywordflow">for</span> (SCItTy SCIt : SCRange) {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *SCName = (*SCIt)-&gt;Name;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html">pi::ByteArray</a> Descriptors =</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html">pi::DeviceBinaryProperty</a>(*SCIt).<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html#a33d6f62d2bdedff63b51040726ef18e2">asByteArray</a>();</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        assert(Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>() &gt; 8 &amp;&amp; <span class="stringliteral">&quot;Unexpected property size&quot;</span>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="comment">// Expected layout is vector of 3-component tuples (flattened into a</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="comment">// vector of scalars), where each tuple consists of: ID of a scalar spec</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">// constant, (which might be a member of the composite); offset, which</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="comment">// is used to calculate location of scalar member within the composite</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// or zero for scalar spec constants; size of a spec constant</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        constexpr <span class="keywordtype">size_t</span> NumElements = 3;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        assert(((Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>() - 8) / <span class="keyword">sizeof</span>(std::uint32_t)) %</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                       NumElements ==</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                   0 &amp;&amp;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;               <span class="stringliteral">&quot;unexpected layout of composite spec const descriptors&quot;</span>);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keyword">auto</span> *It = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>std::uint32_t *<span class="keyword">&gt;</span>(&amp;Descriptors[8]);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">auto</span> *End = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>std::uint32_t *<span class="keyword">&gt;</span>(&amp;Descriptors[0] +</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                                                            Descriptors.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5">size</a>());</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordtype">unsigned</span> PrevOffset = 0;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">while</span> (It != End) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;          <span class="comment">// Make sure that alignment is correct in blob.</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;          BlobOffset += <span class="comment">/*Offset*/</span> It[1] - PrevOffset;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;          PrevOffset = It[1];</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;          <span class="comment">// The map is not locked here because updateSpecConstSymMap() is only</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;          <span class="comment">// supposed to be called from c&#39;tor.</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;          MSpecConstSymMap[std::string{SCName}].push_back(</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;              SpecConstDescT{<span class="comment">/*ID*/</span> It[0], <span class="comment">/*CompositeOffset*/</span> It[1],</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                             <span class="comment">/*Size*/</span> It[2], BlobOffset, HasDefaultValues});</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;          BlobOffset += <span class="comment">/*Size*/</span> It[2];</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;          It += NumElements;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      MSpecConstsBlob.resize(BlobOffset);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <span class="keywordflow">if</span> (HasDefaultValues) {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        pi::ByteArray DefValDescriptors =</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            pi::DeviceBinaryProperty(*SCDefValRange.<a class="code" href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a8cd2da62c97acdfcbc67b52afab85bc8">begin</a>()).asByteArray();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        std::uninitialized_copy(&amp;DefValDescriptors[8],</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                &amp;DefValDescriptors[8] + MSpecConstsBlob.size(),</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                                MSpecConstsBlob.data());</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keyword">const</span> RTDeviceBinaryImage *MBinImage = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707">context</a> MContext;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  std::vector&lt;device&gt; MDevices;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0">bundle_state</a> MState;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">// Native program handler which this device image represents</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <a class="code" href="struct__pi__program.html">RT::PiProgram</a> MProgram = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="comment">// List of kernel ids available in this image, elements should be sorted</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="comment">// according to LessByNameComp</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  std::vector&lt;kernel_id&gt; MKernelIDs;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="comment">// A mutex for sycnhronizing access to spec constants blob. Mutable because</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="comment">// needs to be locked in the const method for getting spec constant value.</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keyword">mutable</span> std::mutex MSpecConstAccessMtx;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="comment">// Binary blob which can have values of all specialization constants in the</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="comment">// image</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  std::vector&lt;unsigned char&gt; MSpecConstsBlob;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="comment">// Buffer containing binary blob which can have values of all specialization</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="comment">// constants in the image, it is using for storing non-native specialization</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="comment">// constants</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="struct__pi__mem.html">RT::PiMem</a> MSpecConstsBuffer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="comment">// Contains map of spec const names to their descriptions + offsets in</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="comment">// the MSpecConstsBlob</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  std::map&lt;std::string, std::vector&lt;SpecConstDescT&gt;&gt; MSpecConstSymMap;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;};</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astruct__pi__mem_html"><div class="ttname"><a href="struct__pi__mem.html">_pi_mem</a></div><div class="ttdoc">PI Mem mapping to CUDA memory allocations, both data and texture/surface.</div><div class="ttdef"><b>Definition:</b> <a href="pi__cuda_8hpp_source.html#l00183">pi_cuda.hpp:183</a></div></div>
@@ -396,8 +410,9 @@ $(document).ready(function(){initNavTree('device__image__impl_8hpp_source.html',
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">cl::sycl::detail::RTDeviceBinaryImage</a></div><div class="ttdef"><b>Definition:</b> <a href="device__binary__image_8hpp_source.html#l00020">device_binary_image.hpp:20</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_a3b327dd926d717f2477c92a3ed41aa66"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a3b327dd926d717f2477c92a3ed41aa66">cl::sycl::detail::device_image_impl::get_spec_const_buffer_ref</a></div><div class="ttdeci">RT::PiMem &amp; get_spec_const_buffer_ref() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00172">device_image_impl.hpp:172</a></div></div>
 <div class="ttc" id="adevice_8hpp_html"><div class="ttname"><a href="device_8hpp.html">device.hpp</a></div></div>
-<div class="ttc" id="api_8h_html_adbea20ee4a5acc6c997463ae63b96442"><div class="ttname"><a href="pi_8h.html#adbea20ee4a5acc6c997463ae63b96442">piextProgramGetNativeHandle</a></div><div class="ttdeci">pi_result piextProgramGetNativeHandle(pi_program program, pi_native_handle *nativeHandle)</div><div class="ttdoc">Gets the native handle of a PI program object.</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l03307">pi_level_zero.cpp:3307</a></div></div>
+<div class="ttc" id="api_8h_html_adbea20ee4a5acc6c997463ae63b96442"><div class="ttname"><a href="pi_8h.html#adbea20ee4a5acc6c997463ae63b96442">piextProgramGetNativeHandle</a></div><div class="ttdeci">pi_result piextProgramGetNativeHandle(pi_program program, pi_native_handle *nativeHandle)</div><div class="ttdoc">Gets the native handle of a PI program object.</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l03330">pi_level_zero.cpp:3330</a></div></div>
 <div class="ttc" id="acommon_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_html_a23e903c0a641f5d057bc774d4177c185"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a23e903c0a641f5d057bc774d4177c185">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::end</a></div><div class="ttdeci">ConstIterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="pi_8hpp_source.html#l00247">pi.hpp:247</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_a77652970566a1c51f1bcb5c6bd30c937"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a77652970566a1c51f1bcb5c6bd30c937">cl::sycl::detail::device_image_impl::has_kernel</a></div><div class="ttdeci">bool has_kernel(const kernel_id &amp;KernelIDCand, const device &amp;DeviceCand) const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00053">device_image_impl.hpp:53</a></div></div>
 <div class="ttc" id="acontext_8hpp_html"><div class="ttname"><a href="context_8hpp.html">context.hpp</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_a2eff7b6a753ab6bb917c07d348e77aa7"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a2eff7b6a753ab6bb917c07d348e77aa7">cl::sycl::detail::device_image_impl::set_specialization_constant_raw_value</a></div><div class="ttdeci">void set_specialization_constant_raw_value(const char *SpecName, const void *Value) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00097">device_image_impl.hpp:97</a></div></div>
@@ -412,7 +427,8 @@ $(document).ready(function(){initNavTree('device__image__impl_8hpp_source.html',
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_a8aa6313fb00755256fce09673c266ae5"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a8aa6313fb00755256fce09673c266ae5">cl::sycl::detail::device_image_impl::set_state</a></div><div class="ttdeci">void set_state(bundle_state NewState) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00150">device_image_impl.hpp:150</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1ONEAPI_html_ad56eb63142a4a0aaa28c23375b33cac6"><div class="ttname"><a href="namespacecl_1_1sycl_1_1ONEAPI.html#ad56eb63142a4a0aaa28c23375b33cac6">cl::sycl::ONEAPI::any_of</a></div><div class="ttdeci">detail::enable_if_t&lt; detail::is_generic_group&lt; Group &gt;::value, bool &gt; any_of(Group, bool pred)</div><div class="ttdef"><b>Definition:</b> <a href="group__algorithm_8hpp_source.html#l00234">group_algorithm.hpp:234</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_ade8963b9bb134c88a5801797d4f6afd9"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#ade8963b9bb134c88a5801797d4f6afd9">cl::sycl::detail::memcpy</a></div><div class="ttdeci">void memcpy(void *Dst, const void *Src, std::size_t Size)</div></div>
-<div class="ttc" id="api_8h_html_a403a1366c23fe8f4c596778500c3a3d7"><div class="ttname"><a href="pi_8h.html#a403a1366c23fe8f4c596778500c3a3d7">piProgramRelease</a></div><div class="ttdeci">pi_result piProgramRelease(pi_program program)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l03297">pi_level_zero.cpp:3297</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_html_a8cd2da62c97acdfcbc67b52afab85bc8"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange.html#a8cd2da62c97acdfcbc67b52afab85bc8">cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::begin</a></div><div class="ttdeci">ConstIterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="pi_8hpp_source.html#l00246">pi.hpp:246</a></div></div>
+<div class="ttc" id="api_8h_html_a403a1366c23fe8f4c596778500c3a3d7"><div class="ttname"><a href="pi_8h.html#a403a1366c23fe8f4c596778500c3a3d7">piProgramRelease</a></div><div class="ttdeci">pi_result piProgramRelease(pi_program program)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l03320">pi_level_zero.cpp:3320</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_a8886a8988f124997474ed3fe43308c4d"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a8886a8988f124997474ed3fe43308c4d">cl::sycl::detail::device_image_impl::has_kernel</a></div><div class="ttdeci">bool has_kernel(const kernel_id &amp;KernelIDCand) const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00048">device_image_impl.hpp:48</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1device_html"><div class="ttname"><a href="classcl_1_1sycl_1_1device.html">cl::sycl::device</a></div><div class="ttdoc">The SYCL device class encapsulates a single SYCL device on which kernels may be executed.</div><div class="ttdef"><b>Definition:</b> <a href="device_8hpp_source.html#l00034">device.hpp:34</a></div></div>
 <div class="ttc" id="akernel__bundle_8hpp_html"><div class="ttname"><a href="kernel__bundle_8hpp.html">kernel_bundle.hpp</a></div></div>
@@ -439,7 +455,7 @@ $(document).ready(function(){initNavTree('device__image__impl_8hpp_source.html',
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_ac8c856ee9210344023c15c84d5bdac3d"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ac8c856ee9210344023c15c84d5bdac3d">cl::sycl::detail::device_image_impl::get_spec_const_data_lock</a></div><div class="ttdeci">std::mutex &amp; get_spec_const_data_lock() noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00190">device_image_impl.hpp:190</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_aca24864f8cbfc6d620391f40575fde81"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">cl::sycl::detail::getSyclObjImpl</a></div><div class="ttdeci">decltype(Obj::impl) getSyclObjImpl(const Obj &amp;SyclObject)</div><div class="ttdef"><b>Definition:</b> <a href="common_8hpp_source.html#l00168">common.hpp:168</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l02335">accessor.hpp:2335</a></div></div>
-<div class="ttc" id="api_8h_html_ad0eb6b12728df62c4cbec6367058868a"><div class="ttname"><a href="pi_8h.html#ad0eb6b12728df62c4cbec6367058868a">piMemBufferCreate</a></div><div class="ttdeci">pi_result piMemBufferCreate(pi_context context, pi_mem_flags flags, size_t size, void *host_ptr, pi_mem *ret_mem, const pi_mem_properties *properties=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l02454">pi_level_zero.cpp:2454</a></div></div>
+<div class="ttc" id="api_8h_html_ad0eb6b12728df62c4cbec6367058868a"><div class="ttname"><a href="pi_8h.html#ad0eb6b12728df62c4cbec6367058868a">piMemBufferCreate</a></div><div class="ttdeci">pi_result piMemBufferCreate(pi_context context, pi_mem_flags flags, size_t size, void *host_ptr, pi_mem *ret_mem, const pi_mem_properties *properties=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l02477">pi_level_zero.cpp:2477</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1device__image__impl_html_ab32cc2d720eef00d42db3b01d06c97ca"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ab32cc2d720eef00d42db3b01d06c97ca">cl::sycl::detail::device_image_impl::get_spec_const_data_ref</a></div><div class="ttdeci">const std::map&lt; std::string, std::vector&lt; SpecConstDescT &gt; &gt; &amp; get_spec_const_data_ref() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00186">device_image_impl.hpp:186</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1context_html"><div class="ttname"><a href="classcl_1_1sycl_1_1context.html">cl::sycl::context</a></div><div class="ttdoc">The context class represents a SYCL context on which kernel functions may be executed.</div><div class="ttdef"><b>Definition:</b> <a href="context_8hpp_source.html#l00035">context.hpp:35</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1pi_1_1ByteArray_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html">cl::sycl::detail::pi::ByteArray</a></div><div class="ttdef"><b>Definition:</b> <a href="pi_8hpp_source.html#l00180">pi.hpp:180</a></div></div>

@@ -23,6 +23,7 @@ var pi_8h =
     [ "__SYCL_PI_DEVICE_BINARY_TARGET_UNKNOWN", "pi_8h.html#abc21ab460b338bfa56fae1569001bf3d", null ],
     [ "__SYCL_PI_PROPERTY_SET_DEVICELIB_REQ_MASK", "pi_8h.html#a168b1d3ff39191de28d569818760d282", null ],
     [ "__SYCL_PI_PROPERTY_SET_KERNEL_PARAM_OPT_INFO", "pi_8h.html#a17def9eec80cfd553155b7df05274f76", null ],
+    [ "__SYCL_PI_PROPERTY_SET_SPEC_CONST_DEFAULT_VALUES_MAP", "pi_8h.html#a146fdac4bb83067b03333abc10e44e23", null ],
     [ "__SYCL_PI_PROPERTY_SET_SPEC_CONST_MAP", "pi_8h.html#acb7b5da873da250ab824a4643589e2fe", null ],
     [ "__SYCL_PI_PROPERTY_SET_SYCL_MISC_PROP", "pi_8h.html#aee763d43843b48dfe6e77a015d75997f", null ],
     [ "_PI_API", "pi_8h.html#a30efcb92adfb3e8888cfe462bb133516", null ],

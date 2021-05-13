@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"functions_vars_z.html":[3,3,2,24],
 "functions_w.html":[3,3,0,24],
 "functions_x.html":[3,3,0,25],
 "functions_y.html":[3,3,0,26],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "globals_eval_p.html":[4,1,5,1],
 "globals_f.html":[4,1,0,5],
 "globals_func.html":[4,1,1],
-"globals_func.html":[4,1,1,0],
-"globals_func_a.html":[4,1,1,1]
+"globals_func.html":[4,1,1,0]
 };

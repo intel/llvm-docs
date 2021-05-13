@@ -10,6 +10,7 @@ var struct__pi__platform =
     [ "PiDevicesCacheMutex", "struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd", null ],
     [ "ZeDriver", "struct__pi__platform.html#ac538d7ae8f84c2475c1f4a80f9af6643", null ],
     [ "ZeDriverApiVersion", "struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90", null ],
+    [ "zeDriverExtensionMap", "struct__pi__platform.html#afdf9ce8a52d574e7cb0950e799392f9d", null ],
     [ "ZeDriverVersion", "struct__pi__platform.html#a07754b139b2535497050f34c48650d73", null ],
     [ "ZeGlobalCommandListCount", "struct__pi__platform.html#a2b1ce87f343641f4da208d7d772a58bb", null ]
 ];

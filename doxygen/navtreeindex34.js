@@ -1,5 +1,9 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder.html":[3,0,1,1,0,353],
+"structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder_3_01T_00_01false_01_4.html":[3,0,1,1,0,354],
+"structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder_3_01T_00_01false_01_4.html#aea49d124b3b4b27a44f265459d165618":[3,0,1,1,0,354,0],
+"structcl_1_1sycl_1_1detail_1_1TupleValueHolder.html":[3,0,1,1,0,355],
 "structcl_1_1sycl_1_1detail_1_1TupleValueHolder.html#a319db56e34faa135384453a6a0e965ad":[3,0,1,1,0,355,0],
 "structcl_1_1sycl_1_1detail_1_1TupleValueHolder.html#aa0bc3fb62afb6eeb7a234b6d6deaa530":[3,0,1,1,0,355,1],
 "structcl_1_1sycl_1_1detail_1_1TupleValueHolder.html#ae3dd8ee952a2553ad51555342e57efca":[3,0,1,1,0,355,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX34 =
 "structcl_1_1sycl_1_1detail_1_1make__signed__impl_3_01T_00_01enable__if__t_3_9is__contained_3_01T1f4a12d00f69d6fa255d9091bf7d5bd6.html#a99c178ed40e7eb06540cd535b8961e73":[3,0,1,1,0,261,0],
 "structcl_1_1sycl_1_1detail_1_1make__type__impl.html":[3,0,1,1,0,262],
 "structcl_1_1sycl_1_1detail_1_1make__type__impl.html#a1f67d365d82e1445216443762190d4f1":[3,0,1,1,0,262,0],
-"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html":[3,0,1,1,0,263],
-"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html#abdec62a11f15e36ab24093490f6fb337":[3,0,1,1,0,263,0],
-"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html#afbfd01d586a5cbfe85eb902350096551":[3,0,1,1,0,263,1],
-"structcl_1_1sycl_1_1detail_1_1make__unsigned.html":[3,0,1,1,0,264],
-"structcl_1_1sycl_1_1detail_1_1make__unsigned.html#a25fa2e910c7aef9f0c32290fd76c3c59":[3,0,1,1,0,264,0]
+"structcl_1_1sycl_1_1detail_1_1make__type__impl_3_01vec_3_01T_00_01N_01_4_00_01TL_01_4.html":[3,0,1,1,0,263]
 };

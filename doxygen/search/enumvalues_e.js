@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['object_10361',['Object',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a41596e4f89393cfa5c76cc9b983e4ae2',1,'_pi_program::Object()'],['../namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0aa8cfde6331bd59eb2ac96f8911c4b666',1,'cl::sycl::object()']]],
-  ['ocloc_5fversion_5f1_5f0_10362',['OCLOC_VERSION_1_0',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032a706169a5a88475b33a6df6bc35321c10',1,'ocloc_api.h']]],
-  ['ocloc_5fversion_5fcurrent_10363',['OCLOC_VERSION_CURRENT',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032a3f4b5608aece4db4b700e6a53cdcabe8',1,'ocloc_api.h']]],
-  ['ocloc_5fversion_5fforce_5fuint32_10364',['OCLOC_VERSION_FORCE_UINT32',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032aff83d473b37aa57458b525953f8d864d',1,'ocloc_api.h']]],
-  ['oct_10365',['oct',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1cdbdf89f2d1bd3dd9e698b2b320cb86',1,'cl::sycl']]],
-  ['online_5fcompiler_10366',['online_compiler',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ead09fec1f234c40f63b2caa649928bffd',1,'cl::sycl']]],
-  ['online_5flinker_10367',['online_linker',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea6eac88ab4945becf3d3ddeeaee00e2a0',1,'cl::sycl']]],
-  ['ooo_10368',['OOO',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06af1254165ff2e284b1b555d99d1c67e64',1,'cl::sycl::detail']]],
-  ['opencl_10369',['opencl',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a93195db1ad73788fe96193503a7d8887',1,'cl::sycl']]],
-  ['opencl_5fc_10370',['opencl_c',['../namespacecl_1_1sycl_1_1INTEL.html#ad66300105b63574892a741b0cf0a6b60a4a196ed426a0217f8a9ab38abe926150',1,'cl::sycl::INTEL']]],
-  ['opencl_5fc_5fversion_10371',['opencl_c_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a82aeb1c67f59db3c5704c12572c32832',1,'cl::sycl::info']]],
-  ['ordered_10372',['Ordered',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06a3cd18dea8eb934f6d0ce3484af28e2a7',1,'cl::sycl::detail']]],
-  ['output_10373',['Output',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420add1df549f91fa5175ee260728a141a35',1,'__spv::StorageClass']]],
-  ['oword_10374',['OWORD',['../structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1OperandSize.html#a0902ea214075d12ff4f82dd022051975a2b31b1dfa6f0397f7d09398a4db56655',1,'cl::sycl::ext::intel::experimental::esimd::detail::OperandSize']]]
+  ['object_10368',['Object',['../struct__pi__program.html#a15c600ded232ac6fe066f205c5e34b16a41596e4f89393cfa5c76cc9b983e4ae2',1,'_pi_program::Object()'],['../namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0aa8cfde6331bd59eb2ac96f8911c4b666',1,'cl::sycl::object()']]],
+  ['ocloc_5fversion_5f1_5f0_10369',['OCLOC_VERSION_1_0',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032a706169a5a88475b33a6df6bc35321c10',1,'ocloc_api.h']]],
+  ['ocloc_5fversion_5fcurrent_10370',['OCLOC_VERSION_CURRENT',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032a3f4b5608aece4db4b700e6a53cdcabe8',1,'ocloc_api.h']]],
+  ['ocloc_5fversion_5fforce_5fuint32_10371',['OCLOC_VERSION_FORCE_UINT32',['../ocloc__api_8h.html#a8255b7d1d2dcaf74af74a7742aa1f032aff83d473b37aa57458b525953f8d864d',1,'ocloc_api.h']]],
+  ['oct_10372',['oct',['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1cdbdf89f2d1bd3dd9e698b2b320cb86',1,'cl::sycl']]],
+  ['online_5fcompiler_10373',['online_compiler',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ead09fec1f234c40f63b2caa649928bffd',1,'cl::sycl']]],
+  ['online_5flinker_10374',['online_linker',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea6eac88ab4945becf3d3ddeeaee00e2a0',1,'cl::sycl']]],
+  ['ooo_10375',['OOO',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06af1254165ff2e284b1b555d99d1c67e64',1,'cl::sycl::detail']]],
+  ['opencl_10376',['opencl',['../namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336a93195db1ad73788fe96193503a7d8887',1,'cl::sycl']]],
+  ['opencl_5fc_10377',['opencl_c',['../namespacecl_1_1sycl_1_1INTEL.html#ad66300105b63574892a741b0cf0a6b60a4a196ed426a0217f8a9ab38abe926150',1,'cl::sycl::INTEL']]],
+  ['opencl_5fc_5fversion_10378',['opencl_c_version',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190a82aeb1c67f59db3c5704c12572c32832',1,'cl::sycl::info']]],
+  ['ordered_10379',['Ordered',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06a3cd18dea8eb934f6d0ce3484af28e2a7',1,'cl::sycl::detail']]],
+  ['output_10380',['Output',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420add1df549f91fa5175ee260728a141a35',1,'__spv::StorageClass']]],
+  ['oword_10381',['OWORD',['../structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1OperandSize.html#a0902ea214075d12ff4f82dd022051975a2b31b1dfa6f0397f7d09398a4db56655',1,'cl::sycl::ext::intel::experimental::esimd::detail::OperandSize']]]
 ];

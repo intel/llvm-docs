@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['slm_20functions_11110',['SLM functions',['../group__sycl__esimd__slm.html',1,'']]]
+  ['slm_20functions_11118',['SLM functions',['../group__sycl__esimd__slm.html',1,'']]]
 ];
