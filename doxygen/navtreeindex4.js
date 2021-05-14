@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"builtins__math_8cpp.html#acbad5c54edb3e0769955a75d77ce7d9f":[4,0,2,1,12,183],
+"builtins__math_8cpp.html#acbb885fef58938854c4afa9011d3ae96":[4,0,2,1,12,114],
 "builtins__math_8cpp.html#acd3947cde187f3d1cb4000e05681ffdf":[4,0,2,1,12,1],
 "builtins__math_8cpp.html#acd5d9fdee7f06b56b6f47fed20cfe918":[4,0,2,1,12,88],
 "builtins__math_8cpp.html#acd8340e6f3bec9c885dc68acf0d02781":[4,0,2,1,12,34],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "classcl_1_1sycl_1_1INTEL_1_1fpga__emulator__selector.html#a2ea95fc9ccd035e29f48e7d9e206d2d9":[3,0,1,1,3,7,0],
 "classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html":[3,0,1,1,3,8],
 "classcl_1_1sycl_1_1INTEL_1_1fpga__selector.html#a52e91fdf360284c188075b28b7130152":[3,0,1,1,3,8,0],
-"classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html":[3,0,1,1,3,9],
-"classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html#a10e3e76a728a607c9621fdb6ba025230":[3,0,1,1,3,9,0],
-"classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html#a564470e82d36a68687ed93ecff4e49a4":[3,0,1,1,3,9,1]
+"classcl_1_1sycl_1_1INTEL_1_1kernel__readable__io__pipe.html":[3,0,1,1,3,9]
 };

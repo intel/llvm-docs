@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1accessor.html#a04522a732fd0ee8de1482a04f48d3614":[1,2,1,0,46],
+"classcl_1_1sycl_1_1accessor.html#a0f3653431f61518189d9f464d581a182":[1,2,1,0,4],
 "classcl_1_1sycl_1_1accessor.html#a14c3f1a038eb6e7dd2ee8dd7a2a4b597":[1,2,1,0,28],
 "classcl_1_1sycl_1_1accessor.html#a15466be08385142dbf5825628e6a0c5f":[1,2,1,0,57],
 "classcl_1_1sycl_1_1accessor.html#a1beed72d1ea68a47506756019bd13a73":[1,2,1,0,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54182d49730f7d82e111295afaa9ae18":[3,0,1,1,0,11,5],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed":[3,0,1,1,0,11,2],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54626b5713e483b8f76010a719d80815":[3,0,1,1,0,11,9],
-"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e":[3,0,1,1,0,11,11],
-"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661":[3,0,1,1,0,11,7],
-"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a6f22dcfda6f3161b3f563635c4626705":[3,0,1,1,0,11,1]
+"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e":[3,0,1,1,0,11,11]
 };

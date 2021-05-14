@@ -188,6 +188,20 @@ $(document).ready(function(){initNavTree('defines__elementary_8hpp_source.html',
 <div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a3421410eeda4031741fb35f730199ba5">   90</a></span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif // __SYCL_FALLTHROUGH</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// define __SYCL_WARNING convenience macro to report compiler warnings</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define __SYCL_GCC_PRAGMA(x) _Pragma(#x)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __SYCL_GCC_PRAGMA(GCC warning msg)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER) &amp;&amp; !defined(__clang__)</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define __SYCL_QUOTE1(x) #x</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define __SYCL_QUOTE(x) __SYCL_QUOTE1(x)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define __SYCL_SRC_LOC __FILE__ &quot;:&quot; __SYCL_QUOTE(__LINE__)</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __pragma(message(__SYCL_SRC_LOC &quot; warning: &quot; msg))</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#else // clang et. al.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">// clang emits &quot;warning:&quot; in the message pragma output</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a8b6d237e544a4c7df8e24b10216738c6">  105</a></span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __pragma(message(msg))</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // __GNUC__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

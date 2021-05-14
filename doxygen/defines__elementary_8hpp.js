@@ -10,5 +10,6 @@ var defines__elementary_8hpp =
     [ "__SYCL_ID_QUERIES_FIT_IN_INT__", "defines__elementary_8hpp.html#a41d99a2c14b53a93a56f3ee4a1447a97", null ],
     [ "__SYCL_INLINE_CONSTEXPR", "defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba", null ],
     [ "__SYCL_INLINE_NAMESPACE", "defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384", null ],
+    [ "__SYCL_WARNING", "defines__elementary_8hpp.html#a8b6d237e544a4c7df8e24b10216738c6", null ],
     [ "SYCL_EXTERNAL", "defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901", null ]
 ];
