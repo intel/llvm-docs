@@ -227,7 +227,7 @@ var hierarchy =
         [ "cl::sycl::property::queue::in_order", "classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html", null ]
       ] ],
       [ "cl::sycl::detail::DataLessProperty< detail::NoInit >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
-        [ "cl::sycl::property::noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ]
+        [ "cl::sycl::property::no_init", "classcl_1_1sycl_1_1property_1_1no__init.html", null ]
       ] ],
       [ "cl::sycl::detail::DataLessProperty< detail::QueueEnableProfiling >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
         [ "cl::sycl::property::queue::enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ]

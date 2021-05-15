@@ -1,5 +1,7 @@
 var NAVTREEINDEX29 =
 {
+"platform_8cpp_source.html":[4,0,2,17],
+"platform_8hpp.html":[4,0,0,0,1,43],
 "platform_8hpp_source.html":[4,0,0,0,1,43],
 "platform__impl_8cpp.html":[4,0,2,1,52],
 "platform__impl_8cpp.html#a2130b5434d2626ef36fbaac83451fdb3":[4,0,2,1,52,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "spinlock_8hpp.html":[4,0,0,0,1,2,35],
 "spinlock_8hpp_source.html":[4,0,0,0,1,2,35],
 "spirv_8hpp.html":[4,0,0,0,1,2,36],
-"spirv_8hpp_source.html":[4,0,0,0,1,2,36],
-"spirv__ops_8cpp.html":[4,0,2,21],
-"spirv__ops_8cpp.html#a0649355f6b1290e7c6c2e15ab14b5879":[4,0,2,21,2]
+"spirv_8hpp_source.html":[4,0,0,0,1,2,36]
 };

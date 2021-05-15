@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"spirv__ops_8cpp.html":[4,0,2,21],
+"spirv__ops_8cpp.html#a0649355f6b1290e7c6c2e15ab14b5879":[4,0,2,21,2],
 "spirv__ops_8cpp.html#a39d8b08b1a558206fe1e2cbba94b7cba":[4,0,2,21,0],
 "spirv__ops_8cpp.html#a85beef2415b20f2a7383f90280c99ae3":[4,0,2,21,1],
 "spirv__ops_8cpp.html#ae348ac93399e5fc151a847069e712f6f":[4,0,2,21,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "struct__pi__buffer.html#a7aa1bc51e539792476d875e10dfb6991":[3,0,9,3],
 "struct__pi__buffer.html#a8250fdca80cc02f9a590289948666e28":[3,0,9,8],
 "struct__pi__buffer.html#a8ca3c4c33b398bed6ddf6d4272774fdb":[3,0,9,4],
-"struct__pi__buffer.html#aa29dbcda036be9d0886aeb5b5a1545d6":[3,0,9,1],
-"struct__pi__buffer.html#aabab9f4228e10b2e6f96249bdfc671a9":[3,0,9,6],
-"struct__pi__context.html":[3,0,10]
+"struct__pi__buffer.html#aa29dbcda036be9d0886aeb5b5a1545d6":[3,0,9,1]
 };

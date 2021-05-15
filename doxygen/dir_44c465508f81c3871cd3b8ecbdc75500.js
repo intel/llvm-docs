@@ -1,7 +1,7 @@
 var dir_44c465508f81c3871cd3b8ecbdc75500 =
 [
     [ "accessor_properties.hpp", "accessor__properties_8hpp.html", [
-      [ "noinit", "classcl_1_1sycl_1_1property_1_1noinit.html", null ],
+      [ "no_init", "classcl_1_1sycl_1_1property_1_1no__init.html", null ],
       [ "buffer_location", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location.html", [
         [ "instance", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance.html", "structcl_1_1sycl_1_1INTEL_1_1property_1_1buffer__location_1_1instance" ]
       ] ],

@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54626b5713e483b8f76010a719d80815":[3,0,1,1,0,11,9],
+"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a5488603c27be6fed37e5712fbcd22f7e":[3,0,1,1,0,11,11],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a611ea264e28b12c7373ea923ce4d8661":[3,0,1,1,0,11,7],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a6f22dcfda6f3161b3f563635c4626705":[3,0,1,1,0,11,1],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#aa52760e90ee85380848597112f7f44f6":[3,0,1,1,0,11,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html#a1817d62695a4a19cb8da8577178475a7":[3,0,1,1,0,133,0],
 "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html#a297eaf20612d7cb27a35a114b4430c08":[3,0,1,1,0,133,1],
 "classcl_1_1sycl_1_1detail_1_1GetScalarOp.html#aeee22176b2c2e7be400f4cbee4b85742":[3,0,1,1,0,133,2],
-"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html":[3,0,1,1,0,138],
-"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a34404566dfa929fef9194f2f684a77a4":[3,0,1,1,0,138,3],
-"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#a3a55cb015f627fb704249ebbe8dd6ac5":[3,0,1,1,0,138,8]
+"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html":[3,0,1,1,0,138]
 };

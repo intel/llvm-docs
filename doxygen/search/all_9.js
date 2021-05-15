@@ -64,7 +64,7 @@ var searchData=
   ['hasavail_2317',['hasAvail',['../classSlab.html#a5166a5c1c5567ac75dd6148387bf7ef3',1,'Slab']]],
   ['hasb_2318',['HasB',['../esimd__enum_8hpp.html#a7ab0f4c8f66b7a32864e40c2930f1128',1,'esimd_enum.hpp']]],
   ['hasbackend_2319',['HasBackend',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#a9229dc485d95205470244c429c3816cb',1,'cl::sycl::detail::device_filter']]],
-  ['hascopyengine_2320',['hasCopyEngine',['../class__pi__device.html#ad996e67afadf20af8e4b41a46c75d577',1,'_pi_device']]],
+  ['hascopyengine_2320',['hasCopyEngine',['../class__pi__device.html#a781876a7db4ab684f662ddf0805f6aa3',1,'_pi_device']]],
   ['hasdevice_2321',['hasDevice',['../classcl_1_1sycl_1_1detail_1_1context__impl.html#a120caa4996ffc7245321b146551c3e4e',1,'cl::sycl::detail::context_impl']]],
   ['hasdevicenum_2322',['HasDeviceNum',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#a49208af750615773cec66d3e62250a59',1,'cl::sycl::detail::device_filter']]],
   ['hasdevicetype_2323',['HasDeviceType',['../structcl_1_1sycl_1_1detail_1_1device__filter.html#aab02e00bf523c66e9928652f7366b5c7',1,'cl::sycl::detail::device_filter']]],

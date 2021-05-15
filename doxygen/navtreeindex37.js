@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01double_01_4.html":[3,0,1,1,1,0,1,0,1,0,97],
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01double_01_4.html#aae098f22579579d7acfdc3907c158f6b":[3,0,1,1,1,0,1,0,1,0,97,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01float_01_4.html":[3,0,1,1,1,0,1,0,1,0,98],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01float_01_4.html#aca998ceeebcc0443c1c8f04d3d19d775":[3,0,1,1,1,0,1,0,1,0,98,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01float_00_01half_01_4.html":[3,0,1,1,1,0,1,0,1,0,99],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#a5153f3262dc58a32b69555b3a5b73ee2":[3,0,1,1,1,0,1,1,1,2],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#a9d0f9109abf52be8b4f2ebe646646a08":[3,0,1,1,1,0,1,1,1,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#aa00b74a4f7c7316e63f935c8feaa3ebb":[3,0,1,1,1,0,1,1,1,7],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#ad9875101a5f4dcf0873221d45ee26183":[3,0,1,1,1,0,1,1,1,4],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#aefbe74eb3c12640ac17e40055ce29da2":[3,0,1,1,1,0,1,1,1,5],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#afe94c5f9b96d07f42a66c7d0225d3ac9":[3,0,1,1,1,0,1,1,1,3]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html#ad9875101a5f4dcf0873221d45ee26183":[3,0,1,1,1,0,1,1,1,4]
 };
