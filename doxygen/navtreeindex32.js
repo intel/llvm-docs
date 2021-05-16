@@ -1,5 +1,7 @@
 var NAVTREEINDEX32 =
 {
+"struct__pi__program.html#af256d620344bdd34d8aa60cc058bdad7":[3,0,24,24],
+"struct__pi__program.html#af901568e1f02b6fdca9e872662f8a02a":[3,0,24,7],
 "struct__pi__program.html#afe9c67f0986969c97bca91ab4706dea9":[3,0,24,29],
 "struct__pi__program.html#afec59a76fa9df65aaa6e7e5a62bf4e3a":[3,0,24,27],
 "struct__pi__queue.html":[3,0,25],
@@ -247,7 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1Boolean.html#a6a87d59629d6587e15b7f2814f5df5c7":[3,0,1,1,0,26,7],
 "structcl_1_1sycl_1_1detail_1_1Boolean.html#ab2e2abcc43a59ccbc200c9ba012f876a":[3,0,1,1,0,26,1],
 "structcl_1_1sycl_1_1detail_1_1Boolean.html#ab72d94131c56e2bab31a5c4bece9fbc0":[3,0,1,1,0,26,0],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#abf6c82ad143935cbd27db0d432bf6fe8":[3,0,1,1,0,26,5],
-"structcl_1_1sycl_1_1detail_1_1Boolean.html#ac968595289e22a8f3027cfa8d6e49390":[3,0,1,1,0,26,6],
-"structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html":[3,0,1,1,0,27]
+"structcl_1_1sycl_1_1detail_1_1Boolean.html#abf6c82ad143935cbd27db0d432bf6fe8":[3,0,1,1,0,26,5]
 };

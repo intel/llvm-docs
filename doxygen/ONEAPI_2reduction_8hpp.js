@@ -42,7 +42,7 @@ var ONEAPI_2reduction_8hpp =
     [ "IsReduMinimum", "ONEAPI_2reduction_8hpp.html#a47f7c6b03ba0c33e73c29af3ace08726", null ],
     [ "IsReduMultiplies", "ONEAPI_2reduction_8hpp.html#abbdb6da3f711dd51910eddd88da3e37c", null ],
     [ "IsReduOptForFastAtomicFetch", "ONEAPI_2reduction_8hpp.html#a12d4d36f7719a7bb9bdaf33e38737636", null ],
-    [ "IsReduOptForFastReduce", "ONEAPI_2reduction_8hpp.html#ad32b845558637284e2308e46e77d87d7", null ],
+    [ "IsReduOptForFastReduce", "ONEAPI_2reduction_8hpp.html#a692dfa9065df4e323e63b0a4b291f9a2", null ],
     [ "IsReduPlus", "ONEAPI_2reduction_8hpp.html#aabee428d481733a0d40614f0c256a9a7", null ],
     [ "IsZeroIdentityOp", "ONEAPI_2reduction_8hpp.html#ad191b65be9ba2ac5ac1e0fe42ee5c810", null ],
     [ "ReduTupleT", "ONEAPI_2reduction_8hpp.html#af59ae3ff54e01972018f16eaf3f7a66d", null ],

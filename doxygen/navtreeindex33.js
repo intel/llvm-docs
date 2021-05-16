@@ -1,5 +1,7 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1Boolean.html#ac968595289e22a8f3027cfa8d6e49390":[3,0,1,1,0,26,6],
+"structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html":[3,0,1,1,0,27],
 "structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html#a3b77dcfd5b4b4f6f0417193b278bb249":[3,0,1,1,0,27,0],
 "structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html#a89342d50e578af941d3e2693c37c3cad":[3,0,1,1,0,27,2],
 "structcl_1_1sycl_1_1detail_1_1Boolean_3_011_01_4.html#aeaab19ce893bca65c8c9dc71f44ce5ae":[3,0,1,1,0,27,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_b43c8e8fffa3308e69a5629adf68172b.html":[3,0,1,1,0,342],
 "structcl_1_1sycl_1_1detail_1_1TryToGetNumElements_3_01T_00_01typename_01detail_1_1enable__if__t_b43c8e8fffa3308e69a5629adf68172b.html#a46ec970987e6398ba11d3f3b791582d7":[3,0,1,1,0,342,0],
 "structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder.html":[3,0,1,1,0,353],
-"structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder_3_01T_00_01false_01_4.html":[3,0,1,1,0,354],
-"structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder_3_01T_00_01false_01_4.html#aea49d124b3b4b27a44f265459d165618":[3,0,1,1,0,354,0],
-"structcl_1_1sycl_1_1detail_1_1TupleValueHolder.html":[3,0,1,1,0,355]
+"structcl_1_1sycl_1_1detail_1_1TupleCopyAssignableValueHolder_3_01T_00_01false_01_4.html":[3,0,1,1,0,354]
 };

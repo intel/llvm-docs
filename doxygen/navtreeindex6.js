@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1accelerator__selector.html#ac462dc2fad939ddec3ce1a38bfdc71aa":[1,2,0,4,0],
 "classcl_1_1sycl_1_1accessor.html":[1,2,1,0],
 "classcl_1_1sycl_1_1accessor.html#a03ebd345b224fe8f7a9a354d1df1f9bd":[1,2,1,0,42],
 "classcl_1_1sycl_1_1accessor.html#a04522a732fd0ee8de1482a04f48d3614":[1,2,1,0,46],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a20850519594e8b6d66044a439c62c099":[3,0,1,1,0,11,4],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a26ad0b3875ad355ed64563cd9eb442a8":[3,0,1,1,0,11,8],
 "classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a2dc0abdd980c367e4df9dda3e0b06f2f":[3,0,1,1,0,11,10],
-"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54182d49730f7d82e111295afaa9ae18":[3,0,1,1,0,11,5],
-"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a543d37aa8a67f68814f68a0b90be1eed":[3,0,1,1,0,11,2]
+"classcl_1_1sycl_1_1detail_1_1AllocaCommandBase.html#a54182d49730f7d82e111295afaa9ae18":[3,0,1,1,0,11,5]
 };

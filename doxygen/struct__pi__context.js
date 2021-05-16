@@ -32,6 +32,7 @@ var struct__pi__context =
     [ "OwnZeContext", "struct__pi__context.html#a911b3d26f34fe105a8709c7fc878bd4a", null ],
     [ "refCount_", "struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1", null ],
     [ "SharedMemAllocContexts", "struct__pi__context.html#aa7db1b2da6c0596fc1a02e1eed76dbc0", null ],
+    [ "SingleRootDevice", "struct__pi__context.html#a26474c5dbc4140fff6a3dafebdc817d8", null ],
     [ "ZeCommandListCacheMutex", "struct__pi__context.html#aa58099223b9ae42d4895a8434728a4e0", null ],
     [ "ZeCommandListInit", "struct__pi__context.html#af7af59c3a749d29f49a53d6b745e1a49", null ],
     [ "ZeComputeCommandListCache", "struct__pi__context.html#a2d12df2f22aed5c64239d7ca5e4852d4", null ],
