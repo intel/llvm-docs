@@ -1,6 +1,7 @@
 var pi__level__zero_8hpp =
 [
     [ "_pi_object", "struct__pi__object.html", "struct__pi__object" ],
+    [ "MemAllocRecord", "structMemAllocRecord.html", "structMemAllocRecord" ],
     [ "_pi_platform", "struct__pi__platform.html", "struct__pi__platform" ],
     [ "USMMemoryAllocBase", "classUSMMemoryAllocBase.html", "classUSMMemoryAllocBase" ],
     [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", "classUSMSharedMemoryAlloc" ],
@@ -20,6 +21,7 @@ var pi__level__zero_8hpp =
     [ "LinkedReleaser", "class__pi__program_1_1LinkedReleaser.html", "class__pi__program_1_1LinkedReleaser" ],
     [ "ModuleIterator", "class__pi__program_1_1ModuleIterator.html", "class__pi__program_1_1ModuleIterator" ],
     [ "_pi_kernel", "struct__pi__kernel.html", "struct__pi__kernel" ],
+    [ "Hash", "struct__pi__kernel_1_1Hash.html", "struct__pi__kernel_1_1Hash" ],
     [ "_pi_sampler", "struct__pi__sampler.html", "struct__pi__sampler" ],
     [ "die", "pi__level__zero_8hpp.html#addeb84d9aa94ce57f216c82c6f1c3eae", null ],
     [ "pi_cast", "pi__level__zero_8hpp.html#acca4b7bd49a8623dffb5e76d4128fd43", null ],

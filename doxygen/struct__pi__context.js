@@ -29,6 +29,7 @@ var struct__pi__context =
     [ "evBase_", "struct__pi__context.html#ae058668425925400001e631158ae4f20", null ],
     [ "HostMemAllocContext", "struct__pi__context.html#ab9dca6f6065de7775e7520fa4d8dca3f", null ],
     [ "kind_", "struct__pi__context.html#ac8117de9a1bd39e0e848a3fb2d639e03", null ],
+    [ "MemAllocs", "struct__pi__context.html#aaa09f02ac03a30b5ae8354c84c7ffe5a", null ],
     [ "OwnZeContext", "struct__pi__context.html#a911b3d26f34fe105a8709c7fc878bd4a", null ],
     [ "refCount_", "struct__pi__context.html#af07bf2f5a146204f960f52b3c379dfe1", null ],
     [ "SharedMemAllocContexts", "struct__pi__context.html#aa7db1b2da6c0596fc1a02e1eed76dbc0", null ],

@@ -30,6 +30,7 @@ var annotated_dup =
     [ "_pi_ze_event_list_t", "struct__pi__ze__event__list__t.html", "struct__pi__ze__event__list__t" ],
     [ "bool_constant", "classbool__constant.html", null ],
     [ "Bucket", "classBucket.html", "classBucket" ],
+    [ "MemAllocRecord", "structMemAllocRecord.html", "structMemAllocRecord" ],
     [ "pi_buff_rect_offset_struct", "structpi__buff__rect__offset__struct.html", "structpi__buff__rect__offset__struct" ],
     [ "pi_buff_rect_region_struct", "structpi__buff__rect__region__struct.html", "structpi__buff__rect__region__struct" ],
     [ "pi_buffer_region_struct", "structpi__buffer__region__struct.html", "structpi__buffer__region__struct" ],

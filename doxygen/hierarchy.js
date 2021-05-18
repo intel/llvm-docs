@@ -25,7 +25,9 @@ var hierarchy =
       [ "_pi_buffer", "struct__pi__buffer.html", null ],
       [ "_pi_image", "struct__pi__image.html", null ]
     ] ],
-    [ "_pi_object", "struct__pi__object.html", null ],
+    [ "_pi_object", "struct__pi__object.html", [
+      [ "MemAllocRecord", "structMemAllocRecord.html", null ]
+    ] ],
     [ "_pi_offload_entry_struct", "struct__pi__offload__entry__struct.html", null ],
     [ "_pi_platform", "struct__pi__platform.html", null ],
     [ "_pi_plugin", "struct__pi__plugin.html", null ],
@@ -456,6 +458,7 @@ var hierarchy =
     [ "cl::sycl::detail::half_impl::half", "classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html", null ],
     [ "cl::sycl::detail::half_impl::half_vec< NumElements >", "structcl_1_1sycl_1_1detail_1_1half__impl_1_1half__vec.html", null ],
     [ "cl::sycl::handler", "classcl_1_1sycl_1_1handler.html", null ],
+    [ "_pi_kernel::Hash", "struct__pi__kernel_1_1Hash.html", null ],
     [ "std::hash< cl::sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01Acce3c0aa922416f31b2255a197e1bf67318.html", null ],
     [ "std::hash< cl::sycl::buffer< T, dimensions, AllocatorT > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1buffer_3_01T_00_01dimensions_00_01AllocatorT_01_4_01_4.html", null ],
     [ "std::hash< cl::sycl::context >", "structstd_1_1hash_3_01cl_1_1sycl_1_1context_01_4.html", null ],

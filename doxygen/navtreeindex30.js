@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"spinlock_8hpp_source.html":[4,0,0,0,1,2,35],
+"spirv_8hpp.html":[4,0,0,0,1,2,36],
 "spirv_8hpp_source.html":[4,0,0,0,1,2,36],
 "spirv__ops_8cpp.html":[4,0,2,21],
 "spirv__ops_8cpp.html#a0649355f6b1290e7c6c2e15ab14b5879":[4,0,2,21,2],
@@ -178,6 +180,9 @@ var NAVTREEINDEX30 =
 "stream__impl_8cpp_source.html":[4,0,2,1,69],
 "stream__impl_8hpp.html":[4,0,2,1,70],
 "stream__impl_8hpp_source.html":[4,0,2,1,70],
+"structMemAllocRecord.html":[3,0,30],
+"structMemAllocRecord.html#ad0ca9c6fd2feb361bc8ec82b51b9dfdd":[3,0,30,0],
+"structMemAllocRecord.html#ae31390218f709e81aa4fed29cfc07e71":[3,0,30,1],
 "struct____spv_1_1MemorySemanticsMask.html":[3,0,0,0],
 "struct____spv_1_1MemorySemanticsMask.html#a21d590ef220b233ccc142a577587a6b9":[3,0,0,0,1],
 "struct____spv_1_1MemorySemanticsMask.html#a2c5d6c7282da8f0837c79981fe7a4cf8":[3,0,0,0,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX30 =
 "struct__pi__buffer.html":[3,0,9],
 "struct__pi__buffer.html#a03b87538e30969c67f43cb6c73d2c0db":[3,0,9,2],
 "struct__pi__buffer.html#a35453f1a8090674506c83200ca09303b":[3,0,9,7],
-"struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf":[3,0,9,5],
-"struct__pi__buffer.html#a61ffd1ec6e561468f08cc05eb6a020cd":[3,0,9,9],
-"struct__pi__buffer.html#a710475165eeca399c7448a0295f8c6dd":[3,0,9,0],
-"struct__pi__buffer.html#a7aa1bc51e539792476d875e10dfb6991":[3,0,9,3],
-"struct__pi__buffer.html#a8250fdca80cc02f9a590289948666e28":[3,0,9,8],
-"struct__pi__buffer.html#a8ca3c4c33b398bed6ddf6d4272774fdb":[3,0,9,4]
+"struct__pi__buffer.html#a35c56eeafef282529d26121d8a96caaf":[3,0,9,5]
 };

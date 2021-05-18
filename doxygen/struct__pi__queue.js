@@ -25,6 +25,7 @@ var struct__pi__queue =
     [ "Device", "struct__pi__queue.html#a58a07d5525910b67e36d47e4baf361c2", null ],
     [ "device_", "struct__pi__queue.html#a5763eb6e4cbd778f9b0f71e6f5579bd5", null ],
     [ "eventCount_", "struct__pi__queue.html#ac5db06e60d422bea7318d8e92cc2dde3", null ],
+    [ "KernelsToBeSubmitted", "struct__pi__queue.html#afe2e7332866f1d1080d615302424f6f9", null ],
     [ "LastCommandEvent", "struct__pi__queue.html#a9cbed11dd66a2d8a318ca77b3444a319", null ],
     [ "NumTimesClosedEarly", "struct__pi__queue.html#a6377db0cb2d99b89298404e43b7f5876", null ],
     [ "NumTimesClosedFull", "struct__pi__queue.html#a68d4f6b845f323d6200bbd6a24f6ac70", null ],

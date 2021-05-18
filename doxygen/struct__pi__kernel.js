@@ -1,6 +1,7 @@
 var struct__pi__kernel =
 [
     [ "arguments", "struct__pi__kernel_1_1arguments.html", "struct__pi__kernel_1_1arguments" ],
+    [ "Hash", "struct__pi__kernel_1_1Hash.html", "struct__pi__kernel_1_1Hash" ],
     [ "native_type", "struct__pi__kernel.html#a3f6403f55ad9a2f53e928f064fc40548", null ],
     [ "_pi_kernel", "struct__pi__kernel.html#a4fcd50997ad0af52ae5af912419caabc", null ],
     [ "_pi_kernel", "struct__pi__kernel.html#ade707fb649357321fa55ed8765ea6030", null ],
@@ -18,6 +19,7 @@ var struct__pi__kernel =
     [ "get_reference_count", "struct__pi__kernel.html#a4534341ef2c17ff6f11d56bc461e8e43", null ],
     [ "get_with_offset_parameter", "struct__pi__kernel.html#a11137383d3b7179cacef312ad792a490", null ],
     [ "has_with_offset_parameter", "struct__pi__kernel.html#a4e415474419c9c6b7b29e1e6a55dcaa5", null ],
+    [ "hasIndirectAccess", "struct__pi__kernel.html#ad327074d8d85b5023b4243221f2b1c6d", null ],
     [ "increment_reference_count", "struct__pi__kernel.html#afaaa478565588b1504f7980cd38c7033", null ],
     [ "set_implicit_offset_arg", "struct__pi__kernel.html#abf0577ba8782e08b1b882ae6546f79b2", null ],
     [ "set_kernel_arg", "struct__pi__kernel.html#ab78df1842f39dfb883077e5c60d4bbbc", null ],
@@ -26,9 +28,11 @@ var struct__pi__kernel =
     [ "context_", "struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb", null ],
     [ "function_", "struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339", null ],
     [ "functionWithOffsetParam_", "struct__pi__kernel.html#a8242ec7d4f228dc10873fc7733cf596f", null ],
+    [ "MemAllocs", "struct__pi__kernel.html#a2d5c28b379aea80de5b9f6c7ea51f9d1", null ],
     [ "name_", "struct__pi__kernel.html#acbe725b178f9972d7a98563a0fad2768", null ],
     [ "Program", "struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6", null ],
     [ "program_", "struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba", null ],
     [ "refCount_", "struct__pi__kernel.html#aee626d969a1e970d9802f8fe04c32a63", null ],
+    [ "SubmissionsCount", "struct__pi__kernel.html#acdff04448b071b0a653044e5ca317be4", null ],
     [ "ZeKernel", "struct__pi__kernel.html#a2a69000010873d5ca19eae3fadb9701a", null ]
 ];
