@@ -683,7 +683,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keywordtype">int</span> SZ&gt;                                                \</div>
 <div class="line">  ESIMD_NODEBUG <a class="code" href="esimd__enum_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> simd&lt;T, SZ&gt; esimd_##<a class="code" href="namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2aab068931cc450442b63f5b3d276ea4297">name</a>(simd&lt;float, SZ&gt; src0,    \</div>
 <div class="line">                                                      <span class="keywordtype">int</span> flag = <a class="code" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ac27894fc218ebc762895a6a3adae9b43a7e34eb8a547913a52ea4672fa7875e2a">GENX_NOSAT</a>) { \</div>
-<div class="line">    simd&lt;float, SZ&gt; Result = __esimd_##<a class="code" href="namespacecl_1_1sycl_1_1info.html#a914754758212d69792bc919ffd79ef2aab068931cc450442b63f5b3d276ea4297">name</a>(src0.data());                      \</div>
+<div class="line">    simd&lt;float, SZ&gt; Result = __esimd_##name&lt;SZ&gt;(src0.data());                  \</div>
 <div class="line">    if (flag != <a class="code" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ac27894fc218ebc762895a6a3adae9b43a0772f37cdb73e6d630356bfc1d685cb3">GENX_SAT</a>)                                                      \</div>
 <div class="line">      return Result;                                                           \</div>
 <div class="line">    return esimd_sat&lt;T&gt;(Result);                                               \</div>

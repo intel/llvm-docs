@@ -1319,7 +1319,7 @@ $(document).ready(function(){initNavTree('esimd__math_8hpp_source.html',''); ini
 <div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;<span class="preprocessor">  template &lt;typename T, int SZ&gt;                                                \</span></div>
 <div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="preprocessor">  ESIMD_NODEBUG ESIMD_INLINE simd&lt;T, SZ&gt; esimd_##name(simd&lt;float, SZ&gt; src0,    \</span></div>
 <div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="preprocessor">                                                      int flag = GENX_NOSAT) { \</span></div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;<span class="preprocessor">    simd&lt;float, SZ&gt; Result = __esimd_##name(src0.data());                      \</span></div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;<span class="preprocessor">    simd&lt;float, SZ&gt; Result = __esimd_##name&lt;SZ&gt;(src0.data());                  \</span></div>
 <div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;<span class="preprocessor">    if (flag != GENX_SAT)                                                      \</span></div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;<span class="preprocessor">      return Result;                                                           \</span></div>
 <div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;<span class="preprocessor">    return esimd_sat&lt;T&gt;(Result);                                               \</span></div>
