@@ -127,7 +127,7 @@ var searchData=
   ['hostentriesend_2383',['HostEntriesEnd',['../structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1',1,'pi_device_binaries_struct']]],
   ['hostkernel_2384',['HostKernel',['../classcl_1_1sycl_1_1detail_1_1HostKernel.html',1,'cl::sycl::detail::HostKernel&lt; KernelType, KernelArgType, Dims, KernelName &gt;'],['../classcl_1_1sycl_1_1detail_1_1HostKernel.html#a76cff4b43e9d54ceac32a58fbf35075f',1,'cl::sycl::detail::HostKernel::HostKernel()']]],
   ['hostkernelbase_2385',['HostKernelBase',['../classcl_1_1sycl_1_1detail_1_1HostKernelBase.html',1,'cl::sycl::detail']]],
-  ['hostmemalloccontext_2386',['HostMemAllocContext',['../struct__pi__context.html#ab9dca6f6065de7775e7520fa4d8dca3f',1,'_pi_context']]],
+  ['hostmemalloccontext_2386',['HostMemAllocContext',['../struct__pi__context.html#a3341a0a8a2108595b9cd6c14119195d5',1,'_pi_context']]],
   ['hostonlyintel_2387',['HostOnlyINTEL',['../struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a458779511192a5147599fec0f426c53d',1,'__spv::StorageClass']]],
   ['hostprofilinginfo_2388',['HostProfilingInfo',['../classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html',1,'cl::sycl::detail']]],
   ['hostptr_5f_2389',['hostPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a1b6cdff933ec7aa1dccf602551ebfab0',1,'_pi_mem::mem_::buffer_mem_']]],

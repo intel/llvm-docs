@@ -21,6 +21,6 @@ var searchData=
   ['holder_8932',['holder',['../structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#aab680aca2798f1bcc2e9a65299f15609',1,'cl::sycl::detail::tuple&lt; T, Ts... &gt;']]],
   ['hostentriesbegin_8933',['HostEntriesBegin',['../structpi__device__binaries__struct.html#ab6155c2833e02bdf23eb379296865a69',1,'pi_device_binaries_struct']]],
   ['hostentriesend_8934',['HostEntriesEnd',['../structpi__device__binaries__struct.html#a9dc72d1325174c1f99c712b2959b2bc1',1,'pi_device_binaries_struct']]],
-  ['hostmemalloccontext_8935',['HostMemAllocContext',['../struct__pi__context.html#ab9dca6f6065de7775e7520fa4d8dca3f',1,'_pi_context']]],
+  ['hostmemalloccontext_8935',['HostMemAllocContext',['../struct__pi__context.html#a3341a0a8a2108595b9cd6c14119195d5',1,'_pi_context']]],
   ['hostptr_5f_8936',['hostPtr_',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a1b6cdff933ec7aa1dccf602551ebfab0',1,'_pi_mem::mem_::buffer_mem_']]]
 ];
