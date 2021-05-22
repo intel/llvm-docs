@@ -26,7 +26,7 @@ var searchData=
   ['deallocatestreambuffers_1185',['deallocateStreamBuffers',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#afe16ed2b110354a8612ab9238f53c265',1,'cl::sycl::detail::Scheduler']]],
   ['deallocatestreams_1186',['deallocateStreams',['../namespacecl_1_1sycl_1_1detail.html#aca5d54f862cf6e315bcb87368e86eb73',1,'cl::sycl::detail']]],
   ['debugprintbinaryimages_1187',['debugPrintBinaryImages',['../classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a03d6ea06a6e077887ad9707d5933b253',1,'cl::sycl::detail::ProgramManager']]],
-  ['dec_1188',['Dec',['../namespacecl_1_1sycl_1_1detail.html#a232b07a68e66e45357d5e7e08724674c',1,'cl::sycl::detail::Dec()'],['../namespacecl_1_1sycl.html#a2a9c51ac35a1740641bff4c0d39d44d4',1,'cl::sycl::dec()'],['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1feea25ecb958229287f885aebe7c49b',1,'cl::sycl::dec()']]],
+  ['dec_1188',['dec',['../namespacecl_1_1sycl.html#a2a9c51ac35a1740641bff4c0d39d44d4',1,'cl::sycl::dec()'],['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1feea25ecb958229287f885aebe7c49b',1,'cl::sycl::dec()'],['../namespacecl_1_1sycl_1_1detail.html#a232b07a68e66e45357d5e7e08724674c',1,'cl::sycl::detail::Dec()']]],
   ['declptr_1189',['declptr',['../namespacecl_1_1sycl_1_1detail.html#a94fcfd6c842253756aed06f0d5dd3640',1,'cl::sycl::detail']]],
   ['decoratedtype_1190',['DecoratedType',['../structcl_1_1sycl_1_1detail_1_1DecoratedType.html',1,'cl::sycl::detail']]],
   ['decoratedtype_3c_20const_20void_2c_20space_20_3e_1191',['DecoratedType&lt; const void, Space &gt;',['../structcl_1_1sycl_1_1detail_1_1DecoratedType.html',1,'cl::sycl::detail']]],

@@ -1,5 +1,15 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01e7c76f4ed80dd6f84c8d6298f7781617.html":[3,0,1,1,0,255],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01e7c76f4ed80dd6f84c8d6298f7781617.html#a424ae3ffd48662e120f6de1725372052":[3,0,1,1,0,255,0],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,0,256],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#a20c3dba2cb74b9512b6dd82b13994a42":[3,0,1,1,0,256,2],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#a26eb698fef3ad32baa8a012955c53d21":[3,0,1,1,0,256,0],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#a9796347fffa307cb0766bd4fad99e929":[3,0,1,1,0,256,1],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#afbcb3def8ad7a611db8c2654f186cb68":[3,0,1,1,0,256,4],
+"structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html#afde909503ae5685923f9171747ec3b3c":[3,0,1,1,0,256,3],
+"structcl_1_1sycl_1_1detail_1_1make__signed.html":[3,0,1,1,0,257],
+"structcl_1_1sycl_1_1detail_1_1make__signed.html#a524c8e2298820aaf32d3f4676c4610c4":[3,0,1,1,0,257,0],
 "structcl_1_1sycl_1_1detail_1_1make__signed.html#a86f79f226677e34f32314196ab18431a":[3,0,1,1,0,257,1],
 "structcl_1_1sycl_1_1detail_1_1make__signed__impl.html":[3,0,1,1,0,258],
 "structcl_1_1sycl_1_1detail_1_1make__signed__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01abbd2ee19be9d7de2d6d2210372c0acf.html":[3,0,1,1,0,259],
@@ -239,15 +249,5 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__reduced__min.html":[3,0,1,1,1,0,1,0,0,26],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__reduced__min.html#a3c37a17e1671465168e8342c3ac61d7c":[3,0,1,1,1,0,1,0,0,26,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__sum.html":[3,0,1,1,1,0,1,0,0,27],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__sum.html#aabb03ef8f5b65191257ccbfb82d5a90c":[3,0,1,1,1,0,1,0,0,27,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__byte__type.html":[3,0,1,1,1,0,1,0,0,28],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__byte__type_3_01simd_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,1,0,1,0,0,29],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__byte__type_3_01simd_3_01T_00_01N_01_4_01_4.html#a0e815a9f18b1a1503029f464e88f7d22":[3,0,1,1,1,0,1,0,0,29,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__byte__type_3_01vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,1,0,1,0,0,30],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__byte__type_3_01vector__type_3_01T_00_01N_01_4_01_4.html#aa22884f56fc997bb47395a2975338db3":[3,0,1,1,1,0,1,0,0,30,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__df__type.html":[3,0,1,1,1,0,1,0,0,31],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__dword__type.html":[3,0,1,1,1,0,1,0,0,32],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__dword__type_3_01simd_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,1,0,1,0,0,33],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__dword__type_3_01simd_3_01T_00_01N_01_4_01_4.html#a97e407b69a5cfe636d3cd91f8671523d":[3,0,1,1,1,0,1,0,0,33,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__dword__type_3_01vector__type_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,1,0,1,0,0,34]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__sum.html#aabb03ef8f5b65191257ccbfb82d5a90c":[3,0,1,1,1,0,1,0,0,27,0]
 };

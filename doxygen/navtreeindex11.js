@@ -1,5 +1,11 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1detail_1_1image__impl.html":[3,0,1,1,0,155],
+"classcl_1_1sycl_1_1detail_1_1image__impl.html#a0973ac19fb654f482f3d946c235671d3":[3,0,1,1,0,155,0],
+"classcl_1_1sycl_1_1detail_1_1image__impl.html#a0c840cb92727cfa3c62a1291fb754190":[3,0,1,1,0,155,11],
+"classcl_1_1sycl_1_1detail_1_1image__impl.html#a0fe4ae87c53eb3b35103b567077b42fa":[3,0,1,1,0,155,18],
+"classcl_1_1sycl_1_1detail_1_1image__impl.html#a1226ce0840781c2611b0036ffe6f6b91":[3,0,1,1,0,155,17],
+"classcl_1_1sycl_1_1detail_1_1image__impl.html#a179a5b24a5fc6f0b76ab663061c72000":[3,0,1,1,0,155,6],
 "classcl_1_1sycl_1_1detail_1_1image__impl.html#a22c5d6fa0e2e86bf4faf608b00f0b6f3":[3,0,1,1,0,155,5],
 "classcl_1_1sycl_1_1detail_1_1image__impl.html#a3428034efb09c830f8a0fc8254471bde":[3,0,1,1,0,155,13],
 "classcl_1_1sycl_1_1detail_1_1image__impl.html#a3a0144c4d421cdfe73fd939c902d6814":[3,0,1,1,0,155,19],
@@ -243,11 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a82286e4c8b2d7860ee18e8e3ec411669":[3,0,1,1,0,293,0],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a86aa1c97a3a5a8ca9fe38024363693a1":[3,0,1,1,0,293,9],
 "classcl_1_1sycl_1_1detail_1_1queue__impl.html#a8ef839a631303cb7b58e409b70582994":[3,0,1,1,0,293,10],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa165a612388669d38fc22b76c18f2364":[3,0,1,1,0,293,28],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#aaf6474c031184b3702c265150e574957":[3,0,1,1,0,293,11],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab258fa8fe858328b59d036991fb84db3":[3,0,1,1,0,293,21],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab2ab34a2aaa70ae5554fdeebc41752d6":[3,0,1,1,0,293,14],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#ab7b1b7e75c3d3713a2793c049a5c0cd9":[3,0,1,1,0,293,25],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#abcad4d43473020384432718bd0f10c12":[3,0,1,1,0,293,2],
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418":[3,0,1,1,0,293,23]
+"classcl_1_1sycl_1_1detail_1_1queue__impl.html#aa165a612388669d38fc22b76c18f2364":[3,0,1,1,0,293,28]
 };

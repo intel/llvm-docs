@@ -1,5 +1,11 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#a0429597e9bb070009007ca85012ba6da":[3,0,1,1,0,306,1],
+"classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#a43ebcd3e46cc8f52a6b4ec3f5a3c6899":[3,0,1,1,0,306,0],
+"classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#a48652491234f3144ea293f234fb36559":[3,0,1,1,0,306,7],
+"classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#a4bc045231a061807de1a8cab17ac5ac7":[3,0,1,1,0,306,5],
+"classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#abd9d3fa4c3afb13ee681df6e6283994b":[3,0,1,1,0,306,3],
+"classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#ad2cd7ee2575466d0d54309f4e09b855d":[3,0,1,1,0,306,2],
 "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#ae60705432198d5f3789a6bda6ac2c39b":[3,0,1,1,0,306,6],
 "classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html#af6e84a1b35a409ff72b01cd19e39f787":[3,0,1,1,0,306,4],
 "classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html":[3,0,1,1,0,299],
@@ -243,11 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html":[3,0,1,1,0,361],
 "classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a1fabf65af286368eaae6a93fa9385168":[3,0,1,1,0,361,0],
 "classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#a5eba13a38f6e2dfcd588fa1aefda1953":[3,0,1,1,0,361,2],
-"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aa4ee05ed262f9e78c7b277fcf55e82d5":[3,0,1,1,0,361,3],
-"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#ac78bb792f0148cb10d56ef912883a4b7":[3,0,1,1,0,361,1],
-"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html":[3,0,1,1,0,3],
-"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a0158600ce4a5863379751f67572d6998":[3,0,1,1,0,3,2],
-"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a38baabada5dbdac96f0ca8f1a874227d":[3,0,1,1,0,3,1],
-"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a48ac11842426ad06d58e607041ba0f14":[3,0,1,1,0,3,3],
-"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a94d6d95b3e91957ec5ecf37d737e7397":[3,0,1,1,0,3,4]
+"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#aa4ee05ed262f9e78c7b277fcf55e82d5":[3,0,1,1,0,361,3]
 };

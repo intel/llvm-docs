@@ -27,5 +27,6 @@ var structcl_1_1sycl_1_1ONEAPI_1_1sub__group =
     [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a8d9a82666ec6dd81107724b5b8a1f7f5", null ],
     [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a1d0e78305d9f8565e7acfda64b1870b0", null ],
     [ "store", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a63743a2e54c7dbba10dc6c2a39f96faa", null ],
-    [ "dimensions", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a7e34d50a69e0f56542427939aa45f4aa", null ]
+    [ "dimensions", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a7e34d50a69e0f56542427939aa45f4aa", null ],
+    [ "fence_scope", "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a63bfa3ba7b28bcc83f180807666cedae", null ]
 ];

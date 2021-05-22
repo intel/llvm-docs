@@ -1,5 +1,15 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#a73198fd8665b3f20d550b8785a98c7b0":[3,0,1,1,0,16,0],
+"structcl_1_1sycl_1_1detail_1_1Assigner_3_010_01_4.html#aa2371ef607a8c70849d5361c1c25a9af":[3,0,1,1,0,16,1],
+"structcl_1_1sycl_1_1detail_1_1BackendInput.html":[3,0,1,1,0,18],
+"structcl_1_1sycl_1_1detail_1_1BackendInput.html#a07be4adc16c3993b13fdc2887b9f63e8":[3,0,1,1,0,18,0],
+"structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel_01_4.html":[3,0,1,1,0,19],
+"structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel_01_4.html#a83213edc085c57740879128985b42433":[3,0,1,1,0,19,0],
+"structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html":[3,0,1,1,0,20],
+"structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html#a7ea348df081009d836137381fc98a33f":[3,0,1,1,0,20,0],
+"structcl_1_1sycl_1_1detail_1_1BackendReturn.html":[3,0,1,1,0,21],
+"structcl_1_1sycl_1_1detail_1_1BackendReturn.html#a4725b6d4adafe04776572581bf4edda4":[3,0,1,1,0,21,0],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html":[3,0,1,1,0,22],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1level__zero_00_01kernel_01_4.html#a4a3dc321366363af7d01d3dbf5faec07":[3,0,1,1,0,22,0],
 "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1opencl_00_01kernel_01_4.html":[3,0,1,1,0,23],
@@ -239,15 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1RelationalReturnType.html#a61bd4aa0922b194953317fe8094cbc3b":[3,0,1,1,0,294,0],
 "structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html":[3,0,1,1,0,295],
 "structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html#a4d2f6377e263d6c866dd580cc35d9e13":[3,0,1,1,0,295,0],
-"structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html#a6033512f5c0ea5b2b7c631ac90c7a65e":[3,0,1,1,0,295,1],
-"structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html":[1,3,4,0],
-"structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#a06f151ef873e6e50543e1b9d54519072":[1,3,4,0,0],
-"structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#aa45497ea640db20648affba21f0ca2cb":[1,3,4,0,1],
-"structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#aa6a40bc29de75206a66794df4e6e3d63":[1,3,4,0,2],
-"structcl_1_1sycl_1_1detail_1_1Scheduler_1_1StreamBuffers.html#acff516ff54ecdfa15efbf088978659dc":[1,3,4,0,3],
-"structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html":[3,0,1,1,0,316],
-"structcl_1_1sycl_1_1detail_1_1SpecConstantInfo.html#a5a8b51e8f64d24641258fa3d6579cf40":[3,0,1,1,0,316,0],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS.html":[3,0,1,1,0,335],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS.html#a5f538bc284fa7c456b29dd4786bb8f19":[3,0,1,1,0,335,0],
-"structcl_1_1sycl_1_1detail_1_1TargetToAS_3_01access_1_1target_1_1constant__buffer_01_4.html":[3,0,1,1,0,336]
+"structcl_1_1sycl_1_1detail_1_1RelationalTestForSignBitType.html#a6033512f5c0ea5b2b7c631ac90c7a65e":[3,0,1,1,0,295,1]
 };

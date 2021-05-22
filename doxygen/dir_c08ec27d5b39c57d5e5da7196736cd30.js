@@ -21,5 +21,5 @@ var dir_c08ec27d5b39c57d5e5da7196736cd30 =
     [ "functional.hpp", "functional_8hpp.html", "functional_8hpp" ],
     [ "group_algorithm.hpp", "group__algorithm_8hpp.html", "group__algorithm_8hpp" ],
     [ "reduction.hpp", "ONEAPI_2reduction_8hpp.html", "ONEAPI_2reduction_8hpp" ],
-    [ "sub_group.hpp", "sub__group_8hpp.html", "sub__group_8hpp" ]
+    [ "sub_group.hpp", "ONEAPI_2sub__group_8hpp.html", "ONEAPI_2sub__group_8hpp" ]
 ];

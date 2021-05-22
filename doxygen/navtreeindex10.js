@@ -1,5 +1,11 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1UpdateHostRequirementCommand.html#ac78bb792f0148cb10d56ef912883a4b7":[3,0,1,1,0,361,1],
+"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html":[3,0,1,1,0,3],
+"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a0158600ce4a5863379751f67572d6998":[3,0,1,1,0,3,2],
+"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a38baabada5dbdac96f0ca8f1a874227d":[3,0,1,1,0,3,1],
+"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a48ac11842426ad06d58e607041ba0f14":[3,0,1,1,0,3,3],
+"classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#a94d6d95b3e91957ec5ecf37d737e7397":[3,0,1,1,0,3,4],
 "classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#ab02f0277609ff0e11836061941910978":[3,0,1,1,0,3,0],
 "classcl_1_1sycl_1_1detail_1_1____image__array__slice____.html#ad8585be192bc0fc9568b8dc305262c9f":[3,0,1,1,0,3,5],
 "classcl_1_1sycl_1_1detail_1_1____pf__kernel__wrapper.html":[3,0,1,1,0,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1image__accessor.html#ab3c4ebe41a13e6d7b2cfb9a5854ba35b":[3,0,1,1,0,154,5],
 "classcl_1_1sycl_1_1detail_1_1image__accessor.html#abc107f55589c20c20882d60f206fc682":[3,0,1,1,0,154,7],
 "classcl_1_1sycl_1_1detail_1_1image__accessor.html#ac630d4a38aca6a008124e6fb392fefa8":[3,0,1,1,0,154,6],
-"classcl_1_1sycl_1_1detail_1_1image__accessor.html#ae75514875d0873858bb069d320403ed5":[3,0,1,1,0,154,13],
-"classcl_1_1sycl_1_1detail_1_1image__impl.html":[3,0,1,1,0,155],
-"classcl_1_1sycl_1_1detail_1_1image__impl.html#a0973ac19fb654f482f3d946c235671d3":[3,0,1,1,0,155,0],
-"classcl_1_1sycl_1_1detail_1_1image__impl.html#a0c840cb92727cfa3c62a1291fb754190":[3,0,1,1,0,155,11],
-"classcl_1_1sycl_1_1detail_1_1image__impl.html#a0fe4ae87c53eb3b35103b567077b42fa":[3,0,1,1,0,155,18],
-"classcl_1_1sycl_1_1detail_1_1image__impl.html#a1226ce0840781c2611b0036ffe6f6b91":[3,0,1,1,0,155,17],
-"classcl_1_1sycl_1_1detail_1_1image__impl.html#a179a5b24a5fc6f0b76ab663061c72000":[3,0,1,1,0,155,6]
+"classcl_1_1sycl_1_1detail_1_1image__accessor.html#ae75514875d0873858bb069d320403ed5":[3,0,1,1,0,154,13]
 };

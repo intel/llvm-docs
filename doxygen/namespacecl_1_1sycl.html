@@ -1245,6 +1245,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9988e164184b386e580267e9a08829df"><td class="memTemplParams" colspan="2">template&lt;int Dims&gt; </td></tr>
 <tr class="memitem:a9988e164184b386e580267e9a08829df"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1group.html">group</a>&lt; Dims &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9988e164184b386e580267e9a08829df">this_group</a> ()</td></tr>
 <tr class="separator:a9988e164184b386e580267e9a08829df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d543af4c2a383e3281c42796db93f51"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a0d543af4c2a383e3281c42796db93f51"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a0d543af4c2a383e3281c42796db93f51">group_barrier</a> (Group G, memory_scope FenceScope=Group::fence_scope)</td></tr>
+<tr class="separator:a0d543af4c2a383e3281c42796db93f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6771b0a9414cf6b3b359b97770a2430"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Group &gt; </td></tr>
 <tr class="memitem:ab6771b0a9414cf6b3b359b97770a2430"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_trivially_destructible&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__group.html">detail::is_group</a>&lt; Group &gt;::value, <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt; T, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa619fb1f3a892c810ac284e01782c8531">access::address_space::local_space</a> &gt; &gt; <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ab6771b0a9414cf6b3b359b97770a2430">group_local_memory_for_overwrite</a> (Group g)</td></tr>
 <tr class="separator:ab6771b0a9414cf6b3b359b97770a2430"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1478,6 +1481,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a18ed04762b28064cf932dce8c930454e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename RT  = detail::EnableIfSwizzleVec&lt;T&gt;&gt; </td></tr>
 <tr class="memitem:a18ed04762b28064cf932dce8c930454e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classcl_1_1sycl_1_1stream.html">stream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a18ed04762b28064cf932dce8c930454e">operator&lt;&lt;</a> (const <a class="el" href="classcl_1_1sycl_1_1stream.html">stream</a> &amp;Out, const T &amp;RHS)</td></tr>
 <tr class="separator:a18ed04762b28064cf932dce8c930454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16787617149f829e52fe636f0a59c455"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a16787617149f829e52fe636f0a59c455"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a16787617149f829e52fe636f0a59c455">group_barrier&lt; sub_group &gt;</a> (<a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a> Group, memory_scope FenceScope)</td></tr>
+<tr class="separator:a16787617149f829e52fe636f0a59c455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92beea6d4d514145c458ff45186158ff"><td class="memTemplParams" colspan="2">template&lt;class _Tp , size_t _Extent&gt; </td></tr>
 <tr class="memitem:a92beea6d4d514145c458ff45186158ff"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl__span_8hpp.html#a17cc8064def6f8eeabc18eebdfd8f6b0">_SYCL_SPAN_INLINE_VISIBILITY</a> auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a92beea6d4d514145c458ff45186158ff">as_bytes</a> (<a class="el" href="classcl_1_1sycl_1_1span.html">span</a>&lt; _Tp, _Extent &gt; __s) noexcept -&gt; decltype(__s.__as_bytes())</td></tr>
 <tr class="separator:a92beea6d4d514145c458ff45186158ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -6329,6 +6335,78 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
 
 </div>
 </div>
+<a id="a0d543af4c2a383e3281c42796db93f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d543af4c2a383e3281c42796db93f51">&#9670;&nbsp;</a></span>group_barrier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::group_barrier </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>G</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">memory_scope&#160;</td>
+          <td class="paramname"><em>FenceScope</em> = <code>Group::fence_scope</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16787617149f829e52fe636f0a59c455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16787617149f829e52fe636f0a59c455">&#9670;&nbsp;</a></span>group_barrier&lt; sub_group &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="namespacecl_1_1sycl.html#a0d543af4c2a383e3281c42796db93f51">cl::sycl::group_barrier</a>&lt; <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a>&#160;</td>
+          <td class="paramname"><em>Group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">memory_scope&#160;</td>
+          <td class="paramname"><em>FenceScope</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="sub__group_8hpp_source.html#l00021">21</a> of file <a class="el" href="sub__group_8hpp_source.html">sub_group.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="spirv__ops_8cpp_source.html#l00026">__spirv_ControlBarrier()</a>, <a class="el" href="spirv__types_8hpp_source.html#l00085">__spv::MemorySemanticsMask::AcquireRelease</a>, <a class="el" href="spirv__types_8hpp_source.html#l00090">__spv::MemorySemanticsMask::CrossWorkgroupMemory</a>, <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>, <a class="el" href="spirv__types_8hpp_source.html#l00028">__spv::Scope::Subgroup</a>, <a class="el" href="spirv__types_8hpp_source.html#l00088">__spv::MemorySemanticsMask::SubgroupMemory</a>, and <a class="el" href="spirv__types_8hpp_source.html#l00089">__spv::MemorySemanticsMask::WorkgroupMemory</a>.</p>
+
+</div>
+</div>
 <a id="a50b3b6b903a67413ab6bca95138f1bb8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50b3b6b903a67413ab6bca95138f1bb8">&#9670;&nbsp;</a></span>group_local_memory()</h2>
 
@@ -6359,7 +6437,7 @@ template&lt;typename T , typename Group , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="group__local__memory_8hpp_source.html#l00046">46</a> of file <a class="el" href="group__local__memory_8hpp_source.html">group_local_memory.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="global__handler_8cpp_source.html#l00172">cl::sycl::detail::__attribute__()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>, and <a class="el" href="group_8hpp_source.html#l00031">cl::sycl::detail::workGroupBarrier()</a>.</p>
+<p class="reference">References <a class="el" href="global__handler_8cpp_source.html#l00172">cl::sycl::detail::__attribute__()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>, and <a class="el" href="group_8hpp_source.html#l00032">cl::sycl::detail::workGroupBarrier()</a>.</p>
 
 </div>
 </div>
@@ -12193,7 +12271,7 @@ template&lt;int Dims&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="group_8hpp_source.html#l00426">426</a> of file <a class="el" href="group_8hpp_source.html">group.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="group_8hpp_source.html#l00427">427</a> of file <a class="el" href="group_8hpp_source.html">group.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="helpers_8hpp_source.html#l00055">cl::sycl::detail::declptr()</a>.</p>
 
