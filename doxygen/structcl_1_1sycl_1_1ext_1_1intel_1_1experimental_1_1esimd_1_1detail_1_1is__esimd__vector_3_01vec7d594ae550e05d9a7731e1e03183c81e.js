@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__esimd__vector_3_01vec7d594ae550e05d9a7731e1e03183c81e =
-[
-    [ "value", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__esimd__vector_3_01vec7d594ae550e05d9a7731e1e03183c81e.html#a0d572c6c4f819f17a5dc2bf5bddb138c", null ]
-];
