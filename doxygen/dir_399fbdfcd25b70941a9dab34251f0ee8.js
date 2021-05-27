@@ -22,7 +22,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "cg.hpp", "cg_8hpp.html", "cg_8hpp" ],
     [ "cg_types.hpp", "cg__types_8hpp.html", "cg__types_8hpp" ],
     [ "cl.h", "cl_8h.html", "cl_8h" ],
-    [ "common.hpp", "common_8hpp.html", "common_8hpp" ],
+    [ "common.hpp", "CL_2sycl_2detail_2common_8hpp.html", "CL_2sycl_2detail_2common_8hpp" ],
     [ "common_info.hpp", "common__info_8hpp.html", "common__info_8hpp" ],
     [ "cuda_definitions.hpp", "cuda__definitions_8hpp.html", "cuda__definitions_8hpp" ],
     [ "defines.hpp", "defines_8hpp.html", "defines_8hpp" ],
@@ -79,5 +79,5 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "type_list.hpp", "type__list_8hpp.html", "type__list_8hpp" ],
     [ "type_traits.hpp", "type__traits_8hpp.html", "type__traits_8hpp" ],
     [ "usm_impl.hpp", "usm__impl_8hpp.html", "usm__impl_8hpp" ],
-    [ "util.hpp", "util_8hpp.html", "util_8hpp" ]
+    [ "util.hpp", "CL_2sycl_2detail_2util_8hpp.html", "CL_2sycl_2detail_2util_8hpp" ]
 ];

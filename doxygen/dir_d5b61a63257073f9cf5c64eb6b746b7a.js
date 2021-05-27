@@ -1,11 +1,11 @@
 var dir_d5b61a63257073f9cf5c64eb6b746b7a =
 [
-    [ "esimd_host_util.hpp", "esimd__host__util_8hpp.html", "esimd__host__util_8hpp" ],
-    [ "esimd_intrin.hpp", "esimd__intrin_8hpp.html", "esimd__intrin_8hpp" ],
-    [ "esimd_math_intrin.hpp", "esimd__math__intrin_8hpp.html", "esimd__math__intrin_8hpp" ],
-    [ "esimd_memory_intrin.hpp", "esimd__memory__intrin_8hpp.html", "esimd__memory__intrin_8hpp" ],
-    [ "esimd_region.hpp", "esimd__region_8hpp.html", "esimd__region_8hpp" ],
-    [ "esimd_sycl_util.hpp", "esimd__sycl__util_8hpp.html", "esimd__sycl__util_8hpp" ],
-    [ "esimd_types.hpp", "esimd__types_8hpp.html", "esimd__types_8hpp" ],
-    [ "esimd_util.hpp", "esimd__util_8hpp.html", "esimd__util_8hpp" ]
+    [ "host_util.hpp", "host__util_8hpp.html", "host__util_8hpp" ],
+    [ "intrin.hpp", "intrin_8hpp.html", "intrin_8hpp" ],
+    [ "math_intrin.hpp", "math__intrin_8hpp.html", "math__intrin_8hpp" ],
+    [ "memory_intrin.hpp", "memory__intrin_8hpp.html", "memory__intrin_8hpp" ],
+    [ "region.hpp", "region_8hpp.html", "region_8hpp" ],
+    [ "sycl_util.hpp", "sycl__util_8hpp.html", "sycl__util_8hpp" ],
+    [ "types.hpp", "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp.html", "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp" ],
+    [ "util.hpp", "sycl_2ext_2intel_2experimental_2esimd_2detail_2util_8hpp.html", "sycl_2ext_2intel_2experimental_2esimd_2detail_2util_8hpp" ]
 ];
