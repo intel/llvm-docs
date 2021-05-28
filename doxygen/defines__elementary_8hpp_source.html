@@ -138,70 +138,66 @@ $(document).ready(function(){initNavTree('defines__elementary_8hpp_source.html',
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifndef __SYCL_DEPRECATED</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#ifndef SYCL_DISABLE_DEPRECATION_WARNINGS</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#define __SYCL_DEPRECATED(message) __declspec(deprecated(message))</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#ab4a96e525ccaf88ee209bf2e85fb7d5a">   46</a></span>&#160;<span class="preprocessor">#define __SYCL_DEPRECATED(message) __attribute__((deprecated(message)))</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#else // SYCL_DISABLE_DEPRECATION_WARNINGS</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define __SYCL_DEPRECATED(message)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif // SYCL_DISABLE_DEPRECATION_WARNINGS</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif // __SYCL_DEPRECATED</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifndef __SYCL2020_DEPRECATED</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#if SYCL_LANGUAGE_VERSION &gt;= 202001 &amp;&amp;                                         \</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    !defined(SYCL2020_DISABLE_DEPRECATION_WARNINGS)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#ac02b2c3d65e385d087c513c04c358f7a">   58</a></span>&#160;<span class="preprocessor">#define __SYCL2020_DEPRECATED(message)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif // __SYCL2020_DEPRECATED</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#ifndef __SYCL_INLINE_CONSTEXPR</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// inline constexpr is a C++17 feature</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#define __SYCL_INLINE_CONSTEXPR inline constexpr</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">   67</a></span>&#160;<span class="preprocessor">#define __SYCL_INLINE_CONSTEXPR static constexpr</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif // __SYCL_INLINE_CONSTEXPR</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#ifndef __SYCL_HAS_CPP_ATTRIBUTE</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#if defined(__cplusplus) &amp;&amp; defined(__has_cpp_attribute)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#define __SYCL_HAS_CPP_ATTRIBUTE(x) __has_cpp_attribute(x)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#aaf8446d441f66ef5f39e7d8c6177de20">   75</a></span>&#160;<span class="preprocessor">#define __SYCL_HAS_CPP_ATTRIBUTE(x) 0</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#ifndef __SYCL_FALLTHROUGH</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#if defined(__cplusplus) &amp;&amp; __cplusplus &gt; 201402L &amp;&amp;                           \</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">    __SYCL_HAS_CPP_ATTRIBUTE(fallthrough)</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH [[fallthrough]]</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#elif __SYCL_HAS_CPP_ATTRIBUTE(gnu::fallthrough)</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH [[gnu::fallthrough]]</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#elif __has_attribute(fallthrough)</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH __attribute__((fallthrough))</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#elif __SYCL_HAS_CPP_ATTRIBUTE(clang::fallthrough)</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH [[clang::fallthrough]]</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a3421410eeda4031741fb35f730199ba5">   90</a></span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif // __SYCL_FALLTHROUGH</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">// define __SYCL_WARNING convenience macro to report compiler warnings</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define __SYCL_GCC_PRAGMA(x) _Pragma(#x)</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __SYCL_GCC_PRAGMA(GCC warning msg)</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER) &amp;&amp; !defined(__clang__)</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#define __SYCL_QUOTE1(x) #x</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#define __SYCL_QUOTE(x) __SYCL_QUOTE1(x)</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#define __SYCL_SRC_LOC __FILE__ &quot;:&quot; __SYCL_QUOTE(__LINE__)</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __pragma(message(__SYCL_SRC_LOC &quot; warning: &quot; msg))</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#else // clang et. al.</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment">// clang emits &quot;warning:&quot; in the message pragma output</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a8b6d237e544a4c7df8e24b10216738c6">  105</a></span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __pragma(message(msg))</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif // __GNUC__</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#ab4a96e525ccaf88ee209bf2e85fb7d5a">   43</a></span>&#160;<span class="preprocessor">#define __SYCL_DEPRECATED(message) [[deprecated(message)]]</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#else // SYCL_DISABLE_DEPRECATION_WARNINGS</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define __SYCL_DEPRECATED(message)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif // SYCL_DISABLE_DEPRECATION_WARNINGS</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // __SYCL_DEPRECATED</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#ifndef __SYCL2020_DEPRECATED</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#if SYCL_LANGUAGE_VERSION &gt;= 202001 &amp;&amp;                                         \</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    !defined(SYCL2020_DISABLE_DEPRECATION_WARNINGS)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#define __SYCL2020_DEPRECATED(message) __SYCL_DEPRECATED(message)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#ac02b2c3d65e385d087c513c04c358f7a">   54</a></span>&#160;<span class="preprocessor">#define __SYCL2020_DEPRECATED(message)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // __SYCL2020_DEPRECATED</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#ifndef __SYCL_INLINE_CONSTEXPR</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// inline constexpr is a C++17 feature</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#if __cplusplus &gt;= 201703L</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#define __SYCL_INLINE_CONSTEXPR inline constexpr</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">   63</a></span>&#160;<span class="preprocessor">#define __SYCL_INLINE_CONSTEXPR static constexpr</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif // __SYCL_INLINE_CONSTEXPR</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifndef __SYCL_HAS_CPP_ATTRIBUTE</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#if defined(__cplusplus) &amp;&amp; defined(__has_cpp_attribute)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#define __SYCL_HAS_CPP_ATTRIBUTE(x) __has_cpp_attribute(x)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#aaf8446d441f66ef5f39e7d8c6177de20">   71</a></span>&#160;<span class="preprocessor">#define __SYCL_HAS_CPP_ATTRIBUTE(x) 0</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#ifndef __SYCL_FALLTHROUGH</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#if defined(__cplusplus) &amp;&amp; __cplusplus &gt; 201402L &amp;&amp;                           \</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">    __SYCL_HAS_CPP_ATTRIBUTE(fallthrough)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH [[fallthrough]]</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#elif __SYCL_HAS_CPP_ATTRIBUTE(gnu::fallthrough)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH [[gnu::fallthrough]]</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#elif __has_attribute(fallthrough)</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH __attribute__((fallthrough))</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#elif __SYCL_HAS_CPP_ATTRIBUTE(clang::fallthrough)</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH [[clang::fallthrough]]</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a3421410eeda4031741fb35f730199ba5">   86</a></span>&#160;<span class="preprocessor">#define __SYCL_FALLTHROUGH</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // __SYCL_FALLTHROUGH</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// define __SYCL_WARNING convenience macro to report compiler warnings</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#if defined(__GNUC__)</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#define __SYCL_GCC_PRAGMA(x) _Pragma(#x)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __SYCL_GCC_PRAGMA(GCC warning msg)</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER) &amp;&amp; !defined(__clang__)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#define __SYCL_QUOTE1(x) #x</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#define __SYCL_QUOTE(x) __SYCL_QUOTE1(x)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#define __SYCL_SRC_LOC __FILE__ &quot;:&quot; __SYCL_QUOTE(__LINE__)</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __pragma(message(__SYCL_SRC_LOC &quot; warning: &quot; msg))</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#else // clang et. al.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// clang emits &quot;warning:&quot; in the message pragma output</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="defines__elementary_8hpp.html#a8b6d237e544a4c7df8e24b10216738c6">  101</a></span>&#160;<span class="preprocessor">#define __SYCL_WARNING(msg) __pragma(message(msg))</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif // __GNUC__</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

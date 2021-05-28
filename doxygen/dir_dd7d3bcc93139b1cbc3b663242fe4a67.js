@@ -77,7 +77,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "stl.hpp", "stl_8hpp.html", "stl_8hpp" ],
     [ "stream.hpp", "stream_8hpp.html", "stream_8hpp" ],
     [ "sub_group.hpp", "sub__group_8hpp.html", "sub__group_8hpp" ],
-    [ "sycl_span.hpp", "sycl__span_8hpp.html", "sycl__span_8hpp" ],
+    [ "sycl_span.hpp", "sycl__span_8hpp.html", null ],
     [ "types.hpp", "CL_2sycl_2types_8hpp.html", "CL_2sycl_2types_8hpp" ],
     [ "usm.hpp", "usm_8hpp.html", "usm_8hpp" ],
     [ "version.hpp", "version_8hpp.html", "version_8hpp" ]
