@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"structcl_1_1____host__std_1_1detail_1_1helper.html#ac462290aa375a29c4d0a902ffd77e20b":[3,0,1,0,0,0,3],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#acde1a250e691c532061816edcf07fb89":[3,0,1,0,0,0,0],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#af3acffe0904c72a3459c7f89a8433299":[3,0,1,0,0,0,10],
 "structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html":[3,0,1,0,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a820ba0af4275dd53a53c16ef6ca2a027":[3,0,1,1,0,161,0],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a933980a9e2429335559c6b2eec2f9970":[3,0,1,1,0,161,1],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#aa9ca93af853373e2155b7b441dc0d6f5":[3,0,1,1,0,161,2],
-"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html":[3,0,1,1,0,162],
-"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html#a00dc351e5fe52e25be246b628e87f8d2":[3,0,1,1,0,162,3]
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html":[3,0,1,1,0,162]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370a5f438397f3deeb8db30329d5f4dd1e02":[4,0,0,0,1,55,10,6],
 "stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370a86f354b8575a1a736775ae003fa344e5":[4,0,0,0,1,55,10,8],
 "stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370ab8d1b43eae73587ba56baef574709ecb":[4,0,0,0,1,55,10,1],
 "stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370abad139cbfb58c8b18e175d62919d7c77":[4,0,0,0,1,55,10,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6":[3,0,18,30],
 "struct__pi__kernel.html#a2f657f90ec38c3a5ee15c33270cf0e32":[3,0,18,14],
 "struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb":[3,0,18,25],
-"struct__pi__kernel.html#a3f6403f55ad9a2f53e928f064fc40548":[3,0,18,2],
-"struct__pi__kernel.html#a4534341ef2c17ff6f11d56bc461e8e43":[3,0,18,16]
+"struct__pi__kernel.html#a3f6403f55ad9a2f53e928f064fc40548":[3,0,18,2]
 };

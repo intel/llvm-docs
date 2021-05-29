@@ -166,9 +166,10 @@ var NAVTREEINDEX19 =
 "host__profiling__info_8hpp.html":[4,0,0,0,1,2,22],
 "host__profiling__info_8hpp_source.html":[4,0,0,0,1,2,22],
 "host__util_8hpp.html":[4,0,0,1,0,0,0,0,0,0],
+"host__util_8hpp.html#a1dff0b67c4798a46c07c4fa51a256550":[4,0,0,1,0,0,0,0,0,0,205],
 "host__util_8hpp.html#aa74c0ffbc34b835e6ec73b89755a4095":[4,0,0,1,0,0,0,0,0,0,204],
-"host__util_8hpp.html#ad796441dc61f4f13bb4612922b977ef2":[4,0,0,1,0,0,0,0,0,0,205],
-"host__util_8hpp.html#ae43b026969a2186810ec95da2cc31997":[4,0,0,1,0,0,0,0,0,0,206],
+"host__util_8hpp.html#ad796441dc61f4f13bb4612922b977ef2":[4,0,0,1,0,0,0,0,0,0,206],
+"host__util_8hpp.html#ae43b026969a2186810ec95da2cc31997":[4,0,0,1,0,0,0,0,0,0,207],
 "host__util_8hpp_source.html":[4,0,0,1,0,0,0,0,0,0],
 "id_8hpp.html":[4,0,0,0,1,30],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,30,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "image__accessor__util_8hpp.html#ab4d388c564ee69fd73798610f0dd35f3":[4,0,0,0,1,2,23,8],
 "image__accessor__util_8hpp.html#adef798b00759263a7ad961e90393ee44":[4,0,0,0,1,2,23,1],
 "image__accessor__util_8hpp.html#af4e508ca6daca4984f672dfcea172455":[4,0,0,0,1,2,23,21],
-"image__accessor__util_8hpp.html#af6e00af9ccdc77eb720d22311ae02c95":[4,0,0,0,1,2,23,16],
-"image__accessor__util_8hpp.html#af94928829837d19e968b4492f2c3b295":[4,0,0,0,1,2,23,27]
+"image__accessor__util_8hpp.html#af6e00af9ccdc77eb720d22311ae02c95":[4,0,0,0,1,2,23,16]
 };

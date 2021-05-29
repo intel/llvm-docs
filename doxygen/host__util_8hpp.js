@@ -205,6 +205,7 @@ var host__util_8hpp =
     [ "dwordtype< int >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1dwordtype_3_01int_01_4.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1dwordtype_3_01int_01_4" ],
     [ "dwordtype< unsigned int >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1dwordtype_3_01unsigned_01int_01_4.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1dwordtype_3_01unsigned_01int_01_4" ],
     [ "SIMDCF_ELEMENT_SKIP", "host__util_8hpp.html#aa74c0ffbc34b835e6ec73b89755a4095", null ],
+    [ "half", "host__util_8hpp.html#a1dff0b67c4798a46c07c4fa51a256550", null ],
     [ "abs", "host__util_8hpp.html#ad796441dc61f4f13bb4612922b977ef2", null ],
     [ "sat_is_on", "host__util_8hpp.html#ae43b026969a2186810ec95da2cc31997", null ]
 ];

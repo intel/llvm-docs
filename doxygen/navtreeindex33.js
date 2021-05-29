@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html#a00dc351e5fe52e25be246b628e87f8d2":[3,0,1,1,0,162,3],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html#a0425c16a1262d6e87139dbd8a6810748":[3,0,1,1,0,162,0],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html#a0484fe1ba0faa59f6e103466836c2a19":[3,0,1,1,0,162,2],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1level__zero_01_4.html#a11cfb092d131152afd298390f8957e5e":[3,0,1,1,0,162,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1ext__intel__mem__channel_01_4.html":[3,0,1,1,0,92],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1ext__intel__mem__channel_01_4.html#ac68248444ae2933335f1995aed15fac9":[3,0,1,1,0,92,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html":[3,0,1,1,0,93],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html#acfcd8dac5b3ffdd0fd9e828fde952015":[3,0,1,1,0,93,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html":[3,0,1,1,0,94]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html#acfcd8dac5b3ffdd0fd9e828fde952015":[3,0,1,1,0,93,0]
 };
