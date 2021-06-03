@@ -105,12 +105,12 @@ var group__sycl__esimd =
     [ "flat_atomic", "group__sycl__esimd.html#gad922047ca351d199e380db3c8dd75694", null ],
     [ "gather", "group__sycl__esimd.html#gabb6c4a98ca631c6900c92d54ef7b565b", null ],
     [ "gather", "group__sycl__esimd.html#gaaa39f2acdbd7316a09cb5ff25c2d5712", null ],
-    [ "gather4", "group__sycl__esimd.html#ga0bed78906ba3fbbbc4ae96c987682cbb", null ],
+    [ "gather4", "group__sycl__esimd.html#gae17cdf61d0f2b9ef32c2c871c7fe13ae", null ],
     [ "media_block_load", "group__sycl__esimd.html#gabd03be5befe7a5a42aab967d3790ba2d", null ],
     [ "media_block_store", "group__sycl__esimd.html#ga0eff440876a00c345c38019449fb65dc", null ],
     [ "scalar_load", "group__sycl__esimd.html#ga05b398ddea51a11723ca6be61837ac8c", null ],
     [ "scalar_store", "group__sycl__esimd.html#ga53eb8767486bc58efaf4cc9b114afd8b", null ],
     [ "scatter", "group__sycl__esimd.html#ga7905efa5c33b5fc7b074344feabfd867", null ],
     [ "scatter", "group__sycl__esimd.html#ga3ae9d676fe64a688f3a2f785eb6ea413", null ],
-    [ "scatter4", "group__sycl__esimd.html#gabd3010ffa5ad4a87ca26a4f2b10ec6dd", null ]
+    [ "scatter4", "group__sycl__esimd.html#gab2703864413ec16d7f9e41da626e7e01", null ]
 ];

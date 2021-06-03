@@ -7,6 +7,8 @@ var program__manager_8cpp =
     ] ],
     [ "__sycl_register_lib", "program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e", null ],
     [ "__sycl_unregister_lib", "program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d", null ],
+    [ "applyOptionsFromEnvironment", "program__manager_8cpp.html#a544654732c56b677e0137fbc089f8082", null ],
+    [ "applyOptionsFromImage", "program__manager_8cpp.html#a9ffc0ae08d547d915aad9f427a4300c9", null ],
     [ "compatibleWithDevice", "program__manager_8cpp.html#a9d9d71ad5d342fb6adb367c7a0413773", null ],
     [ "createBinaryProgram", "program__manager_8cpp.html#adeaee98fe55371e3fd65987d9aa00084", null ],
     [ "createKernelArgMask", "program__manager_8cpp.html#ac5f2d6686ee96e455ca673a86a761546", null ],

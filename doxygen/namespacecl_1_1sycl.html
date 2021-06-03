@@ -1230,6 +1230,108 @@ Functions</h2></td></tr>
 <tr class="memitem:a0d543af4c2a383e3281c42796db93f51"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
 <tr class="memitem:a0d543af4c2a383e3281c42796db93f51"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a0d543af4c2a383e3281c42796db93f51">group_barrier</a> (Group G, memory_scope FenceScope=Group::fence_scope)</td></tr>
 <tr class="separator:a0d543af4c2a383e3281c42796db93f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae789c881c32c7090a7c7dc39ef8c493e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:ae789c881c32c7090a7c7dc39ef8c493e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae789c881c32c7090a7c7dc39ef8c493e">reduce_over_group</a> (Group, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:ae789c881c32c7090a7c7dc39ef8c493e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fadc9657de6fa6860702f1d202c230"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a26fadc9657de6fa6860702f1d202c230"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a26fadc9657de6fa6860702f1d202c230">reduce_over_group</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a26fadc9657de6fa6860702f1d202c230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de5a70b04633b4529d943fa1c6e686a"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a0de5a70b04633b4529d943fa1c6e686a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; V &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; V, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a0de5a70b04633b4529d943fa1c6e686a">reduce_over_group</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a0de5a70b04633b4529d943fa1c6e686a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b3eab8f4a7ea407a686092118c7594"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:ae6b3eab8f4a7ea407a686092118c7594"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; V &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; V, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae6b3eab8f4a7ea407a686092118c7594">reduce_over_group</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:ae6b3eab8f4a7ea407a686092118c7594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d313f66be3e3b35d386632200ee4d6"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a99d313f66be3e3b35d386632200ee4d6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; Ptr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; Ptr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;::value), typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; Ptr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a99d313f66be3e3b35d386632200ee4d6">joint_reduce</a> (Group g, Ptr first, Ptr last, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a99d313f66be3e3b35d386632200ee4d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7356a06537f60d0b5abb3f37927ecc1"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:ac7356a06537f60d0b5abb3f37927ecc1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; Ptr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; Ptr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; Ptr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ac7356a06537f60d0b5abb3f37927ecc1">joint_reduce</a> (Group g, Ptr first, Ptr last, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:ac7356a06537f60d0b5abb3f37927ecc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7785cc5560a94d1dda754d64925c5182"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a7785cc5560a94d1dda754d64925c5182"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt; &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a7785cc5560a94d1dda754d64925c5182">any_of_group</a> (Group, bool pred)</td></tr>
+<tr class="separator:a7785cc5560a94d1dda754d64925c5182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ba0b4adef78c29977738694528005e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
+<tr class="memitem:ae5ba0b4adef78c29977738694528005e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; Group &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae5ba0b4adef78c29977738694528005e">any_of_group</a> (Group g, T x, Predicate pred)</td></tr>
+<tr class="separator:ae5ba0b4adef78c29977738694528005e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9baa1b84261dff459e2853cd1d760414"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
+<tr class="memitem:a9baa1b84261dff459e2853cd1d760414"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; Ptr &gt;::value), bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9baa1b84261dff459e2853cd1d760414">joint_any_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
+<tr class="separator:a9baa1b84261dff459e2853cd1d760414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1c37afeda3eec8e51bd83c875f3773"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a4e1c37afeda3eec8e51bd83c875f3773"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt; &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a4e1c37afeda3eec8e51bd83c875f3773">all_of_group</a> (Group, bool pred)</td></tr>
+<tr class="separator:a4e1c37afeda3eec8e51bd83c875f3773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe1dd2e3a2becee53caca8cc96edca7"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
+<tr class="memitem:a8fe1dd2e3a2becee53caca8cc96edca7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt; &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a8fe1dd2e3a2becee53caca8cc96edca7">all_of_group</a> (Group g, T x, Predicate pred)</td></tr>
+<tr class="separator:a8fe1dd2e3a2becee53caca8cc96edca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0bcda46e9e5305c6b19564f0b70ec9"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
+<tr class="memitem:a2c0bcda46e9e5305c6b19564f0b70ec9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; Ptr &gt;::value), bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2c0bcda46e9e5305c6b19564f0b70ec9">joint_all_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
+<tr class="separator:a2c0bcda46e9e5305c6b19564f0b70ec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84329ae910d90518746c3338b48137c5"><td class="memTemplParams" colspan="2">template&lt;typename Group &gt; </td></tr>
+<tr class="memitem:a84329ae910d90518746c3338b48137c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt; &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a84329ae910d90518746c3338b48137c5">none_of_group</a> (Group, bool pred)</td></tr>
+<tr class="separator:a84329ae910d90518746c3338b48137c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac278ddc3f65b288672001b410561903c"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class Predicate &gt; </td></tr>
+<tr class="memitem:ac278ddc3f65b288672001b410561903c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt; &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ac278ddc3f65b288672001b410561903c">none_of_group</a> (Group g, T x, Predicate pred)</td></tr>
+<tr class="separator:ac278ddc3f65b288672001b410561903c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364add4948b66c4b4ad0088db3e74057"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename Ptr , class Predicate &gt; </td></tr>
+<tr class="memitem:a364add4948b66c4b4ad0088db3e74057"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; Ptr &gt;::value), bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a364add4948b66c4b4ad0088db3e74057">joint_none_of</a> (Group g, Ptr first, Ptr last, Predicate pred)</td></tr>
+<tr class="separator:a364add4948b66c4b4ad0088db3e74057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04dd264a23a72ba13706d972aef76a9c"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a04dd264a23a72ba13706d972aef76a9c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt; std::decay_t&lt; Group &gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a04dd264a23a72ba13706d972aef76a9c">shift_group_left</a> (Group, T x, typename Group::linear_id_type delta=1)</td></tr>
+<tr class="separator:a04dd264a23a72ba13706d972aef76a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290b90e5a55e953457b0e0ddf4842a06"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a290b90e5a55e953457b0e0ddf4842a06"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt; std::decay_t&lt; Group &gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a290b90e5a55e953457b0e0ddf4842a06">shift_group_right</a> (Group, T x, typename Group::linear_id_type delta=1)</td></tr>
+<tr class="separator:a290b90e5a55e953457b0e0ddf4842a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb7f92cecdb0bf1b12047aa80bb1ba05"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:abb7f92cecdb0bf1b12047aa80bb1ba05"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt; std::decay_t&lt; Group &gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#abb7f92cecdb0bf1b12047aa80bb1ba05">permute_group_by_xor</a> (Group, T x, typename Group::linear_id_type mask)</td></tr>
+<tr class="separator:abb7f92cecdb0bf1b12047aa80bb1ba05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6291d3086422c44763b1b21e95aa4b9"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:af6291d3086422c44763b1b21e95aa4b9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt; std::decay_t&lt; Group &gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#af6291d3086422c44763b1b21e95aa4b9">select_from_group</a> (Group, T x, typename Group::id_type local_id)</td></tr>
+<tr class="separator:af6291d3086422c44763b1b21e95aa4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2296a8baa3a6b349d93b8bb44cd8c3dc"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a2296a8baa3a6b349d93b8bb44cd8c3dc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2296a8baa3a6b349d93b8bb44cd8c3dc">group_broadcast</a> (Group, T x, typename Group::id_type local_id)</td></tr>
+<tr class="separator:a2296a8baa3a6b349d93b8bb44cd8c3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc92c5b6b56508b940874312ac70af7"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a9dc92c5b6b56508b940874312ac70af7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9dc92c5b6b56508b940874312ac70af7">group_broadcast</a> (Group g, T x, typename Group::linear_id_type linear_local_id)</td></tr>
+<tr class="separator:a9dc92c5b6b56508b940874312ac70af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47933b3fc90491533b73e6bad0b98b74"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T &gt; </td></tr>
+<tr class="memitem:a47933b3fc90491533b73e6bad0b98b74"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a47933b3fc90491533b73e6bad0b98b74">group_broadcast</a> (Group g, T x)</td></tr>
+<tr class="separator:a47933b3fc90491533b73e6bad0b98b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606bdd6befd2d999fb8fbf91cd117d4f"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a606bdd6befd2d999fb8fbf91cd117d4f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a606bdd6befd2d999fb8fbf91cd117d4f">exclusive_scan_over_group</a> (Group, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a606bdd6befd2d999fb8fbf91cd117d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83526621b6c6ab268f2c6a1eb2a7b8d5"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a83526621b6c6ab268f2c6a1eb2a7b8d5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a83526621b6c6ab268f2c6a1eb2a7b8d5">exclusive_scan_over_group</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a83526621b6c6ab268f2c6a1eb2a7b8d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37565d2de6cf2e72352d33f6a03a080"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:ab37565d2de6cf2e72352d33f6a03a080"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; V &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; V, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ab37565d2de6cf2e72352d33f6a03a080">exclusive_scan_over_group</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:ab37565d2de6cf2e72352d33f6a03a080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440a183fa444f0bc778465aad3e9ac00"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a440a183fa444f0bc778465aad3e9ac00"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; V &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; V, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a440a183fa444f0bc778465aad3e9ac00">exclusive_scan_over_group</a> (Group g, V x, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a440a183fa444f0bc778465aad3e9ac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17fdb8efb31a751a431b52e3a5666d7f"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a17fdb8efb31a751a431b52e3a5666d7f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; InPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; OutPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a17fdb8efb31a751a431b52e3a5666d7f">joint_exclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, T init, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a17fdb8efb31a751a431b52e3a5666d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87b2837685120e5c194197aff8d2c15e"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a87b2837685120e5c194197aff8d2c15e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; InPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; OutPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation &gt;::value), OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a87b2837685120e5c194197aff8d2c15e">joint_exclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a87b2837685120e5c194197aff8d2c15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c064edb71d24e62e5b1c69fecd749da"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a6c064edb71d24e62e5b1c69fecd749da"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a6c064edb71d24e62e5b1c69fecd749da">inclusive_scan_over_group</a> (Group g, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a6c064edb71d24e62e5b1c69fecd749da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ef2934b0d626d98dba292e877d9489"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename T , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:ad3ef2934b0d626d98dba292e877d9489"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ad3ef2934b0d626d98dba292e877d9489">inclusive_scan_over_group</a> (Group, T x, BinaryOperation binary_op)</td></tr>
+<tr class="separator:ad3ef2934b0d626d98dba292e877d9489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a564c333fcab35dfcf49d394eb53d6fd9"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </td></tr>
+<tr class="memitem:a564c333fcab35dfcf49d394eb53d6fd9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; V &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; V, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a564c333fcab35dfcf49d394eb53d6fd9">inclusive_scan_over_group</a> (Group g, V x, BinaryOperation binary_op, T init)</td></tr>
+<tr class="separator:a564c333fcab35dfcf49d394eb53d6fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade54905f8fc3db95753d9a93082156ce"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </td></tr>
+<tr class="memitem:ade54905f8fc3db95753d9a93082156ce"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; V &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; V, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ade54905f8fc3db95753d9a93082156ce">inclusive_scan_over_group</a> (Group g, V x, BinaryOperation binary_op, T init)</td></tr>
+<tr class="separator:ade54905f8fc3db95753d9a93082156ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc38cc9ccde68512bd72bc0c0908e51"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation , typename T &gt; </td></tr>
+<tr class="memitem:aacc38cc9ccde68512bd72bc0c0908e51"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; InPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; OutPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; T, BinaryOperation &gt;::value), OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aacc38cc9ccde68512bd72bc0c0908e51">joint_inclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op, T init)</td></tr>
+<tr class="separator:aacc38cc9ccde68512bd72bc0c0908e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7cadfb27d5da806f1d5bede415e6b9"><td class="memTemplParams" colspan="2">template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </td></tr>
+<tr class="memitem:a7c7cadfb27d5da806f1d5bede415e6b9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt; std::decay_t&lt; Group &gt;&gt; &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; InPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt; OutPtr &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt; InPtr &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation &gt;::value), OutPtr &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a7c7cadfb27d5da806f1d5bede415e6b9">joint_inclusive_scan</a> (Group g, InPtr first, InPtr last, OutPtr result, BinaryOperation binary_op)</td></tr>
+<tr class="separator:a7c7cadfb27d5da806f1d5bede415e6b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6771b0a9414cf6b3b359b97770a2430"><td class="memTemplParams" colspan="2">template&lt;typename T , typename Group &gt; </td></tr>
 <tr class="memitem:ab6771b0a9414cf6b3b359b97770a2430"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_trivially_destructible&lt; T &gt;::value &amp;&amp;<a class="el" href="structcl_1_1sycl_1_1detail_1_1is__group.html">detail::is_group</a>&lt; Group &gt;::value, <a class="el" href="classcl_1_1sycl_1_1multi__ptr.html">multi_ptr</a>&lt; T, <a class="el" href="namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbfa619fb1f3a892c810ac284e01782c8531">access::address_space::local_space</a> &gt; &gt; <a class="el" href="defines__elementary_8hpp.html#ad398022fa7a040e048a368344b14635c">__SYCL_ALWAYS_INLINE</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ab6771b0a9414cf6b3b359b97770a2430">group_local_memory_for_overwrite</a> (Group g)</td></tr>
 <tr class="separator:ab6771b0a9414cf6b3b359b97770a2430"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1518,6 +1620,8 @@ Functions</h2></td></tr>
 <tr class="separator:a89601b8a9195726705c5aa5386d61f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e7ffbeea7404110241a2bbcd70a73a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a39e7ffbeea7404110241a2bbcd70a73a">isForcedDevice</a> (const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Dev, int Index=-1)</td></tr>
 <tr class="separator:a39e7ffbeea7404110241a2bbcd70a73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572c6bcc885400d535fbfd622f775560"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a572c6bcc885400d535fbfd622f775560">addArgsForGlobalAccessor</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">detail::Requirement</a> *AccImpl, size_t Index, size_t &amp;IndexShift, int Size, bool IsKernelCreatedFromSource, size_t GlobalSize, <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1ArgDesc.html">detail::ArgDesc</a> &gt; &amp;Args, bool isESIMD)</td></tr>
+<tr class="separator:a572c6bcc885400d535fbfd622f775560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8af5b2dc342f13cc9b4b81732d1f1fea"><td class="memItemLeft" align="right" valign="top">template bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a8af5b2dc342f13cc9b4b81732d1f1fea">queue::has_property&lt; property::queue::enable_profiling &gt;</a> () const</td></tr>
 <tr class="separator:a8af5b2dc342f13cc9b4b81732d1f1fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea79727faf0c39623dbc3ef6cc2b9d10"><td class="memItemLeft" align="right" valign="top">template <a class="el" href="classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html">property::queue::enable_profiling</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aea79727faf0c39623dbc3ef6cc2b9d10">queue::get_property&lt; property::queue::enable_profiling &gt;</a> () const</td></tr>
@@ -1527,6 +1631,15 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a2c2373f6263f259f4300fd4ffe31d784"><td class="memItemLeft" align="right" valign="top">T y&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2c2373f6263f259f4300fd4ffe31d784">__NOEXC</a></td></tr>
 <tr class="separator:a2c2373f6263f259f4300fd4ffe31d784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af26fad8afd7727663acc1fdafcaa1e88"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:af26fad8afd7727663acc1fdafcaa1e88"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">__SYCL_INLINE_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a></td></tr>
+<tr class="separator:af26fad8afd7727663acc1fdafcaa1e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ac042070c6205d2b6368d0262decdba"><td class="memTemplParams" colspan="2">template&lt;typename BinaryOperation , typename AccumulatorT &gt; </td></tr>
+<tr class="memitem:a0ac042070c6205d2b6368d0262decdba"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">__SYCL_INLINE_CONSTEXPR</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a0ac042070c6205d2b6368d0262decdba">has_known_identity_v</a></td></tr>
+<tr class="separator:a0ac042070c6205d2b6368d0262decdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05dd339c917feaa370676292b3fb5753"><td class="memTemplParams" colspan="2">template&lt;typename BinaryOperation , typename AccumulatorT &gt; </td></tr>
+<tr class="memitem:a05dd339c917feaa370676292b3fb5753"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">__SYCL_INLINE_CONSTEXPR</a> AccumulatorT&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a05dd339c917feaa370676292b3fb5753">known_identity_v</a></td></tr>
+<tr class="separator:a05dd339c917feaa370676292b3fb5753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a9c51ac35a1740641bff4c0d39d44d4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370">stream_manipulator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2a9c51ac35a1740641bff4c0d39d44d4">dec</a> = stream_manipulator::dec</td></tr>
 <tr class="separator:a2a9c51ac35a1740641bff4c0d39d44d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae28f72850af7190c5175e2e5ff1bcf0f"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370">stream_manipulator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ae28f72850af7190c5175e2e5ff1bcf0f">hex</a> = stream_manipulator::hex</td></tr>
@@ -2750,7 +2863,7 @@ template&lt;class T &gt; </div>
 <tr><td class="fieldname"><a id="aae8e7aa729b49299771cd464d4b17370a2ef4603357809b52b88d59db2f18c4da"></a>defaultfloat&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00650">650</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00662">662</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -2775,7 +2888,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00523">523</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00252">cl::sycl::detail::floatingPointToDecStr()</a>, and <a class="el" href="builtins__integer_8cpp_source.html#l00251">cl::__host_std::s_abs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00264">cl::sycl::detail::floatingPointToDecStr()</a>, and <a class="el" href="builtins__integer_8cpp_source.html#l00251">cl::__host_std::s_abs()</a>.</p>
 
 </div>
 </div>
@@ -3014,6 +3127,82 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00658">658</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a572c6bcc885400d535fbfd622f775560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572c6bcc885400d535fbfd622f775560">&#9670;&nbsp;</a></span>addArgsForGlobalAccessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cl::sycl::addArgsForGlobalAccessor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af0ce64d569ce971ebc1920cef881a8b9">detail::Requirement</a> *&#160;</td>
+          <td class="paramname"><em>AccImpl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t &amp;&#160;</td>
+          <td class="paramname"><em>IndexShift</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>Size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>IsKernelCreatedFromSource</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>GlobalSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1ArgDesc.html">detail::ArgDesc</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isESIMD</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00238">238</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc">cl::sycl::detail::kind_accessor</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa804d646aee6ffb43decdc5ca71c12fba">cl::sycl::detail::kind_std_layout</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00109">cl::sycl::detail::AccessorImplHost::MAccessRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00116">cl::sycl::detail::AccessorImplHost::MDims</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00111">cl::sycl::detail::AccessorImplHost::MMemoryRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00107">cl::sycl::detail::AccessorImplHost::MOffset</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00125">cl::sycl::detail::AccessorImplHost::PerWI</a>, and <a class="el" href="accessor__impl_8cpp_source.html#l00026">cl::sycl::detail::AccessorImplHost::resize()</a>.</p>
 
 </div>
 </div>
@@ -3409,6 +3598,80 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a8fe1dd2e3a2becee53caca8cc96edca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe1dd2e3a2becee53caca8cc96edca7">&#9670;&nbsp;</a></span>all_of_group() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt; &gt;, bool&gt; cl::sycl::all_of_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00325">325</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00070">cl::sycl::ONEAPI::all_of()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00333">joint_all_of()</a>.</p>
+
+</div>
+</div>
+<a id="a4e1c37afeda3eec8e51bd83c875f3773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1c37afeda3eec8e51bd83c875f3773">&#9670;&nbsp;</a></span>all_of_group() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt; &gt;, bool&gt; cl::sycl::all_of_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00313">313</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
 <a id="a3bf6fb6c44a3adee65099bb0fb215b5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3bf6fb6c44a3adee65099bb0fb215b5f">&#9670;&nbsp;</a></span>any() <span class="overload">[1/2]</span></h2>
 
@@ -3452,6 +3715,80 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l01268">1268</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ae5ba0b4adef78c29977738694528005e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ba0b4adef78c29977738694528005e">&#9670;&nbsp;</a></span>any_of_group() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;Group&gt;, bool&gt; cl::sycl::any_of_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00285">285</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00092">cl::sycl::ONEAPI::any_of()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00294">joint_any_of()</a>.</p>
+
+</div>
+</div>
+<a id="a7785cc5560a94d1dda754d64925c5182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7785cc5560a94d1dda754d64925c5182">&#9670;&nbsp;</a></span>any_of_group() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt; &gt;, bool&gt; cl::sycl::any_of_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00274">274</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
 
 </div>
 </div>
@@ -3573,7 +3910,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00073">73</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01521">cl::sycl::ext::intel::experimental::esimd::esimd_atan2()</a>, and <a class="el" href="math_8hpp_source.html#l01484">cl::sycl::ext::intel::experimental::esimd::esimd_atan2_fast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01523">cl::sycl::ext::intel::experimental::esimd::esimd_atan2()</a>, and <a class="el" href="math_8hpp_source.html#l01486">cl::sycl::ext::intel::experimental::esimd::esimd_atan2_fast()</a>.</p>
 
 </div>
 </div>
@@ -4252,7 +4589,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="kernel__bundle_8hpp_source.html#l00657">657</a> of file <a class="el" href="kernel__bundle_8hpp_source.html">kernel_bundle.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01275">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>, <a class="el" href="program__manager_8cpp_source.html#l01493">cl::sycl::detail::ProgramManager::build()</a>, <a class="el" href="program__manager_8cpp_source.html#l01378">cl::sycl::detail::ProgramManager::compile()</a>, <a class="el" href="program__manager_8cpp_source.html#l00351">cl::sycl::detail::ProgramManager::getBuiltPIProgram()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00103">cl::sycl::detail::kernel_bundle_impl::kernel_bundle_impl()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01435">cl::sycl::detail::ProgramManager::link()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01293">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>, <a class="el" href="program__manager_8cpp_source.html#l01513">cl::sycl::detail::ProgramManager::build()</a>, <a class="el" href="program__manager_8cpp_source.html#l01396">cl::sycl::detail::ProgramManager::compile()</a>, <a class="el" href="program__manager_8cpp_source.html#l00399">cl::sycl::detail::ProgramManager::getBuiltPIProgram()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00105">cl::sycl::detail::kernel_bundle_impl::kernel_bundle_impl()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01455">cl::sycl::detail::ProgramManager::link()</a>.</p>
 
 </div>
 </div>
@@ -4635,7 +4972,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="kernel__bundle_8hpp_source.html#l00579">579</a> of file <a class="el" href="kernel__bundle_8hpp_source.html">kernel_bundle.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01275">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>, <a class="el" href="online__compiler_8hpp_source.html#l00197">cl::sycl::INTEL::online_compiler&lt; Lang &gt;::compile()</a>, and <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00103">cl::sycl::detail::kernel_bundle_impl::kernel_bundle_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01293">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>, <a class="el" href="online__compiler_8hpp_source.html#l00197">cl::sycl::INTEL::online_compiler&lt; Lang &gt;::compile()</a>, and <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00105">cl::sycl::detail::kernel_bundle_impl::kernel_bundle_impl()</a>.</p>
 
 </div>
 </div>
@@ -5121,6 +5458,180 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a83526621b6c6ab268f2c6a1eb2a7b8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83526621b6c6ab268f2c6a1eb2a7b8d5">&#9670;&nbsp;</a></span>exclusive_scan_over_group() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::exclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00525">525</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00569">exclusive_scan_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="ab37565d2de6cf2e72352d33f6a03a080"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37565d2de6cf2e72352d33f6a03a080">&#9670;&nbsp;</a></span>exclusive_scan_over_group() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;V&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;V, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::exclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00547">547</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00569">exclusive_scan_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="a440a183fa444f0bc778465aad3e9ac00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440a183fa444f0bc778465aad3e9ac00">&#9670;&nbsp;</a></span>exclusive_scan_over_group() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;V&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;V, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::exclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00569">569</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a97c37bb841960b17d4d78a7914734c21">cl::sycl::detail::get_local_linear_id()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00367">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00525">exclusive_scan_over_group()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00606">joint_exclusive_scan()</a>.</p>
+
+</div>
+</div>
+<a id="a606bdd6befd2d999fb8fbf91cd117d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606bdd6befd2d999fb8fbf91cd117d4f">&#9670;&nbsp;</a></span>exclusive_scan_over_group() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::exclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00504">504</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753a40c55da5e37c661d48d6e7d26890368e">__spv::ExclusiveScan</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
 <a id="a0940837cc80103ee21839610f4523403"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0940837cc80103ee21839610f4523403">&#9670;&nbsp;</a></span>exp()</h2>
 
@@ -5141,7 +5652,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00147">147</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01787">cl::sycl::ext::intel::experimental::esimd::detail::esimd_tanh_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01789">cl::sycl::ext::intel::experimental::esimd::detail::esimd_tanh_impl()</a>.</p>
 
 </div>
 </div>
@@ -5515,7 +6026,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00196">196</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="image__accessor__util_8hpp_source.html#l00326">cl::sycl::detail::convertReadData()</a>, and <a class="el" href="builtins__common_8cpp_source.html#l00114">cl::__host_std::fmax_common()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory_8hpp_source.html#l00416">cl::sycl::ext::intel::experimental::esimd::detail::check_atomic()</a>, and <a class="el" href="image__accessor__util_8hpp_source.html#l00326">cl::sycl::detail::convertReadData()</a>.</p>
 
 </div>
 </div>
@@ -5581,7 +6092,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00209">209</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="builtins__common_8cpp_source.html#l00100">cl::__host_std::fmin_common()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="memory_8hpp_source.html#l00416">cl::sycl::ext::intel::experimental::esimd::detail::check_atomic()</a>.</p>
 
 </div>
 </div>
@@ -5647,7 +6158,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00222">222</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01560">cl::sycl::ext::intel::experimental::esimd::esimd_fmod()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01562">cl::sycl::ext::intel::experimental::esimd::esimd_fmod()</a>.</p>
 
 </div>
 </div>
@@ -6089,7 +6600,7 @@ template&lt;typename KernelName &gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a vector with all <a class="el" href="classcl_1_1sycl_1_1kernel__id.html" title="Objects of the class identify kernel is some kernel_bundle related APIs.">kernel_id</a>'s defined in the application </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="kernel__bundle_8hpp_source.html#l00235">cl::sycl::kernel_bundle&lt; State &gt;::get_kernel_ids()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01435">cl::sycl::detail::ProgramManager::link()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="kernel__bundle_8hpp_source.html#l00235">cl::sycl::kernel_bundle&lt; State &gt;::get_kernel_ids()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01455">cl::sycl::detail::ProgramManager::link()</a>.</p>
 
 </div>
 </div>
@@ -6185,7 +6696,7 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00299">299</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00127">cl::sycl::context::get_devices()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">get_pointer_type()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01486">PI_MEM_ALLOC_DEVICE</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l06275">piextUSMGetMemAllocInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00127">cl::sycl::context::get_devices()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">get_pointer_type()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01486">PI_MEM_ALLOC_DEVICE</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l06292">piextUSMGetMemAllocInfo()</a>.</p>
 
 </div>
 </div>
@@ -6227,7 +6738,7 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00249">249</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01483">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01492">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01491">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01493">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l00076">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l06275">piextUSMGetMemAllocInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01483">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01492">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01491">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01493">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l00076">PI_SUCCESS</a>, and <a class="el" href="pi__level__zero_8cpp_source.html#l06292">piextUSMGetMemAllocInfo()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00299">get_pointer_device()</a>.</p>
 
@@ -6302,6 +6813,122 @@ template&lt;&gt; </div>
 <p class="definition">Definition at line <a class="el" href="sub__group_8hpp_source.html#l00021">21</a> of file <a class="el" href="sub__group_8hpp_source.html">sub_group.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="spirv__ops_8cpp_source.html#l00026">__spirv_ControlBarrier()</a>, <a class="el" href="spirv__types_8hpp_source.html#l00085">__spv::MemorySemanticsMask::AcquireRelease</a>, <a class="el" href="spirv__types_8hpp_source.html#l00090">__spv::MemorySemanticsMask::CrossWorkgroupMemory</a>, <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>, <a class="el" href="spirv__types_8hpp_source.html#l00028">__spv::Scope::Subgroup</a>, <a class="el" href="spirv__types_8hpp_source.html#l00088">__spv::MemorySemanticsMask::SubgroupMemory</a>, and <a class="el" href="spirv__types_8hpp_source.html#l00089">__spv::MemorySemanticsMask::WorkgroupMemory</a>.</p>
+
+</div>
+</div>
+<a id="a47933b3fc90491533b73e6bad0b98b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47933b3fc90491533b73e6bad0b98b74">&#9670;&nbsp;</a></span>group_broadcast() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::group_broadcast </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00487">487</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="group__algorithm_8hpp_source.html#l00469">group_broadcast()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00606">joint_exclusive_scan()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00773">joint_inclusive_scan()</a>.</p>
+
+</div>
+</div>
+<a id="a9dc92c5b6b56508b940874312ac70af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc92c5b6b56508b940874312ac70af7">&#9670;&nbsp;</a></span>group_broadcast() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::group_broadcast </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Group::linear_id_type&#160;</td>
+          <td class="paramname"><em>linear_local_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00469">469</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00487">group_broadcast()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00037">cl::sycl::detail::linear_id_to_id()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
+<a id="a2296a8baa3a6b349d93b8bb44cd8c3dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2296a8baa3a6b349d93b8bb44cd8c3dc">&#9670;&nbsp;</a></span>group_broadcast() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::group_broadcast </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Group::id_type&#160;</td>
+          <td class="paramname"><em>local_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00454">454</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
 
 </div>
 </div>
@@ -6670,6 +7297,178 @@ template&lt;typename T , typename  = detail::enable_if_t&lt;detail::is_genfloat&
 
 </div>
 </div>
+<a id="a6c064edb71d24e62e5b1c69fecd749da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c064edb71d24e62e5b1c69fecd749da">&#9670;&nbsp;</a></span>inclusive_scan_over_group() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::inclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00678">678</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00746">inclusive_scan_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="a564c333fcab35dfcf49d394eb53d6fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a564c333fcab35dfcf49d394eb53d6fd9">&#9670;&nbsp;</a></span>inclusive_scan_over_group() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;V&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;V, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::inclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00721">721</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a97c37bb841960b17d4d78a7914734c21">cl::sycl::detail::get_local_linear_id()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00746">inclusive_scan_over_group()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
+<a id="ade54905f8fc3db95753d9a93082156ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade54905f8fc3db95753d9a93082156ce">&#9670;&nbsp;</a></span>inclusive_scan_over_group() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename V , class BinaryOperation , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;V&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;V, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::inclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00746">746</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00447">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00678">inclusive_scan_over_group()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00773">joint_inclusive_scan()</a>.</p>
+
+</div>
+</div>
+<a id="ad3ef2934b0d626d98dba292e877d9489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ef2934b0d626d98dba292e877d9489">&#9670;&nbsp;</a></span>inclusive_scan_over_group() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::inclusive_scan_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00698">698</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753a61ffbdbbe03bbaed7a3926191b00d4b1">__spv::InclusiveScan</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
 <a id="a669f044d3a15bcb121123ff7ddca7e45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a669f044d3a15bcb121123ff7ddca7e45">&#9670;&nbsp;</a></span>is_compatible() <span class="overload">[1/2]</span></h2>
 
@@ -6933,7 +7732,7 @@ template&lt;typename T , typename  = detail::enable_if_t&lt;detail::is_genfloat&
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l01195">1195</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00221">cl::sycl::detail::checkForInfNan()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00233">cl::sycl::detail::checkForInfNan()</a>.</p>
 
 </div>
 </div>
@@ -7053,7 +7852,7 @@ template&lt;typename T , typename  = detail::enable_if_t&lt;detail::is_genfloat&
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l01207">1207</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00221">cl::sycl::detail::checkForInfNan()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00233">cl::sycl::detail::checkForInfNan()</a>.</p>
 
 </div>
 </div>
@@ -7200,6 +7999,470 @@ template&lt;sycl::bundle_state State&gt; </div>
 
 </div>
 </div>
+<a id="a2c0bcda46e9e5305c6b19564f0b70ec9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c0bcda46e9e5305c6b19564f0b70ec9">&#9670;&nbsp;</a></span>joint_all_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename Ptr , class Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;Ptr&gt;::value), bool&gt; cl::sycl::joint_all_of </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00333">333</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00325">all_of_group()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00099">cl::sycl::detail::for_each()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00086">cl::sycl::ONEAPI::all_of()</a>.</p>
+
+</div>
+</div>
+<a id="a9baa1b84261dff459e2853cd1d760414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9baa1b84261dff459e2853cd1d760414">&#9670;&nbsp;</a></span>joint_any_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename Ptr , class Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;Ptr&gt;::value), bool&gt; cl::sycl::joint_any_of </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00294">294</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00285">any_of_group()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00099">cl::sycl::detail::for_each()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00108">cl::sycl::ONEAPI::any_of()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00372">joint_none_of()</a>.</p>
+
+</div>
+</div>
+<a id="a87b2837685120e5c194197aff8d2c15e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87b2837685120e5c194197aff8d2c15e">&#9670;&nbsp;</a></span>joint_exclusive_scan() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;InPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;OutPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation&gt;::value), OutPtr&gt; cl::sycl::joint_exclusive_scan </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutPtr&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00657">657</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00414">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>.</p>
+
+</div>
+</div>
+<a id="a17fdb8efb31a751a431b52e3a5666d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17fdb8efb31a751a431b52e3a5666d7f">&#9670;&nbsp;</a></span>joint_exclusive_scan() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename InPtr , typename OutPtr , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;InPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;OutPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), OutPtr&gt; cl::sycl::joint_exclusive_scan </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutPtr&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00606">606</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00569">exclusive_scan_over_group()</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a97c37bb841960b17d4d78a7914734c21">cl::sycl::detail::get_local_linear_id()</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ac4b1418d023a2cc85b870113870b2ae8">cl::sycl::detail::get_local_linear_range()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00487">group_broadcast()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
+<a id="a7c7cadfb27d5da806f1d5bede415e6b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c7cadfb27d5da806f1d5bede415e6b9">&#9670;&nbsp;</a></span>joint_inclusive_scan() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;InPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;OutPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation&gt;::value), OutPtr&gt; cl::sycl::joint_inclusive_scan </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutPtr&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00823">823</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00494">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>.</p>
+
+</div>
+</div>
+<a id="aacc38cc9ccde68512bd72bc0c0908e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc38cc9ccde68512bd72bc0c0908e51">&#9670;&nbsp;</a></span>joint_inclusive_scan() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename InPtr , typename OutPtr , class BinaryOperation , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;InPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;OutPtr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;InPtr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), OutPtr&gt; cl::sycl::joint_inclusive_scan </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InPtr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutPtr&#160;</td>
+          <td class="paramname"><em>result</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00773">773</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a97c37bb841960b17d4d78a7914734c21">cl::sycl::detail::get_local_linear_id()</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ac4b1418d023a2cc85b870113870b2ae8">cl::sycl::detail::get_local_linear_range()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00487">group_broadcast()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00746">inclusive_scan_over_group()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
+<a id="a364add4948b66c4b4ad0088db3e74057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a364add4948b66c4b4ad0088db3e74057">&#9670;&nbsp;</a></span>joint_none_of()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename Ptr , class Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;Ptr&gt;::value), bool&gt; cl::sycl::joint_none_of </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00372">372</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00294">joint_any_of()</a>, and <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00129">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>.</p>
+
+</div>
+</div>
+<a id="a99d313f66be3e3b35d386632200ee4d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d313f66be3e3b35d386632200ee4d6">&#9670;&nbsp;</a></span>joint_reduce() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename Ptr , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;Ptr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;Ptr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt;::value), typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;Ptr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt; cl::sycl::joint_reduce </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00218">218</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00099">cl::sycl::detail::for_each()</a>, <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00191">reduce_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="ac7356a06537f60d0b5abb3f37927ecc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7356a06537f60d0b5abb3f37927ecc1">&#9670;&nbsp;</a></span>joint_reduce() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename Ptr , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt; (<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__pointer.html">detail::is_pointer</a>&lt;Ptr&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;Ptr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__pointer.html">detail::remove_pointer</a>&lt;Ptr&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::joint_reduce </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Ptr&#160;</td>
+          <td class="paramname"><em>last</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00249">249</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00099">cl::sycl::detail::for_each()</a>, <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00191">reduce_over_group()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00346">cl::sycl::ONEAPI::reduce()</a>.</p>
+
+</div>
+</div>
 <a id="ab865efa8a67a82ab99a74d4ec97f30ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab865efa8a67a82ab99a74d4ec97f30ff">&#9670;&nbsp;</a></span>ldexp() <span class="overload">[1/3]</span></h2>
 
@@ -7316,7 +8579,7 @@ template&lt;typename T , typename  = detail::enable_if_t&lt;detail::is_gengeoflo
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l01011">1011</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04485">cuda_piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02710">cuda_piProgramCreateWithBinary()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01030">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00354">piProgramCreate()</a>, <a class="el" href="simd__view_8hpp_source.html#l00096">cl::sycl::ext::intel::experimental::esimd::simd_view&lt; BaseTy, RegionTy &gt;::read()</a>, <a class="el" href="intrin_8hpp_source.html#l00170">cl::sycl::ext::intel::experimental::esimd::detail::readRegion()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00481">_pi_program::set_binary()</a>, <a class="el" href="common_8cpp_source.html#l00224">cl::sycl::detail::split_string()</a>, and <a class="el" href="simd_8hpp_source.html#l00408">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::writeRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="pi__cuda_8cpp_source.html#l04485">cuda_piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l02710">cuda_piProgramCreateWithBinary()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l01030">piextUSMEnqueueMemAdvise()</a>, <a class="el" href="pi__opencl_8cpp_source.html#l00354">piProgramCreate()</a>, <a class="el" href="simd__view_8hpp_source.html#l00097">cl::sycl::ext::intel::experimental::esimd::simd_view&lt; BaseTy, RegionTy &gt;::read()</a>, <a class="el" href="intrin_8hpp_source.html#l00170">cl::sycl::ext::intel::experimental::esimd::detail::readRegion()</a>, <a class="el" href="pi__cuda_8cpp_source.html#l00481">_pi_program::set_binary()</a>, <a class="el" href="common_8cpp_source.html#l00224">cl::sycl::detail::split_string()</a>, and <a class="el" href="simd_8hpp_source.html#l00410">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::writeRegion()</a>.</p>
 
 </div>
 </div>
@@ -7581,7 +8844,7 @@ template&lt;typename T , typename T2 &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="kernel__bundle_8hpp_source.html#l00612">612</a> of file <a class="el" href="kernel__bundle_8hpp_source.html">kernel_bundle.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program_8hpp_source.html#l00039">__SYCL2020_DEPRECATED()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01275">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program_8hpp_source.html#l00039">__SYCL2020_DEPRECATED()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01293">cl::sycl::detail::ProgramManager::bringSYCLDeviceImagesToState()</a>.</p>
 
 </div>
 </div>
@@ -8089,7 +9352,7 @@ template&lt;backend Backend&gt; </div>
 
 <p class="reference">References <a class="el" href="exception_8cpp_source.html#l00029">sycl_category()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01378">cl::sycl::detail::ProgramManager::compile()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00330">cl::sycl::detail::kernel_bundle_impl::get_kernel()</a>, <a class="el" href="kernel__bundle_8cpp_source.html#l00143">cl::sycl::detail::has_kernel_bundle_impl()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00089">cl::sycl::detail::kernel_bundle_impl::kernel_bundle_impl()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01435">cl::sycl::detail::ProgramManager::link()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="program__manager_8cpp_source.html#l01396">cl::sycl::detail::ProgramManager::compile()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00343">cl::sycl::detail::kernel_bundle_impl::get_kernel()</a>, <a class="el" href="kernel__bundle_8cpp_source.html#l00143">cl::sycl::detail::has_kernel_bundle_impl()</a>, <a class="el" href="kernel__bundle__impl_8hpp_source.html#l00091">cl::sycl::detail::kernel_bundle_impl::kernel_bundle_impl()</a>, and <a class="el" href="program__manager_8cpp_source.html#l01455">cl::sycl::detail::ProgramManager::link()</a>.</p>
 
 </div>
 </div>
@@ -8947,6 +10210,80 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ac278ddc3f65b288672001b410561903c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac278ddc3f65b288672001b410561903c">&#9670;&nbsp;</a></span>none_of_group() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class Predicate &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt; &gt;, bool&gt; cl::sycl::none_of_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Predicate&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00364">364</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00113">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>.</p>
+
+</div>
+</div>
+<a id="a84329ae910d90518746c3338b48137c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84329ae910d90518746c3338b48137c5">&#9670;&nbsp;</a></span>none_of_group() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt; &gt;, bool&gt; cl::sycl::none_of_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pred</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00352">352</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
 <a id="a84deb79e5c4093d160d44daa18ff1467"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84deb79e5c4093d160d44daa18ff1467">&#9670;&nbsp;</a></span>normalize() <span class="overload">[1/3]</span></h2>
 
@@ -9241,9 +10578,9 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01001">1001</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01038">1038</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00700">cl::sycl::__precision_manipulator__::precision()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00712">cl::sycl::__precision_manipulator__::precision()</a>.</p>
 
 </div>
 </div>
@@ -9281,9 +10618,9 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01007">1007</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01044">1044</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00712">cl::sycl::__width_manipulator__::width()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00724">cl::sycl::__width_manipulator__::width()</a>.</p>
 
 </div>
 </div>
@@ -9321,7 +10658,7 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00942">942</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00979">979</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9359,9 +10696,9 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00931">931</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00968">968</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00098">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00110">cl::sycl::detail::write()</a>.</p>
 
 </div>
 </div>
@@ -9399,9 +10736,9 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00925">925</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00962">962</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00098">cl::sycl::detail::write()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00110">cl::sycl::detail::write()</a>.</p>
 
 </div>
 </div>
@@ -9439,9 +10776,9 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00966">966</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01003">1003</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00739">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00741">cl::sycl::stream::get_width()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00756">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00758">cl::sycl::stream::get_width()</a>.</p>
 
 </div>
 </div>
@@ -9479,9 +10816,9 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00959">959</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00996">996</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00739">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00741">cl::sycl::stream::get_width()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00756">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00758">cl::sycl::stream::get_width()</a>.</p>
 
 </div>
 </div>
@@ -9521,7 +10858,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01084">1084</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01121">1121</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9561,7 +10898,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01092">1092</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01129">1129</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9599,9 +10936,9 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00973">973</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01010">1010</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00739">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00741">cl::sycl::stream::get_width()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00756">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00758">cl::sycl::stream::get_width()</a>.</p>
 
 </div>
 </div>
@@ -9641,7 +10978,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01045">1045</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01082">1082</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9681,7 +11018,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01060">1060</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01097">1097</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9721,7 +11058,7 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00983">983</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01020">1020</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="multi__ptr_8hpp_source.html#l00215">cl::sycl::multi_ptr&lt; ElementType, Space &gt;::get()</a>.</p>
 
@@ -9763,7 +11100,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01076">1076</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01113">1113</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9803,7 +11140,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01068">1068</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01105">1105</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9843,7 +11180,7 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01052">1052</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01089">1089</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9881,9 +11218,9 @@ template&lt;int Dimensions&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01013">1013</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01050">1050</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00680">endl</a>, <a class="el" href="stream_8hpp_source.html#l00682">flush</a>, and <a class="el" href="stream_8hpp_source.html#l00431">cl::sycl::detail::flushBuffer()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00692">endl</a>, <a class="el" href="stream_8hpp_source.html#l00694">flush</a>, and <a class="el" href="stream_8hpp_source.html#l00443">cl::sycl::detail::flushBuffer()</a>.</p>
 
 </div>
 </div>
@@ -9923,7 +11260,7 @@ template&lt;typename T , typename RT  = detail::EnableIfSwizzleVec&lt;T&gt;&gt; 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01100">1100</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01137">1137</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -9955,9 +11292,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00990">990</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01027">1027</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00036">cl::sycl::detail::BaseField</a>, <a class="el" href="stream_8hpp_source.html#l00741">cl::sycl::stream::get_width()</a>, <a class="el" href="stream_8hpp_source.html#l00026">cl::sycl::detail::Hex</a>, <a class="el" href="stream_8hpp_source.html#l00028">cl::sycl::detail::ShowBase</a>, and <a class="el" href="stream_8hpp_source.html#l00391">cl::sycl::detail::writeIntegral()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00036">cl::sycl::detail::BaseField</a>, <a class="el" href="stream_8hpp_source.html#l00758">cl::sycl::stream::get_width()</a>, <a class="el" href="stream_8hpp_source.html#l00026">cl::sycl::detail::Hex</a>, <a class="el" href="stream_8hpp_source.html#l00028">cl::sycl::detail::ShowBase</a>, and <a class="el" href="stream_8hpp_source.html#l00403">cl::sycl::detail::writeIntegral()</a>.</p>
 
 </div>
 </div>
@@ -9997,9 +11334,9 @@ template&lt;typename ValueType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00951">951</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00988">988</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00741">cl::sycl::stream::get_width()</a>, and <a class="el" href="stream_8hpp_source.html#l00391">cl::sycl::detail::writeIntegral()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00758">cl::sycl::stream::get_width()</a>, and <a class="el" href="stream_8hpp_source.html#l00403">cl::sycl::detail::writeIntegral()</a>.</p>
 
 </div>
 </div>
@@ -10031,9 +11368,9 @@ template&lt;typename T , int VectorLength&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01035">1035</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l01072">1072</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00739">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00741">cl::sycl::stream::get_width()</a>.</p>
+<p class="reference">References <a class="el" href="stream_8hpp_source.html#l00756">cl::sycl::stream::get_precision()</a>, and <a class="el" href="stream_8hpp_source.html#l00758">cl::sycl::stream::get_width()</a>.</p>
 
 </div>
 </div>
@@ -10461,6 +11798,46 @@ template&lt;typename ElementType , access::address_space Space&gt; </div>
 
 </div>
 </div>
+<a id="abb7f92cecdb0bf1b12047aa80bb1ba05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb7f92cecdb0bf1b12047aa80bb1ba05">&#9670;&nbsp;</a></span>permute_group_by_xor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt;std::decay_t&lt;Group&gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::permute_group_by_xor </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Group::linear_id_type&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00422">422</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
 <a id="a292931b7240f1338be6bdd0b4392b369"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a292931b7240f1338be6bdd0b4392b369">&#9670;&nbsp;</a></span>popcount()</h2>
 
@@ -10639,6 +12016,180 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a26fadc9657de6fa6860702f1d202c230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fadc9657de6fa6860702f1d202c230">&#9670;&nbsp;</a></span>reduce_over_group() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::reduce_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00146">146</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="group__algorithm_8hpp_source.html#l00191">reduce_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="a0de5a70b04633b4529d943fa1c6e686a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de5a70b04633b4529d943fa1c6e686a">&#9670;&nbsp;</a></span>reduce_over_group() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;V&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;V, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::reduce_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00168">168</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00191">reduce_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="ae6b3eab8f4a7ea407a686092118c7594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b3eab8f4a7ea407a686092118c7594">&#9670;&nbsp;</a></span>reduce_over_group() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename V , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;V&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html">detail::is_vector_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;V, BinaryOperation&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::reduce_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">V&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00191">191</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00260">cl::sycl::ONEAPI::__SYCL2020_DEPRECATED()</a>, <a class="el" href="group__algorithm_8hpp_source.html#l00218">joint_reduce()</a>, and <a class="el" href="group__algorithm_8hpp_source.html#l00146">reduce_over_group()</a>.</p>
+
+</div>
+</div>
+<a id="ae789c881c32c7090a7c7dc39ef8c493e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae789c881c32c7090a7c7dc39ef8c493e">&#9670;&nbsp;</a></span>reduce_over_group() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T , class BinaryOperation &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(<a class="el" href="namespacecl_1_1sycl.html#af26fad8afd7727663acc1fdafcaa1e88">is_group_v</a>&lt;std::decay_t&lt;Group&gt;&gt; &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__scalar__arithmetic.html">detail::is_scalar_arithmetic</a>&lt;T&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__native__op.html">detail::is_native_op</a>&lt;T, BinaryOperation&gt;::value), T&gt; cl::sycl::reduce_over_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BinaryOperation&#160;</td>
+          <td class="paramname"><em>binary_op</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00124">124</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>, and <a class="el" href="namespace____spv.html#a0a26bb4bd0f61f648354ecbf7e946753aec4875f03ff0bb0b26cf76ac7f41e3c8">__spv::Reduce</a>.</p>
+
+</div>
+</div>
 <a id="a247a1970a605853b6d62ab630ca2df1b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a247a1970a605853b6d62ab630ca2df1b">&#9670;&nbsp;</a></span>reduction() <span class="overload">[1/6]</span></h2>
 
@@ -10681,7 +12232,7 @@ template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </d
 
 <p>Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00045">45</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00024">24</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -10733,7 +12284,7 @@ template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </d
 
 <p>Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction identity value <code>Identity</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00103">103</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00082">82</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -10780,7 +12331,7 @@ template&lt;typename T , typename AllocatorT , typename BinaryOperation &gt; </d
 <p>Constructs a reduction object using the given buffer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
 <p>The reduction algorithm may be less efficient for this variant as the reduction identity is not known statically and it is not provided by user. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00060">60</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00039">39</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -10821,7 +12372,7 @@ template&lt;typename T , typename BinaryOperation &gt; </div>
 <p>Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
 <p>The reduction algorithm may be less efficient for this variant as the reduction identity is not known statically and it is not provided by user. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00089">89</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00068">68</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -10861,7 +12412,7 @@ template&lt;typename T , typename BinaryOperation &gt; </div>
 
 <p>Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, handler <code>CGH</code>, reduction operation <code>Combiner</code>, and optional reduction properties. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00075">75</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00054">54</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -10907,7 +12458,7 @@ template&lt;typename T , typename BinaryOperation &gt; </div>
 
 <p>Constructs a reduction object using the reduction variable referenced by the given USM pointer <code>Var</code>, reduction identity value <code>Identity</code>, binary operation <code>Combiner</code>, and optional reduction properties. </p>
 
-<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00115">115</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="reduction_8hpp_source.html#l00094">94</a> of file <a class="el" href="reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -10941,7 +12492,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00392">392</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l00473">cl::sycl::ext::intel::experimental::esimd::esimd_div()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l00474">cl::sycl::ext::intel::experimental::esimd::esimd_div()</a>.</p>
 
 </div>
 </div>
@@ -11501,6 +13052,46 @@ template&lt;typename T , typename T2 &gt; </div>
 
 </div>
 </div>
+<a id="af6291d3086422c44763b1b21e95aa4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6291d3086422c44763b1b21e95aa4b9">&#9670;&nbsp;</a></span>select_from_group()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt;std::decay_t&lt;Group&gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::select_from_group </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Group::id_type&#160;</td>
+          <td class="paramname"><em>local_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00438">438</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
 <a id="ab159dab52fc0b1871573d1ed859d5f66"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab159dab52fc0b1871573d1ed859d5f66">&#9670;&nbsp;</a></span>setprecision()</h2>
 
@@ -11525,7 +13116,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00718">718</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00730">730</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -11553,7 +13144,87 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00722">722</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00734">734</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a04dd264a23a72ba13706d972aef76a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04dd264a23a72ba13706d972aef76a9c">&#9670;&nbsp;</a></span>shift_group_left()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt;std::decay_t&lt;Group&gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::shift_group_left </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Group::linear_id_type&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00390">390</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
+
+</div>
+</div>
+<a id="a290b90e5a55e953457b0e0ddf4842a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290b90e5a55e953457b0e0ddf4842a06">&#9670;&nbsp;</a></span>shift_group_right()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Group , typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">detail::enable_if_t</a>&lt;(std::is_same&lt;std::decay_t&lt;Group&gt;, <a class="el" href="structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html">sub_group</a>&gt;::value &amp;&amp; <a class="el" href="structcl_1_1sycl_1_1detail_1_1is__arithmetic.html">detail::is_arithmetic</a>&lt;T&gt;::value), T&gt; cl::sycl::shift_group_right </td>
+          <td>(</td>
+          <td class="paramtype">Group&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename Group::linear_id_type&#160;</td>
+          <td class="paramname"><em>delta</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="group__algorithm_8hpp_source.html#l00406">406</a> of file <a class="el" href="group__algorithm_8hpp_source.html">group_algorithm.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="pi_8h_source.html#l00084">PI_INVALID_DEVICE</a>.</p>
 
 </div>
 </div>
@@ -11577,7 +13248,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l00615">615</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01668">cl::sycl::ext::intel::experimental::esimd::esimd_cos_emu()</a>, <a class="el" href="math_8hpp_source.html#l01591">cl::sycl::ext::intel::experimental::esimd::esimd_sin_emu()</a>, <a class="el" href="math_8hpp_source.html#l01744">cl::sycl::ext::intel::experimental::esimd::detail::esimd_tanh_cody_waite_impl()</a>, and <a class="el" href="math_8hpp_source.html#l01787">cl::sycl::ext::intel::experimental::esimd::detail::esimd_tanh_impl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="math_8hpp_source.html#l01670">cl::sycl::ext::intel::experimental::esimd::esimd_cos_emu()</a>, <a class="el" href="math_8hpp_source.html#l01593">cl::sycl::ext::intel::experimental::esimd::esimd_sin_emu()</a>, <a class="el" href="math_8hpp_source.html#l01746">cl::sycl::ext::intel::experimental::esimd::detail::esimd_tanh_cody_waite_impl()</a>, and <a class="el" href="math_8hpp_source.html#l01789">cl::sycl::ext::intel::experimental::esimd::detail::esimd_tanh_impl()</a>.</p>
 
 </div>
 </div>
@@ -11601,7 +13272,7 @@ template&lt;typename T , typename  = detail::enable_if_t&lt;detail::is_genfloat&
 
 <p class="definition">Definition at line <a class="el" href="builtins_8hpp_source.html#l01255">1255</a> of file <a class="el" href="builtins_8hpp_source.html">builtins.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00221">cl::sycl::detail::checkForInfNan()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l00233">cl::sycl::detail::checkForInfNan()</a>.</p>
 
 </div>
 </div>
@@ -12399,7 +14070,9 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00666">666</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00678">678</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="memory_8hpp_source.html#l00416">cl::sycl::ext::intel::experimental::esimd::detail::check_atomic()</a>.</p>
 
 </div>
 </div>
@@ -12423,7 +14096,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00690">690</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00702">702</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12447,9 +14120,9 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00680">680</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00692">692</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l01013">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l01050">operator&lt;&lt;()</a>.</p>
 
 </div>
 </div>
@@ -12473,7 +14146,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00684">684</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00696">696</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12497,9 +14170,29 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00682">682</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00694">694</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l01013">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="stream_8hpp_source.html#l01050">operator&lt;&lt;()</a>.</p>
+
+</div>
+</div>
+<a id="a0ac042070c6205d2b6368d0262decdba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ac042070c6205d2b6368d0262decdba">&#9670;&nbsp;</a></span>has_known_identity_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BinaryOperation , typename AccumulatorT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">__SYCL_INLINE_CONSTEXPR</a> bool cl::sycl::has_known_identity_v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    sycl::has_known_identity&lt;BinaryOperation, AccumulatorT&gt;::value</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="known__identity_8hpp_source.html#l00204">204</a> of file <a class="el" href="known__identity_8hpp_source.html">known_identity.hpp</a>.</p>
 
 </div>
 </div>
@@ -12523,7 +14216,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00668">668</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00680">680</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12547,7 +14240,47 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00688">688</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00700">700</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+
+</div>
+</div>
+<a id="af26fad8afd7727663acc1fdafcaa1e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26fad8afd7727663acc1fdafcaa1e88">&#9670;&nbsp;</a></span>is_group_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">__SYCL_INLINE_CONSTEXPR</a> bool cl::sycl::is_group_v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    detail::is_group&lt;T&gt;::value || detail::is_sub_group&lt;T&gt;::value</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="type__traits_8hpp_source.html#l00050">50</a> of file <a class="el" href="type__traits_8hpp_source.html">type_traits.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a05dd339c917feaa370676292b3fb5753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05dd339c917feaa370676292b3fb5753">&#9670;&nbsp;</a></span>known_identity_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename BinaryOperation , typename AccumulatorT &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defines__elementary_8hpp.html#a1a96b3da1b5f2ba568477a3c259e88ba">__SYCL_INLINE_CONSTEXPR</a> AccumulatorT cl::sycl::known_identity_v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    sycl::known_identity&lt;BinaryOperation, AccumulatorT&gt;::value</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="known__identity_8hpp_source.html#l00214">214</a> of file <a class="el" href="known__identity_8hpp_source.html">known_identity.hpp</a>.</p>
 
 </div>
 </div>
@@ -12599,7 +14332,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00672">672</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00684">684</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12623,7 +14356,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00676">676</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00688">688</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12647,7 +14380,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00670">670</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00682">682</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12671,7 +14404,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00686">686</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00698">698</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12695,7 +14428,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00674">674</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00686">686</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>
@@ -12719,7 +14452,7 @@ template&lt;typename T , typename T2 &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00678">678</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="stream_8hpp_source.html#l00690">690</a> of file <a class="el" href="stream_8hpp_source.html">stream.hpp</a>.</p>
 
 </div>
 </div>

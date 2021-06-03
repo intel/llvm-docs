@@ -9,6 +9,7 @@ var kernel__desc_8hpp =
       [ "kind_std_layout", "kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa804d646aee6ffb43decdc5ca71c12fba", null ],
       [ "kind_sampler", "kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa7fd1bdac15933981ada28fffd6c40372", null ],
       [ "kind_pointer", "kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa4978aa503ec00be00af860d6e8ba41ef", null ],
-      [ "kind_specialization_constants_buffer", "kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aac2051d9dcb0094ae11cbbfc3ae954d7c", null ]
+      [ "kind_specialization_constants_buffer", "kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aac2051d9dcb0094ae11cbbfc3ae954d7c", null ],
+      [ "kind_stream", "kernel__desc_8hpp.html#ab40cf6b53fff657f60c2ad7ded29712aa0fa347de0d5a5e2f997bba4005712055", null ]
     ] ]
 ];

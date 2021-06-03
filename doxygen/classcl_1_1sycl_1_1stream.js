@@ -8,6 +8,7 @@ var classcl_1_1sycl_1_1stream =
     [ "get_width", "classcl_1_1sycl_1_1stream.html#ae779226930b4eafeb6bb44e2f29bc225", null ],
     [ "operator!=", "classcl_1_1sycl_1_1stream.html#a290b7f527324276ea8a58949f38abddc", null ],
     [ "operator==", "classcl_1_1sycl_1_1stream.html#ae5b85f3f3c1013a2de5f27d39c0ab95a", null ],
+    [ "handler", "classcl_1_1sycl_1_1stream.html#a72db39b889f34257a4c691d6acd383ab", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#adbd172d77105e84a9b4dd3b13dd6e258", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#ac6d40636d22455d50f59c3126253912a", null ],
     [ "operator<<", "classcl_1_1sycl_1_1stream.html#a33821ce06f27f6f7acb02d3e3959ebcf", null ],

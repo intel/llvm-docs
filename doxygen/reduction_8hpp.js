@@ -1,7 +1,5 @@
 var reduction_8hpp =
 [
-    [ "has_known_identity", "structcl_1_1sycl_1_1has__known__identity.html", null ],
-    [ "known_identity", "structcl_1_1sycl_1_1known__identity.html", null ],
     [ "reduction", "reduction_8hpp.html#a247a1970a605853b6d62ab630ca2df1b", null ],
     [ "reduction", "reduction_8hpp.html#addff228a52df9412ca25b2ec66f1c239", null ],
     [ "reduction", "reduction_8hpp.html#af1c522137813712fce14bd1d76bc532b", null ],

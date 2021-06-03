@@ -174,13 +174,13 @@ $(document).ready(function(){initNavTree('kernel__program__cache_8hpp_source.htm
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">class</span> Predicate&gt;</div>
 <div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a4b5881bb2bbad24f257263634b8baa89">   95</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a4b5881bb2bbad24f257263634b8baa89">waitUntilBuilt</a>(<a class="code" href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html">BuildResult&lt;T&gt;</a> &amp;BR, Predicate Pred)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::unique_lock&lt;std::mutex&gt; Lock(BR.<a class="code" href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#aefa4a1b7eab3fd5e3ca4d90e8ce6df5b">MBuildResultMutex</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::unique_lock&lt;std::mutex&gt; Lock(BR.MBuildResultMutex);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    BR.<a class="code" href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a2e0ad5af7ca19cbbfc89887e6ca409a4">MBuildCV</a>.wait(Lock, Pred);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    BR.MBuildCV.wait(Lock, Pred);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a5e22dab6f81483221c914cfd6ca33145">  101</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a5e22dab6f81483221c914cfd6ca33145">notifyAllBuild</a>(<a class="code" href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html">BuildResult&lt;T&gt;</a> &amp;BR)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    BR.<a class="code" href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a2e0ad5af7ca19cbbfc89887e6ca409a4">MBuildCV</a>.notify_all();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    BR.MBuildCV.notify_all();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">private</span>:</div>

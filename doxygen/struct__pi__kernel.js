@@ -28,7 +28,7 @@ var struct__pi__kernel =
     [ "context_", "struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb", null ],
     [ "function_", "struct__pi__kernel.html#ae1da572535f609adc214e4f2606d7339", null ],
     [ "functionWithOffsetParam_", "struct__pi__kernel.html#a8242ec7d4f228dc10873fc7733cf596f", null ],
-    [ "MemAllocs", "struct__pi__kernel.html#a2d5c28b379aea80de5b9f6c7ea51f9d1", null ],
+    [ "MemAllocs", "struct__pi__kernel.html#a88fcd56d8c336c0fc848b94aec421640", null ],
     [ "name_", "struct__pi__kernel.html#acbe725b178f9972d7a98563a0fad2768", null ],
     [ "Program", "struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6", null ],
     [ "program_", "struct__pi__kernel.html#ada6b59129664efb94fa82cbe865ea3ba", null ],

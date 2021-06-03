@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01AccumulatorT_00_01td288a5b2463f39100fe492a48a5e99e0 =
+[
+    [ "value", "structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01AccumulatorT_00_01td288a5b2463f39100fe492a48a5e99e0.html#af925a5ab7d2a719032a40720351c4230", null ]
+];

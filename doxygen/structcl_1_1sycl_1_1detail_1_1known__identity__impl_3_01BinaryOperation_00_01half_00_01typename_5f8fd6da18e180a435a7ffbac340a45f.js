@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_01typename_5f8fd6da18e180a435a7ffbac340a45f =
+[
+    [ "value", "structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_01typename_5f8fd6da18e180a435a7ffbac340a45f.html#a103df0f0b402d195b57bc206aa00f2e0", null ]
+];

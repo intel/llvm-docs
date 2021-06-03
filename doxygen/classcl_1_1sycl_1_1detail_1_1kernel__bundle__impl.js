@@ -17,6 +17,7 @@ var classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl =
     [ "get_devices", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#aca60dced28cf4b48c3d6d15878ae6b23", null ],
     [ "get_kernel", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a88b3ec9eff14b7033556a11a082a483d", null ],
     [ "get_kernel_ids", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a4cec4a1cc1ad77e41b2cc97634a55959", null ],
+    [ "get_spec_const_map_ref", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#aad7f2d8c1360f63f468f40113cc88d24", null ],
     [ "get_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#aa3701699266fcbe36284a275e319da8e", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a0e0e1d22740caebfd0bb4e8a97f39388", null ],
     [ "has_kernel", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#ad16ad1526119d63c382ffb600569f768", null ],

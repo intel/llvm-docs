@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat60e47192ece495c25d821b13daa3e860 =
-[
-    [ "value", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01Accumulat60e47192ece495c25d821b13daa3e860.html#a6413f8148a8465e0bdfe050f2f2fc4dc", null ]
-];

@@ -1,7 +1,9 @@
 var classcl_1_1sycl_1_1detail_1_1device__image__impl =
 [
     [ "SpecConstDescT", "structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html", "structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT" ],
+    [ "SpecConstMapT", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#acb2737157d797776740277be1f2fc8d7", null ],
     [ "device_image_impl", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a6d1e50a383d1fba29618d1a53cc8b045", null ],
+    [ "device_image_impl", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a4a4a53341d5efd8ab8737350934def26", null ],
     [ "~device_image_impl", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#acf4ba89e8608cbdfa397398f94ea974c", null ],
     [ "all_specialization_constant_native", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a9f7f2abc1a75e8d624578972ed9703ae", null ],
     [ "compatible_with_device", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a49b13445a504094f4c13a5abdbf056b9", null ],
@@ -14,7 +16,7 @@ var classcl_1_1sycl_1_1detail_1_1device__image__impl =
     [ "get_spec_const_blob_ref", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a1f6af281d033f1a7e577b589bc84e9eb", null ],
     [ "get_spec_const_buffer_ref", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a3b327dd926d717f2477c92a3ed41aa66", null ],
     [ "get_spec_const_data_lock", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ac8c856ee9210344023c15c84d5bdac3d", null ],
-    [ "get_spec_const_data_ref", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ab32cc2d720eef00d42db3b01d06c97ca", null ],
+    [ "get_spec_const_data_ref", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a341acb8a8dd609ffe967c3f22f27b69c", null ],
     [ "get_specialization_constant_raw_value", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a37bc4e298c33e0459a1679d18362405f", null ],
     [ "get_state", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a06f68e9704e62109ac68d0c773989dcb", null ],
     [ "getNative", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a31225c7e57cba28d80941ca3b3f4988f", null ],

@@ -55,189 +55,189 @@ subject to change. Do not rely on these variables in production code.</p>
 </thead>
 <tbody>
 <tr>
-<td>SYCL_PI_TRACE</td>
+<td><code>SYCL_PI_TRACE</code></td>
 <td>Described <a href="#sycl_pi_trace-options">below</a></td>
 <td>Enable specified level of tracing for PI.</td>
 </tr>
 <tr>
-<td>SYCL_BE (deprecated)</td>
-<td>PI_OPENCL, PI_LEVEL_ZERO, PI_CUDA</td>
-<td>Force SYCL RT to consider only devices of the specified backend during the device selection. We are planning to deprecate SYCL_BE environment variable in the future. The specific grace period is not decided yet. Please use the new env var SYCL_DEVICE_FILTER instead.</td>
+<td><code>SYCL_BE</code> (deprecated)</td>
+<td><code>PI_OPENCL</code>, <code>PI_LEVEL_ZERO</code>, <code>PI_CUDA</code></td>
+<td>Force SYCL RT to consider only devices of the specified backend during the device selection. We are planning to deprecate <code>SYCL_BE</code> environment variable in the future. The specific grace period is not decided yet. Please use the new env var <code>SYCL_DEVICE_FILTER</code> instead.</td>
 </tr>
 <tr>
-<td>SYCL_DEVICE_TYPE (deprecated)</td>
+<td><code>SYCL_DEVICE_TYPE</code> (deprecated)</td>
 <td>CPU, GPU, ACC, HOST</td>
-<td>Force SYCL to use the specified device type. If unset, default selection rules are applied. If set to any unlisted value, this control has no effect. If the requested device type is not found, a <code>cl::sycl::runtime_error</code> exception is thrown. If a non-default device selector is used, a device must satisfy both the selector and this control to be chosen. This control only has effect on devices created with a selector. We are planning to deprecate SYCL_DEVICE_TYPE environment variable in the future. The specific grace period is not decided yet. Please use the new env var SYCL_DEVICE_FILTER instead.</td>
+<td>Force SYCL to use the specified device type. If unset, default selection rules are applied. If set to any unlisted value, this control has no effect. If the requested device type is not found, a <code>cl::sycl::runtime_error</code> exception is thrown. If a non-default device selector is used, a device must satisfy both the selector and this control to be chosen. This control only has effect on devices created with a selector. We are planning to deprecate <code>SYCL_DEVICE_TYPE</code> environment variable in the future. The specific grace period is not decided yet. Please use the new env var <code>SYCL_DEVICE_FILTER</code> instead.</td>
 </tr>
 <tr>
-<td>SYCL_DEVICE_FILTER</td>
-<td>backend:device_type:device_num</td>
-<td>See Section <a href="#sycl_device_filter">SYCL_DEVICE_FILTER</a>  below.</td>
+<td><code>SYCL_DEVICE_FILTER</code></td>
+<td><code>backend:device_type:device_num</code></td>
+<td>See Section <a href="#sycl_device_filter"><code>SYCL_DEVICE_FILTER</code></a>  below.</td>
 </tr>
 <tr>
-<td>SYCL_PROGRAM_COMPILE_OPTIONS</td>
+<td><code>SYCL_PROGRAM_COMPILE_OPTIONS</code></td>
 <td>String of valid OpenCL compile options</td>
 <td>Override compile options for all programs.</td>
 </tr>
 <tr>
-<td>SYCL_PROGRAM_LINK_OPTIONS</td>
+<td><code>SYCL_PROGRAM_LINK_OPTIONS</code></td>
 <td>String of valid OpenCL link options</td>
 <td>Override link options for all programs.</td>
 </tr>
 <tr>
-<td>SYCL_USE_KERNEL_SPV</td>
+<td><code>SYCL_USE_KERNEL_SPV</code></td>
 <td>Path to the SPIR-V binary</td>
 <td>Load device image from the specified file. If runtime is unable to read the file, <code>cl::sycl::runtime_error</code> exception is thrown.</td>
 </tr>
 <tr>
-<td>SYCL_DUMP_IMAGES</td>
+<td><code>SYCL_DUMP_IMAGES</code></td>
 <td>Any(*)</td>
-<td>Dump device image binaries to file. Control has no effect if SYCL_USE_KERNEL_SPV is set.</td>
+<td>Dump device image binaries to file. Control has no effect if <code>SYCL_USE_KERNEL_SPV</code> is set.</td>
 </tr>
 <tr>
-<td>SYCL_PRINT_EXECUTION_GRAPH</td>
+<td><code>SYCL_PRINT_EXECUTION_GRAPH</code></td>
 <td>Described <a href="#sycl_print_execution_graph-options">below</a></td>
 <td>Print execution graph to DOT text file.</td>
 </tr>
 <tr>
-<td>SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP</td>
+<td><code>SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP</code></td>
 <td>Any(*)</td>
 <td>Disable cleanup of finished command nodes at host-device synchronization points.</td>
 </tr>
 <tr>
-<td>SYCL_THROW_ON_BLOCK</td>
+<td><code>SYCL_THROW_ON_BLOCK</code></td>
 <td>Any(*)</td>
 <td>Throw an exception on attempt to wait for a blocked command.</td>
 </tr>
 <tr>
-<td>SYCL_DEVICELIB_INHIBIT_NATIVE</td>
+<td><code>SYCL_DEVICELIB_INHIBIT_NATIVE</code></td>
 <td>String of device library extensions (separated by a whitespace)</td>
 <td>Do not rely on device native support for devicelib extensions listed in this option.</td>
 </tr>
 <tr>
-<td>SYCL_DEVICE_ALLOWLIST</td>
+<td><code>SYCL_DEVICE_ALLOWLIST</code></td>
 <td>A list of devices and their driver version following the pattern: DeviceName:{{XXX}},DriverVersion:{{X.Y.Z.W}}. Also may contain PlatformName and PlatformVersion</td>
 <td>Filter out devices that do not match the pattern specified. Regular expression can be passed and the DPC++ runtime will select only those devices which satisfy the regex. Special characters, such as parenthesis, must be escaped. More than one device can be specified using the piping symbol "|".</td>
 </tr>
 <tr>
-<td>SYCL_QUEUE_THREAD_POOL_SIZE</td>
+<td><code>SYCL_QUEUE_THREAD_POOL_SIZE</code></td>
 <td>Positive integer</td>
 <td>Number of threads in thread pool of queue.</td>
 </tr>
 <tr>
-<td>SYCL_DEVICELIB_NO_FALLBACK</td>
+<td><code>SYCL_DEVICELIB_NO_FALLBACK</code></td>
 <td>Any(*)</td>
 <td>Disable loading and linking of device library images</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_MAX_COMMAND_LIST_CACHE</td>
+<td><code>SYCL_PI_LEVEL_ZERO_MAX_COMMAND_LIST_CACHE</code></td>
 <td>Positive integer</td>
 <td>Maximum number of oneAPI Level Zero Command lists that can be allocated with no reuse before throwing an "out of resources" error. Default is 20000, threshold may be increased based on resource availabilty and workload demand.</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_DISABLE_USM_ALLOCATOR</td>
+<td><code>SYCL_PI_LEVEL_ZERO_DISABLE_USM_ALLOCATOR</code></td>
 <td>Any(*)</td>
 <td>Disable USM allocator in Level Zero plugin (each memory request will go directly to Level Zero runtime)</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR</td>
+<td><code>SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR</code></td>
 <td>MaxPoolableSize,Capacity,MaxPoolSize</td>
 <td>Values specified as positive integers. Defaults are 1, 4, 256. MaxPoolableSize is the maximum allocation size in MB that may be pooled. Capacity is the number of allocations in each size range that are freed by the program but retained in the pool for reallocation. Size ranges follow this pattern: 32, 48, 64, 96, 128, 192, and so on, i.e., powers of 2, with one range in between. MaxPoolSize is the maximum size of the pool in MB.</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_BATCH_SIZE</td>
+<td><code>SYCL_PI_LEVEL_ZERO_BATCH_SIZE</code></td>
 <td>Integer</td>
 <td>Sets a preferred number of commands to batch into a command list before executing the command list. A value of 0 causes the batch size to be adjusted dynamically. A value greater than 0 specifies fixed size batching, with the batch size set to the specified value. The default is 0.</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_FILTER_EVENT_WAIT_LIST</td>
+<td><code>SYCL_PI_LEVEL_ZERO_FILTER_EVENT_WAIT_LIST</code></td>
 <td>Integer</td>
 <td>When set to 0, disables filtering of signaled events from wait lists when using the Level Zero backend. The default is 1.</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE</td>
+<td><code>SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE</code></td>
 <td>Integer</td>
 <td>Allows the use of copy engine, if available in the device, in Level Zero plugin to transfer SYCL buffer or image data between the host and/or device(s) and to fill SYCL buffer or image data in device or shared memory. The default is 1.</td>
 </tr>
 <tr>
-<td>SYCL_PI_LEVEL_ZERO_TRACK_INDIRECT_ACCESS_MEMORY</td>
+<td><code>SYCL_PI_LEVEL_ZERO_TRACK_INDIRECT_ACCESS_MEMORY</code></td>
 <td>Any(*)</td>
 <td>Enable support of the kernels with indirect access and corresponding deferred release of memory allocations in the Level Zero plugin.</td>
 </tr>
 <tr>
-<td>SYCL_PARALLEL_FOR_RANGE_ROUNDING_TRACE</td>
+<td><code>SYCL_PARALLEL_FOR_RANGE_ROUNDING_TRACE</code></td>
 <td>Any(*)</td>
-<td>Enables tracing of parallel_for invocations with rounded-up ranges.</td>
+<td>Enables tracing of <code>parallel_for</code> invocations with rounded-up ranges.</td>
 </tr>
 <tr>
-<td>SYCL_DISABLE_PARALLEL_FOR_RANGE_ROUNDING</td>
+<td><code>SYCL_DISABLE_PARALLEL_FOR_RANGE_ROUNDING</code></td>
 <td>Any(*)</td>
-<td>Disables automatic rounding-up of parallel_for invocation ranges.</td>
+<td>Disables automatic rounding-up of <code>parallel_for</code> invocation ranges.</td>
 </tr>
 <tr>
-<td>SYCL_ENABLE_PCI</td>
+<td><code>SYCL_ENABLE_PCI</code></td>
 <td>Integer</td>
 <td>When set to 1, enables obtaining the GPU PCI address when using the Level Zero backend. The default is 0.</td>
 </tr>
 <tr>
-<td>SYCL_HOST_UNIFIED_MEMORY</td>
+<td><code>SYCL_HOST_UNIFIED_MEMORY</code></td>
 <td>Integer</td>
 <td>Enforce host unified memory support or lack of it for the execution graph builder. If set to 0, it is enforced as not supported by all devices. If set to 1, it is enforced as supported by all devices.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_DIR</td>
+<td><code>SYCL_CACHE_DIR</code></td>
 <td>Path</td>
-<td>Path to persistent cache root directory. Default values are <code>%AppData%\libsycl_cache</code> for Windows and <code>$XDG_CACHE_HOME/libsycl_cache</code> on Linux, if XDG_CACHE_HOME is not set then <code>$HOME/.cache/libsycl_cache</code>.</td>
+<td>Path to persistent cache root directory. Default values are <code>%AppData%\libsycl_cache</code> for Windows and <code>$XDG_CACHE_HOME/libsycl_cache</code> on Linux, if <code>XDG_CACHE_HOME</code> is not set then <code>$HOME/.cache/libsycl_cache</code>.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_TRACE</td>
+<td><code>SYCL_CACHE_TRACE</code></td>
 <td>Any(*)</td>
 <td>If the variable is set, messages are sent to std::cerr when non-blocking failures happen (e.g. unable to access cache item file).</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_DISABLE_PERSISTENT</td>
+<td><code>SYCL_CACHE_DISABLE_PERSISTENT</code></td>
 <td>Any(*)</td>
 <td>Switches persistent cache switch off when the variable is set.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_EVICTION_DISABLE</td>
+<td><code>SYCL_CACHE_EVICTION_DISABLE</code></td>
 <td>Any(*)</td>
 <td>Switches cache eviction off when the variable is set.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_MAX_SIZE</td>
+<td><code>SYCL_CACHE_MAX_SIZE</code></td>
 <td>Positive integer</td>
 <td>Cache eviction is triggered once total size of cached images exceeds the value in megabytes (default - 8 192 for 8 GB). Set to 0 to disable size-based cache eviction.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_THRESHOLD</td>
+<td><code>SYCL_CACHE_THRESHOLD</code></td>
 <td>Positive integer</td>
 <td>Cache eviction threshold in days (default value is 7 for 1 week). Set to 0 for disabling time-based cache eviction.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</td>
+<td><code>SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</code></td>
 <td>Positive integer</td>
 <td>Minimum size of device code image in bytes which is reasonable to cache on disk because disk access operation may take more time than do JIT compilation for it. Default value is 0 to cache all images.</td>
 </tr>
 <tr>
-<td>SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</td>
+<td><code>SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</code></td>
 <td>Positive integer</td>
 <td>Maximum size of device image in bytes which is cached. Too big kernels may overload disk too fast. Default value is 1 GB.</td>
 </tr>
 </tbody>
 </table><p><code class="docutils literal notranslate"><span class="pre">(*)</span> <span class="pre">Note:</span> <span class="pre">Any</span> <span class="pre">means</span> <span class="pre">this</span> <span class="pre">environment</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">effective</span> <span class="pre">when</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">any</span> <span class="pre">non-null</span> <span class="pre">value.</span></code></p>
 <section id="sycl-device-filter">
-<h3>SYCL_DEVICE_FILTER<a class="headerlink" href="#sycl-device-filter" title="Permalink to this headline">¶</a></h3>
-<p>This environment variable limits the SYCL RT to use only a subset of the system’s devices. Setting this environment variable affects all of the device query functions (platform::get_devices() and platform::get_platforms()) and all of the device selectors.</p>
-<p>The value of this environment variable is a comma separated list of filters, where each filter is a triple of the form “backend:device_type:device_num” (without the quotes). Each element of the triple is optional, but each filter must have at least one value. Possible values of “backend” are:</p>
+<h3><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code><a class="headerlink" href="#sycl-device-filter" title="Permalink to this headline">¶</a></h3>
+<p>This environment variable limits the SYCL RT to use only a subset of the system’s devices. Setting this environment variable affects all of the device query functions (<code class="docutils literal notranslate"><span class="pre">platform::get_devices()</span></code> and <code class="docutils literal notranslate"><span class="pre">platform::get_platforms()</span></code>) and all of the device selectors.</p>
+<p>The value of this environment variable is a comma separated list of filters, where each filter is a triple of the form “<code class="docutils literal notranslate"><span class="pre">backend:device_type:device_num</span></code>” (without the quotes). Each element of the triple is optional, but each filter must have at least one value. Possible values of “backend” are:</p>
 <ul class="simple">
 <li><p>host</p></li>
-<li><p>level_zero</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level_zero</span></code></p></li>
 <li><p>opencl</p></li>
 <li><p>cuda</p></li>
 <li><p>*</p></li>
 </ul>
-<p>Possible values of “device_type” are:</p>
+<p>Possible values of “<code class="docutils literal notranslate"><span class="pre">device_type</span></code>” are:</p>
 <ul class="simple">
 <li><p>host</p></li>
 <li><p>cpu</p></li>
@@ -245,13 +245,13 @@ subject to change. Do not rely on these variables in production code.</p>
 <li><p>acc</p></li>
 <li><p>*</p></li>
 </ul>
-<p>Device_num is an integer that indexes the enumeration of devices from the sycl-ls utility tool, where the first device in that enumeration has index zero in each backend. For example, SYCL_DEVICE_FILTER=2 will return all devices with index ‘2’ from all different backends. If multiple devices satisfy this device number (e.g., GPU and CPU devices can be assigned device number ‘2’), then default_selector will choose the device with the highest heuristic point.</p>
-<p>Assuming a filter has all three elements of the triple, it selects only those devices that come from the given backend, have the specified device type, AND have the given device index. If more than one filter is specified, the RT is restricted to the union of devices selected by all filters. The RT does not include the “host” backend and the host device automatically unless one of the filters explicitly specifies the “host” device type. Therefore, SYCL_DEVICE_FILTER=host should be set to enforce SYCL to use the host device only.</p>
-<p>Note that all device selectors will throw an exception if the filtered list of devices does not include a device that satisfies the selector. For instance, SYCL_DEVICE_FILTER=cpu,level_zero will cause host_selector() to throw an exception. SYCL_DEVICE_FILTER also limits loading only specified plugins into the SYCL RT. In particular, SYCL_DEVICE_FILTER=level_zero will cause the cpu_selector to throw an exception since SYCL RT will only load the level_zero backend which does not support any CPU devices at this time. When multiple devices satisfy the filter (e..g, SYCL_DEVICE_FILTER=gpu), only one of them will be selected.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Device_num</span></code> is an integer that indexes the enumeration of devices from the sycl-ls utility tool, where the first device in that enumeration has index zero in each backend. For example, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code>=2 will return all devices with index ‘2’ from all different backends. If multiple devices satisfy this device number (e.g., GPU and CPU devices can be assigned device number ‘2’), then default_selector will choose the device with the highest heuristic point.</p>
+<p>Assuming a filter has all three elements of the triple, it selects only those devices that come from the given backend, have the specified device type, AND have the given device index. If more than one filter is specified, the RT is restricted to the union of devices selected by all filters. The RT does not include the “host” backend and the host device automatically unless one of the filters explicitly specifies the “host” device type. Therefore, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code>=host should be set to enforce SYCL to use the host device only.</p>
+<p>Note that all device selectors will throw an exception if the filtered list of devices does not include a device that satisfies the selector. For instance, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code>=cpu,level_zero will cause host_selector() to throw an exception. <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code> also limits loading only specified plugins into the SYCL RT. In particular, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code>=level_zero will cause the cpu_selector to throw an exception since SYCL RT will only load the level_zero backend which does not support any CPU devices at this time. When multiple devices satisfy the filter (e..g, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code>=gpu), only one of them will be selected.</p>
 </section>
 <section id="sycl-print-execution-graph-options">
-<h3>SYCL_PRINT_EXECUTION_GRAPH Options<a class="headerlink" href="#sycl-print-execution-graph-options" title="Permalink to this headline">¶</a></h3>
-<p>SYCL_PRINT_EXECUTION_GRAPH can accept one or more comma separated values from the table below</p>
+<h3><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code> Options<a class="headerlink" href="#sycl-print-execution-graph-options" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code> can accept one or more comma separated values from the table below</p>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -291,8 +291,8 @@ subject to change. Do not rely on these variables in production code.</p>
 </tbody>
 </table></section>
 <section id="sycl-pi-trace-options">
-<h3>SYCL_PI_TRACE Options<a class="headerlink" href="#sycl-pi-trace-options" title="Permalink to this headline">¶</a></h3>
-<p>SYCL_PI_TRACE accepts a bit-mask. Supported tracing levels are in the table below</p>
+<h3><code class="docutils literal notranslate"><span class="pre">SYCL_PI_TRACE</span></code> Options<a class="headerlink" href="#sycl-pi-trace-options" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_TRACE</span></code> accepts a bit-mask. Supported tracing levels are in the table below</p>
 <table border="1" class="docutils">
 <thead>
 <tr>

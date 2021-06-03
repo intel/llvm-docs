@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['check_5ferr_5fset_5fnull_5fret_11025',['CHECK_ERR_SET_NULL_RET',['../pi__opencl_8cpp.html#a856d2b442db17d79110cea6b01c1af40',1,'pi_opencl.cpp']]],
-  ['cl_5ftarget_5fopencl_5fversion_11026',['CL_TARGET_OPENCL_VERSION',['../cl_8h.html#a5990dea19d4ccb046a3d81b311457add',1,'cl.h']]],
-  ['config_11027',['CONFIG',['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8hpp.html#acaa9617679f6b60fc24220c53822c283',1,'CONFIG():&#160;config.hpp'],['../config_8hpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.hpp']]],
-  ['constfix_11028',['CONSTFIX',['../pi__opencl_8cpp.html#a0317452201a764521f25ac1e14d33c2c',1,'pi_opencl.cpp']]]
+  ['check_5ferr_5fset_5fnull_5fret_11088',['CHECK_ERR_SET_NULL_RET',['../pi__opencl_8cpp.html#a856d2b442db17d79110cea6b01c1af40',1,'pi_opencl.cpp']]],
+  ['cl_5ftarget_5fopencl_5fversion_11089',['CL_TARGET_OPENCL_VERSION',['../cl_8h.html#a5990dea19d4ccb046a3d81b311457add',1,'cl.h']]],
+  ['config_11090',['CONFIG',['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8hpp.html#acaa9617679f6b60fc24220c53822c283',1,'CONFIG():&#160;config.hpp'],['../config_8hpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.hpp']]],
+  ['constfix_11091',['CONSTFIX',['../pi__opencl_8cpp.html#a0317452201a764521f25ac1e14d33c2c',1,'pi_opencl.cpp']]]
 ];

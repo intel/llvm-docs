@@ -1,5 +1,10 @@
 var type__traits_8hpp =
 [
+    [ "is_group", "structcl_1_1sycl_1_1detail_1_1is__group.html", null ],
+    [ "is_group< group< Dimensions > >", "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html", null ],
+    [ "is_sub_group", "structcl_1_1sycl_1_1detail_1_1is__sub__group.html", null ],
+    [ "is_sub_group< ONEAPI::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html", null ],
+    [ "is_generic_group", "structcl_1_1sycl_1_1detail_1_1is__generic__group.html", null ],
     [ "copy_cv_qualifiers", "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers.html", "structcl_1_1sycl_1_1detail_1_1copy__cv__qualifiers" ],
     [ "vector_size_impl", "structcl_1_1sycl_1_1detail_1_1vector__size__impl.html", null ],
     [ "vector_size_impl< vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1vector__size__impl_3_01vec_3_01T_00_01N_01_4_01_4.html", null ],
@@ -59,11 +64,6 @@ var type__traits_8hpp =
     [ "make_larger_impl< T, enable_if_t< is_contained< T, gtl::scalar_unsigned_integer_list >::value, T > >", "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01e7c76f4ed80dd6f84c8d6298f7781617.html", "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_01e7c76f4ed80dd6f84c8d6298f7781617" ],
     [ "make_larger_impl< vec< T, N >, vec< T, N > >", "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01vec_3_01T_00_01N_01_4_00_01vec_3_01T_00_01N_01_4_01_4" ],
     [ "make_larger", "structcl_1_1sycl_1_1detail_1_1make__larger.html", "structcl_1_1sycl_1_1detail_1_1make__larger" ],
-    [ "is_group", "structcl_1_1sycl_1_1detail_1_1is__group.html", null ],
-    [ "is_group< group< Dimensions > >", "structcl_1_1sycl_1_1detail_1_1is__group_3_01group_3_01Dimensions_01_4_01_4.html", null ],
-    [ "is_sub_group", "structcl_1_1sycl_1_1detail_1_1is__sub__group.html", null ],
-    [ "is_sub_group< ONEAPI::sub_group >", "structcl_1_1sycl_1_1detail_1_1is__sub__group_3_01ONEAPI_1_1sub__group_01_4.html", null ],
-    [ "is_generic_group", "structcl_1_1sycl_1_1detail_1_1is__generic__group.html", null ],
     [ "change_base_type_t", "type__traits_8hpp.html#ace2a54b6c8dfc3a811fe30faa7d39d40", null ],
     [ "const_if_const_AS", "type__traits_8hpp.html#ab0f0b23dbcd157e51dca5fa5bbbc8202", null ],
     [ "copy_cv_qualifiers_t", "type__traits_8hpp.html#a1943bfb593638dfe2dca4b9dd2222067", null ],
@@ -77,5 +77,6 @@ var type__traits_8hpp =
     [ "make_unsigned_t", "type__traits_8hpp.html#a9480d1d92df8fb08b39c65719fb53dc0", null ],
     [ "remove_pointer_t", "type__traits_8hpp.html#abbfc9fbc0a39f53321df76e435720253", null ],
     [ "vector_element_impl_t", "type__traits_8hpp.html#a59890a8c4313f44261227efb2c1fac48", null ],
-    [ "vector_element_t", "type__traits_8hpp.html#a97976495720a89f459051cf6e919f96a", null ]
+    [ "vector_element_t", "type__traits_8hpp.html#a97976495720a89f459051cf6e919f96a", null ],
+    [ "is_group_v", "type__traits_8hpp.html#af26fad8afd7727663acc1fdafcaa1e88", null ]
 ];

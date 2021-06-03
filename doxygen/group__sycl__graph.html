@@ -145,8 +145,8 @@ Classes</h2></td></tr>
 <div class="line">  <span class="comment">// The copy operation reads from BufferA and writes to BufferB</span></div>
 <div class="line"> </div>
 <div class="line">  CPU_Queue.<a class="code" href="classcl_1_1sycl_1_1queue.html#a74cfc07a129881fbb0782cfc8092c150">submit</a>([&amp;](handler &amp;CGH) {</div>
-<div class="line">    <span class="keyword">auto</span> A = BufferA.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;(CGH);</div>
-<div class="line">    <span class="keyword">auto</span> B = BufferB.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#a7f8034599550834b7f1d9c514f8a088a">write</a>&gt;(CGH);</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a7409f61bd3ea6a6df60cc394c1c8b9f8a7fc56270e7a70fa81a5935b72eacbe29">A</a> = BufferA.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;(CGH);</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a7409f61bd3ea6a6df60cc394c1c8b9f8a9d5ed678fe57bcca610140957afab571">B</a> = BufferB.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#a7f8034599550834b7f1d9c514f8a088a">write</a>&gt;(CGH);</div>
 <div class="line">    CGH.copy(A, B);</div>
 <div class="line">  });</div>
 <div class="line"> </div>
@@ -156,10 +156,10 @@ Classes</h2></td></tr>
 <div class="line">  <span class="comment">// BufferC</span></div>
 <div class="line"> </div>
 <div class="line">  GPU_Queue.<a class="code" href="classcl_1_1sycl_1_1queue.html#a74cfc07a129881fbb0782cfc8092c150">submit</a>([&amp;](handler &amp;CGH) {</div>
-<div class="line">    <span class="keyword">auto</span> B = BufferB.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;(CGH);</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a7409f61bd3ea6a6df60cc394c1c8b9f8a9d5ed678fe57bcca610140957afab571">B</a> = BufferB.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">read</a>&gt;(CGH);</div>
 <div class="line">    <span class="keyword">auto</span> C = BufferC.get_access&lt;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#a7f8034599550834b7f1d9c514f8a088a">write</a>&gt;(CGH);</div>
 <div class="line">    CGH.parallel_for&lt;<span class="keyword">class </span>multi&gt;(range&lt;1&gt;{N}, [=](id&lt;1&gt; Index) {</div>
-<div class="line">      C[Index] = B[Index] * 4;</div>
+<div class="line">      C[Index] = <a class="code" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a7409f61bd3ea6a6df60cc394c1c8b9f8a9d5ed678fe57bcca610140957afab571">B</a>[Index] * 4;</div>
 <div class="line">    });</div>
 <div class="line">  });</div>
 <div class="line"> </div>
@@ -225,8 +225,10 @@ Classes</h2></td></tr>
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecl_1_1sycl_1_1access_html_a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e"><div class="ttname"><a href="namespacecl_1_1sycl_1_1access.html#a9ae8c23f772316322be407bbb6498b17aecae13117d6f0584c25a9da6c8f8415e">cl::sycl::access::mode::read</a></div><div class="ttdeci">@ read</div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1queue_html"><div class="ttname"><a href="classcl_1_1sycl_1_1queue.html">cl::sycl::queue</a></div><div class="ttdoc">Encapsulates a single SYCL queue which schedules kernels on a SYCL device.</div><div class="ttdef"><b>Definition:</b> <a href="queue_8hpp_source.html#l00082">queue.hpp:82</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a7f8034599550834b7f1d9c514f8a088a"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a7f8034599550834b7f1d9c514f8a088a">cl::sycl::detail::write</a></div><div class="ttdeci">void write(GlobalBufAccessorT &amp;GlobalFlushBuf, size_t FlushBufferSize, unsigned WIOffset, const char *Str, unsigned Len, unsigned Padding=0)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8hpp_source.html#l00098">stream.hpp:98</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a7f8034599550834b7f1d9c514f8a088a"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a7f8034599550834b7f1d9c514f8a088a">cl::sycl::detail::write</a></div><div class="ttdeci">void write(GlobalBufAccessorT &amp;GlobalFlushBuf, size_t FlushBufferSize, unsigned WIOffset, const char *Str, unsigned Len, unsigned Padding=0)</div><div class="ttdef"><b>Definition:</b> <a href="stream_8hpp_source.html#l00110">stream.hpp:110</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_html_a7409f61bd3ea6a6df60cc394c1c8b9f8a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a7409f61bd3ea6a6df60cc394c1c8b9f8a7fc56270e7a70fa81a5935b72eacbe29">cl::sycl::ext::intel::experimental::esimd::rgba_channel::A</a></div><div class="ttdeci">@ A</div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1queue_html_a74cfc07a129881fbb0782cfc8092c150"><div class="ttname"><a href="classcl_1_1sycl_1_1queue.html#a74cfc07a129881fbb0782cfc8092c150">cl::sycl::queue::submit</a></div><div class="ttdeci">event submit(T CGF _CODELOCPARAM(&amp;CodeLoc))</div><div class="ttdoc">Submits a command group function object to the queue, in order to be scheduled for execution on the d...</div><div class="ttdef"><b>Definition:</b> <a href="queue_8hpp_source.html#l00223">queue.hpp:223</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_html_a7409f61bd3ea6a6df60cc394c1c8b9f8a9d5ed678fe57bcca610140957afab571"><div class="ttname"><a href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a7409f61bd3ea6a6df60cc394c1c8b9f8a9d5ed678fe57bcca610140957afab571">cl::sycl::ext::intel::experimental::esimd::rgba_channel::B</a></div><div class="ttdeci">@ B</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
