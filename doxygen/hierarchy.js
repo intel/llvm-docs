@@ -250,7 +250,6 @@ var hierarchy =
     [ "cl::sycl::detail::DecoratedType< void, Space >", "structcl_1_1sycl_1_1detail_1_1DecoratedType.html", null ],
     [ "_pi_context::deleter_data", "struct__pi__context_1_1deleter__data.html", null ],
     [ "cl::sycl::detail::DepDesc", "structcl_1_1sycl_1_1detail_1_1DepDesc.html", null ],
-    [ "cl::sycl::detail::DevDescT", "structcl_1_1sycl_1_1detail_1_1DevDescT.html", null ],
     [ "cl::sycl::device", "classcl_1_1sycl_1_1device.html", null ],
     [ "cl::sycl::INTEL::device_arch", "classcl_1_1sycl_1_1INTEL_1_1device__arch.html", null ],
     [ "cl::sycl::device_event", "classcl_1_1sycl_1_1device__event.html", null ],

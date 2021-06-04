@@ -116,8 +116,8 @@ subject to change. Do not rely on these variables in production code.</p>
 </tr>
 <tr>
 <td><code>SYCL_DEVICE_ALLOWLIST</code></td>
-<td>A list of devices and their driver version following the pattern: DeviceName:{{XXX}},DriverVersion:{{X.Y.Z.W}}. Also may contain PlatformName and PlatformVersion</td>
-<td>Filter out devices that do not match the pattern specified. Regular expression can be passed and the DPC++ runtime will select only those devices which satisfy the regex. Special characters, such as parenthesis, must be escaped. More than one device can be specified using the piping symbol "|".</td>
+<td>A list of devices and their driver version following the pattern: <code>BackendName:XXX,DeviceType:YYY,DeviceVendorId:0xXYZW,DriverVersion:{{X.Y.Z.W}}</code>. Also may contain <code>PlatformVersion</code>, <code>DeviceName</code> and <code>PlatformName</code>. There is no fixed order of properties in the pattern.</td>
+<td>Filter out devices that do not match the pattern specified. <code>BackendName</code> accepts <code>host</code>, <code>opencl</code>, <code>level_zero</code> or <code>cuda</code>. <code>DeviceType</code> accepts <code>host</code>, <code>cpu</code>, <code>gpu</code> or <code>acc</code>. <code>DeviceVendorId</code> accepts uint32_t in hex form (<code>0xXYZW</code>). <code>DriverVersion</code>, <code>PlatformVersion</code>, <code>DeviceName</code> and <code>PlatformName</code> accept regular expression. Special characters, such as parenthesis, must be escaped. DPC++ runtime will select only those devices which satisfy provided values above and regex. More than one device can be specified using the piping symbol "|".</td>
 </tr>
 <tr>
 <td><code>SYCL_QUEUE_THREAD_POOL_SIZE</code></td>

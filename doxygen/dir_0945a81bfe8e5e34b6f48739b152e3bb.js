@@ -6,6 +6,8 @@ var dir_0945a81bfe8e5e34b6f48739b152e3bb =
     [ "scheduler", "dir_54172b97b954fcfa28e920140981ace2.html", "dir_54172b97b954fcfa28e920140981ace2" ],
     [ "usm", "dir_1c7d9a7ac3dcf401e1c0ca187e293bdc.html", "dir_1c7d9a7ac3dcf401e1c0ca187e293bdc" ],
     [ "accessor_impl.cpp", "accessor__impl_8cpp.html", "accessor__impl_8cpp" ],
+    [ "allowlist.cpp", "allowlist_8cpp.html", "allowlist_8cpp" ],
+    [ "allowlist.hpp", "allowlist_8hpp.html", "allowlist_8hpp" ],
     [ "backend_impl.hpp", "backend__impl_8hpp.html", "backend__impl_8hpp" ],
     [ "buffer_impl.cpp", "buffer__impl_8cpp.html", null ],
     [ "builtins_common.cpp", "builtins__common_8cpp.html", "builtins__common_8cpp" ],

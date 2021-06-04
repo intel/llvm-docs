@@ -605,7 +605,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  vec <span class="keyword">operator</span> BINOP(<span class="keyword">const</span> vec &amp;Rhs)<span class="keyword"> const </span>{                                   \</div>
 <div class="line">    vec Ret;                                                                   \</div>
 <div class="line">    for (<span class="keywordtype">size_t</span> I = 0; I &lt; NumElements; ++I) {                                 \</div>
-<div class="line">      Ret.setValue(I, (<a class="code" href="namespacecl_1_1sycl_1_1detail.html#af25f43d603bea1c31df2f11db0ff0905">getValue</a>(I) BINOP Rhs.getValue(I)));                    \</div>
+<div class="line">      Ret.setValue(I, (getValue(I) BINOP Rhs.getValue(I)));                    \</div>
 <div class="line">    }                                                                          \</div>
 <div class="line">    return Ret;                                                                \</div>
 <div class="line">  }                                                                            \</div>
@@ -1318,7 +1318,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  vec&lt;rel_t, NumElements&gt; <span class="keyword">operator</span> RELLOGOP(<span class="keyword">const</span> vec &amp;Rhs)<span class="keyword"> const </span>{            \</div>
 <div class="line">    vec&lt;rel_t, NumElements&gt; Ret;                                               \</div>
 <div class="line">    for (<span class="keywordtype">size_t</span> I = 0; I &lt; NumElements; ++I) {                                 \</div>
-<div class="line">      Ret.setValue(I, -(<a class="code" href="namespacecl_1_1sycl_1_1detail.html#af25f43d603bea1c31df2f11db0ff0905">getValue</a>(I) RELLOGOP Rhs.getValue(I)));                \</div>
+<div class="line">      Ret.setValue(I, -(getValue(I) RELLOGOP Rhs.getValue(I)));                \</div>
 <div class="line">    }                                                                          \</div>
 <div class="line">    return Ret;                                                                \</div>
 <div class="line">  }                                                                            \</div>
@@ -1533,7 +1533,6 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecl_1_1sycl_html_a79866bec9394124765180c6b2423f9c0"><div class="ttname"><a href="namespacecl_1_1sycl.html#a79866bec9394124765180c6b2423f9c0">cl::sycl::ulong</a></div><div class="ttdeci">unsigned long ulong</div><div class="ttdef"><b>Definition:</b> <a href="aliases_8hpp_source.html#l00079">aliases.hpp:79</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_af25f43d603bea1c31df2f11db0ff0905"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#af25f43d603bea1c31df2f11db0ff0905">cl::sycl::detail::getValue</a></div><div class="ttdeci">std::string getValue(const std::string &amp;AllowList, size_t &amp;Pos, unsigned long int Size)</div><div class="ttdef"><b>Definition:</b> <a href="platform__impl_8cpp_source.html#l00136">platform_impl.cpp:136</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a90a4b89b2210219b4dddfdd599b8d162"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a90a4b89b2210219b4dddfdd599b8d162">cl::sycl::detail::select_apply_cl_t</a></div><div class="ttdeci">conditional_t&lt; sizeof(T)==1, T8, conditional_t&lt; sizeof(T)==2, T16, conditional_t&lt; sizeof(T)==4, T32, T64 &gt; &gt;&gt; select_apply_cl_t</div><div class="ttdef"><b>Definition:</b> <a href="CL_2sycl_2types_8hpp_source.html#l02082">types.hpp:2082</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_ac666de109fc99c49823e41f88b82bddd"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#ac666de109fc99c49823e41f88b82bddd">cl::sycl::detail::conditional_t</a></div><div class="ttdeci">typename std::conditional&lt; B, T, F &gt;::type conditional_t</div><div class="ttdef"><b>Definition:</b> <a href="stl__type__traits_8hpp_source.html#l00027">stl_type_traits.hpp:27</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1half__impl_1_1half_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html">cl::sycl::detail::half_impl::half</a></div><div class="ttdef"><b>Definition:</b> <a href="half__type_8hpp_source.html#l00145">half_type.hpp:145</a></div></div>

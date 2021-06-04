@@ -11,6 +11,7 @@ var handler_8hpp =
     [ "reduction_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl" ],
     [ "AreAllButLastReductions", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1AreAllButLastReductions" ],
     [ "ShouldEnableSetArg", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg.html", "structcl_1_1sycl_1_1handler_1_1ShouldEnableSetArg" ],
+    [ "__SYCL_KERNEL_ATTR__", "handler_8hpp.html#ac31e6c02e19348fb01e1d46d48006d56", null ],
     [ "__SYCL_NONCONST_FUNCTOR__", "handler_8hpp.html#af7cb6628b45f7f1a9ba69f2843febe17", null ],
     [ "_KERNELFUNCPARAM", "handler_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1", null ],
     [ "lambda_arg_type", "handler_8hpp.html#aacf8c7510a63a5b1b0e97c3d26216ef4", null ],

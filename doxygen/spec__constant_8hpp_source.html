@@ -148,7 +148,7 @@ $(document).ready(function(){initNavTree('spec__constant_8hpp_source.html',''); 
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keyword">typename</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t&lt;std::is_arithmetic&lt;V&gt;::value</a>, V&gt;</div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">   51</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a435380342616cd1b5944ff9645ffe8b1">get</a>()<span class="keyword"> const </span>{ <span class="comment">// explicit access.</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_unique_stable_name(ID);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_sycl_unique_stable_name(ID);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> __sycl_getScalarSpecConstantValue&lt;T&gt;(TName);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> Val;</div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('spec__constant_8hpp_source.html',''); 
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                     V&gt;</div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">   64</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1ONEAPI_1_1experimental_1_1spec__constant.html#a6de4c787c2302367f7b6b5beea9413a8">get</a>()<span class="keyword"> const </span>{ <span class="comment">// explicit access.</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#ifdef __SYCL_DEVICE_ONLY__</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_unique_stable_name(ID);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *TName = __builtin_sycl_unique_stable_name(ID);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> __sycl_getCompositeSpecConstantValue&lt;T&gt;(TName);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> Val;</div>

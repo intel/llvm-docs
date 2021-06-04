@@ -71,7 +71,6 @@ var namespacecl_1_1sycl_1_1detail =
     [ "DecoratedType< ElementType, access::address_space::local_space >", "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1local__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1local__space_01_4" ],
     [ "DecoratedType< ElementType, access::address_space::private_space >", "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1private__space_01_4.html", "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1private__space_01_4" ],
     [ "DepDesc", "structcl_1_1sycl_1_1detail_1_1DepDesc.html", "structcl_1_1sycl_1_1detail_1_1DepDesc" ],
-    [ "DevDescT", "structcl_1_1sycl_1_1detail_1_1DevDescT.html", "structcl_1_1sycl_1_1detail_1_1DevDescT" ],
     [ "device_filter", "structcl_1_1sycl_1_1detail_1_1device__filter.html", "structcl_1_1sycl_1_1detail_1_1device__filter" ],
     [ "device_filter_list", "classcl_1_1sycl_1_1detail_1_1device__filter__list.html", "classcl_1_1sycl_1_1detail_1_1device__filter__list" ],
     [ "device_image_impl", "classcl_1_1sycl_1_1detail_1_1device__image__impl.html", "classcl_1_1sycl_1_1detail_1_1device__image__impl" ],

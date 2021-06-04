@@ -12,6 +12,6 @@ var cg__types_8hpp =
     [ "isKernelLambdaCallableWithKernelHandler", "cg__types_8hpp.html#a15b6fecbb05171470d5e2f66329a63d6", null ],
     [ "isKernelLambdaCallableWithKernelHandler", "cg__types_8hpp.html#ae8856af982c39af4cd702f88d4340920", null ],
     [ "isKernelLambdaCallableWithKernelHandlerImpl", "cg__types_8hpp.html#a6a414bfdce9572837294359d4993a3c9", null ],
-    [ "runKernelWithArg", "cg__types_8hpp.html#a869380b3d982bbb3991b98c525b4b2e8", null ],
-    [ "runKernelWithoutArg", "cg__types_8hpp.html#a939d7d93edee30890e3c30f5bba413db", null ]
+    [ "runKernelWithArg", "cg__types_8hpp.html#ab4b927010458d9d9036171d2eed7e318", null ],
+    [ "runKernelWithoutArg", "cg__types_8hpp.html#a5fee79cca426c2bd7dd602ea7a086674", null ]
 ];

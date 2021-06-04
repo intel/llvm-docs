@@ -15,5 +15,7 @@ var config_8hpp =
     [ "readConfig", "config_8hpp.html#abbdcbea69a36cd9ddd50332f7020c4bd", null ],
     [ "ConfigFromCompileDefEnabled", "config_8hpp.html#a36cb99fb3e385f2a9c276ff777e66c37", null ],
     [ "ConfigFromEnvEnabled", "config_8hpp.html#a245c541983ad2cf1ded65461d01a7dfb", null ],
-    [ "ConfigFromFileEnabled", "config_8hpp.html#a913f2c2f59992d8e823298d3210d408e", null ]
+    [ "ConfigFromFileEnabled", "config_8hpp.html#a913f2c2f59992d8e823298d3210d408e", null ],
+    [ "SyclBeMap", "config_8hpp.html#a89e67a0dac01769c8704c5eefde5fa17", null ],
+    [ "SyclDeviceTypeMap", "config_8hpp.html#adf60e0177d7f8cab152557507db7168f", null ]
 ];
