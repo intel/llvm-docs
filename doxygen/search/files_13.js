@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['usm_2ehpp_6677',['usm.hpp',['../usm_8hpp.html',1,'']]],
-  ['usm_5fallocator_2ecpp_6678',['usm_allocator.cpp',['../usm__allocator_8cpp.html',1,'']]],
-  ['usm_5fallocator_2ehpp_6679',['usm_allocator.hpp',['../include_2CL_2sycl_2usm_2usm__allocator_8hpp.html',1,'(Global Namespace)'],['../plugins_2level__zero_2usm__allocator_8hpp.html',1,'(Global Namespace)']]],
-  ['usm_5fenums_2ehpp_6680',['usm_enums.hpp',['../usm__enums_8hpp.html',1,'']]],
-  ['usm_5fimpl_2ecpp_6681',['usm_impl.cpp',['../usm__impl_8cpp.html',1,'']]],
-  ['usm_5fimpl_2ehpp_6682',['usm_impl.hpp',['../usm__impl_8hpp.html',1,'']]],
-  ['util_2ecpp_6683',['util.cpp',['../util_8cpp.html',1,'']]],
-  ['util_2ehpp_6684',['util.hpp',['../CL_2sycl_2detail_2util_8hpp.html',1,'(Global Namespace)'],['../sycl_2ext_2intel_2experimental_2esimd_2detail_2util_8hpp.html',1,'(Global Namespace)']]]
+  ['usm_2ehpp_6641',['usm.hpp',['../usm_8hpp.html',1,'']]],
+  ['usm_5fallocator_2ecpp_6642',['usm_allocator.cpp',['../usm__allocator_8cpp.html',1,'']]],
+  ['usm_5fallocator_2ehpp_6643',['usm_allocator.hpp',['../include_2CL_2sycl_2usm_2usm__allocator_8hpp.html',1,'(Global Namespace)'],['../plugins_2level__zero_2usm__allocator_8hpp.html',1,'(Global Namespace)']]],
+  ['usm_5fenums_2ehpp_6644',['usm_enums.hpp',['../usm__enums_8hpp.html',1,'']]],
+  ['usm_5fimpl_2ecpp_6645',['usm_impl.cpp',['../usm__impl_8cpp.html',1,'']]],
+  ['usm_5fimpl_2ehpp_6646',['usm_impl.hpp',['../usm__impl_8hpp.html',1,'']]],
+  ['util_2ecpp_6647',['util.cpp',['../util_8cpp.html',1,'']]],
+  ['util_2ehpp_6648',['util.hpp',['../CL_2sycl_2detail_2util_8hpp.html',1,'(Global Namespace)'],['../sycl_2ext_2intel_2experimental_2esimd_2detail_2util_8hpp.html',1,'(Global Namespace)']]]
 ];

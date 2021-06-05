@@ -303,10 +303,6 @@ var hierarchy =
     [ "error_category", null, [
       [ "cl::sycl::detail::SYCLCategory", "classcl_1_1sycl_1_1detail_1_1SYCLCategory.html", null ]
     ] ],
-    [ "cl::sycl::ext::intel::experimental::esimd::detail::esimd_apply_prod< T0, T1, SZ >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__prod.html", null ],
-    [ "cl::sycl::ext::intel::experimental::esimd::detail::esimd_apply_reduced_max< T0, T1, SZ >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__reduced__max.html", null ],
-    [ "cl::sycl::ext::intel::experimental::esimd::detail::esimd_apply_reduced_min< T0, T1, SZ >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__reduced__min.html", null ],
-    [ "cl::sycl::ext::intel::experimental::esimd::detail::esimd_apply_sum< T0, T1, SZ >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1esimd__apply__sum.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::esimdtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::esimdtype< char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01char_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::esimdtype< double >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01double_01_4.html", null ],
