@@ -9,5 +9,6 @@ var program__manager_8hpp =
       [ "cl_intel_devicelib_complex_fp64", "program__manager_8hpp.html#a045cbe01ad07bfc1cf04c73a8b8c6cceaa57584e225f65820e3a898dd91fbe11e", null ]
     ] ],
     [ "__sycl_register_lib", "program__manager_8hpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e", null ],
-    [ "__sycl_unregister_lib", "program__manager_8hpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d", null ]
+    [ "__sycl_unregister_lib", "program__manager_8hpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d", null ],
+    [ "ITTSpecConstId", "program__manager_8hpp.html#a1181dee564e70846564fc3205dfb8784", null ]
 ];

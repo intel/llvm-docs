@@ -1,5 +1,8 @@
 var NAVTREEINDEX33 =
 {
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1opencl_01_4.html#ac893d7f80cfd01ca824ac3681969e191":[3,0,1,1,0,155,2],
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap_3_01backend_1_1opencl_01_4.html#ad28a0733fa335f7f1734250c4ca0f34c":[3,0,1,1,0,155,6],
+"structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html":[3,0,1,1,0,199],
 "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01INTEL_1_1property_1_1buffer__loc6691d34d6c921773baaba90b0749a995.html":[3,0,1,1,0,200],
 "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__alias_1_1instance_3_4_01_4.html":[3,0,1,1,0,201],
 "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance_3_01ONEAPI_1_1property_1_1no__offset_1_1instance_3_4_01_4.html":[3,0,1,1,0,202],
@@ -246,8 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1usm__system__allocator_01_4.html#ad9dbc2f0523a505d314a754320dda212":[3,0,1,1,0,98,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html":[3,0,1,1,0,99],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01device_00_01info_1_1device_1_1parent__device_01_4.html#addb77f1714d4d62da94e8c0994f54ad3":[3,0,1,1,0,99,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01info_1_1device_1_1max__work__item__sizes_01_4.html":[3,0,1,1,0,100],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01info_1_1device_1_1max__work__item__sizes_01_4.html#a6bef3c6884ede274c1fe1c19288e58cc":[3,0,1,1,0,100,0],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01param_01_4.html":[3,0,1,1,0,101],
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01param_01_4.html#adec3c7cfb7339f1f8876028669a9e3ed":[3,0,1,1,0,101,0]
+"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01id_3_013_01_4_00_01info_1_1device_1_1max__work__item__sizes_01_4.html":[3,0,1,1,0,100]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX31 =
 {
+"struct__pi__kernel.html#a2a69000010873d5ca19eae3fadb9701a":[3,0,18,34],
+"struct__pi__kernel.html#a2db6051ffd43c1934413c272f18942b6":[3,0,18,30],
+"struct__pi__kernel.html#a2f657f90ec38c3a5ee15c33270cf0e32":[3,0,18,14],
 "struct__pi__kernel.html#a3264b1fc1896271ddb0740e36aecf6bb":[3,0,18,25],
 "struct__pi__kernel.html#a3f6403f55ad9a2f53e928f064fc40548":[3,0,18,2],
 "struct__pi__kernel.html#a4534341ef2c17ff6f11d56bc461e8e43":[3,0,18,16],
@@ -246,8 +249,5 @@ var NAVTREEINDEX31 =
 "struct__pi__ze__event__list__t.html#ac9b3b772e2b24a6c6c98f5b0175a3859":[3,0,27,6],
 "structcl_1_1____host__std_1_1detail_1_1helper.html":[3,0,1,0,0,0],
 "structcl_1_1____host__std_1_1detail_1_1helper.html#a200150106dd820b6356382592dfae4a4":[3,0,1,0,0,0,1],
-"structcl_1_1____host__std_1_1detail_1_1helper.html#a26d77c3a4389b5a8c752b7e645415c00":[3,0,1,0,0,0,9],
-"structcl_1_1____host__std_1_1detail_1_1helper.html#a428fba6de30e242312d8bd96e82382c5":[3,0,1,0,0,0,4],
-"structcl_1_1____host__std_1_1detail_1_1helper.html#a50beb1bbef372ccc42adcb442c07f1f1":[3,0,1,0,0,0,7],
-"structcl_1_1____host__std_1_1detail_1_1helper.html#a7134074f2a537886e37b037df4a93a1f":[3,0,1,0,0,0,8]
+"structcl_1_1____host__std_1_1detail_1_1helper.html#a26d77c3a4389b5a8c752b7e645415c00":[3,0,1,0,0,0,9]
 };

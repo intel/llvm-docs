@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"memory__enums_8hpp_source.html":[4,0,0,0,1,41],
 "memory__intrin_8hpp.html":[4,0,0,1,0,0,0,0,0,3],
 "memory__intrin_8hpp.html#a0285dd9a0a7d45fd42e2288774ae94b0":[4,0,0,1,0,0,0,0,0,3,37],
 "memory__intrin_8hpp.html#a03447667b5d817ba3c52a2643fbe25e7":[4,0,0,1,0,0,0,0,0,3,23],
@@ -172,20 +173,20 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1level__zero.html":[2,0,1,1,7],
 "namespacecl_1_1sycl_1_1native.html":[2,0,1,1,8],
 "namespacecl_1_1sycl_1_1opencl.html":[2,0,1,1,10],
-"namespacecl_1_1sycl_1_1property.html":[2,0,1,1,11],
 "namespacecl_1_1sycl_1_1property.html":[3,0,1,1,5],
+"namespacecl_1_1sycl_1_1property.html":[2,0,1,1,11],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[2,0,1,1,11,0],
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,1,1,5,0],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,1,1,11,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,1,1,5,1],
-"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,1,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,1,1,5,1,0],
+"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,1,1,11,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,1,1,11,2],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,1,1,5,2],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,1,1,5,3],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,1,1,11,3],
-"namespacecl_1_1sycl_1_1property_1_1reduction.html":[2,0,1,1,11,4],
 "namespacecl_1_1sycl_1_1property_1_1reduction.html":[3,0,1,1,5,4],
+"namespacecl_1_1sycl_1_1property_1_1reduction.html":[2,0,1,1,11,4],
 "namespacecl_1_1sycl_1_1usm.html":[2,0,1,1,12],
 "namespaceintelfpga.html":[2,0,2],
 "namespacemembers.html":[2,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "namespacemembers_type_g.html":[2,1,3,7],
 "namespacemembers_type_h.html":[2,1,3,8],
 "namespacemembers_type_i.html":[2,1,3,9],
-"namespacemembers_type_k.html":[2,1,3,10],
-"namespacemembers_type_l.html":[2,1,3,11]
+"namespacemembers_type_k.html":[2,1,3,10]
 };
