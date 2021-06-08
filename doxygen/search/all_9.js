@@ -100,7 +100,7 @@ var searchData=
   ['helper_3c_200_20_3e_2308',['helper&lt; 0 &gt;',['../structcl_1_1____host__std_1_1detail_1_1helper_3_010_01_4.html',1,'cl::__host_std::detail']]],
   ['helpers_2ecpp_2309',['helpers.cpp',['../helpers_8cpp.html',1,'']]],
   ['helpers_2ehpp_2310',['helpers.hpp',['../helpers_8hpp.html',1,'']]],
-  ['hex_2311',['hex',['../namespacecl_1_1sycl.html#ae28f72850af7190c5175e2e5ff1bcf0f',1,'cl::sycl::hex()'],['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370ab8d1b43eae73587ba56baef574709ecb',1,'cl::sycl::hex()'],['../namespacecl_1_1sycl_1_1detail.html#a8f0a6ff5de2e162d83a7ac0bb85f13cd',1,'cl::sycl::detail::Hex()']]],
+  ['hex_2311',['Hex',['../namespacecl_1_1sycl_1_1detail.html#a8f0a6ff5de2e162d83a7ac0bb85f13cd',1,'cl::sycl::detail::Hex()'],['../namespacecl_1_1sycl.html#ae28f72850af7190c5175e2e5ff1bcf0f',1,'cl::sycl::hex()'],['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370ab8d1b43eae73587ba56baef574709ecb',1,'cl::sycl::hex()']]],
   ['hexfloat_2312',['hexfloat',['../namespacecl_1_1sycl.html#aa26c10ce0228ce3c9a15234241ffb40a',1,'cl::sycl::hexfloat()'],['../namespacecl_1_1sycl.html#aae8e7aa729b49299771cd464d4b17370a1ee01a7f098219fbfa0d62b14ab59c4f',1,'cl::sycl::hexfloat()']]],
   ['hftype_2313',['hftype',['../structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1hftype.html',1,'cl::sycl::ext::intel::experimental::esimd::emu::detail']]],
   ['hftype_3c_20half_20_3e_2314',['hftype&lt; half &gt;',['../structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1hftype_3_01half_01_4.html',1,'cl::sycl::ext::intel::experimental::esimd::emu::detail']]],

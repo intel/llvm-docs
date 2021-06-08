@@ -1,5 +1,7 @@
 var NAVTREEINDEX36 =
 {
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__dword__type_3_01unsigned_01int_01_4.html":[3,0,1,1,1,0,1,0,1,0,39],
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__dword__type_3_01unsigned_01int_01_4.html#a1e01f99c4e292049d72b4cc63648f65a":[3,0,1,1,1,0,1,0,1,0,39,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__float__dword.html":[3,0,1,1,1,0,1,0,1,0,40],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__float__dword.html#a0cf719de627a0758a6eac38ec53bad31":[3,0,1,1,1,0,1,0,1,0,40,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__float__dword_306ef3d488f022cf79265b0efafde6e01.html":[3,0,1,1,1,0,1,0,1,0,42],
@@ -247,7 +249,5 @@ var NAVTREEINDEX36 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un82c5a1724c7e665368fb63bb4dff5730.html#ac8c26ec7fca5279c2d7ecce6509e3d08":[3,0,1,1,1,0,1,0,1,0,183,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un84cbe9227fd14f02bf08b5903822db51.html":[3,0,1,1,1,0,1,0,1,0,172],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un84cbe9227fd14f02bf08b5903822db51.html#a4b0d9a632a339c1e59e519411aa2982d":[3,0,1,1,1,0,1,0,1,0,172,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un88056ddddc88caddde7da1af20a64d71.html":[3,0,1,1,1,0,1,0,1,0,179],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un88056ddddc88caddde7da1af20a64d71.html#a80a613f04901d5ca199a4a290193d12a":[3,0,1,1,1,0,1,0,1,0,179,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un89b286956c80e6174509de6acf31bea4.html":[3,0,1,1,1,0,1,0,1,0,192]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01un88056ddddc88caddde7da1af20a64d71.html":[3,0,1,1,1,0,1,0,1,0,179]
 };

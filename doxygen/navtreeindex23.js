@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"memory__enums_8hpp.html":[4,0,0,0,1,41],
 "memory__enums_8hpp_source.html":[4,0,0,0,1,41],
 "memory__intrin_8hpp.html":[4,0,0,1,0,0,0,0,0,3],
 "memory__intrin_8hpp.html#a0285dd9a0a7d45fd42e2288774ae94b0":[4,0,0,1,0,0,0,0,0,3,37],
@@ -179,10 +180,10 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1property_1_1buffer.html":[3,0,1,1,5,0],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[2,0,1,1,11,1],
 "namespacecl_1_1sycl_1_1property_1_1context.html":[3,0,1,1,5,1],
-"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,1,1,5,1,0],
 "namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[2,0,1,1,11,1,0],
-"namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,1,1,11,2],
+"namespacecl_1_1sycl_1_1property_1_1context_1_1cuda.html":[3,0,1,1,5,1,0],
 "namespacecl_1_1sycl_1_1property_1_1image.html":[3,0,1,1,5,2],
+"namespacecl_1_1sycl_1_1property_1_1image.html":[2,0,1,1,11,2],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[3,0,1,1,5,3],
 "namespacecl_1_1sycl_1_1property_1_1queue.html":[2,0,1,1,11,3],
 "namespacecl_1_1sycl_1_1property_1_1reduction.html":[3,0,1,1,5,4],
@@ -199,8 +200,8 @@ var NAVTREEINDEX23 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,6],
-"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func.html":[2,1,1,0],
+"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "namespacemembers_type_f.html":[2,1,3,6],
 "namespacemembers_type_g.html":[2,1,3,7],
 "namespacemembers_type_h.html":[2,1,3,8],
-"namespacemembers_type_i.html":[2,1,3,9],
-"namespacemembers_type_k.html":[2,1,3,10]
+"namespacemembers_type_i.html":[2,1,3,9]
 };

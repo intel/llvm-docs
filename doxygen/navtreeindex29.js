@@ -1,5 +1,7 @@
 var NAVTREEINDEX29 =
 {
+"queue_8hpp.html#ad45daf4b7f11d72fd70ca81b5cd7d6e1":[4,0,0,0,1,51,5],
+"queue_8hpp.html#af26913b7095fdf2aa00d51f4e1b5bdf7":[4,0,0,0,1,51,3],
 "queue_8hpp.html#afab26b4f4fa243545595d306afb2a387":[4,0,0,0,1,51,2],
 "queue_8hpp_source.html":[4,0,0,0,1,51],
 "queue__impl_8cpp.html":[4,0,2,1,64],
@@ -247,7 +249,5 @@ var NAVTREEINDEX29 =
 "stream_8hpp.html#aa35a4ac43c3ed912eca2569db245c287":[4,0,0,0,1,57,35],
 "stream_8hpp.html#aaa3a49394478709dbf228f22e9739446":[4,0,0,0,1,57,40],
 "stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370":[4,0,0,0,1,57,12],
-"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370a0facc1862d43dc9dab11fa6b9995e0bd":[4,0,0,0,1,57,12,4],
-"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370a1cdbdf89f2d1bd3dd9e698b2b320cb86":[4,0,0,0,1,57,12,2],
-"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370a1ee01a7f098219fbfa0d62b14ab59c4f":[4,0,0,0,1,57,12,11]
+"stream_8hpp.html#aae8e7aa729b49299771cd464d4b17370a0facc1862d43dc9dab11fa6b9995e0bd":[4,0,0,0,1,57,12,4]
 };

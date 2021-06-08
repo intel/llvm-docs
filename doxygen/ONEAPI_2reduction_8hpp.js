@@ -21,6 +21,8 @@ var ONEAPI_2reduction_8hpp =
     [ "FilterElement", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement" ],
     [ "has_known_identity", "structcl_1_1sycl_1_1ONEAPI_1_1has__known__identity.html", null ],
     [ "known_identity", "structcl_1_1sycl_1_1ONEAPI_1_1known__identity.html", null ],
+    [ "IsReduOptForFastAtomicFetch", "ONEAPI_2reduction_8hpp.html#ad6c75fab0e05a06a66f0d5e134623b51", null ],
+    [ "IsReduOptForFastReduce", "ONEAPI_2reduction_8hpp.html#a9a43e4e6e3f550bbe54abe4e66cee428", null ],
     [ "ReduTupleT", "ONEAPI_2reduction_8hpp.html#af59ae3ff54e01972018f16eaf3f7a66d", null ],
     [ "associateReduAccsWithHandler", "ONEAPI_2reduction_8hpp.html#a35b299e83b6d33c777f34a9af646047d", null ],
     [ "associateReduAccsWithHandlerHelper", "ONEAPI_2reduction_8hpp.html#acbf27bbe2b103569051bfdc6eb6bcacd", null ],

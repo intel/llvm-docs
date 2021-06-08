@@ -1,5 +1,7 @@
 var NAVTREEINDEX5 =
 {
+"classSlab.html#aa91df3292b1c5cfcf3ed297710ab89d5":[3,0,39,0],
+"classSlab.html#ab4c732be9fe460c8c1749118275049e1":[3,0,39,14],
 "classSlab.html#ac8371f66a51619f1d9efddbd4170931d":[3,0,39,10],
 "classSlab.html#ac94f4f90afc3140b8aa60e1f5f18b628":[3,0,39,6],
 "classSlab.html#ad69641b2962a85682a314b5e1190bb50":[3,0,39,4],
@@ -240,14 +242,12 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#a2b302319558c8a2b7a4b1b99bfcc12f3":[3,0,1,1,4,0,14,0],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#aa7935d01fbfe08219c29900728b597d4":[3,0,1,1,4,0,14,2],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html":[3,0,1,1,4,0,23],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a0a8e6e02fece4c1a2ed9696a6574ac7f":[3,0,1,1,4,0,23,8],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a2b08040403719806382f7bf4eccc2ceb":[3,0,1,1,4,0,23,4],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a31a4e06d060020a73091db5ff8d96b31":[3,0,1,1,4,0,23,9],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a3dce2f77c9f68e38afcfa04045cfba62":[3,0,1,1,4,0,23,6],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a47f777eca6680f76f8dc50a1965e9c83":[3,0,1,1,4,0,23,3],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a6c6a3f1ff756cec329dc37b0f9f59b47":[3,0,1,1,4,0,23,5],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a176f6f1c2958e8d5f9b045a16da1da7f":[3,0,1,1,4,0,23,3],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a18d7de0a3b609965e368e29df46fe226":[3,0,1,1,4,0,23,7],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a29524c35988d5b7ee7ba5e68326006e1":[3,0,1,1,4,0,23,4],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a551a33481a60fc55529f860eaf3448fb":[3,0,1,1,4,0,23,6],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a7316ec02f6b9e1848ca6117bcff74d37":[3,0,1,1,4,0,23,5],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a757195a760f4329658632aea3dd1b9e1":[3,0,1,1,4,0,23,10],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a817d285c251028c503aa721dea81cc77":[3,0,1,1,4,0,23,2],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a8776a230ca9ddade0d2809cecb434e01":[3,0,1,1,4,0,23,1],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a9f40bad3caf364ef75dbc73631fc8a51":[3,0,1,1,4,0,23,7]
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a8776a230ca9ddade0d2809cecb434e01":[3,0,1,1,4,0,23,1]
 };
