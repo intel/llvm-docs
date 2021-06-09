@@ -1,5 +1,12 @@
 var NAVTREEINDEX8 =
 {
+"classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a2b490f62685eb7600e1f4c96b361392d":[1,3,0,1,1],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a15614136b85646185200079463c1aa09a94c1955a907871ccb4f9d0fef9b39e3e":[1,3,0,1,0],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a22443cd1de2eae28df2621a52c9efc53":[1,3,0,4],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a24a79100299762eaca79ce4505e9a23a":[1,3,0,30],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a2565f65d0229d9e933eb24d7cef51c80":[1,3,0,14],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a2769f387656b1726eea5a4a965c287e3":[1,3,0,39],
+"classcl_1_1sycl_1_1detail_1_1Command.html#a2db3d5cd729dd0c46b59c0e2d3e81475":[1,3,0,9],
 "classcl_1_1sycl_1_1detail_1_1Command.html#a3062fbf66b0f3597c5ac6890de973604":[1,3,0,47],
 "classcl_1_1sycl_1_1detail_1_1Command.html#a37bddda2e1f11135708d5e29fb3b331d":[1,3,0,20],
 "classcl_1_1sycl_1_1detail_1_1Command.html#a39ba002b9932a2a5c25c50290222fcef":[1,3,0,38],
@@ -242,12 +249,5 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a71d6b81364aa47331f0b1275e7d11b8c":[3,0,1,1,0,273,11],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a79c00febe36c20eaeff46f5e98663ac3":[3,0,1,1,0,273,5],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a87b932b945d98de3e4d3ab787ec5752e":[3,0,1,1,0,273,2],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8d7a472dc0c2bbfa9dd666dc47a9ad0b":[3,0,1,1,0,273,13],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c":[3,0,1,1,0,273,17],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a901e1d901cff7aff07bf9795bd48f9b7":[3,0,1,1,0,273,3],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ab9ff512130fc0fa1a38cb168eb1a0386":[3,0,1,1,0,273,14],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac311b1b640b53526e5f6a964ac52eba9":[3,0,1,1,0,273,0],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac885d004ad801e0fb49150227b5831ab":[3,0,1,1,0,273,10],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#acdc14d8315ab61332c5de245bfa76f7c":[3,0,1,1,0,273,15],
-"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad5d4586c47b2a546300e0e02a2c2fafe":[3,0,1,1,0,273,4]
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8d7a472dc0c2bbfa9dd666dc47a9ad0b":[3,0,1,1,0,273,13]
 };

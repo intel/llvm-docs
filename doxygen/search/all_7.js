@@ -111,7 +111,7 @@ var searchData=
   ['function_5fname_1644',['function_name',['../namespacecl_1_1sycl_1_1info.html#a14e4029ac742fc0239c4129e0c603e4aae82f83ed7c80ba9065e07ee379ce7a56',1,'cl::sycl::info']]],
   ['function_5fpointer_2ecpp_1645',['function_pointer.cpp',['../function__pointer_8cpp.html',1,'']]],
   ['function_5fpointer_2ehpp_1646',['function_pointer.hpp',['../function__pointer_8hpp.html',1,'']]],
-  ['functional_2ehpp_1647',['functional.hpp',['../functional_8hpp.html',1,'']]],
+  ['functional_2ehpp_1647',['functional.hpp',['../functional_8hpp.html',1,'(Global Namespace)'],['../ONEAPI_2functional_8hpp.html',1,'(Global Namespace)']]],
   ['functionname_1648',['functionName',['../structcl_1_1sycl_1_1detail_1_1code__location.html#a5a98b9fd2185bd433e572af3108cc72c',1,'cl::sycl::detail::code_location']]],
   ['functionpointers_1649',['FunctionPointers',['../struct__pi__plugin_1_1FunctionPointers.html',1,'_pi_plugin']]],
   ['functionwithoffsetparam_5f_1650',['functionWithOffsetParam_',['../struct__pi__kernel.html#a8242ec7d4f228dc10873fc7733cf596f',1,'_pi_kernel']]],

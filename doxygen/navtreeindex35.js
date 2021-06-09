@@ -1,5 +1,12 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1detail_1_1tuple__element_3_01N_00_01tuple_3_01T_00_01Rest_8_8_8_01_4_01_4.html":[3,0,1,1,0,352],
+"structcl_1_1sycl_1_1detail_1_1type__list.html":[3,0,1,1,0,356],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html":[3,0,1,1,0,357],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html#a40bd694f83a91e0fac7b4e3f96595a2a":[3,0,1,1,0,357,1],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01H_00_01T_8_8_8_01_4.html#afda780593d2e45d62f7c5405936f1c36":[3,0,1,1,0,357,0],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html":[3,0,1,1,0,358],
+"structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html#a96301d4f14bcc0619c58bacdc2858ad4":[3,0,1,1,0,358,0],
 "structcl_1_1sycl_1_1detail_1_1type__list_3_01type__list_3_01H_00_01T_8_8_8_01_4_00_01T2_8_8_8_01_4.html#ab28202dcd4bae59f21ef0aa4ec522e0f":[3,0,1,1,0,358,1],
 "structcl_1_1sycl_1_1detail_1_1type__list_3_4.html":[3,0,1,1,0,359],
 "structcl_1_1sycl_1_1detail_1_1value__list.html":[3,0,1,1,0,362],
@@ -242,12 +249,5 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__byte__type_3_01char_01_4.html#a77a19df9fbecee8ec8c608f5b169f0b1":[3,0,1,1,1,0,1,0,1,0,33,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__byte__type_3_01unsigned_01char_01_4.html":[3,0,1,1,1,0,1,0,1,0,34],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__byte__type_3_01unsigned_01char_01_4.html#a8a0afd232fc97117258644f8c7eafdb6":[3,0,1,1,1,0,1,0,1,0,34,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__df__type.html":[3,0,1,1,1,0,1,0,1,0,35],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__df__type.html#ac8ae49c1579a93141f7f895f12516770":[3,0,1,1,1,0,1,0,1,0,35,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__df__type_3_01double_01_4.html":[3,0,1,1,1,0,1,0,1,0,36],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__df__type_3_01double_01_4.html#a742ae5112b5436f876e7b7c06aa2c25f":[3,0,1,1,1,0,1,0,1,0,36,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__dword__type.html":[3,0,1,1,1,0,1,0,1,0,37],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__dword__type.html#af1c108c352f7eccd52949df094836631":[3,0,1,1,1,0,1,0,1,0,37,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__dword__type_3_01int_01_4.html":[3,0,1,1,1,0,1,0,1,0,38],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__dword__type_3_01int_01_4.html#aed5ca2e4bf4cf287a22044822afaf3a5":[3,0,1,1,1,0,1,0,1,0,38,0]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__df__type.html":[3,0,1,1,1,0,1,0,1,0,35]
 };

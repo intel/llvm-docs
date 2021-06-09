@@ -20,7 +20,7 @@ var searchData=
   ['native_5flog_3336',['native_log',['../namespacecl_1_1____host__std.html#ac3a754c6892558a1876594ee2d20c852',1,'cl::__host_std']]],
   ['native_5flog10_3337',['native_log10',['../namespacecl_1_1____host__std.html#a4a993c860971b9d9164e0b1c81c26e96',1,'cl::__host_std']]],
   ['native_5flog2_3338',['native_log2',['../namespacecl_1_1____host__std.html#a3bc72556526cdf22ed2d2b74003038d2',1,'cl::__host_std']]],
-  ['native_5fop_5flist_3339',['native_op_list',['../namespacecl_1_1sycl_1_1detail.html#a7350e3db6459334619d1c17d9e105618',1,'cl::sycl::detail']]],
+  ['native_5fop_5flist_3339',['native_op_list',['../namespacecl_1_1sycl_1_1detail.html#a8b3dec367470477a46dc3a6a9c14f65d',1,'cl::sycl::detail']]],
   ['native_5fpowr_3340',['native_powr',['../namespacecl_1_1____host__std.html#ace59f67866a5259e8150671b46c5e37b',1,'cl::__host_std']]],
   ['native_5frecip_3341',['native_recip',['../namespacecl_1_1____host__std.html#a886fa1480af998c6d819a6c7b81d4e6a',1,'cl::__host_std']]],
   ['native_5frsqrt_3342',['native_rsqrt',['../namespacecl_1_1____host__std.html#ae0bc75af8a9709ac33c6b58cff1e23fa',1,'cl::__host_std']]],

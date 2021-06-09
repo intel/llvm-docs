@@ -1,7 +1,7 @@
 var group__algorithm_8hpp =
 [
     [ "is_native_op", "structcl_1_1sycl_1_1detail_1_1is__native__op.html", "structcl_1_1sycl_1_1detail_1_1is__native__op" ],
-    [ "native_op_list", "group__algorithm_8hpp.html#a7350e3db6459334619d1c17d9e105618", null ],
+    [ "native_op_list", "group__algorithm_8hpp.html#a8b3dec367470477a46dc3a6a9c14f65d", null ],
     [ "all_of_group", "group__algorithm_8hpp.html#a8fe1dd2e3a2becee53caca8cc96edca7", null ],
     [ "all_of_group", "group__algorithm_8hpp.html#a4e1c37afeda3eec8e51bd83c875f3773", null ],
     [ "any_of_group", "group__algorithm_8hpp.html#ae5ba0b4adef78c29977738694528005e", null ],

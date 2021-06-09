@@ -1,5 +1,12 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a32d4f75d907820b10e4d08a77d37a2e8":[3,0,1,1,0,75,13],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a33e33b5cfd5845e208d9f374fdcf40b7":[3,0,1,1,0,75,4],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a3458975bac5112442878b542b2a49580":[3,0,1,1,0,75,8],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a53017098724e542f77cfb9f944e371da":[3,0,1,1,0,75,16],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a5a57013e0531de63ee371d9cb0109c96":[3,0,1,1,0,75,18],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a6c55daa20173cc499816d1e8a8ecde51":[3,0,1,1,0,75,2],
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a76f074fc772509a9af5ac1633755910e":[3,0,1,1,0,75,19],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a885f0f936d6f29b2d16e95997150ad5b":[3,0,1,1,0,75,6],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a8d64b7c3282642aaacb8ca430951d7d9":[3,0,1,1,0,75,23],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#aa2f102081281dc600fa44760e21b9333":[3,0,1,1,0,75,21],
@@ -242,12 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1detail_1_1platform__impl.html":[3,0,1,1,0,285],
 "classcl_1_1sycl_1_1detail_1_1platform__impl.html#a01d63dfbd084aeb801b813cf6d81e28d":[3,0,1,1,0,285,9],
 "classcl_1_1sycl_1_1detail_1_1platform__impl.html#a05013f21c92fa1ab7ed4da655a6bb18b":[3,0,1,1,0,285,8],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a07f84f399ecc3955126c78f38794ad4c":[3,0,1,1,0,285,15],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a1408dc7e20f70a17439da81dd97d2912":[3,0,1,1,0,285,14],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a1877b45bb080124ac276bea8f6e9b509":[3,0,1,1,0,285,17],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a368e4f63bd4b21f42bac72739f48fa3f":[3,0,1,1,0,285,7],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a485a32b30891b481b584f7069b7a9494":[3,0,1,1,0,285,2],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a9305c6cda4e3e47dced1a3f7257e6a3c":[3,0,1,1,0,285,10],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a96264223ce64e7944d824070f911e850":[3,0,1,1,0,285,3],
-"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a9acab9537730b0d911fb74e58893b56b":[3,0,1,1,0,285,12]
+"classcl_1_1sycl_1_1detail_1_1platform__impl.html#a07f84f399ecc3955126c78f38794ad4c":[3,0,1,1,0,285,15]
 };

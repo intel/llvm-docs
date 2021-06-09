@@ -1,5 +1,12 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a18d7de0a3b609965e368e29df46fe226":[3,0,1,1,4,0,23,7],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a29524c35988d5b7ee7ba5e68326006e1":[3,0,1,1,4,0,23,4],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a551a33481a60fc55529f860eaf3448fb":[3,0,1,1,4,0,23,6],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a7316ec02f6b9e1848ca6117bcff74d37":[3,0,1,1,4,0,23,5],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a757195a760f4329658632aea3dd1b9e1":[3,0,1,1,4,0,23,10],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a817d285c251028c503aa721dea81cc77":[3,0,1,1,4,0,23,2],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a8776a230ca9ddade0d2809cecb434e01":[3,0,1,1,4,0,23,1],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#a8fd6e598e59992eab53cbd8054e8acad":[3,0,1,1,4,0,23,9],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#aaa76ac16c58e044c6d529aff6f696054":[3,0,1,1,4,0,23,0],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html#af8d0aa65f89545a0f3ec90c232c5315b":[3,0,1,1,4,0,23,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1buffer.html#ab24da87b01f47246722a17ae9ee59ab7":[1,2,2,21],
 "classcl_1_1sycl_1_1buffer.html#ab2f12b7d3cba8f1167c23e2170ef42d7":[1,2,2,4],
 "classcl_1_1sycl_1_1buffer.html#ab321060ae1f7bc97cde292104c9050e5":[1,2,2,31],
-"classcl_1_1sycl_1_1buffer.html#ab99a2e580bba0240a50b1ba2036ff3c3":[1,2,2,14],
-"classcl_1_1sycl_1_1buffer.html#ab9d7be5a3f3912edf44b0b3eace7d0f2":[1,2,2,32],
-"classcl_1_1sycl_1_1buffer.html#abb9def451f44cef9dbaefcd22b7f1785":[1,2,2,3],
-"classcl_1_1sycl_1_1buffer.html#abf93ae833787577417d9a62f51aa00e1":[1,2,2,22],
-"classcl_1_1sycl_1_1buffer.html#ac42933058e0bf83a9543efb948ad2a6f":[1,2,2,8],
-"classcl_1_1sycl_1_1buffer.html#acc4722fbe7c50be252dbaaed9598c5ef":[1,2,2,7],
-"classcl_1_1sycl_1_1buffer.html#adb685bb8c5b09bea1716c40f94dc8359":[1,2,2,1],
-"classcl_1_1sycl_1_1buffer.html#adc5a30ad32871519046d44b2700c5eb8":[1,2,2,26]
+"classcl_1_1sycl_1_1buffer.html#ab99a2e580bba0240a50b1ba2036ff3c3":[1,2,2,14]
 };

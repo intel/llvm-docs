@@ -12,6 +12,6 @@ var searchData=
   ['mask_5ftype_5ft_9629',['mask_type_t',['../namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ae015d2edc392972a96137510a2f4865f',1,'cl::sycl::ext::intel::experimental::esimd']]],
   ['memory_5forder_9630',['memory_order',['../namespacecl_1_1sycl_1_1detail.html#a88dc0675485acc0898b7343c6dcfac40',1,'cl::sycl::detail::memory_order()'],['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a1a0b89e6ffb7fc6a307bdc018068ba19',1,'cl::sycl::ONEAPI::detail::memory_order()']]],
   ['memory_5fscope_9631',['memory_scope',['../namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ac47a526c807969b732257722c2a0d7ee',1,'cl::sycl::ONEAPI::detail']]],
-  ['multiplies_9632',['multiplies',['../namespacecl_1_1sycl_1_1ONEAPI.html#a5e9f6f03ea1b557e8753af9b5de73169',1,'cl::sycl::ONEAPI']]],
+  ['multiplies_9632',['multiplies',['../namespacecl_1_1sycl.html#ad3d5891b65b169af3488e27fa27e957f',1,'cl::sycl::multiplies()'],['../namespacecl_1_1sycl_1_1ONEAPI.html#a5e9f6f03ea1b557e8753af9b5de73169',1,'cl::sycl::ONEAPI::multiplies()']]],
   ['mutex_5fclass_9633',['mutex_class',['../namespacecl_1_1sycl.html#a0e818f1ac2ba5084b08dd41ca813ef28',1,'cl::sycl']]]
 ];

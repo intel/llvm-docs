@@ -1,5 +1,12 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html":[1,3,3],
+"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#abc64ef089b1890c00829c77f7c160844":[1,3,3,0],
+"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#ac4e39d54dad155d40da84aa2b23e43b8":[1,3,3,1],
+"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#aeb744c383493e594979353fe434ba2c3":[1,3,3,2],
+"classcl_1_1sycl_1_1detail_1_1SpinLock.html":[3,0,1,1,0,317],
+"classcl_1_1sycl_1_1detail_1_1SpinLock.html#a6404992f75bb14e487d525f802c66f4a":[3,0,1,1,0,317,0],
+"classcl_1_1sycl_1_1detail_1_1SpinLock.html#ae22e929c8dd5617b76b343c66d3b11e5":[3,0,1,1,0,317,1],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html":[3,0,1,1,0,319],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a011bd94e70fc93b1165a7fead0e046b4":[3,0,1,1,0,319,45],
 "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a0512742844e2483eb980948aae970c32":[3,0,1,1,0,319,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a18ebd6bde4817f75e083e7452ccc138b":[3,0,1,1,0,75,12],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a215b7734e770b7ff84d07ee2051c7f57":[3,0,1,1,0,75,1],
 "classcl_1_1sycl_1_1detail_1_1device__impl.html#a2850b3b56d3b31d984a79eb71176a2b4":[3,0,1,1,0,75,11],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a29769d01ad3552cbd7a36a7e338e8362":[3,0,1,1,0,75,3],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a32d4f75d907820b10e4d08a77d37a2e8":[3,0,1,1,0,75,13],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a33e33b5cfd5845e208d9f374fdcf40b7":[3,0,1,1,0,75,4],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a3458975bac5112442878b542b2a49580":[3,0,1,1,0,75,8],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a53017098724e542f77cfb9f944e371da":[3,0,1,1,0,75,16],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a5a57013e0531de63ee371d9cb0109c96":[3,0,1,1,0,75,18],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a6c55daa20173cc499816d1e8a8ecde51":[3,0,1,1,0,75,2],
-"classcl_1_1sycl_1_1detail_1_1device__impl.html#a76f074fc772509a9af5ac1633755910e":[3,0,1,1,0,75,19]
+"classcl_1_1sycl_1_1detail_1_1device__impl.html#a29769d01ad3552cbd7a36a7e338e8362":[3,0,1,1,0,75,3]
 };

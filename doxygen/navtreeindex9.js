@@ -1,5 +1,12 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8e825112f1e0e08b4b2f9d2d7dc2f28c":[3,0,1,1,0,273,17],
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a901e1d901cff7aff07bf9795bd48f9b7":[3,0,1,1,0,273,3],
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ab9ff512130fc0fa1a38cb168eb1a0386":[3,0,1,1,0,273,14],
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac311b1b640b53526e5f6a964ac52eba9":[3,0,1,1,0,273,0],
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac885d004ad801e0fb49150227b5831ab":[3,0,1,1,0,273,10],
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#acdc14d8315ab61332c5de245bfa76f7c":[3,0,1,1,0,273,15],
+"classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad5d4586c47b2a546300e0e02a2c2fafe":[3,0,1,1,0,273,4],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad5ed0f3b3b5dc655eede7fff9c5c0833":[3,0,1,1,0,273,6],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ad82016f75f13b645c868986261b1a6da":[3,0,1,1,0,273,18],
 "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#add4c87c0f8a7652755eb435a79c4e35d":[3,0,1,1,0,273,8],
@@ -242,12 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#af26d002e0051ce81139b619ff47f996e":[1,3,2,8],
 "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afa56d71db0c9239e57ea83ac5236b123":[1,3,2,16],
 "classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afcc5af244cd15911f043246fbb37230a":[1,3,2,9],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afe96f230f3acb23a552c51869726851a":[1,3,2,11],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html":[1,3,3],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#abc64ef089b1890c00829c77f7c160844":[1,3,3,0],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#ac4e39d54dad155d40da84aa2b23e43b8":[1,3,3,1],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#aeb744c383493e594979353fe434ba2c3":[1,3,3,2],
-"classcl_1_1sycl_1_1detail_1_1SpinLock.html":[3,0,1,1,0,317],
-"classcl_1_1sycl_1_1detail_1_1SpinLock.html#a6404992f75bb14e487d525f802c66f4a":[3,0,1,1,0,317,0],
-"classcl_1_1sycl_1_1detail_1_1SpinLock.html#ae22e929c8dd5617b76b343c66d3b11e5":[3,0,1,1,0,317,1]
+"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#afe96f230f3acb23a552c51869726851a":[1,3,2,11]
 };

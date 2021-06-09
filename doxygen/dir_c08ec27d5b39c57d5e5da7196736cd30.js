@@ -18,7 +18,7 @@ var dir_c08ec27d5b39c57d5e5da7196736cd30 =
       [ "filter_selector", "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector.html", "classcl_1_1sycl_1_1ONEAPI_1_1filter__selector" ]
     ] ],
     [ "function_pointer.hpp", "function__pointer_8hpp.html", "function__pointer_8hpp" ],
-    [ "functional.hpp", "functional_8hpp.html", "functional_8hpp" ],
+    [ "functional.hpp", "ONEAPI_2functional_8hpp.html", "ONEAPI_2functional_8hpp" ],
     [ "group_algorithm.hpp", "ONEAPI_2group__algorithm_8hpp.html", "ONEAPI_2group__algorithm_8hpp" ],
     [ "reduction.hpp", "ONEAPI_2reduction_8hpp.html", "ONEAPI_2reduction_8hpp" ],
     [ "sub_group.hpp", "ONEAPI_2sub__group_8hpp.html", "ONEAPI_2sub__group_8hpp" ]
