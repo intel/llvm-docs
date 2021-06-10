@@ -71,6 +71,7 @@ var pi__level__zero_8cpp =
     [ "piextMemGetNativeHandle", "pi__level__zero_8cpp.html#aa9f3e51ce4a097efe6054fe0d55cb4ab", null ],
     [ "piextPlatformCreateWithNativeHandle", "pi__level__zero_8cpp.html#a239c99321921a0ad3732d1cfe66f274f", null ],
     [ "piextPlatformGetNativeHandle", "pi__level__zero_8cpp.html#a9e84f0826417ebfa4ca899ca724c6516", null ],
+    [ "piextPluginGetOpaqueData", "pi__level__zero_8cpp.html#a2cecbd7edb086aef1fd0d0d659c62e4e", null ],
     [ "piextProgramCreateWithNativeHandle", "pi__level__zero_8cpp.html#af795016a2aa7c29e91ea5a881ea70272", null ],
     [ "piextProgramGetNativeHandle", "pi__level__zero_8cpp.html#aff7a0942a6df30575ed457b5d4dd542d", null ],
     [ "piextProgramSetSpecializationConstant", "pi__level__zero_8cpp.html#adec20ab973251487e2c227e8b01fb77b", null ],

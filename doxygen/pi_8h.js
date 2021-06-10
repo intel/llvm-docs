@@ -554,6 +554,7 @@ var pi_8h =
     [ "piextMemGetNativeHandle", "pi_8h.html#a9e0a0dcbcdbfb21fa1649e84f9b43fcd", null ],
     [ "piextPlatformCreateWithNativeHandle", "pi_8h.html#a60a901e32f2bbcbaa6f8c8e8b2bf7029", null ],
     [ "piextPlatformGetNativeHandle", "pi_8h.html#a3ee5238db6e2fa6bd6d7a40aff3c8326", null ],
+    [ "piextPluginGetOpaqueData", "pi_8h.html#a2cecbd7edb086aef1fd0d0d659c62e4e", null ],
     [ "piextProgramCreateWithNativeHandle", "pi_8h.html#a0c504710d7ffc81246c21a13669b5837", null ],
     [ "piextProgramGetNativeHandle", "pi_8h.html#adbea20ee4a5acc6c997463ae63b96442", null ],
     [ "piextProgramSetSpecializationConstant", "pi_8h.html#a6536605da4d4b98245a07ab1edfc861e", null ],

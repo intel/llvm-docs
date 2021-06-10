@@ -9,6 +9,8 @@ var classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view =
     [ "simd_view", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#a85ddeb95aa3e4e7c578809cc03edaf64", null ],
     [ "all", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#a711495bd2387b15b0af61a41cc3b2a4e", null ],
     [ "any", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#a1be04ad7d8a45ddf83160f5a0179d163", null ],
+    [ "bit_cast_view", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#a631819b52bcd35ccaf22a0592796534e", null ],
+    [ "bit_cast_view", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#a605b0c441cfe307d9157dc9e3a2edb29", null ],
     [ "column", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#a967ecadbd8792f27068375d4e4b9b49a", null ],
     [ "format", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#acfbe7770680d4b6048f7cbc469b3cfac", null ],
     [ "format", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#aa17b57f3e09782315886741464dad436", null ],

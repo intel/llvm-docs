@@ -1,7 +1,5 @@
 var half__type_8cpp =
 [
-    [ "float2Half", "half__type_8cpp.html#ab2d0c006beb4d43543ba3788706405bc", null ],
-    [ "half2Float", "half__type_8cpp.html#ac67eedfe0af7a5de2caf254dada31e60", null ],
     [ "operator!=", "half__type_8cpp.html#ab72fdc9f106f764193f3675b5aba0213", null ],
     [ "operator*", "half__type_8cpp.html#a119f033d27e12fd77b031a1b60f86780", null ],
     [ "operator+", "half__type_8cpp.html#a566acff4e9617f5f2324bacbc51c10f9", null ],

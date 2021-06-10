@@ -82,6 +82,8 @@ var namespacecl_1_1sycl_1_1detail =
     [ "EnqueueResultT", "structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html", "structcl_1_1sycl_1_1detail_1_1EnqueueResultT" ],
     [ "EqualByNameComp", "structcl_1_1sycl_1_1detail_1_1EqualByNameComp.html", "structcl_1_1sycl_1_1detail_1_1EqualByNameComp" ],
     [ "EqualTo", "structcl_1_1sycl_1_1detail_1_1EqualTo.html", "structcl_1_1sycl_1_1detail_1_1EqualTo" ],
+    [ "ESIMDDeviceInterface", "structcl_1_1sycl_1_1detail_1_1ESIMDDeviceInterface.html", "structcl_1_1sycl_1_1detail_1_1ESIMDDeviceInterface" ],
+    [ "ESIMDEmuPluginOpaqueData", "structcl_1_1sycl_1_1detail_1_1ESIMDEmuPluginOpaqueData.html", "structcl_1_1sycl_1_1detail_1_1ESIMDEmuPluginOpaqueData" ],
     [ "event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html", "classcl_1_1sycl_1_1detail_1_1event__impl" ],
     [ "ExecCGCommand", "classcl_1_1sycl_1_1detail_1_1ExecCGCommand.html", "classcl_1_1sycl_1_1detail_1_1ExecCGCommand" ],
     [ "ExtendedMemberT", "structcl_1_1sycl_1_1detail_1_1ExtendedMemberT.html", "structcl_1_1sycl_1_1detail_1_1ExtendedMemberT" ],

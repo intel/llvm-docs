@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['ze_5fcall_11093',['ZE_CALL',['../pi__level__zero_8cpp.html#a7a60feb46bda47f5bb23a533f8749850',1,'pi_level_zero.cpp']]],
-  ['ze_5fcall_5fnocheck_11094',['ZE_CALL_NOCHECK',['../pi__level__zero_8cpp.html#ae645fc7c2649454a092313c362095540',1,'pi_level_zero.cpp']]],
-  ['ze_5ferrcase_11095',['ZE_ERRCASE',['../pi__level__zero_8cpp.html#a811e97d9ea03c4cf9bfc979d6d243ab9',1,'pi_level_zero.cpp']]]
+  ['signature_11192',['SIGNATURE',['../ocloc__api_8h.html#ae72ce63657183560f1b11dbce5a0a5f6',1,'ocloc_api.h']]],
+  ['simdcf_5felement_5fskip_11193',['SIMDCF_ELEMENT_SKIP',['../host__util_8hpp.html#aa74c0ffbc34b835e6ec73b89755a4095',1,'host_util.hpp']]],
+  ['sycl_5fconfig_5ffile_5fname_11194',['SYCL_CONFIG_FILE_NAME',['../config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930',1,'config.cpp']]],
+  ['sycl_5fesimd_5ffunction_11195',['SYCL_ESIMD_FUNCTION',['../sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af8d6f47b7d994e34c4b84ce8969b0e06',1,'common.hpp']]],
+  ['sycl_5fesimd_5fkernel_11196',['SYCL_ESIMD_KERNEL',['../sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a66d006896c3f92463b86a4652b9b1483',1,'common.hpp']]],
+  ['sycl_5fext_5fintel_5fdevice_5finfo_11197',['SYCL_EXT_INTEL_DEVICE_INFO',['../feature__test_8hpp.html#add88ac33e211b801bbda720336486cda',1,'feature_test.hpp']]],
+  ['sycl_5fext_5foneapi_5fmatrix_11198',['SYCL_EXT_ONEAPI_MATRIX',['../feature__test_8hpp.html#a849f7d2e7f726eb888ad7a093a057c82',1,'feature_test.hpp']]],
+  ['sycl_5fexternal_11199',['SYCL_EXTERNAL',['../defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901',1,'defines_elementary.hpp']]]
 ];
