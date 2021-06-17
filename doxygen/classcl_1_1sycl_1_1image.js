@@ -18,10 +18,10 @@ var classcl_1_1sycl_1_1image =
     [ "image", "classcl_1_1sycl_1_1image.html#ae8bb51f895ff692f67ec183a0fbb7fbc", null ],
     [ "image", "classcl_1_1sycl_1_1image.html#a1d58335a8f5997bc75d7b66aad66758b", null ],
     [ "~image", "classcl_1_1sycl_1_1image.html#aa0e6bb1c5b7fe356e0e28b790a29f261", null ],
+    [ "__SYCL2020_DEPRECATED", "classcl_1_1sycl_1_1image.html#aa3c1120e7df875c843b954b9da203a55", null ],
     [ "get_access", "classcl_1_1sycl_1_1image.html#af4e95d6686525f7bc16f22191236eed8", null ],
     [ "get_access", "classcl_1_1sycl_1_1image.html#ab5581286c5b162a6e5d0049062cc8f8b", null ],
     [ "get_allocator", "classcl_1_1sycl_1_1image.html#aa813810cdf080e6cb24c27fc2b3fa8b2", null ],
-    [ "get_count", "classcl_1_1sycl_1_1image.html#acd6226ee5ebfc8497f6eb1df0c9b6890", null ],
     [ "get_pitch", "classcl_1_1sycl_1_1image.html#ab4cd9f519da8a0e6e77eddd2f584b43b", null ],
     [ "get_property", "classcl_1_1sycl_1_1image.html#a08cf7e2302ae23ce7f2113bdba30772a", null ],
     [ "get_range", "classcl_1_1sycl_1_1image.html#addd6a0004c3c6ddf536b3e707bd39089", null ],
@@ -32,5 +32,6 @@ var classcl_1_1sycl_1_1image =
     [ "operator=", "classcl_1_1sycl_1_1image.html#a6a02313d2ed439ee800d97dadf28c009", null ],
     [ "operator==", "classcl_1_1sycl_1_1image.html#a5a6cfa985304325e1cc4932cd28b3025", null ],
     [ "set_final_data", "classcl_1_1sycl_1_1image.html#ab542043e4e0fa9b6e569437d3809a138", null ],
-    [ "set_write_back", "classcl_1_1sycl_1_1image.html#ab41eadc9c1c1fa60c29a94574cd431b1", null ]
+    [ "set_write_back", "classcl_1_1sycl_1_1image.html#ab41eadc9c1c1fa60c29a94574cd431b1", null ],
+    [ "size", "classcl_1_1sycl_1_1image.html#abc6da89c8851b1619f8ec5e65b7808b7", null ]
 ];

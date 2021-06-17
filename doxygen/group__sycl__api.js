@@ -30,12 +30,12 @@ var group__sycl__api =
       [ "buffer", "classcl_1_1sycl_1_1buffer.html#a6df756e6434725ba7c2aa01005fec165", null ],
       [ "buffer", "classcl_1_1sycl_1_1buffer.html#a5628828945a9e0d169925f1849c82213", null ],
       [ "~buffer", "classcl_1_1sycl_1_1buffer.html#adc5a30ad32871519046d44b2700c5eb8", null ],
+      [ "__SYCL2020_DEPRECATED", "classcl_1_1sycl_1_1buffer.html#af7169fa3fc13da9026e4e32cffdb3a18", null ],
       [ "get_access", "classcl_1_1sycl_1_1buffer.html#a7c50a61dc994588481863ba71efd8c54", null ],
       [ "get_access", "classcl_1_1sycl_1_1buffer.html#aecb0535c3de79a9523611e3e5678e00d", null ],
       [ "get_access", "classcl_1_1sycl_1_1buffer.html#a2649f2dbd89352d61d3a182dc017f3b9", null ],
       [ "get_access", "classcl_1_1sycl_1_1buffer.html#a151d1073071fca18c6be873d4e40a4ba", null ],
       [ "get_allocator", "classcl_1_1sycl_1_1buffer.html#ab321060ae1f7bc97cde292104c9050e5", null ],
-      [ "get_count", "classcl_1_1sycl_1_1buffer.html#ab9d7be5a3f3912edf44b0b3eace7d0f2", null ],
       [ "get_property", "classcl_1_1sycl_1_1buffer.html#aa873b12ea090c7f23d776d198ba4b3bb", null ],
       [ "get_range", "classcl_1_1sycl_1_1buffer.html#a1b840be3d1953894a0c502f60fe26d23", null ],
       [ "get_size", "classcl_1_1sycl_1_1buffer.html#afdf2ef621aacaa2c789fa714dcd0c646", null ],
@@ -50,6 +50,7 @@ var group__sycl__api =
       [ "reinterpret", "classcl_1_1sycl_1_1buffer.html#a0281b09d129644dbc3a25d33be483fd2", null ],
       [ "set_final_data", "classcl_1_1sycl_1_1buffer.html#a98adb8c937a420c8f84b889ae2342ec2", null ],
       [ "set_write_back", "classcl_1_1sycl_1_1buffer.html#a1e2d845259552a1426413d311658614b", null ],
+      [ "size", "classcl_1_1sycl_1_1buffer.html#a68b64c905c80c20ae7aa786bd36b257f", null ],
       [ "accessor", "classcl_1_1sycl_1_1buffer.html#a4fe93ea8d613a9b7224780404781c279", null ],
       [ "buffer", "classcl_1_1sycl_1_1buffer.html#a4813bfe9f43cf4da706428f00cb77ca2", null ]
     ] ],
@@ -194,7 +195,8 @@ var group__sycl__api =
       [ "parallel_for_work_item", "classcl_1_1sycl_1_1group.html#af480b64f065924ab135651de6cadb71e", null ],
       [ "wait_for", "classcl_1_1sycl_1_1group.html#a4e6894549d3ef49a1c83ac2a4ce87e7f", null ],
       [ "detail::Builder", "classcl_1_1sycl_1_1group.html#ad90f883e62dca93f6bdd31c1ead4b756", null ],
-      [ "dimensions", "classcl_1_1sycl_1_1group.html#aa4d9b2a3a331b51dd81e54ac4ad7f338", null ]
+      [ "dimensions", "classcl_1_1sycl_1_1group.html#aa4d9b2a3a331b51dd81e54ac4ad7f338", null ],
+      [ "fence_scope", "classcl_1_1sycl_1_1group.html#a1d92d439816b45484f994a69a2a6a186", null ]
     ] ],
     [ "h_item", "classcl_1_1sycl_1_1h__item.html", [
       [ "h_item", "classcl_1_1sycl_1_1h__item.html#a0d4da9c1c0d40b08b3c50541dd7a1b95", null ],
@@ -330,10 +332,10 @@ var group__sycl__api =
       [ "image", "classcl_1_1sycl_1_1image.html#ae8bb51f895ff692f67ec183a0fbb7fbc", null ],
       [ "image", "classcl_1_1sycl_1_1image.html#a1d58335a8f5997bc75d7b66aad66758b", null ],
       [ "~image", "classcl_1_1sycl_1_1image.html#aa0e6bb1c5b7fe356e0e28b790a29f261", null ],
+      [ "__SYCL2020_DEPRECATED", "classcl_1_1sycl_1_1image.html#aa3c1120e7df875c843b954b9da203a55", null ],
       [ "get_access", "classcl_1_1sycl_1_1image.html#af4e95d6686525f7bc16f22191236eed8", null ],
       [ "get_access", "classcl_1_1sycl_1_1image.html#ab5581286c5b162a6e5d0049062cc8f8b", null ],
       [ "get_allocator", "classcl_1_1sycl_1_1image.html#aa813810cdf080e6cb24c27fc2b3fa8b2", null ],
-      [ "get_count", "classcl_1_1sycl_1_1image.html#acd6226ee5ebfc8497f6eb1df0c9b6890", null ],
       [ "get_pitch", "classcl_1_1sycl_1_1image.html#ab4cd9f519da8a0e6e77eddd2f584b43b", null ],
       [ "get_property", "classcl_1_1sycl_1_1image.html#a08cf7e2302ae23ce7f2113bdba30772a", null ],
       [ "get_range", "classcl_1_1sycl_1_1image.html#addd6a0004c3c6ddf536b3e707bd39089", null ],
@@ -344,7 +346,8 @@ var group__sycl__api =
       [ "operator=", "classcl_1_1sycl_1_1image.html#a6a02313d2ed439ee800d97dadf28c009", null ],
       [ "operator==", "classcl_1_1sycl_1_1image.html#a5a6cfa985304325e1cc4932cd28b3025", null ],
       [ "set_final_data", "classcl_1_1sycl_1_1image.html#ab542043e4e0fa9b6e569437d3809a138", null ],
-      [ "set_write_back", "classcl_1_1sycl_1_1image.html#ab41eadc9c1c1fa60c29a94574cd431b1", null ]
+      [ "set_write_back", "classcl_1_1sycl_1_1image.html#ab41eadc9c1c1fa60c29a94574cd431b1", null ],
+      [ "size", "classcl_1_1sycl_1_1image.html#abc6da89c8851b1619f8ec5e65b7808b7", null ]
     ] ],
     [ "item", "classcl_1_1sycl_1_1item.html", [
       [ "item", "classcl_1_1sycl_1_1item.html#a46075e812857d6e1072e300232d027de", null ],

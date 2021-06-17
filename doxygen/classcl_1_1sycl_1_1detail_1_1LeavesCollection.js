@@ -1,10 +1,11 @@
 var classcl_1_1sycl_1_1detail_1_1LeavesCollection =
 [
     [ "IteratorT", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT" ],
-    [ "AllocateDependencyF", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ad10e11f2faa99f86e454a57e7fb24029", null ],
+    [ "AllocateDependencyF", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a6f38d7077cc4f058050b8fec595fb307", null ],
     [ "const_iterator", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a51ffa3201d6b66b407ce265b18ff0cf2", null ],
     [ "const_pointer", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ad3bff0a9ed802aa3600838aad57c2660", null ],
     [ "const_reference", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a0a1756c271590b340aa180903088e957", null ],
+    [ "EnqueueListT", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a0dc58619ee61a2e1ed9511343b81f47d", null ],
     [ "GenericCommandsT", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a78359e39a9ee533c71fb14e1018b8d9c", null ],
     [ "HostAccessorCommandsT", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a5a3168f5ea7a9a4315cfc07cab1b0313", null ],
     [ "iterator", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a8eef407b6d78dde5c8dbaf6b7e61f644", null ],
@@ -19,7 +20,7 @@ var classcl_1_1sycl_1_1detail_1_1LeavesCollection =
     [ "genericCommandsCapacity", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a83a8e2d635929f36161f1a6771137f4d", null ],
     [ "getGenericCommands", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a6a427e00a7a16c6fb5791e96dbb072a2", null ],
     [ "getHostAccessorCommands", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#a0f9427acd29af087e2fcd3bc5030d750", null ],
-    [ "push_back", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ab15dc435f0dd22fcc21b7c4c4dd4588d", null ],
+    [ "push_back", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#abbed86f8770bd58ff0fc4cb0a668a284", null ],
     [ "remove", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#aefd3319b62a31c6ef29ce54160e71f2b", null ],
     [ "toVector", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ac12be87d266f2b39aa7c4d5797f5157c", null ],
     [ "IteratorT< false >", "classcl_1_1sycl_1_1detail_1_1LeavesCollection.html#ae46b1bead845d8cebe3d2714426dc02f", null ],

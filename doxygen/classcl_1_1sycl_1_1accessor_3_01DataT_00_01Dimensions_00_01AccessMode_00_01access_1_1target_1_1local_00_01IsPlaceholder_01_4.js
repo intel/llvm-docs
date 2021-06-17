@@ -12,7 +12,7 @@ var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01a
     [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a5480dcb923757901804b7873cc4480e6", null ],
     [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7928217b66778d723cf211ca3ddae858", null ],
     [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ae19ed0aee052b874ee4b7bc2ce6a8cb1", null ],
-    [ "get_count", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac2f63501af136046ed39f9addb13f604", null ],
+    [ "__SYCL2020_DEPRECATED", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a0cd74f27153a2c424a340f4013c2a971", null ],
     [ "get_pointer", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a3506c044759d10b13aba846d008a68e5", null ],
     [ "get_range", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a8150f9414685815dd00717ece3089d0b", null ],
     [ "get_size", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac373bd3a9bb2525e52edf1d682c5ecb8", null ],
@@ -27,6 +27,7 @@ var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01a
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a64f2c77c539cdcf5982cdc56c64063c8", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#aec5a310abc8dc5903b0b93a80b0ace4f", null ],
     [ "operator[]", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a7a4c716552d304f864a9adf608fe9110", null ],
+    [ "size", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a44cb078ecd22f80ac7cf88d44cbf8bcf", null ],
     [ "AdjustedDim", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#ac54611403aa3e9c953006c0c3e0f7b8d", null ],
     [ "padding", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1local_00_01IsPlaceholder_01_4.html#a01163ddb309fbb6788c82627e049dffa", null ]
 ];

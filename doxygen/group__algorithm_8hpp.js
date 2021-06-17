@@ -1,6 +1,9 @@
 var group__algorithm_8hpp =
 [
     [ "is_native_op", "structcl_1_1sycl_1_1detail_1_1is__native__op.html", "structcl_1_1sycl_1_1detail_1_1is__native__op" ],
+    [ "group_barrier_scope", "structcl_1_1sycl_1_1detail_1_1group__barrier__scope.html", null ],
+    [ "group_barrier_scope< sycl::sub_group >", "structcl_1_1sycl_1_1detail_1_1group__barrier__scope_3_01sycl_1_1sub__group_01_4.html", "structcl_1_1sycl_1_1detail_1_1group__barrier__scope_3_01sycl_1_1sub__group_01_4" ],
+    [ "group_barrier_scope< sycl::group< D > >", "structcl_1_1sycl_1_1detail_1_1group__barrier__scope_3_01sycl_1_1group_3_01D_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1group__barrier__scope_3_01sycl_1_1group_3_01D_01_4_01_4" ],
     [ "native_op_list", "group__algorithm_8hpp.html#a8b3dec367470477a46dc3a6a9c14f65d", null ],
     [ "all_of_group", "group__algorithm_8hpp.html#a8fe1dd2e3a2becee53caca8cc96edca7", null ],
     [ "all_of_group", "group__algorithm_8hpp.html#a4e1c37afeda3eec8e51bd83c875f3773", null ],
@@ -18,6 +21,7 @@ var group__algorithm_8hpp =
     [ "get_local_linear_range< group< 2 > >", "group__algorithm_8hpp.html#a32751dd3f71a6159dc3bb7916e9874c0", null ],
     [ "get_local_linear_range< group< 3 > >", "group__algorithm_8hpp.html#a8f8c2be6248af00c24d3985061e1672b", null ],
     [ "get_local_linear_range< ONEAPI::sub_group >", "group__algorithm_8hpp.html#a42fa1e24d5feb3051083ebe7165e88f0", null ],
+    [ "group_barrier", "group__algorithm_8hpp.html#a17f152916b9bb9db79ee745f98ad7e2e", null ],
     [ "group_broadcast", "group__algorithm_8hpp.html#a47933b3fc90491533b73e6bad0b98b74", null ],
     [ "group_broadcast", "group__algorithm_8hpp.html#a9dc92c5b6b56508b940874312ac70af7", null ],
     [ "group_broadcast", "group__algorithm_8hpp.html#a2296a8baa3a6b349d93b8bb44cd8c3dc", null ],

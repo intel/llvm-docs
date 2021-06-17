@@ -30,5 +30,6 @@ var classcl_1_1sycl_1_1group =
     [ "parallel_for_work_item", "classcl_1_1sycl_1_1group.html#af480b64f065924ab135651de6cadb71e", null ],
     [ "wait_for", "classcl_1_1sycl_1_1group.html#a4e6894549d3ef49a1c83ac2a4ce87e7f", null ],
     [ "detail::Builder", "classcl_1_1sycl_1_1group.html#ad90f883e62dca93f6bdd31c1ead4b756", null ],
-    [ "dimensions", "classcl_1_1sycl_1_1group.html#aa4d9b2a3a331b51dd81e54ac4ad7f338", null ]
+    [ "dimensions", "classcl_1_1sycl_1_1group.html#aa4d9b2a3a331b51dd81e54ac4ad7f338", null ],
+    [ "fence_scope", "classcl_1_1sycl_1_1group.html#a1d92d439816b45484f994a69a2a6a186", null ]
 ];

@@ -19,5 +19,6 @@ var classcl_1_1sycl_1_1detail_1_1image__impl =
     [ "getElementSize", "classcl_1_1sycl_1_1detail_1_1image__impl.html#ae6a6ab8a49e9b50af121832eed4ced8c", null ],
     [ "getRowPitch", "classcl_1_1sycl_1_1detail_1_1image__impl.html#a1226ce0840781c2611b0036ffe6f6b91", null ],
     [ "getSlicePitch", "classcl_1_1sycl_1_1detail_1_1image__impl.html#a0fe4ae87c53eb3b35103b567077b42fa", null ],
-    [ "getType", "classcl_1_1sycl_1_1detail_1_1image__impl.html#a3a0144c4d421cdfe73fd939c902d6814", null ]
+    [ "getType", "classcl_1_1sycl_1_1detail_1_1image__impl.html#a3a0144c4d421cdfe73fd939c902d6814", null ],
+    [ "size", "classcl_1_1sycl_1_1detail_1_1image__impl.html#adcc1538d997eed05c94e6b12274dc5c1", null ]
 ];

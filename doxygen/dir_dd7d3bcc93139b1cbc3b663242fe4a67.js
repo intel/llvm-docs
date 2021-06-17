@@ -19,6 +19,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
       [ "hash< cl::sycl::buffer< T, dimensions, AllocatorT > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1buffer_3_01T_00_01dimensions_00_01AllocatorT_01_4_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1buffer_3_01T_00_01dimensions_00_01AllocatorT_01_4_01_4" ]
     ] ],
     [ "builtins.hpp", "builtins_8hpp.html", "builtins_8hpp" ],
+    [ "builtins_esimd.hpp", "builtins__esimd_8hpp.html", "builtins__esimd_8hpp" ],
     [ "context.hpp", "context_8hpp.html", [
       [ "hash< cl::sycl::context >", "structstd_1_1hash_3_01cl_1_1sycl_1_1context_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1context_01_4" ]
     ] ],
@@ -79,7 +80,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
     [ "specialization_id.hpp", "specialization__id_8hpp.html", null ],
     [ "stl.hpp", "stl_8hpp.html", "stl_8hpp" ],
     [ "stream.hpp", "stream_8hpp.html", "stream_8hpp" ],
-    [ "sub_group.hpp", "sub__group_8hpp.html", "sub__group_8hpp" ],
+    [ "sub_group.hpp", "sub__group_8hpp.html", null ],
     [ "sycl_span.hpp", "sycl__span_8hpp.html", null ],
     [ "types.hpp", "CL_2sycl_2types_8hpp.html", "CL_2sycl_2types_8hpp" ],
     [ "usm.hpp", "usm_8hpp.html", "usm_8hpp" ],

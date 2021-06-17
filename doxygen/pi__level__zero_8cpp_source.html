@@ -160,8 +160,8 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// The non-static version just calls static one.</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  ze_result_t doCall(ze_result_t ZeResult, std::string ZeName,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                     std::string ZeArgs, <span class="keywordtype">bool</span> TraceError = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  ze_result_t doCall(ze_result_t ZeResult, <span class="keyword">const</span> <span class="keywordtype">char</span> *ZeName,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                     <span class="keyword">const</span> <span class="keywordtype">char</span> *ZeArgs, <span class="keywordtype">bool</span> TraceError = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;std::mutex ZeCall::GlobalLock;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
@@ -502,7 +502,7 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keyword">const</span> <a class="code" href="struct__pi__event.html">pi_event</a> *EventWaitList, <a class="code" href="struct__pi__event.html">pi_event</a> *Event,</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordtype">bool</span> PreferCopyEngine = <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
-<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815">  411</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815">zeParseError</a>(ze_result_t ZeError, std::string &amp;ErrorString) {</div>
+<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="pi__level__zero_8cpp.html#add266abfc4d29349e775927a0a1cad8a">  411</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="pi__level__zero_8cpp.html#add266abfc4d29349e775927a0a1cad8a">zeParseError</a>(ze_result_t ZeError, <span class="keyword">const</span> <span class="keywordtype">char</span> *&amp;ErrorString) {</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <span class="keywordflow">switch</span> (ZeError) {</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="preprocessor">#define ZE_ERRCASE(ERR)                                                        \</span></div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">  case ERR:                                                                    \</span></div>
@@ -550,18 +550,18 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;  } <span class="comment">// switch</span></div>
 <div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;}</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;ze_result_t ZeCall::doCall(ze_result_t ZeResult, std::string ZeName,</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                           std::string ZeArgs, <span class="keywordtype">bool</span> TraceError) {</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  zePrint(<span class="stringliteral">&quot;ZE ---&gt; %s%s\n&quot;</span>, ZeName.c_str(), ZeArgs.c_str());</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;ze_result_t ZeCall::doCall(ze_result_t ZeResult, <span class="keyword">const</span> <span class="keywordtype">char</span> *ZeName,</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                           <span class="keyword">const</span> <span class="keywordtype">char</span> *ZeArgs, <span class="keywordtype">bool</span> TraceError) {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  zePrint(<span class="stringliteral">&quot;ZE ---&gt; %s%s\n&quot;</span>, ZeName, ZeArgs);</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  <span class="keywordflow">if</span> (ZeDebug &amp; ZE_DEBUG_CALL_COUNT) {</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    ++(*ZeCallCount)[ZeName];</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;  }</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160; </div>
 <div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;  <span class="keywordflow">if</span> (ZeResult &amp;&amp; TraceError) {</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    std::string ErrorString;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <a class="code" href="pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815">zeParseError</a>(ZeResult, ErrorString);</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    zePrint(<span class="stringliteral">&quot;Error (%s) in %s\n&quot;</span>, ErrorString.c_str(), ZeName.c_str());</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *ErrorString = <span class="stringliteral">&quot;Unknown&quot;</span>;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <a class="code" href="pi__level__zero_8cpp.html#add266abfc4d29349e775927a0a1cad8a">zeParseError</a>(ZeResult, ErrorString);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    zePrint(<span class="stringliteral">&quot;Error (%s) in %s\n&quot;</span>, ErrorString, ZeName);</div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;  }</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  <span class="keywordflow">return</span> ZeResult;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}</div>
@@ -6460,104 +6460,106 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="line"><a name="l06410"></a><span class="lineno"> 6410</span>&#160; </div>
 <div class="line"><a name="l06411"></a><span class="lineno"><a class="line" href="pi__level__zero_8cpp.html#a2cecbd7edb086aef1fd0d0d659c62e4e"> 6411</a></span>&#160;<a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> <a class="code" href="pi__level__zero_8cpp.html#a2cecbd7edb086aef1fd0d0d659c62e4e">piextPluginGetOpaqueData</a>(<span class="keywordtype">void</span> *opaque_data_param,</div>
 <div class="line"><a name="l06412"></a><span class="lineno"> 6412</span>&#160;                                   <span class="keywordtype">void</span> **opaque_data_return) {</div>
-<div class="line"><a name="l06413"></a><span class="lineno"> 6413</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717aea14b15961169e02092f303e2ebc6298">PI_ERROR_UNKNOWN</a>;</div>
-<div class="line"><a name="l06414"></a><span class="lineno"> 6414</span>&#160;}</div>
-<div class="line"><a name="l06415"></a><span class="lineno"> 6415</span>&#160; </div>
-<div class="line"><a name="l06416"></a><span class="lineno"> 6416</span>&#160;<span class="comment">// SYCL RT calls this api to notify the end of plugin lifetime.</span></div>
-<div class="line"><a name="l06417"></a><span class="lineno"> 6417</span>&#160;<span class="comment">// It can include all the jobs to tear down resources before</span></div>
-<div class="line"><a name="l06418"></a><span class="lineno"> 6418</span>&#160;<span class="comment">// the plugin is unloaded from memory.</span></div>
-<div class="line"><a name="l06419"></a><span class="lineno"><a class="line" href="pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49"> 6419</a></span>&#160;<a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> <a class="code" href="pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49">piTearDown</a>(<span class="keywordtype">void</span> *PluginParameter) {</div>
-<div class="line"><a name="l06420"></a><span class="lineno"> 6420</span>&#160;  (void)PluginParameter;</div>
-<div class="line"><a name="l06421"></a><span class="lineno"> 6421</span>&#160;  <span class="comment">// reclaim pi_platform objects here since we don&#39;t have piPlatformRelease.</span></div>
-<div class="line"><a name="l06422"></a><span class="lineno"> 6422</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="struct__pi__platform.html">pi_platform</a> &amp;Platform : *<a class="code" href="pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410">PiPlatformsCache</a>) {</div>
-<div class="line"><a name="l06423"></a><span class="lineno"> 6423</span>&#160;    <span class="keyword">delete</span> Platform;</div>
-<div class="line"><a name="l06424"></a><span class="lineno"> 6424</span>&#160;  }</div>
-<div class="line"><a name="l06425"></a><span class="lineno"> 6425</span>&#160;  <span class="keyword">delete</span> <a class="code" href="pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410">PiPlatformsCache</a>;</div>
-<div class="line"><a name="l06426"></a><span class="lineno"> 6426</span>&#160;  <span class="keyword">delete</span> <a class="code" href="pi__level__zero_8cpp.html#a191dd320ac89153a9e73691172523ae6">PiPlatformsCacheMutex</a>;</div>
-<div class="line"><a name="l06427"></a><span class="lineno"> 6427</span>&#160; </div>
-<div class="line"><a name="l06428"></a><span class="lineno"> 6428</span>&#160;  <span class="comment">// Print the balance of various create/destroy native calls.</span></div>
-<div class="line"><a name="l06429"></a><span class="lineno"> 6429</span>&#160;  <span class="comment">// The idea is to verify if the number of create(+) and destroy(-) calls are</span></div>
-<div class="line"><a name="l06430"></a><span class="lineno"> 6430</span>&#160;  <span class="comment">// matched.</span></div>
-<div class="line"><a name="l06431"></a><span class="lineno"> 6431</span>&#160;  <span class="keywordflow">if</span> (ZeDebug &amp; ZE_DEBUG_CALL_COUNT) {</div>
-<div class="line"><a name="l06432"></a><span class="lineno"> 6432</span>&#160;    <span class="comment">// clang-format off</span></div>
-<div class="line"><a name="l06433"></a><span class="lineno"> 6433</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l06434"></a><span class="lineno"> 6434</span>&#160;    <span class="comment">// The format of this table is such that each row accounts for a</span></div>
-<div class="line"><a name="l06435"></a><span class="lineno"> 6435</span>&#160;    <span class="comment">// specific type of objects, and all elements in the raw except the last</span></div>
-<div class="line"><a name="l06436"></a><span class="lineno"> 6436</span>&#160;    <span class="comment">// one are allocating objects of that type, while the last element is known</span></div>
-<div class="line"><a name="l06437"></a><span class="lineno"> 6437</span>&#160;    <span class="comment">// to deallocate objects of that type.</span></div>
-<div class="line"><a name="l06438"></a><span class="lineno"> 6438</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l06439"></a><span class="lineno"> 6439</span>&#160;    std::vector&lt;std::vector&lt;std::string&gt;&gt; CreateDestroySet = {</div>
-<div class="line"><a name="l06440"></a><span class="lineno"> 6440</span>&#160;      {<span class="stringliteral">&quot;zeContextCreate&quot;</span>,      <span class="stringliteral">&quot;zeContextDestroy&quot;</span>},</div>
-<div class="line"><a name="l06441"></a><span class="lineno"> 6441</span>&#160;      {<span class="stringliteral">&quot;zeCommandQueueCreate&quot;</span>, <span class="stringliteral">&quot;zeCommandQueueDestroy&quot;</span>},</div>
-<div class="line"><a name="l06442"></a><span class="lineno"> 6442</span>&#160;      {<span class="stringliteral">&quot;zeModuleCreate&quot;</span>,       <span class="stringliteral">&quot;zeModuleDestroy&quot;</span>},</div>
-<div class="line"><a name="l06443"></a><span class="lineno"> 6443</span>&#160;      {<span class="stringliteral">&quot;zeKernelCreate&quot;</span>,       <span class="stringliteral">&quot;zeKernelDestroy&quot;</span>},</div>
-<div class="line"><a name="l06444"></a><span class="lineno"> 6444</span>&#160;      {<span class="stringliteral">&quot;zeEventPoolCreate&quot;</span>,    <span class="stringliteral">&quot;zeEventPoolDestroy&quot;</span>},</div>
-<div class="line"><a name="l06445"></a><span class="lineno"> 6445</span>&#160;      {<span class="stringliteral">&quot;zeCommandListCreateImmediate&quot;</span>, <span class="stringliteral">&quot;zeCommandListCreate&quot;</span>, <span class="stringliteral">&quot;zeCommandListDestroy&quot;</span>},</div>
-<div class="line"><a name="l06446"></a><span class="lineno"> 6446</span>&#160;      {<span class="stringliteral">&quot;zeEventCreate&quot;</span>,        <span class="stringliteral">&quot;zeEventDestroy&quot;</span>},</div>
-<div class="line"><a name="l06447"></a><span class="lineno"> 6447</span>&#160;      {<span class="stringliteral">&quot;zeFenceCreate&quot;</span>,        <span class="stringliteral">&quot;zeFenceDestroy&quot;</span>},</div>
-<div class="line"><a name="l06448"></a><span class="lineno"> 6448</span>&#160;      {<span class="stringliteral">&quot;zeImageCreate&quot;</span>,        <span class="stringliteral">&quot;zeImageDestroy&quot;</span>},</div>
-<div class="line"><a name="l06449"></a><span class="lineno"> 6449</span>&#160;      {<span class="stringliteral">&quot;zeSamplerCreate&quot;</span>,      <span class="stringliteral">&quot;zeSamplerDestroy&quot;</span>},</div>
-<div class="line"><a name="l06450"></a><span class="lineno"> 6450</span>&#160;      {<span class="stringliteral">&quot;zeMemAllocDevice&quot;</span>, <span class="stringliteral">&quot;zeMemAllocHost&quot;</span>, <span class="stringliteral">&quot;zeMemAllocShared&quot;</span>, <span class="stringliteral">&quot;zeMemFree&quot;</span>},</div>
-<div class="line"><a name="l06451"></a><span class="lineno"> 6451</span>&#160;    };</div>
-<div class="line"><a name="l06452"></a><span class="lineno"> 6452</span>&#160; </div>
-<div class="line"><a name="l06453"></a><span class="lineno"> 6453</span>&#160;    <span class="comment">// A sample output aimed below is this:</span></div>
-<div class="line"><a name="l06454"></a><span class="lineno"> 6454</span>&#160;    <span class="comment">// ------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l06455"></a><span class="lineno"> 6455</span>&#160;    <span class="comment">//                zeContextCreate = 1     \---&gt;        zeContextDestroy = 1</span></div>
-<div class="line"><a name="l06456"></a><span class="lineno"> 6456</span>&#160;    <span class="comment">//           zeCommandQueueCreate = 1     \---&gt;   zeCommandQueueDestroy = 1</span></div>
-<div class="line"><a name="l06457"></a><span class="lineno"> 6457</span>&#160;    <span class="comment">//                 zeModuleCreate = 1     \---&gt;         zeModuleDestroy = 1</span></div>
-<div class="line"><a name="l06458"></a><span class="lineno"> 6458</span>&#160;    <span class="comment">//                 zeKernelCreate = 1     \---&gt;         zeKernelDestroy = 1</span></div>
-<div class="line"><a name="l06459"></a><span class="lineno"> 6459</span>&#160;    <span class="comment">//              zeEventPoolCreate = 1     \---&gt;      zeEventPoolDestroy = 1</span></div>
-<div class="line"><a name="l06460"></a><span class="lineno"> 6460</span>&#160;    <span class="comment">//   zeCommandListCreateImmediate = 1     |</span></div>
-<div class="line"><a name="l06461"></a><span class="lineno"> 6461</span>&#160;    <span class="comment">//            zeCommandListCreate = 1     \---&gt;    zeCommandListDestroy = 1  ---&gt; LEAK = 1</span></div>
-<div class="line"><a name="l06462"></a><span class="lineno"> 6462</span>&#160;    <span class="comment">//                  zeEventCreate = 2     \---&gt;          zeEventDestroy = 2</span></div>
-<div class="line"><a name="l06463"></a><span class="lineno"> 6463</span>&#160;    <span class="comment">//                  zeFenceCreate = 1     \---&gt;          zeFenceDestroy = 1</span></div>
-<div class="line"><a name="l06464"></a><span class="lineno"> 6464</span>&#160;    <span class="comment">//                  zeImageCreate = 0     \---&gt;          zeImageDestroy = 0</span></div>
-<div class="line"><a name="l06465"></a><span class="lineno"> 6465</span>&#160;    <span class="comment">//                zeSamplerCreate = 0     \---&gt;        zeSamplerDestroy = 0</span></div>
-<div class="line"><a name="l06466"></a><span class="lineno"> 6466</span>&#160;    <span class="comment">//               zeMemAllocDevice = 0     |</span></div>
-<div class="line"><a name="l06467"></a><span class="lineno"> 6467</span>&#160;    <span class="comment">//                 zeMemAllocHost = 1     |</span></div>
-<div class="line"><a name="l06468"></a><span class="lineno"> 6468</span>&#160;    <span class="comment">//               zeMemAllocShared = 0     \---&gt;               zeMemFree = 1</span></div>
-<div class="line"><a name="l06469"></a><span class="lineno"> 6469</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l06470"></a><span class="lineno"> 6470</span>&#160;    <span class="comment">// clang-format on</span></div>
-<div class="line"><a name="l06471"></a><span class="lineno"> 6471</span>&#160; </div>
-<div class="line"><a name="l06472"></a><span class="lineno"> 6472</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;ZE_DEBUG=%d: check balance of create/destroy calls\n&quot;</span>,</div>
-<div class="line"><a name="l06473"></a><span class="lineno"> 6473</span>&#160;            ZE_DEBUG_CALL_COUNT);</div>
-<div class="line"><a name="l06474"></a><span class="lineno"> 6474</span>&#160;    fprintf(stderr,</div>
-<div class="line"><a name="l06475"></a><span class="lineno"> 6475</span>&#160;            <span class="stringliteral">&quot;----------------------------------------------------------\n&quot;</span>);</div>
-<div class="line"><a name="l06476"></a><span class="lineno"> 6476</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Row : CreateDestroySet) {</div>
-<div class="line"><a name="l06477"></a><span class="lineno"> 6477</span>&#160;      <span class="keywordtype">int</span> diff = 0;</div>
-<div class="line"><a name="l06478"></a><span class="lineno"> 6478</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> I = Row.begin(); I != Row.end();) {</div>
-<div class="line"><a name="l06479"></a><span class="lineno"> 6479</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;ZeName = I-&gt;c_str();</div>
-<div class="line"><a name="l06480"></a><span class="lineno"> 6480</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;ZeCount = (*ZeCallCount)[*I];</div>
-<div class="line"><a name="l06481"></a><span class="lineno"> 6481</span>&#160; </div>
-<div class="line"><a name="l06482"></a><span class="lineno"> 6482</span>&#160;        <span class="keywordtype">bool</span> First = (I == Row.begin());</div>
-<div class="line"><a name="l06483"></a><span class="lineno"> 6483</span>&#160;        <span class="keywordtype">bool</span> Last = (++I == Row.end());</div>
-<div class="line"><a name="l06484"></a><span class="lineno"> 6484</span>&#160; </div>
-<div class="line"><a name="l06485"></a><span class="lineno"> 6485</span>&#160;        <span class="keywordflow">if</span> (Last) {</div>
-<div class="line"><a name="l06486"></a><span class="lineno"> 6486</span>&#160;          fprintf(stderr, <span class="stringliteral">&quot; \\---&gt;&quot;</span>);</div>
-<div class="line"><a name="l06487"></a><span class="lineno"> 6487</span>&#160;          diff -= ZeCount;</div>
-<div class="line"><a name="l06488"></a><span class="lineno"> 6488</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l06489"></a><span class="lineno"> 6489</span>&#160;          diff += ZeCount;</div>
-<div class="line"><a name="l06490"></a><span class="lineno"> 6490</span>&#160;          <span class="keywordflow">if</span> (!First) {</div>
-<div class="line"><a name="l06491"></a><span class="lineno"> 6491</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot; | \n&quot;</span>);</div>
-<div class="line"><a name="l06492"></a><span class="lineno"> 6492</span>&#160;          }</div>
-<div class="line"><a name="l06493"></a><span class="lineno"> 6493</span>&#160;        }</div>
-<div class="line"><a name="l06494"></a><span class="lineno"> 6494</span>&#160; </div>
-<div class="line"><a name="l06495"></a><span class="lineno"> 6495</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;%30s = %-5d&quot;</span>, ZeName, ZeCount);</div>
-<div class="line"><a name="l06496"></a><span class="lineno"> 6496</span>&#160;      }</div>
-<div class="line"><a name="l06497"></a><span class="lineno"> 6497</span>&#160; </div>
-<div class="line"><a name="l06498"></a><span class="lineno"> 6498</span>&#160;      <span class="keywordflow">if</span> (diff)</div>
-<div class="line"><a name="l06499"></a><span class="lineno"> 6499</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot; ---&gt; LEAK = %d&quot;</span>, diff);</div>
-<div class="line"><a name="l06500"></a><span class="lineno"> 6500</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l06501"></a><span class="lineno"> 6501</span>&#160;    }</div>
-<div class="line"><a name="l06502"></a><span class="lineno"> 6502</span>&#160; </div>
-<div class="line"><a name="l06503"></a><span class="lineno"> 6503</span>&#160;    ZeCallCount-&gt;clear();</div>
-<div class="line"><a name="l06504"></a><span class="lineno"> 6504</span>&#160;    <span class="keyword">delete</span> ZeCallCount;</div>
-<div class="line"><a name="l06505"></a><span class="lineno"> 6505</span>&#160;    ZeCallCount = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l06506"></a><span class="lineno"> 6506</span>&#160;  }</div>
-<div class="line"><a name="l06507"></a><span class="lineno"> 6507</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a94809a014464a857cf2ec1035988b322">PI_SUCCESS</a>;</div>
-<div class="line"><a name="l06508"></a><span class="lineno"> 6508</span>&#160;}</div>
-<div class="line"><a name="l06509"></a><span class="lineno"> 6509</span>&#160; </div>
-<div class="line"><a name="l06510"></a><span class="lineno"> 6510</span>&#160;} <span class="comment">// extern &quot;C&quot;</span></div>
+<div class="line"><a name="l06413"></a><span class="lineno"> 6413</span>&#160;  (void)opaque_data_param;</div>
+<div class="line"><a name="l06414"></a><span class="lineno"> 6414</span>&#160;  (void)opaque_data_return;</div>
+<div class="line"><a name="l06415"></a><span class="lineno"> 6415</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717aea14b15961169e02092f303e2ebc6298">PI_ERROR_UNKNOWN</a>;</div>
+<div class="line"><a name="l06416"></a><span class="lineno"> 6416</span>&#160;}</div>
+<div class="line"><a name="l06417"></a><span class="lineno"> 6417</span>&#160; </div>
+<div class="line"><a name="l06418"></a><span class="lineno"> 6418</span>&#160;<span class="comment">// SYCL RT calls this api to notify the end of plugin lifetime.</span></div>
+<div class="line"><a name="l06419"></a><span class="lineno"> 6419</span>&#160;<span class="comment">// It can include all the jobs to tear down resources before</span></div>
+<div class="line"><a name="l06420"></a><span class="lineno"> 6420</span>&#160;<span class="comment">// the plugin is unloaded from memory.</span></div>
+<div class="line"><a name="l06421"></a><span class="lineno"><a class="line" href="pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49"> 6421</a></span>&#160;<a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">pi_result</a> <a class="code" href="pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49">piTearDown</a>(<span class="keywordtype">void</span> *PluginParameter) {</div>
+<div class="line"><a name="l06422"></a><span class="lineno"> 6422</span>&#160;  (void)PluginParameter;</div>
+<div class="line"><a name="l06423"></a><span class="lineno"> 6423</span>&#160;  <span class="comment">// reclaim pi_platform objects here since we don&#39;t have piPlatformRelease.</span></div>
+<div class="line"><a name="l06424"></a><span class="lineno"> 6424</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="struct__pi__platform.html">pi_platform</a> &amp;Platform : *<a class="code" href="pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410">PiPlatformsCache</a>) {</div>
+<div class="line"><a name="l06425"></a><span class="lineno"> 6425</span>&#160;    <span class="keyword">delete</span> Platform;</div>
+<div class="line"><a name="l06426"></a><span class="lineno"> 6426</span>&#160;  }</div>
+<div class="line"><a name="l06427"></a><span class="lineno"> 6427</span>&#160;  <span class="keyword">delete</span> <a class="code" href="pi__level__zero_8cpp.html#a6bbfb0fbfbbe1f01731808ed8f96c410">PiPlatformsCache</a>;</div>
+<div class="line"><a name="l06428"></a><span class="lineno"> 6428</span>&#160;  <span class="keyword">delete</span> <a class="code" href="pi__level__zero_8cpp.html#a191dd320ac89153a9e73691172523ae6">PiPlatformsCacheMutex</a>;</div>
+<div class="line"><a name="l06429"></a><span class="lineno"> 6429</span>&#160; </div>
+<div class="line"><a name="l06430"></a><span class="lineno"> 6430</span>&#160;  <span class="comment">// Print the balance of various create/destroy native calls.</span></div>
+<div class="line"><a name="l06431"></a><span class="lineno"> 6431</span>&#160;  <span class="comment">// The idea is to verify if the number of create(+) and destroy(-) calls are</span></div>
+<div class="line"><a name="l06432"></a><span class="lineno"> 6432</span>&#160;  <span class="comment">// matched.</span></div>
+<div class="line"><a name="l06433"></a><span class="lineno"> 6433</span>&#160;  <span class="keywordflow">if</span> (ZeDebug &amp; ZE_DEBUG_CALL_COUNT) {</div>
+<div class="line"><a name="l06434"></a><span class="lineno"> 6434</span>&#160;    <span class="comment">// clang-format off</span></div>
+<div class="line"><a name="l06435"></a><span class="lineno"> 6435</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l06436"></a><span class="lineno"> 6436</span>&#160;    <span class="comment">// The format of this table is such that each row accounts for a</span></div>
+<div class="line"><a name="l06437"></a><span class="lineno"> 6437</span>&#160;    <span class="comment">// specific type of objects, and all elements in the raw except the last</span></div>
+<div class="line"><a name="l06438"></a><span class="lineno"> 6438</span>&#160;    <span class="comment">// one are allocating objects of that type, while the last element is known</span></div>
+<div class="line"><a name="l06439"></a><span class="lineno"> 6439</span>&#160;    <span class="comment">// to deallocate objects of that type.</span></div>
+<div class="line"><a name="l06440"></a><span class="lineno"> 6440</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l06441"></a><span class="lineno"> 6441</span>&#160;    std::vector&lt;std::vector&lt;std::string&gt;&gt; CreateDestroySet = {</div>
+<div class="line"><a name="l06442"></a><span class="lineno"> 6442</span>&#160;      {<span class="stringliteral">&quot;zeContextCreate&quot;</span>,      <span class="stringliteral">&quot;zeContextDestroy&quot;</span>},</div>
+<div class="line"><a name="l06443"></a><span class="lineno"> 6443</span>&#160;      {<span class="stringliteral">&quot;zeCommandQueueCreate&quot;</span>, <span class="stringliteral">&quot;zeCommandQueueDestroy&quot;</span>},</div>
+<div class="line"><a name="l06444"></a><span class="lineno"> 6444</span>&#160;      {<span class="stringliteral">&quot;zeModuleCreate&quot;</span>,       <span class="stringliteral">&quot;zeModuleDestroy&quot;</span>},</div>
+<div class="line"><a name="l06445"></a><span class="lineno"> 6445</span>&#160;      {<span class="stringliteral">&quot;zeKernelCreate&quot;</span>,       <span class="stringliteral">&quot;zeKernelDestroy&quot;</span>},</div>
+<div class="line"><a name="l06446"></a><span class="lineno"> 6446</span>&#160;      {<span class="stringliteral">&quot;zeEventPoolCreate&quot;</span>,    <span class="stringliteral">&quot;zeEventPoolDestroy&quot;</span>},</div>
+<div class="line"><a name="l06447"></a><span class="lineno"> 6447</span>&#160;      {<span class="stringliteral">&quot;zeCommandListCreateImmediate&quot;</span>, <span class="stringliteral">&quot;zeCommandListCreate&quot;</span>, <span class="stringliteral">&quot;zeCommandListDestroy&quot;</span>},</div>
+<div class="line"><a name="l06448"></a><span class="lineno"> 6448</span>&#160;      {<span class="stringliteral">&quot;zeEventCreate&quot;</span>,        <span class="stringliteral">&quot;zeEventDestroy&quot;</span>},</div>
+<div class="line"><a name="l06449"></a><span class="lineno"> 6449</span>&#160;      {<span class="stringliteral">&quot;zeFenceCreate&quot;</span>,        <span class="stringliteral">&quot;zeFenceDestroy&quot;</span>},</div>
+<div class="line"><a name="l06450"></a><span class="lineno"> 6450</span>&#160;      {<span class="stringliteral">&quot;zeImageCreate&quot;</span>,        <span class="stringliteral">&quot;zeImageDestroy&quot;</span>},</div>
+<div class="line"><a name="l06451"></a><span class="lineno"> 6451</span>&#160;      {<span class="stringliteral">&quot;zeSamplerCreate&quot;</span>,      <span class="stringliteral">&quot;zeSamplerDestroy&quot;</span>},</div>
+<div class="line"><a name="l06452"></a><span class="lineno"> 6452</span>&#160;      {<span class="stringliteral">&quot;zeMemAllocDevice&quot;</span>, <span class="stringliteral">&quot;zeMemAllocHost&quot;</span>, <span class="stringliteral">&quot;zeMemAllocShared&quot;</span>, <span class="stringliteral">&quot;zeMemFree&quot;</span>},</div>
+<div class="line"><a name="l06453"></a><span class="lineno"> 6453</span>&#160;    };</div>
+<div class="line"><a name="l06454"></a><span class="lineno"> 6454</span>&#160; </div>
+<div class="line"><a name="l06455"></a><span class="lineno"> 6455</span>&#160;    <span class="comment">// A sample output aimed below is this:</span></div>
+<div class="line"><a name="l06456"></a><span class="lineno"> 6456</span>&#160;    <span class="comment">// ------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l06457"></a><span class="lineno"> 6457</span>&#160;    <span class="comment">//                zeContextCreate = 1     \---&gt;        zeContextDestroy = 1</span></div>
+<div class="line"><a name="l06458"></a><span class="lineno"> 6458</span>&#160;    <span class="comment">//           zeCommandQueueCreate = 1     \---&gt;   zeCommandQueueDestroy = 1</span></div>
+<div class="line"><a name="l06459"></a><span class="lineno"> 6459</span>&#160;    <span class="comment">//                 zeModuleCreate = 1     \---&gt;         zeModuleDestroy = 1</span></div>
+<div class="line"><a name="l06460"></a><span class="lineno"> 6460</span>&#160;    <span class="comment">//                 zeKernelCreate = 1     \---&gt;         zeKernelDestroy = 1</span></div>
+<div class="line"><a name="l06461"></a><span class="lineno"> 6461</span>&#160;    <span class="comment">//              zeEventPoolCreate = 1     \---&gt;      zeEventPoolDestroy = 1</span></div>
+<div class="line"><a name="l06462"></a><span class="lineno"> 6462</span>&#160;    <span class="comment">//   zeCommandListCreateImmediate = 1     |</span></div>
+<div class="line"><a name="l06463"></a><span class="lineno"> 6463</span>&#160;    <span class="comment">//            zeCommandListCreate = 1     \---&gt;    zeCommandListDestroy = 1  ---&gt; LEAK = 1</span></div>
+<div class="line"><a name="l06464"></a><span class="lineno"> 6464</span>&#160;    <span class="comment">//                  zeEventCreate = 2     \---&gt;          zeEventDestroy = 2</span></div>
+<div class="line"><a name="l06465"></a><span class="lineno"> 6465</span>&#160;    <span class="comment">//                  zeFenceCreate = 1     \---&gt;          zeFenceDestroy = 1</span></div>
+<div class="line"><a name="l06466"></a><span class="lineno"> 6466</span>&#160;    <span class="comment">//                  zeImageCreate = 0     \---&gt;          zeImageDestroy = 0</span></div>
+<div class="line"><a name="l06467"></a><span class="lineno"> 6467</span>&#160;    <span class="comment">//                zeSamplerCreate = 0     \---&gt;        zeSamplerDestroy = 0</span></div>
+<div class="line"><a name="l06468"></a><span class="lineno"> 6468</span>&#160;    <span class="comment">//               zeMemAllocDevice = 0     |</span></div>
+<div class="line"><a name="l06469"></a><span class="lineno"> 6469</span>&#160;    <span class="comment">//                 zeMemAllocHost = 1     |</span></div>
+<div class="line"><a name="l06470"></a><span class="lineno"> 6470</span>&#160;    <span class="comment">//               zeMemAllocShared = 0     \---&gt;               zeMemFree = 1</span></div>
+<div class="line"><a name="l06471"></a><span class="lineno"> 6471</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l06472"></a><span class="lineno"> 6472</span>&#160;    <span class="comment">// clang-format on</span></div>
+<div class="line"><a name="l06473"></a><span class="lineno"> 6473</span>&#160; </div>
+<div class="line"><a name="l06474"></a><span class="lineno"> 6474</span>&#160;    fprintf(stderr, <span class="stringliteral">&quot;ZE_DEBUG=%d: check balance of create/destroy calls\n&quot;</span>,</div>
+<div class="line"><a name="l06475"></a><span class="lineno"> 6475</span>&#160;            ZE_DEBUG_CALL_COUNT);</div>
+<div class="line"><a name="l06476"></a><span class="lineno"> 6476</span>&#160;    fprintf(stderr,</div>
+<div class="line"><a name="l06477"></a><span class="lineno"> 6477</span>&#160;            <span class="stringliteral">&quot;----------------------------------------------------------\n&quot;</span>);</div>
+<div class="line"><a name="l06478"></a><span class="lineno"> 6478</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Row : CreateDestroySet) {</div>
+<div class="line"><a name="l06479"></a><span class="lineno"> 6479</span>&#160;      <span class="keywordtype">int</span> diff = 0;</div>
+<div class="line"><a name="l06480"></a><span class="lineno"> 6480</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> I = Row.begin(); I != Row.end();) {</div>
+<div class="line"><a name="l06481"></a><span class="lineno"> 6481</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;ZeName = I-&gt;c_str();</div>
+<div class="line"><a name="l06482"></a><span class="lineno"> 6482</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;ZeCount = (*ZeCallCount)[*I];</div>
+<div class="line"><a name="l06483"></a><span class="lineno"> 6483</span>&#160; </div>
+<div class="line"><a name="l06484"></a><span class="lineno"> 6484</span>&#160;        <span class="keywordtype">bool</span> First = (I == Row.begin());</div>
+<div class="line"><a name="l06485"></a><span class="lineno"> 6485</span>&#160;        <span class="keywordtype">bool</span> Last = (++I == Row.end());</div>
+<div class="line"><a name="l06486"></a><span class="lineno"> 6486</span>&#160; </div>
+<div class="line"><a name="l06487"></a><span class="lineno"> 6487</span>&#160;        <span class="keywordflow">if</span> (Last) {</div>
+<div class="line"><a name="l06488"></a><span class="lineno"> 6488</span>&#160;          fprintf(stderr, <span class="stringliteral">&quot; \\---&gt;&quot;</span>);</div>
+<div class="line"><a name="l06489"></a><span class="lineno"> 6489</span>&#160;          diff -= ZeCount;</div>
+<div class="line"><a name="l06490"></a><span class="lineno"> 6490</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l06491"></a><span class="lineno"> 6491</span>&#160;          diff += ZeCount;</div>
+<div class="line"><a name="l06492"></a><span class="lineno"> 6492</span>&#160;          <span class="keywordflow">if</span> (!First) {</div>
+<div class="line"><a name="l06493"></a><span class="lineno"> 6493</span>&#160;            fprintf(stderr, <span class="stringliteral">&quot; | \n&quot;</span>);</div>
+<div class="line"><a name="l06494"></a><span class="lineno"> 6494</span>&#160;          }</div>
+<div class="line"><a name="l06495"></a><span class="lineno"> 6495</span>&#160;        }</div>
+<div class="line"><a name="l06496"></a><span class="lineno"> 6496</span>&#160; </div>
+<div class="line"><a name="l06497"></a><span class="lineno"> 6497</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;%30s = %-5d&quot;</span>, ZeName, ZeCount);</div>
+<div class="line"><a name="l06498"></a><span class="lineno"> 6498</span>&#160;      }</div>
+<div class="line"><a name="l06499"></a><span class="lineno"> 6499</span>&#160; </div>
+<div class="line"><a name="l06500"></a><span class="lineno"> 6500</span>&#160;      <span class="keywordflow">if</span> (diff)</div>
+<div class="line"><a name="l06501"></a><span class="lineno"> 6501</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot; ---&gt; LEAK = %d&quot;</span>, diff);</div>
+<div class="line"><a name="l06502"></a><span class="lineno"> 6502</span>&#160;      fprintf(stderr, <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l06503"></a><span class="lineno"> 6503</span>&#160;    }</div>
+<div class="line"><a name="l06504"></a><span class="lineno"> 6504</span>&#160; </div>
+<div class="line"><a name="l06505"></a><span class="lineno"> 6505</span>&#160;    ZeCallCount-&gt;clear();</div>
+<div class="line"><a name="l06506"></a><span class="lineno"> 6506</span>&#160;    <span class="keyword">delete</span> ZeCallCount;</div>
+<div class="line"><a name="l06507"></a><span class="lineno"> 6507</span>&#160;    ZeCallCount = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l06508"></a><span class="lineno"> 6508</span>&#160;  }</div>
+<div class="line"><a name="l06509"></a><span class="lineno"> 6509</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a94809a014464a857cf2ec1035988b322">PI_SUCCESS</a>;</div>
+<div class="line"><a name="l06510"></a><span class="lineno"> 6510</span>&#160;}</div>
+<div class="line"><a name="l06511"></a><span class="lineno"> 6511</span>&#160; </div>
+<div class="line"><a name="l06512"></a><span class="lineno"> 6512</span>&#160;} <span class="comment">// extern &quot;C&quot;</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="api_8h_html_abaed2e995068d0454395b8d2e3369df0ade52a0af1874fed5fb5919426b7ba12f"><div class="ttname"><a href="pi_8h.html#abaed2e995068d0454395b8d2e3369df0ade52a0af1874fed5fb5919426b7ba12f">PI_COMMAND_TYPE_USER</a></div><div class="ttdeci">@ PI_COMMAND_TYPE_USER</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00385">pi.h:385</a></div></div>
@@ -6591,7 +6593,7 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="ttc" id="astruct__pi__context_html_af7af59c3a749d29f49a53d6b745e1a49"><div class="ttname"><a href="struct__pi__context.html#af7af59c3a749d29f49a53d6b745e1a49">_pi_context::ZeCommandListInit</a></div><div class="ttdeci">ze_command_list_handle_t ZeCommandListInit</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00295">pi_level_zero.hpp:295</a></div></div>
 <div class="ttc" id="api_8h_html_a15a332a6c4c1701b7e20d5bf0afef717a94809a014464a857cf2ec1035988b322"><div class="ttname"><a href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a94809a014464a857cf2ec1035988b322">PI_SUCCESS</a></div><div class="ttdeci">@ PI_SUCCESS</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00076">pi.h:76</a></div></div>
 <div class="ttc" id="api__level__zero_8cpp_html_a2daa6fd82b433d43479179c5cb88b3b9"><div class="ttname"><a href="pi__level__zero_8cpp.html#a2daa6fd82b433d43479179c5cb88b3b9">enqueueMemFillHelper</a></div><div class="ttdeci">static pi_result enqueueMemFillHelper(pi_command_type CommandType, pi_queue Queue, void *Ptr, const void *Pattern, size_t PatternSize, size_t Size, pi_uint32 NumEventsInWaitList, const pi_event *EventWaitList, pi_event *Event)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l04945">pi_level_zero.cpp:4945</a></div></div>
-<div class="ttc" id="api__level__zero_8cpp_html_a5ac98e3290841a01e0de5131b5935c49"><div class="ttname"><a href="pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49">piTearDown</a></div><div class="ttdeci">pi_result piTearDown(void *PluginParameter)</div><div class="ttdoc">API to notify that the plugin should clean up its resources.</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l06419">pi_level_zero.cpp:6419</a></div></div>
+<div class="ttc" id="api__level__zero_8cpp_html_a5ac98e3290841a01e0de5131b5935c49"><div class="ttname"><a href="pi__level__zero_8cpp.html#a5ac98e3290841a01e0de5131b5935c49">piTearDown</a></div><div class="ttdeci">pi_result piTearDown(void *PluginParameter)</div><div class="ttdoc">API to notify that the plugin should clean up its resources.</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l06421">pi_level_zero.cpp:6421</a></div></div>
 <div class="ttc" id="astruct__pi__context_html_a9126a200a75f4beb6618132c5984bc13"><div class="ttname"><a href="struct__pi__context.html#a9126a200a75f4beb6618132c5984bc13">_pi_context::DeviceMemAllocContexts</a></div><div class="ttdeci">std::unordered_map&lt; pi_device, USMAllocContext &gt; DeviceMemAllocContexts</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00335">pi_level_zero.hpp:335</a></div></div>
 <div class="ttc" id="api_8h_html_a20cb9667c348b3dffdcbd015fb104d4eacbc05b0fb15bbeeef9ed3e2f2a715351"><div class="ttname"><a href="pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eacbc05b0fb15bbeeef9ed3e2f2a715351">PI_DEVICE_INFO_DOUBLE_FP_CONFIG</a></div><div class="ttdeci">@ PI_DEVICE_INFO_DOUBLE_FP_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00185">pi.h:185</a></div></div>
 <div class="ttc" id="api__level__zero_8cpp_html_abe94254ee766a274c4cbe8547ad4556c"><div class="ttname"><a href="pi__level__zero_8cpp.html#abe94254ee766a274c4cbe8547ad4556c">piPlatformsGet</a></div><div class="ttdeci">pi_result piPlatformsGet(pi_uint32 NumEntries, pi_platform *Platforms, pi_uint32 *NumPlatforms)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l01215">pi_level_zero.cpp:1215</a></div></div>
@@ -6832,7 +6834,7 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="ttc" id="astruct__pi__platform_html_a0cbb97b97e6a6784198bc3d55358fedd"><div class="ttname"><a href="struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd">_pi_platform::PiDevicesCacheMutex</a></div><div class="ttdeci">std::mutex PiDevicesCacheMutex</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00100">pi_level_zero.hpp:100</a></div></div>
 <div class="ttc" id="astruct__pi__device_html_ac85b84cd728a9feb4bf6fa6b6c2f33df"><div class="ttname"><a href="struct__pi__device.html#ac85b84cd728a9feb4bf6fa6b6c2f33df">_pi_device::ZeDeviceProperties</a></div><div class="ttdeci">ze_device_properties_t ZeDeviceProperties</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00217">pi_level_zero.hpp:217</a></div></div>
 <div class="ttc" id="api__level__zero_8cpp_html_a24b130fbcf9b7fe878a94d82eabbfe7d"><div class="ttname"><a href="pi__level__zero_8cpp.html#a24b130fbcf9b7fe878a94d82eabbfe7d">piQueueRetain</a></div><div class="ttdeci">pi_result piQueueRetain(pi_queue Queue)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l02453">pi_level_zero.cpp:2453</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_1_1pi_html_abc198fc7f3887cb0deaea2abcbee3d2d"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail_1_1pi.html#abc198fc7f3887cb0deaea2abcbee3d2d">cl::sycl::detail::pi::die</a></div><div class="ttdeci">void die(const char *Message)</div><div class="ttdef"><b>Definition:</b> <a href="pi_8cpp_source.html#l00452">pi.cpp:452</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_1_1pi_html_abc198fc7f3887cb0deaea2abcbee3d2d"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail_1_1pi.html#abc198fc7f3887cb0deaea2abcbee3d2d">cl::sycl::detail::pi::die</a></div><div class="ttdeci">void die(const char *Message)</div><div class="ttdef"><b>Definition:</b> <a href="pi_8cpp_source.html#l00450">pi.cpp:450</a></div></div>
 <div class="ttc" id="api_8h_html_a20cb9667c348b3dffdcbd015fb104d4ea4083e83bd2e774ddae4ab0c190cb708d"><div class="ttname"><a href="pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea4083e83bd2e774ddae4ab0c190cb708d">PI_DEVICE_INFO_HALF_FP_CONFIG</a></div><div class="ttdeci">@ PI_DEVICE_INFO_HALF_FP_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00184">pi.h:184</a></div></div>
 <div class="ttc" id="api__level__zero_8cpp_html_abe3609a6c9572a2521bd498ebc03ebe1"><div class="ttname"><a href="pi__level__zero_8cpp.html#abe3609a6c9572a2521bd498ebc03ebe1">piSamplerCreate</a></div><div class="ttdeci">pi_result piSamplerCreate(pi_context Context, const pi_sampler_properties *SamplerProperties, pi_sampler *RetSampler)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l04419">pi_level_zero.cpp:4419</a></div></div>
 <div class="ttc" id="api_8h_html_a89d177da59c06caf679bb298cc0b0a02"><div class="ttname"><a href="pi_8h.html#a89d177da59c06caf679bb298cc0b0a02">pi_mem_flags</a></div><div class="ttdeci">pi_bitfield pi_mem_flags</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00515">pi.h:515</a></div></div>
@@ -6872,6 +6874,7 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="ttc" id="astruct__pi__platform_html_a9913efa9437be0f2688408e058cd1a90"><div class="ttname"><a href="struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90">_pi_platform::ZeDriverApiVersion</a></div><div class="ttdeci">std::string ZeDriverApiVersion</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00093">pi_level_zero.hpp:93</a></div></div>
 <div class="ttc" id="astruct__pi__platform_html_a6f14d1e5fe883ff45c89ab02d2c33691"><div class="ttname"><a href="struct__pi__platform.html#a6f14d1e5fe883ff45c89ab02d2c33691">_pi_platform::Contexts</a></div><div class="ttdeci">std::list&lt; pi_context &gt; Contexts</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00119">pi_level_zero.hpp:119</a></div></div>
 <div class="ttc" id="api_8h_html_a20cb9667c348b3dffdcbd015fb104d4ea997dc08d08bb798f57e2513641ba4991"><div class="ttname"><a href="pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea997dc08d08bb798f57e2513641ba4991">PI_DEVICE_INFO_USM_HOST_SUPPORT</a></div><div class="ttdeci">@ PI_DEVICE_INFO_USM_HOST_SUPPORT</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00273">pi.h:273</a></div></div>
+<div class="ttc" id="api__level__zero_8cpp_html_add266abfc4d29349e775927a0a1cad8a"><div class="ttname"><a href="pi__level__zero_8cpp.html#add266abfc4d29349e775927a0a1cad8a">zeParseError</a></div><div class="ttdeci">void zeParseError(ze_result_t ZeError, const char *&amp;ErrorString)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l00411">pi_level_zero.cpp:411</a></div></div>
 <div class="ttc" id="api_8h_html_a15a332a6c4c1701b7e20d5bf0afef717a8fb0eda037b6e6c8a6ff437f727adbcf"><div class="ttname"><a href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a8fb0eda037b6e6c8a6ff437f727adbcf">PI_INVALID_QUEUE</a></div><div class="ttdeci">@ PI_INVALID_QUEUE</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00086">pi.h:86</a></div></div>
 <div class="ttc" id="api_8h_html_a9493f815921f58c6e410def36d93bf10"><div class="ttname"><a href="pi_8h.html#a9493f815921f58c6e410def36d93bf10">PI_MEM_FLAGS_HOST_PTR_USE</a></div><div class="ttdeci">constexpr pi_mem_flags PI_MEM_FLAGS_HOST_PTR_USE</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00519">pi.h:519</a></div></div>
 <div class="ttc" id="astruct__pi__queue_html_a3f51722a1c7449317bc6ea799ce6f814"><div class="ttname"><a href="struct__pi__queue.html#a3f51722a1c7449317bc6ea799ce6f814">_pi_queue::ZeOpenCommandListSize</a></div><div class="ttdeci">pi_uint32 ZeOpenCommandListSize</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00421">pi_level_zero.hpp:421</a></div></div>
@@ -7088,7 +7091,6 @@ $(document).ready(function(){initNavTree('pi__level__zero_8cpp_source.html','');
 <div class="ttc" id="astructpi__buff__rect__offset__struct_html_a3ee51903a6b2674d24300a1e472bb56f"><div class="ttname"><a href="structpi__buff__rect__offset__struct.html#a3ee51903a6b2674d24300a1e472bb56f">pi_buff_rect_offset_struct::x_bytes</a></div><div class="ttdeci">size_t x_bytes</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00750">pi.h:750</a></div></div>
 <div class="ttc" id="api__level__zero_8cpp_html_abf4de06fa8c8ba2da6ccc7757da2a7b9"><div class="ttname"><a href="pi__level__zero_8cpp.html#abf4de06fa8c8ba2da6ccc7757da2a7b9">piDevicesGet</a></div><div class="ttdeci">pi_result piDevicesGet(pi_platform Platform, pi_device_type DeviceType, pi_uint32 NumEntries, pi_device *Devices, pi_uint32 *NumDevices)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l01435">pi_level_zero.cpp:1435</a></div></div>
 <div class="ttc" id="astruct__pi__program_html_a8d5f620396d9b8bd269ea3c75b7d8773"><div class="ttname"><a href="struct__pi__program.html#a8d5f620396d9b8bd269ea3c75b7d8773">_pi_program::State</a></div><div class="ttdeci">state State</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8hpp_source.html#l00855">pi_level_zero.hpp:855</a></div></div>
-<div class="ttc" id="api__level__zero_8cpp_html_a7f1da34dd8bd1756331ac222c5c72815"><div class="ttname"><a href="pi__level__zero_8cpp.html#a7f1da34dd8bd1756331ac222c5c72815">zeParseError</a></div><div class="ttdeci">void zeParseError(ze_result_t ZeError, std::string &amp;ErrorString)</div><div class="ttdef"><b>Definition:</b> <a href="pi__level__zero_8cpp_source.html#l00411">pi_level_zero.cpp:411</a></div></div>
 <div class="ttc" id="api_8h_html_a57c877a8b4170a2a4e9958cce2266278af78a73b121f09a13d03920f5662bc65b"><div class="ttname"><a href="pi_8h.html#a57c877a8b4170a2a4e9958cce2266278af78a73b121f09a13d03920f5662bc65b">PI_MEM_TYPE_HOST</a></div><div class="ttdeci">@ PI_MEM_TYPE_HOST</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l01491">pi.h:1491</a></div></div>
 <div class="ttc" id="api_8h_html_abaed2e995068d0454395b8d2e3369df0"><div class="ttname"><a href="pi_8h.html#abaed2e995068d0454395b8d2e3369df0">_pi_command_type</a></div><div class="ttdeci">_pi_command_type</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00375">pi.h:375</a></div></div>
 <div class="ttc" id="api_8h_html_a15a332a6c4c1701b7e20d5bf0afef717a3a475a284a08d9f62521de2a4741bd19"><div class="ttname"><a href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a3a475a284a08d9f62521de2a4741bd19">PI_INVALID_WORK_DIMENSION</a></div><div class="ttdeci">@ PI_INVALID_WORK_DIMENSION</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00103">pi.h:103</a></div></div>

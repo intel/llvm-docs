@@ -109,9 +109,9 @@ $(document).ready(function(){initNavTree('classcl_1_1sycl_1_1detail_1_1Scheduler
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4e39d54dad155d40da84aa2b23e43b8"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#ac4e39d54dad155d40da84aa2b23e43b8">getWaitList</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event)</td></tr>
 <tr class="separator:ac4e39d54dad155d40da84aa2b23e43b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb744c383493e594979353fe434ba2c3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#aeb744c383493e594979353fe434ba2c3">waitForEvent</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event)</td></tr>
-<tr class="memdesc:aeb744c383493e594979353fe434ba2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the command, associated with Event passed, is completed.  <a href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#aeb744c383493e594979353fe434ba2c3">More...</a><br /></td></tr>
-<tr class="separator:aeb744c383493e594979353fe434ba2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a671d4168e825f2f2470acb1bc5ca2d19"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#a671d4168e825f2f2470acb1bc5ca2d19">waitForEvent</a> (<a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a> Event, <a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a011d40c491f07a7097b8b77431c50f54">ReadLockT</a> &amp;GraphReadLock, bool LockTheLock=true)</td></tr>
+<tr class="memdesc:a671d4168e825f2f2470acb1bc5ca2d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for the command, associated with Event passed, is completed.  <a href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#a671d4168e825f2f2470acb1bc5ca2d19">More...</a><br /></td></tr>
+<tr class="separator:a671d4168e825f2f2470acb1bc5ca2d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc64ef089b1890c00829c77f7c160844"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#abc64ef089b1890c00829c77f7c160844">enqueueCommand</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a> *Cmd, <a class="el" href="structcl_1_1sycl_1_1detail_1_1EnqueueResultT.html">EnqueueResultT</a> &amp;EnqueueResult, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af961fb0fe94eef91c4feb0abf6239819">BlockingT</a> Blocking=<a class="el" href="namespacecl_1_1sycl_1_1detail.html#af961fb0fe94eef91c4feb0abf6239819aa95cce2be00376fe3e3b164f1f511e41">NON_BLOCKING</a>)</td></tr>
 <tr class="memdesc:abc64ef089b1890c00829c77f7c160844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueues the command and all its dependencies.  <a href="classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphProcessor.html#abc64ef089b1890c00829c77f7c160844">More...</a><br /></td></tr>
 <tr class="separator:abc64ef089b1890c00829c77f7c160844"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,7 +160,7 @@ Command enqueueing</h1>
 <div class="line">   <span class="comment">// Context2</span></div>
 </div><!-- fragment --><p>The alternative approach that has been considered is to have separate dispatcher thread that would wait for all events from the Context other then target Context to complete and then enqueue command with dependencies from target Context only. Alternative approach makes code significantly more complex and can hurt performance on CPU device vs chosen approach with callbacks. </p>
 
-<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00707">707</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="scheduler_8hpp_source.html#l00722">722</a> of file <a class="el" href="scheduler_8hpp_source.html">scheduler.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abc64ef089b1890c00829c77f7c160844"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc64ef089b1890c00829c77f7c160844">&#9670;&nbsp;</a></span>enqueueCommand()</h2>
@@ -206,14 +206,16 @@ Command enqueueing</h1>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">EnqueueResult</td><td>is set to specific status if enqueue failed. </td></tr>
+    <tr><td class="paramname">GraphReadLock</td><td>read-lock which is already acquired for reading </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the command is successfully enqueued. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the command is successfully enqueued.</dd></dl>
+<p>The function may unlock and lock GraphReadLock as needed. Upon return the lock is left in locked state. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph__processor_8cpp_source.html#l00055">55</a> of file <a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph__processor_8cpp_source.html#l00063">63</a> of file <a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00567">cl::sycl::detail::Command::enqueue()</a>, <a class="el" href="commands_8hpp_source.html#l00226">cl::sycl::detail::Command::getPreparedHostDepsEvents()</a>, <a class="el" href="commands_8hpp_source.html#l00133">cl::sycl::detail::Command::isEnqueueBlocked()</a>, <a class="el" href="commands_8hpp_source.html#l00129">cl::sycl::detail::Command::isSuccessfullyEnqueued()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, and <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MDeps</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00575">cl::sycl::detail::Command::enqueue()</a>, <a class="el" href="commands_8hpp_source.html#l00230">cl::sycl::detail::Command::getPreparedHostDepsEvents()</a>, <a class="el" href="commands_8hpp_source.html#l00135">cl::sycl::detail::Command::isEnqueueBlocked()</a>, <a class="el" href="commands_8hpp_source.html#l00131">cl::sycl::detail::Command::isSuccessfullyEnqueued()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, and <a class="el" href="commands_8hpp_source.html#l00235">cl::sycl::detail::Command::MDeps</a>.</p>
 
 </div>
 </div>
@@ -244,12 +246,12 @@ Command enqueueing</h1>
 
 <p class="definition">Definition at line <a class="el" href="graph__processor_8cpp_source.html#l00025">25</a> of file <a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="graph__processor_8cpp_source.html#l00020">cl::sycl::detail::getCommand()</a>, <a class="el" href="commands_8hpp_source.html#l00139">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, and <a class="el" href="commands_8hpp_source.html#l00231">cl::sycl::detail::Command::MDeps</a>.</p>
+<p class="reference">References <a class="el" href="graph__processor_8cpp_source.html#l00020">cl::sycl::detail::getCommand()</a>, <a class="el" href="commands_8hpp_source.html#l00141">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00078">cl::sycl::detail::DepDesc::MDepCommand</a>, and <a class="el" href="commands_8hpp_source.html#l00235">cl::sycl::detail::Command::MDeps</a>.</p>
 
 </div>
 </div>
-<a id="aeb744c383493e594979353fe434ba2c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb744c383493e594979353fe434ba2c3">&#9670;&nbsp;</a></span>waitForEvent()</h2>
+<a id="a671d4168e825f2f2470acb1bc5ca2d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671d4168e825f2f2470acb1bc5ca2d19">&#9670;&nbsp;</a></span>waitForEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,8 +263,24 @@ Command enqueueing</h1>
           <td class="memname">void cl::sycl::detail::Scheduler::GraphProcessor::waitForEvent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae666f00e7fc733aa20add2a77a262c9c">EventImplPtr</a>&#160;</td>
-          <td class="paramname"><em>Event</em></td><td>)</td>
+          <td class="paramname"><em>Event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Scheduler.html#a011d40c491f07a7097b8b77431c50f54">ReadLockT</a> &amp;&#160;</td>
+          <td class="paramname"><em>GraphReadLock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>LockTheLock</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -273,10 +291,18 @@ Command enqueueing</h1>
 </div><div class="memdoc">
 
 <p>Waits for the command, associated with Event passed, is completed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">GraphReadLock</td><td>read-lock which is already acquired for reading </td></tr>
+    <tr><td class="paramname">LockTheLock</td><td>selects if graph lock should be locked upon return</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The function may unlock and lock GraphReadLock as needed. Upon return the lock is left in locked state if and only if LockTheLock is true. </p>
 
 <p class="definition">Definition at line <a class="el" href="graph__processor_8cpp_source.html#l00039">39</a> of file <a class="el" href="graph__processor_8cpp_source.html">graph_processor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00045">cl::sycl::detail::BLOCKING</a>, <a class="el" href="graph__processor_8cpp_source.html#l00020">cl::sycl::detail::getCommand()</a>, <a class="el" href="commands_8hpp_source.html#l00139">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00059">cl::sycl::detail::EnqueueResultT::MResult</a>, and <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>.</p>
+<p class="reference">References <a class="el" href="commands_8hpp_source.html#l00045">cl::sycl::detail::BLOCKING</a>, <a class="el" href="graph__processor_8cpp_source.html#l00020">cl::sycl::detail::getCommand()</a>, <a class="el" href="commands_8hpp_source.html#l00141">cl::sycl::detail::Command::getEvent()</a>, <a class="el" href="commands_8hpp_source.html#l00059">cl::sycl::detail::EnqueueResultT::MResult</a>, and <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>.</p>
 
 </div>
 </div>

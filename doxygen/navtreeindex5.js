@@ -1,5 +1,12 @@
 var NAVTREEINDEX5 =
 {
+"classReleaseGuard.html#a842fa7466ffe980b5e5fec5a7b582abe":[3,0,39,5],
+"classReleaseGuard.html#a92517f8d00406d4719e310842e6f0e33":[3,0,39,4],
+"classReleaseGuard.html#a935dfcd5eb46cf93d3ce001df1016cc5":[3,0,39,3],
+"classReleaseGuard.html#a9e67a104a26afb57a2d034b03cfd5c3b":[3,0,39,0],
+"classReleaseGuard.html#aa4b97e2f9f510a95213a0716a8e2ff14":[3,0,39,1],
+"classReleaseGuard.html#abd62ef65845cd7ae72f699c766962378":[3,0,39,6],
+"classReleaseGuard.html#ad9bc735e67223fb868020afa4c4cd76a":[3,0,39,7],
 "classSlab.html":[3,0,40],
 "classSlab.html#a0358a2c41543319394b1dafcd0f4c4e6":[3,0,40,2],
 "classSlab.html#a109951e43aa7a487918d520f58975ef9":[3,0,40,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ad1c46ef27e32384773dbe8120796c46f":[3,0,1,1,4,0,6,12],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ad2ef80bdfd55ffca8c2b20f0ee85de14":[3,0,1,1,4,0,6,14],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ad36b232425393f4596860b6c070a5401":[3,0,1,1,4,0,6,23],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ad8f28a92025a1832e3cc04458260d68e":[3,0,1,1,4,0,6,10],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ae61dd72c2023ca369e66b23def2bd348":[3,0,1,1,4,0,6,0],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#af4aaf082986659049a66b19967e5c276":[3,0,1,1,4,0,6,6],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html":[3,0,1,1,4,0,14],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#a104c33e10ad9b8fa6f46ba373303701f":[3,0,1,1,4,0,14,1],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#a2b302319558c8a2b7a4b1b99bfcc12f3":[3,0,1,1,4,0,14,0],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html#aa7935d01fbfe08219c29900728b597d4":[3,0,1,1,4,0,14,2],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html":[3,0,1,1,4,0,23]
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ad8f28a92025a1832e3cc04458260d68e":[3,0,1,1,4,0,6,10]
 };
