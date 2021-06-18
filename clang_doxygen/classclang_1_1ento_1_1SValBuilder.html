@@ -272,6 +272,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab49cf34f86f5a2891dbb9a83005e1ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46684e603c143db5d1d79773ca26759b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1ento_1_1Loc.html">Loc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a46684e603c143db5d1d79773ca26759b">makeLoc</a> (const <a class="el" href="InterpState_8cpp.html#abcdace8b2ec8db6d1a21f45f8a45e6fd">llvm::APSInt</a> &amp;integer)</td></tr>
 <tr class="separator:a46684e603c143db5d1d79773ca26759b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c03bd2d24d8678117d35bf94cf033b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classllvm_1_1Optional.html">Optional</a>&lt; <a class="el" href="classclang_1_1ento_1_1loc_1_1MemRegionVal.html">loc::MemRegionVal</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a2c03bd2d24d8678117d35bf94cf033b6">getCastedMemRegionVal</a> (const <a class="el" href="classclang_1_1ento_1_1MemRegion.html">MemRegion</a> *region, <a class="el" href="classclang_1_1QualType.html">QualType</a> <a class="el" href="classstd_1_1conditional_1_1type.html">type</a>)</td></tr>
+<tr class="memdesc:a2c03bd2d24d8678117d35bf94cf033b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return MemRegionVal on success cast, otherwise return None.  <a href="classclang_1_1ento_1_1SValBuilder.html#a2c03bd2d24d8678117d35bf94cf033b6">More...</a><br /></td></tr>
+<tr class="separator:a2c03bd2d24d8678117d35bf94cf033b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ed28df1377ba74806fd5717f6380282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1ento_1_1SVal.html">SVal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a7ed28df1377ba74806fd5717f6380282">makeSymbolVal</a> (<a class="el" href="namespaceclang_1_1ento.html#a7b23a067324d14c5d493837dbc4fd8ca">SymbolRef</a> Sym)</td></tr>
 <tr class="memdesc:a7ed28df1377ba74806fd5717f6380282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make an <a class="el" href="classclang_1_1ento_1_1SVal.html" title="SVal - This represents a symbolic expression, which can be either an L-value or an R-value.">SVal</a> that represents the given symbol.  <a href="classclang_1_1ento_1_1SValBuilder.html#a7ed28df1377ba74806fd5717f6380282">More...</a><br /></td></tr>
 <tr class="separator:a7ed28df1377ba74806fd5717f6380282"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -440,9 +443,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Whether values in <code>lhs</code> and <code>rhs</code> are equal at <code>state</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00454">454</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00461">461</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00459">evalEQ()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00466">evalEQ()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ProgramState_8cpp_source.html#l00373">clang::ento::ProgramState::areEqual()</a>.</p>
 
@@ -496,7 +499,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00201">201</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">References <a class="el" href="classclang_1_1ento_1_1SymbolManager.html#a4adecbad83939f004f0960ac359d4d06">clang::ento::SymbolManager::conjureSymbol()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00875">clang::ast_matchers::expr</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
+<p class="reference">References <a class="el" href="classclang_1_1ento_1_1SymbolManager.html#a4adecbad83939f004f0960ac359d4d06">clang::ento::SymbolManager::conjureSymbol()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
 
 </div>
 </div>
@@ -648,7 +651,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00153">153</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SymbolManager_8cpp_source.html#l00333">clang::ento::SymbolManager::canSymbolicate()</a>, <a class="el" href="classclang_1_1ento_1_1SymbolManager.html#a4adecbad83939f004f0960ac359d4d06">clang::ento::SymbolManager::conjureSymbol()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00875">clang::ast_matchers::expr</a>, <a class="el" href="MemRegion_8cpp_source.html#l01130">clang::ento::MemRegionManager::getSymbolicRegion()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
+<p class="reference">References <a class="el" href="SymbolManager_8cpp_source.html#l00333">clang::ento::SymbolManager::canSymbolicate()</a>, <a class="el" href="classclang_1_1ento_1_1SymbolManager.html#a4adecbad83939f004f0960ac359d4d06">clang::ento::SymbolManager::conjureSymbol()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="MemRegion_8cpp_source.html#l01130">clang::ento::MemRegionManager::getSymbolicRegion()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
 
 </div>
 </div>
@@ -715,7 +718,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00099">99</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00070">ArrayIndexTy</a>, <a class="el" href="SValBuilder_8h_source.html#l00073">ArrayIndexWidth</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00558">evalCast()</a>, <a class="el" href="SVals_8h_source.html#l00111">clang::ento::SVal::getAs()</a>, and <a class="el" href="SVals_8h_source.html#l00144">clang::ento::SVal::isUnknownOrUndef()</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00070">ArrayIndexTy</a>, <a class="el" href="SValBuilder_8h_source.html#l00073">ArrayIndexWidth</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00565">evalCast()</a>, <a class="el" href="SVals_8h_source.html#l00111">clang::ento::SVal::getAs()</a>, and <a class="el" href="SVals_8h_source.html#l00144">clang::ento::SVal::isUnknownOrUndef()</a>.</p>
 
 </div>
 </div>
@@ -763,11 +766,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00413">413</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00420">420</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a4efb1b91088486c1e4373055ed42eff0">evalBinOpLL()</a>, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a408ca4e0d4be17c99c6c688bf9dbe8e4">evalBinOpLN()</a>, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a80593ee81368f3b4a734d9dec03ac2c4">evalBinOpNN()</a>, <a class="el" href="SVals_8h_source.html#l00111">clang::ento::SVal::getAs()</a>, <a class="el" href="SVals_8h_source.html#l00140">clang::ento::SVal::isUndef()</a>, <a class="el" href="SVals_8h_source.html#l00136">clang::ento::SVal::isUnknown()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00637">clang::ento::ExprEngine::bindReturnValue()</a>, <a class="el" href="ExprEngine_8h_source.html#l00629">clang::ento::ExprEngine::evalBinOp()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00459">evalEQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00637">clang::ento::ExprEngine::bindReturnValue()</a>, <a class="el" href="ExprEngine_8h_source.html#l00629">clang::ento::ExprEngine::evalBinOp()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00466">evalEQ()</a>.</p>
 
 </div>
 </div>
@@ -825,7 +828,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Create a new value which represents a binary expression with two memory location operands. </p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00413">evalBinOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00420">evalBinOp()</a>.</p>
 
 </div>
 </div>
@@ -884,7 +887,7 @@ Protected Attributes</h2></td></tr>
 <p>Create a new value which represents a binary expression with a memory location and non-location operands. </p>
 <p>For example, this would be used to evaluate a pointer arithmetic operation. </p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00413">evalBinOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00420">evalBinOp()</a>.</p>
 
 </div>
 </div>
@@ -942,7 +945,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Create a new value which represents a binary expression with two non- location operands. </p>
 
-<p class="reference">Referenced by <a class="el" href="ProgramState_8cpp_source.html#l00321">clang::ento::ProgramState::assumeInBound()</a>, <a class="el" href="Iterator_8cpp_source.html#l00265">clang::ento::iterator::assumeNoOverflow()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00413">evalBinOp()</a>, <a class="el" href="ExprEngine_8h_source.html#l00618">clang::ento::ExprEngine::evalBinOp()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00506">evalIntegralCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ProgramState_8cpp_source.html#l00321">clang::ento::ProgramState::assumeInBound()</a>, <a class="el" href="Iterator_8cpp_source.html#l00265">clang::ento::iterator::assumeNoOverflow()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00420">evalBinOp()</a>, <a class="el" href="ExprEngine_8h_source.html#l00618">clang::ento::ExprEngine::evalBinOp()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00513">evalIntegralCast()</a>.</p>
 
 </div>
 </div>
@@ -989,11 +992,11 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the most appropriate casted <a class="el" href="classclang_1_1ento_1_1SVal.html" title="SVal - This represents a symbolic expression, which can be either an L-value or an R-value.">SVal</a>. Note: Many cases don't use an exact OriginalTy. It can be extracted from <a class="el" href="classclang_1_1ento_1_1SVal.html" title="SVal - This represents a symbolic expression, which can be either an L-value or an R-value.">SVal</a> or the cast can performs unconditionaly. Always pass OriginalTy! It can be crucial in certain cases and generates different results. FIXME: If <code>OriginalTy.isNull()</code> is true, then cast performs based on CastTy only. This behavior is uncertain and should be improved. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00558">558</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00565">565</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00595">evalCastKind()</a>, <a class="el" href="ASTContext_8h_source.html#l02393">clang::ASTContext::getCanonicalType()</a>, <a class="el" href="ASTContext_8cpp_source.html#l03201">clang::ASTContext::getPointerType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06763">clang::Type::isVariableArrayType()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00473">shouldBeModeledWithNoOp()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00602">evalCastKind()</a>, <a class="el" href="ASTContext_8h_source.html#l02423">clang::ASTContext::getCanonicalType()</a>, <a class="el" href="ASTContext_8cpp_source.html#l03216">clang::ASTContext::getPointerType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06763">clang::Type::isVariableArrayType()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00480">shouldBeModeledWithNoOp()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SimpleConstraintManager_8cpp_source.html#l00025">clang::ento::SimpleConstraintManager::assume()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00099">convertToArrayIndex()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00506">evalIntegralCast()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00783">clang::ento::CXXInstanceCall::getInitialStackFrameContents()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00259">clang::ento::ExprEngine::handleLValueBitCast()</a>, <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00206">clang::ento::ExprEngine::processCallExit()</a>, <a class="el" href="ExprEngineCXX_8cpp_source.html#l00832">clang::ento::ExprEngine::VisitCXXNewExpr()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00655">clang::ento::ExprEngine::VisitLogicalExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SimpleConstraintManager_8cpp_source.html#l00025">clang::ento::SimpleConstraintManager::assume()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00099">convertToArrayIndex()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00513">evalIntegralCast()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00783">clang::ento::CXXInstanceCall::getInitialStackFrameContents()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00259">clang::ento::ExprEngine::handleLValueBitCast()</a>, <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00206">clang::ento::ExprEngine::processCallExit()</a>, <a class="el" href="ExprEngineCXX_8cpp_source.html#l00832">clang::ento::ExprEngine::VisitCXXNewExpr()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00655">clang::ento::ExprEngine::VisitLogicalExpr()</a>.</p>
 
 </div>
 </div>
@@ -1037,9 +1040,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00605">605</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00612">612</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00640">evalCastSubKind()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00647">evalCastSubKind()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1083,9 +1086,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00618">618</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00625">625</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00640">evalCastSubKind()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00647">evalCastSubKind()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1129,11 +1132,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00595">595</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00602">602</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00558">evalCast()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00862">evalCastSubKind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00565">evalCast()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00869">evalCastSubKind()</a>.</p>
 
 </div>
 </div>
@@ -1177,9 +1180,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00600">600</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00607">607</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1223,11 +1226,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00640">640</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00647">647</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="APSIntType_8h_source.html#l00037">clang::ento::APSIntType::apply()</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00141">clang::ento::BasicValueFactory::getAPSIntType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="APSIntType_8h_source.html#l00037">clang::ento::APSIntType::apply()</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00141">clang::ento::BasicValueFactory::getAPSIntType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00605">evalCastKind()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00862">evalCastSubKind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00612">evalCastKind()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00869">evalCastSubKind()</a>.</p>
 
 </div>
 </div>
@@ -1271,9 +1274,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00661">661</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00668">668</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="ASTContext_8cpp_source.html#l10113">clang::ASTContext::getIntWidth()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, <a class="el" href="Type_8h_source.html#l06697">clang::Type::isReferenceType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="ASTContext_8cpp_source.html#l10128">clang::ASTContext::getIntWidth()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, <a class="el" href="Type_8h_source.html#l06697">clang::Type::isReferenceType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1317,9 +1320,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00695">695</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00702">702</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ProgramState_8h_source.html#l00550">clang::ento::ProgramStateManager::ArrayToPointer()</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="Store_8cpp_source.html#l00074">clang::ento::StoreManager::castRegion()</a>, <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="Type_8h_source.html#l06476">clang::QualType::getCanonicalType()</a>, <a class="el" href="SymbolManager_8cpp_source.html#l00209">clang::ento::SymbolManager::getExtentSymbol()</a>, <a class="el" href="ASTContext_8cpp_source.html#l10113">clang::ASTContext::getIntWidth()</a>, <a class="el" href="ProgramState_8h_source.html#l00539">clang::ento::ProgramStateManager::getStoreManager()</a>, <a class="el" href="MemRegion_8cpp_source.html#l01326">clang::ento::MemRegion::getSymbolicBase()</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00222">clang::ento::BasicValueFactory::getZeroWithPtrWidth()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00690">hasSameUnqualifiedPointeeType()</a>, <a class="el" href="Type_8h_source.html#l06693">clang::Type::isBlockPointerType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8h_source.html#l06719">clang::Type::isFunctionPointerType()</a>, <a class="el" href="Type_8h_source.html#l06681">clang::Type::isFunctionType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, <a class="el" href="Type_8h_source.html#l06697">clang::Type::isReferenceType()</a>, <a class="el" href="Type_8cpp_source.html#l00589">clang::Type::isVoidPointerType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00067">StateMgr</a>, <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="ProgramState_8h_source.html#l00550">clang::ento::ProgramStateManager::ArrayToPointer()</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="Type_8h_source.html#l06476">clang::QualType::getCanonicalType()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00272">getCastedMemRegionVal()</a>, <a class="el" href="SymbolManager_8cpp_source.html#l00209">clang::ento::SymbolManager::getExtentSymbol()</a>, <a class="el" href="ASTContext_8cpp_source.html#l10128">clang::ASTContext::getIntWidth()</a>, <a class="el" href="MemRegion_8cpp_source.html#l01326">clang::ento::MemRegion::getSymbolicBase()</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00222">clang::ento::BasicValueFactory::getZeroWithPtrWidth()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00697">hasSameUnqualifiedPointeeType()</a>, <a class="el" href="Type_8h_source.html#l06693">clang::Type::isBlockPointerType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8h_source.html#l06719">clang::Type::isFunctionPointerType()</a>, <a class="el" href="Type_8h_source.html#l06681">clang::Type::isFunctionType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, <a class="el" href="Type_8h_source.html#l06697">clang::Type::isReferenceType()</a>, <a class="el" href="Type_8cpp_source.html#l00589">clang::Type::isVoidPointerType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00067">StateMgr</a>, <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1363,7 +1366,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00826">826</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00833">833</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
 </div>
 </div>
@@ -1407,9 +1410,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00832">832</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00839">839</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="APSIntType_8h_source.html#l00037">clang::ento::APSIntType::apply()</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00141">clang::ento::BasicValueFactory::getAPSIntType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00308">makeIntLocVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="APSIntType_8h_source.html#l00037">clang::ento::APSIntType::apply()</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00141">clang::ento::BasicValueFactory::getAPSIntType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00308">makeIntLocVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1453,7 +1456,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00856">856</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00863">863</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
 </div>
 </div>
@@ -1497,9 +1500,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00862">862</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00869">869</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Store_8cpp_source.html#l00074">clang::ento::StoreManager::castRegion()</a>, <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00595">evalCastKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00640">evalCastSubKind()</a>, <a class="el" href="SVals_8cpp_source.html#l00129">clang::ento::SVal::getAsRegion()</a>, <a class="el" href="ASTContext_8cpp_source.html#l10113">clang::ASTContext::getIntWidth()</a>, <a class="el" href="ProgramState_8h_source.html#l00539">clang::ento::ProgramStateManager::getStoreManager()</a>, <a class="el" href="classclang_1_1ento_1_1SymExpr.html#a8b17954fffe297fa90bb61e31dda7074">clang::ento::SymExpr::getType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8cpp_source.html#l02094">clang::Type::isFloatingType()</a>, <a class="el" href="Type_8h_source.html#l06681">clang::Type::isFunctionType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06697">clang::Type::isReferenceType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8h_source.html#l00067">StateMgr</a>, <a class="el" href="MemRegion_8cpp_source.html#l01303">clang::ento::MemRegion::StripCasts()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00602">evalCastKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00647">evalCastSubKind()</a>, <a class="el" href="SVals_8cpp_source.html#l00129">clang::ento::SVal::getAsRegion()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00272">getCastedMemRegionVal()</a>, <a class="el" href="ASTContext_8cpp_source.html#l10128">clang::ASTContext::getIntWidth()</a>, <a class="el" href="classclang_1_1ento_1_1SymExpr.html#a8b17954fffe297fa90bb61e31dda7074">clang::ento::SymExpr::getType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8cpp_source.html#l02094">clang::Type::isFloatingType()</a>, <a class="el" href="Type_8h_source.html#l06681">clang::Type::isFunctionType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="Type_8h_source.html#l06697">clang::Type::isReferenceType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="MemRegion_8cpp_source.html#l01303">clang::ento::MemRegion::StripCasts()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1543,9 +1546,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00961">961</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00968">968</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1589,9 +1592,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00925">925</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00932">932</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="SValBuilder_8h_source.html#l00182">getBasicValueFactory()</a>, <a class="el" href="ASTContext_8h_source.html#l02393">clang::ASTContext::getCanonicalType()</a>, <a class="el" href="classclang_1_1ento_1_1SymExpr.html#a8b17954fffe297fa90bb61e31dda7074">clang::ento::SymExpr::getType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00107">haveSameType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8cpp_source.html#l02094">clang::Type::isFloatingType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l06733">clang::Type::isMemberPointerType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, and <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="SValBuilder_8h_source.html#l00182">getBasicValueFactory()</a>, <a class="el" href="ASTContext_8h_source.html#l02423">clang::ASTContext::getCanonicalType()</a>, <a class="el" href="classclang_1_1ento_1_1SymExpr.html#a8b17954fffe297fa90bb61e31dda7074">clang::ento::SymExpr::getType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00107">haveSameType()</a>, <a class="el" href="Type_8h_source.html#l07098">clang::Type::isBooleanType()</a>, <a class="el" href="Type_8cpp_source.html#l02094">clang::Type::isFloatingType()</a>, <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Type_8h_source.html#l06733">clang::Type::isMemberPointerType()</a>, <a class="el" href="Type_8h_source.html#l00733">clang::QualType::isNull()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -1655,9 +1658,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00463">463</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00470">470</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00459">evalEQ()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
+<p class="reference">References <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00466">evalEQ()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
 
 </div>
 </div>
@@ -1693,11 +1696,11 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00459">459</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00466">466</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00413">evalBinOp()</a>, <a class="el" href="SValBuilder_8h_source.html#l00174">getConditionType()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00420">evalBinOp()</a>, <a class="el" href="SValBuilder_8h_source.html#l00174">getConditionType()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00454">areEqual()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00463">evalEQ()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00461">areEqual()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00470">evalEQ()</a>.</p>
 
 </div>
 </div>
@@ -1739,9 +1742,9 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00506">506</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00513">513</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a80593ee81368f3b4a734d9dec03ac2c4">evalBinOpNN()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00558">evalCast()</a>, <a class="el" href="SVals_8cpp_source.html#l00121">clang::ento::SVal::getAsSymbol()</a>, <a class="el" href="SValBuilder_8h_source.html#l00174">getConditionType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, <a class="el" href="APSIntType_8h_source.html#l00065">clang::ento::APSIntType::getMaxValue()</a>, <a class="el" href="Type_8cpp_source.html#l02050">clang::Type::isUnsignedIntegerType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
+<p class="reference">References <a class="el" href="SVals_8h_source.html#l00103">clang::ento::SVal::castAs()</a>, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a80593ee81368f3b4a734d9dec03ac2c4">evalBinOpNN()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00565">evalCast()</a>, <a class="el" href="SVals_8cpp_source.html#l00121">clang::ento::SVal::getAsSymbol()</a>, <a class="el" href="SValBuilder_8h_source.html#l00174">getConditionType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, <a class="el" href="APSIntType_8h_source.html#l00065">clang::ento::APSIntType::getMaxValue()</a>, <a class="el" href="Type_8cpp_source.html#l02050">clang::Type::isUnsignedIntegerType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, and <a class="el" href="StaticAnalyzer_2README_8txt_source.html#l00030">state</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ExprEngineC_8cpp_source.html#l00301">clang::ento::ExprEngine::VisitCast()</a>.</p>
 
@@ -1833,7 +1836,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ProgramState_8cpp_source.html#l00321">clang::ento::ProgramState::assumeInBound()</a>, <a class="el" href="Iterator_8cpp_source.html#l00265">clang::ento::iterator::assumeNoOverflow()</a>, <a class="el" href="SVals_8cpp_source.html#l00220">clang::ento::nonloc::ConcreteInt::evalBinOp()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00925">evalCastSubKind()</a>, <a class="el" href="SimpleConstraintManager_8h_source.html#l00078">clang::ento::SimpleConstraintManager::getBasicVals()</a>, and <a class="el" href="StdLibraryFunctionsChecker_8cpp_source.html#l00614">getBVF()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ProgramState_8cpp_source.html#l00321">clang::ento::ProgramState::assumeInBound()</a>, <a class="el" href="Iterator_8cpp_source.html#l00265">clang::ento::iterator::assumeNoOverflow()</a>, <a class="el" href="SVals_8cpp_source.html#l00220">clang::ento::nonloc::ConcreteInt::evalBinOp()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00932">evalCastSubKind()</a>, <a class="el" href="SimpleConstraintManager_8h_source.html#l00078">clang::ento::SimpleConstraintManager::getBasicVals()</a>, and <a class="el" href="StdLibraryFunctionsChecker_8cpp_source.html#l00614">getBVF()</a>.</p>
 
 </div>
 </div>
@@ -1912,6 +1915,42 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2c03bd2d24d8678117d35bf94cf033b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c03bd2d24d8678117d35bf94cf033b6">&#9670;&nbsp;</a></span>getCastedMemRegionVal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classllvm_1_1Optional.html">Optional</a>&lt; <a class="el" href="classclang_1_1ento_1_1loc_1_1MemRegionVal.html">loc::MemRegionVal</a> &gt; SValBuilder::getCastedMemRegionVal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1ento_1_1MemRegion.html">MemRegion</a> *&#160;</td>
+          <td class="paramname"><em>region</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classclang_1_1QualType.html">QualType</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return MemRegionVal on success cast, otherwise return None. </p>
+
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00272">272</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Store_8cpp_source.html#l00074">clang::ento::StoreManager::castRegion()</a>, <a class="el" href="ProgramState_8h_source.html#l00539">clang::ento::ProgramStateManager::getStoreManager()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00067">StateMgr</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00702">evalCastSubKind()</a>.</p>
+
+</div>
+</div>
 <a id="aa3da2284c83ce7d42a3ced52a1b7237a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3da2284c83ce7d42a3ced52a1b7237a">&#9670;&nbsp;</a></span>getConditionType()</h2>
 
@@ -1937,9 +1976,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00174">174</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l01003">clang::ASTContext::BoolTy</a>, <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="ASTContext_8h_source.html#l00711">clang::ASTContext::getLangOpts()</a>, and <a class="el" href="ASTContext_8h_source.html#l01011">clang::ASTContext::IntTy</a>.</p>
+<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l01033">clang::ASTContext::BoolTy</a>, <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="ASTContext_8h_source.html#l00733">clang::ASTContext::getLangOpts()</a>, and <a class="el" href="ASTContext_8h_source.html#l01041">clang::ASTContext::IntTy</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Iterator_8cpp_source.html#l00265">clang::ento::iterator::assumeNoOverflow()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00459">evalEQ()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00506">evalIntegralCast()</a>, and <a class="el" href="ExprEngine_8cpp_source.html#l00232">clang::ento::ExprEngine::getInitialState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Iterator_8cpp_source.html#l00265">clang::ento::iterator::assumeNoOverflow()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00466">evalEQ()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00513">evalIntegralCast()</a>, and <a class="el" href="ExprEngine_8cpp_source.html#l00232">clang::ento::ExprEngine::getInitialState()</a>.</p>
 
 </div>
 </div>
@@ -2005,9 +2044,9 @@ Protected Attributes</h2></td></tr>
 <p>Returns the value of <code>E</code>, if it can be determined in a non-path-sensitive manner. </p>
 <p>If <code>E</code> is not a constant or cannot be modeled, returns <code>None</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00286">286</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00293">293</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00558">evalCast()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l14786">clang::Expr::EvaluateAsInt()</a>, <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, <a class="el" href="SValBuilder_8h_source.html#l00188">getRegionManager()</a>, <a class="el" href="Stmt_8h_source.html#l01162">clang::Stmt::getStmtClass()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8cpp_source.html#l02971">clang::Expr::IgnoreParens()</a>, <a class="el" href="Expr_8h_source.html#l00275">clang::Expr::isGLValue()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Expr_8cpp_source.html#l03802">clang::Expr::isNullPointerConstant()</a>, <a class="el" href="SValBuilder_8h_source.html#l00298">makeBoolVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00367">makeLoc()</a>, <a class="el" href="SValBuilder_8h_source.html#l00363">makeNull()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, and <a class="el" href="Expr_8h_source.html#l00780">clang::Expr::NPC_ValueDependentIsNotNull</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8cpp_source.html#l00565">evalCast()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l14788">clang::Expr::EvaluateAsInt()</a>, <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, <a class="el" href="SValBuilder_8h_source.html#l00188">getRegionManager()</a>, <a class="el" href="Stmt_8h_source.html#l01162">clang::Stmt::getStmtClass()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8cpp_source.html#l02971">clang::Expr::IgnoreParens()</a>, <a class="el" href="Expr_8h_source.html#l00273">clang::Expr::isGLValue()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="Expr_8cpp_source.html#l03802">clang::Expr::isNullPointerConstant()</a>, <a class="el" href="SValBuilder_8h_source.html#l00298">makeBoolVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00367">makeLoc()</a>, <a class="el" href="SValBuilder_8h_source.html#l00363">makeNull()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, and <a class="el" href="Expr_8h_source.html#l00778">clang::Expr::NPC_ValueDependentIsNotNull</a>.</p>
 
 </div>
 </div>
@@ -2038,7 +2077,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SimpleConstraintManager_8cpp_source.html#l00025">clang::ento::SimpleConstraintManager::assume()</a>, <a class="el" href="ProgramState_8cpp_source.html#l00321">clang::ento::ProgramState::assumeInBound()</a>, <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00506">evalIntegralCast()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00279">getCXXThis()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00783">clang::ento::CXXInstanceCall::getInitialStackFrameContents()</a>, and <a class="el" href="Store_8cpp_source.html#l00060">clang::ento::StoreManager::MakeElementRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SimpleConstraintManager_8cpp_source.html#l00025">clang::ento::SimpleConstraintManager::assume()</a>, <a class="el" href="ProgramState_8cpp_source.html#l00321">clang::ento::ProgramState::assumeInBound()</a>, <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00513">evalIntegralCast()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getCXXThis()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00783">clang::ento::CXXInstanceCall::getInitialStackFrameContents()</a>, and <a class="el" href="Store_8cpp_source.html#l00060">clang::ento::StoreManager::MakeElementRegion()</a>.</p>
 
 </div>
 </div>
@@ -2099,11 +2138,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Return a memory region for the 'this' object reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00272">272</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00279">279</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00188">getRegionManager()</a>, and <a class="el" href="DeclCXX_8cpp_source.html#l02470">clang::CXXMethodDecl::getThisType()</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00188">getRegionManager()</a>, and <a class="el" href="DeclCXX_8cpp_source.html#l02456">clang::CXXMethodDecl::getThisType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="CallEvent_8cpp_source.html#l01391">clang::ento::CallEventManager::getCaller()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00864">clang::ento::BlockCall::getInitialStackFrameContents()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00783">clang::ento::CXXInstanceCall::getInitialStackFrameContents()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00902">clang::ento::AnyCXXConstructorCall::getInitialStackFrameContents()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l00232">clang::ento::ExprEngine::getInitialState()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l01025">clang::ento::ExprEngine::ProcessBaseDtor()</a>, <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00206">clang::ento::ExprEngine::processCallExit()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l00817">clang::ento::ExprEngine::ProcessInitializer()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l01045">clang::ento::ExprEngine::ProcessMemberDtor()</a>, and <a class="el" href="ExprEngine_8cpp_source.html#l02532">clang::ento::ExprEngine::VisitCommonDeclRefExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="CallEvent_8cpp_source.html#l01391">clang::ento::CallEventManager::getCaller()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00864">clang::ento::BlockCall::getInitialStackFrameContents()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00783">clang::ento::CXXInstanceCall::getInitialStackFrameContents()</a>, <a class="el" href="CallEvent_8cpp_source.html#l00902">clang::ento::AnyCXXConstructorCall::getInitialStackFrameContents()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l00232">clang::ento::ExprEngine::getInitialState()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l01025">clang::ento::ExprEngine::ProcessBaseDtor()</a>, <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00206">clang::ento::ExprEngine::processCallExit()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l00817">clang::ento::ExprEngine::ProcessInitializer()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l01045">clang::ento::ExprEngine::ProcessMemberDtor()</a>, and <a class="el" href="ExprEngine_8cpp_source.html#l02533">clang::ento::ExprEngine::VisitCommonDeclRefExpr()</a>.</p>
 
 </div>
 </div>
@@ -2135,9 +2174,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Return a memory region for the 'this' object reference. </p>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00279">279</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00286">286</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, <a class="el" href="ASTContext_8cpp_source.html#l03201">clang::ASTContext::getPointerType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00188">getRegionManager()</a>, and <a class="el" href="Decl_8h_source.html#l03124">clang::TypeDecl::getTypeForDecl()</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, <a class="el" href="ASTContext_8cpp_source.html#l03216">clang::ASTContext::getPointerType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00188">getRegionManager()</a>, and <a class="el" href="Decl_8h_source.html#l03124">clang::TypeDecl::getTypeForDecl()</a>.</p>
 
 </div>
 </div>
@@ -2193,7 +2232,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="MemRegion_8cpp_source.html#l01118">clang::ento::MemRegionManager::getFunctionCodeRegion()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00239">getMemberPointer()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l02532">clang::ento::ExprEngine::VisitCommonDeclRefExpr()</a>, and <a class="el" href="ExprEngine_8cpp_source.html#l02666">clang::ento::ExprEngine::VisitMemberExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00239">getMemberPointer()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l02533">clang::ento::ExprEngine::VisitCommonDeclRefExpr()</a>, and <a class="el" href="ExprEngine_8cpp_source.html#l02667">clang::ento::ExprEngine::VisitMemberExpr()</a>.</p>
 
 </div>
 </div>
@@ -2312,7 +2351,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00204">204</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SymbolManager_8cpp_source.html#l00333">clang::ento::SymbolManager::canSymbolicate()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00875">clang::ast_matchers::expr</a>, <a class="el" href="SymbolManager_8cpp_source.html#l00225">clang::ento::SymbolManager::getMetadataSymbol()</a>, <a class="el" href="MemRegion_8cpp_source.html#l01130">clang::ento::MemRegionManager::getSymbolicRegion()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
+<p class="reference">References <a class="el" href="SymbolManager_8cpp_source.html#l00333">clang::ento::SymbolManager::canSymbolicate()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="SymbolManager_8cpp_source.html#l00225">clang::ento::SymbolManager::getMetadataSymbol()</a>, <a class="el" href="MemRegion_8cpp_source.html#l01130">clang::ento::MemRegionManager::getSymbolicRegion()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
 
 </div>
 </div>
@@ -2343,7 +2382,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00272">getCXXThis()</a>, <a class="el" href="CallEvent_8cpp_source.html#l01352">clang::ento::ObjCMethodCall::getInitialStackFrameContents()</a>, <a class="el" href="ExprEngineCXX_8cpp_source.html#l00973">clang::ento::ExprEngine::VisitCXXThisExpr()</a>, and <a class="el" href="ExprEngineCXX_8cpp_source.html#l00989">clang::ento::ExprEngine::VisitLambdaExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00279">getCXXThis()</a>, <a class="el" href="CallEvent_8cpp_source.html#l01352">clang::ento::ObjCMethodCall::getInitialStackFrameContents()</a>, <a class="el" href="ExprEngineCXX_8cpp_source.html#l00973">clang::ento::ExprEngine::VisitCXXThisExpr()</a>, and <a class="el" href="ExprEngineCXX_8cpp_source.html#l00989">clang::ento::ExprEngine::VisitLambdaExpr()</a>.</p>
 
 </div>
 </div>
@@ -2527,7 +2566,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="classclang_1_1ento_1_1SymExpr.html#a8b17954fffe297fa90bb61e31dda7074">clang::ento::SymExpr::getType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00925">evalCastSubKind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00932">evalCastSubKind()</a>.</p>
 
 </div>
 </div>
@@ -2567,7 +2606,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00111">111</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="ASTContext_8h_source.html#l02393">clang::ASTContext::getCanonicalType()</a>, and <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00056">Context</a>, <a class="el" href="ASTContext_8h_source.html#l02423">clang::ASTContext::getCanonicalType()</a>, and <a class="el" href="Type_8h_source.html#l07085">clang::Type::isIntegralOrEnumerationType()</a>.</p>
 
 </div>
 </div>
@@ -2653,7 +2692,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ExprObjC_8h_source.html#l00101">clang::ObjCBoolLiteralExpr::getValue()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>.</p>
 
 </div>
 </div>
@@ -2727,7 +2766,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00832">evalCastSubKind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00839">evalCastSubKind()</a>.</p>
 
 </div>
 </div>
@@ -2757,9 +2796,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00292">292</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8h_source.html#l01468">clang::APIntStorage::getValue()</a>, and <a class="el" href="Type_8cpp_source.html#l02069">clang::Type::isUnsignedIntegerOrEnumerationType()</a>.</p>
+<p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8h_source.html#l01466">clang::APIntStorage::getValue()</a>, and <a class="el" href="Type_8cpp_source.html#l02069">clang::Type::isUnsignedIntegerOrEnumerationType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00637">clang::ento::ExprEngine::bindReturnValue()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00640">evalCastSubKind()</a>, <a class="el" href="SVals_8cpp_source.html#l00233">clang::ento::nonloc::ConcreteInt::evalComplement()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l03047">clang::ento::ExprEngine::evalEagerlyAssumeBinOpBifurcation()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00506">evalIntegralCast()</a>, <a class="el" href="SVals_8cpp_source.html#l00238">clang::ento::nonloc::ConcreteInt::evalMinus()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="MemRegion_8cpp_source.html#l00733">clang::ento::MemRegionManager::getStaticSize()</a>, <a class="el" href="CheckerContext_8cpp_source.html#l00123">clang::ento::CheckerContext::isGreaterOrEqual()</a>, <a class="el" href="CheckerContext_8cpp_source.html#l00128">clang::ento::CheckerContext::isNegative()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l02532">clang::ento::ExprEngine::VisitCommonDeclRefExpr()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00655">clang::ento::ExprEngine::VisitLogicalExpr()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00882">clang::ento::ExprEngine::VisitUnaryExprOrTypeTraitExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineCallAndReturn_8cpp_source.html#l00637">clang::ento::ExprEngine::bindReturnValue()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00647">evalCastSubKind()</a>, <a class="el" href="SVals_8cpp_source.html#l00233">clang::ento::nonloc::ConcreteInt::evalComplement()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l03048">clang::ento::ExprEngine::evalEagerlyAssumeBinOpBifurcation()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00513">evalIntegralCast()</a>, <a class="el" href="SVals_8cpp_source.html#l00238">clang::ento::nonloc::ConcreteInt::evalMinus()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="MemRegion_8cpp_source.html#l00733">clang::ento::MemRegionManager::getStaticSize()</a>, <a class="el" href="CheckerContext_8cpp_source.html#l00123">clang::ento::CheckerContext::isGreaterOrEqual()</a>, <a class="el" href="CheckerContext_8cpp_source.html#l00128">clang::ento::CheckerContext::isNegative()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l02533">clang::ento::ExprEngine::VisitCommonDeclRefExpr()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00655">clang::ento::ExprEngine::VisitLogicalExpr()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00882">clang::ento::ExprEngine::VisitUnaryExprOrTypeTraitExpr()</a>.</p>
 
 </div>
 </div>
@@ -3019,7 +3058,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00375">375</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00875">clang::ast_matchers::expr</a>.</p>
+<p class="reference">References <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>.</p>
 
 </div>
 </div>
@@ -3109,7 +3148,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="MemRegion_8cpp_source.html#l01130">clang::ento::MemRegionManager::getSymbolicRegion()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00065">MemMgr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="CallEvent_8cpp_source.html#l01352">clang::ento::ObjCMethodCall::getInitialStackFrameContents()</a>, <a class="el" href="Store_8h_source.html#l00134">clang::ento::StoreManager::getLValueVar()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00386">makeSymbolVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineCXX_8cpp_source.html#l00112">clang::ento::ExprEngine::computeObjectUnderConstruction()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="CallEvent_8cpp_source.html#l01352">clang::ento::ObjCMethodCall::getInitialStackFrameContents()</a>, <a class="el" href="Store_8h_source.html#l00134">clang::ento::StoreManager::getLValueVar()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00390">makeSymbolVal()</a>.</p>
 
 </div>
 </div>
@@ -3151,7 +3190,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, and <a class="el" href="BasicValueFactory_8cpp_source.html#l00345">clang::ento::BasicValueFactory::getPersistentSValWithData()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00661">evalCastSubKind()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00668">evalCastSubKind()</a>.</p>
 
 </div>
 </div>
@@ -3237,7 +3276,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="classclang_1_1ento_1_1SymbolManager.html#ae969bfffa060e0c8ce8d04143df1c5ea">clang::ento::SymbolManager::getSymIntExpr()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00062">SymMgr</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00695">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00506">evalIntegralCast()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00386">makeSymExprValNN()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00702">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00513">evalIntegralCast()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00393">makeSymExprValNN()</a>.</p>
 
 </div>
 </div>
@@ -3352,7 +3391,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, and <a class="el" href="BasicValueFactory_8h_source.html#l00222">clang::ento::BasicValueFactory::getZeroWithPtrWidth()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00301">clang::ento::ExprEngine::VisitCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00301">clang::ento::ExprEngine::VisitCast()</a>.</p>
 
 </div>
 </div>
@@ -3483,7 +3522,7 @@ Protected Attributes</h2></td></tr>
 <p>Make an <a class="el" href="classclang_1_1ento_1_1SVal.html" title="SVal - This represents a symbolic expression, which can be either an L-value or an R-value.">SVal</a> that represents the given symbol. </p>
 <p>This follows the convention of representing Loc-type symbols (symbolic pointers and references) as <a class="el" href="classclang_1_1ento_1_1Loc.html">Loc</a> values wrapping the symbol rather than as plain symbol values. </p>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00386">386</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00390">390</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
 <p class="reference">References <a class="el" href="classclang_1_1ento_1_1SymExpr.html#a8b17954fffe297fa90bb61e31dda7074">clang::ento::SymExpr::getType()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00367">makeLoc()</a>.</p>
 
@@ -3531,7 +3570,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Constructs a symbolic expression for two non-location values. </p>
 
-<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00386">386</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SValBuilder_8cpp_source.html#l00393">393</a> of file <a class="el" href="SValBuilder_8cpp_source.html">SValBuilder.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classclang_1_1ento_1_1SymExpr.html#abfe954f288c153527f02c4b42ef6ee65">clang::ento::SymExpr::computeComplexity()</a>, <a class="el" href="ExprEngine_8h_source.html#l00208">clang::ento::ExprEngine::getAnalysisManager()</a>, <a class="el" href="SVals_8h_source.html#l00111">clang::ento::SVal::getAs()</a>, <a class="el" href="SVals_8cpp_source.html#l00121">clang::ento::SVal::getAsSymbol()</a>, <a class="el" href="ProgramState_8h_source.html#l00541">clang::ento::ProgramStateManager::getOwningEngine()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>, <a class="el" href="AnalysisManager_8h_source.html#l00047">clang::ento::AnalysisManager::options</a>, and <a class="el" href="SValBuilder_8h_source.html#l00067">StateMgr</a>.</p>
 
@@ -3605,7 +3644,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00314">b</a>, <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, and <a class="el" href="BasicValueFactory_8h_source.html#l00230">clang::ento::BasicValueFactory::getTruthValue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00640">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00298">makeBoolVal()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00301">clang::ento::ExprEngine::VisitCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00647">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00298">makeBoolVal()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00301">clang::ento::ExprEngine::VisitCast()</a>.</p>
 
 </div>
 </div>
@@ -3662,7 +3701,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="SValBuilder_8h_source.html#l00059">BasicVals</a>, <a class="el" href="BasicValueFactory_8h_source.html#l00249">clang::ento::BasicValueFactory::getEmptySValList()</a>, <a class="el" href="SVals_8h_source.html#l00323">clang::ento::Loc::isLocType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00264">makeCompoundVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00363">makeNull()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00153">conjureSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00191">getConjuredHeapSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00286">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00221">getDerivedRegionValueSymbolVal()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l00232">clang::ento::ExprEngine::getInitialState()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00118">getRegionValueSymbolVal()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00941">clang::ento::ExprEngine::VisitUnaryOperator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00153">conjureSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00191">getConjuredHeapSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00293">getConstantVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00221">getDerivedRegionValueSymbolVal()</a>, <a class="el" href="ExprEngine_8cpp_source.html#l00232">clang::ento::ExprEngine::getInitialState()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00118">getRegionValueSymbolVal()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00941">clang::ento::ExprEngine::VisitUnaryOperator()</a>.</p>
 
 </div>
 </div>
@@ -3786,7 +3825,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00059">59</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00640">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8h_source.html#l00182">getBasicValueFactory()</a>, <a class="el" href="SValBuilder_8h_source.html#l00286">makeArrayIndex()</a>, <a class="el" href="SValBuilder_8h_source.html#l00264">makeCompoundVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00308">makeIntLocVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00327">makeIntValWithPtrWidth()</a>, <a class="el" href="SValBuilder_8h_source.html#l00268">makeLazyCompoundVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00379">makeLoc()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8h_source.html#l00363">makeNull()</a>, <a class="el" href="SValBuilder_8h_source.html#l00359">makeNullWithType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00282">makeZeroArrayIndex()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00647">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8h_source.html#l00182">getBasicValueFactory()</a>, <a class="el" href="SValBuilder_8h_source.html#l00286">makeArrayIndex()</a>, <a class="el" href="SValBuilder_8h_source.html#l00264">makeCompoundVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00308">makeIntLocVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00292">makeIntVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00327">makeIntValWithPtrWidth()</a>, <a class="el" href="SValBuilder_8h_source.html#l00268">makeLazyCompoundVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00379">makeLoc()</a>, <a class="el" href="SValBuilder_8h_source.html#l00332">makeLocAsInteger()</a>, <a class="el" href="SValBuilder_8h_source.html#l00363">makeNull()</a>, <a class="el" href="SValBuilder_8h_source.html#l00359">makeNullWithType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00348">makeTruthVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00282">makeZeroArrayIndex()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00052">makeZeroVal()</a>.</p>
 
 </div>
 </div>
@@ -3812,7 +3851,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00056">56</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00558">evalCast()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00661">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8h_source.html#l00174">getConditionType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00111">haveSameType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00565">evalCast()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00668">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8h_source.html#l00174">getConditionType()</a>, <a class="el" href="SValBuilder_8h_source.html#l00169">getContext()</a>, and <a class="el" href="SValBuilder_8h_source.html#l00111">haveSameType()</a>.</p>
 
 </div>
 </div>
@@ -3866,7 +3905,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00067">67</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00695">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8h_source.html#l00172">getStateManager()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00386">makeSymExprValNN()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8cpp_source.html#l00702">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00272">getCastedMemRegionVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00172">getStateManager()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00393">makeSymExprValNN()</a>.</p>
 
 </div>
 </div>
@@ -3894,7 +3933,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="SValBuilder_8h_source.html#l00062">62</a> of file <a class="el" href="SValBuilder_8h_source.html">SValBuilder.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SValBuilder_8h_source.html#l00193">conjureSymbol()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00153">conjureSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00695">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00191">getConjuredHeapSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00221">getDerivedRegionValueSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00204">getMetadataSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00118">getRegionValueSymbolVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00185">getSymbolManager()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SValBuilder_8h_source.html#l00193">conjureSymbol()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00153">conjureSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00702">evalCastSubKind()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00191">getConjuredHeapSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00221">getDerivedRegionValueSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00204">getMetadataSymbolVal()</a>, <a class="el" href="SValBuilder_8cpp_source.html#l00118">getRegionValueSymbolVal()</a>, <a class="el" href="SValBuilder_8h_source.html#l00185">getSymbolManager()</a>, and <a class="el" href="SValBuilder_8cpp_source.html#l00067">makeNonLoc()</a>.</p>
 
 </div>
 </div>
@@ -3905,7 +3944,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:46 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:06:08 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

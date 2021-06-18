@@ -2761,6 +2761,7 @@ $(function() {
 , <a class="el" href="classclang_1_1UnresolvedUsingTypenameDecl.html#aaf8a7ac99d159aa44826402d0f68b240">clang::UnresolvedUsingTypenameDecl</a>
 , <a class="el" href="classclang_1_1UnresolvedUsingValueDecl.html#a2538a4e5ed1c58ac11ba3f4c839dfdd6">clang::UnresolvedUsingValueDecl</a>
 , <a class="el" href="classclang_1_1UsingDecl.html#ac954f4d4a36ec67956be37bb0d9adc7c">clang::UsingDecl</a>
+, <a class="el" href="classclang_1_1UsingEnumDecl.html#a027ff00003fdee751e32789cb833aabd">clang::UsingEnumDecl</a>
 , <a class="el" href="classclang_1_1UsingPackDecl.html#a8c1e3c17e4bc32425bac843bcbf52aac">clang::UsingPackDecl</a>
 , <a class="el" href="classclang_1_1UsingShadowDecl.html#a348fc581d217c347190256c042f1198b">clang::UsingShadowDecl</a>
 , <a class="el" href="classclang_1_1VarDecl.html#a41b791be900d5c37eea9fd8ead366308">clang::VarDecl</a>
@@ -2872,6 +2873,9 @@ $(function() {
 </li>
 <li>getCaseValue()
 : <a class="el" href="classclang_1_1syntax_1_1CaseStatement.html#a378e92115d4ee4deb95e46afe0bc5965">clang::syntax::CaseStatement</a>
+</li>
+<li>getCastedMemRegionVal()
+: <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a2c03bd2d24d8678117d35bf94cf033b6">clang::ento::SValBuilder</a>
 </li>
 <li>getCastExpr()
 : <a class="el" href="classclang_1_1ento_1_1SMTConv.html#ac350306d92c1c94362b682e9beb741af">clang::ento::SMTConv</a>
@@ -5831,6 +5835,12 @@ $(function() {
 , <a class="el" href="structllvm_1_1GraphTraits_3_01Inverse_3_01const_01_1_1clang_1_1CFG_01_5_01_4_01_4.html#a12ec9bf0585adb0b23e0c3ee0bf666d6">llvm::GraphTraits&lt; Inverse&lt; const ::clang::CFG * &gt; &gt;</a>
 , <a class="el" href="structllvm_1_1GraphTraits_3_01Inverse_3_01const_01_1_1clang_1_1CFGBlock_01_5_01_4_01_4.html#a110d1984a4a310fe5d661f85af653c1a">llvm::GraphTraits&lt; Inverse&lt; const ::clang::CFGBlock * &gt; &gt;</a>
 </li>
+<li>getEnumDecl()
+: <a class="el" href="classclang_1_1UsingEnumDecl.html#a8cb3ea603ebed6f56d5f1f48e9a9e48c">clang::UsingEnumDecl</a>
+</li>
+<li>getEnumLoc()
+: <a class="el" href="classclang_1_1UsingEnumDecl.html#a4296e41aaf195cc7b23ca37134a4a693">clang::UsingEnumDecl</a>
+</li>
 <li>getEnumType()
 : <a class="el" href="classclang_1_1ASTContext.html#a44ef03f1bd0b7c4397dbc3fd17271962">clang::ASTContext</a>
 </li>
@@ -6273,6 +6283,9 @@ $(function() {
 </li>
 <li>getExtVectorType()
 : <a class="el" href="classclang_1_1ASTContext.html#acc6fff15d7da96e47502fea6a4b2be04">clang::ASTContext</a>
+</li>
+<li>getFactor()
+: <a class="el" href="classclang_1_1OMPPartialClause.html#a219e9467d249748d074e474a38593d58">clang::OMPPartialClause</a>
 </li>
 <li>getFactory()
 : <a class="el" href="classclang_1_1AttributePool.html#a120643e3375dcd230c23a9557e76849c">clang::AttributePool</a>
@@ -7958,6 +7971,9 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#a200c638801ec43eed5b5f7bc00b856bf">clang::ASTContext</a>
 , <a class="el" href="classclang_1_1UsingPackDecl.html#ae89dfd353000b5ce906174e0e05fee27">clang::UsingPackDecl</a>
 </li>
+<li>getInstantiatedFromUsingEnumDecl()
+: <a class="el" href="classclang_1_1ASTContext.html#a6eec56ef0c3ee992e84d0667ac3c7856">clang::ASTContext</a>
+</li>
 <li>getInstantiatedFromUsingShadowDecl()
 : <a class="el" href="classclang_1_1ASTContext.html#a9e2fd570cc6c61155266c4a45c905122">clang::ASTContext</a>
 </li>
@@ -8052,6 +8068,10 @@ $(function() {
 </li>
 <li>getIntrinsic()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#a746e030a00d8dc22123b52c48120aad3">clang::CodeGen::CodeGenModule</a>
+</li>
+<li>getIntroducer()
+: <a class="el" href="classclang_1_1ConstructorUsingShadowDecl.html#aa99183745589de4560d4b344b81d0309">clang::ConstructorUsingShadowDecl</a>
+, <a class="el" href="classclang_1_1UsingShadowDecl.html#af202594ca711760a1e27a6b4d26c4e3d">clang::UsingShadowDecl</a>
 </li>
 <li>getIntroducerRange()
 : <a class="el" href="classclang_1_1LambdaExpr.html#a3c4fe1db55c2d259e5175ab0461d9754">clang::LambdaExpr</a>
@@ -8391,7 +8411,7 @@ $(function() {
 </li>
 <li>getLabel()
 : <a class="el" href="classclang_1_1AddrLabelExpr.html#a4ba44fd7e313daf8c9ce8fb44d8e11b9">clang::AddrLabelExpr</a>
-, <a class="el" href="classclang_1_1CFGBlock.html#a76c61ba94f1308d79aa29eec072ffd30">clang::CFGBlock</a>
+, <a class="el" href="classclang_1_1CFGBlock.html#ad41cea0bc0865f846383f983673ac9bd">clang::CFGBlock</a>
 , <a class="el" href="classclang_1_1ento_1_1IndirectGotoNodeBuilder_1_1iterator.html#aeaa1eccb44a7422a5a919c35780eb31d">clang::ento::IndirectGotoNodeBuilder::iterator</a>
 , <a class="el" href="classclang_1_1ento_1_1loc_1_1GotoLabel.html#a38ae26f7a2aaefa80b9bb7645932e6a9">clang::ento::loc::GotoLabel</a>
 , <a class="el" href="classclang_1_1GotoStmt.html#a2ca208f4e87971408a95835c34dcb8bb">clang::GotoStmt</a>
@@ -8601,7 +8621,7 @@ $(function() {
 , <a class="el" href="classclang_1_1analyze__format__string_1_1LengthModifier.html#aadaf0b517dfd1e86f89c48db730ffeaa">clang::analyze_format_string::LengthModifier</a>
 , <a class="el" href="classclang_1_1comments_1_1Token.html#ad8a55cf64ccac54d4a4c9d47fc8e994f">clang::comments::Token</a>
 , <a class="el" href="classclang_1_1IdentifierInfo.html#a2565458667f33adc3c0d50cace1a6808">clang::IdentifierInfo</a>
-, <a class="el" href="classclang_1_1OMPArraySectionExpr.html#ac9e6ced4a3fa4dce1f0cf07e9a9c1cda">clang::OMPArraySectionExpr</a>
+, <a class="el" href="classclang_1_1OMPArraySectionExpr.html#ace4a12bd35bb21dfce8d6c37c78c77ef">clang::OMPArraySectionExpr</a>
 , <a class="el" href="classclang_1_1StringLiteral.html#a363e00d7506a11998f85cf59c143b6c5">clang::StringLiteral</a>
 , <a class="el" href="classclang_1_1Token.html#a2ad5b861741cced74099cc167dd9d35f">clang::Token</a>
 , <a class="el" href="classclang_1_1tooling_1_1Range.html#a688f6973ec8c7a7598528d2da3fa25d8">clang::tooling::Range</a>
@@ -8624,7 +8644,7 @@ $(function() {
 : <a class="el" href="classclang_1_1Decl.html#aa390f755d0a0a1fc7fc557af886e4c93">clang::Decl</a>
 </li>
 <li>getLexicalParent()
-: <a class="el" href="classclang_1_1DeclContext.html#a8ac513d569d479c79d55098202703b67">clang::DeclContext</a>
+: <a class="el" href="classclang_1_1DeclContext.html#a7eb413788a2327dcc0de57c365effcfe">clang::DeclContext</a>
 </li>
 <li>getLHS()
 : <a class="el" href="classclang_1_1ArraySubscriptExpr.html#aeea519b6d1b664187c66bf16b2f63d27">clang::ArraySubscriptExpr</a>
@@ -9085,7 +9105,7 @@ $(function() {
 : <a class="el" href="classclang_1_1LookupResult.html#af47e46ccc9c95032ad757b208a0db273">clang::LookupResult</a>
 </li>
 <li>getLookupParent()
-: <a class="el" href="classclang_1_1DeclContext.html#abcd18d2e28c910470e5ba5d30d9661b7">clang::DeclContext</a>
+: <a class="el" href="classclang_1_1DeclContext.html#ad3f371a23f2b8f92275ef63817701e4e">clang::DeclContext</a>
 </li>
 <li>getLookupPtr()
 : <a class="el" href="classclang_1_1DeclContext.html#ad17f7bddd5c700c9fb6843b53f6fbe3b">clang::DeclContext</a>
@@ -9101,7 +9121,7 @@ $(function() {
 : <a class="el" href="classclang_1_1DirectoryLookup.html#ad0eb0d9f2e120f6d13af58e107275b4a">clang::DirectoryLookup</a>
 </li>
 <li>getLoopCounter()
-: <a class="el" href="classclang_1_1OMPOrderedClause.html#ab3dead0bbcc951d2ebfa30204657f16e">clang::OMPOrderedClause</a>
+: <a class="el" href="classclang_1_1OMPOrderedClause.html#a8cfdaa3541d78f676e05b93498a1c854">clang::OMPOrderedClause</a>
 </li>
 <li>getLoopData()
 : <a class="el" href="classclang_1_1OMPDependClause.html#a5a83c953b186c84e06d37239eae4e363">clang::OMPDependClause</a>
@@ -9118,7 +9138,7 @@ $(function() {
 <li>getLoopStmt()
 : <a class="el" href="classclang_1_1CFGLoopExit.html#ab98984131a4853689af39706720d47fd">clang::CFGLoopExit</a>
 , <a class="el" href="classclang_1_1LoopExit.html#ad5f16b1b38ea5fa2c817cbbcf985ac96">clang::LoopExit</a>
-, <a class="el" href="classclang_1_1OMPCanonicalLoop.html#a36abdaffbf1cd2816631c338a581e11c">clang::OMPCanonicalLoop</a>
+, <a class="el" href="classclang_1_1OMPCanonicalLoop.html#a725af9d8922cf68b31e87138cea46292">clang::OMPCanonicalLoop</a>
 , <a class="el" href="structLoopState.html#a4476d55b33041cb658e05c8a50828acf">LoopState</a>
 </li>
 <li>getLoopTarget()
@@ -9131,13 +9151,13 @@ $(function() {
 : <a class="el" href="classclang_1_1CXXForRangeStmt.html#a87da17ce5237001acc79fd7fe3fc591b">clang::CXXForRangeStmt</a>
 </li>
 <li>getLoopVarRef()
-: <a class="el" href="classclang_1_1OMPCanonicalLoop.html#a9673dfe2e15421a0b404310fb7d2331d">clang::OMPCanonicalLoop</a>
+: <a class="el" href="classclang_1_1OMPCanonicalLoop.html#a1aae139366211c90dd21aee4bf105d2d">clang::OMPCanonicalLoop</a>
 </li>
 <li>getLoopVarStmt()
 : <a class="el" href="classclang_1_1CXXForRangeStmt.html#aff034c1cb1dd7dc8950d359259806ea6">clang::CXXForRangeStmt</a>
 </li>
 <li>getLowerBound()
-: <a class="el" href="classclang_1_1OMPArraySectionExpr.html#abc915728921dad215cda255e3436a031">clang::OMPArraySectionExpr</a>
+: <a class="el" href="classclang_1_1OMPArraySectionExpr.html#a9e2384ba896b6cb9bd7cf3d111599f48">clang::OMPArraySectionExpr</a>
 </li>
 <li>getLowerBoundVariable()
 : <a class="el" href="classclang_1_1OMPLoopDirective.html#ae3df0e82e1203b020a61d6409c1fb910">clang::OMPLoopDirective</a>
@@ -9187,6 +9207,7 @@ $(function() {
 , <a class="el" href="classclang_1_1OMPNumThreadsClause.html#a0c4d8e085992ab8e96dc3933d479a390">clang::OMPNumThreadsClause</a>
 , <a class="el" href="classclang_1_1OMPOrderClause.html#a17e662c96e3763a475bcdf9c03c61e3e">clang::OMPOrderClause</a>
 , <a class="el" href="classclang_1_1OMPOrderedClause.html#a53cc4385062d7aaa1f5ad9cb5e151083">clang::OMPOrderedClause</a>
+, <a class="el" href="classclang_1_1OMPPartialClause.html#a9e4ffeab33747322e911519f4f4198ef">clang::OMPPartialClause</a>
 , <a class="el" href="classclang_1_1OMPPriorityClause.html#a9533feb1eb3526e449f641bf0a20967f">clang::OMPPriorityClause</a>
 , <a class="el" href="classclang_1_1OMPProcBindClause.html#a9af3b4e225f0b69a27ab3b3581c3f774">clang::OMPProcBindClause</a>
 , <a class="el" href="classclang_1_1OMPSafelenClause.html#a3f4085bbdb0e8517a1a53f2aa138f603">clang::OMPSafelenClause</a>
@@ -9220,7 +9241,7 @@ $(function() {
 : <a class="el" href="classclang_1_1driver_1_1Driver.html#a92e893b6c770fffbd34bc53f77ca86f2">clang::driver::Driver</a>
 </li>
 <li>getLValue()
-: <a class="el" href="classclang_1_1ento_1_1ProgramState.html#a09d2312a87644b9b9a4c3f70b4d89dfa">clang::ento::ProgramState</a>
+: <a class="el" href="classclang_1_1ento_1_1ProgramState.html#a37ecd8d2b197ac51a1a5b1ec73f9a736">clang::ento::ProgramState</a>
 </li>
 <li>getLValueBase()
 : <a class="el" href="classclang_1_1APValue.html#a05c97d56e149bba98ce29145b812d20b">clang::APValue</a>
@@ -9343,7 +9364,7 @@ $(function() {
 , <a class="el" href="classclang_1_1MaterializeTemporaryExpr.html#aedd2d25b6124c77f4fdab9b4820b9ee5">clang::MaterializeTemporaryExpr</a>
 </li>
 <li>getManglingNumberContext()
-: <a class="el" href="classclang_1_1ASTContext.html#a8ea757cfb36a6e67bab8f616878106e5">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#a81c45f70ea8b46d72240a4fdf0242cb2">clang::ASTContext</a>
 </li>
 <li>getMap()
 : <a class="el" href="classclang_1_1ast__matchers_1_1BoundNodes.html#a6a8c4b9dff25b54d4c65c9512567e3d7">clang::ast_matchers::BoundNodes</a>
@@ -9366,7 +9387,7 @@ $(function() {
 : <a class="el" href="classclang_1_1OMPMappableExprListClause.html#acf17ea839152e22625c9e21c5411d042">clang::OMPMappableExprListClause&lt; T &gt;</a>
 </li>
 <li>getMapperVarRef()
-: <a class="el" href="classclang_1_1OMPDeclareMapperDecl.html#a742355325c983190bb86bb24edde40a1">clang::OMPDeclareMapperDecl</a>
+: <a class="el" href="classclang_1_1OMPDeclareMapperDecl.html#aaeb55a9e9a634bf0ca01b3ef28b0885f">clang::OMPDeclareMapperDecl</a>
 </li>
 <li>getMapType()
 : <a class="el" href="classclang_1_1OMPMapClause.html#a12cf51f3091da5712ee3448a1e8a35f7">clang::OMPMapClause</a>
@@ -9654,7 +9675,7 @@ $(function() {
 , <a class="el" href="classclang_1_1arcmt_1_1trans_1_1ObjCImplementationContext.html#a309aa982cca762fe7f7d72c95a535f15">clang::arcmt::trans::ObjCImplementationContext</a>
 </li>
 <li>getMigratorOpts()
-: <a class="el" href="classclang_1_1CompilerInvocationValueBase.html#a30a1eb379e0422c0d00ed63b5c499637">clang::CompilerInvocationValueBase</a>
+: <a class="el" href="classclang_1_1CompilerInvocationValueBase.html#aded68e5d73e75ce47affb37ceaffeb08">clang::CompilerInvocationValueBase</a>
 </li>
 <li>getMinArgs()
 : <a class="el" href="classclang_1_1ParsedAttr.html#a2d3688f3e3185499c8d288b551769ebd">clang::ParsedAttr</a>
@@ -9675,7 +9696,7 @@ $(function() {
 </li>
 <li>getMinValue()
 : <a class="el" href="classclang_1_1ento_1_1APSIntType.html#a8bece4a7bf5de062a510626b977cad76">clang::ento::APSIntType</a>
-, <a class="el" href="classclang_1_1ento_1_1BasicValueFactory.html#a60c9c1728d5c2d790a68551a38d86cc3">clang::ento::BasicValueFactory</a>
+, <a class="el" href="classclang_1_1ento_1_1BasicValueFactory.html#af725f0f7fc007bf89c6f28b4c8a5b095">clang::ento::BasicValueFactory</a>
 , <a class="el" href="classclang_1_1ento_1_1RangeSet.html#a7566cdd1c115253f36494060a2a7129a">clang::ento::RangeSet</a>
 </li>
 <li>getMismatchingDeleteExpressions()
@@ -10102,9 +10123,9 @@ $(function() {
 </li>
 <li>getNamingClass()
 : <a class="el" href="classclang_1_1LookupResult.html#a7b4a23b0b879e6f32fd521bc7276e018">clang::LookupResult</a>
-, <a class="el" href="classclang_1_1OverloadExpr.html#a66aab4822fe9a3d2a28826739e29f632">clang::OverloadExpr</a>
+, <a class="el" href="classclang_1_1OverloadExpr.html#a666f4cebb46e4d5126f262dc448f3d7b">clang::OverloadExpr</a>
 , <a class="el" href="classclang_1_1sema_1_1AccessedEntity.html#a982b078864a05d67c3e71b649d4da86e">clang::sema::AccessedEntity</a>
-, <a class="el" href="classclang_1_1UnresolvedLookupExpr.html#afd1abaa940042cace1e0d5eb7017c1b6">clang::UnresolvedLookupExpr</a>
+, <a class="el" href="classclang_1_1UnresolvedLookupExpr.html#a71de806b78474c7b1dbc5ade64711767">clang::UnresolvedLookupExpr</a>
 , <a class="el" href="classclang_1_1UnresolvedMemberExpr.html#a335baa6f700e6da4f9881d7139d3842f">clang::UnresolvedMemberExpr</a>
 </li>
 <li>getNarrowingKind()
@@ -10160,7 +10181,7 @@ $(function() {
 : <a class="el" href="classclang_1_1TypoCorrectionConsumer.html#ab52914e52c78f9c2010dc02373a1266c">clang::TypoCorrectionConsumer</a>
 </li>
 <li>getNextDeclInContext()
-: <a class="el" href="classclang_1_1Decl.html#a4e93d06ed785c3f9a3578a26db56233b">clang::Decl</a>
+: <a class="el" href="classclang_1_1Decl.html#abea097dedd8a709819cf2b463e456880">clang::Decl</a>
 </li>
 <li>getNextFunctionPrototypeIndex()
 : <a class="el" href="classclang_1_1Scope.html#a1dc626e35a5a2be24bf526a2c17b3c3f">clang::Scope</a>
@@ -10259,8 +10280,8 @@ $(function() {
 </li>
 <li>getNodeValue()
 : <a class="el" href="classclang_1_1diff_1_1Subtree.html#ad77fa0ff7957b37a4eac226207640b77">clang::diff::Subtree</a>
-, <a class="el" href="classclang_1_1diff_1_1SyntaxTree.html#ae3b6590177409ce19c85d2d36ba10ff7">clang::diff::SyntaxTree</a>
-, <a class="el" href="classclang_1_1diff_1_1SyntaxTree_1_1Impl.html#a2780c0e57a6c0f97501089941f473503">clang::diff::SyntaxTree::Impl</a>
+, <a class="el" href="classclang_1_1diff_1_1SyntaxTree.html#a1024e67f8f075d6fa744280d80fe05a1">clang::diff::SyntaxTree</a>
+, <a class="el" href="classclang_1_1diff_1_1SyntaxTree_1_1Impl.html#aa3288f3c0790e7dcd187b56bdf503a50">clang::diff::SyntaxTree::Impl</a>
 </li>
 <li>getNoexceptExpr()
 : <a class="el" href="classclang_1_1FunctionProtoType.html#a0a1a31a147d881d2fc2a56e763820da8">clang::FunctionProtoType</a>
@@ -10777,7 +10798,7 @@ $(function() {
 : <a class="el" href="classclang_1_1CallExpr.html#af0b1ec0227d05825b54d0ad97e06189b">clang::CallExpr</a>
 </li>
 <li>getNumProtocols
-: <a class="el" href="classclang_1_1ObjCInterfaceType.html#ae71ae64aa2d7591e1167e963260b5c75a710a99f3bce93c5576d562ffba30931f">clang::ObjCInterfaceType</a>
+: <a class="el" href="classclang_1_1ObjCInterfaceType.html#a236c55ef6d6a877a830de05f41366a27a710a99f3bce93c5576d562ffba30931f">clang::ObjCInterfaceType</a>
 , <a class="el" href="classclang_1_1ObjCObjectPointerType.html#a02dd8d532f08d78976d30f1d1c0514e7">clang::ObjCObjectPointerType</a>
 , <a class="el" href="classclang_1_1ObjCObjectTypeLoc.html#a5749a6e797188845b9f5c217ac842990">clang::ObjCObjectTypeLoc</a>
 , <a class="el" href="classclang_1_1ObjCProtocolQualifiers.html#a69d28f31b0af2817d6a2173fd2e56a60">clang::ObjCProtocolQualifiers&lt; T &gt;</a>
@@ -10969,7 +10990,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#a9f604f34a714ef04800ac6504cb1efb7">clang::ASTContext</a>
 </li>
 <li>getObjCImplementation()
-: <a class="el" href="classclang_1_1ASTContext.html#af0ccd1799468d3bfa57a72cda948ca0b">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#a3cc16e6b49acbd8dbd61f110e6033ade">clang::ASTContext</a>
 </li>
 <li>getObjCInstanceType()
 : <a class="el" href="classclang_1_1ASTContext.html#a589a7fd8e39905260456fb30ad240cb8">clang::ASTContext</a>
@@ -11115,7 +11136,7 @@ $(function() {
 <li>getODRHash()
 : <a class="el" href="classclang_1_1CXXRecordDecl.html#ab1b1dc83afa240cf6a0a9a86cef5ada8">clang::CXXRecordDecl</a>
 , <a class="el" href="classclang_1_1EnumDecl.html#a57081873ff3e9027c307191f5f1d0a39">clang::EnumDecl</a>
-, <a class="el" href="classclang_1_1FunctionDecl.html#a656a472691335ee884568402b7ef4990">clang::FunctionDecl</a>
+, <a class="el" href="classclang_1_1FunctionDecl.html#a5af7ddc535bb1647f4a36789dedefd58">clang::FunctionDecl</a>
 </li>
 <li>getOffloadingArch()
 : <a class="el" href="classclang_1_1driver_1_1Action.html#af035faf6ae99832aec23bd1bc5fecfcd">clang::driver::Action</a>
@@ -11199,7 +11220,7 @@ $(function() {
 , <a class="el" href="classclang_1_1UnaryOperator.html#a7309fe0698496ead06f77065a8cb94a1">clang::UnaryOperator</a>
 </li>
 <li>getOpcodeStr()
-: <a class="el" href="classclang_1_1BinaryOperator.html#a35735cb469c016a544886e5ee1461bff">clang::BinaryOperator</a>
+: <a class="el" href="classclang_1_1BinaryOperator.html#a839c4ea97f1ac89e09226b54d2310e43">clang::BinaryOperator</a>
 , <a class="el" href="classclang_1_1CXXRewrittenBinaryOperator.html#a5a037439ab8d6462ff19b787699fde8f">clang::CXXRewrittenBinaryOperator</a>
 , <a class="el" href="classclang_1_1UnaryOperator.html#aea67833acedd6409746250b8e1612dcd">clang::UnaryOperator</a>
 </li>
@@ -11414,14 +11435,14 @@ $(function() {
 : <a class="el" href="classclang_1_1AdjustedTypeLoc.html#a5d073b4af329c1a68a6ca59f81106c36">clang::AdjustedTypeLoc</a>
 </li>
 <li>getOriginalNamespace()
-: <a class="el" href="classclang_1_1NamespaceDecl.html#ad77616392892eb4cd52cf829bd906a75">clang::NamespaceDecl</a>
+: <a class="el" href="classclang_1_1NamespaceDecl.html#aab6c77a74e366c6573ccf7fbf558e203">clang::NamespaceDecl</a>
 </li>
 <li>getOriginalRegion()
 : <a class="el" href="classclang_1_1ento_1_1BlockDataRegion.html#a083cd52c2bea8842d452819d686fe5db">clang::ento::BlockDataRegion</a>
 , <a class="el" href="classclang_1_1ento_1_1BlockDataRegion_1_1referenced__vars__iterator.html#ab7b77f3b67920fc54528f4934fafa09c">clang::ento::BlockDataRegion::referenced_vars_iterator</a>
 </li>
 <li>getOriginalSourceFile()
-: <a class="el" href="classclang_1_1ASTReader.html#a9752b1baf1ef5f199a69bc1f076ccf59">clang::ASTReader</a>
+: <a class="el" href="classclang_1_1ASTReader.html#a9e432550deca2299b965facd32fd00f0">clang::ASTReader</a>
 </li>
 <li>getOriginalSourceFileName()
 : <a class="el" href="classclang_1_1ASTUnit.html#ab4309c4300c7e48ab291cf781aaed575">clang::ASTUnit</a>
@@ -11503,7 +11524,7 @@ $(function() {
 , <a class="el" href="classclang_1_1driver_1_1toolchains_1_1MachO.html#a745cd2646d1084488232de2608cf84ca">clang::driver::toolchains::MachO</a>
 </li>
 <li>getOuterLexicalRecordContext()
-: <a class="el" href="classclang_1_1DeclContext.html#a87f37421055f44a62d840cb9d12beafd">clang::DeclContext</a>
+: <a class="el" href="classclang_1_1DeclContext.html#ac73f7ec4ea7891faaf04985a9b69fb56">clang::DeclContext</a>
 </li>
 <li>getOuterLocStart()
 : <a class="el" href="classclang_1_1DeclaratorDecl.html#a41fe7e51241feff7c8c7a29031b63d44">clang::DeclaratorDecl</a>
@@ -11525,11 +11546,11 @@ $(function() {
 , <a class="el" href="classclang_1_1MSAsmStmt.html#ab7825865d7118516de9e8d5878433ca5">clang::MSAsmStmt</a>
 </li>
 <li>getOutputConstraintLiteral()
-: <a class="el" href="classclang_1_1GCCAsmStmt.html#a7e5b86099e4c5ca972fc3bd3379fa041">clang::GCCAsmStmt</a>
+: <a class="el" href="classclang_1_1GCCAsmStmt.html#a717e991ab1469a023589b60c03f4d015">clang::GCCAsmStmt</a>
 </li>
 <li>getOutputExpr()
 : <a class="el" href="classclang_1_1AsmStmt.html#aa31fe34f74aca70a7a3f656e00e8bcf6">clang::AsmStmt</a>
-, <a class="el" href="classclang_1_1GCCAsmStmt.html#ac62057b9dae47bc5e260be28e7898a51">clang::GCCAsmStmt</a>
+, <a class="el" href="classclang_1_1GCCAsmStmt.html#a1703ba10b9b7d0962da8a36c4a43cb47">clang::GCCAsmStmt</a>
 , <a class="el" href="classclang_1_1MSAsmStmt.html#a0f3377ea2ccfdadc01dc4af4380746dd">clang::MSAsmStmt</a>
 </li>
 <li>getOutputFilenames()
@@ -11643,16 +11664,16 @@ $(function() {
 , <a class="el" href="classclang_1_1CXXDefaultArgExpr.html#a180ec709aa4e6cc82c1facfa30822079">clang::CXXDefaultArgExpr</a>
 , <a class="el" href="classclang_1_1FunctionTypeLoc.html#a93f517d602da63a07d7045d1b00ee3c3">clang::FunctionTypeLoc</a>
 , <a class="el" href="classclang_1_1interp_1_1InterpFrame.html#ac37837e631c90aa55cd9541e57d9af3d">clang::interp::InterpFrame</a>
-, <a class="el" href="classclang_1_1TemplateParameterList.html#ac087742e8b1da896b9e7f4d80b749ec4">clang::TemplateParameterList</a>
+, <a class="el" href="classclang_1_1TemplateParameterList.html#a50ddcd18a1620c9bcfc32b60a0ce1a80">clang::TemplateParameterList</a>
 </li>
 <li>getParamDbgMappings()
 : <a class="el" href="classclang_1_1CodeGen_1_1CGDebugInfo.html#a14c38b9571a3dd5b0b26e6da94c0a1c8">clang::CodeGen::CGDebugInfo</a>
 </li>
 <li>getParamDecl()
-: <a class="el" href="classclang_1_1BlockDecl.html#ad65a0b0ebf3831852aedde0a2de296ff">clang::BlockDecl</a>
+: <a class="el" href="classclang_1_1BlockDecl.html#a7c43d11a71760c8548ce456cc5e0d91c">clang::BlockDecl</a>
 , <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction_1_1AbstractCallee.html#aa3d21255ad5569fc3f1ec70b793bd882">clang::CodeGen::CodeGenFunction::AbstractCallee</a>
 , <a class="el" href="classclang_1_1FunctionDecl.html#aef2e53ef1a6c1370870833ccf161f87d">clang::FunctionDecl</a>
-, <a class="el" href="classclang_1_1ObjCMethodDecl.html#ad37274bffb8a74d998afcf8e2f805fe3">clang::ObjCMethodDecl</a>
+, <a class="el" href="classclang_1_1ObjCMethodDecl.html#af61e697ce6c274035cb6fe5e0c32572b">clang::ObjCMethodDecl</a>
 </li>
 <li>getParamDescriptor()
 : <a class="el" href="classclang_1_1interp_1_1Function.html#ad81a25954398503c7ba1fc731c1632cf">clang::interp::Function</a>
@@ -11763,14 +11784,14 @@ $(function() {
 <li>getParent()
 : <a class="el" href="classclang_1_1CFGBlock.html#a4a631410e9ed4400b747fafb7a070afb">clang::CFGBlock</a>
 , <a class="el" href="classclang_1_1ConstructionContextLayer.html#ae8ae02ea6731a7b9e6dd8f5f6b46a670">clang::ConstructionContextLayer</a>
-, <a class="el" href="classclang_1_1ConstructorUsingShadowDecl.html#aa0bd7c69a70e3aec7c3ae1d5a816b11a">clang::ConstructorUsingShadowDecl</a>
-, <a class="el" href="classclang_1_1CXXMethodDecl.html#afef8b0347180e251310a8c6a55f984a9">clang::CXXMethodDecl</a>
+, <a class="el" href="classclang_1_1ConstructorUsingShadowDecl.html#a6b0ab3ce419b226594281f6331e0d7c5">clang::ConstructorUsingShadowDecl</a>
+, <a class="el" href="classclang_1_1CXXMethodDecl.html#a290cbceee004310e1a43bb8cd9ab25de">clang::CXXMethodDecl</a>
 , <a class="el" href="classclang_1_1DeclContext.html#aed24e08e8b61acee92674f733751f99d">clang::DeclContext</a>
 , <a class="el" href="classclang_1_1FieldDecl.html#ac2498104ca816f4fc20a31e010db531d">clang::FieldDecl</a>
 , <a class="el" href="classclang_1_1InitializedEntity.html#ae082e5677d2aa46fd9a05c475fef5741">clang::InitializedEntity</a>
 , <a class="el" href="classclang_1_1interp_1_1VariableScope.html#a91d496abbec5f4164f540dee6936bd25">clang::interp::VariableScope&lt; Emitter &gt;</a>
 , <a class="el" href="classclang_1_1LocationContext.html#a0d95890e7358d8102ae6056a89508bfb">clang::LocationContext</a>
-, <a class="el" href="classclang_1_1ParentMap.html#ab4a8f4d84666d6b734198488c28718ae">clang::ParentMap</a>
+, <a class="el" href="classclang_1_1ParentMap.html#acb3be22e2274053983dda85999b87274">clang::ParentMap</a>
 , <a class="el" href="classclang_1_1Scope.html#ad2dd96f3dba6553c2846e6385963df5a">clang::Scope</a>
 , <a class="el" href="classclang_1_1sema_1_1DelayedDiagnosticPool.html#a209dca4063833b3049aacd198ac9fab4">clang::sema::DelayedDiagnosticPool</a>
 , <a class="el" href="classclang_1_1syntax_1_1Node.html#a930525afec04aadb4c9b2bc779df8af1">clang::syntax::Node</a>
@@ -11779,7 +11800,7 @@ $(function() {
 : <a class="el" href="classclang_1_1DeclContext.html#a4b5cada47dc1f05716d86de7b2023c9f">clang::DeclContext</a>
 </li>
 <li>getParentContext()
-: <a class="el" href="classclang_1_1SourceLocExpr.html#a4d3b742a9575fc5aa2c3e6047c714c74">clang::SourceLocExpr</a>
+: <a class="el" href="classclang_1_1SourceLocExpr.html#a042a47d4d6855c8f2cee4a5938586ceb">clang::SourceLocExpr</a>
 </li>
 <li>getParentContextName()
 : <a class="el" href="classclang_1_1CodeCompletionString.html#a9638d0d061354ddee4c0e187b2946d84">clang::CodeCompletionString</a>
@@ -11794,7 +11815,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ParentMap.html#a76ab6570306b79f990dd29267718603b">clang::ParentMap</a>
 </li>
 <li>getParentIgnoreParens()
-: <a class="el" href="classclang_1_1ParentMap.html#afc65a4b53a89a0484b1657f8a1a5e474">clang::ParentMap</a>
+: <a class="el" href="classclang_1_1ParentMap.html#a21b9e3e8480a6fa04202fb9589b22887">clang::ParentMap</a>
 </li>
 <li>getParentLibPath()
 : <a class="el" href="classclang_1_1driver_1_1toolchains_1_1Generic__GCC_1_1GCCInstallationDetector.html#a8a23e03e44aa8fd47e182e35526223ca">clang::driver::toolchains::Generic_GCC::GCCInstallationDetector</a>
@@ -11814,13 +11835,18 @@ $(function() {
 , <a class="el" href="classclang_1_1CodeCompletionTUInfo.html#a1f9b83f8b0f29234855559e5ba4e3e58">clang::CodeCompletionTUInfo</a>
 </li>
 <li>getParents()
-: <a class="el" href="classclang_1_1ASTContext.html#a32d11844fdb82310b9059784fd4ceb6b">clang::ASTContext</a>
-, <a class="el" href="classclang_1_1ParentMapContext.html#a73ab2ce6f7efafe8b2e3da59128a8658">clang::ParentMapContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#a3cff0ba314b2909c411e1589907fe998">clang::ASTContext</a>
+, <a class="el" href="classclang_1_1ParentMapContext.html#ad75d2749ec4da21d67115e3f6073fd87">clang::ParentMapContext</a>
 , <a class="el" href="classParentMapContext_1_1ParentMap.html#a178f0e97a72b2a0f271e3834a6831e4d">clang::ParentMapContext::ParentMap</a>
 , <a class="el" href="classclang_1_1tooling_1_1CodeRangeASTSelection.html#aa4f42c7294ca662f6850cbec2fbfe60f">clang::tooling::CodeRangeASTSelection</a>
 </li>
 <li>getParentSymbol()
 : <a class="el" href="classclang_1_1ento_1_1SymbolDerived.html#a7c9c9b1d06d3d70dcea7a3732a2e264e">clang::ento::SymbolDerived</a>
+</li>
+<li>getParentTracker()
+: <a class="el" href="classclang_1_1ento_1_1bugreporter_1_1ExpressionHandler.html#a07afdba63f9bf7700b29ec111ce2d296">clang::ento::bugreporter::ExpressionHandler</a>
+, <a class="el" href="classclang_1_1ento_1_1bugreporter_1_1StoreHandler.html#ae1f333f09bb518bbc976b0fd34ddc826">clang::ento::bugreporter::StoreHandler</a>
+, <a class="el" href="classclang_1_1ento_1_1bugreporter_1_1TrackingBugReporterVisitor.html#a0978236d963429ff793ae2faed8f2bf2">clang::ento::bugreporter::TrackingBugReporterVisitor</a>
 </li>
 <li>getParenType()
 : <a class="el" href="classclang_1_1ASTContext.html#a07b35bb3f1b2da8ec38eb232ceb20fe8">clang::ASTContext</a>
@@ -11829,7 +11855,7 @@ $(function() {
 : <a class="el" href="classclang_1_1FunctionTypeLoc.html#ae0729ebec0cddc85866809f9147375a8">clang::FunctionTypeLoc</a>
 </li>
 <li>getParsedKind()
-: <a class="el" href="classclang_1_1AttributeCommonInfo.html#a0372ff93431c6da2e91a597a47303466">clang::AttributeCommonInfo</a>
+: <a class="el" href="classclang_1_1AttributeCommonInfo.html#af85f17313658274e0a36974ebc397dfa">clang::AttributeCommonInfo</a>
 </li>
 <li>getParsedSpecifiers()
 : <a class="el" href="classclang_1_1DeclSpec.html#aa26f4f0796b60d64a8301722aebd5e7c">clang::DeclSpec</a>
@@ -11848,14 +11874,14 @@ $(function() {
 </li>
 <li>getPartialSpecializations()
 : <a class="el" href="classclang_1_1ASTDeclWriter.html#a579e25e7f2e4487312811e1f6bda2f05">clang::ASTDeclWriter</a>
-, <a class="el" href="classclang_1_1ClassTemplateDecl.html#a6df8709adf924f76a0ba22b16017924b">clang::ClassTemplateDecl</a>
+, <a class="el" href="classclang_1_1ClassTemplateDecl.html#a5c2892f30e68d39a66d9e6dbb6007cf4">clang::ClassTemplateDecl</a>
 , <a class="el" href="classclang_1_1VarTemplateDecl.html#a4628d663d8083c67f16eea538d66a0bf">clang::VarTemplateDecl</a>
 </li>
 <li>getParts()
 : <a class="el" href="classclang_1_1MSGuidDecl.html#a40c7a16b34a0025ed6685d585a191cfa">clang::MSGuidDecl</a>
 </li>
 <li>getPath()
-: <a class="el" href="structAPValue_1_1LV.html#a4c0f60620b8d86901ff9d4309b130357">clang::APValue::LV</a>
+: <a class="el" href="structAPValue_1_1LV.html#a98fbdc0e6dcaf032ad23765bc2c44eb1">clang::APValue::LV</a>
 , <a class="el" href="structAPValue_1_1MemberPointerData.html#ad475fa9abcc022fb437610b01eae5df5">clang::APValue::MemberPointerData</a>
 , <a class="el" href="classclang_1_1ASTSourceDescriptor.html#ae070ea2c3ea075287ac0b00318a7c945">clang::ASTSourceDescriptor</a>
 </li>
@@ -11872,7 +11898,7 @@ $(function() {
 </li>
 <li>getPattern()
 : <a class="el" href="classclang_1_1CXXFoldExpr.html#ab0df2f669c1e478169cb41e497fc50ca">clang::CXXFoldExpr</a>
-, <a class="el" href="classclang_1_1PackExpansionExpr.html#a35cd72843436418a1c6b69e01e3e3897">clang::PackExpansionExpr</a>
+, <a class="el" href="classclang_1_1PackExpansionExpr.html#afc5ad9b7909dcfc1f77102da5b0b85f0">clang::PackExpansionExpr</a>
 , <a class="el" href="classclang_1_1PackExpansionType.html#a7145c950e49116e936bfd1dd91653c73">clang::PackExpansionType</a>
 </li>
 <li>getPatternLoc()
@@ -12065,7 +12091,7 @@ $(function() {
 : <a class="el" href="classclang_1_1diff_1_1Subtree.html#a57759ebe5a0ce6b0dc1e08df030ff490">clang::diff::Subtree</a>
 </li>
 <li>getPostUpdateExpr()
-: <a class="el" href="classclang_1_1OMPClauseWithPostUpdate.html#a888bd83e141820482a9ddfda37207a56">clang::OMPClauseWithPostUpdate</a>
+: <a class="el" href="classclang_1_1OMPClauseWithPostUpdate.html#ae172500d5443e3b3be5951a78265eda4">clang::OMPClauseWithPostUpdate</a>
 </li>
 <li>getPP()
 : <a class="el" href="classclang_1_1PreprocessorLexer.html#ad974a949149763743d1d79f7156742f4">clang::PreprocessorLexer</a>
@@ -12107,7 +12133,7 @@ $(function() {
 : <a class="el" href="classclang_1_1Preprocessor.html#ac1582c524fbc3a21990351472a1dfd30">clang::Preprocessor</a>
 </li>
 <li>getPreArg()
-: <a class="el" href="classclang_1_1CallExpr.html#ad14c91e3542a0ddf09ea50018810aac8">clang::CallExpr</a>
+: <a class="el" href="classclang_1_1CallExpr.html#a3db2acc5bbde39262503da575be2c459">clang::CallExpr</a>
 </li>
 <li>getPrebuiltImplicitModuleFileName()
 : <a class="el" href="classclang_1_1HeaderSearch.html#a5937ccb07317270008fcfe80a3a3b3ab">clang::HeaderSearch</a>
@@ -12162,8 +12188,9 @@ $(function() {
 , <a class="el" href="classclang_1_1NestedNameSpecifierLoc.html#a64a55231830962178bf6dc41fcd04177">clang::NestedNameSpecifierLoc</a>
 </li>
 <li>getPreInits()
-: <a class="el" href="classclang_1_1OMPLoopDirective.html#a3df1197aab57be7a1261db3cd4d1cfdf">clang::OMPLoopDirective</a>
+: <a class="el" href="classclang_1_1OMPLoopDirective.html#a1401572c8b002e4a085be0580210c2e9">clang::OMPLoopDirective</a>
 , <a class="el" href="classclang_1_1OMPTileDirective.html#ab188fae3948b27b989a0b74d0f47f39a">clang::OMPTileDirective</a>
+, <a class="el" href="classclang_1_1OMPUnrollDirective.html#ab63e1d33d6631690665fd9459745b75d">clang::OMPUnrollDirective</a>
 </li>
 <li>getPreInitStmt()
 : <a class="el" href="classclang_1_1OMPClauseWithPreInit.html#ab1965795775a7d208cf3d8de786ee6ca">clang::OMPClauseWithPreInit</a>
@@ -12179,7 +12206,7 @@ $(function() {
 </li>
 <li>getPreprocessor()
 : <a class="el" href="classclang_1_1ASTReader.html#a94c6749692b12eeb82321b01226b2777">clang::ASTReader</a>
-, <a class="el" href="classclang_1_1ASTUnit.html#a3c10468bf59e4404d444cea358ad80df">clang::ASTUnit</a>
+, <a class="el" href="classclang_1_1ASTUnit.html#a9ceb239c3dfdf79fb1460dc302715440">clang::ASTUnit</a>
 , <a class="el" href="classclang_1_1CompilerInstance.html#a1ac2ca1acff919eb06ecf8ccdc680e99">clang::CompilerInstance</a>
 , <a class="el" href="classclang_1_1ento_1_1AnalysisManager.html#abfb74f68d8648bd62709f9a94695b794">clang::ento::AnalysisManager</a>
 , <a class="el" href="classclang_1_1ento_1_1BugReporter.html#aa9574fe3870bfc73f93dfd9a8ba7bcf3">clang::ento::BugReporter</a>
@@ -12196,7 +12223,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTUnit.html#a2d36ef84536de277ec7ec4d41890611f">clang::ASTUnit</a>
 , <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#afda9277296d37b21dd69b2feff9c7088">clang::CodeGen::CodeGenModule</a>
 , <a class="el" href="classclang_1_1CompilerInstance.html#a44f5c8763eb8a46ac41b13e2a56fde24">clang::CompilerInstance</a>
-, <a class="el" href="classclang_1_1CompilerInvocationRefBase.html#aac26540d8bd7e1c65c541fd89d4ad044">clang::CompilerInvocationRefBase</a>
+, <a class="el" href="classclang_1_1CompilerInvocationRefBase.html#a9f7bf06581ce79f30bf4c6d16aa39cea">clang::CompilerInvocationRefBase</a>
 , <a class="el" href="classclang_1_1Preprocessor.html#a0073c93f3640e7a3c051cdac5c6ed78f">clang::Preprocessor</a>
 </li>
 <li>getPreprocessorOptsPtr()
@@ -12204,7 +12231,7 @@ $(function() {
 </li>
 <li>getPreprocessorOutputOpts()
 : <a class="el" href="classclang_1_1CompilerInstance.html#a333733b88fcc5e44461d7904eadb7c6d">clang::CompilerInstance</a>
-, <a class="el" href="classclang_1_1CompilerInvocationValueBase.html#a98a782b8e8028be2f43050092ba40762">clang::CompilerInvocationValueBase</a>
+, <a class="el" href="classclang_1_1CompilerInvocationValueBase.html#abe1a4b5098a6aec6f60427662ca901df">clang::CompilerInvocationValueBase</a>
 </li>
 <li>getPreprocessorPtr()
 : <a class="el" href="classclang_1_1ASTUnit.html#a4542078be2e598b8f8cecdae27c69b62">clang::ASTUnit</a>
@@ -12221,8 +12248,8 @@ $(function() {
 , <a class="el" href="classclang_1_1SourceManager.html#a32e463f07e2af51f1a533a0f05646790">clang::SourceManager</a>
 </li>
 <li>getPrevDeclInScope()
-: <a class="el" href="classclang_1_1OMPDeclareMapperDecl.html#ab32ced433607b052480608879f50f190">clang::OMPDeclareMapperDecl</a>
-, <a class="el" href="classclang_1_1OMPDeclareReductionDecl.html#a22131f71c424128c7ff70a0227ff09f5">clang::OMPDeclareReductionDecl</a>
+: <a class="el" href="classclang_1_1OMPDeclareMapperDecl.html#a206a966eaa477626639291162c8ad9ce">clang::OMPDeclareMapperDecl</a>
+, <a class="el" href="classclang_1_1OMPDeclareReductionDecl.html#a188c88b20e508ddf79ba283be8d7f8e3">clang::OMPDeclareReductionDecl</a>
 </li>
 <li>getPrevEnsureUpperBound()
 : <a class="el" href="classclang_1_1OMPLoopDirective.html#a67313fc6f228d7e384283c0c5b33a521">clang::OMPLoopDirective</a>
@@ -12235,12 +12262,12 @@ $(function() {
 : <a class="el" href="classclang_1_1ClassTemplateDecl.html#ad1d863f0a50bdbaf12d5bfcaaafbe4d1">clang::ClassTemplateDecl</a>
 , <a class="el" href="classclang_1_1CXXRecordDecl.html#a5cdffdeac14023c930e184141c6820e1">clang::CXXRecordDecl</a>
 , <a class="el" href="classclang_1_1Decl.html#a89eb85283ad2678e94841d45c0a30c3a">clang::Decl</a>
-, <a class="el" href="classclang_1_1EnumDecl.html#ad570eafe6152a67e0170049b318d7a78">clang::EnumDecl</a>
-, <a class="el" href="classclang_1_1FunctionTemplateDecl.html#ab690a3cde7f1543cefbfbb2bd6fcc27a">clang::FunctionTemplateDecl</a>
-, <a class="el" href="classclang_1_1RecordDecl.html#a96c030c52c307480cf658a98d5630de2">clang::RecordDecl</a>
+, <a class="el" href="classclang_1_1EnumDecl.html#a52f060da0a67f1efbdcdc7486c59eb83">clang::EnumDecl</a>
+, <a class="el" href="classclang_1_1FunctionTemplateDecl.html#aacd99ad55e4c9a87f27e4bf4fef9f719">clang::FunctionTemplateDecl</a>
+, <a class="el" href="classclang_1_1RecordDecl.html#aa5a82cd1f9ee798cc18ce8f81964399e">clang::RecordDecl</a>
 , <a class="el" href="classclang_1_1Redeclarable.html#ae865b5549d99099ecb62d8b3a104f033">clang::Redeclarable&lt; decl_type &gt;</a>
 , <a class="el" href="classclang_1_1TypeAliasTemplateDecl.html#a78e27cd1920640437fd053ea508fe3fc">clang::TypeAliasTemplateDecl</a>
-, <a class="el" href="classclang_1_1VarTemplateDecl.html#a77c853c74ddfeb9a807bae9b51e0a536">clang::VarTemplateDecl</a>
+, <a class="el" href="classclang_1_1VarTemplateDecl.html#af6d0fdd1188a84c2a04a7015f2c86565">clang::VarTemplateDecl</a>
 </li>
 <li>getPreviousDeclImpl()
 : <a class="el" href="classclang_1_1Decl.html#a0d8215ab32acd46eadf7306d55ccdb07">clang::Decl</a>
@@ -12256,7 +12283,7 @@ $(function() {
 : <a class="el" href="structclang_1_1format_1_1FormatToken.html#a9116650504e2b4c81ced3bd35245413a">clang::format::FormatToken</a>
 </li>
 <li>getPreviousSibling()
-: <a class="el" href="classclang_1_1syntax_1_1Node.html#a328682d00dbfa9c716a71075f4a70a1d">clang::syntax::Node</a>
+: <a class="el" href="classclang_1_1syntax_1_1Node.html#a71b60a560d291851cbdf69ed7c66159e">clang::syntax::Node</a>
 </li>
 <li>getPreviousStmtForDiagnostics()
 : <a class="el" href="classclang_1_1ento_1_1ExplodedNode.html#a380b98b644972639eeea80915b498032">clang::ento::ExplodedNode</a>
@@ -12271,7 +12298,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTRecordLayout.html#a289d1cef934839e5526cbdcc2412eeab">clang::ASTRecordLayout</a>
 </li>
 <li>getPrimaryContext()
-: <a class="el" href="classclang_1_1DeclContext.html#a0ecedb181aa05bed3821d7adaa64d437">clang::DeclContext</a>
+: <a class="el" href="classclang_1_1DeclContext.html#ac3368ad7389098f8fed5c5d346b77445">clang::DeclContext</a>
 </li>
 <li>getPrimaryMergedDecl()
 : <a class="el" href="classclang_1_1ASTContext.html#a698419a74f4b6b9e432538ecc617f458">clang::ASTContext</a>
@@ -12283,7 +12310,7 @@ $(function() {
 : <a class="el" href="classclang_1_1FunctionDecl.html#a3701fbf27221163b5f533f7d0a6f418c">clang::FunctionDecl</a>
 </li>
 <li>getPrintable()
-: <a class="el" href="classclang_1_1Sema.html#aae710d92c3b5a31d97ab036d2bc80df5">clang::Sema</a>
+: <a class="el" href="classclang_1_1Sema.html#a237e65bdfbecaef05653f0551d1e0cdf">clang::Sema</a>
 </li>
 <li>getPrintingPolicy()
 : <a class="el" href="classclang_1_1ASTContext.html#a063e15f0655e75a7686bb7c83d99d18e">clang::ASTContext</a>
@@ -12294,7 +12321,7 @@ $(function() {
 </li>
 <li>getPriority()
 : <a class="el" href="classclang_1_1CodeCompletionString.html#a33e2a729f2b4071530cb70efae920c1b">clang::CodeCompletionString</a>
-, <a class="el" href="classclang_1_1OMPPriorityClause.html#af357195e5ec6fc1105a61279b03f4bb9">clang::OMPPriorityClause</a>
+, <a class="el" href="classclang_1_1OMPPriorityClause.html#aac863f43a0ea192c0b92fd4c31d2c001">clang::OMPPriorityClause</a>
 </li>
 <li>getProcBindKind()
 : <a class="el" href="classclang_1_1OMPProcBindClause.html#ad23a39c42c20ece3c9dd0ea11f9218df">clang::OMPProcBindClause</a>
@@ -12388,7 +12415,7 @@ $(function() {
 : <a class="el" href="classclang_1_1CodeGen_1_1CGObjCRuntime.html#a3cf42c1a9f434d32a8cbc86467c08a62">clang::CodeGen::CGObjCRuntime</a>
 </li>
 <li>getProtocol
-: <a class="el" href="classclang_1_1ObjCInterfaceType.html#ae71ae64aa2d7591e1167e963260b5c75a520cd7dea01a6e671e9f063caac3f073">clang::ObjCInterfaceType</a>
+: <a class="el" href="classclang_1_1ObjCInterfaceType.html#a236c55ef6d6a877a830de05f41366a27a520cd7dea01a6e671e9f063caac3f073">clang::ObjCInterfaceType</a>
 , <a class="el" href="classclang_1_1ObjCObjectPointerType.html#a6448ea0577d2592364f3664703a27bef">clang::ObjCObjectPointerType</a>
 , <a class="el" href="classclang_1_1ObjCObjectTypeLoc.html#ac32ef56d5b51aecf443c3f32f100940a">clang::ObjCObjectTypeLoc</a>
 , <a class="el" href="classclang_1_1ObjCProtocolExpr.html#a3d4084272832f9e2daae59bc1fd2fb63">clang::ObjCProtocolExpr</a>
@@ -12418,7 +12445,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ObjCProtocolQualifiers.html#a2f184404304d62ba723c66d22570fc25">clang::ObjCProtocolQualifiers&lt; T &gt;</a>
 </li>
 <li>getProtocolStorage()
-: <a class="el" href="classclang_1_1ObjCProtocolQualifiers.html#a87217bd3c9af753c2059f5ca05713895">clang::ObjCProtocolQualifiers&lt; T &gt;</a>
+: <a class="el" href="classclang_1_1ObjCProtocolQualifiers.html#af41b19ae8cd034f80249153010a988e9">clang::ObjCProtocolQualifiers&lt; T &gt;</a>
 </li>
 <li>getPseudoDestructorExpr()
 : <a class="el" href="classclang_1_1CodeGen_1_1CGCallee.html#ae25aa8c85203421f9f3ff6ee0ca7c235">clang::CodeGen::CGCallee</a>
@@ -12512,7 +12539,7 @@ $(function() {
 , <a class="el" href="classclang_1_1QualType.html#a79656767a29a455153af86c4afac9fbe">clang::QualType</a>
 </li>
 <li>getQuals()
-: <a class="el" href="classclang_1_1CodeGen_1_1LValue.html#af88c9cc07990f386c3a2aa922a0bd182">clang::CodeGen::LValue</a>
+: <a class="el" href="classclang_1_1CodeGen_1_1LValue.html#a4faf4769600ff66ba66e50d7ceaeb46a">clang::CodeGen::LValue</a>
 </li>
 <li>getQuantity()
 : <a class="el" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">clang::CharUnits</a>
@@ -12527,7 +12554,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ArrayTypeTraitExpr.html#a76f915c802c7a314fe7822134f766000">clang::ArrayTypeTraitExpr</a>
 </li>
 <li>getQueryKind()
-: <a class="el" href="classclang_1_1ObjCPropertyDecl.html#a481fd8df28a0ebf170784c7d0453d7fe">clang::ObjCPropertyDecl</a>
+: <a class="el" href="classclang_1_1ObjCPropertyDecl.html#a2c0dfc33750f3aab6fbbf564f2ddc550">clang::ObjCPropertyDecl</a>
 </li>
 <li>getQuestionLoc()
 : <a class="el" href="classclang_1_1AbstractConditionalOperator.html#ac49b90ddd1b002615889a37dd8530ca2">clang::AbstractConditionalOperator</a>
@@ -12545,7 +12572,7 @@ $(function() {
 , <a class="el" href="classclang_1_1Diagnostic.html#a9fcdbc321437a92797cc8b40f4d94d74">clang::Diagnostic</a>
 , <a class="el" href="classclang_1_1GCCAsmStmt_1_1AsmStringPiece.html#a7d3d0ae119997ddbad978ef6aff28505">clang::GCCAsmStmt::AsmStringPiece</a>
 , <a class="el" href="classclang_1_1InitializationKind.html#af6ad05663a25d139776d36af39bacb90">clang::InitializationKind</a>
-, <a class="el" href="classsyntax_1_1TreeBuilder.html#a689360a33752230b6ed5f193adb0693b">clang::syntax::TreeBuilder</a>
+, <a class="el" href="classsyntax_1_1TreeBuilder.html#a58eebe8c0bf90fbac832ff3c2285c97e">clang::syntax::TreeBuilder</a>
 </li>
 <li>getRangeExpr()
 : <a class="el" href="classclang_1_1ento_1_1SMTConv.html#a4f7a92ea955414931a6f490e6e7d4c75">clang::ento::SMTConv</a>
@@ -12568,13 +12595,13 @@ $(function() {
 , <a class="el" href="classclang_1_1StoredDiagnostic.html#a60fa1951aa5f8af077b63408faca7bf0">clang::StoredDiagnostic</a>
 </li>
 <li>getRangeSet()
-: <a class="el" href="classclang_1_1ento_1_1RangeSet_1_1Factory.html#ae3f69e9f89f26a6ccb0d95b6b9e4624e">clang::ento::RangeSet::Factory</a>
+: <a class="el" href="classclang_1_1ento_1_1RangeSet_1_1Factory.html#a87c062990907587c761feeeb674c788a">clang::ento::RangeSet::Factory</a>
 </li>
 <li>getRangeSize()
 : <a class="el" href="classclang_1_1Rewriter.html#a224c3e092dcee52f87339de03b004307">clang::Rewriter</a>
 </li>
 <li>getRangeStmt()
-: <a class="el" href="classclang_1_1CXXForRangeStmt.html#af6bbdd9e342b0ca0e1662804ccb33138">clang::CXXForRangeStmt</a>
+: <a class="el" href="classclang_1_1CXXForRangeStmt.html#ad2551c5d4dfd3e95b1eac664c6443e40">clang::CXXForRangeStmt</a>
 </li>
 <li>getRAngleLoc()
 : <a class="el" href="structclang_1_1ASTTemplateArgumentListInfo.html#afd9a4be7afffcd6cd0f90b2a2a73e993">clang::ASTTemplateArgumentListInfo</a>
@@ -12626,7 +12653,7 @@ $(function() {
 : <a class="el" href="classclang_1_1FloatingLiteral.html#a339b7980ce2d5461ad2aec0657140b38">clang::FloatingLiteral</a>
 </li>
 <li>getRawStmt()
-: <a class="el" href="classclang_1_1OMPChildren.html#ae52145714d00cca83ca362c2b8cdbae6">clang::OMPChildren</a>
+: <a class="el" href="classclang_1_1OMPChildren.html#a6ec7eb7f34c33811a477907f97276898">clang::OMPChildren</a>
 , <a class="el" href="classclang_1_1OMPExecutableDirective.html#aaa122190b63820094382c3f27ebc8aa4">clang::OMPExecutableDirective</a>
 </li>
 <li>getRawSubExprs()
@@ -12742,7 +12769,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#a2876aa008b370e91e451f946d4aca17b">clang::ASTContext</a>
 </li>
 <li>getRedeclContext()
-: <a class="el" href="classclang_1_1DeclContext.html#a61743ae6acff989a26641900282e6305">clang::DeclContext</a>
+: <a class="el" href="classclang_1_1DeclContext.html#a14bcbf695c74ffb3e4e0559f292e4121">clang::DeclContext</a>
 </li>
 <li>getReductionRef()
 : <a class="el" href="classclang_1_1OMPTaskgroupDirective.html#a102bc372fea40011fdf013bc1ac52473">clang::OMPTaskgroupDirective</a>
@@ -12807,7 +12834,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ento_1_1ExprEngine.html#a2a27823c2b89470a7bcf509d5b90a733">clang::ento::ExprEngine</a>
 , <a class="el" href="classclang_1_1ento_1_1ProgramStateManager.html#a07ad18416d6ebd3d52c93cfd885baae9">clang::ento::ProgramStateManager</a>
 , <a class="el" href="classclang_1_1ento_1_1StoreManager.html#aaf65d950cd515052f465c145c6b4a54f">clang::ento::StoreManager</a>
-, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#aa498939473c12cd59ed8e53a249956c3">clang::ento::SValBuilder</a>
+, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#ab23a645a08ca775cec71213615eb1ca2">clang::ento::SValBuilder</a>
 </li>
 <li>getRegionName()
 : <a class="el" href="classclang_1_1sema_1_1CapturedRegionScopeInfo.html#a78bdfe161f2ab57fb615d33312459551">clang::sema::CapturedRegionScopeInfo</a>
@@ -12842,7 +12869,7 @@ $(function() {
 : <a class="el" href="classclang_1_1FunctionType.html#a4c8d2e570c1e2db02224916ad81225a1">clang::FunctionType</a>
 </li>
 <li>getRelativeName()
-: <a class="el" href="classclang_1_1diff_1_1SyntaxTree_1_1Impl.html#a274cbffef9dd1c7d8bc9e4d4bc595511">clang::diff::SyntaxTree::Impl</a>
+: <a class="el" href="classclang_1_1diff_1_1SyntaxTree_1_1Impl.html#a21733fec5bc635fde94a48bc1547cdec">clang::diff::SyntaxTree::Impl</a>
 </li>
 <li>GetReleaseVersion()
 : <a class="el" href="classclang_1_1driver_1_1Driver.html#a67649fd0cea0b12164fc2cd870d021dc">clang::driver::Driver</a>
@@ -12901,6 +12928,9 @@ $(function() {
 <li>getReplacementType()
 : <a class="el" href="classclang_1_1SubstTemplateTypeParmType.html#aadb5a13f1ac3cc1bbb341753879fc130">clang::SubstTemplateTypeParmType</a>
 </li>
+<li>getReport()
+: <a class="el" href="classclang_1_1ento_1_1bugreporter_1_1Tracker.html#aae754744c5ddf2110684c60618d19de5">clang::ento::bugreporter::Tracker</a>
+</li>
 <li>getReports()
 : <a class="el" href="classclang_1_1ento_1_1BugReportEquivClass.html#a8ea486bf986b9731fc39f3c7a2da8806">clang::ento::BugReportEquivClass</a>
 </li>
@@ -12932,7 +12962,7 @@ $(function() {
 : <a class="el" href="classclang_1_1RequiresExpr.html#abd03d97cbee32064640f2278d25c07e2">clang::RequiresExpr</a>
 </li>
 <li>getRequiresClause()
-: <a class="el" href="classclang_1_1TemplateParameterList.html#ae2dd68942cfcd0346362c4677c6c7f7b">clang::TemplateParameterList</a>
+: <a class="el" href="classclang_1_1TemplateParameterList.html#a1a0b1b8d962ff794804614d3a8cd8c77">clang::TemplateParameterList</a>
 </li>
 <li>getRequiresKWLoc()
 : <a class="el" href="classclang_1_1RequiresExpr.html#a6f2c20cc8feacb9a96b96869d26b8c04">clang::RequiresExpr</a>
@@ -12966,7 +12996,7 @@ $(function() {
 : <a class="el" href="classclang_1_1CoroutineBodyStmt.html#aca1dbb219480300afabba1d3611cb2eb">clang::CoroutineBodyStmt</a>
 </li>
 <li>getResultExpr()
-: <a class="el" href="classclang_1_1GenericSelectionExpr.html#a7b1d275c445e4bbf8a6002307661d8af">clang::GenericSelectionExpr</a>
+: <a class="el" href="classclang_1_1GenericSelectionExpr.html#ab47625d27ad2bcfa49ff0b80c2ca4eef">clang::GenericSelectionExpr</a>
 , <a class="el" href="classclang_1_1PseudoObjectExpr.html#ab62fd9d4cdaa796bfaf8be169214d5a8">clang::PseudoObjectExpr</a>
 </li>
 <li>getResultExprIndex()
@@ -13008,7 +13038,7 @@ $(function() {
 : <a class="el" href="classclang_1_1interp_1_1InterpFrame.html#a51735443c9eeb7901680dca7492dc423">clang::interp::InterpFrame</a>
 </li>
 <li>getReturnInfo()
-: <a class="el" href="classclang_1_1CodeGen_1_1CGFunctionInfo.html#a5e6df2c6428fc7c2dc8d81625f6e13c9">clang::CodeGen::CGFunctionInfo</a>
+: <a class="el" href="classclang_1_1CodeGen_1_1CGFunctionInfo.html#ac0f497df111824e55810d0e389f8b7ae">clang::CodeGen::CGFunctionInfo</a>
 </li>
 <li>getReturnKeyword()
 : <a class="el" href="classclang_1_1syntax_1_1ReturnStatement.html#a0c92ae0c2d0244cb0c3e1ed62ef2d3dc">clang::syntax::ReturnStatement</a>
@@ -13063,7 +13093,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ento_1_1CallEvent.html#af4a506499428e9091077e54fe7e3e5cc">clang::ento::CallEvent</a>
 </li>
 <li>getRetValue()
-: <a class="el" href="classclang_1_1ReturnStmt.html#adaf87d49814b241225c5aa965ca1920b">clang::ReturnStmt</a>
+: <a class="el" href="classclang_1_1ReturnStmt.html#ad881fe4d5e16463b6c65564d893d94b8">clang::ReturnStmt</a>
 </li>
 <li>getRevision()
 : <a class="el" href="classclang_1_1tooling_1_1ExecutionContext.html#a98cbc594fd1e10cf8568940a5fca6772">clang::tooling::ExecutionContext</a>
@@ -13079,10 +13109,10 @@ $(function() {
 , <a class="el" href="structclang_1_1OverloadCandidateSet_1_1OperatorRewriteInfo.html#afd1c0dc8348437c49ee961590899b8f1">clang::OverloadCandidateSet::OperatorRewriteInfo</a>
 </li>
 <li>getRewrittenText()
-: <a class="el" href="classclang_1_1Rewriter.html#acee79f925009a7ef88af284508391bde">clang::Rewriter</a>
+: <a class="el" href="classclang_1_1Rewriter.html#a3d843d2eb705f26372a956d3f1533170">clang::Rewriter</a>
 </li>
 <li>getRHS()
-: <a class="el" href="classclang_1_1ArraySubscriptExpr.html#a0eef1e615457142f643f6fd75c347ec8">clang::ArraySubscriptExpr</a>
+: <a class="el" href="classclang_1_1ArraySubscriptExpr.html#af3350b7031f2393dee83e1fb6fe4db39">clang::ArraySubscriptExpr</a>
 , <a class="el" href="classclang_1_1BinaryOperator.html#aca01c980608d4f58ff567f8028f2594e">clang::BinaryOperator</a>
 , <a class="el" href="classclang_1_1CaseStmt.html#a96cfe2aca9a2248a0f493f9e172de2e1">clang::CaseStmt</a>
 , <a class="el" href="classclang_1_1ChooseExpr.html#ad251e7f00fc66ff1d1ab0e669f58e75e">clang::ChooseExpr</a>
@@ -13123,7 +13153,7 @@ $(function() {
 : <a class="el" href="classclang_1_1DependentSizedMatrixType.html#a30519fffc57050d4b4e825a4490796ae">clang::DependentSizedMatrixType</a>
 </li>
 <li>getRowIdx()
-: <a class="el" href="classclang_1_1MatrixSubscriptExpr.html#a67a78220add8437dd700a32f28909bf1">clang::MatrixSubscriptExpr</a>
+: <a class="el" href="classclang_1_1MatrixSubscriptExpr.html#a004c9f6736b295db0db8fbd3434c539a">clang::MatrixSubscriptExpr</a>
 </li>
 <li>getRParen()
 : <a class="el" href="classclang_1_1ParenExpr.html#ad0e2d5fc13e7c4f2fab2bb0f26daf74c">clang::ParenExpr</a>
@@ -13293,7 +13323,7 @@ $(function() {
 : <a class="el" href="classclang_1_1AttributeCommonInfo.html#a00a517f219ce0e9f93e1a10339493c12">clang::AttributeCommonInfo</a>
 </li>
 <li>getScopeModel()
-: <a class="el" href="classclang_1_1AtomicExpr.html#a62fa4d705b2a47b5ff8c7ad001e7d7b0">clang::AtomicExpr</a>
+: <a class="el" href="classclang_1_1AtomicExpr.html#aa6a67101a61728be6d1b91b52bdc0d82">clang::AtomicExpr</a>
 </li>
 <li>getScopeName()
 : <a class="el" href="classclang_1_1AttributeCommonInfo.html#ae888850016931a136ee06eb03505b9f2">clang::AttributeCommonInfo</a>
@@ -13390,7 +13420,7 @@ $(function() {
 , <a class="el" href="classclang_1_1TreeTransform.html#abe9912cb4b755a9dc85564e89159390c">clang::TreeTransform&lt; Derived &gt;</a>
 </li>
 <li>getSemanticExpr()
-: <a class="el" href="classclang_1_1PseudoObjectExpr.html#a88b3469cd272a3882e59696bad2a9539">clang::PseudoObjectExpr</a>
+: <a class="el" href="classclang_1_1PseudoObjectExpr.html#a2e3a1bd1377e9e42bb887bc8a78747bc">clang::PseudoObjectExpr</a>
 </li>
 <li>getSemanticForm()
 : <a class="el" href="classclang_1_1CXXRewrittenBinaryOperator.html#ab14a0ebc84af9fb5ded414f0141174fe">clang::CXXRewrittenBinaryOperator</a>
@@ -13406,7 +13436,7 @@ $(function() {
 : <a class="el" href="classclang_1_1NullStmt.html#a8d224d6d8151e423659cb21501e55314">clang::NullStmt</a>
 </li>
 <li>getSendResultType()
-: <a class="el" href="classclang_1_1ObjCMethodDecl.html#a0367ee50dd1f348057cdd82cdb5fb97e">clang::ObjCMethodDecl</a>
+: <a class="el" href="classclang_1_1ObjCMethodDecl.html#a4b36cce1e31e976ba647e817f05f936a">clang::ObjCMethodDecl</a>
 </li>
 <li>getSentinel()
 : <a class="el" href="classclang_1_1FileID.html#afdbd751b1c24199d6be2a18942fdba18">clang::FileID</a>
@@ -13454,7 +13484,10 @@ $(function() {
 : <a class="el" href="classclang_1_1InheritedConstructor.html#a2aa390179559d856a3fa41ec0ae3a2c0">clang::InheritedConstructor</a>
 </li>
 <li>getShadowedDeclaration()
-: <a class="el" href="classclang_1_1Sema.html#a6aaf376cf6584665e8a9890568140177">clang::Sema</a>
+: <a class="el" href="classclang_1_1Sema.html#a5f14bdc44722138ca108f945c66f8ca8">clang::Sema</a>
+</li>
+<li>getShadowFlag()
+: <a class="el" href="classclang_1_1BaseUsingDecl.html#a2964b708d4c0e63e3ab3b0a2e26666ab">clang::BaseUsingDecl</a>
 </li>
 <li>getSharedCache()
 : <a class="el" href="classclang_1_1tooling_1_1dependencies_1_1DependencyScanningService.html#adc3c3127555c4e410e54c0de67ec41c9">clang::tooling::dependencies::DependencyScanningService</a>
@@ -13558,7 +13591,7 @@ $(function() {
 , <a class="el" href="structllvm_1_1simplify__type_3_01clang_1_1ento_1_1CallEventRef_3_01T_01_4_01_4.html#a58f5d03b19169931a908e68fa296006e">llvm::simplify_type&lt; clang::ento::CallEventRef&lt; T &gt; &gt;</a>
 </li>
 <li>getSingleClause()
-: <a class="el" href="classclang_1_1OMPExecutableDirective.html#ac29f48714b3dd679ba3c4c50c21249b1">clang::OMPExecutableDirective</a>
+: <a class="el" href="classclang_1_1OMPExecutableDirective.html#ae1b5a0e3119bfac66fc55e154af1baff">clang::OMPExecutableDirective</a>
 </li>
 <li>getSingleCompoundChild()
 : <a class="el" href="classclang_1_1CodeGen_1_1CGOpenMPRuntime.html#a34deac6afc54d401ea44e65d13b17be6">clang::CodeGen::CGOpenMPRuntime</a>
@@ -13588,7 +13621,7 @@ $(function() {
 </li>
 <li>getSize()
 : <a class="el" href="classclang_1_1ASTRecordLayout.html#a6dadc2ec53fd8477a8ae6ad84cf967f2">clang::ASTRecordLayout</a>
-, <a class="el" href="classclang_1_1CodeGen_1_1CGBuilderTy.html#a677746c25acd47410b427e760f2b4027">clang::CodeGen::CGBuilderTy</a>
+, <a class="el" href="classclang_1_1CodeGen_1_1CGBuilderTy.html#ac4326cf52c6a2597f37bae753d829471">clang::CodeGen::CGBuilderTy</a>
 , <a class="el" href="structclang_1_1CodeGen_1_1CodeGenFunction_1_1LifetimeExtendedCleanupHeader.html#a5fc184751de0725bf120764707ed7012">clang::CodeGen::CodeGenFunction::LifetimeExtendedCleanupHeader</a>
 , <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#afc1a42dd19d9f4d3fdb1e9d15cf26810">clang::CodeGen::CodeGenModule</a>
 , <a class="el" href="classclang_1_1CodeGen_1_1EHTerminateScope.html#a668529d0ae49ccdc9bf43c84782b2a87">clang::CodeGen::EHTerminateScope</a>
@@ -13651,7 +13684,7 @@ $(function() {
 : <a class="el" href="structclang_1_1CodeGen_1_1CodeGenTypeCache.html#aa8c6bb588c43ea154040f1eaad32ce71">clang::CodeGen::CodeGenTypeCache</a>
 </li>
 <li>getSizesRefs()
-: <a class="el" href="classclang_1_1OMPSizesClause.html#a1fe3ceb03be8471d768cfe96fd1ac5ed">clang::OMPSizesClause</a>
+: <a class="el" href="classclang_1_1OMPSizesClause.html#a5a2397aad9cae786a9945d4e8ce3c2b7">clang::OMPSizesClause</a>
 </li>
 <li>getSizeType()
 : <a class="el" href="classclang_1_1ASTContext.html#a7c89acd533ffea38c5011885d8d029e4">clang::ASTContext</a>
@@ -13718,7 +13751,7 @@ $(function() {
 <li>getSourceManager()
 : <a class="el" href="classclang_1_1ASTContext.html#ac1fb9eee07e95b4c01931fa93cced28f">clang::ASTContext</a>
 , <a class="el" href="classclang_1_1ASTReader.html#a03289a1f5c16312051100e0982a7d92e">clang::ASTReader</a>
-, <a class="el" href="classclang_1_1ASTUnit.html#ada7db6148a458af4d40ad4b3ee1fa1f6">clang::ASTUnit</a>
+, <a class="el" href="classclang_1_1ASTUnit.html#a9c702da3ce070c696e012c2f53654186">clang::ASTUnit</a>
 , <a class="el" href="classclang_1_1CompilerInstance.html#a68d5c742ab7bff337a334b597a0ee3df">clang::CompilerInstance</a>
 , <a class="el" href="classclang_1_1Diagnostic.html#a0ff2c3f7b9a06462a0769ef1a89e751b">clang::Diagnostic</a>
 , <a class="el" href="classclang_1_1DiagnosticsEngine.html#abe5accb958ea990071f47785997db913">clang::DiagnosticsEngine</a>
@@ -13829,6 +13862,7 @@ $(function() {
 , <a class="el" href="classclang_1_1UnresolvedUsingValueDecl.html#ab3a3876835412ccacd7e42fc9fe78348">clang::UnresolvedUsingValueDecl</a>
 , <a class="el" href="classclang_1_1UsingDecl.html#a436968859eaa5d49d9dd0602329328fd">clang::UsingDecl</a>
 , <a class="el" href="classclang_1_1UsingDirectiveDecl.html#a36e194cf60f95a2238700676502929de">clang::UsingDirectiveDecl</a>
+, <a class="el" href="classclang_1_1UsingEnumDecl.html#a291546d972821acf7e551562e4a92ef0">clang::UsingEnumDecl</a>
 , <a class="el" href="classclang_1_1UsingPackDecl.html#ac46d6d3a34ac6015f7f7e139ac2006fe">clang::UsingPackDecl</a>
 , <a class="el" href="classclang_1_1VarDecl.html#a3bde890789531c77cedb52d664edd9d3">clang::VarDecl</a>
 </li>
@@ -13877,7 +13911,7 @@ $(function() {
 : <a class="el" href="classclang_1_1CompilerInstance.html#ab990f7e749cfb89ad347d89de24cd6d0">clang::CompilerInstance</a>
 </li>
 <li>getSpecifierName()
-: <a class="el" href="classclang_1_1DeclSpec.html#ae48ec2ef43513456cc2d14bc901e44ad">clang::DeclSpec</a>
+: <a class="el" href="classclang_1_1DeclSpec.html#ae1fbbf7dc60d2064b78215a222b99ecf">clang::DeclSpec</a>
 , <a class="el" href="classclang_1_1VirtSpecifiers.html#af79d35f542ae2fcf0618594c416625f7">clang::VirtSpecifiers</a>
 </li>
 <li>getSpecifiers()
@@ -13889,8 +13923,8 @@ $(function() {
 <li>getSpelling()
 : <a class="el" href="classclang_1_1Attr.html#ac2684892be478615d5e81df031f5cda1">clang::Attr</a>
 , <a class="el" href="classclang_1_1comments_1_1Lexer.html#a97b42101154375f2162392bc4fe279c1">clang::comments::Lexer</a>
-, <a class="el" href="classclang_1_1Lexer.html#a36ed7f0c96ce468ba37eaa9b4a9dc8bf">clang::Lexer</a>
-, <a class="el" href="classclang_1_1Preprocessor.html#a9fa70a4c3677672e3b74c0fc74d5ed60">clang::Preprocessor</a>
+, <a class="el" href="classclang_1_1Lexer.html#a969b85763bf8605ae5e7d2b07563b5b0">clang::Lexer</a>
+, <a class="el" href="classclang_1_1Preprocessor.html#aae7a1ae83bebb2ef45ad593758920e98">clang::Preprocessor</a>
 , <a class="el" href="classclang_1_1TargetCXXABI.html#ae172f5a8fbd5cf9ad2e886fe230acb31">clang::TargetCXXABI</a>
 </li>
 <li>getSpellingColumnNumber()
@@ -14065,7 +14099,7 @@ $(function() {
 : <a class="el" href="classclang_1_1Sema.html#ad0fa80b3a22bf6410a12a7727c5ac5d3">clang::Sema</a>
 </li>
 <li>getStep()
-: <a class="el" href="classclang_1_1OMPLinearClause.html#a69e7644990119a0db1cca0d808d0b4fa">clang::OMPLinearClause</a>
+: <a class="el" href="classclang_1_1OMPLinearClause.html#a47802af2b2c5e97df23ec6120ea5b2b3">clang::OMPLinearClause</a>
 </li>
 <li>getStmt()
 : <a class="el" href="classclang_1_1CFGStmt.html#ae9c249569b390adc43fb10e8a2e0854c">clang::CFGStmt</a>
@@ -14084,7 +14118,7 @@ $(function() {
 : <a class="el" href="classclang_1_1StmtPoint.html#adaf248d1f01a406ba0bb4f1982bff68f">clang::StmtPoint</a>
 </li>
 <li>getStmtChildren()
-: <a class="el" href="classclang_1_1LexicallyOrderedRecursiveASTVisitor.html#a0ab651f0d1eb8a3fb092142e7d460817">clang::LexicallyOrderedRecursiveASTVisitor&lt; Derived &gt;</a>
+: <a class="el" href="classclang_1_1LexicallyOrderedRecursiveASTVisitor.html#af9a23adbd658cbc9637de922d3a35058">clang::LexicallyOrderedRecursiveASTVisitor&lt; Derived &gt;</a>
 , <a class="el" href="classclang_1_1RecursiveASTVisitor.html#a7b199ed36f552bcc5160764de6540363">clang::RecursiveASTVisitor&lt; Derived &gt;</a>
 </li>
 <li>getStmtClass()
@@ -14167,7 +14201,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ParsedAttr.html#a765f7182bccdc02a5e0ac40fc2ea465a">clang::ParsedAttr</a>
 </li>
 <li>getStride()
-: <a class="el" href="classclang_1_1OMPArraySectionExpr.html#a10e06322f1f0cd40c380ae4c614622a0">clang::OMPArraySectionExpr</a>
+: <a class="el" href="classclang_1_1OMPArraySectionExpr.html#a6c07f45261567962dd60d3064f82ffd4">clang::OMPArraySectionExpr</a>
 </li>
 <li>getStrideVariable()
 : <a class="el" href="classclang_1_1OMPLoopDirective.html#a5634631254064431bac416012bcb41af">clang::OMPLoopDirective</a>
@@ -14178,7 +14212,7 @@ $(function() {
 , <a class="el" href="classclang_1_1ento_1_1PathDiagnosticPiece.html#af0d6f493592e110cb7b6e89220f9ca23">clang::ento::PathDiagnosticPiece</a>
 , <a class="el" href="classclang_1_1GCCAsmStmt_1_1AsmStringPiece.html#ae3f4c1b4625a813a0149464d7427659a">clang::GCCAsmStmt::AsmStringPiece</a>
 , <a class="el" href="structclang_1_1MMToken.html#acc7a2c12cf5a449c98517fd46f718d71">clang::MMToken</a>
-, <a class="el" href="classclang_1_1ObjCStringLiteral.html#a868ae85e82d5f6c44fdbecd76404d082">clang::ObjCStringLiteral</a>
+, <a class="el" href="classclang_1_1ObjCStringLiteral.html#a6cb1da3cba4a12ffd3c7f33c8bc78114">clang::ObjCStringLiteral</a>
 , <a class="el" href="classclang_1_1StringLiteral.html#ad22b80b61dba8e5c885377cf2a3b0d87">clang::StringLiteral</a>
 </li>
 <li>GetString()
@@ -14224,32 +14258,32 @@ $(function() {
 : <a class="el" href="classclang_1_1CodeGen_1_1CGCXXABI.html#a8b97531a5906a7980d08bb776b509164">clang::CodeGen::CGCXXABI</a>
 </li>
 <li>getStructuredBlock()
-: <a class="el" href="classclang_1_1OMPExecutableDirective.html#aabb64d1c479f65d21ee6645f78d9b4bc">clang::OMPExecutableDirective</a>
+: <a class="el" href="classclang_1_1OMPExecutableDirective.html#af0e6777d7dd7c91ec2d849766df66cbb">clang::OMPExecutableDirective</a>
 </li>
 <li>getSubDirectoryPath()
 : <a class="el" href="classclang_1_1driver_1_1toolchains_1_1MSVCToolChain.html#aff1959c780d4928fa756faf8b5bc8c11">clang::driver::toolchains::MSVCToolChain</a>
 </li>
 <li>getSubExpr()
 : <a class="el" href="classclang_1_1ArrayInitLoopExpr.html#a3b19190dcf6db8927e06ef95d9e53796">clang::ArrayInitLoopExpr</a>
-, <a class="el" href="classclang_1_1CastExpr.html#a34215ea846b5011bbd209c1fe713ee94">clang::CastExpr</a>
+, <a class="el" href="classclang_1_1CastExpr.html#a37e3d80c4ca590eadbe49e400c50134b">clang::CastExpr</a>
 , <a class="el" href="classclang_1_1CXXBindTemporaryExpr.html#a5aa98eccf92193641e8dbebd5b984583">clang::CXXBindTemporaryExpr</a>
 , <a class="el" href="classclang_1_1CXXStdInitializerListExpr.html#ac770f0b0a425a5634c640ec611d151b8">clang::CXXStdInitializerListExpr</a>
 , <a class="el" href="classclang_1_1CXXThrowExpr.html#afa27883003c42b39a2f80a742a06dc00">clang::CXXThrowExpr</a>
 , <a class="el" href="classclang_1_1DesignatedInitExpr.html#a8973acd7b84bd52d4ea1fc672cbc1613">clang::DesignatedInitExpr</a>
-, <a class="el" href="classclang_1_1FullExpr.html#af25ec623989edab883642f50f537ca54">clang::FullExpr</a>
+, <a class="el" href="classclang_1_1FullExpr.html#a9e116b07399f6a4b6d0b6df11dba9357">clang::FullExpr</a>
 , <a class="el" href="classclang_1_1ImaginaryLiteral.html#a70a7b6e1058a7d360be6822b0d7f5c28">clang::ImaginaryLiteral</a>
 , <a class="el" href="classclang_1_1MaterializeTemporaryExpr.html#a4a6ff50585216a6bee3b320847d748ee">clang::MaterializeTemporaryExpr</a>
-, <a class="el" href="classclang_1_1ObjCBoxedExpr.html#a2ceac02003488a7eb56bb9a9d48cc370">clang::ObjCBoxedExpr</a>
-, <a class="el" href="classclang_1_1ObjCIndirectCopyRestoreExpr.html#ab9f03c5ebc646e72d5a396391b5ab57b">clang::ObjCIndirectCopyRestoreExpr</a>
-, <a class="el" href="classclang_1_1ParenExpr.html#a647efc9888b533e141cd08ec741f3aa4">clang::ParenExpr</a>
+, <a class="el" href="classclang_1_1ObjCBoxedExpr.html#ab00145886485e357d5f37eea7d975615">clang::ObjCBoxedExpr</a>
+, <a class="el" href="classclang_1_1ObjCIndirectCopyRestoreExpr.html#a7a0f6d4790836c8b40365f095a8be922">clang::ObjCIndirectCopyRestoreExpr</a>
+, <a class="el" href="classclang_1_1ParenExpr.html#a6151e553e33c819f1bd325763ef0a305">clang::ParenExpr</a>
 , <a class="el" href="classclang_1_1UnaryOperator.html#a804929b99cee522ce0fe5b33fa544e77">clang::UnaryOperator</a>
 , <a class="el" href="classclang_1_1VAArgExpr.html#ab1c981bb183c90d30dfed5feede8379c">clang::VAArgExpr</a>
 </li>
 <li>getSubExprAsWritten()
-: <a class="el" href="classclang_1_1CastExpr.html#a2aebb0698cdd338598da87bd1e659717">clang::CastExpr</a>
+: <a class="el" href="classclang_1_1CastExpr.html#a2453b23afa2f820b2d0c113a290f2dd5">clang::CastExpr</a>
 </li>
 <li>getSubExprs()
-: <a class="el" href="classclang_1_1AtomicExpr.html#a5f2870f45f30a9191a2ab5088b4c6ca4">clang::AtomicExpr</a>
+: <a class="el" href="classclang_1_1AtomicExpr.html#a165de78bf52a208158986d027da1ea8f">clang::AtomicExpr</a>
 , <a class="el" href="classclang_1_1ShuffleVectorExpr.html#a14f00f27638bb5e4f670ef51ab8b107d">clang::ShuffleVectorExpr</a>
 </li>
 <li>getSubKind()
@@ -14260,7 +14294,7 @@ $(function() {
 , <a class="el" href="classclang_1_1ASTRecordReader.html#afa5716bc7f897b49971501ba0a7eb8dc">clang::ASTRecordReader</a>
 </li>
 <li>getSubRegion()
-: <a class="el" href="classclang_1_1ento_1_1MemRegionManager.html#adcc080e50a3107098e7e12dcdb8c87a8">clang::ento::MemRegionManager</a>
+: <a class="el" href="classclang_1_1ento_1_1MemRegionManager.html#a97cb5d3799da85c967a6ca4c91e46a51">clang::ento::MemRegionManager</a>
 </li>
 <li>getSubstitutionDiagnostic()
 : <a class="el" href="classclang_1_1concepts_1_1ExprRequirement_1_1ReturnTypeRequirement.html#af45ea07be52e31730dd4331e24f83d46">clang::concepts::ExprRequirement::ReturnTypeRequirement</a>
@@ -14268,14 +14302,14 @@ $(function() {
 , <a class="el" href="classclang_1_1concepts_1_1TypeRequirement.html#a542485228aec4dbf8a7fc84a6cb34278">clang::concepts::TypeRequirement</a>
 </li>
 <li>getSubStmt()
-: <a class="el" href="classclang_1_1AttributedStmt.html#ac0fbe9c10afca866c17cd8f085017379">clang::AttributedStmt</a>
-, <a class="el" href="classclang_1_1CaseStmt.html#ab70a2320faa389853019c92f5c16893f">clang::CaseStmt</a>
+: <a class="el" href="classclang_1_1AttributedStmt.html#a3658647bdd206c8af070547f1e468dc1">clang::AttributedStmt</a>
+, <a class="el" href="classclang_1_1CaseStmt.html#ab24b29f13eaa0607a46fe07f87705503">clang::CaseStmt</a>
 , <a class="el" href="classclang_1_1DefaultStmt.html#ac148b63550b2906d523b5c75221acec7">clang::DefaultStmt</a>
 , <a class="el" href="classclang_1_1LabelStmt.html#ae24b6eed7d9bdcaab93f0d0a7d0b0546">clang::LabelStmt</a>
 , <a class="el" href="classclang_1_1MSDependentExistsStmt.html#ae19417c71244df2caa1c86770f0f55ac">clang::MSDependentExistsStmt</a>
-, <a class="el" href="classclang_1_1ObjCAutoreleasePoolStmt.html#ab44fec58b134065022c96c4adeab9963">clang::ObjCAutoreleasePoolStmt</a>
+, <a class="el" href="classclang_1_1ObjCAutoreleasePoolStmt.html#a08eef3fe83d3df1971f4bfdcf7c28e2b">clang::ObjCAutoreleasePoolStmt</a>
 , <a class="el" href="classclang_1_1PreStmt.html#ada5eedc855bbafd3b6168a254cccd670">clang::PreStmt</a>
-, <a class="el" href="classclang_1_1StmtExpr.html#a0f25641e4a28c9c33580fb2703999958">clang::StmtExpr</a>
+, <a class="el" href="classclang_1_1StmtExpr.html#a7deda22d0981f5b8991988923ba6e7f7">clang::StmtExpr</a>
 , <a class="el" href="classclang_1_1SwitchCase.html#ac814f859035eb03b50b4e43d55699987">clang::SwitchCase</a>
 </li>
 <li>getSubstTemplateTemplateParm()
@@ -14312,7 +14346,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ento_1_1retaincountchecker_1_1RetainCountChecker.html#a64a750bca94ef47cf8372eeb94ea7a28">clang::ento::retaincountchecker::RetainCountChecker</a>
 </li>
 <li>getSuperClass()
-: <a class="el" href="classclang_1_1ObjCImplementationDecl.html#a2c270f401e12065161320c1bdd5526eb">clang::ObjCImplementationDecl</a>
+: <a class="el" href="classclang_1_1ObjCImplementationDecl.html#ab0079f7418445305f2fb072d46060334">clang::ObjCImplementationDecl</a>
 , <a class="el" href="classclang_1_1ObjCInterfaceDecl.html#add1ac38d4aebdb29b2ee7087590a1f10">clang::ObjCInterfaceDecl</a>
 </li>
 <li>getSuperClassLoc()
@@ -14343,7 +14377,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ObjCMessageExpr.html#a7b7f1c68abd5d3a25181d8b184d843f1">clang::ObjCMessageExpr</a>
 </li>
 <li>getSupportedOpenCLOpts()
-: <a class="el" href="classclang_1_1TargetInfo.html#a9a907547b5cc1c928563bd9e25b4bbd4">clang::TargetInfo</a>
+: <a class="el" href="classclang_1_1TargetInfo.html#a239bf08d9a37f52bda89ae5d1c4eff3d">clang::TargetInfo</a>
 </li>
 <li>getSupportedSanitizers()
 : <a class="el" href="classclang_1_1driver_1_1ToolChain.html#ae8bbab3087d5a56f1241f3131afecebe">clang::driver::ToolChain</a>
@@ -14388,15 +14422,15 @@ $(function() {
 , <a class="el" href="classclang_1_1ento_1_1CheckerContext.html#a774f14e4a2a8b266c3ca04b69b565fa1">clang::ento::CheckerContext</a>
 , <a class="el" href="classclang_1_1ento_1_1Environment.html#a0a6d0af8ce66aa30ce9c2ee7b8e23b34">clang::ento::Environment</a>
 , <a class="el" href="classclang_1_1ento_1_1ExplodedNode.html#abab2731bb5bca9564e0247c0768e2b5d">clang::ento::ExplodedNode</a>
-, <a class="el" href="classclang_1_1ento_1_1ProgramState.html#a74a52adb95a960eb721b8938952af4cd">clang::ento::ProgramState</a>
+, <a class="el" href="classclang_1_1ento_1_1ProgramState.html#afe84fde250c43abc565e6f6b3357b192">clang::ento::ProgramState</a>
 </li>
 <li>getSValAsScalarOrLoc()
-: <a class="el" href="classclang_1_1ento_1_1ProgramState.html#afe0cc10be65a08b77a1ca3eac8013c95">clang::ento::ProgramState</a>
+: <a class="el" href="classclang_1_1ento_1_1ProgramState.html#a38011c378441e6ed4f9a12d200067401">clang::ento::ProgramState</a>
 </li>
 <li>getSValBuilder()
 : <a class="el" href="classclang_1_1ento_1_1CheckerContext.html#a791437277a1f6304084fcd605ca3e4ee">clang::ento::CheckerContext</a>
 , <a class="el" href="classclang_1_1ento_1_1ExprEngine.html#a7d73f3f7e100c056e4358d5403469390">clang::ento::ExprEngine</a>
-, <a class="el" href="classclang_1_1ento_1_1ProgramStateManager.html#a5117fc96da435b1935b01d84b14c7209">clang::ento::ProgramStateManager</a>
+, <a class="el" href="classclang_1_1ento_1_1ProgramStateManager.html#a92072c261de0577852ede48446a2272b">clang::ento::ProgramStateManager</a>
 , <a class="el" href="classclang_1_1ento_1_1SimpleConstraintManager.html#a6104d63ac1802422b0578186ea596914">clang::ento::SimpleConstraintManager</a>
 , <a class="el" href="classclang_1_1ento_1_1StoreManager.html#a0e8b9064634cb66ae4e4f6db1bd4ca92">clang::ento::StoreManager</a>
 </li>
@@ -14459,7 +14493,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#a26187456381f3671193783ac1903a040">clang::ASTContext</a>
 </li>
 <li>getSYCLOptReportHandler()
-: <a class="el" href="classclang_1_1DiagnosticsEngine.html#a37614257a5ee916650008f025933b79e">clang::DiagnosticsEngine</a>
+: <a class="el" href="classclang_1_1DiagnosticsEngine.html#a47e65c2dd46ff67cd6a16bc3dbb82f2c">clang::DiagnosticsEngine</a>
 </li>
 <li>getSYCLRuntime()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#a5eea37ad7dcb16f1d3ec78ffcbc596a5">clang::CodeGen::CodeGenModule</a>
@@ -14493,9 +14527,9 @@ $(function() {
 : <a class="el" href="classclang_1_1ento_1_1CheckerContext.html#ad3d19b0bef961baec420448fe2e3a90a">clang::ento::CheckerContext</a>
 , <a class="el" href="classclang_1_1ento_1_1ExprEngine.html#ac7f9feb0b790817e8da059c58714628f">clang::ento::ExprEngine</a>
 , <a class="el" href="classclang_1_1ento_1_1ProgramState.html#afe018e0f57c318155a3cfd2eef9b8ec4">clang::ento::ProgramState</a>
-, <a class="el" href="classclang_1_1ento_1_1ProgramStateManager.html#a1e75c44673ccdf5a7aae5ed3efce2931">clang::ento::ProgramStateManager</a>
+, <a class="el" href="classclang_1_1ento_1_1ProgramStateManager.html#a1b3a13b1b896ca98cd03d10eaba58b97">clang::ento::ProgramStateManager</a>
 , <a class="el" href="classclang_1_1ento_1_1SimpleConstraintManager.html#af7715cf8f7da019e50546ad159e32fa8">clang::ento::SimpleConstraintManager</a>
-, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#a0eab1e0392759d11d9ce703cd2908e79">clang::ento::SValBuilder</a>
+, <a class="el" href="classclang_1_1ento_1_1SValBuilder.html#acc2441d4734f7b5d1bde2065918ef311">clang::ento::SValBuilder</a>
 </li>
 <li>getSymbolNameForMethod()
 : <a class="el" href="classclang_1_1CodeGen_1_1CGObjCRuntime.html#a59cf3986bf95420c785840d5214e7db1">clang::CodeGen::CGObjCRuntime</a>
@@ -14514,14 +14548,14 @@ $(function() {
 , <a class="el" href="classclang_1_1ento_1_1SMTConstraintManager.html#ad66f5b70b28590a9344881aa7cf902a5">clang::ento::SMTConstraintManager</a>
 </li>
 <li>getSynchBody()
-: <a class="el" href="classclang_1_1ObjCAtSynchronizedStmt.html#a19470de1ad07b5fcd5168836e2b02b79">clang::ObjCAtSynchronizedStmt</a>
+: <a class="el" href="classclang_1_1ObjCAtSynchronizedStmt.html#af0d5ca893a922343d6c101d02beb98f2">clang::ObjCAtSynchronizedStmt</a>
 </li>
 <li>getSynchExpr()
-: <a class="el" href="classclang_1_1ObjCAtSynchronizedStmt.html#a0d18139595b74511f7785776ac3ea8da">clang::ObjCAtSynchronizedStmt</a>
+: <a class="el" href="classclang_1_1ObjCAtSynchronizedStmt.html#a48ee9acf9b8d2329330c8f1e43fe2b8e">clang::ObjCAtSynchronizedStmt</a>
 </li>
 <li>getSyntacticForm()
 : <a class="el" href="classclang_1_1InitListExpr.html#af39d93fa3ef98a2b27c4479369a1883f">clang::InitListExpr</a>
-, <a class="el" href="classclang_1_1PseudoObjectExpr.html#ab878e7fbabc7b7ed2b69792d7327fd8d">clang::PseudoObjectExpr</a>
+, <a class="el" href="classclang_1_1PseudoObjectExpr.html#a4412c8cea58337229e7b417fec34dbd4">clang::PseudoObjectExpr</a>
 </li>
 <li>getSyntax()
 : <a class="el" href="classclang_1_1AttributeCommonInfo.html#a055ffcfc79821816092eb192a077337e">clang::AttributeCommonInfo</a>
@@ -14590,10 +14624,10 @@ $(function() {
 , <a class="el" href="classclang_1_1CodeGen_1_1CodeGenTypes.html#ac81bf2128f049e36b4a1683f9feeaa23">clang::CodeGen::CodeGenTypes</a>
 , <a class="el" href="classclang_1_1CompilerInstance.html#a2daae0e25991adac9e84d5f42e8fa922">clang::CompilerInstance</a>
 , <a class="el" href="classclang_1_1ento_1_1IndirectGotoNodeBuilder.html#ab8d6c7272db25d913263241aceb7c2b2">clang::ento::IndirectGotoNodeBuilder</a>
-, <a class="el" href="classclang_1_1IndirectGotoStmt.html#ae7cfdc257b75c63c803b824d1ed9a91b">clang::IndirectGotoStmt</a>
+, <a class="el" href="classclang_1_1IndirectGotoStmt.html#a17f33bbbb62f278aaa255ec77de2a07c">clang::IndirectGotoStmt</a>
 </li>
 <li>getTargetAddressSpace()
-: <a class="el" href="classclang_1_1ASTContext.html#adf7845565049394ae18e77bfa76599b7">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#a1e2dacf3fd09229a915125f9622c40db">clang::ASTContext</a>
 </li>
 <li>getTargetAndModeFromProgramName()
 : <a class="el" href="classclang_1_1driver_1_1ToolChain.html#a74bef7fe3c56a244a436578d1d97fa0a">clang::driver::ToolChain</a>
@@ -14728,7 +14762,7 @@ $(function() {
 : <a class="el" href="classclang_1_1targets_1_1AArch64TargetInfo.html#a85cabf3d310c77b35b999c136fe0fc72">clang::targets::AArch64TargetInfo</a>
 </li>
 <li>getTargetFieldForToUnionCast()
-: <a class="el" href="classclang_1_1CastExpr.html#a7beb672932cbbc01ac106767952e400f">clang::CastExpr</a>
+: <a class="el" href="classclang_1_1CastExpr.html#a8ab3f37b646adcafb02f35914a99c4ae">clang::CastExpr</a>
 </li>
 <li>getTargetHooks()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#acfa505f45e2c7cb1edc3a133bd9403e1">clang::CodeGen::CodeGenFunction</a>
@@ -14753,7 +14787,7 @@ $(function() {
 </li>
 <li>getTargetOpts()
 : <a class="el" href="classclang_1_1CompilerInstance.html#aa8bf84411ac47e5ae0efe3f3269018bd">clang::CompilerInstance</a>
-, <a class="el" href="classclang_1_1CompilerInvocationRefBase.html#a481bd3d82d15da2d4bd4e775ea1d6d1e">clang::CompilerInvocationRefBase</a>
+, <a class="el" href="classclang_1_1CompilerInvocationRefBase.html#acfb72843d7510bdc618b07119d23f0f6">clang::CompilerInvocationRefBase</a>
 , <a class="el" href="classclang_1_1TargetInfo.html#af46e41c7c724fb238952a87f92eb0557">clang::TargetInfo</a>
 </li>
 <li>getTargetTriple()
@@ -14775,15 +14809,15 @@ $(function() {
 <li>getTaskReductionRefExpr()
 : <a class="el" href="classclang_1_1OMPDistributeParallelForDirective.html#a7e75d294b52b77bcfa5f24daa7bca18d">clang::OMPDistributeParallelForDirective</a>
 , <a class="el" href="classclang_1_1OMPForDirective.html#af44830cdb8cd5589b250b6b76a1728db">clang::OMPForDirective</a>
-, <a class="el" href="classclang_1_1OMPParallelDirective.html#a6a744617da89ea4019526fd855db0702">clang::OMPParallelDirective</a>
+, <a class="el" href="classclang_1_1OMPParallelDirective.html#a072f2eb3a39de42d5bb9aefafc185bac">clang::OMPParallelDirective</a>
 , <a class="el" href="classclang_1_1OMPParallelForDirective.html#ad02366f31c0c6b6b8bb562d182956bf1">clang::OMPParallelForDirective</a>
-, <a class="el" href="classclang_1_1OMPParallelMasterDirective.html#aef9b8fe3d9675576a0006e70cf588f0c">clang::OMPParallelMasterDirective</a>
+, <a class="el" href="classclang_1_1OMPParallelMasterDirective.html#aae737e7cd3964851094034a1f8858599">clang::OMPParallelMasterDirective</a>
 , <a class="el" href="classclang_1_1OMPParallelSectionsDirective.html#a8869ee58c1e0b2905394e4daece5d9e7">clang::OMPParallelSectionsDirective</a>
 , <a class="el" href="classclang_1_1OMPSectionsDirective.html#af610740c630139e9e0b95bcc7d94ff94">clang::OMPSectionsDirective</a>
 , <a class="el" href="classclang_1_1OMPTargetParallelDirective.html#a861ef7d1ca3430578420b36b1658cde4">clang::OMPTargetParallelDirective</a>
 , <a class="el" href="classclang_1_1OMPTargetParallelForDirective.html#aa257202e281b652885eae26b70b2da46">clang::OMPTargetParallelForDirective</a>
-, <a class="el" href="classclang_1_1OMPTargetTeamsDistributeParallelForDirective.html#ad1d43d9f4d03c330e228a7c02fbb3d8d">clang::OMPTargetTeamsDistributeParallelForDirective</a>
-, <a class="el" href="classclang_1_1OMPTeamsDistributeParallelForDirective.html#ab8a0344c178c1ea7a3c191312c3ae6df">clang::OMPTeamsDistributeParallelForDirective</a>
+, <a class="el" href="classclang_1_1OMPTargetTeamsDistributeParallelForDirective.html#a2232568806bc85f45078e7e2f1155824">clang::OMPTargetTeamsDistributeParallelForDirective</a>
+, <a class="el" href="classclang_1_1OMPTeamsDistributeParallelForDirective.html#a92c00d6df55869acca74b4c6acf69f6d">clang::OMPTeamsDistributeParallelForDirective</a>
 </li>
 <li>getTBAAAccessInfo()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#aa1f6192da1c3c05a126569ffade9b2f2">clang::CodeGen::CodeGenModule</a>
@@ -14844,7 +14878,7 @@ $(function() {
 : <a class="el" href="classclang_1_1VarTemplateSpecializationDecl.html#ad8655bf168e2f06f98ed5e4c3af13110">clang::VarTemplateSpecializationDecl</a>
 </li>
 <li>getTemplateArgumentBindingsText()
-: <a class="el" href="classclang_1_1Sema.html#a901f43e4403617fa218dfe71ac1c9945">clang::Sema</a>
+: <a class="el" href="classclang_1_1Sema.html#ae7b5253b2e4594ec08c9bbcf364ec97a">clang::Sema</a>
 </li>
 <li>getTemplateArgumentList()
 : <a class="el" href="structclang_1_1DeductionFailureInfo.html#acc146c58b4ecab282f3e9260c5c1359a">clang::DeductionFailureInfo</a>
@@ -14886,7 +14920,7 @@ $(function() {
 , <a class="el" href="classclang_1_1VarTemplateSpecializationDecl.html#aae28235f42a81eb56ecfa88cebc09f1d">clang::VarTemplateSpecializationDecl</a>
 </li>
 <li>getTemplateInstantiationPattern()
-: <a class="el" href="classclang_1_1CXXRecordDecl.html#a79e6a68062b3f619c9fd957d26bac5f1">clang::CXXRecordDecl</a>
+: <a class="el" href="classclang_1_1CXXRecordDecl.html#a4f15dea751bc66f76d0b6d185793de76">clang::CXXRecordDecl</a>
 , <a class="el" href="classclang_1_1EnumDecl.html#aece7d9d16fea8e5af4f4002e31bd4a5f">clang::EnumDecl</a>
 , <a class="el" href="classclang_1_1FunctionDecl.html#a2dbb84e45d95ec1f2852553f75a593c8">clang::FunctionDecl</a>
 , <a class="el" href="classclang_1_1VarDecl.html#a617bcdd5baaab0ccba71a96cd9c2ed03">clang::VarDecl</a>
@@ -14994,7 +15028,7 @@ $(function() {
 , <a class="el" href="classclang_1_1VarDecl.html#ae9f0739fb0fddf8cfe4e76e59cfb17b4">clang::VarDecl</a>
 </li>
 <li>getTemplateSpecializationType()
-: <a class="el" href="classclang_1_1ASTContext.html#a0428f5c453e856b678bf64740920eac5">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#a26f1ed679bb5f66af174c389a9b1b083">clang::ASTContext</a>
 </li>
 <li>getTemplateSpecializationTypeInfo()
 : <a class="el" href="classclang_1_1ASTContext.html#a7fa805fa62ef279ebd9957841d75f8e8">clang::ASTContext</a>
@@ -15010,7 +15044,7 @@ $(function() {
 : <a class="el" href="classclang_1_1driver_1_1Driver.html#a427b5d2af1ac72eefcb4cc8197aab178">clang::driver::Driver</a>
 </li>
 <li>getTemporaryExpr()
-: <a class="el" href="classclang_1_1LifetimeExtendedTemporaryDecl.html#a8c22861ce781b16752d5c24b3d7000d1">clang::LifetimeExtendedTemporaryDecl</a>
+: <a class="el" href="classclang_1_1LifetimeExtendedTemporaryDecl.html#a765f10429c236f635096377241ca33ed">clang::LifetimeExtendedTemporaryDecl</a>
 </li>
 <li>GetTemporaryPath()
 : <a class="el" href="classclang_1_1driver_1_1Driver.html#abfa0ad09fa19621a08cd6dfee607a2b1">clang::driver::Driver</a>
@@ -15088,7 +15122,7 @@ $(function() {
 : <a class="el" href="classclang_1_1CXXMethodDecl.html#ad4034cd771e9491418fbffe6b6b19805">clang::CXXMethodDecl</a>
 </li>
 <li>getThisType()
-: <a class="el" href="classclang_1_1CXXMethodDecl.html#a53b9cfee65fcd387fbec05461627df37">clang::CXXMethodDecl</a>
+: <a class="el" href="classclang_1_1CXXMethodDecl.html#a7819f2b9d4b7a93fdb1d54d263feecf5">clang::CXXMethodDecl</a>
 </li>
 <li>getThisValue()
 : <a class="el" href="classclang_1_1CodeGen_1_1CGCXXABI.html#a5d91bcd422fa13dfdbb83d220d6d0207">clang::CodeGen::CGCXXABI</a>
@@ -15291,11 +15325,11 @@ $(function() {
 , <a class="el" href="classclang_1_1StandardConversionSequence.html#aff6b2992eb8c3f6176e6cdc46b161a90">clang::StandardConversionSequence</a>
 </li>
 <li>getTrailingASTTemplateKWAndArgsInfo()
-: <a class="el" href="classclang_1_1OverloadExpr.html#ab30b02c6c3a56f27ef4db7ca195d4c9d">clang::OverloadExpr</a>
+: <a class="el" href="classclang_1_1OverloadExpr.html#a15c595df462e7228b0920ef2acfdfb9d">clang::OverloadExpr</a>
 </li>
 <li>getTrailingFPFeatures()
 : <a class="el" href="classclang_1_1BinaryOperator.html#a00f91f8fad310572cff0bd2b20cbd3fc">clang::BinaryOperator</a>
-, <a class="el" href="classclang_1_1CallExpr.html#a1d51d74607fd746894da89dd60628c3b">clang::CallExpr</a>
+, <a class="el" href="classclang_1_1CallExpr.html#ade161b0d66b9dd310ad3a0bac718c01a">clang::CallExpr</a>
 , <a class="el" href="classclang_1_1CastExpr.html#a0fb0456c3cd9a05f03ec7b723d6d92a8">clang::CastExpr</a>
 </li>
 <li>getTrailingRequiresClause()
@@ -15304,7 +15338,7 @@ $(function() {
 , <a class="el" href="classclang_1_1LambdaExpr.html#abc9058e8b0456d745c59781f097237fa">clang::LambdaExpr</a>
 </li>
 <li>getTrailingResults()
-: <a class="el" href="classclang_1_1OverloadExpr.html#ac352838cba991736e1301d280ace0ce5">clang::OverloadExpr</a>
+: <a class="el" href="classclang_1_1OverloadExpr.html#ab4ffef50b2143086afd46ba4412b4ed6">clang::OverloadExpr</a>
 </li>
 <li>getTrailingReturn()
 : <a class="el" href="classclang_1_1syntax_1_1ParametersAndQualifiers.html#a4316f2fb3e8fd8dc76c4f32ad288f5c6">clang::syntax::ParametersAndQualifiers</a>
@@ -15317,7 +15351,7 @@ $(function() {
 : <a class="el" href="structclang_1_1DeclaratorChunk_1_1FunctionTypeInfo.html#a075d13aaefe31bab4a3ff189c1904e3a">clang::DeclaratorChunk::FunctionTypeInfo</a>
 </li>
 <li>getTrailingTemplateArgumentLoc()
-: <a class="el" href="classclang_1_1OverloadExpr.html#a8e9f42892b3b4db7ef87feaa77a1f298">clang::OverloadExpr</a>
+: <a class="el" href="classclang_1_1OverloadExpr.html#abcc5ff55882a68636ed2a38c727deca9">clang::OverloadExpr</a>
 </li>
 <li>getTrait()
 : <a class="el" href="classclang_1_1ArrayTypeTraitExpr.html#a7b73bd2284ecbb9731bd59fd5106ac64">clang::ArrayTypeTraitExpr</a>
@@ -15326,10 +15360,11 @@ $(function() {
 </li>
 <li>getTransformedStmt()
 : <a class="el" href="classclang_1_1OMPTileDirective.html#a8ec5885eb219c31f01706d252b049182">clang::OMPTileDirective</a>
+, <a class="el" href="classclang_1_1OMPUnrollDirective.html#a29654b2bb3da7d72a36cdd781c3316c7">clang::OMPUnrollDirective</a>
 </li>
 <li>getTranslationUnitDecl()
 : <a class="el" href="classclang_1_1ASTContext.html#afad71d8f382bf1943bdd25fb89ebc32c">clang::ASTContext</a>
-, <a class="el" href="classclang_1_1Decl.html#ac535adfd939a3ade5cafa3062888eae4">clang::Decl</a>
+, <a class="el" href="classclang_1_1Decl.html#a204d04761d1c28b0c793b83e8fe075be">clang::Decl</a>
 </li>
 <li>getTranslationUnitKind()
 : <a class="el" href="classclang_1_1ASTMergeAction.html#a2bbfbced832fa34230c2285ac40ee668">clang::ASTMergeAction</a>
@@ -15382,14 +15417,14 @@ $(function() {
 , <a class="el" href="classclang_1_1ConditionalOperator.html#aad197468513e7e361540075fcb5e0c95">clang::ConditionalOperator</a>
 </li>
 <li>getTruthValue()
-: <a class="el" href="classclang_1_1ento_1_1BasicValueFactory.html#a4f42eca74b67ac2c6e223e0f274ee117">clang::ento::BasicValueFactory</a>
+: <a class="el" href="classclang_1_1ento_1_1BasicValueFactory.html#a4251f9c025825e5cffd81f3a48a082c5">clang::ento::BasicValueFactory</a>
 </li>
 <li>getTryBlock()
 : <a class="el" href="classclang_1_1CXXTryStmt.html#a352e9a8444c502de1b51bf167c715ac6">clang::CXXTryStmt</a>
 , <a class="el" href="classclang_1_1SEHTryStmt.html#a631c28dc017ecc7741f0af48c5f96f51">clang::SEHTryStmt</a>
 </li>
 <li>getTryBody()
-: <a class="el" href="classclang_1_1ObjCAtTryStmt.html#ae1b0ce4a888a7b52ce8e5d4da9ed3044">clang::ObjCAtTryStmt</a>
+: <a class="el" href="classclang_1_1ObjCAtTryStmt.html#ac910b3d7997b2a5928873c78f508953c">clang::ObjCAtTryStmt</a>
 </li>
 <li>getTryLoc()
 : <a class="el" href="classclang_1_1CXXTryStmt.html#a01537c2cb36a249501ee2d830c3464ee">clang::CXXTryStmt</a>
@@ -15529,7 +15564,7 @@ $(function() {
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#a15fa56463e9bcbdee69ac6361035bd11">clang::CodeGen::CodeGenModule</a>
 </li>
 <li>getTypedMatcher()
-: <a class="el" href="classclang_1_1ast__matchers_1_1dynamic_1_1VariantMatcher.html#a114b560a1ce515286d421df377562a28">clang::ast_matchers::dynamic::VariantMatcher</a>
+: <a class="el" href="classclang_1_1ast__matchers_1_1dynamic_1_1VariantMatcher.html#a291417b5e564c0b6f4d4eb0e2503e935">clang::ast_matchers::dynamic::VariantMatcher</a>
 , <a class="el" href="classclang_1_1ast__matchers_1_1dynamic_1_1VariantMatcher_1_1PolymorphicPayload.html#afa01ce3d7c41f81d7bd33165bfbef2a1">clang::ast_matchers::dynamic::VariantMatcher::PolymorphicPayload</a>
 , <a class="el" href="classclang_1_1ast__matchers_1_1dynamic_1_1VariantMatcher_1_1SinglePayload.html#a28da19f1414df2f5a6184205fa031b4d">clang::ast_matchers::dynamic::VariantMatcher::SinglePayload</a>
 , <a class="el" href="classclang_1_1ast__matchers_1_1dynamic_1_1VariantMatcher_1_1VariadicOpPayload.html#a7f155e842807c0c8aa1613f143572248">clang::ast_matchers::dynamic::VariantMatcher::VariadicOpPayload</a>
@@ -15577,7 +15612,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#a8ea214531f093a6d64784f6dd3dd5b68">clang::ASTContext</a>
 </li>
 <li>getTypeInfoInChars()
-: <a class="el" href="classclang_1_1ASTContext.html#abdb126dc1bee45a666f1a5cba9073cf7">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#a93e005d60e491ce9984136e8b0bcc6de">clang::ASTContext</a>
 </li>
 <li>getTypeInfoType()
 : <a class="el" href="classclang_1_1APValue_1_1LValueBase.html#a7483a4d677d290b2726d55ba82de819b">clang::APValue::LValueBase</a>
@@ -15667,11 +15702,11 @@ $(function() {
 , <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#a1325760f10142c1da8521b53734858ef">clang::CodeGen::CodeGenModule</a>
 </li>
 <li>getTypeSize()
-: <a class="el" href="classclang_1_1ASTContext.html#a090a8e4897ec1a037046f141a9e55400">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#aa7a28eab5ee69542aff5b8216ed77046">clang::ASTContext</a>
 , <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a8c0fcfd20bf12f8746d76d7cb8cc1604">clang::CodeGen::CodeGenFunction</a>
 </li>
 <li>getTypeSizeInChars()
-: <a class="el" href="classclang_1_1ASTContext.html#a278ce89a1b63d1b97095c48a78e41118">clang::ASTContext</a>
+: <a class="el" href="classclang_1_1ASTContext.html#aa8c44e88d6ce9b3cce885b62d3cd5dff">clang::ASTContext</a>
 </li>
 <li>getTypeSizeInCharsIfKnown()
 : <a class="el" href="classclang_1_1ASTContext.html#a61d3be20e37b7c3628cc5f2f30b6999f">clang::ASTContext</a>
@@ -15690,7 +15725,7 @@ $(function() {
 , <a class="el" href="classclang_1_1ObjCPropertyDecl.html#ae482979dfda0dfd1db5b3e7b5d7df8fa">clang::ObjCPropertyDecl</a>
 , <a class="el" href="classclang_1_1OffsetOfExpr.html#a7d445ac34240036538e804ea783b614a">clang::OffsetOfExpr</a>
 , <a class="el" href="classclang_1_1PseudoDestructorTypeStorage.html#a1106616d1021555783d4bf9e80eda4e8">clang::PseudoDestructorTypeStorage</a>
-, <a class="el" href="classclang_1_1SYCLUniqueStableNameExpr.html#adb283c1fb178a22e2c1b3ea19a6d737d">clang::SYCLUniqueStableNameExpr</a>
+, <a class="el" href="classclang_1_1SYCLUniqueStableNameExpr.html#a2f6aec38d739510b9ba8810fe8214002">clang::SYCLUniqueStableNameExpr</a>
 , <a class="el" href="classclang_1_1TemplateArgumentLoc.html#a08893d678d27e964da735ab22037351e">clang::TemplateArgumentLoc</a>
 , <a class="el" href="classclang_1_1TypedefNameDecl.html#a75a1ac9086ca51ee765e47462d4364bc">clang::TypedefNameDecl</a>
 , <a class="el" href="classclang_1_1TypeLocBuilder.html#aaa8ad8d22b570f728e25a134e913123f">clang::TypeLocBuilder</a>
@@ -15708,7 +15743,7 @@ $(function() {
 : <a class="el" href="classclang_1_1DeclSpec.html#ae44367096ea2bacb79e188c4ab590128">clang::DeclSpec</a>
 </li>
 <li>getTypeSpecScope()
-: <a class="el" href="classclang_1_1DeclSpec.html#aac9396ae32bf1c5824bcd55335f70e32">clang::DeclSpec</a>
+: <a class="el" href="classclang_1_1DeclSpec.html#a8c2862e367e7ef00401232db93547eea">clang::DeclSpec</a>
 </li>
 <li>getTypeSpecSign()
 : <a class="el" href="classclang_1_1DeclSpec.html#acec36c1d6f3de2daf830f60223df8a63">clang::DeclSpec</a>
@@ -15762,7 +15797,7 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#a275516bcee55ef49e1c317b4b461273b">clang::ASTContext</a>
 </li>
 <li>getUDMapperRefs()
-: <a class="el" href="classclang_1_1OMPMappableExprListClause.html#a5ab95476db2caa4b4a9bd317721e0d5e">clang::OMPMappableExprListClause&lt; T &gt;</a>
+: <a class="el" href="classclang_1_1OMPMappableExprListClause.html#a4194321aff72d9ec8aa9e73c529c1f72">clang::OMPMappableExprListClause&lt; T &gt;</a>
 </li>
 <li>getUDSuffix()
 : <a class="el" href="classclang_1_1CharLiteralParser.html#a30f109ae08df40743b8b8099af4667df">clang::CharLiteralParser</a>
@@ -15839,7 +15874,7 @@ $(function() {
 : <a class="el" href="classclang_1_1TemplateName.html#ae12ef70776984b40f75f9a108716d684">clang::TemplateName</a>
 </li>
 <li>getUnderlyingDecl()
-: <a class="el" href="classclang_1_1NamedDecl.html#a8fee30304b9ae8b24136a279b678b951">clang::NamedDecl</a>
+: <a class="el" href="classclang_1_1NamedDecl.html#aaddf9e0a09a43f4018d4bc519526c3db">clang::NamedDecl</a>
 </li>
 <li>getUnderlyingExpr()
 : <a class="el" href="classclang_1_1DecltypeType.html#a02d15ba6ab5922c0e167750230fe777f">clang::DecltypeType</a>
@@ -15866,13 +15901,13 @@ $(function() {
 : <a class="el" href="classclang_1_1ento_1_1FieldChainInfo.html#aa946e45533ed151c62db0caec3c08fb5">clang::ento::FieldChainInfo</a>
 </li>
 <li>getUninstantiatedDefaultArg()
-: <a class="el" href="classclang_1_1ParmVarDecl.html#a4cf9c48e48bd129fd4ba294bd7d92ff9">clang::ParmVarDecl</a>
+: <a class="el" href="classclang_1_1ParmVarDecl.html#aa86c11c73af50b9375f9b6dd00c23a06">clang::ParmVarDecl</a>
 </li>
 <li>getUnionField()
 : <a class="el" href="classclang_1_1APValue.html#ab558119a6e1ecd203ee58cd4a3b82587">clang::APValue</a>
 </li>
 <li>getUnionValue()
-: <a class="el" href="classclang_1_1APValue.html#a14ddc0488234c33e98f71fc269473e6e">clang::APValue</a>
+: <a class="el" href="classclang_1_1APValue.html#af017d1d6044ebe96c5103913008b3723">clang::APValue</a>
 </li>
 <li>getUniqueBlockCount()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenModule.html#a41d8ad4b64d5b0aa6fdd270149c99101">clang::CodeGen::CodeGenModule</a>
@@ -15884,7 +15919,7 @@ $(function() {
 : <a class="el" href="classclang_1_1OMPClauseMappableExprCommon.html#a18f0d93cf05ce49dbb6951b0e5929eeb">clang::OMPClauseMappableExprCommon</a>
 </li>
 <li>getUniqueDeclsRef()
-: <a class="el" href="classclang_1_1OMPMappableExprListClause.html#a8cbde3504d40d1b87ab0075b4fcd8878">clang::OMPMappableExprListClause&lt; T &gt;</a>
+: <a class="el" href="classclang_1_1OMPMappableExprListClause.html#a5b882e09269ed2869cc12e84649f86ed">clang::OMPMappableExprListClause&lt; T &gt;</a>
 </li>
 <li>getUniqueFrameworkName()
 : <a class="el" href="classclang_1_1HeaderSearch.html#a029274742c15ece085c37bb09c91878f">clang::HeaderSearch</a>
@@ -16022,7 +16057,7 @@ $(function() {
 , <a class="el" href="classclang_1_1targets_1_1X86__64TargetInfo.html#adbad39c11b3f394a9834923b240ccb08">clang::targets::X86_64TargetInfo</a>
 </li>
 <li>getUpdateExpr()
-: <a class="el" href="classclang_1_1OMPAtomicDirective.html#ae2f9d5626e610bbcddb977eb1490000e">clang::OMPAtomicDirective</a>
+: <a class="el" href="classclang_1_1OMPAtomicDirective.html#a86f360673d7d05d627aa2f4a6152628b">clang::OMPAtomicDirective</a>
 </li>
 <li>getUpdater()
 : <a class="el" href="classclang_1_1DesignatedInitUpdateExpr.html#ab56274e3991e1494f18de68cc4df47e0">clang::DesignatedInitUpdateExpr</a>
@@ -16038,8 +16073,8 @@ $(function() {
 : <a class="el" href="classclang_1_1WeakInfo.html#aa213a1b7065d51dc738e6124f03d63ec">clang::WeakInfo</a>
 </li>
 <li>getUsedContext()
-: <a class="el" href="classclang_1_1CXXDefaultArgExpr.html#a17a80fe2a1ec8bc8c8c64cf197c42ae0">clang::CXXDefaultArgExpr</a>
-, <a class="el" href="classclang_1_1CXXDefaultInitExpr.html#aa2e63488180de177c2b96022f6e09b44">clang::CXXDefaultInitExpr</a>
+: <a class="el" href="classclang_1_1CXXDefaultArgExpr.html#aedf50028286d55bd7f0ef44f21fc1b86">clang::CXXDefaultArgExpr</a>
+, <a class="el" href="classclang_1_1CXXDefaultInitExpr.html#ab79942d15e3736aaa305d70a49cc1af3">clang::CXXDefaultInitExpr</a>
 </li>
 <li>getUsedLocation()
 : <a class="el" href="classclang_1_1CXXDefaultArgExpr.html#a1d91a5d8f3ecbaaeeb9436c1d620c4b0">clang::CXXDefaultArgExpr</a>
@@ -16064,9 +16099,6 @@ $(function() {
 : <a class="el" href="classclang_1_1AnalysisDeclContext.html#a237a9fdc0563596271297922af5c3e2c">clang::AnalysisDeclContext</a>
 , <a class="el" href="classclang_1_1AnalysisDeclContextManager.html#ace6c7e0aeaac5c0ff04dccab1b27162d">clang::AnalysisDeclContextManager</a>
 </li>
-<li>getUsingDecl()
-: <a class="el" href="classclang_1_1UsingShadowDecl.html#ad9c9e9a13f9e4c94fdb5b61397bc69b7">clang::UsingShadowDecl</a>
-</li>
 <li>getUsingDirectiveName()
 : <a class="el" href="classclang_1_1DeclarationName.html#a76ade3899a5c56cbd592141d5df910b7">clang::DeclarationName</a>
 </li>
@@ -16075,6 +16107,7 @@ $(function() {
 , <a class="el" href="classclang_1_1UnresolvedUsingValueDecl.html#a4d8d2c992a30b93a1b7d4469d73e6ec6">clang::UnresolvedUsingValueDecl</a>
 , <a class="el" href="classclang_1_1UsingDecl.html#af712c39fddde2c73c13e8ac731690462">clang::UsingDecl</a>
 , <a class="el" href="classclang_1_1UsingDirectiveDecl.html#a788b2167f8e43ec4ef51151e33fc3313">clang::UsingDirectiveDecl</a>
+, <a class="el" href="classclang_1_1UsingEnumDecl.html#afd4500630a0dd66882cc9f6b39141325">clang::UsingEnumDecl</a>
 </li>
 <li>getUSRList()
 : <a class="el" href="structclang_1_1tooling_1_1USRFindingAction.html#ad41b92bb8a3c4492d36b1d725244b6cf">clang::tooling::USRFindingAction</a>
@@ -16086,7 +16119,7 @@ $(function() {
 : <a class="el" href="classclang_1_1UnaryTransformType.html#aa6b5c83d7d563a8f0d5ecb39c77be7d4">clang::UnaryTransformType</a>
 </li>
 <li>getV()
-: <a class="el" href="classclang_1_1OMPAtomicDirective.html#ae0efcd238704107cd7f61d961d33af7b">clang::OMPAtomicDirective</a>
+: <a class="el" href="classclang_1_1OMPAtomicDirective.html#a7f299db2f6b159091f563248f7e944d4">clang::OMPAtomicDirective</a>
 </li>
 <li>getVal1()
 : <a class="el" href="classclang_1_1AtomicExpr.html#aa2f8f8219385b5ea7290fe2fcd10f3d7">clang::AtomicExpr</a>
@@ -16112,7 +16145,7 @@ $(function() {
 , <a class="el" href="classclang_1_1CXXBoolLiteralExpr.html#a967903978d39e2e36dd70d62387fbf85">clang::CXXBoolLiteralExpr</a>
 , <a class="el" href="classclang_1_1CXXNoexceptExpr.html#a09f93d81529440654b0580f2388f2378">clang::CXXNoexceptExpr</a>
 , <a class="el" href="classclang_1_1ento_1_1APSIntType.html#add3875675479b8c3966ae456118506fc">clang::ento::APSIntType</a>
-, <a class="el" href="classclang_1_1ento_1_1BasicValueFactory.html#a2f11e4cccdfc3cf55437891f60d8f1d4">clang::ento::BasicValueFactory</a>
+, <a class="el" href="classclang_1_1ento_1_1BasicValueFactory.html#acce3e4b86a46f0efe9806368dbfb41ea">clang::ento::BasicValueFactory</a>
 , <a class="el" href="classclang_1_1ento_1_1ConditionTruthVal.html#a21b3b562c66148ccbe834ab094a3fb84">clang::ento::ConditionTruthVal</a>
 , <a class="el" href="classclang_1_1ento_1_1loc_1_1ConcreteInt.html#a3dddaebd0a98818438c6fc4760d613fb">clang::ento::loc::ConcreteInt</a>
 , <a class="el" href="classclang_1_1ento_1_1nonloc_1_1CompoundVal.html#ad86eb163151d468130ad8362e25ef4e2">clang::ento::nonloc::CompoundVal</a>
@@ -16316,7 +16349,7 @@ $(function() {
 : <a class="el" href="classclang_1_1MicrosoftVTableContext.html#adbdeef156a0850c96b2387ca23f61f0d">clang::MicrosoftVTableContext</a>
 </li>
 <li>getVirtualBase()
-: <a class="el" href="classclang_1_1interp_1_1Record.html#a04a2d995226dfbd761724fefc3752df2">clang::interp::Record</a>
+: <a class="el" href="classclang_1_1interp_1_1Record.html#ad95f9a0ede40f104e5705b043ec37007">clang::interp::Record</a>
 </li>
 <li>GetVirtualBaseClassOffset()
 : <a class="el" href="classclang_1_1CodeGen_1_1CGCXXABI.html#a05ff6e674d8d3a6b31e1b3ed1e31ea15">clang::CodeGen::CGCXXABI</a>
@@ -16373,7 +16406,7 @@ $(function() {
 : <a class="el" href="classclang_1_1targets_1_1WindowsARMTargetInfo.html#a9871f1fb6140ce81695b273646df8c4b">clang::targets::WindowsARMTargetInfo</a>
 </li>
 <li>getVLAElements1D()
-: <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a7346d670e0332c261e5a591a01bef051">clang::CodeGen::CodeGenFunction</a>
+: <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a481af19c679de5a7c5e13d47fb59b591">clang::CodeGen::CodeGenFunction</a>
 </li>
 <li>getVLASize()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a616a6b07b957c501a17c8dbcfd95d1c3">clang::CodeGen::CodeGenFunction</a>
@@ -16418,7 +16451,7 @@ $(function() {
 : <a class="el" href="classclang_1_1VTableLayout.html#a30927fae15eb6b53d7036293c2bc17aa">clang::VTableLayout</a>
 </li>
 <li>getVTablePointers()
-: <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a588771a76f5c6763fcac8482818c44a2">clang::CodeGen::CodeGenFunction</a>
+: <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a4e9d70d450f399ef32202664139c91b9">clang::CodeGen::CodeGenFunction</a>
 </li>
 <li>GetVTablePtr()
 : <a class="el" href="classclang_1_1CodeGen_1_1CodeGenFunction.html#a114bb290ff3af8f3098e7f98cb57c743">clang::CodeGen::CodeGenFunction</a>
@@ -16525,13 +16558,13 @@ $(function() {
 : <a class="el" href="classclang_1_1ASTContext.html#aa422ec8f454c98d3ebee087868d58e04">clang::ASTContext</a>
 </li>
 <li>getWriter()
-: <a class="el" href="classclang_1_1PCHGenerator.html#ab557f441489a39f8f8b08558a6386b78">clang::PCHGenerator</a>
+: <a class="el" href="classclang_1_1PCHGenerator.html#a81dd5221024944d03a1e9b54c9a22901">clang::PCHGenerator</a>
 </li>
 <li>getWriterOrNull()
 : <a class="el" href="classclang_1_1PCHContainerOperations.html#a03a7620f7f0d8f121ea6bc6897fb0af2">clang::PCHContainerOperations</a>
 </li>
 <li>getWrittenBuiltinSpecs()
-: <a class="el" href="classclang_1_1BuiltinTypeLoc.html#a4b5930dfa05b337515598f7c705c7432">clang::BuiltinTypeLoc</a>
+: <a class="el" href="classclang_1_1BuiltinTypeLoc.html#ad1682852a591ac18d84907496c1e487a">clang::BuiltinTypeLoc</a>
 , <a class="el" href="classclang_1_1DeclSpec.html#afa5980e4bab2e71309b502f4ab452087">clang::DeclSpec</a>
 </li>
 <li>getWrittenSignSpec()
@@ -16584,7 +16617,7 @@ $(function() {
 : <a class="el" href="classclang_1_1serialization_1_1ModuleFile.html#aa0b03dd7f127ce40bbcd76e8d19e395c">clang::serialization::ModuleFile</a>
 </li>
 <li>GlobalDecl()
-: <a class="el" href="classclang_1_1GlobalDecl.html#a8bcf255182b5a062439a6e271a98edff">clang::GlobalDecl</a>
+: <a class="el" href="classclang_1_1GlobalDecl.html#a3a361e7a1f98874430a407f6aceb66a7">clang::GlobalDecl</a>
 </li>
 <li>GlobalEagerInstantiationScope()
 : <a class="el" href="classclang_1_1Sema_1_1GlobalEagerInstantiationScope.html#a6b84f01a20273b697b3077c2d78d6704">clang::Sema::GlobalEagerInstantiationScope</a>
@@ -16705,7 +16738,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:54 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:06:15 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -3362,14 +3362,14 @@ of the kernel the attribute is applied to.</p>
 <span class="c1">// argument to the attribute is the one which increments fastest.</span>
 <span class="k">struct</span> <span class="n">func</span> <span class="p">{</span>
   <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">num_simd_work_items</span><span class="p">(</span><span class="mi">4</span><span class="p">)]]</span>
-  <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">64</span><span class="p">)]]</span>
+  <span class="p">[[</span><span class="n">sycl</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">64</span><span class="p">)]]</span>
   <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
 <span class="p">};</span>
 
 <span class="c1">// Note, &#39;8&#39; is evenly divisible by &#39;8&#39;; in SYCL, the last</span>
 <span class="c1">// argument to the attribute is the one which increments fastest.</span>
 <span class="k">struct</span> <span class="n">bar</span> <span class="p">{</span>
-  <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)]]</span>
+  <span class="p">[[</span><span class="n">sycl</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)]]</span>
   <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">num_simd_work_items</span><span class="p">(</span><span class="mi">8</span><span class="p">)]]</span>
   <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
 <span class="p">};</span>
@@ -3511,26 +3511,32 @@ the length of the longest combinational path.</p>
 </tr>
 </tbody>
 </table>
-<p>When applied to a lambda or function call operator (of a function object)
-on device, this requests, to the extent possible, that statically-scheduled
-clusters handle stalls using a stall-enable signal to freeze computation
-within the cluster. This attribute is ignored on the host.</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> is applied to a function called from a device
-kernel, the attribute is ignored and it is not propagated to the kernel.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> attribute takes no argument and has an effect
-when applied to a function, and no effect otherwise.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Functor</span>
-<span class="p">{</span>
-    <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="k">operator</span><span class="p">()(</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span> <span class="n">item</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="cm">/* kernel code */</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> attribute requires SYCL.
+When applied to a lambda function, function definition, or function call
+operator (of a function object) on device, this requests, to the
+extent possible, that statically-scheduled clusters handle stalls using a
+stall-enable signal to freeze computation within the cluster. This attribute
+is ignored on the host.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> attribute takes no argument and has an
+effect when applied to a function, and no effect otherwise.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+  <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
+<span class="p">};</span>
 
-<span class="n">kernel</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">kernel_name</span><span class="o">&gt;</span><span class="p">(</span>
-<span class="p">[]()</span> <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="p">{</span>
-     <span class="cm">/* kernel code */</span>
-<span class="p">});</span>
+<span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="n">test</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="k">struct</span> <span class="n">FuncObj</span> <span class="p">{</span>
+  <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> attribute supports a nonconforming
+behavior when applied to a lambda in the type position.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">test1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">auto</span> <span class="n">lambda</span> <span class="o">=</span> <span class="p">[]()</span> <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]{};</span>
+  <span class="n">lambda</span><span class="p">();</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -6633,6 +6639,9 @@ deprecated in SYCL 2020.</p>
 <p>As an Intel extension, the <code class="docutils literal notranslate"><span class="pre">[[intel::reqd_work_group_size(X,</span> <span class="pre">Y,</span> <span class="pre">Z)]]</span></code>
 spelling is supported with the same semantics as the
 <code class="docutils literal notranslate"><span class="pre">[[sycl::reqd_work_group_size(X,</span> <span class="pre">Y,</span> <span class="pre">Z)]]</span></code> spelling.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">[[intel::reqd_work_group_size(X,</span> <span class="pre">Y,</span> <span class="pre">Z)]]</span></code> attribute spelling
+is deprecated in favor of the SYCL 2020 attribute spelling
+<code class="docutils literal notranslate"><span class="pre">[[sycl::reqd_work_group_size]]</span></code>.</p>
 <p>In OpenCL C, this attribute is available with the GNU spelling
 (<code class="docutils literal notranslate"><span class="pre">__attribute__((reqd_work_group_size(X,</span> <span class="pre">Y,</span> <span class="pre">Z)))</span></code>), see section
 6.7.2 Optional Attribute Qualifiers of OpenCL 1.2 specification for details.</p>
@@ -7242,14 +7251,14 @@ in the <code class="docutils literal notranslate"><span class="pre">reqd_work_gr
 <span class="c1">// argument to the attribute is the one which increments fastest.</span>
 <span class="k">struct</span> <span class="n">func</span> <span class="p">{</span>
   <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">num_simd_work_items</span><span class="p">(</span><span class="mi">4</span><span class="p">)]]</span>
-  <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">64</span><span class="p">)]]</span>
+  <span class="p">[[</span><span class="n">sycl</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">64</span><span class="p">)]]</span>
   <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
 <span class="p">};</span>
 
 <span class="c1">// Note, &#39;8&#39; is evenly divisible by &#39;8&#39;; in SYCL, the last</span>
 <span class="c1">// argument to the attribute is the one which increments fastest.</span>
 <span class="k">struct</span> <span class="n">bar</span> <span class="p">{</span>
-  <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)]]</span>
+  <span class="p">[[</span><span class="n">sycl</span><span class="o">::</span><span class="n">reqd_work_group_size</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)]]</span>
   <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">num_simd_work_items</span><span class="p">(</span><span class="mi">8</span><span class="p">)]]</span>
   <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
 <span class="p">};</span>

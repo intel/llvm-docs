@@ -135,11 +135,11 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span>sycl {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>detail {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#a64bcfebbe9509a5d8318d1449ff8d7b7">   40</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="half__type_8hpp.html#a92eefc7cda0c9ee18374f102d72e3fdb">__SYCL_CONSTEXPR_HALF</a> uint16_t <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a64bcfebbe9509a5d8318d1449ff8d7b7">float2Half</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;Val) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#a64bcfebbe9509a5d8318d1449ff8d7b7">   40</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="half__type_8hpp.html#a92eefc7cda0c9ee18374f102d72e3fdb">__SYCL_CONSTEXPR_HALF</a> <a class="code" href="classuint16__t.html">uint16_t</a> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a64bcfebbe9509a5d8318d1449ff8d7b7">float2Half</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> &amp;Val) {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">const</span> uint32_t Bits = sycl::bit_cast&lt;uint32_t&gt;(Val);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// Extract the sign from the float value</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">const</span> uint16_t Sign = (Bits &amp; 0x80000000) &gt;&gt; 16;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">const</span> <a class="code" href="classuint16__t.html">uint16_t</a> Sign = (Bits &amp; 0x80000000) &gt;&gt; 16;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">// Extract the fraction from the float value</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">const</span> uint32_t Frac32 = Bits &amp; 0x7fffff;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">// Extract the exponent from the float value</span></div>
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">const</span> int16_t Exp32Diff = Exp32 - 127;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">// intialize to 0, covers the case for 0 and small numbers</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  uint16_t Exp16 = 0, Frac16 = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classuint16__t.html">uint16_t</a> Exp16 = 0, Frac16 = 0;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="half__type_8hpp.html#a4a4860e770a02ef072dc28271427d7b4">__builtin_expect</a>(Exp32Diff &gt; 15, 0)) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// Infinity and big numbers convert to infinity</span></div>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// Compose the final FP16 binary</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  uint16_t Ret = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classuint16__t.html">uint16_t</a> Ret = 0;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  Ret |= Sign;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  Ret |= Exp16 &lt;&lt; 10;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  Ret += Frac16; <span class="comment">// Add the carry bit from operation Frac16 += 1;</span></div>
@@ -181,13 +181,13 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> Ret;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#a19e4d8918eb92362a28d0ad23ab289a9">   86</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="half__type_8hpp.html#a92eefc7cda0c9ee18374f102d72e3fdb">__SYCL_CONSTEXPR_HALF</a> <span class="keywordtype">float</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a19e4d8918eb92362a28d0ad23ab289a9">half2Float</a>(<span class="keyword">const</span> uint16_t &amp;Val) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#a19e4d8918eb92362a28d0ad23ab289a9">   86</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="half__type_8hpp.html#a92eefc7cda0c9ee18374f102d72e3fdb">__SYCL_CONSTEXPR_HALF</a> <span class="keywordtype">float</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a19e4d8918eb92362a28d0ad23ab289a9">half2Float</a>(<span class="keyword">const</span> <a class="code" href="classuint16__t.html">uint16_t</a> &amp;Val) {</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// Extract the sign from the bits. It is 1 if the sign is negative</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">const</span> uint32_t Sign = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(Val &amp; 0x8000) &lt;&lt; 16;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// Extract the exponent from the bits</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">const</span> uint8_t Exp16 = (Val &amp; 0x7c00) &gt;&gt; 10;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// Extract the fraction from the bits</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  uint16_t Frac16 = Val &amp; 0x3ff;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <a class="code" href="classuint16__t.html">uint16_t</a> Frac16 = Val &amp; 0x3ff;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  uint32_t Exp32 = 0;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="half__type_8hpp.html#a4a4860e770a02ef072dc28271427d7b4">__builtin_expect</a>(Exp16 == 0x1f, 0)) {</div>
@@ -278,10 +278,10 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a314d491440d416e4bea9f00dbd4d1a48">  180</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key&gt; <span class="keyword">friend</span> <span class="keyword">struct </span>std::hash;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="comment">// Initialize underlying data</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3f8ae6ac0efdcb3fad9156bb3c6bd5b6">  183</a></span>&#160;  constexpr <span class="keyword">explicit</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3f8ae6ac0efdcb3fad9156bb3c6bd5b6">half</a>(uint16_t x) : Buf(x) {}</div>
+<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3f8ae6ac0efdcb3fad9156bb3c6bd5b6">  183</a></span>&#160;  constexpr <span class="keyword">explicit</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a3f8ae6ac0efdcb3fad9156bb3c6bd5b6">half</a>(<a class="code" href="classuint16__t.html">uint16_t</a> x) : Buf(x) {}</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  uint16_t Buf;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="classuint16__t.html">uint16_t</a> Buf;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;};</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment">// The main host half class</span></div>
@@ -351,10 +351,10 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html#a314d491440d416e4bea9f00dbd4d1a48">  253</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Key&gt; <span class="keyword">friend</span> <span class="keyword">struct </span>std::hash;</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// Initialize underlying data</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html#aa8ea67703e016ab1cf3e3162e80b2b1f">  256</a></span>&#160;  constexpr <span class="keyword">explicit</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html#aa8ea67703e016ab1cf3e3162e80b2b1f">half_v2</a>(uint16_t x) : Buf(x) {}</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html#aa8ea67703e016ab1cf3e3162e80b2b1f">  256</a></span>&#160;  constexpr <span class="keyword">explicit</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html#aa8ea67703e016ab1cf3e3162e80b2b1f">half_v2</a>(<a class="code" href="classuint16__t.html">uint16_t</a> x) : Buf(x) {}</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  uint16_t Buf;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <a class="code" href="classuint16__t.html">uint16_t</a> Buf;</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;};</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;} <span class="comment">// namespace host_half_impl</span></div>
@@ -509,7 +509,7 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="comment">// Partial specialization of `std::hash&lt;cl::sycl::half&gt;`</span></div>
 <div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01cl_1_1sycl_1_1half_01_4.html">  412</a></span>&#160;<span class="keyword">template</span> &lt;&gt; <span class="keyword">struct </span>hash&lt;<a class="code" href="namespacecl.html">cl</a>::<a class="code" href="aliases_8hpp.html#adce7cf10789999cc65353c9108f2cadd">sycl::half</a>&gt; {</div>
 <div class="line"><a name="l00413"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01cl_1_1sycl_1_1half_01_4.html#a724e6ea596389622843a38d09cbfc22f">  413</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="structstd_1_1hash_3_01cl_1_1sycl_1_1half_01_4.html#a724e6ea596389622843a38d09cbfc22f">operator()</a>(<a class="code" href="classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html">cl::sycl::half</a> <span class="keyword">const</span> &amp;Key) <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">return</span> hash&lt;uint16_t&gt;{}(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>uint16_t &amp;<span class="keyword">&gt;</span>(Key));</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="keywordflow">return</span> hash&lt;uint16_t&gt;{}(<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code" href="classuint16__t.html">uint16_t</a> &amp;<span class="keyword">&gt;</span>(Key));</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  }</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;};</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
@@ -567,7 +567,7 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    <span class="keywordflow">return</span> __builtin_huge_valf();</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html">cl::sycl::detail::host_half_impl::half_v2</a>(</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keyword">static_cast&lt;</span>uint16_t<span class="keyword">&gt;</span>(0x7C00));</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keyword">static_cast&lt;</span><a class="code" href="classuint16__t.html">uint16_t</a><span class="keyword">&gt;</span>(0x7C00));</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  }</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160; </div>
@@ -649,6 +649,7 @@ $(document).ready(function(){initNavTree('half__type_8hpp_source.html',''); init
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="accessor_8hpp_source.html#l02349">accessor.hpp:2349</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2_html_a7483db4d1c4e55034eb9265878ebcfcc"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half__v2.html#a7483db4d1c4e55034eb9265878ebcfcc">cl::sycl::detail::host_half_impl::half_v2::operator--</a></div><div class="ttdeci">__SYCL_CONSTEXPR_HALF half_v2 operator--(int)</div><div class="ttdef"><b>Definition:</b> <a href="half__type_8hpp_source.html#l00238">half_type.hpp:238</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_1_1half__impl_html_a1b68d15fe9d3cd4a4de58783e3bde4be"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail_1_1half__impl.html#a1b68d15fe9d3cd4a4de58783e3bde4be">cl::sycl::detail::half_impl::Vec4StorageT</a></div><div class="ttdeci">half_vec&lt; 4 &gt; Vec4StorageT</div><div class="ttdef"><b>Definition:</b> <a href="half__type_8hpp_source.html#l00307">half_type.hpp:307</a></div></div>
+<div class="ttc" id="aclassuint16__t_html"><div class="ttname"><a href="classuint16__t.html">uint16_t</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1vector__alignment_html"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1vector__alignment.html">cl::sycl::detail::vector_alignment</a></div><div class="ttdef"><b>Definition:</b> <a href="type__traits_8hpp_source.html#l00076">type_traits.hpp:76</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1half__impl_1_1half_html_a7091cbe72d319312ab0e257de47af27d"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1half__impl_1_1half.html#a7091cbe72d319312ab0e257de47af27d">cl::sycl::detail::half_impl::half::operator/=</a></div><div class="ttdeci">__SYCL_CONSTEXPR_HALF half &amp; operator/=(const half &amp;rhs)</div><div class="ttdef"><b>Definition:</b> <a href="half__type_8hpp_source.html#l00345">half_type.hpp:345</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1host__half__impl_1_1half_html_a0c9b983368474d42ee7f2d6c216cd688"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1host__half__impl_1_1half.html#a0c9b983368474d42ee7f2d6c216cd688">cl::sycl::detail::host_half_impl::half::operator-</a></div><div class="ttdeci">constexpr half &amp; operator-()</div><div class="ttdef"><b>Definition:</b> <a href="half__type_8hpp_source.html#l00172">half_type.hpp:172</a></div></div>

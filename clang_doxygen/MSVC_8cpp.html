@@ -175,6 +175,10 @@ Functions</h2></td></tr>
 <tr class="separator:ae0f80c944b2f47128c29184626d4e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade1c3520e1a73491bf83890c649c5669"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MSVC_8cpp.html#ade1c3520e1a73491bf83890c649c5669">TranslateDArg</a> (Arg *A, llvm::opt::DerivedArgList &amp;DAL, const OptTable &amp;Opts)</td></tr>
 <tr class="separator:ade1c3520e1a73491bf83890c649c5669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1cc303a4b453f9e5c9866155617c85e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MSVC_8cpp.html#af1cc303a4b453f9e5c9866155617c85e">TranslatePermissive</a> (Arg *A, llvm::opt::DerivedArgList &amp;DAL, const OptTable &amp;Opts)</td></tr>
+<tr class="separator:af1cc303a4b453f9e5c9866155617c85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1290ebdd949d62db356330188d09b8fd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MSVC_8cpp.html#a1290ebdd949d62db356330188d09b8fd">TranslatePermissiveMinus</a> (Arg *A, llvm::opt::DerivedArgList &amp;DAL, const OptTable &amp;Opts)</td></tr>
+<tr class="separator:a1290ebdd949d62db356330188d09b8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ab86805116759e37c70e0671233ca9daf"></a>
@@ -604,7 +608,7 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MSVC_8cpp_source.html#l00973">973</a> of file <a class="el" href="MSVC_8cpp_source.html">MSVC.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CharInfo_8h_source.html#l00093">clang::isDigit()</a>, <a class="el" href="opencl-c-base_8h_source.html#l00160">NULL</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
+<p class="reference">References <a class="el" href="CharInfo_8h_source.html#l00093">clang::isDigit()</a>, <a class="el" href="opencl-c-base_8h_source.html#l00168">NULL</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l00340">findVCToolChainViaRegistry()</a>, <a class="el" href="MSVC_8cpp_source.html#l01210">getUniversalCRTSdkDir()</a>, and <a class="el" href="MSVC_8cpp_source.html#l01110">getWindowsSDKDir()</a>.</p>
 
@@ -974,7 +978,7 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l01566">clang::driver::toolchains::MSVCToolChain::TranslateArgs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l01580">clang::driver::toolchains::MSVCToolChain::TranslateArgs()</a>.</p>
 
 </div>
 </div>
@@ -1032,14 +1036,106 @@ Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="MSVC_8cpp_source.html#l01453">1453</a> of file <a class="el" href="MSVC_8cpp_source.html">MSVC.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l01566">clang::driver::toolchains::MSVCToolChain::TranslateArgs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l01580">clang::driver::toolchains::MSVCToolChain::TranslateArgs()</a>.</p>
+
+</div>
+</div>
+<a id="af1cc303a4b453f9e5c9866155617c85e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1cc303a4b453f9e5c9866155617c85e">&#9670;&nbsp;</a></span>TranslatePermissive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TranslatePermissive </td>
+          <td>(</td>
+          <td class="paramtype">Arg *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">llvm::opt::DerivedArgList &amp;&#160;</td>
+          <td class="paramname"><em>DAL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const OptTable &amp;&#160;</td>
+          <td class="paramname"><em>Opts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="MSVC_8cpp_source.html#l01565">1565</a> of file <a class="el" href="MSVC_8cpp_source.html">MSVC.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l01580">clang::driver::toolchains::MSVCToolChain::TranslateArgs()</a>.</p>
+
+</div>
+</div>
+<a id="a1290ebdd949d62db356330188d09b8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1290ebdd949d62db356330188d09b8fd">&#9670;&nbsp;</a></span>TranslatePermissiveMinus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void TranslatePermissiveMinus </td>
+          <td>(</td>
+          <td class="paramtype">Arg *&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">llvm::opt::DerivedArgList &amp;&#160;</td>
+          <td class="paramname"><em>DAL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const OptTable &amp;&#160;</td>
+          <td class="paramname"><em>Opts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="MSVC_8cpp_source.html#l01572">1572</a> of file <a class="el" href="MSVC_8cpp_source.html">MSVC.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="MSVC_8cpp_source.html#l01580">clang::driver::toolchains::MSVCToolChain::TranslateArgs()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:19 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:05:39 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

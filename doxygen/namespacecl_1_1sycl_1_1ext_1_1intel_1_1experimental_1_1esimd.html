@@ -129,7 +129,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The simd vector class.  <a href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html">simd_view</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The reference class.  <a href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class represents a reference to a sub-region of a base simd object.  <a href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view_3_01BaseTy_00_01region__b36271a264bdb862fbe2f5d83370b2a76.html">simd_view&lt; BaseTy, region_base_1&lt; Is2D, T, StrideY, StrideX &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a specialization of <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html" title="This class represents a reference to a sub-region of a base simd object.">simd_view</a> class with a single element.  <a href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view_3_01BaseTy_00_01region__b36271a264bdb862fbe2f5d83370b2a76.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -152,8 +155,11 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a1672a8de15b42056076243017fff56fa"><td class="memTemplParams" colspan="2">template&lt;typename T , int SizeY, int StrideY, int SizeX, int StrideX&gt; </td></tr>
 <tr class="memitem:a1672a8de15b42056076243017fff56fa"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a1672a8de15b42056076243017fff56fa">region2d_t</a> = <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1region__base.html">region_base</a>&lt; true, T, SizeY, StrideY, SizeX, StrideX &gt;</td></tr>
 <tr class="separator:a1672a8de15b42056076243017fff56fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaaec1366e0befda90c0cdf66d433249"><td class="memTemplParams" colspan="2">template&lt;bool Is2D, typename T , int StrideY, int StrideX&gt; </td></tr>
+<tr class="memitem:adaaec1366e0befda90c0cdf66d433249"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#adaaec1366e0befda90c0cdf66d433249">region_base_1</a> = <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1region__base.html">region_base</a>&lt; Is2D, T, 1, StrideY, 1, StrideX &gt;</td></tr>
+<tr class="separator:adaaec1366e0befda90c0cdf66d433249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae015d2edc392972a96137510a2f4865f"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
-<tr class="memitem:ae015d2edc392972a96137510a2f4865f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ae015d2edc392972a96137510a2f4865f">mask_type_t</a> = typename <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1vector__type.html">detail::vector_type</a>&lt; uint16_t, N &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
+<tr class="memitem:ae015d2edc392972a96137510a2f4865f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ae015d2edc392972a96137510a2f4865f">mask_type_t</a> = typename <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1vector__type.html">detail::vector_type</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, N &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td></tr>
 <tr class="separator:ae015d2edc392972a96137510a2f4865f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -542,11 +548,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a0f77a6bbf1beeaad248b1dbde6d7739b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(N !=8 &amp;&amp;N !=16 &amp;&amp;N&lt; 32), <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a69cf4aebd9fdf4706244c8ba656f3284">uint</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#a0f77a6bbf1beeaad248b1dbde6d7739b">esimd_pack_mask</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#adcd44ab42f95d699a442903b118da1d2">ushort</a>, N &gt; src0)</td></tr>
 <tr class="separator:a0f77a6bbf1beeaad248b1dbde6d7739b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaa39f2acdbd7316a09cb5ff25c2d5712"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, int ElemsPerAddr = 1, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
-<tr class="memitem:gaaa39f2acdbd7316a09cb5ff25c2d5712"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;((n==8||n==16||n==32) &amp;&amp;(ElemsPerAddr==1||ElemsPerAddr==2||ElemsPerAddr==4)), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *ElemsPerAddr &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#gaaa39f2acdbd7316a09cb5ff25c2d5712">gather</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:gaaa39f2acdbd7316a09cb5ff25c2d5712"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;((n==8||n==16||n==32) &amp;&amp;(ElemsPerAddr==1||ElemsPerAddr==2||ElemsPerAddr==4)), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *ElemsPerAddr &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#gaaa39f2acdbd7316a09cb5ff25c2d5712">gather</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:gaaa39f2acdbd7316a09cb5ff25c2d5712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flat-address gather.  <a href="group__sycl__esimd.html#gaaa39f2acdbd7316a09cb5ff25c2d5712">More...</a><br /></td></tr>
 <tr class="separator:gaaa39f2acdbd7316a09cb5ff25c2d5712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3ae9d676fe64a688f3a2f785eb6ea413"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, int ElemsPerAddr = 1, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
-<tr class="memitem:ga3ae9d676fe64a688f3a2f785eb6ea413"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;((n==8||n==16||n==32) &amp;&amp;(ElemsPerAddr==1||ElemsPerAddr==2||ElemsPerAddr==4)), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#ga3ae9d676fe64a688f3a2f785eb6ea413">scatter</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *ElemsPerAddr &gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:ga3ae9d676fe64a688f3a2f785eb6ea413"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;((n==8||n==16||n==32) &amp;&amp;(ElemsPerAddr==1||ElemsPerAddr==2||ElemsPerAddr==4)), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#ga3ae9d676fe64a688f3a2f785eb6ea413">scatter</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *ElemsPerAddr &gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:ga3ae9d676fe64a688f3a2f785eb6ea413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flat-address scatter.  <a href="group__sycl__esimd.html#ga3ae9d676fe64a688f3a2f785eb6ea413">More...</a><br /></td></tr>
 <tr class="separator:ga3ae9d676fe64a688f3a2f785eb6ea413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga77a242ba5679cf7d51b9643f6e6caf10"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
@@ -570,7 +576,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gabb6c4a98ca631c6900c92d54ef7b565b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor-based gather.  <a href="group__sycl__esimd.html#gabb6c4a98ca631c6900c92d54ef7b565b">More...</a><br /></td></tr>
 <tr class="separator:gabb6c4a98ca631c6900c92d54ef7b565b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7905efa5c33b5fc7b074344feabfd867"><td class="memTemplParams" colspan="2">template&lt;typename T , int N, typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
-<tr class="memitem:ga7905efa5c33b5fc7b074344feabfd867"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(sizeof(T)&lt;=4) &amp;&amp;(N==1||N==8||N==16) &amp;&amp;!std::is_pointer&lt; AccessorTy &gt;::value, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#ga7905efa5c33b5fc7b074344feabfd867">scatter</a> (AccessorTy acc, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, N &gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, N &gt; pred=1)</td></tr>
+<tr class="memitem:ga7905efa5c33b5fc7b074344feabfd867"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(sizeof(T)&lt;=4) &amp;&amp;(N==1||N==8||N==16) &amp;&amp;!std::is_pointer&lt; AccessorTy &gt;::value, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#ga7905efa5c33b5fc7b074344feabfd867">scatter</a> (AccessorTy acc, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, N &gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, N &gt; offsets, uint32_t glob_offset=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, N &gt; pred=1)</td></tr>
 <tr class="memdesc:ga7905efa5c33b5fc7b074344feabfd867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor-based scatter.  <a href="group__sycl__esimd.html#ga7905efa5c33b5fc7b074344feabfd867">More...</a><br /></td></tr>
 <tr class="separator:ga7905efa5c33b5fc7b074344feabfd867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga05b398ddea51a11723ca6be61837ac8c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename AccessorTy , CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
@@ -582,11 +588,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:ga53eb8767486bc58efaf4cc9b114afd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a scalar value into an accessor.  <a href="group__sycl__esimd.html#ga53eb8767486bc58efaf4cc9b114afd8b">More...</a><br /></td></tr>
 <tr class="separator:ga53eb8767486bc58efaf4cc9b114afd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae17cdf61d0f2b9ef32c2c871c7fe13ae"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, rgba_channel_mask Mask, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
-<tr class="memitem:gae17cdf61d0f2b9ef32c2c871c7fe13ae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32) &amp;&amp;(sizeof(T)==4), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#gae17cdf61d0f2b9ef32c2c871c7fe13ae">gather4</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:gae17cdf61d0f2b9ef32c2c871c7fe13ae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32) &amp;&amp;(sizeof(T)==4), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#gae17cdf61d0f2b9ef32c2c871c7fe13ae">gather4</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:gae17cdf61d0f2b9ef32c2c871c7fe13ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flat-address gather4.  <a href="group__sycl__esimd.html#gae17cdf61d0f2b9ef32c2c871c7fe13ae">More...</a><br /></td></tr>
 <tr class="separator:gae17cdf61d0f2b9ef32c2c871c7fe13ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab2703864413ec16d7f9e41da626e7e01"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, rgba_channel_mask Mask, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
-<tr class="memitem:gab2703864413ec16d7f9e41da626e7e01"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32) &amp;&amp;(sizeof(T)==4), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#gab2703864413ec16d7f9e41da626e7e01">scatter4</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:gab2703864413ec16d7f9e41da626e7e01"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32) &amp;&amp;(sizeof(T)==4), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd.html#gab2703864413ec16d7f9e41da626e7e01">scatter4</a> (T *p, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:gab2703864413ec16d7f9e41da626e7e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flat-address scatter4.  <a href="group__sycl__esimd.html#gab2703864413ec16d7f9e41da626e7e01">More...</a><br /></td></tr>
 <tr class="separator:gab2703864413ec16d7f9e41da626e7e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad922047ca351d199e380db3c8dd75694"><td class="memTemplParams" colspan="2">template&lt;atomic_op Op, typename T , int n, CacheHint L1H = CacheHint::None, CacheHint L3H = CacheHint::None&gt; </td></tr>
@@ -614,19 +620,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:gad40137a279f04097a02523cece6cc3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declare per-work-group slm size.  <a href="group__sycl__esimd__slm.html#gad40137a279f04097a02523cece6cc3d9">More...</a><br /></td></tr>
 <tr class="separator:gad40137a279f04097a02523cece6cc3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82942308d118b13f6a654ae78a0066ad"><td class="memTemplParams" colspan="2">template&lt;typename T , int n&gt; </td></tr>
-<tr class="memitem:ga82942308d118b13f6a654ae78a0066ad"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#ga82942308d118b13f6a654ae78a0066ad">slm_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:ga82942308d118b13f6a654ae78a0066ad"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#ga82942308d118b13f6a654ae78a0066ad">slm_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:ga82942308d118b13f6a654ae78a0066ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM gather.  <a href="group__sycl__esimd__slm.html#ga82942308d118b13f6a654ae78a0066ad">More...</a><br /></td></tr>
 <tr class="separator:ga82942308d118b13f6a654ae78a0066ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2582544ce7d2d12c3301fb7874158b6a"><td class="memTemplParams" colspan="2">template&lt;typename T , int n&gt; </td></tr>
-<tr class="memitem:ga2582544ce7d2d12c3301fb7874158b6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#ga2582544ce7d2d12c3301fb7874158b6a">slm_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n &gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:ga2582544ce7d2d12c3301fb7874158b6a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==16||n==32), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#ga2582544ce7d2d12c3301fb7874158b6a">slm_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n &gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:ga2582544ce7d2d12c3301fb7874158b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scatter.  <a href="group__sycl__esimd__slm.html#ga2582544ce7d2d12c3301fb7874158b6a">More...</a><br /></td></tr>
 <tr class="separator:ga2582544ce7d2d12c3301fb7874158b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga49c7b8c63e52887c59882c35d650ce47"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, rgba_channel_mask Mask&gt; </td></tr>
-<tr class="memitem:ga49c7b8c63e52887c59882c35d650ce47"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==8||n==16||n==32) &amp;&amp;(sizeof(T)==4), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#ga49c7b8c63e52887c59882c35d650ce47">slm_load4</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:ga49c7b8c63e52887c59882c35d650ce47"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==8||n==16||n==32) &amp;&amp;(sizeof(T)==4), <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#ga49c7b8c63e52887c59882c35d650ce47">slm_load4</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:ga49c7b8c63e52887c59882c35d650ce47"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM gather4.  <a href="group__sycl__esimd__slm.html#ga49c7b8c63e52887c59882c35d650ce47">More...</a><br /></td></tr>
 <tr class="separator:ga49c7b8c63e52887c59882c35d650ce47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafbafd02c3ede00d786c976f1977b91d6"><td class="memTemplParams" colspan="2">template&lt;typename T , int n, rgba_channel_mask Mask&gt; </td></tr>
-<tr class="memitem:gafbafd02c3ede00d786c976f1977b91d6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==8||n==16||n==32) &amp;&amp;(sizeof(T)==4), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#gafbafd02c3ede00d786c976f1977b91d6">slm_store4</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, n &gt; pred=1)</td></tr>
+<tr class="memitem:gafbafd02c3ede00d786c976f1977b91d6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">sycl::detail::enable_if_t</a>&lt;(n==8||n==16||n==32) &amp;&amp;(sizeof(T)==4), void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__slm.html#gafbafd02c3ede00d786c976f1977b91d6">slm_store4</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T, n *<a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ab50e10509d7c505002aca470d2a233a5">get_num_channels_enabled</a>(Mask)&gt; vals, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint32_t, n &gt; offsets, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, n &gt; pred=1)</td></tr>
 <tr class="memdesc:gafbafd02c3ede00d786c976f1977b91d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">SLM scatter4.  <a href="group__sycl__esimd__slm.html#gafbafd02c3ede00d786c976f1977b91d6">More...</a><br /></td></tr>
 <tr class="separator:gafbafd02c3ede00d786c976f1977b91d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8d471fcf6fb83fb013111a71c77f7a28"><td class="memTemplParams" colspan="2">template&lt;typename T , int n&gt; </td></tr>
@@ -662,19 +668,19 @@ Functions</h2></td></tr>
 <tr class="memdesc:gabcbf22f06559de307508cb2dcd006f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">esimd_get_value  <a href="group__sycl__esimd.html#gabcbf22f06559de307508cb2dcd006f24">More...</a><br /></td></tr>
 <tr class="separator:gabcbf22f06559de307508cb2dcd006f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6bfd13237b551ce8dc5daa04112a2703"><td class="memTemplParams" colspan="2">template&lt;typename T1 , int n1, typename T2 , int n2, typename T3 , int n3, int N = 16&gt; </td></tr>
-<tr class="memitem:ga6bfd13237b551ce8dc5daa04112a2703"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#ga6bfd13237b551ce8dc5daa04112a2703">esimd_raw_sends_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgDst, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T2, n2 &gt; msgSrc0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T3, n3 &gt; msgSrc1, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t numDst, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, N &gt; mask=1)</td></tr>
+<tr class="memitem:ga6bfd13237b551ce8dc5daa04112a2703"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#ga6bfd13237b551ce8dc5daa04112a2703">esimd_raw_sends_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgDst, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T2, n2 &gt; msgSrc0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T3, n3 &gt; msgSrc1, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t numDst, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, N &gt; mask=1)</td></tr>
 <tr class="memdesc:ga6bfd13237b551ce8dc5daa04112a2703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw sends load.  <a href="group__sycl__esimd__raw__send__api.html#ga6bfd13237b551ce8dc5daa04112a2703">More...</a><br /></td></tr>
 <tr class="separator:ga6bfd13237b551ce8dc5daa04112a2703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafce6152722112a4c186aa338f72ec5c7"><td class="memTemplParams" colspan="2">template&lt;typename T1 , int n1, typename T2 , int n2, int N = 16&gt; </td></tr>
-<tr class="memitem:gafce6152722112a4c186aa338f72ec5c7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#gafce6152722112a4c186aa338f72ec5c7">esimd_raw_send_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgDst, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T2, n2 &gt; msgSrc0, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numDst, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, N &gt; mask=1)</td></tr>
+<tr class="memitem:gafce6152722112a4c186aa338f72ec5c7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#gafce6152722112a4c186aa338f72ec5c7">esimd_raw_send_load</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgDst, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T2, n2 &gt; msgSrc0, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numDst, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, N &gt; mask=1)</td></tr>
 <tr class="memdesc:gafce6152722112a4c186aa338f72ec5c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw send load.  <a href="group__sycl__esimd__raw__send__api.html#gafce6152722112a4c186aa338f72ec5c7">More...</a><br /></td></tr>
 <tr class="separator:gafce6152722112a4c186aa338f72ec5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga913ead1b4a84d7548ed8005c45d754ef"><td class="memTemplParams" colspan="2">template&lt;typename T1 , int n1, typename T2 , int n2, int N = 16&gt; </td></tr>
-<tr class="memitem:ga913ead1b4a84d7548ed8005c45d754ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#ga913ead1b4a84d7548ed8005c45d754ef">esimd_raw_sends_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgSrc0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T2, n2 &gt; msgSrc1, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, N &gt; mask=1)</td></tr>
+<tr class="memitem:ga913ead1b4a84d7548ed8005c45d754ef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#ga913ead1b4a84d7548ed8005c45d754ef">esimd_raw_sends_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgSrc0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T2, n2 &gt; msgSrc1, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t numSrc1, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, N &gt; mask=1)</td></tr>
 <tr class="memdesc:ga913ead1b4a84d7548ed8005c45d754ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw sends store.  <a href="group__sycl__esimd__raw__send__api.html#ga913ead1b4a84d7548ed8005c45d754ef">More...</a><br /></td></tr>
 <tr class="separator:ga913ead1b4a84d7548ed8005c45d754ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7df83e11341cb360daa12b5334b7046f"><td class="memTemplParams" colspan="2">template&lt;typename T1 , int n1, int N = 16&gt; </td></tr>
-<tr class="memitem:ga7df83e11341cb360daa12b5334b7046f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#ga7df83e11341cb360daa12b5334b7046f">esimd_raw_send_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgSrc0, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; uint16_t, N &gt; mask=1)</td></tr>
+<tr class="memitem:ga7df83e11341cb360daa12b5334b7046f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#af37725df7e5fcb9d9fbd21438c617c6d">ESIMD_INLINE</a> <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#a95a7074f3171fabab766cc8186106a7b">ESIMD_NODEBUG</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__sycl__esimd__raw__send__api.html#ga7df83e11341cb360daa12b5334b7046f">esimd_raw_send_store</a> (<a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; T1, n1 &gt; msgSrc0, uint32_t exDesc, uint32_t msgDesc, uint8_t execSize, uint8_t sfid, uint8_t numSrc0, uint8_t isEOT=0, uint8_t isSendc=0, <a class="el" href="classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html">simd</a>&lt; <a class="el" href="classuint16__t.html">uint16_t</a>, N &gt; mask=1)</td></tr>
 <tr class="memdesc:ga7df83e11341cb360daa12b5334b7046f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw send store.  <a href="group__sycl__esimd__raw__send__api.html#ga7df83e11341cb360daa12b5334b7046f">More...</a><br /></td></tr>
 <tr class="separator:ga7df83e11341cb360daa12b5334b7046f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd80e648f8569732f4682227064a4e6"><td class="memTemplParams" colspan="2">template&lt;typename U , typename T , int n&gt; </td></tr>
@@ -748,12 +754,12 @@ Variables</h2></td></tr>
 template&lt;int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ae015d2edc392972a96137510a2f4865f">cl::sycl::ext::intel::experimental::esimd::mask_type_t</a> = typedef typename <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1vector__type.html">detail::vector_type</a>&lt;uint16_t, N&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td>
+          <td class="memname">using <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#ae015d2edc392972a96137510a2f4865f">cl::sycl::ext::intel::experimental::esimd::mask_type_t</a> = typedef typename <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1vector__type.html">detail::vector_type</a>&lt;<a class="el" href="classuint16__t.html">uint16_t</a>, N&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp_source.html#l00262">262</a> of file <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp_source.html">types.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp_source.html#l00266">266</a> of file <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp_source.html">types.hpp</a>.</p>
 
 </div>
 </div>
@@ -790,6 +796,24 @@ template&lt;typename T , int SizeY, int StrideY, int SizeX, int StrideX&gt; </di
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00057">57</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
+
+</div>
+</div>
+<a id="adaaec1366e0befda90c0cdf66d433249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaec1366e0befda90c0cdf66d433249">&#9670;&nbsp;</a></span>region_base_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;bool Is2D, typename T , int StrideY, int StrideX&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html#adaaec1366e0befda90c0cdf66d433249">cl::sycl::ext::intel::experimental::esimd::region_base_1</a> = typedef <a class="el" href="structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1region__base.html">region_base</a>&lt;Is2D, T, 1, StrideY, 1, StrideX&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00061">61</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
 
 </div>
 </div>
@@ -1573,7 +1597,7 @@ template&lt;typename U , typename T , int n&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="simd_8hpp_source.html#l00576">576</a> of file <a class="el" href="simd_8hpp_source.html">simd.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="simd_8hpp_source.html#l00590">590</a> of file <a class="el" href="simd_8hpp_source.html">simd.hpp</a>.</p>
 
 </div>
 </div>
@@ -1737,7 +1761,7 @@ template&lt;typename T , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l01153">1153</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00108">esimd_abs()</a>, <a class="el" href="math_8hpp_source.html#l01104">ESIMD_HDR_CONST_PI</a>, <a class="el" href="simd_8hpp_source.html#l00130">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::merge()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00108">esimd_abs()</a>, <a class="el" href="math_8hpp_source.html#l01104">ESIMD_HDR_CONST_PI</a>, <a class="el" href="simd_8hpp_source.html#l00137">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::merge()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
 
 </div>
 </div>
@@ -1805,7 +1829,7 @@ template&lt;typename T , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l01198">1198</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00108">esimd_abs()</a>, <a class="el" href="math_8hpp_source.html#l01186">esimd_acos()</a>, <a class="el" href="math_8hpp_source.html#l01104">ESIMD_HDR_CONST_PI</a>, <a class="el" href="simd_8hpp_source.html#l00130">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::merge()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00108">esimd_abs()</a>, <a class="el" href="math_8hpp_source.html#l01186">esimd_acos()</a>, <a class="el" href="math_8hpp_source.html#l01104">ESIMD_HDR_CONST_PI</a>, <a class="el" href="simd_8hpp_source.html#l00137">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::merge()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
 
 </div>
 </div>
@@ -1987,7 +2011,7 @@ template&lt;typename T , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l01110">1110</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math_8hpp_source.html#l00108">esimd_abs()</a>, <a class="el" href="math_8hpp_source.html#l01104">ESIMD_HDR_CONST_PI</a>, <a class="el" href="simd_8hpp_source.html#l00130">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::merge()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
+<p class="reference">References <a class="el" href="math_8hpp_source.html#l00108">esimd_abs()</a>, <a class="el" href="math_8hpp_source.html#l01104">ESIMD_HDR_CONST_PI</a>, <a class="el" href="simd_8hpp_source.html#l00137">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::merge()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
 
 </div>
 </div>
@@ -2387,7 +2411,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00699">699</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00175">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00182">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -2427,7 +2451,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00721">721</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00175">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00182">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -2467,7 +2491,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00744">744</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00175">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00182">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -2507,7 +2531,7 @@ template&lt;typename T , typename U , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00767">767</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00175">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00182">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -2633,7 +2657,7 @@ template&lt;typename T0 , typename T1 , typename U , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00368">368</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="math__intrin_8hpp_source.html#l00635">__esimd_smulh()</a>, <a class="el" href="math__intrin_8hpp_source.html#l00619">__esimd_umulh()</a>, and <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
+<p class="reference">References <a class="el" href="math__intrin_8hpp_source.html#l00635">__esimd_smulh()</a>, <a class="el" href="math__intrin_8hpp_source.html#l00619">__esimd_umulh()</a>, and <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
 
 </div>
 </div>
@@ -2759,7 +2783,7 @@ template&lt;typename T , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00788">788</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00175">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">References <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00182">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -2845,7 +2869,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00280">280</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
 
 </div>
 </div>
@@ -3025,7 +3049,7 @@ template&lt;typename T , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00509">509</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00078">saturation_off</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00078">saturation_off</a>.</p>
 
 </div>
 </div>
@@ -3179,7 +3203,7 @@ template&lt;typename T , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00556">556</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00078">saturation_off</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00078">saturation_off</a>.</p>
 
 </div>
 </div>
@@ -3381,7 +3405,7 @@ template&lt;int N&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l01252">1252</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
 
 </div>
 </div>
@@ -3449,7 +3473,7 @@ template&lt;int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00899">899</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00121">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::read()</a>, <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00175">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00128">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::read()</a>, <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>, and <a class="el" href="simd_8hpp_source.html#l00182">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::select()</a>.</p>
 
 </div>
 </div>
@@ -3579,7 +3603,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00215">215</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
 
 </div>
 </div>
@@ -3677,7 +3701,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00251">251</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
 
 </div>
 </div>
@@ -3733,7 +3757,7 @@ template&lt;typename T0 , typename T1 , int SZ&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00030">30</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>.</p>
 
 </div>
 </div>
@@ -3805,7 +3829,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00119">119</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
 
 </div>
 </div>
@@ -3883,7 +3907,7 @@ template&lt;typename T0 , typename T1 , int SZ, typename U &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="math_8hpp_source.html#l00173">173</a> of file <a class="el" href="math_8hpp_source.html">math.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00112">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
+<p class="reference">References <a class="el" href="simd_8hpp_source.html#l00119">cl::sycl::ext::intel::experimental::esimd::simd&lt; Ty, N &gt;::data()</a>, and <a class="el" href="sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html#l00081">saturation_on</a>.</p>
 
 </div>
 </div>
@@ -4035,7 +4059,7 @@ template&lt;typename T , typename U &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00115">115</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00119">119</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
 
 </div>
 </div>
@@ -4057,7 +4081,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00114">114</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00118">118</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
 
 </div>
 </div>
@@ -4079,7 +4103,7 @@ template&lt;typename T , typename U &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00110">110</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00114">114</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
 
 </div>
 </div>
@@ -4101,9 +4125,9 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00109">109</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="region_8hpp_source.html#l00113">113</a> of file <a class="el" href="region_8hpp_source.html">region.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="simd__view_8hpp_source.html#l00088">cl::sycl::ext::intel::experimental::esimd::simd_view&lt; BaseTy, RegionTy &gt;::getOffsetX()</a>, and <a class="el" href="simd__view_8hpp_source.html#l00091">cl::sycl::ext::intel::experimental::esimd::simd_view&lt; BaseTy, RegionTy &gt;::getOffsetY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="simd__view__impl_8hpp_source.html#l00091">cl::sycl::ext::intel::experimental::esimd::detail::simd_view_impl&lt; BaseTy, region_base_1&lt; Is2D, T, StrideY, StrideX &gt; &gt;::getOffsetX()</a>, and <a class="el" href="simd__view__impl_8hpp_source.html#l00094">cl::sycl::ext::intel::experimental::esimd::detail::simd_view_impl&lt; BaseTy, region_base_1&lt; Is2D, T, StrideY, StrideX &gt; &gt;::getOffsetY()</a>.</p>
 
 </div>
 </div>

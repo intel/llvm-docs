@@ -2620,9 +2620,9 @@ semantic) type, or one of its derivatives. Most attributes will derive from the
 later redeclarations of the <code class="docutils literal notranslate"><span class="pre">Decl</span></code> it is associated with.
 <code class="docutils literal notranslate"><span class="pre">InheritableParamAttr</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">InheritableAttr</span></code>, except that the
 attribute is written on a parameter instead of a declaration. If the attribute
-applies to statements, it should inherit from <code class="docutils literal notranslate"><span class="pre">StmtAttr`.</span> <span class="pre">If</span> <span class="pre">the</span> <span class="pre">attribute</span> <span class="pre">is</span>
-<span class="pre">intended</span> <span class="pre">to</span> <span class="pre">apply</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">type</span> <span class="pre">instead</span> <span class="pre">of</span> <span class="pre">a</span> <span class="pre">declaration,</span> <span class="pre">such</span> <span class="pre">an</span> <span class="pre">attribute</span> <span class="pre">should</span>
-<span class="pre">derive</span> <span class="pre">from</span> <span class="pre">``TypeAttr</span></code>, and will generally not be given an AST representation.
+applies to statements, it should inherit from <code class="docutils literal notranslate"><span class="pre">StmtAttr</span></code>. If the attribute is
+intended to apply to a type instead of a declaration, such an attribute should
+derive from <code class="docutils literal notranslate"><span class="pre">TypeAttr</span></code>, and will generally not be given an AST representation.
 (Note that this document does not cover the creation of type attributes.) An
 attribute that inherits from <code class="docutils literal notranslate"><span class="pre">IgnoredAttr</span></code> is parsed, but will generate an
 ignored attribute diagnostic when used, which may be useful when an attribute is

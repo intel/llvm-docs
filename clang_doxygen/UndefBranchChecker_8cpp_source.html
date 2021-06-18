@@ -152,7 +152,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="comment">// Emit the bug report.</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keyword">auto</span> R = std::make_unique&lt;PathSensitiveBugReport&gt;(</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          *BT, BT-&gt;getDescription(), N);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <a class="code" href="namespaceclang_1_1ento_1_1bugreporter.html#aba0d5cebbe6538a67dfc661a8ee535f1">bugreporter::trackExpressionValue</a>(N, Ex, *R);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <a class="code" href="namespaceclang_1_1ento_1_1bugreporter.html#a9f4acbc86c4e8c0a8601b7e7e42814c9">bugreporter::trackExpressionValue</a>(N, Ex, *R);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      R-&gt;addRange(Ex-&gt;<a class="code" href="classclang_1_1Stmt.html#a6844392ee6148b5fe821f211b95e5d1b">getSourceRange</a>());</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      Ctx.emitReport(std::move(R));</div>
@@ -168,7 +168,6 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespaceclang_1_1ento_1_1bugreporter_html_aba0d5cebbe6538a67dfc661a8ee535f1"><div class="ttname"><a href="namespaceclang_1_1ento_1_1bugreporter.html#aba0d5cebbe6538a67dfc661a8ee535f1">clang::ento::bugreporter::trackExpressionValue</a></div><div class="ttdeci">bool trackExpressionValue(const ExplodedNode *N, const Expr *E, PathSensitiveBugReport &amp;R, TrackingKind TKind=TrackingKind::Thorough, bool EnableNullFPSuppression=true)</div><div class="ttdoc">Attempts to add visitors to track expression value back to its point of origin.</div></div>
 <div class="ttc" id="aclassclang_1_1LocationContext_html"><div class="ttname"><a href="classclang_1_1LocationContext.html">clang::LocationContext</a></div><div class="ttdoc">It wraps the AnalysisDeclContext to represent both the call stack with the help of StackFrameContext ...</div><div class="ttdef"><b>Definition:</b> <a href="AnalysisDeclContext_8h_source.html#l00213">AnalysisDeclContext.h:213</a></div></div>
 <div class="ttc" id="aclassclang_1_1Stmt_html_a6844392ee6148b5fe821f211b95e5d1b"><div class="ttname"><a href="classclang_1_1Stmt.html#a6844392ee6148b5fe821f211b95e5d1b">clang::Stmt::getSourceRange</a></div><div class="ttdeci">SourceRange getSourceRange() const LLVM_READONLY</div><div class="ttdoc">SourceLocation tokens are not useful in isolation - they are low level value objects created/interpre...</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8cpp_source.html#l00324">Stmt.cpp:324</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1ento_html_a4e45a121820f0d80d8910093dd33a1df"><div class="ttname"><a href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">clang::ento::ProgramStateRef</a></div><div class="ttdeci">IntrusiveRefCntPtr&lt; const ProgramState &gt; ProgramStateRef</div><div class="ttdef"><b>Definition:</b> <a href="ProgramState__Fwd_8h_source.html#l00037">ProgramState_Fwd.h:37</a></div></div>
@@ -179,19 +178,20 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1Stmt_html_a489148e5d234a5a7f00d8b02981bcee5"><div class="ttname"><a href="classclang_1_1Stmt.html#a489148e5d234a5a7f00d8b02981bcee5">clang::Stmt::children</a></div><div class="ttdeci">child_range children()</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8cpp_source.html#l00285">Stmt.cpp:285</a></div></div>
 <div class="ttc" id="aType_8h_html"><div class="ttname"><a href="Type_8h.html">Type.h</a></div></div>
 <div class="ttc" id="aStmtObjC_8h_html"><div class="ttname"><a href="StmtObjC_8h.html">StmtObjC.h</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1ento_1_1bugreporter_html_a9f4acbc86c4e8c0a8601b7e7e42814c9"><div class="ttname"><a href="namespaceclang_1_1ento_1_1bugreporter.html#a9f4acbc86c4e8c0a8601b7e7e42814c9">clang::ento::bugreporter::trackExpressionValue</a></div><div class="ttdeci">bool trackExpressionValue(const ExplodedNode *N, const Expr *E, PathSensitiveBugReport &amp;R, TrackingOptions Opts={})</div><div class="ttdoc">Attempts to add visitors to track expression value back to its point of origin.</div></div>
 <div class="ttc" id="aclassclang_1_1PostStmt_html"><div class="ttname"><a href="classclang_1_1PostStmt.html">clang::PostStmt</a></div><div class="ttdef"><b>Definition:</b> <a href="ProgramPoint_8h_source.html#l00311">ProgramPoint.h:311</a></div></div>
 <div class="ttc" id="aASTMatchersInternal_8cpp_html_a538dc9e683c4153ed65c95352d7ffa40"><div class="ttname"><a href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a></div><div class="ttdeci">StringRef P</div><div class="ttdef"><b>Definition:</b> <a href="ASTMatchersInternal_8cpp_source.html#l00563">ASTMatchersInternal.cpp:563</a></div></div>
 <div class="ttc" id="aBugType_8h_html"><div class="ttname"><a href="BugType_8h.html">BugType.h</a></div></div>
 <div class="ttc" id="aCheckerContext_8h_html"><div class="ttname"><a href="CheckerContext_8h.html">CheckerContext.h</a></div></div>
 <div class="ttc" id="aChecker_8h_html"><div class="ttname"><a href="Checker_8h.html">Checker.h</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="Format_8h_source.html#l03702">Format.h:3702</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="Format_8h_source.html#l03732">Format.h:3732</a></div></div>
 <div class="ttc" id="anamespaceclang_html"><div class="ttname"><a href="namespaceclang.html">clang</a></div><div class="ttdef"><b>Definition:</b> <a href="CalledOnceCheck_8h_source.html#l00017">CalledOnceCheck.h:17</a></div></div>
 <div class="ttc" id="aclassclang_1_1Stmt_html"><div class="ttname"><a href="classclang_1_1Stmt.html">clang::Stmt</a></div><div class="ttdoc">Stmt - This represents one statement.</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8h_source.html#l00068">Stmt.h:68</a></div></div>
 <div class="ttc" id="aclassclang_1_1Expr_html"><div class="ttname"><a href="classclang_1_1Expr.html">clang::Expr</a></div><div class="ttdoc">This represents one expression.</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l00109">Expr.h:109</a></div></div>
 <div class="ttc" id="aclassclang_1_1ProgramPoint_html"><div class="ttname"><a href="classclang_1_1ProgramPoint.html">clang::ProgramPoint</a></div><div class="ttdef"><b>Definition:</b> <a href="ProgramPoint_8h_source.html#l00059">ProgramPoint.h:59</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:14 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:05:34 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -8,6 +8,7 @@ var region_8hpp =
     [ "shape_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
     [ "region1d_t", "region_8hpp.html#ad3e1e4ec14c370f5c370b56fa96275eb", null ],
     [ "region2d_t", "region_8hpp.html#a1672a8de15b42056076243017fff56fa", null ],
+    [ "region_base_1", "region_8hpp.html#adaaec1366e0befda90c0cdf66d433249", null ],
     [ "getBaseRegion", "region_8hpp.html#a5349939024ef17f98f78bf457e43f3dd", null ],
     [ "getBaseRegion", "region_8hpp.html#a3eb7b50b211d60fda2ca517a8340bf11", null ],
     [ "getTopRegion", "region_8hpp.html#a1d601e7b1503f0cf2ab0c767b80e8c28", null ],

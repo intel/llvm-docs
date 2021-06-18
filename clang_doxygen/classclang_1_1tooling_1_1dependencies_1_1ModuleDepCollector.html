@@ -76,8 +76,8 @@ Collaboration diagram for clang::tooling::dependencies::ModuleDepCollector:</div
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a48575a34ebc7fbeccfc41cc01480cd24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1tooling_1_1dependencies_1_1ModuleDepCollector.html#a48575a34ebc7fbeccfc41cc01480cd24">ModuleDepCollector</a> (std::unique_ptr&lt; <a class="el" href="classclang_1_1DependencyOutputOptions.html">DependencyOutputOptions</a> &gt; Opts, <a class="el" href="classclang_1_1CompilerInstance.html">CompilerInstance</a> &amp;I, <a class="el" href="classclang_1_1tooling_1_1dependencies_1_1DependencyConsumer.html">DependencyConsumer</a> &amp;C)</td></tr>
-<tr class="separator:a48575a34ebc7fbeccfc41cc01480cd24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecc6f86bd7481bd99b85ed70cf1c28a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1tooling_1_1dependencies_1_1ModuleDepCollector.html#a3ecc6f86bd7481bd99b85ed70cf1c28a">ModuleDepCollector</a> (std::unique_ptr&lt; <a class="el" href="classclang_1_1DependencyOutputOptions.html">DependencyOutputOptions</a> &gt; Opts, <a class="el" href="classclang_1_1CompilerInstance.html">CompilerInstance</a> &amp;I, <a class="el" href="classclang_1_1tooling_1_1dependencies_1_1DependencyConsumer.html">DependencyConsumer</a> &amp;C, <a class="el" href="classclang_1_1CompilerInvocation.html">CompilerInvocation</a> &amp;&amp;OriginalCI)</td></tr>
+<tr class="separator:a3ecc6f86bd7481bd99b85ed70cf1c28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc25e2f2c5c6fd1e396359219da5b8f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1tooling_1_1dependencies_1_1ModuleDepCollector.html#adc25e2f2c5c6fd1e396359219da5b8f0">attachToPreprocessor</a> (<a class="el" href="classclang_1_1Preprocessor.html">Preprocessor</a> &amp;PP) override</td></tr>
 <tr class="separator:adc25e2f2c5c6fd1e396359219da5b8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff7ce1fba2c33d9f69e3494e87873aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1tooling_1_1dependencies_1_1ModuleDepCollector.html#aff7ce1fba2c33d9f69e3494e87873aa8">attachToASTReader</a> (<a class="el" href="classclang_1_1ASTReader.html">ASTReader</a> &amp;R) override</td></tr>
@@ -110,10 +110,10 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Collects modular and non-modular dependencies of the main file by attaching <code><a class="el" href="classclang_1_1tooling_1_1dependencies_1_1ModuleDepCollectorPP.html" title="Callback that records textual includes and direct modular includes/imports during preprocessing.">ModuleDepCollectorPP</a></code> to the preprocessor. </p>
 
-<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8h_source.html#l00168">168</a> of file <a class="el" href="ModuleDepCollector_8h_source.html">ModuleDepCollector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8h_source.html#l00190">190</a> of file <a class="el" href="ModuleDepCollector_8h_source.html">ModuleDepCollector.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a48575a34ebc7fbeccfc41cc01480cd24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48575a34ebc7fbeccfc41cc01480cd24">&#9670;&nbsp;</a></span>ModuleDepCollector()</h2>
+<a id="a3ecc6f86bd7481bd99b85ed70cf1c28a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecc6f86bd7481bd99b85ed70cf1c28a">&#9670;&nbsp;</a></span>ModuleDepCollector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +134,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classclang_1_1tooling_1_1dependencies_1_1DependencyConsumer.html">DependencyConsumer</a> &amp;&#160;</td>
-          <td class="paramname"><em>C</em>&#160;</td>
+          <td class="paramname"><em>C</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classclang_1_1CompilerInvocation.html">CompilerInvocation</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>OriginalCI</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -144,7 +150,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8cpp_source.html#l00237">237</a> of file <a class="el" href="ModuleDepCollector_8cpp_source.html">ModuleDepCollector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8cpp_source.html#l00269">269</a> of file <a class="el" href="ModuleDepCollector_8cpp_source.html">ModuleDepCollector.cpp</a>.</p>
 
 </div>
 </div>
@@ -175,7 +181,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1DependencyCollector.html#a5c2223ba16cb83ccf978d25837e81fb1">clang::DependencyCollector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8cpp_source.html#l00246">246</a> of file <a class="el" href="ModuleDepCollector_8cpp_source.html">ModuleDepCollector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8cpp_source.html#l00279">279</a> of file <a class="el" href="ModuleDepCollector_8cpp_source.html">ModuleDepCollector.cpp</a>.</p>
 
 </div>
 </div>
@@ -205,7 +211,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1DependencyCollector.html#a0ae1ed3a37c175db4009e72752395ec0">clang::DependencyCollector</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8cpp_source.html#l00242">242</a> of file <a class="el" href="ModuleDepCollector_8cpp_source.html">ModuleDepCollector.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ModuleDepCollector_8cpp_source.html#l00275">275</a> of file <a class="el" href="ModuleDepCollector_8cpp_source.html">ModuleDepCollector.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Preprocessor_8h_source.html#l01020">clang::Preprocessor::addPPCallbacks()</a>.</p>
 
@@ -218,7 +224,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:51 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:06:13 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

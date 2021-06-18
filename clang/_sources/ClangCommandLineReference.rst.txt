@@ -1091,6 +1091,10 @@ Enable linker dead stripping of globals in AddressSanitizer
 
 Enable poisoning array cookies when using custom operator new\[\] in AddressSanitizer
 
+.. option:: -fsanitize-address-use-after-return=<mode>
+
+Select the mode of detecting stack use-after-return in AddressSanitizer
+
 .. option:: -fsanitize-address-use-after-scope, -fno-sanitize-address-use-after-scope
 
 Enable use-after-scope detection in AddressSanitizer
@@ -2198,10 +2202,6 @@ Do not elide types when printing diagnostics
 
 .. option:: -fno-max-type-align
 
-.. option:: -fno-operator-names
-
-Do not treat C++ operator name keywords as synonyms for operators
-
 .. option:: -fno-strict-modules-decluse
 
 .. option:: -fno-temp-file
@@ -2293,6 +2293,8 @@ Emit OpenMP code only for SIMD-based constructs.
 .. program:: clang
 
 .. option:: -foperator-arrow-depth=<arg>
+
+.. option:: -foperator-names, -fno-operator-names
 
 .. option:: -foptimization-record-file=<file>
 
@@ -2794,6 +2796,8 @@ The visibility for defintiions without an explicit DLL export class \[-fvisibili
 
 Set the default symbol visibility for all global declarations
 
+.. option:: -fwarn-stack-size=<arg>
+
 .. option:: -fwasm-exceptions
 
 Use WebAssembly style exceptions
@@ -2881,6 +2885,10 @@ When using -fxray-function-groups, select which group of functions to instrument
 .. option:: -fzvector, -fno-zvector, -mzvector
 
 Enable System z vector language extension
+
+.. option:: --gpu-bundle-output, --no-gpu-bundle-output
+
+Bundle output files of HIP device compilation
 
 .. option:: -module-suffix <suffix>
 

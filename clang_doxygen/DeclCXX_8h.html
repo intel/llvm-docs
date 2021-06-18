@@ -199,16 +199,22 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit declaration of a temporary that was materialized by a <a class="el" href="classclang_1_1MaterializeTemporaryExpr.html" title="Represents a prvalue temporary that is written into memory so that a reference can bind to it.">MaterializeTemporaryExpr</a> and lifetime-extended by a declaration.  <a href="classclang_1_1LifetimeExtendedTemporaryDecl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html">clang::UsingShadowDecl</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a shadow declaration introduced into a scope by a (resolved) using declaration.  <a href="classclang_1_1UsingShadowDecl.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a shadow declaration implicitly introduced into a scope by a (resolved) using-declaration or using-enum-declaration to achieve the desired lookup semantics.  <a href="classclang_1_1UsingShadowDecl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ConstructorUsingShadowDecl.html">clang::ConstructorUsingShadowDecl</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a shadow constructor declaration introduced into a class by a C++11 using-declaration that names a constructor.  <a href="classclang_1_1ConstructorUsingShadowDecl.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1BaseUsingDecl.html">clang::BaseUsingDecl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a C++ declaration that introduces decls from somewhere else.  <a href="classclang_1_1BaseUsingDecl.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1BaseUsingDecl_1_1shadow__iterator.html">clang::BaseUsingDecl::shadow_iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates through the using shadow declarations associated with this using declaration.  <a href="classclang_1_1BaseUsingDecl_1_1shadow__iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingDecl.html">clang::UsingDecl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a C++ using-declaration.  <a href="classclang_1_1UsingDecl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingDecl_1_1shadow__iterator.html">clang::UsingDecl::shadow_iterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterates through the using shadow declarations associated with this using declaration.  <a href="classclang_1_1UsingDecl_1_1shadow__iterator.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ConstructorUsingShadowDecl.html">clang::ConstructorUsingShadowDecl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a shadow constructor declaration introduced into a class by a C++11 using-declaration that names a constructor.  <a href="classclang_1_1ConstructorUsingShadowDecl.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingEnumDecl.html">clang::UsingEnumDecl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a C++ using-enum-declaration.  <a href="classclang_1_1UsingEnumDecl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingPackDecl.html">clang::UsingPackDecl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a pack of using declarations that a single using-declarator pack-expanded into.  <a href="classclang_1_1UsingPackDecl.html#details">More...</a><br /></td></tr>
@@ -294,14 +300,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l00279">279</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l00280">280</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:16 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:05:36 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      std::make_unique&lt;PathSensitiveBugReport&gt;(BT, BT.getDescription(), N);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  Report-&gt;addRange(RetE-&gt;<a class="code" href="classclang_1_1Stmt.html#a6844392ee6148b5fe821f211b95e5d1b">getSourceRange</a>());</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="namespaceclang_1_1ento_1_1bugreporter.html#aba0d5cebbe6538a67dfc661a8ee535f1">bugreporter::trackExpressionValue</a>(N, TrackingE ? TrackingE : RetE, *Report);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="namespaceclang_1_1ento_1_1bugreporter.html#a9f4acbc86c4e8c0a8601b7e7e42814c9">bugreporter::trackExpressionValue</a>(N, TrackingE ? TrackingE : RetE, *Report);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  C.emitReport(std::move(Report));</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
@@ -175,7 +175,6 @@ $(function() {
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespaceclang_1_1ento_1_1bugreporter_html_aba0d5cebbe6538a67dfc661a8ee535f1"><div class="ttname"><a href="namespaceclang_1_1ento_1_1bugreporter.html#aba0d5cebbe6538a67dfc661a8ee535f1">clang::ento::bugreporter::trackExpressionValue</a></div><div class="ttdeci">bool trackExpressionValue(const ExplodedNode *N, const Expr *E, PathSensitiveBugReport &amp;R, TrackingKind TKind=TrackingKind::Thorough, bool EnableNullFPSuppression=true)</div><div class="ttdoc">Attempts to add visitors to track expression value back to its point of origin.</div></div>
 <div class="ttc" id="aclassclang_1_1ReturnStmt_html_ad881fe4d5e16463b6c65564d893d94b8"><div class="ttname"><a href="classclang_1_1ReturnStmt.html#ad881fe4d5e16463b6c65564d893d94b8">clang::ReturnStmt::getRetValue</a></div><div class="ttdeci">Expr * getRetValue()</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8h_source.html#l02764">Stmt.h:2764</a></div></div>
 <div class="ttc" id="aclassclang_1_1Stmt_html_a6844392ee6148b5fe821f211b95e5d1b"><div class="ttname"><a href="classclang_1_1Stmt.html#a6844392ee6148b5fe821f211b95e5d1b">clang::Stmt::getSourceRange</a></div><div class="ttdeci">SourceRange getSourceRange() const LLVM_READONLY</div><div class="ttdoc">SourceLocation tokens are not useful in isolation - they are low level value objects created/interpre...</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8cpp_source.html#l00324">Stmt.cpp:324</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1ento_html_a4e45a121820f0d80d8910093dd33a1df"><div class="ttname"><a href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">clang::ento::ProgramStateRef</a></div><div class="ttdeci">IntrusiveRefCntPtr&lt; const ProgramState &gt; ProgramStateRef</div><div class="ttdef"><b>Definition:</b> <a href="ProgramState__Fwd_8h_source.html#l00037">ProgramState_Fwd.h:37</a></div></div>
@@ -188,6 +187,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1Type_html_a48b2c2b1c98a1800de465320ee70badc"><div class="ttname"><a href="classclang_1_1Type.html#a48b2c2b1c98a1800de465320ee70badc">clang::Type::isReferenceType</a></div><div class="ttdeci">bool isReferenceType() const</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l06697">Type.h:6697</a></div></div>
 <div class="ttc" id="aBuiltinCheckerRegistration_8h_html"><div class="ttname"><a href="BuiltinCheckerRegistration_8h.html">BuiltinCheckerRegistration.h</a></div></div>
 <div class="ttc" id="aCheckerManager_8h_html"><div class="ttname"><a href="CheckerManager_8h.html">CheckerManager.h</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1ento_1_1bugreporter_html_a9f4acbc86c4e8c0a8601b7e7e42814c9"><div class="ttname"><a href="namespaceclang_1_1ento_1_1bugreporter.html#a9f4acbc86c4e8c0a8601b7e7e42814c9">clang::ento::bugreporter::trackExpressionValue</a></div><div class="ttdeci">bool trackExpressionValue(const ExplodedNode *N, const Expr *E, PathSensitiveBugReport &amp;R, TrackingOptions Opts={})</div><div class="ttdoc">Attempts to add visitors to track expression value back to its point of origin.</div></div>
 <div class="ttc" id="anamespaceclang_1_1ento_1_1bugreporter_html_a997710cc651525b7c294df16f59244b3"><div class="ttname"><a href="namespaceclang_1_1ento_1_1bugreporter.html#a997710cc651525b7c294df16f59244b3">clang::ento::bugreporter::getDerefExpr</a></div><div class="ttdeci">const Expr * getDerefExpr(const Stmt *S)</div></div>
 <div class="ttc" id="aBugType_8h_html"><div class="ttname"><a href="BugType_8h.html">BugType.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1QualType_html_a54127635d2ca4754e91ee96b594eff74"><div class="ttname"><a href="classclang_1_1QualType.html#a54127635d2ca4754e91ee96b594eff74">clang::QualType::isNull</a></div><div class="ttdeci">bool isNull() const</div><div class="ttdoc">Return true if this QualType doesn't point to a type yet.</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l00733">Type.h:733</a></div></div>
@@ -201,7 +201,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1ReturnStmt_html"><div class="ttname"><a href="classclang_1_1ReturnStmt.html">clang::ReturnStmt</a></div><div class="ttdoc">ReturnStmt - This represents a return, optionally of an expression: return; return 4;.</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8h_source.html#l02731">Stmt.h:2731</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:13 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:05:33 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

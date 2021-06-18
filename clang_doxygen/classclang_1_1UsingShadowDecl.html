@@ -55,7 +55,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Represents a shadow declaration introduced into a scope by a (resolved) using declaration.  
+<p>Represents a shadow declaration implicitly introduced into a scope by a (resolved) using-declaration or using-enum-declaration to achieve the desired lookup semantics.  
  <a href="classclang_1_1UsingShadowDecl.html#details">More...</a></p>
 
 <p><code>#include &quot;<a class="el" href="DeclCXX_8h_source.html">clang/AST/DeclCXX.h</a>&quot;</code></p>
@@ -64,7 +64,7 @@ Inheritance diagram for clang::UsingShadowDecl:</div>
 <div class="dyncontent">
 <div class="center"><img src="classclang_1_1UsingShadowDecl__inherit__graph.png" border="0" usemap="#clang_1_1UsingShadowDecl_inherit__map" alt="Inheritance graph"/></div>
 <map name="clang_1_1UsingShadowDecl_inherit__map" id="clang_1_1UsingShadowDecl_inherit__map">
-<area shape="rect" title="Represents a shadow declaration introduced into a scope by a (resolved) using declaration." alt="" coords="74,200,257,227"/>
+<area shape="rect" title="Represents a shadow declaration implicitly introduced into a scope by a (resolved) using&#45;declaration ..." alt="" coords="74,200,257,227"/>
 <area shape="rect" href="classclang_1_1ConstructorUsingShadowDecl.html" title="Represents a shadow constructor declaration introduced into a class by a C++11 using&#45;declaration that..." alt="" coords="37,276,294,303"/>
 <area shape="rect" href="classclang_1_1NamedDecl.html" title="This represents a decl that may have a name." alt="" coords="5,117,147,143"/>
 <area shape="rect" href="classclang_1_1Decl.html" title="Decl &#45; This represents one declaration (or definition), e.g." alt="" coords="29,13,123,39"/>
@@ -77,7 +77,7 @@ Collaboration diagram for clang::UsingShadowDecl:</div>
 <div class="dyncontent">
 <div class="center"><img src="classclang_1_1UsingShadowDecl__coll__graph.png" border="0" usemap="#clang_1_1UsingShadowDecl_coll__map" alt="Collaboration graph"/></div>
 <map name="clang_1_1UsingShadowDecl_coll__map" id="clang_1_1UsingShadowDecl_coll__map">
-<area shape="rect" title="Represents a shadow declaration introduced into a scope by a (resolved) using declaration." alt="" coords="860,139,1043,166"/>
+<area shape="rect" title="Represents a shadow declaration implicitly introduced into a scope by a (resolved) using&#45;declaration ..." alt="" coords="860,139,1043,166"/>
 <area shape="rect" href="classclang_1_1Redeclarable.html" title=" " alt="" coords="1243,79,1412,120"/>
 <area shape="rect" href="classclang_1_1NamedDecl.html" title="This represents a decl that may have a name." alt="" coords="576,139,717,166"/>
 <area shape="rect" href="classclang_1_1Decl.html" title="Decl &#45; This represents one declaration (or definition), e.g." alt="" coords="413,139,508,166"/>
@@ -176,9 +176,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80aeea2bc1bc40a74eaff04a4c4a10d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#a80aeea2bc1bc40a74eaff04a4c4a10d3">setTargetDecl</a> (<a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *ND)</td></tr>
 <tr class="memdesc:a80aeea2bc1bc40a74eaff04a4c4a10d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the underlying declaration which has been brought into the local scope.  <a href="classclang_1_1UsingShadowDecl.html#a80aeea2bc1bc40a74eaff04a4c4a10d3">More...</a><br /></td></tr>
 <tr class="separator:a80aeea2bc1bc40a74eaff04a4c4a10d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c9e9a13f9e4c94fdb5b61397bc69b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#ad9c9e9a13f9e4c94fdb5b61397bc69b7">getUsingDecl</a> () const</td></tr>
-<tr class="memdesc:ad9c9e9a13f9e4c94fdb5b61397bc69b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the using declaration to which this declaration is tied.  <a href="classclang_1_1UsingShadowDecl.html#ad9c9e9a13f9e4c94fdb5b61397bc69b7">More...</a><br /></td></tr>
-<tr class="separator:ad9c9e9a13f9e4c94fdb5b61397bc69b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af202594ca711760a1e27a6b4d26c4e3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#af202594ca711760a1e27a6b4d26c4e3d">getIntroducer</a> () const</td></tr>
+<tr class="memdesc:af202594ca711760a1e27a6b4d26c4e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the (written or instantiated) using declaration that introduced this declaration.  <a href="classclang_1_1UsingShadowDecl.html#af202594ca711760a1e27a6b4d26c4e3d">More...</a><br /></td></tr>
+<tr class="separator:af202594ca711760a1e27a6b4d26c4e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a098068f271113270f0d686b67cc530f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1UsingShadowDecl.html">UsingShadowDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#a098068f271113270f0d686b67cc530f9">getNextUsingShadowDecl</a> () const</td></tr>
 <tr class="memdesc:a098068f271113270f0d686b67cc530f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The next using shadow declaration contained in the shadow decl chain of the using declaration which introduced this decl.  <a href="classclang_1_1UsingShadowDecl.html#a098068f271113270f0d686b67cc530f9">More...</a><br /></td></tr>
 <tr class="separator:a098068f271113270f0d686b67cc530f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -645,8 +645,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a28529c278caf8213819671e10e94dbe6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classclang_1_1UsingShadowDecl.html">UsingShadowDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#a28529c278caf8213819671e10e94dbe6">Create</a> (<a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;C, <a class="el" href="classclang_1_1DeclContext.html">DeclContext</a> *DC, <a class="el" href="classclang_1_1SourceLocation.html">SourceLocation</a> Loc, <a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a> *Using, <a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *Target)</td></tr>
-<tr class="separator:a28529c278caf8213819671e10e94dbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b2a4fc1ccfd0fd7257cc4f9ae93603"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classclang_1_1UsingShadowDecl.html">UsingShadowDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#a80b2a4fc1ccfd0fd7257cc4f9ae93603">Create</a> (<a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;C, <a class="el" href="classclang_1_1DeclContext.html">DeclContext</a> *DC, <a class="el" href="classclang_1_1SourceLocation.html">SourceLocation</a> Loc, <a class="el" href="classclang_1_1DeclarationName.html">DeclarationName</a> Name, <a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a> *Introducer, <a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *Target)</td></tr>
+<tr class="separator:a80b2a4fc1ccfd0fd7257cc4f9ae93603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba7221ea70a0a801b316fcdb7b927c8d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classclang_1_1UsingShadowDecl.html">UsingShadowDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#aba7221ea70a0a801b316fcdb7b927c8d">CreateDeserialized</a> (<a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;C, <a class="el" href="classunsigned.html">unsigned</a> ID)</td></tr>
 <tr class="separator:aba7221ea70a0a801b316fcdb7b927c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad02a1717621682e814526a6b6df7aa60"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#ad02a1717621682e814526a6b6df7aa60">classof</a> (const <a class="el" href="classclang_1_1Decl.html">Decl</a> *D)</td></tr>
@@ -680,8 +680,8 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aaa177422d3575fe77afe44ff4f3267cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#aaa177422d3575fe77afe44ff4f3267cb">UsingShadowDecl</a> (<a class="el" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Kind</a> K, <a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;C, <a class="el" href="classclang_1_1DeclContext.html">DeclContext</a> *DC, <a class="el" href="classclang_1_1SourceLocation.html">SourceLocation</a> Loc, <a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a> *Using, <a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *Target)</td></tr>
-<tr class="separator:aaa177422d3575fe77afe44ff4f3267cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac080e1a23ce2ad4f72076d7ca425904a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#ac080e1a23ce2ad4f72076d7ca425904a">UsingShadowDecl</a> (<a class="el" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Kind</a> K, <a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;C, <a class="el" href="classclang_1_1DeclContext.html">DeclContext</a> *DC, <a class="el" href="classclang_1_1SourceLocation.html">SourceLocation</a> Loc, <a class="el" href="classclang_1_1DeclarationName.html">DeclarationName</a> Name, <a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a> *Introducer, <a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *Target)</td></tr>
+<tr class="separator:ac080e1a23ce2ad4f72076d7ca425904a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae83369286644f33c75685c7859aa27a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#ae83369286644f33c75685c7859aa27a5">UsingShadowDecl</a> (<a class="el" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Kind</a> K, <a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;C, <a class="el" href="structclang_1_1Decl_1_1EmptyShell.html">EmptyShell</a>)</td></tr>
 <tr class="separator:ae83369286644f33c75685c7859aa27a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classclang_1_1NamedDecl"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classclang_1_1NamedDecl')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classclang_1_1NamedDecl.html">clang::NamedDecl</a></td></tr>
@@ -722,8 +722,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a857e16b9bc4e345e11c3cde06ef802d6"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#a857e16b9bc4e345e11c3cde06ef802d6">UsingDecl</a></td></tr>
-<tr class="separator:a857e16b9bc4e345e11c3cde06ef802d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add7027ac6c0e1e23826853ed820c9ce8"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#add7027ac6c0e1e23826853ed820c9ce8">BaseUsingDecl</a></td></tr>
+<tr class="separator:add7027ac6c0e1e23826853ed820c9ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c90c31849a7e44e82778bc157ad9588"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#a6c90c31849a7e44e82778bc157ad9588">ASTDeclReader</a></td></tr>
 <tr class="separator:a6c90c31849a7e44e82778bc157ad9588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf78a162132cef88281b20d4929a43dd"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1UsingShadowDecl.html#aaf78a162132cef88281b20d4929a43dd">ASTDeclWriter</a></td></tr>
@@ -760,16 +760,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa86c6b0254f6f6928d38667d0831557f inherit pro_attribs_classclang_1_1Redeclarable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents a shadow declaration introduced into a scope by a (resolved) using declaration. </p>
-<p>For example, </p><div class="fragment"><div class="line"><span class="keyword">namespace </span>A {</div>
+<div class="textblock"><p>Represents a shadow declaration implicitly introduced into a scope by a (resolved) using-declaration or using-enum-declaration to achieve the desired lookup semantics. </p>
+<p>For example: </p><div class="fragment"><div class="line"><span class="keyword">namespace </span>A {</div>
 <div class="line">  <span class="keywordtype">void</span> foo();</div>
+<div class="line">  <span class="keywordtype">void</span> foo(<span class="keywordtype">int</span>);</div>
+<div class="line">  <span class="keyword">struct </span>foo {};</div>
+<div class="line">  <span class="keyword">enum</span> bar { bar1, bar2 };</div>
 <div class="line">}</div>
 <div class="line"><span class="keyword">namespace </span>B {</div>
-<div class="line">  <span class="keyword">using</span> A::foo; <span class="comment">// &lt;- a UsingDecl</span></div>
-<div class="line">                <span class="comment">// Also creates a UsingShadowDecl for A::foo() in B</span></div>
+<div class="line">  <span class="comment">// add a UsingDecl and three UsingShadowDecls (named foo) to B.</span></div>
+<div class="line">  <span class="keyword">using</span> A::foo;</div>
+<div class="line">  <span class="comment">// adds UsingEnumDecl and two UsingShadowDecls (named bar1 and bar2) to B.</span></div>
+<div class="line">  <span class="keyword">using</span> <span class="keyword">enum</span> A::bar;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03179">3179</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03186">3186</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ac05f2693ae121cbe9e41233a7f3823be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac05f2693ae121cbe9e41233a7f3823be">&#9670;&nbsp;</a></span>redecl_iterator</h2>
@@ -783,7 +788,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03223">3223</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03232">3232</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
@@ -799,13 +804,13 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03222">3222</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03231">3231</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aaa177422d3575fe77afe44ff4f3267cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa177422d3575fe77afe44ff4f3267cb">&#9670;&nbsp;</a></span>UsingShadowDecl() <span class="overload">[1/2]</span></h2>
+<a id="ac080e1a23ce2ad4f72076d7ca425904a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac080e1a23ce2ad4f72076d7ca425904a">&#9670;&nbsp;</a></span>UsingShadowDecl() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -840,8 +845,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a> *&#160;</td>
-          <td class="paramname"><em>Using</em>, </td>
+          <td class="paramtype"><a class="el" href="classclang_1_1DeclarationName.html">DeclarationName</a>&#160;</td>
+          <td class="paramname"><em>Name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a> *&#160;</td>
+          <td class="paramname"><em>Introducer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -862,11 +873,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l02985">2985</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l02971">2971</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DeclBase_8h_source.html#l00564">clang::Decl::setImplicit()</a>, <a class="el" href="DeclCXX_8h_source.html#l03245">setTargetDecl()</a>, and <a class="el" href="namespaceclang.html#acdf88ec6c845aa781824469fcb0af66cac41a31890959544c6523af684561abe5">clang::Target</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="DeclCXX_8h_source.html#l03214">Create()</a>, and <a class="el" href="DeclCXX_8cpp_source.html#l03000">CreateDeserialized()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeclCXX_8cpp_source.html#l02986">CreateDeserialized()</a>.</p>
 
 </div>
 </div>
@@ -910,7 +919,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l02995">2995</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l02981">2981</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
 
 </div>
 </div>
@@ -939,9 +948,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03264">3264</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03274">3274</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
-<p class="reference">References <a class="el" href="DeclCXX_8h_source.html#l03265">classofKind()</a>, and <a class="el" href="DeclBase_8h_source.html#l00433">clang::Decl::getKind()</a>.</p>
+<p class="reference">References <a class="el" href="DeclCXX_8h_source.html#l03275">classofKind()</a>, and <a class="el" href="DeclBase_8h_source.html#l00433">clang::Decl::getKind()</a>.</p>
 
 </div>
 </div>
@@ -969,14 +978,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03265">3265</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03275">3275</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeclCXX_8h_source.html#l03264">classof()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="DeclCXX_8h_source.html#l03274">classof()</a>.</p>
 
 </div>
 </div>
-<a id="a28529c278caf8213819671e10e94dbe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28529c278caf8213819671e10e94dbe6">&#9670;&nbsp;</a></span>Create()</h2>
+<a id="a80b2a4fc1ccfd0fd7257cc4f9ae93603"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b2a4fc1ccfd0fd7257cc4f9ae93603">&#9670;&nbsp;</a></span>Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1005,8 +1014,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a> *&#160;</td>
-          <td class="paramname"><em>Using</em>, </td>
+          <td class="paramtype"><a class="el" href="classclang_1_1DeclarationName.html">DeclarationName</a>&#160;</td>
+          <td class="paramname"><em>Name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a> *&#160;</td>
+          <td class="paramname"><em>Introducer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1027,9 +1042,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03214">3214</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
-
-<p class="reference">References <a class="el" href="SemaDeclAttr_8cpp_source.html#l00053">AttributeLangSupport::C</a>, <a class="el" href="namespaceclang.html#acdf88ec6c845aa781824469fcb0af66cac41a31890959544c6523af684561abe5">clang::Target</a>, and <a class="el" href="DeclCXX_8cpp_source.html#l02985">UsingShadowDecl()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03222">3222</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
@@ -1067,9 +1080,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l03000">3000</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l02986">2986</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="SemaDeclAttr_8cpp_source.html#l00053">AttributeLangSupport::C</a>, and <a class="el" href="DeclCXX_8cpp_source.html#l02985">UsingShadowDecl()</a>.</p>
+<p class="reference">References <a class="el" href="SemaDeclAttr_8cpp_source.html#l00053">AttributeLangSupport::C</a>, and <a class="el" href="DeclCXX_8cpp_source.html#l02971">UsingShadowDecl()</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1109,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03235">3235</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03244">3244</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Redeclarable_8h_source.html#l00215">clang::Redeclarable&lt; UsingShadowDecl &gt;::getFirstDecl()</a>.</p>
 
@@ -1129,9 +1142,32 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1Decl.html#a8dc8c86b18af77eba9afe42e4f429fdc">clang::Decl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03232">3232</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03241">3241</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Redeclarable_8h_source.html#l00215">clang::Redeclarable&lt; UsingShadowDecl &gt;::getFirstDecl()</a>.</p>
+
+</div>
+</div>
+<a id="af202594ca711760a1e27a6b4d26c4e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af202594ca711760a1e27a6b4d26c4e3d">&#9670;&nbsp;</a></span>getIntroducer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a> * UsingShadowDecl::getIntroducer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the (written or instantiated) using declaration that introduced this declaration. </p>
+
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l02990">2990</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="DeclCXX_8h_source.html#l03520">clang::ConstructorUsingShadowDecl::getIntroducer()</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1196,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>The next using shadow declaration contained in the shadow decl chain of the using declaration which introduced this decl. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03260">3260</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03270">3270</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
@@ -1189,32 +1225,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Gets the underlying declaration which has been brought into the local scope. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03241">3241</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03250">3250</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="DeclCXX_8h_source.html#l03363">clang::ConstructorUsingShadowDecl::getConstructedBaseClass()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l02086">clang::TextNodeDumper::VisitConstructorUsingShadowDecl()</a>, <a class="el" href="ASTWriterDecl_8cpp_source.html#l01290">clang::ASTDeclWriter::VisitUsingShadowDecl()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l00759">clang::JSONNodeDumper::VisitUsingShadowDecl()</a>, and <a class="el" href="TextNodeDumper_8cpp_source.html#l02081">clang::TextNodeDumper::VisitUsingShadowDecl()</a>.</p>
-
-</div>
-</div>
-<a id="ad9c9e9a13f9e4c94fdb5b61397bc69b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9c9e9a13f9e4c94fdb5b61397bc69b7">&#9670;&nbsp;</a></span>getUsingDecl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a> * UsingShadowDecl::getUsingDecl </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the using declaration to which this declaration is tied. </p>
-
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8cpp_source.html#l03004">3004</a> of file <a class="el" href="DeclCXX_8cpp_source.html">DeclCXX.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="DeclCXX_8cpp_source.html#l03027">clang::ConstructorUsingShadowDecl::getNominatedBaseClass()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaDeclCXX_8cpp_source.html#l12512">clang::Sema::CheckUsingDeclQualifier()</a>, <a class="el" href="DeclCXX_8h_source.html#l03554">clang::ConstructorUsingShadowDecl::getConstructedBaseClass()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l02092">clang::TextNodeDumper::VisitConstructorUsingShadowDecl()</a>, <a class="el" href="ASTWriterDecl_8cpp_source.html#l01301">clang::ASTDeclWriter::VisitUsingShadowDecl()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l00765">clang::JSONNodeDumper::VisitUsingShadowDecl()</a>, and <a class="el" href="TextNodeDumper_8cpp_source.html#l02087">clang::TextNodeDumper::VisitUsingShadowDecl()</a>.</p>
 
 </div>
 </div>
@@ -1244,11 +1257,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets the underlying declaration which has been brought into the local scope. </p>
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03245">3245</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03254">3254</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 <p class="reference">References <a class="el" href="DeclBase_8h_source.html#l00814">clang::Decl::getIdentifierNamespace()</a>, <a class="el" href="DeclBase_8h_source.html#l00178">clang::Decl::IDNS_LocalExtern</a>, <a class="el" href="DeclBase_8h_source.html#l00155">clang::Decl::IDNS_OrdinaryFriend</a>, and <a class="el" href="DeclBase_8h_source.html#l00160">clang::Decl::IDNS_TagFriend</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="DeclCXX_8cpp_source.html#l02985">UsingShadowDecl()</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1284,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03211">3211</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03219">3219</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
@@ -1297,12 +1308,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03212">3212</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03220">3220</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
-<a id="a857e16b9bc4e345e11c3cde06ef802d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a857e16b9bc4e345e11c3cde06ef802d6">&#9670;&nbsp;</a></span>UsingDecl</h2>
+<a id="add7027ac6c0e1e23826853ed820c9ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7027ac6c0e1e23826853ed820c9ce8">&#9670;&nbsp;</a></span>BaseUsingDecl</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1311,7 +1322,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classclang_1_1UsingDecl.html">UsingDecl</a></td>
+          <td class="memname">friend class <a class="el" href="classclang_1_1BaseUsingDecl.html">BaseUsingDecl</a></td>
         </tr>
       </table>
   </td>
@@ -1321,7 +1332,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03180">3180</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="DeclCXX_8h_source.html#l03187">3187</a> of file <a class="el" href="DeclCXX_8h_source.html">DeclCXX.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1343,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:41 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:06:02 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

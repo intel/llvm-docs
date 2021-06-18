@@ -61,6 +61,7 @@ $(function() {
 <code>#include &quot;<a class="el" href="SourceManager_8h_source.html">clang/Basic/SourceManager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Specifiers_8h_source.html">clang/Basic/Specifiers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="TypeTraits_8h_source.html">clang/Basic/TypeTraits.h</a>&quot;</code><br />
+<code>#include &quot;llvm/ADT/StringExtras.h&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &quot;clang/AST/DeclNodes.inc&quot;</code><br />
@@ -71,56 +72,56 @@ Include dependency graph for TextNodeDumper.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="TextNodeDumper_8cpp__incl.png" border="0" usemap="#lib_2AST_2TextNodeDumper_8cpp" alt=""/></div>
 <map name="lib_2AST_2TextNodeDumper_8cpp" id="lib_2AST_2TextNodeDumper_8cpp">
-<area shape="rect" title=" " alt="" coords="2509,5,2720,32"/>
-<area shape="rect" href="TextNodeDumper_8h.html" title=" " alt="" coords="5623,80,5838,107"/>
-<area shape="rect" href="APValue_8h.html" title=" " alt="" coords="4480,632,4635,659"/>
-<area shape="rect" title=" " alt="" coords="2578,856,2638,883"/>
-<area shape="rect" href="Specifiers_8h.html" title=" " alt="" coords="2059,781,2234,808"/>
-<area shape="rect" title=" " alt="" coords="803,781,888,808"/>
-<area shape="rect" title=" " alt="" coords="117,781,299,808"/>
-<area shape="rect" href="Type_8h.html" title=" " alt="" coords="5534,632,5666,659"/>
-<area shape="rect" title=" " alt="" coords="6413,244,6584,271"/>
-<area shape="rect" href="TypeTraits_8h.html" title=" " alt="" coords="4025,550,4202,577"/>
-<area shape="rect" href="DeclFriend_8h.html" title=" " alt="" coords="1683,244,1853,271"/>
-<area shape="rect" href="DeclTemplate_8h.html" title=" " alt="" coords="2299,319,2490,345"/>
-<area shape="rect" href="DeclOpenMP_8h.html" title=" " alt="" coords="4301,393,4483,420"/>
-<area shape="rect" href="LocInfoType_8h.html" title=" " alt="" coords="6684,319,6863,345"/>
-<area shape="rect" href="Module_8h.html" title=" " alt="" coords="1056,707,1216,733"/>
-<area shape="rect" href="SourceManager_8h.html" title=" " alt="" coords="1594,707,1806,733"/>
-<area shape="rect" title=" " alt="" coords="6811,80,7002,107"/>
-<area shape="rect" href="ASTContext_8h.html" title=" " alt="" coords="5629,468,5806,495"/>
-<area shape="rect" href="CommentCommandTraits_8h.html" title=" " alt="" coords="6185,543,6407,584"/>
-<area shape="rect" href="ASTDumperUtils_8h.html" title=" " alt="" coords="5791,781,6001,808"/>
-<area shape="rect" href="AttrVisitor_8h.html" title=" " alt="" coords="6319,162,6486,189"/>
-<area shape="rect" href="CommentVisitor_8h.html" title=" " alt="" coords="5435,162,5642,189"/>
-<area shape="rect" href="DeclVisitor_8h.html" title=" " alt="" coords="3267,162,3439,189"/>
-<area shape="rect" href="ExprCXX_8h.html" title=" " alt="" coords="3958,244,4117,271"/>
-<area shape="rect" href="StmtVisitor_8h.html" title=" " alt="" coords="6069,162,6243,189"/>
-<area shape="rect" href="TemplateArgumentVisitor_8h.html" title=" " alt="" coords="2766,155,2981,196"/>
-<area shape="rect" href="TypeVisitor_8h.html" title=" " alt="" coords="5581,319,5755,345"/>
-<area shape="rect" title=" " alt="" coords="3005,162,3243,189"/>
-<area shape="rect" href="LLVM_8h.html" title=" " alt="" coords="3845,856,3992,883"/>
-<area shape="rect" title=" " alt="" coords="3723,931,3893,957"/>
-<area shape="rect" title=" " alt="" coords="6733,931,6865,957"/>
-<area shape="rect" href="Decl_8h.html" title=" " alt="" coords="3464,550,3595,577"/>
-<area shape="rect" title=" " alt="" coords="4961,707,5101,733"/>
-<area shape="rect" title=" " alt="" coords="5125,707,5291,733"/>
-<area shape="rect" title=" " alt="" coords="2764,781,2948,808"/>
-<area shape="rect" title=" " alt="" coords="3537,781,3719,808"/>
-<area shape="rect" title=" " alt="" coords="4768,707,4936,733"/>
-<area shape="rect" href="DeclBase_8h.html" title=" " alt="" coords="2589,707,2752,733"/>
-<area shape="rect" href="SourceLocation_8h.html" title=" " alt="" coords="1737,781,1948,808"/>
-<area shape="rect" title=" " alt="" coords="1615,856,1684,883"/>
-<area shape="rect" title=" " alt="" coords="2373,781,2528,808"/>
-<area shape="rect" title=" " alt="" coords="3333,781,3512,808"/>
-<area shape="rect" title=" " alt="" coords="1207,781,1278,808"/>
-<area shape="rect" href="ExternalASTSource_8h.html" title=" " alt="" coords="3082,632,3307,659"/>
-<area shape="rect" title=" " alt="" coords="3841,707,4058,733"/>
-<area shape="rect" title=" " alt="" coords="4337,707,4519,733"/>
-<area shape="rect" title=" " alt="" coords="4595,707,4743,733"/>
-<area shape="rect" href="DeclCXX_8h.html" title=" " alt="" coords="2510,393,2669,420"/>
-<area shape="rect" href="Expr_8h.html" title=" " alt="" coords="4327,468,4457,495"/>
-<area shape="rect" href="TypeLoc_8h.html" title=" " alt="" coords="1328,550,1483,577"/>
+<area shape="rect" title=" " alt="" coords="3750,5,3961,32"/>
+<area shape="rect" href="TextNodeDumper_8h.html" title=" " alt="" coords="4680,80,4895,107"/>
+<area shape="rect" href="APValue_8h.html" title=" " alt="" coords="5370,557,5525,584"/>
+<area shape="rect" title=" " alt="" coords="3009,781,3069,808"/>
+<area shape="rect" href="Specifiers_8h.html" title=" " alt="" coords="4736,707,4911,733"/>
+<area shape="rect" title=" " alt="" coords="1149,707,1234,733"/>
+<area shape="rect" title=" " alt="" coords="5,707,188,733"/>
+<area shape="rect" href="Type_8h.html" title=" " alt="" coords="4507,557,4639,584"/>
+<area shape="rect" title=" " alt="" coords="5367,244,5538,271"/>
+<area shape="rect" href="DeclFriend_8h.html" title=" " alt="" coords="2942,244,3113,271"/>
+<area shape="rect" href="DeclTemplate_8h.html" title=" " alt="" coords="2749,319,2940,345"/>
+<area shape="rect" href="DeclOpenMP_8h.html" title=" " alt="" coords="3764,319,3947,345"/>
+<area shape="rect" href="TypeTraits_8h.html" title=" " alt="" coords="923,319,1100,345"/>
+<area shape="rect" href="LocInfoType_8h.html" title=" " alt="" coords="6102,393,6281,420"/>
+<area shape="rect" href="Module_8h.html" title=" " alt="" coords="1783,632,1943,659"/>
+<area shape="rect" href="SourceManager_8h.html" title=" " alt="" coords="2457,632,2669,659"/>
+<area shape="rect" title=" " alt="" coords="6956,80,7133,107"/>
+<area shape="rect" title=" " alt="" coords="7157,80,7348,107"/>
+<area shape="rect" href="ASTContext_8h.html" title=" " alt="" coords="4329,393,4507,420"/>
+<area shape="rect" href="CommentCommandTraits_8h.html" title=" " alt="" coords="6406,468,6627,509"/>
+<area shape="rect" href="ASTDumperUtils_8h.html" title=" " alt="" coords="1259,707,1468,733"/>
+<area shape="rect" href="AttrVisitor_8h.html" title=" " alt="" coords="5345,162,5512,189"/>
+<area shape="rect" href="CommentVisitor_8h.html" title=" " alt="" coords="4876,162,5083,189"/>
+<area shape="rect" href="DeclVisitor_8h.html" title=" " alt="" coords="3269,162,3441,189"/>
+<area shape="rect" href="ExprCXX_8h.html" title=" " alt="" coords="4056,244,4215,271"/>
+<area shape="rect" href="StmtVisitor_8h.html" title=" " alt="" coords="5977,162,6152,189"/>
+<area shape="rect" href="TemplateArgumentVisitor_8h.html" title=" " alt="" coords="5107,155,5321,196"/>
+<area shape="rect" href="TypeVisitor_8h.html" title=" " alt="" coords="4774,244,4947,271"/>
+<area shape="rect" title=" " alt="" coords="4462,162,4699,189"/>
+<area shape="rect" href="LLVM_8h.html" title=" " alt="" coords="6161,781,6307,808"/>
+<area shape="rect" title=" " alt="" coords="4338,856,4509,883"/>
+<area shape="rect" title=" " alt="" coords="6599,856,6731,883"/>
+<area shape="rect" href="Decl_8h.html" title=" " alt="" coords="3845,475,3975,502"/>
+<area shape="rect" title=" " alt="" coords="4861,632,5001,659"/>
+<area shape="rect" title=" " alt="" coords="5128,632,5295,659"/>
+<area shape="rect" title=" " alt="" coords="2187,707,2371,733"/>
+<area shape="rect" title=" " alt="" coords="4051,707,4233,733"/>
+<area shape="rect" title=" " alt="" coords="5902,632,6070,659"/>
+<area shape="rect" href="DeclBase_8h.html" title=" " alt="" coords="1967,632,2130,659"/>
+<area shape="rect" href="SourceLocation_8h.html" title=" " alt="" coords="2934,707,3145,733"/>
+<area shape="rect" title=" " alt="" coords="1674,781,1743,808"/>
+<area shape="rect" title=" " alt="" coords="2755,707,2910,733"/>
+<area shape="rect" title=" " alt="" coords="1493,707,1671,733"/>
+<area shape="rect" title=" " alt="" coords="952,707,1023,733"/>
+<area shape="rect" href="ExternalASTSource_8h.html" title=" " alt="" coords="3193,557,3419,584"/>
+<area shape="rect" title=" " alt="" coords="3048,632,3265,659"/>
+<area shape="rect" title=" " alt="" coords="5472,632,5655,659"/>
+<area shape="rect" title=" " alt="" coords="5679,632,5827,659"/>
+<area shape="rect" href="DeclCXX_8h.html" title=" " alt="" coords="2832,393,2991,420"/>
+<area shape="rect" href="TypeLoc_8h.html" title=" " alt="" coords="2205,475,2359,502"/>
 </map>
 </div>
 </div>
@@ -337,11 +338,11 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00878">878</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00879">879</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578a7fb55ed0b7a30342ba6da306428cae04">clang::First</a>, <a class="el" href="Type_8h_source.html#l04635">clang::RecordType::getDecl()</a>, <a class="el" href="ASTMatchFinder_8cpp_source.html#l00067">Node</a>, and <a class="el" href="Expr_8h_source.html#l03577">clang::CastExpr::path_const_iterator</a>.</p>
+<p class="reference">References <a class="el" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578a7fb55ed0b7a30342ba6da306428cae04">clang::First</a>, <a class="el" href="Type_8h_source.html#l04635">clang::RecordType::getDecl()</a>, <a class="el" href="ASTMatchFinder_8cpp_source.html#l00067">Node</a>, and <a class="el" href="Expr_8h_source.html#l03576">clang::CastExpr::path_const_iterator</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TextNodeDumper_8cpp_source.html#l00961">clang::TextNodeDumper::VisitCastExpr()</a>, and <a class="el" href="TextNodeDumper_8cpp_source.html#l01127">clang::TextNodeDumper::VisitCXXNamedCastExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TextNodeDumper_8cpp_source.html#l00962">clang::TextNodeDumper::VisitCastExpr()</a>, and <a class="el" href="TextNodeDumper_8cpp_source.html#l01128">clang::TextNodeDumper::VisitCXXNamedCastExpr()</a>.</p>
 
 </div>
 </div>
@@ -381,11 +382,11 @@ Functions</h2></td></tr>
 
 <p>Dump the previous declaration in the redeclaration chain for a declaration, if any. </p>
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00048">48</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00049">49</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DeclBase_8h_source.html#l00433">clang::Decl::getKind()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TextNodeDumper_8cpp_source.html#l00241">clang::TextNodeDumper::Visit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TextNodeDumper_8cpp_source.html#l00242">clang::TextNodeDumper::Visit()</a>.</p>
 
 </div>
 </div>
@@ -425,7 +426,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00033">33</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00034">34</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578a7fb55ed0b7a30342ba6da306428cae04">clang::First</a>, and <a class="el" href="Redeclarable_8h_source.html#l00318">clang::Mergeable&lt; decl_type &gt;::getFirstDecl()</a>.</p>
 
@@ -467,7 +468,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00040">40</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00041">41</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Redeclarable_8h_source.html#l00203">clang::Redeclarable&lt; decl_type &gt;::getPreviousDecl()</a>.</p>
 
@@ -507,7 +508,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00030">30</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00031">31</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
 </div>
 </div>
@@ -535,11 +536,11 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00358">358</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00359">359</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03044">V</a>.</p>
+<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="TextNodeDumper_8cpp_source.html#l00436">clang::TextNodeDumper::Visit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="TextNodeDumper_8cpp_source.html#l00437">clang::TextNodeDumper::Visit()</a>.</p>
 
 </div>
 </div>
@@ -569,7 +570,7 @@ template&lt;typename T &gt; </div>
 
 <p>True if the <code>APValue</code> <code>Value</code> can be folded onto the current line. </p>
 
-<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00367">367</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="TextNodeDumper_8cpp_source.html#l00368">368</a> of file <a class="el" href="TextNodeDumper_8cpp_source.html">TextNodeDumper.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="APValue_8h_source.html#l00143">clang::APValue::AddrLabelDiff</a>, <a class="el" href="APValue_8h_source.html#l00139">clang::APValue::Array</a>, <a class="el" href="APValue_8h_source.html#l00136">clang::APValue::ComplexFloat</a>, <a class="el" href="APValue_8h_source.html#l00135">clang::APValue::ComplexInt</a>, <a class="el" href="APValue_8h_source.html#l00134">clang::APValue::FixedPoint</a>, <a class="el" href="APValue_8h_source.html#l00133">clang::APValue::Float</a>, <a class="el" href="APValue_8h_source.html#l00131">clang::APValue::Indeterminate</a>, <a class="el" href="APValue_8h_source.html#l00132">clang::APValue::Int</a>, <a class="el" href="APValue_8h_source.html#l00137">clang::APValue::LValue</a>, <a class="el" href="APValue_8h_source.html#l00142">clang::APValue::MemberPointer</a>, <a class="el" href="APValue_8h_source.html#l00129">clang::APValue::None</a>, <a class="el" href="APValue_8h_source.html#l00140">clang::APValue::Struct</a>, <a class="el" href="APValue_8h_source.html#l00141">clang::APValue::Union</a>, and <a class="el" href="APValue_8h_source.html#l00138">clang::APValue::Vector</a>.</p>
 
@@ -577,11 +578,11 @@ template&lt;typename T &gt; </div>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="anamespaceclang_1_1tooling_html_a4ffee664435dba78b2225a5457619b53"><div class="ttname"><a href="namespaceclang_1_1tooling.html#a4ffee664435dba78b2225a5457619b53">clang::tooling::X</a></div><div class="ttdeci">static ToolExecutorPluginRegistry::Add&lt; AllTUsToolExecutorPlugin &gt; X(&quot;all-TUs&quot;, &quot;Runs FrontendActions on all TUs in the compilation database. &quot; &quot;Tool results are stored in memory.&quot;)</div></div>
-<div class="ttc" id="aTextNodeDumper_8cpp_html_ab9ab867eac7bac4513a3f1619d115679"><div class="ttname"><a href="TextNodeDumper_8cpp.html#ab9ab867eac7bac4513a3f1619d115679">dumpPreviousDeclImpl</a></div><div class="ttdeci">static void dumpPreviousDeclImpl(raw_ostream &amp;OS,...)</div><div class="ttdef"><b>Definition:</b> <a href="TextNodeDumper_8cpp_source.html#l00030">TextNodeDumper.cpp:30</a></div></div>
+<div class="ttc" id="aTextNodeDumper_8cpp_html_ab9ab867eac7bac4513a3f1619d115679"><div class="ttname"><a href="TextNodeDumper_8cpp.html#ab9ab867eac7bac4513a3f1619d115679">dumpPreviousDeclImpl</a></div><div class="ttdeci">static void dumpPreviousDeclImpl(raw_ostream &amp;OS,...)</div><div class="ttdef"><b>Definition:</b> <a href="TextNodeDumper_8cpp_source.html#l00031">TextNodeDumper.cpp:31</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1transformer_html_afb9ae3f6ff9907205cd12c218f76df7e"><div class="ttname"><a href="namespaceclang_1_1transformer.html#afb9ae3f6ff9907205cd12c218f76df7e">clang::transformer::name</a></div><div class="ttdeci">RangeSelector name(std::string ID)</div><div class="ttdoc">Given a node with a &quot;name&quot;, (like NamedDecl, DeclRefExpr, CxxCtorInitializer, and TypeLoc) selects th...</div><div class="ttdef"><b>Definition:</b> <a href="RangeSelector_8cpp_source.html#l00200">RangeSelector.cpp:200</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:18 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:05:38 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

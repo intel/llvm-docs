@@ -5,6 +5,7 @@ var dir_d5b61a63257073f9cf5c64eb6b746b7a =
     [ "math_intrin.hpp", "math__intrin_8hpp.html", "math__intrin_8hpp" ],
     [ "memory_intrin.hpp", "memory__intrin_8hpp.html", "memory__intrin_8hpp" ],
     [ "region.hpp", "region_8hpp.html", "region_8hpp" ],
+    [ "simd_view_impl.hpp", "simd__view__impl_8hpp.html", "simd__view__impl_8hpp" ],
     [ "sycl_util.hpp", "sycl__util_8hpp.html", "sycl__util_8hpp" ],
     [ "types.hpp", "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp.html", "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp" ],
     [ "util.hpp", "sycl_2ext_2intel_2experimental_2esimd_2detail_2util_8hpp.html", "sycl_2ext_2intel_2experimental_2esimd_2detail_2util_8hpp" ]

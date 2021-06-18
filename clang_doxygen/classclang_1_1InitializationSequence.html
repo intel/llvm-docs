@@ -74,7 +74,7 @@ Public Types</h2></td></tr>
 <tr class="separator:ae4165aad3884059f494b2823e4353fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b616a44866d14510e819d4a331b2d43"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43">StepKind</a> { <br />
 &#160;&#160;<a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43acf8a6a565c37e10e4087eb706f7193eb">SK_ResolveAddressOfOverloadedFunction</a>, 
-<a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43a14c3b7adb872aab076143085daf591c1">SK_CastDerivedToBaseRValue</a>, 
+<a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43a76db52b4c28d25f2d50d43e06b84c17e">SK_CastDerivedToBasePRValue</a>, 
 <a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43a67bfaa50a94804176d971aec810fffc3">SK_CastDerivedToBaseXValue</a>, 
 <a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43a2c4419e6800f5f60ebc7fdcd1b8951f5">SK_CastDerivedToBaseLValue</a>, 
 <br />
@@ -84,7 +84,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43ae4a6edf091f07b944a5f0cf65f5f3047">SK_FinalCopy</a>, 
 <br />
 &#160;&#160;<a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43a6a5d1425e317885c91712cb8ee3b79f5">SK_UserConversion</a>, 
-<a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43ab97945a8a57ae462282ba7dbdf1cac57">SK_QualificationConversionRValue</a>, 
+<a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43af3fc84d5752ce85c870b8a4b1b673b65">SK_QualificationConversionPRValue</a>, 
 <a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43a686eddc5c51bbe7b189992851035fc39">SK_QualificationConversionXValue</a>, 
 <a class="el" href="classclang_1_1InitializationSequence.html#a2b616a44866d14510e819d4a331b2d43aee9b9774e89b4e2eecad31d0c80a1737">SK_QualificationConversionLValue</a>, 
 <br />
@@ -505,7 +505,7 @@ Public Member Functions</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43acf8a6a565c37e10e4087eb706f7193eb"></a>SK_ResolveAddressOfOverloadedFunction&#160;</td><td class="fielddoc"><p>Resolve the address of an overloaded function to a specific function declaration. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43a14c3b7adb872aab076143085daf591c1"></a>SK_CastDerivedToBaseRValue&#160;</td><td class="fielddoc"><p>Perform a derived-to-base cast, producing an rvalue. </p>
+<tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43a76db52b4c28d25f2d50d43e06b84c17e"></a>SK_CastDerivedToBasePRValue&#160;</td><td class="fielddoc"><p>Perform a derived-to-base cast, producing an rvalue. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43a67bfaa50a94804176d971aec810fffc3"></a>SK_CastDerivedToBaseXValue&#160;</td><td class="fielddoc"><p>Perform a derived-to-base cast, producing an xvalue. </p>
 </td></tr>
@@ -521,7 +521,7 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43a6a5d1425e317885c91712cb8ee3b79f5"></a>SK_UserConversion&#160;</td><td class="fielddoc"><p>Perform a user-defined conversion, either via a conversion function or via a constructor. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43ab97945a8a57ae462282ba7dbdf1cac57"></a>SK_QualificationConversionRValue&#160;</td><td class="fielddoc"><p>Perform a qualification conversion, producing an rvalue. </p>
+<tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43af3fc84d5752ce85c870b8a4b1b673b65"></a>SK_QualificationConversionPRValue&#160;</td><td class="fielddoc"><p>Perform a qualification conversion, producing a prvalue. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a2b616a44866d14510e819d4a331b2d43a686eddc5c51bbe7b189992851035fc39"></a>SK_QualificationConversionXValue&#160;</td><td class="fielddoc"><p>Perform a qualification conversion, producing an xvalue. </p>
 </td></tr>
@@ -649,7 +649,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l05637">5637</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l05639">5639</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -668,7 +668,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l06044">6044</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l06046">6046</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -745,7 +745,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add an array initialization loop step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03731">3731</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03733">3733</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -777,7 +777,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add an array initialization step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03724">3724</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03726">3726</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -799,7 +799,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a new step that performs conversion from non-atomic to atomic type. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03657">3657</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03659">3659</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -821,7 +821,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a C assignment step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03703">3703</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03705">3705</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -884,7 +884,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03682">3682</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03684">3684</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -922,7 +922,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a new step that applies an implicit conversion sequence. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03664">3664</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03666">3666</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +989,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03610">3610</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03612">3612</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1011,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a new step that makes a copy of the input to an object of the given type, as the final step in class copy-initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03603">3603</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03605">3605</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1033,7 +1033,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a new step that performs a function reference conversion to the given type. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03650">3650</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03652">3652</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1055,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a list-initialization step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03675">3675</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03677">3677</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1077,7 +1077,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add an Objective-C object conversion step, which is always a no-op. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03717">3717</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03719">3719</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1099,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a step to initialize an OpenCL sampler from an integer constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03772">3772</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03774">3774</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1121,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a step to initialzie an OpenCL opaque type (event_t, queue_t, etc.) from a zero constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03779">3779</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03781">3781</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1143,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a parenthesized array initialization step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03742">3742</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03744">3744</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1175,7 +1175,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a step to pass an object by indirect copy-restore. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03749">3749</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03751">3751</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00315">s</a>, <a class="el" href="Initialization_8h_source.html#l00901">SK_PassByIndirectCopyRestore</a>, <a class="el" href="Initialization_8h_source.html#l00904">SK_PassByIndirectRestore</a>, and <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00772">clang::ast_matchers::type</a>.</p>
 
@@ -1199,7 +1199,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a step to "produce" an Objective-C object (by retaining it). </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03758">3758</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03760">3760</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1231,7 +1231,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a new step that performs a qualification conversion to the given type. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03631">3631</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03633">3633</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1269,7 +1269,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03595">3595</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03597">3597</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1291,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a step to construct a std::initializer_list object from an initializer list. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03765">3765</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03767">3767</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1313,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a string init step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03710">3710</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03712">3712</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1357,7 +1357,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a new step invoking a conversion function, which is either a constructor or a conversion function. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03618">3618</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03620">3620</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1379,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a zero-initialization step. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03696">3696</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03698">3698</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1424,9 +1424,9 @@ Public Member Functions</h2></td></tr>
 <p>Diagnose an potentially-invalid initialization sequence. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the initialization sequence was ill-formed, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l08974">8974</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l08975">8975</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l05845">TryClassUnification()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l05865">TryClassUnification()</a>.</p>
 
 </div>
 </div>
@@ -1447,7 +1447,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Dump a representation of this initialization sequence to standard error, for debugging purposes. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l09785">9785</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l09786">9786</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1469,7 +1469,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Dump a representation of this initialization sequence to the given stream, for debugging purposes. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l09446">9446</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l09447">9447</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Initialization_8h_source.html#l00793">DependentSequence</a>, <a class="el" href="Initialization_8h_source.html#l00788">FailedSequence</a>, <a class="el" href="Initialization_8h_source.html#l01013">FK_AddressOfOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01092">FK_AddressOfUnaddressableFunction</a>, <a class="el" href="Initialization_8h_source.html#l00980">FK_ArrayNeedsInitList</a>, <a class="el" href="Initialization_8h_source.html#l00984">FK_ArrayNeedsInitListOrStringLiteral</a>, <a class="el" href="Initialization_8h_source.html#l00988">FK_ArrayNeedsInitListOrWideStringLiteral</a>, <a class="el" href="Initialization_8h_source.html#l01007">FK_ArrayTypeMismatch</a>, <a class="el" href="Initialization_8h_source.html#l01069">FK_ConstructorOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01047">FK_ConversionFailed</a>, <a class="el" href="Initialization_8h_source.html#l01050">FK_ConversionFromPropertyFailed</a>, <a class="el" href="Initialization_8h_source.html#l01075">FK_DefaultInitOfConst</a>, <a class="el" href="Initialization_8h_source.html#l01095">FK_ExplicitConstructor</a>, <a class="el" href="Initialization_8h_source.html#l00998">FK_IncompatWideStringIntoWideChar</a>, <a class="el" href="Initialization_8h_source.html#l01078">FK_Incomplete</a>, <a class="el" href="Initialization_8h_source.html#l01063">FK_InitListBadDestinationType</a>, <a class="el" href="Initialization_8h_source.html#l01072">FK_ListConstructorOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01084">FK_ListInitializationFailed</a>, <a class="el" href="Initialization_8h_source.html#l00991">FK_NarrowStringIntoWideCharArray</a>, <a class="el" href="Initialization_8h_source.html#l01010">FK_NonConstantArrayInit</a>, <a class="el" href="Initialization_8h_source.html#l01022">FK_NonConstLValueReferenceBindingToBitfield</a>, <a class="el" href="Initialization_8h_source.html#l01028">FK_NonConstLValueReferenceBindingToMatrixElement</a>, <a class="el" href="Initialization_8h_source.html#l01019">FK_NonConstLValueReferenceBindingToTemporary</a>, <a class="el" href="Initialization_8h_source.html#l01032">FK_NonConstLValueReferenceBindingToUnrelated</a>, <a class="el" href="Initialization_8h_source.html#l01025">FK_NonConstLValueReferenceBindingToVectorElement</a>, <a class="el" href="Initialization_8h_source.html#l00977">FK_ParenthesizedListInitForReference</a>, <a class="el" href="Initialization_8h_source.html#l01056">FK_ParenthesizedListInitForScalar</a>, <a class="el" href="Initialization_8h_source.html#l01088">FK_PlaceholderType</a>, <a class="el" href="Initialization_8h_source.html#l01001">FK_PlainStringIntoUTF8Char</a>, <a class="el" href="Initialization_8h_source.html#l01041">FK_ReferenceAddrspaceMismatchTemporary</a>, <a class="el" href="Initialization_8h_source.html#l01059">FK_ReferenceBindingToInitList</a>, <a class="el" href="Initialization_8h_source.html#l01038">FK_ReferenceInitDropsQualifiers</a>, <a class="el" href="Initialization_8h_source.html#l01044">FK_ReferenceInitFailed</a>, <a class="el" href="Initialization_8h_source.html#l01016">FK_ReferenceInitOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01035">FK_RValueReferenceBindingToLValue</a>, <a class="el" href="Initialization_8h_source.html#l00974">FK_TooManyInitsForReference</a>, <a class="el" href="Initialization_8h_source.html#l01053">FK_TooManyInitsForScalar</a>, <a class="el" href="Initialization_8h_source.html#l01066">FK_UserConversionOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01004">FK_UTF8StringIntoPlainChar</a>, <a class="el" href="Initialization_8h_source.html#l01081">FK_VariableLengthArrayHasInitializer</a>, <a class="el" href="Initialization_8h_source.html#l00994">FK_WideStringIntoCharArray</a>, and <a class="el" href="Initialization_8h_source.html#l00796">NormalSequence</a>.</p>
 
@@ -1504,7 +1504,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Initialization_8h_source.html#l00788">FailedSequence</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09887">clang::Sema::CanPerformCopyInitialization()</a>, <a class="el" href="Initialization_8h_source.html#l01390">getFailureKind()</a>, <a class="el" href="SemaInit_8cpp_source.html#l03513">isAmbiguous()</a>, <a class="el" href="Initialization_8h_source.html#l01204">operator bool()</a>, <a class="el" href="SemaExprCXX_8cpp_source.html#l05845">TryClassUnification()</a>, and <a class="el" href="SemaCast_8cpp_source.html#l01818">TryStaticImplicitCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09888">clang::Sema::CanPerformCopyInitialization()</a>, <a class="el" href="Initialization_8h_source.html#l01390">getFailureKind()</a>, <a class="el" href="SemaInit_8cpp_source.html#l03513">isAmbiguous()</a>, <a class="el" href="Initialization_8h_source.html#l01204">operator bool()</a>, <a class="el" href="SemaExprCXX_8cpp_source.html#l05865">TryClassUnification()</a>, and <a class="el" href="SemaCast_8cpp_source.html#l01818">TryStaticImplicitCast()</a>.</p>
 
 </div>
 </div>
@@ -1535,7 +1535,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Initialization_8h_source.html#l01372">1372</a> of file <a class="el" href="Initialization_8h_source.html">Initialization.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09902">clang::Sema::PerformCopyInitialization()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09903">clang::Sema::PerformCopyInitialization()</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1680,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l05693">5693</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l05695">5695</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 </div>
 </div>
@@ -1705,7 +1705,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Initialization_8h_source.html#l01207">Failed()</a>, <a class="el" href="Initialization_8h_source.html#l01013">FK_AddressOfOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01092">FK_AddressOfUnaddressableFunction</a>, <a class="el" href="Initialization_8h_source.html#l00980">FK_ArrayNeedsInitList</a>, <a class="el" href="Initialization_8h_source.html#l00984">FK_ArrayNeedsInitListOrStringLiteral</a>, <a class="el" href="Initialization_8h_source.html#l00988">FK_ArrayNeedsInitListOrWideStringLiteral</a>, <a class="el" href="Initialization_8h_source.html#l01007">FK_ArrayTypeMismatch</a>, <a class="el" href="Initialization_8h_source.html#l01069">FK_ConstructorOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01047">FK_ConversionFailed</a>, <a class="el" href="Initialization_8h_source.html#l01050">FK_ConversionFromPropertyFailed</a>, <a class="el" href="Initialization_8h_source.html#l01075">FK_DefaultInitOfConst</a>, <a class="el" href="Initialization_8h_source.html#l01095">FK_ExplicitConstructor</a>, <a class="el" href="Initialization_8h_source.html#l00998">FK_IncompatWideStringIntoWideChar</a>, <a class="el" href="Initialization_8h_source.html#l01078">FK_Incomplete</a>, <a class="el" href="Initialization_8h_source.html#l01063">FK_InitListBadDestinationType</a>, <a class="el" href="Initialization_8h_source.html#l01072">FK_ListConstructorOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01084">FK_ListInitializationFailed</a>, <a class="el" href="Initialization_8h_source.html#l00991">FK_NarrowStringIntoWideCharArray</a>, <a class="el" href="Initialization_8h_source.html#l01010">FK_NonConstantArrayInit</a>, <a class="el" href="Initialization_8h_source.html#l01022">FK_NonConstLValueReferenceBindingToBitfield</a>, <a class="el" href="Initialization_8h_source.html#l01028">FK_NonConstLValueReferenceBindingToMatrixElement</a>, <a class="el" href="Initialization_8h_source.html#l01019">FK_NonConstLValueReferenceBindingToTemporary</a>, <a class="el" href="Initialization_8h_source.html#l01032">FK_NonConstLValueReferenceBindingToUnrelated</a>, <a class="el" href="Initialization_8h_source.html#l01025">FK_NonConstLValueReferenceBindingToVectorElement</a>, <a class="el" href="Initialization_8h_source.html#l00977">FK_ParenthesizedListInitForReference</a>, <a class="el" href="Initialization_8h_source.html#l01056">FK_ParenthesizedListInitForScalar</a>, <a class="el" href="Initialization_8h_source.html#l01088">FK_PlaceholderType</a>, <a class="el" href="Initialization_8h_source.html#l01001">FK_PlainStringIntoUTF8Char</a>, <a class="el" href="Initialization_8h_source.html#l01041">FK_ReferenceAddrspaceMismatchTemporary</a>, <a class="el" href="Initialization_8h_source.html#l01059">FK_ReferenceBindingToInitList</a>, <a class="el" href="Initialization_8h_source.html#l01038">FK_ReferenceInitDropsQualifiers</a>, <a class="el" href="Initialization_8h_source.html#l01044">FK_ReferenceInitFailed</a>, <a class="el" href="Initialization_8h_source.html#l01016">FK_ReferenceInitOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01035">FK_RValueReferenceBindingToLValue</a>, <a class="el" href="Initialization_8h_source.html#l00974">FK_TooManyInitsForReference</a>, <a class="el" href="Initialization_8h_source.html#l01053">FK_TooManyInitsForScalar</a>, <a class="el" href="Initialization_8h_source.html#l01066">FK_UserConversionOverloadFailed</a>, <a class="el" href="Initialization_8h_source.html#l01004">FK_UTF8StringIntoPlainChar</a>, <a class="el" href="Initialization_8h_source.html#l01081">FK_VariableLengthArrayHasInitializer</a>, <a class="el" href="Initialization_8h_source.html#l00994">FK_WideStringIntoCharArray</a>, <a class="el" href="Initialization_8h_source.html#l01390">getFailureKind()</a>, and <a class="el" href="Overload_8h_source.html#l00059">clang::OR_Ambiguous</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l05845">TryClassUnification()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l05865">TryClassUnification()</a>.</p>
 
 </div>
 </div>
@@ -1730,7 +1730,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Initialization_8h_source.html#l00865">SK_ConstructorInitialization</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09902">clang::Sema::PerformCopyInitialization()</a>, and <a class="el" href="SemaCast_8cpp_source.html#l01818">TryStaticImplicitCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09903">clang::Sema::PerformCopyInitialization()</a>, and <a class="el" href="SemaCast_8cpp_source.html#l01818">TryStaticImplicitCast()</a>.</p>
 
 </div>
 </div>
@@ -1755,7 +1755,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Initialization_8h_source.html#l00816">SK_BindReference</a>, and <a class="el" href="Initialization_8h_source.html#l00819">SK_BindReferenceToTemporary</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l05845">TryClassUnification()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l05865">TryClassUnification()</a>.</p>
 
 </div>
 </div>
@@ -1847,9 +1847,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an expression that performs the actual object initialization, if the initialization is well-formed. Otherwise, emits diagnostics and returns an invalid expression. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l07986">7986</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l07988">7988</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaDeclCXX_8cpp_source.html#l03981">clang::Sema::ActOnFinishCXXInClassMemberInitializer()</a>, <a class="el" href="SemaOpenMP_8cpp_source.html#l15390">clang::Sema::ActOnOpenMPFirstprivateClause()</a>, <a class="el" href="SemaDecl_8cpp_source.html#l12715">clang::Sema::ActOnUninitializedDecl()</a>, <a class="el" href="SemaDecl_8cpp_source.html#l12204">clang::Sema::AddInitializerToDecl()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04461">clang::Sema::BuildBaseInitializer()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l06981">clang::Sema::BuildCompoundLiteralExpr()</a>, <a class="el" href="SemaCoroutine_8cpp_source.html#l00528">clang::Sema::buildCoroutinePromise()</a>, <a class="el" href="SemaExprCXX_8cpp_source.html#l01434">clang::Sema::BuildCXXTypeConstructExpr()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04404">clang::Sema::BuildDelegatingInitializer()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04616">BuildImplicitBaseInitializer()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04699">BuildImplicitMemberInitializer()</a>, <a class="el" href="SemaLambda_8cpp_source.html#l00792">clang::Sema::buildLambdaInitCaptureInitialization()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04328">clang::Sema::BuildMemberInitializer()</a>, <a class="el" href="SemaExprCXX_8cpp_source.html#l05996">ConvertForConditional()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l00257">clang::Sema::ConvertParamDefaultArgument()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14075">clang::Sema::CreateBuiltinBinOp()</a>, <a class="el" href="SemaInit_8cpp_source.html#l09902">clang::Sema::PerformCopyInitialization()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l17478">clang::Sema::SetIvarInitializers()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l04877">clang::Sema::tryConvertExprToType()</a>, and <a class="el" href="SemaCast_8cpp_source.html#l01818">TryStaticImplicitCast()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaDeclCXX_8cpp_source.html#l03981">clang::Sema::ActOnFinishCXXInClassMemberInitializer()</a>, <a class="el" href="SemaOpenMP_8cpp_source.html#l15749">clang::Sema::ActOnOpenMPFirstprivateClause()</a>, <a class="el" href="SemaDecl_8cpp_source.html#l12713">clang::Sema::ActOnUninitializedDecl()</a>, <a class="el" href="SemaDecl_8cpp_source.html#l12204">clang::Sema::AddInitializerToDecl()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04461">clang::Sema::BuildBaseInitializer()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l06985">clang::Sema::BuildCompoundLiteralExpr()</a>, <a class="el" href="SemaCoroutine_8cpp_source.html#l00528">clang::Sema::buildCoroutinePromise()</a>, <a class="el" href="SemaExprCXX_8cpp_source.html#l01434">clang::Sema::BuildCXXTypeConstructExpr()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04404">clang::Sema::BuildDelegatingInitializer()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04616">BuildImplicitBaseInitializer()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04699">BuildImplicitMemberInitializer()</a>, <a class="el" href="SemaLambda_8cpp_source.html#l00792">clang::Sema::buildLambdaInitCaptureInitialization()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l04328">clang::Sema::BuildMemberInitializer()</a>, <a class="el" href="SemaExprCXX_8cpp_source.html#l06016">ConvertForConditional()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l00257">clang::Sema::ConvertParamDefaultArgument()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14083">clang::Sema::CreateBuiltinBinOp()</a>, <a class="el" href="SemaInit_8cpp_source.html#l09903">clang::Sema::PerformCopyInitialization()</a>, <a class="el" href="SemaDeclCXX_8cpp_source.html#l17613">clang::Sema::SetIvarInitializers()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l04879">clang::Sema::tryConvertExprToType()</a>, and <a class="el" href="SemaCast_8cpp_source.html#l01818">TryStaticImplicitCast()</a>.</p>
 
 </div>
 </div>
@@ -1881,9 +1881,9 @@ Public Member Functions</h2></td></tr>
 
 <p>Add steps to unwrap a initializer list for a reference around a single element and rewrap it at the end. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03786">3786</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03788">3788</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04852">clang::InitListExpr::getNumInits()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04851">clang::InitListExpr::getNumInits()</a>.</p>
 
 </div>
 </div>
@@ -1981,11 +1981,11 @@ Public Member Functions</h2></td></tr>
 
 <p>Note that this initialization sequence failed due to failed overload resolution. </p>
 
-<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03801">3801</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="SemaInit_8cpp_source.html#l03803">3803</a> of file <a class="el" href="SemaInit_8cpp_source.html">SemaInit.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Initialization_8h_source.html#l00788">FailedSequence</a>, and <a class="el" href="Initialization_8h_source.html#l01201">setSequenceKind()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09902">clang::Sema::PerformCopyInitialization()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09903">clang::Sema::PerformCopyInitialization()</a>.</p>
 
 </div>
 </div>
@@ -2017,7 +2017,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Initialization_8h_source.html#l01201">1201</a> of file <a class="el" href="Initialization_8h_source.html">Initialization.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l03801">SetOverloadFailure()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l03803">SetOverloadFailure()</a>.</p>
 
 </div>
 </div>
@@ -2115,7 +2115,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Initialization_8h_source.html#l01212">1212</a> of file <a class="el" href="Initialization_8h_source.html">Initialization.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09902">clang::Sema::PerformCopyInitialization()</a>, and <a class="el" href="Initialization_8h_source.html#l01216">steps()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaInit_8cpp_source.html#l09903">clang::Sema::PerformCopyInitialization()</a>, and <a class="el" href="Initialization_8h_source.html#l01216">steps()</a>.</p>
 
 </div>
 </div>
@@ -2155,7 +2155,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:31 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:05:52 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -90,7 +90,7 @@ Public Member Functions</h2></td></tr>
 <p>To guarantee correctness of alignment operations, the <code><a class="el" href="classclang_1_1format_1_1WhitespaceManager.html" title="Manages the whitespaces around tokens and their replacements.">WhitespaceManager</a></code> must be informed about every token in the source file; for each token, there must be exactly one call to either <code>replaceWhitespace</code> or <code>addUntouchableToken</code>.</p>
 <p>There may be multiple calls to <code>breakToken</code> for a given token. </p>
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8h_source.html#l00038">38</a> of file <a class="el" href="WhitespaceManager_8h_source.html">WhitespaceManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8h_source.html#l00040">40</a> of file <a class="el" href="WhitespaceManager_8h_source.html">WhitespaceManager.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aeeb2fb5fed85b842cd5594d4601cde1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeeb2fb5fed85b842cd5594d4601cde1e">&#9670;&nbsp;</a></span>WhitespaceManager()</h2>
@@ -132,7 +132,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8h_source.html#l00040">40</a> of file <a class="el" href="WhitespaceManager_8h_source.html">WhitespaceManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8h_source.html#l00042">42</a> of file <a class="el" href="WhitespaceManager_8h_source.html">WhitespaceManager.h</a>.</p>
 
 </div>
 </div>
@@ -153,7 +153,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00071">71</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00073">73</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Replacement_8cpp_source.html#l00245">clang::tooling::Replacements::add()</a>.</p>
 
@@ -188,7 +188,7 @@ Public Member Functions</h2></td></tr>
 <p>Adds information about an unchangeable token's whitespace. </p>
 <p>Needs to be called for every token for which <code>replaceWhitespace</code> was not called. </p>
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00059">59</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00061">61</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="FormatToken_8h_source.html#l00281">clang::format::FormatToken::Finalized</a>, <a class="el" href="FormatToken_8h_source.html#l00245">clang::format::FormatToken::IsFirst</a>, <a class="el" href="FormatToken_8h_source.html#l00335">clang::format::FormatToken::NewlinesBefore</a>, <a class="el" href="FormatToken_8h_source.html#l00370">clang::format::FormatToken::OriginalColumn</a>, and <a class="el" href="FormatToken_8h_source.html#l00235">clang::format::FormatToken::WhitespaceRange</a>.</p>
 
@@ -211,7 +211,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Returns all the <code>Replacements</code> created during formatting. </p>
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00090">90</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00092">92</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +269,7 @@ Public Member Functions</h2></td></tr>
 <p>Only call once for each <code>AnnotatedToken</code>.</p>
 <p><code>StartOfTokenColumn</code> is the column at which the token will start after this replacement. It is needed for determining how <code>Spaces</code> is turned into tabs and spaces for some format styles. </p>
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00046">46</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00048">48</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="FormatToken_8h_source.html#l00140">clang::format::FD_Break</a>, <a class="el" href="FormatToken_8h_source.html#l00140">clang::format::FD_Continue</a>, <a class="el" href="FormatToken_8h_source.html#l00281">clang::format::FormatToken::Finalized</a>, <a class="el" href="FormatToken_8h_source.html#l00245">clang::format::FormatToken::IsFirst</a>, <a class="el" href="FormatToken_8h_source.html#l00304">clang::format::FormatToken::setDecision()</a>, and <a class="el" href="FormatToken_8h_source.html#l00235">clang::format::FormatToken::WhitespaceRange</a>.</p>
 
@@ -342,9 +342,9 @@ Public Member Functions</h2></td></tr>
 <p>Note: <code>Spaces</code> can be negative to retain information about initial relative column offset between a line of a block comment and the start of the comment. This negative offset may be compensated by trailing comment alignment here. In all other cases negative <code>Spaces</code> will be truncated to 0.</p>
 <p>When <code>InPPDirective</code> is true, escaped newlines are inserted. <code>Spaces</code> is used to align backslashes correctly. </p>
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00075">75</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8cpp_source.html#l00077">77</a> of file <a class="el" href="WhitespaceManager_8cpp_source.html">WhitespaceManager.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="FormatToken_8h_source.html#l00281">clang::format::FormatToken::Finalized</a>, <a class="el" href="SourceLocation_8h_source.html#l00136">clang::SourceLocation::getLocWithOffset()</a>, <a class="el" href="FormatToken_8h_source.html#l00620">clang::format::FormatToken::getStartOfNonWhitespace()</a>, <a class="el" href="FormatToken_8h_source.html#l00245">clang::format::FormatToken::IsFirst</a>, <a class="el" href="____clang__cuda__math_8h_source.html#l00194">max()</a>, and <a class="el" href="Format_8cpp_source.html#l02181">Offset</a>.</p>
+<p class="reference">References <a class="el" href="FormatToken_8h_source.html#l00281">clang::format::FormatToken::Finalized</a>, <a class="el" href="SourceLocation_8h_source.html#l00136">clang::SourceLocation::getLocWithOffset()</a>, <a class="el" href="FormatToken_8h_source.html#l00629">clang::format::FormatToken::getStartOfNonWhitespace()</a>, <a class="el" href="FormatToken_8h_source.html#l00245">clang::format::FormatToken::IsFirst</a>, <a class="el" href="____clang__cuda__math_8h_source.html#l00194">max()</a>, and <a class="el" href="Format_8cpp_source.html#l02193">Offset</a>.</p>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8h_source.html#l00044">44</a> of file <a class="el" href="WhitespaceManager_8h_source.html">WhitespaceManager.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="WhitespaceManager_8h_source.html#l00046">46</a> of file <a class="el" href="WhitespaceManager_8h_source.html">WhitespaceManager.h</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 17 2021 01:58:47 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 18 2021 02:06:08 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

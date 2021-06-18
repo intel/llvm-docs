@@ -9,5 +9,6 @@ var namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd =
     [ "shape_type< simd_view< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01simd__view_3_01BaseTy_00_01RegionTy_01_4_01_4.html", null ],
     [ "shape_type< std::pair< TopRegionTy, BaseRegionTy > >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1shape__type_3_01std_1_1pair_3_01Top1ac2cb2fd2338f65291fa87554bd2289.html", null ],
     [ "simd", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd" ],
-    [ "simd_view", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view" ]
+    [ "simd_view", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view" ],
+    [ "simd_view< BaseTy, region_base_1< Is2D, T, StrideY, StrideX > >", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view_3_01BaseTy_00_01region__b36271a264bdb862fbe2f5d83370b2a76.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1simd__view_3_01BaseTy_00_01region__b36271a264bdb862fbe2f5d83370b2a76" ]
 ];

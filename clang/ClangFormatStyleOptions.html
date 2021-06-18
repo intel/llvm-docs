@@ -200,6 +200,36 @@ on a single line, e.g.:</p>
 </li>
 </ul>
 </dd>
+<dt><strong>AlignArrayOfStructures</strong> (<code class="docutils literal notranslate"><span class="pre">ArrayInitializerAlignmentStyle</span></code>)</dt><dd><p>if not <code class="docutils literal notranslate"><span class="pre">None</span></code>, when using initialization for an array of structs
+aligns the fields into columns.</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">AIAS_Left</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Left</span></code>)
+Align array column and left justify the columns e.g.:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">test</span> <span class="n">demo</span><span class="p">[]</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="p">{</span><span class="mi">56</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span>    <span class="s">&quot;hello&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">93463</span><span class="p">,</span> <span class="s">&quot;world&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="mi">7</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>     <span class="s">&quot;!!&quot;</span>   <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AIAS_Right</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Right</span></code>)
+Align array column and right justify the columns e.g.:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">test</span> <span class="n">demo</span><span class="p">[]</span> <span class="o">=</span>
+<span class="p">{</span>
+    <span class="p">{</span><span class="mi">56</span><span class="p">,</span>    <span class="mi">23</span><span class="p">,</span> <span class="s">&quot;hello&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">93463</span><span class="p">,</span> <span class="s">&quot;world&quot;</span><span class="p">},</span>
+    <span class="p">{</span> <span class="mi">7</span><span class="p">,</span>     <span class="mi">5</span><span class="p">,</span>    <span class="s">&quot;!!&quot;</span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AIAS_None</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">None</span></code>)
+Don’t align array initializer columns.</p></li>
+</ul>
+</dd>
 <dt><strong>AlignConsecutiveAssignments</strong> (<code class="docutils literal notranslate"><span class="pre">AlignConsecutiveStyle</span></code>)</dt><dd><p>Style of aligning consecutive assignments.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Consecutive</span></code> will result in formattings like:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">a</span>            <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
