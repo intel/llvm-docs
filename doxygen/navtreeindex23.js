@@ -1,5 +1,10 @@
 var NAVTREEINDEX23 =
 {
+"math__intrin_8hpp.html#aaa1a4a4ba5594dc534f8da1f197ed8f3":[4,0,0,1,0,0,0,0,0,2,88],
+"math__intrin_8hpp.html#aacfad18a6d7b087d40a695be1b7ee188":[4,0,0,1,0,0,0,0,0,2,115],
+"math__intrin_8hpp.html#aad0aa08553f722cc533e1650aebc8f4e":[4,0,0,1,0,0,0,0,0,2,35],
+"math__intrin_8hpp.html#ab5fa3c702c7dc4906a24cccc376000d0":[4,0,0,1,0,0,0,0,0,2,2],
+"math__intrin_8hpp.html#ab61314afdd023c2b122e47b5b419ffe5":[4,0,0,1,0,0,0,0,0,2,76],
 "math__intrin_8hpp.html#abceca38639936867e991bda28c318f36":[4,0,0,1,0,0,0,0,0,2,79],
 "math__intrin_8hpp.html#abda372536448f64db70d01ad8de1137a":[4,0,0,1,0,0,0,0,0,2,71],
 "math__intrin_8hpp.html#abf15419aba502026b6dcd60cebe1f59f":[4,0,0,1,0,0,0,0,0,2,97],
@@ -244,10 +249,5 @@ var NAVTREEINDEX23 =
 "namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[2,0,1,1,9,1],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1property.html":[3,0,1,1,4,2],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1property.html":[2,0,1,1,9,2],
-"namespacecl_1_1sycl_1_1access.html":[2,0,1,1,0],
-"namespacecl_1_1sycl_1_1detail.html":[2,0,1,1,1],
-"namespacecl_1_1sycl_1_1detail.html":[3,0,1,1,0],
-"namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html":[2,0,1,1,1,0],
-"namespacecl_1_1sycl_1_1detail_1_1gtl.html":[2,0,1,1,1,1],
-"namespacecl_1_1sycl_1_1detail_1_1gvl.html":[2,0,1,1,1,2]
+"namespacecl_1_1sycl_1_1access.html":[2,0,1,1,0]
 };

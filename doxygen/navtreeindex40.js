@@ -1,5 +1,11 @@
 var NAVTREEINDEX40 =
 {
+"sycl_2sycl_8hpp_source.html":[4,0,0,1,1],
+"sycl__fe__intrins_8hpp.html":[4,0,0,0,1,2,38],
+"sycl__fe__intrins_8hpp_source.html":[4,0,0,0,1,2,38],
+"sycl__mem__obj__allocator_8hpp.html":[4,0,0,0,1,2,39],
+"sycl__mem__obj__allocator_8hpp_source.html":[4,0,0,0,1,2,39],
+"sycl__mem__obj__i_8hpp.html":[4,0,0,0,1,2,40],
 "sycl__mem__obj__i_8hpp_source.html":[4,0,0,0,1,2,40],
 "sycl__mem__obj__t_8cpp.html":[4,0,2,1,73],
 "sycl__mem__obj__t_8cpp_source.html":[4,0,2,1,73],

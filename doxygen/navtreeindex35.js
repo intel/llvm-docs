@@ -1,5 +1,11 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html#afb3c17e28fb7ec38cf31c052770818cc":[3,0,1,1,0,90,0],
+"structcl_1_1sycl_1_1detail_1_1get__context__info.html":[3,0,1,1,0,91],
+"structcl_1_1sycl_1_1detail_1_1get__context__info.html#aed1da39df2ab5d95e40f6ff57881b580":[3,0,1,1,0,91,0],
+"structcl_1_1sycl_1_1detail_1_1get__context__info.html#afb5e0f2b83bd4b9dd4dcebe7d7cdfa42":[3,0,1,1,0,91,1],
+"structcl_1_1sycl_1_1detail_1_1get__device__info.html":[3,0,1,1,0,92],
+"structcl_1_1sycl_1_1detail_1_1get__device__info.html#ae51ce11430888973a2febfdc1cc61866":[3,0,1,1,0,92,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01T_00_01info_1_1device_1_1parent__device_01_4.html":[3,0,1,1,0,109],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01T_00_01info_1_1device_1_1parent__device_01_4.html#a0f182a50168d56ba508aed11468c8642":[3,0,1,1,0,109,0],
 "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1ext__intel__mem__channel_01_4.html":[3,0,1,1,0,93],
@@ -243,11 +249,5 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a03f749c4fab2947c1e5e1616934024a9":[3,0,1,1,0,353,0],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a4543ee82f713feb95bdf849ffbb5f24e":[3,0,1,1,0,353,15],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a528ff3667536642710f83cefc3084c61":[3,0,1,1,0,353,2],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a6c1a011b10b9eeee1b58bd38102d3c5c":[3,0,1,1,0,353,11],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a7a6ad953939e3477e765de5460448c7e":[3,0,1,1,0,353,6],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a7e72004b2680f4d0cb3933562f4b8b96":[3,0,1,1,0,353,7],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a81e9c6c0727d1db7a34e39d7b4a3186f":[3,0,1,1,0,353,13],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a8ca9aed83c405bee33391cd400e13b10":[3,0,1,1,0,353,5],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#aab680aca2798f1bcc2e9a65299f15609":[3,0,1,1,0,353,14],
-"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#abd06683b198c8bc915862e89928df81d":[3,0,1,1,0,353,9]
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a6c1a011b10b9eeee1b58bd38102d3c5c":[3,0,1,1,0,353,11]
 };

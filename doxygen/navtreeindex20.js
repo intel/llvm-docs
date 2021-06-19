@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"half__type_8cpp.html#a6fbc3fd582a47994d3114156ec116327":[4,0,2,11,9],
+"half__type_8cpp.html#a952a897f10a022876a412f3f7908ec8b":[4,0,2,11,6],
+"half__type_8cpp.html#aaae1e37d56d68a35ed194bdd9ccd34e9":[4,0,2,11,3],
+"half__type_8cpp.html#ab72fdc9f106f764193f3675b5aba0213":[4,0,2,11,0],
+"half__type_8cpp.html#ac22a6e1f72e7053631ad0fb9d12be73d":[4,0,2,11,4],
 "half__type_8cpp.html#aecb4f6b11c9062e4b3dc274d65b5cd8c":[4,0,2,11,7],
 "half__type_8cpp_source.html":[4,0,2,11],
 "half__type_8hpp.html":[4,0,0,0,1,31],
@@ -78,8 +83,8 @@ var NAVTREEINDEX20 =
 "host__util_8hpp_source.html":[4,0,0,1,0,0,0,0,0,0],
 "id_8hpp.html":[4,0,0,0,1,33],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,0],
-"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,1],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,2],
+"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,1],
 "id_8hpp.html#aa40b71b8dd6ff6fdbf2cea604b3793c3":[4,0,0,0,1,33,5],
 "id_8hpp.html#aa8953bc09b85c70fd186496488a89a76":[4,0,0,0,1,33,4],
 "id_8hpp.html#aa999c9ff2be6ea85802409903755f482":[4,0,0,0,1,33,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "info__desc_8hpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,0,0,1,3,0,4],
 "info__desc_8hpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,0,0,1,3,0,5],
 "info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7c":[4,0,0,0,1,3,0,20],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca0dfb2d09aeef6a0220a25c2e2d0fddbd":[4,0,0,0,1,3,0,20,1],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca4caa8fade30967a8377af50b650cdba4":[4,0,0,0,1,3,0,20,3],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca4d5dc746cb3817f420a9dc05425e660f":[4,0,0,0,1,3,0,20,0],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca7f52cd07191bbdfc8bf925acf7076ffd":[4,0,0,0,1,3,0,20,2],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca84426bc33cb131aa00c40cd629ae5727":[4,0,0,0,1,3,0,20,5],
-"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca9e50da16b6f86043b800814c259a6f5f":[4,0,0,0,1,3,0,20,6]
+"info__desc_8hpp.html#a8c575cc9f9b2fb8d37bd1d593a7f7c7ca0dfb2d09aeef6a0220a25c2e2d0fddbd":[4,0,0,0,1,3,0,20,1]
 };

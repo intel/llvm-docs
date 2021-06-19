@@ -2,6 +2,7 @@ var pi__opencl_8cpp =
 [
     [ "_PI_CL", "pi__opencl_8cpp.html#a202ce1284dfe832d706747e1649ff93e", null ],
     [ "CHECK_ERR_SET_NULL_RET", "pi__opencl_8cpp.html#a856d2b442db17d79110cea6b01c1af40", null ],
+    [ "CL_USE_DEPRECATED_OPENCL_1_2_APIS", "pi__opencl_8cpp.html#a16605039b395344c0b68b435e197b8bd", null ],
     [ "CONSTFIX", "pi__opencl_8cpp.html#a0317452201a764521f25ac1e14d33c2c", null ],
     [ "clSetProgramSpecializationConstant_fn", "pi__opencl_8cpp.html#a6adb57f04a7f087cb902f2cadae76550", null ],
     [ "cast", "pi__opencl_8cpp.html#a6943cecba0128e74adc68da1a7321510", null ],

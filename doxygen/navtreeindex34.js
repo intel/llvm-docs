@@ -1,5 +1,11 @@
 var NAVTREEINDEX34 =
 {
+"structcl_1_1sycl_1_1detail_1_1InitializedVal_3_013_00_01T_01_4.html#af38b9888ac7e567de49c9c97a984d0d4":[3,0,1,1,0,156,0],
+"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html":[3,0,1,1,0,157],
+"structcl_1_1sycl_1_1detail_1_1InlineVariableHelper.html#a4ea04aa5d8c402c4565fe308bb378470":[3,0,1,1,0,157,0],
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html":[3,0,1,1,0,158],
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a16d01e250013b0bb63690b1dfa1d4e2a":[3,0,1,1,0,158,5],
+"structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a2cea2da4b910e53b81415de764d9b3e6":[3,0,1,1,0,158,4],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a580eaa81c1eeae2e86dced6fe46fc1da":[3,0,1,1,0,158,3],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a7435fb7b4a6c4d78637eddd9e1352b0c":[3,0,1,1,0,158,6],
 "structcl_1_1sycl_1_1detail_1_1InteropFeatureSupportMap.html#a820ba0af4275dd53a53c16ef6ca2a027":[3,0,1,1,0,158,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX34 =
 "structcl_1_1sycl_1_1detail_1_1get.html#afb74964383d69f459625b31d6eb59865":[3,0,1,1,0,89,1],
 "structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html":[3,0,1,1,0,90],
 "structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html#a00d17547bee882c88a06c09c5fcdbdb1":[3,0,1,1,0,90,2],
-"structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html#ac00c90cde1de571b24a1f3f9381b7e38":[3,0,1,1,0,90,1],
-"structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html#afb3c17e28fb7ec38cf31c052770818cc":[3,0,1,1,0,90,0],
-"structcl_1_1sycl_1_1detail_1_1get__context__info.html":[3,0,1,1,0,91],
-"structcl_1_1sycl_1_1detail_1_1get__context__info.html#aed1da39df2ab5d95e40f6ff57881b580":[3,0,1,1,0,91,0],
-"structcl_1_1sycl_1_1detail_1_1get__context__info.html#afb5e0f2b83bd4b9dd4dcebe7d7cdfa42":[3,0,1,1,0,91,1],
-"structcl_1_1sycl_1_1detail_1_1get__device__info.html":[3,0,1,1,0,92],
-"structcl_1_1sycl_1_1detail_1_1get__device__info.html#ae51ce11430888973a2febfdc1cc61866":[3,0,1,1,0,92,0]
+"structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html#ac00c90cde1de571b24a1f3f9381b7e38":[3,0,1,1,0,90,1]
 };

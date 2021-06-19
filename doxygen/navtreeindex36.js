@@ -1,5 +1,11 @@
 var NAVTREEINDEX36 =
 {
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a7a6ad953939e3477e765de5460448c7e":[3,0,1,1,0,353,6],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a7e72004b2680f4d0cb3933562f4b8b96":[3,0,1,1,0,353,7],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a81e9c6c0727d1db7a34e39d7b4a3186f":[3,0,1,1,0,353,13],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#a8ca9aed83c405bee33391cd400e13b10":[3,0,1,1,0,353,5],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#aab680aca2798f1bcc2e9a65299f15609":[3,0,1,1,0,353,14],
+"structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#abd06683b198c8bc915862e89928df81d":[3,0,1,1,0,353,9],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#ac791342140fc297a88757ffb981ea99f":[3,0,1,1,0,353,1],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#ad14af3060870036c81a0d447dfdb392c":[3,0,1,1,0,353,4],
 "structcl_1_1sycl_1_1detail_1_1tuple_3_01T_00_01Ts_8_8_8_01_4.html#ae5b72ee3bc8bb6b005832a8603f53345":[3,0,1,1,0,353,12],
@@ -243,11 +249,5 @@ var NAVTREEINDEX36 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01signed_01char_01_4.html":[3,0,1,1,1,0,1,0,1,0,22],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01signed_01char_01_4.html#a95f874ce62112c5476cd15de2ce77a63":[3,0,1,1,1,0,1,0,1,0,22,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01char_01_4.html":[3,0,1,1,1,0,1,0,1,0,23],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01char_01_4.html#a8fda31e94ac684a3b9895734d3048682":[3,0,1,1,1,0,1,0,1,0,23,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01int_01_4.html":[3,0,1,1,1,0,1,0,1,0,24],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01int_01_4.html#a627f11216303b6b3d076d939f3f03e4f":[3,0,1,1,1,0,1,0,1,0,24,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01long_01_4.html":[3,0,1,1,1,0,1,0,1,0,25],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01long_01_4.html#a8730c179736012cc465f7420be9a00a9":[3,0,1,1,1,0,1,0,1,0,25,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01long_01long_01_4.html":[3,0,1,1,1,0,1,0,1,0,26],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01long_01long_01_4.html#aa0923ce6ac10d6e51ec8ff270466b029":[3,0,1,1,1,0,1,0,1,0,26,0]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1esimdtype_3_01unsigned_01char_01_4.html#a8fda31e94ac684a3b9895734d3048682":[3,0,1,1,1,0,1,0,1,0,23,0]
 };
