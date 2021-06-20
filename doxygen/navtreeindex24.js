@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"namespacecl_1_1sycl_1_1access.html":[2,0,1,1,0],
 "namespacecl_1_1sycl_1_1detail.html":[2,0,1,1,1],
 "namespacecl_1_1sycl_1_1detail.html":[3,0,1,1,0],
 "namespacecl_1_1sycl_1_1detail_1_1enqueue__kernel__launch.html":[2,0,1,1,1,0],
@@ -25,8 +26,8 @@ var NAVTREEINDEX24 =
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html":[3,0,1,1,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail.html":[2,0,1,1,2,0,1,0,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail.html":[3,0,1,1,1,0,1,0,0],
-"namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[3,0,1,1,1,0,1,0,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[2,0,1,1,2,0,1,0,1],
+"namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[3,0,1,1,1,0,1,0,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail.html":[3,0,1,1,1,0,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail.html":[2,0,1,1,2,0,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html":[2,0,1,1,2,0,1,1],
@@ -60,8 +61,8 @@ var NAVTREEINDEX24 =
 "namespacecl_1_1sycl_1_1property_1_1reduction.html":[2,0,1,1,11,4],
 "namespacecl_1_1sycl_1_1usm.html":[2,0,1,1,12],
 "namespaceintelfpga.html":[2,0,2],
-"namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
+"namespacemembers.html":[2,1,0],
 "namespacemembers_a.html":[2,1,0,1],
 "namespacemembers_b.html":[2,1,0,2],
 "namespacemembers_c.html":[2,1,0,3],
@@ -70,8 +71,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,6],
-"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func.html":[2,1,1],
+"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
@@ -139,8 +140,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_w.html":[2,1,0,23],
 "namespacemembers_x.html":[2,1,0,24],
 "namespaces.html":[2,0],
-"namespacesettings.html":[3,0,2],
 "namespacesettings.html":[2,0,3],
+"namespacesettings.html":[3,0,2],
 "namespacestd.html":[3,0,3],
 "namespacestd.html":[2,0,4],
 "nd__item_8hpp.html":[4,0,0,0,1,45],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "pi_8h.html#a140f544327e5cf8c6a6bfc984ef67355":[4,0,0,0,1,2,31,157],
 "pi_8h.html#a146fdac4bb83067b03333abc10e44e23":[4,0,0,0,1,2,31,23],
 "pi_8h.html#a1520bebd635620cc853597acda4cb054":[4,0,0,0,1,2,31,248],
-"pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717":[4,0,0,0,1,2,31,133],
-"pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a03a8f5cc04f3825582dd0c691c3a3f14":[4,0,0,0,1,2,31,133,21]
+"pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717":[4,0,0,0,1,2,31,133]
 };

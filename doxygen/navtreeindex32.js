@@ -1,5 +1,6 @@
 var NAVTREEINDEX32 =
 {
+"struct__pi__image.html#a85de932a49ff40e6df07b7a88c1519c3":[3,0,15,1],
 "struct__pi__image.html#af3eabf3a1dec86be0296b9a981894596":[3,0,15,0],
 "struct__pi__image__desc.html":[3,0,16],
 "struct__pi__image__desc.html#a409fe35118556b8c659e721a2f6d769f":[3,0,16,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX32 =
 "struct__pi__queue_1_1command__list__fence__t.html":[3,0,25,0],
 "struct__pi__queue_1_1command__list__fence__t.html#a3ea93f40f31b4ef0060c6e2781fefee0":[3,0,25,0,2],
 "struct__pi__queue_1_1command__list__fence__t.html#a5124d014ef30581fc55bab663c137117":[3,0,25,0,0],
-"struct__pi__queue_1_1command__list__fence__t.html#aeb7ef2d0bf76480f6b0462983292462f":[3,0,25,0,1],
-"struct__pi__sampler.html":[3,0,26]
+"struct__pi__queue_1_1command__list__fence__t.html#aeb7ef2d0bf76480f6b0462983292462f":[3,0,25,0,1]
 };
