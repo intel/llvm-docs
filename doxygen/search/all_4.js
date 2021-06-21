@@ -321,7 +321,7 @@ var searchData=
   ['cuda_5fpideviceretain_1040',['cuda_piDeviceRetain',['../pi__cuda_8cpp.html#a8ee46411e68612b80d9d68392a215481',1,'pi_cuda.cpp']]],
   ['cuda_5fpidevicesget_1041',['cuda_piDevicesGet',['../pi__cuda_8cpp.html#a6cda6564b9002f577b335c7a6899a149',1,'pi_cuda.cpp']]],
   ['cuda_5fpienqueueeventswait_1042',['cuda_piEnqueueEventsWait',['../pi__cuda_8cpp.html#a2497913392249b469d0614a3e2571cd4',1,'pi_cuda.cpp']]],
-  ['cuda_5fpienqueueeventswaitwithbarrier_1043',['cuda_piEnqueueEventsWaitWithBarrier',['../pi__cuda_8cpp.html#a4b27a55fc785aeb8ce5a176deb6b4b79',1,'pi_cuda.cpp']]],
+  ['cuda_5fpienqueueeventswaitwithbarrier_1043',['cuda_piEnqueueEventsWaitWithBarrier',['../pi__cuda_8cpp.html#ab4006c5813daf93f8648cad7b305a8dc',1,'pi_cuda.cpp']]],
   ['cuda_5fpienqueuekernellaunch_1044',['cuda_piEnqueueKernelLaunch',['../pi__cuda_8cpp.html#a476546da0fe98b9547a97579722a862c',1,'pi_cuda.cpp']]],
   ['cuda_5fpienqueuemembuffercopy_1045',['cuda_piEnqueueMemBufferCopy',['../pi__cuda_8cpp.html#a2098707c7656a5c473ce28c499d57d70',1,'pi_cuda.cpp']]],
   ['cuda_5fpienqueuemembuffercopyrect_1046',['cuda_piEnqueueMemBufferCopyRect',['../pi__cuda_8cpp.html#a95159c701d0274885add31d67376f1df',1,'pi_cuda.cpp']]],
