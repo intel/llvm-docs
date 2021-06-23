@@ -130,6 +130,12 @@ Include dependency graph for Stencil.cpp:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a9eb69e9423409f74163eefa6e6025229"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classllvm_1_1Expected.html">llvm::Expected</a>&lt; <a class="el" href="classclang_1_1DynTypedNode.html">DynTypedNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Stencil_8cpp.html#a9eb69e9423409f74163eefa6e6025229">getNode</a> (const <a class="el" href="classclang_1_1ast__matchers_1_1BoundNodes.html">ast_matchers::BoundNodes</a> &amp;<a class="el" href="ASTMatchFinder_8cpp.html#a2efebf59722498358b342545b0e3b8ba">Nodes</a>, StringRef <a class="el" href="ASTDiff_8cpp.html#afe0b47b3c92f2f69ea3da50cb72553eb">Id</a>)</td></tr>
 <tr class="separator:a9eb69e9423409f74163eefa6e6025229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fd267d595a192d83cff2387f329dcb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ByteCodeEmitter_8cpp.html#a4bd5334353e73943f5521049c0a1522a">Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Stencil_8cpp.html#a87fd267d595a192d83cff2387f329dcb">printNode</a> (StringRef <a class="el" href="ASTDiff_8cpp.html#afe0b47b3c92f2f69ea3da50cb72553eb">Id</a>, const <a class="el" href="structclang_1_1ast__matchers_1_1MatchFinder_1_1MatchResult.html">MatchFinder::MatchResult</a> &amp;Match, <a class="el" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> *Result)</td></tr>
+<tr class="separator:a87fd267d595a192d83cff2387f329dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d85ba95662edf476226e455c675cdb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Stencil_8cpp.html#a00d85ba95662edf476226e455c675cdb">isSmartPointerType</a> (<a class="el" href="classclang_1_1QualType.html">QualType</a> Ty, <a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;Context)</td></tr>
+<tr class="separator:a00d85ba95662edf476226e455c675cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae60fe2873a223e82fb04920bdc6bd685"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classclang_1_1Expr.html">Expr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Stencil_8cpp.html#ae60fe2873a223e82fb04920bdc6bd685">isSmartDereference</a> (const <a class="el" href="classclang_1_1Expr.html">Expr</a> &amp;E, <a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;Context)</td></tr>
+<tr class="separator:ae60fe2873a223e82fb04920bdc6bd685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a9eb69e9423409f74163eefa6e6025229"></a>
@@ -170,12 +176,140 @@ Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="ASTDiff_8cpp_source.html#l00191">Id</a>, and <a class="el" href="ASTMatchFinder_8cpp_source.html#l00082">Nodes</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="Stencil_8cpp_source.html#l00046">printNode()</a>.</p>
+
+</div>
+</div>
+<a id="ae60fe2873a223e82fb04920bdc6bd685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae60fe2873a223e82fb04920bdc6bd685">&#9670;&nbsp;</a></span>isSmartDereference()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="classclang_1_1Expr.html">Expr</a>* isSmartDereference </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1Expr.html">Expr</a> &amp;&#160;</td>
+          <td class="paramname"><em>E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>Context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Stencil_8cpp_source.html#l00078">78</a> of file <a class="el" href="Stencil_8cpp_source.html">Stencil.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00785">clang::ast_matchers::cxxMethodDecl</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00873">clang::ast_matchers::cxxOperatorCallExpr</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00745">clang::ast_matchers::cxxRecordDecl</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="ASTMatchers_8h_source.html#l03050">clang::ast_matchers::hasOverloadedOperatorName()</a>, <a class="el" href="ASTMatchFinder_8h_source.html#l00310">clang::ast_matchers::match()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00771">clang::ast_matchers::qualType</a>, and <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00772">clang::ast_matchers::type</a>.</p>
+
+</div>
+</div>
+<a id="a00d85ba95662edf476226e455c675cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d85ba95662edf476226e455c675cdb">&#9670;&nbsp;</a></span>isSmartPointerType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> isSmartPointerType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classclang_1_1QualType.html">QualType</a>&#160;</td>
+          <td class="paramname"><em>Ty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>Context</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Stencil_8cpp_source.html#l00059">59</a> of file <a class="el" href="Stencil_8cpp_source.html">Stencil.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00975">clang::ast_matchers::anyOf</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00785">clang::ast_matchers::cxxMethodDecl</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00745">clang::ast_matchers::cxxRecordDecl</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00983">clang::ast_matchers::hasAnyName</a>, <a class="el" href="ASTMatchers_8h_source.html#l03561">clang::ast_matchers::hasDeclaration()</a>, <a class="el" href="ASTMatchers_8h_source.html#l03050">clang::ast_matchers::hasOverloadedOperatorName()</a>, <a class="el" href="ASTMatchFinder_8h_source.html#l00310">clang::ast_matchers::match()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00771">clang::ast_matchers::qualType</a>, and <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00772">clang::ast_matchers::type</a>.</p>
+
+</div>
+</div>
+<a id="a87fd267d595a192d83cff2387f329dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87fd267d595a192d83cff2387f329dcb">&#9670;&nbsp;</a></span>printNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="ByteCodeEmitter_8cpp.html#a4bd5334353e73943f5521049c0a1522a">Error</a> printNode </td>
+          <td>(</td>
+          <td class="paramtype">StringRef&#160;</td>
+          <td class="paramname"><em>Id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structclang_1_1ast__matchers_1_1MatchFinder_1_1MatchResult.html">MatchFinder::MatchResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>Match</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> *&#160;</td>
+          <td class="paramname"><em>Result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Stencil_8cpp_source.html#l00046">46</a> of file <a class="el" href="Stencil_8cpp_source.html">Stencil.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="ASTMatchFinder_8h_source.html#l00084">clang::ast_matchers::MatchFinder::MatchResult::Context</a>, <a class="el" href="ASTContext_8h_source.html#l00733">clang::ASTContext::getLangOpts()</a>, <a class="el" href="Stencil_8cpp_source.html#l00037">getNode()</a>, <a class="el" href="ASTDiff_8cpp_source.html#l00191">Id</a>, <a class="el" href="ASTMatchFinder_8h_source.html#l00080">clang::ast_matchers::MatchFinder::MatchResult::Nodes</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 01:56:23 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 23 2021 01:47:06 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

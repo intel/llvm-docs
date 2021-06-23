@@ -110,6 +110,19 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreSiteFinder.html">StoreSiteFinder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds last store into the given region, which is different from a given symbolic value.  <a href="classStoreSiteFinder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDefaultStoreHandler.html">DefaultStoreHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlDependencyHandler.html">ControlDependencyHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNilReceiverHandler.html">NilReceiverHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArrayIndexHandler.html">ArrayIndexHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInterestingLValueHandler.html">InterestingLValueHandler</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInlinedFunctionCallHandler.html">InlinedFunctionCallHandler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a ReturnVisitor if the given statement represents a call that was inlined.  <a href="classInlinedFunctionCallHandler.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDefaultExpressionHandler.html">DefaultExpressionHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPRValueHandler.html">PRValueHandler</a></td></tr>
@@ -149,15 +162,19 @@ Functions</h2></td></tr>
 <tr class="memitem:ad7640dbd9f3120496ba251f367ada0b6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#ad7640dbd9f3120496ba251f367ada0b6">isInitializationOfVar</a> (const ExplodedNode *N, const VarRegion *VR)</td></tr>
 <tr class="memdesc:ad7640dbd9f3120496ba251f367ada0b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if <code>N</code> represents the DeclStmt declaring and initializing <code>VR</code>.  <a href="BugReporterVisitors_8cpp.html#ad7640dbd9f3120496ba251f367ada0b6">More...</a><br /></td></tr>
 <tr class="separator:ad7640dbd9f3120496ba251f367ada0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a295a4d0e17d7bdf02c7820b4449b5d39"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#a295a4d0e17d7bdf02c7820b4449b5d39">showBRDiagnostics</a> (const char *action, llvm::raw_svector_ostream &amp;os, const MemRegion *NewR, SVal <a class="el" href="ASTContext_8h.html#ab1457e11becd51c5d0c750caab5446c2">V</a>, const MemRegion *OldR, const <a class="el" href="classclang_1_1DeclStmt.html">DeclStmt</a> *DS)</td></tr>
-<tr class="memdesc:a295a4d0e17d7bdf02c7820b4449b5d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show diagnostics for initializing or declaring a region <code>R</code> with a bad value.  <a href="BugReporterVisitors_8cpp.html#a295a4d0e17d7bdf02c7820b4449b5d39">More...</a><br /></td></tr>
-<tr class="separator:a295a4d0e17d7bdf02c7820b4449b5d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb68cff65a73c33279144f3275cf2e8d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#acb68cff65a73c33279144f3275cf2e8d">showBRParamDiagnostics</a> (llvm::raw_svector_ostream &amp;os, const VarRegion *VR, SVal <a class="el" href="ASTContext_8h.html#ab1457e11becd51c5d0c750caab5446c2">V</a>, const MemRegion *ValueR)</td></tr>
-<tr class="memdesc:acb68cff65a73c33279144f3275cf2e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display diagnostics for passing bad region as a parameter.  <a href="BugReporterVisitors_8cpp.html#acb68cff65a73c33279144f3275cf2e8d">More...</a><br /></td></tr>
-<tr class="separator:acb68cff65a73c33279144f3275cf2e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16751d6b1e067bcd7d4be1439c574e81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#a16751d6b1e067bcd7d4be1439c574e81">showBRDefaultDiagnostics</a> (llvm::raw_svector_ostream &amp;os, const MemRegion *NewR, SVal <a class="el" href="ASTContext_8h.html#ab1457e11becd51c5d0c750caab5446c2">V</a>, const MemRegion *OldR)</td></tr>
-<tr class="memdesc:a16751d6b1e067bcd7d4be1439c574e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show default diagnostics for storing bad region.  <a href="BugReporterVisitors_8cpp.html#a16751d6b1e067bcd7d4be1439c574e81">More...</a><br /></td></tr>
-<tr class="separator:a16751d6b1e067bcd7d4be1439c574e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed82ecf4c0f52828cc8d6a134e20d69"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#abed82ecf4c0f52828cc8d6a134e20d69">isObjCPointer</a> (const MemRegion *R)</td></tr>
+<tr class="separator:abed82ecf4c0f52828cc8d6a134e20d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cabcdbcf2f78373901e878bd50aef4f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#a1cabcdbcf2f78373901e878bd50aef4f">isObjCPointer</a> (const <a class="el" href="classclang_1_1ValueDecl.html">ValueDecl</a> *D)</td></tr>
+<tr class="separator:a1cabcdbcf2f78373901e878bd50aef4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35c9698bece6715fd652a80d5574473"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#af35c9698bece6715fd652a80d5574473">showBRDiagnostics</a> (llvm::raw_svector_ostream &amp;OS, StoreInfo SI)</td></tr>
+<tr class="memdesc:af35c9698bece6715fd652a80d5574473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show diagnostics for initializing or declaring a region <code>R</code> with a bad value.  <a href="BugReporterVisitors_8cpp.html#af35c9698bece6715fd652a80d5574473">More...</a><br /></td></tr>
+<tr class="separator:af35c9698bece6715fd652a80d5574473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7e17e0c6737ab780432b322bd61363"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#a1b7e17e0c6737ab780432b322bd61363">showBRParamDiagnostics</a> (llvm::raw_svector_ostream &amp;OS, StoreInfo SI)</td></tr>
+<tr class="memdesc:a1b7e17e0c6737ab780432b322bd61363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display diagnostics for passing bad region as a parameter.  <a href="BugReporterVisitors_8cpp.html#a1b7e17e0c6737ab780432b322bd61363">More...</a><br /></td></tr>
+<tr class="separator:a1b7e17e0c6737ab780432b322bd61363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bf53dc07c15b136d762d09e46e4c89"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#ab0bf53dc07c15b136d762d09e46e4c89">showBRDefaultDiagnostics</a> (llvm::raw_svector_ostream &amp;OS, StoreInfo SI)</td></tr>
+<tr class="memdesc:ab0bf53dc07c15b136d762d09e46e4c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show default diagnostics for storing bad region.  <a href="BugReporterVisitors_8cpp.html#ab0bf53dc07c15b136d762d09e46e4c89">More...</a><br /></td></tr>
+<tr class="separator:ab0bf53dc07c15b136d762d09e46e4c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d4f93955b3a82ca72c7d30926eb5ff5"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; PathDiagnosticEventPiece &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#a7d4f93955b3a82ca72c7d30926eb5ff5">constructDebugPieceForTrackedCondition</a> (const <a class="el" href="classclang_1_1Expr.html">Expr</a> *Cond, const ExplodedNode *N, BugReporterContext &amp;BRC)</td></tr>
 <tr class="separator:a7d4f93955b3a82ca72c7d30926eb5ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad09ccc9cef6b3acf7a177e55b8257be2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="BugReporterVisitors_8cpp.html#ad09ccc9cef6b3acf7a177e55b8257be2">isAssertlikeBlock</a> (const <a class="el" href="classclang_1_1CFGBlock.html">CFGBlock</a> *B, <a class="el" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;Context)</td></tr>
@@ -214,7 +231,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01882">1882</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01780">1780</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="PathDiagnostic_8cpp_source.html#l00580">clang::ento::PathDiagnosticLocation::createBegin()</a>, <a class="el" href="Stmt_8cpp_source.html#l00324">clang::Stmt::getSourceRange()</a>, <a class="el" href="Lexer_8cpp_source.html#l00944">clang::Lexer::getSourceText()</a>, <a class="el" href="SourceLocation_8h_source.html#l00263">clang::CharSourceRange::getTokenRange()</a>, <a class="el" href="AnalyzerOptions_8h_source.html#l00062">clang::PD_NONE</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
@@ -256,7 +273,7 @@ Variables</h2></td></tr>
 
 <p>Find the ExplodedNode where the lvalue (the value of 'Ex') was computed. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l02049">2049</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01947">1947</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +345,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="BugReporterVisitors_8cpp_source.html#l00205">getSValForVar()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02881">clang::ento::ConditionBRVisitor::printValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02974">clang::ento::ConditionBRVisitor::printValue()</a>.</p>
 
 </div>
 </div>
@@ -374,8 +391,6 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l00158">158</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01442">StoreSiteFinder::VisitNode()</a>.</p>
-
 </div>
 </div>
 <a id="abd1b1ef8d6ee52d70982b746213348b4"></a>
@@ -417,7 +432,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Lexer_8cpp_source.html#l00980">clang::Lexer::getImmediateMacroName()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01772">clang::ento::SuppressInlineDefensiveChecksVisitor::VisitNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01670">clang::ento::SuppressInlineDefensiveChecksVisitor::VisitNode()</a>.</p>
 
 </div>
 </div>
@@ -514,7 +529,7 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l00187">187</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01442">StoreSiteFinder::VisitNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01360">StoreSiteFinder::VisitNode()</a>.</p>
 
 </div>
 </div>
@@ -552,7 +567,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01900">1900</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01798">1798</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CFG_8cpp_source.html#l05962">clang::CFGBlock::getTerminatorCondition()</a>, <a class="el" href="CFG_8cpp_source.html#l05896">clang::CFGBlock::isInevitablySinking()</a>, <a class="el" href="CFG_8h_source.html#l00955">clang::CFGBlock::succ_begin()</a>, and <a class="el" href="CFG_8h_source.html#l00973">clang::CFGBlock::succ_size()</a>.</p>
 
@@ -635,11 +650,11 @@ Variables</h2></td></tr>
 
 <p>Returns true if <code>N</code> represents the DeclStmt declaring and initializing <code>VR</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01282">1282</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01190">1190</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01306">clang::DeclStmt::getSingleDecl()</a>, <a class="el" href="AnalysisDeclContext_8cpp_source.html#l00410">clang::LocationContext::getStackFrame()</a>, and <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00563">P</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01442">StoreSiteFinder::VisitNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01360">StoreSiteFinder::VisitNode()</a>.</p>
 
 </div>
 </div>
@@ -687,7 +702,67 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="BugReporterVisitors_8cpp_source.html#l00205">getSValForVar()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02780">clang::ento::ConditionBRVisitor::VisitConditionVariable()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02873">clang::ento::ConditionBRVisitor::VisitConditionVariable()</a>.</p>
+
+</div>
+</div>
+<a id="abed82ecf4c0f52828cc8d6a134e20d69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed82ecf4c0f52828cc8d6a134e20d69">&#9670;&nbsp;</a></span>isObjCPointer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> isObjCPointer </td>
+          <td>(</td>
+          <td class="paramtype">const MemRegion *&#160;</td>
+          <td class="paramname"><em>R</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01217">1217</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l10723">clang::Sema::CheckAdditionOperands()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l01321">showBRDefaultDiagnostics()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l01230">showBRDiagnostics()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l01287">showBRParamDiagnostics()</a>.</p>
+
+</div>
+</div>
+<a id="a1cabcdbcf2f78373901e878bd50aef4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cabcdbcf2f78373901e878bd50aef4f">&#9670;&nbsp;</a></span>isObjCPointer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> isObjCPointer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1ValueDecl.html">ValueDecl</a> *&#160;</td>
+          <td class="paramname"><em>D</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01225">1225</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Decl_8h_source.html#l00660">clang::ValueDecl::getType()</a>, and <a class="el" href="Type_8h_source.html#l06807">clang::Type::isObjCObjectPointerType()</a>.</p>
 
 </div>
 </div>
@@ -766,7 +841,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="namespaceclang_1_1ento_1_1bugreporter.html#af2ca64fac08b6097205ca3f72b002779a9e2941b3c81256fac10392aaca4ccfde">clang::ento::bugreporter::Condition</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00205">getSValForVar()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02780">clang::ento::ConditionBRVisitor::VisitConditionVariable()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02660">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02873">clang::ento::ConditionBRVisitor::VisitConditionVariable()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -805,7 +880,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>A subexpression of <code>Ex</code> which represents the expression-of-interest. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01983">1983</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01881">1881</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ProgramPoint_8h_source.html#l00151">clang::ProgramPoint::getAs()</a>, <a class="el" href="namespaceclang_1_1ento_1_1bugreporter.html#a997710cc651525b7c294df16f59244b3">clang::ento::bugreporter::getDerefExpr()</a>, <a class="el" href="CFG_8h_source.html#l01050">clang::CFGBlock::getTerminatorStmt()</a>, <a class="el" href="Expr_8cpp_source.html#l02980">clang::Expr::IgnoreParenCasts()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, and <a class="el" href="CFG_8h_source.html#l00955">clang::CFGBlock::succ_begin()</a>.</p>
 
@@ -839,7 +914,7 @@ Variables</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Expr_8h_source.html#l03887">clang::BinaryOperator::getLHS()</a>, <a class="el" href="Expr_8h_source.html#l03889">clang::BinaryOperator::getRHS()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8h_source.html#l03923">clang::BinaryOperator::isAdditiveOp()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01983">peelOffOuterExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01881">peelOffOuterExpr()</a>.</p>
 
 </div>
 </div>
@@ -884,8 +959,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a16751d6b1e067bcd7d4be1439c574e81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16751d6b1e067bcd7d4be1439c574e81">&#9670;&nbsp;</a></span>showBRDefaultDiagnostics()</h2>
+<a id="ab0bf53dc07c15b136d762d09e46e4c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0bf53dc07c15b136d762d09e46e4c89">&#9670;&nbsp;</a></span>showBRDefaultDiagnostics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,25 +972,13 @@ Variables</h2></td></tr>
           <td class="memname">static void showBRDefaultDiagnostics </td>
           <td>(</td>
           <td class="paramtype">llvm::raw_svector_ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
+          <td class="paramname"><em>OS</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const MemRegion *&#160;</td>
-          <td class="paramname"><em>NewR</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SVal&#160;</td>
-          <td class="paramname"><em>V</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const MemRegion *&#160;</td>
-          <td class="paramname"><em>OldR</em>&#160;</td>
+          <td class="paramtype">StoreInfo&#160;</td>
+          <td class="paramname"><em>SI</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -932,14 +995,16 @@ Variables</h2></td></tr>
 
 <p>Show default diagnostics for storing bad region. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01387">1387</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01321">1321</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00314">b</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
+<p class="reference">References <a class="el" href="BugReporterVisitors_8cpp_source.html#l01217">isObjCPointer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01984">DefaultStoreHandler::handle()</a>.</p>
 
 </div>
 </div>
-<a id="a295a4d0e17d7bdf02c7820b4449b5d39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a295a4d0e17d7bdf02c7820b4449b5d39">&#9670;&nbsp;</a></span>showBRDiagnostics()</h2>
+<a id="af35c9698bece6715fd652a80d5574473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35c9698bece6715fd652a80d5574473">&#9670;&nbsp;</a></span>showBRDiagnostics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -950,38 +1015,14 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void showBRDiagnostics </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>action</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">llvm::raw_svector_ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
+          <td class="paramname"><em>OS</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const MemRegion *&#160;</td>
-          <td class="paramname"><em>NewR</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SVal&#160;</td>
-          <td class="paramname"><em>V</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const MemRegion *&#160;</td>
-          <td class="paramname"><em>OldR</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classclang_1_1DeclStmt.html">DeclStmt</a> *&#160;</td>
-          <td class="paramname"><em>DS</em>&#160;</td>
+          <td class="paramtype">StoreInfo&#160;</td>
+          <td class="paramname"><em>SI</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -998,14 +1039,16 @@ Variables</h2></td></tr>
 
 <p>Show diagnostics for initializing or declaring a region <code>R</code> with a bad value. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01310">1310</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01230">1230</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00314">b</a>, <a class="el" href="Stmt_8h_source.html#l01306">clang::DeclStmt::getSingleDecl()</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
+<p class="reference">References <a class="el" href="BugReporterVisitors_8h_source.html#l00135">clang::ento::bugreporter::StoreInfo::BlockCapture</a>, <a class="el" href="ProgramPoint_8h_source.html#l00279">clang::StmtPoint::getStmt()</a>, <a class="el" href="BugReporterVisitors_8h_source.html#l00123">clang::ento::bugreporter::StoreInfo::Initialization</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l01217">isObjCPointer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01984">DefaultStoreHandler::handle()</a>.</p>
 
 </div>
 </div>
-<a id="acb68cff65a73c33279144f3275cf2e8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb68cff65a73c33279144f3275cf2e8d">&#9670;&nbsp;</a></span>showBRParamDiagnostics()</h2>
+<a id="a1b7e17e0c6737ab780432b322bd61363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7e17e0c6737ab780432b322bd61363">&#9670;&nbsp;</a></span>showBRParamDiagnostics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1017,25 +1060,13 @@ Variables</h2></td></tr>
           <td class="memname">static void showBRParamDiagnostics </td>
           <td>(</td>
           <td class="paramtype">llvm::raw_svector_ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
+          <td class="paramname"><em>OS</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const VarRegion *&#160;</td>
-          <td class="paramname"><em>VR</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">SVal&#160;</td>
-          <td class="paramname"><em>V</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const MemRegion *&#160;</td>
-          <td class="paramname"><em>ValueR</em>&#160;</td>
+          <td class="paramtype">StoreInfo&#160;</td>
+          <td class="paramname"><em>SI</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1052,9 +1083,11 @@ Variables</h2></td></tr>
 
 <p>Display diagnostics for passing bad region as a parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01355">1355</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01287">1287</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
+<p class="reference">References <a class="el" href="BugReporterVisitors_8cpp_source.html#l01217">isObjCPointer()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01984">DefaultStoreHandler::handle()</a>.</p>
 
 </div>
 </div>
@@ -1130,14 +1163,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l00676">676</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l02780">clang::ento::ConditionBRVisitor::VisitConditionVariable()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02660">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01984">DefaultStoreHandler::handle()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l02873">clang::ento::ConditionBRVisitor::VisitConditionVariable()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 01:56:22 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 23 2021 01:47:06 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

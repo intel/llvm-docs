@@ -70,8 +70,8 @@ Collaboration diagram for StoreSiteFinder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a92e4bb78e7ff58086a13005ed02bf219"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreSiteFinder.html#a92e4bb78e7ff58086a13005ed02bf219">StoreSiteFinder</a> (bugreporter::TrackerRef ParentTracker, KnownSVal V, const MemRegion *R, <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> InEnableNullFPSuppression, TrackingKind TKind, const <a class="el" href="classclang_1_1StackFrameContext.html">StackFrameContext</a> *OriginSFC=nullptr)</td></tr>
-<tr class="separator:a92e4bb78e7ff58086a13005ed02bf219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4810020104b63d9cd50e6cd0133c5d96"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreSiteFinder.html#a4810020104b63d9cd50e6cd0133c5d96">StoreSiteFinder</a> (bugreporter::TrackerRef ParentTracker, KnownSVal V, const MemRegion *R, TrackingOptions Options, const <a class="el" href="classclang_1_1StackFrameContext.html">StackFrameContext</a> *OriginSFC=nullptr)</td></tr>
+<tr class="separator:a4810020104b63d9cd50e6cd0133c5d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d8bdf12c49e479c44b86212fa86fb23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreSiteFinder.html#a3d8bdf12c49e479c44b86212fa86fb23">Profile</a> (llvm::FoldingSetNodeID &amp;ID) const override</td></tr>
 <tr class="separator:a3d8bdf12c49e479c44b86212fa86fb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a0dad7b7fcc79efa41afa97a2bf9103"><td class="memItemLeft" align="right" valign="top">PathDiagnosticPieceRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classStoreSiteFinder.html#a5a0dad7b7fcc79efa41afa97a2bf9103">VisitNode</a> (const ExplodedNode *N, BugReporterContext &amp;BRC, PathSensitiveBugReport &amp;BR) override</td></tr>
@@ -80,10 +80,10 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Finds last store into the given region, which is different from a given symbolic value. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01230">1230</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01145">1145</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a92e4bb78e7ff58086a13005ed02bf219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92e4bb78e7ff58086a13005ed02bf219">&#9670;&nbsp;</a></span>StoreSiteFinder()</h2>
+<a id="a4810020104b63d9cd50e6cd0133c5d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4810020104b63d9cd50e6cd0133c5d96">&#9670;&nbsp;</a></span>StoreSiteFinder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,14 +112,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
-          <td class="paramname"><em>InEnableNullFPSuppression</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TrackingKind&#160;</td>
-          <td class="paramname"><em>TKind</em>, </td>
+          <td class="paramtype">TrackingOptions&#160;</td>
+          <td class="paramname"><em>Options</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -149,7 +143,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01254">1254</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01164">1164</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 </div>
 </div>
@@ -178,7 +172,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01271">1271</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01179">1179</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
@@ -224,9 +218,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01442">1442</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8cpp_source.html#l01360">1360</a> of file <a class="el" href="BugReporterVisitors_8cpp_source.html">BugReporterVisitors.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="namespaceclang_1_1ento_1_1bugreporter.html#af2ca64fac08b6097205ca3f72b002779a9e2941b3c81256fac10392aaca4ccfde">clang::ento::bugreporter::Condition</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00158">getLocationRegionIfReference()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00187">hasVisibleUpdate()</a>, <a class="el" href="Expr_8cpp_source.html#l02980">clang::Expr::IgnoreParenCasts()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l01282">isInitializationOfVar()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00563">P</a>, <a class="el" href="Basic_2Cuda_8cpp_source.html#l00070">SM</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
+<p class="reference">References <a class="el" href="BugReporterVisitors_8cpp_source.html#l00187">hasVisibleUpdate()</a>, <a class="el" href="Expr_8cpp_source.html#l02980">clang::Expr::IgnoreParenCasts()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l01190">isInitializationOfVar()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00563">P</a>, and <a class="el" href="ASTContext_8h_source.html#l03074">V</a>.</p>
 
 </div>
 </div>
@@ -236,7 +230,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 01:56:23 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 23 2021 01:47:06 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

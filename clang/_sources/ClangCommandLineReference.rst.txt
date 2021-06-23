@@ -256,10 +256,6 @@ Trivial automatic variable initialization to zero is only here for benchmarks, i
 
 .. option:: -faligned-new=<arg>
 
-.. option:: -fdebug-module-writer
-
-Enable debug messages while writing module files
-
 .. option:: -ffixed-r19
 
 Reserve register r19 (Hexagon only)
@@ -470,12 +466,6 @@ Additional arguments to forward to LLVM's option processing
 .. option:: -module-dependency-dir <arg>
 
 Directory to dump module dependencies to
-
-.. option:: -module-dir <dir>, -J<arg>
-
-This option specifies where to put .mod files for compiled modules.
-It is also added to the list of directories to be searched by an USE statement.
-The default is the current directory.
 
 .. option:: -mtvos-simulator-version-min=<arg>, -mappletvsimulator-version-min=<arg>
 
@@ -897,58 +887,6 @@ Use the LLVM representation for assembler and object files
 
 Generate Interface Stub Files, emit merged text not binary.
 
-.. option:: -fdebug-dump-parse-tree
-
-Run the Parser and the semantic checks, and then output the
-parse tree.
-
-.. option:: -fdebug-dump-parse-tree-no-sema
-
-Run the Parser and then output the parse tree. Semantic
-checks are disabled.
-
-.. option:: -fdebug-dump-parsing-log
-
-Run instrumented parse and dump the parsing log
-
-.. option:: -fdebug-dump-provenance
-
-Dump provenance
-
-.. option:: -fdebug-dump-symbols
-
-Dump symbols after the semantic analysis
-
-.. option:: -fdebug-measure-parse-tree
-
-Measure the parse tree
-
-.. option:: -fdebug-pre-fir-tree
-
-Dump the pre-FIR tree
-
-.. option:: -fdebug-unparse
-
-Run the parser and the semantic checks. Then unparse the
-parse-tree and output the generated Fortran source file.
-
-.. option:: -fdebug-unparse-no-sema
-
-Only run the parser, then unparse the parse-tree and output the
-generated Fortran source file. Semantic checks are disabled.
-
-.. option:: -fdebug-unparse-with-symbols
-
-Unparse and stop.
-
-.. option:: -fget-definition <arg1> <arg2> <arg3>
-
-Get the symbol definition from <line> <start-column> <end-column>
-
-.. option:: -fget-symbols-sources
-
-Dump symbols and their source code locations
-
 .. option:: -fsyntax-only
 
 .. option:: -module-file-info
@@ -962,10 +900,6 @@ Only precompile the input
 .. option:: -rewrite-objc
 
 Rewrite Objective-C source to C++
-
-.. option:: -test-io
-
-Run the InputOuputTest action. Use for development and testing only.
 
 .. option:: -verify-pch
 
@@ -984,10 +918,6 @@ Pass <arg> to the assembler
 .. option:: -Xclang <arg>
 
 Pass <arg> to the clang compiler
-
-.. option:: -Xflang <arg>
-
-Pass <arg> to the flang compiler
 
 .. option:: -ansi, --ansi
 
@@ -1119,7 +1049,7 @@ Generalize pointers in CFI indirect call type signature checks
 
 Restrict sanitizer coverage instrumentation exclusively to modules and functions that match the provided special case list, except the blocked ones
 
-.. option:: -fsanitize-coverage-ignorelist=<arg>, -fsanitize-coverage-blacklist=<arg>, -fsanitize-coverage-blocklist=<arg>
+.. option:: -fsanitize-coverage-ignorelist=<arg>, -fsanitize-coverage-blacklist=<arg>
 
 Disable sanitizer coverage instrumentation for modules and functions that match the provided special case list, even the allowed ones
 
@@ -1521,6 +1451,8 @@ Enable the specified warning
 
 Enable warnings for deprecated constructs and define \_\_DEPRECATED
 
+.. option:: -Wframe-larger-than=<arg>, -Wframe-larger-than
+
 .. option:: -Wno-sycl-strict
 
 Disable warnings which enforce strict SYCL language compatibility.
@@ -1529,12 +1461,6 @@ Disable warnings which enforce strict SYCL language compatibility.
 
 Target-independent compilation options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. option:: -Wframe-larger-than=<arg>
-
-.. option:: -cpp
-
-Enable predefined and command line preprocessor macros
-
 .. option:: -fPIC, -fno-PIC
 
 .. option:: -fPIE, -fno-PIE
@@ -1562,10 +1488,6 @@ Enable C++17 aligned allocation functions
 Treat editor placeholders as valid source code
 
 .. option:: -fallow-unsupported
-
-.. option:: -falternative-parameter-statement
-
-Enable the old style PARAMETER statement
 
 .. option:: -faltivec, -fno-altivec
 
@@ -1610,11 +1532,6 @@ Enable EH Asynchronous exceptions
 .. option:: -fasynchronous-unwind-tables, -fno-asynchronous-unwind-tables
 
 .. option:: -fautolink, -fno-autolink
-
-.. option:: -fbackslash, -fno-backslash
-
-Change the interpretation of backslashes in string literals from
-a single backslash character to "C-style" escape characters.
 
 .. option:: -fbasic-block-sections=<arg>
 
@@ -1762,18 +1679,6 @@ Use DWARF base address selection entries in .debug\_ranges
 
 Place debug types in their own section (ELF Only)
 
-.. option:: -fdefault-double-8
-
-Set the default double precision kind to an 8 byte wide type
-
-.. option:: -fdefault-integer-8
-
-Set the default integer kind to an 8 byte wide type
-
-.. option:: -fdefault-real-8
-
-Set the default real kind to an 8 byte wide type
-
 .. option:: -fdelayed-template-parsing, -fno-delayed-template-parsing
 
 Parse templated function definitions at the end of the translation unit
@@ -1900,15 +1805,6 @@ Assume all loops are finite.
 
 .. option:: -ffinite-math-only, -fno-finite-math-only
 
-.. option:: -ffixed-form
-
-Process source files in fixed form
-
-.. option:: -ffixed-line-length=<arg>, -ffixed-line-length-<arg>
-
-Set column after which characters are ignored in typical fixed-form lines in the source
-file
-
 .. option:: -ffixed-point, -fno-fixed-point
 
 Enable fixed point types
@@ -1938,10 +1834,6 @@ Specifies the exception behavior of floating-point operations.
 .. option:: -ffp-model=<arg>
 
 Controls the semantics of floating-point calculations.
-
-.. option:: -ffree-form
-
-Process source files in free form
 
 .. option:: -ffreestanding
 
@@ -2009,10 +1901,6 @@ Implicitly search the file system for module map files.
 
 .. option:: -fimplicit-modules, -fno-implicit-modules
 
-.. option:: -fimplicit-none, -fno-implicit-none
-
-No implicit typing allowed unless overridden by IMPLICIT statements
-
 .. option:: -finput-charset=<arg>
 
 Specify the default character set for source files
@@ -2041,11 +1929,6 @@ Run cc1 in-process
 
 Perform ahead of time compilation for FPGA
 
-.. option:: -fintrinsic-modules-path <dir>
-
-This option specifies the location of pre-compiled intrinsic modules, 
-  if they are not in the default location expected by the compiler.
-
 .. option:: -fjump-tables, -fno-jump-tables
 
 Use jump tables for lowering switches
@@ -2054,19 +1937,11 @@ Use jump tables for lowering switches
 
 Keep static const variables if unused
 
-.. option:: -flarge-sizes
-
-Use INTEGER(KIND=8) for the result type in size-related intrinsics
-
 .. option:: -flax-vector-conversions=<arg>, -flax-vector-conversions (equivalent to -flax-vector-conversions=integer), -fno-lax-vector-conversions (equivalent to -flax-vector-conversions=none)
 
 Enable implicit vector bit-casts
 
 .. option:: -flimited-precision=<arg>
-
-.. option:: -flogical-abbreviations, -fno-logical-abbreviations
-
-Enable logical abbreviations
 
 .. option:: -flto, -fno-lto
 
@@ -2273,10 +2148,6 @@ Enable LTO in 'full' mode for offload compilation
 Set LTO mode to either 'full' or 'thin' for offload compilation
 
 .. option:: -fomit-frame-pointer, -fno-omit-frame-pointer
-
-.. option:: -fopenacc
-
-Enable OpenACC
 
 .. option:: -fopenmp, -fno-openmp
 
@@ -2796,8 +2667,6 @@ The visibility for defintiions without an explicit DLL export class \[-fvisibili
 
 Set the default symbol visibility for all global declarations
 
-.. option:: -fwarn-stack-size=<arg>
-
 .. option:: -fwasm-exceptions
 
 Use WebAssembly style exceptions
@@ -2817,10 +2686,6 @@ Store string literals as writable data
 .. option:: -fxl-pragma-pack, -fno-xl-pragma-pack
 
 Enable IBM XL #pragma pack handling
-
-.. option:: -fxor-operator, -fno-xor-operator
-
-Enable .XOR. as a synonym of .NEQV.
 
 .. option:: -fxray-always-emit-customevents, -fno-xray-always-emit-customevents
 
@@ -2889,14 +2754,6 @@ Enable System z vector language extension
 .. option:: --gpu-bundle-output, --no-gpu-bundle-output
 
 Bundle output files of HIP device compilation
-
-.. option:: -module-suffix <suffix>
-
-Use <suffix> as the suffix for module files (the default value is \`.mod\`)
-
-.. option:: -nocpp
-
-Disable predefined and command line preprocessor macros
 
 .. option:: -pedantic, --pedantic, -no-pedantic, --no-pedantic
 

@@ -2151,213 +2151,215 @@ $(function() {
 <div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160;    <span class="keywordflow">return</span> UO_Minus;</div>
 <div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;  <span class="keywordflow">case</span> OO_Amp:</div>
 <div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;    <span class="keywordflow">return</span> UO_AddrOf;</div>
-<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;  <span class="keywordflow">case</span> OO_Tilde:</div>
-<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;    <span class="keywordflow">return</span> UO_Not;</div>
-<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;  <span class="keywordflow">case</span> OO_Exclaim:</div>
-<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;    <span class="keywordflow">return</span> UO_LNot;</div>
-<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;  <span class="keywordflow">case</span> OO_PlusPlus: {</div>
-<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *FD = <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getDirectCallee();</div>
-<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;    <span class="keywordflow">if</span> (!FD)</div>
-<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
-<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;    <span class="keywordflow">return</span> FD-&gt;getNumParams() &gt; 0 ? UO_PostInc : UO_PreInc;</div>
-<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;  }</div>
-<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;  <span class="keywordflow">case</span> OO_MinusMinus: {</div>
-<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *FD = <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getDirectCallee();</div>
-<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;    <span class="keywordflow">if</span> (!FD)</div>
-<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
-<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    <span class="keywordflow">return</span> FD-&gt;getNumParams() &gt; 0 ? UO_PostDec : UO_PreDec;</div>
-<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;  }</div>
-<div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;  <span class="keywordflow">case</span> OO_Coawait:</div>
-<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;    <span class="keywordflow">return</span> UO_Coawait;</div>
-<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;  }</div>
-<div class="line"><a name="l02124"></a><span class="lineno"> 2124</span>&#160;}</div>
-<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160; </div>
-<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeType&gt; <span class="keyword">inline</span> <span class="keyword">const</span> Expr *getLHS(<span class="keyword">const</span> NodeType &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getLHS();</div>
-<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;}</div>
-<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *</div>
-<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;getLHS&lt;CXXOperatorCallExpr&gt;(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;  <span class="keywordflow">if</span> (!internal::equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>))</div>
-<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getArg(0);</div>
-<div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;}</div>
-<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeType&gt; <span class="keyword">inline</span> <span class="keyword">const</span> Expr *getRHS(<span class="keyword">const</span> NodeType &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getRHS();</div>
-<div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;}</div>
-<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *</div>
-<div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;getRHS&lt;CXXOperatorCallExpr&gt;(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;  <span class="keywordflow">if</span> (!internal::equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>))</div>
-<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getArg(1);</div>
-<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;}</div>
-<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeType&gt;</div>
-<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *getSubExpr(<span class="keyword">const</span> NodeType &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSubExpr();</div>
-<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;}</div>
-<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *</div>
-<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;getSubExpr&lt;CXXOperatorCallExpr&gt;(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;  <span class="keywordflow">if</span> (!internal::equivalentUnaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>))</div>
-<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getArg(0);</div>
-<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;}</div>
-<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160; </div>
-<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Ty&gt;</div>
-<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160;<span class="keyword">struct </span>HasSizeMatcher {</div>
-<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> hasSize(<span class="keyword">const</span> Ty &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N) {</div>
-<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSize() == N;</div>
-<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;  }</div>
-<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;};</div>
-<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160; </div>
-<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> HasSizeMatcher&lt;StringLiteral&gt;::hasSize(</div>
-<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;    <span class="keyword">const</span> StringLiteral &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N) {</div>
-<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getLength() == N;</div>
-<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;}</div>
-<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160; </div>
-<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Ty&gt;</div>
-<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160;<span class="keyword">struct </span>GetSourceExpressionMatcher {</div>
-<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> Expr *get(<span class="keyword">const</span> Ty &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSubExpr();</div>
-<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;  }</div>
-<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;};</div>
-<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160; </div>
-<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *GetSourceExpressionMatcher&lt;OpaqueValueExpr&gt;::get(</div>
-<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;    <span class="keyword">const</span> OpaqueValueExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSourceExpr();</div>
-<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;}</div>
-<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160; </div>
-<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Ty&gt;</div>
-<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160;<span class="keyword">struct </span>CompoundStmtMatcher {</div>
-<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> CompoundStmt *get(<span class="keyword">const</span> Ty &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>;</div>
-<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;  }</div>
-<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;};</div>
-<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160; </div>
-<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> CompoundStmt *</div>
-<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;CompoundStmtMatcher&lt;StmtExpr&gt;::get(<span class="keyword">const</span> StmtExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSubStmt();</div>
-<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;}</div>
-<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;<span class="comment">/// If \p Loc is (transitively) expanded from macro \p MacroName, returns the</span></div>
-<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;<span class="comment">/// location (in the chain of expansions) at which \p MacroName was</span></div>
-<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;<span class="comment">/// expanded. Since the macro may have been expanded inside a series of</span></div>
-<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;<span class="comment">/// expansions, that location may itself be a MacroID.</span></div>
-<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;<span class="comment"></span><a class="code" href="classllvm_1_1Optional.html">llvm::Optional&lt;SourceLocation&gt;</a></div>
-<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;<a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#ae908b7f1f410ca1cf083511fdb95249d">getExpansionLocOfMacro</a>(StringRef MacroName, SourceLocation Loc,</div>
-<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;                       <span class="keyword">const</span> ASTContext &amp;Context);</div>
-<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160; </div>
-<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;<span class="keyword">inline</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> UnaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcode());</div>
-<div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160;}</div>
-<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;<span class="keyword">inline</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> BinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
-<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;}</div>
-<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;<span class="keyword">inline</span> StringRef getOpName(<span class="keyword">const</span> CXXRewrittenBinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
-<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;}</div>
-<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;<span class="keyword">inline</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;  <span class="keyword">auto</span> optBinaryOpcode = equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
-<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;  <span class="keywordflow">if</span> (!optBinaryOpcode) {</div>
-<div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;    <span class="keyword">auto</span> optUnaryOpcode = equivalentUnaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
-<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;    <span class="keywordflow">if</span> (!optUnaryOpcode)</div>
-<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
-<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classclang_1_1UnaryOperator.html#aea67833acedd6409746250b8e1612dcd">UnaryOperator::getOpcodeStr</a>(*optUnaryOpcode);</div>
-<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;  }</div>
-<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classclang_1_1BinaryOperator.html#a35735cb469c016a544886e5ee1461bff">BinaryOperator::getOpcodeStr</a>(*optBinaryOpcode);</div>
-<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;}</div>
-<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;<span class="comment">/// Matches overloaded operators with a specific name.</span></div>
-<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;<span class="comment">///</span></div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;<span class="comment">/// The type argument ArgT is not used by this matcher but is used by</span></div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;<span class="comment">/// PolymorphicMatcher and should be std::vector&lt;std::string&gt;&gt;.</span></div>
-<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ArgT = std::vector&lt;std::<span class="keywordtype">string</span>&gt;&gt;</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;<span class="keyword">class </span>HasAnyOperatorNameMatcher : <span class="keyword">public</span> SingleNodeMatcherInterface&lt;T&gt; {</div>
-<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;  static_assert(std::is_same&lt;T, BinaryOperator&gt;::value ||</div>
-<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;                    std::is_same&lt;T, CXXOperatorCallExpr&gt;::value ||</div>
-<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;                    std::is_same&lt;T, CXXRewrittenBinaryOperator&gt;::value ||</div>
-<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;                    std::is_same&lt;T, UnaryOperator&gt;::value,</div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;                <span class="stringliteral">&quot;Matcher only supports `BinaryOperator`, `UnaryOperator`, &quot;</span></div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;                <span class="stringliteral">&quot;`CXXOperatorCallExpr` and `CXXRewrittenBinaryOperator`&quot;</span>);</div>
-<div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;  static_assert(std::is_same&lt;ArgT, std::vector&lt;std::string&gt;&gt;::value,</div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;                <span class="stringliteral">&quot;Matcher ArgT must be std::vector&lt;std::string&gt;&quot;</span>);</div>
-<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160; </div>
-<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;  <span class="keyword">explicit</span> HasAnyOperatorNameMatcher(std::vector&lt;std::string&gt; Names)</div>
-<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;      : SingleNodeMatcherInterface&lt;T&gt;(), Names(<a class="code" href="namespacestd.html">std</a>::move(Names)) {}</div>
-<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160; </div>
-<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;  <span class="keywordtype">bool</span> matchesNode(<span class="keyword">const</span> T &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>)<span class="keyword"> const override </span>{</div>
-<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;    <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> OptOpName = getOpName(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
-<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;    <span class="keywordflow">if</span> (!OptOpName)</div>
-<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;    <span class="keywordflow">return</span> llvm::any_of(Names, [OpName = *OptOpName](<span class="keyword">const</span> <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &amp;Name) {</div>
-<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;      <span class="keywordflow">return</span> Name == OpName;</div>
-<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;    });</div>
-<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;  }</div>
-<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160; </div>
-<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;  <span class="keyword">static</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> UnaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcode());</div>
-<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;  }</div>
-<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;  <span class="keyword">static</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> BinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
-<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;  }</div>
-<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;  <span class="keyword">static</span> StringRef getOpName(<span class="keyword">const</span> CXXRewrittenBinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
-<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;  }</div>
-<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;  <span class="keyword">static</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
-<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;    <span class="keyword">auto</span> optBinaryOpcode = equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
-<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;    <span class="keywordflow">if</span> (!optBinaryOpcode) {</div>
-<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;      <span class="keyword">auto</span> optUnaryOpcode = equivalentUnaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
-<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;      <span class="keywordflow">if</span> (!optUnaryOpcode)</div>
-<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
-<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classclang_1_1UnaryOperator.html#aea67833acedd6409746250b8e1612dcd">UnaryOperator::getOpcodeStr</a>(*optUnaryOpcode);</div>
-<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;    }</div>
-<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classclang_1_1BinaryOperator.html#a35735cb469c016a544886e5ee1461bff">BinaryOperator::getOpcodeStr</a>(*optBinaryOpcode);</div>
-<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;  }</div>
-<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160; </div>
-<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;  std::vector&lt;std::string&gt; Names;</div>
-<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;};</div>
-<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160; </div>
-<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;<span class="keyword">using</span> HasOpNameMatcher =</div>
-<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;    PolymorphicMatcher&lt;HasAnyOperatorNameMatcher,</div>
-<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;                       void(</div>
-<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;                           TypeList&lt;BinaryOperator, CXXOperatorCallExpr,</div>
-<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;                                    CXXRewrittenBinaryOperator, UnaryOperator&gt;),</div>
-<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;                       std::vector&lt;std::string&gt;&gt;;</div>
-<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160; </div>
-<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;HasOpNameMatcher <a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#aa6c82af4b9087769a26b4e80ff53d5e0">hasAnyOperatorNameFunc</a>(ArrayRef&lt;const StringRef *&gt; NameRefs);</div>
+<div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160;  <span class="keywordflow">case</span> OO_Star:</div>
+<div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;    <span class="keywordflow">return</span> UO_Deref;</div>
+<div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160;  <span class="keywordflow">case</span> OO_Tilde:</div>
+<div class="line"><a name="l02108"></a><span class="lineno"> 2108</span>&#160;    <span class="keywordflow">return</span> UO_Not;</div>
+<div class="line"><a name="l02109"></a><span class="lineno"> 2109</span>&#160;  <span class="keywordflow">case</span> OO_Exclaim:</div>
+<div class="line"><a name="l02110"></a><span class="lineno"> 2110</span>&#160;    <span class="keywordflow">return</span> UO_LNot;</div>
+<div class="line"><a name="l02111"></a><span class="lineno"> 2111</span>&#160;  <span class="keywordflow">case</span> OO_PlusPlus: {</div>
+<div class="line"><a name="l02112"></a><span class="lineno"> 2112</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *FD = <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getDirectCallee();</div>
+<div class="line"><a name="l02113"></a><span class="lineno"> 2113</span>&#160;    <span class="keywordflow">if</span> (!FD)</div>
+<div class="line"><a name="l02114"></a><span class="lineno"> 2114</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
+<div class="line"><a name="l02115"></a><span class="lineno"> 2115</span>&#160;    <span class="keywordflow">return</span> FD-&gt;getNumParams() &gt; 0 ? UO_PostInc : UO_PreInc;</div>
+<div class="line"><a name="l02116"></a><span class="lineno"> 2116</span>&#160;  }</div>
+<div class="line"><a name="l02117"></a><span class="lineno"> 2117</span>&#160;  <span class="keywordflow">case</span> OO_MinusMinus: {</div>
+<div class="line"><a name="l02118"></a><span class="lineno"> 2118</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *FD = <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getDirectCallee();</div>
+<div class="line"><a name="l02119"></a><span class="lineno"> 2119</span>&#160;    <span class="keywordflow">if</span> (!FD)</div>
+<div class="line"><a name="l02120"></a><span class="lineno"> 2120</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
+<div class="line"><a name="l02121"></a><span class="lineno"> 2121</span>&#160;    <span class="keywordflow">return</span> FD-&gt;getNumParams() &gt; 0 ? UO_PostDec : UO_PreDec;</div>
+<div class="line"><a name="l02122"></a><span class="lineno"> 2122</span>&#160;  }</div>
+<div class="line"><a name="l02123"></a><span class="lineno"> 2123</span>&#160;  <span class="keywordflow">case</span> OO_Coawait:</div>
+<div class="line"><a name="l02124"></a><span class="lineno"> 2124</span>&#160;    <span class="keywordflow">return</span> UO_Coawait;</div>
+<div class="line"><a name="l02125"></a><span class="lineno"> 2125</span>&#160;  }</div>
+<div class="line"><a name="l02126"></a><span class="lineno"> 2126</span>&#160;}</div>
+<div class="line"><a name="l02127"></a><span class="lineno"> 2127</span>&#160; </div>
+<div class="line"><a name="l02128"></a><span class="lineno"> 2128</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeType&gt; <span class="keyword">inline</span> <span class="keyword">const</span> Expr *getLHS(<span class="keyword">const</span> NodeType &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02129"></a><span class="lineno"> 2129</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getLHS();</div>
+<div class="line"><a name="l02130"></a><span class="lineno"> 2130</span>&#160;}</div>
+<div class="line"><a name="l02131"></a><span class="lineno"> 2131</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l02132"></a><span class="lineno"> 2132</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *</div>
+<div class="line"><a name="l02133"></a><span class="lineno"> 2133</span>&#160;getLHS&lt;CXXOperatorCallExpr&gt;(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02134"></a><span class="lineno"> 2134</span>&#160;  <span class="keywordflow">if</span> (!internal::equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>))</div>
+<div class="line"><a name="l02135"></a><span class="lineno"> 2135</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l02136"></a><span class="lineno"> 2136</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getArg(0);</div>
+<div class="line"><a name="l02137"></a><span class="lineno"> 2137</span>&#160;}</div>
+<div class="line"><a name="l02138"></a><span class="lineno"> 2138</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeType&gt; <span class="keyword">inline</span> <span class="keyword">const</span> Expr *getRHS(<span class="keyword">const</span> NodeType &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02139"></a><span class="lineno"> 2139</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getRHS();</div>
+<div class="line"><a name="l02140"></a><span class="lineno"> 2140</span>&#160;}</div>
+<div class="line"><a name="l02141"></a><span class="lineno"> 2141</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l02142"></a><span class="lineno"> 2142</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *</div>
+<div class="line"><a name="l02143"></a><span class="lineno"> 2143</span>&#160;getRHS&lt;CXXOperatorCallExpr&gt;(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02144"></a><span class="lineno"> 2144</span>&#160;  <span class="keywordflow">if</span> (!internal::equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>))</div>
+<div class="line"><a name="l02145"></a><span class="lineno"> 2145</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l02146"></a><span class="lineno"> 2146</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getArg(1);</div>
+<div class="line"><a name="l02147"></a><span class="lineno"> 2147</span>&#160;}</div>
+<div class="line"><a name="l02148"></a><span class="lineno"> 2148</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> NodeType&gt;</div>
+<div class="line"><a name="l02149"></a><span class="lineno"> 2149</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *getSubExpr(<span class="keyword">const</span> NodeType &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02150"></a><span class="lineno"> 2150</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSubExpr();</div>
+<div class="line"><a name="l02151"></a><span class="lineno"> 2151</span>&#160;}</div>
+<div class="line"><a name="l02152"></a><span class="lineno"> 2152</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l02153"></a><span class="lineno"> 2153</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *</div>
+<div class="line"><a name="l02154"></a><span class="lineno"> 2154</span>&#160;getSubExpr&lt;CXXOperatorCallExpr&gt;(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02155"></a><span class="lineno"> 2155</span>&#160;  <span class="keywordflow">if</span> (!internal::equivalentUnaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>))</div>
+<div class="line"><a name="l02156"></a><span class="lineno"> 2156</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l02157"></a><span class="lineno"> 2157</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getArg(0);</div>
+<div class="line"><a name="l02158"></a><span class="lineno"> 2158</span>&#160;}</div>
+<div class="line"><a name="l02159"></a><span class="lineno"> 2159</span>&#160; </div>
+<div class="line"><a name="l02160"></a><span class="lineno"> 2160</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Ty&gt;</div>
+<div class="line"><a name="l02161"></a><span class="lineno"> 2161</span>&#160;<span class="keyword">struct </span>HasSizeMatcher {</div>
+<div class="line"><a name="l02162"></a><span class="lineno"> 2162</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> hasSize(<span class="keyword">const</span> Ty &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N) {</div>
+<div class="line"><a name="l02163"></a><span class="lineno"> 2163</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSize() == N;</div>
+<div class="line"><a name="l02164"></a><span class="lineno"> 2164</span>&#160;  }</div>
+<div class="line"><a name="l02165"></a><span class="lineno"> 2165</span>&#160;};</div>
+<div class="line"><a name="l02166"></a><span class="lineno"> 2166</span>&#160; </div>
+<div class="line"><a name="l02167"></a><span class="lineno"> 2167</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l02168"></a><span class="lineno"> 2168</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> HasSizeMatcher&lt;StringLiteral&gt;::hasSize(</div>
+<div class="line"><a name="l02169"></a><span class="lineno"> 2169</span>&#160;    <span class="keyword">const</span> StringLiteral &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> N) {</div>
+<div class="line"><a name="l02170"></a><span class="lineno"> 2170</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getLength() == N;</div>
+<div class="line"><a name="l02171"></a><span class="lineno"> 2171</span>&#160;}</div>
+<div class="line"><a name="l02172"></a><span class="lineno"> 2172</span>&#160; </div>
+<div class="line"><a name="l02173"></a><span class="lineno"> 2173</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Ty&gt;</div>
+<div class="line"><a name="l02174"></a><span class="lineno"> 2174</span>&#160;<span class="keyword">struct </span>GetSourceExpressionMatcher {</div>
+<div class="line"><a name="l02175"></a><span class="lineno"> 2175</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> Expr *get(<span class="keyword">const</span> Ty &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02176"></a><span class="lineno"> 2176</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSubExpr();</div>
+<div class="line"><a name="l02177"></a><span class="lineno"> 2177</span>&#160;  }</div>
+<div class="line"><a name="l02178"></a><span class="lineno"> 2178</span>&#160;};</div>
+<div class="line"><a name="l02179"></a><span class="lineno"> 2179</span>&#160; </div>
+<div class="line"><a name="l02180"></a><span class="lineno"> 2180</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l02181"></a><span class="lineno"> 2181</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> Expr *GetSourceExpressionMatcher&lt;OpaqueValueExpr&gt;::get(</div>
+<div class="line"><a name="l02182"></a><span class="lineno"> 2182</span>&#160;    <span class="keyword">const</span> OpaqueValueExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02183"></a><span class="lineno"> 2183</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSourceExpr();</div>
+<div class="line"><a name="l02184"></a><span class="lineno"> 2184</span>&#160;}</div>
+<div class="line"><a name="l02185"></a><span class="lineno"> 2185</span>&#160; </div>
+<div class="line"><a name="l02186"></a><span class="lineno"> 2186</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Ty&gt;</div>
+<div class="line"><a name="l02187"></a><span class="lineno"> 2187</span>&#160;<span class="keyword">struct </span>CompoundStmtMatcher {</div>
+<div class="line"><a name="l02188"></a><span class="lineno"> 2188</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> CompoundStmt *get(<span class="keyword">const</span> Ty &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02189"></a><span class="lineno"> 2189</span>&#160;    <span class="keywordflow">return</span> &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>;</div>
+<div class="line"><a name="l02190"></a><span class="lineno"> 2190</span>&#160;  }</div>
+<div class="line"><a name="l02191"></a><span class="lineno"> 2191</span>&#160;};</div>
+<div class="line"><a name="l02192"></a><span class="lineno"> 2192</span>&#160; </div>
+<div class="line"><a name="l02193"></a><span class="lineno"> 2193</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
+<div class="line"><a name="l02194"></a><span class="lineno"> 2194</span>&#160;<span class="keyword">inline</span> <span class="keyword">const</span> CompoundStmt *</div>
+<div class="line"><a name="l02195"></a><span class="lineno"> 2195</span>&#160;CompoundStmtMatcher&lt;StmtExpr&gt;::get(<span class="keyword">const</span> StmtExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02196"></a><span class="lineno"> 2196</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getSubStmt();</div>
+<div class="line"><a name="l02197"></a><span class="lineno"> 2197</span>&#160;}</div>
+<div class="line"><a name="l02198"></a><span class="lineno"> 2198</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l02199"></a><span class="lineno"> 2199</span>&#160;<span class="comment">/// If \p Loc is (transitively) expanded from macro \p MacroName, returns the</span></div>
+<div class="line"><a name="l02200"></a><span class="lineno"> 2200</span>&#160;<span class="comment">/// location (in the chain of expansions) at which \p MacroName was</span></div>
+<div class="line"><a name="l02201"></a><span class="lineno"> 2201</span>&#160;<span class="comment">/// expanded. Since the macro may have been expanded inside a series of</span></div>
+<div class="line"><a name="l02202"></a><span class="lineno"> 2202</span>&#160;<span class="comment">/// expansions, that location may itself be a MacroID.</span></div>
+<div class="line"><a name="l02203"></a><span class="lineno"> 2203</span>&#160;<span class="comment"></span><a class="code" href="classllvm_1_1Optional.html">llvm::Optional&lt;SourceLocation&gt;</a></div>
+<div class="line"><a name="l02204"></a><span class="lineno"> 2204</span>&#160;<a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#ae908b7f1f410ca1cf083511fdb95249d">getExpansionLocOfMacro</a>(StringRef MacroName, SourceLocation Loc,</div>
+<div class="line"><a name="l02205"></a><span class="lineno"> 2205</span>&#160;                       <span class="keyword">const</span> ASTContext &amp;Context);</div>
+<div class="line"><a name="l02206"></a><span class="lineno"> 2206</span>&#160; </div>
+<div class="line"><a name="l02207"></a><span class="lineno"> 2207</span>&#160;<span class="keyword">inline</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> UnaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02208"></a><span class="lineno"> 2208</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcode());</div>
+<div class="line"><a name="l02209"></a><span class="lineno"> 2209</span>&#160;}</div>
+<div class="line"><a name="l02210"></a><span class="lineno"> 2210</span>&#160;<span class="keyword">inline</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> BinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02211"></a><span class="lineno"> 2211</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
+<div class="line"><a name="l02212"></a><span class="lineno"> 2212</span>&#160;}</div>
+<div class="line"><a name="l02213"></a><span class="lineno"> 2213</span>&#160;<span class="keyword">inline</span> StringRef getOpName(<span class="keyword">const</span> CXXRewrittenBinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02214"></a><span class="lineno"> 2214</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
+<div class="line"><a name="l02215"></a><span class="lineno"> 2215</span>&#160;}</div>
+<div class="line"><a name="l02216"></a><span class="lineno"> 2216</span>&#160;<span class="keyword">inline</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02217"></a><span class="lineno"> 2217</span>&#160;  <span class="keyword">auto</span> optBinaryOpcode = equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
+<div class="line"><a name="l02218"></a><span class="lineno"> 2218</span>&#160;  <span class="keywordflow">if</span> (!optBinaryOpcode) {</div>
+<div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;    <span class="keyword">auto</span> optUnaryOpcode = equivalentUnaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
+<div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;    <span class="keywordflow">if</span> (!optUnaryOpcode)</div>
+<div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
+<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classclang_1_1UnaryOperator.html#aea67833acedd6409746250b8e1612dcd">UnaryOperator::getOpcodeStr</a>(*optUnaryOpcode);</div>
+<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;  }</div>
+<div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classclang_1_1BinaryOperator.html#a35735cb469c016a544886e5ee1461bff">BinaryOperator::getOpcodeStr</a>(*optBinaryOpcode);</div>
+<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;}</div>
+<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;<span class="comment">/// Matches overloaded operators with a specific name.</span></div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;<span class="comment">///</span></div>
+<div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;<span class="comment">/// The type argument ArgT is not used by this matcher but is used by</span></div>
+<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;<span class="comment">/// PolymorphicMatcher and should be std::vector&lt;std::string&gt;&gt;.</span></div>
+<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;<span class="comment"></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> ArgT = std::vector&lt;std::<span class="keywordtype">string</span>&gt;&gt;</div>
+<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;<span class="keyword">class </span>HasAnyOperatorNameMatcher : <span class="keyword">public</span> SingleNodeMatcherInterface&lt;T&gt; {</div>
+<div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160;  static_assert(std::is_same&lt;T, BinaryOperator&gt;::value ||</div>
+<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;                    std::is_same&lt;T, CXXOperatorCallExpr&gt;::value ||</div>
+<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;                    std::is_same&lt;T, CXXRewrittenBinaryOperator&gt;::value ||</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;                    std::is_same&lt;T, UnaryOperator&gt;::value,</div>
+<div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160;                <span class="stringliteral">&quot;Matcher only supports `BinaryOperator`, `UnaryOperator`, &quot;</span></div>
+<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;                <span class="stringliteral">&quot;`CXXOperatorCallExpr` and `CXXRewrittenBinaryOperator`&quot;</span>);</div>
+<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;  static_assert(std::is_same&lt;ArgT, std::vector&lt;std::string&gt;&gt;::value,</div>
+<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;                <span class="stringliteral">&quot;Matcher ArgT must be std::vector&lt;std::string&gt;&quot;</span>);</div>
+<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160; </div>
+<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;  <span class="keyword">explicit</span> HasAnyOperatorNameMatcher(std::vector&lt;std::string&gt; Names)</div>
+<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;      : SingleNodeMatcherInterface&lt;T&gt;(), Names(<a class="code" href="namespacestd.html">std</a>::move(Names)) {}</div>
+<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160; </div>
+<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;  <span class="keywordtype">bool</span> matchesNode(<span class="keyword">const</span> T &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>)<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;    <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> OptOpName = getOpName(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
+<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;    <span class="keywordflow">if</span> (!OptOpName)</div>
+<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;    <span class="keywordflow">return</span> llvm::any_of(Names, [OpName = *OptOpName](<span class="keyword">const</span> <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &amp;Name) {</div>
+<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;      <span class="keywordflow">return</span> Name == OpName;</div>
+<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;    });</div>
+<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;  }</div>
+<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160; </div>
+<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;  <span class="keyword">static</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> UnaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcode());</div>
+<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;  }</div>
+<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;  <span class="keyword">static</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> BinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
+<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;  }</div>
+<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;  <span class="keyword">static</span> StringRef getOpName(<span class="keyword">const</span> CXXRewrittenBinaryOperator &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>.getOpcodeStr();</div>
+<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;  }</div>
+<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;  <span class="keyword">static</span> <a class="code" href="classllvm_1_1Optional.html">Optional&lt;StringRef&gt;</a> getOpName(<span class="keyword">const</span> CXXOperatorCallExpr &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>) {</div>
+<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;    <span class="keyword">auto</span> optBinaryOpcode = equivalentBinaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
+<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;    <span class="keywordflow">if</span> (!optBinaryOpcode) {</div>
+<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;      <span class="keyword">auto</span> optUnaryOpcode = equivalentUnaryOperator(<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>);</div>
+<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;      <span class="keywordflow">if</span> (!optUnaryOpcode)</div>
+<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1XRayInstrKind.html#a74957f939e9c2b26d53095846a926c34">None</a>;</div>
+<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classclang_1_1UnaryOperator.html#aea67833acedd6409746250b8e1612dcd">UnaryOperator::getOpcodeStr</a>(*optUnaryOpcode);</div>
+<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;    }</div>
+<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classclang_1_1BinaryOperator.html#a35735cb469c016a544886e5ee1461bff">BinaryOperator::getOpcodeStr</a>(*optBinaryOpcode);</div>
+<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;  }</div>
+<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160; </div>
+<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;  std::vector&lt;std::string&gt; Names;</div>
+<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;};</div>
+<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160; </div>
+<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;<span class="keyword">using</span> HasOpNameMatcher =</div>
+<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;    PolymorphicMatcher&lt;HasAnyOperatorNameMatcher,</div>
+<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;                       void(</div>
+<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;                           TypeList&lt;BinaryOperator, CXXOperatorCallExpr,</div>
+<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;                                    CXXRewrittenBinaryOperator, UnaryOperator&gt;),</div>
+<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;                       std::vector&lt;std::string&gt;&gt;;</div>
 <div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160; </div>
-<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;<span class="keyword">using</span> HasOverloadOpNameMatcher =</div>
-<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;    PolymorphicMatcher&lt;HasOverloadedOperatorNameMatcher,</div>
-<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;                       void(TypeList&lt;CXXOperatorCallExpr, FunctionDecl&gt;),</div>
-<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;                       std::vector&lt;std::string&gt;&gt;;</div>
-<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160; </div>
-<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;HasOverloadOpNameMatcher</div>
-<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;<a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#a1e5b2642d58cd1ce19c81f4c4335fc80">hasAnyOverloadedOperatorNameFunc</a>(ArrayRef&lt;const StringRef *&gt; NameRefs);</div>
-<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;<span class="comment">/// Returns true if \p Node has a base specifier matching \p BaseSpec.</span></div>
-<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;<span class="comment">///</span></div>
-<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;<span class="comment">/// A class is not considered to be derived from itself.</span></div>
-<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#ac342cc5773840d083545416b4eaa1c19">matchesAnyBase</a>(<span class="keyword">const</span> CXXRecordDecl &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>,</div>
-<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;                    <span class="keyword">const</span> Matcher&lt;CXXBaseSpecifier&gt; &amp;BaseSpecMatcher,</div>
-<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;                    ASTMatchFinder *Finder, BoundNodesTreeBuilder *Builder);</div>
-<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160; </div>
-<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;std::shared_ptr&lt;llvm::Regex&gt; <a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#a4ec8c424da71f64ad9bd28c1bb370330">createAndVerifyRegex</a>(StringRef Regex,</div>
-<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;                                                  llvm::Regex::RegexFlags Flags,</div>
-<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;                                                  StringRef <a class="code" href="ASTMatchFinder_8cpp.html#a6726f42e8aba90683413b776384b6e95">MatcherID</a>);</div>
-<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160; </div>
-<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;} <span class="comment">// namespace internal</span></div>
+<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;HasOpNameMatcher <a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#aa6c82af4b9087769a26b4e80ff53d5e0">hasAnyOperatorNameFunc</a>(ArrayRef&lt;const StringRef *&gt; NameRefs);</div>
+<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160; </div>
+<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;<span class="keyword">using</span> HasOverloadOpNameMatcher =</div>
+<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;    PolymorphicMatcher&lt;HasOverloadedOperatorNameMatcher,</div>
+<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;                       void(TypeList&lt;CXXOperatorCallExpr, FunctionDecl&gt;),</div>
+<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;                       std::vector&lt;std::string&gt;&gt;;</div>
+<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160; </div>
+<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;HasOverloadOpNameMatcher</div>
+<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;<a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#a1e5b2642d58cd1ce19c81f4c4335fc80">hasAnyOverloadedOperatorNameFunc</a>(ArrayRef&lt;const StringRef *&gt; NameRefs);</div>
+<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;<span class="comment">/// Returns true if \p Node has a base specifier matching \p BaseSpec.</span></div>
+<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;<span class="comment">///</span></div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;<span class="comment">/// A class is not considered to be derived from itself.</span></div>
+<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;<span class="comment"></span><span class="keywordtype">bool</span> <a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#ac342cc5773840d083545416b4eaa1c19">matchesAnyBase</a>(<span class="keyword">const</span> CXXRecordDecl &amp;<a class="code" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>,</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;                    <span class="keyword">const</span> Matcher&lt;CXXBaseSpecifier&gt; &amp;BaseSpecMatcher,</div>
+<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;                    ASTMatchFinder *Finder, BoundNodesTreeBuilder *Builder);</div>
+<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160; </div>
+<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;std::shared_ptr&lt;llvm::Regex&gt; <a class="code" href="namespaceclang_1_1ast__matchers_1_1internal.html#a4ec8c424da71f64ad9bd28c1bb370330">createAndVerifyRegex</a>(StringRef Regex,</div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;                                                  llvm::Regex::RegexFlags Flags,</div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;                                                  StringRef <a class="code" href="ASTMatchFinder_8cpp.html#a6726f42e8aba90683413b776384b6e95">MatcherID</a>);</div>
 <div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160; </div>
-<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;} <span class="comment">// namespace ast_matchers</span></div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;} <span class="comment">// namespace internal</span></div>
 <div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160; </div>
-<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;} <span class="comment">// namespace clang</span></div>
+<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;} <span class="comment">// namespace ast_matchers</span></div>
 <div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160; </div>
-<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;<span class="preprocessor">#endif // LLVM_CLANG_ASTMATCHERS_ASTMATCHERSINTERNAL_H</span></div>
+<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;} <span class="comment">// namespace clang</span></div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160; </div>
+<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;<span class="preprocessor">#endif // LLVM_CLANG_ASTMATCHERS_ASTMATCHERSINTERNAL_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceclang_html_a6196a82dc53119822ac96e34a9726058"><div class="ttname"><a href="namespaceclang.html#a6196a82dc53119822ac96e34a9726058">clang::TraversalKind</a></div><div class="ttdeci">TraversalKind</div><div class="ttdoc">Defines how we descend a level in the AST when we pass through expressions.</div><div class="ttdef"><b>Definition:</b> <a href="ASTTypeTraits_8h_source.html#l00039">ASTTypeTraits.h:39</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1ast__matchers_1_1internal_html_ae908b7f1f410ca1cf083511fdb95249d"><div class="ttname"><a href="namespaceclang_1_1ast__matchers_1_1internal.html#ae908b7f1f410ca1cf083511fdb95249d">clang::ast_matchers::internal::getExpansionLocOfMacro</a></div><div class="ttdeci">llvm::Optional&lt; SourceLocation &gt; getExpansionLocOfMacro(StringRef MacroName, SourceLocation Loc, const ASTContext &amp;Context)</div><div class="ttdef"><b>Definition:</b> <a href="ASTMatchersInternal_8cpp_source.html#l00689">ASTMatchersInternal.cpp:689</a></div></div>
@@ -2422,7 +2424,7 @@ $(function() {
 <div class="ttc" id="aASTMatchFinder_8cpp_html_a00b5b979fc4b4e5bfe20af5f70977941"><div class="ttname"><a href="ASTMatchFinder_8cpp.html#a00b5b979fc4b4e5bfe20af5f70977941">Type</a></div><div class="ttdeci">MatchType Type</div><div class="ttdef"><b>Definition:</b> <a href="ASTMatchFinder_8cpp_source.html#l00070">ASTMatchFinder.cpp:70</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 01:55:31 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 23 2021 01:46:23 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

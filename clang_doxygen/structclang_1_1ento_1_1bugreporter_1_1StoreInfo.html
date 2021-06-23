@@ -118,6 +118,7 @@ Collaboration diagram for clang::ento::bugreporter::StoreInfo:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a13f484cc14ee7e76350012e54f7cd982"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a13f484cc14ee7e76350012e54f7cd982">Kind</a> { <a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a13f484cc14ee7e76350012e54f7cd982aaceacaab3153438235957bc0a9c470ea">Initialization</a>, 
 <a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a13f484cc14ee7e76350012e54f7cd982a04cd00cc76318fef9f92459cc7e0e07c">Assignment</a>, 
+<a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a13f484cc14ee7e76350012e54f7cd982a190812aad403449c88388b85996525f2">CallArgument</a>, 
 <a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a13f484cc14ee7e76350012e54f7cd982a99700d6dc1781328d023353c4350eb1e">BlockCapture</a>
  }</td></tr>
 <tr class="separator:a13f484cc14ee7e76350012e54f7cd982"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,9 +131,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a38c08a05a2d5c213275ddf0297c5828c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classclang_1_1ento_1_1ExplodedNode.html">ExplodedNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a38c08a05a2d5c213275ddf0297c5828c">StoreSite</a></td></tr>
 <tr class="memdesc:a38c08a05a2d5c213275ddf0297c5828c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The node where the store happened.  <a href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a38c08a05a2d5c213275ddf0297c5828c">More...</a><br /></td></tr>
 <tr class="separator:a38c08a05a2d5c213275ddf0297c5828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52b2f75e4f3624a6c3254ecbf10993d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1Expr.html">Expr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a52b2f75e4f3624a6c3254ecbf10993d7">SourceOfTheValue</a></td></tr>
-<tr class="memdesc:a52b2f75e4f3624a6c3254ecbf10993d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expression where the value comes from.  <a href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a52b2f75e4f3624a6c3254ecbf10993d7">More...</a><br /></td></tr>
-<tr class="separator:a52b2f75e4f3624a6c3254ecbf10993d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edc32832592a8c662b83b90089a8fb8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classclang_1_1Expr.html">Expr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a1edc32832592a8c662b83b90089a8fb8">SourceOfTheValue</a></td></tr>
+<tr class="memdesc:a1edc32832592a8c662b83b90089a8fb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expression where the value comes from.  <a href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a1edc32832592a8c662b83b90089a8fb8">More...</a><br /></td></tr>
+<tr class="separator:a1edc32832592a8c662b83b90089a8fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759b0ca10f7356e984577fec635de73b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1ento_1_1SVal.html">SVal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a759b0ca10f7356e984577fec635de73b">Value</a></td></tr>
 <tr class="memdesc:a759b0ca10f7356e984577fec635de73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbolic value that is being stored.  <a href="structclang_1_1ento_1_1bugreporter_1_1StoreInfo.html#a759b0ca10f7356e984577fec635de73b">More...</a><br /></td></tr>
 <tr class="separator:a759b0ca10f7356e984577fec635de73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +165,8 @@ Public Attributes</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a13f484cc14ee7e76350012e54f7cd982a04cd00cc76318fef9f92459cc7e0e07c"></a>Assignment&#160;</td><td class="fielddoc"><p>The value got stored into the region during assignment: int x; x = 42;. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a13f484cc14ee7e76350012e54f7cd982a190812aad403449c88388b85996525f2"></a>CallArgument&#160;</td><td class="fielddoc"><p>The value got stored into the parameter region as the result of a call. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="a13f484cc14ee7e76350012e54f7cd982a99700d6dc1781328d023353c4350eb1e"></a>BlockCapture&#160;</td><td class="fielddoc"><p>The value got stored into the region as block capture. </p>
 <p>Block data is modeled as a separate region, thus whenever the analyzer sees a captured variable, its value is copied into a special block region. </p>
 </td></tr>
@@ -189,7 +192,7 @@ Public Attributes</h2></td></tr>
 <p>Memory regions involved in the store operation. </p>
 <p>Dest &lt;- Origin NOTE: Origin might be null, when the stored value doesn't come from another region. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00148">148</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00151">151</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
 
 </div>
 </div>
@@ -205,18 +208,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00148">148</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00151">151</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
 
 </div>
 </div>
-<a id="a52b2f75e4f3624a6c3254ecbf10993d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52b2f75e4f3624a6c3254ecbf10993d7">&#9670;&nbsp;</a></span>SourceOfTheValue</h2>
+<a id="a1edc32832592a8c662b83b90089a8fb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edc32832592a8c662b83b90089a8fb8">&#9670;&nbsp;</a></span>SourceOfTheValue</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classclang_1_1Expr.html">Expr</a>* clang::ento::bugreporter::StoreInfo::SourceOfTheValue</td>
+          <td class="memname">const <a class="el" href="classclang_1_1Expr.html">Expr</a>* clang::ento::bugreporter::StoreInfo::SourceOfTheValue</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,7 +227,9 @@ Public Attributes</h2></td></tr>
 <p>The expression where the value comes from. </p>
 <p>NOTE: might be null. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00141">141</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00144">144</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01961">clang::ento::bugreporter::StoreHandler::constructNote()</a>.</p>
 
 </div>
 </div>
@@ -242,7 +247,7 @@ Public Attributes</h2></td></tr>
 
 <p>The type of store operation. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00136">136</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00139">139</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
 
 </div>
 </div>
@@ -260,7 +265,9 @@ Public Attributes</h2></td></tr>
 
 <p>The node where the store happened. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00138">138</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00141">141</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="BugReporterVisitors_8cpp_source.html#l01961">clang::ento::bugreporter::StoreHandler::constructNote()</a>.</p>
 
 </div>
 </div>
@@ -278,7 +285,7 @@ Public Attributes</h2></td></tr>
 
 <p>Symbolic value that is being stored. </p>
 
-<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00143">143</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BugReporterVisitors_8h_source.html#l00146">146</a> of file <a class="el" href="BugReporterVisitors_8h_source.html">BugReporterVisitors.h</a>.</p>
 
 </div>
 </div>
@@ -288,7 +295,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 22 2021 01:56:47 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 23 2021 01:47:26 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
