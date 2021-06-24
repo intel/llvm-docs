@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"sycl_2ext_2intel_2experimental_2esimd_8hpp_source.html":[4,0,0,1,0,0,0,1],
 "sycl_2sycl_8hpp.html":[4,0,0,1,1],
 "sycl_2sycl_8hpp_source.html":[4,0,0,1,1],
 "sycl__fe__intrins_8hpp.html":[4,0,0,0,1,2,38],

@@ -1228,127 +1228,131 @@ $(function() {
 <div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__SYCL_DEVICE_ONLY__&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
 <div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;SYCL_EXTERNAL&quot;</span>, <span class="stringliteral">&quot;__attribute__((sycl_device))&quot;</span>);</div>
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160; </div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    <span class="keywordflow">if</span> (TI.<a class="code" href="classclang_1_1TargetInfo.html#abbc87af30c26901adb25c948c72e9039">getTriple</a>().isNVPTX()) {</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;        Builder.defineMacro(<span class="stringliteral">&quot;__SYCL_NVPTX__&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;    }</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;  }</div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;  <span class="keywordflow">if</span> (LangOpts.SYCLUnnamedLambda)</div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__SYCL_UNNAMED_LAMBDA__&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160; </div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;  <span class="comment">// OpenCL definitions.</span></div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;  <span class="keywordflow">if</span> (LangOpts.OpenCL) {</div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a612ce28fb1dfc6277db899cf40a3dcbf">InitializeOpenCLFeatureTestMacros</a>(TI, LangOpts, Builder);</div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    <span class="keyword">const</span> llvm::Triple &amp;DeviceTriple = TI.<a class="code" href="classclang_1_1TargetInfo.html#abbc87af30c26901adb25c948c72e9039">getTriple</a>();</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;    <span class="keywordflow">if</span> (DeviceTriple.isNVPTX())</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;      Builder.defineMacro(<span class="stringliteral">&quot;__SYCL_NVPTX__&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;    <span class="keyword">const</span> llvm::Triple::SubArchType DeviceSubArch = DeviceTriple.getSubArch();</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;    <span class="keywordflow">if</span> (DeviceTriple.isSPIR() &amp;&amp;</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;        DeviceSubArch != llvm::Triple::SPIRSubArch_fpga)</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;      Builder.defineMacro(<span class="stringliteral">&quot;SYCL_USE_NATIVE_FP_ATOMICS&quot;</span>);</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;  }</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;  <span class="keywordflow">if</span> (LangOpts.SYCLUnnamedLambda)</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__SYCL_UNNAMED_LAMBDA__&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>);</div>
 <div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160; </div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;    <span class="keywordflow">if</span> (TI.<a class="code" href="classclang_1_1TargetInfo.html#abbc87af30c26901adb25c948c72e9039">getTriple</a>().isSPIR())</div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      Builder.defineMacro(<span class="stringliteral">&quot;__IMAGE_SUPPORT__&quot;</span>);</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;  }</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;  <span class="comment">// OpenCL definitions.</span></div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;  <span class="keywordflow">if</span> (LangOpts.OpenCL) {</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a612ce28fb1dfc6277db899cf40a3dcbf">InitializeOpenCLFeatureTestMacros</a>(TI, LangOpts, Builder);</div>
 <div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160; </div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;  <span class="keywordflow">if</span> (TI.<a class="code" href="classclang_1_1TargetInfo.html#a508b025e5a02c26153e248b45af5eb63">hasInt128Type</a>() &amp;&amp; LangOpts.CPlusPlus &amp;&amp; LangOpts.GNUMode) {</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;    <span class="comment">// For each extended integer type, g++ defines a macro mapping the</span></div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;    <span class="comment">// index of the type (0 in this case) in some list of extended types</span></div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;    <span class="comment">// to the type.</span></div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__GLIBCXX_TYPE_INT_N_0&quot;</span>, <span class="stringliteral">&quot;__int128&quot;</span>);</div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__GLIBCXX_BITSIZE_INT_N_0&quot;</span>, <span class="stringliteral">&quot;128&quot;</span>);</div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;  }</div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160; </div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;  <span class="comment">// Get other target #defines.</span></div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;  TI.<a class="code" href="classclang_1_1TargetInfo.html#a71651c591a87566b541874507e3de1ef">getTargetDefines</a>(LangOpts, Builder);</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;}</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;<span class="comment">/// InitializePreprocessor - Initialize the preprocessor getting it and the</span></div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="comment">/// environment ready to process a single file. This returns true on error.</span></div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;<span class="comment">///</span></div>
-<div class="line"><a name="l01212"></a><span class="lineno"><a class="line" href="namespaceclang.html#acd6a589f2eec943f0ebe8fefdc17b175"> 1212</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespaceclang.html#acd6a589f2eec943f0ebe8fefdc17b175">clang::InitializePreprocessor</a>(</div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    <a class="code" href="classclang_1_1Preprocessor.html">Preprocessor</a> &amp;PP, <span class="keyword">const</span> <a class="code" href="classclang_1_1PreprocessorOptions.html">PreprocessorOptions</a> &amp;InitOpts,</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;    <span class="keyword">const</span> <a class="code" href="classclang_1_1PCHContainerReader.html">PCHContainerReader</a> &amp;PCHContainerRdr,</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;    <span class="keyword">const</span> <a class="code" href="classclang_1_1FrontendOptions.html">FrontendOptions</a> &amp;FEOpts) {</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1LangOptions.html">LangOptions</a> &amp;LangOpts = PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>();</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;  <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> PredefineBuffer;</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;  PredefineBuffer.reserve(4080);</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;  llvm::raw_string_ostream Predefines(PredefineBuffer);</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;  <a class="code" href="classclang_1_1MacroBuilder.html">MacroBuilder</a> Builder(Predefines);</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160; </div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;  <span class="comment">// Emit line markers for various builtin sections of the file.  We don&#39;t do</span></div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;  <span class="comment">// this in asm preprocessor mode, because &quot;# 4&quot; is not a line marker directive</span></div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;  <span class="comment">// in this mode.</span></div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;  <span class="keywordflow">if</span> (!PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>().AsmPreprocessor)</div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;    Builder.append(<span class="stringliteral">&quot;# 1 \&quot;&lt;built-in&gt;\&quot; 3&quot;</span>);</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160; </div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="comment">// Install things like __POWERPC__, __GNUC__, etc into the macro table.</span></div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;  <span class="keywordflow">if</span> (InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ad365fcd77771130610495bbcb8d666f5">UsePredefines</a>) {</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    <span class="comment">// FIXME: This will create multiple definitions for most of the predefined</span></div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;    <span class="comment">// macros. This is not the right way to handle this.</span></div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;    <span class="keywordflow">if</span> ((LangOpts.CUDA || LangOpts.OpenMPIsDevice || LangOpts.SYCLIsDevice) &amp;&amp;</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;        PP.<a class="code" href="classclang_1_1Preprocessor.html#ac751e763b8148a95641ef7abd8cd735e">getAuxTargetInfo</a>())</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;      <a class="code" href="InitPreprocessor_8cpp.html#a2c5d6902f261aab4526a27fe4a367a5b">InitializePredefinedMacros</a>(*PP.<a class="code" href="classclang_1_1Preprocessor.html#ac751e763b8148a95641ef7abd8cd735e">getAuxTargetInfo</a>(), LangOpts, FEOpts,</div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;                                 PP.<a class="code" href="classclang_1_1Preprocessor.html#a0073c93f3640e7a3c051cdac5c6ed78f">getPreprocessorOpts</a>(), Builder);</div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160; </div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a2c5d6902f261aab4526a27fe4a367a5b">InitializePredefinedMacros</a>(PP.<a class="code" href="classclang_1_1Preprocessor.html#af598e792c01f77309bd9a9c390c7f4ae">getTargetInfo</a>(), LangOpts, FEOpts,</div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;                               PP.<a class="code" href="classclang_1_1Preprocessor.html#a0073c93f3640e7a3c051cdac5c6ed78f">getPreprocessorOpts</a>(), Builder);</div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;    <span class="comment">// Install definitions to make Objective-C++ ARC work well with various</span></div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;    <span class="comment">// C++ Standard Library implementations.</span></div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;    <span class="keywordflow">if</span> (LangOpts.ObjC &amp;&amp; LangOpts.CPlusPlus &amp;&amp;</div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;        (LangOpts.ObjCAutoRefCount || LangOpts.ObjCWeak)) {</div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;      <span class="keywordflow">switch</span> (InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a539b6d0619bceaaf15a2cee0d0280fe8">ObjCXXARCStandardLibrary</a>) {</div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="namespaceclang.html#a6d30ae8d7e08d15996da55cf93877d55a6ff99b448e2797128b7f2065f3043d36">ARCXX_nolib</a>:</div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="namespaceclang.html#a6d30ae8d7e08d15996da55cf93877d55a33c6ddd125a3f144029d859dc45b5c01">ARCXX_libcxx</a>:</div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160; </div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="namespaceclang.html#a6d30ae8d7e08d15996da55cf93877d55a9fd85370c60b0ff305cd2203fb1646f7">ARCXX_libstdcxx</a>:</div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;        <a class="code" href="InitPreprocessor_8cpp.html#a72fd5e2bd99be04ee85b2c00966da196">AddObjCXXARCLibstdcxxDefines</a>(LangOpts, Builder);</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;    <span class="keywordflow">if</span> (TI.<a class="code" href="classclang_1_1TargetInfo.html#abbc87af30c26901adb25c948c72e9039">getTriple</a>().isSPIR())</div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;      Builder.defineMacro(<span class="stringliteral">&quot;__IMAGE_SUPPORT__&quot;</span>);</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;  }</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160; </div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;  <span class="keywordflow">if</span> (TI.<a class="code" href="classclang_1_1TargetInfo.html#a508b025e5a02c26153e248b45af5eb63">hasInt128Type</a>() &amp;&amp; LangOpts.CPlusPlus &amp;&amp; LangOpts.GNUMode) {</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;    <span class="comment">// For each extended integer type, g++ defines a macro mapping the</span></div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;    <span class="comment">// index of the type (0 in this case) in some list of extended types</span></div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;    <span class="comment">// to the type.</span></div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__GLIBCXX_TYPE_INT_N_0&quot;</span>, <span class="stringliteral">&quot;__int128&quot;</span>);</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;    Builder.defineMacro(<span class="stringliteral">&quot;__GLIBCXX_BITSIZE_INT_N_0&quot;</span>, <span class="stringliteral">&quot;128&quot;</span>);</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;  }</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160; </div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;  <span class="comment">// Get other target #defines.</span></div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;  TI.<a class="code" href="classclang_1_1TargetInfo.html#a71651c591a87566b541874507e3de1ef">getTargetDefines</a>(LangOpts, Builder);</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;}</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;<span class="comment">/// InitializePreprocessor - Initialize the preprocessor getting it and the</span></div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;<span class="comment">/// environment ready to process a single file. This returns true on error.</span></div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;<span class="comment">///</span></div>
+<div class="line"><a name="l01216"></a><span class="lineno"><a class="line" href="namespaceclang.html#acd6a589f2eec943f0ebe8fefdc17b175"> 1216</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespaceclang.html#acd6a589f2eec943f0ebe8fefdc17b175">clang::InitializePreprocessor</a>(</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;    <a class="code" href="classclang_1_1Preprocessor.html">Preprocessor</a> &amp;PP, <span class="keyword">const</span> <a class="code" href="classclang_1_1PreprocessorOptions.html">PreprocessorOptions</a> &amp;InitOpts,</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    <span class="keyword">const</span> <a class="code" href="classclang_1_1PCHContainerReader.html">PCHContainerReader</a> &amp;PCHContainerRdr,</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;    <span class="keyword">const</span> <a class="code" href="classclang_1_1FrontendOptions.html">FrontendOptions</a> &amp;FEOpts) {</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1LangOptions.html">LangOptions</a> &amp;LangOpts = PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>();</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;  <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> PredefineBuffer;</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;  PredefineBuffer.reserve(4080);</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;  llvm::raw_string_ostream Predefines(PredefineBuffer);</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;  <a class="code" href="classclang_1_1MacroBuilder.html">MacroBuilder</a> Builder(Predefines);</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160; </div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;  <span class="comment">// Emit line markers for various builtin sections of the file.  We don&#39;t do</span></div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;  <span class="comment">// this in asm preprocessor mode, because &quot;# 4&quot; is not a line marker directive</span></div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;  <span class="comment">// in this mode.</span></div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;  <span class="keywordflow">if</span> (!PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>().AsmPreprocessor)</div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    Builder.append(<span class="stringliteral">&quot;# 1 \&quot;&lt;built-in&gt;\&quot; 3&quot;</span>);</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160; </div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;  <span class="comment">// Install things like __POWERPC__, __GNUC__, etc into the macro table.</span></div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;  <span class="keywordflow">if</span> (InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ad365fcd77771130610495bbcb8d666f5">UsePredefines</a>) {</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;    <span class="comment">// FIXME: This will create multiple definitions for most of the predefined</span></div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;    <span class="comment">// macros. This is not the right way to handle this.</span></div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;    <span class="keywordflow">if</span> ((LangOpts.CUDA || LangOpts.OpenMPIsDevice || LangOpts.SYCLIsDevice) &amp;&amp;</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;        PP.<a class="code" href="classclang_1_1Preprocessor.html#ac751e763b8148a95641ef7abd8cd735e">getAuxTargetInfo</a>())</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;      <a class="code" href="InitPreprocessor_8cpp.html#a2c5d6902f261aab4526a27fe4a367a5b">InitializePredefinedMacros</a>(*PP.<a class="code" href="classclang_1_1Preprocessor.html#ac751e763b8148a95641ef7abd8cd735e">getAuxTargetInfo</a>(), LangOpts, FEOpts,</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;                                 PP.<a class="code" href="classclang_1_1Preprocessor.html#a0073c93f3640e7a3c051cdac5c6ed78f">getPreprocessorOpts</a>(), Builder);</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160; </div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a2c5d6902f261aab4526a27fe4a367a5b">InitializePredefinedMacros</a>(PP.<a class="code" href="classclang_1_1Preprocessor.html#af598e792c01f77309bd9a9c390c7f4ae">getTargetInfo</a>(), LangOpts, FEOpts,</div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;                               PP.<a class="code" href="classclang_1_1Preprocessor.html#a0073c93f3640e7a3c051cdac5c6ed78f">getPreprocessorOpts</a>(), Builder);</div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160; </div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;    <span class="comment">// Install definitions to make Objective-C++ ARC work well with various</span></div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;    <span class="comment">// C++ Standard Library implementations.</span></div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;    <span class="keywordflow">if</span> (LangOpts.ObjC &amp;&amp; LangOpts.CPlusPlus &amp;&amp;</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;        (LangOpts.ObjCAutoRefCount || LangOpts.ObjCWeak)) {</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;      <span class="keywordflow">switch</span> (InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a539b6d0619bceaaf15a2cee0d0280fe8">ObjCXXARCStandardLibrary</a>) {</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="namespaceclang.html#a6d30ae8d7e08d15996da55cf93877d55a6ff99b448e2797128b7f2065f3043d36">ARCXX_nolib</a>:</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="namespaceclang.html#a6d30ae8d7e08d15996da55cf93877d55a33c6ddd125a3f144029d859dc45b5c01">ARCXX_libcxx</a>:</div>
 <div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;      }</div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;    }</div>
-<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;  }</div>
-<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160; </div>
-<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;  <span class="comment">// Even with predefines off, some macros are still predefined.</span></div>
-<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;  <span class="comment">// These should all be defined in the preprocessor according to the</span></div>
-<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;  <span class="comment">// current language configuration.</span></div>
-<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;  <a class="code" href="InitPreprocessor_8cpp.html#ad4586206f87783141063ab80478933e0">InitializeStandardPredefinedMacros</a>(PP.<a class="code" href="classclang_1_1Preprocessor.html#af598e792c01f77309bd9a9c390c7f4ae">getTargetInfo</a>(), PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>(),</div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;                                     FEOpts, Builder);</div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160; </div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;  <span class="comment">// Add on the predefines from the driver.  Wrap in a #line directive to report</span></div>
-<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;  <span class="comment">// that they come from the command line.</span></div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;  <span class="keywordflow">if</span> (!PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>().AsmPreprocessor)</div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    Builder.append(<span class="stringliteral">&quot;# 1 \&quot;&lt;command line&gt;\&quot; 1&quot;</span>);</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160; </div>
-<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;  <span class="comment">// Process #define&#39;s and #undef&#39;s in the order they are given.</span></div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0, e = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>.size(); i != e; ++i) {</div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    <span class="keywordflow">if</span> (InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>[i].second)  <span class="comment">// isUndef</span></div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;      Builder.undefineMacro(InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>[i].first);</div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;      <a class="code" href="InitPreprocessor_8cpp.html#ace35cbb4d01338aa6fa123e734386ac1">DefineBuiltinMacro</a>(Builder, InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>[i].first,</div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;                         PP.<a class="code" href="classclang_1_1Preprocessor.html#a6936bed186a14e391de97e3505953934">getDiagnostics</a>());</div>
-<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;  }</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160; </div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;  <span class="comment">// Exit the command line and go back to &lt;built-in&gt; (2 is LC_LEAVE).</span></div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;  <span class="keywordflow">if</span> (!PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>().AsmPreprocessor)</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    Builder.append(<span class="stringliteral">&quot;# 1 \&quot;&lt;built-in&gt;\&quot; 2&quot;</span>);</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160; </div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;      <span class="keywordflow">case</span> <a class="code" href="namespaceclang.html#a6d30ae8d7e08d15996da55cf93877d55a9fd85370c60b0ff305cd2203fb1646f7">ARCXX_libstdcxx</a>:</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;        <a class="code" href="InitPreprocessor_8cpp.html#a72fd5e2bd99be04ee85b2c00966da196">AddObjCXXARCLibstdcxxDefines</a>(LangOpts, Builder);</div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;      }</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;    }</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;  }</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160; </div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;  <span class="comment">// Even with predefines off, some macros are still predefined.</span></div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;  <span class="comment">// These should all be defined in the preprocessor according to the</span></div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;  <span class="comment">// current language configuration.</span></div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;  <a class="code" href="InitPreprocessor_8cpp.html#ad4586206f87783141063ab80478933e0">InitializeStandardPredefinedMacros</a>(PP.<a class="code" href="classclang_1_1Preprocessor.html#af598e792c01f77309bd9a9c390c7f4ae">getTargetInfo</a>(), PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>(),</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;                                     FEOpts, Builder);</div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160; </div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;  <span class="comment">// Add on the predefines from the driver.  Wrap in a #line directive to report</span></div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;  <span class="comment">// that they come from the command line.</span></div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;  <span class="keywordflow">if</span> (!PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>().AsmPreprocessor)</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    Builder.append(<span class="stringliteral">&quot;# 1 \&quot;&lt;command line&gt;\&quot; 1&quot;</span>);</div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160; </div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;  <span class="comment">// Process #define&#39;s and #undef&#39;s in the order they are given.</span></div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0, e = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>.size(); i != e; ++i) {</div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;    <span class="keywordflow">if</span> (InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>[i].second)  <span class="comment">// isUndef</span></div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;      Builder.undefineMacro(InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>[i].first);</div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;      <a class="code" href="InitPreprocessor_8cpp.html#ace35cbb4d01338aa6fa123e734386ac1">DefineBuiltinMacro</a>(Builder, InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ae048445dc7b1036784a71d057eb803c1">Macros</a>[i].first,</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;                         PP.<a class="code" href="classclang_1_1Preprocessor.html#a6936bed186a14e391de97e3505953934">getDiagnostics</a>());</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;  }</div>
 <div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160; </div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;  <span class="comment">// If -imacros are specified, include them now.  These are processed before</span></div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;  <span class="comment">// any -include directives.</span></div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0, e = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1ab7a198bfde2831a06b9716986eab3b">MacroIncludes</a>.size(); i != e; ++i)</div>
-<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a6d62a3483b00fcc81ee0e41d40008ed7">AddImplicitIncludeMacros</a>(Builder, InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1ab7a198bfde2831a06b9716986eab3b">MacroIncludes</a>[i]);</div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160; </div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  <span class="comment">// Process -include-pch/-include-pth directives.</span></div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  <span class="keywordflow">if</span> (!InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ab62f6211f45e53fb6a45ad84d2a87657">ImplicitPCHInclude</a>.empty())</div>
-<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a024b81afca5ec05d4b09b1a378a1e14d">AddImplicitIncludePCH</a>(Builder, PP, PCHContainerRdr,</div>
-<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;                          InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ab62f6211f45e53fb6a45ad84d2a87657">ImplicitPCHInclude</a>);</div>
-<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160; </div>
-<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  <span class="comment">// Process -include directives.</span></div>
-<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0, e = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1d10fb5b3335d765ea61e5a5cf3e1821">Includes</a>.size(); i != e; ++i) {</div>
-<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;    <span class="keyword">const</span> <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &amp;Path = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1d10fb5b3335d765ea61e5a5cf3e1821">Includes</a>[i];</div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a0360a5fc71aa74ac8cc7499c3793a151">AddImplicitInclude</a>(Builder, Path);</div>
-<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  }</div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160; </div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  <span class="comment">// Instruct the preprocessor to skip the preamble.</span></div>
-<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;  PP.<a class="code" href="classclang_1_1Preprocessor.html#abebe93852f740db28b47ba6de2165ec2">setSkipMainFilePreamble</a>(InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a24671d094917020114917c55ee0c7a11">PrecompiledPreambleBytes</a>.first,</div>
-<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;                             InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a24671d094917020114917c55ee0c7a11">PrecompiledPreambleBytes</a>.second);</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;  <span class="comment">// Exit the command line and go back to &lt;built-in&gt; (2 is LC_LEAVE).</span></div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;  <span class="keywordflow">if</span> (!PP.<a class="code" href="classclang_1_1Preprocessor.html#ad994ade284ed192487a9c04517ee745a">getLangOpts</a>().AsmPreprocessor)</div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;    Builder.append(<span class="stringliteral">&quot;# 1 \&quot;&lt;built-in&gt;\&quot; 2&quot;</span>);</div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160; </div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;  <span class="comment">// If -imacros are specified, include them now.  These are processed before</span></div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  <span class="comment">// any -include directives.</span></div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0, e = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1ab7a198bfde2831a06b9716986eab3b">MacroIncludes</a>.size(); i != e; ++i)</div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a6d62a3483b00fcc81ee0e41d40008ed7">AddImplicitIncludeMacros</a>(Builder, InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1ab7a198bfde2831a06b9716986eab3b">MacroIncludes</a>[i]);</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160; </div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  <span class="comment">// Process -include-pch/-include-pth directives.</span></div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  <span class="keywordflow">if</span> (!InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ab62f6211f45e53fb6a45ad84d2a87657">ImplicitPCHInclude</a>.empty())</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a024b81afca5ec05d4b09b1a378a1e14d">AddImplicitIncludePCH</a>(Builder, PP, PCHContainerRdr,</div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;                          InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#ab62f6211f45e53fb6a45ad84d2a87657">ImplicitPCHInclude</a>);</div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160; </div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  <span class="comment">// Process -include directives.</span></div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> i = 0, e = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1d10fb5b3335d765ea61e5a5cf3e1821">Includes</a>.size(); i != e; ++i) {</div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;    <span class="keyword">const</span> <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &amp;Path = InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a1d10fb5b3335d765ea61e5a5cf3e1821">Includes</a>[i];</div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;    <a class="code" href="InitPreprocessor_8cpp.html#a0360a5fc71aa74ac8cc7499c3793a151">AddImplicitInclude</a>(Builder, Path);</div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;  }</div>
 <div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160; </div>
-<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  <span class="comment">// Copy PredefinedBuffer into the Preprocessor.</span></div>
-<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;  PP.<a class="code" href="classclang_1_1Preprocessor.html#ac30753bca7cb4d7a2cf92ea9ed91266a">setPredefines</a>(Predefines.str());</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;}</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  <span class="comment">// Instruct the preprocessor to skip the preamble.</span></div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;  PP.<a class="code" href="classclang_1_1Preprocessor.html#abebe93852f740db28b47ba6de2165ec2">setSkipMainFilePreamble</a>(InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a24671d094917020114917c55ee0c7a11">PrecompiledPreambleBytes</a>.first,</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;                             InitOpts.<a class="code" href="classclang_1_1PreprocessorOptions.html#a24671d094917020114917c55ee0c7a11">PrecompiledPreambleBytes</a>.second);</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160; </div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;  <span class="comment">// Copy PredefinedBuffer into the Preprocessor.</span></div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;  PP.<a class="code" href="classclang_1_1Preprocessor.html#ac30753bca7cb4d7a2cf92ea9ed91266a">setPredefines</a>(Predefines.str());</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceclang_html_aac061dd9d63cb89fb5b657633a794198a01e860997dda761b240fb216f1aa114b"><div class="ttname"><a href="namespaceclang.html#aac061dd9d63cb89fb5b657633a794198a01e860997dda761b240fb216f1aa114b">clang::TypeSpecifierWidth::LongLong</a></div><div class="ttdeci">@ LongLong</div></div>
 <div class="ttc" id="aclassclang_1_1Preprocessor_html_abebe93852f740db28b47ba6de2165ec2"><div class="ttname"><a href="classclang_1_1Preprocessor.html#abebe93852f740db28b47ba6de2165ec2">clang::Preprocessor::setSkipMainFilePreamble</a></div><div class="ttdeci">void setSkipMainFilePreamble(unsigned Bytes, bool StartOfLine)</div><div class="ttdoc">Instruct the preprocessor to skip part of the main source file.</div><div class="ttdef"><b>Definition:</b> <a href="Preprocessor_8h_source.html#l01698">Preprocessor.h:1698</a></div></div>
@@ -1426,7 +1430,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1FrontendOptions_html"><div class="ttname"><a href="classclang_1_1FrontendOptions.html">clang::FrontendOptions</a></div><div class="ttdoc">FrontendOptions - Options for controlling the behavior of the frontend.</div><div class="ttdef"><b>Definition:</b> <a href="FrontendOptions_8h_source.html#l00228">FrontendOptions.h:228</a></div></div>
 <div class="ttc" id="aUtils_8h_html"><div class="ttname"><a href="Utils_8h.html">Utils.h</a></div></div>
 <div class="ttc" id="aMacroBuilder_8h_html"><div class="ttname"><a href="MacroBuilder_8h.html">MacroBuilder.h</a></div></div>
-<div class="ttc" id="anamespaceclang_html_acd6a589f2eec943f0ebe8fefdc17b175"><div class="ttname"><a href="namespaceclang.html#acd6a589f2eec943f0ebe8fefdc17b175">clang::InitializePreprocessor</a></div><div class="ttdeci">void InitializePreprocessor(Preprocessor &amp;PP, const PreprocessorOptions &amp;PPOpts, const PCHContainerReader &amp;PCHContainerRdr, const FrontendOptions &amp;FEOpts)</div><div class="ttdoc">InitializePreprocessor - Initialize the preprocessor getting it and the environment ready to process ...</div><div class="ttdef"><b>Definition:</b> <a href="InitPreprocessor_8cpp_source.html#l01212">InitPreprocessor.cpp:1212</a></div></div>
+<div class="ttc" id="anamespaceclang_html_acd6a589f2eec943f0ebe8fefdc17b175"><div class="ttname"><a href="namespaceclang.html#acd6a589f2eec943f0ebe8fefdc17b175">clang::InitializePreprocessor</a></div><div class="ttdeci">void InitializePreprocessor(Preprocessor &amp;PP, const PreprocessorOptions &amp;PPOpts, const PCHContainerReader &amp;PCHContainerRdr, const FrontendOptions &amp;FEOpts)</div><div class="ttdoc">InitializePreprocessor - Initialize the preprocessor getting it and the environment ready to process ...</div><div class="ttdef"><b>Definition:</b> <a href="InitPreprocessor_8cpp_source.html#l01216">InitPreprocessor.cpp:1216</a></div></div>
 <div class="ttc" id="aInitPreprocessor_8cpp_html_af465483a4faeb0212ed71d60c243bcbf"><div class="ttname"><a href="InitPreprocessor_8cpp.html#af465483a4faeb0212ed71d60c243bcbf">DefineTypeWidth</a></div><div class="ttdeci">static void DefineTypeWidth(StringRef MacroName, TargetInfo::IntType Ty, const TargetInfo &amp;TI, MacroBuilder &amp;Builder)</div><div class="ttdef"><b>Definition:</b> <a href="InitPreprocessor_8cpp_source.html#l00197">InitPreprocessor.cpp:197</a></div></div>
 <div class="ttc" id="aInitPreprocessor_8cpp_html_a2c5d6902f261aab4526a27fe4a367a5b"><div class="ttname"><a href="InitPreprocessor_8cpp.html#a2c5d6902f261aab4526a27fe4a367a5b">InitializePredefinedMacros</a></div><div class="ttdeci">static void InitializePredefinedMacros(const TargetInfo &amp;TI, const LangOptions &amp;LangOpts, const FrontendOptions &amp;FEOpts, const PreprocessorOptions &amp;PPOpts, MacroBuilder &amp;Builder)</div><div class="ttdef"><b>Definition:</b> <a href="InitPreprocessor_8cpp_source.html#l00648">InitPreprocessor.cpp:648</a></div></div>
 <div class="ttc" id="aclassclang_1_1Preprocessor_html_af598e792c01f77309bd9a9c390c7f4ae"><div class="ttname"><a href="classclang_1_1Preprocessor.html#af598e792c01f77309bd9a9c390c7f4ae">clang::Preprocessor::getTargetInfo</a></div><div class="ttdeci">const TargetInfo &amp; getTargetInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="Preprocessor_8h_source.html#l00923">Preprocessor.h:923</a></div></div>
@@ -1520,7 +1524,7 @@ $(function() {
 <div class="ttc" id="astructclang_1_1TransferrableTargetInfo_html_a30e275c7308708d1b55cd9d009265e33ac1cb5bb5c9ea45bc7330b69c4937631b"><div class="ttname"><a href="structclang_1_1TransferrableTargetInfo.html#a30e275c7308708d1b55cd9d009265e33ac1cb5bb5c9ea45bc7330b69c4937631b">clang::TransferrableTargetInfo::SignedLong</a></div><div class="ttdeci">@ SignedLong</div><div class="ttdef"><b>Definition:</b> <a href="include_2clang_2Basic_2TargetInfo_8h_source.html#l00118">TargetInfo.h:118</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 23 2021 01:46:40 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 24 2021 01:45:41 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -17,6 +17,7 @@ var pi__level__zero_8cpp =
     [ "enqueueMemFillHelper", "pi__level__zero_8cpp.html#a2daa6fd82b433d43479179c5cb88b3b9", null ],
     [ "enqueueMemImageCommandHelper", "pi__level__zero_8cpp.html#a43e44eeb802633f1e57b6e1a4bfea4b5", null ],
     [ "getImageRegionHelper", "pi__level__zero_8cpp.html#adb49714d97c1585b65a6407453fdf73a", null ],
+    [ "IsDevicePointer", "pi__level__zero_8cpp.html#a966deb69aa2bdb210dca3bd5aadee740", null ],
     [ "isOnlineLinkEnabled", "pi__level__zero_8cpp.html#acafc1cc52eda482ed85f6f8e08212461", null ],
     [ "piclProgramCreateWithSource", "pi__level__zero_8cpp.html#a966a4cfb605eb6f85670df838484a676", null ],
     [ "piContextCreate", "pi__level__zero_8cpp.html#ac2a0955f062c6bca4628d26a6fb0c424", null ],

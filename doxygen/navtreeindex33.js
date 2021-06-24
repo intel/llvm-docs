@@ -1,5 +1,6 @@
 var NAVTREEINDEX33 =
 {
+"struct__pi__queue_1_1command__list__fence__t.html#aeb7ef2d0bf76480f6b0462983292462f":[3,0,25,0,1],
 "struct__pi__sampler.html":[3,0,26],
 "struct__pi__sampler.html#a15895558567d7b432347ec0240fbdb75":[3,0,26,7],
 "struct__pi__sampler.html#a39b8ed2fef76d1a4c482c8b472fb648d":[3,0,26,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX33 =
 "structcl_1_1sycl_1_1detail_1_1InitializedVal.html#a1561594dd0adac0308585e75f3039198":[3,0,1,1,0,153,0],
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4.html":[3,0,1,1,0,154],
 "structcl_1_1sycl_1_1detail_1_1InitializedVal_3_011_00_01T_01_4.html#a2c154dd3a101e1dce36eeb88ecb66a26":[3,0,1,1,0,154,0],
-"structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html":[3,0,1,1,0,155],
-"structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html#a9a4512c9427672c81b65731f3340b0b5":[3,0,1,1,0,155,0]
+"structcl_1_1sycl_1_1detail_1_1InitializedVal_3_012_00_01T_01_4.html":[3,0,1,1,0,155]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01short_00_01unsigned_01char_01_4.html#a8622aba8aaebdc76a687281a990594e4":[3,0,1,1,1,0,1,0,1,0,147,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01short_00_01unsigned_01int_01_4.html":[3,0,1,1,1,0,1,0,1,0,148],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01short_00_01unsigned_01int_01_4.html#a35c83357a3af3d2a1535892b41a824ad":[3,0,1,1,1,0,1,0,1,0,148,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01short_00_01unsigned_01short_01_4.html":[3,0,1,1,1,0,1,0,1,0,150],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "structpi__device__binary__struct.html#a7867091111ae310fdda53f4a074f71dd":[3,0,36,2],
 "structpi__device__binary__struct.html#a84557e6cea59b13a7035f8cb7161d05b":[3,0,36,0],
 "structpi__device__binary__struct.html#a878e5bebe74c5308b46fc6819a323e72":[3,0,36,10],
-"structpi__device__binary__struct.html#a9a565e8a6c2566689feddfe95102f787":[3,0,36,13],
-"structpi__device__binary__struct.html#a9a80194f39a66baf5dfcbee492cb0f97":[3,0,36,3]
+"structpi__device__binary__struct.html#a9a565e8a6c2566689feddfe95102f787":[3,0,36,13]
 };
