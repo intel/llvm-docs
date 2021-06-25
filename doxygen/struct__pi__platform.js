@@ -7,7 +7,7 @@ var struct__pi__platform =
     [ "Contexts", "struct__pi__platform.html#a6f14d1e5fe883ff45c89ab02d2c33691", null ],
     [ "ContextsMutex", "struct__pi__platform.html#a92f972b142b9cd777fb452b71416e595", null ],
     [ "DeviceCachePopulated", "struct__pi__platform.html#afba11b061b3a835003d2583a03d7a9d2", null ],
-    [ "devices_", "struct__pi__platform.html#aa931adfabeee6df1d28fdf2830e366f8", null ],
+    [ "devices_", "struct__pi__platform.html#a4f6631a0a0070145fe1f8ad2b7a36d19", null ],
     [ "PiDevicesCache", "struct__pi__platform.html#a1bda77c3b82bc918eeac40cff2416c30", null ],
     [ "PiDevicesCacheMutex", "struct__pi__platform.html#a0cbb97b97e6a6784198bc3d55358fedd", null ],
     [ "ZeDriver", "struct__pi__platform.html#ac538d7ae8f84c2475c1f4a80f9af6643", null ],

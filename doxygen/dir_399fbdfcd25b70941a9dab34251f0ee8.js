@@ -37,6 +37,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "generic_type_traits.hpp", "generic__type__traits_8hpp.html", "generic__type__traits_8hpp" ],
     [ "handler_proxy.hpp", "handler__proxy_8hpp.html", "handler__proxy_8hpp" ],
     [ "helpers.hpp", "helpers_8hpp.html", "helpers_8hpp" ],
+    [ "hip_definitions.hpp", "hip__definitions_8hpp.html", "hip__definitions_8hpp" ],
     [ "host_profiling_info.hpp", "host__profiling__info_8hpp.html", [
       [ "HostProfilingInfo", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html", "classcl_1_1sycl_1_1detail_1_1HostProfilingInfo" ]
     ] ],

@@ -52,22 +52,40 @@ and a wide range of compute accelerators such as GPU and FPGA.</p>
 <ul>
 <li><p><a class="reference external" href="#build-dpc-toolchain-with-libc-library">Build DPC++ toolchain with libc++ library</a></p></li>
 <li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">Build DPC++ toolchain with support for NVIDIA CUDA</a></p></li>
+<li><p><a class="reference external" href="#build-dpc-toolchain-with-support-for-amd-rocm">Build DPC++ toolchain with support for AMD ROCm</a></p></li>
 <li><p><a class="reference external" href="#build-doxygen-documentation">Build Doxygen documentation</a></p></li>
+<li><p><a class="reference external" href="#deployment">Deployment</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="#use-dpc-toolchain">Use DPC++ toolchain</a></p>
 <ul>
 <li><p><a class="reference external" href="#install-low-level-runtime">Install low level runtime</a></p></li>
-<li><p><a class="reference external" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation">Obtain prerequisites for ahead of time (AOT) compilation</a></p></li>
-<li><p><a class="reference external" href="#test-dpc-toolchain">Test DPC++ toolchain</a></p></li>
+<li><p><a class="reference external" href="#obtain-prerequisites-for-ahead-of-time-aot-compilation">Obtain prerequisites for ahead of time (AOT) compilation</a></p>
+<ul>
+<li><p><a class="reference external" href="#gpu">GPU</a></p></li>
+<li><p><a class="reference external" href="#cpu">CPU</a></p></li>
+<li><p><a class="reference external" href="#accelerator">Accelerator</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#test-dpc-toolchain">Test DPC++ toolchain</a></p>
+<ul>
+<li><p><a class="reference external" href="#run-in-tree-lit-tests">Run in-tree LIT tests</a></p></li>
+<li><p><a class="reference external" href="#run-dpc-e2e-test-suite">Run DPC++ E2E test suite</a></p></li>
+<li><p><a class="reference external" href="#run-khronos-sycl-conformance-test-suite-optional">Run Khronos* SYCL* conformance test suite (optional)</a></p></li>
+</ul>
+</li>
 <li><p><a class="reference external" href="#run-simple-dpc-application">Run simple DPC++ application</a></p></li>
 <li><p><a class="reference external" href="#code-the-program-for-a-specific-gpu">Code the program for a specific GPU</a></p></li>
 <li><p><a class="reference external" href="#using-the-dpc-toolchain-on-cuda-platforms">Using the DPC++ toolchain on CUDA platforms</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference external" href="#c-standard">C++ standard</a></p></li>
-<li><p><a class="reference external" href="#known-issues-and-limitations">Known Issues and Limitations</a></p></li>
+<li><p><a class="reference external" href="#known-issues-and-limitations">Known Issues and Limitations</a></p>
+<ul>
 <li><p><a class="reference external" href="#cuda-back-end-limitations">CUDA back-end limitations</a></p></li>
+<li><p><a class="reference external" href="#rocm-back-end-limitations">ROCm back-end limitations</a></p></li>
+</ul>
+</li>
 <li><p><a class="reference external" href="#find-more">Find More</a></p></li>
 </ul>
 </section>
@@ -141,6 +159,7 @@ flags can be found by launching the script with <code class="docutils literal no
 <li><p><code class="docutils literal notranslate"><span class="pre">--system-ocl</span></code> -&gt; Don’t download OpenCL headers and library via CMake but use the system ones</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--no-werror</span></code> -&gt; Don’t treat warnings as errors when compiling llvm</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--cuda</span></code> -&gt; use the cuda backend (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-nvidia-cuda">Nvidia CUDA</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--rocm</span></code> -&gt; use the rocm backend (see <a class="reference external" href="#build-dpc-toolchain-with-support-for-amd-rocm">AMD ROCm</a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--shared-libs</span></code> -&gt; Build shared libraries</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-t</span></code> -&gt; Build type (debug or release)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-o</span></code> -&gt; Path to build directory</p></li>
@@ -184,6 +203,21 @@ the system, refer to
 a Titan RTX GPU (SM 71), but it should work on any GPU compatible with SM 50 or
 above. The default SM for the NVIDIA CUDA backend is 5.0. Users can specify
 lower values, but some features may not be supported.</p>
+</section>
+<section id="build-dpc-toolchain-with-support-for-amd-rocm">
+<h3>Build DPC++ toolchain with support for AMD ROCm<a class="headerlink" href="#build-dpc-toolchain-with-support-for-amd-rocm" title="Permalink to this headline">¶</a></h3>
+<p>There is experimental support for DPC++ for ROCm devices.</p>
+<p>To enable support for ROCm devices, follow the instructions for the Linux
+DPC++ toolchain, but add the <code class="docutils literal notranslate"><span class="pre">--rocm</span></code> flag to <code class="docutils literal notranslate"><span class="pre">configure.py</span></code></p>
+<p>Enabling this flag requires an installation of
+ROCm 4.1.0 on the system, refer to
+<a class="reference external" href="https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html">AMD ROCm Installation Guide for Linux</a>.</p>
+<p>Currently, the only combination tested is Ubuntu 18.04 with ROCm 4.1.0 using a Vega20 gfx906.</p>
+<p><a class="reference external" href="https://llvm.org/docs/AMDGPUUsage.html">LLD</a> is necessary for the AMD GPU compilation chain.
+The AMDGPU backend generates a standard ELF [ELF] relocatable code object that can be linked by lld to
+produce a standard ELF shared code object which can be loaded and executed on an AMDGPU target.
+So if you want to support AMD ROCm, you should also build the lld project.
+<a class="reference external" href="https://lld.llvm.org/">LLD Build Guide</a></p>
 </section>
 <section id="build-doxygen-documentation">
 <h3>Build Doxygen documentation<a class="headerlink" href="#build-doxygen-documentation" title="Permalink to this headline">¶</a></h3>
@@ -505,6 +539,11 @@ file to obtain test sources and instructions how build and execute the tests.</p
   simple-sycl-app.cpp -o simple-sycl-app-cuda.exe
 </pre></div>
 </div>
+<p>When building for ROCm, please note that the option <code class="docutils literal notranslate"><span class="pre">mcpu</span></code> must be specified, use the ROCm target triple as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>amdgcn-amd-amdhsa-sycldevice <span class="se">\</span>
+  -mcpu<span class="o">=</span>gfx906 simple-sycl-app.cpp -o simple-sycl-app-cuda.exe
+</pre></div>
+</div>
 <p>To build simple-sycl-app ahead of time for GPU, CPU or Accelerator devices,
 specify the target architecture:</p>
 <p><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_gen-unknown-unknown-sycldevice</span></code> for GPU,<br /><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_x86_64-unknown-unknown-sycldevice</span></code> for CPU,<br /><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_fpga-unknown-unknown-sycldevice</span></code> for Accelerator.</p>
@@ -526,7 +565,8 @@ execution, so SYCL runtime will use <code class="docutils literal notranslate"><
 of accelerators available in the system or SYCL host device.
 In this case, the behavior of the <code class="docutils literal notranslate"><span class="pre">default_selector</span></code> can be altered
 using the <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment variable, setting <code class="docutils literal notranslate"><span class="pre">PI_CUDA</span></code> forces
-the usage of the CUDA backend (if available), <code class="docutils literal notranslate"><span class="pre">PI_OPENCL</span></code> will
+the usage of the CUDA backend (if available), <code class="docutils literal notranslate"><span class="pre">PI_ROCM</span></code> forces
+the usage of the ROCm backend (if available), <code class="docutils literal notranslate"><span class="pre">PI_OPENCL</span></code> will
 force the usage of the OpenCL backend.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SYCL_BE</span><span class="o">=</span>PI_CUDA ./simple-sycl-app-cuda.exe
 </pre></div>
@@ -657,6 +697,18 @@ crashes.</p></li>
 GPU (SM 71), but it should work on any GPU compatible with SM 50 or above</p></li>
 <li><p>The NVIDIA OpenCL headers conflict with the OpenCL headers required for this
 project and may cause compilation issues on some platforms</p></li>
+</ul>
+</section>
+<section id="rocm-back-end-limitations">
+<h3>ROCm back-end limitations<a class="headerlink" href="#rocm-back-end-limitations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>For supported Operating Systems, please refer to the <a class="reference external" href="https://github.com/RadeonOpenCompute/ROCm#supported-operating-systems">Supported Operating Systems</a></p></li>
+<li><p>The only combination tested is Ubuntu 18.04 with ROCm 4.1 using a Vega20 gfx906.</p></li>
+<li><p>Judging from the current <a class="reference external" href="https://github.com/zjin-lcf/oneAPI-DirectProgramming">test</a> results,
+there is still a lot of room for improvement in ROCm back-end support. The current problems include three aspects.
+The first one is at compile time: the <code class="docutils literal notranslate"><span class="pre">barrier</span></code> and <code class="docutils literal notranslate"><span class="pre">atomic</span></code> keywords are not supported.
+The second is at runtime: when calling <code class="docutils literal notranslate"><span class="pre">hipMemcpyDtoHAsync</span></code> ROCm API, the program will cause an exception if the input data size is too large.
+The third is calculation accuracy: the ROCm backend has obvious errors in the calculation results of some float type operators</p></li>
 </ul>
 </section>
 </section>

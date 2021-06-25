@@ -1,5 +1,14 @@
 var NAVTREEINDEX15 =
 {
+"classcl_1_1sycl_1_1multi__ptr.html#ae03f28bb469ee678abbee0a2e3024750":[1,2,20,22],
+"classcl_1_1sycl_1_1multi__ptr.html#ae12f90cd4cb5c5d810169a52c6fbbcc0":[1,2,20,38],
+"classcl_1_1sycl_1_1multi__ptr.html#ae40f546e8e2d5f552a5cac537447697b":[1,2,20,13],
+"classcl_1_1sycl_1_1multi__ptr.html#aea8796399e9e2faca963c4f8de85aa61":[1,2,20,33],
+"classcl_1_1sycl_1_1multi__ptr.html#af01f4f329963d9990c8e1357823973a6":[1,2,20,20],
+"classcl_1_1sycl_1_1multi__ptr.html#af1088b0ee4a90f201b902c3880667320":[1,2,20,17],
+"classcl_1_1sycl_1_1multi__ptr.html#af21dc45e887501aef17c986219da5bae":[1,2,20,7],
+"classcl_1_1sycl_1_1multi__ptr.html#afda9140b5575a8ab8132748b7b8febb0":[1,2,20,8],
+"classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html":[3,0,1,1,90],
 "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a054cedb0f832f5b605b9f904cc7d653c":[3,0,1,1,90,8],
 "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a0562edc275d49f9d6703ec53c57623a6":[3,0,1,1,90,11],
 "classcl_1_1sycl_1_1multi__ptr_3_01const_01void_00_01Space_01_4.html#a05777e64dacdcd006d61eb865f9286c7":[3,0,1,1,90,17],
@@ -240,14 +249,5 @@ var NAVTREEINDEX15 =
 "classcl_1_1sycl_1_1sampler.html#a9b9ab6109aea7c5966a7ce67ea0c3a09":[1,2,28,8],
 "classcl_1_1sycl_1_1sampler.html#a9dbd42d9d8082f8327826aa249d83897":[1,2,28,1],
 "classcl_1_1sycl_1_1sampler.html#abca7290d5e90ef14f1743d5b4adb0688":[1,2,28,7],
-"classcl_1_1sycl_1_1sampler.html#adbb498cc698f57626f0746b3365a880e":[1,2,28,13],
-"classcl_1_1sycl_1_1sampler.html#ae83ed1fc639694c32a5510c3c6e85cdb":[1,2,28,9],
-"classcl_1_1sycl_1_1sampler.html#aed31537ff0e43be53702932293b925f5":[1,2,28,3],
-"classcl_1_1sycl_1_1specialization__id.html":[1,2,29],
-"classcl_1_1sycl_1_1specialization__id.html#a0d3b8750c7828de8da5fdd57340ce29e":[1,2,29,6],
-"classcl_1_1sycl_1_1specialization__id.html#a157bfa5ffa07be869e9b13459914b819":[1,2,29,4],
-"classcl_1_1sycl_1_1specialization__id.html#a4a02ff4002fa9eece914631dfdc8ea0b":[1,2,29,5],
-"classcl_1_1sycl_1_1specialization__id.html#a6a23b2dd3b8f39deeb0af7309541efb1":[1,2,29,3],
-"classcl_1_1sycl_1_1specialization__id.html#aa3c51d21ed2eae0605e5956b7e201c25":[1,2,29,2],
-"classcl_1_1sycl_1_1specialization__id.html#ac47870e3eca8415b3b11db5aa9f599aa":[1,2,29,0]
+"classcl_1_1sycl_1_1sampler.html#adbb498cc698f57626f0746b3365a880e":[1,2,28,13]
 };

@@ -11,6 +11,7 @@ var pi_8hpp =
     [ "__SYCL_LEVEL_ZERO_PLUGIN_NAME", "pi_8hpp.html#a5b31b039f1a3e9813d179232c4c1c60e", null ],
     [ "__SYCL_OPENCL_PLUGIN_NAME", "pi_8hpp.html#ad00ca8057201f49da3e746641bd6a85b", null ],
     [ "__SYCL_PI_HANDLE_UNKNOWN_PARAM_NAME", "pi_8hpp.html#a520dcf7620099d820ee871b910929543", null ],
+    [ "__SYCL_ROCM_PLUGIN_NAME", "pi_8hpp.html#adbfa0de5dccd80288e98d7dca91d3e3c", null ],
     [ "_PI_API", "pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "_PI_API", "pi_8hpp.html#a30efcb92adfb3e8888cfe462bb133516", null ],
     [ "PiContext", "pi_8hpp.html#affdd574e979e343c0e6d45125be9ce6c", null ],

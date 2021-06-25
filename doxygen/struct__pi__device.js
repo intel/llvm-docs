@@ -2,8 +2,12 @@ var struct__pi__device =
 [
     [ "_pi_device", "struct__pi__device.html#a627746d796788070558a11165b761246", null ],
     [ "_pi_device", "struct__pi__device.html#ac146baced0c4ba770167172a9ea78fd4", null ],
+    [ "_pi_device", "struct__pi__device.html#a627746d796788070558a11165b761246", null ],
+    [ "get", "struct__pi__device.html#a6bb8a1567f31c17c8009624e8916ccb9", null ],
     [ "get", "struct__pi__device.html#a6bb8a1567f31c17c8009624e8916ccb9", null ],
     [ "get_platform", "struct__pi__device.html#a088695d930c25590d6a47897fb29bc17", null ],
+    [ "get_platform", "struct__pi__device.html#a088695d930c25590d6a47897fb29bc17", null ],
+    [ "get_reference_count", "struct__pi__device.html#a7e9c155a94fddc1591bf5e450b1e9d5d", null ],
     [ "get_reference_count", "struct__pi__device.html#a7e9c155a94fddc1591bf5e450b1e9d5d", null ],
     [ "hasCopyEngine", "struct__pi__device.html#a781876a7db4ab684f662ddf0805f6aa3", null ],
     [ "initialize", "struct__pi__device.html#a56e91984f15ec06679ca3a21c3b4facc", null ],

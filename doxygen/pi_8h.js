@@ -14,6 +14,7 @@ var pi_8h =
     [ "_pi_image_desc", "struct__pi__image__desc.html", "struct__pi__image__desc" ],
     [ "_pi_plugin", "struct__pi__plugin.html", "struct__pi__plugin" ],
     [ "FunctionPointers", "struct__pi__plugin_1_1FunctionPointers.html", null ],
+    [ "__SYCL_PI_DEVICE_BINARY_TARGET_AMDGCN", "pi_8h.html#a884f25fc784579dfc35f2ec61a4f85dd", null ],
     [ "__SYCL_PI_DEVICE_BINARY_TARGET_NVPTX64", "pi_8h.html#a679b73985420221d38c59e66b7126540", null ],
     [ "__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV32", "pi_8h.html#ab5cd8a0b747ecc3ea2b578c902335f42", null ],
     [ "__SYCL_PI_DEVICE_BINARY_TARGET_SPIRV64", "pi_8h.html#a85b665270071307cc2cba4a3d97e8b04", null ],

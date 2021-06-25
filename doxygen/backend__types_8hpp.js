@@ -8,7 +8,8 @@ var backend__types_8hpp =
       [ "level_zero", "backend__types_8hpp.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b", null ],
       [ "cuda", "backend__types_8hpp.html#ac67af1b2ee223fc75f90287790459336a39466fe22b062a34cfe09f3cc8c24868", null ],
       [ "all", "backend__types_8hpp.html#ac67af1b2ee223fc75f90287790459336aa181a603769c1f98ad927e7367c7aa51", null ],
-      [ "esimd_cpu", "backend__types_8hpp.html#ac67af1b2ee223fc75f90287790459336a5e196f7cf78e066930518202bcede9b1", null ]
+      [ "esimd_cpu", "backend__types_8hpp.html#ac67af1b2ee223fc75f90287790459336a5e196f7cf78e066930518202bcede9b1", null ],
+      [ "rocm", "backend__types_8hpp.html#ac67af1b2ee223fc75f90287790459336a8509bcf70f2503eab7b05572ae997276", null ]
     ] ],
     [ "operator<<", "backend__types_8hpp.html#ac4e483a4c3de36346021fd678a0a811f", null ]
 ];

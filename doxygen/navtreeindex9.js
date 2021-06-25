@@ -1,5 +1,14 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html":[3,0,1,1,0,275],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a0b758ddcb773edd62fe88f2f51371587":[3,0,1,1,0,275,2],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a18cb5085774ed8007c3b2e0b84303385":[3,0,1,1,0,275,4],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a240fe7b71de27b4c9d169f9b6df4cc93":[3,0,1,1,0,275,1],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a29f093a0bf665ac53ee5b6b42411eee0":[3,0,1,1,0,275,5],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a317c9f85a8922d68c1c70068d74df942":[3,0,1,1,0,275,0],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#afad18ba62647221e84e9d10a33c452b6":[3,0,1,1,0,275,3],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html":[3,0,1,1,0,276],
+"classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a5d52b9c5aed6be87dfa1b38e710d30e3":[3,0,1,1,0,276,0],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a6e13bdfb7a04192e2b64d65258c0d754":[3,0,1,1,0,276,1],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#aabfb23a56e10471670561523dbde6b49":[3,0,1,1,0,276,2],
 "classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#acf02b09d5110db0d087f5efc93f8fcca":[3,0,1,1,0,276,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae48e3a629d271a28cb280432389b881f":[1,3,4,5],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#ae5aea7766fbe6d37849f45208e705cb9":[1,3,4,25],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#aec5f4676243cfbf21edc4abeb054f8fa":[1,3,4,11],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#af01d870c24856e2c5d1bd4b74c4f7701":[1,3,4,20],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#af5887b8414f705ee134016e59e14baeb":[1,3,4,8],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#afe16ed2b110354a8612ab9238f53c265":[1,3,4,12],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html":[1,3,2],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a06383af395fab1747534959c3727c2a4":[1,3,2,12],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a18083340d0e4f7941ac88bee242321f8":[1,3,2,8],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a4a6d2b7ab95fd77a2d88498a1f58346c":[1,3,2,6],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a611fa64ef14bb1491149acbed77d5911":[1,3,2,5],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a62a7fc89f0ee4604e3ccab9b6b6a343f":[1,3,2,20],
-"classcl_1_1sycl_1_1detail_1_1Scheduler_1_1GraphBuilder.html#a6d42750e40104858732eb41d29723c2b":[1,3,2,21]
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#af01d870c24856e2c5d1bd4b74c4f7701":[1,3,4,20]
 };

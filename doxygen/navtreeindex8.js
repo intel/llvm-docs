@@ -1,5 +1,14 @@
 var NAVTREEINDEX8 =
 {
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ab15ed700ca1222337f865d55e48eda81":[3,0,1,1,0,48,17],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#abad80d35abb80420d44990cd8981e863":[3,0,1,1,0,48,8],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ac410613c4e2855f742f9b341cf4b1d12":[3,0,1,1,0,48,2],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ac7353ac42e0dedf7cae4438d1d85eb69":[3,0,1,1,0,48,15],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#acf8f54b47ed4eb45f0e2f2da25335851":[3,0,1,1,0,48,10],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ad7095e2d4e2bf14462923b1471fbbb40":[3,0,1,1,0,48,0],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ad88d366fcdd3e8d10e5c8b12154b204a":[3,0,1,1,0,48,24],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ade746ed40d518f96ae0a463ac2d426d5":[3,0,1,1,0,48,23],
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#ae6b266cd1f8662eb652e8a5fd4917237":[3,0,1,1,0,48,3],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#af78db51ddc09693744e18e42ba3647a1":[3,0,1,1,0,48,19],
 "classcl_1_1sycl_1_1detail_1_1Command.html":[1,3,0],
 "classcl_1_1sycl_1_1detail_1_1Command.html#a0030e3ea7e156c3f77b77df28e9b1fd6":[1,3,0,35],
@@ -240,14 +249,5 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1MapMemObject.html#a01f9a9003eb009106b5e8218310deb50":[3,0,1,1,0,274,2],
 "classcl_1_1sycl_1_1detail_1_1MapMemObject.html#a1b45cd6f26fa82bb60b8362fbd07020f":[3,0,1,1,0,274,1],
 "classcl_1_1sycl_1_1detail_1_1MapMemObject.html#ad1584e6fb4ec7de41f7d5e3436a49d85":[3,0,1,1,0,274,3],
-"classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d":[3,0,1,1,0,274,0],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html":[3,0,1,1,0,275],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a0b758ddcb773edd62fe88f2f51371587":[3,0,1,1,0,275,2],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a18cb5085774ed8007c3b2e0b84303385":[3,0,1,1,0,275,4],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a240fe7b71de27b4c9d169f9b6df4cc93":[3,0,1,1,0,275,1],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a29f093a0bf665ac53ee5b6b42411eee0":[3,0,1,1,0,275,5],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#a317c9f85a8922d68c1c70068d74df942":[3,0,1,1,0,275,0],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommand.html#afad18ba62647221e84e9d10a33c452b6":[3,0,1,1,0,275,3],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html":[3,0,1,1,0,276],
-"classcl_1_1sycl_1_1detail_1_1MemCpyCommandHost.html#a5d52b9c5aed6be87dfa1b38e710d30e3":[3,0,1,1,0,276,0]
+"classcl_1_1sycl_1_1detail_1_1MapMemObject.html#af0e042b41228864db6b4d28b5d67952d":[3,0,1,1,0,274,0]
 };

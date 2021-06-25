@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('spirv__vars_8hpp_source.html',''); ini
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define __SPIRV_VAR_QUALIFIERS extern &quot;C&quot; const</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#if defined(__SYCL_NVPTX__)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#if defined(__NVPTX__) || defined(__AMDGCN__)</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> <span class="keywordtype">size_t</span> __spirv_GlobalInvocationId_x();</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> <span class="keywordtype">size_t</span> __spirv_GlobalInvocationId_y();</div>
@@ -149,7 +149,7 @@ $(document).ready(function(){initNavTree('spirv__vars_8hpp_source.html',''); ini
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> uint32_t __spirv_SubgroupId();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="defines__elementary_8hpp.html#aed4048f8df3068f0e57d0fc20b21a901">SYCL_EXTERNAL</a> uint32_t __spirv_SubgroupLocalInvocationId();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#else // __SYCL_NVPTX__</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#else // defined(__NVPTX__) || defined(__AMDGCN__)</span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">size_t</span> size_t_vec <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">__attribute__</a>((ext_vector_type(3)));</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;__SPIRV_VAR_QUALIFIERS size_t_vec __spirv_BuiltInGlobalSize;</div>
@@ -252,7 +252,7 @@ $(document).ready(function(){initNavTree('spirv__vars_8hpp_source.html',''); ini
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordflow">return</span> __spirv_BuiltInSubgroupLocalInvocationId;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif // __SYCL_NVPTX__</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif // defined(__NVPTX__) || defined(__AMDGCN__)</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="preprocessor">#undef __SPIRV_VAR_QUALIFIERS</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"builtins__math_8cpp.html#a1f9e2ce36497f5575c8b5aa795bfddfb":[4,0,2,1,14,203],
 "builtins__math_8cpp.html#a1fd218f5c638db5305539e02614cb904":[4,0,2,1,14,192],
 "builtins__math_8cpp.html#a200581b20a79bb71b23b5cd6d4d6cb0c":[4,0,2,1,14,156],
 "builtins__math_8cpp.html#a2322c752189168a8d0a2c1889967baf2":[4,0,2,1,14,57],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classBucket.html#ab8500386b0656cd503656e89e08bf31a":[3,0,29,8],
 "classBucket.html#abf0c619dfaaac359686dc36dda8d89eb":[3,0,29,1],
 "classBucket.html#ac796f8ead8693acee2520b9981eeda1c":[3,0,29,5],
-"classReleaseGuard.html":[3,0,39],
-"classReleaseGuard.html#a2edf42c132ac6df9bdcd047bae758835":[3,0,39,2]
+"classReleaseGuard.html":[3,0,39]
 };

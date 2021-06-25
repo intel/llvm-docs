@@ -1218,194 +1218,196 @@ $(function() {
 <div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;    <span class="comment">// matches the current toolchain triple. If it is not present</span></div>
 <div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    <span class="comment">// at all, target and host share a toolchain.</span></div>
 <div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_m_Group)) {</div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;      <span class="keywordflow">if</span> (SameTripleAsHost)</div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;        DAL-&gt;append(A);</div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;        Modified = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    }</div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160; </div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    <span class="comment">// Exclude -fsycl</span></div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_fsycl)) {</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;      Modified = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;    }</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160; </div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;    <span class="keywordtype">unsigned</span> Index = 0;</div>
-<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;    <span class="keywordtype">unsigned</span> Prev;</div>
-<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;    <span class="keywordtype">bool</span> XOffloadTargetNoTriple;</div>
-<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160; </div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;    <span class="comment">// TODO: functionality between OpenMP offloading and SYCL offloading</span></div>
-<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;    <span class="comment">// is similar, can be improved</span></div>
-<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2da3165fa03ae32938d72372397dea79">Action::OFK_OpenMP</a>) {</div>
-<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;      XOffloadTargetNoTriple =</div>
-<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;        A-&gt;getOption().matches(options::OPT_Xopenmp_target);</div>
-<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xopenmp_target_EQ)) {</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;        <span class="comment">// Passing device args: -Xopenmp-target=&lt;triple&gt; -opt=val.</span></div>
-<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;        <span class="keywordflow">if</span> (A-&gt;getValue(0) == <a class="code" href="classclang_1_1driver_1_1ToolChain.html#ac49fa595e3f44cf1639f6784750f02ab">getTripleString</a>())</div>
-<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;          Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(1));</div>
-<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;          <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (XOffloadTargetNoTriple) {</div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;        <span class="comment">// Passing device args: -Xopenmp-target -opt=val.</span></div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;        Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(0));</div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;        DAL-&gt;append(A);</div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;      }</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3adaa6463d7ffaf50be0f025cffdaa1a06">Action::OFK_SYCL</a>) {</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;      XOffloadTargetNoTriple =</div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;        A-&gt;getOption().matches(options::OPT_Xsycl_frontend);</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;      <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xsycl_frontend_EQ)) {</div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;        <span class="comment">// Passing device args: -Xsycl-target-frontend=&lt;triple&gt; -opt=val.</span></div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;        <span class="keywordflow">if</span> (A-&gt;getValue(0) == <a class="code" href="classclang_1_1driver_1_1ToolChain.html#ac49fa595e3f44cf1639f6784750f02ab">getTripleString</a>())</div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;          Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(1));</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;          <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (XOffloadTargetNoTriple) {</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;        <span class="comment">// Passing device args: -Xsycl-target-frontend -opt=val.</span></div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;        Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(0));</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;        DAL-&gt;append(A);</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;      }</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;    }</div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160; </div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    <span class="comment">// Parse the argument to -Xopenmp-target.</span></div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;    Prev = Index;</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;    std::unique_ptr&lt;Arg&gt; XOffloadTargetArg(Opts.ParseOneArg(Args, Index));</div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;    <span class="keywordflow">if</span> (!XOffloadTargetArg || Index &gt; Prev + 1) {</div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;      <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2da3165fa03ae32938d72372397dea79">Action::OFK_OpenMP</a>) {</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_invalid_Xopenmp_target_with_args)</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;            &lt;&lt; A-&gt;getAsString(Args);</div>
-<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_invalid_Xsycl_frontend_with_args)</div>
-<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;            &lt;&lt; A-&gt;getAsString(Args);</div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;      }</div>
-<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;    }</div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;    <span class="keywordflow">if</span> (XOffloadTargetNoTriple &amp;&amp; XOffloadTargetArg) {</div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;      <span class="comment">// TODO: similar behaviors with OpenMP and SYCL offloading, can be</span></div>
-<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;      <span class="comment">// improved upon</span></div>
-<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;      <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2da3165fa03ae32938d72372397dea79">Action::OFK_OpenMP</a> &amp;&amp;</div>
-<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;          Args.getAllArgValues(options::OPT_fopenmp_targets_EQ).size() != 1) {</div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_Xopenmp_target_missing_triple);</div>
-<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3adaa6463d7ffaf50be0f025cffdaa1a06">Action::OFK_SYCL</a> &amp;&amp;</div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;          Args.getAllArgValues(options::OPT_fsycl_targets_EQ).size() &gt; 1) {</div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_Xsycl_target_missing_triple)</div>
-<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;            &lt;&lt; A-&gt;getSpelling();</div>
-<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;      }</div>
-<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;    }</div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160; </div>
-<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;    <span class="keywordflow">if</span> (!XOffloadTargetArg)</div>
-<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160; </div>
-<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;    XOffloadTargetArg-&gt;setBaseArg(A);</div>
-<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;    A = XOffloadTargetArg.release();</div>
-<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;    AllocatedArgs.push_back(A);</div>
-<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;    DAL-&gt;append(A);</div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;    Modified = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;  }</div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160; </div>
-<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;  <span class="keywordflow">if</span> (Modified)</div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;    <span class="keywordflow">return</span> DAL;</div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160; </div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;  <span class="keyword">delete</span> DAL;</div>
-<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;}</div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160; </div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;<span class="comment">// TODO: Currently argument values separated by space e.g.</span></div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;<span class="comment">// -Xclang -mframe-pointer=no cannot be passed by -Xarch_. This should be</span></div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;<span class="comment">// fixed.</span></div>
-<div class="line"><a name="l01273"></a><span class="lineno"><a class="line" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa"> 1273</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">ToolChain::TranslateXarchArgs</a>(</div>
-<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;    <span class="keyword">const</span> llvm::opt::DerivedArgList &amp;Args, llvm::opt::Arg *&amp;A,</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;    llvm::opt::DerivedArgList *DAL,</div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    <a class="code" href="classllvm_1_1SmallVectorImpl.html">SmallVectorImpl&lt;llvm::opt::Arg *&gt;</a> *AllocatedArgs)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;  <span class="keyword">const</span> OptTable &amp;Opts = <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#ab5df585a9901dccb1eb6de21b1f311cd">getOpts</a>();</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;  <span class="keywordtype">unsigned</span> ValuePos = 1;</div>
-<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;  <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch_device) ||</div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;      A-&gt;getOption().matches(options::OPT_Xarch_host))</div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;    ValuePos = 0;</div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160; </div>
-<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;  <span class="keywordtype">unsigned</span> Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(ValuePos));</div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160;  <span class="keywordtype">unsigned</span> Prev = Index;</div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  std::unique_ptr&lt;llvm::opt::Arg&gt; XarchArg(Opts.ParseOneArg(Args, Index));</div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160; </div>
-<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;  <span class="comment">// If the argument parsing failed or more than one argument was</span></div>
-<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;  <span class="comment">// consumed, the -Xarch_ argument&#39;s parameter tried to consume</span></div>
-<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  <span class="comment">// extra arguments. Emit an error and ignore.</span></div>
-<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  <span class="comment">// We also want to disallow any options which would alter the</span></div>
-<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;  <span class="comment">// driver behavior; that isn&#39;t going to work in our model. We</span></div>
-<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;  <span class="comment">// use options::NoXarchOption to control this.</span></div>
-<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  <span class="keywordflow">if</span> (!XarchArg || Index &gt; Prev + 1) {</div>
-<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;    <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_invalid_Xarch_argument_with_args)</div>
-<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;        &lt;&lt; A-&gt;getAsString(Args);</div>
-<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (XarchArg-&gt;getOption().hasFlag(<a class="code" href="namespaceclang_1_1driver_1_1options.html#a282a4be3871bbc7ffb8d1267a6fe41a2af4d5e6e6d0921a8b9f9fb3f81d92d7d1">options::NoXarchOption</a>)) {</div>
-<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;    <span class="keyword">auto</span> &amp;Diags = <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#aa9add94c2fed3a2a4f132664d6ad9e16">getDiags</a>();</div>
-<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;    <span class="keywordtype">unsigned</span> DiagID =</div>
-<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;        Diags.<a class="code" href="classclang_1_1DiagnosticsEngine.html#a0a8521bd7fd1c68c33f65775b7ee85be">getCustomDiagID</a>(<a class="code" href="classclang_1_1DiagnosticsEngine.html#a94e5078973aa3a34432e91f3b26263e0a67b5cd51c751720d23bd4ad592252c6e">DiagnosticsEngine::Error</a>,</div>
-<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;                              <span class="stringliteral">&quot;invalid Xarch argument: &#39;%0&#39;, not all driver &quot;</span></div>
-<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;                              <span class="stringliteral">&quot;options can be forwared via Xarch argument&quot;</span>);</div>
-<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;    Diags.Report(DiagID) &lt;&lt; A-&gt;getAsString(Args);</div>
-<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;  }</div>
-<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;  XarchArg-&gt;setBaseArg(A);</div>
-<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;  A = XarchArg.release();</div>
-<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  <span class="keywordflow">if</span> (!AllocatedArgs)</div>
-<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;    DAL-&gt;AddSynthesizedArg(A);</div>
-<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;    AllocatedArgs-&gt;push_back(A);</div>
-<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;}</div>
-<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160; </div>
-<div class="line"><a name="l01315"></a><span class="lineno"><a class="line" href="classclang_1_1driver_1_1ToolChain.html#a5f85f177496f50ed5b68ca942e94a2ad"> 1315</a></span>&#160;llvm::opt::DerivedArgList *<a class="code" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">ToolChain::TranslateXarchArgs</a>(</div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;    <span class="keyword">const</span> llvm::opt::DerivedArgList &amp;Args, StringRef BoundArch,</div>
-<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;    <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3">Action::OffloadKind</a> OFK,</div>
-<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;    <a class="code" href="classllvm_1_1SmallVectorImpl.html">SmallVectorImpl&lt;llvm::opt::Arg *&gt;</a> *AllocatedArgs)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;  DerivedArgList *DAL = <span class="keyword">new</span> DerivedArgList(Args.getBaseArgs());</div>
-<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;  <span class="keywordtype">bool</span> Modified = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160; </div>
-<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;  <span class="keywordtype">bool</span> IsGPU = OFK == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2afdc1d67cec764dcce4b71bd5c6400e">Action::OFK_Cuda</a> || OFK == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a15006137fb4a8007389c9d1023fa283b">Action::OFK_HIP</a>;</div>
-<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160;  <span class="keywordflow">for</span> (Arg *A : Args) {</div>
-<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;    <span class="keywordtype">bool</span> NeedTrans = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;    <span class="keywordtype">bool</span> Skip = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;    <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch_device)) {</div>
-<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;      NeedTrans = IsGPU;</div>
-<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;      Skip = !IsGPU;</div>
-<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch_host)) {</div>
-<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;      NeedTrans = !IsGPU;</div>
-<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;      Skip = IsGPU;</div>
-<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch__) &amp;&amp; IsGPU) {</div>
-<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;      <span class="comment">// Do not translate -Xarch_ options for non CUDA/HIP toolchain since</span></div>
-<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;      <span class="comment">// they may need special translation.</span></div>
-<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;      <span class="comment">// Skip this argument unless the architecture matches BoundArch</span></div>
-<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;      <span class="keywordflow">if</span> (BoundArch.empty() || A-&gt;getValue(0) != BoundArch)</div>
-<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;        Skip = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;        NeedTrans = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;    }</div>
-<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;    <span class="keywordflow">if</span> (NeedTrans || Skip)</div>
-<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;      Modified = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    <span class="keywordflow">if</span> (NeedTrans)</div>
-<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;      <a class="code" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">TranslateXarchArgs</a>(Args, A, DAL, AllocatedArgs);</div>
-<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    <span class="keywordflow">if</span> (!Skip)</div>
-<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;      DAL-&gt;append(A);</div>
-<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;  }</div>
-<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160; </div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;  <span class="keywordflow">if</span> (Modified)</div>
-<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;    <span class="keywordflow">return</span> DAL;</div>
-<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160; </div>
-<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;  <span class="keyword">delete</span> DAL;</div>
-<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;}</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;      <span class="comment">// AMD GPU is a special case, as -mcpu is required for the device</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;      <span class="comment">// compilation.</span></div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;      <span class="keywordflow">if</span> (SameTripleAsHost || <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a3c8a8b95e1278a73a3e5fddec8e3799c">getTriple</a>().<a class="code" href="classclang_1_1driver_1_1ToolChain.html#a3750b35878607cd53ffc5a220f7bd661">getArch</a>() == llvm::Triple::amdgcn)</div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;        DAL-&gt;append(A);</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;        Modified = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;    }</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160; </div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;    <span class="comment">// Exclude -fsycl</span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_fsycl)) {</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;      Modified = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;    }</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160; </div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;    <span class="keywordtype">unsigned</span> Index = 0;</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;    <span class="keywordtype">unsigned</span> Prev;</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;    <span class="keywordtype">bool</span> XOffloadTargetNoTriple;</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160; </div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;    <span class="comment">// TODO: functionality between OpenMP offloading and SYCL offloading</span></div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;    <span class="comment">// is similar, can be improved</span></div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;    <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2da3165fa03ae32938d72372397dea79">Action::OFK_OpenMP</a>) {</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      XOffloadTargetNoTriple =</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;        A-&gt;getOption().matches(options::OPT_Xopenmp_target);</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;      <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xopenmp_target_EQ)) {</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;        <span class="comment">// Passing device args: -Xopenmp-target=&lt;triple&gt; -opt=val.</span></div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;        <span class="keywordflow">if</span> (A-&gt;getValue(0) == <a class="code" href="classclang_1_1driver_1_1ToolChain.html#ac49fa595e3f44cf1639f6784750f02ab">getTripleString</a>())</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;          Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(1));</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;          <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (XOffloadTargetNoTriple) {</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;        <span class="comment">// Passing device args: -Xopenmp-target -opt=val.</span></div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;        Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(0));</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;        DAL-&gt;append(A);</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;      }</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3adaa6463d7ffaf50be0f025cffdaa1a06">Action::OFK_SYCL</a>) {</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;      XOffloadTargetNoTriple =</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;        A-&gt;getOption().matches(options::OPT_Xsycl_frontend);</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;      <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xsycl_frontend_EQ)) {</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;        <span class="comment">// Passing device args: -Xsycl-target-frontend=&lt;triple&gt; -opt=val.</span></div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;        <span class="keywordflow">if</span> (A-&gt;getValue(0) == <a class="code" href="classclang_1_1driver_1_1ToolChain.html#ac49fa595e3f44cf1639f6784750f02ab">getTripleString</a>())</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;          Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(1));</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;          <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (XOffloadTargetNoTriple) {</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;        <span class="comment">// Passing device args: -Xsycl-target-frontend -opt=val.</span></div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;        Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(0));</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;        DAL-&gt;append(A);</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;      }</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    }</div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160; </div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;    <span class="comment">// Parse the argument to -Xopenmp-target.</span></div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;    Prev = Index;</div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;    std::unique_ptr&lt;Arg&gt; XOffloadTargetArg(Opts.ParseOneArg(Args, Index));</div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    <span class="keywordflow">if</span> (!XOffloadTargetArg || Index &gt; Prev + 1) {</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;      <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2da3165fa03ae32938d72372397dea79">Action::OFK_OpenMP</a>) {</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_invalid_Xopenmp_target_with_args)</div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;            &lt;&lt; A-&gt;getAsString(Args);</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_invalid_Xsycl_frontend_with_args)</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;            &lt;&lt; A-&gt;getAsString(Args);</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;      }</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;    }</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;    <span class="keywordflow">if</span> (XOffloadTargetNoTriple &amp;&amp; XOffloadTargetArg) {</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;      <span class="comment">// TODO: similar behaviors with OpenMP and SYCL offloading, can be</span></div>
+<div class="line"><a name="l01242"></a><span class="lineno"> 1242</span>&#160;      <span class="comment">// improved upon</span></div>
+<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160;      <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2da3165fa03ae32938d72372397dea79">Action::OFK_OpenMP</a> &amp;&amp;</div>
+<div class="line"><a name="l01244"></a><span class="lineno"> 1244</span>&#160;          Args.getAllArgValues(options::OPT_fopenmp_targets_EQ).size() != 1) {</div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_Xopenmp_target_missing_triple);</div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (DeviceOffloadKind == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3adaa6463d7ffaf50be0f025cffdaa1a06">Action::OFK_SYCL</a> &amp;&amp;</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;          Args.getAllArgValues(options::OPT_fsycl_targets_EQ).size() &gt; 1) {</div>
+<div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160;        <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_Xsycl_target_missing_triple)</div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;            &lt;&lt; A-&gt;getSpelling();</div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;      }</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160;    }</div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160; </div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;    <span class="keywordflow">if</span> (!XOffloadTargetArg)</div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160; </div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;    XOffloadTargetArg-&gt;setBaseArg(A);</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;    A = XOffloadTargetArg.release();</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;    AllocatedArgs.push_back(A);</div>
+<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;    DAL-&gt;append(A);</div>
+<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;    Modified = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;  }</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160; </div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;  <span class="keywordflow">if</span> (Modified)</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;    <span class="keywordflow">return</span> DAL;</div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160; </div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;  <span class="keyword">delete</span> DAL;</div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;}</div>
+<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160; </div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;<span class="comment">// TODO: Currently argument values separated by space e.g.</span></div>
+<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;<span class="comment">// -Xclang -mframe-pointer=no cannot be passed by -Xarch_. This should be</span></div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160;<span class="comment">// fixed.</span></div>
+<div class="line"><a name="l01275"></a><span class="lineno"><a class="line" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa"> 1275</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">ToolChain::TranslateXarchArgs</a>(</div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;    <span class="keyword">const</span> llvm::opt::DerivedArgList &amp;Args, llvm::opt::Arg *&amp;A,</div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;    llvm::opt::DerivedArgList *DAL,</div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    <a class="code" href="classllvm_1_1SmallVectorImpl.html">SmallVectorImpl&lt;llvm::opt::Arg *&gt;</a> *AllocatedArgs)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;  <span class="keyword">const</span> OptTable &amp;Opts = <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#ab5df585a9901dccb1eb6de21b1f311cd">getOpts</a>();</div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;  <span class="keywordtype">unsigned</span> ValuePos = 1;</div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;  <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch_device) ||</div>
+<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;      A-&gt;getOption().matches(options::OPT_Xarch_host))</div>
+<div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160;    ValuePos = 0;</div>
+<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160; </div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;  <span class="keywordtype">unsigned</span> Index = Args.getBaseArgs().MakeIndex(A-&gt;getValue(ValuePos));</div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;  <span class="keywordtype">unsigned</span> Prev = Index;</div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;  std::unique_ptr&lt;llvm::opt::Arg&gt; XarchArg(Opts.ParseOneArg(Args, Index));</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160; </div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;  <span class="comment">// If the argument parsing failed or more than one argument was</span></div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;  <span class="comment">// consumed, the -Xarch_ argument&#39;s parameter tried to consume</span></div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;  <span class="comment">// extra arguments. Emit an error and ignore.</span></div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l01293"></a><span class="lineno"> 1293</span>&#160;  <span class="comment">// We also want to disallow any options which would alter the</span></div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;  <span class="comment">// driver behavior; that isn&#39;t going to work in our model. We</span></div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160;  <span class="comment">// use options::NoXarchOption to control this.</span></div>
+<div class="line"><a name="l01296"></a><span class="lineno"> 1296</span>&#160;  <span class="keywordflow">if</span> (!XarchArg || Index &gt; Prev + 1) {</div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;    <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">Diag</a>(diag::err_drv_invalid_Xarch_argument_with_args)</div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;        &lt;&lt; A-&gt;getAsString(Args);</div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (XarchArg-&gt;getOption().hasFlag(<a class="code" href="namespaceclang_1_1driver_1_1options.html#a282a4be3871bbc7ffb8d1267a6fe41a2af4d5e6e6d0921a8b9f9fb3f81d92d7d1">options::NoXarchOption</a>)) {</div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;    <span class="keyword">auto</span> &amp;Diags = <a class="code" href="classclang_1_1driver_1_1ToolChain.html#a07dab26687a39da186aa21f14abb49f3">getDriver</a>().<a class="code" href="classclang_1_1driver_1_1Driver.html#aa9add94c2fed3a2a4f132664d6ad9e16">getDiags</a>();</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;    <span class="keywordtype">unsigned</span> DiagID =</div>
+<div class="line"><a name="l01303"></a><span class="lineno"> 1303</span>&#160;        Diags.<a class="code" href="classclang_1_1DiagnosticsEngine.html#a0a8521bd7fd1c68c33f65775b7ee85be">getCustomDiagID</a>(<a class="code" href="classclang_1_1DiagnosticsEngine.html#a94e5078973aa3a34432e91f3b26263e0a67b5cd51c751720d23bd4ad592252c6e">DiagnosticsEngine::Error</a>,</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;                              <span class="stringliteral">&quot;invalid Xarch argument: &#39;%0&#39;, not all driver &quot;</span></div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;                              <span class="stringliteral">&quot;options can be forwared via Xarch argument&quot;</span>);</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;    Diags.Report(DiagID) &lt;&lt; A-&gt;getAsString(Args);</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;  }</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;  XarchArg-&gt;setBaseArg(A);</div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;  A = XarchArg.release();</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;  <span class="keywordflow">if</span> (!AllocatedArgs)</div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;    DAL-&gt;AddSynthesizedArg(A);</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;    AllocatedArgs-&gt;push_back(A);</div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;}</div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160; </div>
+<div class="line"><a name="l01317"></a><span class="lineno"><a class="line" href="classclang_1_1driver_1_1ToolChain.html#a5f85f177496f50ed5b68ca942e94a2ad"> 1317</a></span>&#160;llvm::opt::DerivedArgList *<a class="code" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">ToolChain::TranslateXarchArgs</a>(</div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;    <span class="keyword">const</span> llvm::opt::DerivedArgList &amp;Args, StringRef BoundArch,</div>
+<div class="line"><a name="l01319"></a><span class="lineno"> 1319</span>&#160;    <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3">Action::OffloadKind</a> OFK,</div>
+<div class="line"><a name="l01320"></a><span class="lineno"> 1320</span>&#160;    <a class="code" href="classllvm_1_1SmallVectorImpl.html">SmallVectorImpl&lt;llvm::opt::Arg *&gt;</a> *AllocatedArgs)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l01321"></a><span class="lineno"> 1321</span>&#160;  DerivedArgList *DAL = <span class="keyword">new</span> DerivedArgList(Args.getBaseArgs());</div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;  <span class="keywordtype">bool</span> Modified = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160; </div>
+<div class="line"><a name="l01324"></a><span class="lineno"> 1324</span>&#160;  <span class="keywordtype">bool</span> IsGPU = OFK == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2afdc1d67cec764dcce4b71bd5c6400e">Action::OFK_Cuda</a> || OFK == <a class="code" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a15006137fb4a8007389c9d1023fa283b">Action::OFK_HIP</a>;</div>
+<div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;  <span class="keywordflow">for</span> (Arg *A : Args) {</div>
+<div class="line"><a name="l01326"></a><span class="lineno"> 1326</span>&#160;    <span class="keywordtype">bool</span> NeedTrans = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01327"></a><span class="lineno"> 1327</span>&#160;    <span class="keywordtype">bool</span> Skip = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;    <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch_device)) {</div>
+<div class="line"><a name="l01329"></a><span class="lineno"> 1329</span>&#160;      NeedTrans = IsGPU;</div>
+<div class="line"><a name="l01330"></a><span class="lineno"> 1330</span>&#160;      Skip = !IsGPU;</div>
+<div class="line"><a name="l01331"></a><span class="lineno"> 1331</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch_host)) {</div>
+<div class="line"><a name="l01332"></a><span class="lineno"> 1332</span>&#160;      NeedTrans = !IsGPU;</div>
+<div class="line"><a name="l01333"></a><span class="lineno"> 1333</span>&#160;      Skip = IsGPU;</div>
+<div class="line"><a name="l01334"></a><span class="lineno"> 1334</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (A-&gt;getOption().matches(options::OPT_Xarch__) &amp;&amp; IsGPU) {</div>
+<div class="line"><a name="l01335"></a><span class="lineno"> 1335</span>&#160;      <span class="comment">// Do not translate -Xarch_ options for non CUDA/HIP toolchain since</span></div>
+<div class="line"><a name="l01336"></a><span class="lineno"> 1336</span>&#160;      <span class="comment">// they may need special translation.</span></div>
+<div class="line"><a name="l01337"></a><span class="lineno"> 1337</span>&#160;      <span class="comment">// Skip this argument unless the architecture matches BoundArch</span></div>
+<div class="line"><a name="l01338"></a><span class="lineno"> 1338</span>&#160;      <span class="keywordflow">if</span> (BoundArch.empty() || A-&gt;getValue(0) != BoundArch)</div>
+<div class="line"><a name="l01339"></a><span class="lineno"> 1339</span>&#160;        Skip = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01340"></a><span class="lineno"> 1340</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l01341"></a><span class="lineno"> 1341</span>&#160;        NeedTrans = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01342"></a><span class="lineno"> 1342</span>&#160;    }</div>
+<div class="line"><a name="l01343"></a><span class="lineno"> 1343</span>&#160;    <span class="keywordflow">if</span> (NeedTrans || Skip)</div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;      Modified = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160;    <span class="keywordflow">if</span> (NeedTrans)</div>
+<div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;      <a class="code" href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">TranslateXarchArgs</a>(Args, A, DAL, AllocatedArgs);</div>
+<div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;    <span class="keywordflow">if</span> (!Skip)</div>
+<div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;      DAL-&gt;append(A);</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;  }</div>
+<div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160; </div>
+<div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;  <span class="keywordflow">if</span> (Modified)</div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;    <span class="keywordflow">return</span> DAL;</div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160; </div>
+<div class="line"><a name="l01354"></a><span class="lineno"> 1354</span>&#160;  <span class="keyword">delete</span> DAL;</div>
+<div class="line"><a name="l01355"></a><span class="lineno"> 1355</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l01356"></a><span class="lineno"> 1356</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassclang_1_1driver_1_1Action_html_af593898af4be6070eaf4b1a7ea861700a7b586ab9d110214bfb3550bd78bce54f"><div class="ttname"><a href="classclang_1_1driver_1_1Action.html#af593898af4be6070eaf4b1a7ea861700a7b586ab9d110214bfb3550bd78bce54f">clang::driver::Action::BackendCompileJobClass</a></div><div class="ttdeci">@ BackendCompileJobClass</div><div class="ttdef"><b>Definition:</b> <a href="Action_8h_source.html#l00081">Action.h:81</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_a22a8dbac0f0fcafc5a28e4e1b106d6af"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#a22a8dbac0f0fcafc5a28e4e1b106d6af">clang::driver::ToolChain::buildStaticLibTool</a></div><div class="ttdeci">virtual Tool * buildStaticLibTool() const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00288">ToolChain.cpp:288</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_a86704fe3c8d5c4dc4907c2954472f086"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#a86704fe3c8d5c4dc4907c2954472f086">clang::driver::ToolChain::getSanitizerArgs</a></div><div class="ttdeci">const SanitizerArgs &amp; getSanitizerArgs() const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00118">ToolChain.cpp:118</a></div></div>
-<div class="ttc" id="aclassclang_1_1driver_1_1Driver_html_aad38223fda62544e758feebd0b55ea1b"><div class="ttname"><a href="classclang_1_1driver_1_1Driver.html#aad38223fda62544e758feebd0b55ea1b">clang::driver::Driver::GetProgramPath</a></div><div class="ttdeci">std::string GetProgramPath(StringRef Name, const ToolChain &amp;TC) const</div><div class="ttdoc">GetProgramPath - Lookup Name in the list of program search paths.</div><div class="ttdef"><b>Definition:</b> <a href="Driver_8cpp_source.html#l06982">Driver.cpp:6982</a></div></div>
+<div class="ttc" id="aclassclang_1_1driver_1_1Driver_html_aad38223fda62544e758feebd0b55ea1b"><div class="ttname"><a href="classclang_1_1driver_1_1Driver.html#aad38223fda62544e758feebd0b55ea1b">clang::driver::Driver::GetProgramPath</a></div><div class="ttdeci">std::string GetProgramPath(StringRef Name, const ToolChain &amp;TC) const</div><div class="ttdoc">GetProgramPath - Lookup Name in the list of program search paths.</div><div class="ttdef"><b>Definition:</b> <a href="Driver_8cpp_source.html#l07007">Driver.cpp:7007</a></div></div>
 <div class="ttc" id="anamespacellvm_html"><div class="ttname"><a href="namespacellvm.html">llvm</a></div><div class="ttdef"><b>Definition:</b> <a href="Dominators_8h_source.html#l00030">Dominators.h:30</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1driver_html_a6afaa5a5585c80299a8a5a9d914dad4d"><div class="ttname"><a href="namespaceclang_1_1driver.html#a6afaa5a5585c80299a8a5a9d914dad4d">clang::driver::isOptimizationLevelFast</a></div><div class="ttdeci">bool isOptimizationLevelFast(const llvm::opt::ArgList &amp;Args)</div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_aa23c714270e515aaf82fc27f5b9ef8a7"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#aa23c714270e515aaf82fc27f5b9ef8a7">clang::driver::ToolChain::getCompilerRT</a></div><div class="ttdeci">virtual std::string getCompilerRT(const llvm::opt::ArgList &amp;Args, StringRef Component, FileType Type=ToolChain::FT_Static) const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00528">ToolChain.cpp:528</a></div></div>
@@ -1425,7 +1427,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_a9af8a50f14ef12be8ab8ff1412075aca"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#a9af8a50f14ef12be8ab8ff1412075aca">clang::driver::ToolChain::buildCompilerRTBasename</a></div><div class="ttdeci">virtual std::string buildCompilerRTBasename(const llvm::opt::ArgList &amp;Args, StringRef Component, FileType Type, bool AddArch) const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00494">ToolChain.cpp:494</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1Action_html_ae9bd3e2b14f70dc3c5305fbb8f2303d3a2afdc1d67cec764dcce4b71bd5c6400e"><div class="ttname"><a href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3a2afdc1d67cec764dcce4b71bd5c6400e">clang::driver::Action::OFK_Cuda</a></div><div class="ttdeci">@ OFK_Cuda</div><div class="ttdef"><b>Definition:</b> <a href="Action_8h_source.html#l00100">Action.h:100</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_afecd7ccca2f178094dfcc8292bea05c7"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#afecd7ccca2f178094dfcc8292bea05c7">clang::driver::ToolChain::getDefaultObjCRuntime</a></div><div class="ttdeci">virtual ObjCRuntime getDefaultObjCRuntime(bool isNonFragile) const</div><div class="ttdoc">getDefaultObjCRuntime - Return the default Objective-C runtime for this platform.</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00721">ToolChain.cpp:721</a></div></div>
-<div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_af85fb779e241ae72a50f29c4f5e4f1aa"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">clang::driver::ToolChain::TranslateXarchArgs</a></div><div class="ttdeci">virtual void TranslateXarchArgs(const llvm::opt::DerivedArgList &amp;Args, llvm::opt::Arg *&amp;A, llvm::opt::DerivedArgList *DAL, SmallVectorImpl&lt; llvm::opt::Arg * &gt; *AllocatedArgs=nullptr) const</div><div class="ttdoc">Append the argument following A to DAL assuming A is an Xarch argument.</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l01273">ToolChain.cpp:1273</a></div></div>
+<div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_af85fb779e241ae72a50f29c4f5e4f1aa"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#af85fb779e241ae72a50f29c4f5e4f1aa">clang::driver::ToolChain::TranslateXarchArgs</a></div><div class="ttdeci">virtual void TranslateXarchArgs(const llvm::opt::DerivedArgList &amp;Args, llvm::opt::Arg *&amp;A, llvm::opt::DerivedArgList *DAL, SmallVectorImpl&lt; llvm::opt::Arg * &gt; *AllocatedArgs=nullptr) const</div><div class="ttdoc">Append the argument following A to DAL assuming A is an Xarch argument.</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l01275">ToolChain.cpp:1275</a></div></div>
 <div class="ttc" id="aclassllvm_1_1SmallVector_html"><div class="ttname"><a href="classllvm_1_1SmallVector.html">llvm::SmallVector</a></div><div class="ttdef"><b>Definition:</b> <a href="LLVM_8h_source.html#l00038">LLVM.h:38</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1driver_1_1tools_1_1arm_html_a949639b3d0bbfa97e2d5e5612c56da36"><div class="ttname"><a href="namespaceclang_1_1driver_1_1tools_1_1arm.html#a949639b3d0bbfa97e2d5e5612c56da36">clang::driver::tools::arm::getARMFloatABI</a></div><div class="ttdeci">FloatABI getARMFloatABI(const ToolChain &amp;TC, const llvm::opt::ArgList &amp;Args)</div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1Action_html_af593898af4be6070eaf4b1a7ea861700"><div class="ttname"><a href="classclang_1_1driver_1_1Action.html#af593898af4be6070eaf4b1a7ea861700">clang::driver::Action::ActionClass</a></div><div class="ttdeci">ActionClass</div><div class="ttdef"><b>Definition:</b> <a href="Action_8h_source.html#l00056">Action.h:56</a></div></div>
@@ -1565,7 +1567,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1driver_1_1Action_html_af593898af4be6070eaf4b1a7ea861700aa9cea83154785da25099480d5bc2ab13"><div class="ttname"><a href="classclang_1_1driver_1_1Action.html#af593898af4be6070eaf4b1a7ea861700aa9cea83154785da25099480d5bc2ab13">clang::driver::Action::CompileJobClass</a></div><div class="ttdeci">@ CompileJobClass</div><div class="ttdef"><b>Definition:</b> <a href="Action_8h_source.html#l00065">Action.h:65</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_abc5e742140625a3705bf927c27d11e64"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#abc5e742140625a3705bf927c27d11e64">clang::driver::ToolChain::getOSLibName</a></div><div class="ttdeci">virtual StringRef getOSLibName() const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00457">ToolChain.cpp:457</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_a13c7515c5a5455424d9a466afe743c4a"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#a13c7515c5a5455424d9a466afe743c4a">clang::driver::ToolChain::FileType</a></div><div class="ttdeci">FileType</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8h_source.html#l00116">ToolChain.h:116</a></div></div>
-<div class="ttc" id="aclassclang_1_1driver_1_1Driver_html_a254c68da4824ef6f0566d14fe8898af2"><div class="ttname"><a href="classclang_1_1driver_1_1Driver.html#a254c68da4824ef6f0566d14fe8898af2">clang::driver::Driver::GetFilePath</a></div><div class="ttdeci">std::string GetFilePath(StringRef Name, const ToolChain &amp;TC) const</div><div class="ttdoc">GetFilePath - Lookup Name in the list of file search paths.</div><div class="ttdef"><b>Definition:</b> <a href="Driver_8cpp_source.html#l06922">Driver.cpp:6922</a></div></div>
+<div class="ttc" id="aclassclang_1_1driver_1_1Driver_html_a254c68da4824ef6f0566d14fe8898af2"><div class="ttname"><a href="classclang_1_1driver_1_1Driver.html#a254c68da4824ef6f0566d14fe8898af2">clang::driver::Driver::GetFilePath</a></div><div class="ttdeci">std::string GetFilePath(StringRef Name, const ToolChain &amp;TC) const</div><div class="ttdoc">GetFilePath - Lookup Name in the list of file search paths.</div><div class="ttdef"><b>Definition:</b> <a href="Driver_8cpp_source.html#l06947">Driver.cpp:6947</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_ac17ba926b9878f2dd8b4bd8eedf20cc9"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#ac17ba926b9878f2dd8b4bd8eedf20cc9">clang::driver::ToolChain::GetDefaultCXXStdlibType</a></div><div class="ttdeci">virtual CXXStdlibType GetDefaultCXXStdlibType() const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8h_source.html#l00439">ToolChain.h:439</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_ace11792ce526bfa0b5bdd6e07ca13303"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#ace11792ce526bfa0b5bdd6e07ca13303">clang::driver::ToolChain::GetCXXStdlibType</a></div><div class="ttdeci">virtual CXXStdlibType GetCXXStdlibType(const llvm::opt::ArgList &amp;Args) const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00882">ToolChain.cpp:882</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_ac0b664f56e5b0e5bbf149c4889fd293d"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#ac0b664f56e5b0e5bbf149c4889fd293d">clang::driver::ToolChain::AddIAMCUIncludeArgs</a></div><div class="ttdeci">virtual void AddIAMCUIncludeArgs(const llvm::opt::ArgList &amp;DriverArgs, llvm::opt::ArgStringList &amp;CC1Args) const</div><div class="ttdoc">Add arguments to use MCU GCC toolchain includes.</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l01097">ToolChain.cpp:1097</a></div></div>
@@ -1621,7 +1623,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1driver_1_1ToolChain_html_a44da28d009e494ce8cab73a56418c2b4"><div class="ttname"><a href="classclang_1_1driver_1_1ToolChain.html#a44da28d009e494ce8cab73a56418c2b4">clang::driver::ToolChain::getRuntimePath</a></div><div class="ttdeci">virtual std::string getRuntimePath() const</div><div class="ttdef"><b>Definition:</b> <a href="ToolChain_8cpp_source.html#l00555">ToolChain.cpp:555</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 24 2021 01:45:38 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 25 2021 01:59:13 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

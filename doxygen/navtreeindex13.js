@@ -1,5 +1,14 @@
 var NAVTREEINDEX13 =
 {
+"classcl_1_1sycl_1_1exception.html":[1,2,7],
+"classcl_1_1sycl_1_1exception.html#a20f9834c3c472344f00cedd99390f834":[1,2,7,3],
+"classcl_1_1sycl_1_1exception.html#a2755752cadc0a065916b3fadd760dad5":[1,2,7,4],
+"classcl_1_1sycl_1_1exception.html#a32caf4741d72b0e8d1ee617a1713f653":[1,2,7,8],
+"classcl_1_1sycl_1_1exception.html#a64fe234b1febc722835c2baec5daf31e":[1,2,7,1],
+"classcl_1_1sycl_1_1exception.html#a7615f3465414d8551af331fd98ed147f":[1,2,7,2],
+"classcl_1_1sycl_1_1exception.html#a7ac9890f13cc0b1a1b666caa896db6c4":[1,2,7,6],
+"classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e":[1,2,7,9],
+"classcl_1_1sycl_1_1exception.html#a8b1479cf8dda8089c5d8135c4c8a064a":[1,2,7,0],
 "classcl_1_1sycl_1_1exception.html#aa326bac3c0b44811d3c7633621c6d6ba":[1,2,7,5],
 "classcl_1_1sycl_1_1exception.html#af4e53a320810b1a1218da32bc27026bc":[1,2,7,7],
 "classcl_1_1sycl_1_1exception__list.html":[1,2,8],
@@ -240,14 +249,5 @@ var NAVTREEINDEX13 =
 "classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4":[1,2,11,13],
 "classcl_1_1sycl_1_1handler.html#a87d56a475a807c51c9f750bb6c8ee15e":[1,2,11,4],
 "classcl_1_1sycl_1_1handler.html#a8b4924bfca94f90fc3a158bf6992a24c":[1,2,11,33],
-"classcl_1_1sycl_1_1handler.html#a8f112c5b9cbd5db123764bf1eae306bb":[1,2,11,7],
-"classcl_1_1sycl_1_1handler.html#a93f8f35825802c6e026f2dcd343bb093":[1,2,11,47],
-"classcl_1_1sycl_1_1handler.html#a959728223dda817d3593c6e3e104b0ff":[1,2,11,40],
-"classcl_1_1sycl_1_1handler.html#a9b5797be83894c081b6ea29f9bec85f8":[1,2,11,12],
-"classcl_1_1sycl_1_1handler.html#aa263b98900a3e67d195b5bc591c50ef3":[1,2,11,6],
-"classcl_1_1sycl_1_1handler.html#aa46bc683d37b6005434a0bceb5389f8c":[1,2,11,57],
-"classcl_1_1sycl_1_1handler.html#aa68d8445ce652ee6f2df4ce661513a81":[1,2,11,50],
-"classcl_1_1sycl_1_1handler.html#aaabb994ca2bdbf38e10d7742a7e97f8f":[1,2,11,54],
-"classcl_1_1sycl_1_1handler.html#aab6e38c9f1c74a6353d9328a2a6950d6":[1,2,11,3],
-"classcl_1_1sycl_1_1handler.html#aadd0bebb1b380bf3733e8d889b1d85da":[1,2,11,30]
+"classcl_1_1sycl_1_1handler.html#a8f112c5b9cbd5db123764bf1eae306bb":[1,2,11,7]
 };

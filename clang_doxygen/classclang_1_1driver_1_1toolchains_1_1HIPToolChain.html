@@ -89,8 +89,8 @@ Collaboration diagram for clang::driver::toolchains::HIPToolChain:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71df3f4882d7bb3bb91ac0970a8be5c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a71df3f4882d7bb3bb91ac0970a8be5c7">HIPToolChain</a> (const <a class="el" href="classclang_1_1driver_1_1Driver.html">Driver</a> &amp;D, const llvm::Triple &amp;Triple, const <a class="el" href="classclang_1_1driver_1_1ToolChain.html">ToolChain</a> &amp;<a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#ab856f514a03a5392e3ca71bd1d1886b7">HostTC</a>, const llvm::opt::ArgList &amp;Args)</td></tr>
-<tr class="separator:a71df3f4882d7bb3bb91ac0970a8be5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a068cf915496290e64d2b7a43034bb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a6a068cf915496290e64d2b7a43034bb0">HIPToolChain</a> (const <a class="el" href="classclang_1_1driver_1_1Driver.html">Driver</a> &amp;D, const llvm::Triple &amp;Triple, const <a class="el" href="classclang_1_1driver_1_1ToolChain.html">ToolChain</a> &amp;<a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#ab856f514a03a5392e3ca71bd1d1886b7">HostTC</a>, const llvm::opt::ArgList &amp;Args, const <a class="el" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3">Action::OffloadKind</a> OK)</td></tr>
+<tr class="separator:a6a068cf915496290e64d2b7a43034bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1794406829706d5f0e0c6e7cc480e9b4"><td class="memItemLeft" align="right" valign="top">const llvm::Triple *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a1794406829706d5f0e0c6e7cc480e9b4">getAuxTriple</a> () const override</td></tr>
 <tr class="memdesc:a1794406829706d5f0e0c6e7cc480e9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the toolchain's aux triple, if it has one.  <a href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a1794406829706d5f0e0c6e7cc480e9b4">More...</a><br /></td></tr>
 <tr class="separator:a1794406829706d5f0e0c6e7cc480e9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,6 +131,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4759352b0db79a0a4d4ac75504f7e258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a4759352b0db79a0a4d4ac75504f7e258">checkTargetID</a> (const llvm::opt::ArgList &amp;DriverArgs) const override</td></tr>
 <tr class="memdesc:a4759352b0db79a0a4d4ac75504f7e258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check and diagnose invalid target ID specified by -mcpu.  <a href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a4759352b0db79a0a4d4ac75504f7e258">More...</a><br /></td></tr>
 <tr class="separator:a4759352b0db79a0a4d4ac75504f7e258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a702fee4ef322026991214e7370436f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classclang_1_1driver_1_1Tool.html">Tool</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a6a702fee4ef322026991214e7370436f">SelectTool</a> (const <a class="el" href="classclang_1_1driver_1_1JobAction.html">JobAction</a> &amp;JA) const override</td></tr>
+<tr class="memdesc:a6a702fee4ef322026991214e7370436f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose a tool to use to handle the action <code>JA</code>.  <a href="classclang_1_1driver_1_1toolchains_1_1HIPToolChain.html#a6a702fee4ef322026991214e7370436f">More...</a><br /></td></tr>
+<tr class="separator:a6a702fee4ef322026991214e7370436f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classclang_1_1driver_1_1toolchains_1_1ROCMToolChain"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classclang_1_1driver_1_1toolchains_1_1ROCMToolChain')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1ROCMToolChain.html">clang::driver::toolchains::ROCMToolChain</a></td></tr>
 <tr class="memitem:ac97c577b235deefa5e222c0c058c3ea5 inherit pub_methods_classclang_1_1driver_1_1toolchains_1_1ROCMToolChain"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1toolchains_1_1ROCMToolChain.html#ac97c577b235deefa5e222c0c058c3ea5">ROCMToolChain</a> (const <a class="el" href="classclang_1_1driver_1_1Driver.html">Driver</a> &amp;D, const llvm::Triple &amp;Triple, const llvm::opt::ArgList &amp;Args)</td></tr>
 <tr class="memdesc:ac97c577b235deefa5e222c0c058c3ea5 inherit pub_methods_classclang_1_1driver_1_1toolchains_1_1ROCMToolChain"><td class="mdescLeft">&#160;</td><td class="mdescRight">ROCM Toolchain.  <a href="classclang_1_1driver_1_1toolchains_1_1ROCMToolChain.html#ac97c577b235deefa5e222c0c058c3ea5">More...</a><br /></td></tr>
@@ -269,9 +272,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f85f177496f50ed5b68ca942e94a2ad inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memItemLeft" align="right" valign="top">virtual llvm::opt::DerivedArgList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1ToolChain.html#a5f85f177496f50ed5b68ca942e94a2ad">TranslateXarchArgs</a> (const llvm::opt::DerivedArgList &amp;Args, StringRef BoundArch, <a class="el" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3">Action::OffloadKind</a> DeviceOffloadKind, <a class="el" href="classllvm_1_1SmallVectorImpl.html">SmallVectorImpl</a>&lt; llvm::opt::Arg * &gt; *AllocatedArgs) const</td></tr>
 <tr class="memdesc:a5f85f177496f50ed5b68ca942e94a2ad inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate -Xarch_ arguments.  <a href="classclang_1_1driver_1_1ToolChain.html#a5f85f177496f50ed5b68ca942e94a2ad">More...</a><br /></td></tr>
 <tr class="separator:a5f85f177496f50ed5b68ca942e94a2ad inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c955c0b24c2c399cf396cf13a87bccc inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classclang_1_1driver_1_1Tool.html">Tool</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1ToolChain.html#a2c955c0b24c2c399cf396cf13a87bccc">SelectTool</a> (const <a class="el" href="classclang_1_1driver_1_1JobAction.html">JobAction</a> &amp;JA) const</td></tr>
-<tr class="memdesc:a2c955c0b24c2c399cf396cf13a87bccc inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose a tool to use to handle the action <code>JA</code>.  <a href="classclang_1_1driver_1_1ToolChain.html#a2c955c0b24c2c399cf396cf13a87bccc">More...</a><br /></td></tr>
-<tr class="separator:a2c955c0b24c2c399cf396cf13a87bccc inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27366cf2ed4d718bdd66c24f38ae00b2 inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1ToolChain.html#a27366cf2ed4d718bdd66c24f38ae00b2">GetFilePath</a> (const char *Name) const</td></tr>
 <tr class="separator:a27366cf2ed4d718bdd66c24f38ae00b2 inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad05a8e70022911f1b647a29e8baca27 inherit pub_methods_classclang_1_1driver_1_1ToolChain"><td class="memItemLeft" align="right" valign="top"><a class="el" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1ToolChain.html#aad05a8e70022911f1b647a29e8baca27">GetProgramPath</a> (const char *Name) const</td></tr>
@@ -557,10 +557,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00059">59</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00073">73</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a71df3f4882d7bb3bb91ac0970a8be5c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71df3f4882d7bb3bb91ac0970a8be5c7">&#9670;&nbsp;</a></span>HIPToolChain()</h2>
+<a id="a6a068cf915496290e64d2b7a43034bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a068cf915496290e64d2b7a43034bb0">&#9670;&nbsp;</a></span>HIPToolChain()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -587,7 +587,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const llvm::opt::ArgList &amp;&#160;</td>
-          <td class="paramname"><em>Args</em>&#160;</td>
+          <td class="paramname"><em>Args</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1driver_1_1Action.html#ae9bd3e2b14f70dc3c5305fbb8f2303d3">Action::OffloadKind</a>&#160;</td>
+          <td class="paramname"><em>OK</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -597,7 +603,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00233">233</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00234">234</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ToolChain_8h_source.html#l00229">clang::driver::ToolChain::getDriver()</a>, and <a class="el" href="ToolChain_8h_source.html#l00270">clang::driver::ToolChain::getProgramPaths()</a>.</p>
 
@@ -642,9 +648,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1Generic__GCC.html#a6dba0eac91272eacfed104903d2e0e84">clang::driver::toolchains::Generic_GCC</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00328">328</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00397">397</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00970">clang::driver::ToolChain::AddClangCXXStdlibIncludeArgs()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00970">clang::driver::ToolChain::AddClangCXXStdlibIncludeArgs()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
 
 </div>
 </div>
@@ -687,9 +693,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#adb8a01dbb138e8c9494d9e552b6aacad">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00323">323</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00392">392</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00801">clang::driver::ToolChain::AddClangSystemIncludeArgs()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00801">clang::driver::ToolChain::AddClangSystemIncludeArgs()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
 
 </div>
 </div>
@@ -737,9 +743,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1ROCMToolChain.html#a2baa5f030a124bda2f688fced9bf2ce9">clang::driver::toolchains::ROCMToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00241">241</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00243">243</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00806">clang::driver::ToolChain::addClangTargetOptions()</a>, <a class="el" href="HIP_8cpp_source.html#l00362">getHIPDeviceLibs()</a>, <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>, <a class="el" href="Action_8h_source.html#l00102">clang::driver::Action::OFK_HIP</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00806">clang::driver::ToolChain::addClangTargetOptions()</a>, <a class="el" href="SYCL_8cpp_source.html#l00805">clang::driver::toolchains::SYCLToolChain::AddSYCLIncludeArgs()</a>, <a class="el" href="Driver_8h_source.html#l00112">clang::driver::Driver::Diag()</a>, <a class="el" href="ToolChain_8h_source.html#l00229">clang::driver::ToolChain::getDriver()</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00709">clang::driver::toolchains::AMDGPUToolChain::getGPUArch()</a>, <a class="el" href="HIP_8cpp_source.html#l00431">getHIPDeviceLibs()</a>, <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>, <a class="el" href="Action_8h_source.html#l00102">clang::driver::Action::OFK_HIP</a>, <a class="el" href="Action_8h_source.html#l00103">clang::driver::Action::OFK_SYCL</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
 </div>
 </div>
@@ -771,9 +777,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#a095ce6908c0969940918bc87bae999ac">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00314">314</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00383">383</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00810">clang::driver::ToolChain::addClangWarningOptions()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00810">clang::driver::ToolChain::addClangWarningOptions()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
 
 </div>
 </div>
@@ -815,7 +821,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#ab578a004330d1e05c432f9940610d90e">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00338">338</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00407">407</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00479">clang::driver::RocmInstallationDetector::AddHIPIncludeArgs()</a>, and <a class="el" href="Gnu_8h_source.html#l00296">clang::driver::toolchains::Generic_GCC::RocmInstallation</a>.</p>
 
@@ -859,9 +865,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#ac0b664f56e5b0e5bbf149c4889fd293d">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00333">333</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00402">402</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l01097">clang::driver::ToolChain::AddIAMCUIncludeArgs()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l01097">clang::driver::ToolChain::AddIAMCUIncludeArgs()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
 
 </div>
 </div>
@@ -890,9 +896,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1AMDGPUToolChain.html#a575fae5637fd39dc1c95e33bf51cd136">clang::driver::toolchains::AMDGPUToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00309">309</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00365">365</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8h_source.html#l00245">clang::driver::ToolChain::getArch()</a>, and <a class="el" href="ToolChain_8h_source.html#l00231">clang::driver::ToolChain::getTriple()</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8h_source.html#l00245">clang::driver::ToolChain::getArch()</a>, <a class="el" href="ToolChain_8h_source.html#l00231">clang::driver::ToolChain::getTriple()</a>, and <a class="el" href="Action_8h_source.html#l00103">clang::driver::Action::OFK_SYCL</a>.</p>
 
 </div>
 </div>
@@ -924,11 +930,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1AMDGPUToolChain.html#a43d2e642196a93131bf20a863fa1553c">clang::driver::toolchains::AMDGPUToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00463">463</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00532">532</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="Driver_8h_source.html#l00112">clang::driver::Driver::Diag()</a>, <a class="el" href="Basic_2Diagnostic_8h_source.html#l00200">clang::DiagnosticsEngine::Error</a>, <a class="el" href="Basic_2Diagnostic_8h_source.html#l00871">clang::DiagnosticsEngine::getCustomDiagID()</a>, <a class="el" href="Driver_8h_source.html#l00327">clang::driver::Driver::getDiags()</a>, <a class="el" href="ToolChain_8h_source.html#l00229">clang::driver::ToolChain::getDriver()</a>, and <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00715">clang::driver::toolchains::AMDGPUToolChain::getParsedTargetID()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HIP_8cpp_source.html#l00285">TranslateArgs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HIP_8cpp_source.html#l00341">TranslateArgs()</a>.</p>
 
 </div>
 </div>
@@ -970,9 +976,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#abbfe773e1d6ba82fb908f1d3969e20f7">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00356">356</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00425">425</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l01114">clang::driver::ToolChain::computeMSVCVersion()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l01114">clang::driver::ToolChain::computeMSVCVersion()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1010,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#ac8c35b24040890ea669704c9c1824492">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00064">64</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00079">79</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ToolChain_8h_source.html#l00231">clang::driver::ToolChain::getTriple()</a>.</p>
 
@@ -1036,9 +1042,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#ace11792ce526bfa0b5bdd6e07ca13303">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00319">319</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00388">388</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00882">clang::driver::ToolChain::GetCXXStdlibType()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l00882">clang::driver::ToolChain::GetCXXStdlibType()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1073,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1AMDGPUToolChain.html#a77bb0211ba4d2b921d52c78030f8765b">clang::driver::toolchains::AMDGPUToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00095">95</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00110">110</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
 
 </div>
 </div>
@@ -1099,11 +1105,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#a0121d28800e12159d77f86d30ee898c5">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00362">362</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00431">431</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespaceclang_1_1driver_1_1tools.html#a73685f4a864b5958fa307dbcb8f96882">clang::driver::tools::addDirectoryList()</a>, <a class="el" href="Driver_8h_source.html#l00112">clang::driver::Driver::Diag()</a>, <a class="el" href="Basic_2Diagnostic_8h_source.html#l00200">clang::DiagnosticsEngine::Error</a>, <a class="el" href="ROCm_8h_source.html#l00195">clang::driver::RocmInstallationDetector::getAsanRTLPath()</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00869">clang::driver::RocmInstallationDetector::getCommonBitcodeLibs()</a>, <a class="el" href="Basic_2Diagnostic_8h_source.html#l00871">clang::DiagnosticsEngine::getCustomDiagID()</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00626">clang::driver::toolchains::AMDGPUToolChain::getDefaultDenormsAreZeroForTarget()</a>, <a class="el" href="Driver_8h_source.html#l00327">clang::driver::Driver::getDiags()</a>, <a class="el" href="ToolChain_8h_source.html#l00229">clang::driver::ToolChain::getDriver()</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00709">clang::driver::toolchains::AMDGPUToolChain::getGPUArch()</a>, <a class="el" href="ROCm_8h_source.html#l00189">clang::driver::RocmInstallationDetector::getHIPPath()</a>, <a class="el" href="ROCm_8h_source.html#l00218">clang::driver::RocmInstallationDetector::getLibDeviceFile()</a>, <a class="el" href="ROCm_8h_source.html#l00229">clang::driver::RocmInstallationDetector::getRocmDeviceLibPathArg()</a>, <a class="el" href="ROCm_8h_source.html#l00151">clang::driver::RocmInstallationDetector::hasDeviceLibrary()</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00677">clang::driver::toolchains::AMDGPUToolChain::isWave64()</a>, <a class="el" href="Gnu_8h_source.html#l00296">clang::driver::toolchains::Generic_GCC::RocmInstallation</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HIP_8cpp_source.html#l00241">addClangTargetOptions()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HIP_8cpp_source.html#l00243">addClangTargetOptions()</a>.</p>
 
 </div>
 </div>
@@ -1134,9 +1140,44 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#ae8bbab3087d5a56f1241f3131afecebe">clang::driver::ToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00343">343</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00412">412</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l01061">clang::driver::ToolChain::getSupportedSanitizers()</a>, and <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>.</p>
+<p class="reference">References <a class="el" href="ToolChain_8cpp_source.html#l01061">clang::driver::ToolChain::getSupportedSanitizers()</a>, and <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>.</p>
+
+</div>
+</div>
+<a id="a6a702fee4ef322026991214e7370436f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a702fee4ef322026991214e7370436f">&#9670;&nbsp;</a></span>SelectTool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classclang_1_1driver_1_1Tool.html">Tool</a> * HIPToolChain::SelectTool </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1driver_1_1JobAction.html">JobAction</a> &amp;&#160;</td>
+          <td class="paramname"><em>JA</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Choose a tool to use to handle the action <code>JA</code>. </p>
+<p>This can be overridden when a particular <a class="el" href="classclang_1_1driver_1_1ToolChain.html" title="ToolChain - Access to tools for a single platform.">ToolChain</a> needs to use a compiler other than Clang. </p>
+
+<p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1ToolChain.html#a2c955c0b24c2c399cf396cf13a87bccc">clang::driver::ToolChain</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00372">372</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="Action_8h_source.html#l00151">clang::driver::Action::getKind()</a>, <a class="el" href="Action_8h_source.html#l00152">clang::driver::Action::getType()</a>, <a class="el" href="Action_8h_source.html#l00068">clang::driver::Action::LinkJobClass</a>, <a class="el" href="Action_8h_source.html#l00103">clang::driver::Action::OFK_SYCL</a>, and <a class="el" href="ToolChain_8cpp_source.html#l00594">clang::driver::ToolChain::SelectTool()</a>.</p>
 
 </div>
 </div>
@@ -1192,9 +1233,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classclang_1_1driver_1_1toolchains_1_1AMDGPUToolChain.html#a2a19e04cd387154ed4ea4d9cd2f8bf13">clang::driver::toolchains::AMDGPUToolChain</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00285">285</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8cpp_source.html#l00341">341</a> of file <a class="el" href="HIP_8cpp_source.html">HIP.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="HIP_8cpp_source.html#l00463">checkTargetID()</a>, <a class="el" href="ToolChain_8h_source.html#l00229">clang::driver::ToolChain::getDriver()</a>, <a class="el" href="Driver_8h_source.html#l00325">clang::driver::Driver::getOpts()</a>, <a class="el" href="HIP_8h_source.html#l00097">HostTC</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00890">clang::driver::toolchains::AMDGPUToolChain::shouldSkipArgument()</a>, and <a class="el" href="ToolChain_8h_source.html#l00314">clang::driver::ToolChain::TranslateArgs()</a>.</p>
+<p class="reference">References <a class="el" href="HIP_8cpp_source.html#l00532">checkTargetID()</a>, <a class="el" href="ToolChain_8h_source.html#l00229">clang::driver::ToolChain::getDriver()</a>, <a class="el" href="Driver_8h_source.html#l00325">clang::driver::Driver::getOpts()</a>, <a class="el" href="HIP_8h_source.html#l00112">HostTC</a>, <a class="el" href="Driver_2ToolChains_2AMDGPU_8cpp_source.html#l00890">clang::driver::toolchains::AMDGPUToolChain::shouldSkipArgument()</a>, and <a class="el" href="ToolChain_8h_source.html#l00314">clang::driver::ToolChain::TranslateArgs()</a>.</p>
 
 </div>
 </div>
@@ -1211,9 +1252,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00097">97</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="HIP_8h_source.html#l00112">112</a> of file <a class="el" href="HIP_8h_source.html">HIP.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="HIP_8cpp_source.html#l00328">AddClangCXXStdlibIncludeArgs()</a>, <a class="el" href="HIP_8cpp_source.html#l00323">AddClangSystemIncludeArgs()</a>, <a class="el" href="HIP_8cpp_source.html#l00241">addClangTargetOptions()</a>, <a class="el" href="HIP_8cpp_source.html#l00314">addClangWarningOptions()</a>, <a class="el" href="HIP_8cpp_source.html#l00333">AddIAMCUIncludeArgs()</a>, <a class="el" href="HIP_8cpp_source.html#l00356">computeMSVCVersion()</a>, <a class="el" href="HIP_8cpp_source.html#l00319">GetCXXStdlibType()</a>, <a class="el" href="HIP_8cpp_source.html#l00343">getSupportedSanitizers()</a>, and <a class="el" href="HIP_8cpp_source.html#l00285">TranslateArgs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="HIP_8cpp_source.html#l00397">AddClangCXXStdlibIncludeArgs()</a>, <a class="el" href="HIP_8cpp_source.html#l00392">AddClangSystemIncludeArgs()</a>, <a class="el" href="HIP_8cpp_source.html#l00243">addClangTargetOptions()</a>, <a class="el" href="HIP_8cpp_source.html#l00383">addClangWarningOptions()</a>, <a class="el" href="HIP_8cpp_source.html#l00402">AddIAMCUIncludeArgs()</a>, <a class="el" href="HIP_8cpp_source.html#l00425">computeMSVCVersion()</a>, <a class="el" href="HIP_8cpp_source.html#l00388">GetCXXStdlibType()</a>, <a class="el" href="HIP_8cpp_source.html#l00412">getSupportedSanitizers()</a>, and <a class="el" href="HIP_8cpp_source.html#l00341">TranslateArgs()</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1265,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 24 2021 01:46:41 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 25 2021 02:00:06 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

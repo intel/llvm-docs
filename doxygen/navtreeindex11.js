@@ -1,5 +1,14 @@
 var NAVTREEINDEX11 =
 {
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#a9f7f2abc1a75e8d624578972ed9703ae":[3,0,1,1,0,73,5],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#aae9987b74bc515718707040230e6cf1b":[3,0,1,1,0,73,11],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ac8c856ee9210344023c15c84d5bdac3d":[3,0,1,1,0,73,15],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#acb2737157d797776740277be1f2fc8d7":[3,0,1,1,0,73,1],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#acd8b26e07d563afa8f6394ba94b22b6a":[3,0,1,1,0,73,12],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#acf4ba89e8608cbdfa397398f94ea974c":[3,0,1,1,0,73,4],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#ae993af4cb40110058f7d39a41c6dc941":[3,0,1,1,0,73,24],
+"classcl_1_1sycl_1_1detail_1_1device__image__impl.html#aff03e0115ba400d573546f2b630ff67b":[3,0,1,1,0,73,23],
+"classcl_1_1sycl_1_1detail_1_1device__image__plain.html":[3,0,1,1,0,74],
 "classcl_1_1sycl_1_1detail_1_1device__image__plain.html#a630f22494991d7bab7a2b59a3f3b97d8":[3,0,1,1,0,74,8],
 "classcl_1_1sycl_1_1detail_1_1device__image__plain.html#a71492293d0386f542d120a1fc3dfbb55":[3,0,1,1,0,74,7],
 "classcl_1_1sycl_1_1detail_1_1device__image__plain.html#aaf1e1b0218b57c8c22c7e01f848dda6a":[3,0,1,1,0,74,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX11 =
 "classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a7f9e33924f41569dcceef99041a432d8":[3,0,1,1,0,2,0,1],
 "classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a84943b411de02cdc7d22cc9ac2b1b170":[3,0,1,1,0,2,0,4],
 "classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a86acc11f264241ad61cd450219d0386f":[3,0,1,1,0,2,0,2],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5":[3,0,1,1,0,2,0,5],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#af7331e099ca2a16eede06086968dc96d":[3,0,1,1,0,2,0,3],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html":[3,0,1,1,0,2,1],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a04b8cd1a1bbf947a865e59140bf3b580":[3,0,1,1,0,2,1,1],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a0b2f5293a631433defa0b651efa5c2a1":[3,0,1,1,0,2,1,2],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a121bde47ef2fe3dca3674f01ca14d5fd":[3,0,1,1,0,2,1,7],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a3230e42a4ca6ddf451ef66922283ebe1":[3,0,1,1,0,2,1,3],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a3c5bccb1fbbb7592fbfe3e2a1e2982f5":[3,0,1,1,0,2,1,17],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a407a91a8287933a62b6aa4b084ca26d3":[3,0,1,1,0,2,1,11],
-"classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a5ce259269c04321089a8a1cae77654fb":[3,0,1,1,0,2,1,20]
+"classcl_1_1sycl_1_1detail_1_1pi_1_1ByteArray.html#a8c1d9edd6d48a77b86208f80895bd2a5":[3,0,1,1,0,2,0,5]
 };
