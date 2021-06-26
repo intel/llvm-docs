@@ -211,6 +211,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "IsCxPropertyList", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList.html", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList" ],
     [ "IsCxPropertyList< ONEAPI::accessor_property_list< Props... > >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4" ],
     [ "IsCxPropertyList< ONEAPI::accessor_property_list<> >", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4.html", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ONEAPI_1_1accessor__property__list_3_4_01_4" ],
+    [ "IsDeprecatedDeviceCopyable", "structcl_1_1sycl_1_1detail_1_1IsDeprecatedDeviceCopyable.html", null ],
     [ "IsSwizzleOp", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp.html", null ],
     [ "IsSwizzleOp< cl::sycl::detail::SwizzleOp< VecT, OperationLeftT, OperationRightT, OperationCurrentT, Indexes... > >", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0.html", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp_3_01cl_1_1sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Opd184f347e860d4d3afaf159430bc93a0" ],
     [ "IsValidAtomicAddressSpace", "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace.html", "structcl_1_1sycl_1_1detail_1_1IsValidAtomicAddressSpace" ],

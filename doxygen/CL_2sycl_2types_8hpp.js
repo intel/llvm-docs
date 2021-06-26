@@ -16,6 +16,11 @@ var CL_2sycl_2types_8hpp =
     [ "RShift", "structcl_1_1sycl_1_1detail_1_1RShift.html", "structcl_1_1sycl_1_1detail_1_1RShift" ],
     [ "LShift", "structcl_1_1sycl_1_1detail_1_1LShift.html", "structcl_1_1sycl_1_1detail_1_1LShift" ],
     [ "SwizzleOp", "classcl_1_1sycl_1_1detail_1_1SwizzleOp.html", "classcl_1_1sycl_1_1detail_1_1SwizzleOp" ],
+    [ "is_device_copyable", "structcl_1_1sycl_1_1is__device__copyable.html", null ],
+    [ "is_device_copyable< T, std::enable_if_t< std::is_trivially_copyable< T >::value > >", "structcl_1_1sycl_1_1is__device__copyable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__triviall16f83f38862e93e240bf62a9a3830c74.html", null ],
+    [ "is_device_copyable< std::tuple<> >", "structcl_1_1sycl_1_1is__device__copyable_3_01std_1_1tuple_3_4_01_4.html", null ],
+    [ "is_device_copyable< std::tuple< T, Ts... > >", "structcl_1_1sycl_1_1is__device__copyable_3_01std_1_1tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html", null ],
+    [ "IsDeprecatedDeviceCopyable", "structcl_1_1sycl_1_1detail_1_1IsDeprecatedDeviceCopyable.html", null ],
     [ "__SYCL_ACCESS_RETURN", "CL_2sycl_2types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06", null ],
     [ "__SYCL_ACCESS_RETURN", "CL_2sycl_2types_8hpp.html#adaff6a9bb924754b52d8e73c9c119c06", null ],
     [ "__SYCL_ALIGNAS", "CL_2sycl_2types_8hpp.html#a25e7cc7f60dd3139d3f2eb30e07c3007", null ],
@@ -50,6 +55,7 @@ var CL_2sycl_2types_8hpp =
     [ "__SYCL_RELLOGOP", "CL_2sycl_2types_8hpp.html#a8d03946656f8df2e834f264cde74563f", null ],
     [ "__SYCL_UOP", "CL_2sycl_2types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578", null ],
     [ "__SYCL_UOP", "CL_2sycl_2types_8hpp.html#a324d94b148c9a2927c9a708a9bfef578", null ],
+    [ "SYCL_DEVICE_COPYABLE", "CL_2sycl_2types_8hpp.html#a177cd877d1e2f78a95f95ca287d86761", null ],
     [ "__half16_vec_t", "CL_2sycl_2types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886", null ],
     [ "__half2_vec_t", "CL_2sycl_2types_8hpp.html#a078ed71e8266e98e74cc42286e0bb23a", null ],
     [ "__half3_vec_t", "CL_2sycl_2types_8hpp.html#a55606a5fb19a6144017b8ae67902dd57", null ],
@@ -75,6 +81,7 @@ var CL_2sycl_2types_8hpp =
       [ "rtp", "CL_2sycl_2types_8hpp.html#a16ab217f4d07c904f763adf0a270d1c0ac766e112de79c244fdaed0ed34ca5e12", null ],
       [ "rtn", "CL_2sycl_2types_8hpp.html#a16ab217f4d07c904f763adf0a270d1c0aa1ddc56bf1413a90046522963aaf37ab", null ]
     ] ],
+    [ "__SYCL2020_DEPRECATED", "CL_2sycl_2types_8hpp.html#ad849054f4a0a2cd7b16eebf112dea89d", null ],
     [ "convertImpl", "CL_2sycl_2types_8hpp.html#ab262339a1fce15dc2038b2e6613c968d", null ],
     [ "convertImpl", "CL_2sycl_2types_8hpp.html#aeb389d39bb45298bce9a694fe5c54b48", null ],
     [ "convertImpl", "CL_2sycl_2types_8hpp.html#ac0a2aa751fe2811288209cea19b8dd52", null ]

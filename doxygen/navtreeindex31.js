@@ -1,5 +1,7 @@
 var NAVTREEINDEX31 =
 {
+"simd__view__impl_8hpp_source.html":[4,0,0,1,0,0,0,0,0,5],
+"spec__constant_8hpp.html":[4,0,0,0,1,5,0,1],
 "spec__constant_8hpp_source.html":[4,0,0,0,1,5,0,1],
 "spec__constant__impl_8cpp.html":[4,0,2,1,69],
 "spec__constant__impl_8cpp.html#a20319e466e426d61d8496eda480d484f":[4,0,2,1,69,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX31 =
 "struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a60da62b736facaaa6d24d4681e7e0ba8":[3,0,0,2,0,26],
 "struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a61062f6478a589e7ac5cf4a19b30dcf6":[3,0,0,2,0,1],
 "struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a73401a32f86b77c45806a33c507bc086":[3,0,0,2,0,18],
-"struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a73ffaf6af984ec316bad79e078a581a7":[3,0,0,2,0,17],
-"struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a94ed291681833073aebe867b12d44b42":[3,0,0,2,0,4],
-"struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420aa0cb763a3e7da2a6b3ddba9f844a0dfd":[3,0,0,2,0,16]
+"struct____spv_1_1StorageClass.html#ad8729561137c1d3b244b92704ea7c420a73ffaf6af984ec316bad79e078a581a7":[3,0,0,2,0,17]
 };

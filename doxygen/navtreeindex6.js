@@ -1,5 +1,7 @@
 var NAVTREEINDEX6 =
 {
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#aa8cc3b8a6d809db426e0252026e0e171":[3,0,1,1,4,0,6,8],
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#aaa903b9aa23478f68aff488402c66458":[3,0,1,1,4,0,6,5],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ab2cb7bdeff63dcdcd8eac0fd9bfc5830":[3,0,1,1,4,0,6,4],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#ab7cf48481972ffdf0e68cd4a86265fbc":[3,0,1,1,4,0,6,9],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#abad3d4d76118a7018b7c2ca84ae81013":[3,0,1,1,4,0,6,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX6 =
 "classcl_1_1sycl_1_1buffer.html#a29ccfb73a867a6684af39f5fd5692d2a":[1,2,2,42],
 "classcl_1_1sycl_1_1buffer.html#a2dd6c96ec96b1c5e203e43bba8106fe4":[1,2,2,40],
 "classcl_1_1sycl_1_1buffer.html#a4667c613ac8935358c080be0a938c5bc":[1,2,2,20],
-"classcl_1_1sycl_1_1buffer.html#a4813bfe9f43cf4da706428f00cb77ca2":[1,2,2,49],
-"classcl_1_1sycl_1_1buffer.html#a4ea35f3c3dd2951787f4c83cd425b96c":[1,2,2,38],
-"classcl_1_1sycl_1_1buffer.html#a4fe93ea8d613a9b7224780404781c279":[1,2,2,48]
+"classcl_1_1sycl_1_1buffer.html#a4813bfe9f43cf4da706428f00cb77ca2":[1,2,2,49]
 };

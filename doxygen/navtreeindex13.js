@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"classcl_1_1sycl_1_1event.html#af651e36e8780b75a851c7587cc9c05a7":[1,2,6,17],
+"classcl_1_1sycl_1_1event__error.html":[3,0,1,1,29],
 "classcl_1_1sycl_1_1exception.html":[1,2,7],
 "classcl_1_1sycl_1_1exception.html#a20f9834c3c472344f00cedd99390f834":[1,2,7,3],
 "classcl_1_1sycl_1_1exception.html#a2755752cadc0a065916b3fadd760dad5":[1,2,7,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "classcl_1_1sycl_1_1handler.html#a710a56f0785983f0e4f3943679e0f3a7":[1,2,11,27],
 "classcl_1_1sycl_1_1handler.html#a725e255af60b5545d5af97e1420856b0":[1,2,11,51],
 "classcl_1_1sycl_1_1handler.html#a73ffbad8c0bff5d1604c06a69c4cb0c4":[1,2,11,13],
-"classcl_1_1sycl_1_1handler.html#a87d56a475a807c51c9f750bb6c8ee15e":[1,2,11,4],
-"classcl_1_1sycl_1_1handler.html#a8b4924bfca94f90fc3a158bf6992a24c":[1,2,11,33],
-"classcl_1_1sycl_1_1handler.html#a8f112c5b9cbd5db123764bf1eae306bb":[1,2,11,7]
+"classcl_1_1sycl_1_1handler.html#a87d56a475a807c51c9f750bb6c8ee15e":[1,2,11,4]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"classcl_1_1sycl_1_1handler.html#a8b4924bfca94f90fc3a158bf6992a24c":[1,2,11,33],
+"classcl_1_1sycl_1_1handler.html#a8f112c5b9cbd5db123764bf1eae306bb":[1,2,11,7],
 "classcl_1_1sycl_1_1handler.html#a93f8f35825802c6e026f2dcd343bb093":[1,2,11,47],
 "classcl_1_1sycl_1_1handler.html#a959728223dda817d3593c6e3e104b0ff":[1,2,11,40],
 "classcl_1_1sycl_1_1handler.html#a9b5797be83894c081b6ea29f9bec85f8":[1,2,11,12],
@@ -176,7 +178,7 @@ var NAVTREEINDEX14 =
 "classcl_1_1sycl_1_1kernel__bundle.html#ac80e06aa1377fd3fad7ad7a86048f285":[1,2,17,1],
 "classcl_1_1sycl_1_1kernel__bundle.html#ace43bd05e3d8a9113687e357b2784e30":[1,2,17,14],
 "classcl_1_1sycl_1_1kernel__bundle.html#ad624ef6bcd254ec5f6f94f9f1706eff8":[1,2,17,2],
-"classcl_1_1sycl_1_1kernel__error.html":[3,0,1,1,76],
+"classcl_1_1sycl_1_1kernel__error.html":[3,0,1,1,80],
 "classcl_1_1sycl_1_1kernel__handler.html":[1,2,18],
 "classcl_1_1sycl_1_1kernel__id.html":[1,2,16],
 "classcl_1_1sycl_1_1kernel__id.html#a005c6b494ea6942712430f2fdaf03fd3":[1,2,16,5],
@@ -185,7 +187,7 @@ var NAVTREEINDEX14 =
 "classcl_1_1sycl_1_1kernel__id.html#a3e641259bce332d52f70f3c6e50b0ad5":[1,2,16,2],
 "classcl_1_1sycl_1_1kernel__id.html#a71492293d0386f542d120a1fc3dfbb55":[1,2,16,4],
 "classcl_1_1sycl_1_1kernel__id.html#af675a429f31a07442a3fea913b26d5aa":[1,2,16,1],
-"classcl_1_1sycl_1_1link__program__error.html":[3,0,1,1,80],
+"classcl_1_1sycl_1_1link__program__error.html":[3,0,1,1,84],
 "classcl_1_1sycl_1_1marray.html":[1,2,19],
 "classcl_1_1sycl_1_1marray.html#a00c2ef22271aa4b3adbd375551c101ba":[1,2,19,18],
 "classcl_1_1sycl_1_1marray.html#a05cc05e411081f943843af2c5034d9a8":[1,2,19,9],
@@ -211,7 +213,7 @@ var NAVTREEINDEX14 =
 "classcl_1_1sycl_1_1marray.html#aafe687095e3a2ca19d6f37ffee0cdb25":[1,2,19,8],
 "classcl_1_1sycl_1_1marray.html#adf9e0dece903f13930a75e5cdfc850b9":[1,2,19,10],
 "classcl_1_1sycl_1_1marray.html#ae60c3ee0d1d915ca225b65e956cf7057":[1,2,19,12],
-"classcl_1_1sycl_1_1memory__allocation__error.html":[3,0,1,1,84],
+"classcl_1_1sycl_1_1memory__allocation__error.html":[3,0,1,1,88],
 "classcl_1_1sycl_1_1multi__ptr.html":[1,2,20],
 "classcl_1_1sycl_1_1multi__ptr.html#a0d1b1c8a95241ef9e29b69b445de19c0":[1,2,20,43],
 "classcl_1_1sycl_1_1multi__ptr.html#a1c13407ef07fb3e7851ecca15acaeb74":[1,2,20,10],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "classcl_1_1sycl_1_1multi__ptr.html#ab7f8e862022a199e37124f98af22a2c3":[1,2,20,23],
 "classcl_1_1sycl_1_1multi__ptr.html#ac33a5a284b92308b440007c35bf612ef":[1,2,20,44],
 "classcl_1_1sycl_1_1multi__ptr.html#ac520137808feb1916d31f98c3fd7a1c2":[1,2,20,35],
-"classcl_1_1sycl_1_1multi__ptr.html#accf635b916c4195733128b956b0b8ea2":[1,2,20,1],
-"classcl_1_1sycl_1_1multi__ptr.html#ad353d562fb6d71f7054be181a6d43667":[1,2,20,0],
-"classcl_1_1sycl_1_1multi__ptr.html#ad92bc0f0916ddfbc40da2488fe824645":[1,2,20,19]
+"classcl_1_1sycl_1_1multi__ptr.html#accf635b916c4195733128b956b0b8ea2":[1,2,20,1]
 };

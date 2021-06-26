@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"namespacecl.html":[2,0,1],
+"namespacecl.html":[3,0,1],
 "namespacecl_1_1____host__std.html":[2,0,1,0],
 "namespacecl_1_1____host__std.html":[3,0,1,0],
 "namespacecl_1_1____host__std_1_1detail.html":[2,0,1,0,0],
@@ -49,8 +51,8 @@ var NAVTREEINDEX24 =
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[3,0,1,1,1,0,1,0,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail.html":[2,0,1,1,2,0,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail.html":[3,0,1,1,1,0,1,0,1,0],
-"namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html":[2,0,1,1,2,0,1,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html":[3,0,1,1,1,0,1,1],
+"namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html":[2,0,1,1,2,0,1,1],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi.html":[2,0,1,1,2,1],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi.html":[3,0,1,1,1,1],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html":[2,0,1,1,2,1,0],
@@ -90,8 +92,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,6],
-"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func.html":[2,1,1,0],
+"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
@@ -129,8 +131,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_r.html":[2,1,0,18],
 "namespacemembers_s.html":[2,1,0,19],
 "namespacemembers_t.html":[2,1,0,20],
-"namespacemembers_type.html":[2,1,3,0],
 "namespacemembers_type.html":[2,1,3],
+"namespacemembers_type.html":[2,1,3,0],
 "namespacemembers_type_a.html":[2,1,3,1],
 "namespacemembers_type_b.html":[2,1,3,2],
 "namespacemembers_type_c.html":[2,1,3,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "pi_8cpp.html#ae61ba170f7f8ad42b4f0d4575b2ccab2":[4,0,2,1,53,5],
 "pi_8cpp.html#aec8cc975c45bbd1adc7cacbf1cd7107f":[4,0,2,1,53,17],
 "pi_8cpp.html#af3dde3983ba4223609bcdd344ab66084":[4,0,2,1,53,20],
-"pi_8cpp_source.html":[4,0,2,1,53],
-"pi_8h.html":[4,0,0,0,1,2,32],
-"pi_8h.html#a01c7cd6826000f011885275541a7d038":[4,0,0,0,1,2,32,206]
+"pi_8cpp_source.html":[4,0,2,1,53]
 };

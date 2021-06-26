@@ -1,5 +1,7 @@
 var NAVTREEINDEX30 =
 {
+"platform__impl_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,1,54,0],
+"platform__impl_8cpp_source.html":[4,0,2,1,54],
 "platform__impl_8hpp.html":[4,0,2,1,55],
 "platform__impl_8hpp_source.html":[4,0,2,1,55],
 "platform__info_8hpp.html":[4,0,2,1,56],
@@ -247,7 +249,5 @@ var NAVTREEINDEX30 =
 "simd__view__impl_8hpp.html":[4,0,0,1,0,0,0,0,0,5],
 "simd__view__impl_8hpp.html#a6755e207502267cee2f3ed0c2326b428":[4,0,0,1,0,0,0,0,0,5,0],
 "simd__view__impl_8hpp.html#a755ec775ffa5d133842e10321f98ce61":[4,0,0,1,0,0,0,0,0,5,1],
-"simd__view__impl_8hpp.html#acac943051728fb4ff8619f46af73e798":[4,0,0,1,0,0,0,0,0,5,2],
-"simd__view__impl_8hpp_source.html":[4,0,0,1,0,0,0,0,0,5],
-"spec__constant_8hpp.html":[4,0,0,0,1,5,0,1]
+"simd__view__impl_8hpp.html#acac943051728fb4ff8619f46af73e798":[4,0,0,1,0,0,0,0,0,5,2]
 };

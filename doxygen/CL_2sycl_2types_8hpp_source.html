@@ -2373,10 +2373,93 @@ $(document).ready(function(){initNavTree('CL_2sycl_2types_8hpp_source.html','');
 <div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;#undef __SYCL_DECLARE_SCALAR_BOOL_CONVERTER</div>
 <div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;#undef __SYCL_USE_EXT_VECTOR_TYPE__</div>
 <div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160; </div>
-<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
-<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160; </div>
-<div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;#undef __SYCL_ALIGNAS</div>
+<div class="line"><a name="l02285"></a><span class="lineno"><a class="line" href="CL_2sycl_2types_8hpp.html#a177cd877d1e2f78a95f95ca287d86761"> 2285</a></span>&#160;#define SYCL_DEVICE_COPYABLE 1</div>
+<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160; </div>
+<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;template &lt;typename T, typename = void&gt;</div>
+<div class="line"><a name="l02295"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1is__device__copyable.html"> 2295</a></span>&#160;struct is_device_copyable : std::false_type {};</div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160; </div>
+<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;template &lt;typename T&gt;</div>
+<div class="line"><a name="l02298"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1is__device__copyable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__triviall16f83f38862e93e240bf62a9a3830c74.html"> 2298</a></span>&#160;struct is_device_copyable&lt;</div>
+<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;    T, std::enable_if_t&lt;std::is_trivially_copyable&lt;T&gt;::value&gt;&gt;</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;    : std::true_type {};</div>
+<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160; </div>
+<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;#if __cplusplus &gt;= 201703L</div>
+<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;template &lt;typename T&gt;</div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;inline constexpr bool is_device_copyable_v = is_device_copyable&lt;T&gt;::value;</div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;#endif <span class="comment">// __cplusplus &gt;= 201703L</span></div>
+<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160; </div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;<span class="comment">// std::tuple&lt;&gt; is implicitly device copyable type.</span></div>
+<div class="line"><a name="l02308"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1is__device__copyable_3_01std_1_1tuple_3_4_01_4.html"> 2308</a></span>&#160;template &lt;&gt; struct is_device_copyable&lt;std::tuple&lt;&gt;&gt; : std::true_type {};</div>
+<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160; </div>
+<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;<span class="comment">// std::tuple&lt;Ts...&gt; is implicitly device copyable type if each type T of Ts...</span></div>
+<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;<span class="comment">// is device copyable.</span></div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;template &lt;typename T, typename... Ts&gt;</div>
+<div class="line"><a name="l02313"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1is__device__copyable_3_01std_1_1tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html"> 2313</a></span>&#160;struct is_device_copyable&lt;std::tuple&lt;T, Ts...&gt;&gt;</div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;    : detail::bool_constant&lt;is_device_copyable&lt;T&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;                            is_device_copyable&lt;std::tuple&lt;Ts...&gt;&gt;::value&gt; {};</div>
+<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160; </div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;namespace detail {</div>
+<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;template &lt;typename T, typename = void&gt;</div>
+<div class="line"><a name="l02319"></a><span class="lineno"><a class="line" href="structcl_1_1sycl_1_1detail_1_1IsDeprecatedDeviceCopyable.html"> 2319</a></span>&#160;struct IsDeprecatedDeviceCopyable : std::false_type {};</div>
+<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160; </div>
+<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;<span class="comment">// TODO: using C++ attribute [[deprecated]] or the macro __SYCL2020_DEPRECATED</span></div>
+<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;<span class="comment">// does not produce expected warning message for the type &#39;T&#39;.</span></div>
+<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;template &lt;typename T&gt;</div>
+<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;struct __SYCL2020_DEPRECATED(&quot;This type isn&#39;t device copyable in SYCL 2020&quot;)</div>
+<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160;    IsDeprecatedDeviceCopyable&lt;</div>
+<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;        T, std::enable_if_t&lt;std::is_trivially_copy_constructible&lt;T&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;                            std::is_trivially_destructible&lt;T&gt;::value &amp;&amp;</div>
+<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;                            !is_device_copyable&lt;T&gt;::value&gt;&gt; : std::true_type {};</div>
+<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160; </div>
+<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;#ifdef __SYCL_DEVICE_ONLY__</div>
+<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;<span class="comment">// Checks that the fields of the type T with indices 0 to (NumFieldsToCheck - 1)</span></div>
+<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160;<span class="comment">// are device copyable.</span></div>
+<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;template &lt;typename T, unsigned NumFieldsToCheck&gt;</div>
+<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;struct CheckFieldsAreDeviceCopyable</div>
+<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;    : CheckFieldsAreDeviceCopyable&lt;T, NumFieldsToCheck - 1&gt; {</div>
+<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;  using FieldT = decltype(__builtin_field_type(T, NumFieldsToCheck - 1));</div>
+<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;  static_assert(is_device_copyable&lt;FieldT&gt;::value ||</div>
+<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;                    detail::IsDeprecatedDeviceCopyable&lt;FieldT&gt;::value,</div>
+<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;                &quot;The specified type is not device copyable&quot;);</div>
+<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;};</div>
+<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160; </div>
+<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;template &lt;typename T&gt; struct CheckFieldsAreDeviceCopyable&lt;T, 0&gt; {};</div>
+<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160; </div>
+<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;<span class="comment">// Checks that the base classes of the type T with indices 0 to</span></div>
+<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;<span class="comment">// (NumFieldsToCheck - 1) are device copyable.</span></div>
+<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;template &lt;typename T, unsigned NumBasesToCheck&gt;</div>
+<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;struct CheckBasesAreDeviceCopyable</div>
+<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;    : CheckBasesAreDeviceCopyable&lt;T, NumBasesToCheck - 1&gt; {</div>
+<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;  using BaseT = decltype(__builtin_base_type(T, NumBasesToCheck - 1));</div>
+<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;  static_assert(is_device_copyable&lt;BaseT&gt;::value ||</div>
+<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;                    detail::IsDeprecatedDeviceCopyable&lt;BaseT&gt;::value,</div>
+<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;                &quot;The specified type is not device copyable&quot;);</div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;};</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160; </div>
+<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;template &lt;typename T&gt; struct CheckBasesAreDeviceCopyable&lt;T, 0&gt; {};</div>
+<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160; </div>
+<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;<span class="comment">// All the captures of a lambda or functor of type FuncT passed to a kernel</span></div>
+<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;<span class="comment">// must be is_device_copyable, which extends to bases and fields of FuncT.</span></div>
+<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;<span class="comment">// Fields are captures of lambda/functors and bases are possible base classes</span></div>
+<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;<span class="comment">// of functors also allowed by SYCL.</span></div>
+<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;<span class="comment">// The SYCL-2020 implementation must check each of the fields &amp; bases of the</span></div>
+<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;<span class="comment">// type FuncT, only one level deep, which is enough to see if they are all</span></div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;<span class="comment">// device copyable by using the result of is_device_copyable returned for them.</span></div>
+<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;<span class="comment">// At this moment though the check also allowes using types for which</span></div>
+<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;<span class="comment">// (is_trivially_copy_constructible &amp;&amp; is_trivially_destructible) returns true</span></div>
+<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;<span class="comment">// and (is_device_copyable) returns false. That is the deprecated behavior and</span></div>
+<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;<span class="comment">// is currently/temporarily supported only to not break older SYCL programs.</span></div>
+<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;template &lt;typename FuncT&gt;</div>
+<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;struct CheckDeviceCopyable</div>
+<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;    : CheckFieldsAreDeviceCopyable&lt;FuncT, __builtin_num_fields(FuncT)&gt;,</div>
+<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;      CheckBasesAreDeviceCopyable&lt;FuncT, __builtin_num_bases(FuncT)&gt; {};</div>
+<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;#endif <span class="comment">// __SYCL_DEVICE_ONLY__</span></div>
+<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160; </div>
+<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160; </div>
+<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;#undef __SYCL_ALIGNAS</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1LessThan_html"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1LessThan.html">cl::sycl::detail::LessThan</a></div><div class="ttdef"><b>Definition:</b> <a href="CL_2sycl_2types_8hpp_source.html#l00169">types.hpp:169</a></div></div>

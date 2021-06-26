@@ -61,6 +61,7 @@ var sycl_2ext_2intel_2experimental_2esimd_2common_8hpp =
     [ "CacheHint", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2f", [
       [ "None", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2fa6adf97f83acf6453d4a6a4b1070f3754", null ],
       [ "Uncached", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2faab47215a1173a0ee7b4740f249a7ca2c", null ],
+      [ "Cached", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2fa064bede9a565190bdde35f978e1b7193", null ],
       [ "WriteBack", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2fadf8e90f657c55cab67bfd1f1b91ba573", null ],
       [ "WriteThrough", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2faacb7820573f20d69befb56e41f440549", null ],
       [ "Streaming", "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ab4ca4b01b3e4f06693c21998107baf2faac21d502848247aa2f578d0f718f5d1d", null ],

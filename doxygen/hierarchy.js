@@ -105,6 +105,9 @@ var hierarchy =
     [ "cl::sycl::ONEAPI::detail::bit_equal< float >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01float_01_4.html", null ],
     [ "cl::sycl::ONEAPI::detail::bit_equal< T, typename detail::enable_if_t< std::is_integral< T >::value > >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enable__if__t611d1540b24ee0a72c99aa85e07a2000.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::detail::bitcast_helper< ToEltTy, FromEltTy, FromN, typename >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1bitcast__helper.html", null ],
+    [ "bool_constant", null, [
+      [ "cl::sycl::is_device_copyable< std::tuple< T, Ts... > >", "structcl_1_1sycl_1_1is__device__copyable_3_01std_1_1tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html", null ]
+    ] ],
     [ "bool_constant", "classbool__constant.html", [
       [ "cl::sycl::detail::is_address_space_compliant_impl< multi_ptr< T, Space >, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl_3_01multi__ptr_3_01T_00_01Space_01_4_00_01SpaceList_01_4.html", null ],
       [ "cl::sycl::detail::is_arithmetic< T >", "structcl_1_1sycl_1_1detail_1_1is__arithmetic.html", null ],
@@ -356,6 +359,7 @@ var hierarchy =
       [ "cl::sycl::detail::is_sub_group< T >", "structcl_1_1sycl_1_1detail_1_1is__sub__group.html", null ],
       [ "cl::sycl::detail::is_vec< typename >", "structcl_1_1sycl_1_1detail_1_1is__vec.html", null ],
       [ "cl::sycl::detail::IsCompileTimePropertyInstance< T >", "structcl_1_1sycl_1_1detail_1_1IsCompileTimePropertyInstance.html", null ],
+      [ "cl::sycl::detail::IsDeprecatedDeviceCopyable< T, typename >", "structcl_1_1sycl_1_1detail_1_1IsDeprecatedDeviceCopyable.html", null ],
       [ "cl::sycl::detail::IsSwizzleOp< typename >", "structcl_1_1sycl_1_1detail_1_1IsSwizzleOp.html", null ],
       [ "cl::sycl::detail::IsWorkGroupInfo< Param >", "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_esimd_arithmetic_type< Ty, class >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__esimd__arithmetic__type.html", null ],
@@ -364,6 +368,7 @@ var hierarchy =
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_simd_view_type< Ty >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__simd__view__type.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_sycl_accessor< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_vectorizable< bool >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__vectorizable_3_01bool_01_4.html", null ],
+      [ "cl::sycl::is_device_copyable< T, typename >", "structcl_1_1sycl_1_1is__device__copyable.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< T >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property.html", null ],
       [ "cl::sycl::detail::is_address_space_compliant_impl< remove_cv_t< T >, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant__impl.html", [
         [ "cl::sycl::detail::is_address_space_compliant< T, SpaceList >", "structcl_1_1sycl_1_1detail_1_1is__address__space__compliant.html", null ]
@@ -696,10 +701,10 @@ var hierarchy =
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
     [ "cl::sycl::detail::Command::Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", null ],
     [ "cl::sycl::marray< Type, NumElements >", "classcl_1_1sycl_1_1marray.html", null ],
-    [ "cl::sycl::maximum< T >", "structcl_1_1sycl_1_1maximum.html", null ],
     [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
-    [ "cl::sycl::ONEAPI::maximum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::maximum< T >", "structcl_1_1sycl_1_1maximum.html", null ],
     [ "cl::sycl::maximum< void >", "structcl_1_1sycl_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::maximum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01char_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01short_01_4.html", null ],
@@ -713,8 +718,8 @@ var hierarchy =
     [ "cl::sycl::ONEAPI::detail::memory_order_traits< memory_order::seq_cst >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1memory__order__traits_3_01memory__order_1_1seq__cst_01_4.html", null ],
     [ "cl::sycl::detail::MemoryManager", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html", null ],
     [ "__spv::MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", null ],
-    [ "cl::sycl::minimum< T >", "structcl_1_1sycl_1_1minimum.html", null ],
     [ "cl::sycl::ONEAPI::minimum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum.html", null ],
+    [ "cl::sycl::minimum< T >", "structcl_1_1sycl_1_1minimum.html", null ],
     [ "cl::sycl::minimum< void >", "structcl_1_1sycl_1_1minimum_3_01void_01_4.html", null ],
     [ "cl::sycl::ONEAPI::minimum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4.html", null ],
     [ "cl::sycl::mode_tag_t< mode >", "structcl_1_1sycl_1_1mode__tag__t.html", null ],
@@ -1048,6 +1053,8 @@ var hierarchy =
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_simd_type< simd< Ty, N > >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__simd__type_3_01simd_3_01Ty_00_01N_01_4_01_4.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_simd_view_type< detail::simd_view_impl< BaseTy, RegionTy > >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__simd__view__type_3_0104f4e5f5a4e1798f7f1c6611419560a4.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_sycl_accessor< sycl::accessor< DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT > >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor_3_01syc6ff2b2f529475e44f9a2aded0d5eee0.html", null ],
+      [ "cl::sycl::is_device_copyable< std::tuple<> >", "structcl_1_1sycl_1_1is__device__copyable_3_01std_1_1tuple_3_4_01_4.html", null ],
+      [ "cl::sycl::is_device_copyable< T, std::enable_if_t< std::is_trivially_copyable< T >::value > >", "structcl_1_1sycl_1_1is__device__copyable_3_01T_00_01std_1_1enable__if__t_3_01std_1_1is__triviall16f83f38862e93e240bf62a9a3830c74.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< INTEL::property::buffer_location >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01INTEL_1_1property_1_1buffer__location_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_alias >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__alias_01_4.html", null ],
       [ "cl::sycl::ONEAPI::is_compile_time_property< ONEAPI::property::no_offset >", "structcl_1_1sycl_1_1ONEAPI_1_1is__compile__time__property_3_01ONEAPI_1_1property_1_1no__offset_01_4.html", null ],

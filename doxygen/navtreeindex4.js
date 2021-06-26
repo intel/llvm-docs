@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"builtins__math_8cpp.html#a1dac9d020f31c84c967a38b0f4e2d48c":[4,0,2,1,14,208],
+"builtins__math_8cpp.html#a1e70e661e8cb9883bc313e4d29565ddc":[4,0,2,1,14,143],
 "builtins__math_8cpp.html#a1f9e2ce36497f5575c8b5aa795bfddfb":[4,0,2,1,14,203],
 "builtins__math_8cpp.html#a1fd218f5c638db5305539e02614cb904":[4,0,2,1,14,192],
 "builtins__math_8cpp.html#a200581b20a79bb71b23b5cd6d4d6cb0c":[4,0,2,1,14,156],
@@ -247,7 +249,5 @@ var NAVTREEINDEX4 =
 "classBucket.html#a6f9fcc71727388ffae9e14cea66601b9":[3,0,29,2],
 "classBucket.html#aa34a206d47118a1bf844d103bb172e26":[3,0,29,7],
 "classBucket.html#ab8500386b0656cd503656e89e08bf31a":[3,0,29,8],
-"classBucket.html#abf0c619dfaaac359686dc36dda8d89eb":[3,0,29,1],
-"classBucket.html#ac796f8ead8693acee2520b9981eeda1c":[3,0,29,5],
-"classReleaseGuard.html":[3,0,39]
+"classBucket.html#abf0c619dfaaac359686dc36dda8d89eb":[3,0,29,1]
 };
