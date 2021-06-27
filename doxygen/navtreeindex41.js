@@ -1,7 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"sycl_2ext_2intel_2experimental_2esimd_2common_8hpp_source.html":[4,0,0,1,0,0,0,0,1],
-"sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp.html":[4,0,0,1,0,0,0,0,0,7],
 "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp.html#a07000e67c333b3a6c2ab3bd0e3882189":[4,0,0,1,0,0,0,0,0,7,33],
 "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp.html#a2bda09ad91b96c280f8f2072500b3760":[4,0,0,1,0,0,0,0,0,7,26],
 "sycl_2ext_2intel_2experimental_2esimd_2detail_2types_8hpp.html#a56f6045916bb885aae57b0830a31189e":[4,0,0,1,0,0,0,0,0,7,27],
