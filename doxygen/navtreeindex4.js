@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"builtins__math_8cpp.html#a1b75e48894c9a6321d84b47b2c13b656":[4,0,2,1,14,201],
+"builtins__math_8cpp.html#a1c510881c0588b56b7b82e0ad4c9f926":[4,0,2,1,14,219],
 "builtins__math_8cpp.html#a1dac9d020f31c84c967a38b0f4e2d48c":[4,0,2,1,14,208],
 "builtins__math_8cpp.html#a1e70e661e8cb9883bc313e4d29565ddc":[4,0,2,1,14,143],
 "builtins__math_8cpp.html#a1f9e2ce36497f5575c8b5aa795bfddfb":[4,0,2,1,14,203],
@@ -220,13 +222,14 @@ var NAVTREEINDEX4 =
 "builtins__relational_8cpp.html#ab8c8ac1df339dc0fc450e8a357a3d9ec":[4,0,2,1,15,3],
 "builtins__relational_8cpp_source.html":[4,0,2,1,15],
 "cg_8hpp.html":[4,0,0,0,1,2,7],
-"cg_8hpp.html#a20d13952ec8de162aaa273f48a334bae":[4,0,0,0,1,2,7,16],
-"cg_8hpp.html#a6391752349a8ab0014fac6433703455b":[4,0,0,0,1,2,7,14],
-"cg_8hpp.html#a97af5962f04305381f524ac243511ac0":[4,0,0,0,1,2,7,17],
-"cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81":[4,0,0,0,1,2,7,12],
-"cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81a68ff0837c698d19a4bc3a0f9fd0beca2":[4,0,0,0,1,2,7,12,0],
-"cg_8hpp.html#abdbb09cf15abd6ed922773deea18807b":[4,0,0,0,1,2,7,15],
-"cg_8hpp.html#afb91e2386dd0134595dc05e0a1d721f6":[4,0,0,0,1,2,7,13],
+"cg_8hpp.html#a20d13952ec8de162aaa273f48a334bae":[4,0,0,0,1,2,7,17],
+"cg_8hpp.html#a6391752349a8ab0014fac6433703455b":[4,0,0,0,1,2,7,15],
+"cg_8hpp.html#a97af5962f04305381f524ac243511ac0":[4,0,0,0,1,2,7,18],
+"cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81":[4,0,0,0,1,2,7,13],
+"cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81a5403135845d4b93afdfe8dc859c554ef":[4,0,0,0,1,2,7,13,1],
+"cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81a68ff0837c698d19a4bc3a0f9fd0beca2":[4,0,0,0,1,2,7,13,0],
+"cg_8hpp.html#abdbb09cf15abd6ed922773deea18807b":[4,0,0,0,1,2,7,16],
+"cg_8hpp.html#afb91e2386dd0134595dc05e0a1d721f6":[4,0,0,0,1,2,7,14],
 "cg_8hpp_source.html":[4,0,0,0,1,2,7],
 "cg__types_8hpp.html":[4,0,0,0,1,2,8],
 "cg__types_8hpp.html#a15b6fecbb05171470d5e2f66329a63d6":[4,0,0,0,1,2,8,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX4 =
 "classBucket.html#a24eed1098f21095989cf1025b28d2058":[3,0,29,0],
 "classBucket.html#a34e87dc119109b90ca52eae53629aec7":[3,0,29,4],
 "classBucket.html#a6e54fc83161a766fc837c9534fc1fec8":[3,0,29,6],
-"classBucket.html#a6f9fcc71727388ffae9e14cea66601b9":[3,0,29,2],
-"classBucket.html#aa34a206d47118a1bf844d103bb172e26":[3,0,29,7],
-"classBucket.html#ab8500386b0656cd503656e89e08bf31a":[3,0,29,8],
-"classBucket.html#abf0c619dfaaac359686dc36dda8d89eb":[3,0,29,1]
+"classBucket.html#a6f9fcc71727388ffae9e14cea66601b9":[3,0,29,2]
 };

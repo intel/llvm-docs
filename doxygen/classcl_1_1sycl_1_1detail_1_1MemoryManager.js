@@ -1,5 +1,6 @@
 var classcl_1_1sycl_1_1detail_1_1MemoryManager =
 [
+    [ "advise_usm", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#abfe1bcf9db433261e88659cca3f17b11", null ],
     [ "allocate", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#ac311b1b640b53526e5f6a964ac52eba9", null ],
     [ "allocateBufferObject", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a1b83a62f0aa9caa6626f860ab33008eb", null ],
     [ "allocateHostMemory", "classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a87b932b945d98de3e4d3ab787ec5752e", null ],

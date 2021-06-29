@@ -342,87 +342,89 @@ $(document).ready(function(){initNavTree('queue__impl_8hpp_source.html',''); ini
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keywordflow">return</span> MPropList.get_property&lt;propertyT&gt;();</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  }</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keyword">event</span> memset(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self, <span class="keywordtype">void</span> *Ptr, <span class="keywordtype">int</span> Value,</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;               <span class="keywordtype">size_t</span> Count);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keyword">event</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ade8963b9bb134c88a5801797d4f6afd9">memcpy</a>(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self, <span class="keywordtype">void</span> *Dest,</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">void</span> *Src, <span class="keywordtype">size_t</span> Count);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keyword">event</span> mem_advise(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self, <span class="keyword">const</span> <span class="keywordtype">void</span> *Ptr,</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                   <span class="keywordtype">size_t</span> Length, <a class="code" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a> Advice);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285">  357</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285">reportAsyncException</a>(<span class="keyword">const</span> std::exception_ptr &amp;ExceptionPtr) {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    std::lock_guard&lt;mutex_class&gt; Lock(MMutex);</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    MExceptions.PushBack(ExceptionPtr);</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">  362</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1ThreadPool.html">ThreadPool</a> &amp;<a class="code" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">getThreadPool</a>() {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <span class="keywordflow">if</span> (!MHostTaskThreadPool)</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      initHostTaskAndEventCallbackThreadPool();</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">return</span> *MHostTaskThreadPool;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418">  369</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418">stopThreadPool</a>() {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">if</span> (MHostTaskThreadPool) {</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      MHostTaskThreadPool-&gt;finishAndWait();</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  }</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <a class="code" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> getNative() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  <span class="keyword">event</span> submit_impl(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#afb9dbf04ee5a8befd9c439daf7e88d83">function_class</a>&lt;<span class="keywordtype">void</span>(<a class="code" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;CGF,</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self,</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                    <span class="keyword">const</span> <a class="code" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc) {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <a class="code" href="classcl_1_1sycl_1_1handler.html">handler</a> Handler(Self, MHostQueue);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    Handler.saveCodeLoc(Loc);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    CGF(Handler);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keyword">event</span> Event = Handler.finalize();</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    addEvent(Event);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">return</span> Event;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  }</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <span class="comment">// When instrumentation is enabled emits trace event for wait begin and</span></div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="comment">// returns the telemetry event generated for the wait</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keywordtype">void</span> *instrumentationProlog(<span class="keyword">const</span> <a class="code" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;CodeLoc,</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                              <a class="code" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;Name, int32_t StreamID,</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                              uint64_t &amp;iid);</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="comment">// Uses events generated by the Prolog and emits wait done event</span></div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="keywordtype">void</span> instrumentationEpilog(<span class="keywordtype">void</span> *TelementryEvent, <a class="code" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;Name,</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                             int32_t StreamID, uint64_t IId);</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keywordtype">void</span> initHostTaskAndEventCallbackThreadPool();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">void</span> addSharedEvent(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1event.html">event</a> &amp;Event);</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keywordtype">void</span> addEvent(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1event.html">event</a> &amp;Event);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0e818f1ac2ba5084b08dd41ca813ef28">mutex_class</a> MMutex;</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a3b78f8c517b1d76ecd7b0eb46ec2056e">DeviceImplPtr</a> MDevice;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a1fa57b2bf648836fb6705ac185d6b76f">ContextImplPtr</a> MContext;</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;std::weak_ptr&lt;event_impl&gt;</a>&gt; MEventsWeak;</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;event&gt;</a> MEventsShared;</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1exception__list.html">exception_list</a> MExceptions;</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a> MAsyncHandler;</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> MPropList;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160; </div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;RT::PiQueue&gt;</a> MQueues;</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="keywordtype">size_t</span> MNextQueueIdx = 0;</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">bool</span> MHostQueue = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="comment">// Assume OOO support by default.</span></div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keywordtype">bool</span> MSupportOOO = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="comment">// Thread pool for host task and event callbacks execution.</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  <span class="comment">// The thread pool is instantiated upon the very first call to getThreadPool()</span></div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  std::unique_ptr&lt;ThreadPool&gt; MHostTaskThreadPool;</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;};</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="keyword">event</span> memset(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self, <span class="keywordtype">void</span> *Ptr, <span class="keywordtype">int</span> Value,</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;               <span class="keywordtype">size_t</span> Count, <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;event&gt;</a> &amp;DepEvents);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keyword">event</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ade8963b9bb134c88a5801797d4f6afd9">memcpy</a>(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self, <span class="keywordtype">void</span> *Dest,</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">void</span> *Src, <span class="keywordtype">size_t</span> Count,</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;               <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;event&gt;</a> &amp;DepEvents);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keyword">event</span> mem_advise(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self, <span class="keyword">const</span> <span class="keywordtype">void</span> *Ptr,</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                   <span class="keywordtype">size_t</span> Length, <a class="code" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a> Advice,</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                   <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;event&gt;</a> &amp;DepEvents);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285">  367</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285">reportAsyncException</a>(<span class="keyword">const</span> std::exception_ptr &amp;ExceptionPtr) {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    std::lock_guard&lt;mutex_class&gt; Lock(MMutex);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    MExceptions.PushBack(ExceptionPtr);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">  372</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1ThreadPool.html">ThreadPool</a> &amp;<a class="code" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">getThreadPool</a>() {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">if</span> (!MHostTaskThreadPool)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;      initHostTaskAndEventCallbackThreadPool();</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">return</span> *MHostTaskThreadPool;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418">  379</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418">stopThreadPool</a>() {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">if</span> (MHostTaskThreadPool) {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      MHostTaskThreadPool-&gt;finishAndWait();</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  <a class="code" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> getNative() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  <span class="keyword">event</span> submit_impl(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#afb9dbf04ee5a8befd9c439daf7e88d83">function_class</a>&lt;<span class="keywordtype">void</span>(<a class="code" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;)&gt; &amp;CGF,</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                    <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class&lt;queue_impl&gt;</a> &amp;Self,</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                    <span class="keyword">const</span> <a class="code" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;Loc) {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <a class="code" href="classcl_1_1sycl_1_1handler.html">handler</a> Handler(Self, MHostQueue);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    Handler.saveCodeLoc(Loc);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    CGF(Handler);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keyword">event</span> Event = Handler.finalize();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    addEvent(Event);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keywordflow">return</span> Event;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  }</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <span class="comment">// When instrumentation is enabled emits trace event for wait begin and</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <span class="comment">// returns the telemetry event generated for the wait</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordtype">void</span> *instrumentationProlog(<span class="keyword">const</span> <a class="code" href="structcl_1_1sycl_1_1detail_1_1code__location.html">detail::code_location</a> &amp;CodeLoc,</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                              <a class="code" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;Name, int32_t StreamID,</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                              uint64_t &amp;iid);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="comment">// Uses events generated by the Prolog and emits wait done event</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">void</span> instrumentationEpilog(<span class="keywordtype">void</span> *TelementryEvent, <a class="code" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;Name,</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                             int32_t StreamID, uint64_t IId);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="keywordtype">void</span> initHostTaskAndEventCallbackThreadPool();</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  <span class="keywordtype">void</span> addSharedEvent(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1event.html">event</a> &amp;Event);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="keywordtype">void</span> addEvent(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1event.html">event</a> &amp;Event);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160; </div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0e818f1ac2ba5084b08dd41ca813ef28">mutex_class</a> MMutex;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a3b78f8c517b1d76ecd7b0eb46ec2056e">DeviceImplPtr</a> MDevice;</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a1fa57b2bf648836fb6705ac185d6b76f">ContextImplPtr</a> MContext;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;std::weak_ptr&lt;event_impl&gt;</a>&gt; MEventsWeak;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;event&gt;</a> MEventsShared;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1exception__list.html">exception_list</a> MExceptions;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#afa75562282b330af224321cc194a37de">async_handler</a> MAsyncHandler;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> MPropList;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;RT::PiQueue&gt;</a> MQueues;</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;  <span class="keywordtype">size_t</span> MNextQueueIdx = 0;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">bool</span> MHostQueue = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <span class="comment">// Assume OOO support by default.</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <span class="keywordtype">bool</span> MSupportOOO = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;  <span class="comment">// Thread pool for host task and event callbacks execution.</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;  <span class="comment">// The thread pool is instantiated upon the very first call to getThreadPool()</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  std::unique_ptr&lt;ThreadPool&gt; MHostTaskThreadPool;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;};</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasscl_1_1sycl_1_1invalid__object__error_html"><div class="ttname"><a href="classcl_1_1sycl_1_1invalid__object__error.html">cl::sycl::invalid_object_error</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00104">exception.hpp:104</a></div></div>
@@ -442,7 +444,7 @@ $(document).ready(function(){initNavTree('queue__impl_8hpp_source.html',''); ini
 <div class="ttc" id="astl_8hpp_html"><div class="ttname"><a href="stl_8hpp.html">stl.hpp</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_abf270973bb66a47f8e8aebddd06ac8aa"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#abf270973bb66a47f8e8aebddd06ac8aa">cl::sycl::detail::createSyclObjFromImpl</a></div><div class="ttdeci">T createSyclObjFromImpl(decltype(T::impl) ImplObj)</div><div class="ttdef"><b>Definition:</b> <a href="CL_2sycl_2detail_2common_8hpp_source.html#l00185">common.hpp:185</a></div></div>
 <div class="ttc" id="adevice_8hpp_html"><div class="ttname"><a href="device_8hpp.html">device.hpp</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_a3fd2c6c3672f03c31139ce52f1bd0285"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285">cl::sycl::detail::queue_impl::reportAsyncException</a></div><div class="ttdeci">void reportAsyncException(const std::exception_ptr &amp;ExceptionPtr)</div><div class="ttdoc">Puts exception to the list of asynchronous ecxeptions.</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00357">queue_impl.hpp:357</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_a3fd2c6c3672f03c31139ce52f1bd0285"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a3fd2c6c3672f03c31139ce52f1bd0285">cl::sycl::detail::queue_impl::reportAsyncException</a></div><div class="ttdeci">void reportAsyncException(const std::exception_ptr &amp;ExceptionPtr)</div><div class="ttdoc">Puts exception to the list of asynchronous ecxeptions.</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00367">queue_impl.hpp:367</a></div></div>
 <div class="ttc" id="api_8h_html_a286bf19d79f0e65f8137d269f037798b"><div class="ttname"><a href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">_pi_mem_advice</a></div><div class="ttdeci">_pi_mem_advice</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00417">pi.h:417</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_abcad4d43473020384432718bd0f10c12"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abcad4d43473020384432718bd0f10c12">cl::sycl::detail::queue_impl::queue_impl</a></div><div class="ttdeci">queue_impl(RT::PiQueue PiQueue, const ContextImplPtr &amp;Context, const async_handler &amp;AsyncHandler)</div><div class="ttdoc">Constructs a SYCL queue from plugin interoperability handle.</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00102">queue_impl.hpp:102</a></div></div>
 <div class="ttc" id="api_8h_html_a15a332a6c4c1701b7e20d5bf0afef717"><div class="ttname"><a href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717">_pi_result</a></div><div class="ttdeci">_pi_result</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00075">pi.h:75</a></div></div>
@@ -459,7 +461,7 @@ $(document).ready(function(){initNavTree('queue__impl_8hpp_source.html',''); ini
 <div class="ttc" id="aclasscl_1_1sycl_1_1property_1_1queue_1_1in__order_html"><div class="ttname"><a href="classcl_1_1sycl_1_1property_1_1queue_1_1in__order.html">cl::sycl::property::queue::in_order</a></div><div class="ttdef"><b>Definition:</b> <a href="queue__properties_8hpp_source.html#l00017">queue_properties.hpp:17</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_a1c6e3a913c64c15cc3874a06f2ca38da"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a1c6e3a913c64c15cc3874a06f2ca38da">cl::sycl::detail::queue_impl::throw_asynchronous</a></div><div class="ttdeci">void throw_asynchronous()</div><div class="ttdoc">Performs a blocking wait for the completion of all enqueued tasks in the queue.</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00222">queue_impl.hpp:222</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a74a50612bd831e329413cf55545b3b06"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06">cl::sycl::detail::QueueOrder</a></div><div class="ttdeci">QueueOrder</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00047">queue_impl.hpp:47</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_a368a51ce99818f8560b21198900161cf"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">cl::sycl::detail::queue_impl::getThreadPool</a></div><div class="ttdeci">ThreadPool &amp; getThreadPool()</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00362">queue_impl.hpp:362</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_a368a51ce99818f8560b21198900161cf"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a368a51ce99818f8560b21198900161cf">cl::sycl::detail::queue_impl::getThreadPool</a></div><div class="ttdeci">ThreadPool &amp; getThreadPool()</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00372">queue_impl.hpp:372</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1code__location_html"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1code__location.html">cl::sycl::detail::code_location</a></div><div class="ttdef"><b>Definition:</b> <a href="CL_2sycl_2detail_2common_8hpp_source.html#l00036">common.hpp:36</a></div></div>
 <div class="ttc" id="ascheduler_8hpp_html"><div class="ttname"><a href="scheduler_8hpp.html">scheduler.hpp</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html_ae0c3e4a9606a7b31199e1dc5530bd295"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295">cl::sycl::detail::plugin::call_nocheck</a></div><div class="ttdeci">RT::PiResult call_nocheck(ArgsT... Args) const</div><div class="ttdoc">Calls the PiApi, traces the call, and returns the result.</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00070">plugin.hpp:70</a></div></div>
@@ -511,7 +513,7 @@ $(document).ready(function(){initNavTree('queue__impl_8hpp_source.html',''); ini
 <div class="ttc" id="ahandler_8hpp_html"><div class="ttname"><a href="handler_8hpp.html">handler.hpp</a></div></div>
 <div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
 <div class="ttc" id="api_8h_html_ad36f2ff72516040388d88f718b392f3b"><div class="ttname"><a href="pi_8h.html#ad36f2ff72516040388d88f718b392f3b">piQueueGetInfo</a></div><div class="ttdeci">pi_result piQueueGetInfo(pi_queue command_queue, pi_queue_info param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</div><div class="ttdef"><b>Definition:</b> <a href="pi__esimd__cpu_8cpp_source.html#l00651">pi_esimd_cpu.cpp:651</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_abfb7079a81c96ac268e3179ab3aa2418"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418">cl::sycl::detail::queue_impl::stopThreadPool</a></div><div class="ttdeci">void stopThreadPool()</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00369">queue_impl.hpp:369</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_abfb7079a81c96ac268e3179ab3aa2418"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#abfb7079a81c96ac268e3179ab3aa2418">cl::sycl::detail::queue_impl::stopThreadPool</a></div><div class="ttdeci">void stopThreadPool()</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00379">queue_impl.hpp:379</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1context_html"><div class="ttname"><a href="classcl_1_1sycl_1_1context.html">cl::sycl::context</a></div><div class="ttdoc">The context class represents a SYCL context on which kernel functions may be executed.</div><div class="ttdef"><b>Definition:</b> <a href="context_8hpp_source.html#l00035">context.hpp:35</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1queue__impl_html_a6163342df6c993c9ffc9f100b4911c75"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1queue__impl.html#a6163342df6c993c9ffc9f100b4911c75">cl::sycl::detail::queue_impl::get_context</a></div><div class="ttdeci">context get_context() const</div><div class="ttdef"><b>Definition:</b> <a href="queue__impl_8hpp_source.html#l00139">queue_impl.hpp:139</a></div></div>
 <div class="ttc" id="aexception__list_8hpp_html"><div class="ttname"><a href="exception__list_8hpp.html">exception_list.hpp</a></div></div>

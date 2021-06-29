@@ -142,11 +142,77 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a71d6b81364aa47331f0b1275e7d11b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d7a472dc0c2bbfa9dd666dc47a9ad0b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#a8d7a472dc0c2bbfa9dd666dc47a9ad0b">prefetch_usm</a> (void *Ptr, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, size_t Len, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
 <tr class="separator:a8d7a472dc0c2bbfa9dd666dc47a9ad0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe1bcf9db433261e88659cca3f17b11"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1MemoryManager.html#abfe1bcf9db433261e88659cca3f17b11">advise_usm</a> (const void *Ptr, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue, size_t Len, <a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a> Advice, std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt; DepEvents, <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;OutEvent)</td></tr>
+<tr class="separator:abfe1bcf9db433261e88659cca3f17b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="memory__manager_8hpp_source.html#l00036">36</a> of file <a class="el" href="memory__manager_8hpp_source.html">memory_manager.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abfe1bcf9db433261e88659cca3f17b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe1bcf9db433261e88659cca3f17b11">&#9670;&nbsp;</a></span>advise_usm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::detail::MemoryManager::advise_usm </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>Ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a>&#160;</td>
+          <td class="paramname"><em>Queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a>&#160;</td>
+          <td class="paramname"><em>Advice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &gt;&#160;</td>
+          <td class="paramname"><em>DepEvents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a0db0792203a371dfb9a6379fce94675a">RT::PiEvent</a> &amp;&#160;</td>
+          <td class="paramname"><em>OutEvent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="memory__manager_8cpp_source.html#l00700">700</a> of file <a class="el" href="memory__manager_8cpp_source.html">memory_manager.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, and <a class="el" href="pi__esimd__cpu_8cpp_source.html#l01186">piextUSMEnqueueMemAdvise()</a>.</p>
+
+</div>
+</div>
 <a id="ac311b1b640b53526e5f6a964ac52eba9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac311b1b640b53526e5f6a964ac52eba9">&#9670;&nbsp;</a></span>allocate()</h2>
 

@@ -546,7 +546,9 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea5df6f689fdab25052f8840b0dc7205f6">aspect::ext_intel_gpu_eu_count_per_subslice</a> = 23, 
 <br />
 &#160;&#160;<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea4d2cabd4dba12aa15b6f495ded149a4f">aspect::ext_intel_max_mem_bandwidth</a> = 24, 
-<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea28ceaa6aabc248e3b7d988f20001c0c0">aspect::ext_intel_mem_channel</a> = 25
+<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea28ceaa6aabc248e3b7d988f20001c0c0">aspect::ext_intel_mem_channel</a> = 25, 
+<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261eaeb50fd334ae9c5c463ffc150880ee2b0">aspect::usm_atomic_host_allocations</a> = 26, 
+<a class="el" href="namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261ea19b3b6d60e4485375782357836995b8c">aspect::usm_atomic_shared_allocations</a> = 27
 <br />
  }</td></tr>
 <tr class="separator:a0c5593ca4fbd8828493d37b723b9261e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1611,42 +1613,74 @@ Functions</h2></td></tr>
 <tr class="memitem:a18ed04762b28064cf932dce8c930454e"><td class="memTemplParams" colspan="2">template&lt;typename T , typename RT  = detail::EnableIfSwizzleVec&lt;T&gt;&gt; </td></tr>
 <tr class="memitem:a18ed04762b28064cf932dce8c930454e"><td class="memTemplItemLeft" align="right" valign="top">const <a class="el" href="classcl_1_1sycl_1_1stream.html">stream</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a18ed04762b28064cf932dce8c930454e">operator&lt;&lt;</a> (const <a class="el" href="classcl_1_1sycl_1_1stream.html">stream</a> &amp;Out, const T &amp;RHS)</td></tr>
 <tr class="separator:a18ed04762b28064cf932dce8c930454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a926362a87856ed707139cc8e86f5e973"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a926362a87856ed707139cc8e86f5e973">aligned_alloc</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind)</td></tr>
-<tr class="separator:a926362a87856ed707139cc8e86f5e973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65e60d163515cd0da902e960aac510c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ab65e60d163515cd0da902e960aac510c">aligned_alloc</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:ab65e60d163515cd0da902e960aac510c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a338d59dd7adeb19f5515fab4faf17c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9a338d59dd7adeb19f5515fab4faf17c">free</a> (void *ptr, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:a9a338d59dd7adeb19f5515fab4faf17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadac759bd9ebd094cfe333257576319d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aadac759bd9ebd094cfe333257576319d">malloc_device</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:aadac759bd9ebd094cfe333257576319d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebe3ee23c4fe99dec9bfbf9c1304443"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a1ebe3ee23c4fe99dec9bfbf9c1304443">malloc_device</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a1ebe3ee23c4fe99dec9bfbf9c1304443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a537cd5bf6629ee1c350dbea212e89e5c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a537cd5bf6629ee1c350dbea212e89e5c">malloc_device</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:a537cd5bf6629ee1c350dbea212e89e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ec5348023930766c4e23c99df2660f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a27ec5348023930766c4e23c99df2660f">malloc_device</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a27ec5348023930766c4e23c99df2660f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90e05cdb4ee7ea0b2fef4ea8bfd1adb4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a90e05cdb4ee7ea0b2fef4ea8bfd1adb4">aligned_alloc_device</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:a90e05cdb4ee7ea0b2fef4ea8bfd1adb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fbf5884553864af0bc349ff977beae5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9fbf5884553864af0bc349ff977beae5">aligned_alloc_device</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a9fbf5884553864af0bc349ff977beae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420228d8dc2859a03dfe6cd6960922f7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a420228d8dc2859a03dfe6cd6960922f7">aligned_alloc_device</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:a420228d8dc2859a03dfe6cd6960922f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea7715b7d81a863479753b938d1c2300"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aea7715b7d81a863479753b938d1c2300">aligned_alloc_device</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:aea7715b7d81a863479753b938d1c2300"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af12afeb2d628f8ae6f7af94c21a7423b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#af12afeb2d628f8ae6f7af94c21a7423b">free</a> (void *ptr, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:af12afeb2d628f8ae6f7af94c21a7423b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65b09a997fc6a20f8c0dc49b51dd5051"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a65b09a997fc6a20f8c0dc49b51dd5051">malloc_host</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:a65b09a997fc6a20f8c0dc49b51dd5051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4d4aabcf193e91db33e84805a0bf4c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a6e4d4aabcf193e91db33e84805a0bf4c">malloc_host</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a6e4d4aabcf193e91db33e84805a0bf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa97c1f578e23516d56c4437cef4f09da"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aa97c1f578e23516d56c4437cef4f09da">malloc_host</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:aa97c1f578e23516d56c4437cef4f09da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f44409c504322b2c41cedb9e860af5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a65f44409c504322b2c41cedb9e860af5">malloc_host</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a65f44409c504322b2c41cedb9e860af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6305df5d225ae1a1ae79ce16bcb6158a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a6305df5d225ae1a1ae79ce16bcb6158a">malloc_shared</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:a6305df5d225ae1a1ae79ce16bcb6158a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b96d7cdaa321a049ae7dbe04cfe3d4"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a88b96d7cdaa321a049ae7dbe04cfe3d4">malloc_shared</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a88b96d7cdaa321a049ae7dbe04cfe3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2861039868cba91e0250e34eb67e4b2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ac2861039868cba91e0250e34eb67e4b2">malloc_shared</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:ac2861039868cba91e0250e34eb67e4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a338bdc657c3ebe307aede2b6fe20bf86"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a338bdc657c3ebe307aede2b6fe20bf86">malloc_shared</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a338bdc657c3ebe307aede2b6fe20bf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9fc860b594430ded92b49f4e21e3f67"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#ac9fc860b594430ded92b49f4e21e3f67">aligned_alloc_host</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:ac9fc860b594430ded92b49f4e21e3f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3701825cbb62e615553dd953c74c3962"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a3701825cbb62e615553dd953c74c3962">aligned_alloc_host</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a3701825cbb62e615553dd953c74c3962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a480c0a76deaa57f3fe48f8ef7309fc7d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a480c0a76deaa57f3fe48f8ef7309fc7d">aligned_alloc_host</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:a480c0a76deaa57f3fe48f8ef7309fc7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a598fca3b364adfd41c613e74f28ae4b1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a598fca3b364adfd41c613e74f28ae4b1">aligned_alloc_host</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a598fca3b364adfd41c613e74f28ae4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec657939aefbaec3094155eb42debc3e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#aec657939aefbaec3094155eb42debc3e">aligned_alloc_shared</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="separator:aec657939aefbaec3094155eb42debc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a00c795bd285d599e687813c717edd9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a9a00c795bd285d599e687813c717edd9">aligned_alloc_shared</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a9a00c795bd285d599e687813c717edd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a938e4c26916c924ae2b7695ece42215b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a938e4c26916c924ae2b7695ece42215b">aligned_alloc_shared</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q)</td></tr>
 <tr class="separator:a938e4c26916c924ae2b7695ece42215b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefb763ae3c4e7f5e13aba3eb51ddb16"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#afefb763ae3c4e7f5e13aba3eb51ddb16">aligned_alloc_shared</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:afefb763ae3c4e7f5e13aba3eb51ddb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a8609a1485c85d0f85666276f9ed5c3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a6a8609a1485c85d0f85666276f9ed5c3">malloc</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind)</td></tr>
 <tr class="separator:a6a8609a1485c85d0f85666276f9ed5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1f08a5f5bc998e56ca4ffd54b31ea1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a3c1f08a5f5bc998e56ca4ffd54b31ea1">malloc</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a3c1f08a5f5bc998e56ca4ffd54b31ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0476c6d4e2e68fef9c2df4dc27a115ef"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a0476c6d4e2e68fef9c2df4dc27a115ef">malloc</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind)</td></tr>
 <tr class="separator:a0476c6d4e2e68fef9c2df4dc27a115ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a150d46b0092dc873aa8f6b4ec3e667"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2a150d46b0092dc873aa8f6b4ec3e667">malloc</a> (size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:a2a150d46b0092dc873aa8f6b4ec3e667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926362a87856ed707139cc8e86f5e973"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a926362a87856ed707139cc8e86f5e973">aligned_alloc</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;dev, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind)</td></tr>
+<tr class="separator:a926362a87856ed707139cc8e86f5e973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a553759fbaf7f9d5ebdbb2083b732c3f7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a553759fbaf7f9d5ebdbb2083b732c3f7">aligned_alloc</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind)</td></tr>
 <tr class="separator:a553759fbaf7f9d5ebdbb2083b732c3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8092085d44c1f47f9eb04073794117"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#afb8092085d44c1f47f9eb04073794117">aligned_alloc</a> (size_t alignment, size_t size, const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;q, <a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a> kind, const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;propList)</td></tr>
+<tr class="separator:afb8092085d44c1f47f9eb04073794117"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d836a2a5ad4849be1c4caf4dc9aef86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2d836a2a5ad4849be1c4caf4dc9aef86">get_pointer_type</a> (const void *ptr, const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;ctxt)</td></tr>
 <tr class="memdesc:a2d836a2a5ad4849be1c4caf4dc9aef86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query the allocation type from a USM pointer.  <a href="namespacecl_1_1sycl.html#a2d836a2a5ad4849be1c4caf4dc9aef86">More...</a><br /></td></tr>
 <tr class="separator:a2d836a2a5ad4849be1c4caf4dc9aef86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2631,6 +2665,8 @@ template&lt;class T &gt; </div>
 <tr><td class="fieldname"><a id="a0c5593ca4fbd8828493d37b723b9261ea5df6f689fdab25052f8840b0dc7205f6"></a>ext_intel_gpu_eu_count_per_subslice&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0c5593ca4fbd8828493d37b723b9261ea4d2cabd4dba12aa15b6f495ded149a4f"></a>ext_intel_max_mem_bandwidth&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a0c5593ca4fbd8828493d37b723b9261ea28ceaa6aabc248e3b7d988f20001c0c0"></a>ext_intel_mem_channel&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0c5593ca4fbd8828493d37b723b9261eaeb50fd334ae9c5c463ffc150880ee2b0"></a>usm_atomic_host_allocations&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0c5593ca4fbd8828493d37b723b9261ea19b3b6d60e4485375782357836995b8c"></a>usm_atomic_shared_allocations&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="aspects_8hpp_source.html#l00015">15</a> of file <a class="el" href="aspects_8hpp_source.html">aspects.hpp</a>.</p>
@@ -3335,14 +3371,14 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00242">242</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00248">248</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa07d3f9bf1d0d3dae00cf62ec5c7851cc">cl::sycl::detail::kind_accessor</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ab40cf6b53fff657f60c2ad7ded29712aa804d646aee6ffb43decdc5ca71c12fba">cl::sycl::detail::kind_std_layout</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00109">cl::sycl::detail::AccessorImplHost::MAccessRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00116">cl::sycl::detail::AccessorImplHost::MDims</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00111">cl::sycl::detail::AccessorImplHost::MMemoryRange</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00107">cl::sycl::detail::AccessorImplHost::MOffset</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00125">cl::sycl::detail::AccessorImplHost::PerWI</a>, and <a class="el" href="accessor__impl_8cpp_source.html#l00026">cl::sycl::detail::AccessorImplHost::resize()</a>.</p>
 
 </div>
 </div>
 <a id="a926362a87856ed707139cc8e86f5e973"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a926362a87856ed707139cc8e86f5e973">&#9670;&nbsp;</a></span>aligned_alloc() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a926362a87856ed707139cc8e86f5e973">&#9670;&nbsp;</a></span>aligned_alloc() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3385,16 +3421,70 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00145">145</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00296">296</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00152">aligned_alloc()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, and <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="os__util_8cpp_source.html#l00255">cl::sycl::detail::OSUtil::alignedAlloc()</a>, and <a class="el" href="include_2CL_2sycl_2usm_2usm__allocator_8hpp_source.html#l00071">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::allocate()</a>.</p>
+</div>
+</div>
+<a id="ab65e60d163515cd0da902e960aac510c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65e60d163515cd0da902e960aac510c">&#9670;&nbsp;</a></span>aligned_alloc() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a>&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00208">208</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00314">aligned_alloc()</a>, <a class="el" href="os__util_8cpp_source.html#l00255">cl::sycl::detail::OSUtil::alignedAlloc()</a>, and <a class="el" href="include_2CL_2sycl_2usm_2usm__allocator_8hpp_source.html#l00077">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::allocate()</a>.</p>
 
 </div>
 </div>
 <a id="a553759fbaf7f9d5ebdbb2083b732c3f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a553759fbaf7f9d5ebdbb2083b732c3f7">&#9670;&nbsp;</a></span>aligned_alloc() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a553759fbaf7f9d5ebdbb2083b732c3f7">&#9670;&nbsp;</a></span>aligned_alloc() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3431,16 +3521,62 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00152">152</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00314">314</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
+<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00208">aligned_alloc()</a>, <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00145">aligned_alloc()</a>.</p>
+</div>
+</div>
+<a id="afb8092085d44c1f47f9eb04073794117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8092085d44c1f47f9eb04073794117">&#9670;&nbsp;</a></span>aligned_alloc() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a>&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00216">216</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a90e05cdb4ee7ea0b2fef4ea8bfd1adb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90e05cdb4ee7ea0b2fef4ea8bfd1adb4">&#9670;&nbsp;</a></span>aligned_alloc_device() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e05cdb4ee7ea0b2fef4ea8bfd1adb4">&#9670;&nbsp;</a></span>aligned_alloc_device() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3477,14 +3613,64 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00081">81</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00167">167</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00088">aligned_alloc_device()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00177">aligned_alloc_device()</a>.</p>
+
+</div>
+</div>
+<a id="a9fbf5884553864af0bc349ff977beae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fbf5884553864af0bc349ff977beae5">&#9670;&nbsp;</a></span>aligned_alloc_device() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc_device </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00128">128</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a420228d8dc2859a03dfe6cd6960922f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a420228d8dc2859a03dfe6cd6960922f7">&#9670;&nbsp;</a></span>aligned_alloc_device() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a420228d8dc2859a03dfe6cd6960922f7">&#9670;&nbsp;</a></span>aligned_alloc_device() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3515,16 +3701,56 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00088">88</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00177">177</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00167">aligned_alloc_device()</a>, <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00081">aligned_alloc_device()</a>.</p>
+</div>
+</div>
+<a id="aea7715b7d81a863479753b938d1c2300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea7715b7d81a863479753b938d1c2300">&#9670;&nbsp;</a></span>aligned_alloc_device() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc_device </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00136">136</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ac9fc860b594430ded92b49f4e21e3f67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9fc860b594430ded92b49f4e21e3f67">&#9670;&nbsp;</a></span>aligned_alloc_host() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fc860b594430ded92b49f4e21e3f67">&#9670;&nbsp;</a></span>aligned_alloc_host() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3555,14 +3781,58 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00111">111</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00230">230</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00117">aligned_alloc_host()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00239">aligned_alloc_host()</a>.</p>
+
+</div>
+</div>
+<a id="a3701825cbb62e615553dd953c74c3962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3701825cbb62e615553dd953c74c3962">&#9670;&nbsp;</a></span>aligned_alloc_host() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc_host </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00168">168</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a480c0a76deaa57f3fe48f8ef7309fc7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a480c0a76deaa57f3fe48f8ef7309fc7d">&#9670;&nbsp;</a></span>aligned_alloc_host() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a480c0a76deaa57f3fe48f8ef7309fc7d">&#9670;&nbsp;</a></span>aligned_alloc_host() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3593,16 +3863,56 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00117">117</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00239">239</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00230">aligned_alloc_host()</a>, and <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00111">aligned_alloc_host()</a>.</p>
+</div>
+</div>
+<a id="a598fca3b364adfd41c613e74f28ae4b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a598fca3b364adfd41c613e74f28ae4b1">&#9670;&nbsp;</a></span>aligned_alloc_host() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc_host </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00175">175</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aec657939aefbaec3094155eb42debc3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec657939aefbaec3094155eb42debc3e">&#9670;&nbsp;</a></span>aligned_alloc_shared() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec657939aefbaec3094155eb42debc3e">&#9670;&nbsp;</a></span>aligned_alloc_shared() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3639,14 +3949,64 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00122">122</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00248">248</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00129">aligned_alloc_shared()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00258">aligned_alloc_shared()</a>.</p>
+
+</div>
+</div>
+<a id="a9a00c795bd285d599e687813c717edd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a00c795bd285d599e687813c717edd9">&#9670;&nbsp;</a></span>aligned_alloc_shared() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc_shared </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00181">181</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a938e4c26916c924ae2b7695ece42215b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a938e4c26916c924ae2b7695ece42215b">&#9670;&nbsp;</a></span>aligned_alloc_shared() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a938e4c26916c924ae2b7695ece42215b">&#9670;&nbsp;</a></span>aligned_alloc_shared() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3677,11 +4037,51 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00129">129</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00258">258</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00248">aligned_alloc_shared()</a>, <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00122">aligned_alloc_shared()</a>.</p>
+</div>
+</div>
+<a id="afefb763ae3c4e7f5e13aba3eb51ddb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afefb763ae3c4e7f5e13aba3eb51ddb16">&#9670;&nbsp;</a></span>aligned_alloc_shared() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::aligned_alloc_shared </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>alignment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00189">189</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
@@ -6393,11 +6793,11 @@ template&lt;typename T , typename T2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00166">166</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00187">187</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="include_2CL_2sycl_2usm_2usm__allocator_8hpp_source.html#l00086">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::deallocate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="include_2CL_2sycl_2usm_2usm__allocator_8hpp_source.html#l00092">cl::sycl::usm_allocator&lt; T, AllocKind, Alignment &gt;::deallocate()</a>.</p>
 
 </div>
 </div>
@@ -6427,7 +6827,7 @@ template&lt;typename T , typename T2 &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00170">170</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00191">191</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00132">cl::sycl::detail::usm::free()</a>, and <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>.</p>
 
@@ -6867,9 +7267,9 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00299">299</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00380">380</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00127">cl::sycl::context::get_devices()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00249">get_pointer_type()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01487">PI_MEM_ALLOC_DEVICE</a>, and <a class="el" href="pi__esimd__cpu_8cpp_source.html#l01192">piextUSMGetMemAllocInfo()</a>.</p>
+<p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00104">cl::sycl::detail::plugin::call()</a>, <a class="el" href="context_8cpp_source.html#l00127">cl::sycl::context::get_devices()</a>, <a class="el" href="usm__impl_8cpp_source.html#l00330">get_pointer_type()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00078">PI_INVALID_OPERATION</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01487">PI_MEM_ALLOC_DEVICE</a>, and <a class="el" href="pi__esimd__cpu_8cpp_source.html#l01192">piextUSMGetMemAllocInfo()</a>.</p>
 
 </div>
 </div>
@@ -6909,11 +7309,11 @@ template&lt;backend BackendName, class SyclObjectT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00249">249</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00330">330</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="plugin_8hpp_source.html#l00070">cl::sycl::detail::plugin::call_nocheck()</a>, <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>, <a class="el" href="context_8cpp_source.html#l00119">cl::sycl::context::is_host()</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, <a class="el" href="pi_8h_source.html#l01484">PI_MEM_ALLOC_TYPE</a>, <a class="el" href="pi_8h_source.html#l01493">PI_MEM_TYPE_DEVICE</a>, <a class="el" href="pi_8h_source.html#l01492">PI_MEM_TYPE_HOST</a>, <a class="el" href="pi_8h_source.html#l01494">PI_MEM_TYPE_SHARED</a>, <a class="el" href="pi_8h_source.html#l00076">PI_SUCCESS</a>, and <a class="el" href="pi__esimd__cpu_8cpp_source.html#l01192">piextUSMGetMemAllocInfo()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00299">get_pointer_device()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00380">get_pointer_device()</a>.</p>
 
 </div>
 </div>
@@ -9714,7 +10114,7 @@ template&lt;typename T , typename... ArgsT&gt; </div>
 </div>
 </div>
 <a id="a6a8609a1485c85d0f85666276f9ed5c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a8609a1485c85d0f85666276f9ed5c3">&#9670;&nbsp;</a></span>malloc() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8609a1485c85d0f85666276f9ed5c3">&#9670;&nbsp;</a></span>malloc() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9751,16 +10151,64 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00135">135</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00270">270</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00140">malloc()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>, and <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="pi__cuda_8hpp_source.html#l00249">_pi_mem::mem_::buffer_mem_::map_to_ptr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00287">malloc()</a>, and <a class="el" href="pi__cuda_8hpp_source.html#l00249">_pi_mem::mem_::buffer_mem_::map_to_ptr()</a>.</p>
+
+</div>
+</div>
+<a id="a3c1f08a5f5bc998e56ca4ffd54b31ea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1f08a5f5bc998e56ca4ffd54b31ea1">&#9670;&nbsp;</a></span>malloc() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a>&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00196">196</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a0476c6d4e2e68fef9c2df4dc27a115ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0476c6d4e2e68fef9c2df4dc27a115ef">&#9670;&nbsp;</a></span>malloc() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0476c6d4e2e68fef9c2df4dc27a115ef">&#9670;&nbsp;</a></span>malloc() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9791,16 +10239,56 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00140">140</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00287">287</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
+<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>, and <a class="el" href="usm__impl_8cpp_source.html#l00270">malloc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00135">malloc()</a>.</p>
+</div>
+</div>
+<a id="a2a150d46b0092dc873aa8f6b4ec3e667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a150d46b0092dc873aa8f6b4ec3e667">&#9670;&nbsp;</a></span>malloc() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e">usm::alloc</a>&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00202">202</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aadac759bd9ebd094cfe333257576319d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadac759bd9ebd094cfe333257576319d">&#9670;&nbsp;</a></span>malloc_device() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aadac759bd9ebd094cfe333257576319d">&#9670;&nbsp;</a></span>malloc_device() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9831,14 +10319,58 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00072">72</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00149">149</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00076">malloc_device()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00158">malloc_device()</a>.</p>
+
+</div>
+</div>
+<a id="a1ebe3ee23c4fe99dec9bfbf9c1304443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebe3ee23c4fe99dec9bfbf9c1304443">&#9670;&nbsp;</a></span>malloc_device() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc_device </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00115">115</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a537cd5bf6629ee1c350dbea212e89e5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a537cd5bf6629ee1c350dbea212e89e5c">&#9670;&nbsp;</a></span>malloc_device() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a537cd5bf6629ee1c350dbea212e89e5c">&#9670;&nbsp;</a></span>malloc_device() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9863,16 +10395,50 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00076">76</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00158">158</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
+<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>, and <a class="el" href="usm__impl_8cpp_source.html#l00149">malloc_device()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00072">malloc_device()</a>.</p>
+</div>
+</div>
+<a id="a27ec5348023930766c4e23c99df2660f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ec5348023930766c4e23c99df2660f">&#9670;&nbsp;</a></span>malloc_device() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc_device </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00122">122</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a65b09a997fc6a20f8c0dc49b51dd5051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65b09a997fc6a20f8c0dc49b51dd5051">&#9670;&nbsp;</a></span>malloc_host() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b09a997fc6a20f8c0dc49b51dd5051">&#9670;&nbsp;</a></span>malloc_host() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9897,14 +10463,52 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00093">93</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00196">196</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00097">malloc_host()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00027">cl::sycl::detail::usm::alignedAllocHost()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00204">malloc_host()</a>.</p>
+
+</div>
+</div>
+<a id="a6e4d4aabcf193e91db33e84805a0bf4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4d4aabcf193e91db33e84805a0bf4c">&#9670;&nbsp;</a></span>malloc_host() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc_host </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00143">143</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa97c1f578e23516d56c4437cef4f09da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa97c1f578e23516d56c4437cef4f09da">&#9670;&nbsp;</a></span>malloc_host() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa97c1f578e23516d56c4437cef4f09da">&#9670;&nbsp;</a></span>malloc_host() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9929,16 +10533,50 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00097">97</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00204">204</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>.</p>
+<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="usm__impl_8cpp_source.html#l00196">malloc_host()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00093">malloc_host()</a>.</p>
+</div>
+</div>
+<a id="a65f44409c504322b2c41cedb9e860af5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f44409c504322b2c41cedb9e860af5">&#9670;&nbsp;</a></span>malloc_host() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc_host </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00149">149</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a6305df5d225ae1a1ae79ce16bcb6158a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6305df5d225ae1a1ae79ce16bcb6158a">&#9670;&nbsp;</a></span>malloc_shared() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6305df5d225ae1a1ae79ce16bcb6158a">&#9670;&nbsp;</a></span>malloc_shared() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9969,14 +10607,58 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00102">102</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00212">212</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="usm_8hpp_source.html#l00106">malloc_shared()</a>.</p>
+<p class="reference">References <a class="el" href="usm__impl_8cpp_source.html#l00074">cl::sycl::detail::usm::alignedAlloc()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="usm__impl_8cpp_source.html#l00221">malloc_shared()</a>.</p>
+
+</div>
+</div>
+<a id="a88b96d7cdaa321a049ae7dbe04cfe3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b96d7cdaa321a049ae7dbe04cfe3d4">&#9670;&nbsp;</a></span>malloc_shared() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc_shared </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &amp;&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;&#160;</td>
+          <td class="paramname"><em>ctxt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00155">155</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ac2861039868cba91e0250e34eb67e4b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2861039868cba91e0250e34eb67e4b2">&#9670;&nbsp;</a></span>malloc_shared() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2861039868cba91e0250e34eb67e4b2">&#9670;&nbsp;</a></span>malloc_shared() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10001,11 +10683,45 @@ template&lt;typename T , typename... ArgsT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00106">106</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="usm__impl_8cpp_source.html#l00221">221</a> of file <a class="el" href="usm__impl_8cpp_source.html">usm_impl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, and <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>.</p>
+<p class="reference">References <a class="el" href="queue_8cpp_source.html#l00072">cl::sycl::queue::get_context()</a>, <a class="el" href="queue_8cpp_source.html#l00074">cl::sycl::queue::get_device()</a>, and <a class="el" href="usm__impl_8cpp_source.html#l00212">malloc_shared()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="usm_8hpp_source.html#l00102">malloc_shared()</a>.</p>
+</div>
+</div>
+<a id="a338bdc657c3ebe307aede2b6fe20bf86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338bdc657c3ebe307aede2b6fe20bf86">&#9670;&nbsp;</a></span>malloc_shared() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * cl::sycl::malloc_shared </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a> &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;&#160;</td>
+          <td class="paramname"><em>propList</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="usm_8hpp_source.html#l00162">162</a> of file <a class="el" href="usm_8hpp_source.html">usm.hpp</a>.</p>
 
 </div>
 </div>

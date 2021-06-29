@@ -545,12 +545,16 @@ file to obtain test sources and instructions how build and execute the tests.</p
 </pre></div>
 </div>
 <p>To build simple-sycl-app ahead of time for GPU, CPU or Accelerator devices,
-specify the target architecture:</p>
-<p><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_gen-unknown-unknown-sycldevice</span></code> for GPU,<br /><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_x86_64-unknown-unknown-sycldevice</span></code> for CPU,<br /><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_fpga-unknown-unknown-sycldevice</span></code> for Accelerator.</p>
+specify the target architecture.  The examples provided use a supported
+alias for the target, representing a full triple.  Additional details can
+be found in the <a class="reference external" href="UsersManual.md#generic-options">Users Manual</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_gen</span></code> for GPU,
+<code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_x86_64</span></code> for CPU,
+<code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_fpga</span></code> for Accelerator.</p>
 <p>Multiple target architectures are supported.</p>
 <p>E.g., this command builds simple-sycl-app for GPU and CPU devices in
 ahead of time mode:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>spir64_gen-unknown-unknown-sycldevice,spir64_x86_64-unknown-unknown-sycldevice simple-sycl-app.cpp -o simple-sycl-app-aot.exe
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clang++ -fsycl -fsycl-targets<span class="o">=</span>spir64_gen,spir64_x86_64 simple-sycl-app.cpp -o simple-sycl-app-aot.exe
 </pre></div>
 </div>
 <p>Additionally, user can pass specific options of AOT compiler to

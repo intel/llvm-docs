@@ -1,17 +1,20 @@
 var NAVTREEINDEX5 =
 {
+"classBucket.html#aa34a206d47118a1bf844d103bb172e26":[3,0,29,7],
+"classBucket.html#ab8500386b0656cd503656e89e08bf31a":[3,0,29,8],
+"classBucket.html#abf0c619dfaaac359686dc36dda8d89eb":[3,0,29,1],
 "classBucket.html#ac796f8ead8693acee2520b9981eeda1c":[3,0,29,5],
 "classReleaseGuard.html":[3,0,39],
-"classReleaseGuard.html#a2edf42c132ac6df9bdcd047bae758835":[3,0,39,7],
 "classReleaseGuard.html#a2edf42c132ac6df9bdcd047bae758835":[3,0,39,2],
+"classReleaseGuard.html#a2edf42c132ac6df9bdcd047bae758835":[3,0,39,7],
 "classReleaseGuard.html#a842fa7466ffe980b5e5fec5a7b582abe":[3,0,39,10],
 "classReleaseGuard.html#a842fa7466ffe980b5e5fec5a7b582abe":[3,0,39,11],
 "classReleaseGuard.html#a92517f8d00406d4719e310842e6f0e33":[3,0,39,4],
 "classReleaseGuard.html#a92517f8d00406d4719e310842e6f0e33":[3,0,39,9],
 "classReleaseGuard.html#a935dfcd5eb46cf93d3ce001df1016cc5":[3,0,39,3],
 "classReleaseGuard.html#a935dfcd5eb46cf93d3ce001df1016cc5":[3,0,39,8],
-"classReleaseGuard.html#a9e67a104a26afb57a2d034b03cfd5c3b":[3,0,39,5],
 "classReleaseGuard.html#a9e67a104a26afb57a2d034b03cfd5c3b":[3,0,39,0],
+"classReleaseGuard.html#a9e67a104a26afb57a2d034b03cfd5c3b":[3,0,39,5],
 "classReleaseGuard.html#aa4b97e2f9f510a95213a0716a8e2ff14":[3,0,39,1],
 "classReleaseGuard.html#aa4b97e2f9f510a95213a0716a8e2ff14":[3,0,39,6],
 "classReleaseGuard.html#abd62ef65845cd7ae72f699c766962378":[3,0,39,12],
@@ -246,8 +249,5 @@ var NAVTREEINDEX5 =
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a4e8edabe40774d96b4265855d795bbcc":[3,0,1,1,4,0,6,20],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a4e93e74db1b0b3294d85e4b639e79d5f":[3,0,1,1,4,0,6,19],
 "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a6648eada44404c5cc6a46734c081dce5":[3,0,1,1,4,0,6,25],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a8b0cace9e0c4a530d431c9053a40e07d":[3,0,1,1,4,0,6,21],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a8e94891f792e1bd87f22c6254e92abe5":[3,0,1,1,4,0,6,15],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a96b1d7668b961a214bb06405d797291f":[3,0,1,1,4,0,6,13],
-"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a9881543e74cb74ebf17be4005df963ae":[3,0,1,1,4,0,6,11]
+"classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1atomic__ref__impl_3_01T_01_5_00_01DefaultOrder_00_01DefaultScope_00_01AddressSpace_01_4.html#a8b0cace9e0c4a530d431c9053a40e07d":[3,0,1,1,4,0,6,21]
 };

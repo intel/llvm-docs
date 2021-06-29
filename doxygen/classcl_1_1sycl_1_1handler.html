@@ -292,12 +292,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a110067774f86c17741d3dbcaba51de0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c">memcpy</a> (void *Dest, const void *Src, size_t Count)</td></tr>
 <tr class="memdesc:a110067774f86c17741d3dbcaba51de0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from one memory region to another, both pointed by USM pointers.  <a href="classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c">More...</a><br /></td></tr>
 <tr class="separator:a110067774f86c17741d3dbcaba51de0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a8300a06c639ca1404587dd14c55d2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a19a8300a06c639ca1404587dd14c55d2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a19a8300a06c639ca1404587dd14c55d2">copy</a> (T *Dest, const T *Src, size_t Count)</td></tr>
+<tr class="memdesc:a19a8300a06c639ca1404587dd14c55d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from one memory region to another, both pointed by USM pointers.  <a href="classcl_1_1sycl_1_1handler.html#a19a8300a06c639ca1404587dd14c55d2">More...</a><br /></td></tr>
+<tr class="separator:a19a8300a06c639ca1404587dd14c55d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abacc9b24930b0343613e9746734ec540"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540">memset</a> (void *Dest, int Value, size_t Count)</td></tr>
 <tr class="memdesc:abacc9b24930b0343613e9746734ec540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the memory pointed by a USM pointer with the value specified.  <a href="classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540">More...</a><br /></td></tr>
 <tr class="separator:abacc9b24930b0343613e9746734ec540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e350f915111b129b22eba2989382863"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863">prefetch</a> (const void *Ptr, size_t Count)</td></tr>
 <tr class="memdesc:a2e350f915111b129b22eba2989382863"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides hints to the runtime library that data should be made available on a device earlier than Unified Shared Memory would normally require it to be available.  <a href="classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863">More...</a><br /></td></tr>
 <tr class="separator:a2e350f915111b129b22eba2989382863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca90710f6b43247d881c0a8648706f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a6ca90710f6b43247d881c0a8648706f4">mem_advise</a> (const void *Ptr, size_t Length, <a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a> Advice)</td></tr>
+<tr class="memdesc:a6ca90710f6b43247d881c0a8648706f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides additional information to the underlying runtime about how different allocations are used.  <a href="classcl_1_1sycl_1_1handler.html#a6ca90710f6b43247d881c0a8648706f4">More...</a><br /></td></tr>
+<tr class="separator:a6ca90710f6b43247d881c0a8648706f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -534,14 +541,14 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00471">471</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00477">477</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00158">cl::sycl::detail::CG::BARRIER_WAITLIST</a>.</p>
+<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00159">cl::sycl::detail::CG::BARRIER_WAITLIST</a>.</p>
 
 </div>
 </div>
 <a id="afd88ec85f759e5617ebdf8b0cacfdd9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd88ec85f759e5617ebdf8b0cacfdd9a">&#9670;&nbsp;</a></span>copy() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd88ec85f759e5617ebdf8b0cacfdd9a">&#9670;&nbsp;</a></span>copy() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -593,7 +600,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 </div>
 </div>
 <a id="af3ef5dbc3cd1700248581e59a1225b21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3ef5dbc3cd1700248581e59a1225b21">&#9670;&nbsp;</a></span>copy() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ef5dbc3cd1700248581e59a1225b21">&#9670;&nbsp;</a></span>copy() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,7 +652,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 </div>
 </div>
 <a id="adfccda42f0d1957d65c2ca1e9e2d5097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfccda42f0d1957d65c2ca1e9e2d5097">&#9670;&nbsp;</a></span>copy() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adfccda42f0d1957d65c2ca1e9e2d5097">&#9670;&nbsp;</a></span>copy() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -697,7 +704,7 @@ template&lt;typename T_Src , int Dims_Src, access::mode AccessMode_Src, access::
 </div>
 </div>
 <a id="a29d402737cbdce196b0278d6b3e6de84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d402737cbdce196b0278d6b3e6de84">&#9670;&nbsp;</a></span>copy() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d402737cbdce196b0278d6b3e6de84">&#9670;&nbsp;</a></span>copy() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,7 +756,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 </div>
 </div>
 <a id="a9b5797be83894c081b6ea29f9bec85f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b5797be83894c081b6ea29f9bec85f8">&#9670;&nbsp;</a></span>copy() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5797be83894c081b6ea29f9bec85f8">&#9670;&nbsp;</a></span>copy() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,6 +802,67 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l01945">1945</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a19a8300a06c639ca1404587dd14c55d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a8300a06c639ca1404587dd14c55d2">&#9670;&nbsp;</a></span>copy() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::handler::copy </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>Dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>Src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies data from one memory region to another, both pointed by USM pointers. </p>
+<p>No operations is done if</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Count</td><td>is zero. An exception is thrown if either</td></tr>
+    <tr><td class="paramname">Dest</td><td>or</td></tr>
+    <tr><td class="paramname">Src</td><td>is nullptr. The behavior is undefined if any of the pointer parameters is invalid.</td></tr>
+    <tr><td class="paramname">Dest</td><td>is a USM pointer to the destination memory. </td></tr>
+    <tr><td class="paramname">Src</td><td>is a USM pointer to the source memory. </td></tr>
+    <tr><td class="paramname">Count</td><td>is a number of elements of type T to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02206">2206</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ade8963b9bb134c88a5801797d4f6afd9">cl::sycl::detail::memcpy()</a>.</p>
 
 </div>
 </div>
@@ -872,7 +940,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 
 <p class="reference">References <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00588">cl::sycl::queue::parallel_for()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01601">cl::sycl::ONEAPI::detail::reduSaveFinalResultToUserMemHelper()</a>, and <a class="el" href="queue_8hpp_source.html#l00394">cl::sycl::queue::single_task()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00341">cl::sycl::queue::fill()</a>, <a class="el" href="queue_8hpp_source.html#l00780">cl::sycl::queue::parallel_for()</a>, <a class="el" href="queue_8hpp_source.html#l00541">cl::sycl::queue::prefetch()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01601">cl::sycl::ONEAPI::detail::reduSaveFinalResultToUserMemHelper()</a>, and <a class="el" href="queue_8hpp_source.html#l00586">cl::sycl::queue::single_task()</a>.</p>
 
 </div>
 </div>
@@ -926,7 +994,7 @@ template&lt;typename T , int Dims, access::mode AccessMode, access::target Acces
 
 <p class="reference">References <a class="el" href="accessor_8hpp_source.html#l01521">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::get_range()</a>, and <a class="el" href="CL_2sycl_2detail_2common_8hpp_source.html#l00168">cl::sycl::detail::getSyclObjImpl()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00327">cl::sycl::queue::fill()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00328">cl::sycl::queue::fill()</a>.</p>
 
 </div>
 </div>
@@ -1057,6 +1125,54 @@ template&lt;typename FuncT &gt; </div>
 
 </div>
 </div>
+<a id="a6ca90710f6b43247d881c0a8648706f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca90710f6b43247d881c0a8648706f4">&#9670;&nbsp;</a></span>mem_advise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::handler::mem_advise </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>Ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a>&#160;</td>
+          <td class="paramname"><em>Advice</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides additional information to the underlying runtime about how different allocations are used. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Ptr</td><td>is a USM pointer to the allocation. </td></tr>
+    <tr><td class="paramname">Length</td><td>is a number of bytes in the allocation. </td></tr>
+    <tr><td class="paramname">Advice</td><td>is a device-defined advice for the specified allocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00509">509</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00168">cl::sycl::detail::CG::ADVISE_USM</a>, <a class="el" href="cg_8hpp_source.html#l00109">cl::sycl::detail::convertToExtendedMembers()</a>, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#aae0b2cf58081e898ab5b4bc4fe0abb81a5403135845d4b93afdfe8dc859c554ef">cl::sycl::detail::HANDLER_MEM_ADVICE</a>, and <a class="el" href="global__handler_8cpp_source.html#l00030">cl::sycl::detail::GlobalHandler::instance()</a>.</p>
+
+</div>
+</div>
 <a id="a110067774f86c17741d3dbcaba51de0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a110067774f86c17741d3dbcaba51de0c">&#9670;&nbsp;</a></span>memcpy()</h2>
 
@@ -1102,9 +1218,9 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00480">480</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00486">486</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00162">cl::sycl::detail::CG::COPY_USM</a>.</p>
+<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00163">cl::sycl::detail::CG::COPY_USM</a>.</p>
 
 </div>
 </div>
@@ -1153,9 +1269,9 @@ template&lt;typename FuncT &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00488">488</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00494">494</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00163">cl::sycl::detail::CG::FILL_USM</a>.</p>
+<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00164">cl::sycl::detail::CG::FILL_USM</a>.</p>
 
 </div>
 </div>
@@ -2257,11 +2373,11 @@ template&lt;typename KernelName  = detail::auto_name, typename KernelType , int 
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00496">496</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8cpp_source.html#l00502">502</a> of file <a class="el" href="handler_8cpp_source.html">handler.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00164">cl::sycl::detail::CG::PREFETCH_USM</a>.</p>
+<p class="reference">References <a class="el" href="cg_8hpp_source.html#l00165">cl::sycl::detail::CG::PREFETCH_USM</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00369">cl::sycl::queue::prefetch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="queue_8hpp_source.html#l00529">cl::sycl::queue::prefetch()</a>.</p>
 
 </div>
 </div>
@@ -2695,7 +2811,7 @@ template&lt;typename T , int Dims, access::mode AccessMode, access::target Acces
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02303">2303</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02324">2324</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2721,7 +2837,7 @@ template&lt;typename DataT , int Dims, access::mode AccMode, access::target AccT
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02276">2276</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02297">2297</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2815,7 +2931,7 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02281">2281</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02302">2302</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2839,7 +2955,7 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02271">2271</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02292">2292</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2863,7 +2979,7 @@ template&lt;typename DataT , int Dimensions, access::mode AccessMode, access::ta
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02284">2284</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02305">2305</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2889,7 +3005,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02289">2289</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02310">2310</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>
@@ -2913,7 +3029,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02283">2283</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02304">2304</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
 
 </div>
 </div>

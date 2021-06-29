@@ -9,11 +9,13 @@ var cg_8hpp =
     [ "CGCopyUSM", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM.html", "classcl_1_1sycl_1_1detail_1_1CGCopyUSM" ],
     [ "CGFillUSM", "classcl_1_1sycl_1_1detail_1_1CGFillUSM.html", "classcl_1_1sycl_1_1detail_1_1CGFillUSM" ],
     [ "CGPrefetchUSM", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM.html", "classcl_1_1sycl_1_1detail_1_1CGPrefetchUSM" ],
+    [ "CGAdviseUSM", "classcl_1_1sycl_1_1detail_1_1CGAdviseUSM.html", "classcl_1_1sycl_1_1detail_1_1CGAdviseUSM" ],
     [ "CGInteropTask", "classcl_1_1sycl_1_1detail_1_1CGInteropTask.html", "classcl_1_1sycl_1_1detail_1_1CGInteropTask" ],
     [ "CGHostTask", "classcl_1_1sycl_1_1detail_1_1CGHostTask.html", "classcl_1_1sycl_1_1detail_1_1CGHostTask" ],
     [ "CGBarrier", "classcl_1_1sycl_1_1detail_1_1CGBarrier.html", "classcl_1_1sycl_1_1detail_1_1CGBarrier" ],
     [ "ExtendedMembersType", "cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81", [
-      [ "HANDLER_KERNEL_BUNDLE", "cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81a68ff0837c698d19a4bc3a0f9fd0beca2", null ]
+      [ "HANDLER_KERNEL_BUNDLE", "cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81a68ff0837c698d19a4bc3a0f9fd0beca2", null ],
+      [ "HANDLER_MEM_ADVICE", "cg_8hpp.html#aae0b2cf58081e898ab5b4bc4fe0abb81a5403135845d4b93afdfe8dc859c554ef", null ]
     ] ],
     [ "convertToExtendedMembers", "cg_8hpp.html#afb91e2386dd0134595dc05e0a1d721f6", null ],
     [ "getCGTypeVersion", "cg_8hpp.html#a6391752349a8ab0014fac6433703455b", null ],
