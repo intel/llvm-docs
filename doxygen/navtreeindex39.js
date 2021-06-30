@@ -1,6 +1,5 @@
 var NAVTREEINDEX39 =
 {
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01int_00_01half_01_4.html":[3,0,1,1,1,0,1,0,1,0,121],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01int_00_01half_01_4.html#a5ea48d4ad19f6d7c643ff2b61c65f233":[3,0,1,1,1,0,1,0,1,0,121,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01int_00_01int_01_4.html":[3,0,1,1,1,0,1,0,1,0,122],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01int_00_01int_01_4.html#a4ae4e9f77d38f6921b17c2d3d73ccdc5":[3,0,1,1,1,0,1,0,1,0,122,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX39 =
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01accessor_3_01DataT_00_01Dimensions_00_01Ae0f41ff8c81b179c6cc8a836c9edd946.html#a83ec2edecfa68fcbdae3a77433c3815e":[3,0,1,1,61,0],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dimensions_00_01AllocatorT_01_4_01_4.html":[3,0,1,1,62],
 "structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dimensions_00_01AllocatorT_01_4_01_4.html#a76ab2fc4ad69532ed74f891394236839":[3,0,1,1,62,0],
-"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01context_01_4.html":[3,0,1,1,63]
+"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01context_01_4.html":[3,0,1,1,63],
+"structcl_1_1sycl_1_1interop_3_01backend_1_1opencl_00_01context_01_4.html#a6d51bb6c2bc6c42dcfb9460fe6af8ce1":[3,0,1,1,63,0]
 };

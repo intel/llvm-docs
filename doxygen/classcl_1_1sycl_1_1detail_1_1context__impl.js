@@ -1,7 +1,7 @@
 var classcl_1_1sycl_1_1detail_1_1context__impl =
 [
     [ "context_impl", "classcl_1_1sycl_1_1detail_1_1context__impl.html#abdcdaeb8aa6f3aa4ab98f7ccdf6a1a46", null ],
-    [ "context_impl", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ac6822f4a43ced05fedb81229f6a9adda", null ],
+    [ "context_impl", "classcl_1_1sycl_1_1detail_1_1context__impl.html#aeb6acf21afa02180a2c5fcea5a842f8d", null ],
     [ "context_impl", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ae8217e233330069fa3c208bef3b6dde6", null ],
     [ "~context_impl", "classcl_1_1sycl_1_1detail_1_1context__impl.html#afcc778077baac5ed5fcb16427103cda7", null ],
     [ "get", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ac3486d70ee20b8faea1ea43459ed8b4f", null ],
@@ -9,7 +9,7 @@ var classcl_1_1sycl_1_1detail_1_1context__impl =
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1context__impl.html#aa160ddd07c0e7c7da0d4a55e7186af9f", null ],
     [ "get_property", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a88c0dd481b6f32ff80596019de0b5539", null ],
     [ "getCachedLibPrograms", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a5225eb2d2abe26f3918db08f41d03897", null ],
-    [ "getDevices", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a26b6a9e907f22be2c65878a3924306cd", null ],
+    [ "getDevices", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ad040c4b7e3c29a638e5bd9a9f3b2efee", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a7c137e32f17e49485022438ab631dbd9", null ],
     [ "getHandleRef", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a7bfffd527d49147e899e285cecde4148", null ],
     [ "getKernelProgramCache", "classcl_1_1sycl_1_1detail_1_1context__impl.html#adee09e06ee1a7f2020f365e8bc786597", null ],
@@ -17,6 +17,6 @@ var classcl_1_1sycl_1_1detail_1_1context__impl =
     [ "getPlatformImpl", "classcl_1_1sycl_1_1detail_1_1context__impl.html#aaed79a19cb0b34298358c2f3ce7f7933", null ],
     [ "getPlugin", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ae9bc9af4657b84233a4d1139260725b2", null ],
     [ "has_property", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a9b51c80def5e4f39ce1e56c76af69b74", null ],
-    [ "hasDevice", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a120caa4996ffc7245321b146551c3e4e", null ],
+    [ "hasDevice", "classcl_1_1sycl_1_1detail_1_1context__impl.html#ad5f57291f43531fd7077bc17c7ec932b", null ],
     [ "is_host", "classcl_1_1sycl_1_1detail_1_1context__impl.html#a0ba80013dfcb22a4aec8cbad60d77bff", null ]
 ];

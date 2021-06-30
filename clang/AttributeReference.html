@@ -109,7 +109,7 @@
 <li><p><a class="reference internal" href="#named-sub-group-size" id="id353">named_sub_group_size</a></p></li>
 <li><p><a class="reference internal" href="#no-builtin" id="id354">no_builtin</a></p></li>
 <li><p><a class="reference internal" href="#no-caller-saved-registers" id="id355">no_caller_saved_registers</a></p></li>
-<li><p><a class="reference internal" href="#no-profile" id="id356">no_profile</a></p></li>
+<li><p><a class="reference internal" href="#no-profile-instrument-function" id="id356">no_profile_instrument_function</a></p></li>
 <li><p><a class="reference internal" href="#no-sanitize" id="id357">no_sanitize</a></p></li>
 <li><p><a class="reference internal" href="#no-sanitize-address-no-address-safety-analysis" id="id358">no_sanitize_address, no_address_safety_analysis</a></p></li>
 <li><p><a class="reference internal" href="#no-sanitize-memory" id="id359">no_sanitize_memory</a></p></li>
@@ -4394,8 +4394,8 @@ register parameters. However, it will not assume any scratch registers and
 should save and restore any modified registers except for ECX and EDX.</p>
 </div></blockquote>
 </section>
-<section id="no-profile">
-<h3><a class="toc-backref" href="#id356">no_profile</a><a class="headerlink" href="#no-profile" title="Permalink to this headline">¶</a></h3>
+<section id="no-profile-instrument-function">
+<h3><a class="toc-backref" href="#id356">no_profile_instrument_function</a><a class="headerlink" href="#no-profile-instrument-function" title="Permalink to this headline">¶</a></h3>
 <table class="docutils align-default" id="id85">
 <caption><span class="caption-text">Supported Syntaxes</span><a class="headerlink" href="#id85" title="Permalink to this table">¶</a></caption>
 <colgroup>
@@ -4418,9 +4418,9 @@ should save and restore any modified registers except for ECX and EDX.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">no_profile</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">clang::no_profile</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">clang::no_profile</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">no_profile_instrument_function</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gnu::no_profile_instrument_function</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gnu::no_profile_instrument_function</span></code></p></td>
 <td></td>
 <td></td>
 <td></td>
@@ -4428,9 +4428,9 @@ should save and restore any modified registers except for ECX and EDX.</p>
 </tr>
 </tbody>
 </table>
-<p>Use the <code class="docutils literal notranslate"><span class="pre">no_profile</span></code> attribute on a function declaration to denote that the
-compiler should not instrument the function with profile-related
-instrumentation, such as via the
+<p>Use the <code class="docutils literal notranslate"><span class="pre">no_profile_instrument_function</span></code> attribute on a function declaration
+to denote that the compiler should not instrument the function with
+profile-related instrumentation, such as via the
 <code class="docutils literal notranslate"><span class="pre">-fprofile-generate</span></code> / <code class="docutils literal notranslate"><span class="pre">-fprofile-instr-generate</span></code> /
 <code class="docutils literal notranslate"><span class="pre">-fcs-profile-generate</span></code> / <code class="docutils literal notranslate"><span class="pre">-fprofile-arcs</span></code> flags.</p>
 </section>

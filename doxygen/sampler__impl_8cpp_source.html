@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('sampler__impl_8cpp_source.html',''); i
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a33f1e852edc3df20a2357cc4d4c324de">   41</a></span>&#160;<a class="code" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html#a33f1e852edc3df20a2357cc4d4c324de">sampler_impl::~sampler_impl</a>() {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  std::lock_guard&lt;mutex_class&gt; Lock(MMutex);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  std::lock_guard&lt;std::mutex&gt; Lock(MMutex);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;Iter : MContextToSampler) {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// TODO catch an exception and add it to the list of asynchronous exceptions</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Iter.first)-&gt;getPlugin();</div>
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('sampler__impl_8cpp_source.html',''); i
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html#ac0d5af410f3aad3a5adb19632c00b388">   50</a></span>&#160;<a class="code" href="struct__pi__sampler.html">RT::PiSampler</a> <a class="code" href="classcl_1_1sycl_1_1detail_1_1sampler__impl.html#ac0d5af410f3aad3a5adb19632c00b388">sampler_impl::getOrCreateSampler</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context) {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::lock_guard&lt;mutex_class&gt; Lock(MMutex);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::lock_guard&lt;std::mutex&gt; Lock(MMutex);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">auto</span> It = MContextToSampler.find(Context);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (It != MContextToSampler.end())</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">return</span> It-&gt;second;</div>
@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('sampler__impl_8cpp_source.html',''); i
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                errcode_ret);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a7c46fe0e8f5bc50562cb5a5ec60accd4">checkPiResult</a>(errcode_ret);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  std::lock_guard&lt;mutex_class&gt; Lock(MMutex);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  std::lock_guard&lt;std::mutex&gt; Lock(MMutex);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  MContextToSampler[Context] = resultSampler;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">return</span> resultSampler;</div>

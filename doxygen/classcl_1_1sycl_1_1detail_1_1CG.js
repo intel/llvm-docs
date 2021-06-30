@@ -22,16 +22,16 @@ var classcl_1_1sycl_1_1detail_1_1CG =
       [ "CODEPLAY_HOST_TASK", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ad9c25fb4fc5b6b68246f8f590082e061", null ],
       [ "ADVISE_USM", "classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ae67cc669236c0c3ac66e51b043e59ddc", null ]
     ] ],
-    [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ab93fcd8a7fdfe7e29a4306d663b8fa62", null ],
+    [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ab30bfbde05320cc0024ac30dbfff794e", null ],
     [ "CG", "classcl_1_1sycl_1_1detail_1_1CG.html#aea503c1c8f0394eede77a1fdf985d02a", null ],
     [ "~CG", "classcl_1_1sycl_1_1detail_1_1CG.html#ad909df45d32dc55331140b813f60700b", null ],
     [ "getExtendedMembers", "classcl_1_1sycl_1_1detail_1_1CG.html#a714235046eae08d1898eea0be1f9bd4a", null ],
     [ "getType", "classcl_1_1sycl_1_1detail_1_1CG.html#a41fca13e6a5f79e319806715fa48b743", null ],
     [ "getVersion", "classcl_1_1sycl_1_1detail_1_1CG.html#ac6f98fbf6b1b5610be92d4d36f9dde6b", null ],
     [ "MColumn", "classcl_1_1sycl_1_1detail_1_1CG.html#a6628c8c2ca6833f9cef8a650361bccda", null ],
-    [ "MEvents", "classcl_1_1sycl_1_1detail_1_1CG.html#aed39ca43cc8e1592955f1d425e641acf", null ],
-    [ "MFileName", "classcl_1_1sycl_1_1detail_1_1CG.html#a5092dfc352e9f617c2bf1f3e76c0d83a", null ],
-    [ "MFunctionName", "classcl_1_1sycl_1_1detail_1_1CG.html#abac8209b68b492b72b181b9a0fec5f0d", null ],
+    [ "MEvents", "classcl_1_1sycl_1_1detail_1_1CG.html#a2ce4b57bd865e790bbae3bd55968d45c", null ],
+    [ "MFileName", "classcl_1_1sycl_1_1detail_1_1CG.html#aeac90b27f5b6ecf8a2a68d6fa4071c22", null ],
+    [ "MFunctionName", "classcl_1_1sycl_1_1detail_1_1CG.html#a1ebf84434835b1acce037adbfd437db3", null ],
     [ "MLine", "classcl_1_1sycl_1_1detail_1_1CG.html#adac17762f7e2c5c21d19e554cc956c51", null ],
-    [ "MRequirements", "classcl_1_1sycl_1_1detail_1_1CG.html#a5ff4bd61baf6903b250a64a9dc207245", null ]
+    [ "MRequirements", "classcl_1_1sycl_1_1detail_1_1CG.html#ae9b1c3e0e384bcef0a9528132434c617", null ]
 ];

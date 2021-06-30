@@ -1,7 +1,7 @@
 var kernel__info_8hpp =
 [
     [ "get_kernel_info", "structcl_1_1sycl_1_1detail_1_1get__kernel__info.html", null ],
-    [ "get_kernel_info< string_class, Param >", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01string__class_00_01Param_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01string__class_00_01Param_01_4" ],
+    [ "get_kernel_info< std::string, Param >", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01std_1_1string_00_01Param_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01std_1_1string_00_01Param_01_4" ],
     [ "get_kernel_info< cl_uint, Param >", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01cl__uint_00_01Param_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01cl__uint_00_01Param_01_4" ],
     [ "IsWorkGroupInfo", "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo.html", null ],
     [ "IsWorkGroupInfo< info::kernel_device_specific::global_work_size >", "structcl_1_1sycl_1_1detail_1_1IsWorkGroupInfo_3_01info_1_1kernel__device__specific_1_1global__work__size_01_4.html", null ],

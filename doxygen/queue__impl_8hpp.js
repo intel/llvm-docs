@@ -1,7 +1,7 @@
 var queue__impl_8hpp =
 [
     [ "queue_impl", "classcl_1_1sycl_1_1detail_1_1queue__impl.html", "classcl_1_1sycl_1_1detail_1_1queue__impl" ],
-    [ "DeviceImplPtr", "queue__impl_8hpp.html#a3b78f8c517b1d76ecd7b0eb46ec2056e", null ],
+    [ "DeviceImplPtr", "queue__impl_8hpp.html#ad83bb25e5e73430df5add1479a58ab85", null ],
     [ "CUDAContextT", "queue__impl_8hpp.html#a3e65b92996d59ada3452ecba0fd88524", [
       [ "primary", "queue__impl_8hpp.html#a3e65b92996d59ada3452ecba0fd88524a386bba5a5dc4fac215c9cf0b9a29b352", null ],
       [ "custom", "queue__impl_8hpp.html#a3e65b92996d59ada3452ecba0fd88524a8b9035807842a4e4dbe009f3f1478127", null ]

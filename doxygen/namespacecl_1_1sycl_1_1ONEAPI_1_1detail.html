@@ -219,15 +219,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a560b972e421223834dbcdaa16ed41d3e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; Reduction::is_usm &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a560b972e421223834dbcdaa16ed41d3e">reduSaveFinalResultToUserMem</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, Reduction &amp;Redu)</td></tr>
 <tr class="memdesc:a560b972e421223834dbcdaa16ed41d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the final reduction result kept in read-write accessor to user's USM memory.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a560b972e421223834dbcdaa16ed41d3e">More...</a><br /></td></tr>
 <tr class="separator:a560b972e421223834dbcdaa16ed41d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad9c747bcc0465762c6b4cb4fbd74347"><td class="memTemplParams" colspan="2">template&lt;typename... Reduction, size_t... Is&gt; </td></tr>
-<tr class="memitem:aad9c747bcc0465762c6b4cb4fbd74347"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aad9c747bcc0465762c6b4cb4fbd74347">reduSaveFinalResultToUserMem</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; Queue, bool IsHost, std::tuple&lt; Reduction... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
-<tr class="memdesc:aad9c747bcc0465762c6b4cb4fbd74347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates additional kernels that copy the accumulated/final results from reductions accessors to either user's accessor or user's USM memory.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#aad9c747bcc0465762c6b4cb4fbd74347">More...</a><br /></td></tr>
-<tr class="separator:aad9c747bcc0465762c6b4cb4fbd74347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a4ff74e6796c7961ff361662523715"><td class="memTemplParams" colspan="2">template&lt;typename Reduction , typename... RestT&gt; </td></tr>
-<tr class="memitem:a32a4ff74e6796c7961ff361662523715"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!Reduction::is_usm &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a32a4ff74e6796c7961ff361662523715">reduSaveFinalResultToUserMemHelper</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;Events, <a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; Queue, bool IsHost, Reduction &amp;Redu, RestT... Rest)</td></tr>
-<tr class="separator:a32a4ff74e6796c7961ff361662523715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a217c7e07fa61a2c040a362501711afb4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a217c7e07fa61a2c040a362501711afb4">reduGetMaxWGSize</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
-<tr class="separator:a217c7e07fa61a2c040a362501711afb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113b3861f25bcaaea711658a82e9dd40"><td class="memTemplParams" colspan="2">template&lt;typename... Reduction, size_t... Is&gt; </td></tr>
+<tr class="memitem:a113b3861f25bcaaea711658a82e9dd40"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a113b3861f25bcaaea711658a82e9dd40">reduSaveFinalResultToUserMem</a> (std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; Queue, bool IsHost, std::tuple&lt; Reduction... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
+<tr class="memdesc:a113b3861f25bcaaea711658a82e9dd40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates additional kernels that copy the accumulated/final results from reductions accessors to either user's accessor or user's USM memory.  <a href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a113b3861f25bcaaea711658a82e9dd40">More...</a><br /></td></tr>
+<tr class="separator:a113b3861f25bcaaea711658a82e9dd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e87ef5886bcf8dfc37baf742cbd101a"><td class="memTemplParams" colspan="2">template&lt;typename Reduction , typename... RestT&gt; </td></tr>
+<tr class="memitem:a6e87ef5886bcf8dfc37baf742cbd101a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!Reduction::is_usm &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a6e87ef5886bcf8dfc37baf742cbd101a">reduSaveFinalResultToUserMemHelper</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;Events, std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; Queue, bool IsHost, Reduction &amp;Redu, RestT... Rest)</td></tr>
+<tr class="separator:a6e87ef5886bcf8dfc37baf742cbd101a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46e819fac9a3e2ef5c5708b81bf770a4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a46e819fac9a3e2ef5c5708b81bf770a4">reduGetMaxWGSize</a> (std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
+<tr class="separator:a46e819fac9a3e2ef5c5708b81bf770a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c2751ba7d3012d52ddb9168d34d7a1f"><td class="memTemplParams" colspan="2">template&lt;typename... ReductionT, size_t... Is&gt; </td></tr>
 <tr class="memitem:a1c2751ba7d3012d52ddb9168d34d7a1f"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a1c2751ba7d3012d52ddb9168d34d7a1f">reduGetMemPerWorkItem</a> (std::tuple&lt; ReductionT... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt;)</td></tr>
 <tr class="separator:a1c2751ba7d3012d52ddb9168d34d7a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,11 +343,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a444b5c315d7b252cb7b436565b1dc0e9"><td class="memTemplParams" colspan="2">template&lt;typename KernelName , typename KernelType , bool UniformPow2WG, bool IsOneWG, typename... Reductions, size_t... Is&gt; </td></tr>
 <tr class="memitem:a444b5c315d7b252cb7b436565b1dc0e9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a444b5c315d7b252cb7b436565b1dc0e9">reduAuxCGFuncImpl</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH, size_t NWorkItems, size_t NWorkGroups, size_t WGSize, std::tuple&lt; Reductions... &gt; &amp;ReduTuple, std::index_sequence&lt; Is... &gt; ReduIndices)</td></tr>
 <tr class="separator:a444b5c315d7b252cb7b436565b1dc0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9101557e18388ef454a9a352f1895626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a9101557e18388ef454a9a352f1895626">reduSaveFinalResultToUserMemHelper</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;, <a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;, bool)</td></tr>
-<tr class="separator:a9101557e18388ef454a9a352f1895626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f46a977bc28b7583d1f4c612167b9b7"><td class="memTemplParams" colspan="2">template&lt;typename Reduction , typename... RestT&gt; </td></tr>
-<tr class="memitem:a7f46a977bc28b7583d1f4c612167b9b7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; Reduction::is_usm &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a7f46a977bc28b7583d1f4c612167b9b7">reduSaveFinalResultToUserMemHelper</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;Events, <a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; Queue, bool IsHost, Reduction &amp;, RestT... Rest)</td></tr>
-<tr class="separator:a7f46a977bc28b7583d1f4c612167b9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20623b1b2f92cd97ef827fb4f2b2f963"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a20623b1b2f92cd97ef827fb4f2b2f963">reduSaveFinalResultToUserMemHelper</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;, std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;, bool)</td></tr>
+<tr class="separator:a20623b1b2f92cd97ef827fb4f2b2f963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf4ba2ad31681685f15203c4d67e621"><td class="memTemplParams" colspan="2">template&lt;typename Reduction , typename... RestT&gt; </td></tr>
+<tr class="memitem:abdf4ba2ad31681685f15203c4d67e621"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; Reduction::is_usm &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#abdf4ba2ad31681685f15203c4d67e621">reduSaveFinalResultToUserMemHelper</a> (std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; &amp;Events, std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt; Queue, bool IsHost, Reduction &amp;, RestT... Rest)</td></tr>
+<tr class="separator:abdf4ba2ad31681685f15203c4d67e621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a1cc1b337dfe646c2175ca2b66d0dd4"><td class="memTemplParams" colspan="2">template&lt;typename Reduction &gt; </td></tr>
 <tr class="memitem:a5a1cc1b337dfe646c2175ca2b66d0dd4"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a5a1cc1b337dfe646c2175ca2b66d0dd4">reduGetMemPerWorkItemHelper</a> (Reduction &amp;)</td></tr>
 <tr class="separator:a5a1cc1b337dfe646c2175ca2b66d0dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,8 +358,8 @@ Functions</h2></td></tr>
 <tr class="separator:a5e4d176a945d5620dea49c45f3ca79e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49cd0f815db7ad9f93f4db1c1e94bf9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a15e0fc514ad921d26fe442fe161a8f13">filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a49cd0f815db7ad9f93f4db1c1e94bf9e">create_filter</a> (const std::string &amp;Input)</td></tr>
 <tr class="separator:a49cd0f815db7ad9f93f4db1c1e94bf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3955af96c1019ee7650326f74848e548"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a3955af96c1019ee7650326f74848e548">reduGetMaxWGSize</a> (<a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
-<tr class="separator:a3955af96c1019ee7650326f74848e548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9a24b0e04c0e41822d14ba7cf869c95"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ae9a24b0e04c0e41822d14ba7cf869c95">reduGetMaxWGSize</a> (std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt; Queue, size_t LocalMemBytesPerWorkItem)</td></tr>
+<tr class="separator:ae9a24b0e04c0e41822d14ba7cf869c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a15e0fc514ad921d26fe442fe161a8f13"></a>
@@ -1855,7 +1855,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00826">826</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00042">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
 
 </div>
 </div>
@@ -1901,7 +1901,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00961">961</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00044">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00042">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
 
 </div>
 </div>
@@ -1953,7 +1953,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, typename... Re
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01442">1442</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00044">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, and <a class="el" href="nd__range_8hpp_source.html#l00042">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>.</p>
 
 </div>
 </div>
@@ -2065,7 +2065,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00775">775</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l01219">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00042">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l01219">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -2121,7 +2121,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00865">865</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="handler_8hpp_source.html#l01219">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00346">cl::sycl::ONEAPI::reduce()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00044">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="handler_8hpp_source.html#l01219">cl::sycl::handler::parallel_for()</a>, and <a class="el" href="ONEAPI_2group__algorithm_8hpp_source.html#l00346">cl::sycl::ONEAPI::reduce()</a>.</p>
 
 </div>
 </div>
@@ -2182,7 +2182,7 @@ template&lt;typename KernelName , typename KernelType , int Dims, class Reductio
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00903">903</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l01219">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">References <a class="el" href="nd__range_8hpp_source.html#l00044">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00042">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, and <a class="el" href="handler_8hpp_source.html#l01219">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -2234,7 +2234,7 @@ template&lt;typename KernelName , bool Pow2WG, bool IsOneWG, typename KernelType
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01380">1380</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01214">callReduUserKernelFunc()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01206">createReducers()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01154">createReduLocalAccs()</a>, <a class="el" href="nd__range_8hpp_source.html#l00039">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00037">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01199">getInitToIdentityProperties()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01193">getReduBOPs()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01186">getReduIdentities()</a>, and <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01267">reduceReduLocalAccs()</a>.</p>
+<p class="reference">References <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01214">callReduUserKernelFunc()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01206">createReducers()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01154">createReduLocalAccs()</a>, <a class="el" href="nd__range_8hpp_source.html#l00044">cl::sycl::nd_range&lt; dimensions &gt;::get_group_range()</a>, <a class="el" href="nd__range_8hpp_source.html#l00042">cl::sycl::nd_range&lt; dimensions &gt;::get_local_range()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01199">getInitToIdentityProperties()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01193">getReduBOPs()</a>, <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01186">getReduIdentities()</a>, and <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01267">reduceReduLocalAccs()</a>.</p>
 
 </div>
 </div>
@@ -2276,8 +2276,8 @@ template&lt;typename KernelName , bool Pow2WG, bool IsOneWG, typename KernelType
 
 </div>
 </div>
-<a id="a217c7e07fa61a2c040a362501711afb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a217c7e07fa61a2c040a362501711afb4">&#9670;&nbsp;</a></span>reduGetMaxWGSize() <span class="overload">[1/2]</span></h2>
+<a id="a46e819fac9a3e2ef5c5708b81bf770a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46e819fac9a3e2ef5c5708b81bf770a4">&#9670;&nbsp;</a></span>reduGetMaxWGSize() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2285,7 +2285,7 @@ template&lt;typename KernelName , bool Pow2WG, bool IsOneWG, typename KernelType
         <tr>
           <td class="memname">size_t cl::sycl::ONEAPI::detail::reduGetMaxWGSize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Queue</em>, </td>
         </tr>
         <tr>
@@ -2302,12 +2302,12 @@ template&lt;typename KernelName , bool Pow2WG, bool IsOneWG, typename KernelType
       </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01402">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01403">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
-<a id="a3955af96c1019ee7650326f74848e548"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3955af96c1019ee7650326f74848e548">&#9670;&nbsp;</a></span>reduGetMaxWGSize() <span class="overload">[2/2]</span></h2>
+<a id="ae9a24b0e04c0e41822d14ba7cf869c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a24b0e04c0e41822d14ba7cf869c95">&#9670;&nbsp;</a></span>reduGetMaxWGSize() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2315,7 +2315,7 @@ template&lt;typename KernelName , bool Pow2WG, bool IsOneWG, typename KernelType
         <tr>
           <td class="memname">size_t cl::sycl::ONEAPI::detail::reduGetMaxWGSize </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">sycl::detail::queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Queue</em>, </td>
         </tr>
         <tr>
@@ -2366,11 +2366,11 @@ template&lt;typename... ReductionT, size_t... Is&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01646">1646</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01647">1647</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01640">reduGetMemPerWorkItemHelper()</a>.</p>
+<p class="reference">References <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01641">reduGetMemPerWorkItemHelper()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01513">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01514">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
@@ -2392,7 +2392,7 @@ template&lt;typename Reduction &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01635">1635</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01636">1636</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -2424,9 +2424,9 @@ template&lt;typename Reduction , typename... RestT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01640">1640</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01641">1641</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01646">reduGetMemPerWorkItem()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01647">reduGetMemPerWorkItem()</a>.</p>
 
 </div>
 </div>
@@ -2463,7 +2463,7 @@ template&lt;typename KernelName , class Reduction &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01121">1121</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01920">cl::sycl::handler::copy()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01923">cl::sycl::handler::copy()</a>.</p>
 
 </div>
 </div>
@@ -2503,8 +2503,8 @@ template&lt;typename KernelName , class Reduction &gt; </div>
 
 </div>
 </div>
-<a id="aad9c747bcc0465762c6b4cb4fbd74347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad9c747bcc0465762c6b4cb4fbd74347">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMem() <span class="overload">[3/3]</span></h2>
+<a id="a113b3861f25bcaaea711658a82e9dd40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113b3861f25bcaaea711658a82e9dd40">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMem() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2512,9 +2512,9 @@ template&lt;typename KernelName , class Reduction &gt; </div>
 template&lt;typename... Reduction, size_t... Is&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; cl::sycl::ONEAPI::detail::reduSaveFinalResultToUserMem </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1event.html">event</a> &gt; cl::sycl::ONEAPI::detail::reduSaveFinalResultToUserMem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Queue</em>, </td>
         </tr>
         <tr>
@@ -2546,16 +2546,16 @@ template&lt;typename... Reduction, size_t... Is&gt; </div>
 <p>Creates additional kernels that copy the accumulated/final results from reductions accessors to either user's accessor or user's USM memory. </p>
 <p>Returns the event to the last kernel copying data or nullptr if no additional kernels created. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01624">1624</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01625">1625</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01592">reduSaveFinalResultToUserMemHelper()</a>.</p>
+<p class="reference">References <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01593">reduSaveFinalResultToUserMemHelper()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01513">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01514">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>
-<a id="a9101557e18388ef454a9a352f1895626"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9101557e18388ef454a9a352f1895626">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMemHelper() <span class="overload">[1/3]</span></h2>
+<a id="a20623b1b2f92cd97ef827fb4f2b2f963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20623b1b2f92cd97ef827fb4f2b2f963">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMemHelper() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2572,7 +2572,7 @@ template&lt;typename... Reduction, size_t... Is&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -2594,12 +2594,12 @@ template&lt;typename... Reduction, size_t... Is&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01587">1587</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01588">1588</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a7f46a977bc28b7583d1f4c612167b9b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f46a977bc28b7583d1f4c612167b9b7">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMemHelper() <span class="overload">[2/3]</span></h2>
+<a id="abdf4ba2ad31681685f15203c4d67e621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdf4ba2ad31681685f15203c4d67e621">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMemHelper() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2615,7 +2615,7 @@ template&lt;typename Reduction , typename... RestT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Queue</em>, </td>
         </tr>
         <tr>
@@ -2644,14 +2644,14 @@ template&lt;typename Reduction , typename... RestT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01592">1592</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01593">1593</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01624">reduSaveFinalResultToUserMem()</a>, and <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01601">reduSaveFinalResultToUserMemHelper()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01625">reduSaveFinalResultToUserMem()</a>, and <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01602">reduSaveFinalResultToUserMemHelper()</a>.</p>
 
 </div>
 </div>
-<a id="a32a4ff74e6796c7961ff361662523715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32a4ff74e6796c7961ff361662523715">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMemHelper() <span class="overload">[3/3]</span></h2>
+<a id="a6e87ef5886bcf8dfc37baf742cbd101a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e87ef5886bcf8dfc37baf742cbd101a">&#9670;&nbsp;</a></span>reduSaveFinalResultToUserMemHelper() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2667,7 +2667,7 @@ template&lt;typename Reduction , typename... RestT&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacecl_1_1sycl.html#a145741acbe1817e4b03338ffcfd21012">shared_ptr_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classcl_1_1sycl_1_1detail_1_1queue__impl.html">detail::queue_impl</a> &gt;&#160;</td>
           <td class="paramname"><em>Queue</em>, </td>
         </tr>
         <tr>
@@ -2696,9 +2696,9 @@ template&lt;typename Reduction , typename... RestT&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01601">1601</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01602">1602</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01920">cl::sycl::handler::copy()</a>, <a class="el" href="handler_8hpp_source.html#l01129">cl::sycl::handler::depends_on()</a>, and <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01592">reduSaveFinalResultToUserMemHelper()</a>.</p>
+<p class="reference">References <a class="el" href="handler_8hpp_source.html#l01923">cl::sycl::handler::copy()</a>, <a class="el" href="handler_8hpp_source.html#l01129">cl::sycl::handler::depends_on()</a>, and <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01593">reduSaveFinalResultToUserMemHelper()</a>.</p>
 
 </div>
 </div>
@@ -2770,9 +2770,9 @@ template&lt;typename TupleT , std::size_t... Is&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01655">1655</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l01656">1656</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01513">cl::sycl::handler::parallel_for()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="handler_8hpp_source.html#l01514">cl::sycl::handler::parallel_for()</a>.</p>
 
 </div>
 </div>

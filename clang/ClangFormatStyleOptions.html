@@ -2193,6 +2193,21 @@ instead of as function calls.</p>
 </div>
 <p>For example: BOOST_FOREACH.</p>
 </dd>
+<dt><strong>IfMacros</strong> (<code class="docutils literal notranslate"><span class="pre">std::vector&lt;std::string&gt;</span></code>)</dt><dd><p>A vector of macros that should be interpreted as conditionals
+instead of as function calls.</p>
+<p>These are expected to be macros of the form:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span><span class="p">(...)</span>
+  <span class="o">&lt;</span><span class="n">conditional</span><span class="o">-</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="k">else</span> <span class="n">IF</span><span class="p">(...)</span>
+  <span class="o">&lt;</span><span class="n">conditional</span><span class="o">-</span><span class="n">body</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In the .clang-format configuration file, this can be configured like:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">IfMacros</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;IF&#39;</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>For example: <a class="reference external" href="https://github.com/capnproto/capnproto/blob/master/kjdoc/tour.md#maybes">KJ_IF_MAYBE</a></p>
+</dd>
 <dt><strong>IncludeBlocks</strong> (<code class="docutils literal notranslate"><span class="pre">IncludeBlocksStyle</span></code>)</dt><dd><p>Dependent on the value, multiple <code class="docutils literal notranslate"><span class="pre">#include</span></code> blocks can be sorted
 as one and divided based on category.</p>
 <p>Possible values:</p>
@@ -2587,6 +2602,37 @@ Always use double quotes.</p>
 </pre></div>
 </div>
 </dd>
+<dt><strong>LambdaBodyIndentation</strong> (<code class="docutils literal notranslate"><span class="pre">LambdaBodyIndentationKind</span></code>)</dt><dd><p>The indentation style of lambda bodies. <code class="docutils literal notranslate"><span class="pre">Signature</span></code> (the default)
+causes the lambda body to be indented one additional level relative to
+the indentation level of the signature. <code class="docutils literal notranslate"><span class="pre">OuterScope</span></code> forces the lambda
+body to be indented one additional level relative to the parent scope
+containing the lambda signature. For callback-heavy code, it may improve
+readability to have the signature indented two levels and to use
+<code class="docutils literal notranslate"><span class="pre">OuterScope</span></code>. The KJ style guide requires <code class="docutils literal notranslate"><span class="pre">OuterScope</span></code>.
+<a class="reference external" href="https://github.com/capnproto/capnproto/blob/master/kjdoc/style-guide.md">KJ style guide</a></p>
+<p>Possible values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">LBI_Signature</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Signature</span></code>)
+Align lambda body relative to the lambda signature. This is the default.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">someMethod</span><span class="p">(</span>
+    <span class="p">[](</span><span class="n">SomeReallyLongLambdaSignatureArgument</span> <span class="n">foo</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">});</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LBI_OuterScope</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">OuterScope</span></code>)
+Align lambda body relative to the indentation level of the outer scope
+the lambda signature resides in.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">someMethod</span><span class="p">(</span>
+    <span class="p">[](</span><span class="n">SomeReallyLongLambdaSignatureArgument</span> <span class="n">foo</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
 <dt><strong>Language</strong> (<code class="docutils literal notranslate"><span class="pre">LanguageKind</span></code>)</dt><dd><p>Language, this format style is targeted at.</p>
 <p>Possible values:</p>
 <ul class="simple">
@@ -2600,6 +2646,8 @@ Should be used for C#.</p></li>
 Should be used for Java.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LK_JavaScript</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">JavaScript</span></code>)
 Should be used for JavaScript.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LK_Json</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Json</span></code>)
+Should be used for JSON.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LK_ObjC</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">ObjC</span></code>)
 Should be used for Objective-C, Objective-C++.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">LK_Proto</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Proto</span></code>)
@@ -2861,6 +2909,32 @@ and enclosing function should not occur in multiple specifications.</p>
 </pre></div>
 </div>
 </dd>
+<dt><strong>ReferenceAlignment</strong> (<code class="docutils literal notranslate"><span class="pre">ReferenceAlignmentStyle</span></code>)</dt><dd><p>Reference alignment style (overrides <code class="docutils literal notranslate"><span class="pre">PointerAlignment</span></code> for
+references).</p>
+<p>Possible values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">RAS_Pointer</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Pointer</span></code>)
+Align reference like <code class="docutils literal notranslate"><span class="pre">PointerAlignment</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RAS_Left</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Left</span></code>)
+Align reference to the left.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RAS_Right</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Right</span></code>)
+Align reference to the right.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RAS_Middle</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">Middle</span></code>)
+Align reference in the middle.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="o">&amp;</span> <span class="n">a</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
 <dt><strong>ReflowComments</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, clang-format will attempt to re-flow comments.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nb">false</span><span class="o">:</span>
 <span class="c1">// veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongComment with plenty of information</span>
@@ -3084,10 +3158,12 @@ keywords (<code class="docutils literal notranslate"><span class="pre">for/if/wh
 </pre></div>
 </div>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">SBPO_ControlStatementsExceptForEachMacros</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">ControlStatementsExceptForEachMacros</span></code>)
+<li><p><code class="docutils literal notranslate"><span class="pre">SBPO_ControlStatementsExceptControlMacros</span></code> (in configuration: <code class="docutils literal notranslate"><span class="pre">ControlStatementsExceptControlMacros</span></code>)
 Same as <code class="docutils literal notranslate"><span class="pre">SBPO_ControlStatements</span></code> except this option doesn’t apply to
-ForEach macros. This is useful in projects where ForEach macros are
-treated as function calls instead of control statements.</p>
+ForEach and If macros. This is useful in projects where ForEach/If
+macros are treated as function calls instead of control statements.
+<code class="docutils literal notranslate"><span class="pre">SBPO_ControlStatementsExceptForEachMacros</span></code> remains an alias for
+backward compatability.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">Q_FOREACH</span><span class="p">(...)</span> <span class="p">{</span>
     <span class="n">f</span><span class="p">();</span>

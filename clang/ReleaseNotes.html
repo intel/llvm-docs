@@ -323,12 +323,21 @@ accepts <code class="docutils literal notranslate"><span class="pre">AllIfsAndEl
 statements on a single line. (Fixes <a class="reference external" href="https://llvm.org/PR50019">https://llvm.org/PR50019</a>.)</p></li>
 <li><p>Option <code class="docutils literal notranslate"><span class="pre">BreakInheritanceList</span></code> gets a new style, <code class="docutils literal notranslate"><span class="pre">AfterComma</span></code>. It breaks
 only after the commas that separate the base-specifiers.</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">LambdaBodyIndentation</span></code> has been added to control how the body of a
+lambda is indented. The default <code class="docutils literal notranslate"><span class="pre">Signature</span></code> value indents the body one level
+relative to whatever indentation the signature has. <code class="docutils literal notranslate"><span class="pre">OuterScope</span></code> lets you
+change that so that the lambda body is indented one level relative to the scope
+containing the lambda, regardless of where the lambda signature was placed.</p></li>
+<li><p>Option <code class="docutils literal notranslate"><span class="pre">IfMacros</span></code> has been added. This lets you define macros that get
+formatted like conditionals much like <code class="docutils literal notranslate"><span class="pre">ForEachMacros</span></code> get styled like
+foreach loops.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git-clang-format</span></code> no longer formats changes to symbolic links. (Fixes
 <a class="reference external" href="https://llvm.org/PR46992">https://llvm.org/PR46992</a>.)</p></li>
 <li><p>Makes <code class="docutils literal notranslate"><span class="pre">PointerAligment:</span> <span class="pre">Right</span></code> working with <code class="docutils literal notranslate"><span class="pre">AlignConsecutiveDeclarations</span></code>.
 (Fixes <a class="reference external" href="https://llvm.org/PR27353">https://llvm.org/PR27353</a>)</p></li>
 <li><p>Option <code class="docutils literal notranslate"><span class="pre">AlignArrayOfStructure</span></code> has been added to allow for ordering array-like
 initializers.</p></li>
+<li><p>Support for formatting JSON file (*.json) has been added to clang-format.</p></li>
 </ul>
 </section>
 <section id="libclang">

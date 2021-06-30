@@ -8,5 +8,5 @@ var classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost =
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#a64b71e6fdb59593cef8d9bf5ee4a202b", null ],
     [ "getSize", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#a025f4937c789759d28f18295cf6799bf", null ],
     [ "getSyclObjImpl", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#a74477d273241bc97874d34fe6d95889e", null ],
-    [ "impl", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#a2835d3d090406cbcab9d8399954f7ed8", null ]
+    [ "impl", "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#ad55ee70a80fe29448dcd236712966d9d", null ]
 ];

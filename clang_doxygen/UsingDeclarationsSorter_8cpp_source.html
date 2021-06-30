@@ -97,7 +97,7 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> -1;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="comment">// Two names within a group compare case-insensitively.</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordflow">return</span> NamesA[I].compare_lower(NamesB[I]);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordflow">return</span> NamesA[I].compare_insensitive(NamesB[I]);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// I is the last index of NamesB and NamesB[I] is a non-namespace name.</span></div>
@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Two namespaces names within a group compare case-insensitively.</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> C = NamesA[I].compare_lower(NamesB[I]);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> C = NamesA[I].compare_insensitive(NamesB[I]);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (C != 0)</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">return</span> C;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
@@ -286,7 +286,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1format_1_1Environment_html_a04a240473de24c0065a7f6770758b6bf"><div class="ttname"><a href="classclang_1_1format_1_1Environment.html#a04a240473de24c0065a7f6770758b6bf">clang::format::Environment::getSourceManager</a></div><div class="ttdeci">const SourceManager &amp; getSourceManager() const</div><div class="ttdef"><b>Definition:</b> <a href="TokenAnalyzer_8h_source.html#l00049">TokenAnalyzer.h:49</a></div></div>
 <div class="ttc" id="aUSRLocFinder_8cpp_html_ab81f7a8ff866f4df2160fa7b1f2cf182"><div class="ttname"><a href="USRLocFinder_8cpp.html#ab81f7a8ff866f4df2160fa7b1f2cf182">Begin</a></div><div class="ttdeci">SourceLocation Begin</div><div class="ttdef"><b>Definition:</b> <a href="USRLocFinder_8cpp_source.html#l00165">USRLocFinder.cpp:165</a></div></div>
 <div class="ttc" id="anamespaceclang_html"><div class="ttname"><a href="namespaceclang.html">clang</a></div><div class="ttdef"><b>Definition:</b> <a href="CalledOnceCheck_8h_source.html#l00017">CalledOnceCheck.h:17</a></div></div>
-<div class="ttc" id="aFormat_8cpp_html_a30c618d2023710328101d60cbe97beb8"><div class="ttname"><a href="Format_8cpp.html#a30c618d2023710328101d60cbe97beb8">Text</a></div><div class="ttdeci">StringRef Text</div><div class="ttdef"><b>Definition:</b> <a href="Format_8cpp_source.html#l02192">Format.cpp:2192</a></div></div>
+<div class="ttc" id="aFormat_8cpp_html_a30c618d2023710328101d60cbe97beb8"><div class="ttname"><a href="Format_8cpp.html#a30c618d2023710328101d60cbe97beb8">Text</a></div><div class="ttdeci">StringRef Text</div><div class="ttdef"><b>Definition:</b> <a href="Format_8cpp_source.html#l02226">Format.cpp:2226</a></div></div>
 <div class="ttc" id="aclassclang_1_1format_1_1TokenAnalyzer_html"><div class="ttname"><a href="classclang_1_1format_1_1TokenAnalyzer.html">clang::format::TokenAnalyzer</a></div><div class="ttdef"><b>Definition:</b> <a href="TokenAnalyzer_8h_source.html#l00080">TokenAnalyzer.h:80</a></div></div>
 <div class="ttc" id="aUsingDeclarationsSorter_8h_html"><div class="ttname"><a href="UsingDeclarationsSorter_8h.html">UsingDeclarationsSorter.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1format_1_1FormatTokenLexer_html"><div class="ttname"><a href="classclang_1_1format_1_1FormatTokenLexer.html">clang::format::FormatTokenLexer</a></div><div class="ttdef"><b>Definition:</b> <a href="FormatTokenLexer_8h_source.html#l00038">FormatTokenLexer.h:38</a></div></div>
@@ -294,7 +294,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1format_1_1AffectedRangeManager_html_abcca0e13085ea6cd4053cc59e250ea51"><div class="ttname"><a href="classclang_1_1format_1_1AffectedRangeManager.html#abcca0e13085ea6cd4053cc59e250ea51">clang::format::AffectedRangeManager::computeAffectedLines</a></div><div class="ttdeci">bool computeAffectedLines(SmallVectorImpl&lt; AnnotatedLine * &gt; &amp;Lines)</div><div class="ttdef"><b>Definition:</b> <a href="AffectedRangeManager_8cpp_source.html#l00022">AffectedRangeManager.cpp:22</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 29 2021 01:53:32 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 30 2021 01:59:29 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

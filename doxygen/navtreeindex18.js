@@ -1,6 +1,5 @@
 var NAVTREEINDEX18 =
 {
-"fpga__device__selector_8hpp.html#ab1ff29a4a5bef037095559df0f5d6640":[4,0,0,0,1,4,2,3],
 "fpga__device__selector_8hpp_source.html":[4,0,0,0,1,4,2],
 "fpga__extensions_8hpp.html":[4,0,0,0,1,4,3],
 "fpga__extensions_8hpp_source.html":[4,0,0,0,1,4,3],
@@ -14,8 +13,9 @@ var NAVTREEINDEX18 =
 "fpga__lsu_8hpp.html#aed846bf9c0acd9b3bc52d02ae53ca5a1":[4,0,0,0,1,4,4,11],
 "fpga__lsu_8hpp_source.html":[4,0,0,0,1,4,4],
 "fpga__reg_8hpp.html":[4,0,0,0,1,4,5],
-"fpga__reg_8hpp.html#a4149c6503f5774f100c6d739506ad22a":[4,0,0,0,1,4,5,0],
-"fpga__reg_8hpp.html#add6e801dfd6f9bacb55937be6fff7b69":[4,0,0,0,1,4,5,1],
+"fpga__reg_8hpp.html#a61b23ac5486dd836189d93c4f94aa386":[4,0,0,0,1,4,5,0],
+"fpga__reg_8hpp.html#ac59a049166715b58013ee2403e17675d":[4,0,0,0,1,4,5,1],
+"fpga__reg_8hpp.html#add6e801dfd6f9bacb55937be6fff7b69":[4,0,0,0,1,4,5,2],
 "fpga__reg_8hpp_source.html":[4,0,0,0,1,4,5],
 "fpga__utils_8hpp.html":[4,0,0,0,1,4,6],
 "fpga__utils_8hpp_source.html":[4,0,0,0,1,4,6],

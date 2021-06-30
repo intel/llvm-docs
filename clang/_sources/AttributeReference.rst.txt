@@ -2504,16 +2504,16 @@ For example:
   should save and restore any modified registers except for ECX and EDX.
 
 
-no_profile
-----------
+no_profile_instrument_function
+------------------------------
 .. csv-table:: Supported Syntaxes
    :header: "GNU", "C++11", "C2x", "``__declspec``", "Keyword", "``#pragma``", "``#pragma clang attribute``"
 
-   "``no_profile``","``clang::no_profile``","``clang::no_profile``","","","","Yes"
+   "``no_profile_instrument_function``","``gnu::no_profile_instrument_function``","``gnu::no_profile_instrument_function``","","","","Yes"
 
-Use the ``no_profile`` attribute on a function declaration to denote that the
-compiler should not instrument the function with profile-related
-instrumentation, such as via the
+Use the ``no_profile_instrument_function`` attribute on a function declaration
+to denote that the compiler should not instrument the function with
+profile-related instrumentation, such as via the
 ``-fprofile-generate`` / ``-fprofile-instr-generate`` /
 ``-fcs-profile-generate`` / ``-fprofile-arcs`` flags.
 

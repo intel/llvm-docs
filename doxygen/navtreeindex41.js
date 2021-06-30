@@ -1,6 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#acaaa90c62089c1bcc7da3c3df7210912afc01fcd1835c2d3c70415339827e6e73":[4,0,0,1,0,0,0,0,1,23,15],
 "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ad098c23601df4cd77418db8c4d64ae87":[4,0,0,1,0,0,0,0,1,34],
 "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ad146919c11784928db5cddb9385f925a":[4,0,0,1,0,0,0,0,1,51],
 "sycl_2ext_2intel_2experimental_2esimd_2common_8hpp.html#ad6f853550620db49b18663553cbd1c9c":[4,0,0,1,0,0,0,0,1,32],
@@ -249,5 +248,6 @@ var NAVTREEINDEX41 =
 "windows__pi_8cpp.html":[4,0,2,1,76],
 "windows__pi_8cpp.html#a04e5dff7ef22d15c8b3cd7f80a128785":[4,0,2,1,76,0],
 "windows__pi_8cpp.html#a492fcb5eea191575bbfb650e8ac4f392":[4,0,2,1,76,1],
-"windows__pi_8cpp.html#a6465c13a65281b447f8f97560d0dc563":[4,0,2,1,76,2]
+"windows__pi_8cpp.html#a6465c13a65281b447f8f97560d0dc563":[4,0,2,1,76,2],
+"windows__pi_8cpp_source.html":[4,0,2,1,76]
 };

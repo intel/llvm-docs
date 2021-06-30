@@ -60,7 +60,7 @@ var pi_8hpp =
     [ "getPlugin", "pi_8hpp.html#a25a3cf13e929d772f08013fea813fb41", null ],
     [ "getPluginOpaqueData", "pi_8hpp.html#ad6a58adf1005dcb6fd834846a0165005", null ],
     [ "handleUnknownParamName", "pi_8hpp.html#ab3874682c7df0b17cdb14b09b5f7ad76", null ],
-    [ "initialize", "pi_8hpp.html#aca711f16e058b99fa411043bfafbc4aa", null ],
+    [ "initialize", "pi_8hpp.html#ae33314962c614551002cd6690e8051d6", null ],
     [ "loadOsLibrary", "pi_8hpp.html#a492fcb5eea191575bbfb650e8ac4f392", null ],
     [ "operator<<", "pi_8hpp.html#af3dde3983ba4223609bcdd344ab66084", null ],
     [ "platformInfoToString", "pi_8hpp.html#a7f46f068db2e8af69c378715c6dc642d", null ],

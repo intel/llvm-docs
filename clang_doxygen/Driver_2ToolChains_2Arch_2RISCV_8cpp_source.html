@@ -659,117 +659,119 @@ $(function() {
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;  <span class="comment">// rv64* -&gt; lp64</span></div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;  StringRef MArch = <a class="code" href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">getRISCVArch</a>(Args, Triple);</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160; </div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  <span class="keywordflow">if</span> (MArch.startswith_lower(<span class="stringliteral">&quot;rv32&quot;</span>)) {</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  <span class="keywordflow">if</span> (MArch.startswith_insensitive(<span class="stringliteral">&quot;rv32&quot;</span>)) {</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    <span class="comment">// FIXME: parse `March` to find `D` extension properly</span></div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keywordflow">if</span> (MArch.substr(4).contains_lower(<span class="stringliteral">&quot;d&quot;</span>) || MArch.startswith_lower(<span class="stringliteral">&quot;rv32g&quot;</span>))</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32d&quot;</span>;</div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MArch.startswith_lower(<span class="stringliteral">&quot;rv32e&quot;</span>))</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32e&quot;</span>;</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32&quot;</span>;</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MArch.startswith_lower(<span class="stringliteral">&quot;rv64&quot;</span>)) {</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <span class="comment">// FIXME: parse `March` to find `D` extension properly</span></div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="keywordflow">if</span> (MArch.substr(4).contains_lower(<span class="stringliteral">&quot;d&quot;</span>) || MArch.startswith_lower(<span class="stringliteral">&quot;rv64g&quot;</span>))</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64d&quot;</span>;</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64&quot;</span>;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;  }</div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160; </div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;  <span class="comment">// 3. Choose a default based on the triple</span></div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;  <span class="comment">// We deviate from GCC&#39;s defaults here:</span></div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;  <span class="comment">// - On `riscv{XLEN}-unknown-elf` we use the integer calling convention only.</span></div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;  <span class="comment">// - On all other OSs we use the double floating point calling convention.</span></div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;  <span class="keywordflow">if</span> (Triple.getArch() == llvm::Triple::riscv32) {</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32&quot;</span>;</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32d&quot;</span>;</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64&quot;</span>;</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64d&quot;</span>;</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;  }</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;}</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160; </div>
-<div class="line"><a name="l00647"></a><span class="lineno"><a class="line" href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">  647</a></span>&#160;StringRef <a class="code" href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">riscv::getRISCVArch</a>(<span class="keyword">const</span> llvm::opt::ArgList &amp;Args,</div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;                              <span class="keyword">const</span> llvm::Triple &amp;Triple) {</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;  assert((Triple.getArch() == llvm::Triple::riscv32 ||</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;          Triple.getArch() == llvm::Triple::riscv64) &amp;&amp;</div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;         <span class="stringliteral">&quot;Unexpected triple&quot;</span>);</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160; </div>
-<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;  <span class="comment">// GCC&#39;s logic around choosing a default `-march=` is complex. If GCC is not</span></div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;  <span class="comment">// configured using `--with-arch=`, then the logic for the default choice is</span></div>
-<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;  <span class="comment">// defined in config.gcc. This function is based on the logic in GCC 9.2.0. We</span></div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;  <span class="comment">// deviate from GCC&#39;s default on additional `-mcpu` option (GCC does not</span></div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;  <span class="comment">// support `-mcpu`) and baremetal targets (UnknownOS) where neither `-march`</span></div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;  <span class="comment">// nor `-mabi` is specified.</span></div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;  <span class="comment">// The logic used in GCC 9.2.0 is the following, in order:</span></div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;  <span class="comment">// 1. Explicit choices using `--with-arch=`</span></div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="comment">// 2. A default based on `--with-abi=`, if provided</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;  <span class="comment">// 3. A default based on the target triple&#39;s arch</span></div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;  <span class="comment">// The logic in config.gcc is a little circular but it is not inconsistent.</span></div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keywordflow">if</span> (MArch.substr(4).contains_insensitive(<span class="stringliteral">&quot;d&quot;</span>) ||</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        MArch.startswith_insensitive(<span class="stringliteral">&quot;rv32g&quot;</span>))</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32d&quot;</span>;</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MArch.startswith_insensitive(<span class="stringliteral">&quot;rv32e&quot;</span>))</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32e&quot;</span>;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32&quot;</span>;</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MArch.startswith_insensitive(<span class="stringliteral">&quot;rv64&quot;</span>)) {</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="comment">// FIXME: parse `March` to find `D` extension properly</span></div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="keywordflow">if</span> (MArch.substr(4).contains_insensitive(<span class="stringliteral">&quot;d&quot;</span>) ||</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        MArch.startswith_insensitive(<span class="stringliteral">&quot;rv64g&quot;</span>))</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64d&quot;</span>;</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64&quot;</span>;</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;  }</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160; </div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;  <span class="comment">// 3. Choose a default based on the triple</span></div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;  <span class="comment">// We deviate from GCC&#39;s defaults here:</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;  <span class="comment">// - On `riscv{XLEN}-unknown-elf` we use the integer calling convention only.</span></div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;  <span class="comment">// - On all other OSs we use the double floating point calling convention.</span></div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;  <span class="keywordflow">if</span> (Triple.getArch() == llvm::Triple::riscv32) {</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32&quot;</span>;</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;ilp32d&quot;</span>;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64&quot;</span>;</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;lp64d&quot;</span>;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;  }</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;}</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160; </div>
+<div class="line"><a name="l00649"></a><span class="lineno"><a class="line" href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">  649</a></span>&#160;StringRef <a class="code" href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">riscv::getRISCVArch</a>(<span class="keyword">const</span> llvm::opt::ArgList &amp;Args,</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                              <span class="keyword">const</span> llvm::Triple &amp;Triple) {</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;  assert((Triple.getArch() == llvm::Triple::riscv32 ||</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;          Triple.getArch() == llvm::Triple::riscv64) &amp;&amp;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;         <span class="stringliteral">&quot;Unexpected triple&quot;</span>);</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160; </div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;  <span class="comment">// GCC&#39;s logic around choosing a default `-march=` is complex. If GCC is not</span></div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;  <span class="comment">// configured using `--with-arch=`, then the logic for the default choice is</span></div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;  <span class="comment">// defined in config.gcc. This function is based on the logic in GCC 9.2.0. We</span></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;  <span class="comment">// deviate from GCC&#39;s default on additional `-mcpu` option (GCC does not</span></div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  <span class="comment">// support `-mcpu`) and baremetal targets (UnknownOS) where neither `-march`</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;  <span class="comment">// nor `-mabi` is specified.</span></div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="comment">// The logic used in GCC 9.2.0 is the following, in order:</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;  <span class="comment">// 1. Explicit choices using `--with-arch=`</span></div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  <span class="comment">// 2. A default based on `--with-abi=`, if provided</span></div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;  <span class="comment">// 3. A default based on the target triple&#39;s arch</span></div>
 <div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <span class="comment">// Clang does not have `--with-arch=` or `--with-abi=`, so we use `-march=`</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  <span class="comment">// and `-mabi=` respectively instead.</span></div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;  <span class="comment">// Clang uses the following logic, in order:</span></div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;  <span class="comment">// 1. Explicit choices using `-march=`</span></div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;  <span class="comment">// 2. Based on `-mcpu` if the target CPU has a default ISA string</span></div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;  <span class="comment">// 3. A default based on `-mabi`, if provided</span></div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;  <span class="comment">// 4. A default based on the target triple&#39;s arch</span></div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;  <span class="comment">// Clang does not yet support MULTILIB_REUSE, so we use `rv{XLEN}imafdc`</span></div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;  <span class="comment">// instead of `rv{XLEN}gc` though they are (currently) equivalent.</span></div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;  <span class="comment">// 1. If `-march=` is specified, use it.</span></div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> Arg *A = Args.getLastArg(options::OPT_march_EQ))</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    <span class="keywordflow">return</span> A-&gt;getValue();</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160; </div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;  <span class="comment">// 2. Get march (isa string) based on `-mcpu=`</span></div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> Arg *A = Args.getLastArg(options::OPT_mcpu_EQ)) {</div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;    StringRef MArch = llvm::RISCV::getMArchFromMcpu(A-&gt;getValue());</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;    <span class="comment">// Bypass if target cpu&#39;s default march is empty.</span></div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keywordflow">if</span> (MArch != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;      <span class="keywordflow">return</span> MArch;</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;  }</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160; </div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  <span class="comment">// 3. Choose a default based on `-mabi=`</span></div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  <span class="comment">// ilp32e -&gt; rv32e</span></div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  <span class="comment">// ilp32 | ilp32f | ilp32d -&gt; rv32imafdc</span></div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <span class="comment">// lp64 | lp64f | lp64d -&gt; rv64imafdc</span></div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> Arg *A = Args.getLastArg(options::OPT_mabi_EQ)) {</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    StringRef MABI = A-&gt;getValue();</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160; </div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    <span class="keywordflow">if</span> (MABI.equals_lower(<span class="stringliteral">&quot;ilp32e&quot;</span>))</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32e&quot;</span>;</div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MABI.startswith_lower(<span class="stringliteral">&quot;ilp32&quot;</span>))</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32imafdc&quot;</span>;</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MABI.startswith_lower(<span class="stringliteral">&quot;lp64&quot;</span>))</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv64imafdc&quot;</span>;</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;  }</div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160; </div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;  <span class="comment">// 4. Choose a default based on the triple</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;  <span class="comment">//</span></div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  <span class="comment">// We deviate from GCC&#39;s defaults here:</span></div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <span class="comment">// - On `riscv{XLEN}-unknown-elf` we default to `rv{XLEN}imac`</span></div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  <span class="comment">// - On all other OSs we use `rv{XLEN}imafdc` (equivalent to `rv{XLEN}gc`)</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;  <span class="keywordflow">if</span> (Triple.getArch() == llvm::Triple::riscv32) {</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32imac&quot;</span>;</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32imafdc&quot;</span>;</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv64imac&quot;</span>;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv64imafdc&quot;</span>;</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  }</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;}</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <span class="comment">// The logic in config.gcc is a little circular but it is not inconsistent.</span></div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;  <span class="comment">// Clang does not have `--with-arch=` or `--with-abi=`, so we use `-march=`</span></div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;  <span class="comment">// and `-mabi=` respectively instead.</span></div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;  <span class="comment">// Clang uses the following logic, in order:</span></div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;  <span class="comment">// 1. Explicit choices using `-march=`</span></div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;  <span class="comment">// 2. Based on `-mcpu` if the target CPU has a default ISA string</span></div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;  <span class="comment">// 3. A default based on `-mabi`, if provided</span></div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;  <span class="comment">// 4. A default based on the target triple&#39;s arch</span></div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;  <span class="comment">// Clang does not yet support MULTILIB_REUSE, so we use `rv{XLEN}imafdc`</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;  <span class="comment">// instead of `rv{XLEN}gc` though they are (currently) equivalent.</span></div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;  <span class="comment">// 1. If `-march=` is specified, use it.</span></div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> Arg *A = Args.getLastArg(options::OPT_march_EQ))</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    <span class="keywordflow">return</span> A-&gt;getValue();</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160; </div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;  <span class="comment">// 2. Get march (isa string) based on `-mcpu=`</span></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> Arg *A = Args.getLastArg(options::OPT_mcpu_EQ)) {</div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    StringRef MArch = llvm::RISCV::getMArchFromMcpu(A-&gt;getValue());</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="comment">// Bypass if target cpu&#39;s default march is empty.</span></div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;    <span class="keywordflow">if</span> (MArch != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;      <span class="keywordflow">return</span> MArch;</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  }</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160; </div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  <span class="comment">// 3. Choose a default based on `-mabi=`</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <span class="comment">// ilp32e -&gt; rv32e</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;  <span class="comment">// ilp32 | ilp32f | ilp32d -&gt; rv32imafdc</span></div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  <span class="comment">// lp64 | lp64f | lp64d -&gt; rv64imafdc</span></div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> Arg *A = Args.getLastArg(options::OPT_mabi_EQ)) {</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    StringRef MABI = A-&gt;getValue();</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <span class="keywordflow">if</span> (MABI.equals_insensitive(<span class="stringliteral">&quot;ilp32e&quot;</span>))</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32e&quot;</span>;</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MABI.startswith_insensitive(<span class="stringliteral">&quot;ilp32&quot;</span>))</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32imafdc&quot;</span>;</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (MABI.startswith_insensitive(<span class="stringliteral">&quot;lp64&quot;</span>))</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv64imafdc&quot;</span>;</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;  }</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;  <span class="comment">// 4. Choose a default based on the triple</span></div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;  <span class="comment">//</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;  <span class="comment">// We deviate from GCC&#39;s defaults here:</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;  <span class="comment">// - On `riscv{XLEN}-unknown-elf` we default to `rv{XLEN}imac`</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  <span class="comment">// - On all other OSs we use `rv{XLEN}imafdc` (equivalent to `rv{XLEN}gc`)</span></div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  <span class="keywordflow">if</span> (Triple.getArch() == llvm::Triple::riscv32) {</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32imac&quot;</span>;</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv32imafdc&quot;</span>;</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordflow">if</span> (Triple.getOS() == llvm::Triple::UnknownOS)</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv64imac&quot;</span>;</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;rv64imafdc&quot;</span>;</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;  }</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aDriver_2ToolChains_2Arch_2RISCV_8cpp_html_a9b323140e2292ee13a2eaabdc945db29"><div class="ttname"><a href="Driver_2ToolChains_2Arch_2RISCV_8cpp.html#a9b323140e2292ee13a2eaabdc945db29">getExtensionFeatures</a></div><div class="ttdeci">static void getExtensionFeatures(const Driver &amp;D, const ArgList &amp;Args, std::vector&lt; StringRef &gt; &amp;Features, StringRef &amp;MArch, StringRef &amp;Exts)</div><div class="ttdef"><b>Definition:</b> <a href="Driver_2ToolChains_2Arch_2RISCV_8cpp_source.html#l00171">RISCV.cpp:171</a></div></div>
 <div class="ttc" id="aByteCodeEmitter_8cpp_html_a4bd5334353e73943f5521049c0a1522a"><div class="ttname"><a href="ByteCodeEmitter_8cpp.html#a4bd5334353e73943f5521049c0a1522a">Error</a></div><div class="ttdeci">llvm::Error Error</div><div class="ttdef"><b>Definition:</b> <a href="ByteCodeEmitter_8cpp_source.html#l00019">ByteCodeEmitter.cpp:19</a></div></div>
@@ -782,7 +784,7 @@ $(function() {
 <div class="ttc" id="aDriver_2ToolChains_2Arch_2RISCV_8h_html"><div class="ttname"><a href="Driver_2ToolChains_2Arch_2RISCV_8h.html">RISCV.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1Type_html"><div class="ttname"><a href="classclang_1_1Type.html">clang::Type</a></div><div class="ttdoc">The base class of the type hierarchy.</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l01485">Type.h:1485</a></div></div>
 <div class="ttc" id="aDriver_2ToolChains_2Arch_2RISCV_8cpp_html_a44f84637f19662bf9d1c251ce1b759ac"><div class="ttname"><a href="Driver_2ToolChains_2Arch_2RISCV_8cpp.html#a44f84637f19662bf9d1c251ce1b759ac">getArchFeatures</a></div><div class="ttdeci">static bool getArchFeatures(const Driver &amp;D, StringRef MArch, std::vector&lt; StringRef &gt; &amp;Features, const ArgList &amp;Args)</div><div class="ttdef"><b>Definition:</b> <a href="Driver_2ToolChains_2Arch_2RISCV_8cpp_source.html#l00273">RISCV.cpp:273</a></div></div>
-<div class="ttc" id="anamespaceclang_1_1driver_1_1tools_1_1riscv_html_a6e1e5f77fef03160043104635686bf6a"><div class="ttname"><a href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">clang::driver::tools::riscv::getRISCVArch</a></div><div class="ttdeci">StringRef getRISCVArch(const llvm::opt::ArgList &amp;Args, const llvm::Triple &amp;Triple)</div><div class="ttdef"><b>Definition:</b> <a href="Driver_2ToolChains_2Arch_2RISCV_8cpp_source.html#l00647">RISCV.cpp:647</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1driver_1_1tools_1_1riscv_html_a6e1e5f77fef03160043104635686bf6a"><div class="ttname"><a href="namespaceclang_1_1driver_1_1tools_1_1riscv.html#a6e1e5f77fef03160043104635686bf6a">clang::driver::tools::riscv::getRISCVArch</a></div><div class="ttdeci">StringRef getRISCVArch(const llvm::opt::ArgList &amp;Args, const llvm::Triple &amp;Triple)</div><div class="ttdef"><b>Definition:</b> <a href="Driver_2ToolChains_2Arch_2RISCV_8cpp_source.html#l00649">RISCV.cpp:649</a></div></div>
 <div class="ttc" id="aclassclang_1_1driver_1_1Driver_html_a61db7c2f0eb35004127f49fec7a4a121"><div class="ttname"><a href="classclang_1_1driver_1_1Driver.html#a61db7c2f0eb35004127f49fec7a4a121">clang::driver::Driver::Diag</a></div><div class="ttdeci">DiagnosticBuilder Diag(unsigned DiagID) const</div><div class="ttdef"><b>Definition:</b> <a href="Driver_8h_source.html#l00112">Driver.h:112</a></div></div>
 <div class="ttc" id="aOptions_8h_html"><div class="ttname"><a href="Options_8h.html">Options.h</a></div></div>
 <div class="ttc" id="aDriver_2ToolChains_2Arch_2RISCV_8cpp_html_a54e4a66befa13ab6dbcc29efa5ec2fe6"><div class="ttname"><a href="Driver_2ToolChains_2Arch_2RISCV_8cpp.html#a54e4a66befa13ab6dbcc29efa5ec2fe6">isExperimentalExtension</a></div><div class="ttdeci">static Optional&lt; RISCVExtensionVersion &gt; isExperimentalExtension(StringRef Ext)</div><div class="ttdef"><b>Definition:</b> <a href="Driver_2ToolChains_2Arch_2RISCV_8cpp_source.html#l00060">RISCV.cpp:60</a></div></div>
@@ -805,7 +807,7 @@ $(function() {
 <div class="ttc" id="aDriver_2ToolChains_2Arch_2RISCV_8cpp_html_a610aa13071b9397956a56e286873d9ea"><div class="ttname"><a href="Driver_2ToolChains_2Arch_2RISCV_8cpp.html#a610aa13071b9397956a56e286873d9ea">getExtensionVersion</a></div><div class="ttdeci">static bool getExtensionVersion(const Driver &amp;D, const ArgList &amp;Args, StringRef MArch, StringRef Ext, StringRef In, std::string &amp;Major, std::string &amp;Minor)</div><div class="ttdef"><b>Definition:</b> <a href="Driver_2ToolChains_2Arch_2RISCV_8cpp_source.html#l00086">RISCV.cpp:86</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 29 2021 01:53:22 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 30 2021 01:59:22 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -103,8 +103,8 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  CmdArgs.push_back(<span class="stringliteral">&quot;now&quot;</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">char</span> *Exec = Args.MakeArgString(<a class="code" href="classclang_1_1driver_1_1ToolChain.html">ToolChain</a>.<a class="code" href="classclang_1_1driver_1_1ToolChain.html#a6c0f16d8c5e034895fd65aed31990a46">GetLinkerPath</a>());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (llvm::sys::path::filename(Exec).equals_lower(<span class="stringliteral">&quot;ld.lld&quot;</span>) ||</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      llvm::sys::path::stem(Exec).equals_lower(<span class="stringliteral">&quot;ld.lld&quot;</span>)) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span> (llvm::sys::path::filename(Exec).equals_insensitive(<span class="stringliteral">&quot;ld.lld&quot;</span>) ||</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      llvm::sys::path::stem(Exec).equals_insensitive(<span class="stringliteral">&quot;ld.lld&quot;</span>)) {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    CmdArgs.push_back(<span class="stringliteral">&quot;-z&quot;</span>);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    CmdArgs.push_back(<span class="stringliteral">&quot;rodynamic&quot;</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    CmdArgs.push_back(<span class="stringliteral">&quot;-z&quot;</span>);</div>
@@ -600,7 +600,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1SanitizerMask_html"><div class="ttname"><a href="classclang_1_1SanitizerMask.html">clang::SanitizerMask</a></div><div class="ttdef"><b>Definition:</b> <a href="Sanitizers_8h_source.html#l00029">Sanitizers.h:29</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 29 2021 01:53:30 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 30 2021 01:59:28 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

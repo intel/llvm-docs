@@ -319,40 +319,37 @@ $(document).ready(function(){initNavTree('common_8cpp_source.html',''); initResi
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#af71093bded138b3cf1e5c7d6b8f419fe">  224</a></span>&#160;<a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;string_class&gt;</a> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af71093bded138b3cf1e5c7d6b8f419fe">split_string</a>(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">string_class</a> &amp;str,</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                        <span class="keywordtype">char</span> delimeter) {</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <a class="code" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class&lt;string_class&gt;</a> result;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordtype">size_t</span> beg = 0;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> = 0;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : str) {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="keywordflow">if</span> (x == delimeter) {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      result.push_back(str.substr(beg, <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a>));</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      beg += <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> + 1;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> = 0;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a>++;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> != 0) {</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    result.push_back(str.substr(beg, <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a>));</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#ac347e4c87084b74d2ebd4a5775e4841d">  224</a></span>&#160;std::vector&lt;std::string&gt; <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ac347e4c87084b74d2ebd4a5775e4841d">split_string</a>(<span class="keyword">const</span> std::string &amp;str, <span class="keywordtype">char</span> delimeter) {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  std::vector&lt;std::string&gt; result;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordtype">size_t</span> beg = 0;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> = 0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;x : str) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (x == delimeter) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      result.push_back(str.substr(beg, <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a>));</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      beg += <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> + 1;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> = 0;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a>++;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a> != 0) {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    result.push_back(str.substr(beg, <a class="code" href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">length</a>));</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_af71093bded138b3cf1e5c7d6b8f419fe"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#af71093bded138b3cf1e5c7d6b8f419fe">cl::sycl::detail::split_string</a></div><div class="ttdeci">vector_class&lt; string_class &gt; split_string(const string_class &amp;str, char delimeter)</div><div class="ttdef"><b>Definition:</b> <a href="common_8cpp_source.html#l00224">common.cpp:224</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_a0f53d2485c5e83787c778b1e2bede3cd"><div class="ttname"><a href="namespacecl_1_1sycl.html#a0f53d2485c5e83787c778b1e2bede3cd">cl::sycl::length</a></div><div class="ttdeci">float length(T p) __NOEXC</div><div class="ttdef"><b>Definition:</b> <a href="builtins_8hpp_source.html#l01011">builtins.hpp:1011</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_html_a20186da90261e9302b957e4823179f1b"><div class="ttname"><a href="namespacecl_1_1sycl.html#a20186da90261e9302b957e4823179f1b">cl::sycl::string_class</a></div><div class="ttdeci">std::string string_class</div><div class="ttdef"><b>Definition:</b> <a href="stl_8hpp_source.html#l00053">stl.hpp:53</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">We provide new interfaces for matrix muliply in this patch:</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a1af53414d9083438c310a1a40bd2500d"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a1af53414d9083438c310a1a40bd2500d">cl::sycl::detail::stringifyErrorCode</a></div><div class="ttdeci">const char * stringifyErrorCode(cl_int error)</div><div class="ttdef"><b>Definition:</b> <a href="common_8cpp_source.html#l00016">common.cpp:16</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_ac347e4c87084b74d2ebd4a5775e4841d"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#ac347e4c87084b74d2ebd4a5775e4841d">cl::sycl::detail::split_string</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split_string(const std::string &amp;str, char delimeter)</div><div class="ttdef"><b>Definition:</b> <a href="common_8cpp_source.html#l00224">common.cpp:224</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_a2e2f7596dc075c417d85bce4e2c40eae"><div class="ttname"><a href="namespacecl_1_1sycl.html#a2e2f7596dc075c417d85bce4e2c40eae">cl::sycl::cl_int</a></div><div class="ttdeci">std::int32_t cl_int</div><div class="ttdef"><b>Definition:</b> <a href="aliases_8hpp_source.html#l00088">aliases.hpp:88</a></div></div>
 <div class="ttc" id="aCL_2sycl_2detail_2common_8hpp_html"><div class="ttname"><a href="CL_2sycl_2detail_2common_8hpp.html">common.hpp</a></div></div>
 <div class="ttc" id="acommon__info_8hpp_html"><div class="ttname"><a href="common__info_8hpp.html">common_info.hpp</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_html_a0a3b58674c77d248758b6bee05800ac5"><div class="ttname"><a href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">cl::sycl::vector_class</a></div><div class="ttdeci">std::vector&lt; T, Alloc &gt; vector_class</div><div class="ttdef"><b>Definition:</b> <a href="stl_8hpp_source.html#l00051">stl.hpp:51</a></div></div>
 <div class="ttc" id="adefines__elementary_8hpp_html_af014229c51476c8c275e6e94d0549384"><div class="ttname"><a href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a></div><div class="ttdeci">#define __SYCL_INLINE_NAMESPACE(X)</div><div class="ttdef"><b>Definition:</b> <a href="defines__elementary_8hpp_source.html#l00012">defines_elementary.hpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

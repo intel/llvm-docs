@@ -26,12 +26,12 @@ var handler_8hpp =
     [ "reduCGFunc", "handler_8hpp.html#a957b5ba302984355025ddb68d13f185e", null ],
     [ "reduCGFunc", "handler_8hpp.html#aa785281ba708736f7e9842f2741462ad", null ],
     [ "reduCGFunc", "handler_8hpp.html#a75e3022c2d6eecf4038137e64748696a", null ],
-    [ "reduGetMaxWGSize", "handler_8hpp.html#a217c7e07fa61a2c040a362501711afb4", null ],
+    [ "reduGetMaxWGSize", "handler_8hpp.html#a46e819fac9a3e2ef5c5708b81bf770a4", null ],
     [ "reduGetMemPerWorkItem", "handler_8hpp.html#a1c2751ba7d3012d52ddb9168d34d7a1f", null ],
     [ "reduSaveFinalResultToUserMem", "handler_8hpp.html#a64cf1458fc21e3bdbba7d842a4473cc1", null ],
     [ "reduSaveFinalResultToUserMem", "handler_8hpp.html#a560b972e421223834dbcdaa16ed41d3e", null ],
-    [ "reduSaveFinalResultToUserMem", "handler_8hpp.html#aad9c747bcc0465762c6b4cb4fbd74347", null ],
-    [ "reduSaveFinalResultToUserMemHelper", "handler_8hpp.html#a32a4ff74e6796c7961ff361662523715", null ],
+    [ "reduSaveFinalResultToUserMem", "handler_8hpp.html#a113b3861f25bcaaea711658a82e9dd40", null ],
+    [ "reduSaveFinalResultToUserMemHelper", "handler_8hpp.html#a6e87ef5886bcf8dfc37baf742cbd101a", null ],
     [ "tuple_select_elements", "handler_8hpp.html#a074c1a9538a468b7afc2763b054790f4", null ],
     [ "argument_helper", "handler_8hpp.html#a0e2a8cd39c5325f03f08e50ef55bb73c", null ]
 ];

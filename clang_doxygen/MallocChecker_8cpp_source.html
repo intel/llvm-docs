@@ -3194,275 +3194,276 @@ $(function() {
 <div class="line"><a name="l03145"></a><span class="lineno"><a class="line" href="MallocChecker_8cpp.html#a686de38faf1dbbbf84b48c28e6f442b3"> 3145</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="MallocChecker_8cpp.html#a686de38faf1dbbbf84b48c28e6f442b3">isReferenceCountingPointerDestructor</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1CXXDestructorDecl.html">CXXDestructorDecl</a> *DD) {</div>
 <div class="line"><a name="l03146"></a><span class="lineno"> 3146</span>&#160;  <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1IdentifierInfo.html">IdentifierInfo</a> *II = DD-&gt;<a class="code" href="classclang_1_1CXXMethodDecl.html#a290cbceee004310e1a43bb8cd9ab25de">getParent</a>()-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a7fab32caa3b7d601128265248260fd37">getIdentifier</a>()) {</div>
 <div class="line"><a name="l03147"></a><span class="lineno"> 3147</span>&#160;    StringRef N = II-&gt;<a class="code" href="classclang_1_1IdentifierInfo.html#ae3eae8e88234cfc11812fc54266bd0f1">getName</a>();</div>
-<div class="line"><a name="l03148"></a><span class="lineno"> 3148</span>&#160;    <span class="keywordflow">if</span> (N.contains_lower(<span class="stringliteral">&quot;ptr&quot;</span>) || N.contains_lower(<span class="stringliteral">&quot;pointer&quot;</span>)) {</div>
-<div class="line"><a name="l03149"></a><span class="lineno"> 3149</span>&#160;      <span class="keywordflow">if</span> (N.contains_lower(<span class="stringliteral">&quot;ref&quot;</span>) || N.contains_lower(<span class="stringliteral">&quot;cnt&quot;</span>) ||</div>
-<div class="line"><a name="l03150"></a><span class="lineno"> 3150</span>&#160;          N.contains_lower(<span class="stringliteral">&quot;intrusive&quot;</span>) || N.contains_lower(<span class="stringliteral">&quot;shared&quot;</span>)) {</div>
-<div class="line"><a name="l03151"></a><span class="lineno"> 3151</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l03152"></a><span class="lineno"> 3152</span>&#160;      }</div>
-<div class="line"><a name="l03153"></a><span class="lineno"> 3153</span>&#160;    }</div>
-<div class="line"><a name="l03154"></a><span class="lineno"> 3154</span>&#160;  }</div>
-<div class="line"><a name="l03155"></a><span class="lineno"> 3155</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l03156"></a><span class="lineno"> 3156</span>&#160;}</div>
-<div class="line"><a name="l03157"></a><span class="lineno"> 3157</span>&#160; </div>
-<div class="line"><a name="l03158"></a><span class="lineno"> 3158</span>&#160;<a class="code" href="namespaceclang_1_1ento.html#af0d0e00a28f39eb324aea94250e58848">PathDiagnosticPieceRef</a> MallocBugVisitor::VisitNode(<span class="keyword">const</span> ExplodedNode *N,</div>
-<div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;                                                   BugReporterContext &amp;BRC,</div>
-<div class="line"><a name="l03160"></a><span class="lineno"> 3160</span>&#160;                                                   PathSensitiveBugReport &amp;BR) {</div>
-<div class="line"><a name="l03161"></a><span class="lineno"> 3161</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a> <a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a> = N-&gt;getState();</div>
-<div class="line"><a name="l03162"></a><span class="lineno"> 3162</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a> statePrev = N-&gt;getFirstPred()-&gt;getState();</div>
-<div class="line"><a name="l03163"></a><span class="lineno"> 3163</span>&#160; </div>
-<div class="line"><a name="l03164"></a><span class="lineno"> 3164</span>&#160;  <span class="keyword">const</span> RefState *RSCurr = <a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a>-&gt;get&lt;RegionState&gt;(Sym);</div>
-<div class="line"><a name="l03165"></a><span class="lineno"> 3165</span>&#160;  <span class="keyword">const</span> RefState *RSPrev = statePrev-&gt;get&lt;RegionState&gt;(Sym);</div>
-<div class="line"><a name="l03166"></a><span class="lineno"> 3166</span>&#160; </div>
-<div class="line"><a name="l03167"></a><span class="lineno"> 3167</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *S = N-&gt;getStmtForDiagnostics();</div>
-<div class="line"><a name="l03168"></a><span class="lineno"> 3168</span>&#160;  <span class="comment">// When dealing with containers, we sometimes want to give a note</span></div>
-<div class="line"><a name="l03169"></a><span class="lineno"> 3169</span>&#160;  <span class="comment">// even if the statement is missing.</span></div>
-<div class="line"><a name="l03170"></a><span class="lineno"> 3170</span>&#160;  <span class="keywordflow">if</span> (!S &amp;&amp; (!RSCurr || RSCurr-&gt;getAllocationFamily() != AF_InnerBuffer))</div>
-<div class="line"><a name="l03171"></a><span class="lineno"> 3171</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l03172"></a><span class="lineno"> 3172</span>&#160; </div>
-<div class="line"><a name="l03173"></a><span class="lineno"> 3173</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1LocationContext.html">LocationContext</a> *CurrentLC = N-&gt;getLocationContext();</div>
-<div class="line"><a name="l03174"></a><span class="lineno"> 3174</span>&#160; </div>
-<div class="line"><a name="l03175"></a><span class="lineno"> 3175</span>&#160;  <span class="comment">// If we find an atomic fetch_add or fetch_sub within the destructor in which</span></div>
-<div class="line"><a name="l03176"></a><span class="lineno"> 3176</span>&#160;  <span class="comment">// the pointer was released (before the release), this is likely a destructor</span></div>
-<div class="line"><a name="l03177"></a><span class="lineno"> 3177</span>&#160;  <span class="comment">// of a shared pointer.</span></div>
-<div class="line"><a name="l03178"></a><span class="lineno"> 3178</span>&#160;  <span class="comment">// Because we don&#39;t model atomics, and also because we don&#39;t know that the</span></div>
-<div class="line"><a name="l03179"></a><span class="lineno"> 3179</span>&#160;  <span class="comment">// original reference count is positive, we should not report use-after-frees</span></div>
-<div class="line"><a name="l03180"></a><span class="lineno"> 3180</span>&#160;  <span class="comment">// on objects deleted in such destructors. This can probably be improved</span></div>
-<div class="line"><a name="l03181"></a><span class="lineno"> 3181</span>&#160;  <span class="comment">// through better shared pointer modeling.</span></div>
-<div class="line"><a name="l03182"></a><span class="lineno"> 3182</span>&#160;  <span class="keywordflow">if</span> (ReleaseDestructorLC) {</div>
-<div class="line"><a name="l03183"></a><span class="lineno"> 3183</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *AE = dyn_cast&lt;AtomicExpr&gt;(S)) {</div>
-<div class="line"><a name="l03184"></a><span class="lineno"> 3184</span>&#160;      <a class="code" href="classclang_1_1AtomicExpr.html#aafb2a1534e844508c6c0979397e5261d">AtomicExpr::AtomicOp</a> Op = AE-&gt;getOp();</div>
-<div class="line"><a name="l03185"></a><span class="lineno"> 3185</span>&#160;      <span class="keywordflow">if</span> (Op == AtomicExpr::AO__c11_atomic_fetch_add ||</div>
-<div class="line"><a name="l03186"></a><span class="lineno"> 3186</span>&#160;          Op == AtomicExpr::AO__c11_atomic_fetch_sub) {</div>
-<div class="line"><a name="l03187"></a><span class="lineno"> 3187</span>&#160;        <span class="keywordflow">if</span> (ReleaseDestructorLC == CurrentLC ||</div>
-<div class="line"><a name="l03188"></a><span class="lineno"> 3188</span>&#160;            ReleaseDestructorLC-&gt;<a class="code" href="classclang_1_1LocationContext.html#a11efac841bf05dcba26313e753fc52a5">isParentOf</a>(CurrentLC)) {</div>
-<div class="line"><a name="l03189"></a><span class="lineno"> 3189</span>&#160;          BR.markInvalid(getTag(), S);</div>
-<div class="line"><a name="l03190"></a><span class="lineno"> 3190</span>&#160;        }</div>
-<div class="line"><a name="l03191"></a><span class="lineno"> 3191</span>&#160;      }</div>
-<div class="line"><a name="l03192"></a><span class="lineno"> 3192</span>&#160;    }</div>
-<div class="line"><a name="l03193"></a><span class="lineno"> 3193</span>&#160;  }</div>
-<div class="line"><a name="l03194"></a><span class="lineno"> 3194</span>&#160; </div>
-<div class="line"><a name="l03195"></a><span class="lineno"> 3195</span>&#160;  <span class="comment">// FIXME: We will eventually need to handle non-statement-based events</span></div>
-<div class="line"><a name="l03196"></a><span class="lineno"> 3196</span>&#160;  <span class="comment">// (__attribute__((cleanup))).</span></div>
-<div class="line"><a name="l03197"></a><span class="lineno"> 3197</span>&#160; </div>
-<div class="line"><a name="l03198"></a><span class="lineno"> 3198</span>&#160;  <span class="comment">// Find out if this is an interesting point and what is the kind.</span></div>
-<div class="line"><a name="l03199"></a><span class="lineno"> 3199</span>&#160;  StringRef Msg;</div>
-<div class="line"><a name="l03200"></a><span class="lineno"> 3200</span>&#160;  std::unique_ptr&lt;StackHintGeneratorForSymbol&gt; StackHint = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l03201"></a><span class="lineno"> 3201</span>&#160;  <a class="code" href="classllvm_1_1SmallString.html">SmallString&lt;256&gt;</a> Buf;</div>
-<div class="line"><a name="l03202"></a><span class="lineno"> 3202</span>&#160;  llvm::raw_svector_ostream <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a>(Buf);</div>
-<div class="line"><a name="l03203"></a><span class="lineno"> 3203</span>&#160; </div>
-<div class="line"><a name="l03204"></a><span class="lineno"> 3204</span>&#160;  <span class="keywordflow">if</span> (Mode == Normal) {</div>
-<div class="line"><a name="l03205"></a><span class="lineno"> 3205</span>&#160;    <span class="keywordflow">if</span> (isAllocated(RSCurr, RSPrev, S)) {</div>
-<div class="line"><a name="l03206"></a><span class="lineno"> 3206</span>&#160;      Msg = <span class="stringliteral">&quot;Memory is allocated&quot;</span>;</div>
-<div class="line"><a name="l03207"></a><span class="lineno"> 3207</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
-<div class="line"><a name="l03208"></a><span class="lineno"> 3208</span>&#160;          Sym, <span class="stringliteral">&quot;Returned allocated memory&quot;</span>);</div>
-<div class="line"><a name="l03209"></a><span class="lineno"> 3209</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="MallocChecker_8cpp.html#a2a7903a04bcc80b227a601bafdf4d128">isReleased</a>(RSCurr, RSPrev, S)) {</div>
-<div class="line"><a name="l03210"></a><span class="lineno"> 3210</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> Family = RSCurr-&gt;getAllocationFamily();</div>
-<div class="line"><a name="l03211"></a><span class="lineno"> 3211</span>&#160;      <span class="keywordflow">switch</span> (Family) {</div>
-<div class="line"><a name="l03212"></a><span class="lineno"> 3212</span>&#160;        <span class="keywordflow">case</span> AF_Alloca:</div>
-<div class="line"><a name="l03213"></a><span class="lineno"> 3213</span>&#160;        <span class="keywordflow">case</span> AF_Malloc:</div>
-<div class="line"><a name="l03214"></a><span class="lineno"> 3214</span>&#160;        <span class="keywordflow">case</span> AF_CXXNew:</div>
-<div class="line"><a name="l03215"></a><span class="lineno"> 3215</span>&#160;        <span class="keywordflow">case</span> AF_CXXNewArray:</div>
-<div class="line"><a name="l03216"></a><span class="lineno"> 3216</span>&#160;        <span class="keywordflow">case</span> AF_IfNameIndex:</div>
-<div class="line"><a name="l03217"></a><span class="lineno"> 3217</span>&#160;          Msg = <span class="stringliteral">&quot;Memory is released&quot;</span>;</div>
-<div class="line"><a name="l03218"></a><span class="lineno"> 3218</span>&#160;          StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
-<div class="line"><a name="l03219"></a><span class="lineno"> 3219</span>&#160;              Sym, <span class="stringliteral">&quot;Returning; memory was released&quot;</span>);</div>
-<div class="line"><a name="l03220"></a><span class="lineno"> 3220</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l03221"></a><span class="lineno"> 3221</span>&#160;        <span class="keywordflow">case</span> AF_InnerBuffer: {</div>
-<div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;          <span class="keyword">const</span> MemRegion *ObjRegion =</div>
-<div class="line"><a name="l03223"></a><span class="lineno"> 3223</span>&#160;              <a class="code" href="namespaceclang_1_1ento_1_1allocation__state.html#ac1f0c9a29ca565930d37aaf30881300e">allocation_state::getContainerObjRegion</a>(statePrev, Sym);</div>
-<div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;          <span class="keyword">const</span> <span class="keyword">auto</span> *TypedRegion = cast&lt;TypedValueRegion&gt;(ObjRegion);</div>
-<div class="line"><a name="l03225"></a><span class="lineno"> 3225</span>&#160;          <a class="code" href="classclang_1_1QualType.html">QualType</a> ObjTy = TypedRegion-&gt;getValueType();</div>
-<div class="line"><a name="l03226"></a><span class="lineno"> 3226</span>&#160;          <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;Inner buffer of &#39;&quot;</span> &lt;&lt; ObjTy.<a class="code" href="classclang_1_1QualType.html#ae248b51eebdb65da5c48bfd8694c7e51">getAsString</a>() &lt;&lt; <span class="stringliteral">&quot;&#39; &quot;</span>;</div>
-<div class="line"><a name="l03227"></a><span class="lineno"> 3227</span>&#160; </div>
-<div class="line"><a name="l03228"></a><span class="lineno"> 3228</span>&#160;          <span class="keywordflow">if</span> (N-&gt;getLocation().getKind() == <a class="code" href="classclang_1_1ProgramPoint.html#aa4bd73e248c6fca35aad0b2c1fb7e8c6a34a09ff52d62e8c8a472ed2f948f43ec">ProgramPoint::PostImplicitCallKind</a>) {</div>
-<div class="line"><a name="l03229"></a><span class="lineno"> 3229</span>&#160;            <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;deallocated by call to destructor&quot;</span>;</div>
-<div class="line"><a name="l03230"></a><span class="lineno"> 3230</span>&#160;            StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
-<div class="line"><a name="l03231"></a><span class="lineno"> 3231</span>&#160;                Sym, <span class="stringliteral">&quot;Returning; inner buffer was deallocated&quot;</span>);</div>
-<div class="line"><a name="l03232"></a><span class="lineno"> 3232</span>&#160;          } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l03233"></a><span class="lineno"> 3233</span>&#160;            <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;reallocated by call to &#39;&quot;</span>;</div>
-<div class="line"><a name="l03234"></a><span class="lineno"> 3234</span>&#160;            <span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *S = RSCurr-&gt;getStmt();</div>
-<div class="line"><a name="l03235"></a><span class="lineno"> 3235</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *MemCallE = dyn_cast&lt;CXXMemberCallExpr&gt;(S)) {</div>
-<div class="line"><a name="l03236"></a><span class="lineno"> 3236</span>&#160;              <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; MemCallE-&gt;getMethodDecl()-&gt;getDeclName();</div>
-<div class="line"><a name="l03237"></a><span class="lineno"> 3237</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *OpCallE = dyn_cast&lt;CXXOperatorCallExpr&gt;(S)) {</div>
-<div class="line"><a name="l03238"></a><span class="lineno"> 3238</span>&#160;              <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; OpCallE-&gt;getDirectCallee()-&gt;getDeclName();</div>
-<div class="line"><a name="l03239"></a><span class="lineno"> 3239</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *CallE = dyn_cast&lt;CallExpr&gt;(S)) {</div>
-<div class="line"><a name="l03240"></a><span class="lineno"> 3240</span>&#160;              <span class="keyword">auto</span> &amp;CEMgr = BRC.getStateManager().getCallEventManager();</div>
-<div class="line"><a name="l03241"></a><span class="lineno"> 3241</span>&#160;              CallEventRef&lt;&gt; <a class="code" href="namespaceclang_1_1index.html#a21cdcb5f0f9f26abf02e5c4c3bb93e11ac3755e61202abd74da5885d2e9c9160e">Call</a> = CEMgr.getSimpleCall(CallE, <a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a>, CurrentLC);</div>
-<div class="line"><a name="l03242"></a><span class="lineno"> 3242</span>&#160;              <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *D = dyn_cast_or_null&lt;NamedDecl&gt;(<a class="code" href="namespaceclang_1_1index.html#a21cdcb5f0f9f26abf02e5c4c3bb93e11ac3755e61202abd74da5885d2e9c9160e">Call</a>-&gt;getDecl()))</div>
-<div class="line"><a name="l03243"></a><span class="lineno"> 3243</span>&#160;                <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; D-&gt;getDeclName();</div>
-<div class="line"><a name="l03244"></a><span class="lineno"> 3244</span>&#160;              <span class="keywordflow">else</span></div>
-<div class="line"><a name="l03245"></a><span class="lineno"> 3245</span>&#160;                <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;unknown&quot;</span>;</div>
-<div class="line"><a name="l03246"></a><span class="lineno"> 3246</span>&#160;            }</div>
-<div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;            <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;            StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
-<div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;                Sym, <span class="stringliteral">&quot;Returning; inner buffer was reallocated&quot;</span>);</div>
-<div class="line"><a name="l03250"></a><span class="lineno"> 3250</span>&#160;          }</div>
-<div class="line"><a name="l03251"></a><span class="lineno"> 3251</span>&#160;          Msg = <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a>.str();</div>
-<div class="line"><a name="l03252"></a><span class="lineno"> 3252</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l03253"></a><span class="lineno"> 3253</span>&#160;        }</div>
-<div class="line"><a name="l03254"></a><span class="lineno"> 3254</span>&#160;        <span class="keywordflow">case</span> AF_None:</div>
-<div class="line"><a name="l03255"></a><span class="lineno"> 3255</span>&#160;          llvm_unreachable(<span class="stringliteral">&quot;Unhandled allocation family!&quot;</span>);</div>
-<div class="line"><a name="l03256"></a><span class="lineno"> 3256</span>&#160;      }</div>
-<div class="line"><a name="l03257"></a><span class="lineno"> 3257</span>&#160; </div>
-<div class="line"><a name="l03258"></a><span class="lineno"> 3258</span>&#160;      <span class="comment">// See if we&#39;re releasing memory while inlining a destructor</span></div>
-<div class="line"><a name="l03259"></a><span class="lineno"> 3259</span>&#160;      <span class="comment">// (or one of its callees). This turns on various common</span></div>
-<div class="line"><a name="l03260"></a><span class="lineno"> 3260</span>&#160;      <span class="comment">// false positive suppressions.</span></div>
-<div class="line"><a name="l03261"></a><span class="lineno"> 3261</span>&#160;      <span class="keywordtype">bool</span> FoundAnyDestructor = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l03262"></a><span class="lineno"> 3262</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1LocationContext.html">LocationContext</a> *LC = CurrentLC; LC; LC = LC-&gt;<a class="code" href="classclang_1_1LocationContext.html#a0d95890e7358d8102ae6056a89508bfb">getParent</a>()) {</div>
-<div class="line"><a name="l03263"></a><span class="lineno"> 3263</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *DD = dyn_cast&lt;CXXDestructorDecl&gt;(LC-&gt;<a class="code" href="classclang_1_1LocationContext.html#a5f34d4aa5d22732cbe4500b406312431">getDecl</a>())) {</div>
-<div class="line"><a name="l03264"></a><span class="lineno"> 3264</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="MallocChecker_8cpp.html#a686de38faf1dbbbf84b48c28e6f442b3">isReferenceCountingPointerDestructor</a>(DD)) {</div>
-<div class="line"><a name="l03265"></a><span class="lineno"> 3265</span>&#160;            <span class="comment">// This immediately looks like a reference-counting destructor.</span></div>
-<div class="line"><a name="l03266"></a><span class="lineno"> 3266</span>&#160;            <span class="comment">// We&#39;re bad at guessing the original reference count of the object,</span></div>
-<div class="line"><a name="l03267"></a><span class="lineno"> 3267</span>&#160;            <span class="comment">// so suppress the report for now.</span></div>
-<div class="line"><a name="l03268"></a><span class="lineno"> 3268</span>&#160;            BR.markInvalid(getTag(), DD);</div>
-<div class="line"><a name="l03269"></a><span class="lineno"> 3269</span>&#160;          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!FoundAnyDestructor) {</div>
-<div class="line"><a name="l03270"></a><span class="lineno"> 3270</span>&#160;            assert(!ReleaseDestructorLC &amp;&amp;</div>
-<div class="line"><a name="l03271"></a><span class="lineno"> 3271</span>&#160;                   <span class="stringliteral">&quot;There can be only one release point!&quot;</span>);</div>
-<div class="line"><a name="l03272"></a><span class="lineno"> 3272</span>&#160;            <span class="comment">// Suspect that it&#39;s a reference counting pointer destructor.</span></div>
-<div class="line"><a name="l03273"></a><span class="lineno"> 3273</span>&#160;            <span class="comment">// On one of the next nodes might find out that it has atomic</span></div>
-<div class="line"><a name="l03274"></a><span class="lineno"> 3274</span>&#160;            <span class="comment">// reference counting operations within it (see the code above),</span></div>
-<div class="line"><a name="l03275"></a><span class="lineno"> 3275</span>&#160;            <span class="comment">// and if so, we&#39;d conclude that it likely is a reference counting</span></div>
-<div class="line"><a name="l03276"></a><span class="lineno"> 3276</span>&#160;            <span class="comment">// pointer destructor.</span></div>
-<div class="line"><a name="l03277"></a><span class="lineno"> 3277</span>&#160;            ReleaseDestructorLC = LC-&gt;<a class="code" href="classclang_1_1LocationContext.html#ad83bf782b94f8931c1a28dfcd4b915bf">getStackFrame</a>();</div>
-<div class="line"><a name="l03278"></a><span class="lineno"> 3278</span>&#160;            <span class="comment">// It is unlikely that releasing memory is delegated to a destructor</span></div>
-<div class="line"><a name="l03279"></a><span class="lineno"> 3279</span>&#160;            <span class="comment">// inside a destructor of a shared pointer, because it&#39;s fairly hard</span></div>
-<div class="line"><a name="l03280"></a><span class="lineno"> 3280</span>&#160;            <span class="comment">// to pass the information that the pointer indeed needs to be</span></div>
-<div class="line"><a name="l03281"></a><span class="lineno"> 3281</span>&#160;            <span class="comment">// released into it. So we&#39;re only interested in the innermost</span></div>
-<div class="line"><a name="l03282"></a><span class="lineno"> 3282</span>&#160;            <span class="comment">// destructor.</span></div>
-<div class="line"><a name="l03283"></a><span class="lineno"> 3283</span>&#160;            FoundAnyDestructor = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l03284"></a><span class="lineno"> 3284</span>&#160;          }</div>
-<div class="line"><a name="l03285"></a><span class="lineno"> 3285</span>&#160;        }</div>
-<div class="line"><a name="l03286"></a><span class="lineno"> 3286</span>&#160;      }</div>
-<div class="line"><a name="l03287"></a><span class="lineno"> 3287</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isRelinquished(RSCurr, RSPrev, S)) {</div>
-<div class="line"><a name="l03288"></a><span class="lineno"> 3288</span>&#160;      Msg = <span class="stringliteral">&quot;Memory ownership is transferred&quot;</span>;</div>
-<div class="line"><a name="l03289"></a><span class="lineno"> 3289</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(Sym, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l03290"></a><span class="lineno"> 3290</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hasReallocFailed(RSCurr, RSPrev, S)) {</div>
-<div class="line"><a name="l03291"></a><span class="lineno"> 3291</span>&#160;      Mode = ReallocationFailed;</div>
-<div class="line"><a name="l03292"></a><span class="lineno"> 3292</span>&#160;      Msg = <span class="stringliteral">&quot;Reallocation failed&quot;</span>;</div>
-<div class="line"><a name="l03293"></a><span class="lineno"> 3293</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForReallocationFailed&gt;(</div>
-<div class="line"><a name="l03294"></a><span class="lineno"> 3294</span>&#160;          Sym, <span class="stringliteral">&quot;Reallocation failed&quot;</span>);</div>
-<div class="line"><a name="l03295"></a><span class="lineno"> 3295</span>&#160; </div>
-<div class="line"><a name="l03296"></a><span class="lineno"> 3296</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespaceclang_1_1ento.html#a7b23a067324d14c5d493837dbc4fd8ca">SymbolRef</a> sym = <a class="code" href="MallocChecker_8cpp.html#a7019fa32d4323ea2a05116240724e77f">findFailedReallocSymbol</a>(<a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a>, statePrev)) {</div>
-<div class="line"><a name="l03297"></a><span class="lineno"> 3297</span>&#160;        <span class="comment">// Is it possible to fail two reallocs WITHOUT testing in between?</span></div>
-<div class="line"><a name="l03298"></a><span class="lineno"> 3298</span>&#160;        assert((!FailedReallocSymbol || FailedReallocSymbol == sym) &amp;&amp;</div>
-<div class="line"><a name="l03299"></a><span class="lineno"> 3299</span>&#160;          <span class="stringliteral">&quot;We only support one failed realloc at a time.&quot;</span>);</div>
-<div class="line"><a name="l03300"></a><span class="lineno"> 3300</span>&#160;        BR.markInteresting(sym);</div>
-<div class="line"><a name="l03301"></a><span class="lineno"> 3301</span>&#160;        FailedReallocSymbol = sym;</div>
-<div class="line"><a name="l03302"></a><span class="lineno"> 3302</span>&#160;      }</div>
-<div class="line"><a name="l03303"></a><span class="lineno"> 3303</span>&#160;    }</div>
-<div class="line"><a name="l03304"></a><span class="lineno"> 3304</span>&#160; </div>
-<div class="line"><a name="l03305"></a><span class="lineno"> 3305</span>&#160;  <span class="comment">// We are in a special mode if a reallocation failed later in the path.</span></div>
-<div class="line"><a name="l03306"></a><span class="lineno"> 3306</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Mode == ReallocationFailed) {</div>
-<div class="line"><a name="l03307"></a><span class="lineno"> 3307</span>&#160;    assert(FailedReallocSymbol &amp;&amp; <span class="stringliteral">&quot;No symbol to look for.&quot;</span>);</div>
-<div class="line"><a name="l03308"></a><span class="lineno"> 3308</span>&#160; </div>
-<div class="line"><a name="l03309"></a><span class="lineno"> 3309</span>&#160;    <span class="comment">// Is this is the first appearance of the reallocated symbol?</span></div>
-<div class="line"><a name="l03310"></a><span class="lineno"> 3310</span>&#160;    <span class="keywordflow">if</span> (!statePrev-&gt;get&lt;RegionState&gt;(FailedReallocSymbol)) {</div>
-<div class="line"><a name="l03311"></a><span class="lineno"> 3311</span>&#160;      <span class="comment">// We&#39;re at the reallocation point.</span></div>
-<div class="line"><a name="l03312"></a><span class="lineno"> 3312</span>&#160;      Msg = <span class="stringliteral">&quot;Attempt to reallocate memory&quot;</span>;</div>
-<div class="line"><a name="l03313"></a><span class="lineno"> 3313</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
-<div class="line"><a name="l03314"></a><span class="lineno"> 3314</span>&#160;          Sym, <span class="stringliteral">&quot;Returned reallocated memory&quot;</span>);</div>
-<div class="line"><a name="l03315"></a><span class="lineno"> 3315</span>&#160;      FailedReallocSymbol = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l03316"></a><span class="lineno"> 3316</span>&#160;      Mode = <a class="code" href="namespaceclang.html#a44775134eba0623164027214ea176711a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>;</div>
-<div class="line"><a name="l03317"></a><span class="lineno"> 3317</span>&#160;    }</div>
-<div class="line"><a name="l03318"></a><span class="lineno"> 3318</span>&#160;  }</div>
-<div class="line"><a name="l03319"></a><span class="lineno"> 3319</span>&#160; </div>
-<div class="line"><a name="l03320"></a><span class="lineno"> 3320</span>&#160;  <span class="keywordflow">if</span> (Msg.empty()) {</div>
-<div class="line"><a name="l03321"></a><span class="lineno"> 3321</span>&#160;    assert(!StackHint);</div>
-<div class="line"><a name="l03322"></a><span class="lineno"> 3322</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l03323"></a><span class="lineno"> 3323</span>&#160;  }</div>
-<div class="line"><a name="l03324"></a><span class="lineno"> 3324</span>&#160; </div>
-<div class="line"><a name="l03325"></a><span class="lineno"> 3325</span>&#160;  assert(StackHint);</div>
-<div class="line"><a name="l03326"></a><span class="lineno"> 3326</span>&#160; </div>
-<div class="line"><a name="l03327"></a><span class="lineno"> 3327</span>&#160;  <span class="comment">// Generate the extra diagnostic.</span></div>
-<div class="line"><a name="l03328"></a><span class="lineno"> 3328</span>&#160;  PathDiagnosticLocation Pos;</div>
-<div class="line"><a name="l03329"></a><span class="lineno"> 3329</span>&#160;  <span class="keywordflow">if</span> (!S) {</div>
-<div class="line"><a name="l03330"></a><span class="lineno"> 3330</span>&#160;    assert(RSCurr-&gt;getAllocationFamily() == AF_InnerBuffer);</div>
-<div class="line"><a name="l03331"></a><span class="lineno"> 3331</span>&#160;    <span class="keyword">auto</span> PostImplCall = N-&gt;getLocation().getAs&lt;<a class="code" href="classclang_1_1PostImplicitCall.html">PostImplicitCall</a>&gt;();</div>
-<div class="line"><a name="l03332"></a><span class="lineno"> 3332</span>&#160;    <span class="keywordflow">if</span> (!PostImplCall)</div>
-<div class="line"><a name="l03333"></a><span class="lineno"> 3333</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l03334"></a><span class="lineno"> 3334</span>&#160;    Pos = PathDiagnosticLocation(PostImplCall-&gt;getLocation(),</div>
-<div class="line"><a name="l03335"></a><span class="lineno"> 3335</span>&#160;                                 BRC.getSourceManager());</div>
-<div class="line"><a name="l03336"></a><span class="lineno"> 3336</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l03337"></a><span class="lineno"> 3337</span>&#160;    Pos = PathDiagnosticLocation(S, BRC.getSourceManager(),</div>
-<div class="line"><a name="l03338"></a><span class="lineno"> 3338</span>&#160;                                 N-&gt;getLocationContext());</div>
-<div class="line"><a name="l03339"></a><span class="lineno"> 3339</span>&#160;  }</div>
-<div class="line"><a name="l03340"></a><span class="lineno"> 3340</span>&#160; </div>
-<div class="line"><a name="l03341"></a><span class="lineno"> 3341</span>&#160;  <span class="keyword">auto</span> <a class="code" href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a> = std::make_shared&lt;PathDiagnosticEventPiece&gt;(Pos, Msg, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l03342"></a><span class="lineno"> 3342</span>&#160;  BR.addCallStackHint(<a class="code" href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a>, std::move(StackHint));</div>
-<div class="line"><a name="l03343"></a><span class="lineno"> 3343</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a>;</div>
-<div class="line"><a name="l03344"></a><span class="lineno"> 3344</span>&#160;}</div>
-<div class="line"><a name="l03345"></a><span class="lineno"> 3345</span>&#160; </div>
-<div class="line"><a name="l03346"></a><span class="lineno"> 3346</span>&#160;<span class="keywordtype">void</span> MallocChecker::printState(raw_ostream &amp;Out, <a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a> <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>,</div>
-<div class="line"><a name="l03347"></a><span class="lineno"> 3347</span>&#160;                               <span class="keyword">const</span> <span class="keywordtype">char</span> *NL, <span class="keyword">const</span> <span class="keywordtype">char</span> *Sep)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l03348"></a><span class="lineno"> 3348</span>&#160; </div>
-<div class="line"><a name="l03349"></a><span class="lineno"> 3349</span>&#160;  RegionStateTy RS = <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>-&gt;get&lt;RegionState&gt;();</div>
-<div class="line"><a name="l03350"></a><span class="lineno"> 3350</span>&#160; </div>
-<div class="line"><a name="l03351"></a><span class="lineno"> 3351</span>&#160;  <span class="keywordflow">if</span> (!RS.isEmpty()) {</div>
-<div class="line"><a name="l03352"></a><span class="lineno"> 3352</span>&#160;    Out &lt;&lt; Sep &lt;&lt; <span class="stringliteral">&quot;MallocChecker :&quot;</span> &lt;&lt; NL;</div>
-<div class="line"><a name="l03353"></a><span class="lineno"> 3353</span>&#160;    <span class="keywordflow">for</span> (RegionStateTy::iterator I = RS.begin(), E = RS.end(); I != E; ++I) {</div>
-<div class="line"><a name="l03354"></a><span class="lineno"> 3354</span>&#160;      <span class="keyword">const</span> RefState *RefS = <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>-&gt;get&lt;RegionState&gt;(I.getKey());</div>
-<div class="line"><a name="l03355"></a><span class="lineno"> 3355</span>&#160;      AllocationFamily Family = RefS-&gt;getAllocationFamily();</div>
-<div class="line"><a name="l03356"></a><span class="lineno"> 3356</span>&#160;      <a class="code" href="classllvm_1_1Optional.html">Optional&lt;MallocChecker::CheckKind&gt;</a> CheckKind = getCheckIfTracked(Family);</div>
-<div class="line"><a name="l03357"></a><span class="lineno"> 3357</span>&#160;      <span class="keywordflow">if</span> (!CheckKind.hasValue())</div>
-<div class="line"><a name="l03358"></a><span class="lineno"> 3358</span>&#160;         CheckKind = getCheckIfTracked(Family, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l03359"></a><span class="lineno"> 3359</span>&#160; </div>
-<div class="line"><a name="l03360"></a><span class="lineno"> 3360</span>&#160;      I.getKey()-&gt;dumpToStream(Out);</div>
-<div class="line"><a name="l03361"></a><span class="lineno"> 3361</span>&#160;      Out &lt;&lt; <span class="stringliteral">&quot; : &quot;</span>;</div>
-<div class="line"><a name="l03362"></a><span class="lineno"> 3362</span>&#160;      I.getData().dump(Out);</div>
-<div class="line"><a name="l03363"></a><span class="lineno"> 3363</span>&#160;      <span class="keywordflow">if</span> (CheckKind.hasValue())</div>
-<div class="line"><a name="l03364"></a><span class="lineno"> 3364</span>&#160;        Out &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; CheckNames[*CheckKind].getName() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l03365"></a><span class="lineno"> 3365</span>&#160;      Out &lt;&lt; NL;</div>
-<div class="line"><a name="l03366"></a><span class="lineno"> 3366</span>&#160;    }</div>
-<div class="line"><a name="l03367"></a><span class="lineno"> 3367</span>&#160;  }</div>
-<div class="line"><a name="l03368"></a><span class="lineno"> 3368</span>&#160;}</div>
-<div class="line"><a name="l03369"></a><span class="lineno"> 3369</span>&#160; </div>
-<div class="line"><a name="l03370"></a><span class="lineno"> 3370</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceclang.html">clang</a> {</div>
-<div class="line"><a name="l03371"></a><span class="lineno"> 3371</span>&#160;<span class="keyword">namespace </span>ento {</div>
-<div class="line"><a name="l03372"></a><span class="lineno"> 3372</span>&#160;<span class="keyword">namespace </span>allocation_state {</div>
-<div class="line"><a name="l03373"></a><span class="lineno"> 3373</span>&#160; </div>
-<div class="line"><a name="l03374"></a><span class="lineno"> 3374</span>&#160;<a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a></div>
-<div class="line"><a name="l03375"></a><span class="lineno"><a class="line" href="namespaceclang_1_1ento_1_1allocation__state.html#a29462c918cfe94de7c8fb57c3c13a058"> 3375</a></span>&#160;<a class="code" href="namespaceclang_1_1ento_1_1allocation__state.html#a29462c918cfe94de7c8fb57c3c13a058">markReleased</a>(<a class="code" href="classllvm_1_1IntrusiveRefCntPtr.html">ProgramStateRef</a> <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>, <a class="code" href="classclang_1_1ento_1_1SymExpr.html">SymbolRef</a> Sym, <span class="keyword">const</span> <a class="code" href="classclang_1_1Expr.html">Expr</a> *Origin) {</div>
-<div class="line"><a name="l03376"></a><span class="lineno"> 3376</span>&#160;  AllocationFamily Family = AF_InnerBuffer;</div>
-<div class="line"><a name="l03377"></a><span class="lineno"> 3377</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>-&gt;set&lt;RegionState&gt;(Sym, RefState::getReleased(Family, Origin));</div>
-<div class="line"><a name="l03378"></a><span class="lineno"> 3378</span>&#160;}</div>
-<div class="line"><a name="l03379"></a><span class="lineno"> 3379</span>&#160; </div>
-<div class="line"><a name="l03380"></a><span class="lineno"> 3380</span>&#160;} <span class="comment">// end namespace allocation_state</span></div>
-<div class="line"><a name="l03381"></a><span class="lineno"> 3381</span>&#160;} <span class="comment">// end namespace ento</span></div>
-<div class="line"><a name="l03382"></a><span class="lineno"> 3382</span>&#160;} <span class="comment">// end namespace clang</span></div>
-<div class="line"><a name="l03383"></a><span class="lineno"> 3383</span>&#160; </div>
-<div class="line"><a name="l03384"></a><span class="lineno"> 3384</span>&#160;<span class="comment">// Intended to be used in InnerPointerChecker to register the part of</span></div>
-<div class="line"><a name="l03385"></a><span class="lineno"> 3385</span>&#160;<span class="comment">// MallocChecker connected to it.</span></div>
-<div class="line"><a name="l03386"></a><span class="lineno"><a class="line" href="namespaceclang_1_1ento.html#a9c8aca4f8b927847b5785d84ac0305d6"> 3386</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceclang_1_1ento.html#a9c8aca4f8b927847b5785d84ac0305d6">ento::registerInnerPointerCheckerAux</a>(<a class="code" href="classclang_1_1ento_1_1CheckerManager.html">CheckerManager</a> &amp;mgr) {</div>
-<div class="line"><a name="l03387"></a><span class="lineno"> 3387</span>&#160;  MallocChecker *checker = mgr.<a class="code" href="classclang_1_1ento_1_1CheckerManager.html#a34fb2770f967daca02f358ac3095b152">getChecker</a>&lt;MallocChecker&gt;();</div>
-<div class="line"><a name="l03388"></a><span class="lineno"> 3388</span>&#160;  checker-&gt;ChecksEnabled[MallocChecker::CK_InnerPointerChecker] = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l03389"></a><span class="lineno"> 3389</span>&#160;  checker-&gt;CheckNames[MallocChecker::CK_InnerPointerChecker] =</div>
-<div class="line"><a name="l03390"></a><span class="lineno"> 3390</span>&#160;      mgr.<a class="code" href="classclang_1_1ento_1_1CheckerManager.html#ad60686344ab5b998db0740cfc8374a8a">getCurrentCheckerName</a>();</div>
-<div class="line"><a name="l03391"></a><span class="lineno"> 3391</span>&#160;}</div>
-<div class="line"><a name="l03392"></a><span class="lineno"> 3392</span>&#160; </div>
-<div class="line"><a name="l03393"></a><span class="lineno"> 3393</span>&#160;<span class="keywordtype">void</span> ento::registerDynamicMemoryModeling(CheckerManager &amp;mgr) {</div>
-<div class="line"><a name="l03394"></a><span class="lineno"> 3394</span>&#160;  <span class="keyword">auto</span> *checker = mgr.registerChecker&lt;MallocChecker&gt;();</div>
-<div class="line"><a name="l03395"></a><span class="lineno"> 3395</span>&#160;  checker-&gt;ShouldIncludeOwnershipAnnotatedFunctions =</div>
-<div class="line"><a name="l03396"></a><span class="lineno"> 3396</span>&#160;      mgr.getAnalyzerOptions().getCheckerBooleanOption(checker, <span class="stringliteral">&quot;Optimistic&quot;</span>);</div>
-<div class="line"><a name="l03397"></a><span class="lineno"> 3397</span>&#160;}</div>
-<div class="line"><a name="l03398"></a><span class="lineno"> 3398</span>&#160; </div>
-<div class="line"><a name="l03399"></a><span class="lineno"> 3399</span>&#160;<span class="keywordtype">bool</span> ento::shouldRegisterDynamicMemoryModeling(<span class="keyword">const</span> CheckerManager &amp;mgr) {</div>
-<div class="line"><a name="l03400"></a><span class="lineno"> 3400</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l03401"></a><span class="lineno"> 3401</span>&#160;}</div>
-<div class="line"><a name="l03402"></a><span class="lineno"> 3402</span>&#160; </div>
-<div class="line"><a name="l03403"></a><span class="lineno"><a class="line" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1"> 3403</a></span>&#160;<span class="preprocessor">#define REGISTER_CHECKER(name)                                                 \</span></div>
-<div class="line"><a name="l03404"></a><span class="lineno"> 3404</span>&#160;<span class="preprocessor">  void ento::register##name(CheckerManager &amp;mgr) {                             \</span></div>
-<div class="line"><a name="l03405"></a><span class="lineno"> 3405</span>&#160;<span class="preprocessor">    MallocChecker *checker = mgr.getChecker&lt;MallocChecker&gt;();                  \</span></div>
-<div class="line"><a name="l03406"></a><span class="lineno"> 3406</span>&#160;<span class="preprocessor">    checker-&gt;ChecksEnabled[MallocChecker::CK_##name] = true;                   \</span></div>
-<div class="line"><a name="l03407"></a><span class="lineno"> 3407</span>&#160;<span class="preprocessor">    checker-&gt;CheckNames[MallocChecker::CK_##name] =                            \</span></div>
-<div class="line"><a name="l03408"></a><span class="lineno"> 3408</span>&#160;<span class="preprocessor">        mgr.getCurrentCheckerName();                                           \</span></div>
-<div class="line"><a name="l03409"></a><span class="lineno"> 3409</span>&#160;<span class="preprocessor">  }                                                                            \</span></div>
-<div class="line"><a name="l03410"></a><span class="lineno"> 3410</span>&#160;<span class="preprocessor">                                                                               \</span></div>
-<div class="line"><a name="l03411"></a><span class="lineno"> 3411</span>&#160;<span class="preprocessor">  bool ento::shouldRegister##name(const CheckerManager &amp;mgr) { return true; }</span></div>
-<div class="line"><a name="l03412"></a><span class="lineno"> 3412</span>&#160; </div>
-<div class="line"><a name="l03413"></a><span class="lineno"> 3413</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(MallocChecker)</div>
-<div class="line"><a name="l03414"></a><span class="lineno"> 3414</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(NewDeleteChecker)</div>
-<div class="line"><a name="l03415"></a><span class="lineno"> 3415</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(NewDeleteLeaksChecker)</div>
-<div class="line"><a name="l03416"></a><span class="lineno"> 3416</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(MismatchedDeallocatorChecker)</div>
+<div class="line"><a name="l03148"></a><span class="lineno"> 3148</span>&#160;    <span class="keywordflow">if</span> (N.contains_insensitive(<span class="stringliteral">&quot;ptr&quot;</span>) || N.contains_insensitive(<span class="stringliteral">&quot;pointer&quot;</span>)) {</div>
+<div class="line"><a name="l03149"></a><span class="lineno"> 3149</span>&#160;      <span class="keywordflow">if</span> (N.contains_insensitive(<span class="stringliteral">&quot;ref&quot;</span>) || N.contains_insensitive(<span class="stringliteral">&quot;cnt&quot;</span>) ||</div>
+<div class="line"><a name="l03150"></a><span class="lineno"> 3150</span>&#160;          N.contains_insensitive(<span class="stringliteral">&quot;intrusive&quot;</span>) ||</div>
+<div class="line"><a name="l03151"></a><span class="lineno"> 3151</span>&#160;          N.contains_insensitive(<span class="stringliteral">&quot;shared&quot;</span>)) {</div>
+<div class="line"><a name="l03152"></a><span class="lineno"> 3152</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l03153"></a><span class="lineno"> 3153</span>&#160;      }</div>
+<div class="line"><a name="l03154"></a><span class="lineno"> 3154</span>&#160;    }</div>
+<div class="line"><a name="l03155"></a><span class="lineno"> 3155</span>&#160;  }</div>
+<div class="line"><a name="l03156"></a><span class="lineno"> 3156</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l03157"></a><span class="lineno"> 3157</span>&#160;}</div>
+<div class="line"><a name="l03158"></a><span class="lineno"> 3158</span>&#160; </div>
+<div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;<a class="code" href="namespaceclang_1_1ento.html#af0d0e00a28f39eb324aea94250e58848">PathDiagnosticPieceRef</a> MallocBugVisitor::VisitNode(<span class="keyword">const</span> ExplodedNode *N,</div>
+<div class="line"><a name="l03160"></a><span class="lineno"> 3160</span>&#160;                                                   BugReporterContext &amp;BRC,</div>
+<div class="line"><a name="l03161"></a><span class="lineno"> 3161</span>&#160;                                                   PathSensitiveBugReport &amp;BR) {</div>
+<div class="line"><a name="l03162"></a><span class="lineno"> 3162</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a> <a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a> = N-&gt;getState();</div>
+<div class="line"><a name="l03163"></a><span class="lineno"> 3163</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a> statePrev = N-&gt;getFirstPred()-&gt;getState();</div>
+<div class="line"><a name="l03164"></a><span class="lineno"> 3164</span>&#160; </div>
+<div class="line"><a name="l03165"></a><span class="lineno"> 3165</span>&#160;  <span class="keyword">const</span> RefState *RSCurr = <a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a>-&gt;get&lt;RegionState&gt;(Sym);</div>
+<div class="line"><a name="l03166"></a><span class="lineno"> 3166</span>&#160;  <span class="keyword">const</span> RefState *RSPrev = statePrev-&gt;get&lt;RegionState&gt;(Sym);</div>
+<div class="line"><a name="l03167"></a><span class="lineno"> 3167</span>&#160; </div>
+<div class="line"><a name="l03168"></a><span class="lineno"> 3168</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *S = N-&gt;getStmtForDiagnostics();</div>
+<div class="line"><a name="l03169"></a><span class="lineno"> 3169</span>&#160;  <span class="comment">// When dealing with containers, we sometimes want to give a note</span></div>
+<div class="line"><a name="l03170"></a><span class="lineno"> 3170</span>&#160;  <span class="comment">// even if the statement is missing.</span></div>
+<div class="line"><a name="l03171"></a><span class="lineno"> 3171</span>&#160;  <span class="keywordflow">if</span> (!S &amp;&amp; (!RSCurr || RSCurr-&gt;getAllocationFamily() != AF_InnerBuffer))</div>
+<div class="line"><a name="l03172"></a><span class="lineno"> 3172</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l03173"></a><span class="lineno"> 3173</span>&#160; </div>
+<div class="line"><a name="l03174"></a><span class="lineno"> 3174</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1LocationContext.html">LocationContext</a> *CurrentLC = N-&gt;getLocationContext();</div>
+<div class="line"><a name="l03175"></a><span class="lineno"> 3175</span>&#160; </div>
+<div class="line"><a name="l03176"></a><span class="lineno"> 3176</span>&#160;  <span class="comment">// If we find an atomic fetch_add or fetch_sub within the destructor in which</span></div>
+<div class="line"><a name="l03177"></a><span class="lineno"> 3177</span>&#160;  <span class="comment">// the pointer was released (before the release), this is likely a destructor</span></div>
+<div class="line"><a name="l03178"></a><span class="lineno"> 3178</span>&#160;  <span class="comment">// of a shared pointer.</span></div>
+<div class="line"><a name="l03179"></a><span class="lineno"> 3179</span>&#160;  <span class="comment">// Because we don&#39;t model atomics, and also because we don&#39;t know that the</span></div>
+<div class="line"><a name="l03180"></a><span class="lineno"> 3180</span>&#160;  <span class="comment">// original reference count is positive, we should not report use-after-frees</span></div>
+<div class="line"><a name="l03181"></a><span class="lineno"> 3181</span>&#160;  <span class="comment">// on objects deleted in such destructors. This can probably be improved</span></div>
+<div class="line"><a name="l03182"></a><span class="lineno"> 3182</span>&#160;  <span class="comment">// through better shared pointer modeling.</span></div>
+<div class="line"><a name="l03183"></a><span class="lineno"> 3183</span>&#160;  <span class="keywordflow">if</span> (ReleaseDestructorLC) {</div>
+<div class="line"><a name="l03184"></a><span class="lineno"> 3184</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *AE = dyn_cast&lt;AtomicExpr&gt;(S)) {</div>
+<div class="line"><a name="l03185"></a><span class="lineno"> 3185</span>&#160;      <a class="code" href="classclang_1_1AtomicExpr.html#aafb2a1534e844508c6c0979397e5261d">AtomicExpr::AtomicOp</a> Op = AE-&gt;getOp();</div>
+<div class="line"><a name="l03186"></a><span class="lineno"> 3186</span>&#160;      <span class="keywordflow">if</span> (Op == AtomicExpr::AO__c11_atomic_fetch_add ||</div>
+<div class="line"><a name="l03187"></a><span class="lineno"> 3187</span>&#160;          Op == AtomicExpr::AO__c11_atomic_fetch_sub) {</div>
+<div class="line"><a name="l03188"></a><span class="lineno"> 3188</span>&#160;        <span class="keywordflow">if</span> (ReleaseDestructorLC == CurrentLC ||</div>
+<div class="line"><a name="l03189"></a><span class="lineno"> 3189</span>&#160;            ReleaseDestructorLC-&gt;<a class="code" href="classclang_1_1LocationContext.html#a11efac841bf05dcba26313e753fc52a5">isParentOf</a>(CurrentLC)) {</div>
+<div class="line"><a name="l03190"></a><span class="lineno"> 3190</span>&#160;          BR.markInvalid(getTag(), S);</div>
+<div class="line"><a name="l03191"></a><span class="lineno"> 3191</span>&#160;        }</div>
+<div class="line"><a name="l03192"></a><span class="lineno"> 3192</span>&#160;      }</div>
+<div class="line"><a name="l03193"></a><span class="lineno"> 3193</span>&#160;    }</div>
+<div class="line"><a name="l03194"></a><span class="lineno"> 3194</span>&#160;  }</div>
+<div class="line"><a name="l03195"></a><span class="lineno"> 3195</span>&#160; </div>
+<div class="line"><a name="l03196"></a><span class="lineno"> 3196</span>&#160;  <span class="comment">// FIXME: We will eventually need to handle non-statement-based events</span></div>
+<div class="line"><a name="l03197"></a><span class="lineno"> 3197</span>&#160;  <span class="comment">// (__attribute__((cleanup))).</span></div>
+<div class="line"><a name="l03198"></a><span class="lineno"> 3198</span>&#160; </div>
+<div class="line"><a name="l03199"></a><span class="lineno"> 3199</span>&#160;  <span class="comment">// Find out if this is an interesting point and what is the kind.</span></div>
+<div class="line"><a name="l03200"></a><span class="lineno"> 3200</span>&#160;  StringRef Msg;</div>
+<div class="line"><a name="l03201"></a><span class="lineno"> 3201</span>&#160;  std::unique_ptr&lt;StackHintGeneratorForSymbol&gt; StackHint = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l03202"></a><span class="lineno"> 3202</span>&#160;  <a class="code" href="classllvm_1_1SmallString.html">SmallString&lt;256&gt;</a> Buf;</div>
+<div class="line"><a name="l03203"></a><span class="lineno"> 3203</span>&#160;  llvm::raw_svector_ostream <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a>(Buf);</div>
+<div class="line"><a name="l03204"></a><span class="lineno"> 3204</span>&#160; </div>
+<div class="line"><a name="l03205"></a><span class="lineno"> 3205</span>&#160;  <span class="keywordflow">if</span> (Mode == Normal) {</div>
+<div class="line"><a name="l03206"></a><span class="lineno"> 3206</span>&#160;    <span class="keywordflow">if</span> (isAllocated(RSCurr, RSPrev, S)) {</div>
+<div class="line"><a name="l03207"></a><span class="lineno"> 3207</span>&#160;      Msg = <span class="stringliteral">&quot;Memory is allocated&quot;</span>;</div>
+<div class="line"><a name="l03208"></a><span class="lineno"> 3208</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
+<div class="line"><a name="l03209"></a><span class="lineno"> 3209</span>&#160;          Sym, <span class="stringliteral">&quot;Returned allocated memory&quot;</span>);</div>
+<div class="line"><a name="l03210"></a><span class="lineno"> 3210</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="MallocChecker_8cpp.html#a2a7903a04bcc80b227a601bafdf4d128">isReleased</a>(RSCurr, RSPrev, S)) {</div>
+<div class="line"><a name="l03211"></a><span class="lineno"> 3211</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> Family = RSCurr-&gt;getAllocationFamily();</div>
+<div class="line"><a name="l03212"></a><span class="lineno"> 3212</span>&#160;      <span class="keywordflow">switch</span> (Family) {</div>
+<div class="line"><a name="l03213"></a><span class="lineno"> 3213</span>&#160;        <span class="keywordflow">case</span> AF_Alloca:</div>
+<div class="line"><a name="l03214"></a><span class="lineno"> 3214</span>&#160;        <span class="keywordflow">case</span> AF_Malloc:</div>
+<div class="line"><a name="l03215"></a><span class="lineno"> 3215</span>&#160;        <span class="keywordflow">case</span> AF_CXXNew:</div>
+<div class="line"><a name="l03216"></a><span class="lineno"> 3216</span>&#160;        <span class="keywordflow">case</span> AF_CXXNewArray:</div>
+<div class="line"><a name="l03217"></a><span class="lineno"> 3217</span>&#160;        <span class="keywordflow">case</span> AF_IfNameIndex:</div>
+<div class="line"><a name="l03218"></a><span class="lineno"> 3218</span>&#160;          Msg = <span class="stringliteral">&quot;Memory is released&quot;</span>;</div>
+<div class="line"><a name="l03219"></a><span class="lineno"> 3219</span>&#160;          StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
+<div class="line"><a name="l03220"></a><span class="lineno"> 3220</span>&#160;              Sym, <span class="stringliteral">&quot;Returning; memory was released&quot;</span>);</div>
+<div class="line"><a name="l03221"></a><span class="lineno"> 3221</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;        <span class="keywordflow">case</span> AF_InnerBuffer: {</div>
+<div class="line"><a name="l03223"></a><span class="lineno"> 3223</span>&#160;          <span class="keyword">const</span> MemRegion *ObjRegion =</div>
+<div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;              <a class="code" href="namespaceclang_1_1ento_1_1allocation__state.html#ac1f0c9a29ca565930d37aaf30881300e">allocation_state::getContainerObjRegion</a>(statePrev, Sym);</div>
+<div class="line"><a name="l03225"></a><span class="lineno"> 3225</span>&#160;          <span class="keyword">const</span> <span class="keyword">auto</span> *TypedRegion = cast&lt;TypedValueRegion&gt;(ObjRegion);</div>
+<div class="line"><a name="l03226"></a><span class="lineno"> 3226</span>&#160;          <a class="code" href="classclang_1_1QualType.html">QualType</a> ObjTy = TypedRegion-&gt;getValueType();</div>
+<div class="line"><a name="l03227"></a><span class="lineno"> 3227</span>&#160;          <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;Inner buffer of &#39;&quot;</span> &lt;&lt; ObjTy.<a class="code" href="classclang_1_1QualType.html#ae248b51eebdb65da5c48bfd8694c7e51">getAsString</a>() &lt;&lt; <span class="stringliteral">&quot;&#39; &quot;</span>;</div>
+<div class="line"><a name="l03228"></a><span class="lineno"> 3228</span>&#160; </div>
+<div class="line"><a name="l03229"></a><span class="lineno"> 3229</span>&#160;          <span class="keywordflow">if</span> (N-&gt;getLocation().getKind() == <a class="code" href="classclang_1_1ProgramPoint.html#aa4bd73e248c6fca35aad0b2c1fb7e8c6a34a09ff52d62e8c8a472ed2f948f43ec">ProgramPoint::PostImplicitCallKind</a>) {</div>
+<div class="line"><a name="l03230"></a><span class="lineno"> 3230</span>&#160;            <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;deallocated by call to destructor&quot;</span>;</div>
+<div class="line"><a name="l03231"></a><span class="lineno"> 3231</span>&#160;            StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
+<div class="line"><a name="l03232"></a><span class="lineno"> 3232</span>&#160;                Sym, <span class="stringliteral">&quot;Returning; inner buffer was deallocated&quot;</span>);</div>
+<div class="line"><a name="l03233"></a><span class="lineno"> 3233</span>&#160;          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l03234"></a><span class="lineno"> 3234</span>&#160;            <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;reallocated by call to &#39;&quot;</span>;</div>
+<div class="line"><a name="l03235"></a><span class="lineno"> 3235</span>&#160;            <span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *S = RSCurr-&gt;getStmt();</div>
+<div class="line"><a name="l03236"></a><span class="lineno"> 3236</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *MemCallE = dyn_cast&lt;CXXMemberCallExpr&gt;(S)) {</div>
+<div class="line"><a name="l03237"></a><span class="lineno"> 3237</span>&#160;              <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; MemCallE-&gt;getMethodDecl()-&gt;getDeclName();</div>
+<div class="line"><a name="l03238"></a><span class="lineno"> 3238</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *OpCallE = dyn_cast&lt;CXXOperatorCallExpr&gt;(S)) {</div>
+<div class="line"><a name="l03239"></a><span class="lineno"> 3239</span>&#160;              <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; OpCallE-&gt;getDirectCallee()-&gt;getDeclName();</div>
+<div class="line"><a name="l03240"></a><span class="lineno"> 3240</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *CallE = dyn_cast&lt;CallExpr&gt;(S)) {</div>
+<div class="line"><a name="l03241"></a><span class="lineno"> 3241</span>&#160;              <span class="keyword">auto</span> &amp;CEMgr = BRC.getStateManager().getCallEventManager();</div>
+<div class="line"><a name="l03242"></a><span class="lineno"> 3242</span>&#160;              CallEventRef&lt;&gt; <a class="code" href="namespaceclang_1_1index.html#a21cdcb5f0f9f26abf02e5c4c3bb93e11ac3755e61202abd74da5885d2e9c9160e">Call</a> = CEMgr.getSimpleCall(CallE, <a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a>, CurrentLC);</div>
+<div class="line"><a name="l03243"></a><span class="lineno"> 3243</span>&#160;              <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *D = dyn_cast_or_null&lt;NamedDecl&gt;(<a class="code" href="namespaceclang_1_1index.html#a21cdcb5f0f9f26abf02e5c4c3bb93e11ac3755e61202abd74da5885d2e9c9160e">Call</a>-&gt;getDecl()))</div>
+<div class="line"><a name="l03244"></a><span class="lineno"> 3244</span>&#160;                <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; D-&gt;getDeclName();</div>
+<div class="line"><a name="l03245"></a><span class="lineno"> 3245</span>&#160;              <span class="keywordflow">else</span></div>
+<div class="line"><a name="l03246"></a><span class="lineno"> 3246</span>&#160;                <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;unknown&quot;</span>;</div>
+<div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;            }</div>
+<div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;            <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;            StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
+<div class="line"><a name="l03250"></a><span class="lineno"> 3250</span>&#160;                Sym, <span class="stringliteral">&quot;Returning; inner buffer was reallocated&quot;</span>);</div>
+<div class="line"><a name="l03251"></a><span class="lineno"> 3251</span>&#160;          }</div>
+<div class="line"><a name="l03252"></a><span class="lineno"> 3252</span>&#160;          Msg = <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a>.str();</div>
+<div class="line"><a name="l03253"></a><span class="lineno"> 3253</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l03254"></a><span class="lineno"> 3254</span>&#160;        }</div>
+<div class="line"><a name="l03255"></a><span class="lineno"> 3255</span>&#160;        <span class="keywordflow">case</span> AF_None:</div>
+<div class="line"><a name="l03256"></a><span class="lineno"> 3256</span>&#160;          llvm_unreachable(<span class="stringliteral">&quot;Unhandled allocation family!&quot;</span>);</div>
+<div class="line"><a name="l03257"></a><span class="lineno"> 3257</span>&#160;      }</div>
+<div class="line"><a name="l03258"></a><span class="lineno"> 3258</span>&#160; </div>
+<div class="line"><a name="l03259"></a><span class="lineno"> 3259</span>&#160;      <span class="comment">// See if we&#39;re releasing memory while inlining a destructor</span></div>
+<div class="line"><a name="l03260"></a><span class="lineno"> 3260</span>&#160;      <span class="comment">// (or one of its callees). This turns on various common</span></div>
+<div class="line"><a name="l03261"></a><span class="lineno"> 3261</span>&#160;      <span class="comment">// false positive suppressions.</span></div>
+<div class="line"><a name="l03262"></a><span class="lineno"> 3262</span>&#160;      <span class="keywordtype">bool</span> FoundAnyDestructor = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l03263"></a><span class="lineno"> 3263</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1LocationContext.html">LocationContext</a> *LC = CurrentLC; LC; LC = LC-&gt;<a class="code" href="classclang_1_1LocationContext.html#a0d95890e7358d8102ae6056a89508bfb">getParent</a>()) {</div>
+<div class="line"><a name="l03264"></a><span class="lineno"> 3264</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *DD = dyn_cast&lt;CXXDestructorDecl&gt;(LC-&gt;<a class="code" href="classclang_1_1LocationContext.html#a5f34d4aa5d22732cbe4500b406312431">getDecl</a>())) {</div>
+<div class="line"><a name="l03265"></a><span class="lineno"> 3265</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="MallocChecker_8cpp.html#a686de38faf1dbbbf84b48c28e6f442b3">isReferenceCountingPointerDestructor</a>(DD)) {</div>
+<div class="line"><a name="l03266"></a><span class="lineno"> 3266</span>&#160;            <span class="comment">// This immediately looks like a reference-counting destructor.</span></div>
+<div class="line"><a name="l03267"></a><span class="lineno"> 3267</span>&#160;            <span class="comment">// We&#39;re bad at guessing the original reference count of the object,</span></div>
+<div class="line"><a name="l03268"></a><span class="lineno"> 3268</span>&#160;            <span class="comment">// so suppress the report for now.</span></div>
+<div class="line"><a name="l03269"></a><span class="lineno"> 3269</span>&#160;            BR.markInvalid(getTag(), DD);</div>
+<div class="line"><a name="l03270"></a><span class="lineno"> 3270</span>&#160;          } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!FoundAnyDestructor) {</div>
+<div class="line"><a name="l03271"></a><span class="lineno"> 3271</span>&#160;            assert(!ReleaseDestructorLC &amp;&amp;</div>
+<div class="line"><a name="l03272"></a><span class="lineno"> 3272</span>&#160;                   <span class="stringliteral">&quot;There can be only one release point!&quot;</span>);</div>
+<div class="line"><a name="l03273"></a><span class="lineno"> 3273</span>&#160;            <span class="comment">// Suspect that it&#39;s a reference counting pointer destructor.</span></div>
+<div class="line"><a name="l03274"></a><span class="lineno"> 3274</span>&#160;            <span class="comment">// On one of the next nodes might find out that it has atomic</span></div>
+<div class="line"><a name="l03275"></a><span class="lineno"> 3275</span>&#160;            <span class="comment">// reference counting operations within it (see the code above),</span></div>
+<div class="line"><a name="l03276"></a><span class="lineno"> 3276</span>&#160;            <span class="comment">// and if so, we&#39;d conclude that it likely is a reference counting</span></div>
+<div class="line"><a name="l03277"></a><span class="lineno"> 3277</span>&#160;            <span class="comment">// pointer destructor.</span></div>
+<div class="line"><a name="l03278"></a><span class="lineno"> 3278</span>&#160;            ReleaseDestructorLC = LC-&gt;<a class="code" href="classclang_1_1LocationContext.html#ad83bf782b94f8931c1a28dfcd4b915bf">getStackFrame</a>();</div>
+<div class="line"><a name="l03279"></a><span class="lineno"> 3279</span>&#160;            <span class="comment">// It is unlikely that releasing memory is delegated to a destructor</span></div>
+<div class="line"><a name="l03280"></a><span class="lineno"> 3280</span>&#160;            <span class="comment">// inside a destructor of a shared pointer, because it&#39;s fairly hard</span></div>
+<div class="line"><a name="l03281"></a><span class="lineno"> 3281</span>&#160;            <span class="comment">// to pass the information that the pointer indeed needs to be</span></div>
+<div class="line"><a name="l03282"></a><span class="lineno"> 3282</span>&#160;            <span class="comment">// released into it. So we&#39;re only interested in the innermost</span></div>
+<div class="line"><a name="l03283"></a><span class="lineno"> 3283</span>&#160;            <span class="comment">// destructor.</span></div>
+<div class="line"><a name="l03284"></a><span class="lineno"> 3284</span>&#160;            FoundAnyDestructor = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l03285"></a><span class="lineno"> 3285</span>&#160;          }</div>
+<div class="line"><a name="l03286"></a><span class="lineno"> 3286</span>&#160;        }</div>
+<div class="line"><a name="l03287"></a><span class="lineno"> 3287</span>&#160;      }</div>
+<div class="line"><a name="l03288"></a><span class="lineno"> 3288</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isRelinquished(RSCurr, RSPrev, S)) {</div>
+<div class="line"><a name="l03289"></a><span class="lineno"> 3289</span>&#160;      Msg = <span class="stringliteral">&quot;Memory ownership is transferred&quot;</span>;</div>
+<div class="line"><a name="l03290"></a><span class="lineno"> 3290</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(Sym, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l03291"></a><span class="lineno"> 3291</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (hasReallocFailed(RSCurr, RSPrev, S)) {</div>
+<div class="line"><a name="l03292"></a><span class="lineno"> 3292</span>&#160;      Mode = ReallocationFailed;</div>
+<div class="line"><a name="l03293"></a><span class="lineno"> 3293</span>&#160;      Msg = <span class="stringliteral">&quot;Reallocation failed&quot;</span>;</div>
+<div class="line"><a name="l03294"></a><span class="lineno"> 3294</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForReallocationFailed&gt;(</div>
+<div class="line"><a name="l03295"></a><span class="lineno"> 3295</span>&#160;          Sym, <span class="stringliteral">&quot;Reallocation failed&quot;</span>);</div>
+<div class="line"><a name="l03296"></a><span class="lineno"> 3296</span>&#160; </div>
+<div class="line"><a name="l03297"></a><span class="lineno"> 3297</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespaceclang_1_1ento.html#a7b23a067324d14c5d493837dbc4fd8ca">SymbolRef</a> sym = <a class="code" href="MallocChecker_8cpp.html#a7019fa32d4323ea2a05116240724e77f">findFailedReallocSymbol</a>(<a class="code" href="StaticAnalyzer_2README_8txt.html#a1a264b3e48bda8ea3bed83698db8dca7">state</a>, statePrev)) {</div>
+<div class="line"><a name="l03298"></a><span class="lineno"> 3298</span>&#160;        <span class="comment">// Is it possible to fail two reallocs WITHOUT testing in between?</span></div>
+<div class="line"><a name="l03299"></a><span class="lineno"> 3299</span>&#160;        assert((!FailedReallocSymbol || FailedReallocSymbol == sym) &amp;&amp;</div>
+<div class="line"><a name="l03300"></a><span class="lineno"> 3300</span>&#160;          <span class="stringliteral">&quot;We only support one failed realloc at a time.&quot;</span>);</div>
+<div class="line"><a name="l03301"></a><span class="lineno"> 3301</span>&#160;        BR.markInteresting(sym);</div>
+<div class="line"><a name="l03302"></a><span class="lineno"> 3302</span>&#160;        FailedReallocSymbol = sym;</div>
+<div class="line"><a name="l03303"></a><span class="lineno"> 3303</span>&#160;      }</div>
+<div class="line"><a name="l03304"></a><span class="lineno"> 3304</span>&#160;    }</div>
+<div class="line"><a name="l03305"></a><span class="lineno"> 3305</span>&#160; </div>
+<div class="line"><a name="l03306"></a><span class="lineno"> 3306</span>&#160;  <span class="comment">// We are in a special mode if a reallocation failed later in the path.</span></div>
+<div class="line"><a name="l03307"></a><span class="lineno"> 3307</span>&#160;  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (Mode == ReallocationFailed) {</div>
+<div class="line"><a name="l03308"></a><span class="lineno"> 3308</span>&#160;    assert(FailedReallocSymbol &amp;&amp; <span class="stringliteral">&quot;No symbol to look for.&quot;</span>);</div>
+<div class="line"><a name="l03309"></a><span class="lineno"> 3309</span>&#160; </div>
+<div class="line"><a name="l03310"></a><span class="lineno"> 3310</span>&#160;    <span class="comment">// Is this is the first appearance of the reallocated symbol?</span></div>
+<div class="line"><a name="l03311"></a><span class="lineno"> 3311</span>&#160;    <span class="keywordflow">if</span> (!statePrev-&gt;get&lt;RegionState&gt;(FailedReallocSymbol)) {</div>
+<div class="line"><a name="l03312"></a><span class="lineno"> 3312</span>&#160;      <span class="comment">// We&#39;re at the reallocation point.</span></div>
+<div class="line"><a name="l03313"></a><span class="lineno"> 3313</span>&#160;      Msg = <span class="stringliteral">&quot;Attempt to reallocate memory&quot;</span>;</div>
+<div class="line"><a name="l03314"></a><span class="lineno"> 3314</span>&#160;      StackHint = std::make_unique&lt;StackHintGeneratorForSymbol&gt;(</div>
+<div class="line"><a name="l03315"></a><span class="lineno"> 3315</span>&#160;          Sym, <span class="stringliteral">&quot;Returned reallocated memory&quot;</span>);</div>
+<div class="line"><a name="l03316"></a><span class="lineno"> 3316</span>&#160;      FailedReallocSymbol = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l03317"></a><span class="lineno"> 3317</span>&#160;      Mode = <a class="code" href="namespaceclang.html#a44775134eba0623164027214ea176711a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>;</div>
+<div class="line"><a name="l03318"></a><span class="lineno"> 3318</span>&#160;    }</div>
+<div class="line"><a name="l03319"></a><span class="lineno"> 3319</span>&#160;  }</div>
+<div class="line"><a name="l03320"></a><span class="lineno"> 3320</span>&#160; </div>
+<div class="line"><a name="l03321"></a><span class="lineno"> 3321</span>&#160;  <span class="keywordflow">if</span> (Msg.empty()) {</div>
+<div class="line"><a name="l03322"></a><span class="lineno"> 3322</span>&#160;    assert(!StackHint);</div>
+<div class="line"><a name="l03323"></a><span class="lineno"> 3323</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l03324"></a><span class="lineno"> 3324</span>&#160;  }</div>
+<div class="line"><a name="l03325"></a><span class="lineno"> 3325</span>&#160; </div>
+<div class="line"><a name="l03326"></a><span class="lineno"> 3326</span>&#160;  assert(StackHint);</div>
+<div class="line"><a name="l03327"></a><span class="lineno"> 3327</span>&#160; </div>
+<div class="line"><a name="l03328"></a><span class="lineno"> 3328</span>&#160;  <span class="comment">// Generate the extra diagnostic.</span></div>
+<div class="line"><a name="l03329"></a><span class="lineno"> 3329</span>&#160;  PathDiagnosticLocation Pos;</div>
+<div class="line"><a name="l03330"></a><span class="lineno"> 3330</span>&#160;  <span class="keywordflow">if</span> (!S) {</div>
+<div class="line"><a name="l03331"></a><span class="lineno"> 3331</span>&#160;    assert(RSCurr-&gt;getAllocationFamily() == AF_InnerBuffer);</div>
+<div class="line"><a name="l03332"></a><span class="lineno"> 3332</span>&#160;    <span class="keyword">auto</span> PostImplCall = N-&gt;getLocation().getAs&lt;<a class="code" href="classclang_1_1PostImplicitCall.html">PostImplicitCall</a>&gt;();</div>
+<div class="line"><a name="l03333"></a><span class="lineno"> 3333</span>&#160;    <span class="keywordflow">if</span> (!PostImplCall)</div>
+<div class="line"><a name="l03334"></a><span class="lineno"> 3334</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l03335"></a><span class="lineno"> 3335</span>&#160;    Pos = PathDiagnosticLocation(PostImplCall-&gt;getLocation(),</div>
+<div class="line"><a name="l03336"></a><span class="lineno"> 3336</span>&#160;                                 BRC.getSourceManager());</div>
+<div class="line"><a name="l03337"></a><span class="lineno"> 3337</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l03338"></a><span class="lineno"> 3338</span>&#160;    Pos = PathDiagnosticLocation(S, BRC.getSourceManager(),</div>
+<div class="line"><a name="l03339"></a><span class="lineno"> 3339</span>&#160;                                 N-&gt;getLocationContext());</div>
+<div class="line"><a name="l03340"></a><span class="lineno"> 3340</span>&#160;  }</div>
+<div class="line"><a name="l03341"></a><span class="lineno"> 3341</span>&#160; </div>
+<div class="line"><a name="l03342"></a><span class="lineno"> 3342</span>&#160;  <span class="keyword">auto</span> <a class="code" href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a> = std::make_shared&lt;PathDiagnosticEventPiece&gt;(Pos, Msg, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l03343"></a><span class="lineno"> 3343</span>&#160;  BR.addCallStackHint(<a class="code" href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a>, std::move(StackHint));</div>
+<div class="line"><a name="l03344"></a><span class="lineno"> 3344</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="ASTMatchersInternal_8cpp.html#a538dc9e683c4153ed65c95352d7ffa40">P</a>;</div>
+<div class="line"><a name="l03345"></a><span class="lineno"> 3345</span>&#160;}</div>
+<div class="line"><a name="l03346"></a><span class="lineno"> 3346</span>&#160; </div>
+<div class="line"><a name="l03347"></a><span class="lineno"> 3347</span>&#160;<span class="keywordtype">void</span> MallocChecker::printState(raw_ostream &amp;Out, <a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a> <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>,</div>
+<div class="line"><a name="l03348"></a><span class="lineno"> 3348</span>&#160;                               <span class="keyword">const</span> <span class="keywordtype">char</span> *NL, <span class="keyword">const</span> <span class="keywordtype">char</span> *Sep)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l03349"></a><span class="lineno"> 3349</span>&#160; </div>
+<div class="line"><a name="l03350"></a><span class="lineno"> 3350</span>&#160;  RegionStateTy RS = <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>-&gt;get&lt;RegionState&gt;();</div>
+<div class="line"><a name="l03351"></a><span class="lineno"> 3351</span>&#160; </div>
+<div class="line"><a name="l03352"></a><span class="lineno"> 3352</span>&#160;  <span class="keywordflow">if</span> (!RS.isEmpty()) {</div>
+<div class="line"><a name="l03353"></a><span class="lineno"> 3353</span>&#160;    Out &lt;&lt; Sep &lt;&lt; <span class="stringliteral">&quot;MallocChecker :&quot;</span> &lt;&lt; NL;</div>
+<div class="line"><a name="l03354"></a><span class="lineno"> 3354</span>&#160;    <span class="keywordflow">for</span> (RegionStateTy::iterator I = RS.begin(), E = RS.end(); I != E; ++I) {</div>
+<div class="line"><a name="l03355"></a><span class="lineno"> 3355</span>&#160;      <span class="keyword">const</span> RefState *RefS = <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>-&gt;get&lt;RegionState&gt;(I.getKey());</div>
+<div class="line"><a name="l03356"></a><span class="lineno"> 3356</span>&#160;      AllocationFamily Family = RefS-&gt;getAllocationFamily();</div>
+<div class="line"><a name="l03357"></a><span class="lineno"> 3357</span>&#160;      <a class="code" href="classllvm_1_1Optional.html">Optional&lt;MallocChecker::CheckKind&gt;</a> CheckKind = getCheckIfTracked(Family);</div>
+<div class="line"><a name="l03358"></a><span class="lineno"> 3358</span>&#160;      <span class="keywordflow">if</span> (!CheckKind.hasValue())</div>
+<div class="line"><a name="l03359"></a><span class="lineno"> 3359</span>&#160;         CheckKind = getCheckIfTracked(Family, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l03360"></a><span class="lineno"> 3360</span>&#160; </div>
+<div class="line"><a name="l03361"></a><span class="lineno"> 3361</span>&#160;      I.getKey()-&gt;dumpToStream(Out);</div>
+<div class="line"><a name="l03362"></a><span class="lineno"> 3362</span>&#160;      Out &lt;&lt; <span class="stringliteral">&quot; : &quot;</span>;</div>
+<div class="line"><a name="l03363"></a><span class="lineno"> 3363</span>&#160;      I.getData().dump(Out);</div>
+<div class="line"><a name="l03364"></a><span class="lineno"> 3364</span>&#160;      <span class="keywordflow">if</span> (CheckKind.hasValue())</div>
+<div class="line"><a name="l03365"></a><span class="lineno"> 3365</span>&#160;        Out &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; CheckNames[*CheckKind].getName() &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l03366"></a><span class="lineno"> 3366</span>&#160;      Out &lt;&lt; NL;</div>
+<div class="line"><a name="l03367"></a><span class="lineno"> 3367</span>&#160;    }</div>
+<div class="line"><a name="l03368"></a><span class="lineno"> 3368</span>&#160;  }</div>
+<div class="line"><a name="l03369"></a><span class="lineno"> 3369</span>&#160;}</div>
+<div class="line"><a name="l03370"></a><span class="lineno"> 3370</span>&#160; </div>
+<div class="line"><a name="l03371"></a><span class="lineno"> 3371</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceclang.html">clang</a> {</div>
+<div class="line"><a name="l03372"></a><span class="lineno"> 3372</span>&#160;<span class="keyword">namespace </span>ento {</div>
+<div class="line"><a name="l03373"></a><span class="lineno"> 3373</span>&#160;<span class="keyword">namespace </span>allocation_state {</div>
+<div class="line"><a name="l03374"></a><span class="lineno"> 3374</span>&#160; </div>
+<div class="line"><a name="l03375"></a><span class="lineno"> 3375</span>&#160;<a class="code" href="namespaceclang_1_1ento.html#a4e45a121820f0d80d8910093dd33a1df">ProgramStateRef</a></div>
+<div class="line"><a name="l03376"></a><span class="lineno"><a class="line" href="namespaceclang_1_1ento_1_1allocation__state.html#a29462c918cfe94de7c8fb57c3c13a058"> 3376</a></span>&#160;<a class="code" href="namespaceclang_1_1ento_1_1allocation__state.html#a29462c918cfe94de7c8fb57c3c13a058">markReleased</a>(<a class="code" href="classllvm_1_1IntrusiveRefCntPtr.html">ProgramStateRef</a> <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>, <a class="code" href="classclang_1_1ento_1_1SymExpr.html">SymbolRef</a> Sym, <span class="keyword">const</span> <a class="code" href="classclang_1_1Expr.html">Expr</a> *Origin) {</div>
+<div class="line"><a name="l03377"></a><span class="lineno"> 3377</span>&#160;  AllocationFamily Family = AF_InnerBuffer;</div>
+<div class="line"><a name="l03378"></a><span class="lineno"> 3378</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a>-&gt;set&lt;RegionState&gt;(Sym, RefState::getReleased(Family, Origin));</div>
+<div class="line"><a name="l03379"></a><span class="lineno"> 3379</span>&#160;}</div>
+<div class="line"><a name="l03380"></a><span class="lineno"> 3380</span>&#160; </div>
+<div class="line"><a name="l03381"></a><span class="lineno"> 3381</span>&#160;} <span class="comment">// end namespace allocation_state</span></div>
+<div class="line"><a name="l03382"></a><span class="lineno"> 3382</span>&#160;} <span class="comment">// end namespace ento</span></div>
+<div class="line"><a name="l03383"></a><span class="lineno"> 3383</span>&#160;} <span class="comment">// end namespace clang</span></div>
+<div class="line"><a name="l03384"></a><span class="lineno"> 3384</span>&#160; </div>
+<div class="line"><a name="l03385"></a><span class="lineno"> 3385</span>&#160;<span class="comment">// Intended to be used in InnerPointerChecker to register the part of</span></div>
+<div class="line"><a name="l03386"></a><span class="lineno"> 3386</span>&#160;<span class="comment">// MallocChecker connected to it.</span></div>
+<div class="line"><a name="l03387"></a><span class="lineno"><a class="line" href="namespaceclang_1_1ento.html#a9c8aca4f8b927847b5785d84ac0305d6"> 3387</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceclang_1_1ento.html#a9c8aca4f8b927847b5785d84ac0305d6">ento::registerInnerPointerCheckerAux</a>(<a class="code" href="classclang_1_1ento_1_1CheckerManager.html">CheckerManager</a> &amp;mgr) {</div>
+<div class="line"><a name="l03388"></a><span class="lineno"> 3388</span>&#160;  MallocChecker *checker = mgr.<a class="code" href="classclang_1_1ento_1_1CheckerManager.html#a34fb2770f967daca02f358ac3095b152">getChecker</a>&lt;MallocChecker&gt;();</div>
+<div class="line"><a name="l03389"></a><span class="lineno"> 3389</span>&#160;  checker-&gt;ChecksEnabled[MallocChecker::CK_InnerPointerChecker] = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l03390"></a><span class="lineno"> 3390</span>&#160;  checker-&gt;CheckNames[MallocChecker::CK_InnerPointerChecker] =</div>
+<div class="line"><a name="l03391"></a><span class="lineno"> 3391</span>&#160;      mgr.<a class="code" href="classclang_1_1ento_1_1CheckerManager.html#ad60686344ab5b998db0740cfc8374a8a">getCurrentCheckerName</a>();</div>
+<div class="line"><a name="l03392"></a><span class="lineno"> 3392</span>&#160;}</div>
+<div class="line"><a name="l03393"></a><span class="lineno"> 3393</span>&#160; </div>
+<div class="line"><a name="l03394"></a><span class="lineno"> 3394</span>&#160;<span class="keywordtype">void</span> ento::registerDynamicMemoryModeling(CheckerManager &amp;mgr) {</div>
+<div class="line"><a name="l03395"></a><span class="lineno"> 3395</span>&#160;  <span class="keyword">auto</span> *checker = mgr.registerChecker&lt;MallocChecker&gt;();</div>
+<div class="line"><a name="l03396"></a><span class="lineno"> 3396</span>&#160;  checker-&gt;ShouldIncludeOwnershipAnnotatedFunctions =</div>
+<div class="line"><a name="l03397"></a><span class="lineno"> 3397</span>&#160;      mgr.getAnalyzerOptions().getCheckerBooleanOption(checker, <span class="stringliteral">&quot;Optimistic&quot;</span>);</div>
+<div class="line"><a name="l03398"></a><span class="lineno"> 3398</span>&#160;}</div>
+<div class="line"><a name="l03399"></a><span class="lineno"> 3399</span>&#160; </div>
+<div class="line"><a name="l03400"></a><span class="lineno"> 3400</span>&#160;<span class="keywordtype">bool</span> ento::shouldRegisterDynamicMemoryModeling(<span class="keyword">const</span> CheckerManager &amp;mgr) {</div>
+<div class="line"><a name="l03401"></a><span class="lineno"> 3401</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l03402"></a><span class="lineno"> 3402</span>&#160;}</div>
+<div class="line"><a name="l03403"></a><span class="lineno"> 3403</span>&#160; </div>
+<div class="line"><a name="l03404"></a><span class="lineno"><a class="line" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1"> 3404</a></span>&#160;<span class="preprocessor">#define REGISTER_CHECKER(name)                                                 \</span></div>
+<div class="line"><a name="l03405"></a><span class="lineno"> 3405</span>&#160;<span class="preprocessor">  void ento::register##name(CheckerManager &amp;mgr) {                             \</span></div>
+<div class="line"><a name="l03406"></a><span class="lineno"> 3406</span>&#160;<span class="preprocessor">    MallocChecker *checker = mgr.getChecker&lt;MallocChecker&gt;();                  \</span></div>
+<div class="line"><a name="l03407"></a><span class="lineno"> 3407</span>&#160;<span class="preprocessor">    checker-&gt;ChecksEnabled[MallocChecker::CK_##name] = true;                   \</span></div>
+<div class="line"><a name="l03408"></a><span class="lineno"> 3408</span>&#160;<span class="preprocessor">    checker-&gt;CheckNames[MallocChecker::CK_##name] =                            \</span></div>
+<div class="line"><a name="l03409"></a><span class="lineno"> 3409</span>&#160;<span class="preprocessor">        mgr.getCurrentCheckerName();                                           \</span></div>
+<div class="line"><a name="l03410"></a><span class="lineno"> 3410</span>&#160;<span class="preprocessor">  }                                                                            \</span></div>
+<div class="line"><a name="l03411"></a><span class="lineno"> 3411</span>&#160;<span class="preprocessor">                                                                               \</span></div>
+<div class="line"><a name="l03412"></a><span class="lineno"> 3412</span>&#160;<span class="preprocessor">  bool ento::shouldRegister##name(const CheckerManager &amp;mgr) { return true; }</span></div>
+<div class="line"><a name="l03413"></a><span class="lineno"> 3413</span>&#160; </div>
+<div class="line"><a name="l03414"></a><span class="lineno"> 3414</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(MallocChecker)</div>
+<div class="line"><a name="l03415"></a><span class="lineno"> 3415</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(NewDeleteChecker)</div>
+<div class="line"><a name="l03416"></a><span class="lineno"> 3416</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(NewDeleteLeaksChecker)</div>
+<div class="line"><a name="l03417"></a><span class="lineno"> 3417</span>&#160;<a class="code" href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a>(MismatchedDeallocatorChecker)</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aMallocChecker_8cpp_html_a7019fa32d4323ea2a05116240724e77f"><div class="ttname"><a href="MallocChecker_8cpp.html#a7019fa32d4323ea2a05116240724e77f">findFailedReallocSymbol</a></div><div class="ttdeci">static SymbolRef findFailedReallocSymbol(ProgramStateRef currState, ProgramStateRef prevState)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03131">MallocChecker.cpp:3131</a></div></div>
 <div class="ttc" id="aclassclang_1_1ento_1_1Loc_html_ade52f99777d7f54628cdac05e9992878"><div class="ttname"><a href="classclang_1_1ento_1_1Loc.html#ade52f99777d7f54628cdac05e9992878">clang::ento::Loc::isLocType</a></div><div class="ttdeci">static bool isLocType(QualType T)</div><div class="ttdef"><b>Definition:</b> <a href="SVals_8h_source.html#l00323">SVals.h:323</a></div></div>
@@ -3484,7 +3485,7 @@ $(function() {
 <div class="ttc" id="aclassllvm_1_1SmallVector_html"><div class="ttname"><a href="classllvm_1_1SmallVector.html">llvm::SmallVector</a></div><div class="ttdef"><b>Definition:</b> <a href="LLVM_8h_source.html#l00038">LLVM.h:38</a></div></div>
 <div class="ttc" id="aclassclang_1_1SourceLocation_html"><div class="ttname"><a href="classclang_1_1SourceLocation.html">clang::SourceLocation</a></div><div class="ttdoc">Encodes a location in the source.</div><div class="ttdef"><b>Definition:</b> <a href="SourceLocation_8h_source.html#l00089">SourceLocation.h:89</a></div></div>
 <div class="ttc" id="aclassclang_1_1NamedDecl_html"><div class="ttname"><a href="classclang_1_1NamedDecl.html">clang::NamedDecl</a></div><div class="ttdoc">This represents a decl that may have a name.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00223">Decl.h:223</a></div></div>
-<div class="ttc" id="anamespaceclang_1_1ento_html_a9c8aca4f8b927847b5785d84ac0305d6"><div class="ttname"><a href="namespaceclang_1_1ento.html#a9c8aca4f8b927847b5785d84ac0305d6">clang::ento::registerInnerPointerCheckerAux</a></div><div class="ttdeci">void registerInnerPointerCheckerAux(CheckerManager &amp;Mgr)</div><div class="ttdoc">Register the part of MallocChecker connected to InnerPointerChecker.</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03386">MallocChecker.cpp:3386</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1ento_html_a9c8aca4f8b927847b5785d84ac0305d6"><div class="ttname"><a href="namespaceclang_1_1ento.html#a9c8aca4f8b927847b5785d84ac0305d6">clang::ento::registerInnerPointerCheckerAux</a></div><div class="ttdeci">void registerInnerPointerCheckerAux(CheckerManager &amp;Mgr)</div><div class="ttdoc">Register the part of MallocChecker connected to InnerPointerChecker.</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03387">MallocChecker.cpp:3387</a></div></div>
 <div class="ttc" id="ainclude_2clang_2Basic_2TargetInfo_8h_html"><div class="ttname"><a href="include_2clang_2Basic_2TargetInfo_8h.html">TargetInfo.h</a></div></div>
 <div class="ttc" id="anamespaceclang_html_acdf88ec6c845aa781824469fcb0af66cac41a31890959544c6523af684561abe5"><div class="ttname"><a href="namespaceclang.html#acdf88ec6c845aa781824469fcb0af66cac41a31890959544c6523af684561abe5">clang::MultiVersionKind::Target</a></div><div class="ttdeci">@ Target</div></div>
 <div class="ttc" id="aclassclang_1_1CXXDeleteExpr_html_a43ff28963a2f1cab913725fd4baa9306"><div class="ttname"><a href="classclang_1_1CXXDeleteExpr.html#a43ff28963a2f1cab913725fd4baa9306">clang::CXXDeleteExpr::isArrayForm</a></div><div class="ttdeci">bool isArrayForm() const</div><div class="ttdef"><b>Definition:</b> <a href="ExprCXX_8h_source.html#l02424">ExprCXX.h:2424</a></div></div>
@@ -3516,7 +3517,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1PostImplicitCall_html"><div class="ttname"><a href="classclang_1_1PostImplicitCall.html">clang::PostImplicitCall</a></div><div class="ttdoc">Represents a program point just after an implicit call event.</div><div class="ttdef"><b>Definition:</b> <a href="ProgramPoint_8h_source.html#l00600">ProgramPoint.h:600</a></div></div>
 <div class="ttc" id="aInterCheckerAPI_8h_html"><div class="ttname"><a href="InterCheckerAPI_8h.html">InterCheckerAPI.h</a></div></div>
 <div class="ttc" id="aCallEvent_8h_html"><div class="ttname"><a href="CallEvent_8h.html">CallEvent.h</a></div></div>
-<div class="ttc" id="aFormat_8cpp_html_a9fcf84dffafb0ea03c0f9b686ddbf2b3"><div class="ttname"><a href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a></div><div class="ttdeci">unsigned Offset</div><div class="ttdef"><b>Definition:</b> <a href="Format_8cpp_source.html#l02193">Format.cpp:2193</a></div></div>
+<div class="ttc" id="aFormat_8cpp_html_a9fcf84dffafb0ea03c0f9b686ddbf2b3"><div class="ttname"><a href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a></div><div class="ttdeci">unsigned Offset</div><div class="ttdef"><b>Definition:</b> <a href="Format_8cpp_source.html#l02227">Format.cpp:2227</a></div></div>
 <div class="ttc" id="aProgramStateTrait_8h_html_a6d1893bb8c18543337b6c363c1319fcf"><div class="ttname"><a href="ProgramStateTrait_8h.html#a6d1893bb8c18543337b6c363c1319fcf">REGISTER_MAP_WITH_PROGRAMSTATE</a></div><div class="ttdeci">#define REGISTER_MAP_WITH_PROGRAMSTATE(Name, Key, Value)</div><div class="ttdoc">Declares an immutable map of type NameTy, suitable for placement into the ProgramState.</div><div class="ttdef"><b>Definition:</b> <a href="ProgramStateTrait_8h_source.html#l00084">ProgramStateTrait.h:84</a></div></div>
 <div class="ttc" id="aByteCodeEmitter_8cpp_html_abcdace8b2ec8db6d1a21f45f8a45e6fd"><div class="ttname"><a href="ByteCodeEmitter_8cpp.html#abcdace8b2ec8db6d1a21f45f8a45e6fd">APSInt</a></div><div class="ttdeci">llvm::APSInt APSInt</div><div class="ttdef"><b>Definition:</b> <a href="ByteCodeEmitter_8cpp_source.html#l00018">ByteCodeEmitter.cpp:18</a></div></div>
 <div class="ttc" id="aAllocationState_8h_html"><div class="ttname"><a href="AllocationState_8h.html">AllocationState.h</a></div></div>
@@ -3531,7 +3532,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1ASTContext_html"><div class="ttname"><a href="classclang_1_1ASTContext.html">clang::ASTContext</a></div><div class="ttdoc">Holds long-lived AST nodes (such as types and decls) that can be referred to throughout the semantic ...</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8h_source.html#l00189">ASTContext.h:189</a></div></div>
 <div class="ttc" id="aclassclang_1_1ASTContext_html_a7c89acd533ffea38c5011885d8d029e4"><div class="ttname"><a href="classclang_1_1ASTContext.html#a7c89acd533ffea38c5011885d8d029e4">clang::ASTContext::getSizeType</a></div><div class="ttdeci">CanQualType getSizeType() const</div><div class="ttdoc">Return the unique type for &quot;size_t&quot; (C99 7.17), defined in &lt;stddef.h&gt;.</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8cpp_source.html#l05656">ASTContext.cpp:5656</a></div></div>
 <div class="ttc" id="aclassclang_1_1ento_1_1SymExpr_html"><div class="ttname"><a href="classclang_1_1ento_1_1SymExpr.html">clang::ento::SymExpr</a></div><div class="ttdoc">Symbolic value.</div><div class="ttdef"><b>Definition:</b> <a href="SymExpr_8h_source.html#l00029">SymExpr.h:29</a></div></div>
-<div class="ttc" id="aclassclang_1_1FunctionDecl_html_a06987fa159c94bf40f8c716804e1dc27"><div class="ttname"><a href="classclang_1_1FunctionDecl.html#a06987fa159c94bf40f8c716804e1dc27">clang::FunctionDecl::getBody</a></div><div class="ttdeci">Stmt * getBody(const FunctionDecl *&amp;Definition) const</div><div class="ttdoc">Retrieve the body (definition) of the function.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l03008">Decl.cpp:3008</a></div></div>
+<div class="ttc" id="aclassclang_1_1FunctionDecl_html_a06987fa159c94bf40f8c716804e1dc27"><div class="ttname"><a href="classclang_1_1FunctionDecl.html#a06987fa159c94bf40f8c716804e1dc27">clang::FunctionDecl::getBody</a></div><div class="ttdeci">Stmt * getBody(const FunctionDecl *&amp;Definition) const</div><div class="ttdoc">Retrieve the body (definition) of the function.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l03007">Decl.cpp:3007</a></div></div>
 <div class="ttc" id="aclassclang_1_1LocationContext_html_a11efac841bf05dcba26313e753fc52a5"><div class="ttname"><a href="classclang_1_1LocationContext.html#a11efac841bf05dcba26313e753fc52a5">clang::LocationContext::isParentOf</a></div><div class="ttdeci">bool isParentOf(const LocationContext *LC) const</div><div class="ttdef"><b>Definition:</b> <a href="AnalysisDeclContext_8cpp_source.html#l00424">AnalysisDeclContext.cpp:424</a></div></div>
 <div class="ttc" id="aclassclang_1_1CallExpr_html_aa454d6f1e76623da60451885239f63c6"><div class="ttname"><a href="classclang_1_1CallExpr.html#aa454d6f1e76623da60451885239f63c6">clang::CallExpr::getArg</a></div><div class="ttdeci">Expr * getArg(unsigned Arg)</div><div class="ttdoc">getArg - Return the specified argument.</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03032">Expr.h:3032</a></div></div>
 <div class="ttc" id="aclassclang_1_1CXXDestructorDecl_html"><div class="ttname"><a href="classclang_1_1CXXDestructorDecl.html">clang::CXXDestructorDecl</a></div><div class="ttdoc">Represents a C++ destructor within a class.</div><div class="ttdef"><b>Definition:</b> <a href="DeclCXX_8h_source.html#l02668">DeclCXX.h:2668</a></div></div>
@@ -3547,7 +3548,7 @@ $(function() {
 <div class="ttc" id="anamespaceclang_html_ae74346a5140f24995931cd3c4104e202"><div class="ttname"><a href="namespaceclang.html#ae74346a5140f24995931cd3c4104e202">clang::getOperatorSpelling</a></div><div class="ttdeci">const char * getOperatorSpelling(OverloadedOperatorKind Operator)</div><div class="ttdoc">Retrieve the spelling of the given overloaded operator, without the preceding &quot;operator&quot; keyword.</div><div class="ttdef"><b>Definition:</b> <a href="IdentifierTable_8cpp_source.html#l00736">IdentifierTable.cpp:736</a></div></div>
 <div class="ttc" id="aExprCXX_8h_html"><div class="ttname"><a href="ExprCXX_8h.html">ExprCXX.h</a></div></div>
 <div class="ttc" id="aUsingDeclarationsSorter_8cpp_html_aec13ba851f7e3aa70f5f3960f5d14324"><div class="ttname"><a href="UsingDeclarationsSorter_8cpp.html#aec13ba851f7e3aa70f5f3960f5d14324">Label</a></div><div class="ttdeci">std::string Label</div><div class="ttdef"><b>Definition:</b> <a href="UsingDeclarationsSorter_8cpp_source.html#l00069">UsingDeclarationsSorter.cpp:69</a></div></div>
-<div class="ttc" id="aclassclang_1_1FunctionDecl_html_ac0027637798e850bd7f6c5f823ca6362"><div class="ttname"><a href="classclang_1_1FunctionDecl.html#ac0027637798e850bd7f6c5f823ca6362">clang::FunctionDecl::getOverloadedOperator</a></div><div class="ttdeci">OverloadedOperatorKind getOverloadedOperator() const</div><div class="ttdoc">getOverloadedOperator - Which C++ overloaded operator this function represents, if any.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l03624">Decl.cpp:3624</a></div></div>
+<div class="ttc" id="aclassclang_1_1FunctionDecl_html_ac0027637798e850bd7f6c5f823ca6362"><div class="ttname"><a href="classclang_1_1FunctionDecl.html#ac0027637798e850bd7f6c5f823ca6362">clang::FunctionDecl::getOverloadedOperator</a></div><div class="ttdeci">OverloadedOperatorKind getOverloadedOperator() const</div><div class="ttdoc">getOverloadedOperator - Which C++ overloaded operator this function represents, if any.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l03623">Decl.cpp:3623</a></div></div>
 <div class="ttc" id="aclassclang_1_1AtomicExpr_html_aafb2a1534e844508c6c0979397e5261d"><div class="ttname"><a href="classclang_1_1AtomicExpr.html#aafb2a1534e844508c6c0979397e5261d">clang::AtomicExpr::AtomicOp</a></div><div class="ttdeci">AtomicOp</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l06266">Expr.h:6266</a></div></div>
 <div class="ttc" id="aclassclang_1_1ObjCMessageExpr_html"><div class="ttname"><a href="classclang_1_1ObjCMessageExpr.html">clang::ObjCMessageExpr</a></div><div class="ttdoc">An expression that sends a message to the given Objective-C object or class.</div><div class="ttdef"><b>Definition:</b> <a href="ExprObjC_8h_source.html#l00940">ExprObjC.h:940</a></div></div>
 <div class="ttc" id="anamespaceclang_html_a0667c189ac152d457c17935303efeb5a"><div class="ttname"><a href="namespaceclang.html#a0667c189ac152d457c17935303efeb5a">clang::OverloadedOperatorKind</a></div><div class="ttdeci">OverloadedOperatorKind</div><div class="ttdoc">Enumeration specifying the different kinds of C++ overloaded operators.</div><div class="ttdef"><b>Definition:</b> <a href="OperatorKinds_8h_source.html#l00021">OperatorKinds.h:21</a></div></div>
@@ -3582,7 +3583,7 @@ $(function() {
 <div class="ttc" id="aLexer_8h_html"><div class="ttname"><a href="Lexer_8h.html">Lexer.h</a></div></div>
 <div class="ttc" id="aLLVM_8h_html"><div class="ttname"><a href="LLVM_8h.html">LLVM.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1ASTContext_html_a80ed5a736a74c76bbbd66b90821d1689"><div class="ttname"><a href="classclang_1_1ASTContext.html#a80ed5a736a74c76bbbd66b90821d1689">clang::ASTContext::CharTy</a></div><div class="ttdeci">CanQualType CharTy</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8h_source.html#l01034">ASTContext.h:1034</a></div></div>
-<div class="ttc" id="aUnwrappedLineFormatter_8cpp_html_a83e9e4ff6cb05dbdf72ab2a01aa289c0"><div class="ttname"><a href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a></div><div class="ttdeci">LineState State</div><div class="ttdef"><b>Definition:</b> <a href="UnwrappedLineFormatter_8cpp_source.html#l00973">UnwrappedLineFormatter.cpp:973</a></div></div>
+<div class="ttc" id="aUnwrappedLineFormatter_8cpp_html_a83e9e4ff6cb05dbdf72ab2a01aa289c0"><div class="ttname"><a href="UnwrappedLineFormatter_8cpp.html#a83e9e4ff6cb05dbdf72ab2a01aa289c0">State</a></div><div class="ttdeci">LineState State</div><div class="ttdef"><b>Definition:</b> <a href="UnwrappedLineFormatter_8cpp_source.html#l00985">UnwrappedLineFormatter.cpp:985</a></div></div>
 <div class="ttc" id="aclassclang_1_1IdentifierInfo_html"><div class="ttname"><a href="classclang_1_1IdentifierInfo.html">clang::IdentifierInfo</a></div><div class="ttdoc">One of these records is kept for each identifier that is lexed.</div><div class="ttdef"><b>Definition:</b> <a href="IdentifierTable_8h_source.html#l00067">IdentifierTable.h:67</a></div></div>
 <div class="ttc" id="aclassclang_1_1ASTContext_html_ac052b2e7614712bb410e01756f9669e9"><div class="ttname"><a href="classclang_1_1ASTContext.html#ac052b2e7614712bb410e01756f9669e9">clang::ASTContext::getTargetInfo</a></div><div class="ttdeci">const TargetInfo &amp; getTargetInfo() const</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8h_source.html#l00716">ASTContext.h:716</a></div></div>
 <div class="ttc" id="aMallocChecker_8cpp_html_ae6533c7f9026cf098295dadb134506d7"><div class="ttname"><a href="MallocChecker_8cpp.html#ae6533c7f9026cf098295dadb134506d7">isStandardNewDelete</a></div><div class="ttdeci">static bool isStandardNewDelete(const FunctionDecl *FD)</div><div class="ttdoc">Tells if the callee is one of the builtin new/delete operators, including placement operators and oth...</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l00876">MallocChecker.cpp:876</a></div></div>
@@ -3592,7 +3593,7 @@ $(function() {
 <div class="ttc" id="aProgramState_8h_html"><div class="ttname"><a href="ProgramState_8h.html">ProgramState.h</a></div></div>
 <div class="ttc" id="aChecker_8h_html"><div class="ttname"><a href="Checker_8h.html">Checker.h</a></div></div>
 <div class="ttc" id="aMallocChecker_8cpp_html_a923124dcac9f30d5c9d80541135f5d1e"><div class="ttname"><a href="MallocChecker_8cpp.html#a923124dcac9f30d5c9d80541135f5d1e">MallocUpdateRefState</a></div><div class="ttdeci">static ProgramStateRef MallocUpdateRefState(CheckerContext &amp;C, const Expr *E, ProgramStateRef State, AllocationFamily Family, Optional&lt; SVal &gt; RetVal=None)</div><div class="ttdoc">Update the RefState to reflect the new memory allocation.</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l01547">MallocChecker.cpp:1547</a></div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="Format_8h_source.html#l03732">Format.h:3732</a></div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="Format_8h_source.html#l03818">Format.h:3818</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1interp_html_a4722429e794a3d193b85f859eef008a1"><div class="ttname"><a href="namespaceclang_1_1interp.html#a4722429e794a3d193b85f859eef008a1">clang::interp::NE</a></div><div class="ttdeci">bool NE(InterpState &amp;S, CodePtr OpPC)</div><div class="ttdef"><b>Definition:</b> <a href="Interp_8h_source.html#l00224">Interp.h:224</a></div></div>
 <div class="ttc" id="aParentMap_8h_html"><div class="ttname"><a href="ParentMap_8h.html">ParentMap.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1ento_1_1CheckerManager_html"><div class="ttname"><a href="classclang_1_1ento_1_1CheckerManager.html">clang::ento::CheckerManager</a></div><div class="ttdef"><b>Definition:</b> <a href="CheckerManager_8h_source.html#l00127">CheckerManager.h:127</a></div></div>
@@ -3600,7 +3601,7 @@ $(function() {
 <div class="ttc" id="anamespaceclang_1_1Builtin_html_a96281da348e2b70f3a45a66f6e48905c"><div class="ttname"><a href="namespaceclang_1_1Builtin.html#a96281da348e2b70f3a45a66f6e48905c">clang::Builtin::ID</a></div><div class="ttdeci">ID</div><div class="ttdef"><b>Definition:</b> <a href="Builtins_8h_source.html#l00048">Builtins.h:48</a></div></div>
 <div class="ttc" id="anamespaceclang_html"><div class="ttname"><a href="namespaceclang.html">clang</a></div><div class="ttdef"><b>Definition:</b> <a href="CalledOnceCheck_8h_source.html#l00017">CalledOnceCheck.h:17</a></div></div>
 <div class="ttc" id="aclassclang_1_1Selector_html"><div class="ttname"><a href="classclang_1_1Selector.html">clang::Selector</a></div><div class="ttdoc">Smart pointer class that efficiently represents Objective-C method names.</div><div class="ttdef"><b>Definition:</b> <a href="IdentifierTable_8h_source.html#l00685">IdentifierTable.h:685</a></div></div>
-<div class="ttc" id="aclassclang_1_1NamedDecl_html_a944a976b455505507450bc68b56a9b75"><div class="ttname"><a href="classclang_1_1NamedDecl.html#a944a976b455505507450bc68b56a9b75">clang::NamedDecl::getQualifiedNameAsString</a></div><div class="ttdeci">std::string getQualifiedNameAsString(bool WithGlobalNsPrefix=false) const</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l01567">Decl.cpp:1567</a></div></div>
+<div class="ttc" id="aclassclang_1_1NamedDecl_html_a944a976b455505507450bc68b56a9b75"><div class="ttname"><a href="classclang_1_1NamedDecl.html#a944a976b455505507450bc68b56a9b75">clang::NamedDecl::getQualifiedNameAsString</a></div><div class="ttdeci">std::string getQualifiedNameAsString(bool WithGlobalNsPrefix=false) const</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l01566">Decl.cpp:1566</a></div></div>
 <div class="ttc" id="aclassclang_1_1Stmt_html"><div class="ttname"><a href="classclang_1_1Stmt.html">clang::Stmt</a></div><div class="ttdoc">Stmt - This represents one statement.</div><div class="ttdef"><b>Definition:</b> <a href="Stmt_8h_source.html#l00068">Stmt.h:68</a></div></div>
 <div class="ttc" id="aclassclang_1_1Decl_html_ad5bf0172af87a4324b9c8204206270d5"><div class="ttname"><a href="classclang_1_1Decl.html#ad5bf0172af87a4324b9c8204206270d5">clang::Decl::print</a></div><div class="ttdeci">void print(raw_ostream &amp;Out, unsigned Indentation=0, bool PrintInstantiation=false) const</div><div class="ttdef"><b>Definition:</b> <a href="DeclPrinter_8cpp_source.html#l00126">DeclPrinter.cpp:126</a></div></div>
 <div class="ttc" id="aclassclang_1_1SourceManager_html_aa728bad682c5216d9efa45c03404447a"><div class="ttname"><a href="classclang_1_1SourceManager.html#aa728bad682c5216d9efa45c03404447a">clang::SourceManager::isInSystemHeader</a></div><div class="ttdeci">bool isInSystemHeader(SourceLocation Loc) const</div><div class="ttdoc">Returns if a SourceLocation is in a system header.</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8h_source.html#l01485">SourceManager.h:1485</a></div></div>
@@ -3616,7 +3617,7 @@ $(function() {
 <div class="ttc" id="anamespaceclang_1_1ento_html_a1f45158b71c9d04bfd6094ee29a38e59"><div class="ttname"><a href="namespaceclang_1_1ento.html#a1f45158b71c9d04bfd6094ee29a38e59">clang::ento::PointerEscapeKind</a></div><div class="ttdeci">PointerEscapeKind</div><div class="ttdoc">Describes the different reasons a pointer escapes during analysis.</div><div class="ttdef"><b>Definition:</b> <a href="CheckerManager_8h_source.html#l00079">CheckerManager.h:79</a></div></div>
 <div class="ttc" id="aMallocChecker_8cpp_html_a2a7903a04bcc80b227a601bafdf4d128"><div class="ttname"><a href="MallocChecker_8cpp.html#a2a7903a04bcc80b227a601bafdf4d128">isReleased</a></div><div class="ttdeci">static bool isReleased(SymbolRef Sym, CheckerContext &amp;C)</div><div class="ttdoc">Check if the memory associated with this symbol was released.</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l02784">MallocChecker.cpp:2784</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1ento_html_aec69b4d8a2399220a5c7df7b4f0534c0"><div class="ttname"><a href="namespaceclang_1_1ento.html#aec69b4d8a2399220a5c7df7b4f0534c0">clang::ento::setDynamicExtent</a></div><div class="ttdeci">ProgramStateRef setDynamicExtent(ProgramStateRef State, const MemRegion *MR, DefinedOrUnknownSVal Extent, SValBuilder &amp;SVB)</div><div class="ttdoc">Set the dynamic extent Extent of the region MR.</div></div>
-<div class="ttc" id="anamespaceclang_1_1ento_1_1allocation__state_html_a29462c918cfe94de7c8fb57c3c13a058"><div class="ttname"><a href="namespaceclang_1_1ento_1_1allocation__state.html#a29462c918cfe94de7c8fb57c3c13a058">clang::ento::allocation_state::markReleased</a></div><div class="ttdeci">ProgramStateRef markReleased(ProgramStateRef State, SymbolRef Sym, const Expr *Origin)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03375">MallocChecker.cpp:3375</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1ento_1_1allocation__state_html_a29462c918cfe94de7c8fb57c3c13a058"><div class="ttname"><a href="namespaceclang_1_1ento_1_1allocation__state.html#a29462c918cfe94de7c8fb57c3c13a058">clang::ento::allocation_state::markReleased</a></div><div class="ttdeci">ProgramStateRef markReleased(ProgramStateRef State, SymbolRef Sym, const Expr *Origin)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03376">MallocChecker.cpp:3376</a></div></div>
 <div class="ttc" id="aMallocChecker_8cpp_html_ae1e7389f740cf97f5021b0c02a795abd"><div class="ttname"><a href="MallocChecker_8cpp.html#ae1e7389f740cf97f5021b0c02a795abd">isKnownDeallocObjCMethodName</a></div><div class="ttdeci">static bool isKnownDeallocObjCMethodName(const ObjCMethodCall &amp;Call)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l01437">MallocChecker.cpp:1437</a></div></div>
 <div class="ttc" id="aclassllvm_1_1SmallVectorImpl_html"><div class="ttname"><a href="classllvm_1_1SmallVectorImpl.html">llvm::SmallVectorImpl</a></div><div class="ttdef"><b>Definition:</b> <a href="LLVM_8h_source.html#l00039">LLVM.h:39</a></div></div>
 <div class="ttc" id="aclassclang_1_1ParentMap_html_a1019668ec664a33b4d9d51b169493a3a"><div class="ttname"><a href="classclang_1_1ParentMap.html#a1019668ec664a33b4d9d51b169493a3a">clang::ParentMap::isConsumedExpr</a></div><div class="ttdeci">bool isConsumedExpr(Expr *E) const</div><div class="ttdef"><b>Definition:</b> <a href="ParentMap_8cpp_source.html#l00171">ParentMap.cpp:171</a></div></div>
@@ -3630,7 +3631,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1LocationContext_html_a5f34d4aa5d22732cbe4500b406312431"><div class="ttname"><a href="classclang_1_1LocationContext.html#a5f34d4aa5d22732cbe4500b406312431">clang::LocationContext::getDecl</a></div><div class="ttdeci">const Decl * getDecl() const</div><div class="ttdef"><b>Definition:</b> <a href="AnalysisDeclContext_8h_source.html#l00245">AnalysisDeclContext.h:245</a></div></div>
 <div class="ttc" id="aclassclang_1_1FunctionDecl_html"><div class="ttname"><a href="classclang_1_1FunctionDecl.html">clang::FunctionDecl</a></div><div class="ttdoc">Represents a function declaration or definition.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l01826">Decl.h:1826</a></div></div>
 <div class="ttc" id="aclassclang_1_1CallExpr_html"><div class="ttname"><a href="classclang_1_1CallExpr.html">clang::CallExpr</a></div><div class="ttdoc">CallExpr - Represents a function call (C99 6.5.2.2, C++ [expr.call]).</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l02841">Expr.h:2841</a></div></div>
-<div class="ttc" id="aMallocChecker_8cpp_html_a16bafa3ab22e525da6f943cc02c2bef1"><div class="ttname"><a href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a></div><div class="ttdeci">#define REGISTER_CHECKER(name)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03403">MallocChecker.cpp:3403</a></div></div>
+<div class="ttc" id="aMallocChecker_8cpp_html_a16bafa3ab22e525da6f943cc02c2bef1"><div class="ttname"><a href="MallocChecker_8cpp.html#a16bafa3ab22e525da6f943cc02c2bef1">REGISTER_CHECKER</a></div><div class="ttdeci">#define REGISTER_CHECKER(name)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l03404">MallocChecker.cpp:3404</a></div></div>
 <div class="ttc" id="aclassclang_1_1CXXConstructExpr_html"><div class="ttname"><a href="classclang_1_1CXXConstructExpr.html">clang::CXXConstructExpr</a></div><div class="ttdoc">Represents a call to a C++ constructor.</div><div class="ttdef"><b>Definition:</b> <a href="ExprCXX_8h_source.html#l01460">ExprCXX.h:1460</a></div></div>
 <div class="ttc" id="aMallocChecker_8cpp_html_abc20428bd6d598274e9deea1e5e0d068"><div class="ttname"><a href="MallocChecker_8cpp.html#abc20428bd6d598274e9deea1e5e0d068">getFreeWhenDoneArg</a></div><div class="ttdeci">static Optional&lt; bool &gt; getFreeWhenDoneArg(const ObjCMethodCall &amp;Call)</div><div class="ttdef"><b>Definition:</b> <a href="MallocChecker_8cpp_source.html#l01449">MallocChecker.cpp:1449</a></div></div>
 <div class="ttc" id="anamespaceclang_html_a4a57f21b55a81cefae4379e09a3be0c3"><div class="ttname"><a href="namespaceclang.html#a4a57f21b55a81cefae4379e09a3be0c3">clang::operator==</a></div><div class="ttdeci">bool operator==(const CallGraphNode::CallRecord &amp;LHS, const CallGraphNode::CallRecord &amp;RHS)</div><div class="ttdef"><b>Definition:</b> <a href="CallGraph_8h_source.html#l00223">CallGraph.h:223</a></div></div>
@@ -3642,7 +3643,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1NamedDecl_html_a350fd0415d5f387716d5a970b9de4c29"><div class="ttname"><a href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">clang::NamedDecl::getName</a></div><div class="ttdeci">StringRef getName() const</div><div class="ttdoc">Get the name of identifier for this declaration as a StringRef.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00250">Decl.h:250</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 29 2021 01:53:56 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 30 2021 01:59:47 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

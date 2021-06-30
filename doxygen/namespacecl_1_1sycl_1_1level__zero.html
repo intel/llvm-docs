@@ -113,8 +113,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9abbe6a935cd5f837a8418d15a54a373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac63a83a2fb892fbd4f960f6b07881a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1device.html">device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#aac63a83a2fb892fbd4f960f6b07881a3">make_device</a> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;Platform, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> NativeHandle)</td></tr>
 <tr class="separator:aac63a83a2fb892fbd4f960f6b07881a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfd12f15818fbfae68fd3bb31acf8ade"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#abfd12f15818fbfae68fd3bb31acf8ade">make_context</a> (const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;DeviceList, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> NativeHandle, bool keep_ownership=false)</td></tr>
-<tr class="separator:abfd12f15818fbfae68fd3bb31acf8ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa38da343922b94a55aa731db6bb4d6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#afa38da343922b94a55aa731db6bb4d6f">make_context</a> (const std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;DeviceList, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> NativeHandle, bool keep_ownership=false)</td></tr>
+<tr class="separator:afa38da343922b94a55aa731db6bb4d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3207c733a242c9f49cb45268a35204d9"><td class="memItemLeft" align="right" valign="top">program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a3207c733a242c9f49cb45268a35204d9">make_program</a> (const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> NativeHandle)</td></tr>
 <tr class="separator:a3207c733a242c9f49cb45268a35204d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa35026857283edbbb75b00e260d8d456"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1queue.html">queue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#aa35026857283edbbb75b00e260d8d456">make_queue</a> (const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> InteropHandle)</td></tr>
@@ -125,15 +125,15 @@ Functions</h2></td></tr>
 <tr class="memitem:ac111d1534b45a82d8de3939c1d620dd7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, device &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:ac111d1534b45a82d8de3939c1d620dd7"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#ac111d1534b45a82d8de3939c1d620dd7">make</a> (const <a class="el" href="classcl_1_1sycl_1_1platform.html">platform</a> &amp;Platform, typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b">backend::level_zero</a>, T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> Interop)</td></tr>
 <tr class="separator:ac111d1534b45a82d8de3939c1d620dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89d9661927aeb507d199a4255e48ec29"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_same&lt; T, context &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
-<tr class="memitem:a89d9661927aeb507d199a4255e48ec29"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a89d9661927aeb507d199a4255e48ec29">make</a> (const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;DeviceList, typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b">backend::level_zero</a>, T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> Interop, <a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a71a6fa7044c59c76b8a5d9cff1d7c097">ownership</a> Ownership=<a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a71a6fa7044c59c76b8a5d9cff1d7c097a84a0f3455dcca894ace136be62efa292">ownership::transfer</a>)</td></tr>
-<tr class="memdesc:a89d9661927aeb507d199a4255e48ec29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction of SYCL context.  <a href="namespacecl_1_1sycl_1_1level__zero.html#a89d9661927aeb507d199a4255e48ec29">More...</a><br /></td></tr>
-<tr class="separator:a89d9661927aeb507d199a4255e48ec29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1cc7d7f34ca0eb0a45388114f588b0f"><td class="memTemplParams" colspan="2">template&lt;typename T , typename std::enable_if&lt; std::is_same&lt; T, context &gt;::value &gt;::type *  = nullptr&gt; </td></tr>
+<tr class="memitem:ab1cc7d7f34ca0eb0a45388114f588b0f"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#ab1cc7d7f34ca0eb0a45388114f588b0f">make</a> (const std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;DeviceList, typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b">backend::level_zero</a>, T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> Interop, <a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a71a6fa7044c59c76b8a5d9cff1d7c097">ownership</a> Ownership=<a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a71a6fa7044c59c76b8a5d9cff1d7c097a84a0f3455dcca894ace136be62efa292">ownership::transfer</a>)</td></tr>
+<tr class="memdesc:ab1cc7d7f34ca0eb0a45388114f588b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construction of SYCL context.  <a href="namespacecl_1_1sycl_1_1level__zero.html#ab1cc7d7f34ca0eb0a45388114f588b0f">More...</a><br /></td></tr>
+<tr class="separator:ab1cc7d7f34ca0eb0a45388114f588b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ecc962b81315bce0ac14fba1006f870"><td class="memTemplParams" colspan="2">template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, program &gt;::value &gt; *  = nullptr&gt; </td></tr>
 <tr class="memitem:a8ecc962b81315bce0ac14fba1006f870"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a8ecc962b81315bce0ac14fba1006f870">make</a> (const <a class="el" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, typename <a class="el" href="structcl_1_1sycl_1_1interop.html">interop</a>&lt; <a class="el" href="namespacecl_1_1sycl.html#ac67af1b2ee223fc75f90287790459336aae71100a2c53aa96f6e78cee151b923b">backend::level_zero</a>, T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> Interop)</td></tr>
 <tr class="separator:a8ecc962b81315bce0ac14fba1006f870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da19fdec67254f191729ab85dd9243a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a0da19fdec67254f191729ab85dd9243a">make_context</a> (const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;DeviceList, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> NativeHandle)</td></tr>
-<tr class="separator:a0da19fdec67254f191729ab85dd9243a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249d28da23650df384cf74a62bae6005"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1level__zero.html#a249d28da23650df384cf74a62bae6005">make_context</a> (const std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;DeviceList, <a class="el" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> NativeHandle)</td></tr>
+<tr class="separator:a249d28da23650df384cf74a62bae6005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a71a6fa7044c59c76b8a5d9cff1d7c097"></a>
@@ -233,8 +233,8 @@ template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, de
 
 </div>
 </div>
-<a id="a89d9661927aeb507d199a4255e48ec29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89d9661927aeb507d199a4255e48ec29">&#9670;&nbsp;</a></span>make() <span class="overload">[3/4]</span></h2>
+<a id="ab1cc7d7f34ca0eb0a45388114f588b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1cc7d7f34ca0eb0a45388114f588b0f">&#9670;&nbsp;</a></span>make() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +244,7 @@ template&lt;typename T , typename std::enable_if&lt; std::is_same&lt; T, context
         <tr>
           <td class="memname">T cl::sycl::level_zero::make </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>DeviceList</em>, </td>
         </tr>
         <tr>
@@ -307,8 +307,8 @@ template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, pl
 
 </div>
 </div>
-<a id="a0da19fdec67254f191729ab85dd9243a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da19fdec67254f191729ab85dd9243a">&#9670;&nbsp;</a></span>make_context() <span class="overload">[1/2]</span></h2>
+<a id="a249d28da23650df384cf74a62bae6005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249d28da23650df384cf74a62bae6005">&#9670;&nbsp;</a></span>make_context() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +316,7 @@ template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, pl
         <tr>
           <td class="memname"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a> cl::sycl::level_zero::make_context </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>DeviceList</em>, </td>
         </tr>
         <tr>
@@ -337,8 +337,8 @@ template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, pl
 
 </div>
 </div>
-<a id="abfd12f15818fbfae68fd3bb31acf8ade"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfd12f15818fbfae68fd3bb31acf8ade">&#9670;&nbsp;</a></span>make_context() <span class="overload">[2/2]</span></h2>
+<a id="afa38da343922b94a55aa731db6bb4d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa38da343922b94a55aa731db6bb4d6f">&#9670;&nbsp;</a></span>make_context() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,7 +346,7 @@ template&lt;typename T , typename detail::enable_if_t&lt; std::is_same&lt; T, pl
         <tr>
           <td class="memname"><a class="el" href="classcl_1_1sycl_1_1context.html">context</a> cl::sycl::level_zero::make_context </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacecl_1_1sycl.html#a0a3b58674c77d248758b6bee05800ac5">vector_class</a>&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classcl_1_1sycl_1_1device.html">device</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>DeviceList</em>, </td>
         </tr>
         <tr>

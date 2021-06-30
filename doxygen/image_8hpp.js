@@ -1,6 +1,7 @@
 var image_8hpp =
 [
     [ "hash< cl::sycl::image< Dimensions, AllocatorT > >", "structstd_1_1hash_3_01cl_1_1sycl_1_1image_3_01Dimensions_00_01AllocatorT_01_4_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1image_3_01Dimensions_00_01AllocatorT_01_4_01_4" ],
+    [ "byte", "image_8hpp.html#a8a434f950a184b3d0d3e123250c5e66a", null ],
     [ "image_allocator", "image_8hpp.html#a62f6ae03890e8da4a9ef5113c782c91b", null ],
     [ "image_channel_order", "image_8hpp.html#a8557ea72c6739001cf30a301567cf3df", [
       [ "a", "image_8hpp.html#a8557ea72c6739001cf30a301567cf3dfa0cc175b9c0f1b6a831c399e269772661", null ],

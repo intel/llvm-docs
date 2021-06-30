@@ -596,6 +596,57 @@ float matrices and add the result to a third 4x4 matrix.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+<p>The matrix type extension also supports operations on a matrix and a scalar.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="kt">float</span> <span class="n">m4x4_t</span> <span class="nf">__attribute__</span><span class="p">((</span><span class="n">matrix_type</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)));</span>
+
+<span class="n">m4x4_t</span> <span class="nf">f</span><span class="p">(</span><span class="n">m4x4_t</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">23</span><span class="p">)</span> <span class="o">*</span> <span class="mi">12</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The matrix type extension supports division on a matrix and a scalar but not on a matrix and a matrix.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="kt">float</span> <span class="n">m4x4_t</span> <span class="nf">__attribute__</span><span class="p">((</span><span class="n">matrix_type</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)));</span>
+
+<span class="n">m4x4_t</span> <span class="nf">f</span><span class="p">(</span><span class="n">m4x4_t</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="mf">3.0</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The matrix type extension supports compound assignments for addition, subtraction, and multiplication on matrices
+and on a matrix and a scalar, provided their types are consistent.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="kt">float</span> <span class="n">m4x4_t</span> <span class="nf">__attribute__</span><span class="p">((</span><span class="n">matrix_type</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)));</span>
+
+<span class="n">m4x4_t</span> <span class="nf">f</span><span class="p">(</span><span class="n">m4x4_t</span> <span class="n">a</span><span class="p">,</span> <span class="n">m4x4_t</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="n">b</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">-=</span> <span class="n">b</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">*=</span> <span class="n">b</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">23</span><span class="p">;</span>
+  <span class="n">a</span> <span class="o">-=</span> <span class="mi">12</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The matrix type extension supports explicit casts. Implicit type conversion between matrix types is not allowed.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="kt">int</span> <span class="n">ix5x5</span> <span class="nf">__attribute__</span><span class="p">((</span><span class="n">matrix_type</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)));</span>
+<span class="k">typedef</span> <span class="kt">float</span> <span class="n">fx5x5</span> <span class="nf">__attribute__</span><span class="p">((</span><span class="n">matrix_type</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)));</span>
+
+<span class="n">fx5x5</span> <span class="nf">f1</span><span class="p">(</span><span class="n">ix5x5</span> <span class="n">i</span><span class="p">,</span> <span class="n">fx5x5</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">fx5x5</span><span class="p">)</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">X</span><span class="o">&gt;</span>
+<span class="k">using</span> <span class="n">matrix_4_4</span> <span class="o">=</span> <span class="n">X</span> <span class="n">__attribute__</span><span class="p">((</span><span class="n">matrix_type</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)));</span>
+
+<span class="kt">void</span> <span class="nf">f2</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">matrix_5_5</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span> <span class="n">d</span><span class="p">;</span>
+  <span class="n">matrix_5_5</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">i</span><span class="p">;</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="p">(</span><span class="n">matrix_5_5</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">)</span><span class="n">d</span><span class="p">;</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="n">matrix_5_5</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 <section id="half-precision-floating-point">
 <h2><a class="toc-backref" href="#id12">Half-Precision Floating Point</a><a class="headerlink" href="#half-precision-floating-point" title="Permalink to this headline">¶</a></h2>

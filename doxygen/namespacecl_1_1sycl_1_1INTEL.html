@@ -177,9 +177,12 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4149c6503f5774f100c6d739506ad22a"><td class="memTemplParams" colspan="2">template&lt;typename _T &gt; </td></tr>
-<tr class="memitem:a4149c6503f5774f100c6d739506ad22a"><td class="memTemplItemLeft" align="right" valign="top">_T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL.html#a4149c6503f5774f100c6d739506ad22a">fpga_reg</a> (const _T &amp;t)</td></tr>
-<tr class="separator:a4149c6503f5774f100c6d739506ad22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b23ac5486dd836189d93c4f94aa386"><td class="memTemplParams" colspan="2">template&lt;typename _T &gt; </td></tr>
+<tr class="memitem:a61b23ac5486dd836189d93c4f94aa386"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_trivially_copyable&lt; _T &gt;::value, _T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL.html#a61b23ac5486dd836189d93c4f94aa386">fpga_reg</a> (_T t)</td></tr>
+<tr class="separator:a61b23ac5486dd836189d93c4f94aa386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59a049166715b58013ee2403e17675d"><td class="memTemplParams" colspan="2">template&lt;typename _T &gt; </td></tr>
+<tr class="memitem:ac59a049166715b58013ee2403e17675d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_trivially_copyable&lt; _T &gt;::value==false, _T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1INTEL.html#ac59a049166715b58013ee2403e17675d">fpga_reg</a> (_T t)</td></tr>
+<tr class="separator:ac59a049166715b58013ee2403e17675d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -326,8 +329,8 @@ template&lt;bool _B&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4149c6503f5774f100c6d739506ad22a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4149c6503f5774f100c6d739506ad22a">&#9670;&nbsp;</a></span>fpga_reg()</h2>
+<a id="a61b23ac5486dd836189d93c4f94aa386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b23ac5486dd836189d93c4f94aa386">&#9670;&nbsp;</a></span>fpga_reg() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,18 +338,40 @@ template&lt;bool _B&gt; </div>
 template&lt;typename _T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">_T cl::sycl::INTEL::fpga_reg </td>
+          <td class="memname">std::enable_if&lt;std::is_trivially_copyable&lt;_T&gt;::value, _T&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::INTEL::fpga_reg </td>
           <td>(</td>
-          <td class="paramtype">const _T &amp;&#160;</td>
+          <td class="paramtype">_T&#160;</td>
           <td class="paramname"><em>t</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fpga__reg_8hpp_source.html#l00017">17</a> of file <a class="el" href="fpga__reg_8hpp_source.html">fpga_reg.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fpga__reg_8hpp_source.html#l00023">23</a> of file <a class="el" href="fpga__reg_8hpp_source.html">fpga_reg.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="fpga__reg_8hpp_source.html#l00032">intelfpga::fpga_reg()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="fpga__reg_8hpp_source.html#l00053">intelfpga::fpga_reg()</a>.</p>
+
+</div>
+</div>
+<a id="ac59a049166715b58013ee2403e17675d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59a049166715b58013ee2403e17675d">&#9670;&nbsp;</a></span>fpga_reg() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename _T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;std::is_trivially_copyable&lt;_T&gt;::value == false, _T&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a> cl::sycl::INTEL::fpga_reg </td>
+          <td>(</td>
+          <td class="paramtype">_T&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="fpga__reg_8hpp_source.html#l00036">36</a> of file <a class="el" href="fpga__reg_8hpp_source.html">fpga_reg.hpp</a>.</p>
 
 </div>
 </div>
