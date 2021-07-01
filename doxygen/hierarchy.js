@@ -194,6 +194,9 @@ var hierarchy =
     [ "cl::sycl::ext::intel::experimental::esimd::detail::compute_format_type_2d< detail::simd_view_impl< BaseTy, RegionTy >, EltTy, Height, Width >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d0ad9b801c51a4f7156c870acb9ab2500.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::detail::compute_format_type_2d< simd< Ty, N >, EltTy, Height, Width >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html", null ],
     [ "conditional_t", null, [
+      [ "cl::sycl::ext::intel::experimental::esimd::detail::is_sycl_accessor_with< T, Capability, AccessTarget >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor__with.html", null ]
+    ] ],
+    [ "conditional_t", null, [
       [ "cl::sycl::detail::is_contained< T, L >", "structcl_1_1sycl_1_1detail_1_1is__contained.html", null ],
       [ "cl::sycl::detail::is_contained_value< T, V, TL >", "structcl_1_1sycl_1_1detail_1_1is__contained__value.html", null ],
       [ "cl::sycl::detail::is_empty_type_list< T >", "structcl_1_1sycl_1_1detail_1_1is__empty__type__list.html", null ],
@@ -201,9 +204,6 @@ var hierarchy =
       [ "cl::sycl::detail::vector_alignment_impl< remove_cv_t< remove_reference_t< T > >, N >", "structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html", [
         [ "cl::sycl::detail::vector_alignment< T, N >", "structcl_1_1sycl_1_1detail_1_1vector__alignment.html", null ]
       ] ]
-    ] ],
-    [ "conditional_t", null, [
-      [ "cl::sycl::ext::intel::experimental::esimd::detail::is_sycl_accessor_with< T, Capability, AccessTarget >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor__with.html", null ]
     ] ],
     [ "cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::ConstIterator", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html", null ],
     [ "cl::sycl::context", "classcl_1_1sycl_1_1context.html", null ],
@@ -238,6 +238,9 @@ var hierarchy =
       ] ],
       [ "cl::sycl::detail::DataLessProperty< detail::QueueEnableProfiling >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
         [ "cl::sycl::property::queue::enable_profiling", "classcl_1_1sycl_1_1property_1_1queue_1_1enable__profiling.html", null ]
+      ] ],
+      [ "cl::sycl::detail::DataLessProperty< detail::UseDefaultStream >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
+        [ "cl::sycl::property::queue::cuda::use_default_stream", "classcl_1_1sycl_1_1property_1_1queue_1_1cuda_1_1use__default__stream.html", null ]
       ] ],
       [ "cl::sycl::detail::DataLessProperty< detail::UsePrimaryContext >", "classcl_1_1sycl_1_1detail_1_1DataLessProperty.html", [
         [ "cl::sycl::property::context::cuda::use_primary_context", "classcl_1_1sycl_1_1property_1_1context_1_1cuda_1_1use__primary__context.html", null ]
@@ -394,6 +397,7 @@ var hierarchy =
     [ "cl::sycl::detail::get< 0 >", "structcl_1_1sycl_1_1detail_1_1get_3_010_01_4.html", null ],
     [ "cl::sycl::detail::get_context_info< param >", "structcl_1_1sycl_1_1detail_1_1get__context__info.html", null ],
     [ "cl::sycl::detail::get_device_info< T, param >", "structcl_1_1sycl_1_1detail_1_1get__device__info.html", null ],
+    [ "cl::sycl::detail::get_device_info< bool, info::device::atomic64 >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1atomic64_01_4.html", null ],
     [ "cl::sycl::detail::get_device_info< bool, info::device::ext_intel_mem_channel >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1ext__intel__mem__channel_01_4.html", null ],
     [ "cl::sycl::detail::get_device_info< bool, info::device::kernel_kernel_pipe_support >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1kernel__kernel__pipe__support_01_4.html", null ],
     [ "cl::sycl::detail::get_device_info< bool, info::device::queue_profiling >", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01bool_00_01info_1_1device_1_1queue__profiling_01_4.html", null ],
@@ -702,10 +706,10 @@ var hierarchy =
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
     [ "cl::sycl::detail::Command::Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", null ],
     [ "cl::sycl::marray< Type, NumElements >", "classcl_1_1sycl_1_1marray.html", null ],
-    [ "cl::sycl::maximum< T >", "structcl_1_1sycl_1_1maximum.html", null ],
     [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
-    [ "cl::sycl::maximum< void >", "structcl_1_1sycl_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::maximum< T >", "structcl_1_1sycl_1_1maximum.html", null ],
     [ "cl::sycl::ONEAPI::maximum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::maximum< void >", "structcl_1_1sycl_1_1maximum_3_01void_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01char_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01short_01_4.html", null ],
@@ -721,8 +725,8 @@ var hierarchy =
     [ "__spv::MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", null ],
     [ "cl::sycl::minimum< T >", "structcl_1_1sycl_1_1minimum.html", null ],
     [ "cl::sycl::ONEAPI::minimum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum.html", null ],
-    [ "cl::sycl::ONEAPI::minimum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4.html", null ],
     [ "cl::sycl::minimum< void >", "structcl_1_1sycl_1_1minimum_3_01void_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::minimum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4.html", null ],
     [ "cl::sycl::mode_tag_t< mode >", "structcl_1_1sycl_1_1mode__tag__t.html", null ],
     [ "cl::sycl::mode_target_tag_t< mode, trgt >", "structcl_1_1sycl_1_1mode__target__tag__t.html", null ],
     [ "_pi_program::ModuleIterator", "class__pi__program_1_1ModuleIterator.html", null ],

@@ -38,6 +38,7 @@ var classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl =
     [ "initializeToIdentity", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a6c288f7a6fbce553096e87e6180c5389", null ],
     [ "accessor_dim", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a325934bd8b18ce4c8ad4a5e2ea34c8bf", null ],
     [ "buffer_dim", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ac64ade5d65ea0ef2fd83b70b5078d949", null ],
+    [ "has_atomic_add_float64", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ab10b103b3262a93ec0dd4e2dc0723f84", null ],
     [ "has_fast_atomics", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a325ed7bed60688670252180c6594da3e", null ],
     [ "has_fast_reduce", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a122f6ae83b6504b2bbce1634a6d06168", null ],
     [ "is_placeholder", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a8f2a0e97c04ee2697cd9fb7b26862699", null ],

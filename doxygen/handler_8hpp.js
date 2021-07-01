@@ -26,6 +26,7 @@ var handler_8hpp =
     [ "reduCGFunc", "handler_8hpp.html#a957b5ba302984355025ddb68d13f185e", null ],
     [ "reduCGFunc", "handler_8hpp.html#aa785281ba708736f7e9842f2741462ad", null ],
     [ "reduCGFunc", "handler_8hpp.html#a75e3022c2d6eecf4038137e64748696a", null ],
+    [ "reduCGFuncAtomic64", "handler_8hpp.html#aaaed68141fa5ad29bf7e3b6c4a978d20", null ],
     [ "reduGetMaxWGSize", "handler_8hpp.html#a46e819fac9a3e2ef5c5708b81bf770a4", null ],
     [ "reduGetMemPerWorkItem", "handler_8hpp.html#a1c2751ba7d3012d52ddb9168d34d7a1f", null ],
     [ "reduSaveFinalResultToUserMem", "handler_8hpp.html#a64cf1458fc21e3bdbba7d842a4473cc1", null ],

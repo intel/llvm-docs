@@ -103,7 +103,8 @@ var info__desc_8hpp =
       [ "ext_intel_gpu_subslices_per_slice", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190aff44a93fba7e8adf9a44a1af62c69b59", null ],
       [ "ext_intel_gpu_eu_count_per_subslice", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a5df6f689fdab25052f8840b0dc7205f6", null ],
       [ "ext_intel_max_mem_bandwidth", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a4d2cabd4dba12aa15b6f495ded149a4f", null ],
-      [ "ext_intel_mem_channel", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a28ceaa6aabc248e3b7d988f20001c0c0", null ]
+      [ "ext_intel_mem_channel", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a28ceaa6aabc248e3b7d988f20001c0c0", null ],
+      [ "atomic64", "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190a1dd9655cfd97613a0a996060a998b0d4", null ]
     ] ],
     [ "device_type", "info__desc_8hpp.html#a952e2d85fd3f1f3eeca7d883c6526165", [
       [ "cpu", "info__desc_8hpp.html#a952e2d85fd3f1f3eeca7d883c6526165ad9747e2da342bdb995f6389533ad1a3d", null ],

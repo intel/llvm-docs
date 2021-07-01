@@ -112,7 +112,7 @@ Collaboration diagram for cl::sycl::ONEAPI::detail::reduction_impl&lt; T, Binary
 <div class="dyncontent">
 <div class="center"><img src="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl__coll__graph.png" border="0" usemap="#cl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01IsUSM_00_01IsPlaceholder_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="cl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01IsUSM_00_01IsPlaceholder_01_4_coll__map" id="cl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl_3_01T_00_01BinaryOperation_00_01Dims_00_01IsUSM_00_01IsPlaceholder_01_4_coll__map">
-<area shape="rect" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera..." alt="" coords="5,139,273,195"/>
+<area shape="rect" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera..." alt="" coords="5,153,273,209"/>
 <area shape="rect" title=" " alt="" coords="59,5,97,32"/>
 <area shape="rect" title=" " alt="" coords="177,5,227,32"/>
 </map>
@@ -211,7 +211,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b35f894bfa347813a936282ac865c6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ae6e4f31f13669644df432a8342770f16">rw_accessor_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a9b35f894bfa347813a936282ac865c6a">getWriteAccForPartialReds</a> (size_t Size, <a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
 <tr class="memdesc:a9b35f894bfa347813a936282ac865c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an accessor accessing the memory that will hold the reduction partial sums.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a9b35f894bfa347813a936282ac865c6a">More...</a><br /></td></tr>
 <tr class="separator:a9b35f894bfa347813a936282ac865c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44911a4bccc022c4407b3b48f4115475"><td class="memTemplParams" colspan="2">template&lt;bool HasFastAtomics = has_fast_atomics&gt; </td></tr>
+<tr class="memitem:a44911a4bccc022c4407b3b48f4115475"><td class="memTemplParams" colspan="2">template&lt;bool HasFastAtomics = (has_fast_atomics || has_atomic_add_float64)&gt; </td></tr>
 <tr class="memitem:a44911a4bccc022c4407b3b48f4115475"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; HasFastAtomics, <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ae6e4f31f13669644df432a8342770f16">rw_accessor_type</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a44911a4bccc022c4407b3b48f4115475">getReadWriteAccessorToInitializedMem</a> (<a class="el" href="classcl_1_1sycl_1_1handler.html">handler</a> &amp;CGH)</td></tr>
 <tr class="memdesc:a44911a4bccc022c4407b3b48f4115475"><td class="mdescLeft">&#160;</td><td class="mdescRight">If reduction is initialized with read-write accessor, which does not require initialization with identity value, then return user's read-write accessor.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a44911a4bccc022c4407b3b48f4115475">More...</a><br /></td></tr>
 <tr class="separator:a44911a4bccc022c4407b3b48f4115475"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,6 +246,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a325934bd8b18ce4c8ad4a5e2ea34c8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac64ade5d65ea0ef2fd83b70b5078d949"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ac64ade5d65ea0ef2fd83b70b5078d949">buffer_dim</a> = (Dims == 0) ? 1 : Dims</td></tr>
 <tr class="separator:ac64ade5d65ea0ef2fd83b70b5078d949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab10b103b3262a93ec0dd4e2dc0723f84"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#ab10b103b3262a93ec0dd4e2dc0723f84">has_atomic_add_float64</a></td></tr>
+<tr class="separator:ab10b103b3262a93ec0dd4e2dc0723f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325ed7bed60688670252180c6594da3e"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a325ed7bed60688670252180c6594da3e">has_fast_atomics</a></td></tr>
 <tr class="separator:a325ed7bed60688670252180c6594da3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a122f6ae83b6504b2bbce1634a6d06168"><td class="memItemLeft" align="right" valign="top">static constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html#a122f6ae83b6504b2bbce1634a6d06168">has_fast_reduce</a></td></tr>
@@ -277,7 +279,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00320">320</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00354">354</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -295,7 +297,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00327">327</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00361">361</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,7 +315,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00331">331</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00365">365</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +333,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00318">318</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00352">352</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -349,7 +351,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00319">319</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00353">353</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -367,7 +369,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00323">323</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00357">357</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,7 +421,7 @@ template&lt;typename _T , typename AllocatorT , std::enable_if_t&lt; IsKnownIden
 <p>SYCL-2020. </p>
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00367">367</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00403">403</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="handler__proxy_8cpp_source.html#l00017">cl::sycl::detail::associateWithHandler()</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="buffer_8hpp_source.html#l00264">cl::sycl::buffer&lt; T, dimensions, AllocatorT, typename &gt;::size()</a>.</p>
 
@@ -455,7 +457,7 @@ template&lt;typename _T  = T, enable_if_t&lt; IsKnownIdentityOp&lt; _T, BinaryOp
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00381">381</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00417">417</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="accessor_8hpp_source.html#l01518">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::size()</a>.</p>
 
@@ -491,7 +493,7 @@ template&lt;typename _T  = T, enable_if_t&lt; IsKnownIdentityOp&lt; _T, BinaryOp
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00393">393</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00429">429</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="accessor_8hpp_source.html#l01518">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::size()</a>.</p>
 
@@ -556,7 +558,7 @@ template&lt;typename _T , typename AllocatorT , enable_if_t&lt; IsKnownIdentityO
 <p>SYCL-2020. </p>
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00407">407</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00443">443</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="handler__proxy_8cpp_source.html#l00017">cl::sycl::detail::associateWithHandler()</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="buffer_8hpp_source.html#l00264">cl::sycl::buffer&lt; T, dimensions, AllocatorT, typename &gt;::size()</a>.</p>
 
@@ -608,7 +610,7 @@ template&lt;typename _T  = T, enable_if_t&lt; IsKnownIdentityOp&lt; _T, BinaryOp
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00434">434</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00470">470</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="accessor_8hpp_source.html#l01518">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::size()</a>.</p>
 
@@ -660,7 +662,7 @@ template&lt;typename _T  = T, enable_if_t&lt; IsKnownIdentityOp&lt; _T, BinaryOp
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is statically known, and user still passed the identity value. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00458">458</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00494">494</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="accessor_8hpp_source.html#l01518">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::size()</a>.</p>
 
@@ -725,7 +727,7 @@ template&lt;typename _T , typename AllocatorT , enable_if_t&lt;!IsKnownIdentityO
 <p>SYCL-2020. </p>
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is NOT known statically. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00482">482</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00518">518</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="handler__proxy_8cpp_source.html#l00017">cl::sycl::detail::associateWithHandler()</a>, <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="buffer_8hpp_source.html#l00264">cl::sycl::buffer&lt; T, dimensions, AllocatorT, typename &gt;::size()</a>.</p>
 
@@ -777,7 +779,7 @@ template&lt;typename _T  = T, enable_if_t&lt;!IsKnownIdentityOp&lt; _T, BinaryOp
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00497">497</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00533">533</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="accessor_8hpp_source.html#l01518">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::size()</a>.</p>
 
@@ -829,7 +831,7 @@ template&lt;typename _T  = T, enable_if_t&lt;!IsKnownIdentityOp&lt; _T, BinaryOp
 
 <p>Constructs <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html" title="This class encapsulates the reduction variable/accessor, the reduction operator and an optional opera...">reduction_impl</a> when the identity value is unknown. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00509">509</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00545">545</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="pi_8h_source.html#l00081">PI_INVALID_VALUE</a>, and <a class="el" href="accessor_8hpp_source.html#l01518">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::size()</a>.</p>
 
@@ -881,7 +883,7 @@ template&lt;typename _T  = T, enable_if_t&lt; IsKnownIdentityOp&lt; _T, BinaryOp
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00524">524</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00560">560</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -943,7 +945,7 @@ template&lt;typename _T  = T, enable_if_t&lt; IsKnownIdentityOp&lt; _T, BinaryOp
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00536">536</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00572">572</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1007,7 @@ template&lt;typename _T  = T, enable_if_t&lt;!IsKnownIdentityOp&lt; _T, BinaryOp
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00560">560</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00596">596</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1041,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 <p>Associates the reduction accessor to user's memory with <code>CGH</code> handler to keep the accessor alive until the command group finishes the work. </p>
 <p>This function does not do anything for USM reductions. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00568">568</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00604">604</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1072,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 
 <p>Returns the binary operation associated with the reduction. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00678">678</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00715">715</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1105,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns the statically known identity value. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00351">351</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00387">387</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1136,7 +1138,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Returns the identity value given by user. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00358">358</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00394">394</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1166,7 +1168,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00669">669</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00706">706</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="accessor_8hpp_source.html#l01595">cl::sycl::accessor&lt; DataT, Dimensions, AccessMode, AccessTarget, IsPlaceholder, PropertyListT &gt;::get_pointer()</a>.</p>
 
@@ -1198,7 +1200,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00673">673</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00710">710</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1228,7 +1230,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00584">584</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00620">620</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1242,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 <div class="memtemplate">
 template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
 <div class="memtemplate">
-template&lt;bool HasFastAtomics = has_fast_atomics&gt; </div>
+template&lt;bool HasFastAtomics = (has_fast_atomics || has_atomic_add_float64)&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1263,7 +1265,7 @@ template&lt;bool HasFastAtomics = has_fast_atomics&gt; </div>
 <p>If reduction is initialized with read-write accessor, which does not require initialization with identity value, then return user's read-write accessor. </p>
 <p>Otherwise, create 1-element global buffer initialized with identity value and return an accessor to that buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00641">641</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00678">678</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1303,7 +1305,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00579">579</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00615">615</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1334,7 +1336,7 @@ template&lt;bool _IsUSM = IsUSM&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00660">660</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00697">697</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1365,7 +1367,7 @@ template&lt;bool _IsUSM = IsUSM&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00655">655</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00692">692</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1396,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00664">664</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00701">701</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1437,7 +1439,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 <p>Returns an accessor accessing the memory that will hold the reduction partial sums. </p>
 <p>If <code>Size</code> is equal to one, then the reduction result is the final and needs to be written to user's read-write accessor (if there is such). Otherwise, a new buffer is created and accessor to that buffer is returned. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00623">623</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00659">659</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="handler__proxy_8cpp_source.html#l00017">cl::sycl::detail::associateWithHandler()</a>.</p>
 
@@ -1483,7 +1485,7 @@ template&lt;bool IsOneWG&gt; </div>
 
 <p>Constructs a new temporary buffer to hold partial sums and returns the accessor for that buffer. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00611">611</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00647">647</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1529,7 @@ template&lt;bool IsOneWG, bool _IsUSM = is_usm&gt; </div>
 
 <p>Returns user's USM pointer passed to reduction for editing. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00592">592</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00628">628</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1572,7 +1574,7 @@ template&lt;bool IsOneWG, bool _IsUSM = is_usm&gt; </div>
 <p>Returns user's accessor passed to reduction for editing if that is the read-write accessor. </p>
 <p>Otherwise, create a new buffer and return read-write accessor to it. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00601">601</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00637">637</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1601,7 +1603,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00652">652</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00689">689</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1630,7 +1632,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00679">679</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00716">716</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="property__helper_8hpp_source.html#l00034">cl::sycl::detail::InitializeToIdentity</a>.</p>
 
@@ -1659,7 +1661,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00328">328</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00362">362</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1685,7 +1687,35 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00329">329</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00363">363</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+
+</div>
+</div>
+<a id="ab10b103b3262a93ec0dd4e2dc0723f84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10b103b3262a93ec0dd4e2dc0723f84">&#9670;&nbsp;</a></span>has_atomic_add_float64</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::placeholder IsPlaceholder = access::placeholder::false_t&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reduction__impl.html">cl::sycl::ONEAPI::detail::reduction_impl</a>&lt; T, BinaryOperation, Dims, IsUSM, IsPlaceholder &gt;::has_atomic_add_float64</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">      IsReduOptForAtomic64Add&lt;T, BinaryOperation&gt;::value</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00367">367</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1713,7 +1743,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">      IsReduOptForFastAtomicFetch&lt;T, BinaryOperation&gt;::value</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00333">333</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00369">369</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1741,7 +1771,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">      IsReduOptForFastReduce&lt;T, BinaryOperation&gt;::value</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00335">335</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00371">371</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1769,7 +1799,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">      (IsPlaceholder == <a class="code" href="namespacecl_1_1sycl_1_1access.html#af1c616691dbceeaca9cdd537a8ab0af9a1b756892a15e10bdbdfe033bf55e8d03">access::placeholder::true_t</a>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00338">338</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00374">374</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -1795,7 +1825,7 @@ template&lt;typename T , class BinaryOperation , int Dims, bool IsUSM, access::p
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00337">337</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00373">373</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>

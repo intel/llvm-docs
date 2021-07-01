@@ -13,6 +13,7 @@ var property__helper_8hpp =
       [ "BufferUsePinnedHostMemory", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa7bef9f39ce7182fc2abe59496515918a", null ],
       [ "UsePrimaryContext", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa5a4d7f27258e21fbf0d04c360281af39", null ],
       [ "InitializeToIdentity", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa6a5117fc47073fcf86c51ec49bf88381", null ],
+      [ "UseDefaultStream", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaad7c1fec4f28689d544bbacbe52df933b", null ],
       [ "LastKnownDataLessPropKind", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaad812eeda0b793feefc8009d9546f6a34", null ],
       [ "DataLessPropKindSize", "property__helper_8hpp.html#a77f2e70072cd746b3ce56a3b5788bfdaa3e52d3421431774d908abb15de3620ac", null ]
     ] ],

@@ -238,7 +238,8 @@ var pi_8h =
       [ "PI_DEVICE_INFO_GPU_SLICES", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea074c00e00d052d53a2a9ebe340ca7a48", null ],
       [ "PI_DEVICE_INFO_GPU_SUBSLICES_PER_SLICE", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eafc544a026d76683341a150ea98d28113", null ],
       [ "PI_DEVICE_INFO_GPU_EU_COUNT_PER_SUBSLICE", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea9d98dffed7ec7adcf636ae603b67e1e2", null ],
-      [ "PI_DEVICE_INFO_MAX_MEM_BANDWIDTH", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea06adc8577a982414c106aa4b29eb5c0f", null ]
+      [ "PI_DEVICE_INFO_MAX_MEM_BANDWIDTH", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea06adc8577a982414c106aa4b29eb5c0f", null ],
+      [ "PI_DEVICE_INFO_ATOMIC_64", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea97b899f3ba54e237c7402b33994d77f3", null ]
     ] ],
     [ "_pi_device_local_mem_type", "pi_8h.html#ac9435d7fcc630cad9edbf944ed3b2957", [
       [ "PI_DEVICE_LOCAL_MEM_TYPE_LOCAL", "pi_8h.html#ac9435d7fcc630cad9edbf944ed3b2957ac0c7d583fc6511952975b58161bebccd", null ],

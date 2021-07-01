@@ -61,6 +61,7 @@ var dir_399fbdfcd25b70941a9dab34251f0ee8 =
     [ "property_list_base.hpp", "property__list__base_8hpp.html", [
       [ "PropertyListBase", "classcl_1_1sycl_1_1detail_1_1PropertyListBase.html", "classcl_1_1sycl_1_1detail_1_1PropertyListBase" ]
     ] ],
+    [ "spec_const_integration.hpp", "spec__const__integration_8hpp.html", null ],
     [ "spinlock.hpp", "spinlock_8hpp.html", [
       [ "SpinLock", "classcl_1_1sycl_1_1detail_1_1SpinLock.html", "classcl_1_1sycl_1_1detail_1_1SpinLock" ]
     ] ],

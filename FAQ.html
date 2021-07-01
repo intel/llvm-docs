@@ -67,22 +67,33 @@ specific build options.</p>
 <p><strong>A:</strong> Due to the fact that both host and device code need to be compiled and
 linked into the final binary, the compilation steps sequence is more
 complicated compared to the usual C++ flow.</p>
-<p>In general, we encourage our users to rely on the DPC++ Compiler for handling
-all of the compilation phases “under the hood”. However, thorough understanding
-of the above-described steps may allow you to customize your compilation by
-invoking different phases manually. As an example, you could:</p>
+<p>In general, we encourage our users to rely on the DPC++ Compiler for
+handling all of the compilation phases “under the hood”. However,
+certain use-cases may involve third-party compiler usage for host-side
+compilation. The DPC++ compiler provides the
+<code class="docutils literal notranslate"><span class="pre">-fsycl-host-compiler=&lt;compiler_name&gt;</span></code> option, which allows one to
+specify the desired third-party compiler name. Usage example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">host</span><span class="o">-</span><span class="n">compiler</span><span class="o">=</span><span class="n">g</span><span class="o">++</span>
+<span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">host</span><span class="o">-</span><span class="n">compiler</span><span class="o">-</span><span class="n">options</span><span class="o">=</span><span class="s2">&quot;-g&quot;</span> <span class="n">test</span><span class="o">.</span><span class="n">cpp</span>
+</pre></div>
+</div>
+<p>Implicitly, the above command would:</p>
 <ol class="simple">
-<li><p>preprocess your host code with another C++-capable compiler;</p></li>
-<li><p>turn to the DPC++ compiler for generating the integration header and
-compiling the device code for the needed target(s);</p></li>
-<li><p>use your preferred host compiler from 1) to compile your preprocessed host
-code and the integration header into a host object file;</p></li>
-<li><p>link the host object file and the device image(s) into the final executable.</p></li>
+<li><p>turn to the DPC++ compiler for compiling the device code for the
+needed target(s) and generating dependencies (”integration files”) for
+the host side;</p></li>
+<li><p>detect your preferred host compiler (<code class="docutils literal notranslate"><span class="pre">g++</span></code>, in this case), then use
+it to compile your host code and the dependency files from 1) into
+host object file(s);</p></li>
+<li><p>link the device image(s) from 1) and the host object(s) from 2)
+into the final executable.</p></li>
 </ol>
-<p>To learn more about the concepts behind this flow, and the DPC++ Compiler
-internals as such, we welcome you to study our
-<a class="reference internal" href="CompilerAndRuntimeDesign.html"><span class="doc">DPC++ Compiler and Runtime architecture design</span></a>
-document.</p>
+<p>To learn more about the compiler options mentioned, and the DPC++
+compiler command-line interface in general, please refer to the
+<a class="reference internal" href="UsersManual.html"><span class="doc">DPC++ Compiler User Manual</span></a>.
+To learn more about the concepts behind this flow, and the DPC++
+Compiler internals as such, we welcome you to study our
+<a class="reference internal" href="CompilerAndRuntimeDesign.html"><span class="doc">DPC++ Compiler and Runtime architecture design</span></a> document.</p>
 </section>
 </section>
 <section id="using-applications-built-with-dpc">

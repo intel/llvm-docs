@@ -5014,258 +5014,261 @@ $(function() {
 <div class="line"><a name="l04965"></a><span class="lineno"> 4965</span>&#160;  Policy.SuppressTypedefs = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l04966"></a><span class="lineno"> 4966</span>&#160;  Policy.SuppressUnwrittenScope = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l04967"></a><span class="lineno"> 4967</span>&#160; </div>
-<div class="line"><a name="l04968"></a><span class="lineno"> 4968</span>&#160;  llvm::SmallSet&lt;const VarDecl *, 8&gt; VisitedSpecConstants;</div>
+<div class="line"><a name="l04968"></a><span class="lineno"> 4968</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;#include &lt;CL/sycl/detail/defines_elementary.hpp&gt;\n&quot;</span>;</div>
 <div class="line"><a name="l04969"></a><span class="lineno"> 4969</span>&#160; </div>
-<div class="line"><a name="l04970"></a><span class="lineno"> 4970</span>&#160;  <span class="comment">// Used to uniquely name the &#39;shim&#39;s as we generate the names in each</span></div>
-<div class="line"><a name="l04971"></a><span class="lineno"> 4971</span>&#160;  <span class="comment">// anonymous namespace.</span></div>
-<div class="line"><a name="l04972"></a><span class="lineno"> 4972</span>&#160;  <span class="keywordtype">unsigned</span> ShimCounter = 0;</div>
-<div class="line"><a name="l04973"></a><span class="lineno"> 4973</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1VarDecl.html">VarDecl</a> *VD : SpecConstants) {</div>
-<div class="line"><a name="l04974"></a><span class="lineno"> 4974</span>&#160;    VD = VD-&gt;<a class="code" href="classclang_1_1VarDecl.html#a41b791be900d5c37eea9fd8ead366308">getCanonicalDecl</a>();</div>
-<div class="line"><a name="l04975"></a><span class="lineno"> 4975</span>&#160; </div>
-<div class="line"><a name="l04976"></a><span class="lineno"> 4976</span>&#160;    <span class="comment">// Skip if this isn&#39;t a SpecIdType.  This can happen if it was a deduced</span></div>
-<div class="line"><a name="l04977"></a><span class="lineno"> 4977</span>&#160;    <span class="comment">// type.</span></div>
-<div class="line"><a name="l04978"></a><span class="lineno"> 4978</span>&#160;    <span class="keywordflow">if</span> (!Util::isSyclSpecIdType(VD-&gt;<a class="code" href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">getType</a>()))</div>
-<div class="line"><a name="l04979"></a><span class="lineno"> 4979</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l04980"></a><span class="lineno"> 4980</span>&#160; </div>
-<div class="line"><a name="l04981"></a><span class="lineno"> 4981</span>&#160;    <span class="comment">// Skip if we&#39;ve already visited this.</span></div>
-<div class="line"><a name="l04982"></a><span class="lineno"> 4982</span>&#160;    <span class="keywordflow">if</span> (llvm::find(VisitedSpecConstants, VD) != VisitedSpecConstants.end())</div>
-<div class="line"><a name="l04983"></a><span class="lineno"> 4983</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l04984"></a><span class="lineno"> 4984</span>&#160; </div>
-<div class="line"><a name="l04985"></a><span class="lineno"> 4985</span>&#160;    VisitedSpecConstants.insert(VD);</div>
-<div class="line"><a name="l04986"></a><span class="lineno"> 4986</span>&#160;    <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> TopShim = <a class="code" href="SemaSYCL_8cpp.html#acfe35e60cbad6dd77e9f42fbc59cb402">EmitSpecIdShims</a>(OS, ShimCounter, Policy, VD);</div>
-<div class="line"><a name="l04987"></a><span class="lineno"> 4987</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;__SYCL_INLINE_NAMESPACE(cl) {\n&quot;</span>;</div>
-<div class="line"><a name="l04988"></a><span class="lineno"> 4988</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;namespace sycl {\n&quot;</span>;</div>
-<div class="line"><a name="l04989"></a><span class="lineno"> 4989</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;namespace detail {\n&quot;</span>;</div>
-<div class="line"><a name="l04990"></a><span class="lineno"> 4990</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;template&lt;&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l04991"></a><span class="lineno"> 4991</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;inline const char *get_spec_constant_symbolic_ID&lt;&quot;</span>;</div>
-<div class="line"><a name="l04992"></a><span class="lineno"> 4992</span>&#160; </div>
-<div class="line"><a name="l04993"></a><span class="lineno"> 4993</span>&#160;    <span class="keywordflow">if</span> (VD-&gt;<a class="code" href="classclang_1_1Decl.html#abe7e7b7306c1d04066acecc56935fe1c">isInAnonymousNamespace</a>()) {</div>
-<div class="line"><a name="l04994"></a><span class="lineno"> 4994</span>&#160;      <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; TopShim;</div>
-<div class="line"><a name="l04995"></a><span class="lineno"> 4995</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l04996"></a><span class="lineno"> 4996</span>&#160;      <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;::&quot;</span>;</div>
-<div class="line"><a name="l04997"></a><span class="lineno"> 4997</span>&#160;      VD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a9da9eea86d20aadabd466171b67db6fa">getNameForDiagnostic</a>(OS, Policy, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l04998"></a><span class="lineno"> 4998</span>&#160;    }</div>
-<div class="line"><a name="l04999"></a><span class="lineno"> 4999</span>&#160; </div>
-<div class="line"><a name="l05000"></a><span class="lineno"> 5000</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;&gt;() {\n&quot;</span>;</div>
-<div class="line"><a name="l05001"></a><span class="lineno"> 5001</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;  return \&quot;&quot;</span>;</div>
-<div class="line"><a name="l05002"></a><span class="lineno"> 5002</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <a class="code" href="classclang_1_1SYCLUniqueStableIdExpr.html#a9126d66f3670a66b76153778fd1cbbaa">SYCLUniqueStableIdExpr::ComputeName</a>(S.<a class="code" href="classclang_1_1Sema.html#ab9b993262e89efbf7932338a955783de">getASTContext</a>(), VD);</div>
-<div class="line"><a name="l05003"></a><span class="lineno"> 5003</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;;\n&quot;</span>;</div>
-<div class="line"><a name="l05004"></a><span class="lineno"> 5004</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span>;</div>
-<div class="line"><a name="l05005"></a><span class="lineno"> 5005</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;} // namespace detail\n&quot;</span>;</div>
-<div class="line"><a name="l05006"></a><span class="lineno"> 5006</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;} // namespace sycl\n&quot;</span>;</div>
-<div class="line"><a name="l05007"></a><span class="lineno"> 5007</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;} // __SYCL_INLINE_NAMESPACE(cl)\n&quot;</span>;</div>
-<div class="line"><a name="l05008"></a><span class="lineno"> 5008</span>&#160;  }</div>
-<div class="line"><a name="l05009"></a><span class="lineno"> 5009</span>&#160; </div>
-<div class="line"><a name="l05010"></a><span class="lineno"> 5010</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;#include &lt;CL/sycl/detail/spec_const_integration.hpp&gt;\n&quot;</span>;</div>
-<div class="line"><a name="l05011"></a><span class="lineno"> 5011</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l05012"></a><span class="lineno"> 5012</span>&#160;}</div>
+<div class="line"><a name="l04970"></a><span class="lineno"> 4970</span>&#160;  llvm::SmallSet&lt;const VarDecl *, 8&gt; VisitedSpecConstants;</div>
+<div class="line"><a name="l04971"></a><span class="lineno"> 4971</span>&#160; </div>
+<div class="line"><a name="l04972"></a><span class="lineno"> 4972</span>&#160;  <span class="comment">// Used to uniquely name the &#39;shim&#39;s as we generate the names in each</span></div>
+<div class="line"><a name="l04973"></a><span class="lineno"> 4973</span>&#160;  <span class="comment">// anonymous namespace.</span></div>
+<div class="line"><a name="l04974"></a><span class="lineno"> 4974</span>&#160;  <span class="keywordtype">unsigned</span> ShimCounter = 0;</div>
+<div class="line"><a name="l04975"></a><span class="lineno"> 4975</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1VarDecl.html">VarDecl</a> *VD : SpecConstants) {</div>
+<div class="line"><a name="l04976"></a><span class="lineno"> 4976</span>&#160;    VD = VD-&gt;<a class="code" href="classclang_1_1VarDecl.html#a41b791be900d5c37eea9fd8ead366308">getCanonicalDecl</a>();</div>
+<div class="line"><a name="l04977"></a><span class="lineno"> 4977</span>&#160; </div>
+<div class="line"><a name="l04978"></a><span class="lineno"> 4978</span>&#160;    <span class="comment">// Skip if this isn&#39;t a SpecIdType.  This can happen if it was a deduced</span></div>
+<div class="line"><a name="l04979"></a><span class="lineno"> 4979</span>&#160;    <span class="comment">// type.</span></div>
+<div class="line"><a name="l04980"></a><span class="lineno"> 4980</span>&#160;    <span class="keywordflow">if</span> (!Util::isSyclSpecIdType(VD-&gt;<a class="code" href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">getType</a>()))</div>
+<div class="line"><a name="l04981"></a><span class="lineno"> 4981</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l04982"></a><span class="lineno"> 4982</span>&#160; </div>
+<div class="line"><a name="l04983"></a><span class="lineno"> 4983</span>&#160;    <span class="comment">// Skip if we&#39;ve already visited this.</span></div>
+<div class="line"><a name="l04984"></a><span class="lineno"> 4984</span>&#160;    <span class="keywordflow">if</span> (llvm::find(VisitedSpecConstants, VD) != VisitedSpecConstants.end())</div>
+<div class="line"><a name="l04985"></a><span class="lineno"> 4985</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l04986"></a><span class="lineno"> 4986</span>&#160; </div>
+<div class="line"><a name="l04987"></a><span class="lineno"> 4987</span>&#160;    VisitedSpecConstants.insert(VD);</div>
+<div class="line"><a name="l04988"></a><span class="lineno"> 4988</span>&#160;    <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> TopShim = <a class="code" href="SemaSYCL_8cpp.html#acfe35e60cbad6dd77e9f42fbc59cb402">EmitSpecIdShims</a>(OS, ShimCounter, Policy, VD);</div>
+<div class="line"><a name="l04989"></a><span class="lineno"> 4989</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;__SYCL_INLINE_NAMESPACE(cl) {\n&quot;</span>;</div>
+<div class="line"><a name="l04990"></a><span class="lineno"> 4990</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;namespace sycl {\n&quot;</span>;</div>
+<div class="line"><a name="l04991"></a><span class="lineno"> 4991</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;namespace detail {\n&quot;</span>;</div>
+<div class="line"><a name="l04992"></a><span class="lineno"> 4992</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;template&lt;&gt;\n&quot;</span>;</div>
+<div class="line"><a name="l04993"></a><span class="lineno"> 4993</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;inline const char *get_spec_constant_symbolic_ID_impl&lt;&quot;</span>;</div>
+<div class="line"><a name="l04994"></a><span class="lineno"> 4994</span>&#160; </div>
+<div class="line"><a name="l04995"></a><span class="lineno"> 4995</span>&#160;    <span class="keywordflow">if</span> (VD-&gt;<a class="code" href="classclang_1_1Decl.html#abe7e7b7306c1d04066acecc56935fe1c">isInAnonymousNamespace</a>()) {</div>
+<div class="line"><a name="l04996"></a><span class="lineno"> 4996</span>&#160;      <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; TopShim;</div>
+<div class="line"><a name="l04997"></a><span class="lineno"> 4997</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l04998"></a><span class="lineno"> 4998</span>&#160;      <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;::&quot;</span>;</div>
+<div class="line"><a name="l04999"></a><span class="lineno"> 4999</span>&#160;      VD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a9da9eea86d20aadabd466171b67db6fa">getNameForDiagnostic</a>(OS, Policy, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l05000"></a><span class="lineno"> 5000</span>&#160;    }</div>
+<div class="line"><a name="l05001"></a><span class="lineno"> 5001</span>&#160; </div>
+<div class="line"><a name="l05002"></a><span class="lineno"> 5002</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;&gt;() {\n&quot;</span>;</div>
+<div class="line"><a name="l05003"></a><span class="lineno"> 5003</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;  return \&quot;&quot;</span>;</div>
+<div class="line"><a name="l05004"></a><span class="lineno"> 5004</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <a class="code" href="classclang_1_1SYCLUniqueStableIdExpr.html#a9126d66f3670a66b76153778fd1cbbaa">SYCLUniqueStableIdExpr::ComputeName</a>(S.<a class="code" href="classclang_1_1Sema.html#ab9b993262e89efbf7932338a955783de">getASTContext</a>(), VD);</div>
+<div class="line"><a name="l05005"></a><span class="lineno"> 5005</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;\&quot;;\n&quot;</span>;</div>
+<div class="line"><a name="l05006"></a><span class="lineno"> 5006</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l05007"></a><span class="lineno"> 5007</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;} // namespace detail\n&quot;</span>;</div>
+<div class="line"><a name="l05008"></a><span class="lineno"> 5008</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;} // namespace sycl\n&quot;</span>;</div>
+<div class="line"><a name="l05009"></a><span class="lineno"> 5009</span>&#160;    <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;} // __SYCL_INLINE_NAMESPACE(cl)\n&quot;</span>;</div>
+<div class="line"><a name="l05010"></a><span class="lineno"> 5010</span>&#160;  }</div>
+<div class="line"><a name="l05011"></a><span class="lineno"> 5011</span>&#160; </div>
+<div class="line"><a name="l05012"></a><span class="lineno"> 5012</span>&#160;  <a class="code" href="namespaceclang_1_1ento.html#aaa9478ede47d40f326648cd3bb0b25a4a17bc10091293fdc562a6db69940ee924">OS</a> &lt;&lt; <span class="stringliteral">&quot;#include &lt;CL/sycl/detail/spec_const_integration.hpp&gt;\n&quot;</span>;</div>
 <div class="line"><a name="l05013"></a><span class="lineno"> 5013</span>&#160; </div>
-<div class="line"><a name="l05014"></a><span class="lineno"> 5014</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l05015"></a><span class="lineno"> 5015</span>&#160;<span class="comment">// Utility class methods</span></div>
-<div class="line"><a name="l05016"></a><span class="lineno"> 5016</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l05017"></a><span class="lineno"> 5017</span>&#160; </div>
-<div class="line"><a name="l05018"></a><span class="lineno"> 5018</span>&#160;<span class="keywordtype">bool</span> Util::isSyclAccessorType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05019"></a><span class="lineno"> 5019</span>&#160;  <span class="keywordflow">return</span> isSyclType(Ty, <span class="stringliteral">&quot;accessor&quot;</span>, <span class="keyword">true</span> <span class="comment">/*Tmpl*/</span>);</div>
-<div class="line"><a name="l05020"></a><span class="lineno"> 5020</span>&#160;}</div>
-<div class="line"><a name="l05021"></a><span class="lineno"> 5021</span>&#160; </div>
-<div class="line"><a name="l05022"></a><span class="lineno"> 5022</span>&#160;<span class="keywordtype">bool</span> Util::isSyclSamplerType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) { <span class="keywordflow">return</span> isSyclType(Ty, <span class="stringliteral">&quot;sampler&quot;</span>); }</div>
-<div class="line"><a name="l05023"></a><span class="lineno"> 5023</span>&#160; </div>
-<div class="line"><a name="l05024"></a><span class="lineno"> 5024</span>&#160;<span class="keywordtype">bool</span> Util::isSyclStreamType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) { <span class="keywordflow">return</span> isSyclType(Ty, <span class="stringliteral">&quot;stream&quot;</span>); }</div>
-<div class="line"><a name="l05025"></a><span class="lineno"> 5025</span>&#160; </div>
-<div class="line"><a name="l05026"></a><span class="lineno"> 5026</span>&#160;<span class="keywordtype">bool</span> Util::isSyclHalfType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05027"></a><span class="lineno"> 5027</span>&#160;  std::array&lt;DeclContextDesc, 5&gt; Scopes = {</div>
-<div class="line"><a name="l05028"></a><span class="lineno"> 5028</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05029"></a><span class="lineno"> 5029</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05030"></a><span class="lineno"> 5030</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;detail&quot;</span>),</div>
-<div class="line"><a name="l05031"></a><span class="lineno"> 5031</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;half_impl&quot;</span>),</div>
-<div class="line"><a name="l05032"></a><span class="lineno"> 5032</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::CXXRecord, <span class="stringliteral">&quot;half&quot;</span>)};</div>
-<div class="line"><a name="l05033"></a><span class="lineno"> 5033</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05034"></a><span class="lineno"> 5034</span>&#160;}</div>
-<div class="line"><a name="l05035"></a><span class="lineno"> 5035</span>&#160; </div>
-<div class="line"><a name="l05036"></a><span class="lineno"> 5036</span>&#160;<span class="keywordtype">bool</span> Util::isSyclSpecConstantType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05037"></a><span class="lineno"> 5037</span>&#160;  std::array&lt;DeclContextDesc, 5&gt; Scopes = {</div>
-<div class="line"><a name="l05038"></a><span class="lineno"> 5038</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05039"></a><span class="lineno"> 5039</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05040"></a><span class="lineno"> 5040</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;ONEAPI&quot;</span>),</div>
-<div class="line"><a name="l05041"></a><span class="lineno"> 5041</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;experimental&quot;</span>),</div>
-<div class="line"><a name="l05042"></a><span class="lineno"> 5042</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
-<div class="line"><a name="l05043"></a><span class="lineno"> 5043</span>&#160;                                <span class="stringliteral">&quot;spec_constant&quot;</span>)};</div>
-<div class="line"><a name="l05044"></a><span class="lineno"> 5044</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05045"></a><span class="lineno"> 5045</span>&#160;}</div>
-<div class="line"><a name="l05046"></a><span class="lineno"> 5046</span>&#160; </div>
-<div class="line"><a name="l05047"></a><span class="lineno"> 5047</span>&#160;<span class="keywordtype">bool</span> Util::isSyclSpecIdType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05048"></a><span class="lineno"> 5048</span>&#160;  std::array&lt;DeclContextDesc, 3&gt; Scopes = {</div>
-<div class="line"><a name="l05049"></a><span class="lineno"> 5049</span>&#160;      Util::MakeDeclContextDesc(clang::Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05050"></a><span class="lineno"> 5050</span>&#160;      Util::MakeDeclContextDesc(clang::Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05051"></a><span class="lineno"> 5051</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
-<div class="line"><a name="l05052"></a><span class="lineno"> 5052</span>&#160;                                <span class="stringliteral">&quot;specialization_id&quot;</span>)};</div>
-<div class="line"><a name="l05053"></a><span class="lineno"> 5053</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05054"></a><span class="lineno"> 5054</span>&#160;}</div>
-<div class="line"><a name="l05055"></a><span class="lineno"> 5055</span>&#160; </div>
-<div class="line"><a name="l05056"></a><span class="lineno"> 5056</span>&#160;<span class="keywordtype">bool</span> Util::isSyclKernelHandlerType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05057"></a><span class="lineno"> 5057</span>&#160;  std::array&lt;DeclContextDesc, 3&gt; Scopes = {</div>
-<div class="line"><a name="l05058"></a><span class="lineno"> 5058</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05059"></a><span class="lineno"> 5059</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05060"></a><span class="lineno"> 5060</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::CXXRecord, <span class="stringliteral">&quot;kernel_handler&quot;</span>)};</div>
-<div class="line"><a name="l05061"></a><span class="lineno"> 5061</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05062"></a><span class="lineno"> 5062</span>&#160;}</div>
-<div class="line"><a name="l05063"></a><span class="lineno"> 5063</span>&#160; </div>
-<div class="line"><a name="l05064"></a><span class="lineno"> 5064</span>&#160;<span class="keywordtype">bool</span> Util::isSyclAccessorNoAliasPropertyType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05065"></a><span class="lineno"> 5065</span>&#160;  std::array&lt;DeclContextDesc, 6&gt; Scopes = {</div>
-<div class="line"><a name="l05066"></a><span class="lineno"> 5066</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>},</div>
-<div class="line"><a name="l05067"></a><span class="lineno"> 5067</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>},</div>
-<div class="line"><a name="l05068"></a><span class="lineno"> 5068</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;ONEAPI&quot;</span>},</div>
-<div class="line"><a name="l05069"></a><span class="lineno"> 5069</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;property&quot;</span>},</div>
-<div class="line"><a name="l05070"></a><span class="lineno"> 5070</span>&#160;      Util::DeclContextDesc{Decl::Kind::CXXRecord, <span class="stringliteral">&quot;no_alias&quot;</span>},</div>
-<div class="line"><a name="l05071"></a><span class="lineno"> 5071</span>&#160;      Util::DeclContextDesc{Decl::Kind::ClassTemplateSpecialization,</div>
-<div class="line"><a name="l05072"></a><span class="lineno"> 5072</span>&#160;                            <span class="stringliteral">&quot;instance&quot;</span>}};</div>
-<div class="line"><a name="l05073"></a><span class="lineno"> 5073</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05074"></a><span class="lineno"> 5074</span>&#160;}</div>
-<div class="line"><a name="l05075"></a><span class="lineno"> 5075</span>&#160; </div>
-<div class="line"><a name="l05076"></a><span class="lineno"> 5076</span>&#160;<span class="keywordtype">bool</span> Util::isSyclBufferLocationType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05077"></a><span class="lineno"> 5077</span>&#160;  std::array&lt;DeclContextDesc, 6&gt; Scopes = {</div>
-<div class="line"><a name="l05078"></a><span class="lineno"> 5078</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05079"></a><span class="lineno"> 5079</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05080"></a><span class="lineno"> 5080</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;INTEL&quot;</span>),</div>
-<div class="line"><a name="l05081"></a><span class="lineno"> 5081</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;property&quot;</span>),</div>
-<div class="line"><a name="l05082"></a><span class="lineno"> 5082</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::CXXRecord, <span class="stringliteral">&quot;buffer_location&quot;</span>),</div>
-<div class="line"><a name="l05083"></a><span class="lineno"> 5083</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
-<div class="line"><a name="l05084"></a><span class="lineno"> 5084</span>&#160;                                <span class="stringliteral">&quot;instance&quot;</span>)};</div>
-<div class="line"><a name="l05085"></a><span class="lineno"> 5085</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05086"></a><span class="lineno"> 5086</span>&#160;}</div>
-<div class="line"><a name="l05087"></a><span class="lineno"> 5087</span>&#160; </div>
-<div class="line"><a name="l05088"></a><span class="lineno"> 5088</span>&#160;<span class="keywordtype">bool</span> Util::isSyclType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty, StringRef Name, <span class="keywordtype">bool</span> Tmpl) {</div>
-<div class="line"><a name="l05089"></a><span class="lineno"> 5089</span>&#160;  <a class="code" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Decl::Kind</a> ClassDeclKind =</div>
-<div class="line"><a name="l05090"></a><span class="lineno"> 5090</span>&#160;      Tmpl ? Decl::Kind::ClassTemplateSpecialization : Decl::Kind::CXXRecord;</div>
-<div class="line"><a name="l05091"></a><span class="lineno"> 5091</span>&#160;  std::array&lt;DeclContextDesc, 3&gt; Scopes = {</div>
-<div class="line"><a name="l05092"></a><span class="lineno"> 5092</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05093"></a><span class="lineno"> 5093</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05094"></a><span class="lineno"> 5094</span>&#160;      Util::MakeDeclContextDesc(ClassDeclKind, Name)};</div>
-<div class="line"><a name="l05095"></a><span class="lineno"> 5095</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05096"></a><span class="lineno"> 5096</span>&#160;}</div>
-<div class="line"><a name="l05097"></a><span class="lineno"> 5097</span>&#160; </div>
-<div class="line"><a name="l05098"></a><span class="lineno"> 5098</span>&#160;<span class="keywordtype">bool</span> Util::isSyclFunction(<span class="keyword">const</span> <a class="code" href="classclang_1_1FunctionDecl.html">FunctionDecl</a> *FD, StringRef Name) {</div>
-<div class="line"><a name="l05099"></a><span class="lineno"> 5099</span>&#160;  <span class="keywordflow">if</span> (!FD-&gt;<a class="code" href="classclang_1_1DeclContext.html#acf11933ff34e2e8b56d5e648e00be742">isFunctionOrMethod</a>() || !FD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a7fab32caa3b7d601128265248260fd37">getIdentifier</a>() ||</div>
-<div class="line"><a name="l05100"></a><span class="lineno"> 5100</span>&#160;      FD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">getName</a>().empty() || Name != FD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">getName</a>())</div>
-<div class="line"><a name="l05101"></a><span class="lineno"> 5101</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l05102"></a><span class="lineno"> 5102</span>&#160; </div>
-<div class="line"><a name="l05103"></a><span class="lineno"> 5103</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1DeclContext.html">DeclContext</a> *DC = FD-&gt;<a class="code" href="classclang_1_1Decl.html#af67e1a1d24dcc51093b95dbcf68d4288">getDeclContext</a>();</div>
-<div class="line"><a name="l05104"></a><span class="lineno"> 5104</span>&#160;  <span class="keywordflow">if</span> (DC-&gt;<a class="code" href="classclang_1_1DeclContext.html#a59082c38a902401609bf08db31286e75">isTranslationUnit</a>())</div>
-<div class="line"><a name="l05105"></a><span class="lineno"> 5105</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l05106"></a><span class="lineno"> 5106</span>&#160; </div>
-<div class="line"><a name="l05107"></a><span class="lineno"> 5107</span>&#160;  std::array&lt;DeclContextDesc, 2&gt; Scopes = {</div>
-<div class="line"><a name="l05108"></a><span class="lineno"> 5108</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05109"></a><span class="lineno"> 5109</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>)};</div>
-<div class="line"><a name="l05110"></a><span class="lineno"> 5110</span>&#160;  <span class="keywordflow">return</span> matchContext(DC, Scopes);</div>
-<div class="line"><a name="l05111"></a><span class="lineno"> 5111</span>&#160;}</div>
-<div class="line"><a name="l05112"></a><span class="lineno"> 5112</span>&#160; </div>
-<div class="line"><a name="l05113"></a><span class="lineno"> 5113</span>&#160;<span class="keywordtype">bool</span> Util::isAccessorPropertyListType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
-<div class="line"><a name="l05114"></a><span class="lineno"> 5114</span>&#160;  std::array&lt;DeclContextDesc, 4&gt; Scopes = {</div>
-<div class="line"><a name="l05115"></a><span class="lineno"> 5115</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
-<div class="line"><a name="l05116"></a><span class="lineno"> 5116</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
-<div class="line"><a name="l05117"></a><span class="lineno"> 5117</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;ONEAPI&quot;</span>),</div>
-<div class="line"><a name="l05118"></a><span class="lineno"> 5118</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
-<div class="line"><a name="l05119"></a><span class="lineno"> 5119</span>&#160;                                <span class="stringliteral">&quot;accessor_property_list&quot;</span>)};</div>
-<div class="line"><a name="l05120"></a><span class="lineno"> 5120</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
-<div class="line"><a name="l05121"></a><span class="lineno"> 5121</span>&#160;}</div>
-<div class="line"><a name="l05122"></a><span class="lineno"> 5122</span>&#160; </div>
-<div class="line"><a name="l05123"></a><span class="lineno"> 5123</span>&#160;<span class="keywordtype">bool</span> Util::matchContext(<span class="keyword">const</span> <a class="code" href="classclang_1_1DeclContext.html">DeclContext</a> *Ctx,</div>
-<div class="line"><a name="l05124"></a><span class="lineno"> 5124</span>&#160;                        <a class="code" href="classllvm_1_1ArrayRef.html">ArrayRef&lt;Util::DeclContextDesc&gt;</a> Scopes) {</div>
-<div class="line"><a name="l05125"></a><span class="lineno"> 5125</span>&#160;  <span class="comment">// The idea: check the declaration context chain starting from the item</span></div>
-<div class="line"><a name="l05126"></a><span class="lineno"> 5126</span>&#160;  <span class="comment">// itself. At each step check the context is of expected kind</span></div>
-<div class="line"><a name="l05127"></a><span class="lineno"> 5127</span>&#160;  <span class="comment">// (namespace) and name.</span></div>
-<div class="line"><a name="l05128"></a><span class="lineno"> 5128</span>&#160;  StringRef Name = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l05129"></a><span class="lineno"> 5129</span>&#160; </div>
-<div class="line"><a name="l05130"></a><span class="lineno"> 5130</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="classclang_1_1Scope.html">Scope</a> : llvm::reverse(Scopes)) {</div>
-<div class="line"><a name="l05131"></a><span class="lineno"> 5131</span>&#160;    <a class="code" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Decl::Kind</a> DK = Ctx-&gt;<a class="code" href="classclang_1_1DeclContext.html#aee85c06098fa320e9a215214c2b94e65">getDeclKind</a>();</div>
-<div class="line"><a name="l05132"></a><span class="lineno"> 5132</span>&#160;    <span class="keywordflow">if</span> (DK != <a class="code" href="classclang_1_1Scope.html">Scope</a>.first)</div>
-<div class="line"><a name="l05133"></a><span class="lineno"> 5133</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l05134"></a><span class="lineno"> 5134</span>&#160; </div>
-<div class="line"><a name="l05135"></a><span class="lineno"> 5135</span>&#160;    <span class="keywordflow">switch</span> (DK) {</div>
-<div class="line"><a name="l05136"></a><span class="lineno"> 5136</span>&#160;    <span class="keywordflow">case</span> Decl::Kind::ClassTemplateSpecialization:</div>
-<div class="line"><a name="l05137"></a><span class="lineno"> 5137</span>&#160;      <span class="comment">// ClassTemplateSpecializationDecl inherits from CXXRecordDecl</span></div>
-<div class="line"><a name="l05138"></a><span class="lineno"> 5138</span>&#160;    <span class="keywordflow">case</span> Decl::Kind::CXXRecord:</div>
-<div class="line"><a name="l05139"></a><span class="lineno"> 5139</span>&#160;      Name = cast&lt;CXXRecordDecl&gt;(Ctx)-&gt;getName();</div>
-<div class="line"><a name="l05140"></a><span class="lineno"> 5140</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l05141"></a><span class="lineno"> 5141</span>&#160;    <span class="keywordflow">case</span> Decl::Kind::Namespace:</div>
-<div class="line"><a name="l05142"></a><span class="lineno"> 5142</span>&#160;      Name = cast&lt;NamespaceDecl&gt;(Ctx)-&gt;getName();</div>
+<div class="line"><a name="l05014"></a><span class="lineno"> 5014</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l05015"></a><span class="lineno"> 5015</span>&#160;}</div>
+<div class="line"><a name="l05016"></a><span class="lineno"> 5016</span>&#160; </div>
+<div class="line"><a name="l05017"></a><span class="lineno"> 5017</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l05018"></a><span class="lineno"> 5018</span>&#160;<span class="comment">// Utility class methods</span></div>
+<div class="line"><a name="l05019"></a><span class="lineno"> 5019</span>&#160;<span class="comment">// -----------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l05020"></a><span class="lineno"> 5020</span>&#160; </div>
+<div class="line"><a name="l05021"></a><span class="lineno"> 5021</span>&#160;<span class="keywordtype">bool</span> Util::isSyclAccessorType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05022"></a><span class="lineno"> 5022</span>&#160;  <span class="keywordflow">return</span> isSyclType(Ty, <span class="stringliteral">&quot;accessor&quot;</span>, <span class="keyword">true</span> <span class="comment">/*Tmpl*/</span>);</div>
+<div class="line"><a name="l05023"></a><span class="lineno"> 5023</span>&#160;}</div>
+<div class="line"><a name="l05024"></a><span class="lineno"> 5024</span>&#160; </div>
+<div class="line"><a name="l05025"></a><span class="lineno"> 5025</span>&#160;<span class="keywordtype">bool</span> Util::isSyclSamplerType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) { <span class="keywordflow">return</span> isSyclType(Ty, <span class="stringliteral">&quot;sampler&quot;</span>); }</div>
+<div class="line"><a name="l05026"></a><span class="lineno"> 5026</span>&#160; </div>
+<div class="line"><a name="l05027"></a><span class="lineno"> 5027</span>&#160;<span class="keywordtype">bool</span> Util::isSyclStreamType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) { <span class="keywordflow">return</span> isSyclType(Ty, <span class="stringliteral">&quot;stream&quot;</span>); }</div>
+<div class="line"><a name="l05028"></a><span class="lineno"> 5028</span>&#160; </div>
+<div class="line"><a name="l05029"></a><span class="lineno"> 5029</span>&#160;<span class="keywordtype">bool</span> Util::isSyclHalfType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05030"></a><span class="lineno"> 5030</span>&#160;  std::array&lt;DeclContextDesc, 5&gt; Scopes = {</div>
+<div class="line"><a name="l05031"></a><span class="lineno"> 5031</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05032"></a><span class="lineno"> 5032</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05033"></a><span class="lineno"> 5033</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;detail&quot;</span>),</div>
+<div class="line"><a name="l05034"></a><span class="lineno"> 5034</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;half_impl&quot;</span>),</div>
+<div class="line"><a name="l05035"></a><span class="lineno"> 5035</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::CXXRecord, <span class="stringliteral">&quot;half&quot;</span>)};</div>
+<div class="line"><a name="l05036"></a><span class="lineno"> 5036</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05037"></a><span class="lineno"> 5037</span>&#160;}</div>
+<div class="line"><a name="l05038"></a><span class="lineno"> 5038</span>&#160; </div>
+<div class="line"><a name="l05039"></a><span class="lineno"> 5039</span>&#160;<span class="keywordtype">bool</span> Util::isSyclSpecConstantType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05040"></a><span class="lineno"> 5040</span>&#160;  std::array&lt;DeclContextDesc, 5&gt; Scopes = {</div>
+<div class="line"><a name="l05041"></a><span class="lineno"> 5041</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05042"></a><span class="lineno"> 5042</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05043"></a><span class="lineno"> 5043</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;ONEAPI&quot;</span>),</div>
+<div class="line"><a name="l05044"></a><span class="lineno"> 5044</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;experimental&quot;</span>),</div>
+<div class="line"><a name="l05045"></a><span class="lineno"> 5045</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
+<div class="line"><a name="l05046"></a><span class="lineno"> 5046</span>&#160;                                <span class="stringliteral">&quot;spec_constant&quot;</span>)};</div>
+<div class="line"><a name="l05047"></a><span class="lineno"> 5047</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05048"></a><span class="lineno"> 5048</span>&#160;}</div>
+<div class="line"><a name="l05049"></a><span class="lineno"> 5049</span>&#160; </div>
+<div class="line"><a name="l05050"></a><span class="lineno"> 5050</span>&#160;<span class="keywordtype">bool</span> Util::isSyclSpecIdType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05051"></a><span class="lineno"> 5051</span>&#160;  std::array&lt;DeclContextDesc, 3&gt; Scopes = {</div>
+<div class="line"><a name="l05052"></a><span class="lineno"> 5052</span>&#160;      Util::MakeDeclContextDesc(clang::Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05053"></a><span class="lineno"> 5053</span>&#160;      Util::MakeDeclContextDesc(clang::Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05054"></a><span class="lineno"> 5054</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
+<div class="line"><a name="l05055"></a><span class="lineno"> 5055</span>&#160;                                <span class="stringliteral">&quot;specialization_id&quot;</span>)};</div>
+<div class="line"><a name="l05056"></a><span class="lineno"> 5056</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05057"></a><span class="lineno"> 5057</span>&#160;}</div>
+<div class="line"><a name="l05058"></a><span class="lineno"> 5058</span>&#160; </div>
+<div class="line"><a name="l05059"></a><span class="lineno"> 5059</span>&#160;<span class="keywordtype">bool</span> Util::isSyclKernelHandlerType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05060"></a><span class="lineno"> 5060</span>&#160;  std::array&lt;DeclContextDesc, 3&gt; Scopes = {</div>
+<div class="line"><a name="l05061"></a><span class="lineno"> 5061</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05062"></a><span class="lineno"> 5062</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05063"></a><span class="lineno"> 5063</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::CXXRecord, <span class="stringliteral">&quot;kernel_handler&quot;</span>)};</div>
+<div class="line"><a name="l05064"></a><span class="lineno"> 5064</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05065"></a><span class="lineno"> 5065</span>&#160;}</div>
+<div class="line"><a name="l05066"></a><span class="lineno"> 5066</span>&#160; </div>
+<div class="line"><a name="l05067"></a><span class="lineno"> 5067</span>&#160;<span class="keywordtype">bool</span> Util::isSyclAccessorNoAliasPropertyType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05068"></a><span class="lineno"> 5068</span>&#160;  std::array&lt;DeclContextDesc, 6&gt; Scopes = {</div>
+<div class="line"><a name="l05069"></a><span class="lineno"> 5069</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>},</div>
+<div class="line"><a name="l05070"></a><span class="lineno"> 5070</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>},</div>
+<div class="line"><a name="l05071"></a><span class="lineno"> 5071</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;ONEAPI&quot;</span>},</div>
+<div class="line"><a name="l05072"></a><span class="lineno"> 5072</span>&#160;      Util::DeclContextDesc{Decl::Kind::Namespace, <span class="stringliteral">&quot;property&quot;</span>},</div>
+<div class="line"><a name="l05073"></a><span class="lineno"> 5073</span>&#160;      Util::DeclContextDesc{Decl::Kind::CXXRecord, <span class="stringliteral">&quot;no_alias&quot;</span>},</div>
+<div class="line"><a name="l05074"></a><span class="lineno"> 5074</span>&#160;      Util::DeclContextDesc{Decl::Kind::ClassTemplateSpecialization,</div>
+<div class="line"><a name="l05075"></a><span class="lineno"> 5075</span>&#160;                            <span class="stringliteral">&quot;instance&quot;</span>}};</div>
+<div class="line"><a name="l05076"></a><span class="lineno"> 5076</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05077"></a><span class="lineno"> 5077</span>&#160;}</div>
+<div class="line"><a name="l05078"></a><span class="lineno"> 5078</span>&#160; </div>
+<div class="line"><a name="l05079"></a><span class="lineno"> 5079</span>&#160;<span class="keywordtype">bool</span> Util::isSyclBufferLocationType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05080"></a><span class="lineno"> 5080</span>&#160;  std::array&lt;DeclContextDesc, 6&gt; Scopes = {</div>
+<div class="line"><a name="l05081"></a><span class="lineno"> 5081</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05082"></a><span class="lineno"> 5082</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05083"></a><span class="lineno"> 5083</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;INTEL&quot;</span>),</div>
+<div class="line"><a name="l05084"></a><span class="lineno"> 5084</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;property&quot;</span>),</div>
+<div class="line"><a name="l05085"></a><span class="lineno"> 5085</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::CXXRecord, <span class="stringliteral">&quot;buffer_location&quot;</span>),</div>
+<div class="line"><a name="l05086"></a><span class="lineno"> 5086</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
+<div class="line"><a name="l05087"></a><span class="lineno"> 5087</span>&#160;                                <span class="stringliteral">&quot;instance&quot;</span>)};</div>
+<div class="line"><a name="l05088"></a><span class="lineno"> 5088</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05089"></a><span class="lineno"> 5089</span>&#160;}</div>
+<div class="line"><a name="l05090"></a><span class="lineno"> 5090</span>&#160; </div>
+<div class="line"><a name="l05091"></a><span class="lineno"> 5091</span>&#160;<span class="keywordtype">bool</span> Util::isSyclType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty, StringRef Name, <span class="keywordtype">bool</span> Tmpl) {</div>
+<div class="line"><a name="l05092"></a><span class="lineno"> 5092</span>&#160;  <a class="code" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Decl::Kind</a> ClassDeclKind =</div>
+<div class="line"><a name="l05093"></a><span class="lineno"> 5093</span>&#160;      Tmpl ? Decl::Kind::ClassTemplateSpecialization : Decl::Kind::CXXRecord;</div>
+<div class="line"><a name="l05094"></a><span class="lineno"> 5094</span>&#160;  std::array&lt;DeclContextDesc, 3&gt; Scopes = {</div>
+<div class="line"><a name="l05095"></a><span class="lineno"> 5095</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05096"></a><span class="lineno"> 5096</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05097"></a><span class="lineno"> 5097</span>&#160;      Util::MakeDeclContextDesc(ClassDeclKind, Name)};</div>
+<div class="line"><a name="l05098"></a><span class="lineno"> 5098</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05099"></a><span class="lineno"> 5099</span>&#160;}</div>
+<div class="line"><a name="l05100"></a><span class="lineno"> 5100</span>&#160; </div>
+<div class="line"><a name="l05101"></a><span class="lineno"> 5101</span>&#160;<span class="keywordtype">bool</span> Util::isSyclFunction(<span class="keyword">const</span> <a class="code" href="classclang_1_1FunctionDecl.html">FunctionDecl</a> *FD, StringRef Name) {</div>
+<div class="line"><a name="l05102"></a><span class="lineno"> 5102</span>&#160;  <span class="keywordflow">if</span> (!FD-&gt;<a class="code" href="classclang_1_1DeclContext.html#acf11933ff34e2e8b56d5e648e00be742">isFunctionOrMethod</a>() || !FD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a7fab32caa3b7d601128265248260fd37">getIdentifier</a>() ||</div>
+<div class="line"><a name="l05103"></a><span class="lineno"> 5103</span>&#160;      FD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">getName</a>().empty() || Name != FD-&gt;<a class="code" href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">getName</a>())</div>
+<div class="line"><a name="l05104"></a><span class="lineno"> 5104</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l05105"></a><span class="lineno"> 5105</span>&#160; </div>
+<div class="line"><a name="l05106"></a><span class="lineno"> 5106</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1DeclContext.html">DeclContext</a> *DC = FD-&gt;<a class="code" href="classclang_1_1Decl.html#af67e1a1d24dcc51093b95dbcf68d4288">getDeclContext</a>();</div>
+<div class="line"><a name="l05107"></a><span class="lineno"> 5107</span>&#160;  <span class="keywordflow">if</span> (DC-&gt;<a class="code" href="classclang_1_1DeclContext.html#a59082c38a902401609bf08db31286e75">isTranslationUnit</a>())</div>
+<div class="line"><a name="l05108"></a><span class="lineno"> 5108</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l05109"></a><span class="lineno"> 5109</span>&#160; </div>
+<div class="line"><a name="l05110"></a><span class="lineno"> 5110</span>&#160;  std::array&lt;DeclContextDesc, 2&gt; Scopes = {</div>
+<div class="line"><a name="l05111"></a><span class="lineno"> 5111</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05112"></a><span class="lineno"> 5112</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>)};</div>
+<div class="line"><a name="l05113"></a><span class="lineno"> 5113</span>&#160;  <span class="keywordflow">return</span> matchContext(DC, Scopes);</div>
+<div class="line"><a name="l05114"></a><span class="lineno"> 5114</span>&#160;}</div>
+<div class="line"><a name="l05115"></a><span class="lineno"> 5115</span>&#160; </div>
+<div class="line"><a name="l05116"></a><span class="lineno"> 5116</span>&#160;<span class="keywordtype">bool</span> Util::isAccessorPropertyListType(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty) {</div>
+<div class="line"><a name="l05117"></a><span class="lineno"> 5117</span>&#160;  std::array&lt;DeclContextDesc, 4&gt; Scopes = {</div>
+<div class="line"><a name="l05118"></a><span class="lineno"> 5118</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;cl&quot;</span>),</div>
+<div class="line"><a name="l05119"></a><span class="lineno"> 5119</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;sycl&quot;</span>),</div>
+<div class="line"><a name="l05120"></a><span class="lineno"> 5120</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::Namespace, <span class="stringliteral">&quot;ONEAPI&quot;</span>),</div>
+<div class="line"><a name="l05121"></a><span class="lineno"> 5121</span>&#160;      Util::MakeDeclContextDesc(Decl::Kind::ClassTemplateSpecialization,</div>
+<div class="line"><a name="l05122"></a><span class="lineno"> 5122</span>&#160;                                <span class="stringliteral">&quot;accessor_property_list&quot;</span>)};</div>
+<div class="line"><a name="l05123"></a><span class="lineno"> 5123</span>&#160;  <span class="keywordflow">return</span> matchQualifiedTypeName(Ty, Scopes);</div>
+<div class="line"><a name="l05124"></a><span class="lineno"> 5124</span>&#160;}</div>
+<div class="line"><a name="l05125"></a><span class="lineno"> 5125</span>&#160; </div>
+<div class="line"><a name="l05126"></a><span class="lineno"> 5126</span>&#160;<span class="keywordtype">bool</span> Util::matchContext(<span class="keyword">const</span> <a class="code" href="classclang_1_1DeclContext.html">DeclContext</a> *Ctx,</div>
+<div class="line"><a name="l05127"></a><span class="lineno"> 5127</span>&#160;                        <a class="code" href="classllvm_1_1ArrayRef.html">ArrayRef&lt;Util::DeclContextDesc&gt;</a> Scopes) {</div>
+<div class="line"><a name="l05128"></a><span class="lineno"> 5128</span>&#160;  <span class="comment">// The idea: check the declaration context chain starting from the item</span></div>
+<div class="line"><a name="l05129"></a><span class="lineno"> 5129</span>&#160;  <span class="comment">// itself. At each step check the context is of expected kind</span></div>
+<div class="line"><a name="l05130"></a><span class="lineno"> 5130</span>&#160;  <span class="comment">// (namespace) and name.</span></div>
+<div class="line"><a name="l05131"></a><span class="lineno"> 5131</span>&#160;  StringRef Name = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l05132"></a><span class="lineno"> 5132</span>&#160; </div>
+<div class="line"><a name="l05133"></a><span class="lineno"> 5133</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;<a class="code" href="classclang_1_1Scope.html">Scope</a> : llvm::reverse(Scopes)) {</div>
+<div class="line"><a name="l05134"></a><span class="lineno"> 5134</span>&#160;    <a class="code" href="classclang_1_1Decl.html#a4c591bf2c0aa4f4d5f343ec665cbf196">Decl::Kind</a> DK = Ctx-&gt;<a class="code" href="classclang_1_1DeclContext.html#aee85c06098fa320e9a215214c2b94e65">getDeclKind</a>();</div>
+<div class="line"><a name="l05135"></a><span class="lineno"> 5135</span>&#160;    <span class="keywordflow">if</span> (DK != <a class="code" href="classclang_1_1Scope.html">Scope</a>.first)</div>
+<div class="line"><a name="l05136"></a><span class="lineno"> 5136</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l05137"></a><span class="lineno"> 5137</span>&#160; </div>
+<div class="line"><a name="l05138"></a><span class="lineno"> 5138</span>&#160;    <span class="keywordflow">switch</span> (DK) {</div>
+<div class="line"><a name="l05139"></a><span class="lineno"> 5139</span>&#160;    <span class="keywordflow">case</span> Decl::Kind::ClassTemplateSpecialization:</div>
+<div class="line"><a name="l05140"></a><span class="lineno"> 5140</span>&#160;      <span class="comment">// ClassTemplateSpecializationDecl inherits from CXXRecordDecl</span></div>
+<div class="line"><a name="l05141"></a><span class="lineno"> 5141</span>&#160;    <span class="keywordflow">case</span> Decl::Kind::CXXRecord:</div>
+<div class="line"><a name="l05142"></a><span class="lineno"> 5142</span>&#160;      Name = cast&lt;CXXRecordDecl&gt;(Ctx)-&gt;getName();</div>
 <div class="line"><a name="l05143"></a><span class="lineno"> 5143</span>&#160;      <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l05144"></a><span class="lineno"> 5144</span>&#160;    <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l05145"></a><span class="lineno"> 5145</span>&#160;      llvm_unreachable(<span class="stringliteral">&quot;matchContext: decl kind not supported&quot;</span>);</div>
-<div class="line"><a name="l05146"></a><span class="lineno"> 5146</span>&#160;    }</div>
-<div class="line"><a name="l05147"></a><span class="lineno"> 5147</span>&#160;    <span class="keywordflow">if</span> (Name != <a class="code" href="classclang_1_1Scope.html">Scope</a>.second)</div>
-<div class="line"><a name="l05148"></a><span class="lineno"> 5148</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l05149"></a><span class="lineno"> 5149</span>&#160;    Ctx = Ctx-&gt;<a class="code" href="classclang_1_1DeclContext.html#a31c99b38017e8d702fda9c0f1d021186">getParent</a>();</div>
-<div class="line"><a name="l05150"></a><span class="lineno"> 5150</span>&#160;  }</div>
-<div class="line"><a name="l05151"></a><span class="lineno"> 5151</span>&#160;  <span class="keywordflow">return</span> Ctx-&gt;<a class="code" href="classclang_1_1DeclContext.html#a59082c38a902401609bf08db31286e75">isTranslationUnit</a>();</div>
-<div class="line"><a name="l05152"></a><span class="lineno"> 5152</span>&#160;}</div>
-<div class="line"><a name="l05153"></a><span class="lineno"> 5153</span>&#160; </div>
-<div class="line"><a name="l05154"></a><span class="lineno"> 5154</span>&#160;<span class="keywordtype">bool</span> Util::matchQualifiedTypeName(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty,</div>
-<div class="line"><a name="l05155"></a><span class="lineno"> 5155</span>&#160;                                  <a class="code" href="classllvm_1_1ArrayRef.html">ArrayRef&lt;Util::DeclContextDesc&gt;</a> Scopes) {</div>
-<div class="line"><a name="l05156"></a><span class="lineno"> 5156</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1CXXRecordDecl.html">CXXRecordDecl</a> *RecTy = Ty-&gt;<a class="code" href="classclang_1_1Type.html#a0506d2fd1e686757c62a2b1aa3f9de8d">getAsCXXRecordDecl</a>();</div>
-<div class="line"><a name="l05157"></a><span class="lineno"> 5157</span>&#160; </div>
-<div class="line"><a name="l05158"></a><span class="lineno"> 5158</span>&#160;  <span class="keywordflow">if</span> (!RecTy)</div>
-<div class="line"><a name="l05159"></a><span class="lineno"> 5159</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// only classes/structs supported</span></div>
-<div class="line"><a name="l05160"></a><span class="lineno"> 5160</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> *Ctx = cast&lt;DeclContext&gt;(RecTy);</div>
-<div class="line"><a name="l05161"></a><span class="lineno"> 5161</span>&#160;  <span class="keywordflow">return</span> Util::matchContext(Ctx, Scopes);</div>
-<div class="line"><a name="l05162"></a><span class="lineno"> 5162</span>&#160;}</div>
-<div class="line"><a name="l05163"></a><span class="lineno"> 5163</span>&#160; </div>
-<div class="line"><a name="l05164"></a><span class="lineno"> 5164</span>&#160;<span class="comment">// The SYCL kernel&#39;s &#39;object type&#39; used for diagnostics and naming/mangling is</span></div>
-<div class="line"><a name="l05165"></a><span class="lineno"> 5165</span>&#160;<span class="comment">// the first parameter to a sycl_kernel labeled function template. In SYCL1.2.1,</span></div>
-<div class="line"><a name="l05166"></a><span class="lineno"> 5166</span>&#160;<span class="comment">// this was passed by value, and in SYCL2020, it is passed by reference.</span></div>
-<div class="line"><a name="l05167"></a><span class="lineno"><a class="line" href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c"> 5167</a></span>&#160;<span class="keyword">static</span> <a class="code" href="classclang_1_1QualType.html">QualType</a> <a class="code" href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c">GetSYCLKernelObjectType</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1FunctionDecl.html">FunctionDecl</a> *KernelCaller) {</div>
-<div class="line"><a name="l05168"></a><span class="lineno"> 5168</span>&#160;  assert(KernelCaller-&gt;<a class="code" href="classclang_1_1FunctionDecl.html#ae3cf2778dffe5ebe820cf811ca0a134f">getNumParams</a>() &gt; 0 &amp;&amp; <span class="stringliteral">&quot;Insufficient kernel parameters&quot;</span>);</div>
-<div class="line"><a name="l05169"></a><span class="lineno"> 5169</span>&#160;  <a class="code" href="classclang_1_1QualType.html">QualType</a> KernelParamTy = KernelCaller-&gt;<a class="code" href="classclang_1_1FunctionDecl.html#afd761724c0261c3613c187ca98482442">getParamDecl</a>(0)-&gt;<a class="code" href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">getType</a>();</div>
-<div class="line"><a name="l05170"></a><span class="lineno"> 5170</span>&#160; </div>
-<div class="line"><a name="l05171"></a><span class="lineno"> 5171</span>&#160;  <span class="comment">// SYCL 2020 kernels are passed by reference.</span></div>
-<div class="line"><a name="l05172"></a><span class="lineno"> 5172</span>&#160;  <span class="keywordflow">if</span> (KernelParamTy-&gt;<a class="code" href="classclang_1_1Type.html#a48b2c2b1c98a1800de465320ee70badc">isReferenceType</a>())</div>
-<div class="line"><a name="l05173"></a><span class="lineno"> 5173</span>&#160;    <span class="keywordflow">return</span> KernelParamTy-&gt;<a class="code" href="classclang_1_1Type.html#a56c474868f4027b847f181f99b226f47">getPointeeType</a>();</div>
-<div class="line"><a name="l05174"></a><span class="lineno"> 5174</span>&#160; </div>
-<div class="line"><a name="l05175"></a><span class="lineno"> 5175</span>&#160;  <span class="comment">// SYCL 1.2.1</span></div>
-<div class="line"><a name="l05176"></a><span class="lineno"> 5176</span>&#160;  <span class="keywordflow">return</span> KernelParamTy;</div>
-<div class="line"><a name="l05177"></a><span class="lineno"> 5177</span>&#160;}</div>
-<div class="line"><a name="l05178"></a><span class="lineno"> 5178</span>&#160; </div>
-<div class="line"><a name="l05179"></a><span class="lineno"><a class="line" href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb"> 5179</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb">Sema::MarkSYCLKernel</a>(<a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> NewLoc, <a class="code" href="classclang_1_1QualType.html">QualType</a> Ty,</div>
-<div class="line"><a name="l05180"></a><span class="lineno"> 5180</span>&#160;                          <span class="keywordtype">bool</span> IsInstantiation) {</div>
-<div class="line"><a name="l05181"></a><span class="lineno"> 5181</span>&#160;  <span class="keyword">auto</span> MangleCallback = [](<a class="code" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;Ctx,</div>
-<div class="line"><a name="l05182"></a><span class="lineno"> 5182</span>&#160;                           <span class="keyword">const</span> <a class="code" href="classclang_1_1NamedDecl.html">NamedDecl</a> *ND) -&gt; <a class="code" href="classllvm_1_1Optional.html">llvm::Optional&lt;unsigned&gt;</a> {</div>
-<div class="line"><a name="l05183"></a><span class="lineno"> 5183</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *RD = dyn_cast&lt;CXXRecordDecl&gt;(ND))</div>
-<div class="line"><a name="l05184"></a><span class="lineno"> 5184</span>&#160;      Ctx.<a class="code" href="classclang_1_1ASTContext.html#a1a39ebf89a8fcf10a55218680c0536ae">AddSYCLKernelNamingDecl</a>(RD);</div>
-<div class="line"><a name="l05185"></a><span class="lineno"> 5185</span>&#160;    <span class="comment">// We always want to go into the lambda mangling (skipping the unnamed</span></div>
-<div class="line"><a name="l05186"></a><span class="lineno"> 5186</span>&#160;    <span class="comment">// struct version), so make sure we return a value here.</span></div>
-<div class="line"><a name="l05187"></a><span class="lineno"> 5187</span>&#160;    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l05188"></a><span class="lineno"> 5188</span>&#160;  };</div>
-<div class="line"><a name="l05189"></a><span class="lineno"> 5189</span>&#160; </div>
-<div class="line"><a name="l05190"></a><span class="lineno"> 5190</span>&#160;  std::unique_ptr&lt;MangleContext&gt; Ctx{<a class="code" href="classclang_1_1ItaniumMangleContext.html#a569d84f3ebc9a0f6b123457f6fca4110">ItaniumMangleContext::create</a>(</div>
-<div class="line"><a name="l05191"></a><span class="lineno"> 5191</span>&#160;      <a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>, <a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>.<a class="code" href="classclang_1_1ASTContext.html#ac95c0b86d83960e453f4c38ec6d44b93">getDiagnostics</a>(), MangleCallback)};</div>
-<div class="line"><a name="l05192"></a><span class="lineno"> 5192</span>&#160;  llvm::raw_null_ostream Out;</div>
-<div class="line"><a name="l05193"></a><span class="lineno"> 5193</span>&#160;  Ctx-&gt;mangleTypeName(Ty, Out);</div>
-<div class="line"><a name="l05194"></a><span class="lineno"> 5194</span>&#160; </div>
-<div class="line"><a name="l05195"></a><span class="lineno"> 5195</span>&#160;  <span class="comment">// Evaluate whether this would change any of the already evaluated</span></div>
-<div class="line"><a name="l05196"></a><span class="lineno"> 5196</span>&#160;  <span class="comment">// __builtin_sycl_unique_stable_name/id values.</span></div>
-<div class="line"><a name="l05197"></a><span class="lineno"> 5197</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;Itr : <a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>.<a class="code" href="classclang_1_1ASTContext.html#aa47c5e625cb655dff81e0deae9402ad1">SYCLUniqueStableNameEvaluatedValues</a>) {</div>
-<div class="line"><a name="l05198"></a><span class="lineno"> 5198</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *NameExpr = dyn_cast&lt;SYCLUniqueStableNameExpr&gt;(Itr.first);</div>
-<div class="line"><a name="l05199"></a><span class="lineno"> 5199</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *IdExpr = dyn_cast&lt;SYCLUniqueStableIdExpr&gt;(Itr.first);</div>
-<div class="line"><a name="l05200"></a><span class="lineno"> 5200</span>&#160;    assert((NameExpr || IdExpr) &amp;&amp; <span class="stringliteral">&quot;Unknown expr type?&quot;</span>);</div>
-<div class="line"><a name="l05201"></a><span class="lineno"> 5201</span>&#160; </div>
-<div class="line"><a name="l05202"></a><span class="lineno"> 5202</span>&#160;    <span class="keyword">const</span> <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &amp;CurName = NameExpr ? NameExpr-&gt;ComputeName(<a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>)</div>
-<div class="line"><a name="l05203"></a><span class="lineno"> 5203</span>&#160;                                          : IdExpr-&gt;ComputeName(<a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>);</div>
-<div class="line"><a name="l05204"></a><span class="lineno"> 5204</span>&#160;    <span class="keywordflow">if</span> (Itr.second != CurName) {</div>
-<div class="line"><a name="l05205"></a><span class="lineno"> 5205</span>&#160;      <a class="code" href="classclang_1_1Sema.html#a15a47608a70e70543584549a20d4e773">Diag</a>(NewLoc, diag::err_kernel_invalidates_sycl_unique_stable_name)</div>
-<div class="line"><a name="l05206"></a><span class="lineno"> 5206</span>&#160;          &lt;&lt; IsInstantiation &lt;&lt; (IdExpr != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l05207"></a><span class="lineno"> 5207</span>&#160;      <a class="code" href="classclang_1_1Sema.html#a15a47608a70e70543584549a20d4e773">Diag</a>(Itr.first-&gt;getExprLoc(),</div>
-<div class="line"><a name="l05208"></a><span class="lineno"> 5208</span>&#160;           diag::note_sycl_unique_stable_name_evaluated_here)</div>
-<div class="line"><a name="l05209"></a><span class="lineno"> 5209</span>&#160;          &lt;&lt; (IdExpr != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l05210"></a><span class="lineno"> 5210</span>&#160;      <span class="comment">// Update this so future diagnostics work correctly.</span></div>
-<div class="line"><a name="l05211"></a><span class="lineno"> 5211</span>&#160;      Itr.second = CurName;</div>
-<div class="line"><a name="l05212"></a><span class="lineno"> 5212</span>&#160;    }</div>
-<div class="line"><a name="l05213"></a><span class="lineno"> 5213</span>&#160;  }</div>
-<div class="line"><a name="l05214"></a><span class="lineno"> 5214</span>&#160;}</div>
-<div class="line"><a name="l05215"></a><span class="lineno"> 5215</span>&#160; </div>
-<div class="line"><a name="l05216"></a><span class="lineno"><a class="line" href="classclang_1_1Sema.html#ae3306df2014bf5a74e899ee944e60478"> 5216</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classclang_1_1Sema.html#ae3306df2014bf5a74e899ee944e60478">Sema::AddSYCLKernelLambda</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1FunctionDecl.html">FunctionDecl</a> *FD) {</div>
-<div class="line"><a name="l05217"></a><span class="lineno"> 5217</span>&#160;  <a class="code" href="classclang_1_1QualType.html">QualType</a> Ty = <a class="code" href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c">GetSYCLKernelObjectType</a>(FD);</div>
-<div class="line"><a name="l05218"></a><span class="lineno"> 5218</span>&#160;  <a class="code" href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb">MarkSYCLKernel</a>(FD-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>(), Ty, <span class="comment">/*IsInstantiation*/</span> <span class="keyword">true</span>);</div>
-<div class="line"><a name="l05219"></a><span class="lineno"> 5219</span>&#160;}</div>
+<div class="line"><a name="l05144"></a><span class="lineno"> 5144</span>&#160;    <span class="keywordflow">case</span> Decl::Kind::Namespace:</div>
+<div class="line"><a name="l05145"></a><span class="lineno"> 5145</span>&#160;      Name = cast&lt;NamespaceDecl&gt;(Ctx)-&gt;getName();</div>
+<div class="line"><a name="l05146"></a><span class="lineno"> 5146</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l05147"></a><span class="lineno"> 5147</span>&#160;    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l05148"></a><span class="lineno"> 5148</span>&#160;      llvm_unreachable(<span class="stringliteral">&quot;matchContext: decl kind not supported&quot;</span>);</div>
+<div class="line"><a name="l05149"></a><span class="lineno"> 5149</span>&#160;    }</div>
+<div class="line"><a name="l05150"></a><span class="lineno"> 5150</span>&#160;    <span class="keywordflow">if</span> (Name != <a class="code" href="classclang_1_1Scope.html">Scope</a>.second)</div>
+<div class="line"><a name="l05151"></a><span class="lineno"> 5151</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l05152"></a><span class="lineno"> 5152</span>&#160;    Ctx = Ctx-&gt;<a class="code" href="classclang_1_1DeclContext.html#a31c99b38017e8d702fda9c0f1d021186">getParent</a>();</div>
+<div class="line"><a name="l05153"></a><span class="lineno"> 5153</span>&#160;  }</div>
+<div class="line"><a name="l05154"></a><span class="lineno"> 5154</span>&#160;  <span class="keywordflow">return</span> Ctx-&gt;<a class="code" href="classclang_1_1DeclContext.html#a59082c38a902401609bf08db31286e75">isTranslationUnit</a>();</div>
+<div class="line"><a name="l05155"></a><span class="lineno"> 5155</span>&#160;}</div>
+<div class="line"><a name="l05156"></a><span class="lineno"> 5156</span>&#160; </div>
+<div class="line"><a name="l05157"></a><span class="lineno"> 5157</span>&#160;<span class="keywordtype">bool</span> Util::matchQualifiedTypeName(<a class="code" href="classclang_1_1QualType.html">QualType</a> Ty,</div>
+<div class="line"><a name="l05158"></a><span class="lineno"> 5158</span>&#160;                                  <a class="code" href="classllvm_1_1ArrayRef.html">ArrayRef&lt;Util::DeclContextDesc&gt;</a> Scopes) {</div>
+<div class="line"><a name="l05159"></a><span class="lineno"> 5159</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1CXXRecordDecl.html">CXXRecordDecl</a> *RecTy = Ty-&gt;<a class="code" href="classclang_1_1Type.html#a0506d2fd1e686757c62a2b1aa3f9de8d">getAsCXXRecordDecl</a>();</div>
+<div class="line"><a name="l05160"></a><span class="lineno"> 5160</span>&#160; </div>
+<div class="line"><a name="l05161"></a><span class="lineno"> 5161</span>&#160;  <span class="keywordflow">if</span> (!RecTy)</div>
+<div class="line"><a name="l05162"></a><span class="lineno"> 5162</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>; <span class="comment">// only classes/structs supported</span></div>
+<div class="line"><a name="l05163"></a><span class="lineno"> 5163</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> *Ctx = cast&lt;DeclContext&gt;(RecTy);</div>
+<div class="line"><a name="l05164"></a><span class="lineno"> 5164</span>&#160;  <span class="keywordflow">return</span> Util::matchContext(Ctx, Scopes);</div>
+<div class="line"><a name="l05165"></a><span class="lineno"> 5165</span>&#160;}</div>
+<div class="line"><a name="l05166"></a><span class="lineno"> 5166</span>&#160; </div>
+<div class="line"><a name="l05167"></a><span class="lineno"> 5167</span>&#160;<span class="comment">// The SYCL kernel&#39;s &#39;object type&#39; used for diagnostics and naming/mangling is</span></div>
+<div class="line"><a name="l05168"></a><span class="lineno"> 5168</span>&#160;<span class="comment">// the first parameter to a sycl_kernel labeled function template. In SYCL1.2.1,</span></div>
+<div class="line"><a name="l05169"></a><span class="lineno"> 5169</span>&#160;<span class="comment">// this was passed by value, and in SYCL2020, it is passed by reference.</span></div>
+<div class="line"><a name="l05170"></a><span class="lineno"><a class="line" href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c"> 5170</a></span>&#160;<span class="keyword">static</span> <a class="code" href="classclang_1_1QualType.html">QualType</a> <a class="code" href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c">GetSYCLKernelObjectType</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1FunctionDecl.html">FunctionDecl</a> *KernelCaller) {</div>
+<div class="line"><a name="l05171"></a><span class="lineno"> 5171</span>&#160;  assert(KernelCaller-&gt;<a class="code" href="classclang_1_1FunctionDecl.html#ae3cf2778dffe5ebe820cf811ca0a134f">getNumParams</a>() &gt; 0 &amp;&amp; <span class="stringliteral">&quot;Insufficient kernel parameters&quot;</span>);</div>
+<div class="line"><a name="l05172"></a><span class="lineno"> 5172</span>&#160;  <a class="code" href="classclang_1_1QualType.html">QualType</a> KernelParamTy = KernelCaller-&gt;<a class="code" href="classclang_1_1FunctionDecl.html#afd761724c0261c3613c187ca98482442">getParamDecl</a>(0)-&gt;<a class="code" href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">getType</a>();</div>
+<div class="line"><a name="l05173"></a><span class="lineno"> 5173</span>&#160; </div>
+<div class="line"><a name="l05174"></a><span class="lineno"> 5174</span>&#160;  <span class="comment">// SYCL 2020 kernels are passed by reference.</span></div>
+<div class="line"><a name="l05175"></a><span class="lineno"> 5175</span>&#160;  <span class="keywordflow">if</span> (KernelParamTy-&gt;<a class="code" href="classclang_1_1Type.html#a48b2c2b1c98a1800de465320ee70badc">isReferenceType</a>())</div>
+<div class="line"><a name="l05176"></a><span class="lineno"> 5176</span>&#160;    <span class="keywordflow">return</span> KernelParamTy-&gt;<a class="code" href="classclang_1_1Type.html#a56c474868f4027b847f181f99b226f47">getPointeeType</a>();</div>
+<div class="line"><a name="l05177"></a><span class="lineno"> 5177</span>&#160; </div>
+<div class="line"><a name="l05178"></a><span class="lineno"> 5178</span>&#160;  <span class="comment">// SYCL 1.2.1</span></div>
+<div class="line"><a name="l05179"></a><span class="lineno"> 5179</span>&#160;  <span class="keywordflow">return</span> KernelParamTy;</div>
+<div class="line"><a name="l05180"></a><span class="lineno"> 5180</span>&#160;}</div>
+<div class="line"><a name="l05181"></a><span class="lineno"> 5181</span>&#160; </div>
+<div class="line"><a name="l05182"></a><span class="lineno"><a class="line" href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb"> 5182</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb">Sema::MarkSYCLKernel</a>(<a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> NewLoc, <a class="code" href="classclang_1_1QualType.html">QualType</a> Ty,</div>
+<div class="line"><a name="l05183"></a><span class="lineno"> 5183</span>&#160;                          <span class="keywordtype">bool</span> IsInstantiation) {</div>
+<div class="line"><a name="l05184"></a><span class="lineno"> 5184</span>&#160;  <span class="keyword">auto</span> MangleCallback = [](<a class="code" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;Ctx,</div>
+<div class="line"><a name="l05185"></a><span class="lineno"> 5185</span>&#160;                           <span class="keyword">const</span> <a class="code" href="classclang_1_1NamedDecl.html">NamedDecl</a> *ND) -&gt; <a class="code" href="classllvm_1_1Optional.html">llvm::Optional&lt;unsigned&gt;</a> {</div>
+<div class="line"><a name="l05186"></a><span class="lineno"> 5186</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *RD = dyn_cast&lt;CXXRecordDecl&gt;(ND))</div>
+<div class="line"><a name="l05187"></a><span class="lineno"> 5187</span>&#160;      Ctx.<a class="code" href="classclang_1_1ASTContext.html#a1a39ebf89a8fcf10a55218680c0536ae">AddSYCLKernelNamingDecl</a>(RD);</div>
+<div class="line"><a name="l05188"></a><span class="lineno"> 5188</span>&#160;    <span class="comment">// We always want to go into the lambda mangling (skipping the unnamed</span></div>
+<div class="line"><a name="l05189"></a><span class="lineno"> 5189</span>&#160;    <span class="comment">// struct version), so make sure we return a value here.</span></div>
+<div class="line"><a name="l05190"></a><span class="lineno"> 5190</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l05191"></a><span class="lineno"> 5191</span>&#160;  };</div>
+<div class="line"><a name="l05192"></a><span class="lineno"> 5192</span>&#160; </div>
+<div class="line"><a name="l05193"></a><span class="lineno"> 5193</span>&#160;  std::unique_ptr&lt;MangleContext&gt; Ctx{<a class="code" href="classclang_1_1ItaniumMangleContext.html#a569d84f3ebc9a0f6b123457f6fca4110">ItaniumMangleContext::create</a>(</div>
+<div class="line"><a name="l05194"></a><span class="lineno"> 5194</span>&#160;      <a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>, <a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>.<a class="code" href="classclang_1_1ASTContext.html#ac95c0b86d83960e453f4c38ec6d44b93">getDiagnostics</a>(), MangleCallback)};</div>
+<div class="line"><a name="l05195"></a><span class="lineno"> 5195</span>&#160;  llvm::raw_null_ostream Out;</div>
+<div class="line"><a name="l05196"></a><span class="lineno"> 5196</span>&#160;  Ctx-&gt;mangleTypeName(Ty, Out);</div>
+<div class="line"><a name="l05197"></a><span class="lineno"> 5197</span>&#160; </div>
+<div class="line"><a name="l05198"></a><span class="lineno"> 5198</span>&#160;  <span class="comment">// Evaluate whether this would change any of the already evaluated</span></div>
+<div class="line"><a name="l05199"></a><span class="lineno"> 5199</span>&#160;  <span class="comment">// __builtin_sycl_unique_stable_name/id values.</span></div>
+<div class="line"><a name="l05200"></a><span class="lineno"> 5200</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;Itr : <a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>.<a class="code" href="classclang_1_1ASTContext.html#aa47c5e625cb655dff81e0deae9402ad1">SYCLUniqueStableNameEvaluatedValues</a>) {</div>
+<div class="line"><a name="l05201"></a><span class="lineno"> 5201</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *NameExpr = dyn_cast&lt;SYCLUniqueStableNameExpr&gt;(Itr.first);</div>
+<div class="line"><a name="l05202"></a><span class="lineno"> 5202</span>&#160;    <span class="keyword">const</span> <span class="keyword">auto</span> *IdExpr = dyn_cast&lt;SYCLUniqueStableIdExpr&gt;(Itr.first);</div>
+<div class="line"><a name="l05203"></a><span class="lineno"> 5203</span>&#160;    assert((NameExpr || IdExpr) &amp;&amp; <span class="stringliteral">&quot;Unknown expr type?&quot;</span>);</div>
+<div class="line"><a name="l05204"></a><span class="lineno"> 5204</span>&#160; </div>
+<div class="line"><a name="l05205"></a><span class="lineno"> 5205</span>&#160;    <span class="keyword">const</span> <a class="code" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &amp;CurName = NameExpr ? NameExpr-&gt;ComputeName(<a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>)</div>
+<div class="line"><a name="l05206"></a><span class="lineno"> 5206</span>&#160;                                          : IdExpr-&gt;ComputeName(<a class="code" href="classclang_1_1Sema.html#a3ccddacb1f4f71b084296175cc9e5b0e">Context</a>);</div>
+<div class="line"><a name="l05207"></a><span class="lineno"> 5207</span>&#160;    <span class="keywordflow">if</span> (Itr.second != CurName) {</div>
+<div class="line"><a name="l05208"></a><span class="lineno"> 5208</span>&#160;      <a class="code" href="classclang_1_1Sema.html#a15a47608a70e70543584549a20d4e773">Diag</a>(NewLoc, diag::err_kernel_invalidates_sycl_unique_stable_name)</div>
+<div class="line"><a name="l05209"></a><span class="lineno"> 5209</span>&#160;          &lt;&lt; IsInstantiation &lt;&lt; (IdExpr != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l05210"></a><span class="lineno"> 5210</span>&#160;      <a class="code" href="classclang_1_1Sema.html#a15a47608a70e70543584549a20d4e773">Diag</a>(Itr.first-&gt;getExprLoc(),</div>
+<div class="line"><a name="l05211"></a><span class="lineno"> 5211</span>&#160;           diag::note_sycl_unique_stable_name_evaluated_here)</div>
+<div class="line"><a name="l05212"></a><span class="lineno"> 5212</span>&#160;          &lt;&lt; (IdExpr != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l05213"></a><span class="lineno"> 5213</span>&#160;      <span class="comment">// Update this so future diagnostics work correctly.</span></div>
+<div class="line"><a name="l05214"></a><span class="lineno"> 5214</span>&#160;      Itr.second = CurName;</div>
+<div class="line"><a name="l05215"></a><span class="lineno"> 5215</span>&#160;    }</div>
+<div class="line"><a name="l05216"></a><span class="lineno"> 5216</span>&#160;  }</div>
+<div class="line"><a name="l05217"></a><span class="lineno"> 5217</span>&#160;}</div>
+<div class="line"><a name="l05218"></a><span class="lineno"> 5218</span>&#160; </div>
+<div class="line"><a name="l05219"></a><span class="lineno"><a class="line" href="classclang_1_1Sema.html#ae3306df2014bf5a74e899ee944e60478"> 5219</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classclang_1_1Sema.html#ae3306df2014bf5a74e899ee944e60478">Sema::AddSYCLKernelLambda</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1FunctionDecl.html">FunctionDecl</a> *FD) {</div>
+<div class="line"><a name="l05220"></a><span class="lineno"> 5220</span>&#160;  <a class="code" href="classclang_1_1QualType.html">QualType</a> Ty = <a class="code" href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c">GetSYCLKernelObjectType</a>(FD);</div>
+<div class="line"><a name="l05221"></a><span class="lineno"> 5221</span>&#160;  <a class="code" href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb">MarkSYCLKernel</a>(FD-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>(), Ty, <span class="comment">/*IsInstantiation*/</span> <span class="keyword">true</span>);</div>
+<div class="line"><a name="l05222"></a><span class="lineno"> 5222</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassclang_1_1BuiltinType_html"><div class="ttname"><a href="classclang_1_1BuiltinType.html">clang::BuiltinType</a></div><div class="ttdoc">This class is used for builtin types like 'int'.</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l02493">Type.h:2493</a></div></div>
 <div class="ttc" id="aclassclang_1_1ASTContext_html_aa8c44e88d6ce9b3cce885b62d3cd5dff"><div class="ttname"><a href="classclang_1_1ASTContext.html#aa8c44e88d6ce9b3cce885b62d3cd5dff">clang::ASTContext::getTypeSizeInChars</a></div><div class="ttdeci">CharUnits getTypeSizeInChars(QualType T) const</div><div class="ttdoc">Return the size of the specified (complete) type T, in characters.</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8cpp_source.html#l02448">ASTContext.cpp:2448</a></div></div>
@@ -5419,7 +5422,7 @@ $(function() {
 <div class="ttc" id="aSemaSYCL_8cpp_html_a75857815ac65d39327ac3c8fc721262d"><div class="ttname"><a href="SemaSYCL_8cpp.html#a75857815ac65d39327ac3c8fc721262d">getIntExprValue</a></div><div class="ttdeci">static int64_t getIntExprValue(const Expr *E, ASTContext &amp;Ctx)</div><div class="ttdoc">Returns the signed constant integer value represented by given expression.</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l00550">SemaSYCL.cpp:550</a></div></div>
 <div class="ttc" id="aclassSYCLFwdDeclEmitter_html_a557b764387b6bda916136828c0a3c313"><div class="ttname"><a href="classSYCLFwdDeclEmitter.html#a557b764387b6bda916136828c0a3c313">SYCLFwdDeclEmitter::SYCLFwdDeclEmitter</a></div><div class="ttdeci">SYCLFwdDeclEmitter(raw_ostream &amp;OS, LangOptions LO)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l04347">SemaSYCL.cpp:4347</a></div></div>
 <div class="ttc" id="aUSRLocFinder_8cpp_html_a72301050bcd2cbad8e72c18dbe66e066"><div class="ttname"><a href="USRLocFinder_8cpp.html#a72301050bcd2cbad8e72c18dbe66e066">End</a></div><div class="ttdeci">SourceLocation End</div><div class="ttdef"><b>Definition:</b> <a href="USRLocFinder_8cpp_source.html#l00167">USRLocFinder.cpp:167</a></div></div>
-<div class="ttc" id="aclassclang_1_1Sema_html_ae3306df2014bf5a74e899ee944e60478"><div class="ttname"><a href="classclang_1_1Sema.html#ae3306df2014bf5a74e899ee944e60478">clang::Sema::AddSYCLKernelLambda</a></div><div class="ttdeci">void AddSYCLKernelLambda(const FunctionDecl *FD)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l05216">SemaSYCL.cpp:5216</a></div></div>
+<div class="ttc" id="aclassclang_1_1Sema_html_ae3306df2014bf5a74e899ee944e60478"><div class="ttname"><a href="classclang_1_1Sema.html#ae3306df2014bf5a74e899ee944e60478">clang::Sema::AddSYCLKernelLambda</a></div><div class="ttdeci">void AddSYCLKernelLambda(const FunctionDecl *FD)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l05219">SemaSYCL.cpp:5219</a></div></div>
 <div class="ttc" id="aclassclang_1_1ASTContext_html_afad71d8f382bf1943bdd25fb89ebc32c"><div class="ttname"><a href="classclang_1_1ASTContext.html#afad71d8f382bf1943bdd25fb89ebc32c">clang::ASTContext::getTranslationUnitDecl</a></div><div class="ttdeci">TranslationUnitDecl * getTranslationUnitDecl() const</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8h_source.html#l01025">ASTContext.h:1025</a></div></div>
 <div class="ttc" id="aSemaSYCL_8cpp_html_a03e853412ef846d237e6f0d0c343fee0"><div class="ttname"><a href="SemaSYCL_8cpp.html#a03e853412ef846d237e6f0d0c343fee0">getKernelObjectType</a></div><div class="ttdeci">static const CXXRecordDecl * getKernelObjectType(FunctionDecl *Caller)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l01014">SemaSYCL.cpp:1014</a></div></div>
 <div class="ttc" id="aclassMarkWIScopeFnVisitor_html_a1e1bec0ef30a466f96c94aeaa00eaa5e"><div class="ttname"><a href="classMarkWIScopeFnVisitor.html#a1e1bec0ef30a466f96c94aeaa00eaa5e">MarkWIScopeFnVisitor::MarkWIScopeFnVisitor</a></div><div class="ttdeci">MarkWIScopeFnVisitor(ASTContext &amp;Ctx)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l00942">SemaSYCL.cpp:942</a></div></div>
@@ -5733,11 +5736,11 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1Sema_html_a25e69670331c24fb11370b50342e530c"><div class="ttname"><a href="classclang_1_1Sema.html#a25e69670331c24fb11370b50342e530c">clang::Sema::ActOnSYCLBuiltinBaseTypeExpr</a></div><div class="ttdeci">ExprResult ActOnSYCLBuiltinBaseTypeExpr(ParsedType PT, Expr *Idx)</div><div class="ttdoc">Get a value based on the type of the given base number so that callers can wrap it in a decltype() to...</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l00294">SemaSYCL.cpp:294</a></div></div>
 <div class="ttc" id="aclassSYCLFwdDeclEmitter_html_ad0f34171c224663bed3892b5bae6877e"><div class="ttname"><a href="classSYCLFwdDeclEmitter.html#ad0f34171c224663bed3892b5bae6877e">SYCLFwdDeclEmitter::VisitTagType</a></div><div class="ttdeci">void VisitTagType(const TagType *T)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l04373">SemaSYCL.cpp:4373</a></div></div>
 <div class="ttc" id="aclassclang_1_1InitializedEntity_html"><div class="ttname"><a href="classclang_1_1InitializedEntity.html">clang::InitializedEntity</a></div><div class="ttdoc">Describes an entity that is being initialized.</div><div class="ttdef"><b>Definition:</b> <a href="Initialization_8h_source.html#l00048">Initialization.h:48</a></div></div>
-<div class="ttc" id="aclassclang_1_1Sema_html_a5f585939b2b3a735a28fcb6015f612bb"><div class="ttname"><a href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb">clang::Sema::MarkSYCLKernel</a></div><div class="ttdeci">void MarkSYCLKernel(SourceLocation NewLoc, QualType Ty, bool IsInstantiation)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l05179">SemaSYCL.cpp:5179</a></div></div>
+<div class="ttc" id="aclassclang_1_1Sema_html_a5f585939b2b3a735a28fcb6015f612bb"><div class="ttname"><a href="classclang_1_1Sema.html#a5f585939b2b3a735a28fcb6015f612bb">clang::Sema::MarkSYCLKernel</a></div><div class="ttdeci">void MarkSYCLKernel(SourceLocation NewLoc, QualType Ty, bool IsInstantiation)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l05182">SemaSYCL.cpp:5182</a></div></div>
 <div class="ttc" id="aclassclang_1_1SYCLIntegrationHeader_html"><div class="ttname"><a href="classclang_1_1SYCLIntegrationHeader.html">clang::SYCLIntegrationHeader</a></div><div class="ttdef"><b>Definition:</b> <a href="Sema_8h_source.html#l00309">Sema.h:309</a></div></div>
 <div class="ttc" id="aclassclang_1_1InitializedEntity_html_a8c696ea091b8dc2aec11c0b71426fe9f"><div class="ttname"><a href="classclang_1_1InitializedEntity.html#a8c696ea091b8dc2aec11c0b71426fe9f">clang::InitializedEntity::InitializeVariable</a></div><div class="ttdeci">static InitializedEntity InitializeVariable(VarDecl *Var)</div><div class="ttdoc">Create the initialization entity for a variable.</div><div class="ttdef"><b>Definition:</b> <a href="Initialization_8h_source.html#l00249">Initialization.h:249</a></div></div>
 <div class="ttc" id="aclassclang_1_1Decl_html_abae11b19b60f5291f70b397af22d81ca"><div class="ttname"><a href="classclang_1_1Decl.html#abae11b19b60f5291f70b397af22d81ca">clang::Decl::getAttrs</a></div><div class="ttdeci">AttrVec &amp; getAttrs()</div><div class="ttdef"><b>Definition:</b> <a href="DeclBase_8h_source.html#l00495">DeclBase.h:495</a></div></div>
-<div class="ttc" id="aSemaSYCL_8cpp_html_addaaf07f58ea672fd4c8549476dfbf4c"><div class="ttname"><a href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c">GetSYCLKernelObjectType</a></div><div class="ttdeci">static QualType GetSYCLKernelObjectType(const FunctionDecl *KernelCaller)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l05167">SemaSYCL.cpp:5167</a></div></div>
+<div class="ttc" id="aSemaSYCL_8cpp_html_addaaf07f58ea672fd4c8549476dfbf4c"><div class="ttname"><a href="SemaSYCL_8cpp.html#addaaf07f58ea672fd4c8549476dfbf4c">GetSYCLKernelObjectType</a></div><div class="ttdeci">static QualType GetSYCLKernelObjectType(const FunctionDecl *KernelCaller)</div><div class="ttdef"><b>Definition:</b> <a href="SemaSYCL_8cpp_source.html#l05170">SemaSYCL.cpp:5170</a></div></div>
 <div class="ttc" id="aclassclang_1_1ASTContext_html_a327ebb1b3a192cb64ce57494a9a93e61"><div class="ttname"><a href="classclang_1_1ASTContext.html#a327ebb1b3a192cb64ce57494a9a93e61">clang::ASTContext::getASTRecordLayout</a></div><div class="ttdeci">const ASTRecordLayout &amp; getASTRecordLayout(const RecordDecl *D) const</div><div class="ttdoc">Get or compute information about the layout of the specified record (struct/union/class) D,...</div><div class="ttdef"><b>Definition:</b> <a href="RecordLayoutBuilder_8cpp_source.html#l03220">RecordLayoutBuilder.cpp:3220</a></div></div>
 <div class="ttc" id="aclassclang_1_1Sema_html_abd600b82095a6f68bc24a901243f0cd4"><div class="ttname"><a href="classclang_1_1Sema.html#abd600b82095a6f68bc24a901243f0cd4">clang::Sema::CreateBuiltinArraySubscriptExpr</a></div><div class="ttdeci">ExprResult CreateBuiltinArraySubscriptExpr(Expr *Base, SourceLocation LLoc, Expr *Idx, SourceLocation RLoc)</div><div class="ttdef"><b>Definition:</b> <a href="SemaExpr_8cpp_source.html#l05551">SemaExpr.cpp:5551</a></div></div>
 <div class="ttc" id="a____clang__hip__libdevice__declares_8h_html_ad55181c98da0de5b29a5afc3060fc6d0"><div class="ttname"><a href="____clang__hip__libdevice__declares_8h.html#ad55181c98da0de5b29a5afc3060fc6d0">c</a></div><div class="ttdeci">__device__ __2f16 float c</div><div class="ttdef"><b>Definition:</b> <a href="____clang__hip__libdevice__declares_8h_source.html#l00315">__clang_hip_libdevice_declares.h:315</a></div></div>
@@ -5838,7 +5841,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1NamedDecl_html_a350fd0415d5f387716d5a970b9de4c29"><div class="ttname"><a href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">clang::NamedDecl::getName</a></div><div class="ttdeci">StringRef getName() const</div><div class="ttdoc">Get the name of identifier for this declaration as a StringRef.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00250">Decl.h:250</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 30 2021 01:59:43 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 1 2021 01:57:56 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

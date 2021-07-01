@@ -1,5 +1,9 @@
 var NAVTREEINDEX4 =
 {
+"builtins__math_8cpp.html#a0f04be5fbc6393b52787b48ad78bf3ce":[4,0,2,1,14,172],
+"builtins__math_8cpp.html#a10b36aff4496bf5d070b995806ede4d7":[4,0,2,1,14,9],
+"builtins__math_8cpp.html#a14236799345972e717322c5228aa55a4":[4,0,2,1,14,25],
+"builtins__math_8cpp.html#a14d18c33b0dd13c0145efc76fa2ad1f1":[4,0,2,1,14,82],
 "builtins__math_8cpp.html#a1b75e48894c9a6321d84b47b2c13b656":[4,0,2,1,14,201],
 "builtins__math_8cpp.html#a1c510881c0588b56b7b82e0ad4c9f926":[4,0,2,1,14,219],
 "builtins__math_8cpp.html#a1dac9d020f31c84c967a38b0f4e2d48c":[4,0,2,1,14,208],
@@ -245,9 +249,5 @@ var NAVTREEINDEX4 =
 "cl_8h.html#a5990dea19d4ccb046a3d81b311457add":[4,0,0,0,1,2,9,0],
 "cl_8h_source.html":[4,0,0,0,1,2,9],
 "classBucket.html":[3,0,29],
-"classBucket.html#a181e98e8b024b938c4174af3085078d4":[3,0,29,3],
-"classBucket.html#a24eed1098f21095989cf1025b28d2058":[3,0,29,0],
-"classBucket.html#a34e87dc119109b90ca52eae53629aec7":[3,0,29,4],
-"classBucket.html#a6e54fc83161a766fc837c9534fc1fec8":[3,0,29,6],
-"classBucket.html#a6f9fcc71727388ffae9e14cea66601b9":[3,0,29,2]
+"classBucket.html#a181e98e8b024b938c4174af3085078d4":[3,0,29,3]
 };

@@ -327,13 +327,16 @@ used:</p>
 <p><code class="docutils literal notranslate"><span class="pre">-fsycl</span> <span class="pre">-fsycl-targets=spir64_gen-unknown-unknown-sycldevice</span> <span class="pre">-Xsycl-target-backend</span> <span class="pre">&quot;-device</span> <span class="pre">skl&quot;</span></code></p>
 <p>The driver passes the <code class="docutils literal notranslate"><span class="pre">-device</span> <span class="pre">skl</span></code> parameter directly to the Gen device backend
 compiler <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> without parsing it.</p>
-<p><strong>TBD:</strong> Having multiple code forms for the same target in the fat binary might
-mean invoking device compiler multiple times. Multiple invocations are not
-needed if these forms can be dumped at various compilation stages by the single
-device compilation, like SPIR-V → visa → ISA. But if e.g. <code class="docutils literal notranslate"><span class="pre">gen9:visa3.2</span></code> and
-<code class="docutils literal notranslate"><span class="pre">gen9:visa3.3</span></code> are needed at the same time, then some mechanism is needed.
-Should it be a dedicated target triple for each needed visa version or Gen
-generation?</p>
+<p><code class="docutils literal notranslate"><span class="pre">ocloc</span></code> is also capable of offline compilation for several ISA
+versions/Gen architectures. For example, to make the device binary
+compatible with all Intel Gen9 GPU platforms, one could use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">targets</span><span class="o">=</span><span class="n">spir64_gen</span><span class="o">-</span><span class="n">unknown</span><span class="o">-</span><span class="n">unknown</span><span class="o">-</span><span class="n">sycldevice</span>
+<span class="o">-</span><span class="n">Xsycl</span><span class="o">-</span><span class="n">target</span><span class="o">-</span><span class="n">backend</span> <span class="s2">&quot;-device gen9&quot;</span>
+</pre></div>
+</div>
+<p>For more details on supported platforms and argument syntax, refer to
+the GPU offline compiler manual by detecting your local <code class="docutils literal notranslate"><span class="pre">ocloc</span></code>
+installation and running <code class="docutils literal notranslate"><span class="pre">ocloc</span> <span class="pre">compile</span> <span class="pre">--help</span></code>.</p>
 </section>
 <section id="separate-compilation-and-linking">
 <h4>Separate Compilation and Linking<a class="headerlink" href="#separate-compilation-and-linking" title="Permalink to this headline">¶</a></h4>

@@ -169,6 +169,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3ee43a880b231524228508d0074b2dfc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt; std::is_same&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__AS.html">remove_AS</a>&lt; _T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, T &gt;::value &amp;&amp;<a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#ad6c75fab0e05a06a66f0d5e134623b51">IsReduOptForFastAtomicFetch</a>&lt; T, _BinaryOperation &gt;::value &amp;&amp;<a class="el" href="namespacecl_1_1sycl_1_1detail.html#adeec59b796b44e3578775b63e13b682c">sycl::detail::IsMaximum</a>&lt; T, _BinaryOperation &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a3ee43a880b231524228508d0074b2dfc">atomic_combine</a> (_T *ReduVarPtr) const</td></tr>
 <tr class="memdesc:a3ee43a880b231524228508d0074b2dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic MAX operation: *ReduVarPtr = ONEAPI::maximum(*ReduVarPtr, MValue);.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a3ee43a880b231524228508d0074b2dfc">More...</a><br /></td></tr>
 <tr class="separator:a3ee43a880b231524228508d0074b2dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cfc3cb898ca6c6d418b9bec967bec49"><td class="memTemplParams" colspan="2">template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </td></tr>
+<tr class="memitem:a4cfc3cb898ca6c6d418b9bec967bec49"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt; std::is_same&lt; typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__AS.html">remove_AS</a>&lt; _T &gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, T &gt;::value &amp;&amp;<a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a12d648c2e84b6e82584ad16fce908a9c">IsReduOptForAtomic64Add</a>&lt; T, _BinaryOperation &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a4cfc3cb898ca6c6d418b9bec967bec49">atomic_combine</a> (_T *ReduVarPtr) const</td></tr>
+<tr class="memdesc:a4cfc3cb898ca6c6d418b9bec967bec49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atomic ADD operation: for floating point using <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1atomic__ref.html">atomic_ref</a>.  <a href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a4cfc3cb898ca6c6d418b9bec967bec49">More...</a><br /></td></tr>
+<tr class="separator:a4cfc3cb898ca6c6d418b9bec967bec49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -191,7 +195,7 @@ class cl::sycl::ONEAPI::detail::reducer&lt; T, BinaryOperation, enable_if_t&lt; 
 <p>Also, for many types with known identity the operation '<a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a1d04b1991b12666287e5d0b6ad067fd7" title="Atomic ADD operation: *ReduVarPtr += MValue;.">atomic_combine()</a>' is implemented here, which allows to use more efficient version of kernels using those operations, which are based on functionality provided by <a class="el" href="classcl_1_1sycl_1_1atomic.html">sycl::atomic</a> class.</p>
 <p>For example, it is known that 0 is identity for <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI.html#a3dfa832925e63034196e96feb9547af0">ONEAPI::plus</a> operations accepting native scalar types to which scalar 0 is convertible. Also, for int32/64 types the <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer_3_01T_00_01BinaryOperation_00_01enable__if__t_3_09acd02b6ff845e091de65f9e2badd7d0.html#a1d04b1991b12666287e5d0b6ad067fd7" title="Atomic ADD operation: *ReduVarPtr += MValue;.">atomic_combine()</a> is lowered to <a class="el" href="classcl_1_1sycl_1_1atomic.html#a1cce4038112df1989eba8dc194b08739">sycl::atomic::fetch_add()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00170">170</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00192">192</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a125c28e0477f7fd5d43a0d341d3dd525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a125c28e0477f7fd5d43a0d341d3dd525">&#9670;&nbsp;</a></span>reducer() <span class="overload">[1/2]</span></h2>
@@ -218,7 +222,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00173">173</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00195">195</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -258,13 +262,13 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00174">174</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00196">196</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1d04b1991b12666287e5d0b6ad067fd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d04b1991b12666287e5d0b6ad067fd7">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d04b1991b12666287e5d0b6ad067fd7">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -293,14 +297,14 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic ADD operation: *ReduVarPtr += MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00236">236</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00258">258</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00277">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_add()</a>.</p>
 
 </div>
 </div>
 <a id="a382e3b61266c287eeafd1432c441a9bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a382e3b61266c287eeafd1432c441a9bf">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a382e3b61266c287eeafd1432c441a9bf">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -329,14 +333,14 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic BITWISE OR operation: *ReduVarPtr |= MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00246">246</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00268">268</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00295">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_or()</a>.</p>
 
 </div>
 </div>
 <a id="aa595192c3485874aef6a296b93f6740e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa595192c3485874aef6a296b93f6740e">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa595192c3485874aef6a296b93f6740e">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,14 +369,14 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic BITWISE XOR operation: *ReduVarPtr ^= MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00256">256</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00278">278</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00301">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_xor()</a>.</p>
 
 </div>
 </div>
 <a id="a2bb5797d292b22ea659eea88630a9914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bb5797d292b22ea659eea88630a9914">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb5797d292b22ea659eea88630a9914">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -401,14 +405,14 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic BITWISE AND operation: *ReduVarPtr &amp;= MValue;. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00266">266</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00288">288</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00289">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_and()</a>.</p>
 
 </div>
 </div>
 <a id="a4def2630ed28039875b0cb3161925588"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4def2630ed28039875b0cb3161925588">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4def2630ed28039875b0cb3161925588">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,14 +441,14 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic MIN operation: *ReduVarPtr = ONEAPI::minimum(*ReduVarPtr, MValue);. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00276">276</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00298">298</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00307">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_min()</a>.</p>
 
 </div>
 </div>
 <a id="a3ee43a880b231524228508d0074b2dfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ee43a880b231524228508d0074b2dfc">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee43a880b231524228508d0074b2dfc">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,9 +477,43 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 
 <p>Atomic MAX operation: *ReduVarPtr = ONEAPI::maximum(*ReduVarPtr, MValue);. </p>
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00286">286</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00308">308</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00313">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_max()</a>.</p>
+
+</div>
+</div>
+<a id="a4cfc3cb898ca6c6d418b9bec967bec49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cfc3cb898ca6c6d418b9bec967bec49">&#9670;&nbsp;</a></span>atomic_combine() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , class BinaryOperation &gt; </div>
+<div class="memtemplate">
+template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt;std::is_same&lt;typename <a class="el" href="structcl_1_1sycl_1_1detail_1_1remove__AS.html">remove_AS</a>&lt;_T&gt;::<a class="el" href="classstd_1_1conditional_1_1type.html">type</a>, T&gt;::value &amp;&amp; <a class="el" href="namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html#a12d648c2e84b6e82584ad16fce908a9c">IsReduOptForAtomic64Add</a>&lt;T, _BinaryOperation&gt;::value&gt; <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1reducer.html">cl::sycl::ONEAPI::detail::reducer</a>&lt; T, BinaryOperation, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#af45cb3f9724853d5ea66e37de686a383">enable_if_t</a>&lt; <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ae95091dfd376def94223a46d6df57c81">IsKnownIdentityOp</a>&lt; T, BinaryOperation &gt;::value &gt; &gt;::atomic_combine </td>
+          <td>(</td>
+          <td class="paramtype">_T *&#160;</td>
+          <td class="paramname"><em>ReduVarPtr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atomic ADD operation: for floating point using <a class="el" href="classcl_1_1sycl_1_1ONEAPI_1_1atomic__ref.html">atomic_ref</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00317">317</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -505,7 +543,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00176">176</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00198">198</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +574,7 @@ template&lt;typename _T  = T, class _BinaryOperation  = BinaryOperation&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00183">183</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00205">205</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +606,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00227">227</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00249">249</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -600,7 +638,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00209">209</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00231">231</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -631,7 +669,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00190">190</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00212">212</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -663,7 +701,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00197">197</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00219">219</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -695,7 +733,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00203">203</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00225">225</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +765,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00221">221</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00243">243</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -759,7 +797,7 @@ template&lt;typename _T  = T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00215">215</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00237">237</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>
@@ -778,7 +816,7 @@ template&lt;typename T , class BinaryOperation &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00291">291</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ONEAPI_2reduction_8hpp_source.html#l00325">325</a> of file <a class="el" href="ONEAPI_2reduction_8hpp_source.html">reduction.hpp</a>.</p>
 
 </div>
 </div>

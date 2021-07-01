@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['queue_6274',['queue',['../classcl_1_1sycl_1_1queue.html',1,'cl::sycl']]],
-  ['queue_5fimpl_6275',['queue_impl',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html',1,'cl::sycl::detail']]]
+  ['queue_6289',['queue',['../classcl_1_1sycl_1_1queue.html',1,'cl::sycl']]],
+  ['queue_5fimpl_6290',['queue_impl',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html',1,'cl::sycl::detail']]]
 ];
