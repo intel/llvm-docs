@@ -232,6 +232,7 @@ var pi_8h =
       [ "PI_DEVICE_INFO_USM_SINGLE_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea19f60da42bf18e434bc133abeaf7c570", null ],
       [ "PI_DEVICE_INFO_USM_CROSS_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea5b2a629a108aa31c19807a147b88c227", null ],
       [ "PI_DEVICE_INFO_USM_SYSTEM_SHARED_SUPPORT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4eabb803c6d8b9507150b6de2b0d9b5a3e3", null ],
+      [ "PI_DEVICE_INFO_UUID", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea36e0f4a3542340db23211a4d9e80e6a3", null ],
       [ "PI_DEVICE_INFO_PCI_ADDRESS", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea90837b87fc065d71de1faf563b622414", null ],
       [ "PI_DEVICE_INFO_GPU_EU_COUNT", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea2240d9b4853db6c9b70da4743246db9f", null ],
       [ "PI_DEVICE_INFO_GPU_EU_SIMD_WIDTH", "pi_8h.html#a20cb9667c348b3dffdcbd015fb104d4ea4daa1048efbf954afa505503b1b5052f", null ],

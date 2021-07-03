@@ -8,6 +8,7 @@ var classcl_1_1sycl_1_1kernel =
     [ "get_info", "classcl_1_1sycl_1_1kernel.html#aeef5b4353a35936c99c2f5e92a6e4d17", null ],
     [ "get_info", "classcl_1_1sycl_1_1kernel.html#a61d784a6a2ef0490c87f54f1bae5f3f0", null ],
     [ "get_info", "classcl_1_1sycl_1_1kernel.html#aea2d21b6835eb14c23a488d07a800a0b", null ],
+    [ "get_kernel_bundle", "classcl_1_1sycl_1_1kernel.html#ac018ff88ab2e4eb1b6fd8c09a0603b10", null ],
     [ "get_native", "classcl_1_1sycl_1_1kernel.html#af6daa77c1d642415ac6e5af7c4fe9532", null ],
     [ "get_program", "classcl_1_1sycl_1_1kernel.html#a44e9b48f6121c2b483129c733b56273d", null ],
     [ "get_sub_group_info", "classcl_1_1sycl_1_1kernel.html#abab604fc3c235d43af6c78a7241b9f79", null ],

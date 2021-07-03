@@ -1,5 +1,6 @@
 var pi__level__zero_8hpp =
 [
+    [ "ZeStruct", "structZeStruct.html", "structZeStruct" ],
     [ "_pi_object", "struct__pi__object.html", "struct__pi__object" ],
     [ "MemAllocRecord", "structMemAllocRecord.html", "structMemAllocRecord" ],
     [ "_pi_platform", "struct__pi__platform.html", "struct__pi__platform" ],
@@ -24,6 +25,20 @@ var pi__level__zero_8hpp =
     [ "Hash", "struct__pi__kernel_1_1Hash.html", "struct__pi__kernel_1_1Hash" ],
     [ "_pi_sampler", "struct__pi__sampler.html", "struct__pi__sampler" ],
     [ "die", "pi__level__zero_8hpp.html#addeb84d9aa94ce57f216c82c6f1c3eae", null ],
+    [ "getZeStructureType", "pi__level__zero_8hpp.html#a694b0a7fce136bb97830f134e772df07", null ],
+    [ "getZeStructureType< ze_command_list_desc_t >", "pi__level__zero_8hpp.html#a5f34ee84fe4e072e2b674b819e5302fc", null ],
+    [ "getZeStructureType< ze_command_queue_desc_t >", "pi__level__zero_8hpp.html#a209ae9710fb6a5025d2be2e9d39722d4", null ],
+    [ "getZeStructureType< ze_context_desc_t >", "pi__level__zero_8hpp.html#ac4e89a44d82dd106715ccf4110ef5797", null ],
+    [ "getZeStructureType< ze_device_mem_alloc_desc_t >", "pi__level__zero_8hpp.html#a82b431236802804982f4430c2af66107", null ],
+    [ "getZeStructureType< ze_event_desc_t >", "pi__level__zero_8hpp.html#a90eade929498d8ee6d1df1c1ca2ff8cc", null ],
+    [ "getZeStructureType< ze_event_pool_desc_t >", "pi__level__zero_8hpp.html#a24f4d1a29922ae298d49953057d31a16", null ],
+    [ "getZeStructureType< ze_fence_desc_t >", "pi__level__zero_8hpp.html#a68dcfa8dbb3226a8b3682f2132c91020", null ],
+    [ "getZeStructureType< ze_host_mem_alloc_desc_t >", "pi__level__zero_8hpp.html#a2e3ccf16a85d3ebe1c63ffd79a9909c2", null ],
+    [ "getZeStructureType< ze_image_desc_t >", "pi__level__zero_8hpp.html#ae3cc7f17406fe7f0308989102b2e42f6", null ],
+    [ "getZeStructureType< ze_kernel_desc_t >", "pi__level__zero_8hpp.html#a8e2584f77e0f7c0bf1532cc2e7cb1cff", null ],
+    [ "getZeStructureType< ze_module_desc_t >", "pi__level__zero_8hpp.html#ad0111a780c3a17d737d9753a184fe60b", null ],
+    [ "getZeStructureType< ze_relaxed_allocation_limits_exp_desc_t >", "pi__level__zero_8hpp.html#ab3f0f8f9563be9e7e93150bf7e780a29", null ],
+    [ "getZeStructureType< ze_sampler_desc_t >", "pi__level__zero_8hpp.html#a7df0e7278b77a0a38aa7e1ae1ffbca8b", null ],
     [ "pi_cast", "pi__level__zero_8hpp.html#acca4b7bd49a8623dffb5e76d4128fd43", null ],
     [ "pi_cast", "pi__level__zero_8hpp.html#afdda4e227622fe8fecd0faeb00cd964d", null ],
     [ "DynamicBatchStartSize", "pi__level__zero_8hpp.html#afdb5b7893f58b7a952e51f4e0ea1f2cf", null ]

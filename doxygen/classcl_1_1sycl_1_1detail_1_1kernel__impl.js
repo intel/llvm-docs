@@ -11,6 +11,7 @@ var classcl_1_1sycl_1_1detail_1_1kernel__impl =
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aa62ebc547ab29d030e513e24ff53c506", null ],
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aa6d288c04eb3b129a685bfe4632e5665", null ],
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#ad193c1de24862427bb72e1ed7a18af2a", null ],
+    [ "get_kernel_bundle", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a1b1d288cfe87f9a73d42689b82b13188", null ],
     [ "get_sub_group_info", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#ab2996fb8326c428c4f4a8f042a3a5074", null ],
     [ "get_sub_group_info", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#aeac9e2da08b88c5e9e9bcda19881773e", null ],
     [ "get_work_group_info", "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a994fc4ad7daf4c23e38de49cc6d6dba0", null ],

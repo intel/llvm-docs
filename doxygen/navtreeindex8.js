@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a1267bf8e9a3eee168d76f3d738c0bf2a":[3,0,1,1,0,49,7],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a18b202c304cc02d7883fba2d1ff742eb":[3,0,1,1,0,49,25],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a1e8fe64a148d9327548006a89aa98658":[3,0,1,1,0,49,6],
 "classcl_1_1sycl_1_1detail_1_1CircularBuffer.html#a21df2828d2ff7b816f7d4eeec1c68495":[3,0,1,1,0,49,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#ad55ee70a80fe29448dcd236712966d9d":[3,0,1,1,0,252,8],
 "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#adc8bf5fd9ec77ab5271052dde9c2158f":[3,0,1,1,0,252,4],
 "classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#afd86a9c8539519c84a04f9f06aa0f19a":[3,0,1,1,0,252,3],
-"classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html":[3,0,1,1,0,253],
-"classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a11f112c7d5e3c5906a683c9ccb4454e2":[3,0,1,1,0,253,0]
+"classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html":[3,0,1,1,0,253]
 };

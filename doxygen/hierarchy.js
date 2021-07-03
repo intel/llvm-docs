@@ -194,9 +194,6 @@ var hierarchy =
     [ "cl::sycl::ext::intel::experimental::esimd::detail::compute_format_type_2d< detail::simd_view_impl< BaseTy, RegionTy >, EltTy, Height, Width >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d0ad9b801c51a4f7156c870acb9ab2500.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::detail::compute_format_type_2d< simd< Ty, N >, EltTy, Height, Width >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html", null ],
     [ "conditional_t", null, [
-      [ "cl::sycl::ext::intel::experimental::esimd::detail::is_sycl_accessor_with< T, Capability, AccessTarget >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor__with.html", null ]
-    ] ],
-    [ "conditional_t", null, [
       [ "cl::sycl::detail::is_contained< T, L >", "structcl_1_1sycl_1_1detail_1_1is__contained.html", null ],
       [ "cl::sycl::detail::is_contained_value< T, V, TL >", "structcl_1_1sycl_1_1detail_1_1is__contained__value.html", null ],
       [ "cl::sycl::detail::is_empty_type_list< T >", "structcl_1_1sycl_1_1detail_1_1is__empty__type__list.html", null ],
@@ -204,6 +201,9 @@ var hierarchy =
       [ "cl::sycl::detail::vector_alignment_impl< remove_cv_t< remove_reference_t< T > >, N >", "structcl_1_1sycl_1_1detail_1_1vector__alignment__impl.html", [
         [ "cl::sycl::detail::vector_alignment< T, N >", "structcl_1_1sycl_1_1detail_1_1vector__alignment.html", null ]
       ] ]
+    ] ],
+    [ "conditional_t", null, [
+      [ "cl::sycl::ext::intel::experimental::esimd::detail::is_sycl_accessor_with< T, Capability, AccessTarget >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__sycl__accessor__with.html", null ]
     ] ],
     [ "cl::sycl::detail::pi::DeviceBinaryImage::PropertyRange::ConstIterator", "classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_1_1PropertyRange_1_1ConstIterator.html", null ],
     [ "cl::sycl::context", "classcl_1_1sycl_1_1context.html", null ],
@@ -637,10 +637,9 @@ var hierarchy =
     [ "cl::sycl::detail::LeavesCollection::IteratorT< IsConst >", "classcl_1_1sycl_1_1detail_1_1LeavesCollection_1_1IteratorT.html", null ],
     [ "cl::sycl::ext::intel::experimental::matrix::joint_matrix< Group, T, NumRows, NumCols, Layout, Enabled >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html", null ],
     [ "cl::sycl::kernel", "classcl_1_1sycl_1_1kernel.html", null ],
+    [ "cl::sycl::kernel_bundle< State >", "classcl_1_1sycl_1_1kernel__bundle.html", null ],
     [ "cl::sycl::detail::kernel_bundle_impl", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html", null ],
-    [ "cl::sycl::detail::kernel_bundle_plain", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html", [
-      [ "cl::sycl::kernel_bundle< State >", "classcl_1_1sycl_1_1kernel__bundle.html", null ]
-    ] ],
+    [ "cl::sycl::detail::kernel_bundle_plain", "classcl_1_1sycl_1_1detail_1_1kernel__bundle__plain.html", null ],
     [ "cl::sycl::kernel_handler", "classcl_1_1sycl_1_1kernel__handler.html", null ],
     [ "cl::sycl::kernel_id", "classcl_1_1sycl_1_1kernel__id.html", null ],
     [ "cl::sycl::detail::kernel_id_impl", "classcl_1_1sycl_1_1detail_1_1kernel__id__impl.html", null ],
@@ -708,8 +707,8 @@ var hierarchy =
     [ "cl::sycl::marray< Type, NumElements >", "classcl_1_1sycl_1_1marray.html", null ],
     [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
     [ "cl::sycl::maximum< T >", "structcl_1_1sycl_1_1maximum.html", null ],
-    [ "cl::sycl::ONEAPI::maximum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4.html", null ],
     [ "cl::sycl::maximum< void >", "structcl_1_1sycl_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::maximum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01char_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01short_01_4.html", null ],
@@ -725,8 +724,8 @@ var hierarchy =
     [ "__spv::MemorySemanticsMask", "struct____spv_1_1MemorySemanticsMask.html", null ],
     [ "cl::sycl::minimum< T >", "structcl_1_1sycl_1_1minimum.html", null ],
     [ "cl::sycl::ONEAPI::minimum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum.html", null ],
-    [ "cl::sycl::minimum< void >", "structcl_1_1sycl_1_1minimum_3_01void_01_4.html", null ],
     [ "cl::sycl::ONEAPI::minimum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1minimum_3_01void_01_4.html", null ],
+    [ "cl::sycl::minimum< void >", "structcl_1_1sycl_1_1minimum_3_01void_01_4.html", null ],
     [ "cl::sycl::mode_tag_t< mode >", "structcl_1_1sycl_1_1mode__tag__t.html", null ],
     [ "cl::sycl::mode_target_tag_t< mode, trgt >", "structcl_1_1sycl_1_1mode__target__tag__t.html", null ],
     [ "_pi_program::ModuleIterator", "class__pi__program_1_1ModuleIterator.html", null ],
@@ -1113,10 +1112,16 @@ var hierarchy =
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::wordtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1wordtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::wordtype< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1wordtype_3_01short_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::wordtype< unsigned short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1wordtype_3_01unsigned_01short_01_4.html", null ],
+    [ "ze_image_desc_t", null, [
+      [ "ZeStruct< ze_image_desc_t >", "structZeStruct.html", null ]
+    ] ],
     [ "atomic< uintptr_t > *", "classstd_1_1atomic_3_01uintptr__t_01_4_01_5.html", null ],
     [ "char", "classchar.html", null ],
     [ "constexpr static bool", "classconstexpr_01static_01bool.html", null ],
     [ "constexpr static int", "classconstexpr_01static_01int.html", null ],
     [ "static constexpr bool", "classstatic_01constexpr_01bool.html", null ],
+    [ "T", null, [
+      [ "ZeStruct< T >", "structZeStruct.html", null ]
+    ] ],
     [ "uint16_t", "classuint16__t.html", null ]
 ];

@@ -44,6 +44,7 @@ var device__info_8hpp =
     [ "get_device_info_host< info::device::driver_version >", "device__info_8hpp.html#ae44da4104b5cbdce44976ba58b34db1c", null ],
     [ "get_device_info_host< info::device::error_correction_support >", "device__info_8hpp.html#a940ce419bbc2384175357aa70d2feb4b", null ],
     [ "get_device_info_host< info::device::execution_capabilities >", "device__info_8hpp.html#a461afd6500ee610ae14f03fe82c8ee56", null ],
+    [ "get_device_info_host< info::device::ext_intel_device_info_uuid >", "device__info_8hpp.html#a6a1d0acdba7e02d404d15be369901521", null ],
     [ "get_device_info_host< info::device::ext_intel_gpu_eu_count >", "device__info_8hpp.html#a426db68616c0dd28f975fc902cfaae86", null ],
     [ "get_device_info_host< info::device::ext_intel_gpu_eu_count_per_subslice >", "device__info_8hpp.html#a4df96f610ec39cc7f6eed193a3489302", null ],
     [ "get_device_info_host< info::device::ext_intel_gpu_eu_simd_width >", "device__info_8hpp.html#ab7b30108303ddc04ebb3d834e168726d", null ],

@@ -1,5 +1,8 @@
 var NAVTREEINDEX16 =
 {
+"classcl_1_1sycl_1_1queue.html#ae5c39ed682422e4e525fe0a01e8b7ad9":[1,2,26,68],
+"classcl_1_1sycl_1_1queue.html#ae877ebb3989aa206124871b849b04813":[1,2,26,23],
+"classcl_1_1sycl_1_1queue.html#ae88a60a32d5695334a6a20246acf5ee3":[1,2,26,69],
 "classcl_1_1sycl_1_1queue.html#aeb15e1e55a37546f233f9f74c069ee51":[1,2,26,30],
 "classcl_1_1sycl_1_1queue.html#aeb1974405138a5c4791a55aa3cc596c0":[1,2,26,18],
 "classcl_1_1sycl_1_1queue.html#af2ef2f7ba7b48430719139c9bef971df":[1,2,26,43],
@@ -140,9 +143,9 @@ var NAVTREEINDEX16 =
 "config_8cpp.html":[4,0,2,1,18],
 "config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,1,18,4],
 "config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,1,18,6],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,2],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,1],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,0],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,1],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,2],
 "config_8cpp.html#abbdcbea69a36cd9ddd50332f7020c4bd":[4,0,2,1,18,7],
 "config_8cpp.html#abff350c80e1a1b4643da8212a47ff6f9":[4,0,2,1,18,5],
 "config_8cpp.html#ad5d0dadaaad78e00b3a3d991e539d4a8":[4,0,2,1,18,3],
@@ -162,8 +165,8 @@ var NAVTREEINDEX16 =
 "config_8hpp.html#adf60e0177d7f8cab152557507db7168f":[4,0,2,1,19,14],
 "config_8hpp_source.html":[4,0,2,1,19],
 "context_8cpp.html":[4,0,2,4],
-"context_8cpp.html#abaa786f3aead61c55512054cbc09ae89":[4,0,2,4,0],
 "context_8cpp.html#abaa786f3aead61c55512054cbc09ae89":[4,0,2,4,1],
+"context_8cpp.html#abaa786f3aead61c55512054cbc09ae89":[4,0,2,4,0],
 "context_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,4,2],
 "context_8cpp_source.html":[4,0,2,4],
 "context_8hpp.html":[4,0,0,0,1,18],
@@ -246,8 +249,5 @@ var NAVTREEINDEX16 =
 "device_8hpp.html":[4,0,0,0,1,19],
 "device_8hpp_source.html":[4,0,0,0,1,19],
 "device__binary__image_8cpp.html":[4,0,2,1,23],
-"device__binary__image_8cpp_source.html":[4,0,2,1,23],
-"device__binary__image_8hpp.html":[4,0,0,0,1,2,15],
-"device__binary__image_8hpp_source.html":[4,0,0,0,1,2,15],
-"device__event_8hpp.html":[4,0,0,0,1,20]
+"device__binary__image_8cpp_source.html":[4,0,2,1,23]
 };

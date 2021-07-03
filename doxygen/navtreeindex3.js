@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"builtins__geometric_8cpp.html#a26855eb1cab5379694e22f56e2d44c08":[4,0,2,1,11,82],
 "builtins__geometric_8cpp.html#a26b4fc06cfac8408f7f702f27fb177f8":[4,0,2,1,11,57],
 "builtins__geometric_8cpp.html#a2a56929d75145ad3c371c7956c2aadb3":[4,0,2,1,11,24],
 "builtins__geometric_8cpp.html#a333a6d1ff2f297d122ba5e875009dcfb":[4,0,2,1,11,78],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "builtins__math_8cpp.html#a08906821d8bf5a842d529b02fbfd671a":[4,0,2,1,14,122],
 "builtins__math_8cpp.html#a0a10fd5c66445a80b0e983b5490f7be8":[4,0,2,1,14,132],
 "builtins__math_8cpp.html#a0b95a5cc62870d738a3790c1acdbf61b":[4,0,2,1,14,204],
-"builtins__math_8cpp.html#a0dd558e4d70b3c8c7fddbfaa3d237088":[4,0,2,1,14,121],
-"builtins__math_8cpp.html#a0e0482c53c58bc24d8d47b2b0aa365a7":[4,0,2,1,14,138]
+"builtins__math_8cpp.html#a0dd558e4d70b3c8c7fddbfaa3d237088":[4,0,2,1,14,121]
 };

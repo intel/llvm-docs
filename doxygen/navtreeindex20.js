@@ -1,5 +1,10 @@
 var NAVTREEINDEX20 =
 {
+"group__local__memory_8hpp_source.html":[4,0,0,0,1,29],
+"group__sycl__api.html":[1,2],
+"group__sycl__api.html#ga98bc9d7bbe01b4ad8088269110633ba7":[1,2,32],
+"group__sycl__api__acc.html":[1,2,1],
+"group__sycl__api__dev__sel.html":[1,2,0],
 "group__sycl__esimd.html":[1,1],
 "group__sycl__esimd.html#ga05b398ddea51a11723ca6be61837ac8c":[1,1,22],
 "group__sycl__esimd.html#ga0eff440876a00c345c38019449fb65dc":[1,1,21],
@@ -140,8 +145,8 @@ var NAVTREEINDEX20 =
 "host__util_8hpp.html#ae43b026969a2186810ec95da2cc31997":[4,0,0,1,0,0,0,0,0,0,207],
 "host__util_8hpp_source.html":[4,0,0,1,0,0,0,0,0,0],
 "id_8hpp.html":[4,0,0,0,1,33],
-"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,1],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,0],
+"id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,1],
 "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3":[4,0,0,0,1,33,2],
 "id_8hpp.html#aa40b71b8dd6ff6fdbf2cea604b3793c3":[4,0,0,0,1,33,5],
 "id_8hpp.html#aa8953bc09b85c70fd186496488a89a76":[4,0,0,0,1,33,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX20 =
 "image__impl_8hpp.html#a77f9c1fc741b736fc5441ef0b0f0a42b":[4,0,0,0,1,2,25,7],
 "image__impl_8hpp.html#a8dd0f06cff51e006655776f760e19267":[4,0,0,0,1,2,25,3],
 "image__impl_8hpp.html#a98d16930deb260075c397874b7891e4c":[4,0,0,0,1,2,25,2],
-"image__impl_8hpp_source.html":[4,0,0,0,1,2,25],
-"image__ocl__types_8hpp.html":[4,0,0,0,1,2,26],
-"image__ocl__types_8hpp_source.html":[4,0,0,0,1,2,26],
-"image__properties_8hpp.html":[4,0,0,0,1,6,4],
-"image__properties_8hpp_source.html":[4,0,0,0,1,6,4],
-"include_2CL_2sycl_2usm_2usm__allocator_8hpp.html":[4,0,0,0,1,7,0]
+"image__impl_8hpp_source.html":[4,0,0,0,1,2,25]
 };

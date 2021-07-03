@@ -10,11 +10,6 @@ var kernel__bundle_8hpp =
     [ "DeviceImageImplPtr", "kernel__bundle_8hpp.html#af937791ac4fabd0f2a1a1576fec9b6df", null ],
     [ "DevImgSelectorImpl", "kernel__bundle_8hpp.html#aad6c54f073223ac3513e74cf1ca5a762", null ],
     [ "KernelBundleImplPtr", "kernel__bundle_8hpp.html#aa55ff9a68f668b5cd2113448fc4213ed", null ],
-    [ "bundle_state", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0", [
-      [ "input", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0aa43c1b0aa53a0c908810c06ab1ff3967", null ],
-      [ "object", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0aa8cfde6331bd59eb2ac96f8911c4b666", null ],
-      [ "executable", "kernel__bundle_8hpp.html#a2704d20220e08bb580fed24428b051d0aee7004c7949d83f130592f15d98ca343", null ]
-    ] ],
     [ "build", "kernel__bundle_8hpp.html#aea933a1de7560efce853aaf9d6acd66e", null ],
     [ "build", "kernel__bundle_8hpp.html#ada9f6df5384b58bbb680aba8eec3d387", null ],
     [ "build_impl", "kernel__bundle_8hpp.html#a3a194f465b82857b8e0e9a2c9246f908", null ],

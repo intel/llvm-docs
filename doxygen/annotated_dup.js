@@ -48,5 +48,6 @@ var annotated_dup =
     [ "USMDeviceMemoryAlloc", "classUSMDeviceMemoryAlloc.html", "classUSMDeviceMemoryAlloc" ],
     [ "USMHostMemoryAlloc", "classUSMHostMemoryAlloc.html", "classUSMHostMemoryAlloc" ],
     [ "USMMemoryAllocBase", "classUSMMemoryAllocBase.html", "classUSMMemoryAllocBase" ],
-    [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", "classUSMSharedMemoryAlloc" ]
+    [ "USMSharedMemoryAlloc", "classUSMSharedMemoryAlloc.html", "classUSMSharedMemoryAlloc" ],
+    [ "ZeStruct", "structZeStruct.html", "structZeStruct" ]
 ];

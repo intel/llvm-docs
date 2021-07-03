@@ -58,6 +58,7 @@ var dir_dd7d3bcc93139b1cbc3b663242fe4a67 =
       [ "hash< cl::sycl::kernel >", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4.html", "structstd_1_1hash_3_01cl_1_1sycl_1_1kernel_01_4" ]
     ] ],
     [ "kernel_bundle.hpp", "kernel__bundle_8hpp.html", "kernel__bundle_8hpp" ],
+    [ "kernel_bundle_enums.hpp", "kernel__bundle__enums_8hpp.html", "kernel__bundle__enums_8hpp" ],
     [ "kernel_handler.hpp", "kernel__handler_8hpp.html", null ],
     [ "known_identity.hpp", "known__identity_8hpp.html", "known__identity_8hpp" ],
     [ "marray.hpp", "marray_8hpp.html", "marray_8hpp" ],

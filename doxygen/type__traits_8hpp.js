@@ -76,6 +76,7 @@ var type__traits_8hpp =
     [ "make_unsigned_impl_t", "type__traits_8hpp.html#ae9a165f74e0e85e5e1b6acd6a889c2eb", null ],
     [ "make_unsigned_t", "type__traits_8hpp.html#a9480d1d92df8fb08b39c65719fb53dc0", null ],
     [ "remove_pointer_t", "type__traits_8hpp.html#abbfc9fbc0a39f53321df76e435720253", null ],
+    [ "uuid_type", "type__traits_8hpp.html#a9b3ff835c965681ab4c0049b6f984cfd", null ],
     [ "vector_element_impl_t", "type__traits_8hpp.html#a59890a8c4313f44261227efb2c1fac48", null ],
     [ "vector_element_t", "type__traits_8hpp.html#a97976495720a89f459051cf6e919f96a", null ],
     [ "is_group_v", "type__traits_8hpp.html#af26fad8afd7727663acc1fdafcaa1e88", null ]
