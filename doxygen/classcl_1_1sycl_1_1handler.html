@@ -299,10 +299,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a110067774f86c17741d3dbcaba51de0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c">memcpy</a> (void *Dest, const void *Src, size_t Count)</td></tr>
 <tr class="memdesc:a110067774f86c17741d3dbcaba51de0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from one memory region to another, both pointed by USM pointers.  <a href="classcl_1_1sycl_1_1handler.html#a110067774f86c17741d3dbcaba51de0c">More...</a><br /></td></tr>
 <tr class="separator:a110067774f86c17741d3dbcaba51de0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19a8300a06c639ca1404587dd14c55d2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a19a8300a06c639ca1404587dd14c55d2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a19a8300a06c639ca1404587dd14c55d2">copy</a> (T *Dest, const T *Src, size_t Count)</td></tr>
-<tr class="memdesc:a19a8300a06c639ca1404587dd14c55d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from one memory region to another, both pointed by USM pointers.  <a href="classcl_1_1sycl_1_1handler.html#a19a8300a06c639ca1404587dd14c55d2">More...</a><br /></td></tr>
-<tr class="separator:a19a8300a06c639ca1404587dd14c55d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a852354ad3880f3ffdd5c1c9884bdc8f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a852354ad3880f3ffdd5c1c9884bdc8f3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#a852354ad3880f3ffdd5c1c9884bdc8f3">copy</a> (const T *Src, T *Dest, size_t Count)</td></tr>
+<tr class="memdesc:a852354ad3880f3ffdd5c1c9884bdc8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies data from one memory region to another, both pointed by USM pointers.  <a href="classcl_1_1sycl_1_1handler.html#a852354ad3880f3ffdd5c1c9884bdc8f3">More...</a><br /></td></tr>
+<tr class="separator:a852354ad3880f3ffdd5c1c9884bdc8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abacc9b24930b0343613e9746734ec540"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540">memset</a> (void *Dest, int Value, size_t Count)</td></tr>
 <tr class="memdesc:abacc9b24930b0343613e9746734ec540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the memory pointed by a USM pointer with the value specified.  <a href="classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540">More...</a><br /></td></tr>
 <tr class="separator:abacc9b24930b0343613e9746734ec540"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -710,8 +710,69 @@ template&lt;typename T_Src , int Dims_Src, access::mode AccessMode_Src, access::
 
 </div>
 </div>
+<a id="a852354ad3880f3ffdd5c1c9884bdc8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852354ad3880f3ffdd5c1c9884bdc8f3">&#9670;&nbsp;</a></span>copy() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cl::sycl::handler::copy </td>
+          <td>(</td>
+          <td class="paramtype">const T *&#160;</td>
+          <td class="paramname"><em>Src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>Dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>Count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies data from one memory region to another, both pointed by USM pointers. </p>
+<p>No operations is done if</p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Count</td><td>is zero. An exception is thrown if either</td></tr>
+    <tr><td class="paramname">Dest</td><td>or</td></tr>
+    <tr><td class="paramname">Src</td><td>is nullptr. The behavior is undefined if any of the pointer parameters is invalid.</td></tr>
+    <tr><td class="paramname">Src</td><td>is a USM pointer to the source memory. </td></tr>
+    <tr><td class="paramname">Dest</td><td>is a USM pointer to the destination memory. </td></tr>
+    <tr><td class="paramname">Count</td><td>is a number of elements of type T to copy. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02267">2267</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
+
+<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ade8963b9bb134c88a5801797d4f6afd9">cl::sycl::detail::memcpy()</a>.</p>
+
+</div>
+</div>
 <a id="a29d402737cbdce196b0278d6b3e6de84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d402737cbdce196b0278d6b3e6de84">&#9670;&nbsp;</a></span>copy() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d402737cbdce196b0278d6b3e6de84">&#9670;&nbsp;</a></span>copy() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -763,7 +824,7 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 </div>
 </div>
 <a id="a5f29616b3b3476b8a936320825b6d143"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f29616b3b3476b8a936320825b6d143">&#9670;&nbsp;</a></span>copy() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f29616b3b3476b8a936320825b6d143">&#9670;&nbsp;</a></span>copy() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,67 +870,6 @@ template&lt;typename T_Src , typename T_Dst , int Dims, access::mode AccessMode,
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02006">2006</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a19a8300a06c639ca1404587dd14c55d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19a8300a06c639ca1404587dd14c55d2">&#9670;&nbsp;</a></span>copy() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void cl::sycl::handler::copy </td>
-          <td>(</td>
-          <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>Dest</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T *&#160;</td>
-          <td class="paramname"><em>Src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>Count</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Copies data from one memory region to another, both pointed by USM pointers. </p>
-<p>No operations is done if</p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Count</td><td>is zero. An exception is thrown if either</td></tr>
-    <tr><td class="paramname">Dest</td><td>or</td></tr>
-    <tr><td class="paramname">Src</td><td>is nullptr. The behavior is undefined if any of the pointer parameters is invalid.</td></tr>
-    <tr><td class="paramname">Dest</td><td>is a USM pointer to the destination memory. </td></tr>
-    <tr><td class="paramname">Src</td><td>is a USM pointer to the source memory. </td></tr>
-    <tr><td class="paramname">Count</td><td>is a number of elements of type T to copy. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="handler_8hpp_source.html#l02267">2267</a> of file <a class="el" href="handler_8hpp_source.html">handler.hpp</a>.</p>
-
-<p class="reference">References <a class="el" href="namespacecl_1_1sycl_1_1detail.html#ade8963b9bb134c88a5801797d4f6afd9">cl::sycl::detail::memcpy()</a>.</p>
 
 </div>
 </div>

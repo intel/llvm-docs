@@ -81,7 +81,7 @@ var NAVTREEINDEX =
 "classcl_1_1sycl_1_1detail_1_1device__image__impl.html",
 "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a8c30bfabeef4643a31dafeb8c703ba1b",
 "classcl_1_1sycl_1_1event.html#a17d6a9b43054c87a71eaa50da6b529c4",
-"classcl_1_1sycl_1_1handler.html#a2211d108eb3b208b1a2b73da1161e79b",
+"classcl_1_1sycl_1_1handler.html#a234cd372ff6a74e0721838d17c4adf8b",
 "classcl_1_1sycl_1_1multi__ptr.html#a64a76ff6240a50d9dc152404912448d2",
 "classcl_1_1sycl_1_1queue.html#ae5c39ed682422e4e525fe0a01e8b7ad9",
 "device__binary__image_8hpp.html",
