@@ -16,10 +16,10 @@ var struct__pi__device =
     [ "RootDevice", "struct__pi__device.html#aab5d2489743f88afd3019f0b6056e98d", null ],
     [ "SubDevices", "struct__pi__device.html#a4dec9013f0cfa2f088cdc8b4d844871c", null ],
     [ "ZeComputeQueueGroupIndex", "struct__pi__device.html#a7e12907e6aa46b86d4549043745189a1", null ],
-    [ "ZeComputeQueueGroupProperties", "struct__pi__device.html#af878ac9a930fa4ddf2882a6098fc37a3", null ],
+    [ "ZeComputeQueueGroupProperties", "struct__pi__device.html#a4cdea69823773cdfa43951a01e6f2b18", null ],
     [ "ZeCopyQueueGroupIndex", "struct__pi__device.html#a5633bea75637abcb65efa49c6bc29a72", null ],
-    [ "ZeCopyQueueGroupProperties", "struct__pi__device.html#a2ca39669176100a143699d9efaeafc55", null ],
+    [ "ZeCopyQueueGroupProperties", "struct__pi__device.html#aa04ca317c52cc8f4ccdd7073d01b13ec", null ],
     [ "ZeDevice", "struct__pi__device.html#aa28a24fe6d68823714cb23c57e428290", null ],
-    [ "ZeDeviceComputeProperties", "struct__pi__device.html#a6e87b3dd2c77cdeb53ba5a328ec919b6", null ],
-    [ "ZeDeviceProperties", "struct__pi__device.html#ac85b84cd728a9feb4bf6fa6b6c2f33df", null ]
+    [ "ZeDeviceComputeProperties", "struct__pi__device.html#ace8be16e8ca3b12ff6967c4060876de3", null ],
+    [ "ZeDeviceProperties", "struct__pi__device.html#a81e4b9fe9030d0e50a15d72d48331606", null ]
 ];

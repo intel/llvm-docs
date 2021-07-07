@@ -3520,6 +3520,8 @@ stall-enable signal to freeze computation within the cluster. This attribute
 is ignored on the host.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> attribute takes no argument and has an
 effect when applied to a function, and no effect otherwise.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> is applied to a function called from a device
+kernel, the attribute is ignored and it is not propagated to the kernel.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
   <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
@@ -3530,6 +3532,14 @@ effect when applied to a function, and no effect otherwise.</p>
 <span class="k">struct</span> <span class="n">FuncObj</span> <span class="p">{</span>
   <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="k">const</span> <span class="p">{}</span>
 <span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Functor</span>
+<span class="p">{</span>
+    <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="kt">void</span> <span class="k">operator</span><span class="p">()(</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span> <span class="n">item</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* kernel code */</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">intel::use_stall_enable_clusters</span></code> attribute supports a nonconforming
@@ -3538,6 +3548,11 @@ behavior when applied to a lambda in the type position.</p>
   <span class="k">auto</span> <span class="n">lambda</span> <span class="o">=</span> <span class="p">[]()</span> <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]{};</span>
   <span class="n">lambda</span><span class="p">();</span>
 <span class="p">}</span>
+
+<span class="n">kernel</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">kernel_name</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="p">[]()</span> <span class="p">[[</span><span class="n">intel</span><span class="o">::</span><span class="n">use_stall_enable_clusters</span><span class="p">]]</span> <span class="p">{</span>
+     <span class="cm">/* kernel code */</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </section>

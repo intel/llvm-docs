@@ -705,10 +705,10 @@ var hierarchy =
     [ "_pi_mem::Mapping", "struct__pi__mem_1_1Mapping.html", null ],
     [ "cl::sycl::detail::Command::Marks", "structcl_1_1sycl_1_1detail_1_1Command_1_1Marks.html", null ],
     [ "cl::sycl::marray< Type, NumElements >", "classcl_1_1sycl_1_1marray.html", null ],
-    [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
     [ "cl::sycl::maximum< T >", "structcl_1_1sycl_1_1maximum.html", null ],
-    [ "cl::sycl::maximum< void >", "structcl_1_1sycl_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::ONEAPI::maximum< T >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum.html", null ],
     [ "cl::sycl::ONEAPI::maximum< void >", "structcl_1_1sycl_1_1ONEAPI_1_1maximum_3_01void_01_4.html", null ],
+    [ "cl::sycl::maximum< void >", "structcl_1_1sycl_1_1maximum_3_01void_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01char_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::maxtype< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1maxtype_3_01short_01_4.html", null ],
@@ -1112,6 +1112,15 @@ var hierarchy =
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::wordtype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1wordtype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::wordtype< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1wordtype_3_01short_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::wordtype< unsigned short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1wordtype_3_01unsigned_01short_01_4.html", null ],
+    [ "ze_command_queue_group_properties_t", null, [
+      [ "ZeStruct< ze_command_queue_group_properties_t >", "structZeStruct.html", null ]
+    ] ],
+    [ "ze_device_compute_properties_t", null, [
+      [ "ZeStruct< ze_device_compute_properties_t >", "structZeStruct.html", null ]
+    ] ],
+    [ "ze_device_properties_t", null, [
+      [ "ZeStruct< ze_device_properties_t >", "structZeStruct.html", null ]
+    ] ],
     [ "ze_image_desc_t", null, [
       [ "ZeStruct< ze_image_desc_t >", "structZeStruct.html", null ]
     ] ],
@@ -1121,6 +1130,7 @@ var hierarchy =
     [ "constexpr static int", "classconstexpr_01static_01int.html", null ],
     [ "static constexpr bool", "classstatic_01constexpr_01bool.html", null ],
     [ "T", null, [
+      [ "ZesStruct< T >", "structZesStruct.html", null ],
       [ "ZeStruct< T >", "structZeStruct.html", null ]
     ] ],
     [ "uint16_t", "classuint16__t.html", null ]

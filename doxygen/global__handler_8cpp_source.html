@@ -249,34 +249,36 @@ $(document).ready(function(){initNavTree('global__handler_8cpp_source.html','');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#ifdef _WIN32</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="comment">// Perform actions based on the reason for calling.</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">switch</span> (fdwReason) {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">case</span> DLL_PROCESS_DETACH:</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">shutdown</a>();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">case</span> DLL_PROCESS_ATTACH:</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">case</span> DLL_THREAD_ATTACH:</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordflow">case</span> DLL_THREAD_DETACH:</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">return</span> TRUE; <span class="comment">// Successful DLL_PROCESS_ATTACH.</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">// Setting low priority on destructor ensures it runs after all other global</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">// destructors. Priorities 0-100 are reserved by the compiler. The priority</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">// value 110 allows SYCL users to run their destructors after runtime library</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">// deinitialization.</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">  172</a></span>&#160;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">__attribute__</a>((destructor(110))) static <span class="keywordtype">void</span> syclUnload() { <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">shutdown</a>(); }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> __SYCL_EXPORT BOOL WINAPI DllMain(HINSTANCE hinstDLL,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                             DWORD fdwReason,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                             LPVOID lpReserved) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="comment">// Perform actions based on the reason for calling.</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">switch</span> (fdwReason) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordflow">case</span> DLL_PROCESS_DETACH:</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">shutdown</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordflow">case</span> DLL_PROCESS_ATTACH:</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">case</span> DLL_THREAD_ATTACH:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordflow">case</span> DLL_THREAD_DETACH:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordflow">return</span> TRUE; <span class="comment">// Successful DLL_PROCESS_ATTACH.</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment">// Setting low priority on destructor ensures it runs after all other global</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">// destructors. Priorities 0-100 are reserved by the compiler. The priority</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">// value 110 allows SYCL users to run their destructors after runtime library</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">// deinitialization.</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">  174</a></span>&#160;<a class="code" href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">__attribute__</a>((destructor(110))) static <span class="keywordtype">void</span> syclUnload() { <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9f94841af0069345de116d9b6bf66124">shutdown</a>(); }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1Scheduler_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1Scheduler.html">cl::sycl::detail::Scheduler</a></div><div class="ttdoc">DPC++ graph scheduler class.</div><div class="ttdef"><b>Definition:</b> <a href="scheduler_8hpp_source.html#l00358">scheduler.hpp:358</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1Sync_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1Sync.html">cl::sycl::detail::Sync</a></div><div class="ttdoc">Groups and provides access to all the locks used the SYCL runtime.</div><div class="ttdef"><b>Definition:</b> <a href="CL_2sycl_2detail_2util_8hpp_source.html#l00024">util.hpp:24</a></div></div>
-<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_aff496f9d989f86a57d010bd72fa489ba"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">cl::sycl::detail::__attribute__</a></div><div class="ttdeci">__attribute__((destructor(110))) static void syclUnload()</div><div class="ttdef"><b>Definition:</b> <a href="global__handler_8cpp_source.html#l00172">global_handler.cpp:172</a></div></div>
+<div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_aff496f9d989f86a57d010bd72fa489ba"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#aff496f9d989f86a57d010bd72fa489ba">cl::sycl::detail::__attribute__</a></div><div class="ttdeci">__attribute__((destructor(110))) static void syclUnload()</div><div class="ttdef"><b>Definition:</b> <a href="global__handler_8cpp_source.html#l00174">global_handler.cpp:174</a></div></div>
 <div class="ttc" id="adevice__filter_8hpp_html"><div class="ttname"><a href="device__filter_8hpp.html">device_filter.hpp</a></div></div>
 <div class="ttc" id="api_8h_html_a5ac98e3290841a01e0de5131b5935c49"><div class="ttname"><a href="pi_8h.html#a5ac98e3290841a01e0de5131b5935c49">piTearDown</a></div><div class="ttdeci">pi_result piTearDown(void *PluginParameter)</div><div class="ttdoc">API to notify that the plugin should clean up its resources.</div><div class="ttdef"><b>Definition:</b> <a href="pi__esimd__cpu_8cpp_source.html#l01228">pi_esimd_cpu.cpp:1228</a></div></div>
 <div class="ttc" id="aplugin_8hpp_html"><div class="ttname"><a href="plugin_8hpp.html">plugin.hpp</a></div></div>
