@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"memory__intrin_8hpp.html#aeb670baec8e9c19dd32d1674dee69ac6":[4,0,0,1,0,0,0,0,0,3,20],
 "memory__intrin_8hpp.html#aed6fc21b09089967db480ebfc003ac7f":[4,0,0,1,0,0,0,0,0,3,56],
 "memory__intrin_8hpp.html#af5199c6b0567f292915e07af9bb38c19":[4,0,0,1,0,0,0,0,0,3,5],
 "memory__intrin_8hpp.html#af72031f30dade694a725ee6f14f82b61":[4,0,0,1,0,0,0,0,0,3,59],
@@ -61,8 +62,8 @@ var NAVTREEINDEX24 =
 "namespacecl_1_1sycl_1_1ONEAPI.html":[3,0,1,1,4],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[2,0,1,1,9,0],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1detail.html":[3,0,1,1,4,0],
-"namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[2,0,1,1,9,1],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[3,0,1,1,4,1],
+"namespacecl_1_1sycl_1_1ONEAPI_1_1experimental.html":[2,0,1,1,9,1],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1property.html":[2,0,1,1,9,2],
 "namespacecl_1_1sycl_1_1ONEAPI_1_1property.html":[3,0,1,1,4,2],
 "namespacecl_1_1sycl_1_1access.html":[2,0,1,1,0],
@@ -91,14 +92,14 @@ var NAVTREEINDEX24 =
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd.html":[3,0,1,1,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail.html":[2,0,1,1,2,0,1,0,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail.html":[3,0,1,1,1,0,1,0,0],
-"namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[3,0,1,1,1,0,1,0,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[2,0,1,1,2,0,1,0,1],
+"namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu.html":[3,0,1,1,1,0,1,0,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail.html":[3,0,1,1,1,0,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail.html":[2,0,1,1,2,0,1,0,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html":[2,0,1,1,2,0,1,1],
 "namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix.html":[3,0,1,1,1,0,1,1],
-"namespacecl_1_1sycl_1_1ext_1_1oneapi.html":[2,0,1,1,2,1],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi.html":[3,0,1,1,1,1],
+"namespacecl_1_1sycl_1_1ext_1_1oneapi.html":[2,0,1,1,2,1],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html":[2,0,1,1,2,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property.html":[3,0,1,1,1,1,0],
 "namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1property_1_1buffer.html":[2,0,1,1,2,1,0,0],
@@ -138,8 +139,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,6],
-"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func.html":[2,1,1],
+"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_a.html":[2,1,1,1],
 "namespacemembers_func_b.html":[2,1,1,2],
 "namespacemembers_func_c.html":[2,1,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "opencl_8cpp.html#aa763471a69808df5a7082d34154f1fdd":[4,0,2,0,1,2],
 "opencl_8cpp.html#adc9921fd2f0a31c127549af6d649b08e":[4,0,2,0,1,1],
 "opencl_8cpp_source.html":[4,0,2,0,1],
-"opencl_8hpp.html":[4,0,0,0,1,1,2],
-"opencl_8hpp.html#a46baa12d3c24020999eff4a573de55a0":[4,0,0,0,1,1,2,17]
+"opencl_8hpp.html":[4,0,0,0,1,1,2]
 };

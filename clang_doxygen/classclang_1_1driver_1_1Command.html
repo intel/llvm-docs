@@ -82,6 +82,8 @@ Collaboration diagram for clang::driver::Command:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a0ee347fcdfc8cc1bb8fb55f8fc387fbf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#a0ee347fcdfc8cc1bb8fb55f8fc387fbf">ErrorCodeDiagMapTy</a> = llvm::DenseMap&lt; <a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a>, <a class="el" href="lib_2Tooling_2CMakeLists_8txt.html#af86de1f06488914e30d948a42f397df5">std::string</a> &gt;</td></tr>
 <tr class="separator:a0ee347fcdfc8cc1bb8fb55f8fc387fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c0defd08229a7c0056d25bb1b606ad"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#ab2c0defd08229a7c0056d25bb1b606ad">ErrorCodeExitMapTy</a> = llvm::DenseMap&lt; <a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a>, <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> &gt;</td></tr>
+<tr class="separator:ab2c0defd08229a7c0056d25bb1b606ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,9 +100,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a339fcafbcdfb70bccc313efc21129c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#a339fcafbcdfb70bccc313efc21129c2d">addDiagForErrorCode</a> (<a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a> ErrorCode, StringRef CustomDiag)</td></tr>
 <tr class="memdesc:a339fcafbcdfb70bccc313efc21129c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a custom driver diagnostic message upon a particular error code returned by the command.  <a href="classclang_1_1driver_1_1Command.html#a339fcafbcdfb70bccc313efc21129c2d">More...</a><br /></td></tr>
 <tr class="separator:a339fcafbcdfb70bccc313efc21129c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d56b280c6ce03cdd6b0b7947be77fac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#a5d56b280c6ce03cdd6b0b7947be77fac">addExitForErrorCode</a> (<a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a> ErrorCode, <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> Exit)</td></tr>
+<tr class="memdesc:a5d56b280c6ce03cdd6b0b7947be77fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store if the compilation should exit upon a particular error code returned by the command.  <a href="classclang_1_1driver_1_1Command.html#a5d56b280c6ce03cdd6b0b7947be77fac">More...</a><br /></td></tr>
+<tr class="separator:a5d56b280c6ce03cdd6b0b7947be77fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55cc41e46d414f7ac72a211ddccadaba"><td class="memItemLeft" align="right" valign="top">StringRef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#a55cc41e46d414f7ac72a211ddccadaba">getDiagForErrorCode</a> (<a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a> ErrorCode) const</td></tr>
 <tr class="memdesc:a55cc41e46d414f7ac72a211ddccadaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the custom driver diagnostic message for a particular error code if such was stored.  <a href="classclang_1_1driver_1_1Command.html#a55cc41e46d414f7ac72a211ddccadaba">More...</a><br /></td></tr>
 <tr class="separator:a55cc41e46d414f7ac72a211ddccadaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71fad72cf4b1785ff46929afe1b8cefe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#a71fad72cf4b1785ff46929afe1b8cefe">getWillExitForErrorCode</a> (<a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a> ErrorCode) const</td></tr>
+<tr class="memdesc:a71fad72cf4b1785ff46929afe1b8cefe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will the tool exit when a particular error code is encountered.  <a href="classclang_1_1driver_1_1Command.html#a71fad72cf4b1785ff46929afe1b8cefe">More...</a><br /></td></tr>
+<tr class="separator:a71fad72cf4b1785ff46929afe1b8cefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae4235c7f6f60508567632adff258de3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classclang_1_1driver_1_1Action.html">Action</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1driver_1_1Command.html#aae4235c7f6f60508567632adff258de3">getSource</a> () const</td></tr>
 <tr class="memdesc:aae4235c7f6f60508567632adff258de3"><td class="mdescLeft">&#160;</td><td class="mdescRight">getSource - Return the <a class="el" href="classclang_1_1driver_1_1Action.html" title="Action - Represent an abstract compilation step to perform.">Action</a> which caused the creation of this job.  <a href="classclang_1_1driver_1_1Command.html#aae4235c7f6f60508567632adff258de3">More...</a><br /></td></tr>
 <tr class="separator:aae4235c7f6f60508567632adff258de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +171,22 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00108">108</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+
+</div>
+</div>
+<a id="ab2c0defd08229a7c0056d25bb1b606ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c0defd08229a7c0056d25bb1b606ad">&#9670;&nbsp;</a></span>ErrorCodeExitMapTy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classclang_1_1driver_1_1Command.html#ab2c0defd08229a7c0056d25bb1b606ad">clang::driver::Command::ErrorCodeExitMapTy</a> =  llvm::DenseMap&lt;<a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a>, <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00109">109</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -311,6 +335,38 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5d56b280c6ce03cdd6b0b7947be77fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d56b280c6ce03cdd6b0b7947be77fac">&#9670;&nbsp;</a></span>addExitForErrorCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Command::addExitForErrorCode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a>&#160;</td>
+          <td class="paramname"><em>ErrorCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td>
+          <td class="paramname"><em>Exit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Store if the compilation should exit upon a particular error code returned by the command. </p>
+
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00165">165</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+
+</div>
+</div>
 <a id="af80b8a64de831cb19bb6f9ab4fd6da65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af80b8a64de831cb19bb6f9ab4fd6da65">&#9670;&nbsp;</a></span>Execute()</h2>
 
@@ -353,11 +409,11 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classclang_1_1driver_1_1ForceSuccessCommand.html#afd86d9b0c2a04ea2cb3c1ec62290dcb1">clang::driver::ForceSuccessCommand</a>, and <a class="el" href="classclang_1_1driver_1_1CC1Command.html#a810543c53ca411011436ef8eb913e0e8">clang::driver::CC1Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00322">322</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00333">333</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00387">clang::driver::CC1Command::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00398">clang::driver::CC1Command::Execute()</a>.</p>
 
 </div>
 </div>
@@ -384,9 +440,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00234">234</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00248">248</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00387">clang::driver::CC1Command::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00398">clang::driver::CC1Command::Execute()</a>.</p>
 
 </div>
 </div>
@@ -415,9 +471,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>getCreator - Return the <a class="el" href="classclang_1_1driver_1_1Tool.html" title="Tool - Information on a specific compilation tool.">Tool</a> which caused the creation of this job. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00210">210</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00224">224</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00387">clang::driver::CC1Command::Execute()</a>, <a class="el" href="Driver_8cpp_source.html#l01764">clang::driver::Driver::ExecuteCompilation()</a>, and <a class="el" href="Driver_8cpp_source.html#l01562">clang::driver::Driver::generateCompilationDiagnostics()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00398">clang::driver::CC1Command::Execute()</a>, <a class="el" href="Driver_8cpp_source.html#l01764">clang::driver::Driver::ExecuteCompilation()</a>, and <a class="el" href="Driver_8cpp_source.html#l01562">clang::driver::Driver::generateCompilationDiagnostics()</a>.</p>
 
 </div>
 </div>
@@ -440,7 +496,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get the custom driver diagnostic message for a particular error code if such was stored. </p>
 <p>Returns an empty string if no diagnostic message was found for the given error code. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00165">165</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00169">169</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Driver_8cpp_source.html#l01764">clang::driver::Driver::ExecuteCompilation()</a>.</p>
 
@@ -469,9 +525,9 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00232">232</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00246">246</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00387">clang::driver::CC1Command::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00398">clang::driver::CC1Command::Execute()</a>.</p>
 
 </div>
 </div>
@@ -498,7 +554,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00236">236</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00250">250</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -525,7 +581,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00240">240</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00254">254</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -552,7 +608,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00244">244</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00258">258</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -581,7 +637,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Returns the kind of response file supported by the current invocation. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00213">213</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00227">227</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -610,9 +666,34 @@ Protected Member Functions</h2></td></tr>
 
 <p>getSource - Return the <a class="el" href="classclang_1_1driver_1_1Action.html" title="Action - Represent an abstract compilation step to perform.">Action</a> which caused the creation of this job. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00207">207</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00221">221</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Driver_8cpp_source.html#l01764">clang::driver::Driver::ExecuteCompilation()</a>.</p>
+
+</div>
+</div>
+<a id="a71fad72cf4b1785ff46929afe1b8cefe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71fad72cf4b1785ff46929afe1b8cefe">&#9670;&nbsp;</a></span>getWillExitForErrorCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> Command::getWillExitForErrorCode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="____clang__hip__libdevice__declares_8h.html#aa7b8984e16daeff79f73e22b4e040334">int</a>&#160;</td>
+          <td class="paramname"><em>ErrorCode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Will the tool exit when a particular error code is encountered. </p>
+<p>Returns true if not set (always exit) </p>
+
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00176">176</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="Compilation_8cpp_source.html#l00279">clang::driver::Compilation::ExecuteJobs()</a>.</p>
 
 </div>
 </div>
@@ -664,11 +745,11 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classclang_1_1driver_1_1ForceSuccessCommand.html#a4ae84de1dc17d1228ef2c6049146871c">clang::driver::ForceSuccessCommand</a>, and <a class="el" href="classclang_1_1driver_1_1CC1Command.html#a7a3fe7de9e6f873c8fb95dd0f7eb4f56">clang::driver::CC1Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00212">212</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00223">223</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Job_8h_source.html#l00034">clang::driver::CrashReportInfo::Filename</a>, <a class="el" href="Job_8cpp_source.html#l00174">rewriteIncludes()</a>, <a class="el" href="Job_8h_source.html#l00051">clang::driver::ResponseFileSupport::RF_FileList</a>, <a class="el" href="Job_8cpp_source.html#l00055">skipArgs()</a>, <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>, and <a class="el" href="Job_8h_source.html#l00035">clang::driver::CrashReportInfo::VFSPath</a>.</p>
+<p class="reference">References <a class="el" href="Job_8h_source.html#l00034">clang::driver::CrashReportInfo::Filename</a>, <a class="el" href="Job_8cpp_source.html#l00185">rewriteIncludes()</a>, <a class="el" href="Job_8h_source.html#l00051">clang::driver::ResponseFileSupport::RF_FileList</a>, <a class="el" href="Job_8cpp_source.html#l00055">skipArgs()</a>, <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>, and <a class="el" href="Job_8h_source.html#l00035">clang::driver::CrashReportInfo::VFSPath</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00380">clang::driver::CC1Command::Print()</a>, and <a class="el" href="Job_8cpp_source.html#l00436">clang::driver::ForceSuccessCommand::Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00391">clang::driver::CC1Command::Print()</a>, and <a class="el" href="Job_8cpp_source.html#l00447">clang::driver::ForceSuccessCommand::Print()</a>.</p>
 
 </div>
 </div>
@@ -697,9 +778,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Optionally print the filenames to be compiled. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00314">314</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00325">325</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00387">clang::driver::CC1Command::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00398">clang::driver::CC1Command::Execute()</a>.</p>
 
 </div>
 </div>
@@ -738,7 +819,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classclang_1_1driver_1_1CC1Command.html#a74747adc11eb7b1763da5e6a57ec19a3">clang::driver::CC1Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00308">308</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00319">319</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
 </div>
 </div>
@@ -768,7 +849,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set an input file list, necessary if you specified an RF_FileList response file support. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00222">222</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00236">236</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -790,7 +871,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Set to pass arguments via a response file when launching the command. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00302">302</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8cpp_source.html#l00313">313</a> of file <a class="el" href="Job_8cpp_source.html">Job.cpp</a>.</p>
 
 </div>
 </div>
@@ -809,9 +890,9 @@ Protected Member Functions</h2></td></tr>
 
 <p>Whether the command will be executed in this process or not. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00180">180</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00186">186</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00370">clang::driver::CC1Command::CC1Command()</a>, <a class="el" href="Job_8cpp_source.html#l00387">clang::driver::CC1Command::Execute()</a>, and <a class="el" href="Job_8cpp_source.html#l00380">clang::driver::CC1Command::Print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Job_8cpp_source.html#l00381">clang::driver::CC1Command::CC1Command()</a>, <a class="el" href="Job_8cpp_source.html#l00398">clang::driver::CC1Command::Execute()</a>, and <a class="el" href="Job_8cpp_source.html#l00391">clang::driver::CC1Command::Print()</a>.</p>
 
 </div>
 </div>
@@ -829,7 +910,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Whether to print the input filenames when executing. </p>
 
-<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00177">177</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Job_8h_source.html#l00183">183</a> of file <a class="el" href="Job_8h_source.html">Job.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +921,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 7 2021 01:57:05 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 8 2021 01:58:04 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

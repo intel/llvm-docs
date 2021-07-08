@@ -19,7 +19,9 @@ var namespacecl_1_1sycl_1_1ONEAPI_1_1detail =
     [ "filter_selector_impl", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl.html", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1filter__selector__impl" ],
     [ "FilterElement", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1FilterElement" ],
     [ "get_reduction_aux_kernel_name_t", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t" ],
+    [ "get_reduction_aux_kernel_name_t< sycl::detail::auto_name, Type, B1, B2, T3 >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t_3_01sycl_1_1detail_7655603571d570898e773bcff9740df5.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__aux__kernel__name__t_3_01sycl_1_1detail_7655603571d570898e773bcff9740df5" ],
     [ "get_reduction_main_kernel_name_t", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t" ],
+    [ "get_reduction_main_kernel_name_t< sycl::detail::auto_name, Type, B1, B2, T3 >", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t_3_01sycl_1_1detail271c0153020478d94a786d56998521a9.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t_3_01sycl_1_1detail271c0153020478d94a786d56998521a9" ],
     [ "IsNonUsmReductionPredicate", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate.html", [
       [ "Func", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func.html", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1IsNonUsmReductionPredicate_1_1Func" ]
     ] ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"image__impl_8hpp_source.html":[4,0,0,0,1,2,25],
 "image__ocl__types_8hpp.html":[4,0,0,0,1,2,26],
 "image__ocl__types_8hpp_source.html":[4,0,0,0,1,2,26],
 "image__properties_8hpp.html":[4,0,0,0,1,6,4],
@@ -162,8 +163,8 @@ var NAVTREEINDEX21 =
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab068931cc450442b63f5b3d276ea4297":[4,0,0,0,1,3,0,7,58],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab128a9128069a203a38f56f7e9b55cc5":[4,0,0,0,1,3,0,7,49],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab4de23283932dd3379e1cf289219128c":[4,0,0,0,1,3,0,7,42],
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab5c9f53b2d60279eb66dcc8dfd43d2bd":[4,0,0,0,1,3,0,7,43],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab5c9f53b2d60279eb66dcc8dfd43d2bd":[4,0,0,0,1,3,0,7,44],
+"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab5c9f53b2d60279eb66dcc8dfd43d2bd":[4,0,0,0,1,3,0,7,43],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab8fea510498176a7f4d1ef646c2454aa":[4,0,0,0,1,3,0,7,25],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab9ce7f7a217e10088566b1aec5d41da8":[4,0,0,0,1,3,0,7,86],
 "info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ac09593f6075100eef79c8f4da08afa16":[4,0,0,0,1,3,0,7,0],
@@ -240,14 +241,13 @@ var NAVTREEINDEX21 =
 "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,15,4],
 "kernel_8cpp.html#a8c086778bb66cc9acfb7a8b6f3c59f34":[4,0,2,15,5],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,15,0],
+"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,15,1],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,15,2],
 "kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,15,3],
-"kernel_8cpp.html#ac535545f91898330c7322596642fd332":[4,0,2,15,1],
 "kernel_8cpp_source.html":[4,0,2,15],
 "kernel_8hpp.html":[4,0,0,0,1,38],
 "kernel_8hpp_source.html":[4,0,0,0,1,38],
 "kernel__bundle_8cpp.html":[4,0,2,16],
 "kernel__bundle_8cpp.html#a252763ed094cbc7905d311854454d95e":[4,0,2,16,6],
-"kernel__bundle_8cpp.html#a2c88f91a85d733a1521e5511803dd552":[4,0,2,16,3],
-"kernel__bundle_8cpp.html#a3531916d9a100ddaec5c176cbbe2e459":[4,0,2,16,1]
+"kernel__bundle_8cpp.html#a2c88f91a85d733a1521e5511803dd552":[4,0,2,16,3]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"group__local__memory_8hpp.html#ab6771b0a9414cf6b3b359b97770a2430":[4,0,0,0,1,29,1],
 "group__local__memory_8hpp_source.html":[4,0,0,0,1,29],
 "group__sycl__api.html":[1,2],
 "group__sycl__api.html#ga98bc9d7bbe01b4ad8088269110633ba7":[1,2,32],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "image__impl_8hpp.html#a77d9dea295ea5f12503064a8fd23d686":[4,0,0,0,1,2,25,6],
 "image__impl_8hpp.html#a77f9c1fc741b736fc5441ef0b0f0a42b":[4,0,0,0,1,2,25,7],
 "image__impl_8hpp.html#a8dd0f06cff51e006655776f760e19267":[4,0,0,0,1,2,25,3],
-"image__impl_8hpp.html#a98d16930deb260075c397874b7891e4c":[4,0,0,0,1,2,25,2],
-"image__impl_8hpp_source.html":[4,0,0,0,1,2,25]
+"image__impl_8hpp.html#a98d16930deb260075c397874b7891e4c":[4,0,0,0,1,2,25,2]
 };

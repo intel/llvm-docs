@@ -130,7 +130,7 @@ var namespacecl_1_1sycl_1_1detail =
     [ "get_kernel_info< cl_uint, Param >", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01cl__uint_00_01Param_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01cl__uint_00_01Param_01_4" ],
     [ "get_kernel_info< std::string, Param >", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01std_1_1string_00_01Param_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__info_3_01std_1_1string_00_01Param_01_4" ],
     [ "get_kernel_name_t", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t" ],
-    [ "get_kernel_name_t< detail::auto_name, Type >", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t_3_01detail_1_1auto__name_00_01Type_01_4" ],
+    [ "get_kernel_name_t_helper", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t__helper.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__name__t__helper" ],
     [ "get_kernel_wrapper_name_t", "structcl_1_1sycl_1_1detail_1_1get__kernel__wrapper__name__t.html", "structcl_1_1sycl_1_1detail_1_1get__kernel__wrapper__name__t" ],
     [ "get_platform_info", "structcl_1_1sycl_1_1detail_1_1get__platform__info.html", null ],
     [ "get_platform_info< std::string, param >", "structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01std_1_1string_00_01param_01_4.html", "structcl_1_1sycl_1_1detail_1_1get__platform__info_3_01std_1_1string_00_01param_01_4" ],

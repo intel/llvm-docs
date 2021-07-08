@@ -1,5 +1,10 @@
 var NAVTREEINDEX37 =
 {
+"structcl_1_1sycl_1_1detail_1_1is__vec_3_01cl_1_1sycl_1_1vec_3_01T_00_01N_01_4_01_4.html":[3,0,1,1,0,203],
+"structcl_1_1sycl_1_1detail_1_1is__vector__arithmetic.html":[3,0,1,1,0,204],
+"structcl_1_1sycl_1_1detail_1_1is__vector__bool.html":[3,0,1,1,0,205],
+"structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html":[3,0,1,1,0,235],
+"structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#a9592e7174a38eab227a800eb7cc98ce3":[3,0,1,1,0,235,0],
 "structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#a972dfd401bb4303521c903b18882b703":[3,0,1,1,0,235,2],
 "structcl_1_1sycl_1_1detail_1_1kernel__param__desc__t.html#ab02bfda6fa8097e2a80f0cfc01fef305":[3,0,1,1,0,235,1],
 "structcl_1_1sycl_1_1detail_1_1known__identity__impl.html":[3,0,1,1,0,238],
@@ -244,10 +249,5 @@ var NAVTREEINDEX37 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d0ad9b801c51a4f7156c870acb9ab2500.html#af069d8425c60360e4089ab164f4b9dfc":[3,0,1,1,1,0,1,0,0,14,4],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d0ad9b801c51a4f7156c870acb9ab2500.html#af72d1239d1255170403881ae808d0a68":[3,0,1,1,1,0,1,0,0,14,3],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html":[3,0,1,1,1,0,1,0,0,15],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a5d876a690beb5577b7e32c10e6f15e00":[3,0,1,1,1,0,1,0,0,15,2],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a88bac9a50af31264cd9af8707b717d72":[3,0,1,1,1,0,1,0,0,15,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a97c506c5e49a22cfd4fb5617b54f1660":[3,0,1,1,1,0,1,0,0,15,3],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#abb21c5cbc0c42f04740691a7d415b0c4":[3,0,1,1,1,0,1,0,0,15,5],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#ad93f22a21d081a6cd512cabba7dccbb8":[3,0,1,1,1,0,1,0,0,15,4],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#aeb442c0a845319041e4e9b558facc60f":[3,0,1,1,1,0,1,0,0,15,1]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type__2d234e272841bf966e97c06a286a9ad938.html#a5d876a690beb5577b7e32c10e6f15e00":[3,0,1,1,1,0,1,0,0,15,2]
 };

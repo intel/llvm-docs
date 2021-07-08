@@ -1,5 +1,10 @@
 var NAVTREEINDEX35 =
 {
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a7e34d50a69e0f56542427939aa45f4aa":[3,0,1,1,4,17,27],
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a8d9a82666ec6dd81107724b5b8a1f7f5":[3,0,1,1,4,17,24],
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a91274d4015b7f157241ce34dcde4e3c3":[3,0,1,1,4,17,11],
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a921dcfca4009a0af9154ce684840b80d":[3,0,1,1,4,17,3],
+"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a9b86cde8a1a85fd92147ecc32ece1f58":[3,0,1,1,4,17,12],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#aa79568ede1925f77fa78c808b6216b97":[3,0,1,1,4,17,18],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#ab8dc12b865fc9c0c5537412a93408e25":[3,0,1,1,4,17,13],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#ac6c19fdc46bbc7fb2154e9fa11a19c9b":[3,0,1,1,4,17,10],
@@ -244,10 +249,5 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa1686a6c336b71b36d77354cea19a8b52":[3,0,1,1,0,294,0,2],
 "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa22ae0e2b89e5e3d477f988cc36d3272b":[3,0,1,1,0,294,0,4],
 "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa30bb747c98bccdd11b3f89e644c4d0ad":[3,0,1,1,0,294,0,1],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8394f0347c184cf156ac5924dccb773b":[3,0,1,1,0,294,0,3],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8e95e84813830072b7516cfaa7dbc1a9":[3,0,1,1,0,294,0,0],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aac48615a1bc4197056d522af276aa5a85":[3,0,1,1,0,294,0,6],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aad909d38d705ce75386dd86e611a82f5b":[3,0,1,1,0,294,0,5],
-"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae2742be59e0918dd0d0188aadcdc56f2":[3,0,1,1,0,294,1],
-"structcl_1_1sycl_1_1detail_1_1RShift.html":[3,0,1,1,0,313]
+"structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929aa8394f0347c184cf156ac5924dccb773b":[3,0,1,1,0,294,0,3]
 };

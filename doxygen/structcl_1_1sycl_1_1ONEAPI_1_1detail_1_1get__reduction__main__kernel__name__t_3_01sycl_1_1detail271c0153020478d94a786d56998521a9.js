@@ -1,0 +1,4 @@
+var structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t_3_01sycl_1_1detail271c0153020478d94a786d56998521a9 =
+[
+    [ "name", "structcl_1_1sycl_1_1ONEAPI_1_1detail_1_1get__reduction__main__kernel__name__t_3_01sycl_1_1detail271c0153020478d94a786d56998521a9.html#a754a304d0e6af067720a641db920cb1e", null ]
+];

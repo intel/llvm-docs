@@ -199,31 +199,43 @@ $(document).ready(function(){initNavTree('kernel__desc_8hpp_source.html',''); in
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">struct </span>KernelInfoImpl {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// This is necessary to ensure that any kernels we get info for are properly</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// labeled as such before we call __builtin_sycl_unique_stable_name in a</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="comment">// constant expression, otherwise subsequent calls to a sycl_kernel function</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="comment">// could cause the kernel name to be altered, and change the result of the</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="comment">// builtin.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// Additionally, we make this a dependency of &#39;n&#39; so that we can guarantee</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="comment">// that this is evaluated first. The builtin always returns &#39;true&#39;, so the</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// &#39;else&#39; branch of &#39;n&#39;s ternary is never evaluated.</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> b = __builtin_sycl_mark_kernel_name(T);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">auto</span> n = b ? __builtin_sycl_unique_stable_name(T)</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                              : __builtin_sycl_unique_stable_name(T);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>... I&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keyword">static</span> KernelInfoData&lt;n[I]...&gt; impl(index_sequence&lt;I...&gt;) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> {};</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">using</span> <a class="code" href="classstd_1_1conditional_1_1type.html">type</a> = decltype(impl(make_index_sequence&lt;__builtin_strlen(n)&gt;{}));</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">using</span> KernelInfo = <span class="keyword">typename</span> KernelInfoImpl&lt;T&gt;::type;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif //__SYCL_UNNAMED_LAMBDA__</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">auto</span> n = __builtin_sycl_unique_stable_name(T);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>... I&gt;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">static</span> KernelInfoData&lt;n[I]...&gt; impl(index_sequence&lt;I...&gt;) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keyword">using</span> <a class="code" href="classstd_1_1conditional_1_1type.html">type</a> = decltype(impl(make_index_sequence&lt;__builtin_strlen(n)&gt;{}));</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">// For named kernels, this structure is specialized in the integration header.</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">// For unnamed kernels, KernelInfoData is specialized in the integration header,</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// and this picks it up via the KernelInfoImpl. For non-existent kernels, this</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment">// will also pick up a KernelInfoData (as SubKernelInfo) via KernelInfoImpl, but</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="comment">// it will instead get the unspecialized case, defined above.</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> KernelNameType&gt; <span class="keyword">struct </span>KernelInfo {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">using</span> SubKernelInfo = <span class="keyword">typename</span> KernelInfoImpl&lt;KernelNameType&gt;::type;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">unsigned</span> getNumParams() {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> SubKernelInfo::getNumParams();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> kernel_param_desc_t &amp;getParamDesc(<span class="keywordtype">int</span> Idx) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> SubKernelInfo::getParamDesc(Idx);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keyword">static</span> constexpr <span class="keyword">const</span> <span class="keywordtype">char</span> *getName() { <span class="keywordflow">return</span> SubKernelInfo::getName(); }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> isESIMD() { <span class="keywordflow">return</span> SubKernelInfo::isESIMD(); }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> callsThisItem() {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordflow">return</span> SubKernelInfo::callsThisItem();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> callsAnyThisFreeFunction() {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> SubKernelInfo::callsAnyThisFreeFunction();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;};</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif //__SYCL_UNNAMED_LAMBDA__</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1KernelInfo_html_a40b6b97a55f30c469b1203a6c1ecf13c"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a40b6b97a55f30c469b1203a6c1ecf13c">cl::sycl::detail::KernelInfo::callsAnyThisFreeFunction</a></div><div class="ttdeci">static constexpr bool callsAnyThisFreeFunction()</div><div class="ttdef"><b>Definition:</b> <a href="kernel__desc_8hpp_source.html#l00078">kernel_desc.hpp:78</a></div></div>
