@@ -152,6 +152,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c45e819d9ad51b10f1f19bc4f5eef7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7c45e819d9ad51b10f1f19bc4f5eef7b">emitInstrumentationData</a> () override</td></tr>
 <tr class="memdesc:a7c45e819d9ad51b10f1f19bc4f5eef7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instrumentation method which emits telemetry data.  <a href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7c45e819d9ad51b10f1f19bc4f5eef7b">More...</a><br /></td></tr>
 <tr class="separator:a7c45e819d9ad51b10f1f19bc4f5eef7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7832f556e90f5d659e02abbe30289780"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7832f556e90f5d659e02abbe30289780">producesPiEvent</a> () const final</td></tr>
+<tr class="memdesc:a7832f556e90f5d659e02abbe30289780"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the command produces a PI event on non-host devices.  <a href="classcl_1_1sycl_1_1detail_1_1EmptyCommand.html#a7832f556e90f5d659e02abbe30289780">More...</a><br /></td></tr>
+<tr class="separator:a7832f556e90f5d659e02abbe30289780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classcl_1_1sycl_1_1detail_1_1Command')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html">cl::sycl::detail::Command</a></td></tr>
 <tr class="memitem:ae4372aa392bfea61ada1697a9a75f975 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ae4372aa392bfea61ada1697a9a75f975">Command</a> (<a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a68b8ff940e510d5d289d54dc21718ad4">CommandType</a> Type, <a class="el" href="namespacecl_1_1sycl_1_1detail.html#a6c21d261b1995d0ce7058f54581ac8a8">QueueImplPtr</a> Queue)</td></tr>
 <tr class="separator:ae4372aa392bfea61ada1697a9a75f975 inherit pub_methods_classcl_1_1sycl_1_1detail_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,7 +318,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>The empty command does nothing during enqueue. </p>
 <p>The task can be used to implement lock in the graph, or to merge several nodes into one. </p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00298">298</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00301">301</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aed67f1c5291737aa9adc40ca825c2404"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aed67f1c5291737aa9adc40ca825c2404">&#9670;&nbsp;</a></span>EmptyCommand()</h2>
@@ -333,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01329">1329</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01339">1339</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="commands_8cpp_source.html#l00323">cl::sycl::detail::Command::emitInstrumentationDataProxy()</a>.</p>
 
@@ -372,9 +375,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01341">1341</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01351">1351</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00523">cl::sycl::detail::Command::addDep()</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00529">cl::sycl::detail::Command::addDep()</a>.</p>
 
 </div>
 </div>
@@ -405,9 +408,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a79201bceb39ae975f481c30f5e0741ce">cl::sycl::detail::Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01353">1353</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01363">1363</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00073">cl::sycl::detail::deviceToString()</a>, <a class="el" href="commands_8hpp_source.html#l00273">cl::sycl::detail::Command::MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00275">cl::sycl::detail::Command::MAddressString</a>, <a class="el" href="commands_8cpp_source.html#l00472">cl::sycl::detail::Command::makeTraceEventEpilog()</a>, <a class="el" href="commands_8cpp_source.html#l00440">cl::sycl::detail::Command::makeTraceEventProlog()</a>, <a class="el" href="commands_8hpp_source.html#l00283">cl::sycl::detail::Command::MFirstInstance</a>, <a class="el" href="commands_8hpp_source.html#l00194">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00114">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="commands_8hpp_source.html#l00266">cl::sycl::detail::Command::MTraceEvent</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00073">cl::sycl::detail::deviceToString()</a>, <a class="el" href="commands_8hpp_source.html#l00276">cl::sycl::detail::Command::MAddress</a>, <a class="el" href="commands_8hpp_source.html#l00278">cl::sycl::detail::Command::MAddressString</a>, <a class="el" href="commands_8cpp_source.html#l00472">cl::sycl::detail::Command::makeTraceEventEpilog()</a>, <a class="el" href="commands_8cpp_source.html#l00440">cl::sycl::detail::Command::makeTraceEventProlog()</a>, <a class="el" href="commands_8hpp_source.html#l00286">cl::sycl::detail::Command::MFirstInstance</a>, <a class="el" href="commands_8hpp_source.html#l00197">cl::sycl::detail::Command::MQueue</a>, <a class="el" href="accessor__impl_8hpp_source.html#l00114">cl::sycl::detail::AccessorImplHost::MSYCLMemObj</a>, and <a class="el" href="commands_8hpp_source.html#l00269">cl::sycl::detail::Command::MTraceEvent</a>.</p>
 
 </div>
 </div>
@@ -436,7 +439,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a37bddda2e1f11135708d5e29fb3b331d">cl::sycl::detail::Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00303">303</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8hpp_source.html#l00306">306</a> of file <a class="el" href="commands_8hpp_source.html">commands.hpp</a>.</p>
 
 </div>
 </div>
@@ -466,9 +469,40 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#a0db86d92eca0ce39ab1992bc0b6ba139">cl::sycl::detail::Command</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01377">1377</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01387">1387</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00086">cl::sycl::detail::accessModeToString()</a>, and <a class="el" href="commands_8hpp_source.html#l00235">cl::sycl::detail::Command::MDeps</a>.</p>
+<p class="reference">References <a class="el" href="commands_8cpp_source.html#l00086">cl::sycl::detail::accessModeToString()</a>, and <a class="el" href="commands_8hpp_source.html#l00238">cl::sycl::detail::Command::MDeps</a>.</p>
+
+</div>
+</div>
+<a id="a7832f556e90f5d659e02abbe30289780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7832f556e90f5d659e02abbe30289780">&#9670;&nbsp;</a></span>producesPiEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cl::sycl::detail::EmptyCommand::producesPiEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true iff the command produces a PI event on non-host devices. </p>
+
+<p>Reimplemented from <a class="el" href="classcl_1_1sycl_1_1detail_1_1Command.html#ab60c81c0ea8386d8a64a629a3540518d">cl::sycl::detail::Command</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="commands_8cpp_source.html#l01405">1405</a> of file <a class="el" href="commands_8cpp_source.html">commands.cpp</a>.</p>
 
 </div>
 </div>

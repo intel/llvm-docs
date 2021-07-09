@@ -1,5 +1,10 @@
 var NAVTREEINDEX9 =
 {
+"classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#a93cd5bd4ba3b81f08e416c0c52b8efcf":[3,0,1,1,0,252,2],
+"classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#ad55ee70a80fe29448dcd236712966d9d":[3,0,1,1,0,252,8],
+"classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#adc8bf5fd9ec77ab5271052dde9c2158f":[3,0,1,1,0,252,4],
+"classcl_1_1sycl_1_1detail_1_1LocalAccessorBaseHost.html#afd86a9c8539519c84a04f9f06aa0f19a":[3,0,1,1,0,252,3],
+"classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html":[3,0,1,1,0,253],
 "classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a11f112c7d5e3c5906a683c9ccb4454e2":[3,0,1,1,0,253,0],
 "classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a5fa3f8f25927232df0b0384e9719da98":[3,0,1,1,0,253,1],
 "classcl_1_1sycl_1_1detail_1_1LocalAccessorImplHost.html#a94c0757f497a3028916d8f8c98daaab9":[3,0,1,1,0,253,2],
@@ -140,6 +145,7 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html":[3,0,1,1,0,307],
 "classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#a0ffbc31bb4f1b0dcd18c75cc362e7c23":[3,0,1,1,0,307,2],
 "classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#a83785c0606c824ab8e35ac677f8a9309":[3,0,1,1,0,307,1],
+"classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#a9a68b2410b32e7d697b1249c311c7fd7":[3,0,1,1,0,307,3],
 "classcl_1_1sycl_1_1detail_1_1ReleaseCommand.html#accc4298b2a6fb090ac296bfb5fbfabca":[3,0,1,1,0,307,0],
 "classcl_1_1sycl_1_1detail_1_1SYCLCategory.html":[3,0,1,1,0,332],
 "classcl_1_1sycl_1_1detail_1_1SYCLCategory.html#a07570fe8dad5813c5422edf6e51b1981":[3,0,1,1,0,332,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX9 =
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html":[1,3,4],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a011d40c491f07a7097b8b77431c50f54":[1,3,4,1],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a140b6282077e7de641b759865921a141":[1,3,4,17],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a1bff8b0f2caf28c9a6773ae020c90f67":[1,3,4,2],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a24c668644f9f5a46f87bd67f68951835":[1,3,4,19],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3e7f0b212e78ad11f9f8c9dc43b64496":[1,3,4,29],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258":[1,3,4,14],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902":[1,3,4,26],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e":[1,3,4,27],
-"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a62a7fc89f0ee4604e3ccab9b6b6a343f":[1,3,4,22]
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a1bff8b0f2caf28c9a6773ae020c90f67":[1,3,4,2]
 };

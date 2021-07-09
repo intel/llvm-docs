@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cuda_20plugin_11596',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]]
+  ['cuda_20plugin_11602',['CUDA Plugin',['../group__sycl__pi__cuda.html',1,'']]]
 ];

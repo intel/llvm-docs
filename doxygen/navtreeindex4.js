@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"builtins__math_8cpp.html#a0dd558e4d70b3c8c7fddbfaa3d237088":[4,0,2,1,14,121],
 "builtins__math_8cpp.html#a0e0482c53c58bc24d8d47b2b0aa365a7":[4,0,2,1,14,138],
 "builtins__math_8cpp.html#a0f04be5fbc6393b52787b48ad78bf3ce":[4,0,2,1,14,172],
 "builtins__math_8cpp.html#a10b36aff4496bf5d070b995806ede4d7":[4,0,2,1,14,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "circular__buffer_8hpp_source.html":[4,0,2,1,16],
 "cl_8h.html":[4,0,0,0,1,2,9],
 "cl_8h.html#a5990dea19d4ccb046a3d81b311457add":[4,0,0,0,1,2,9,0],
-"cl_8h_source.html":[4,0,0,0,1,2,9],
-"classBucket.html":[3,0,29]
+"cl_8h_source.html":[4,0,0,0,1,2,9]
 };

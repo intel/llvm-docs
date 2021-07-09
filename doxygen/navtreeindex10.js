@@ -1,5 +1,11 @@
 var NAVTREEINDEX10 =
 {
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a24c668644f9f5a46f87bd67f68951835":[1,3,4,19],
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a3e7f0b212e78ad11f9f8c9dc43b64496":[1,3,4,29],
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a51e54bc01214bd25329e556ba97b0258":[1,3,4,14],
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a5477da51f48aec98b98e990c887a1902":[1,3,4,26],
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a609d270e5c2651fb22533dbd9fdf136e":[1,3,4,27],
+"classcl_1_1sycl_1_1detail_1_1Scheduler.html#a62a7fc89f0ee4604e3ccab9b6b6a343f":[1,3,4,22],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6a372403ed668ccf5f5469a854aa3f5e":[1,3,4,15],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a6e184b6920626e812994f0b905a9644a":[1,3,4,9],
 "classcl_1_1sycl_1_1detail_1_1Scheduler.html#a732c15bb7fa1de1dd501e4dabe06f5df":[1,3,4,28],
@@ -243,11 +249,5 @@ var NAVTREEINDEX10 =
 "classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a01b3270a077394eac393400396a39442":[3,0,1,1,0,73,0],
 "classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a34edfa523fc1421eef9145b2a19446bd":[3,0,1,1,0,73,4],
 "classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a3f351b16c4096cf118c75a8dfca45c6c":[3,0,1,1,0,73,2],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a67ef39be14dec827ba83b5d413d12c23":[3,0,1,1,0,73,7],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a720c18730f015f0a42e880d7395705dc":[3,0,1,1,0,73,9],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a97c0c05c984a799a949facbbc32021c2":[3,0,1,1,0,73,5],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#aa14f0755805ffc8f17f2344af5c89de8":[3,0,1,1,0,73,8],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#ab692b9f8e4ffd76b11186dccbfc2cf39":[3,0,1,1,0,73,6],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#abecf44430c6598827fc781544b9c7646":[3,0,1,1,0,73,3],
-"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#af9c27764f2016068d8dc333ed1c95b8a":[3,0,1,1,0,73,1]
+"classcl_1_1sycl_1_1detail_1_1device__filter__list.html#a67ef39be14dec827ba83b5d413d12c23":[3,0,1,1,0,73,7]
 };

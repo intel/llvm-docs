@@ -1,5 +1,12 @@
 var NAVTREEINDEX12 =
 {
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a2b368c5dded1c129ecf00082038273e7":[3,0,1,1,0,234,16],
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a3716eeeba2b67c849b1a258e0059fd5c":[3,0,1,1,0,234,6],
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a434a27404380f5c52c15b3ee3d1d0c5b":[3,0,1,1,0,234,4],
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a44be52b149025a03a4b686b16ed4277f":[3,0,1,1,0,234,5],
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a5295e23899d13a92666f2404711c22cd":[3,0,1,1,0,234,19],
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a54c86c0ef4592c6bc44a02a4c9457eb5":[3,0,1,1,0,234,23],
+"classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a5a05eaa95d9400e65bfb3056749401cb":[3,0,1,1,0,234,0],
 "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a8c30bfabeef4643a31dafeb8c703ba1b":[3,0,1,1,0,234,3],
 "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a918531e89dcf4715aab6ce6451842064":[3,0,1,1,0,234,21],
 "classcl_1_1sycl_1_1detail_1_1kernel__impl.html#a994fc4ad7daf4c23e38de49cc6d6dba0":[3,0,1,1,0,234,14],
@@ -242,12 +249,5 @@ var NAVTREEINDEX12 =
 "classcl_1_1sycl_1_1device__image.html#a71492293d0386f542d120a1fc3dfbb55":[3,0,1,1,25,3],
 "classcl_1_1sycl_1_1device__image.html#aa1fc4e0172f7af08b7ce82414f68b0cc":[3,0,1,1,25,0],
 "classcl_1_1sycl_1_1device__image.html#ab1a0930f47d383fe6124df911d2adf60":[3,0,1,1,25,2],
-"classcl_1_1sycl_1_1device__image.html#ae7fdeb8b87679deb6987b80353f74094":[3,0,1,1,25,1],
-"classcl_1_1sycl_1_1device__selector.html":[1,2,0,0],
-"classcl_1_1sycl_1_1device__selector.html#a0498c4c618b50e9ac5cb6ca03d9730b4":[1,2,0,0,0],
-"classcl_1_1sycl_1_1device__selector.html#a5aa27120d21e971a773ef980ded9788d":[1,2,0,0,2],
-"classcl_1_1sycl_1_1device__selector.html#a5c530343b8db83baaf2dc14bdcc119f6":[1,2,0,0,1],
-"classcl_1_1sycl_1_1device__selector.html#ad4caff4c99597424aed9610313d491b6":[1,2,0,0,3],
-"classcl_1_1sycl_1_1event.html":[1,2,6],
-"classcl_1_1sycl_1_1event.html#a0ad755ebee13139c75aafb781e690601":[1,2,6,5]
+"classcl_1_1sycl_1_1device__image.html#ae7fdeb8b87679deb6987b80353f74094":[3,0,1,1,25,1]
 };

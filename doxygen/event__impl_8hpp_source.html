@@ -141,74 +141,76 @@ $(document).ready(function(){initNavTree('event__impl_8hpp_source.html',''); ini
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> wait_and_throw(std::shared_ptr&lt;cl::sycl::detail::event_impl&gt; Self);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">template</span> &lt;info::event_profiling param&gt;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keyword">typename</span> <a class="code" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits&lt;info::event_profiling, param&gt;::return_type</a></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  get_profiling_info() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">template</span> &lt;info::event param&gt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keyword">typename</span> <a class="code" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits&lt;info::event, param&gt;::return_type</a> get_info() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> cleanupCommand(std::shared_ptr&lt;cl::sycl::detail::event_impl&gt; Self) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keyword">template</span> &lt;info::event_profiling param&gt;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">typename</span> <a class="code" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits&lt;info::event_profiling, param&gt;::return_type</a></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  get_profiling_info() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  ~<a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">void</span> waitInternal() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> setComplete();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">template</span> &lt;info::event param&gt;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">typename</span> <a class="code" href="classcl_1_1sycl_1_1info_1_1param__traits.html">info::param_traits&lt;info::event, param&gt;::return_type</a> get_info() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  ~<a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html">event_impl</a>();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="struct__pi__event.html">RT::PiEvent</a> &amp;getHandleRef();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">const</span> <a class="code" href="struct__pi__event.html">RT::PiEvent</a> &amp;getHandleRef() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;getContextImpl();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a25a3cf13e929d772f08013fea813fb41">getPlugin</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> setContextImpl(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;Context);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">  139</a></span>&#160;  <span class="keywordtype">void</span> *<a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">getCommand</a>() { <span class="keywordflow">return</span> MCommand; }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673">  146</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673">setCommand</a>(<span class="keywordtype">void</span> *<a class="code" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a>) { MCommand = <a class="code" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a>; }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">  151</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html">HostProfilingInfo</a> *<a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">getHostProfilingInfo</a>() { <span class="keywordflow">return</span> MHostProfilingInfo.get(); }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> getNative() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="comment">// When instrumentation is enabled emits trace event for event wait begin and</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="comment">// returns the telemetry event generated for the wait</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">void</span> *instrumentationProlog(std::string &amp;Name, int32_t StreamID,</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                              uint64_t &amp;instance_id) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="comment">// Uses events generated by the Prolog and emits event wait done event</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordtype">void</span> instrumentationEpilog(<span class="keywordtype">void</span> *TelementryEvent, <span class="keyword">const</span> std::string &amp;Name,</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                             int32_t StreamID, uint64_t IId) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="struct__pi__event.html">RT::PiEvent</a> MEvent = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> MContext;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">bool</span> MOpenCLInterop = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">bool</span> MHostEvent = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  std::unique_ptr&lt;HostProfilingInfo&gt; MHostProfilingInfo;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">void</span> *MCommand = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keyword">enum</span> HostEventState : <span class="keywordtype">int</span> { HES_NotComplete = 0, HES_Complete };</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="comment">// State of host event. Employed only for host events and event with no</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="comment">// backend&#39;s representation (e.g. alloca). Used values are listed in</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="comment">// HostEventState enum.</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  std::atomic&lt;int&gt; MState;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> waitInternal() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> setComplete();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="struct__pi__event.html">RT::PiEvent</a> &amp;getHandleRef();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keyword">const</span> <a class="code" href="struct__pi__event.html">RT::PiEvent</a> &amp;getHandleRef() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;getContextImpl();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">plugin</a> &amp;<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a25a3cf13e929d772f08013fea813fb41">getPlugin</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">void</span> setContextImpl(<span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> &amp;Context);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">  145</a></span>&#160;  <span class="keywordtype">void</span> *<a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">getCommand</a>() { <span class="keywordflow">return</span> MCommand; }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673">  152</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673">setCommand</a>(<span class="keywordtype">void</span> *<a class="code" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a>) { MCommand = <a class="code" href="classcl_1_1sycl_1_1detail_1_1Command.html">Command</a>; }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">  157</a></span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html">HostProfilingInfo</a> *<a class="code" href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">getHostProfilingInfo</a>() { <span class="keywordflow">return</span> MHostProfilingInfo.get(); }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="pi_8h.html#a11056869f4074c362c2347033e5d1b92">pi_native_handle</a> getNative() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// When instrumentation is enabled emits trace event for event wait begin and</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="comment">// returns the telemetry event generated for the wait</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">void</span> *instrumentationProlog(std::string &amp;Name, int32_t StreamID,</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                              uint64_t &amp;instance_id) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="comment">// Uses events generated by the Prolog and emits event wait done event</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">void</span> instrumentationEpilog(<span class="keywordtype">void</span> *TelementryEvent, <span class="keyword">const</span> std::string &amp;Name,</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                             int32_t StreamID, uint64_t IId) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <a class="code" href="struct__pi__event.html">RT::PiEvent</a> MEvent = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> MContext;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordtype">bool</span> MOpenCLInterop = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordtype">bool</span> MHostEvent = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  std::unique_ptr&lt;HostProfilingInfo&gt; MHostProfilingInfo;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">void</span> *MCommand = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keyword">enum</span> HostEventState : <span class="keywordtype">int</span> { HES_NotComplete = 0, HES_Complete };</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="comment">// State of host event. Employed only for host events and event with no</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="comment">// backend&#39;s representation (e.g. alloca). Used values are listed in</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="comment">// HostEventState enum.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  std::atomic&lt;int&gt; MState;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;};</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_1_1pi_html_a25a3cf13e929d772f08013fea813fb41"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a25a3cf13e929d772f08013fea813fb41">cl::sycl::detail::pi::getPlugin</a></div><div class="ttdeci">const plugin &amp; getPlugin()</div><div class="ttdef"><b>Definition:</b> <a href="pi_8cpp_source.html#l00437">pi.cpp:437</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_ab3344d056975e3c60daac83b7487bb0f"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">cl::sycl::detail::ContextImplPtr</a></div><div class="ttdeci">std::shared_ptr&lt; detail::context_impl &gt; ContextImplPtr</div><div class="ttdef"><b>Definition:</b> <a href="memory__manager_8hpp_source.html#l00031">memory_manager.hpp:31</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1info_1_1param__traits_html"><div class="ttname"><a href="classcl_1_1sycl_1_1info_1_1param__traits.html">cl::sycl::info::param_traits</a></div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00271">info_desc.hpp:271</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1info_1_1param__traits_html"><div class="ttname"><a href="classcl_1_1sycl_1_1info_1_1param__traits.html">cl::sycl::info::param_traits</a></div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00274">info_desc.hpp:274</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1HostProfilingInfo_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1HostProfilingInfo.html">cl::sycl::detail::HostProfilingInfo</a></div><div class="ttdoc">Profiling info for the host execution.</div><div class="ttdef"><b>Definition:</b> <a href="host__profiling__info_8hpp_source.html#l00019">host_profiling_info.hpp:19</a></div></div>
 <div class="ttc" id="astl_8hpp_html"><div class="ttname"><a href="stl_8hpp.html">stl.hpp</a></div></div>
 <div class="ttc" id="ahost__profiling__info_8hpp_html"><div class="ttname"><a href="host__profiling__info_8hpp.html">host_profiling_info.hpp</a></div></div>
 <div class="ttc" id="aplugin_8hpp_html"><div class="ttname"><a href="plugin_8hpp.html">plugin.hpp</a></div></div>
 <div class="ttc" id="api_8hpp_html"><div class="ttname"><a href="pi_8hpp.html">pi.hpp</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html_a5ca1c3832cdb6db9f8ac5cb1c3191673"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673">cl::sycl::detail::event_impl::setCommand</a></div><div class="ttdeci">void setCommand(void *Command)</div><div class="ttdoc">Associates this event with the command.</div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00146">event_impl.hpp:146</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html_a5ca1c3832cdb6db9f8ac5cb1c3191673"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ca1c3832cdb6db9f8ac5cb1c3191673">cl::sycl::detail::event_impl::setCommand</a></div><div class="ttdeci">void setCommand(void *Command)</div><div class="ttdoc">Associates this event with the command.</div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00152">event_impl.hpp:152</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1Command_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1Command.html">cl::sycl::detail::Command</a></div><div class="ttdoc">The Command class represents some action that needs to be performed on one or more memory objects.</div><div class="ttdef"><b>Definition:</b> <a href="commands_8hpp_source.html#l00093">commands.hpp:93</a></div></div>
 <div class="ttc" id="anamespacecl_html"><div class="ttname"><a href="namespacecl.html">cl</a></div><div class="ttdoc">We provide new interfaces for matrix muliply in this patch:</div><div class="ttdef"><b>Definition:</b> <a href="access_8hpp_source.html#l00013">access.hpp:13</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html">cl::sycl::detail::plugin</a></div><div class="ttdoc">The plugin class provides a unified interface to the underlying low-level runtimes for the device-agn...</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00033">plugin.hpp:33</a></div></div>
@@ -221,8 +223,8 @@ $(document).ready(function(){initNavTree('event__impl_8hpp_source.html',''); ini
 <div class="ttc" id="aCL_2sycl_2detail_2common_8hpp_html"><div class="ttname"><a href="CL_2sycl_2detail_2common_8hpp.html">common.hpp</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html">cl::sycl::detail::event_impl</a></div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00031">event_impl.hpp:31</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1info_html_a51e9e44a5c98627aafbe28dba6844707"><div class="ttname"><a href="namespacecl_1_1sycl_1_1info.html#a51e9e44a5c98627aafbe28dba6844707">cl::sycl::info::context</a></div><div class="ttdeci">context</div><div class="ttdef"><b>Definition:</b> <a href="info__desc_8hpp_source.html#l00036">info_desc.hpp:36</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html_a5ea457d14d9c534d2961edf993d50bc2"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">cl::sycl::detail::event_impl::getCommand</a></div><div class="ttdeci">void * getCommand()</div><div class="ttdoc">Returns command that is associated with the event.</div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00139">event_impl.hpp:139</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html_a4a1ee081efbf4bbb365eda7c54c24e3f"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">cl::sycl::detail::event_impl::getHostProfilingInfo</a></div><div class="ttdeci">HostProfilingInfo * getHostProfilingInfo()</div><div class="ttdoc">Returns host profiling information.</div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00151">event_impl.hpp:151</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html_a5ea457d14d9c534d2961edf993d50bc2"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a5ea457d14d9c534d2961edf993d50bc2">cl::sycl::detail::event_impl::getCommand</a></div><div class="ttdeci">void * getCommand()</div><div class="ttdoc">Returns command that is associated with the event.</div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00145">event_impl.hpp:145</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1event__impl_html_a4a1ee081efbf4bbb365eda7c54c24e3f"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a1ee081efbf4bbb365eda7c54c24e3f">cl::sycl::detail::event_impl::getHostProfilingInfo</a></div><div class="ttdeci">HostProfilingInfo * getHostProfilingInfo()</div><div class="ttdoc">Returns host profiling information.</div><div class="ttdef"><b>Definition:</b> <a href="event__impl_8hpp_source.html#l00157">event_impl.hpp:157</a></div></div>
 <div class="ttc" id="adefines__elementary_8hpp_html_af014229c51476c8c275e6e94d0549384"><div class="ttname"><a href="defines__elementary_8hpp.html#af014229c51476c8c275e6e94d0549384">__SYCL_INLINE_NAMESPACE</a></div><div class="ttdeci">#define __SYCL_INLINE_NAMESPACE(X)</div><div class="ttdef"><b>Definition:</b> <a href="defines__elementary_8hpp_source.html#l00012">defines_elementary.hpp:12</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

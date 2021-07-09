@@ -4,6 +4,7 @@ var classcl_1_1sycl_1_1detail_1_1event__impl =
     [ "event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html#ab2f3826fd4b4919b3f88c3e48db465ec", null ],
     [ "event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html#aa064a42bbf3a18961b6957c145fb1753", null ],
     [ "~event_impl", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a8325d8b974d6b646148433414377190d", null ],
+    [ "cleanupCommand", "classcl_1_1sycl_1_1detail_1_1event__impl.html#aa2add699d051d4960a7fe8066dd229bb", null ],
     [ "get", "classcl_1_1sycl_1_1detail_1_1event__impl.html#ae6fcdcc8cf35224e72b199ecd240d858", null ],
     [ "get_info", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a4a4f68b0ddbf4b6f726960d478d13003", null ],
     [ "get_profiling_info", "classcl_1_1sycl_1_1detail_1_1event__impl.html#a77f0615418eaa4f780457b96c0f920ce", null ],

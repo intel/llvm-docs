@@ -97,7 +97,6 @@ $(document).ready(function(){initNavTree('atomic_8hpp.html',''); initResizable()
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">atomic.hpp File Reference</div>  </div>
@@ -106,6 +105,7 @@ $(document).ready(function(){initNavTree('atomic_8hpp.html',''); initResizable()
 <div class="textblock"><code>#include &lt;<a class="el" href="spirv__ops_8hpp_source.html">CL/__spirv/spirv_ops.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="access_8hpp_source.html">CL/sycl/access/access.hpp</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="helpers_8hpp_source.html">CL/sycl/detail/helpers.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="memory__enums_8hpp_source.html">CL/sycl/memory_enums.hpp</a>&gt;</code><br />
 <code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -113,54 +113,56 @@ Include dependency graph for atomic.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="atomic_8hpp__incl.png" border="0" usemap="#include_2CL_2sycl_2atomic_8hpp" alt=""/></div>
 <map name="include_2CL_2sycl_2atomic_8hpp" id="include_2CL_2sycl_2atomic_8hpp">
-<area shape="rect" title=" " alt="" coords="2009,5,2205,32"/>
-<area shape="rect" href="spirv__ops_8hpp.html" title=" " alt="" coords="406,572,589,599"/>
-<area shape="rect" title=" " alt="" coords="2566,818,2658,845"/>
-<area shape="rect" href="access_8hpp.html" title=" " alt="" coords="1955,423,2147,449"/>
-<area shape="rect" href="helpers_8hpp.html" title=" " alt="" coords="1824,80,2013,107"/>
-<area shape="rect" title=" " alt="" coords="2751,80,2817,107"/>
-<area shape="rect" href="spirv__types_8hpp.html" title=" " alt="" coords="5,654,200,681"/>
-<area shape="rect" title=" " alt="" coords="241,736,308,763"/>
-<area shape="rect" href="defines_8hpp.html" title=" " alt="" coords="2053,736,2241,763"/>
-<area shape="rect" href="export_8hpp.html" title=" " alt="" coords="653,736,835,763"/>
-<area shape="rect" href="stl__type__traits_8hpp.html" title=" " alt="" coords="2322,647,2451,688"/>
-<area shape="rect" title=" " alt="" coords="326,654,397,681"/>
-<area shape="rect" href="defines__elementary_8hpp.html" title=" " alt="" coords="2135,811,2295,852"/>
-<area shape="rect" title=" " alt="" coords="2044,818,2111,845"/>
-<area shape="rect" title=" " alt="" coords="2351,736,2422,763"/>
-<area shape="rect" title=" " alt="" coords="2497,736,2575,763"/>
-<area shape="rect" href="CL_2sycl_2detail_2common_8hpp.html" title=" " alt="" coords="1598,497,1797,524"/>
-<area shape="rect" href="cl_8h.html" title=" " alt="" coords="1136,736,1272,763"/>
-<area shape="rect" title=" " alt="" coords="1296,736,1355,763"/>
-<area shape="rect" title=" " alt="" coords="1349,572,1429,599"/>
-<area shape="rect" href="exception_8hpp.html" title=" " alt="" coords="1555,572,1719,599"/>
-<area shape="rect" title=" " alt="" coords="1146,818,1211,845"/>
-<area shape="rect" title=" " alt="" coords="1015,818,1108,845"/>
-<area shape="rect" href="pi_8h.html" title=" " alt="" coords="1035,654,1173,681"/>
-<area shape="rect" href="stl_8hpp.html" title=" " alt="" coords="1726,654,1842,681"/>
-<area shape="rect" title=" " alt="" coords="1379,736,1466,763"/>
-<area shape="rect" title=" " alt="" coords="859,736,1010,763"/>
-<area shape="rect" href="bit__cast_8hpp.html" title=" " alt="" coords="1878,736,2029,763"/>
-<area shape="rect" href="sycl__span_8hpp.html" title=" " alt="" coords="1490,736,1654,763"/>
-<area shape="rect" title=" " alt="" coords="1678,736,1765,763"/>
-<area shape="rect" title=" " alt="" coords="1789,736,1853,763"/>
-<area shape="rect" title=" " alt="" coords="2265,736,2327,763"/>
-<area shape="rect" href="spirv__vars_8hpp.html" title=" " alt="" coords="144,572,331,599"/>
-<area shape="rect" href="pi_8hpp.html" title=" " alt="" coords="1041,423,1194,449"/>
-<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="2177,155,2319,196"/>
-<area shape="rect" title=" " alt="" coords="1982,162,2069,189"/>
-<area shape="rect" href="backend__types_8hpp.html" title=" " alt="" coords="1277,497,1475,524"/>
-<area shape="rect" href="os__util_8hpp.html" title=" " alt="" coords="523,654,707,681"/>
-<area shape="rect" title=" " alt="" coords="1035,497,1104,524"/>
-<area shape="rect" title=" " alt="" coords="1128,497,1203,524"/>
-<area shape="rect" title=" " alt="" coords="1105,572,1178,599"/>
-<area shape="rect" title=" " alt="" coords="1203,572,1275,599"/>
-<area shape="rect" title=" " alt="" coords="333,736,398,763"/>
-<area shape="rect" title=" " alt="" coords="423,736,508,763"/>
-<area shape="rect" title=" " alt="" coords="532,736,628,763"/>
-<area shape="rect" href="generic__type__lists_8hpp.html" title=" " alt="" coords="2286,244,2447,285"/>
-<area shape="rect" href="type__list_8hpp.html" title=" " alt="" coords="2206,333,2349,375"/>
-<area shape="rect" title=" " alt="" coords="2155,251,2211,278"/>
+<area shape="rect" title=" " alt="" coords="2243,5,2439,32"/>
+<area shape="rect" href="spirv__ops_8hpp.html" title=" " alt="" coords="1717,661,1900,688"/>
+<area shape="rect" title=" " alt="" coords="2392,982,2484,1009"/>
+<area shape="rect" href="access_8hpp.html" title=" " alt="" coords="1449,587,1641,613"/>
+<area shape="rect" href="helpers_8hpp.html" title=" " alt="" coords="1413,244,1602,271"/>
+<area shape="rect" href="memory__enums_8hpp.html" title=" " alt="" coords="2167,80,2373,107"/>
+<area shape="rect" title=" " alt="" coords="2378,244,2445,271"/>
+<area shape="rect" href="spirv__types_8hpp.html" title=" " alt="" coords="1039,743,1234,770"/>
+<area shape="rect" title=" " alt="" coords="886,900,953,927"/>
+<area shape="rect" href="defines_8hpp.html" title=" " alt="" coords="1857,900,2045,927"/>
+<area shape="rect" href="export_8hpp.html" title=" " alt="" coords="977,900,1160,927"/>
+<area shape="rect" href="stl__type__traits_8hpp.html" title=" " alt="" coords="1984,736,2113,777"/>
+<area shape="rect" title=" " alt="" coords="1651,743,1721,770"/>
+<area shape="rect" href="defines__elementary_8hpp.html" title=" " alt="" coords="1939,975,2099,1016"/>
+<area shape="rect" title=" " alt="" coords="1849,982,1915,1009"/>
+<area shape="rect" title=" " alt="" coords="1949,825,2020,852"/>
+<area shape="rect" title=" " alt="" coords="2070,900,2147,927"/>
+<area shape="rect" href="CL_2sycl_2detail_2common_8hpp.html" title=" " alt="" coords="1180,661,1379,688"/>
+<area shape="rect" href="cl_8h.html" title=" " alt="" coords="621,900,757,927"/>
+<area shape="rect" title=" " alt="" coords="501,900,559,927"/>
+<area shape="rect" title=" " alt="" coords="581,743,661,770"/>
+<area shape="rect" href="exception_8hpp.html" title=" " alt="" coords="1309,743,1473,770"/>
+<area shape="rect" title=" " alt="" coords="787,982,852,1009"/>
+<area shape="rect" title=" " alt="" coords="655,982,749,1009"/>
+<area shape="rect" href="pi_8h.html" title=" " alt="" coords="725,825,863,852"/>
+<area shape="rect" href="stl_8hpp.html" title=" " alt="" coords="1568,825,1684,852"/>
+<area shape="rect" title=" " alt="" coords="1184,900,1271,927"/>
+<area shape="rect" title=" " alt="" coords="205,900,356,927"/>
+<area shape="rect" href="bit__cast_8hpp.html" title=" " alt="" coords="1683,900,1833,927"/>
+<area shape="rect" href="sycl__span_8hpp.html" title=" " alt="" coords="1295,900,1459,927"/>
+<area shape="rect" title=" " alt="" coords="1483,900,1569,927"/>
+<area shape="rect" title=" " alt="" coords="1594,900,1658,927"/>
+<area shape="rect" title=" " alt="" coords="2172,900,2235,927"/>
+<area shape="rect" href="spirv__vars_8hpp.html" title=" " alt="" coords="1403,661,1590,688"/>
+<area shape="rect" href="pi_8hpp.html" title=" " alt="" coords="604,587,757,613"/>
+<area shape="rect" href="type__traits_8hpp.html" title=" " alt="" coords="1868,319,2011,360"/>
+<area shape="rect" title=" " alt="" coords="1413,326,1500,353"/>
+<area shape="rect" href="backend__types_8hpp.html" title=" " alt="" coords="514,661,711,688"/>
+<area shape="rect" href="os__util_8hpp.html" title=" " alt="" coords="271,825,455,852"/>
+<area shape="rect" title=" " alt="" coords="271,661,341,688"/>
+<area shape="rect" title=" " alt="" coords="365,661,439,688"/>
+<area shape="rect" title=" " alt="" coords="387,743,460,770"/>
+<area shape="rect" title=" " alt="" coords="485,743,557,770"/>
+<area shape="rect" title=" " alt="" coords="5,900,71,927"/>
+<area shape="rect" title=" " alt="" coords="95,900,181,927"/>
+<area shape="rect" title=" " alt="" coords="381,900,477,927"/>
+<area shape="rect" href="generic__type__lists_8hpp.html" title=" " alt="" coords="1859,408,2020,449"/>
+<area shape="rect" href="type__list_8hpp.html" title=" " alt="" coords="1868,497,2011,539"/>
+<area shape="rect" title=" " alt="" coords="1778,415,1834,442"/>
+<area shape="rect" href="atomic__enums_8hpp.html" title=" " alt="" coords="2185,155,2355,196"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -263,18 +265,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a88dc0675485acc0898b7343c6dcfac40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a88dc0675485acc0898b7343c6dcfac40">cl::sycl::detail::memory_order</a> = <a class="el" href="namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76">cl::sycl::memory_order</a></td></tr>
 <tr class="separator:a88dc0675485acc0898b7343c6dcfac40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a2145358fe52a1f70ad8cb1ca7ce89a76"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76">cl::sycl::memory_order</a> : int { <a class="el" href="namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76a81f32be24a2a62fc472cc43edc97e65b">cl::sycl::memory_order::relaxed</a> = 0
- }</td></tr>
-<tr class="separator:a2145358fe52a1f70ad8cb1ca7ce89a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a265cd77091f90dca97b6f39f53d2e3c6"><td class="memItemLeft" align="right" valign="top">static std::memory_order&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a265cd77091f90dca97b6f39f53d2e3c6">cl::sycl::detail::getStdMemoryOrder</a> (<a class="el" href="struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1">__spv::MemorySemanticsMask::Flag</a>)</td></tr>
 <tr class="separator:a265cd77091f90dca97b6f39f53d2e3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a845b4f2f4c8228ae80ef094cf5467d"><td class="memItemLeft" align="right" valign="top">static std::memory_order&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecl_1_1sycl_1_1detail.html#a4a845b4f2f4c8228ae80ef094cf5467d">cl::sycl::detail::getStdMemoryOrder</a> (::<a class="el" href="namespacecl_1_1sycl.html#a2145358fe52a1f70ad8cb1ca7ce89a76">cl::sycl::memory_order</a>)</td></tr>
-<tr class="separator:a4a845b4f2f4c8228ae80ef094cf5467d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10d7e230bff2780c663fd6fc916b2eb6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a10d7e230bff2780c663fd6fc916b2eb6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="atomic_8hpp.html#a10d7e230bff2780c663fd6fc916b2eb6">__spirv_AtomicStore</a> (std::atomic&lt; T &gt; *Ptr, <a class="el" href="struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4">__spv::Scope::Flag</a>, <a class="el" href="struct____spv_1_1MemorySemanticsMask.html#a441dc5afaf272e4343cb5050939a70e1">__spv::MemorySemanticsMask::Flag</a> MS, T V)</td></tr>
 <tr class="separator:a10d7e230bff2780c663fd6fc916b2eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -358,7 +352,7 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  static_assert(!std::is_same&lt;T, float&gt;::value,                                \</div>
 <div class="line">                <span class="stringliteral">&quot;SYCL atomic function not available for float type&quot;</span>)</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00022">22</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00023">23</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
 </div>
 </div>
@@ -403,11 +397,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00125">125</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00121">121</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00289">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_and()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00285">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_and()</a>.</p>
 
 </div>
 </div>
@@ -451,11 +445,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00107">107</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00103">103</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00250">cl::sycl::atomic&lt; T, addressSpace &gt;::exchange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00246">cl::sycl::atomic&lt; T, addressSpace &gt;::exchange()</a>.</p>
 
 </div>
 </div>
@@ -499,11 +493,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00113">113</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00109">109</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00277">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_add()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00273">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_add()</a>.</p>
 
 </div>
 </div>
@@ -547,11 +541,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00119">119</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00115">115</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00283">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_sub()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00279">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_sub()</a>.</p>
 
 </div>
 </div>
@@ -589,11 +583,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00101">101</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00097">97</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00244">cl::sycl::atomic&lt; T, addressSpace &gt;::load()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00240">cl::sycl::atomic&lt; T, addressSpace &gt;::load()</a>.</p>
 
 </div>
 </div>
@@ -637,11 +631,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00156">156</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00152">152</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00085">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00313">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_max()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00309">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_max()</a>.</p>
 
 </div>
 </div>
@@ -685,11 +679,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00143">143</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00139">139</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00085">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00307">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_min()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00303">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_min()</a>.</p>
 
 </div>
 </div>
@@ -733,11 +727,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00131">131</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00127">127</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00295">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_or()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00291">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_or()</a>.</p>
 
 </div>
 </div>
@@ -781,11 +775,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00095">95</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00091">91</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00220">cl::sycl::atomic&lt; T, addressSpace &gt;::store()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00216">cl::sycl::atomic&lt; T, addressSpace &gt;::store()</a>.</p>
 
 </div>
 </div>
@@ -829,11 +823,11 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00137">137</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="atomic_8hpp_source.html#l00133">133</a> of file <a class="el" href="atomic_8hpp_source.html">atomic.hpp</a>.</p>
 
-<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00082">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
+<p class="reference">References <a class="el" href="atomic_8hpp_source.html#l00081">cl::sycl::detail::getStdMemoryOrder()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00301">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_xor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="atomic_8hpp_source.html#l00297">cl::sycl::atomic&lt; T, addressSpace &gt;::fetch_xor()</a>.</p>
 
 </div>
 </div>

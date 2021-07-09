@@ -9,9 +9,6 @@ var atomic_8hpp =
     [ "atomic", "classcl_1_1sycl_1_1atomic.html", "classcl_1_1sycl_1_1atomic" ],
     [ "__SYCL_STATIC_ASSERT_NOT_FLOAT", "atomic_8hpp.html#a4f863a033b02fc5a4d13a966e92220e4", null ],
     [ "memory_order", "atomic_8hpp.html#a88dc0675485acc0898b7343c6dcfac40", null ],
-    [ "memory_order", "atomic_8hpp.html#a2145358fe52a1f70ad8cb1ca7ce89a76", [
-      [ "relaxed", "atomic_8hpp.html#a2145358fe52a1f70ad8cb1ca7ce89a76a81f32be24a2a62fc472cc43edc97e65b", null ]
-    ] ],
     [ "__spirv_AtomicAnd", "atomic_8hpp.html#aa718cd3d846316032fe893c2481421a9", null ],
     [ "__spirv_AtomicExchange", "atomic_8hpp.html#a16bd8803af5537a5471cb34b7989b841", null ],
     [ "__spirv_AtomicIAdd", "atomic_8hpp.html#aa689b4f0cd645aa202bab411de0a749e", null ],
@@ -33,6 +30,5 @@ var atomic_8hpp =
     [ "atomic_fetch_xor", "atomic_8hpp.html#a70d2bad67cdf6071c8ae96a9bb3d4d36", null ],
     [ "atomic_load", "atomic_8hpp.html#af3574f37ddf6daaa4fbfc01940d946d1", null ],
     [ "atomic_store", "atomic_8hpp.html#a964b6f49d8cbce86677e3363956b6149", null ],
-    [ "getStdMemoryOrder", "atomic_8hpp.html#a4a845b4f2f4c8228ae80ef094cf5467d", null ],
     [ "getStdMemoryOrder", "atomic_8hpp.html#a265cd77091f90dca97b6f39f53d2e3c6", null ]
 ];
