@@ -161,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a363458149e45a0c19df0d906a1dc99aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac36c115c3f5ecb7c1b16186fb6a11532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#ac36c115c3f5ecb7c1b16186fb6a11532">Visit</a> (const <a class="el" href="classclang_1_1GenericSelectionExpr.html#a7e4ff200bdb00ca50f5da0bd7f24777f">GenericSelectionExpr::ConstAssociation</a> &amp;A)</td></tr>
 <tr class="separator:ac36c115c3f5ecb7c1b16186fb6a11532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7553250fc4d79d3b23d85e36712d9436"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#a7553250fc4d79d3b23d85e36712d9436">Visit</a> (const <a class="el" href="classclang_1_1concepts_1_1Requirement.html">concepts::Requirement</a> *R)</td></tr>
+<tr class="separator:a7553250fc4d79d3b23d85e36712d9436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93e5e3476083ab511f90009449df01f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#a93e5e3476083ab511f90009449df01f5">Visit</a> (const <a class="el" href="classclang_1_1APValue.html">APValue</a> &amp;<a class="el" href="UninitializedValues_8cpp.html#a896c037a32087c5c20d97e64a1786880">Value</a>, <a class="el" href="classclang_1_1QualType.html">QualType</a> Ty)</td></tr>
 <tr class="separator:a93e5e3476083ab511f90009449df01f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26c2ae93766fa14eadca36cd98ac3868"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#a26c2ae93766fa14eadca36cd98ac3868">Visit</a> (const <a class="el" href="classclang_1_1comments_1_1Comment.html">comments::Comment</a> *C, const <a class="el" href="classclang_1_1comments_1_1FullComment.html">comments::FullComment</a> *FC)</td></tr>
@@ -329,6 +331,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a99d2f1f4a6ee96c68d777ed33ae9b070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951d91cb3f81b6ca503c366c55e26c96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#a951d91cb3f81b6ca503c366c55e26c96">VisitGenericSelectionExpr</a> (const <a class="el" href="classclang_1_1GenericSelectionExpr.html">GenericSelectionExpr</a> *E)</td></tr>
 <tr class="separator:a951d91cb3f81b6ca503c366c55e26c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948c0e1b3e2d5c169b42e4e49fb816e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#a948c0e1b3e2d5c169b42e4e49fb816e3">VisitRequiresExpr</a> (const <a class="el" href="classclang_1_1RequiresExpr.html">RequiresExpr</a> *E)</td></tr>
+<tr class="separator:a948c0e1b3e2d5c169b42e4e49fb816e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf97dfb1e2f84006f021e66686597fde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#aaf97dfb1e2f84006f021e66686597fde">VisitLambdaExpr</a> (const <a class="el" href="classclang_1_1LambdaExpr.html">LambdaExpr</a> *<a class="el" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>)</td></tr>
 <tr class="separator:aaf97dfb1e2f84006f021e66686597fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a136b57837842b909ed711381987750dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1ASTNodeTraverser.html#a136b57837842b909ed711381987750dc">VisitSizeOfPackExpr</a> (const <a class="el" href="classclang_1_1SizeOfPackExpr.html">SizeOfPackExpr</a> *<a class="el" href="ASTMatchFinder_8cpp.html#a32ca2adfad3611927e87efc253e7b7b1">Node</a>)</td></tr>
@@ -415,9 +419,9 @@ class clang::ASTNodeTraverser&lt; Derived, NodeDelegateType &gt;</h3>
 <p><a class="el" href="classclang_1_1ASTNodeTraverser.html" title="ASTNodeTraverser traverses the Clang AST for dumping purposes.">ASTNodeTraverser</a> traverses the Clang AST for dumping purposes. </p>
 <p>The <code>Derived::doGetNodeDelegate()</code> method is required to be an accessible member which returns a reference of type <code>NodeDelegateType &amp;</code> which implements the following interface:</p>
 <p>struct { template &lt;typename Fn&gt; void AddChild(Fn DoAddChild); template &lt;typename Fn&gt; void AddChild(StringRef Label, Fn DoAddChild);</p>
-<p>void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a26c2ae93766fa14eadca36cd98ac3868">Visit(const comments::Comment *C, const comments::FullComment *FC)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a57472c3dff12c2af209465492492ebf2">Visit(const Attr *A)</a>; void Visit(const <a class="el" href="classclang_1_1TemplateArgument.html" title="Represents a template argument.">TemplateArgument</a> &amp;TA, <a class="el" href="classclang_1_1SourceRange.html" title="A trivial tuple used to represent a source range.">SourceRange</a> R = {}, const <a class="el" href="classclang_1_1Decl.html" title="Decl - This represents one declaration (or definition), e.g.">Decl</a> *From = nullptr, StringRef Label = {}); void Visit(const Stmt *Node); void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a5180f11fc6d1ee6bf975c7e37bbedcbe">Visit(const Type *T)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a5633bdf662106ccf57adfdc2ebcb17ed">Visit(QualType T)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#aeb0d8a91b31a319ba86640c5ff1e614a">Visit(const Decl *D)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#aa24673d9a9be1d872491b3da88af46c5">Visit(const CXXCtorInitializer *Init)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a363458149e45a0c19df0d906a1dc99aa">Visit(const OMPClause *C)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a0cf93acdc62c500940033aa8c2e0dd22">Visit(const BlockDecl::Capture &amp;C)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#ac36c115c3f5ecb7c1b16186fb6a11532">Visit(const GenericSelectionExpr::ConstAssociation &amp;A)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a93e5e3476083ab511f90009449df01f5">Visit(const APValue &amp;Value, QualType Ty)</a>; }; </p>
+<p>void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a26c2ae93766fa14eadca36cd98ac3868">Visit(const comments::Comment *C, const comments::FullComment *FC)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a57472c3dff12c2af209465492492ebf2">Visit(const Attr *A)</a>; void Visit(const <a class="el" href="classclang_1_1TemplateArgument.html" title="Represents a template argument.">TemplateArgument</a> &amp;TA, <a class="el" href="classclang_1_1SourceRange.html" title="A trivial tuple used to represent a source range.">SourceRange</a> R = {}, const <a class="el" href="classclang_1_1Decl.html" title="Decl - This represents one declaration (or definition), e.g.">Decl</a> *From = nullptr, StringRef Label = {}); void Visit(const Stmt *Node); void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a5180f11fc6d1ee6bf975c7e37bbedcbe">Visit(const Type *T)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a5633bdf662106ccf57adfdc2ebcb17ed">Visit(QualType T)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#aeb0d8a91b31a319ba86640c5ff1e614a">Visit(const Decl *D)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#aa24673d9a9be1d872491b3da88af46c5">Visit(const CXXCtorInitializer *Init)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a363458149e45a0c19df0d906a1dc99aa">Visit(const OMPClause *C)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a0cf93acdc62c500940033aa8c2e0dd22">Visit(const BlockDecl::Capture &amp;C)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#ac36c115c3f5ecb7c1b16186fb6a11532">Visit(const GenericSelectionExpr::ConstAssociation &amp;A)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a7553250fc4d79d3b23d85e36712d9436">Visit(const concepts::Requirement *R)</a>; void <a class="el" href="classclang_1_1ASTNodeTraverser.html#a93e5e3476083ab511f90009449df01f5">Visit(const APValue &amp;Value, QualType Ty)</a>; }; </p>
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00060">60</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00061">61</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acafbdd283e80b11a5d0e8a8117212eb7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acafbdd283e80b11a5d0e8a8117212eb7">&#9670;&nbsp;</a></span>dumpASTTemplateArgumentListInfo()</h2>
@@ -445,9 +449,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00289">289</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00313">313</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00544">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassScopeFunctionSpecializationDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00568">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassScopeFunctionSpecializationDecl()</a>.</p>
 
 </div>
 </div>
@@ -477,9 +481,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00269">269</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00293">293</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00087">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::Visit()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00614">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCMethodDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00088">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::Visit()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00638">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCMethodDecl()</a>.</p>
 
 </div>
 </div>
@@ -509,9 +513,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00308">308</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00332">332</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00625">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCCategoryDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00629">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCInterfaceDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00649">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCCategoryDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00653">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCInterfaceDecl()</a>.</p>
 
 </div>
 </div>
@@ -541,9 +545,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00303">303</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00327">327</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00533">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplateSpecializationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00397">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00556">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplateSpecializationDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00557">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplateSpecializationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00421">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00580">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplateSpecializationDecl()</a>.</p>
 
 </div>
 </div>
@@ -589,9 +593,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00297">297</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00321">321</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00289">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpASTTemplateArgumentListInfo()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00598">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitConceptSpecializationExpr()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00585">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateTemplateParmDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00313">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpASTTemplateArgumentListInfo()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00622">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitConceptSpecializationExpr()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00609">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateTemplateParmDecl()</a>.</p>
 
 </div>
 </div>
@@ -623,9 +627,9 @@ template&lt;typename TemplateDecl &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00500">500</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00524">524</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00529">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00525">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionTemplateDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00549">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplateDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00553">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00549">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionTemplateDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00573">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplateDecl()</a>.</p>
 
 </div>
 </div>
@@ -657,9 +661,9 @@ template&lt;typename SpecializationDecl &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00481">481</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00505">505</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00500">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00524">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDecl()</a>.</p>
 
 </div>
 </div>
@@ -689,9 +693,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00277">277</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00301">301</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00500">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00551">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBuiltinTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00538">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplatePartialSpecializationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00593">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitConceptDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00692">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitLambdaExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00585">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateTemplateParmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00515">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeAliasTemplateDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00561">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplatePartialSpecializationDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00524">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00575">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBuiltinTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00562">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplatePartialSpecializationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00617">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitConceptDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00723">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitLambdaExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00609">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateTemplateParmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00539">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeAliasTemplateDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00585">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplatePartialSpecializationDecl()</a>.</p>
 
 </div>
 </div>
@@ -720,7 +724,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00082">82</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00083">83</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -749,7 +753,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00085">85</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00086">86</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -779,7 +783,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00081">81</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00082">82</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -809,12 +813,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00084">84</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00085">85</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a93e5e3476083ab511f90009449df01f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93e5e3476083ab511f90009449df01f5">&#9670;&nbsp;</a></span>Visit() <span class="overload">[1/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e5e3476083ab511f90009449df01f5">&#9670;&nbsp;</a></span>Visit() <span class="overload">[1/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -849,12 +853,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00231">231</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00255">255</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a57472c3dff12c2af209465492492ebf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57472c3dff12c2af209465492492ebf2">&#9670;&nbsp;</a></span>Visit() <span class="overload">[2/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a57472c3dff12c2af209465492492ebf2">&#9670;&nbsp;</a></span>Visit() <span class="overload">[2/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -879,12 +883,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00182">182</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00184">184</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a0cf93acdc62c500940033aa8c2e0dd22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cf93acdc62c500940033aa8c2e0dd22">&#9670;&nbsp;</a></span>Visit() <span class="overload">[3/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf93acdc62c500940033aa8c2e0dd22">&#9670;&nbsp;</a></span>Visit() <span class="overload">[3/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -909,12 +913,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00206">206</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00208">208</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a26c2ae93766fa14eadca36cd98ac3868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26c2ae93766fa14eadca36cd98ac3868">&#9670;&nbsp;</a></span>Visit() <span class="overload">[4/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c2ae93766fa14eadca36cd98ac3868">&#9670;&nbsp;</a></span>Visit() <span class="overload">[4/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -949,12 +953,42 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00235">235</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00259">259</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+
+</div>
+</div>
+<a id="a7553250fc4d79d3b23d85e36712d9436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7553250fc4d79d3b23d85e36712d9436">&#9670;&nbsp;</a></span>Visit() <span class="overload">[5/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived , typename NodeDelegateType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classclang_1_1ASTNodeTraverser.html">clang::ASTNodeTraverser</a>&lt; Derived, NodeDelegateType &gt;::Visit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1concepts_1_1Requirement.html">concepts::Requirement</a> *&#160;</td>
+          <td class="paramname"><em>R</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00233">233</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="aa24673d9a9be1d872491b3da88af46c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa24673d9a9be1d872491b3da88af46c5">&#9670;&nbsp;</a></span>Visit() <span class="overload">[5/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24673d9a9be1d872491b3da88af46c5">&#9670;&nbsp;</a></span>Visit() <span class="overload">[6/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -979,12 +1013,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00189">189</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00191">191</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="aeb0d8a91b31a319ba86640c5ff1e614a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb0d8a91b31a319ba86640c5ff1e614a">&#9670;&nbsp;</a></span>Visit() <span class="overload">[6/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0d8a91b31a319ba86640c5ff1e614a">&#9670;&nbsp;</a></span>Visit() <span class="overload">[7/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1009,14 +1043,14 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00087">87</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00088">88</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTDumper_8cpp_source.html#l00251">clang::comments::Comment::dump()</a>, <a class="el" href="ASTDumper_8cpp_source.html#l00280">clang::APValue::dump()</a>, <a class="el" href="ASTDumper_8cpp_source.html#l00164">clang::QualType::dump()</a>, <a class="el" href="ASTDumper_8cpp_source.html#l00268">clang::comments::Comment::dumpColor()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00269">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpDeclContext()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00308">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpObjCTypeParamList()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00303">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateArgumentList()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00297">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateArgumentLoc()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00500">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00481">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDeclSpecialization()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00277">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateParameters()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00087">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::Visit()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00382">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAdjustedType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00332">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitArrayType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00380">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAtomicType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00652">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAttributedStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00361">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAttributedType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00440">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBindingDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00638">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBlockDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00676">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBlockExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00322">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBlockPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00741">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCallExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00451">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCapturedDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00661">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCapturedStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00544">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassScopeFunctionSpecializationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00317">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitComplexType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00593">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitConceptDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00657">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCXXCatchStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00732">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCXXForRangeStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00752">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCXXRewrittenBinaryOperator()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00647">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDeclStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00355">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDecltypeType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00434">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDecompositionDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00337">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDependentSizedArrayType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00341">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDependentSizedExtVectorType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00392">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitEnumConstantDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00761">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitExpressionTemplateArgument()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00419">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFieldDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00447">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFileScopeAsmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00609">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFriendDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00397">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00347">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionProtoType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00346">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00683">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitGenericSelectionExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00670">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitInitListExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00692">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitLambdaExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00318">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitLocInfoType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00328">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitMemberPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00576">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitNonTypeTemplateParmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00727">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCAtCatchStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00633">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCImplementationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00614">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCMethodDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00377">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCObjectPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00473">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPAllocateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00469">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPCapturedExprDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00464">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPDeclareMapperDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00458">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPDeclareReductionDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00665">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPExecutableDirective()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00453">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPThreadPrivateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00678">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOpaqueValueExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00383">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPackExpansionType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00769">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPackTemplateArgument()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00381">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPipeType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00321">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00325">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitReferenceType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00712">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSizeOfPackExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00520">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitStaticAssertDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00718">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstNonTypeTemplateParmExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00721">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstNonTypeTemplateParmPackExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00369">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstTemplateTypeParmPackType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00365">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstTemplateTypeParmType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00373">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateSpecializationType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00567">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateTypeParmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00511">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeAliasDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00515">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeAliasTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00390">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypedefDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00352">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeOfExprType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00765">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeTemplateArgument()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00358">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitUnaryTransformType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00604">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitUsingShadowDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00426">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00333">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVariableArrayType()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00345">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVectorType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTDumper_8cpp_source.html#l00251">clang::comments::Comment::dump()</a>, <a class="el" href="ASTDumper_8cpp_source.html#l00280">clang::APValue::dump()</a>, <a class="el" href="ASTDumper_8cpp_source.html#l00164">clang::QualType::dump()</a>, <a class="el" href="ASTDumper_8cpp_source.html#l00268">clang::comments::Comment::dumpColor()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00293">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpDeclContext()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00332">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpObjCTypeParamList()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00327">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateArgumentList()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00321">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateArgumentLoc()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00524">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00505">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateDeclSpecialization()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00301">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::dumpTemplateParameters()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00088">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::Visit()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00406">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAdjustedType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00356">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitArrayType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00404">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAtomicType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00676">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAttributedStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00385">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitAttributedType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00464">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBindingDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00662">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBlockDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00700">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBlockExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00346">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitBlockPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00772">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCallExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00475">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCapturedDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00685">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCapturedStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00568">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassScopeFunctionSpecializationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00341">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitComplexType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00617">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitConceptDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00681">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCXXCatchStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00763">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCXXForRangeStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00783">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitCXXRewrittenBinaryOperator()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00671">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDeclStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00379">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDecltypeType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00458">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDecompositionDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00361">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDependentSizedArrayType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00365">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDependentSizedExtVectorType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00416">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitEnumConstantDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00792">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitExpressionTemplateArgument()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00443">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFieldDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00471">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFileScopeAsmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00633">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFriendDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00421">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00371">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionProtoType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00370">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00707">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitGenericSelectionExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00694">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitInitListExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00723">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitLambdaExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00342">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitLocInfoType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00352">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitMemberPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00600">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitNonTypeTemplateParmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00758">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCAtCatchStmt()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00657">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCImplementationDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00638">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCMethodDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00401">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitObjCObjectPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00497">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPAllocateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00493">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPCapturedExprDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00488">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPDeclareMapperDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00482">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPDeclareReductionDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00689">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPExecutableDirective()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00477">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOMPThreadPrivateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00702">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitOpaqueValueExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00407">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPackExpansionType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00800">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPackTemplateArgument()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00405">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPipeType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00345">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitPointerType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00349">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitReferenceType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00716">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitRequiresExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00743">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSizeOfPackExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00544">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitStaticAssertDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00749">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstNonTypeTemplateParmExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00752">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstNonTypeTemplateParmPackExpr()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00393">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstTemplateTypeParmPackType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00389">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitSubstTemplateTypeParmType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00397">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateSpecializationType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00591">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTemplateTypeParmDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00535">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeAliasDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00539">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeAliasTemplateDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00414">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypedefDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00376">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeOfExprType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00796">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitTypeTemplateArgument()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00382">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitUnaryTransformType()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00628">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitUsingShadowDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00450">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarDecl()</a>, <a class="el" href="ASTNodeTraverser_8h_source.html#l00357">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVariableArrayType()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00369">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVectorType()</a>.</p>
 
 </div>
 </div>
 <a id="a81505098a88c0a966203dfda46927c41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81505098a88c0a966203dfda46927c41">&#9670;&nbsp;</a></span>Visit() <span class="overload">[7/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81505098a88c0a966203dfda46927c41">&#9670;&nbsp;</a></span>Visit() <span class="overload">[8/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1041,12 +1075,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00251">251</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00275">275</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="ac36c115c3f5ecb7c1b16186fb6a11532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac36c115c3f5ecb7c1b16186fb6a11532">&#9670;&nbsp;</a></span>Visit() <span class="overload">[8/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36c115c3f5ecb7c1b16186fb6a11532">&#9670;&nbsp;</a></span>Visit() <span class="overload">[9/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1071,12 +1105,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00222">222</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00224">224</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a363458149e45a0c19df0d906a1dc99aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a363458149e45a0c19df0d906a1dc99aa">&#9670;&nbsp;</a></span>Visit() <span class="overload">[9/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a363458149e45a0c19df0d906a1dc99aa">&#9670;&nbsp;</a></span>Visit() <span class="overload">[10/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1101,12 +1135,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00214">214</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00216">216</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="ac0c777ba72b619d291c214b26fa81097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c777ba72b619d291c214b26fa81097">&#9670;&nbsp;</a></span>Visit() <span class="overload">[10/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0c777ba72b619d291c214b26fa81097">&#9670;&nbsp;</a></span>Visit() <span class="overload">[11/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1141,12 +1175,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00121">121</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00122">122</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="aeed6ecb7d94ca64ac5f3e828320cf937"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeed6ecb7d94ca64ac5f3e828320cf937">&#9670;&nbsp;</a></span>Visit() <span class="overload">[11/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed6ecb7d94ca64ac5f3e828320cf937">&#9670;&nbsp;</a></span>Visit() <span class="overload">[12/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1193,12 +1227,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00198">198</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00200">200</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a5180f11fc6d1ee6bf975c7e37bbedcbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5180f11fc6d1ee6bf975c7e37bbedcbe">&#9670;&nbsp;</a></span>Visit() <span class="overload">[12/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5180f11fc6d1ee6bf975c7e37bbedcbe">&#9670;&nbsp;</a></span>Visit() <span class="overload">[13/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1223,12 +1257,12 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00168">168</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00170">170</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
 <a id="a5633bdf662106ccf57adfdc2ebcb17ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5633bdf662106ccf57adfdc2ebcb17ed">&#9670;&nbsp;</a></span>Visit() <span class="overload">[13/13]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5633bdf662106ccf57adfdc2ebcb17ed">&#9670;&nbsp;</a></span>Visit() <span class="overload">[14/14]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1253,7 +1287,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00157">157</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00159">159</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1317,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00382">382</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00406">406</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1313,9 +1347,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00332">332</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00356">356</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00333">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVariableArrayType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00357">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVariableArrayType()</a>.</p>
 
 </div>
 </div>
@@ -1345,7 +1379,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00380">380</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00404">404</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1375,7 +1409,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00652">652</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00676">676</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1405,7 +1439,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00361">361</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00385">385</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1435,7 +1469,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00440">440</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00464">464</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1465,7 +1499,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00638">638</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00662">662</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1529,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00676">676</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00700">700</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1559,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00322">322</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00346">346</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1555,7 +1589,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00551">551</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00575">575</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1585,7 +1619,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00741">741</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00772">772</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1615,7 +1649,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00451">451</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00475">475</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1645,7 +1679,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00661">661</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00685">685</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1675,7 +1709,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00544">544</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00568">568</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1705,7 +1739,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00529">529</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00553">553</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1735,7 +1769,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00538">538</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00562">562</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1765,9 +1799,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00533">533</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00557">557</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00538">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplatePartialSpecializationDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00562">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitClassTemplatePartialSpecializationDecl()</a>.</p>
 
 </div>
 </div>
@@ -1797,7 +1831,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00317">317</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00341">341</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1827,7 +1861,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00593">593</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00617">617</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1857,7 +1891,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00598">598</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00622">622</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1887,7 +1921,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00657">657</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00681">681</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1917,7 +1951,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00732">732</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00763">763</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1947,7 +1981,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00752">752</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00783">783</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -1977,7 +2011,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00647">647</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00671">671</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2007,7 +2041,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00355">355</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00379">379</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2037,7 +2071,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00434">434</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00458">458</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2067,7 +2101,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00337">337</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00361">361</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2097,7 +2131,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00341">341</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00365">365</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2127,7 +2161,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00392">392</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00416">416</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2157,7 +2191,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00761">761</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00792">792</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2187,7 +2221,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00419">419</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00443">443</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2217,7 +2251,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00447">447</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00471">471</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2247,7 +2281,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00609">609</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00633">633</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2277,7 +2311,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00397">397</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00421">421</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2307,7 +2341,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00347">347</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00371">371</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2337,7 +2371,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00525">525</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00549">549</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2367,9 +2401,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00346">346</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00370">370</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00347">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionProtoType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00371">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitFunctionProtoType()</a>.</p>
 
 </div>
 </div>
@@ -2399,7 +2433,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00683">683</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00707">707</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2429,7 +2463,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00670">670</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00694">694</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2459,7 +2493,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00692">692</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00723">723</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2489,7 +2523,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00318">318</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00342">342</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2519,7 +2553,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00328">328</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00352">352</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2549,7 +2583,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00576">576</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00600">600</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2579,7 +2613,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00727">727</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00758">758</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2609,7 +2643,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00625">625</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00649">649</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2639,7 +2673,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00633">633</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00657">657</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2669,7 +2703,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00629">629</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00653">653</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2699,7 +2733,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00614">614</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00638">638</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2729,7 +2763,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00377">377</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00401">401</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2759,7 +2793,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00473">473</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00497">497</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2789,7 +2823,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00469">469</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00493">493</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2819,7 +2853,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00464">464</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00488">488</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2849,7 +2883,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00458">458</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00482">482</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2879,7 +2913,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00665">665</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00689">689</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2909,7 +2943,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00453">453</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00477">477</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2939,7 +2973,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00678">678</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00702">702</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2969,7 +3003,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00383">383</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00407">407</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -2999,7 +3033,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00769">769</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00800">800</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3029,7 +3063,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00381">381</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00405">405</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3059,7 +3093,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00321">321</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00345">345</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3089,7 +3123,37 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00325">325</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00349">349</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+
+</div>
+</div>
+<a id="a948c0e1b3e2d5c169b42e4e49fb816e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948c0e1b3e2d5c169b42e4e49fb816e3">&#9670;&nbsp;</a></span>VisitRequiresExpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Derived , typename NodeDelegateType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classclang_1_1ASTNodeTraverser.html">clang::ASTNodeTraverser</a>&lt; Derived, NodeDelegateType &gt;::VisitRequiresExpr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classclang_1_1RequiresExpr.html">RequiresExpr</a> *&#160;</td>
+          <td class="paramname"><em>E</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00716">716</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3119,7 +3183,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00712">712</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00743">743</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3149,7 +3213,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00520">520</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00544">544</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3179,7 +3243,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00718">718</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00749">749</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3209,7 +3273,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00721">721</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00752">752</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3239,7 +3303,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00369">369</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00393">393</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3269,7 +3333,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00365">365</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00389">389</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3299,7 +3363,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00373">373</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00397">397</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3329,7 +3393,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00585">585</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00609">609</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3359,7 +3423,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00567">567</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00591">591</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3389,7 +3453,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00511">511</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00535">535</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3419,7 +3483,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00515">515</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00539">539</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3449,7 +3513,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00390">390</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00414">414</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3479,7 +3543,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00352">352</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00376">376</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3509,7 +3573,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00765">765</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00796">796</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3539,7 +3603,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00358">358</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00382">382</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3569,7 +3633,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00604">604</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00628">628</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3599,9 +3663,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00426">426</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00450">450</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00434">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDecompositionDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00556">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplateSpecializationDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00458">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitDecompositionDecl()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00580">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplateSpecializationDecl()</a>.</p>
 
 </div>
 </div>
@@ -3631,7 +3695,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00333">333</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00357">357</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3661,7 +3725,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00549">549</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00573">573</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3691,7 +3755,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00561">561</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00585">585</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3721,9 +3785,9 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00556">556</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00580">580</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00561">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplatePartialSpecializationDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTNodeTraverser_8h_source.html#l00585">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitVarTemplatePartialSpecializationDecl()</a>.</p>
 
 </div>
 </div>
@@ -3753,7 +3817,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00345">345</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTNodeTraverser_8h_source.html#l00369">369</a> of file <a class="el" href="ASTNodeTraverser_8h_source.html">ASTNodeTraverser.h</a>.</p>
 
 </div>
 </div>
@@ -3763,7 +3827,7 @@ template&lt;typename Derived , typename NodeDelegateType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:31 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:12 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

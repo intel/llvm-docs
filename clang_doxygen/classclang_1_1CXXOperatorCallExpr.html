@@ -190,6 +190,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a32e4d50338ced19a9ccccfabc6455431 inherit pub_methods_classclang_1_1CallExpr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1CallExpr.html#a32e4d50338ced19a9ccccfabc6455431">setArg</a> (<a class="el" href="classunsigned.html">unsigned</a> Arg, <a class="el" href="classclang_1_1Expr.html">Expr</a> *ArgExpr)</td></tr>
 <tr class="memdesc:a32e4d50338ced19a9ccccfabc6455431 inherit pub_methods_classclang_1_1CallExpr"><td class="mdescLeft">&#160;</td><td class="mdescRight">setArg - Set the specified argument.  <a href="classclang_1_1CallExpr.html#a32e4d50338ced19a9ccccfabc6455431">More...</a><br /></td></tr>
 <tr class="separator:a32e4d50338ced19a9ccccfabc6455431 inherit pub_methods_classclang_1_1CallExpr"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f032ed702fe9d9ce993300079b41b4b inherit pub_methods_classclang_1_1CallExpr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1CallExpr.html#a9f032ed702fe9d9ce993300079b41b4b">computeDependence</a> ()</td></tr>
+<tr class="memdesc:a9f032ed702fe9d9ce993300079b41b4b inherit pub_methods_classclang_1_1CallExpr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute and set dependence bits.  <a href="classclang_1_1CallExpr.html#a9f032ed702fe9d9ce993300079b41b4b">More...</a><br /></td></tr>
+<tr class="separator:a9f032ed702fe9d9ce993300079b41b4b inherit pub_methods_classclang_1_1CallExpr"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7e7998eba080ba9a85f9b6cf628a850 inherit pub_methods_classclang_1_1CallExpr"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classclang_1_1CallExpr.html#af7e7998eba080ba9a85f9b6cf628a850">shrinkNumArgs</a> (<a class="el" href="classunsigned.html">unsigned</a> NewNumArgs)</td></tr>
 <tr class="memdesc:af7e7998eba080ba9a85f9b6cf628a850 inherit pub_methods_classclang_1_1CallExpr"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the number of arguments in this call expression.  <a href="classclang_1_1CallExpr.html#af7e7998eba080ba9a85f9b6cf628a850">More...</a><br /></td></tr>
 <tr class="separator:af7e7998eba080ba9a85f9b6cf628a850 inherit pub_methods_classclang_1_1CallExpr"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1116,9 +1119,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ExprCXX_8cpp_source.html#l00558">558</a> of file <a class="el" href="ExprCXX_8cpp_source.html">ExprCXX.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l00677">clang::ASTContext::Allocate()</a>, <a class="el" href="LangOptions_8h_source.html#l00617">clang::FPOptionsOverride::requiresTrailingStorage()</a>, <a class="el" href="Expr_8h_source.html#l02915">clang::CallExpr::sizeOfTrailingObjects()</a>, and <a class="el" href="Expr_8h_source.html#l02899">clang::CallExpr::UsesADL</a>.</p>
+<p class="reference">References <a class="el" href="ASTContext_8h_source.html#l00677">clang::ASTContext::Allocate()</a>, <a class="el" href="LangOptions_8h_source.html#l00629">clang::FPOptionsOverride::requiresTrailingStorage()</a>, <a class="el" href="Expr_8h_source.html#l02915">clang::CallExpr::sizeOfTrailingObjects()</a>, and <a class="el" href="Expr_8h_source.html#l02899">clang::CallExpr::UsesADL</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13236">clang::Sema::CreateOverloadedUnaryOp()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03659">clang::CodeGen::CodeGenFunction::GenerateObjCAtomicSetterCopyHelperFunction()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07908">clang::ASTNodeImporter::VisitCallExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13236">clang::Sema::CreateOverloadedUnaryOp()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03663">clang::CodeGen::CodeGenFunction::GenerateObjCAtomicSetterCopyHelperFunction()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07938">clang::ASTNodeImporter::VisitCallExpr()</a>.</p>
 
 </div>
 </div>
@@ -1320,7 +1323,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="ExprCXX_8h_source.html#l00150">150</a> of file <a class="el" href="ExprCXX_8h_source.html">ExprCXX.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03144">clang::CallExpr::getRParenLoc()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03155">clang::CallExpr::getRParenLoc()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ExprCXX_8h_source.html#l00152">getExprLoc()</a>, and <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>.</p>
 
@@ -1554,7 +1557,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:34 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:15 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

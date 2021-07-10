@@ -936,7 +936,7 @@ Additional Inherited Members</h2></td></tr>
 <p>After semantic analysis, the initializer list will represent the semantic form of the initializer, where the initializations of all subobjects are made explicit with nested <a class="el" href="classclang_1_1InitListExpr.html" title="Describes an C or C++ initializer list.">InitListExpr</a> nodes and C99 designators have been eliminated by placing the designated initializations into the subobject they initialize. Additionally, any "holes" in the initialization, where no initializer has been specified for a particular subobject, will be replaced with implicitly-generated <a class="el" href="classclang_1_1ImplicitValueInitExpr.html" title="Represents an implicitly-generated value initialization of an object of a given type.">ImplicitValueInitExpr</a> expressions that value-initialize the subobjects. Note, however, that the initializer lists may still have fewer initializers than there are elements to initialize within the object.</p>
 <p>After semantic analysis has completed, given an initializer list, method <a class="el" href="classclang_1_1InitListExpr.html#a649ec10f2623882178804d7d4b9f7624">isSemanticForm()</a> returns true if and only if this is the semantic form of the initializer list (note: the same AST node may at the same time be the syntactic form). Given the semantic form of the initializer list, one can retrieve the syntactic form of that initializer list (when different) using method <a class="el" href="classclang_1_1InitListExpr.html#af39d93fa3ef98a2b27c4479369a1883f">getSyntacticForm()</a>; the method returns null if applied to a initializer list which is already in syntactic form. Similarly, given the syntactic form (i.e., an initializer list such that <a class="el" href="classclang_1_1InitListExpr.html#a649ec10f2623882178804d7d4b9f7624">isSemanticForm()</a> returns false), one can retrieve the semantic form using method <a class="el" href="classclang_1_1InitListExpr.html#a846908b3877de1a625ae37e64512c284">getSemanticForm()</a>. Since many initializer lists have the same syntactic and semantic forms, <a class="el" href="classclang_1_1InitListExpr.html#af39d93fa3ef98a2b27c4479369a1883f">getSyntacticForm()</a> may return NULL, indicating that the current semantic initializer list also serves as its syntactic form. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04821">4821</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04832">4832</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7c18fa9d6eb9ba93cc0d5f6b1f7f6c86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c18fa9d6eb9ba93cc0d5f6b1f7f6c86">&#9670;&nbsp;</a></span>const_iterator</h2>
@@ -950,7 +950,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05022">5022</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05033">5033</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -966,7 +966,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05024">5024</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05035">5035</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -982,7 +982,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05021">5021</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05032">5032</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -998,7 +998,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05023">5023</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05034">5034</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1043,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02306">2306</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ComputeDependence_8cpp_source.html#l00024">clang::computeDependence()</a>, <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>, <a class="el" href="ASTVector_8h_source.html#l00219">clang::ASTVector&lt; T &gt;::insert()</a>, <a class="el" href="Expr_8h_source.html#l04996">sawArrayRangeDesignator()</a>, and <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>.</p>
+<p class="reference">References <a class="el" href="ComputeDependence_8cpp_source.html#l00024">clang::computeDependence()</a>, <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>, <a class="el" href="ASTVector_8h_source.html#l00219">clang::ASTVector&lt; T &gt;::insert()</a>, <a class="el" href="Expr_8h_source.html#l05007">sawArrayRangeDesignator()</a>, and <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1073,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Build an empty initializer list. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04848">4848</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04859">4859</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1101,7 +1101,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05026">5026</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05037">5037</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00097">clang::ASTVector&lt; T &gt;::begin()</a>.</p>
 
@@ -1130,7 +1130,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05027">5027</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05038">5038</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00097">clang::ASTVector&lt; T &gt;::begin()</a>.</p>
 
@@ -1159,7 +1159,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05008">5008</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05019">5019</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="StmtIterator_8h_source.html#l00155">clang::cast_away_const()</a>.</p>
 
@@ -1188,7 +1188,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05014">5014</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05025">5025</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00108">clang::ASTVector&lt; T &gt;::empty()</a>, and <a class="el" href="ASTVector_8h_source.html#l00109">clang::ASTVector&lt; T &gt;::size()</a>.</p>
 
@@ -1218,7 +1218,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05003">5003</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05014">5014</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1245,7 +1245,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05028">5028</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05039">5039</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>.</p>
 
@@ -1274,7 +1274,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05029">5029</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05040">5040</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>.</p>
 
@@ -1305,9 +1305,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>If this initializer list initializes an array with more elements than there are initializers in the list, specifies an expression to be used for value initialization of the rest of the elements. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04917">4917</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04928">4928</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04920">getArrayFiller()</a>, <a class="el" href="Expr_8h_source.html#l04927">hasArrayFiller()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00670">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04931">getArrayFiller()</a>, <a class="el" href="Expr_8h_source.html#l04938">hasArrayFiller()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>, and <a class="el" href="ASTNodeTraverser_8h_source.html#l00694">clang::ASTNodeTraverser&lt; ASTDumper, TextNodeDumper &gt;::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1334,9 +1334,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04920">4920</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04931">4931</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04917">getArrayFiller()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04928">getArrayFiller()</a>.</p>
 
 </div>
 </div>
@@ -1357,7 +1357,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02396">2396</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00097">clang::ASTVector&lt; T &gt;::begin()</a>, <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>, <a class="el" href="Expr_8h_source.html#l04982">getSyntacticForm()</a>, and <a class="el" href="SourceLocation_8h_source.html#l00111">clang::SourceLocation::isInvalid()</a>.</p>
+<p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00097">clang::ASTVector&lt; T &gt;::begin()</a>, <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>, <a class="el" href="Expr_8h_source.html#l04993">getSyntacticForm()</a>, and <a class="el" href="SourceLocation_8h_source.html#l00111">clang::SourceLocation::isInvalid()</a>.</p>
 
 </div>
 </div>
@@ -1378,7 +1378,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02414">2414</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="USRLocFinder_8cpp_source.html#l00167">End</a>, <a class="el" href="Expr_8h_source.html#l04982">getSyntacticForm()</a>, <a class="el" href="SourceLocation_8h_source.html#l00111">clang::SourceLocation::isInvalid()</a>, <a class="el" href="ASTVector_8h_source.html#l00103">clang::ASTVector&lt; T &gt;::rbegin()</a>, and <a class="el" href="ASTVector_8h_source.html#l00105">clang::ASTVector&lt; T &gt;::rend()</a>.</p>
+<p class="reference">References <a class="el" href="USRLocFinder_8cpp_source.html#l00167">End</a>, <a class="el" href="Expr_8h_source.html#l04993">getSyntacticForm()</a>, <a class="el" href="SourceLocation_8h_source.html#l00111">clang::SourceLocation::isInvalid()</a>, <a class="el" href="ASTVector_8h_source.html#l00103">clang::ASTVector&lt; T &gt;::rbegin()</a>, and <a class="el" href="ASTVector_8h_source.html#l00105">clang::ASTVector&lt; T &gt;::rend()</a>.</p>
 
 </div>
 </div>
@@ -1406,9 +1406,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04874">4874</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04885">4885</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>.</p>
 
 </div>
 </div>
@@ -1436,11 +1436,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04869">4869</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04880">4880</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaTemplateDeduction_8cpp_source.html#l04740">clang::Sema::DeduceAutoType()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04532">clang::CodeGen::CodeGenFunction::EmitInitListLValue()</a>, <a class="el" href="CGExprAgg_8cpp_source.html#l01876">GetNumNonZeroBytesInInit()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02385">isIdiomaticZeroInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02348">isStringLiteralInit()</a>, <a class="el" href="Expr_8cpp_source.html#l02362">isTransparent()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>, <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07072">visitLocalsRetainedByReferenceBinding()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaTemplateDeduction_8cpp_source.html#l04740">clang::Sema::DeduceAutoType()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04532">clang::CodeGen::CodeGenFunction::EmitInitListLValue()</a>, <a class="el" href="CGExprAgg_8cpp_source.html#l01876">GetNumNonZeroBytesInInit()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02385">isIdiomaticZeroInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02348">isStringLiteralInit()</a>, <a class="el" href="Expr_8cpp_source.html#l02362">isTransparent()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00737">clang::ento::ExprEngine::VisitInitListExpr()</a>, <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07072">visitLocalsRetainedByReferenceBinding()</a>.</p>
 
 </div>
 </div>
@@ -1470,9 +1470,9 @@ Additional Inherited Members</h2></td></tr>
 <p>If this initializes a union, specifies which field in the union to initialize. </p>
 <p>Typically, this field is the first named field within the union. However, a designated initializer can specify the initialization of a different field within the union. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04935">4935</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04946">4946</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04938">getInitializedFieldInUnion()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8h_source.html#l04941">setInitializedFieldInUnion()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l01061">clang::TextNodeDumper::VisitInitListExpr()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l01308">clang::JSONNodeDumper::VisitInitListExpr()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04949">getInitializedFieldInUnion()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8h_source.html#l04952">setInitializedFieldInUnion()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l01101">clang::TextNodeDumper::VisitInitListExpr()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l01341">clang::JSONNodeDumper::VisitInitListExpr()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>.</p>
 
 </div>
 </div>
@@ -1499,9 +1499,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04938">4938</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04949">4949</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04935">getInitializedFieldInUnion()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04946">getInitializedFieldInUnion()</a>.</p>
 
 </div>
 </div>
@@ -1530,11 +1530,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Retrieve the set of initializers. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04854">4854</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04865">4865</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00153">clang::ASTVector&lt; T &gt;::data()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04861">inits()</a>, and <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04872">inits()</a>, and <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>.</p>
 
 </div>
 </div>
@@ -1563,7 +1563,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Retrieve the set of initializers. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04857">4857</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04868">4868</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00153">clang::ASTVector&lt; T &gt;::data()</a>.</p>
 
@@ -1592,9 +1592,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04970">4970</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04981">4981</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1621,11 +1621,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04851">4851</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04862">4862</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00109">clang::ASTVector&lt; T &gt;::size()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaTemplateDeduction_8cpp_source.html#l04740">clang::Sema::DeduceAutoType()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l01554">clang::CodeGen::CodeGenFunction::EmitCXXNewExpr()</a>, <a class="el" href="Expr_8h_source.html#l04869">getInit()</a>, <a class="el" href="CGExprAgg_8cpp_source.html#l01876">GetNumNonZeroBytesInInit()</a>, <a class="el" href="Expr_8h_source.html#l04861">inits()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02385">isIdiomaticZeroInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02348">isStringLiteralInit()</a>, <a class="el" href="Expr_8cpp_source.html#l02362">isTransparent()</a>, <a class="el" href="SemaInit_8cpp_source.html#l03788">clang::InitializationSequence::RewrapReferenceInitList()</a>, <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>, <a class="el" href="Expr_8h_source.html#l04879">setInit()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaTemplateDeduction_8cpp_source.html#l04740">clang::Sema::DeduceAutoType()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l01554">clang::CodeGen::CodeGenFunction::EmitCXXNewExpr()</a>, <a class="el" href="Expr_8h_source.html#l04880">getInit()</a>, <a class="el" href="CGExprAgg_8cpp_source.html#l01876">GetNumNonZeroBytesInInit()</a>, <a class="el" href="Expr_8h_source.html#l04872">inits()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02385">isIdiomaticZeroInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02348">isStringLiteralInit()</a>, <a class="el" href="Expr_8cpp_source.html#l02362">isTransparent()</a>, <a class="el" href="SemaInit_8cpp_source.html#l03788">clang::InitializationSequence::RewrapReferenceInitList()</a>, <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>, <a class="el" href="Expr_8h_source.html#l04890">setInit()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00737">clang::ento::ExprEngine::VisitInitListExpr()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>.</p>
 
 </div>
 </div>
@@ -1652,9 +1652,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04972">4972</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04983">4983</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1681,9 +1681,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04976">4976</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04987">4987</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04975">isSemanticForm()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04986">isSemanticForm()</a>.</p>
 
 </div>
 </div>
@@ -1710,11 +1710,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04982">4982</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04993">4993</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04975">isSemanticForm()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04986">isSemanticForm()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02396">getBeginLoc()</a>, <a class="el" href="Expr_8cpp_source.html#l02414">getEndLoc()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02396">getBeginLoc()</a>, <a class="el" href="Expr_8cpp_source.html#l02414">getEndLoc()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1741,11 +1741,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04993">4993</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05004">5004</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01035">clang::Stmt::InitListExprBits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1774,11 +1774,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return true if this is an array initializer and its array "filler" has been set. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04927">4927</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04938">4938</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04917">getArrayFiller()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04928">getArrayFiller()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1805,11 +1805,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04861">4861</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04872">4872</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04854">getInits()</a>, and <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04865">getInits()</a>, and <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ComputeDependence_8cpp_source.html#l00614">clang::computeDependence()</a>, <a class="el" href="SemaTemplateDeduction_8cpp_source.html#l04740">clang::Sema::DeduceAutoType()</a>, <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ComputeDependence_8cpp_source.html#l00614">clang::computeDependence()</a>, <a class="el" href="SemaTemplateDeduction_8cpp_source.html#l04740">clang::Sema::DeduceAutoType()</a>, <a class="el" href="Expr_8cpp_source.html#l02338">setArrayFiller()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -1836,9 +1836,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04865">4865</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04876">4876</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04854">getInits()</a>, and <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04865">getInits()</a>, and <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>.</p>
 
 </div>
 </div>
@@ -1865,7 +1865,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04953">4953</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04964">4964</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="SourceLocation_8h_source.html#l00110">clang::SourceLocation::isValid()</a>.</p>
 
@@ -1891,7 +1891,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02385">2385</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04869">getInit()</a>, <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l01466">clang::APIntStorage::getValue()</a>, <a class="el" href="Expr_8cpp_source.html#l02963">clang::Expr::IgnoreImplicit()</a>, and <a class="el" href="Expr_8h_source.html#l04979">isSyntacticForm()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04880">getInit()</a>, <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l01466">clang::APIntStorage::getValue()</a>, <a class="el" href="Expr_8cpp_source.html#l02963">clang::Expr::IgnoreImplicit()</a>, and <a class="el" href="Expr_8h_source.html#l04990">isSyntacticForm()</a>.</p>
 
 </div>
 </div>
@@ -1918,9 +1918,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04975">4975</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04986">4986</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04976">getSemanticForm()</a>, <a class="el" href="Expr_8h_source.html#l04982">getSyntacticForm()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02362">isTransparent()</a>, and <a class="el" href="Expr_8h_source.html#l04889">markError()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04987">getSemanticForm()</a>, <a class="el" href="Expr_8h_source.html#l04993">getSyntacticForm()</a>, <a class="el" href="Expr_8cpp_source.html#l03203">clang::Expr::isConstantInitializer()</a>, <a class="el" href="Expr_8cpp_source.html#l02362">isTransparent()</a>, and <a class="el" href="Expr_8h_source.html#l04900">markError()</a>.</p>
 
 </div>
 </div>
@@ -1941,7 +1941,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02348">2348</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Type_8h_source.html#l07239">clang::Type::getAsArrayTypeUnsafe()</a>, <a class="el" href="Type_8h_source.html#l02908">clang::ArrayType::getElementType()</a>, <a class="el" href="Expr_8h_source.html#l04869">getInit()</a>, <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="Type_8h_source.html#l07014">clang::Type::isIntegerType()</a>.</p>
+<p class="reference">References <a class="el" href="Type_8h_source.html#l07239">clang::Type::getAsArrayTypeUnsafe()</a>, <a class="el" href="Type_8h_source.html#l02908">clang::ArrayType::getElementType()</a>, <a class="el" href="Expr_8h_source.html#l04880">getInit()</a>, <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="Type_8h_source.html#l07014">clang::Type::isIntegerType()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CGExprCXX_8cpp_source.html#l01554">clang::CodeGen::CodeGenFunction::EmitCXXNewExpr()</a>.</p>
 
@@ -1970,7 +1970,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04979">4979</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04990">4990</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02385">isIdiomaticZeroInitializer()</a>.</p>
 
@@ -1995,9 +1995,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02362">2362</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Type_8h_source.html#l06476">clang::QualType::getCanonicalType()</a>, <a class="el" href="Expr_8h_source.html#l04869">getInit()</a>, <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8h_source.html#l00273">clang::Expr::isGLValue()</a>, <a class="el" href="Expr_8h_source.html#l00271">clang::Expr::isPRValue()</a>, <a class="el" href="SemaExprMember_8cpp_source.html#l01215">isRecordType()</a>, and <a class="el" href="Expr_8h_source.html#l04975">isSemanticForm()</a>.</p>
+<p class="reference">References <a class="el" href="Type_8h_source.html#l06476">clang::QualType::getCanonicalType()</a>, <a class="el" href="Expr_8h_source.html#l04880">getInit()</a>, <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8h_source.html#l00273">clang::Expr::isGLValue()</a>, <a class="el" href="Expr_8h_source.html#l00271">clang::Expr::isPRValue()</a>, <a class="el" href="SemaExprMember_8cpp_source.html#l01215">isRecordType()</a>, and <a class="el" href="Expr_8h_source.html#l04986">isSemanticForm()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGExpr_8cpp_source.html#l04532">clang::CodeGen::CodeGenFunction::EmitInitListLValue()</a>, <a class="el" href="CGExprAgg_8cpp_source.html#l01876">GetNumNonZeroBytesInInit()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>, <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07072">visitLocalsRetainedByReferenceBinding()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGExpr_8cpp_source.html#l04532">clang::CodeGen::CodeGenFunction::EmitInitListLValue()</a>, <a class="el" href="CGExprAgg_8cpp_source.html#l01876">GetNumNonZeroBytesInInit()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00737">clang::ento::ExprEngine::VisitInitListExpr()</a>, <a class="el" href="SemaInit_8cpp_source.html#l07200">visitLocalsRetainedByInitializer()</a>, and <a class="el" href="SemaInit_8cpp_source.html#l07072">visitLocalsRetainedByReferenceBinding()</a>.</p>
 
 </div>
 </div>
@@ -2026,9 +2026,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Mark the semantic form of the <a class="el" href="classclang_1_1InitListExpr.html" title="Describes an C or C++ initializer list.">InitListExpr</a> as error when the semantic analysis fails. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04889">4889</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04900">4900</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l00155">clang::Expr::getDependence()</a>, <a class="el" href="Expr_8h_source.html#l04975">isSemanticForm()</a>, and <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l00155">clang::Expr::getDependence()</a>, <a class="el" href="Expr_8h_source.html#l04986">isSemanticForm()</a>, and <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>.</p>
 
 </div>
 </div>
@@ -2055,11 +2055,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05030">5030</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05041">5041</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00103">clang::ASTVector&lt; T &gt;::rbegin()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineC_8cpp_source.html#l00737">clang::ento::ExprEngine::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -2086,7 +2086,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05031">5031</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05042">5042</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00103">clang::ASTVector&lt; T &gt;::rbegin()</a>.</p>
 
@@ -2115,11 +2115,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05032">5032</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05043">5043</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00105">clang::ASTVector&lt; T &gt;::rend()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprEngineC_8cpp_source.html#l00749">clang::ento::ExprEngine::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprEngineC_8cpp_source.html#l00737">clang::ento::ExprEngine::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -2146,7 +2146,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05033">5033</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05044">5044</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00105">clang::ASTVector&lt; T &gt;::rend()</a>.</p>
 
@@ -2245,11 +2245,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04996">4996</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05007">5007</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01035">clang::Stmt::InitListExprBits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02306">InitListExpr()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02306">InitListExpr()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -2271,9 +2271,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02338">2338</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04854">getInits()</a>, <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l04927">hasArrayFiller()</a>, and <a class="el" href="Expr_8h_source.html#l04861">inits()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04865">getInits()</a>, <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>, <a class="el" href="Expr_8h_source.html#l04938">hasArrayFiller()</a>, and <a class="el" href="Expr_8h_source.html#l04872">inits()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -2311,9 +2311,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04879">4879</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04890">4890</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="Expr_8h_source.html#l00155">clang::Expr::getDependence()</a>, <a class="el" href="Expr_8h_source.html#l04851">getNumInits()</a>, and <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>.</p>
+<p class="reference">References <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="Expr_8h_source.html#l00155">clang::Expr::getDependence()</a>, <a class="el" href="Expr_8h_source.html#l04862">getNumInits()</a>, and <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l02326">updateInit()</a>.</p>
 
@@ -2343,11 +2343,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04941">4941</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04952">4952</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04935">getInitializedFieldInUnion()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04946">getInitializedFieldInUnion()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -2375,7 +2375,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04971">4971</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04982">4982</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2403,7 +2403,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04973">4973</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04984">4984</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2431,9 +2431,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04986">4986</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04997">4997</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07963">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07993">clang::ASTNodeImporter::VisitInitListExpr()</a>.</p>
 
 </div>
 </div>
@@ -2474,7 +2474,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02326">2326</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="ASTVector_8h_source.html#l00219">clang::ASTVector&lt; T &gt;::insert()</a>, <a class="el" href="Expr_8h_source.html#l04879">setInit()</a>, and <a class="el" href="ASTVector_8h_source.html#l00109">clang::ASTVector&lt; T &gt;::size()</a>.</p>
+<p class="reference">References <a class="el" href="ASTVector_8h_source.html#l00099">clang::ASTVector&lt; T &gt;::end()</a>, <a class="el" href="ASTMatchersInternal_8cpp_source.html#l00876">clang::ast_matchers::expr</a>, <a class="el" href="ASTVector_8h_source.html#l00219">clang::ASTVector&lt; T &gt;::insert()</a>, <a class="el" href="Expr_8h_source.html#l04890">setInit()</a>, and <a class="el" href="ASTVector_8h_source.html#l00109">clang::ASTVector&lt; T &gt;::size()</a>.</p>
 
 </div>
 </div>
@@ -2499,7 +2499,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05035">5035</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05046">5046</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2523,7 +2523,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05036">5036</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l05047">5047</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2535,7 +2535,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="ttc" id="aCodeGen_2README_8txt_html_a2f5467b833926827f4292d3ba7fea003"><div class="ttname"><a href="CodeGen_2README_8txt.html#a2f5467b833926827f4292d3ba7fea003">x</a></div><div class="ttdeci">IRgen optimization opportunities The common pattern of short x</div><div class="ttdef"><b>Definition:</b> <a href="CodeGen_2README_8txt_source.html#l00007">README.txt:7</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:37 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:19 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

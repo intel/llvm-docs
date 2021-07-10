@@ -1,8 +1,9 @@
 var namespacecl_1_1sycl_1_1INTEL =
 [
     [ "property", "namespacecl_1_1sycl_1_1INTEL_1_1property.html", "namespacecl_1_1sycl_1_1INTEL_1_1property" ],
-    [ "_GetValue", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue" ],
-    [ "_GetValue< _Type, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4" ],
+    [ "_GetValue", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", null ],
+    [ "_GetValue< _D >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_01_4.html", null ],
+    [ "_GetValue< _D, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_00_01__T1_00_01__T_8_8_8_01_4.html", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_00_01__T1_00_01__T_8_8_8_01_4" ],
     [ "_MatchType", "structcl_1_1sycl_1_1INTEL_1_1__MatchType.html", null ],
     [ "burst_coalesce_impl", "structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html", "structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl" ],
     [ "cache", "structcl_1_1sycl_1_1INTEL_1_1cache.html", "structcl_1_1sycl_1_1INTEL_1_1cache" ],

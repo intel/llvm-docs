@@ -290,7 +290,7 @@ $(document).ready(function(){initNavTree('handler_8cpp_source.html',''); initRes
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    CommandGroup.reset(<span class="keyword">new</span> detail::CGAdviseUSM(</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        MDstPtr, MLength, std::move(MArgsStorage), std::move(MAccStorage),</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        std::move(MSharedPtrStorage), std::move(MRequirements),</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        std::move(MEvents), MCodeLoc));</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        std::move(MEvents), MCGType, MCodeLoc));</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ad9c25fb4fc5b6b68246f8f590082e061">detail::CG::CODEPLAY_HOST_TASK</a>:</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    CommandGroup.reset(<span class="keyword">new</span> detail::CGHostTask(</div>
@@ -586,7 +586,7 @@ $(document).ready(function(){initNavTree('handler_8cpp_source.html',''); initRes
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  MSrcPtr = <span class="keyword">const_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(Src);</div>
 <div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;  MDstPtr = Dest;</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  MLength = Count;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  MCGType = <a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208aac6fede0ce27acc0208f4610a0f27fd4">detail::CG::COPY_USM</a>;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  setType(<a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208aac6fede0ce27acc0208f4610a0f27fd4">detail::CG::COPY_USM</a>);</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;}</div>
 <div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160; </div>
 <div class="line"><a name="l00494"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540">  494</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1handler.html#abacc9b24930b0343613e9746734ec540">handler::memset</a>(<span class="keywordtype">void</span> *Dest, <span class="keywordtype">int</span> Value, <span class="keywordtype">size_t</span> Count) {</div>
@@ -594,21 +594,21 @@ $(document).ready(function(){initNavTree('handler_8cpp_source.html',''); initRes
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;  MDstPtr = Dest;</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;  MPattern.push_back(<span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(Value));</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;  MLength = Count;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  MCGType = <a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a5d1025f00ce039627cd01a97e08a6eb1">detail::CG::FILL_USM</a>;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  setType(<a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a5d1025f00ce039627cd01a97e08a6eb1">detail::CG::FILL_USM</a>);</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;}</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160; </div>
 <div class="line"><a name="l00502"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863">  502</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1handler.html#a2e350f915111b129b22eba2989382863">handler::prefetch</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *Ptr, <span class="keywordtype">size_t</span> Count) {</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;  throwIfActionIsCreated();</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  MDstPtr = <span class="keyword">const_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(Ptr);</div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  MLength = Count;</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;  MCGType = <a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a789955d1c8083d18f9bf4c01e2c0884a">detail::CG::PREFETCH_USM</a>;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;  setType(<a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208a789955d1c8083d18f9bf4c01e2c0884a">detail::CG::PREFETCH_USM</a>);</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;}</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
 <div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1handler.html#a6ca90710f6b43247d881c0a8648706f4">  509</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcl_1_1sycl_1_1handler.html#a6ca90710f6b43247d881c0a8648706f4">handler::mem_advise</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *Ptr, <span class="keywordtype">size_t</span> Count, <a class="code" href="pi_8h.html#a286bf19d79f0e65f8137d269f037798b">pi_mem_advice</a> Advice) {</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  throwIfActionIsCreated();</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;  MDstPtr = <span class="keyword">const_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(Ptr);</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;  MLength = Count;</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  MCGType = <a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ae67cc669236c0c3ac66e51b043e59ddc">detail::CG::ADVISE_USM</a>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  setType(<a class="code" href="classcl_1_1sycl_1_1detail_1_1CG.html#a8b1458546a649db385316dd9554a1208ae67cc669236c0c3ac66e51b043e59ddc">detail::CG::ADVISE_USM</a>);</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160; </div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  assert(!MSharedPtrStorage.empty());</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; </div>

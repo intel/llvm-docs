@@ -1,7 +1,5 @@
 var NAVTREEINDEX35 =
 {
-"structcl_1_1sycl_1_1ONEAPI_1_1property_1_1no__offset_1_1instance.html#ae8039bccec338a083cc6a2de734fbd45":[3,0,1,1,4,2,1,0,1],
-"structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html":[3,0,1,1,4,17],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a0a3bfb3ed16e586a1711c590cb146991":[3,0,1,1,4,17,23],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a1d0e78305d9f8565e7acfda64b1870b0":[3,0,1,1,4,17,25],
 "structcl_1_1sycl_1_1ONEAPI_1_1sub__group.html#a2dfb292133ca379eb7b47d8628b87d2f":[3,0,1,1,4,17,15],
@@ -249,5 +247,7 @@ var NAVTREEINDEX35 =
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#aae4c5827d76024eff29b3b5c325e5241":[1,3,1,0],
 "structcl_1_1sycl_1_1detail_1_1MemObjRecord.html#ac273fa8bbe1679327416b3c2eec5a9d4":[1,3,1,1],
 "structcl_1_1sycl_1_1detail_1_1NDLoop.html":[3,0,1,1,0,286],
-"structcl_1_1sycl_1_1detail_1_1NDLoop.html#a9434e1180a2cf66eea087e967a95f4dc":[3,0,1,1,0,286,1]
+"structcl_1_1sycl_1_1detail_1_1NDLoop.html#a9434e1180a2cf66eea087e967a95f4dc":[3,0,1,1,0,286,1],
+"structcl_1_1sycl_1_1detail_1_1NDLoop.html#ad3177e9c10ac738c0f9e159c8673bda2":[3,0,1,1,0,286,0],
+"structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl.html":[3,0,1,1,0,287]
 };

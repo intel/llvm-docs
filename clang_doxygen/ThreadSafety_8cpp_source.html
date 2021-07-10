@@ -914,7 +914,7 @@ $(function() {
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;  handleRemovalFromIntersection(<span class="keyword">const</span> FactSet &amp;FSet, FactManager &amp;FactMan,</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                                <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> JoinLoc, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK,</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                                <a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html">ThreadSafetyHandler</a> &amp;Handler)<span class="keyword"> const override </span>{</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <span class="keywordflow">if</span> (!managed() &amp;&amp; !asserted() &amp;&amp; !negative() &amp;&amp; !isUniversal()) {</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;    <span class="keywordflow">if</span> (!asserted() &amp;&amp; !negative() &amp;&amp; !isUniversal()) {</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;      Handler.<a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#afb0f47f4aadbec685a97bbfb62a08eb9">handleMutexHeldEndOfScope</a>(<span class="stringliteral">&quot;mutex&quot;</span>, <a class="code" href="namespaceclang_1_1threadSafety_1_1sx.html#ae17443dfb73305637d8d327cc2fd0058">toString</a>(), loc(), JoinLoc,</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;                                        LEK);</div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;    }</div>
@@ -1101,13 +1101,13 @@ $(function() {
 <div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160; </div>
 <div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160;  <span class="keywordtype">bool</span> join(<span class="keyword">const</span> FactEntry &amp;a, <span class="keyword">const</span> FactEntry &amp;<a class="code" href="____clang__hip__libdevice__declares_8h.html#a373e9fc646873cd20f2c9fdb7125a207">b</a>);</div>
 <div class="line"><a name="l01054"></a><span class="lineno"> 1054</span>&#160; </div>
-<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;  <span class="keywordtype">void</span> intersectAndWarn(FactSet &amp;FSet1, <span class="keyword">const</span> FactSet &amp;FSet2,</div>
-<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;                        <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> JoinLoc, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK1,</div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;                        <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK2);</div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160;  <span class="keywordtype">void</span> intersectAndWarn(FactSet &amp;EntrySet, <span class="keyword">const</span> FactSet &amp;ExitSet,</div>
+<div class="line"><a name="l01056"></a><span class="lineno"> 1056</span>&#160;                        <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> JoinLoc, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> EntryLEK,</div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;                        <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> ExitLEK);</div>
 <div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160; </div>
-<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;  <span class="keywordtype">void</span> intersectAndWarn(FactSet &amp;FSet1, <span class="keyword">const</span> FactSet &amp;FSet2,</div>
-<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;                        <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> JoinLoc, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK1) {</div>
-<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    intersectAndWarn(FSet1, FSet2, JoinLoc, LEK1, LEK1);</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;  <span class="keywordtype">void</span> intersectAndWarn(FactSet &amp;EntrySet, <span class="keyword">const</span> FactSet &amp;ExitSet,</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;                        <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> JoinLoc, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK) {</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160;    intersectAndWarn(EntrySet, ExitSet, JoinLoc, LEK, LEK);</div>
 <div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;  }</div>
 <div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160; </div>
 <div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;  <span class="keywordtype">void</span> runAnalysis(<a class="code" href="classclang_1_1AnalysisDeclContext.html">AnalysisDeclContext</a> &amp;AC);</div>
@@ -2268,377 +2268,379 @@ $(function() {
 <div class="line"><a name="l02219"></a><span class="lineno"> 2219</span>&#160;<span class="comment">/// are the same. In the event of a difference, we use the intersection of these</span></div>
 <div class="line"><a name="l02220"></a><span class="lineno"> 2220</span>&#160;<span class="comment">/// two locksets at the start of D.</span></div>
 <div class="line"><a name="l02221"></a><span class="lineno"> 2221</span>&#160;<span class="comment">///</span></div>
-<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;<span class="comment">/// \param FSet1 The first lockset.</span></div>
-<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;<span class="comment">/// \param FSet2 The second lockset.</span></div>
+<div class="line"><a name="l02222"></a><span class="lineno"> 2222</span>&#160;<span class="comment">/// \param EntrySet A lockset for entry into a (possibly new) block.</span></div>
+<div class="line"><a name="l02223"></a><span class="lineno"> 2223</span>&#160;<span class="comment">/// \param ExitSet The lockset on exiting a preceding block.</span></div>
 <div class="line"><a name="l02224"></a><span class="lineno"> 2224</span>&#160;<span class="comment">/// \param JoinLoc The location of the join point for error reporting</span></div>
-<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;<span class="comment">/// \param LEK1 The error message to report if a mutex is missing from LSet1</span></div>
-<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;<span class="comment">/// \param LEK2 The error message to report if a mutex is missing from Lset2</span></div>
-<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> ThreadSafetyAnalyzer::intersectAndWarn(FactSet &amp;FSet1,</div>
-<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;                                            <span class="keyword">const</span> FactSet &amp;FSet2,</div>
+<div class="line"><a name="l02225"></a><span class="lineno"> 2225</span>&#160;<span class="comment">/// \param EntryLEK The warning if a mutex is missing from \p EntrySet.</span></div>
+<div class="line"><a name="l02226"></a><span class="lineno"> 2226</span>&#160;<span class="comment">/// \param ExitLEK The warning if a mutex is missing from \p ExitSet.</span></div>
+<div class="line"><a name="l02227"></a><span class="lineno"> 2227</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> ThreadSafetyAnalyzer::intersectAndWarn(FactSet &amp;EntrySet,</div>
+<div class="line"><a name="l02228"></a><span class="lineno"> 2228</span>&#160;                                            <span class="keyword">const</span> FactSet &amp;ExitSet,</div>
 <div class="line"><a name="l02229"></a><span class="lineno"> 2229</span>&#160;                                            <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> JoinLoc,</div>
-<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;                                            <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK1,</div>
-<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;                                            <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> LEK2) {</div>
-<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;  FactSet FSet1Orig = FSet1;</div>
+<div class="line"><a name="l02230"></a><span class="lineno"> 2230</span>&#160;                                            <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> EntryLEK,</div>
+<div class="line"><a name="l02231"></a><span class="lineno"> 2231</span>&#160;                                            <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">LockErrorKind</a> ExitLEK) {</div>
+<div class="line"><a name="l02232"></a><span class="lineno"> 2232</span>&#160;  FactSet EntrySetOrig = EntrySet;</div>
 <div class="line"><a name="l02233"></a><span class="lineno"> 2233</span>&#160; </div>
-<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;  <span class="comment">// Find locks in FSet2 that conflict or are not in FSet1, and warn.</span></div>
-<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Fact : FSet2) {</div>
-<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    <span class="keyword">const</span> FactEntry &amp;LDat2 = FactMan[Fact];</div>
+<div class="line"><a name="l02234"></a><span class="lineno"> 2234</span>&#160;  <span class="comment">// Find locks in ExitSet that conflict or are not in EntrySet, and warn.</span></div>
+<div class="line"><a name="l02235"></a><span class="lineno"> 2235</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Fact : ExitSet) {</div>
+<div class="line"><a name="l02236"></a><span class="lineno"> 2236</span>&#160;    <span class="keyword">const</span> FactEntry &amp;ExitFact = FactMan[Fact];</div>
 <div class="line"><a name="l02237"></a><span class="lineno"> 2237</span>&#160; </div>
-<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;    FactSet::iterator Iter1 = FSet1.findLockIter(FactMan, LDat2);</div>
-<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;    <span class="keywordflow">if</span> (Iter1 != FSet1.end()) {</div>
-<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;      <span class="keywordflow">if</span> (join(FactMan[*Iter1], LDat2) &amp;&amp; LEK1 == <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>)</div>
-<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;        *Iter1 = Fact;</div>
-<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;      LDat2.handleRemovalFromIntersection(FSet2, FactMan, JoinLoc, LEK1,</div>
-<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;                                          Handler);</div>
-<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;    }</div>
-<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;  }</div>
-<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160; </div>
-<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160;  <span class="comment">// Find locks in FSet1 that are not in FSet2, and remove them.</span></div>
-<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Fact : FSet1Orig) {</div>
-<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;    <span class="keyword">const</span> FactEntry *LDat1 = &amp;FactMan[Fact];</div>
-<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;    <span class="keyword">const</span> FactEntry *LDat2 = FSet2.findLock(FactMan, *LDat1);</div>
-<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160; </div>
-<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160;    <span class="keywordflow">if</span> (!LDat2) {</div>
-<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;      LDat1-&gt;handleRemovalFromIntersection(FSet1Orig, FactMan, JoinLoc, LEK2,</div>
-<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;                                           Handler);</div>
-<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;      <span class="keywordflow">if</span> (LEK2 == <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>)</div>
-<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;        FSet1.removeLock(FactMan, *LDat1);</div>
-<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;    }</div>
-<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;  }</div>
-<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;}</div>
-<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160; </div>
-<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;<span class="comment">// Return true if block B never continues to its successors.</span></div>
-<div class="line"><a name="l02263"></a><span class="lineno"><a class="line" href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd"> 2263</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd">neverReturns</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1CFGBlock.html">CFGBlock</a> *B) {</div>
-<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;  <span class="keywordflow">if</span> (B-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a45a59f50f8b93e0bc8f611b8c61bb8d1">hasNoReturnElement</a>())</div>
-<div class="line"><a name="l02265"></a><span class="lineno"> 2265</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;  <span class="keywordflow">if</span> (B-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a84d2304881d190c71003705f4e18b66f">empty</a>())</div>
-<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160; </div>
-<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;  <a class="code" href="classclang_1_1CFGElement.html">CFGElement</a> <a class="code" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578ad55b30607c2a9a2616347d6edb789f6b">Last</a> = B-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a490ee6b84a4e16ab46d2a323a267c263">back</a>();</div>
-<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classllvm_1_1Optional.html">Optional&lt;CFGStmt&gt;</a> S = <a class="code" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578ad55b30607c2a9a2616347d6edb789f6b">Last</a>.getAs&lt;<a class="code" href="classclang_1_1CFGStmt.html">CFGStmt</a>&gt;()) {</div>
-<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;    <span class="keywordflow">if</span> (isa&lt;CXXThrowExpr&gt;(S-&gt;getStmt()))</div>
-<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;  }</div>
-<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;}</div>
-<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;<span class="comment">/// Check a function&#39;s CFG for thread-safety violations.</span></div>
-<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;<span class="comment">///</span></div>
-<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;<span class="comment">/// We traverse the blocks in the CFG, compute the set of mutexes that are held</span></div>
-<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;<span class="comment">/// at the end of each block, and issue warnings for thread safety violations.</span></div>
-<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;<span class="comment">/// Each block in the CFG is traversed exactly once.</span></div>
-<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> ThreadSafetyAnalyzer::runAnalysis(<a class="code" href="classclang_1_1AnalysisDeclContext.html">AnalysisDeclContext</a> &amp;AC) {</div>
-<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;  <span class="comment">// TODO: this whole function needs be rewritten as a visitor for CFGWalker.</span></div>
-<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;  <span class="comment">// For now, we just use the walker to set things up.</span></div>
-<div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;  <a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html">threadSafety::CFGWalker</a> walker;</div>
-<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;  <span class="keywordflow">if</span> (!walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#ad43eb99c009b8166acf7d40e536fdf42">init</a>(AC))</div>
-<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160; </div>
-<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;  <span class="comment">// AC.dumpCFG(true);</span></div>
-<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160;  <span class="comment">// threadSafety::printSCFG(walker);</span></div>
-<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160; </div>
-<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;  <a class="code" href="classclang_1_1CFG.html">CFG</a> *CFGraph = walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#ab954fd5afa8b7b6f7b21b6a38b7233f2">getGraph</a>();</div>
-<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1NamedDecl.html">NamedDecl</a> *D = walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#aeaa7e6dcc489652447796e3f296cae4e">getDecl</a>();</div>
-<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> *CurrentFunction = dyn_cast&lt;FunctionDecl&gt;(D);</div>
-<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;  CurrentMethod = dyn_cast&lt;CXXMethodDecl&gt;(D);</div>
-<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160; </div>
-<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;  <span class="keywordflow">if</span> (D-&gt;<a class="code" href="classclang_1_1Decl.html#ae7a63b99398864d86f53afd8a03c359b">hasAttr</a>&lt;NoThreadSafetyAnalysisAttr&gt;())</div>
-<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160; </div>
-<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;  <span class="comment">// FIXME: Do something a bit more intelligent inside constructor and</span></div>
-<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160;  <span class="comment">// destructor code.  Constructors and destructors must assume unique access</span></div>
-<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;  <span class="comment">// to &#39;this&#39;, so checks on member variable access is disabled, but we should</span></div>
-<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;  <span class="comment">// still enable checks on other objects.</span></div>
-<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;  <span class="keywordflow">if</span> (isa&lt;CXXConstructorDecl&gt;(D))</div>
-<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;    <span class="keywordflow">return</span>;  <span class="comment">// Don&#39;t check inside constructors.</span></div>
-<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;  <span class="keywordflow">if</span> (isa&lt;CXXDestructorDecl&gt;(D))</div>
-<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;    <span class="keywordflow">return</span>;  <span class="comment">// Don&#39;t check inside destructors.</span></div>
-<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160; </div>
-<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;  Handler.<a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#a4ed766b3ebeea66775f54c18229c5a40">enterFunction</a>(CurrentFunction);</div>
+<div class="line"><a name="l02238"></a><span class="lineno"> 2238</span>&#160;    FactSet::iterator EntryIt = EntrySet.findLockIter(FactMan, ExitFact);</div>
+<div class="line"><a name="l02239"></a><span class="lineno"> 2239</span>&#160;    <span class="keywordflow">if</span> (EntryIt != EntrySet.end()) {</div>
+<div class="line"><a name="l02240"></a><span class="lineno"> 2240</span>&#160;      <span class="keywordflow">if</span> (join(FactMan[*EntryIt], ExitFact) &amp;&amp;</div>
+<div class="line"><a name="l02241"></a><span class="lineno"> 2241</span>&#160;          EntryLEK == <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>)</div>
+<div class="line"><a name="l02242"></a><span class="lineno"> 2242</span>&#160;        *EntryIt = Fact;</div>
+<div class="line"><a name="l02243"></a><span class="lineno"> 2243</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!ExitFact.managed()) {</div>
+<div class="line"><a name="l02244"></a><span class="lineno"> 2244</span>&#160;      ExitFact.handleRemovalFromIntersection(ExitSet, FactMan, JoinLoc,</div>
+<div class="line"><a name="l02245"></a><span class="lineno"> 2245</span>&#160;                                             EntryLEK, Handler);</div>
+<div class="line"><a name="l02246"></a><span class="lineno"> 2246</span>&#160;    }</div>
+<div class="line"><a name="l02247"></a><span class="lineno"> 2247</span>&#160;  }</div>
+<div class="line"><a name="l02248"></a><span class="lineno"> 2248</span>&#160; </div>
+<div class="line"><a name="l02249"></a><span class="lineno"> 2249</span>&#160;  <span class="comment">// Find locks in EntrySet that are not in ExitSet, and remove them.</span></div>
+<div class="line"><a name="l02250"></a><span class="lineno"> 2250</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Fact : EntrySetOrig) {</div>
+<div class="line"><a name="l02251"></a><span class="lineno"> 2251</span>&#160;    <span class="keyword">const</span> FactEntry *EntryFact = &amp;FactMan[Fact];</div>
+<div class="line"><a name="l02252"></a><span class="lineno"> 2252</span>&#160;    <span class="keyword">const</span> FactEntry *ExitFact = ExitSet.findLock(FactMan, *EntryFact);</div>
+<div class="line"><a name="l02253"></a><span class="lineno"> 2253</span>&#160; </div>
+<div class="line"><a name="l02254"></a><span class="lineno"> 2254</span>&#160;    <span class="keywordflow">if</span> (!ExitFact) {</div>
+<div class="line"><a name="l02255"></a><span class="lineno"> 2255</span>&#160;      <span class="keywordflow">if</span> (!EntryFact-&gt;managed() || ExitLEK == <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a6d98812ce083318b61532c36bbfab900">LEK_LockedSomeLoopIterations</a>)</div>
+<div class="line"><a name="l02256"></a><span class="lineno"> 2256</span>&#160;        EntryFact-&gt;handleRemovalFromIntersection(EntrySetOrig, FactMan, JoinLoc,</div>
+<div class="line"><a name="l02257"></a><span class="lineno"> 2257</span>&#160;                                                 ExitLEK, Handler);</div>
+<div class="line"><a name="l02258"></a><span class="lineno"> 2258</span>&#160;      <span class="keywordflow">if</span> (ExitLEK == <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>)</div>
+<div class="line"><a name="l02259"></a><span class="lineno"> 2259</span>&#160;        EntrySet.removeLock(FactMan, *EntryFact);</div>
+<div class="line"><a name="l02260"></a><span class="lineno"> 2260</span>&#160;    }</div>
+<div class="line"><a name="l02261"></a><span class="lineno"> 2261</span>&#160;  }</div>
+<div class="line"><a name="l02262"></a><span class="lineno"> 2262</span>&#160;}</div>
+<div class="line"><a name="l02263"></a><span class="lineno"> 2263</span>&#160; </div>
+<div class="line"><a name="l02264"></a><span class="lineno"> 2264</span>&#160;<span class="comment">// Return true if block B never continues to its successors.</span></div>
+<div class="line"><a name="l02265"></a><span class="lineno"><a class="line" href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd"> 2265</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd">neverReturns</a>(<span class="keyword">const</span> <a class="code" href="classclang_1_1CFGBlock.html">CFGBlock</a> *B) {</div>
+<div class="line"><a name="l02266"></a><span class="lineno"> 2266</span>&#160;  <span class="keywordflow">if</span> (B-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a45a59f50f8b93e0bc8f611b8c61bb8d1">hasNoReturnElement</a>())</div>
+<div class="line"><a name="l02267"></a><span class="lineno"> 2267</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02268"></a><span class="lineno"> 2268</span>&#160;  <span class="keywordflow">if</span> (B-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a84d2304881d190c71003705f4e18b66f">empty</a>())</div>
+<div class="line"><a name="l02269"></a><span class="lineno"> 2269</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02270"></a><span class="lineno"> 2270</span>&#160; </div>
+<div class="line"><a name="l02271"></a><span class="lineno"> 2271</span>&#160;  <a class="code" href="classclang_1_1CFGElement.html">CFGElement</a> <a class="code" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578ad55b30607c2a9a2616347d6edb789f6b">Last</a> = B-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a490ee6b84a4e16ab46d2a323a267c263">back</a>();</div>
+<div class="line"><a name="l02272"></a><span class="lineno"> 2272</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classllvm_1_1Optional.html">Optional&lt;CFGStmt&gt;</a> S = <a class="code" href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578ad55b30607c2a9a2616347d6edb789f6b">Last</a>.getAs&lt;<a class="code" href="classclang_1_1CFGStmt.html">CFGStmt</a>&gt;()) {</div>
+<div class="line"><a name="l02273"></a><span class="lineno"> 2273</span>&#160;    <span class="keywordflow">if</span> (isa&lt;CXXThrowExpr&gt;(S-&gt;getStmt()))</div>
+<div class="line"><a name="l02274"></a><span class="lineno"> 2274</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02275"></a><span class="lineno"> 2275</span>&#160;  }</div>
+<div class="line"><a name="l02276"></a><span class="lineno"> 2276</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02277"></a><span class="lineno"> 2277</span>&#160;}</div>
+<div class="line"><a name="l02278"></a><span class="lineno"> 2278</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l02279"></a><span class="lineno"> 2279</span>&#160;<span class="comment">/// Check a function&#39;s CFG for thread-safety violations.</span></div>
+<div class="line"><a name="l02280"></a><span class="lineno"> 2280</span>&#160;<span class="comment">///</span></div>
+<div class="line"><a name="l02281"></a><span class="lineno"> 2281</span>&#160;<span class="comment">/// We traverse the blocks in the CFG, compute the set of mutexes that are held</span></div>
+<div class="line"><a name="l02282"></a><span class="lineno"> 2282</span>&#160;<span class="comment">/// at the end of each block, and issue warnings for thread safety violations.</span></div>
+<div class="line"><a name="l02283"></a><span class="lineno"> 2283</span>&#160;<span class="comment">/// Each block in the CFG is traversed exactly once.</span></div>
+<div class="line"><a name="l02284"></a><span class="lineno"> 2284</span>&#160;<span class="comment"></span><span class="keywordtype">void</span> ThreadSafetyAnalyzer::runAnalysis(<a class="code" href="classclang_1_1AnalysisDeclContext.html">AnalysisDeclContext</a> &amp;AC) {</div>
+<div class="line"><a name="l02285"></a><span class="lineno"> 2285</span>&#160;  <span class="comment">// TODO: this whole function needs be rewritten as a visitor for CFGWalker.</span></div>
+<div class="line"><a name="l02286"></a><span class="lineno"> 2286</span>&#160;  <span class="comment">// For now, we just use the walker to set things up.</span></div>
+<div class="line"><a name="l02287"></a><span class="lineno"> 2287</span>&#160;  <a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html">threadSafety::CFGWalker</a> walker;</div>
+<div class="line"><a name="l02288"></a><span class="lineno"> 2288</span>&#160;  <span class="keywordflow">if</span> (!walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#ad43eb99c009b8166acf7d40e536fdf42">init</a>(AC))</div>
+<div class="line"><a name="l02289"></a><span class="lineno"> 2289</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02290"></a><span class="lineno"> 2290</span>&#160; </div>
+<div class="line"><a name="l02291"></a><span class="lineno"> 2291</span>&#160;  <span class="comment">// AC.dumpCFG(true);</span></div>
+<div class="line"><a name="l02292"></a><span class="lineno"> 2292</span>&#160;  <span class="comment">// threadSafety::printSCFG(walker);</span></div>
+<div class="line"><a name="l02293"></a><span class="lineno"> 2293</span>&#160; </div>
+<div class="line"><a name="l02294"></a><span class="lineno"> 2294</span>&#160;  <a class="code" href="classclang_1_1CFG.html">CFG</a> *CFGraph = walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#ab954fd5afa8b7b6f7b21b6a38b7233f2">getGraph</a>();</div>
+<div class="line"><a name="l02295"></a><span class="lineno"> 2295</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1NamedDecl.html">NamedDecl</a> *D = walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#aeaa7e6dcc489652447796e3f296cae4e">getDecl</a>();</div>
+<div class="line"><a name="l02296"></a><span class="lineno"> 2296</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> *CurrentFunction = dyn_cast&lt;FunctionDecl&gt;(D);</div>
+<div class="line"><a name="l02297"></a><span class="lineno"> 2297</span>&#160;  CurrentMethod = dyn_cast&lt;CXXMethodDecl&gt;(D);</div>
+<div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160; </div>
+<div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;  <span class="keywordflow">if</span> (D-&gt;<a class="code" href="classclang_1_1Decl.html#ae7a63b99398864d86f53afd8a03c359b">hasAttr</a>&lt;NoThreadSafetyAnalysisAttr&gt;())</div>
+<div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02301"></a><span class="lineno"> 2301</span>&#160; </div>
+<div class="line"><a name="l02302"></a><span class="lineno"> 2302</span>&#160;  <span class="comment">// FIXME: Do something a bit more intelligent inside constructor and</span></div>
+<div class="line"><a name="l02303"></a><span class="lineno"> 2303</span>&#160;  <span class="comment">// destructor code.  Constructors and destructors must assume unique access</span></div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;  <span class="comment">// to &#39;this&#39;, so checks on member variable access is disabled, but we should</span></div>
+<div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;  <span class="comment">// still enable checks on other objects.</span></div>
+<div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;  <span class="keywordflow">if</span> (isa&lt;CXXConstructorDecl&gt;(D))</div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;    <span class="keywordflow">return</span>;  <span class="comment">// Don&#39;t check inside constructors.</span></div>
+<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;  <span class="keywordflow">if</span> (isa&lt;CXXDestructorDecl&gt;(D))</div>
+<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;    <span class="keywordflow">return</span>;  <span class="comment">// Don&#39;t check inside destructors.</span></div>
 <div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160; </div>
-<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;  BlockInfo.resize(CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#acf2966b92e666b8358818e640f80a09b">getNumBlockIDs</a>(),</div>
-<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;    CFGBlockInfo::getEmptyBlockInfo(LocalVarMap));</div>
-<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160; </div>
-<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;  <span class="comment">// We need to explore the CFG via a &quot;topological&quot; ordering.</span></div>
-<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160;  <span class="comment">// That way, we will be guaranteed to have information about required</span></div>
-<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;  <span class="comment">// predecessor locksets when exploring a new block.</span></div>
-<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1PostOrderCFGView.html">PostOrderCFGView</a> *SortedGraph = walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#a601e35c2b123258c4fccd576c4b98a18">getSortedGraph</a>();</div>
-<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;  <a class="code" href="classclang_1_1PostOrderCFGView_1_1CFGBlockSet.html">PostOrderCFGView::CFGBlockSet</a> VisitedBlocks(CFGraph);</div>
-<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160; </div>
-<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;  <span class="comment">// Mark entry block as reachable</span></div>
-<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;  BlockInfo[CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#ad5618d5c0636efb4d71510bd66c066cf">getEntry</a>().<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()].Reachable = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160; </div>
-<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;  <span class="comment">// Compute SSA names for local variables</span></div>
-<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;  LocalVarMap.traverseCFG(CFGraph, SortedGraph, BlockInfo);</div>
-<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160; </div>
-<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;  <span class="comment">// Fill in source locations for all CFGBlocks.</span></div>
-<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;  <a class="code" href="ThreadSafety_8cpp.html#a7f765bec2f8d3ec2b3798dfce9a65e0a">findBlockLocations</a>(CFGraph, SortedGraph, BlockInfo);</div>
-<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160; </div>
-<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;  CapExprSet ExclusiveLocksAcquired;</div>
-<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;  CapExprSet SharedLocksAcquired;</div>
-<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;  CapExprSet LocksReleased;</div>
-<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160; </div>
-<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;  <span class="comment">// Add locks from exclusive_locks_required and shared_locks_required</span></div>
-<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;  <span class="comment">// to initial lockset. Also turn off checking for lock and unlock functions.</span></div>
-<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;  <span class="comment">// FIXME: is there a more intelligent way to check lock/unlock functions?</span></div>
-<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;  <span class="keywordflow">if</span> (!SortedGraph-&gt;<a class="code" href="classclang_1_1PostOrderCFGView.html#a57f98f7e1cfa3eaab4559d02806e31b4">empty</a>() &amp;&amp; D-&gt;<a class="code" href="classclang_1_1Decl.html#a1e0b6223e2547ac65ddbf4802117998b">hasAttrs</a>()) {</div>
-<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;    <span class="keyword">const</span> <a class="code" href="classclang_1_1CFGBlock.html">CFGBlock</a> *FirstBlock = *SortedGraph-&gt;<a class="code" href="classclang_1_1PostOrderCFGView.html#a24690cde019309c3b2ea7bee32250a35">begin</a>();</div>
-<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;    FactSet &amp;InitialLockset = BlockInfo[FirstBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()].EntrySet;</div>
-<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160; </div>
-<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;    CapExprSet ExclusiveLocksToAdd;</div>
-<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;    CapExprSet SharedLocksToAdd;</div>
-<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;    StringRef CapDiagKind = <span class="stringliteral">&quot;mutex&quot;</span>;</div>
-<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160; </div>
-<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;    <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> Loc = D-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>();</div>
-<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *<a class="code" href="classclang_1_1Attr.html">Attr</a> : D-&gt;<a class="code" href="classclang_1_1Decl.html#abca158d704fe74081d28a16596671c06">attrs</a>()) {</div>
-<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;      Loc = <a class="code" href="classclang_1_1Attr.html">Attr</a>-&gt;<a class="code" href="classclang_1_1Attr.html#adb1b8122069df702fb5077c95e436d7b">getLocation</a>();</div>
-<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *A = dyn_cast&lt;RequiresCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
-<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;        getMutexIDs(A-&gt;isShared() ? SharedLocksToAdd : ExclusiveLocksToAdd, A,</div>
-<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;                    <span class="keyword">nullptr</span>, D);</div>
-<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;        CapDiagKind = <a class="code" href="ThreadSafety_8cpp.html#ac5b2d81bf1204c1463a3f6219fae611e">ClassifyDiagnostic</a>(A);</div>
-<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *A = dyn_cast&lt;ReleaseCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
-<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;        <span class="comment">// UNLOCK_FUNCTION() is used to hide the underlying lock implementation.</span></div>
-<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;        <span class="comment">// We must ignore such methods.</span></div>
-<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;        <span class="keywordflow">if</span> (A-&gt;args_size() == 0)</div>
-<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;          <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;        getMutexIDs(A-&gt;isShared() ? SharedLocksToAdd : ExclusiveLocksToAdd, A,</div>
-<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;                    <span class="keyword">nullptr</span>, D);</div>
-<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;        getMutexIDs(LocksReleased, A, <span class="keyword">nullptr</span>, D);</div>
-<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;        CapDiagKind = <a class="code" href="ThreadSafety_8cpp.html#ac5b2d81bf1204c1463a3f6219fae611e">ClassifyDiagnostic</a>(A);</div>
-<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *A = dyn_cast&lt;AcquireCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
-<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        <span class="keywordflow">if</span> (A-&gt;args_size() == 0)</div>
-<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;          <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;        getMutexIDs(A-&gt;isShared() ? SharedLocksAcquired</div>
-<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;                                  : ExclusiveLocksAcquired,</div>
-<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;                    A, <span class="keyword">nullptr</span>, D);</div>
-<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;        CapDiagKind = <a class="code" href="ThreadSafety_8cpp.html#ac5b2d81bf1204c1463a3f6219fae611e">ClassifyDiagnostic</a>(A);</div>
-<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isa&lt;ExclusiveTrylockFunctionAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
-<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;        <span class="comment">// Don&#39;t try to check trylock functions for now.</span></div>
-<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isa&lt;SharedTrylockFunctionAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
-<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;        <span class="comment">// Don&#39;t try to check trylock functions for now.</span></div>
-<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isa&lt;TryAcquireCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
-<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;        <span class="comment">// Don&#39;t try to check trylock functions for now.</span></div>
-<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;      }</div>
-<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;    }</div>
-<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160; </div>
-<div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;    <span class="comment">// FIXME -- Loc can be wrong here.</span></div>
-<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Mu : ExclusiveLocksToAdd) {</div>
-<div class="line"><a name="l02381"></a><span class="lineno"> 2381</span>&#160;      <span class="keyword">auto</span> Entry = std::make_unique&lt;LockableFactEntry&gt;(Mu, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa9c30482a29ee82af2974ce475d235c13">LK_Exclusive</a>, Loc,</div>
-<div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;                                                       FactEntry::Declared);</div>
-<div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;      addLock(InitialLockset, std::move(Entry), CapDiagKind, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l02384"></a><span class="lineno"> 2384</span>&#160;    }</div>
-<div class="line"><a name="l02385"></a><span class="lineno"> 2385</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Mu : SharedLocksToAdd) {</div>
-<div class="line"><a name="l02386"></a><span class="lineno"> 2386</span>&#160;      <span class="keyword">auto</span> Entry = std::make_unique&lt;LockableFactEntry&gt;(Mu, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa96b7c0462743ae84e9388c82622c1dc9">LK_Shared</a>, Loc,</div>
-<div class="line"><a name="l02387"></a><span class="lineno"> 2387</span>&#160;                                                       FactEntry::Declared);</div>
-<div class="line"><a name="l02388"></a><span class="lineno"> 2388</span>&#160;      addLock(InitialLockset, std::move(Entry), CapDiagKind, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l02389"></a><span class="lineno"> 2389</span>&#160;    }</div>
-<div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;  }</div>
-<div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160; </div>
-<div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *CurrBlock : *SortedGraph) {</div>
-<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;    <span class="keywordtype">unsigned</span> CurrBlockID = CurrBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>();</div>
-<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;    CFGBlockInfo *CurrBlockInfo = &amp;BlockInfo[CurrBlockID];</div>
-<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160; </div>
-<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;    <span class="comment">// Use the default initial lockset in case there are no predecessors.</span></div>
-<div class="line"><a name="l02397"></a><span class="lineno"> 2397</span>&#160;    VisitedBlocks.insert(CurrBlock);</div>
-<div class="line"><a name="l02398"></a><span class="lineno"> 2398</span>&#160; </div>
-<div class="line"><a name="l02399"></a><span class="lineno"> 2399</span>&#160;    <span class="comment">// Iterate through the predecessor blocks and warn if the lockset for all</span></div>
-<div class="line"><a name="l02400"></a><span class="lineno"> 2400</span>&#160;    <span class="comment">// predecessors is not the same. We take the entry lockset of the current</span></div>
-<div class="line"><a name="l02401"></a><span class="lineno"> 2401</span>&#160;    <span class="comment">// block to be the intersection of all previous locksets.</span></div>
-<div class="line"><a name="l02402"></a><span class="lineno"> 2402</span>&#160;    <span class="comment">// FIXME: By keeping the intersection, we may output more errors in future</span></div>
-<div class="line"><a name="l02403"></a><span class="lineno"> 2403</span>&#160;    <span class="comment">// for a lock which is not in the intersection, but was in the union. We</span></div>
-<div class="line"><a name="l02404"></a><span class="lineno"> 2404</span>&#160;    <span class="comment">// may want to also keep the union in future. As an example, let&#39;s say</span></div>
-<div class="line"><a name="l02405"></a><span class="lineno"> 2405</span>&#160;    <span class="comment">// the intersection contains Mutex L, and the union contains L and M.</span></div>
-<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160;    <span class="comment">// Later we unlock M. At this point, we would output an error because we</span></div>
-<div class="line"><a name="l02407"></a><span class="lineno"> 2407</span>&#160;    <span class="comment">// never locked M; although the real error is probably that we forgot to</span></div>
-<div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160;    <span class="comment">// lock M on all code paths. Conversely, let&#39;s say that later we lock M.</span></div>
-<div class="line"><a name="l02409"></a><span class="lineno"> 2409</span>&#160;    <span class="comment">// In this case, we should compare against the intersection instead of the</span></div>
-<div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;    <span class="comment">// union because the real error is probably that we forgot to unlock M on</span></div>
-<div class="line"><a name="l02411"></a><span class="lineno"> 2411</span>&#160;    <span class="comment">// all code paths.</span></div>
-<div class="line"><a name="l02412"></a><span class="lineno"> 2412</span>&#160;    <span class="keywordtype">bool</span> LocksetInitialized = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02413"></a><span class="lineno"> 2413</span>&#160;    <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;CFGBlock *, 8&gt;</a> SpecialBlocks;</div>
-<div class="line"><a name="l02414"></a><span class="lineno"> 2414</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classclang_1_1CFGBlock.html#aab8fec14dc43f4a693271e0bd212bbf4">CFGBlock::const_pred_iterator</a> PI = CurrBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ac0001ac14b86768c641f769c5fb1f4c6">pred_begin</a>(),</div>
-<div class="line"><a name="l02415"></a><span class="lineno"> 2415</span>&#160;         PE  = CurrBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a172965bda787bf3795bb7f02b2520033">pred_end</a>(); PI != PE; ++PI) {</div>
-<div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;      <span class="comment">// if *PI -&gt; CurrBlock is a back edge</span></div>
-<div class="line"><a name="l02417"></a><span class="lineno"> 2417</span>&#160;      <span class="keywordflow">if</span> (*PI == <span class="keyword">nullptr</span> || !VisitedBlocks.alreadySet(*PI))</div>
-<div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02419"></a><span class="lineno"> 2419</span>&#160; </div>
-<div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;      <span class="keywordtype">unsigned</span> PrevBlockID = (*PI)-&gt;getBlockID();</div>
-<div class="line"><a name="l02421"></a><span class="lineno"> 2421</span>&#160;      CFGBlockInfo *PrevBlockInfo = &amp;BlockInfo[PrevBlockID];</div>
-<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160; </div>
-<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;      <span class="comment">// Ignore edges from blocks that can&#39;t return.</span></div>
-<div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd">neverReturns</a>(*PI) || !PrevBlockInfo-&gt;Reachable)</div>
-<div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160; </div>
-<div class="line"><a name="l02427"></a><span class="lineno"> 2427</span>&#160;      <span class="comment">// Okay, we can reach this block from the entry.</span></div>
-<div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;      CurrBlockInfo-&gt;Reachable = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160; </div>
-<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;      <span class="comment">// If the previous block ended in a &#39;continue&#39; or &#39;break&#39; statement, then</span></div>
-<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;      <span class="comment">// a difference in locksets is probably due to a bug in that block, rather</span></div>
-<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;      <span class="comment">// than in some other predecessor. In that case, keep the other</span></div>
-<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;      <span class="comment">// predecessor&#39;s lockset.</span></div>
-<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *Terminator = (*PI)-&gt;getTerminatorStmt()) {</div>
-<div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;        <span class="keywordflow">if</span> (isa&lt;ContinueStmt&gt;(Terminator) || isa&lt;BreakStmt&gt;(Terminator)) {</div>
-<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;          SpecialBlocks.push_back(*PI);</div>
-<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;          <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02438"></a><span class="lineno"> 2438</span>&#160;        }</div>
-<div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160;      }</div>
-<div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160; </div>
-<div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;      FactSet PrevLockset;</div>
-<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160;      getEdgeLockset(PrevLockset, PrevBlockInfo-&gt;ExitSet, *PI, CurrBlock);</div>
-<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160; </div>
-<div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;      <span class="keywordflow">if</span> (!LocksetInitialized) {</div>
-<div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160;        CurrBlockInfo-&gt;EntrySet = PrevLockset;</div>
-<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;        LocksetInitialized = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;        intersectAndWarn(CurrBlockInfo-&gt;EntrySet, PrevLockset,</div>
-<div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160;                         CurrBlockInfo-&gt;EntryLoc,</div>
-<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;                         <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>);</div>
-<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;      }</div>
-<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;    }</div>
-<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160; </div>
-<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;    <span class="comment">// Skip rest of block if it&#39;s not reachable.</span></div>
-<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;    <span class="keywordflow">if</span> (!CurrBlockInfo-&gt;Reachable)</div>
-<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;      <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160; </div>
-<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;    <span class="comment">// Process continue and break blocks. Assume that the lockset for the</span></div>
-<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160;    <span class="comment">// resulting block is unaffected by any discrepancies in them.</span></div>
-<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *PrevBlock : SpecialBlocks) {</div>
-<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;      <span class="keywordtype">unsigned</span> PrevBlockID = PrevBlock-&gt;getBlockID();</div>
-<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;      CFGBlockInfo *PrevBlockInfo = &amp;BlockInfo[PrevBlockID];</div>
-<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160; </div>
-<div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160;      <span class="keywordflow">if</span> (!LocksetInitialized) {</div>
-<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160;        CurrBlockInfo-&gt;EntrySet = PrevBlockInfo-&gt;ExitSet;</div>
-<div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160;        LocksetInitialized = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160;        <span class="comment">// Determine whether this edge is a loop terminator for diagnostic</span></div>
-<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;        <span class="comment">// purposes. FIXME: A &#39;break&#39; statement might be a loop terminator, but</span></div>
-<div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;        <span class="comment">// it might also be part of a switch. Also, a subsequent destructor</span></div>
-<div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;        <span class="comment">// might add to the lockset, in which case the real issue might be a</span></div>
-<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;        <span class="comment">// double lock on the other path.</span></div>
-<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;        <span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *Terminator = PrevBlock-&gt;getTerminatorStmt();</div>
-<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;        <span class="keywordtype">bool</span> IsLoop = Terminator &amp;&amp; isa&lt;ContinueStmt&gt;(Terminator);</div>
-<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160; </div>
-<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;        FactSet PrevLockset;</div>
-<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160;        getEdgeLockset(PrevLockset, PrevBlockInfo-&gt;ExitSet,</div>
-<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;                       PrevBlock, CurrBlock);</div>
-<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160; </div>
-<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;        <span class="comment">// Do not update EntrySet.</span></div>
-<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;        intersectAndWarn(</div>
-<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;            CurrBlockInfo-&gt;EntrySet, PrevLockset, PrevBlockInfo-&gt;ExitLoc,</div>
-<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;            IsLoop ? <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a6d98812ce083318b61532c36bbfab900">LEK_LockedSomeLoopIterations</a> : <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>);</div>
-<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;      }</div>
-<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;    }</div>
-<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160; </div>
-<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;    BuildLockset LocksetBuilder(<span class="keyword">this</span>, *CurrBlockInfo);</div>
+<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;  Handler.<a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#a4ed766b3ebeea66775f54c18229c5a40">enterFunction</a>(CurrentFunction);</div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160; </div>
+<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;  BlockInfo.resize(CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#acf2966b92e666b8358818e640f80a09b">getNumBlockIDs</a>(),</div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;    CFGBlockInfo::getEmptyBlockInfo(LocalVarMap));</div>
+<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160; </div>
+<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;  <span class="comment">// We need to explore the CFG via a &quot;topological&quot; ordering.</span></div>
+<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;  <span class="comment">// That way, we will be guaranteed to have information about required</span></div>
+<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;  <span class="comment">// predecessor locksets when exploring a new block.</span></div>
+<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;  <span class="keyword">const</span> <a class="code" href="classclang_1_1PostOrderCFGView.html">PostOrderCFGView</a> *SortedGraph = walker.<a class="code" href="classclang_1_1threadSafety_1_1CFGWalker.html#a601e35c2b123258c4fccd576c4b98a18">getSortedGraph</a>();</div>
+<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;  <a class="code" href="classclang_1_1PostOrderCFGView_1_1CFGBlockSet.html">PostOrderCFGView::CFGBlockSet</a> VisitedBlocks(CFGraph);</div>
+<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160; </div>
+<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;  <span class="comment">// Mark entry block as reachable</span></div>
+<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;  BlockInfo[CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#ad5618d5c0636efb4d71510bd66c066cf">getEntry</a>().<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()].Reachable = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160; </div>
+<div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160;  <span class="comment">// Compute SSA names for local variables</span></div>
+<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;  LocalVarMap.traverseCFG(CFGraph, SortedGraph, BlockInfo);</div>
+<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160; </div>
+<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;  <span class="comment">// Fill in source locations for all CFGBlocks.</span></div>
+<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;  <a class="code" href="ThreadSafety_8cpp.html#a7f765bec2f8d3ec2b3798dfce9a65e0a">findBlockLocations</a>(CFGraph, SortedGraph, BlockInfo);</div>
+<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160; </div>
+<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;  CapExprSet ExclusiveLocksAcquired;</div>
+<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160;  CapExprSet SharedLocksAcquired;</div>
+<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;  CapExprSet LocksReleased;</div>
+<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160; </div>
+<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;  <span class="comment">// Add locks from exclusive_locks_required and shared_locks_required</span></div>
+<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;  <span class="comment">// to initial lockset. Also turn off checking for lock and unlock functions.</span></div>
+<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;  <span class="comment">// FIXME: is there a more intelligent way to check lock/unlock functions?</span></div>
+<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;  <span class="keywordflow">if</span> (!SortedGraph-&gt;<a class="code" href="classclang_1_1PostOrderCFGView.html#a57f98f7e1cfa3eaab4559d02806e31b4">empty</a>() &amp;&amp; D-&gt;<a class="code" href="classclang_1_1Decl.html#a1e0b6223e2547ac65ddbf4802117998b">hasAttrs</a>()) {</div>
+<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;    <span class="keyword">const</span> <a class="code" href="classclang_1_1CFGBlock.html">CFGBlock</a> *FirstBlock = *SortedGraph-&gt;<a class="code" href="classclang_1_1PostOrderCFGView.html#a24690cde019309c3b2ea7bee32250a35">begin</a>();</div>
+<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;    FactSet &amp;InitialLockset = BlockInfo[FirstBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()].EntrySet;</div>
+<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160; </div>
+<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;    CapExprSet ExclusiveLocksToAdd;</div>
+<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;    CapExprSet SharedLocksToAdd;</div>
+<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;    StringRef CapDiagKind = <span class="stringliteral">&quot;mutex&quot;</span>;</div>
+<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160; </div>
+<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;    <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> Loc = D-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>();</div>
+<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *<a class="code" href="classclang_1_1Attr.html">Attr</a> : D-&gt;<a class="code" href="classclang_1_1Decl.html#abca158d704fe74081d28a16596671c06">attrs</a>()) {</div>
+<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160;      Loc = <a class="code" href="classclang_1_1Attr.html">Attr</a>-&gt;<a class="code" href="classclang_1_1Attr.html#adb1b8122069df702fb5077c95e436d7b">getLocation</a>();</div>
+<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *A = dyn_cast&lt;RequiresCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
+<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;        getMutexIDs(A-&gt;isShared() ? SharedLocksToAdd : ExclusiveLocksToAdd, A,</div>
+<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;                    <span class="keyword">nullptr</span>, D);</div>
+<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;        CapDiagKind = <a class="code" href="ThreadSafety_8cpp.html#ac5b2d81bf1204c1463a3f6219fae611e">ClassifyDiagnostic</a>(A);</div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *A = dyn_cast&lt;ReleaseCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;        <span class="comment">// UNLOCK_FUNCTION() is used to hide the underlying lock implementation.</span></div>
+<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;        <span class="comment">// We must ignore such methods.</span></div>
+<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;        <span class="keywordflow">if</span> (A-&gt;args_size() == 0)</div>
+<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;          <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160;        getMutexIDs(A-&gt;isShared() ? SharedLocksToAdd : ExclusiveLocksToAdd, A,</div>
+<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;                    <span class="keyword">nullptr</span>, D);</div>
+<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;        getMutexIDs(LocksReleased, A, <span class="keyword">nullptr</span>, D);</div>
+<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        CapDiagKind = <a class="code" href="ThreadSafety_8cpp.html#ac5b2d81bf1204c1463a3f6219fae611e">ClassifyDiagnostic</a>(A);</div>
+<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *A = dyn_cast&lt;AcquireCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
+<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;        <span class="keywordflow">if</span> (A-&gt;args_size() == 0)</div>
+<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;          <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;        getMutexIDs(A-&gt;isShared() ? SharedLocksAcquired</div>
+<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160;                                  : ExclusiveLocksAcquired,</div>
+<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;                    A, <span class="keyword">nullptr</span>, D);</div>
+<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;        CapDiagKind = <a class="code" href="ThreadSafety_8cpp.html#ac5b2d81bf1204c1463a3f6219fae611e">ClassifyDiagnostic</a>(A);</div>
+<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isa&lt;ExclusiveTrylockFunctionAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
+<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;        <span class="comment">// Don&#39;t try to check trylock functions for now.</span></div>
+<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isa&lt;SharedTrylockFunctionAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
+<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160;        <span class="comment">// Don&#39;t try to check trylock functions for now.</span></div>
+<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (isa&lt;TryAcquireCapabilityAttr&gt;(<a class="code" href="classclang_1_1Attr.html">Attr</a>)) {</div>
+<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160;        <span class="comment">// Don&#39;t try to check trylock functions for now.</span></div>
+<div class="line"><a name="l02377"></a><span class="lineno"> 2377</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02378"></a><span class="lineno"> 2378</span>&#160;      }</div>
+<div class="line"><a name="l02379"></a><span class="lineno"> 2379</span>&#160;    }</div>
+<div class="line"><a name="l02380"></a><span class="lineno"> 2380</span>&#160; </div>
+<div class="line"><a name="l02381"></a><span class="lineno"> 2381</span>&#160;    <span class="comment">// FIXME -- Loc can be wrong here.</span></div>
+<div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Mu : ExclusiveLocksToAdd) {</div>
+<div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;      <span class="keyword">auto</span> Entry = std::make_unique&lt;LockableFactEntry&gt;(Mu, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa9c30482a29ee82af2974ce475d235c13">LK_Exclusive</a>, Loc,</div>
+<div class="line"><a name="l02384"></a><span class="lineno"> 2384</span>&#160;                                                       FactEntry::Declared);</div>
+<div class="line"><a name="l02385"></a><span class="lineno"> 2385</span>&#160;      addLock(InitialLockset, std::move(Entry), CapDiagKind, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l02386"></a><span class="lineno"> 2386</span>&#160;    }</div>
+<div class="line"><a name="l02387"></a><span class="lineno"> 2387</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Mu : SharedLocksToAdd) {</div>
+<div class="line"><a name="l02388"></a><span class="lineno"> 2388</span>&#160;      <span class="keyword">auto</span> Entry = std::make_unique&lt;LockableFactEntry&gt;(Mu, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa96b7c0462743ae84e9388c82622c1dc9">LK_Shared</a>, Loc,</div>
+<div class="line"><a name="l02389"></a><span class="lineno"> 2389</span>&#160;                                                       FactEntry::Declared);</div>
+<div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;      addLock(InitialLockset, std::move(Entry), CapDiagKind, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;    }</div>
+<div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;  }</div>
+<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160; </div>
+<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *CurrBlock : *SortedGraph) {</div>
+<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;    <span class="keywordtype">unsigned</span> CurrBlockID = CurrBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>();</div>
+<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;    CFGBlockInfo *CurrBlockInfo = &amp;BlockInfo[CurrBlockID];</div>
+<div class="line"><a name="l02397"></a><span class="lineno"> 2397</span>&#160; </div>
+<div class="line"><a name="l02398"></a><span class="lineno"> 2398</span>&#160;    <span class="comment">// Use the default initial lockset in case there are no predecessors.</span></div>
+<div class="line"><a name="l02399"></a><span class="lineno"> 2399</span>&#160;    VisitedBlocks.insert(CurrBlock);</div>
+<div class="line"><a name="l02400"></a><span class="lineno"> 2400</span>&#160; </div>
+<div class="line"><a name="l02401"></a><span class="lineno"> 2401</span>&#160;    <span class="comment">// Iterate through the predecessor blocks and warn if the lockset for all</span></div>
+<div class="line"><a name="l02402"></a><span class="lineno"> 2402</span>&#160;    <span class="comment">// predecessors is not the same. We take the entry lockset of the current</span></div>
+<div class="line"><a name="l02403"></a><span class="lineno"> 2403</span>&#160;    <span class="comment">// block to be the intersection of all previous locksets.</span></div>
+<div class="line"><a name="l02404"></a><span class="lineno"> 2404</span>&#160;    <span class="comment">// FIXME: By keeping the intersection, we may output more errors in future</span></div>
+<div class="line"><a name="l02405"></a><span class="lineno"> 2405</span>&#160;    <span class="comment">// for a lock which is not in the intersection, but was in the union. We</span></div>
+<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160;    <span class="comment">// may want to also keep the union in future. As an example, let&#39;s say</span></div>
+<div class="line"><a name="l02407"></a><span class="lineno"> 2407</span>&#160;    <span class="comment">// the intersection contains Mutex L, and the union contains L and M.</span></div>
+<div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160;    <span class="comment">// Later we unlock M. At this point, we would output an error because we</span></div>
+<div class="line"><a name="l02409"></a><span class="lineno"> 2409</span>&#160;    <span class="comment">// never locked M; although the real error is probably that we forgot to</span></div>
+<div class="line"><a name="l02410"></a><span class="lineno"> 2410</span>&#160;    <span class="comment">// lock M on all code paths. Conversely, let&#39;s say that later we lock M.</span></div>
+<div class="line"><a name="l02411"></a><span class="lineno"> 2411</span>&#160;    <span class="comment">// In this case, we should compare against the intersection instead of the</span></div>
+<div class="line"><a name="l02412"></a><span class="lineno"> 2412</span>&#160;    <span class="comment">// union because the real error is probably that we forgot to unlock M on</span></div>
+<div class="line"><a name="l02413"></a><span class="lineno"> 2413</span>&#160;    <span class="comment">// all code paths.</span></div>
+<div class="line"><a name="l02414"></a><span class="lineno"> 2414</span>&#160;    <span class="keywordtype">bool</span> LocksetInitialized = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02415"></a><span class="lineno"> 2415</span>&#160;    <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;CFGBlock *, 8&gt;</a> SpecialBlocks;</div>
+<div class="line"><a name="l02416"></a><span class="lineno"> 2416</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classclang_1_1CFGBlock.html#aab8fec14dc43f4a693271e0bd212bbf4">CFGBlock::const_pred_iterator</a> PI = CurrBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ac0001ac14b86768c641f769c5fb1f4c6">pred_begin</a>(),</div>
+<div class="line"><a name="l02417"></a><span class="lineno"> 2417</span>&#160;         PE  = CurrBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#a172965bda787bf3795bb7f02b2520033">pred_end</a>(); PI != PE; ++PI) {</div>
+<div class="line"><a name="l02418"></a><span class="lineno"> 2418</span>&#160;      <span class="comment">// if *PI -&gt; CurrBlock is a back edge</span></div>
+<div class="line"><a name="l02419"></a><span class="lineno"> 2419</span>&#160;      <span class="keywordflow">if</span> (*PI == <span class="keyword">nullptr</span> || !VisitedBlocks.alreadySet(*PI))</div>
+<div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02421"></a><span class="lineno"> 2421</span>&#160; </div>
+<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;      <span class="keywordtype">unsigned</span> PrevBlockID = (*PI)-&gt;getBlockID();</div>
+<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;      CFGBlockInfo *PrevBlockInfo = &amp;BlockInfo[PrevBlockID];</div>
+<div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160; </div>
+<div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;      <span class="comment">// Ignore edges from blocks that can&#39;t return.</span></div>
+<div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd">neverReturns</a>(*PI) || !PrevBlockInfo-&gt;Reachable)</div>
+<div class="line"><a name="l02427"></a><span class="lineno"> 2427</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160; </div>
+<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;      <span class="comment">// Okay, we can reach this block from the entry.</span></div>
+<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160;      CurrBlockInfo-&gt;Reachable = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160; </div>
+<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160;      <span class="comment">// If the previous block ended in a &#39;continue&#39; or &#39;break&#39; statement, then</span></div>
+<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;      <span class="comment">// a difference in locksets is probably due to a bug in that block, rather</span></div>
+<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;      <span class="comment">// than in some other predecessor. In that case, keep the other</span></div>
+<div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;      <span class="comment">// predecessor&#39;s lockset.</span></div>
+<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *Terminator = (*PI)-&gt;getTerminatorStmt()) {</div>
+<div class="line"><a name="l02437"></a><span class="lineno"> 2437</span>&#160;        <span class="keywordflow">if</span> (isa&lt;ContinueStmt&gt;(Terminator) || isa&lt;BreakStmt&gt;(Terminator)) {</div>
+<div class="line"><a name="l02438"></a><span class="lineno"> 2438</span>&#160;          SpecialBlocks.push_back(*PI);</div>
+<div class="line"><a name="l02439"></a><span class="lineno"> 2439</span>&#160;          <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02440"></a><span class="lineno"> 2440</span>&#160;        }</div>
+<div class="line"><a name="l02441"></a><span class="lineno"> 2441</span>&#160;      }</div>
+<div class="line"><a name="l02442"></a><span class="lineno"> 2442</span>&#160; </div>
+<div class="line"><a name="l02443"></a><span class="lineno"> 2443</span>&#160;      FactSet PrevLockset;</div>
+<div class="line"><a name="l02444"></a><span class="lineno"> 2444</span>&#160;      getEdgeLockset(PrevLockset, PrevBlockInfo-&gt;ExitSet, *PI, CurrBlock);</div>
+<div class="line"><a name="l02445"></a><span class="lineno"> 2445</span>&#160; </div>
+<div class="line"><a name="l02446"></a><span class="lineno"> 2446</span>&#160;      <span class="keywordflow">if</span> (!LocksetInitialized) {</div>
+<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;        CurrBlockInfo-&gt;EntrySet = PrevLockset;</div>
+<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;        LocksetInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;        intersectAndWarn(CurrBlockInfo-&gt;EntrySet, PrevLockset,</div>
+<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;                         CurrBlockInfo-&gt;EntryLoc,</div>
+<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;                         <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>);</div>
+<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160;      }</div>
+<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;    }</div>
+<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160; </div>
+<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;    <span class="comment">// Skip rest of block if it&#39;s not reachable.</span></div>
+<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160;    <span class="keywordflow">if</span> (!CurrBlockInfo-&gt;Reachable)</div>
+<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;      <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160; </div>
+<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;    <span class="comment">// Process continue and break blocks. Assume that the lockset for the</span></div>
+<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;    <span class="comment">// resulting block is unaffected by any discrepancies in them.</span></div>
+<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *PrevBlock : SpecialBlocks) {</div>
+<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160;      <span class="keywordtype">unsigned</span> PrevBlockID = PrevBlock-&gt;getBlockID();</div>
+<div class="line"><a name="l02464"></a><span class="lineno"> 2464</span>&#160;      CFGBlockInfo *PrevBlockInfo = &amp;BlockInfo[PrevBlockID];</div>
+<div class="line"><a name="l02465"></a><span class="lineno"> 2465</span>&#160; </div>
+<div class="line"><a name="l02466"></a><span class="lineno"> 2466</span>&#160;      <span class="keywordflow">if</span> (!LocksetInitialized) {</div>
+<div class="line"><a name="l02467"></a><span class="lineno"> 2467</span>&#160;        CurrBlockInfo-&gt;EntrySet = PrevBlockInfo-&gt;ExitSet;</div>
+<div class="line"><a name="l02468"></a><span class="lineno"> 2468</span>&#160;        LocksetInitialized = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l02469"></a><span class="lineno"> 2469</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;        <span class="comment">// Determine whether this edge is a loop terminator for diagnostic</span></div>
+<div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;        <span class="comment">// purposes. FIXME: A &#39;break&#39; statement might be a loop terminator, but</span></div>
+<div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;        <span class="comment">// it might also be part of a switch. Also, a subsequent destructor</span></div>
+<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;        <span class="comment">// might add to the lockset, in which case the real issue might be a</span></div>
+<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;        <span class="comment">// double lock on the other path.</span></div>
+<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;        <span class="keyword">const</span> <a class="code" href="classclang_1_1Stmt.html">Stmt</a> *Terminator = PrevBlock-&gt;getTerminatorStmt();</div>
+<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;        <span class="keywordtype">bool</span> IsLoop = Terminator &amp;&amp; isa&lt;ContinueStmt&gt;(Terminator);</div>
+<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160; </div>
+<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;        FactSet PrevLockset;</div>
+<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;        getEdgeLockset(PrevLockset, PrevBlockInfo-&gt;ExitSet,</div>
+<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;                       PrevBlock, CurrBlock);</div>
+<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160; </div>
+<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;        <span class="comment">// Do not update EntrySet.</span></div>
+<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;        intersectAndWarn(</div>
+<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160;            CurrBlockInfo-&gt;EntrySet, PrevLockset, PrevBlockInfo-&gt;ExitLoc,</div>
+<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;            IsLoop ? <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a6d98812ce083318b61532c36bbfab900">LEK_LockedSomeLoopIterations</a> : <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">LEK_LockedSomePredecessors</a>);</div>
+<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160;      }</div>
+<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;    }</div>
 <div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160; </div>
-<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;    <span class="comment">// Visit all the statements in the basic block.</span></div>
-<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;BI : *CurrBlock) {</div>
-<div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;      <span class="keywordflow">switch</span> (BI.getKind()) {</div>
-<div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="classclang_1_1CFGElement.html#a3c498c8273bfd0c87134bfd590428395a5fe5a186caab5e8a3ddbbcddb68c20f8">CFGElement::Statement</a>: {</div>
-<div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160;          <a class="code" href="classclang_1_1CFGStmt.html">CFGStmt</a> CS = BI.<a class="code" href="classclang_1_1CFGElement.html#a5af63ce25ddd8be768933ea8265048d4">castAs</a>&lt;<a class="code" href="classclang_1_1CFGStmt.html">CFGStmt</a>&gt;();</div>
-<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;          LocksetBuilder.Visit(CS.<a class="code" href="classclang_1_1CFGStmt.html#ae9c249569b390adc43fb10e8a2e0854c">getStmt</a>());</div>
-<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160;        }</div>
-<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;        <span class="comment">// Ignore BaseDtor, MemberDtor, and TemporaryDtor for now.</span></div>
-<div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="classclang_1_1CFGElement.html#a3c498c8273bfd0c87134bfd590428395aa874e18863ab62b7c0383cdf8de3512e">CFGElement::AutomaticObjectDtor</a>: {</div>
-<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;          <a class="code" href="classclang_1_1CFGAutomaticObjDtor.html">CFGAutomaticObjDtor</a> AD = BI.<a class="code" href="classclang_1_1CFGElement.html#a5af63ce25ddd8be768933ea8265048d4">castAs</a>&lt;<a class="code" href="classclang_1_1CFGAutomaticObjDtor.html">CFGAutomaticObjDtor</a>&gt;();</div>
-<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160;          <span class="keyword">const</span> <span class="keyword">auto</span> *DD = AD.<a class="code" href="classclang_1_1CFGImplicitDtor.html#a1858055b819495f2b144710a6f4d31de">getDestructorDecl</a>(AC.<a class="code" href="classclang_1_1AnalysisDeclContext.html#a8a9014e683ac71c91c8c025461beb07f">getASTContext</a>());</div>
-<div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160;          <span class="keywordflow">if</span> (!DD-&gt;hasAttrs())</div>
-<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160; </div>
-<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;          <span class="comment">// Create a dummy expression,</span></div>
-<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160;          <span class="keyword">auto</span> *VD = <span class="keyword">const_cast&lt;</span><a class="code" href="classclang_1_1VarDecl.html">VarDecl</a> *<span class="keyword">&gt;</span>(AD.<a class="code" href="classclang_1_1CFGAutomaticObjDtor.html#adb56fff47327be70b644fffd9344ee73">getVarDecl</a>());</div>
-<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;          <a class="code" href="classclang_1_1DeclRefExpr.html">DeclRefExpr</a> DRE(VD-&gt;<a class="code" href="classclang_1_1Decl.html#a213239e747fb0b3a0cacd86267339af2">getASTContext</a>(), VD, <span class="keyword">false</span>,</div>
-<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;                          VD-&gt;<a class="code" href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">getType</a>().<a class="code" href="classclang_1_1QualType.html#a8be1f3b9e144fba37e7aa9ae2a583de6">getNonReferenceType</a>(), <a class="code" href="namespaceclang.html#ac7b1e4926b152c0385bc7ec72319a340ab67545101f6b01efc1ecf6a0cefc7ee7">VK_LValue</a>,</div>
-<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;                          AD.<a class="code" href="classclang_1_1CFGAutomaticObjDtor.html#a071c47112bfb749ace6b3db5712903ad">getTriggerStmt</a>()-&gt;<a class="code" href="classclang_1_1Stmt.html#a0634f86323ea647d091b8a33d37d175b">getEndLoc</a>());</div>
-<div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;          LocksetBuilder.handleCall(&amp;DRE, DD);</div>
-<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;        }</div>
-<div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;      }</div>
-<div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;    }</div>
-<div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;    CurrBlockInfo-&gt;ExitSet = LocksetBuilder.FSet;</div>
-<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160; </div>
-<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;    <span class="comment">// For every back edge from CurrBlock (the end of the loop) to another block</span></div>
-<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160;    <span class="comment">// (FirstLoopBlock) we need to check that the Lockset of Block is equal to</span></div>
-<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;    <span class="comment">// the one held at the beginning of FirstLoopBlock. We can look up the</span></div>
-<div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;    <span class="comment">// Lockset held at the beginning of FirstLoopBlock in the EntryLockSets map.</span></div>
-<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classclang_1_1CFGBlock.html#aeb2bebcc14c09b9cf250aa659670f736">CFGBlock::const_succ_iterator</a> SI = CurrBlock-&gt;succ_begin(),</div>
-<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;         SE  = CurrBlock-&gt;succ_end(); SI != SE; ++SI) {</div>
-<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;      <span class="comment">// if CurrBlock -&gt; *SI is *not* a back edge</span></div>
-<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;      <span class="keywordflow">if</span> (*SI == <span class="keyword">nullptr</span> || !VisitedBlocks.alreadySet(*SI))</div>
-<div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160; </div>
-<div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;      <a class="code" href="classclang_1_1CFGBlock.html">CFGBlock</a> *FirstLoopBlock = *SI;</div>
-<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;      CFGBlockInfo *PreLoop = &amp;BlockInfo[FirstLoopBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()];</div>
-<div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;      CFGBlockInfo *LoopEnd = &amp;BlockInfo[CurrBlockID];</div>
-<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;      intersectAndWarn(LoopEnd-&gt;ExitSet, PreLoop-&gt;EntrySet, PreLoop-&gt;EntryLoc,</div>
-<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;                       <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a6d98812ce083318b61532c36bbfab900">LEK_LockedSomeLoopIterations</a>);</div>
-<div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;    }</div>
-<div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;  }</div>
-<div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160; </div>
-<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160;  CFGBlockInfo *Initial = &amp;BlockInfo[CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#ad5618d5c0636efb4d71510bd66c066cf">getEntry</a>().<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()];</div>
-<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160;  CFGBlockInfo *Final   = &amp;BlockInfo[CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#a2ff1ea015dc3922825441ce7a2ec13b7">getExit</a>().<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()];</div>
-<div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160; </div>
-<div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;  <span class="comment">// Skip the final check if the exit block is unreachable.</span></div>
-<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;  <span class="keywordflow">if</span> (!Final-&gt;Reachable)</div>
-<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160; </div>
-<div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160;  <span class="comment">// By default, we expect all locks held on entry to be held on exit.</span></div>
-<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160;  FactSet ExpectedExitSet = Initial-&gt;EntrySet;</div>
-<div class="line"><a name="l02545"></a><span class="lineno"> 2545</span>&#160; </div>
-<div class="line"><a name="l02546"></a><span class="lineno"> 2546</span>&#160;  <span class="comment">// Adjust the expected exit set by adding or removing locks, as declared</span></div>
-<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160;  <span class="comment">// by *-LOCK_FUNCTION and UNLOCK_FUNCTION.  The intersect below will then</span></div>
-<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160;  <span class="comment">// issue the appropriate warning.</span></div>
-<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160;  <span class="comment">// FIXME: the location here is not quite right.</span></div>
-<div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Lock : ExclusiveLocksAcquired)</div>
-<div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;    ExpectedExitSet.addLock(FactMan, std::make_unique&lt;LockableFactEntry&gt;(</div>
-<div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;                                         Lock, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa9c30482a29ee82af2974ce475d235c13">LK_Exclusive</a>, D-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>()));</div>
-<div class="line"><a name="l02553"></a><span class="lineno"> 2553</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Lock : SharedLocksAcquired)</div>
-<div class="line"><a name="l02554"></a><span class="lineno"> 2554</span>&#160;    ExpectedExitSet.addLock(FactMan, std::make_unique&lt;LockableFactEntry&gt;(</div>
-<div class="line"><a name="l02555"></a><span class="lineno"> 2555</span>&#160;                                         Lock, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa96b7c0462743ae84e9388c82622c1dc9">LK_Shared</a>, D-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>()));</div>
-<div class="line"><a name="l02556"></a><span class="lineno"> 2556</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Lock : LocksReleased)</div>
-<div class="line"><a name="l02557"></a><span class="lineno"> 2557</span>&#160;    ExpectedExitSet.removeLock(FactMan, Lock);</div>
-<div class="line"><a name="l02558"></a><span class="lineno"> 2558</span>&#160; </div>
-<div class="line"><a name="l02559"></a><span class="lineno"> 2559</span>&#160;  <span class="comment">// FIXME: Should we call this function for all blocks which exit the function?</span></div>
-<div class="line"><a name="l02560"></a><span class="lineno"> 2560</span>&#160;  intersectAndWarn(ExpectedExitSet, Final-&gt;ExitSet, Final-&gt;ExitLoc,</div>
-<div class="line"><a name="l02561"></a><span class="lineno"> 2561</span>&#160;                   <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a527693cc04bba87b3fb04d2a5b57a2f0">LEK_LockedAtEndOfFunction</a>, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a16b8b2830241b1f991a497dd61756eba">LEK_NotLockedAtEndOfFunction</a>);</div>
-<div class="line"><a name="l02562"></a><span class="lineno"> 2562</span>&#160; </div>
-<div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160;  Handler.<a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#a75d599046f5d493b4d5afd74f95e1bce">leaveFunction</a>(CurrentFunction);</div>
-<div class="line"><a name="l02564"></a><span class="lineno"> 2564</span>&#160;}</div>
-<div class="line"><a name="l02565"></a><span class="lineno"> 2565</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02566"></a><span class="lineno"> 2566</span>&#160;<span class="comment">/// Check a function&#39;s CFG for thread-safety violations.</span></div>
-<div class="line"><a name="l02567"></a><span class="lineno"> 2567</span>&#160;<span class="comment">///</span></div>
-<div class="line"><a name="l02568"></a><span class="lineno"> 2568</span>&#160;<span class="comment">/// We traverse the blocks in the CFG, compute the set of mutexes that are held</span></div>
-<div class="line"><a name="l02569"></a><span class="lineno"> 2569</span>&#160;<span class="comment">/// at the end of each block, and issue warnings for thread safety violations.</span></div>
-<div class="line"><a name="l02570"></a><span class="lineno"> 2570</span>&#160;<span class="comment">/// Each block in the CFG is traversed exactly once.</span></div>
-<div class="line"><a name="l02571"></a><span class="lineno"><a class="line" href="namespaceclang_1_1threadSafety.html#adf2b52c0324ca5aafa2075acf6f28744"> 2571</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespaceclang_1_1threadSafety.html#adf2b52c0324ca5aafa2075acf6f28744">threadSafety::runThreadSafetyAnalysis</a>(<a class="code" href="classclang_1_1AnalysisDeclContext.html">AnalysisDeclContext</a> &amp;AC,</div>
-<div class="line"><a name="l02572"></a><span class="lineno"> 2572</span>&#160;                                           <a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html">ThreadSafetyHandler</a> &amp;Handler,</div>
-<div class="line"><a name="l02573"></a><span class="lineno"> 2573</span>&#160;                                           <a class="code" href="classclang_1_1threadSafety_1_1BeforeSet.html">BeforeSet</a> **BSet) {</div>
-<div class="line"><a name="l02574"></a><span class="lineno"> 2574</span>&#160;  <span class="keywordflow">if</span> (!*BSet)</div>
-<div class="line"><a name="l02575"></a><span class="lineno"> 2575</span>&#160;    *BSet = <span class="keyword">new</span> <a class="code" href="classclang_1_1threadSafety_1_1BeforeSet.html">BeforeSet</a>;</div>
-<div class="line"><a name="l02576"></a><span class="lineno"> 2576</span>&#160;  ThreadSafetyAnalyzer Analyzer(Handler, *BSet);</div>
-<div class="line"><a name="l02577"></a><span class="lineno"> 2577</span>&#160;  Analyzer.runAnalysis(AC);</div>
-<div class="line"><a name="l02578"></a><span class="lineno"> 2578</span>&#160;}</div>
-<div class="line"><a name="l02579"></a><span class="lineno"> 2579</span>&#160; </div>
-<div class="line"><a name="l02580"></a><span class="lineno"><a class="line" href="namespaceclang_1_1threadSafety.html#a7dc09b3d6e48218b48a907ae71f3e8ab"> 2580</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceclang_1_1threadSafety.html#a7dc09b3d6e48218b48a907ae71f3e8ab">threadSafety::threadSafetyCleanup</a>(<a class="code" href="classclang_1_1threadSafety_1_1BeforeSet.html">BeforeSet</a> *<a class="code" href="classclang_1_1TypePropertyCache.html">Cache</a>) { <span class="keyword">delete</span> <a class="code" href="Type_8cpp.html#a63c3268d9ee77956e94bb7b7098c8e97">Cache</a>; }</div>
-<div class="line"><a name="l02581"></a><span class="lineno"> 2581</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l02582"></a><span class="lineno"> 2582</span>&#160;<span class="comment">/// Helper function that returns a LockKind required for the given level</span></div>
-<div class="line"><a name="l02583"></a><span class="lineno"> 2583</span>&#160;<span class="comment">/// of access.</span></div>
-<div class="line"><a name="l02584"></a><span class="lineno"><a class="line" href="namespaceclang_1_1threadSafety.html#a0ebbaed4fb8a58eb9358e50eb4814d22"> 2584</a></span>&#160;<span class="comment"></span><a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388f">LockKind</a> <a class="code" href="namespaceclang_1_1threadSafety.html#a0ebbaed4fb8a58eb9358e50eb4814d22">threadSafety::getLockKindFromAccessKind</a>(<a class="code" href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15e">AccessKind</a> AK) {</div>
-<div class="line"><a name="l02585"></a><span class="lineno"> 2585</span>&#160;  <span class="keywordflow">switch</span> (AK) {</div>
-<div class="line"><a name="l02586"></a><span class="lineno"> 2586</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15ead15a7164e0f21b2d94220e700f77298c">AK_Read</a> :</div>
-<div class="line"><a name="l02587"></a><span class="lineno"> 2587</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa96b7c0462743ae84e9388c82622c1dc9">LK_Shared</a>;</div>
-<div class="line"><a name="l02588"></a><span class="lineno"> 2588</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15ea1dc024e5d6102b8de941d97fe9689c37">AK_Written</a> :</div>
-<div class="line"><a name="l02589"></a><span class="lineno"> 2589</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa9c30482a29ee82af2974ce475d235c13">LK_Exclusive</a>;</div>
-<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;  }</div>
-<div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;  llvm_unreachable(<span class="stringliteral">&quot;Unknown AccessKind&quot;</span>);</div>
-<div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160;}</div>
+<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;    BuildLockset LocksetBuilder(<span class="keyword">this</span>, *CurrBlockInfo);</div>
+<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160; </div>
+<div class="line"><a name="l02491"></a><span class="lineno"> 2491</span>&#160;    <span class="comment">// Visit all the statements in the basic block.</span></div>
+<div class="line"><a name="l02492"></a><span class="lineno"> 2492</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;BI : *CurrBlock) {</div>
+<div class="line"><a name="l02493"></a><span class="lineno"> 2493</span>&#160;      <span class="keywordflow">switch</span> (BI.getKind()) {</div>
+<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="classclang_1_1CFGElement.html#a3c498c8273bfd0c87134bfd590428395a5fe5a186caab5e8a3ddbbcddb68c20f8">CFGElement::Statement</a>: {</div>
+<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160;          <a class="code" href="classclang_1_1CFGStmt.html">CFGStmt</a> CS = BI.<a class="code" href="classclang_1_1CFGElement.html#a5af63ce25ddd8be768933ea8265048d4">castAs</a>&lt;<a class="code" href="classclang_1_1CFGStmt.html">CFGStmt</a>&gt;();</div>
+<div class="line"><a name="l02496"></a><span class="lineno"> 2496</span>&#160;          LocksetBuilder.Visit(CS.<a class="code" href="classclang_1_1CFGStmt.html#ae9c249569b390adc43fb10e8a2e0854c">getStmt</a>());</div>
+<div class="line"><a name="l02497"></a><span class="lineno"> 2497</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02498"></a><span class="lineno"> 2498</span>&#160;        }</div>
+<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160;        <span class="comment">// Ignore BaseDtor, MemberDtor, and TemporaryDtor for now.</span></div>
+<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="classclang_1_1CFGElement.html#a3c498c8273bfd0c87134bfd590428395aa874e18863ab62b7c0383cdf8de3512e">CFGElement::AutomaticObjectDtor</a>: {</div>
+<div class="line"><a name="l02501"></a><span class="lineno"> 2501</span>&#160;          <a class="code" href="classclang_1_1CFGAutomaticObjDtor.html">CFGAutomaticObjDtor</a> AD = BI.<a class="code" href="classclang_1_1CFGElement.html#a5af63ce25ddd8be768933ea8265048d4">castAs</a>&lt;<a class="code" href="classclang_1_1CFGAutomaticObjDtor.html">CFGAutomaticObjDtor</a>&gt;();</div>
+<div class="line"><a name="l02502"></a><span class="lineno"> 2502</span>&#160;          <span class="keyword">const</span> <span class="keyword">auto</span> *DD = AD.<a class="code" href="classclang_1_1CFGImplicitDtor.html#a1858055b819495f2b144710a6f4d31de">getDestructorDecl</a>(AC.<a class="code" href="classclang_1_1AnalysisDeclContext.html#a8a9014e683ac71c91c8c025461beb07f">getASTContext</a>());</div>
+<div class="line"><a name="l02503"></a><span class="lineno"> 2503</span>&#160;          <span class="keywordflow">if</span> (!DD-&gt;hasAttrs())</div>
+<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02505"></a><span class="lineno"> 2505</span>&#160; </div>
+<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160;          <span class="comment">// Create a dummy expression,</span></div>
+<div class="line"><a name="l02507"></a><span class="lineno"> 2507</span>&#160;          <span class="keyword">auto</span> *VD = <span class="keyword">const_cast&lt;</span><a class="code" href="classclang_1_1VarDecl.html">VarDecl</a> *<span class="keyword">&gt;</span>(AD.<a class="code" href="classclang_1_1CFGAutomaticObjDtor.html#adb56fff47327be70b644fffd9344ee73">getVarDecl</a>());</div>
+<div class="line"><a name="l02508"></a><span class="lineno"> 2508</span>&#160;          <a class="code" href="classclang_1_1DeclRefExpr.html">DeclRefExpr</a> DRE(VD-&gt;<a class="code" href="classclang_1_1Decl.html#a213239e747fb0b3a0cacd86267339af2">getASTContext</a>(), VD, <span class="keyword">false</span>,</div>
+<div class="line"><a name="l02509"></a><span class="lineno"> 2509</span>&#160;                          VD-&gt;<a class="code" href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">getType</a>().<a class="code" href="classclang_1_1QualType.html#a8be1f3b9e144fba37e7aa9ae2a583de6">getNonReferenceType</a>(), <a class="code" href="namespaceclang.html#ac7b1e4926b152c0385bc7ec72319a340ab67545101f6b01efc1ecf6a0cefc7ee7">VK_LValue</a>,</div>
+<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160;                          AD.<a class="code" href="classclang_1_1CFGAutomaticObjDtor.html#a071c47112bfb749ace6b3db5712903ad">getTriggerStmt</a>()-&gt;<a class="code" href="classclang_1_1Stmt.html#a0634f86323ea647d091b8a33d37d175b">getEndLoc</a>());</div>
+<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160;          LocksetBuilder.handleCall(&amp;DRE, DD);</div>
+<div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02513"></a><span class="lineno"> 2513</span>&#160;        }</div>
+<div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160;          <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l02516"></a><span class="lineno"> 2516</span>&#160;      }</div>
+<div class="line"><a name="l02517"></a><span class="lineno"> 2517</span>&#160;    }</div>
+<div class="line"><a name="l02518"></a><span class="lineno"> 2518</span>&#160;    CurrBlockInfo-&gt;ExitSet = LocksetBuilder.FSet;</div>
+<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160; </div>
+<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160;    <span class="comment">// For every back edge from CurrBlock (the end of the loop) to another block</span></div>
+<div class="line"><a name="l02521"></a><span class="lineno"> 2521</span>&#160;    <span class="comment">// (FirstLoopBlock) we need to check that the Lockset of Block is equal to</span></div>
+<div class="line"><a name="l02522"></a><span class="lineno"> 2522</span>&#160;    <span class="comment">// the one held at the beginning of FirstLoopBlock. We can look up the</span></div>
+<div class="line"><a name="l02523"></a><span class="lineno"> 2523</span>&#160;    <span class="comment">// Lockset held at the beginning of FirstLoopBlock in the EntryLockSets map.</span></div>
+<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="classclang_1_1CFGBlock.html#aeb2bebcc14c09b9cf250aa659670f736">CFGBlock::const_succ_iterator</a> SI = CurrBlock-&gt;succ_begin(),</div>
+<div class="line"><a name="l02525"></a><span class="lineno"> 2525</span>&#160;         SE  = CurrBlock-&gt;succ_end(); SI != SE; ++SI) {</div>
+<div class="line"><a name="l02526"></a><span class="lineno"> 2526</span>&#160;      <span class="comment">// if CurrBlock -&gt; *SI is *not* a back edge</span></div>
+<div class="line"><a name="l02527"></a><span class="lineno"> 2527</span>&#160;      <span class="keywordflow">if</span> (*SI == <span class="keyword">nullptr</span> || !VisitedBlocks.alreadySet(*SI))</div>
+<div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160; </div>
+<div class="line"><a name="l02530"></a><span class="lineno"> 2530</span>&#160;      <a class="code" href="classclang_1_1CFGBlock.html">CFGBlock</a> *FirstLoopBlock = *SI;</div>
+<div class="line"><a name="l02531"></a><span class="lineno"> 2531</span>&#160;      CFGBlockInfo *PreLoop = &amp;BlockInfo[FirstLoopBlock-&gt;<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()];</div>
+<div class="line"><a name="l02532"></a><span class="lineno"> 2532</span>&#160;      CFGBlockInfo *LoopEnd = &amp;BlockInfo[CurrBlockID];</div>
+<div class="line"><a name="l02533"></a><span class="lineno"> 2533</span>&#160;      intersectAndWarn(PreLoop-&gt;EntrySet, LoopEnd-&gt;ExitSet, PreLoop-&gt;EntryLoc,</div>
+<div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;                       <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a6d98812ce083318b61532c36bbfab900">LEK_LockedSomeLoopIterations</a>);</div>
+<div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160;    }</div>
+<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160;  }</div>
+<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160; </div>
+<div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;  CFGBlockInfo *Initial = &amp;BlockInfo[CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#ad5618d5c0636efb4d71510bd66c066cf">getEntry</a>().<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()];</div>
+<div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;  CFGBlockInfo *Final   = &amp;BlockInfo[CFGraph-&gt;<a class="code" href="classclang_1_1CFG.html#a2ff1ea015dc3922825441ce7a2ec13b7">getExit</a>().<a class="code" href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">getBlockID</a>()];</div>
+<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160; </div>
+<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;  <span class="comment">// Skip the final check if the exit block is unreachable.</span></div>
+<div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160;  <span class="keywordflow">if</span> (!Final-&gt;Reachable)</div>
+<div class="line"><a name="l02543"></a><span class="lineno"> 2543</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160; </div>
+<div class="line"><a name="l02545"></a><span class="lineno"> 2545</span>&#160;  <span class="comment">// By default, we expect all locks held on entry to be held on exit.</span></div>
+<div class="line"><a name="l02546"></a><span class="lineno"> 2546</span>&#160;  FactSet ExpectedExitSet = Initial-&gt;EntrySet;</div>
+<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160; </div>
+<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160;  <span class="comment">// Adjust the expected exit set by adding or removing locks, as declared</span></div>
+<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160;  <span class="comment">// by *-LOCK_FUNCTION and UNLOCK_FUNCTION.  The intersect below will then</span></div>
+<div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;  <span class="comment">// issue the appropriate warning.</span></div>
+<div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;  <span class="comment">// FIXME: the location here is not quite right.</span></div>
+<div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Lock : ExclusiveLocksAcquired)</div>
+<div class="line"><a name="l02553"></a><span class="lineno"> 2553</span>&#160;    ExpectedExitSet.addLock(FactMan, std::make_unique&lt;LockableFactEntry&gt;(</div>
+<div class="line"><a name="l02554"></a><span class="lineno"> 2554</span>&#160;                                         Lock, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa9c30482a29ee82af2974ce475d235c13">LK_Exclusive</a>, D-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>()));</div>
+<div class="line"><a name="l02555"></a><span class="lineno"> 2555</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Lock : SharedLocksAcquired)</div>
+<div class="line"><a name="l02556"></a><span class="lineno"> 2556</span>&#160;    ExpectedExitSet.addLock(FactMan, std::make_unique&lt;LockableFactEntry&gt;(</div>
+<div class="line"><a name="l02557"></a><span class="lineno"> 2557</span>&#160;                                         Lock, <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa96b7c0462743ae84e9388c82622c1dc9">LK_Shared</a>, D-&gt;<a class="code" href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">getLocation</a>()));</div>
+<div class="line"><a name="l02558"></a><span class="lineno"> 2558</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;Lock : LocksReleased)</div>
+<div class="line"><a name="l02559"></a><span class="lineno"> 2559</span>&#160;    ExpectedExitSet.removeLock(FactMan, Lock);</div>
+<div class="line"><a name="l02560"></a><span class="lineno"> 2560</span>&#160; </div>
+<div class="line"><a name="l02561"></a><span class="lineno"> 2561</span>&#160;  <span class="comment">// FIXME: Should we call this function for all blocks which exit the function?</span></div>
+<div class="line"><a name="l02562"></a><span class="lineno"> 2562</span>&#160;  intersectAndWarn(ExpectedExitSet, Final-&gt;ExitSet, Final-&gt;ExitLoc,</div>
+<div class="line"><a name="l02563"></a><span class="lineno"> 2563</span>&#160;                   <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a527693cc04bba87b3fb04d2a5b57a2f0">LEK_LockedAtEndOfFunction</a>, <a class="code" href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a16b8b2830241b1f991a497dd61756eba">LEK_NotLockedAtEndOfFunction</a>);</div>
+<div class="line"><a name="l02564"></a><span class="lineno"> 2564</span>&#160; </div>
+<div class="line"><a name="l02565"></a><span class="lineno"> 2565</span>&#160;  Handler.<a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#a75d599046f5d493b4d5afd74f95e1bce">leaveFunction</a>(CurrentFunction);</div>
+<div class="line"><a name="l02566"></a><span class="lineno"> 2566</span>&#160;}</div>
+<div class="line"><a name="l02567"></a><span class="lineno"> 2567</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l02568"></a><span class="lineno"> 2568</span>&#160;<span class="comment">/// Check a function&#39;s CFG for thread-safety violations.</span></div>
+<div class="line"><a name="l02569"></a><span class="lineno"> 2569</span>&#160;<span class="comment">///</span></div>
+<div class="line"><a name="l02570"></a><span class="lineno"> 2570</span>&#160;<span class="comment">/// We traverse the blocks in the CFG, compute the set of mutexes that are held</span></div>
+<div class="line"><a name="l02571"></a><span class="lineno"> 2571</span>&#160;<span class="comment">/// at the end of each block, and issue warnings for thread safety violations.</span></div>
+<div class="line"><a name="l02572"></a><span class="lineno"> 2572</span>&#160;<span class="comment">/// Each block in the CFG is traversed exactly once.</span></div>
+<div class="line"><a name="l02573"></a><span class="lineno"><a class="line" href="namespaceclang_1_1threadSafety.html#adf2b52c0324ca5aafa2075acf6f28744"> 2573</a></span>&#160;<span class="comment"></span><span class="keywordtype">void</span> <a class="code" href="namespaceclang_1_1threadSafety.html#adf2b52c0324ca5aafa2075acf6f28744">threadSafety::runThreadSafetyAnalysis</a>(<a class="code" href="classclang_1_1AnalysisDeclContext.html">AnalysisDeclContext</a> &amp;AC,</div>
+<div class="line"><a name="l02574"></a><span class="lineno"> 2574</span>&#160;                                           <a class="code" href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html">ThreadSafetyHandler</a> &amp;Handler,</div>
+<div class="line"><a name="l02575"></a><span class="lineno"> 2575</span>&#160;                                           <a class="code" href="classclang_1_1threadSafety_1_1BeforeSet.html">BeforeSet</a> **BSet) {</div>
+<div class="line"><a name="l02576"></a><span class="lineno"> 2576</span>&#160;  <span class="keywordflow">if</span> (!*BSet)</div>
+<div class="line"><a name="l02577"></a><span class="lineno"> 2577</span>&#160;    *BSet = <span class="keyword">new</span> <a class="code" href="classclang_1_1threadSafety_1_1BeforeSet.html">BeforeSet</a>;</div>
+<div class="line"><a name="l02578"></a><span class="lineno"> 2578</span>&#160;  ThreadSafetyAnalyzer Analyzer(Handler, *BSet);</div>
+<div class="line"><a name="l02579"></a><span class="lineno"> 2579</span>&#160;  Analyzer.runAnalysis(AC);</div>
+<div class="line"><a name="l02580"></a><span class="lineno"> 2580</span>&#160;}</div>
+<div class="line"><a name="l02581"></a><span class="lineno"> 2581</span>&#160; </div>
+<div class="line"><a name="l02582"></a><span class="lineno"><a class="line" href="namespaceclang_1_1threadSafety.html#a7dc09b3d6e48218b48a907ae71f3e8ab"> 2582</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceclang_1_1threadSafety.html#a7dc09b3d6e48218b48a907ae71f3e8ab">threadSafety::threadSafetyCleanup</a>(<a class="code" href="classclang_1_1threadSafety_1_1BeforeSet.html">BeforeSet</a> *<a class="code" href="classclang_1_1TypePropertyCache.html">Cache</a>) { <span class="keyword">delete</span> <a class="code" href="Type_8cpp.html#a63c3268d9ee77956e94bb7b7098c8e97">Cache</a>; }</div>
+<div class="line"><a name="l02583"></a><span class="lineno"> 2583</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l02584"></a><span class="lineno"> 2584</span>&#160;<span class="comment">/// Helper function that returns a LockKind required for the given level</span></div>
+<div class="line"><a name="l02585"></a><span class="lineno"> 2585</span>&#160;<span class="comment">/// of access.</span></div>
+<div class="line"><a name="l02586"></a><span class="lineno"><a class="line" href="namespaceclang_1_1threadSafety.html#a0ebbaed4fb8a58eb9358e50eb4814d22"> 2586</a></span>&#160;<span class="comment"></span><a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388f">LockKind</a> <a class="code" href="namespaceclang_1_1threadSafety.html#a0ebbaed4fb8a58eb9358e50eb4814d22">threadSafety::getLockKindFromAccessKind</a>(<a class="code" href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15e">AccessKind</a> AK) {</div>
+<div class="line"><a name="l02587"></a><span class="lineno"> 2587</span>&#160;  <span class="keywordflow">switch</span> (AK) {</div>
+<div class="line"><a name="l02588"></a><span class="lineno"> 2588</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15ead15a7164e0f21b2d94220e700f77298c">AK_Read</a> :</div>
+<div class="line"><a name="l02589"></a><span class="lineno"> 2589</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa96b7c0462743ae84e9388c82622c1dc9">LK_Shared</a>;</div>
+<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15ea1dc024e5d6102b8de941d97fe9689c37">AK_Written</a> :</div>
+<div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespaceclang_1_1threadSafety.html#ab1546ffda8bf88f101aa4acd5334388fa9c30482a29ee82af2974ce475d235c13">LK_Exclusive</a>;</div>
+<div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160;  }</div>
+<div class="line"><a name="l02593"></a><span class="lineno"> 2593</span>&#160;  llvm_unreachable(<span class="stringliteral">&quot;Unknown AccessKind&quot;</span>);</div>
+<div class="line"><a name="l02594"></a><span class="lineno"> 2594</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_a2fc3462781ff3f97d827f739de996349a527693cc04bba87b3fb04d2a5b57a2f0"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a527693cc04bba87b3fb04d2a5b57a2f0">clang::threadSafety::LEK_LockedAtEndOfFunction</a></div><div class="ttdeci">@ LEK_LockedAtEndOfFunction</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00088">ThreadSafety.h:88</a></div></div>
 <div class="ttc" id="aclassclang_1_1CXXConstructExpr_html_a88db2c2b9ae313af0f3310a600bc44b5a3733e434dafb17cdbee82c01462a4da8"><div class="ttname"><a href="classclang_1_1CXXConstructExpr.html#a88db2c2b9ae313af0f3310a600bc44b5a3733e434dafb17cdbee82c01462a4da8">clang::CXXConstructExpr::CK_Complete</a></div><div class="ttdeci">@ CK_Complete</div><div class="ttdef"><b>Definition:</b> <a href="ExprCXX_8h_source.html#l01465">ExprCXX.h:1465</a></div></div>
@@ -2649,9 +2651,9 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1CFGWalker_html"><div class="ttname"><a href="classclang_1_1threadSafety_1_1CFGWalker.html">clang::threadSafety::CFGWalker</a></div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafetyCommon_8h_source.html#l00145">ThreadSafetyCommon.h:145</a></div></div>
 <div class="ttc" id="aclassclang_1_1CXXConstructorDecl_html"><div class="ttname"><a href="classclang_1_1CXXConstructorDecl.html">clang::CXXConstructorDecl</a></div><div class="ttdoc">Represents a C++ constructor within a class.</div><div class="ttdef"><b>Definition:</b> <a href="DeclCXX_8h_source.html#l02402">DeclCXX.h:2402</a></div></div>
 <div class="ttc" id="aclassclang_1_1AnalysisDeclContext_html_a8a9014e683ac71c91c8c025461beb07f"><div class="ttname"><a href="classclang_1_1AnalysisDeclContext.html#a8a9014e683ac71c91c8c025461beb07f">clang::AnalysisDeclContext::getASTContext</a></div><div class="ttdeci">ASTContext &amp; getASTContext() const</div><div class="ttdef"><b>Definition:</b> <a href="AnalysisDeclContext_8h_source.html#l00104">AnalysisDeclContext.h:104</a></div></div>
-<div class="ttc" id="aclassclang_1_1BinaryOperator_html_abf2f15561ec6d790031ec82974924690"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#abf2f15561ec6d790031ec82974924690">clang::BinaryOperator::isAssignmentOp</a></div><div class="ttdeci">static bool isAssignmentOp(Opcode Opc)</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03973">Expr.h:3973</a></div></div>
-<div class="ttc" id="aclassclang_1_1CallExpr_html_a7131a2da85b34d34e00ec7c6004b0836"><div class="ttname"><a href="classclang_1_1CallExpr.html#a7131a2da85b34d34e00ec7c6004b0836">clang::CallExpr::arg_end</a></div><div class="ttdeci">arg_iterator arg_end()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03077">Expr.h:3077</a></div></div>
-<div class="ttc" id="aclassclang_1_1CallExpr_html_a6f97281c2e5e3820685951be98b661a3"><div class="ttname"><a href="classclang_1_1CallExpr.html#a6f97281c2e5e3820685951be98b661a3">clang::CallExpr::arg_begin</a></div><div class="ttdeci">arg_iterator arg_begin()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03074">Expr.h:3074</a></div></div>
+<div class="ttc" id="aclassclang_1_1BinaryOperator_html_abf2f15561ec6d790031ec82974924690"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#abf2f15561ec6d790031ec82974924690">clang::BinaryOperator::isAssignmentOp</a></div><div class="ttdeci">static bool isAssignmentOp(Opcode Opc)</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03984">Expr.h:3984</a></div></div>
+<div class="ttc" id="aclassclang_1_1CallExpr_html_a7131a2da85b34d34e00ec7c6004b0836"><div class="ttname"><a href="classclang_1_1CallExpr.html#a7131a2da85b34d34e00ec7c6004b0836">clang::CallExpr::arg_end</a></div><div class="ttdeci">arg_iterator arg_end()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03088">Expr.h:3088</a></div></div>
+<div class="ttc" id="aclassclang_1_1CallExpr_html_a6f97281c2e5e3820685951be98b661a3"><div class="ttname"><a href="classclang_1_1CallExpr.html#a6f97281c2e5e3820685951be98b661a3">clang::CallExpr::arg_begin</a></div><div class="ttdeci">arg_iterator arg_begin()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03085">Expr.h:3085</a></div></div>
 <div class="ttc" id="aSpecifiers_8h_html"><div class="ttname"><a href="Specifiers_8h.html">Specifiers.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1CapabilityExpr_html_a0fd0274841f93e8f042f40b866fb1408"><div class="ttname"><a href="classclang_1_1threadSafety_1_1CapabilityExpr.html#a0fd0274841f93e8f042f40b866fb1408">clang::threadSafety::CapabilityExpr::shouldIgnore</a></div><div class="ttdeci">bool shouldIgnore() const</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafetyCommon_8h_source.html#l00321">ThreadSafetyCommon.h:321</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_aea1dcf7b1f5abcb93b308883ff1015beaf54519a3541a10404372d577274634af"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#aea1dcf7b1f5abcb93b308883ff1015beaf54519a3541a10404372d577274634af">clang::threadSafety::POK_FunctionCall</a></div><div class="ttdeci">@ POK_FunctionCall</div><div class="ttdoc">Making a function call (e.g. fool())</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00044">ThreadSafety.h:44</a></div></div>
@@ -2677,12 +2679,12 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1Attr_html_adb1b8122069df702fb5077c95e436d7b"><div class="ttname"><a href="classclang_1_1Attr.html#adb1b8122069df702fb5077c95e436d7b">clang::Attr::getLocation</a></div><div class="ttdeci">SourceLocation getLocation() const</div><div class="ttdef"><b>Definition:</b> <a href="Attr_8h_source.html#l00094">Attr.h:94</a></div></div>
 <div class="ttc" id="anamespaceclang_html_acdf88ec6c845aa781824469fcb0af66cac41a31890959544c6523af684561abe5"><div class="ttname"><a href="namespaceclang.html#acdf88ec6c845aa781824469fcb0af66cac41a31890959544c6523af684561abe5">clang::MultiVersionKind::Target</a></div><div class="ttdeci">@ Target</div></div>
 <div class="ttc" id="aclassclang_1_1QualType_html_a8be1f3b9e144fba37e7aa9ae2a583de6"><div class="ttname"><a href="classclang_1_1QualType.html#a8be1f3b9e144fba37e7aa9ae2a583de6">clang::QualType::getNonReferenceType</a></div><div class="ttdeci">QualType getNonReferenceType() const</div><div class="ttdoc">If Type is a reference type (e.g., const int&amp;), returns the type that the reference refers to (&quot;const...</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l06633">Type.h:6633</a></div></div>
-<div class="ttc" id="aclassclang_1_1CastExpr_html_a37e3d80c4ca590eadbe49e400c50134b"><div class="ttname"><a href="classclang_1_1CastExpr.html#a37e3d80c4ca590eadbe49e400c50134b">clang::CastExpr::getSubExpr</a></div><div class="ttdeci">Expr * getSubExpr()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03559">Expr.h:3559</a></div></div>
+<div class="ttc" id="aclassclang_1_1CastExpr_html_a37e3d80c4ca590eadbe49e400c50134b"><div class="ttname"><a href="classclang_1_1CastExpr.html#a37e3d80c4ca590eadbe49e400c50134b">clang::CastExpr::getSubExpr</a></div><div class="ttdeci">Expr * getSubExpr()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03570">Expr.h:3570</a></div></div>
 <div class="ttc" id="aclassclang_1_1CFGBlock_html_ad6eb4cfb5896f3583c4c28f02a4c4af4"><div class="ttname"><a href="classclang_1_1CFGBlock.html#ad6eb4cfb5896f3583c4c28f02a4c4af4">clang::CFGBlock::getBlockID</a></div><div class="ttdeci">unsigned getBlockID() const</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l01074">CFG.h:1074</a></div></div>
 <div class="ttc" id="aclassclang_1_1QualType_html"><div class="ttname"><a href="classclang_1_1QualType.html">clang::QualType</a></div><div class="ttdoc">A (possibly-)qualified type.</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l00668">Type.h:668</a></div></div>
 <div class="ttc" id="aAttr_8h_html"><div class="ttname"><a href="Attr_8h.html">Attr.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1CFGAutomaticObjDtor_html_a071c47112bfb749ace6b3db5712903ad"><div class="ttname"><a href="classclang_1_1CFGAutomaticObjDtor.html#a071c47112bfb749ace6b3db5712903ad">clang::CFGAutomaticObjDtor::getTriggerStmt</a></div><div class="ttdeci">const Stmt * getTriggerStmt() const</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l00399">CFG.h:399</a></div></div>
-<div class="ttc" id="aThreadSafety_8cpp_html_a5d5e6a788dd052b2b0c6a2da76ac60cd"><div class="ttname"><a href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd">neverReturns</a></div><div class="ttdeci">static bool neverReturns(const CFGBlock *B)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02263">ThreadSafety.cpp:2263</a></div></div>
+<div class="ttc" id="aThreadSafety_8cpp_html_a5d5e6a788dd052b2b0c6a2da76ac60cd"><div class="ttname"><a href="ThreadSafety_8cpp.html#a5d5e6a788dd052b2b0c6a2da76ac60cd">neverReturns</a></div><div class="ttdeci">static bool neverReturns(const CFGBlock *B)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02265">ThreadSafety.cpp:2265</a></div></div>
 <div class="ttc" id="aThreadSafety_8cpp_html_a510d47ec2a4a0b1801074b7fe2da6ade"><div class="ttname"><a href="ThreadSafety_8cpp.html#a510d47ec2a4a0b1801074b7fe2da6ade">getStaticBooleanValue</a></div><div class="ttdeci">static bool getStaticBooleanValue(Expr *E, bool &amp;TCond)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l01423">ThreadSafety.cpp:1423</a></div></div>
 <div class="ttc" id="anamespaceAttributeLangSupport_html_a2f895ae8ae6d7966390f197b109d1f4dac1c6ab9ca121c29c650b3ab6a4212b4e"><div class="ttname"><a href="namespaceAttributeLangSupport.html#a2f895ae8ae6d7966390f197b109d1f4dac1c6ab9ca121c29c650b3ab6a4212b4e">AttributeLangSupport::C</a></div><div class="ttdeci">@ C</div><div class="ttdef"><b>Definition:</b> <a href="SemaDeclAttr_8cpp_source.html#l00053">SemaDeclAttr.cpp:53</a></div></div>
 <div class="ttc" id="aclassclang_1_1AnalysisDeclContext_html"><div class="ttname"><a href="classclang_1_1AnalysisDeclContext.html">clang::AnalysisDeclContext</a></div><div class="ttdoc">AnalysisDeclContext contains the context data for the function, method or block under analysis.</div><div class="ttdef"><b>Definition:</b> <a href="AnalysisDeclContext_8h_source.html#l00072">AnalysisDeclContext.h:72</a></div></div>
@@ -2697,7 +2699,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1TypePropertyCache_html"><div class="ttname"><a href="classclang_1_1TypePropertyCache.html">clang::TypePropertyCache</a></div><div class="ttdoc">The type-property cache.</div><div class="ttdef"><b>Definition:</b> <a href="Type_8cpp_source.html#l03775">Type.cpp:3775</a></div></div>
 <div class="ttc" id="aclassclang_1_1Stmt_html_a99ea025ff94841762aa4fbe690c12ec9"><div class="ttname"><a href="classclang_1_1Stmt.html#a99ea025ff94841762aa4fbe690c12ec9">clang::Stmt::dump</a></div><div class="ttdeci">void dump() const</div><div class="ttdoc">Dumps the specified AST fragment and all subtrees to llvm::errs().</div><div class="ttdef"><b>Definition:</b> <a href="ASTDumper_8cpp_source.html#l00231">ASTDumper.cpp:231</a></div></div>
 <div class="ttc" id="aclassclang_1_1CallExpr_html_adae79f81d15fd153dc505d597ceee5ea"><div class="ttname"><a href="classclang_1_1CallExpr.html#adae79f81d15fd153dc505d597ceee5ea">clang::CallExpr::getCalleeDecl</a></div><div class="ttdeci">Decl * getCalleeDecl()</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03005">Expr.h:3005</a></div></div>
-<div class="ttc" id="aclassclang_1_1BinaryOperator_html_ac68857d85840e9f7b051ebd0d2e7b938"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#ac68857d85840e9f7b051ebd0d2e7b938">clang::BinaryOperator::getOpcode</a></div><div class="ttdeci">Opcode getOpcode() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03882">Expr.h:3882</a></div></div>
+<div class="ttc" id="aclassclang_1_1BinaryOperator_html_ac68857d85840e9f7b051ebd0d2e7b938"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#ac68857d85840e9f7b051ebd0d2e7b938">clang::BinaryOperator::getOpcode</a></div><div class="ttdeci">Opcode getOpcode() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03893">Expr.h:3893</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_aea1dcf7b1f5abcb93b308883ff1015beac918a88518ae9d267c43525605f202b9"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#aea1dcf7b1f5abcb93b308883ff1015beac918a88518ae9d267c43525605f202b9">clang::threadSafety::POK_VarAccess</a></div><div class="ttdeci">@ POK_VarAccess</div><div class="ttdoc">Reading or writing a variable (e.g. x in x = 5;)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00041">ThreadSafety.h:41</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_a9ec7802e200691caf7362f823f20f15ead15a7164e0f21b2d94220e700f77298c"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15ead15a7164e0f21b2d94220e700f77298c">clang::threadSafety::AK_Read</a></div><div class="ttdeci">@ AK_Read</div><div class="ttdoc">Reading a variable.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00071">ThreadSafety.h:71</a></div></div>
 <div class="ttc" id="aclassclang_1_1CFGBlock_html_aeb2bebcc14c09b9cf250aa659670f736"><div class="ttname"><a href="classclang_1_1CFGBlock.html#aeb2bebcc14c09b9cf250aa659670f736">clang::CFGBlock::const_succ_iterator</a></div><div class="ttdeci">AdjacentBlocks::const_iterator const_succ_iterator</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l00931">CFG.h:931</a></div></div>
@@ -2721,7 +2723,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1RecordType_html"><div class="ttname"><a href="classclang_1_1RecordType.html">clang::RecordType</a></div><div class="ttdoc">A helper class that allows the use of isa/cast/dyncast to detect TagType objects of structs/unions/cl...</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l04625">Type.h:4625</a></div></div>
 <div class="ttc" id="aclassclang_1_1Decl_html_a9c0ac8ddf9155de0b95eeeb18034e50f"><div class="ttname"><a href="classclang_1_1Decl.html#a9c0ac8ddf9155de0b95eeeb18034e50f">clang::Decl::specific_attrs</a></div><div class="ttdeci">llvm::iterator_range&lt; specific_attr_iterator&lt; T &gt; &gt; specific_attrs() const</div><div class="ttdef"><b>Definition:</b> <a href="DeclBase_8h_source.html#l00529">DeclBase.h:529</a></div></div>
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1ThreadSafetyHandler_html_ae4f91f58ce259191a12bfc7847797221"><div class="ttname"><a href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#ae4f91f58ce259191a12bfc7847797221">clang::threadSafety::ThreadSafetyHandler::handleNegativeNotHeld</a></div><div class="ttdeci">virtual void handleNegativeNotHeld(StringRef Kind, Name LockName, Name Neg, SourceLocation Loc)</div><div class="ttdoc">Warn when acquiring a lock that the negative capability is not held.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00202">ThreadSafety.h:202</a></div></div>
-<div class="ttc" id="aclassclang_1_1BinaryOperator_html"><div class="ttname"><a href="classclang_1_1BinaryOperator.html">clang::BinaryOperator</a></div><div class="ttdoc">A builtin binary operation expression such as &quot;x + y&quot; or &quot;x &lt;= y&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03838">Expr.h:3838</a></div></div>
+<div class="ttc" id="aclassclang_1_1BinaryOperator_html"><div class="ttname"><a href="classclang_1_1BinaryOperator.html">clang::BinaryOperator</a></div><div class="ttdoc">A builtin binary operation expression such as &quot;x + y&quot; or &quot;x &lt;= y&quot;.</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03849">Expr.h:3849</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_a2fc3462781ff3f97d827f739de996349"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349">clang::threadSafety::LockErrorKind</a></div><div class="ttdeci">LockErrorKind</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00085">ThreadSafety.h:85</a></div></div>
 <div class="ttc" id="aOperatorKinds_8h_html"><div class="ttname"><a href="OperatorKinds_8h.html">OperatorKinds.h</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_a9ec7802e200691caf7362f823f20f15ea1dc024e5d6102b8de941d97fe9689c37"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a9ec7802e200691caf7362f823f20f15ea1dc024e5d6102b8de941d97fe9689c37">clang::threadSafety::AK_Written</a></div><div class="ttdeci">@ AK_Written</div><div class="ttdoc">Writing a variable.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00074">ThreadSafety.h:74</a></div></div>
@@ -2758,7 +2760,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1PostOrderCFGView_html_a57f98f7e1cfa3eaab4559d02806e31b4"><div class="ttname"><a href="classclang_1_1PostOrderCFGView.html#a57f98f7e1cfa3eaab4559d02806e31b4">clang::PostOrderCFGView::empty</a></div><div class="ttdeci">bool empty() const</div><div class="ttdef"><b>Definition:</b> <a href="PostOrderCFGView_8h_source.html#l00093">PostOrderCFGView.h:93</a></div></div>
 <div class="ttc" id="aDeclGroup_8h_html"><div class="ttname"><a href="DeclGroup_8h.html">DeclGroup.h</a></div></div>
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1ThreadSafetyHandler_html_aff9e66259b1a9eaffdf6d316dbcae039"><div class="ttname"><a href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#aff9e66259b1a9eaffdf6d316dbcae039">clang::threadSafety::ThreadSafetyHandler::handleDoubleLock</a></div><div class="ttdeci">virtual void handleDoubleLock(StringRef Kind, Name LockName, SourceLocation LocLocked, SourceLocation LocDoubleLock)</div><div class="ttdoc">Warn about lock function calls for locks which are already held.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00137">ThreadSafety.h:137</a></div></div>
-<div class="ttc" id="aclassclang_1_1CastExpr_html_a2e40241b31a75137d192af1ec626f9d8"><div class="ttname"><a href="classclang_1_1CastExpr.html#a2e40241b31a75137d192af1ec626f9d8">clang::CastExpr::getCastKind</a></div><div class="ttdeci">CastKind getCastKind() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03553">Expr.h:3553</a></div></div>
+<div class="ttc" id="aclassclang_1_1CastExpr_html_a2e40241b31a75137d192af1ec626f9d8"><div class="ttname"><a href="classclang_1_1CastExpr.html#a2e40241b31a75137d192af1ec626f9d8">clang::CastExpr::getCastKind</a></div><div class="ttdeci">CastKind getCastKind() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03564">Expr.h:3564</a></div></div>
 <div class="ttc" id="aclassclang_1_1PostOrderCFGView_html"><div class="ttname"><a href="classclang_1_1PostOrderCFGView.html">clang::PostOrderCFGView</a></div><div class="ttdef"><b>Definition:</b> <a href="PostOrderCFGView_8h_source.html#l00028">PostOrderCFGView.h:28</a></div></div>
 <div class="ttc" id="aclassclang_1_1CFGElement_html_a3c498c8273bfd0c87134bfd590428395aa874e18863ab62b7c0383cdf8de3512e"><div class="ttname"><a href="classclang_1_1CFGElement.html#a3c498c8273bfd0c87134bfd590428395aa874e18863ab62b7c0383cdf8de3512e">clang::CFGElement::AutomaticObjectDtor</a></div><div class="ttdeci">@ AutomaticObjectDtor</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l00072">CFG.h:72</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_aea1dcf7b1f5abcb93b308883ff1015bea282505c97f4c3e6068cd4d27048cdd28"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#aea1dcf7b1f5abcb93b308883ff1015bea282505c97f4c3e6068cd4d27048cdd28">clang::threadSafety::POK_PassByRef</a></div><div class="ttdeci">@ POK_PassByRef</div><div class="ttdoc">Passing a guarded variable by reference.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00047">ThreadSafety.h:47</a></div></div>
@@ -2779,7 +2781,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1BeforeSet_html"><div class="ttname"><a href="classclang_1_1threadSafety_1_1BeforeSet.html">clang::threadSafety::BeforeSet</a></div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l00280">ThreadSafety.cpp:280</a></div></div>
 <div class="ttc" id="aclassclang_1_1ValueDecl_html"><div class="ttname"><a href="classclang_1_1ValueDecl.html">clang::ValueDecl</a></div><div class="ttdoc">Represent the declaration of a variable (in which case it is an lvalue) a function (in which case it ...</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00649">Decl.h:649</a></div></div>
 <div class="ttc" id="aclassclang_1_1CFGBlock_html_a1bcc002635a676581313a5e832b31cbc"><div class="ttname"><a href="classclang_1_1CFGBlock.html#a1bcc002635a676581313a5e832b31cbc">clang::CFGBlock::succ_end</a></div><div class="ttdeci">succ_iterator succ_end()</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l00956">CFG.h:956</a></div></div>
-<div class="ttc" id="aclassclang_1_1BinaryOperator_html_aff30d9d23b3726d7458571237f098b34"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#aff30d9d23b3726d7458571237f098b34">clang::BinaryOperator::getLHS</a></div><div class="ttdeci">Expr * getLHS() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03887">Expr.h:3887</a></div></div>
+<div class="ttc" id="aclassclang_1_1BinaryOperator_html_aff30d9d23b3726d7458571237f098b34"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#aff30d9d23b3726d7458571237f098b34">clang::BinaryOperator::getLHS</a></div><div class="ttdeci">Expr * getLHS() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03898">Expr.h:3898</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_aea1dcf7b1f5abcb93b308883ff1015bea218f1b7a3074fe0350a8b68b38ef72ad"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#aea1dcf7b1f5abcb93b308883ff1015bea218f1b7a3074fe0350a8b68b38ef72ad">clang::threadSafety::POK_VarDereference</a></div><div class="ttdeci">@ POK_VarDereference</div><div class="ttdoc">Dereferencing a variable (e.g. p in *p = 5;)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00038">ThreadSafety.h:38</a></div></div>
 <div class="ttc" id="aCoverageMappingGen_8cpp_html_aac83d992338dc387528380660998fb50"><div class="ttname"><a href="CoverageMappingGen_8cpp.html#aac83d992338dc387528380660998fb50">dump</a></div><div class="ttdeci">static void dump(llvm::raw_ostream &amp;OS, StringRef FunctionName, ArrayRef&lt; CounterExpression &gt; Expressions, ArrayRef&lt; CounterMappingRegion &gt; Regions)</div><div class="ttdef"><b>Definition:</b> <a href="CoverageMappingGen_8cpp_source.html#l01521">CoverageMappingGen.cpp:1521</a></div></div>
 <div class="ttc" id="aclassclang_1_1DeclContext_html_a31c99b38017e8d702fda9c0f1d021186"><div class="ttname"><a href="classclang_1_1DeclContext.html#a31c99b38017e8d702fda9c0f1d021186">clang::DeclContext::getParent</a></div><div class="ttdeci">DeclContext * getParent()</div><div class="ttdoc">getParent - Returns the containing DeclContext.</div><div class="ttdef"><b>Definition:</b> <a href="DeclBase_8h_source.html#l01860">DeclBase.h:1860</a></div></div>
@@ -2817,8 +2819,8 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1CFGBlock_html_a45a59f50f8b93e0bc8f611b8c61bb8d1"><div class="ttname"><a href="classclang_1_1CFGBlock.html#a45a59f50f8b93e0bc8f611b8c61bb8d1">clang::CFGBlock::hasNoReturnElement</a></div><div class="ttdeci">bool hasNoReturnElement() const</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l01072">CFG.h:1072</a></div></div>
 <div class="ttc" id="anamespaceclang_html_aac69f5e9ba0a8b51a12a50154cf81578ad55b30607c2a9a2616347d6edb789f6b"><div class="ttname"><a href="namespaceclang.html#aac69f5e9ba0a8b51a12a50154cf81578ad55b30607c2a9a2616347d6edb789f6b">clang::ComparisonCategoryType::Last</a></div><div class="ttdeci">@ Last</div></div>
 <div class="ttc" id="aclassclang_1_1UnaryOperator_html_a7309fe0698496ead06f77065a8cb94a1"><div class="ttname"><a href="classclang_1_1UnaryOperator.html#a7309fe0698496ead06f77065a8cb94a1">clang::UnaryOperator::getOpcode</a></div><div class="ttdeci">Opcode getOpcode() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l02245">Expr.h:2245</a></div></div>
-<div class="ttc" id="aclassclang_1_1BinaryOperator_html_aca01c980608d4f58ff567f8028f2594e"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#aca01c980608d4f58ff567f8028f2594e">clang::BinaryOperator::getRHS</a></div><div class="ttdeci">Expr * getRHS() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03889">Expr.h:3889</a></div></div>
-<div class="ttc" id="anamespaceclang_1_1threadSafety_html_a7dc09b3d6e48218b48a907ae71f3e8ab"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a7dc09b3d6e48218b48a907ae71f3e8ab">clang::threadSafety::threadSafetyCleanup</a></div><div class="ttdeci">void threadSafetyCleanup(BeforeSet *Cache)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02580">ThreadSafety.cpp:2580</a></div></div>
+<div class="ttc" id="aclassclang_1_1BinaryOperator_html_aca01c980608d4f58ff567f8028f2594e"><div class="ttname"><a href="classclang_1_1BinaryOperator.html#aca01c980608d4f58ff567f8028f2594e">clang::BinaryOperator::getRHS</a></div><div class="ttdeci">Expr * getRHS() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03900">Expr.h:3900</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1threadSafety_html_a7dc09b3d6e48218b48a907ae71f3e8ab"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a7dc09b3d6e48218b48a907ae71f3e8ab">clang::threadSafety::threadSafetyCleanup</a></div><div class="ttdeci">void threadSafetyCleanup(BeforeSet *Cache)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02582">ThreadSafety.cpp:2582</a></div></div>
 <div class="ttc" id="aclassclang_1_1CFGBlock_html_a7fca393504a5e4f240b62af86553c5d9"><div class="ttname"><a href="classclang_1_1CFGBlock.html#a7fca393504a5e4f240b62af86553c5d9">clang::CFGBlock::getTerminatorStmt</a></div><div class="ttdeci">Stmt * getTerminatorStmt()</div><div class="ttdef"><b>Definition:</b> <a href="CFG_8h_source.html#l01050">CFG.h:1050</a></div></div>
 <div class="ttc" id="aclassclang_1_1Expr_html_ac9bfcc699442f2093723cfcf703d9f47"><div class="ttname"><a href="classclang_1_1Expr.html#ac9bfcc699442f2093723cfcf703d9f47">clang::Expr::getType</a></div><div class="ttdeci">QualType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l00141">Expr.h:141</a></div></div>
 <div class="ttc" id="aclassclang_1_1SourceLocation_html_a980da8d6100c0a0c3764991ca80ce6e7"><div class="ttname"><a href="classclang_1_1SourceLocation.html#a980da8d6100c0a0c3764991ca80ce6e7">clang::SourceLocation::isValid</a></div><div class="ttdeci">bool isValid() const</div><div class="ttdoc">Return true if this is a valid SourceLocation object.</div><div class="ttdef"><b>Definition:</b> <a href="SourceLocation_8h_source.html#l00110">SourceLocation.h:110</a></div></div>
@@ -2834,16 +2836,16 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1CFGWalker_html_ad43eb99c009b8166acf7d40e536fdf42"><div class="ttname"><a href="classclang_1_1threadSafety_1_1CFGWalker.html#ad43eb99c009b8166acf7d40e536fdf42">clang::threadSafety::CFGWalker::init</a></div><div class="ttdeci">bool init(AnalysisDeclContext &amp;AC)</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafetyCommon_8h_source.html#l00151">ThreadSafetyCommon.h:151</a></div></div>
 <div class="ttc" id="aclassclang_1_1PostOrderCFGView_1_1CFGBlockSet_html"><div class="ttname"><a href="classclang_1_1PostOrderCFGView_1_1CFGBlockSet.html">clang::PostOrderCFGView::CFGBlockSet</a></div><div class="ttdoc">Implements a set of CFGBlocks using a BitVector.</div><div class="ttdef"><b>Definition:</b> <a href="PostOrderCFGView_8h_source.html#l00038">PostOrderCFGView.h:38</a></div></div>
 <div class="ttc" id="aStmt_8h_html"><div class="ttname"><a href="Stmt_8h.html">Stmt.h</a></div></div>
-<div class="ttc" id="anamespaceclang_1_1threadSafety_html_a0ebbaed4fb8a58eb9358e50eb4814d22"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a0ebbaed4fb8a58eb9358e50eb4814d22">clang::threadSafety::getLockKindFromAccessKind</a></div><div class="ttdeci">LockKind getLockKindFromAccessKind(AccessKind AK)</div><div class="ttdoc">Helper function that returns a LockKind required for the given level of access.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02584">ThreadSafety.cpp:2584</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1threadSafety_html_a0ebbaed4fb8a58eb9358e50eb4814d22"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a0ebbaed4fb8a58eb9358e50eb4814d22">clang::threadSafety::getLockKindFromAccessKind</a></div><div class="ttdeci">LockKind getLockKindFromAccessKind(AccessKind AK)</div><div class="ttdoc">Helper function that returns a LockKind required for the given level of access.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02586">ThreadSafety.cpp:2586</a></div></div>
 <div class="ttc" id="aclassclang_1_1CXXConstructExpr_html_a9f460dadf776a2efd0177aafc06f6b50"><div class="ttname"><a href="classclang_1_1CXXConstructExpr.html#a9f460dadf776a2efd0177aafc06f6b50">clang::CXXConstructExpr::getArg</a></div><div class="ttdeci">Expr * getArg(unsigned Arg)</div><div class="ttdoc">Return the specified argument.</div><div class="ttdef"><b>Definition:</b> <a href="ExprCXX_8h_source.html#l01611">ExprCXX.h:1611</a></div></div>
 <div class="ttc" id="aclassclang_1_1ValueDecl_html_a673ae4e2fab42426820de8df166fef5d"><div class="ttname"><a href="classclang_1_1ValueDecl.html#a673ae4e2fab42426820de8df166fef5d">clang::ValueDecl::getType</a></div><div class="ttdeci">QualType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00660">Decl.h:660</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1threadSafety_html_a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#a2fc3462781ff3f97d827f739de996349a3c05828d9c10b077620bdc64cdc21ab6">clang::threadSafety::LEK_LockedSomePredecessors</a></div><div class="ttdeci">@ LEK_LockedSomePredecessors</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00087">ThreadSafety.h:87</a></div></div>
-<div class="ttc" id="anamespaceclang_1_1threadSafety_html_adf2b52c0324ca5aafa2075acf6f28744"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#adf2b52c0324ca5aafa2075acf6f28744">clang::threadSafety::runThreadSafetyAnalysis</a></div><div class="ttdeci">void runThreadSafetyAnalysis(AnalysisDeclContext &amp;AC, ThreadSafetyHandler &amp;Handler, BeforeSet **Bset)</div><div class="ttdoc">Check a function's CFG for thread-safety violations.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02571">ThreadSafety.cpp:2571</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1threadSafety_html_adf2b52c0324ca5aafa2075acf6f28744"><div class="ttname"><a href="namespaceclang_1_1threadSafety.html#adf2b52c0324ca5aafa2075acf6f28744">clang::threadSafety::runThreadSafetyAnalysis</a></div><div class="ttdeci">void runThreadSafetyAnalysis(AnalysisDeclContext &amp;AC, ThreadSafetyHandler &amp;Handler, BeforeSet **Bset)</div><div class="ttdoc">Check a function's CFG for thread-safety violations.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8cpp_source.html#l02573">ThreadSafety.cpp:2573</a></div></div>
 <div class="ttc" id="aclassclang_1_1Expr_html"><div class="ttname"><a href="classclang_1_1Expr.html">clang::Expr</a></div><div class="ttdoc">This represents one expression.</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l00109">Expr.h:109</a></div></div>
 <div class="ttc" id="aclassclang_1_1CXXConstructExpr_html_a2bb215b4a4179a97810e53026be2de89"><div class="ttname"><a href="classclang_1_1CXXConstructExpr.html#a2bb215b4a4179a97810e53026be2de89">clang::CXXConstructExpr::Create</a></div><div class="ttdeci">static CXXConstructExpr * Create(const ASTContext &amp;Ctx, QualType Ty, SourceLocation Loc, CXXConstructorDecl *Ctor, bool Elidable, ArrayRef&lt; Expr * &gt; Args, bool HadMultipleCandidates, bool ListInitialization, bool StdInitListInitialization, bool ZeroInitialization, ConstructionKind ConstructKind, SourceRange ParenOrBraceRange)</div><div class="ttdoc">Create a C++ construction expression.</div><div class="ttdef"><b>Definition:</b> <a href="ExprCXX_8cpp_source.html#l01031">ExprCXX.cpp:1031</a></div></div>
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1ThreadSafetyHandler_html_afb0f47f4aadbec685a97bbfb62a08eb9"><div class="ttname"><a href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#afb0f47f4aadbec685a97bbfb62a08eb9">clang::threadSafety::ThreadSafetyHandler::handleMutexHeldEndOfScope</a></div><div class="ttdeci">virtual void handleMutexHeldEndOfScope(StringRef Kind, Name LockName, SourceLocation LocLocked, SourceLocation LocEndOfScope, LockErrorKind LEK)</div><div class="ttdoc">Warn about situations where a mutex is sometimes held and sometimes not.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00154">ThreadSafety.h:154</a></div></div>
 <div class="ttc" id="aclassclang_1_1threadSafety_1_1ThreadSafetyHandler_html_aa56231fdd6a6df16dd899c95640052d7"><div class="ttname"><a href="classclang_1_1threadSafety_1_1ThreadSafetyHandler.html#aa56231fdd6a6df16dd899c95640052d7">clang::threadSafety::ThreadSafetyHandler::handleExclusiveAndShared</a></div><div class="ttdeci">virtual void handleExclusiveAndShared(StringRef Kind, Name LockName, SourceLocation Loc1, SourceLocation Loc2)</div><div class="ttdoc">Warn when a mutex is held exclusively and shared at the same point.</div><div class="ttdef"><b>Definition:</b> <a href="ThreadSafety_8h_source.html#l00167">ThreadSafety.h:167</a></div></div>
-<div class="ttc" id="aclassclang_1_1CastExpr_html"><div class="ttname"><a href="classclang_1_1CastExpr.html">clang::CastExpr</a></div><div class="ttdoc">CastExpr - Base class for type casts, including both implicit casts (ImplicitCastExpr) and explicit c...</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03508">Expr.h:3508</a></div></div>
+<div class="ttc" id="aclassclang_1_1CastExpr_html"><div class="ttname"><a href="classclang_1_1CastExpr.html">clang::CastExpr</a></div><div class="ttdoc">CastExpr - Base class for type casts, including both implicit casts (ImplicitCastExpr) and explicit c...</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l03519">Expr.h:3519</a></div></div>
 <div class="ttc" id="aclassclang_1_1FunctionDecl_html_ab95c29a19de7d1c1e967d59cdbac2dcc"><div class="ttname"><a href="classclang_1_1FunctionDecl.html#ab95c29a19de7d1c1e967d59cdbac2dcc">clang::FunctionDecl::parameters</a></div><div class="ttdeci">ArrayRef&lt; ParmVarDecl * &gt; parameters() const</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l02453">Decl.h:2453</a></div></div>
 <div class="ttc" id="aclassclang_1_1Decl_html_a9ac934b2f7ae95704682dc44da1f0867"><div class="ttname"><a href="classclang_1_1Decl.html#a9ac934b2f7ae95704682dc44da1f0867">clang::Decl::getLocation</a></div><div class="ttdeci">SourceLocation getLocation() const</div><div class="ttdef"><b>Definition:</b> <a href="DeclBase_8h_source.html#l00430">DeclBase.h:430</a></div></div>
 <div class="ttc" id="aclassclang_1_1DeclRefExpr_html"><div class="ttname"><a href="classclang_1_1DeclRefExpr.html">clang::DeclRefExpr</a></div><div class="ttdoc">A reference to a declared variable, function, enum, etc.</div><div class="ttdef"><b>Definition:</b> <a href="Expr_8h_source.html#l01211">Expr.h:1211</a></div></div>
@@ -2862,7 +2864,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1NamedDecl_html_a350fd0415d5f387716d5a970b9de4c29"><div class="ttname"><a href="classclang_1_1NamedDecl.html#a350fd0415d5f387716d5a970b9de4c29">clang::NamedDecl::getName</a></div><div class="ttdeci">StringRef getName() const</div><div class="ttdoc">Get the name of identifier for this declaration as a StringRef.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00250">Decl.h:250</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:56:43 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:51:20 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

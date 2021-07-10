@@ -103,43 +103,44 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      Argv.reserve(<a class="code" href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a>.CommandLine.size());</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;Arg : <a class="code" href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a>.CommandLine) {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        Argv.push_back(Arg.c_str());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        SeenRSPFile |= Arg.front() == <span class="charliteral">&#39;@&#39;</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">if</span> (!SeenRSPFile)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      llvm::BumpPtrAllocator Alloc;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      llvm::StringSaver Saver(Alloc);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      llvm::cl::ExpandResponseFiles(Saver, Tokenizer, Argv, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                    llvm::StringRef(<a class="code" href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a>.Directory), *FS);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="comment">// Don&#39;t assign directly, Argv aliases CommandLine.</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      std::vector&lt;std::string&gt; ExpandedArgv(Argv.begin(), Argv.end());</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a>.CommandLine = std::move(ExpandedArgv);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> Cmds;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::unique_ptr&lt;CompilationDatabase&gt; <a class="code" href="classBase.html">Base</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  llvm::cl::TokenizerCallback Tokenizer;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="classllvm_1_1IntrusiveRefCntPtr.html">llvm::IntrusiveRefCntPtr&lt;llvm::vfs::FileSystem&gt;</a> FS;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;std::unique_ptr&lt;CompilationDatabase&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespaceclang_1_1tooling.html#a8ac6b0ee63b33f4a13bad5d74c319f6b">   81</a></span>&#160;<a class="code" href="namespaceclang_1_1tooling.html#a8ac6b0ee63b33f4a13bad5d74c319f6b">expandResponseFiles</a>(std::unique_ptr&lt;CompilationDatabase&gt; <a class="code" href="classBase.html">Base</a>,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    <a class="code" href="classllvm_1_1IntrusiveRefCntPtr.html">llvm::IntrusiveRefCntPtr&lt;llvm::vfs::FileSystem&gt;</a> FS) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keyword">auto</span> Tokenizer = llvm::Triple(llvm::sys::getProcessTriple()).isOSWindows()</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                       ? llvm::cl::TokenizeWindowsCommandLine</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                       : llvm::cl::TokenizeGNUCommandLine;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">return</span> std::make_unique&lt;ExpandResponseFilesDatabase&gt;(</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      std::move(<a class="code" href="classBase.html">Base</a>), Tokenizer, std::move(FS));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <span class="comment">// namespace tooling</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace clang</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (!Arg.empty())</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          SeenRSPFile |= Arg.front() == <span class="charliteral">&#39;@&#39;</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordflow">if</span> (!SeenRSPFile)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      llvm::BumpPtrAllocator Alloc;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      llvm::StringSaver Saver(Alloc);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      llvm::cl::ExpandResponseFiles(Saver, Tokenizer, Argv, <span class="keyword">false</span>, <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                    llvm::StringRef(<a class="code" href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a>.Directory), *FS);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="comment">// Don&#39;t assign directly, Argv aliases CommandLine.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      std::vector&lt;std::string&gt; ExpandedArgv(Argv.begin(), Argv.end());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <a class="code" href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a>.CommandLine = std::move(ExpandedArgv);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> Cmds;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  std::unique_ptr&lt;CompilationDatabase&gt; <a class="code" href="classBase.html">Base</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  llvm::cl::TokenizerCallback Tokenizer;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <a class="code" href="classllvm_1_1IntrusiveRefCntPtr.html">llvm::IntrusiveRefCntPtr&lt;llvm::vfs::FileSystem&gt;</a> FS;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;std::unique_ptr&lt;CompilationDatabase&gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="namespaceclang_1_1tooling.html#a8ac6b0ee63b33f4a13bad5d74c319f6b">   82</a></span>&#160;<a class="code" href="namespaceclang_1_1tooling.html#a8ac6b0ee63b33f4a13bad5d74c319f6b">expandResponseFiles</a>(std::unique_ptr&lt;CompilationDatabase&gt; <a class="code" href="classBase.html">Base</a>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <a class="code" href="classllvm_1_1IntrusiveRefCntPtr.html">llvm::IntrusiveRefCntPtr&lt;llvm::vfs::FileSystem&gt;</a> FS) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">auto</span> Tokenizer = llvm::Triple(llvm::sys::getProcessTriple()).isOSWindows()</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                       ? llvm::cl::TokenizeWindowsCommandLine</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                       : llvm::cl::TokenizeGNUCommandLine;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> std::make_unique&lt;ExpandResponseFilesDatabase&gt;(</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      std::move(<a class="code" href="classBase.html">Base</a>), Tokenizer, std::move(FS));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;} <span class="comment">// namespace tooling</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace clang</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespaceclang_1_1tooling_html_a8ac6b0ee63b33f4a13bad5d74c319f6b"><div class="ttname"><a href="namespaceclang_1_1tooling.html#a8ac6b0ee63b33f4a13bad5d74c319f6b">clang::tooling::expandResponseFiles</a></div><div class="ttdeci">std::unique_ptr&lt; CompilationDatabase &gt; expandResponseFiles(std::unique_ptr&lt; CompilationDatabase &gt; Base, llvm::IntrusiveRefCntPtr&lt; llvm::vfs::FileSystem &gt; FS)</div><div class="ttdoc">Returns a wrapped CompilationDatabase that will expand all rsp(response) files on commandline returne...</div><div class="ttdef"><b>Definition:</b> <a href="ExpandResponseFilesCompilationDatabase_8cpp_source.html#l00081">ExpandResponseFilesCompilationDatabase.cpp:81</a></div></div>
+<div class="ttc" id="anamespaceclang_1_1tooling_html_a8ac6b0ee63b33f4a13bad5d74c319f6b"><div class="ttname"><a href="namespaceclang_1_1tooling.html#a8ac6b0ee63b33f4a13bad5d74c319f6b">clang::tooling::expandResponseFiles</a></div><div class="ttdeci">std::unique_ptr&lt; CompilationDatabase &gt; expandResponseFiles(std::unique_ptr&lt; CompilationDatabase &gt; Base, llvm::IntrusiveRefCntPtr&lt; llvm::vfs::FileSystem &gt; FS)</div><div class="ttdoc">Returns a wrapped CompilationDatabase that will expand all rsp(response) files on commandline returne...</div><div class="ttdef"><b>Definition:</b> <a href="ExpandResponseFilesCompilationDatabase_8cpp_source.html#l00082">ExpandResponseFilesCompilationDatabase.cpp:82</a></div></div>
 <div class="ttc" id="aclassllvm_1_1SmallVector_html"><div class="ttname"><a href="classllvm_1_1SmallVector.html">llvm::SmallVector</a></div><div class="ttdef"><b>Definition:</b> <a href="LLVM_8h_source.html#l00038">LLVM.h:38</a></div></div>
 <div class="ttc" id="aclassBase_html"><div class="ttname"><a href="classBase.html">Base</a></div></div>
 <div class="ttc" id="aInterpolatingCompilationDatabase_8cpp_html_a2081a64c3bca81def0b3d79d40e32383"><div class="ttname"><a href="InterpolatingCompilationDatabase_8cpp.html#a2081a64c3bca81def0b3d79d40e32383">Cmd</a></div><div class="ttdeci">CompileCommand Cmd</div><div class="ttdef"><b>Definition:</b> <a href="InterpolatingCompilationDatabase_8cpp_source.html#l00128">InterpolatingCompilationDatabase.cpp:128</a></div></div>
@@ -149,7 +150,7 @@ $(function() {
 <div class="ttc" id="aclassllvm_1_1IntrusiveRefCntPtr_html"><div class="ttname"><a href="classllvm_1_1IntrusiveRefCntPtr.html">llvm::IntrusiveRefCntPtr&lt; llvm::vfs::FileSystem &gt;</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:22 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:02 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

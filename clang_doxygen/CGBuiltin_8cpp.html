@@ -145,6 +145,8 @@ Macros</h2></td></tr>
 <tr class="separator:ad15075097608b3de6351f426b1bf9afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5212abfc95ff04c5983c57bd230f9d0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CGBuiltin_8cpp.html#a5212abfc95ff04c5983c57bd230f9d0d">MMA_VARIANTS</a>(geom,  <a class="el" href="classstd_1_1conditional_1_1type.html">type</a>)</td></tr>
 <tr class="separator:a5212abfc95ff04c5983c57bd230f9d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc017cd09c9c0aed97ebf8fa1d18f36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CGBuiltin_8cpp.html#a6fc017cd09c9c0aed97ebf8fa1d18f36">MMA_SATF_VARIANTS</a>(geom,  <a class="el" href="classstd_1_1conditional_1_1type.html">type</a>)</td></tr>
+<tr class="separator:a6fc017cd09c9c0aed97ebf8fa1d18f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0cd1c6dcd8548ceb5549ef8bc2336e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CGBuiltin_8cpp.html#af0cd1c6dcd8548ceb5549ef8bc2336e6">MMA_VARIANTS_I4</a>(geom,  <a class="el" href="classstd_1_1conditional_1_1type.html">type</a>)</td></tr>
 <tr class="separator:af0cd1c6dcd8548ceb5549ef8bc2336e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0591458c7821f2a5bf69d05cf04fea5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CGBuiltin_8cpp.html#a0591458c7821f2a5bf69d05cf04fea5b">MMA_VARIANTS_B1</a>(geom,  <a class="el" href="classstd_1_1conditional_1_1type.html">type</a>)</td></tr>
@@ -613,7 +615,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l16273">16273</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l16361">16361</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -643,8 +645,41 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l16275">16275</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l16363">16363</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
+</div>
+</div>
+<a id="a6fc017cd09c9c0aed97ebf8fa1d18f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc017cd09c9c0aed97ebf8fa1d18f36">&#9670;&nbsp;</a></span>MMA_SATF_VARIANTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MMA_SATF_VARIANTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">geom, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="classstd_1_1conditional_1_1type.html">type</a>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">      <a class="code" href="CGBuiltin_8cpp.html#a5212abfc95ff04c5983c57bd230f9d0d">MMA_VARIANTS</a>(geom, <a class="code" href="classstd_1_1conditional_1_1type.html">type</a>),                                     \</div>
+<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_row_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
+<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_col_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
+<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_row_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
+<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_col_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5212abfc95ff04c5983c57bd230f9d0d"></a>
@@ -672,16 +707,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">      {{                                 \</div>
-<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_row_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
-<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_row_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
+<b>Value:</b><div class="fragment"><div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_row_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
 <div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_col_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
-<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_col_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
 <div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_row_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
-<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_row_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
-<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_col_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
-<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_col_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite  \</div>
-<div class="line">    }}</div>
+<div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_col_col_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -710,16 +739,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">      {{ \</div>
-<div class="line">      0, \</div>
-<div class="line">      0, \</div>
+<b>Value:</b><div class="fragment"><div class="line">      0, \</div>
 <div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_col_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
 <div class="line">      0, \</div>
 <div class="line">      0, \</div>
 <div class="line">      0, \</div>
 <div class="line">      0, \</div>
-<div class="line">      0  \</div>
-<div class="line">    }}</div>
+<div class="line">      0, \</div>
+<div class="line">      0</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -748,16 +775,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">      {{ \</div>
-<div class="line">      0, \</div>
-<div class="line">      0, \</div>
+<b>Value:</b><div class="fragment"><div class="line">      0, \</div>
 <div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_col_##<a class="code" href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">type</a>,             \</div>
+<div class="line">      0, \</div>
+<div class="line">      0, \</div>
+<div class="line">      0, \</div>
 <div class="line">      Intrinsic::nvvm_wmma_##geom##_mma_row_col_##<a class="code" href="classstd_1_1conditional_1_1type.html">type</a>##_satfinite, \</div>
 <div class="line">      0, \</div>
-<div class="line">      0, \</div>
-<div class="line">      0, \</div>
-<div class="line">      0  \</div>
-<div class="line">    }}</div>
+<div class="line">      0</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -797,7 +822,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05456">5456</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05478">5478</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -835,7 +860,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">  { #NameBase, NEON:: BI__builtin_neon_ ## NameBase, \</div>
 <div class="line">      Intrinsic::LLVMIntrinsic, 0, TypeModifier }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05459">5459</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05481">5481</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -880,7 +905,7 @@ Variables</h2></td></tr>
 <div class="line">      Intrinsic::LLVMIntrinsic, Intrinsic::AltLLVMIntrinsic, \</div>
 <div class="line">      TypeModifier }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05463">5463</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05485">5485</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -920,7 +945,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="preprocessor">        TypeModifier                                                           \</span></div>
 <div class="line"><span class="preprocessor">  }</span></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06225">6225</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06247">6247</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -950,7 +975,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06231">6231</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06253">6253</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1122,7 +1147,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="ad63d52f2a7873cd40a13c4ce18552e27a51e61becf858140644513331eb58034a"></a>FpCmpzModifiers&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05417">5417</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05439">5439</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1167,7 +1192,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="aa61364205011b27afd0760ca0b2e8778aa56670174817e3fed92bfd8182d7c0d1"></a>Write&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07163">7163</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07185">7185</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1273,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08040">8040</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08062">8062</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1292,7 +1317,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08052">8052</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08074">8074</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1342,7 +1367,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07988">7988</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08010">8010</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1380,7 +1405,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07980">7980</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08002">8002</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1456,7 +1481,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00062">62</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="____clang__cuda__math_8h_source.html#l00194">max()</a>, and <a class="el" href="____clang__cuda__math_8h_source.html#l00195">min()</a>.</p>
+<p class="reference">References <a class="el" href="____clang__cuda__math_8h_source.html#l00196">max()</a>, and <a class="el" href="____clang__cuda__math_8h_source.html#l00197">min()</a>.</p>
 
 </div>
 </div>
@@ -1518,7 +1543,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01980">1980</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01972">1972</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="Type_8h_source.html#l07253">clang::Type::castAs()</a>, <a class="el" href="Type_8h_source.html#l01010">clang::QualType::getAsString()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, and <a class="el" href="lib_2Tooling_2CMakeLists_8txt_source.html#l00022">string()</a>.</p>
 
@@ -1576,9 +1601,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08178">8178</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08200">8200</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15559">clang::Expr::getIntegerConstantExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l05291">GetNeonType()</a>, <a class="el" href="Expr_8h_source.html#l03019">clang::CallExpr::getNumArgs()</a>, and <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00315">s</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15562">clang::Expr::getIntegerConstantExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l05313">GetNeonType()</a>, <a class="el" href="Expr_8h_source.html#l03019">clang::CallExpr::getNumArgs()</a>, and <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00315">s</a>.</p>
 
 </div>
 </div>
@@ -1624,7 +1649,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00330">330</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00131">clang::CodeGen::CGBuilderTy::CreateAtomicCmpXchg()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuilder_8h_source.html#l00068">clang::CodeGen::CGBuilderTy::CreateLoad()</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Expr_8h_source.html#l03019">clang::CallExpr::getNumArgs()</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int8Ty</a>, and <a class="el" href="ASTContext_8cpp_source.html#l02437">clang::ASTContext::toCharUnitsFromBits()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00131">clang::CodeGen::CGBuilderTy::CreateAtomicCmpXchg()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuilder_8h_source.html#l00068">clang::CodeGen::CGBuilderTy::CreateLoad()</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Expr_8h_source.html#l03019">clang::CallExpr::getNumArgs()</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int8Ty</a>, and <a class="el" href="ASTContext_8cpp_source.html#l02437">clang::ASTContext::toCharUnitsFromBits()</a>.</p>
 
 </div>
 </div>
@@ -1673,7 +1698,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00292">292</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00131">clang::CodeGen::CGBuilderTy::CreateAtomicCmpXchg()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8h_source.html#l02463">clang::ASTContext::hasSameUnqualifiedType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00131">clang::CodeGen::CGBuilderTy::CreateAtomicCmpXchg()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8h_source.html#l02463">clang::ASTContext::hasSameUnqualifiedType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1744,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00397">397</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, and <a class="el" href="Interp_8h_source.html#l00141">clang::interp::Sub()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, and <a class="el" href="Interp_8h_source.html#l00141">clang::interp::Sub()</a>.</p>
 
 </div>
 </div>
@@ -1765,7 +1790,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00384">384</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Interp_8h_source.html#l00133">clang::interp::Add()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
+<p class="reference">References <a class="el" href="Interp_8h_source.html#l00133">clang::interp::Add()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
 
 </div>
 </div>
@@ -1871,7 +1896,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00198">198</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00126">EmitFromInt()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00115">EmitToInt()</a>, <a class="el" href="CGValue_8h_source.html#l00086">clang::CodeGen::RValue::get()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8h_source.html#l02200">clang::ASTContext::getTypeSize()</a>, <a class="el" href="ASTContext_8h_source.html#l02463">clang::ASTContext::hasSameUnqualifiedType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00126">EmitFromInt()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00115">EmitToInt()</a>, <a class="el" href="CGValue_8h_source.html#l00086">clang::CodeGen::RValue::get()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8h_source.html#l02200">clang::ASTContext::getTypeSize()</a>, <a class="el" href="ASTContext_8h_source.html#l02463">clang::ASTContext::hasSameUnqualifiedType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
 
 </div>
 </div>
@@ -1917,9 +1942,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00524">524</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02186">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02178">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -1971,9 +1996,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00458">458</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02186">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02178">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -2022,7 +2047,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00920">920</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="OperatorPrecedence_8h_source.html#l00035">clang::prec::And</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGBuilder_8h_source.html#l00068">clang::CodeGen::CGBuilderTy::CreateLoad()</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00868">EmitX86BitTestIntrinsic()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00905">getBitTestAtomicOrdering()</a>, <a class="el" href="Address_8h_source.html#l00037">clang::CodeGen::Address::getPointer()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01967">clang::CodeGen::CodeGenFunction::getTarget()</a>, <a class="el" href="include_2clang_2Basic_2TargetInfo_8h_source.html#l01110">clang::TargetInfo::getTriple()</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00057">clang::CodeGen::CodeGenTypeCache::Int8PtrTy</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int8Ty</a>, and <a class="el" href="CharUnits_8h_source.html#l00058">clang::CharUnits::One()</a>.</p>
+<p class="reference">References <a class="el" href="OperatorPrecedence_8h_source.html#l00035">clang::prec::And</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGBuilder_8h_source.html#l00068">clang::CodeGen::CGBuilderTy::CreateLoad()</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00868">EmitX86BitTestIntrinsic()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00905">getBitTestAtomicOrdering()</a>, <a class="el" href="Address_8h_source.html#l00037">clang::CodeGen::Address::getPointer()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01967">clang::CodeGen::CodeGenFunction::getTarget()</a>, <a class="el" href="include_2clang_2Basic_2TargetInfo_8h_source.html#l01110">clang::TargetInfo::getTriple()</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00057">clang::CodeGen::CodeGenTypeCache::Int8PtrTy</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int8Ty</a>, and <a class="el" href="CharUnits_8h_source.html#l00058">clang::CharUnits::One()</a>.</p>
 
 </div>
 </div>
@@ -2157,9 +2182,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 <p>Emit a checked mixed-sign multiply. </p>
 <p>This is a cheaper specialization of the generic checked-binop irgen. </p>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01893">1893</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01885">1885</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00631">EmitOverflowIntrinsic()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01073">clang::CodeGen::CodeGenFunction::EmitPointerWithAlignment()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01765">clang::CodeGen::CodeGenFunction::EmitToMemory()</a>, <a class="el" href="CGValue_8h_source.html#l00086">clang::CodeGen::RValue::get()</a>, <a class="el" href="Address_8h_source.html#l00051">clang::CodeGen::Address::getElementType()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l01881">isSpecialMixedSignMultiply()</a>, <a class="el" href="Type_8h_source.html#l06507">clang::QualType::isVolatileQualified()</a>, <a class="el" href="____clang__cuda__math_8h_source.html#l00194">max()</a>, <a class="el" href="namespaceclang.html#abfbef64d907e6cc318b38af692636fd2a71fed0c3428bf1a2e19af257c4bac379">clang::Signed</a>, <a class="el" href="namespaceclang.html#abfbef64d907e6cc318b38af692636fd2aa1a914735b205424ba6c40b85528d78a">clang::Unsigned</a>, and <a class="el" href="Interp_8h_source.html#l00813">clang::interp::Zero()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00631">EmitOverflowIntrinsic()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01073">clang::CodeGen::CodeGenFunction::EmitPointerWithAlignment()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01765">clang::CodeGen::CodeGenFunction::EmitToMemory()</a>, <a class="el" href="CGValue_8h_source.html#l00086">clang::CodeGen::RValue::get()</a>, <a class="el" href="Address_8h_source.html#l00051">clang::CodeGen::Address::getElementType()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l01873">isSpecialMixedSignMultiply()</a>, <a class="el" href="Type_8h_source.html#l06507">clang::QualType::isVolatileQualified()</a>, <a class="el" href="____clang__cuda__math_8h_source.html#l00196">max()</a>, <a class="el" href="namespaceclang.html#abfbef64d907e6cc318b38af692636fd2a71fed0c3428bf1a2e19af257c4bac379">clang::Signed</a>, <a class="el" href="namespaceclang.html#abfbef64d907e6cc318b38af692636fd2aa1a914735b205424ba6c40b85528d78a">clang::Unsigned</a>, and <a class="el" href="Interp_8h_source.html#l00813">clang::interp::Zero()</a>.</p>
 
 </div>
 </div>
@@ -2233,9 +2258,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01847">1847</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01839">1839</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00631">EmitOverflowIntrinsic()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01073">clang::CodeGen::CodeGenFunction::EmitPointerWithAlignment()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01765">clang::CodeGen::CodeGenFunction::EmitToMemory()</a>, <a class="el" href="CGValue_8h_source.html#l00086">clang::CodeGen::RValue::get()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l01839">isSpecialUnsignedMultiplySignedResult()</a>, and <a class="el" href="Type_8h_source.html#l06507">clang::QualType::isVolatileQualified()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00631">EmitOverflowIntrinsic()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01073">clang::CodeGen::CodeGenFunction::EmitPointerWithAlignment()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01765">clang::CodeGen::CodeGenFunction::EmitToMemory()</a>, <a class="el" href="CGValue_8h_source.html#l00086">clang::CodeGen::RValue::get()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l01831">isSpecialUnsignedMultiplySignedResult()</a>, and <a class="el" href="Type_8h_source.html#l06507">clang::QualType::isVolatileQualified()</a>.</p>
 
 </div>
 </div>
@@ -2285,9 +2310,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06307">6307</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06329">6329</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l05358">clang::CodeGen::CodeGenFunction::EmitNeonCall()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l06268">clang::CodeGen::CodeGenFunction::LookupNeonLLVMIntrinsic()</a>, <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00315">s</a>, and <a class="el" href="CodeGenTypeCache_8h_source.html#l00050">clang::CodeGen::CodeGenTypeCache::SizeTy</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l05380">clang::CodeGen::CodeGenFunction::EmitNeonCall()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l06290">clang::CodeGen::CodeGenFunction::LookupNeonLLVMIntrinsic()</a>, <a class="el" href="____clang__hip__libdevice__declares_8h_source.html#l00315">s</a>, and <a class="el" href="CodeGenTypeCache_8h_source.html#l00050">clang::CodeGen::CodeGenTypeCache::SizeTy</a>.</p>
 
 </div>
 </div>
@@ -2375,7 +2400,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00547">547</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
 </div>
 </div>
@@ -2469,7 +2494,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00411">411</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00086">clang::CodeGen::CGBuilderTy::CreateAlignedLoad()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="CharUnits_8h_source.html#l00179">clang::CharUnits::getQuantity()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8cpp_source.html#l02448">clang::ASTContext::getTypeSizeInChars()</a>, and <a class="el" href="Interp_8h_source.html#l00617">clang::interp::Load()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00086">clang::CodeGen::CGBuilderTy::CreateAlignedLoad()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="CharUnits_8h_source.html#l00179">clang::CharUnits::getQuantity()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8cpp_source.html#l02448">clang::ASTContext::getTypeSizeInChars()</a>, and <a class="el" href="Interp_8h_source.html#l00617">clang::interp::Load()</a>.</p>
 
 </div>
 </div>
@@ -2509,7 +2534,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00424">424</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00102">clang::CodeGen::CGBuilderTy::CreateAlignedStore()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="CharUnits_8h_source.html#l00179">clang::CharUnits::getQuantity()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="ASTContext_8cpp_source.html#l02448">clang::ASTContext::getTypeSizeInChars()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00102">clang::CodeGen::CGBuilderTy::CreateAlignedStore()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="CharUnits_8h_source.html#l00179">clang::CharUnits::getQuantity()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="ASTContext_8cpp_source.html#l02448">clang::ASTContext::getTypeSizeInChars()</a>.</p>
 
 </div>
 </div>
@@ -2561,7 +2586,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00616">616</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CGCall_8cpp_source.html#l04606">clang::CodeGen::CodeGenFunction::EmitCall()</a>, <a class="el" href="CGCall_8h_source.html#l00135">clang::CodeGen::CGCallee::forDirect()</a>, <a class="el" href="Expr_8h_source.html#l02991">clang::CallExpr::getCallee()</a>, and <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>.</p>
+<p class="reference">References <a class="el" href="CGCall_8cpp_source.html#l04607">clang::CodeGen::CodeGenFunction::EmitCall()</a>, <a class="el" href="CGCall_8h_source.html#l00135">clang::CodeGen::CGCallee::forDirect()</a>, <a class="el" href="Expr_8h_source.html#l02991">clang::CallExpr::getCallee()</a>, and <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>.</p>
 
 </div>
 </div>
@@ -2613,7 +2638,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00559">559</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>.</p>
 
 </div>
 </div>
@@ -2700,7 +2725,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00181">181</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l03762">clang::CodeGen::CodeGenFunction::EmitLoadOfScalar()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8cpp_source.html#l00229">clang::Expr::getExprLoc()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00200">clang::CodeGen::CodeGenFunction::MakeNaturalAlignAddrLValue()</a>, and <a class="el" href="CGValue_8h_source.html#l00294">clang::CodeGen::LValue::setNontemporal()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l03762">clang::CodeGen::CodeGenFunction::EmitLoadOfScalar()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8cpp_source.html#l00229">clang::Expr::getExprLoc()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00200">clang::CodeGen::CodeGenFunction::MakeNaturalAlignAddrLValue()</a>, and <a class="el" href="CGValue_8h_source.html#l00294">clang::CodeGen::LValue::setNontemporal()</a>.</p>
 
 </div>
 </div>
@@ -2740,7 +2765,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00167">167</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l03784">clang::CodeGen::CodeGenFunction::EmitStoreOfScalar()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01765">clang::CodeGen::CodeGenFunction::EmitToMemory()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00200">clang::CodeGen::CodeGenFunction::MakeNaturalAlignAddrLValue()</a>, and <a class="el" href="CGValue_8h_source.html#l00294">clang::CodeGen::LValue::setNontemporal()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l03784">clang::CodeGen::CodeGenFunction::EmitStoreOfScalar()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01765">clang::CodeGen::CodeGenFunction::EmitToMemory()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00200">clang::CodeGen::CodeGenFunction::MakeNaturalAlignAddrLValue()</a>, and <a class="el" href="CGValue_8h_source.html#l00294">clang::CodeGen::LValue::setNontemporal()</a>.</p>
 
 </div>
 </div>
@@ -2811,7 +2836,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="namespaceclang_1_1tooling.html#a4ffee664435dba78b2225a5457619b53">clang::tooling::X()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l01893">EmitCheckedMixedSignMultiply()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l01847">EmitCheckedUnsignedMultiplySignedResult()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l01885">EmitCheckedMixedSignMultiply()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l01839">EmitCheckedUnsignedMultiplySignedResult()</a>.</p>
 
 </div>
 </div>
@@ -2931,9 +2956,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12074">12074</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12096">12096</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11875">EmitX86ScalarSelect()</a>, <a class="el" href="tgmath_8h_source.html#l00742">fma</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11897">EmitX86ScalarSelect()</a>, <a class="el" href="tgmath_8h_source.html#l00742">fma</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
 </div>
 </div>
@@ -3038,7 +3063,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07172">7172</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07194">7194</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -3085,9 +3110,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 <p>Handle a SystemZ function in which the final argument is a pointer to an int that receives the post-instruction CC value. </p>
 <p>At the LLVM level this is represented as a function that returns a {result, cc} pair. </p>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l15872">15872</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l15960">15960</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01073">clang::CodeGen::CodeGenFunction::EmitPointerWithAlignment()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="Expr_8h_source.html#l03019">clang::CallExpr::getNumArgs()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00095">clang::CodeGen::CGBuilderTy::CreateStore()</a>, <a class="el" href="CGExpr_8cpp_source.html#l01073">clang::CodeGen::CodeGenFunction::EmitPointerWithAlignment()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="Expr_8h_source.html#l03019">clang::CallExpr::getNumArgs()</a>.</p>
 
 </div>
 </div>
@@ -3143,11 +3168,11 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05231">5231</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05253">5253</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CGBuiltin_8cpp_source.html#l09162">clang::CodeGen::CodeGenFunction::EmitAArch64BuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l15572">clang::CodeGen::CodeGenFunction::EmitAMDGPUBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l07280">clang::CodeGen::CodeGenFunction::EmitARMBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11561">clang::CodeGen::CodeGenFunction::EmitBPFBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l17711">clang::CodeGen::CodeGenFunction::EmitHexagonBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l16509">clang::CodeGen::CodeGenFunction::EmitNVPTXBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l14809">clang::CodeGen::CodeGenFunction::EmitPPCBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l17968">clang::CodeGen::CodeGenFunction::EmitRISCVBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l15887">clang::CodeGen::CodeGenFunction::EmitSystemZBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l17059">clang::CodeGen::CodeGenFunction::EmitWebAssemblyBuiltinExpr()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l12382">clang::CodeGen::CodeGenFunction::EmitX86BuiltinExpr()</a>.</p>
+<p class="reference">References <a class="el" href="CGBuiltin_8cpp_source.html#l09184">clang::CodeGen::CodeGenFunction::EmitAArch64BuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l15643">clang::CodeGen::CodeGenFunction::EmitAMDGPUBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l07302">clang::CodeGen::CodeGenFunction::EmitARMBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11583">clang::CodeGen::CodeGenFunction::EmitBPFBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l17873">clang::CodeGen::CodeGenFunction::EmitHexagonBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l16651">clang::CodeGen::CodeGenFunction::EmitNVPTXBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l14880">clang::CodeGen::CodeGenFunction::EmitPPCBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l18130">clang::CodeGen::CodeGenFunction::EmitRISCVBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l15975">clang::CodeGen::CodeGenFunction::EmitSystemZBuiltinExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l17221">clang::CodeGen::CodeGenFunction::EmitWebAssemblyBuiltinExpr()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l12404">clang::CodeGen::CodeGenFunction::EmitX86BuiltinExpr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l05277">clang::CodeGen::CodeGenFunction::EmitTargetBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l05299">clang::CodeGen::CodeGenFunction::EmitTargetBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -3193,7 +3218,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00535">535</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
 </div>
 </div>
@@ -3245,9 +3270,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00476">476</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02186">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02178">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -3349,9 +3374,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00514">514</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02186">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02178">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -3403,9 +3428,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00441">441</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02186">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02178">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -3449,7 +3474,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12186">12186</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12208">12208</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
@@ -3555,9 +3580,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11760">11760</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11782">11782</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -3595,9 +3620,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11773">11773</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11795">11795</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -3647,9 +3672,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11952">11952</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11974">11974</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11861">EmitX86Select()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11883">EmitX86Select()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
 </div>
 </div>
@@ -3687,9 +3712,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11947">11947</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11969">11969</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CGBuiltin_8cpp_source.html#l11912">EmitX86MaskedCompare()</a>, and <a class="el" href="Interp_8h_source.html#l00813">clang::interp::Zero()</a>.</p>
+<p class="reference">References <a class="el" href="CGBuiltin_8cpp_source.html#l11934">EmitX86MaskedCompare()</a>, and <a class="el" href="Interp_8h_source.html#l00813">clang::interp::Zero()</a>.</p>
 
 </div>
 </div>
@@ -3733,7 +3758,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12236">12236</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12258">12258</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="Interp_8h_source.html#l00912">clang::interp::Shl()</a>.</p>
 
@@ -3779,9 +3804,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12199">12199</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12221">12221</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11861">EmitX86Select()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11883">EmitX86Select()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>.</p>
 
 </div>
 </div>
@@ -3819,9 +3844,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11743">11743</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11765">11765</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -3877,9 +3902,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11973">11973</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11995">11995</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11861">EmitX86Select()</a>, <a class="el" href="tgmath_8h_source.html#l00742">fma</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11883">EmitX86Select()</a>, <a class="el" href="tgmath_8h_source.html#l00742">fma</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
 </div>
 </div>
@@ -3935,7 +3960,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11803">11803</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11825">11825</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
@@ -3987,9 +4012,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11912">11912</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11934">11934</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l11947">EmitX86ConvertToMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l11969">EmitX86ConvertToMask()</a>.</p>
 
 </div>
 </div>
@@ -4039,7 +4064,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11889">11889</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11911">11911</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -4083,9 +4108,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11730">11730</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11752">11752</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -4129,9 +4154,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11717">11717</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11739">11739</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -4181,9 +4206,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11789">11789</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11811">11811</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -4227,7 +4252,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12120">12120</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12142">12142</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, and <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int64Ty</a>.</p>
 
@@ -4279,11 +4304,11 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11875">11875</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11897">11897</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, and <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l12074">EmitScalarFMAExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l12096">EmitScalarFMAExpr()</a>.</p>
 
 </div>
 </div>
@@ -4333,11 +4358,11 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11861">11861</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11883">11883</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l11952">EmitX86ConvertIntToFp()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l12199">EmitX86CvtF16ToFloatExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11973">EmitX86FMAExpr()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l12149">EmitX86Ternlog()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l11974">EmitX86ConvertIntToFp()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l12221">EmitX86CvtF16ToFloatExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11995">EmitX86FMAExpr()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l12171">EmitX86Ternlog()</a>.</p>
 
 </div>
 </div>
@@ -4381,9 +4406,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12177">12177</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12199">12199</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11696">getMaskVecValue()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l11718">getMaskVecValue()</a>.</p>
 
 </div>
 </div>
@@ -4427,9 +4452,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12149">12149</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l12171">12171</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11861">EmitX86Select()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8h_source.html#l00266">clang::CodeGen::CodeGenFunction::CGM</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11883">EmitX86Select()</a>, and <a class="el" href="CodeGenModule_8cpp_source.html#l05289">clang::CodeGen::CodeGenModule::getIntrinsic()</a>.</p>
 
 </div>
 </div>
@@ -4473,7 +4498,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11821">11821</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11843">11843</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -4545,9 +4570,9 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06249">6249</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06271">6271</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08880">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08902">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -4653,7 +4678,7 @@ template&lt;unsigned HighBit, unsigned OtherBits&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05332">5332</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05354">5354</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::DoubleTy</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::FloatTy</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00172">clang::NeonTypeFlags::getEltType()</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::HalfTy</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00151">clang::NeonTypeFlags::Int16</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00152">clang::NeonTypeFlags::Int32</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00153">clang::NeonTypeFlags::Int64</a>, and <a class="el" href="TargetBuiltins_8h_source.html#l00178">clang::NeonTypeFlags::isQuad()</a>.</p>
 
@@ -4695,9 +4720,9 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07947">7947</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07969">7969</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="ExprConstant_8cpp_source.html#l15559">clang::Expr::getIntegerConstantExpr()</a>, and <a class="el" href="ExprConstant_8cpp.html#ae4a213489715e2de4562b3ae0538648daa0faef0851b4294c06f2b94bb1cb2044">Integer</a>.</p>
+<p class="reference">References <a class="el" href="ExprConstant_8cpp_source.html#l15562">clang::Expr::getIntegerConstantExpr()</a>, and <a class="el" href="ExprConstant_8cpp.html#ae4a213489715e2de4562b3ae0538648daa0faef0851b4294c06f2b94bb1cb2044">Integer</a>.</p>
 
 </div>
 </div>
@@ -4765,11 +4790,11 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l17656">17656</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l17818">17818</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CGBuiltin_8cpp.html#a87a601a871582d0a52828133b6c1940f">CUSTOM_BUILTIN_MAPPING</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l17711">clang::CodeGen::CodeGenFunction::EmitHexagonBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l17873">clang::CodeGen::CodeGenFunction::EmitHexagonBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -4813,11 +4838,11 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11696">11696</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l11718">11718</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, and <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l11760">EmitX86CompressExpand()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11773">EmitX86CompressStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11743">EmitX86ExpandLoad()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11730">EmitX86MaskedLoad()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11717">EmitX86MaskedStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11789">EmitX86MaskLogic()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11861">EmitX86Select()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l12177">EmitX86SExtMask()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l11782">EmitX86CompressExpand()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11795">EmitX86CompressStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11765">EmitX86ExpandLoad()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11752">EmitX86MaskedLoad()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11739">EmitX86MaskedStore()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11811">EmitX86MaskLogic()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l11883">EmitX86Select()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l12199">EmitX86SExtMask()</a>.</p>
 
 </div>
 </div>
@@ -4873,11 +4898,11 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05291">5291</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05313">5313</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="TargetBuiltins_8h_source.html#l00161">clang::NeonTypeFlags::BFloat16</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::BFloatTy</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::DoubleTy</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00158">clang::NeonTypeFlags::Float16</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00159">clang::NeonTypeFlags::Float32</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00160">clang::NeonTypeFlags::Float64</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::FloatTy</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00172">clang::NeonTypeFlags::getEltType()</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00039">clang::CodeGen::CodeGenTypeCache::HalfTy</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00151">clang::NeonTypeFlags::Int16</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int16Ty</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00152">clang::NeonTypeFlags::Int32</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int32Ty</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00153">clang::NeonTypeFlags::Int64</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int64Ty</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00150">clang::NeonTypeFlags::Int8</a>, <a class="el" href="CodeGenTypeCache_8h_source.html#l00037">clang::CodeGen::CodeGenTypeCache::Int8Ty</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00178">clang::NeonTypeFlags::isQuad()</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00157">clang::NeonTypeFlags::Poly128</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00155">clang::NeonTypeFlags::Poly16</a>, <a class="el" href="TargetBuiltins_8h_source.html#l00156">clang::NeonTypeFlags::Poly64</a>, and <a class="el" href="TargetBuiltins_8h_source.html#l00154">clang::NeonTypeFlags::Poly8</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08178">EmitAArch64TblBuiltinExpr()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l06369">clang::CodeGen::CodeGenFunction::EmitCommonNeonBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08200">EmitAArch64TblBuiltinExpr()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l06391">clang::CodeGen::CodeGenFunction::EmitCommonNeonBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -4945,11 +4970,11 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08466">8466</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08488">8488</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CGBuiltin_8cpp_source.html#l08464">SVEBitsPerBlock</a>.</p>
+<p class="reference">References <a class="el" href="CGBuiltin_8cpp_source.html#l08486">SVEBitsPerBlock</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08748">clang::CodeGen::CodeGenFunction::EmitSVEPrefetchLoad()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08770">clang::CodeGen::CodeGenFunction::EmitSVEPrefetchLoad()</a>.</p>
 
 </div>
 </div>
@@ -4979,7 +5004,7 @@ template&lt;typename Integer &gt; </div>
 
 <p>Return true if BuiltinID is an overloaded Neon intrinsic with an extra argument that specifies the vector type. </p>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07239">7239</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07261">7261</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5075,7 +5100,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08851">8851</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08873">8873</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5119,9 +5144,9 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08845">8845</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08867">8867</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08880">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08902">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -5173,11 +5198,11 @@ template&lt;typename Integer &gt; </div>
 
 <p>Determine if a binop is a checked mixed-sign multiply we can specialize. </p>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01881">1881</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01873">1873</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="____clang__cuda__math_8h_source.html#l00194">max()</a>.</p>
+<p class="reference">References <a class="el" href="____clang__cuda__math_8h_source.html#l00196">max()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l01893">EmitCheckedMixedSignMultiply()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l01885">EmitCheckedMixedSignMultiply()</a>.</p>
 
 </div>
 </div>
@@ -5227,9 +5252,9 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01839">1839</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01831">1831</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l01847">EmitCheckedUnsignedMultiplySignedResult()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l01839">EmitCheckedUnsignedMultiplySignedResult()</a>.</p>
 
 </div>
 </div>
@@ -5287,7 +5312,7 @@ template&lt;typename Integer &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00248">248</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00131">clang::CodeGen::CGBuilderTy::CreateAtomicCmpXchg()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00126">EmitFromInt()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00115">EmitToInt()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="ASTContext_8h_source.html#l02200">clang::ASTContext::getTypeSize()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CodeGenFunction_8cpp_source.html#l00224">clang::CodeGen::CodeGenFunction::ConvertType()</a>, <a class="el" href="CGBuilder_8h_source.html#l00131">clang::CodeGen::CGBuilderTy::CreateAtomicCmpXchg()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00126">EmitFromInt()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00115">EmitToInt()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, and <a class="el" href="ASTContext_8h_source.html#l02200">clang::ASTContext::getTypeSize()</a>.</p>
 
 </div>
 </div>
@@ -5341,7 +5366,7 @@ template&lt;typename Integer &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l00139">139</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00126">EmitFromInt()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04835">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00115">EmitToInt()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8h_source.html#l02200">clang::ASTContext::getTypeSize()</a>, <a class="el" href="ASTContext_8h_source.html#l02463">clang::ASTContext::hasSameUnqualifiedType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenFunction_8h_source.html#l00274">clang::CodeGen::CodeGenFunction::Builder</a>, <a class="el" href="CGBuilder_8h_source.html#l00143">clang::CodeGen::CGBuilderTy::CreateAtomicRMW()</a>, <a class="el" href="CGBuilder_8h_source.html#l00151">clang::CodeGen::CGBuilderTy::CreateBitCast()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00126">EmitFromInt()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04822">clang::CodeGen::CodeGenFunction::EmitScalarExpr()</a>, <a class="el" href="CGBuiltin_8cpp_source.html#l00115">EmitToInt()</a>, <a class="el" href="Expr_8h_source.html#l03032">clang::CallExpr::getArg()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01925">clang::CodeGen::CodeGenFunction::getContext()</a>, <a class="el" href="CodeGenFunction_8h_source.html#l01968">clang::CodeGen::CodeGenFunction::getLLVMContext()</a>, <a class="el" href="Type_8cpp_source.html#l00625">clang::Type::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="ASTContext_8h_source.html#l02200">clang::ASTContext::getTypeSize()</a>, <a class="el" href="ASTContext_8h_source.html#l02463">clang::ASTContext::hasSameUnqualifiedType()</a>, and <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l00189">EmitBinaryAtomic()</a>.</p>
 
@@ -5371,11 +5396,11 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l02115">2115</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l02107">2107</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="tgmath_8h_source.html#l00083">acos</a>, <a class="el" href="tgmath_8h_source.html#l00170">acosh</a>, <a class="el" href="tgmath_8h_source.html#l00112">asin</a>, <a class="el" href="tgmath_8h_source.html#l00199">asinh</a>, <a class="el" href="tgmath_8h_source.html#l00141">atan</a>, <a class="el" href="tgmath_8h_source.html#l00566">atan2</a>, <a class="el" href="tgmath_8h_source.html#l00228">atanh</a>, <a class="el" href="tgmath_8h_source.html#l00584">cbrt</a>, <a class="el" href="tgmath_8h_source.html#l00601">ceil</a>, <a class="el" href="tgmath_8h_source.html#l00618">copysign</a>, <a class="el" href="tgmath_8h_source.html#l00257">cos</a>, <a class="el" href="tgmath_8h_source.html#l00344">cosh</a>, <a class="el" href="tgmath_8h_source.html#l00636">erf</a>, <a class="el" href="tgmath_8h_source.html#l00653">erfc</a>, <a class="el" href="tgmath_8h_source.html#l00431">exp</a>, <a class="el" href="tgmath_8h_source.html#l00670">exp2</a>, <a class="el" href="tgmath_8h_source.html#l00687">expm1</a>, <a class="el" href="tgmath_8h_source.html#l00549">fabs</a>, <a class="el" href="tgmath_8h_source.html#l00704">fdim</a>, <a class="el" href="tgmath_8h_source.html#l00722">floor</a>, <a class="el" href="tgmath_8h_source.html#l00742">fma</a>, <a class="el" href="tgmath_8h_source.html#l00762">fmax</a>, <a class="el" href="tgmath_8h_source.html#l00780">fmin</a>, <a class="el" href="tgmath_8h_source.html#l00798">fmod</a>, <a class="el" href="tgmath_8h_source.html#l00816">frexp</a>, <a class="el" href="tgmath_8h_source.html#l00833">hypot</a>, <a class="el" href="tgmath_8h_source.html#l00851">ilogb</a>, <a class="el" href="tgmath_8h_source.html#l00868">ldexp</a>, <a class="el" href="tgmath_8h_source.html#l00885">lgamma</a>, <a class="el" href="tgmath_8h_source.html#l00902">llrint</a>, <a class="el" href="tgmath_8h_source.html#l00919">llround</a>, <a class="el" href="tgmath_8h_source.html#l00460">log</a>, <a class="el" href="tgmath_8h_source.html#l00936">log10</a>, <a class="el" href="tgmath_8h_source.html#l00953">log1p</a>, <a class="el" href="tgmath_8h_source.html#l00970">log2</a>, <a class="el" href="tgmath_8h_source.html#l00987">logb</a>, <a class="el" href="tgmath_8h_source.html#l01004">lrint</a>, <a class="el" href="tgmath_8h_source.html#l01021">lround</a>, <a class="el" href="____clang__cuda__cmath_8h_source.html#l00160">modf()</a>, <a class="el" href="CGBuiltin_8cpp.html#a3fef15e6937d36946615700f91c03511">MUTATE_LDBL</a>, <a class="el" href="____clang__hip__math_8h_source.html#l00885">nan()</a>, <a class="el" href="tgmath_8h_source.html#l01038">nearbyint</a>, <a class="el" href="tgmath_8h_source.html#l01055">nextafter</a>, <a class="el" href="tgmath_8h_source.html#l01073">nexttoward</a>, <a class="el" href="tgmath_8h_source.html#l00490">pow</a>, <a class="el" href="tgmath_8h_source.html#l01090">remainder</a>, <a class="el" href="tgmath_8h_source.html#l01111">remquo</a>, <a class="el" href="tgmath_8h_source.html#l01131">rint</a>, <a class="el" href="tgmath_8h_source.html#l01148">round</a>, <a class="el" href="tgmath_8h_source.html#l01182">scalbln</a>, <a class="el" href="tgmath_8h_source.html#l01165">scalbn</a>, <a class="el" href="tgmath_8h_source.html#l00286">sin</a>, <a class="el" href="tgmath_8h_source.html#l00373">sinh</a>, <a class="el" href="tgmath_8h_source.html#l00520">sqrt</a>, <a class="el" href="tgmath_8h_source.html#l00315">tan</a>, <a class="el" href="tgmath_8h_source.html#l00402">tanh</a>, <a class="el" href="tgmath_8h_source.html#l01199">tgamma</a>, and <a class="el" href="tgmath_8h_source.html#l01216">trunc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02186">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02178">clang::CodeGen::CodeGenFunction::EmitBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -5425,7 +5450,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07958">7958</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07980">7980</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5493,7 +5518,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07090">7090</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07112">7112</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5543,7 +5568,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07951">7951</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l07973">7973</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5629,7 +5654,7 @@ template&lt;typename Integer &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l01393">1393</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l12382">clang::CodeGen::CodeGenFunction::EmitX86BuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l12404">clang::CodeGen::CodeGenFunction::EmitX86BuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -5669,9 +5694,9 @@ template&lt;typename Integer &gt; </div>
 
 <p>Determine if the specified type requires laundering by checking if it is a dynamic class type or contains a subobject which is a dynamic class type. </p>
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l02092">2092</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l02084">2084</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="CodeGenModule_8h_source.html#l00722">clang::CodeGen::CodeGenModule::getCodeGenOpts()</a>, <a class="el" href="CodeGenModule_8h_source.html#l00716">clang::CodeGen::CodeGenModule::getContext()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l02064">TypeRequiresBuiltinLaunderImp()</a>.</p>
+<p class="reference">References <a class="el" href="CodeGenModule_8h_source.html#l00722">clang::CodeGen::CodeGenModule::getCodeGenOpts()</a>, <a class="el" href="CodeGenModule_8h_source.html#l00716">clang::CodeGen::CodeGenModule::getContext()</a>, and <a class="el" href="CGBuiltin_8cpp_source.html#l02056">TypeRequiresBuiltinLaunderImp()</a>.</p>
 
 </div>
 </div>
@@ -5715,11 +5740,11 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l02064">2064</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l02056">2056</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="ASTContext_8cpp_source.html#l06112">clang::ASTContext::getAsArrayType()</a>, <a class="el" href="Type_8cpp_source.html#l01753">clang::Type::getAsCXXRecordDecl()</a>, and <a class="el" href="ASTContext_8cpp_source.html#l06223">clang::ASTContext::getBaseElementType()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02092">TypeRequiresBuiltinLaunder()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l02084">TypeRequiresBuiltinLaunder()</a>.</p>
 
 </div>
 </div>
@@ -5763,7 +5788,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08014">8014</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08036">8036</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5807,7 +5832,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08025">8025</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08047">8047</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5832,7 +5857,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05766">5766</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05788">5788</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5856,7 +5881,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06244">6244</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06266">6266</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5880,7 +5905,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05986">5986</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06008">6008</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5904,7 +5929,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06245">6245</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06267">6267</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -5933,9 +5958,9 @@ template&lt;typename Integer &gt; </div>
 <div class="line"> </div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06233">6233</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06255">6255</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08880">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08902">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -5959,9 +5984,9 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06246">6246</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06268">6268</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08880">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08902">clang::CodeGen::CodeGenFunction::EmitAArch64SVEBuiltinExpr()</a>.</p>
 
 </div>
 </div>
@@ -5985,7 +6010,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05468">5468</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l05490">5490</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -6009,7 +6034,7 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06242">6242</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l06264">6264</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
 </div>
 </div>
@@ -6033,19 +6058,20 @@ template&lt;typename Integer &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08464">8464</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="CGBuiltin_8cpp_source.html#l08486">8486</a> of file <a class="el" href="CGBuiltin_8cpp_source.html">CGBuiltin.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08466">getSVEVectorForElementType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CGBuiltin_8cpp_source.html#l08488">getSVEVectorForElementType()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <div class="ttc" id="aclassstd_1_1conditional_1_1type_html"><div class="ttname"><a href="classstd_1_1conditional_1_1type.html">type</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1ast__matchers_html_a600679c157b5bd05c4bfb940fb2511dd"><div class="ttname"><a href="namespaceclang_1_1ast__matchers.html#a600679c157b5bd05c4bfb940fb2511dd">clang::ast_matchers::type</a></div><div class="ttdeci">const internal::VariadicAllOfMatcher&lt; Type &gt; type</div><div class="ttdoc">Matches Types in the clang AST.</div><div class="ttdef"><b>Definition:</b> <a href="ASTMatchersInternal_8cpp_source.html#l00772">ASTMatchersInternal.cpp:772</a></div></div>
-<div class="ttc" id="aCGBuiltin_8cpp_html_a821790ca23e5205fef89fbd69540b4c6"><div class="ttname"><a href="CGBuiltin_8cpp.html#a821790ca23e5205fef89fbd69540b4c6">EmitSystemZIntrinsicWithCC</a></div><div class="ttdeci">static Value * EmitSystemZIntrinsicWithCC(CodeGenFunction &amp;CGF, unsigned IntrinsicID, const CallExpr *E)</div><div class="ttdoc">Handle a SystemZ function in which the final argument is a pointer to an int that receives the post-i...</div><div class="ttdef"><b>Definition:</b> <a href="CGBuiltin_8cpp_source.html#l15872">CGBuiltin.cpp:15872</a></div></div>
+<div class="ttc" id="aCGBuiltin_8cpp_html_a5212abfc95ff04c5983c57bd230f9d0d"><div class="ttname"><a href="CGBuiltin_8cpp.html#a5212abfc95ff04c5983c57bd230f9d0d">MMA_VARIANTS</a></div><div class="ttdeci">#define MMA_VARIANTS(geom, type)</div></div>
+<div class="ttc" id="aCGBuiltin_8cpp_html_a821790ca23e5205fef89fbd69540b4c6"><div class="ttname"><a href="CGBuiltin_8cpp.html#a821790ca23e5205fef89fbd69540b4c6">EmitSystemZIntrinsicWithCC</a></div><div class="ttdeci">static Value * EmitSystemZIntrinsicWithCC(CodeGenFunction &amp;CGF, unsigned IntrinsicID, const CallExpr *E)</div><div class="ttdoc">Handle a SystemZ function in which the final argument is a pointer to an int that receives the post-i...</div><div class="ttdef"><b>Definition:</b> <a href="CGBuiltin_8cpp_source.html#l15960">CGBuiltin.cpp:15960</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:24 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:05 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

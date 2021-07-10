@@ -11,8 +11,8 @@ var hierarchy =
     [ "cl::sycl::ONEAPI::detail::__sycl_reduction_main_kernel< T1, B1, B2, T2 >", "classcl_1_1sycl_1_1ONEAPI_1_1detail_1_1____sycl__reduction__main__kernel.html", null ],
     [ "__usmfill< T >", "class____usmfill.html", null ],
     [ "cl::sycl::__width_manipulator__", "classcl_1_1sycl_1_1____width__manipulator____.html", null ],
-    [ "cl::sycl::INTEL::_GetValue< _Type, _T >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", null ],
-    [ "cl::sycl::INTEL::_GetValue< _Type, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__Type_00_01__T1_00_01__T_8_8_8_01_4.html", null ],
+    [ "cl::sycl::INTEL::_GetValue< _D, _T >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue.html", null ],
+    [ "cl::sycl::INTEL::_GetValue< _D, _T1, _T... >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_00_01__T1_00_01__T_8_8_8_01_4.html", null ],
     [ "_pi_context", "struct__pi__context.html", null ],
     [ "_pi_device", "struct__pi__device.html", null ],
     [ "_pi_device_binary_property_set_struct", "struct__pi__device__binary__property__set__struct.html", null ],
@@ -132,7 +132,6 @@ var hierarchy =
     [ "cl::sycl::detail::Builder", "classcl_1_1sycl_1_1detail_1_1Builder.html", null ],
     [ "cl::sycl::detail::KernelProgramCache::BuildError", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html", null ],
     [ "cl::sycl::detail::KernelProgramCache::BuildResult< T >", "structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html", null ],
-    [ "cl::sycl::INTEL::burst_coalesce_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::detail::byte_type< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1byte__type.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::detail::byte_type< int >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1byte__type_3_01int_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::detail::byte_type< short >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1byte__type_3_01short_01_4.html", null ],
@@ -142,7 +141,6 @@ var hierarchy =
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::bytetype< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1bytetype.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::bytetype< char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1bytetype_3_01char_01_4.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::bytetype< unsigned char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1bytetype_3_01unsigned_01char_01_4.html", null ],
-    [ "cl::sycl::INTEL::cache< _N >", "structcl_1_1sycl_1_1INTEL_1_1cache.html", null ],
     [ "cl::sycl::detail::CG", "classcl_1_1sycl_1_1detail_1_1CG.html", [
       [ "cl::sycl::detail::CGAdviseUSM", "classcl_1_1sycl_1_1detail_1_1CGAdviseUSM.html", null ],
       [ "cl::sycl::detail::CGBarrier", "classcl_1_1sycl_1_1detail_1_1CGBarrier.html", null ],
@@ -518,6 +516,13 @@ var hierarchy =
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_simd_v< Ty >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__simd__v.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_simd_view_v< Ty >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__simd__view__v.html", null ],
       [ "cl::sycl::ext::intel::experimental::esimd::detail::is_vectorizable_v< Ty >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1is__vectorizable__v.html", null ],
+      [ "cl::sycl::INTEL::_GetValue< _D >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_01_4.html", null ],
+      [ "cl::sycl::INTEL::_GetValue< _D, _T1, _T... >::impl< _D2, _T12, _Enable >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_00_01__T1_00_01__T_8_8_8_01_4_1_1impl.html", null ],
+      [ "cl::sycl::INTEL::_GetValue< _D, _T1, _T... >::impl< _D2, _T12, std::enable_if_t< _MatchType< _D2, _T12 >::value > >", "structcl_1_1sycl_1_1INTEL_1_1__GetValue_3_01__D_00_01__T1_00_01__T_8_8_8_01_4_1_1impl_3_01__D2_0a3890b20ddee7ffb1133d0901fadaf91.html", null ],
+      [ "cl::sycl::INTEL::burst_coalesce_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1burst__coalesce__impl.html", null ],
+      [ "cl::sycl::INTEL::cache< _N >", "structcl_1_1sycl_1_1INTEL_1_1cache.html", null ],
+      [ "cl::sycl::INTEL::prefetch_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html", null ],
+      [ "cl::sycl::INTEL::statically_coalesce_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html", null ],
       [ "cl::sycl::detail::has_known_identity_impl< std::decay< BinaryOperation >::type, std::decay< AccumulatorT >::type >", "structcl_1_1sycl_1_1detail_1_1has__known__identity__impl.html", [
         [ "cl::sycl::has_known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1has__known__identity.html", [
           [ "cl::sycl::ONEAPI::has_known_identity< BinaryOperation, AccumulatorT >", "structcl_1_1sycl_1_1ONEAPI_1_1has__known__identity.html", null ]
@@ -603,7 +608,7 @@ var hierarchy =
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::is_qf_type< T >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__qf__type.html", null ],
     [ "cl::sycl::ext::intel::experimental::esimd::emu::detail::is_qf_type< unsigned char >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1is__qf__type_3_01unsigned_01char_01_4.html", null ],
     [ "is_same", null, [
-      [ "cl::sycl::INTEL::_MatchType< _Type, _T >", "structcl_1_1sycl_1_1INTEL_1_1__MatchType.html", null ]
+      [ "cl::sycl::INTEL::_MatchType< _D, _T >", "structcl_1_1sycl_1_1INTEL_1_1__MatchType.html", null ]
     ] ],
     [ "cl::sycl::detail::is_same_vector_size< T, Args >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size.html", null ],
     [ "cl::sycl::detail::is_same_vector_size_impl< FirstSize, Args >", "classcl_1_1sycl_1_1detail_1_1is__same__vector__size__impl.html", null ],
@@ -769,7 +774,6 @@ var hierarchy =
     [ "cl::sycl::detail::platform_impl", "classcl_1_1sycl_1_1detail_1_1platform__impl.html", null ],
     [ "cl::sycl::detail::PlatformUtil", "structcl_1_1sycl_1_1detail_1_1PlatformUtil.html", null ],
     [ "cl::sycl::detail::plugin", "classcl_1_1sycl_1_1detail_1_1plugin.html", null ],
-    [ "cl::sycl::INTEL::prefetch_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html", null ],
     [ "cl::sycl::detail::pi::printOut< T >", "structcl_1_1sycl_1_1detail_1_1pi_1_1printOut.html", null ],
     [ "cl::sycl::detail::pi::printOut< PiEvent * >", "structcl_1_1sycl_1_1detail_1_1pi_1_1printOut_3_01PiEvent_01_5_01_4.html", null ],
     [ "cl::sycl::detail::pi::printOut< PiMem * >", "structcl_1_1sycl_1_1detail_1_1pi_1_1printOut_3_01PiMem_01_5_01_4.html", null ],
@@ -995,7 +999,6 @@ var hierarchy =
     [ "cl::sycl::detail::device_image_impl::SpecConstDescT", "structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html", null ],
     [ "cl::sycl::specialization_id< T >", "classcl_1_1sycl_1_1specialization__id.html", null ],
     [ "cl::sycl::detail::SpinLock", "classcl_1_1sycl_1_1detail_1_1SpinLock.html", null ],
-    [ "cl::sycl::INTEL::statically_coalesce_impl< _N >", "structcl_1_1sycl_1_1INTEL_1_1statically__coalesce__impl.html", null ],
     [ "__spv::StorageClass", "struct____spv_1_1StorageClass.html", null ],
     [ "cl::sycl::stream", "classcl_1_1sycl_1_1stream.html", null ],
     [ "cl::sycl::detail::stream_impl", "classcl_1_1sycl_1_1detail_1_1stream__impl.html", null ],

@@ -1487,6 +1487,10 @@ Treat editor placeholders as valid source code
 
 .. option:: -faltivec, -fno-altivec
 
+.. option:: -faltivec-src-compat=<arg>
+
+Source-level compatibility for Altivec vectors (for PowerPC targets). This includes results of vector comparison (scalar for 'xl', vector for 'gcc') as well as behavior when initializing with a scalar (splatting for 'xl', element zero only for 'gcc'). For 'mixed', the compatibility is as 'gcc' for 'vector bool/vector pixel' and as 'xl' for other types. Current default is 'mixed'.
+
 .. option:: -fansi-escape-codes
 
 Use ANSI escape codes for diagnostics
@@ -2320,6 +2324,10 @@ Set update method of profile counters (atomic,prefer-atomic,single)
 
 Use instrumentation data for profile-guided optimization. If pathname is a directory, it reads from <pathname>/default.profdata. Otherwise, it reads from file <pathname>.
 
+.. option:: -fprotect-parens, -fno-protect-parens
+
+Determines whether the optimizer honors parentheses when floating-point expressions are evaluated
+
 .. option:: -fpseudo-probe-for-profiling, -fno-pseudo-probe-for-profiling
 
 Emit pseudo probes for sample profiling
@@ -3071,6 +3079,10 @@ Insert calls to fentry at function entry (x86/SystemZ only)
 
 .. option:: -mfpu=<arg>
 
+.. option:: -mgeneral-regs-only
+
+Generate code which only uses the general purpose registers (AArch64/x86 only)
+
 .. option:: -mglobal-merge, -mno-global-merge
 
 Enable merging of globals
@@ -3310,10 +3322,6 @@ Make the x9 register call-saved (AArch64 only)
 .. option:: -mfix-cortex-a53-835769, -mno-fix-cortex-a53-835769
 
 Workaround Cortex-A53 erratum 835769 (AArch64 only)
-
-.. option:: -mgeneral-regs-only
-
-Generate code which only uses the general purpose registers (AArch64 only)
 
 .. option:: -mmark-bti-property
 
@@ -4062,8 +4070,6 @@ a Fortran input.
 .. option:: -fmodule-private, -fno-module-private
 
 .. option:: -fpack-derived, -fno-pack-derived
-
-.. option:: -fprotect-parens, -fno-protect-parens
 
 .. option:: -frange-check, -fno-range-check
 

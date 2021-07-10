@@ -1500,6 +1500,28 @@ The default value is <code class="docutils literal notranslate"><span class="pre
 </ul>
 </dd></dl>
 
+<dl class="std option">
+<dt id="cmdoption-f-no-protect-parens">
+<code class="sig-name descname">-f[no-]protect-parens:</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-f-no-protect-parens" title="Permalink to this definition">¶</a></dt>
+<dd><p>This option pertains to floating-point types, complex types with
+floating-point components, and vectors of these types. Some arithmetic
+expression transformations that are mathematically correct and permissible
+according to the C and C++ language standards may be incorrect when dealing
+with floating-point types, such as reassociation and distribution. Further,
+the optimizer may ignore parentheses when computing arithmetic expressions
+in circumstances where the parenthesized and unparenthesized expression
+express the same mathematical value. For example (a+b)+c is the same
+mathematical value as a+(b+c), but the optimizer is free to evaluate the
+additions in any order regardless of the parentheses. When enabled, this
+option forces the optimizer to honor the order of operations with respect
+to parentheses in all circumstances.</p>
+<p>Note that floating-point contraction (option <cite>-ffp-contract=</cite>) is disabled
+when <cite>-fprotect-parens</cite> is enabled.  Also note that in safe floating-point
+modes, such as <cite>-ffp-model=precise</cite> or <cite>-ffp-model=strict</cite>, this option
+has no effect because the optimizer is prohibited from making unsafe
+transformations.</p>
+</dd></dl>
+
 <section id="a-note-about-floating-point-constant-evaluation">
 <span id="fp-constant-eval"></span><h4><a class="toc-backref" href="#id38">A note about Floating Point Constant Evaluation</a><a class="headerlink" href="#a-note-about-floating-point-constant-evaluation" title="Permalink to this headline">¶</a></h4>
 <p>In C, the only place floating point operations are guaranteed to be evaluated

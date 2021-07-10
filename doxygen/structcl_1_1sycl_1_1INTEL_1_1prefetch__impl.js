@@ -1,5 +1,4 @@
 var structcl_1_1sycl_1_1INTEL_1_1prefetch__impl =
 [
-    [ "default_value", "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#a24ad7e0490b88957e7c3a7222cc11828", null ],
-    [ "value", "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#af99d460206a1cc7ddb9d91976bf97829", null ]
+    [ "type_id", "structcl_1_1sycl_1_1INTEL_1_1prefetch__impl.html#a91b50a96574d975bd1b00a1451bbed87", null ]
 ];

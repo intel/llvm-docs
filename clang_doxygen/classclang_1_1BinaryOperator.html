@@ -962,7 +962,7 @@ Additional Inherited Members</h2></td></tr>
 <p>This expression node kind describes a builtin binary operation, such as "x + y" for integer values "x" and "y". The operands will already have been converted to appropriate types (e.g., by performing promotions or conversions).</p>
 <p>In C++, where operators may be overloaded, a different kind of expression node (<a class="el" href="classclang_1_1CXXOperatorCallExpr.html" title="A call to an overloaded operator written using operator syntax.">CXXOperatorCallExpr</a>) is used to express the invocation of an overloaded operator with operator syntax. Within a C++ template, whether <a class="el" href="classclang_1_1BinaryOperator.html" title="A builtin binary operation expression such as &quot;x + y&quot; or &quot;x &lt;= y&quot;.">BinaryOperator</a> or <a class="el" href="classclang_1_1CXXOperatorCallExpr.html" title="A call to an overloaded operator written using operator syntax.">CXXOperatorCallExpr</a> is used to store an expression "x + y" depends on the subexpressions for x and y. If neither x or y is type-dependent, and the "+" operator resolves to a built-in operation, <a class="el" href="classclang_1_1BinaryOperator.html" title="A builtin binary operation expression such as &quot;x + y&quot; or &quot;x &lt;= y&quot;.">BinaryOperator</a> will be used to express the computation (x and y may still be value-dependent). If either x or y is type-dependent, or if the "+" resolves to an overloaded operator, <a class="el" href="classclang_1_1CXXOperatorCallExpr.html" title="A call to an overloaded operator written using operator syntax.">CXXOperatorCallExpr</a> will be used to express the computation. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03838">3838</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03849">3849</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="afcfcf53cc9ebcec2aa8a8a57870e8720"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcfcf53cc9ebcec2aa8a8a57870e8720">&#9670;&nbsp;</a></span>Opcode</h2>
@@ -976,7 +976,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03843">3843</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03854">3854</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1061,7 +1061,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l04529">4529</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00024">clang::computeDependence()</a>, <a class="el" href="Expr_8h_source.html#l04021">hasStoredFPFeatures()</a>, <a class="el" href="Expr_8h_source.html#l03981">isCompoundAssignmentOp()</a>, <a class="el" href="LangOptions_8h_source.html#l00617">clang::FPOptionsOverride::requiresTrailingStorage()</a>, <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>, and <a class="el" href="Expr_8h_source.html#l04029">setStoredFPFeatures()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00024">clang::computeDependence()</a>, <a class="el" href="Expr_8h_source.html#l04032">hasStoredFPFeatures()</a>, <a class="el" href="Expr_8h_source.html#l03992">isCompoundAssignmentOp()</a>, <a class="el" href="LangOptions_8h_source.html#l00629">clang::FPOptionsOverride::requiresTrailingStorage()</a>, <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>, and <a class="el" href="Expr_8h_source.html#l04040">setStoredFPFeatures()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04571">Create()</a>, and <a class="el" href="Expr_8cpp_source.html#l04563">CreateEmpty()</a>.</p>
 
@@ -1093,7 +1093,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct an empty binary operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03867">3867</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03878">3878</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
@@ -1183,7 +1183,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l04546">4546</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00024">clang::computeDependence()</a>, <a class="el" href="Expr_8h_source.html#l04021">hasStoredFPFeatures()</a>, <a class="el" href="Expr_8h_source.html#l03981">isCompoundAssignmentOp()</a>, <a class="el" href="LangOptions_8h_source.html#l00617">clang::FPOptionsOverride::requiresTrailingStorage()</a>, <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>, and <a class="el" href="Expr_8h_source.html#l04029">setStoredFPFeatures()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00024">clang::computeDependence()</a>, <a class="el" href="Expr_8h_source.html#l04032">hasStoredFPFeatures()</a>, <a class="el" href="Expr_8h_source.html#l03992">isCompoundAssignmentOp()</a>, <a class="el" href="LangOptions_8h_source.html#l00629">clang::FPOptionsOverride::requiresTrailingStorage()</a>, <a class="el" href="Expr_8h_source.html#l00134">clang::Expr::setDependence()</a>, and <a class="el" href="Expr_8h_source.html#l04040">setStoredFPFeatures()</a>.</p>
 
 </div>
 </div>
@@ -1223,7 +1223,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Construct an empty <a class="el" href="classclang_1_1BinaryOperator.html" title="A builtin binary operation expression such as &quot;x + y&quot; or &quot;x &lt;= y&quot;.">BinaryOperator</a>, SC is <a class="el" href="classclang_1_1CompoundAssignOperator.html" title="CompoundAssignOperator - For compound assignments (e.g.">CompoundAssignOperator</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04068">4068</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04079">4079</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
@@ -1253,7 +1253,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04011">4011</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04022">4022</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1280,7 +1280,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04014">4014</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04025">4025</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1308,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04005">4005</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04016">4016</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -1390,9 +1390,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l04571">4571</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, <a class="el" href="LangOptions_8h_source.html#l00617">clang::FPOptionsOverride::requiresTrailingStorage()</a>, and <a class="el" href="Expr_8h_source.html#l04074">sizeOfTrailingObjects()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, <a class="el" href="LangOptions_8h_source.html#l00629">clang::FPOptionsOverride::requiresTrailingStorage()</a>, and <a class="el" href="Expr_8h_source.html#l04085">sizeOfTrailingObjects()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l07116">clang::Sema::ActOnDecltypeExpression()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14092">clang::Sema::CreateBuiltinBinOp()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, <a class="el" href="CGObjC_8cpp_source.html#l01400">clang::CodeGen::CodeGenFunction::generateObjCSetterBody()</a>, <a class="el" href="SemaPseudoObject_8cpp_source.html#l01638">clang::Sema::recreateSyntacticForm()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07049">clang::ASTNodeImporter::VisitBinaryOperator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExprCXX_8cpp_source.html#l07116">clang::Sema::ActOnDecltypeExpression()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14140">clang::Sema::CreateBuiltinBinOp()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, <a class="el" href="CGObjC_8cpp_source.html#l01400">clang::CodeGen::CodeGenFunction::generateObjCSetterBody()</a>, <a class="el" href="SemaPseudoObject_8cpp_source.html#l01638">clang::Sema::recreateSyntacticForm()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07079">clang::ASTNodeImporter::VisitBinaryOperator()</a>.</p>
 
 </div>
 </div>
@@ -1432,7 +1432,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l04563">4563</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, and <a class="el" href="Expr_8h_source.html#l04074">sizeOfTrailingObjects()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, and <a class="el" href="Expr_8h_source.html#l04085">sizeOfTrailingObjects()</a>.</p>
 
 </div>
 </div>
@@ -1459,9 +1459,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03892">3892</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03903">3903</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8cpp_source.html#l00336">clang::Stmt::getBeginLoc()</a>, and <a class="el" href="Expr_8h_source.html#l03887">getLHS()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8cpp_source.html#l00336">clang::Stmt::getBeginLoc()</a>, and <a class="el" href="Expr_8h_source.html#l03898">getLHS()</a>.</p>
 
 </div>
 </div>
@@ -1488,9 +1488,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03895">3895</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03906">3906</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8cpp_source.html#l00348">clang::Stmt::getEndLoc()</a>, and <a class="el" href="Expr_8h_source.html#l03889">getRHS()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8cpp_source.html#l00348">clang::Stmt::getEndLoc()</a>, and <a class="el" href="Expr_8h_source.html#l03900">getRHS()</a>.</p>
 
 </div>
 </div>
@@ -1517,11 +1517,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03878">3878</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03889">3889</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03879">getOperatorLoc()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03890">getOperatorLoc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10646">clang::Sema::ActOnOpenMPAtomicDirective()</a>, and <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10656">clang::Sema::ActOnOpenMPAtomicDirective()</a>, and <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>.</p>
 
 </div>
 </div>
@@ -1549,11 +1549,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04043">4043</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04054">4054</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l04024">getStoredFPFeatures()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l04035">getStoredFPFeatures()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07049">clang::ASTNodeImporter::VisitBinaryOperator()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07157">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTImporter_8cpp_source.html#l07079">clang::ASTNodeImporter::VisitBinaryOperator()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07187">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>.</p>
 
 </div>
 </div>
@@ -1581,11 +1581,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04036">4036</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04047">4047</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LangOptions_8h_source.html#l00658">clang::FPOptionsOverride::applyOverrides()</a>, <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, <a class="el" href="LangOptions_8cpp_source.html#l00051">clang::FPOptions::defaultWithoutTrailingStorage()</a>, and <a class="el" href="Expr_8h_source.html#l04024">getStoredFPFeatures()</a>.</p>
+<p class="reference">References <a class="el" href="LangOptions_8h_source.html#l00670">clang::FPOptionsOverride::applyOverrides()</a>, <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, <a class="el" href="LangOptions_8cpp_source.html#l00051">clang::FPOptions::defaultWithoutTrailingStorage()</a>, and <a class="el" href="Expr_8h_source.html#l04035">getStoredFPFeatures()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="Expr_8h_source.html#l04057">isFEnvAccessOn()</a>, and <a class="el" href="Expr_8h_source.html#l04051">isFPContractableWithinStatement()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="Expr_8h_source.html#l04068">isFEnvAccessOn()</a>, and <a class="el" href="Expr_8h_source.html#l04062">isFPContractableWithinStatement()</a>.</p>
 
 </div>
 </div>
@@ -1612,9 +1612,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03887">3887</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03898">3898</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10646">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15120">CheckICE()</a>, <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00143">clang::computeDependence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14368">DiagnoseBitwisePrecedence()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03604">clang::CodeGen::CodeGenFunction::EmitARCStoreAutoreleasing()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03573">clang::CodeGen::CodeGenFunction::EmitARCStoreStrong()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03554">clang::CodeGen::CodeGenFunction::EmitARCStoreUnsafeUnretained()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01150">clang::CodeGen::CodeGenFunction::EmitComplexAssignmentLValue()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l00431">clang::CodeGen::CodeGenFunction::EmitCXXMemberPointerCallExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l05354">clang::CodeGen::CodeGenFunction::EmitPointerToDataMemberBinaryExpr()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14632">getBaseAlignmentAndOffsetFromPtr()</a>, <a class="el" href="Expr_8h_source.html#l03892">getBeginLoc()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l04677">HandleMemberPointerAccess()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l10524">ignoreLiteralAdditions()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00066">isLeftShiftResultUnrepresentable()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00061">isShiftOverflow()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, <a class="el" href="CFG_8cpp_source.html#l00114">tryNormalizeBinaryOperator()</a>, <a class="el" href="ByteCodeExprGen_8cpp_source.html#l00146">clang::interp::ByteCodeExprGen&lt; Emitter &gt;::VisitBinaryOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>, <a class="el" href="Consumed_8cpp_source.html#l00701">clang::consumed::ConsumedStmtVisitor::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07049">clang::ASTNodeImporter::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07157">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10656">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15123">CheckICE()</a>, <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00143">clang::computeDependence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14416">DiagnoseBitwisePrecedence()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03608">clang::CodeGen::CodeGenFunction::EmitARCStoreAutoreleasing()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03577">clang::CodeGen::CodeGenFunction::EmitARCStoreStrong()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03558">clang::CodeGen::CodeGenFunction::EmitARCStoreUnsafeUnretained()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01150">clang::CodeGen::CodeGenFunction::EmitComplexAssignmentLValue()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l00431">clang::CodeGen::CodeGenFunction::EmitCXXMemberPointerCallExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l05354">clang::CodeGen::CodeGenFunction::EmitPointerToDataMemberBinaryExpr()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14659">getBaseAlignmentAndOffsetFromPtr()</a>, <a class="el" href="Expr_8h_source.html#l03903">getBeginLoc()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l04677">HandleMemberPointerAccess()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l10551">ignoreLiteralAdditions()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00066">isLeftShiftResultUnrepresentable()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00061">isShiftOverflow()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, <a class="el" href="CFG_8cpp_source.html#l00114">tryNormalizeBinaryOperator()</a>, <a class="el" href="ByteCodeExprGen_8cpp_source.html#l00146">clang::interp::ByteCodeExprGen&lt; Emitter &gt;::VisitBinaryOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>, <a class="el" href="Consumed_8cpp_source.html#l00701">clang::consumed::ConsumedStmtVisitor::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07079">clang::ASTNodeImporter::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07187">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -1641,11 +1641,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03882">3882</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03893">3893</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10646">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15120">CheckICE()</a>, <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01150">clang::CodeGen::CodeGenFunction::EmitComplexAssignmentLValue()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01175">clang::CodeGen::CodeGenFunction::EmitComplexCompoundAssignmentLValue()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04890">clang::CodeGen::CodeGenFunction::EmitCompoundAssignmentLValue()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l00431">clang::CodeGen::CodeGenFunction::EmitCXXMemberPointerCallExpr()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14411">EmitDiagnosticForLogicalAndInLogicalOr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l05354">clang::CodeGen::CodeGenFunction::EmitPointerToDataMemberBinaryExpr()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01182">clang::CodeGen::CodeGenFunction::EmitScalarCompoundAssignWithComplex()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l16012">FindTypeTagExpr()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14545">getBaseAlignmentAndOffsetFromLValue()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14632">getBaseAlignmentAndOffsetFromPtr()</a>, <a class="el" href="Expr_8h_source.html#l03903">getOpcodeStr()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l04677">HandleMemberPointerAccess()</a>, <a class="el" href="Expr_8h_source.html#l03924">isAdditiveOp()</a>, <a class="el" href="Expr_8h_source.html#l03976">isAssignmentOp()</a>, <a class="el" href="Expr_8h_source.html#l03929">isBitwiseOp()</a>, <a class="el" href="Expr_8h_source.html#l03941">isCommaOp()</a>, <a class="el" href="Expr_8h_source.html#l03938">isComparisonOp()</a>, <a class="el" href="Expr_8h_source.html#l03981">isCompoundAssignmentOp()</a>, <a class="el" href="ParentMap_8cpp_source.html#l00171">clang::ParentMap::isConsumedExpr()</a>, <a class="el" href="Expr_8h_source.html#l03935">isEqualityOp()</a>, <a class="el" href="IdenticalExprChecker_8cpp_source.html#l00306">isIdenticalStmt()</a>, <a class="el" href="Expr_8h_source.html#l03971">isLogicalOp()</a>, <a class="el" href="Expr_8h_source.html#l03922">isMultiplicativeOp()</a>, <a class="el" href="Transforms_8cpp_source.html#l00067">clang::arcmt::trans::isPlusOneAssign()</a>, <a class="el" href="Expr_8h_source.html#l03917">isPtrMemOp()</a>, <a class="el" href="Expr_8h_source.html#l03932">isRelationalOp()</a>, <a class="el" href="Expr_8h_source.html#l03995">isShiftAssignOp()</a>, <a class="el" href="Expr_8h_source.html#l03926">isShiftOp()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="DeadStoresChecker_8cpp_source.html#l00104">LookThroughTransitiveAssignmentsAndCommaOperators()</a>, <a class="el" href="CFG_8cpp_source.html#l00114">tryNormalizeBinaryOperator()</a>, <a class="el" href="ByteCodeExprGen_8cpp_source.html#l00146">clang::interp::ByteCodeExprGen&lt; Emitter &gt;::VisitBinaryOperator()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l01193">clang::JSONNodeDumper::VisitBinaryOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>, <a class="el" href="Consumed_8cpp_source.html#l00701">clang::consumed::ConsumedStmtVisitor::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07049">clang::ASTNodeImporter::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07157">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00655">clang::ento::ExprEngine::VisitLogicalExpr()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10656">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15123">CheckICE()</a>, <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01150">clang::CodeGen::CodeGenFunction::EmitComplexAssignmentLValue()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01175">clang::CodeGen::CodeGenFunction::EmitComplexCompoundAssignmentLValue()</a>, <a class="el" href="CGExprScalar_8cpp_source.html#l04877">clang::CodeGen::CodeGenFunction::EmitCompoundAssignmentLValue()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l00431">clang::CodeGen::CodeGenFunction::EmitCXXMemberPointerCallExpr()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14459">EmitDiagnosticForLogicalAndInLogicalOr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l05354">clang::CodeGen::CodeGenFunction::EmitPointerToDataMemberBinaryExpr()</a>, <a class="el" href="CGExprComplex_8cpp_source.html#l01182">clang::CodeGen::CodeGenFunction::EmitScalarCompoundAssignWithComplex()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l16039">FindTypeTagExpr()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14572">getBaseAlignmentAndOffsetFromLValue()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14659">getBaseAlignmentAndOffsetFromPtr()</a>, <a class="el" href="Expr_8h_source.html#l03914">getOpcodeStr()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l04677">HandleMemberPointerAccess()</a>, <a class="el" href="Expr_8h_source.html#l03935">isAdditiveOp()</a>, <a class="el" href="Expr_8h_source.html#l03987">isAssignmentOp()</a>, <a class="el" href="Expr_8h_source.html#l03940">isBitwiseOp()</a>, <a class="el" href="Expr_8h_source.html#l03952">isCommaOp()</a>, <a class="el" href="Expr_8h_source.html#l03949">isComparisonOp()</a>, <a class="el" href="Expr_8h_source.html#l03992">isCompoundAssignmentOp()</a>, <a class="el" href="ParentMap_8cpp_source.html#l00171">clang::ParentMap::isConsumedExpr()</a>, <a class="el" href="Expr_8h_source.html#l03946">isEqualityOp()</a>, <a class="el" href="IdenticalExprChecker_8cpp_source.html#l00306">isIdenticalStmt()</a>, <a class="el" href="Expr_8h_source.html#l03982">isLogicalOp()</a>, <a class="el" href="Expr_8h_source.html#l03933">isMultiplicativeOp()</a>, <a class="el" href="Transforms_8cpp_source.html#l00067">clang::arcmt::trans::isPlusOneAssign()</a>, <a class="el" href="Expr_8h_source.html#l03928">isPtrMemOp()</a>, <a class="el" href="Expr_8h_source.html#l03943">isRelationalOp()</a>, <a class="el" href="Expr_8h_source.html#l04006">isShiftAssignOp()</a>, <a class="el" href="Expr_8h_source.html#l03937">isShiftOp()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="DeadStoresChecker_8cpp_source.html#l00104">LookThroughTransitiveAssignmentsAndCommaOperators()</a>, <a class="el" href="CFG_8cpp_source.html#l00114">tryNormalizeBinaryOperator()</a>, <a class="el" href="ByteCodeExprGen_8cpp_source.html#l00146">clang::interp::ByteCodeExprGen&lt; Emitter &gt;::VisitBinaryOperator()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l01226">clang::JSONNodeDumper::VisitBinaryOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>, <a class="el" href="Consumed_8cpp_source.html#l00701">clang::consumed::ConsumedStmtVisitor::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07079">clang::ASTNodeImporter::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07187">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00643">clang::ento::ExprEngine::VisitLogicalExpr()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -1672,11 +1672,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03903">3903</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03914">3914</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03903">getOpcodeStr()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03914">getOpcodeStr()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaTemplateVariadic_8cpp_source.html#l01261">clang::Sema::BuildEmptyCXXFoldExpr()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14535">DiagnoseBinOpPrecedence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14368">DiagnoseBitwisePrecedence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l08745">DiagnoseConditionalPrecedence()</a>, <a class="el" href="ExprCXX_8h_source.html#l00324">clang::CXXRewrittenBinaryOperator::getOpcodeStr()</a>, <a class="el" href="Expr_8h_source.html#l03903">getOpcodeStr()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l01106">clang::TextNodeDumper::VisitBinaryOperator()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l01193">clang::JSONNodeDumper::VisitBinaryOperator()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l01112">clang::TextNodeDumper::VisitCompoundAssignOperator()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaTemplateVariadic_8cpp_source.html#l01261">clang::Sema::BuildEmptyCXXFoldExpr()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14583">DiagnoseBinOpPrecedence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14416">DiagnoseBitwisePrecedence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l08774">DiagnoseConditionalPrecedence()</a>, <a class="el" href="ExprCXX_8h_source.html#l00324">clang::CXXRewrittenBinaryOperator::getOpcodeStr()</a>, <a class="el" href="Expr_8h_source.html#l03914">getOpcodeStr()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l01146">clang::TextNodeDumper::VisitBinaryOperator()</a>, <a class="el" href="JSONNodeDumper_8cpp_source.html#l01226">clang::JSONNodeDumper::VisitBinaryOperator()</a>, <a class="el" href="TextNodeDumper_8cpp_source.html#l01152">clang::TextNodeDumper::VisitCompoundAssignOperator()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -1709,7 +1709,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02116">2116</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14368">DiagnoseBitwisePrecedence()</a>, and <a class="el" href="SemaExpr_8cpp_source.html#l14411">EmitDiagnosticForLogicalAndInLogicalOr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14416">DiagnoseBitwisePrecedence()</a>, and <a class="el" href="SemaExpr_8cpp_source.html#l14459">EmitDiagnosticForLogicalAndInLogicalOr()</a>.</p>
 
 </div>
 </div>
@@ -1736,11 +1736,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03879">3879</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03890">3890</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10646">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="PathDiagnostic_8cpp_source.html#l00604">clang::ento::PathDiagnosticLocation::createOperatorLoc()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14411">EmitDiagnosticForLogicalAndInLogicalOr()</a>, <a class="el" href="Expr_8h_source.html#l03878">getExprLoc()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07049">clang::ASTNodeImporter::VisitBinaryOperator()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07157">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10656">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="PathDiagnostic_8cpp_source.html#l00604">clang::ento::PathDiagnosticLocation::createOperatorLoc()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14459">EmitDiagnosticForLogicalAndInLogicalOr()</a>, <a class="el" href="Expr_8h_source.html#l03889">getExprLoc()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07079">clang::ASTNodeImporter::VisitBinaryOperator()</a>, and <a class="el" href="ASTImporter_8cpp_source.html#l07187">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>.</p>
 
 </div>
 </div>
@@ -1768,9 +1768,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03984">3984</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03995">3995</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03981">isCompoundAssignmentOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03992">isCompoundAssignmentOp()</a>.</p>
 
 </div>
 </div>
@@ -1802,7 +1802,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="Expr_8cpp_source.html#l02125">2125</a> of file <a class="el" href="Expr_8cpp_source.html">Expr.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l08678">IsArithmeticBinaryExpr()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l08707">IsArithmeticBinaryExpr()</a>.</p>
 
 </div>
 </div>
@@ -1836,7 +1836,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="OperatorKinds_8h_source.html#l00022">clang::OO_None</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l18135">clang::Sema::ActOnOpenMPDependClause()</a>, and <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l18144">clang::Sema::ActOnOpenMPDependClause()</a>, and <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>.</p>
 
 </div>
 </div>
@@ -1863,9 +1863,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03889">3889</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03900">3900</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10646">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15120">CheckICE()</a>, <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00143">clang::computeDependence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14368">DiagnoseBitwisePrecedence()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03604">clang::CodeGen::CodeGenFunction::EmitARCStoreAutoreleasing()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03573">clang::CodeGen::CodeGenFunction::EmitARCStoreStrong()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03554">clang::CodeGen::CodeGenFunction::EmitARCStoreUnsafeUnretained()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l00431">clang::CodeGen::CodeGenFunction::EmitCXXMemberPointerCallExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l05354">clang::CodeGen::CodeGenFunction::EmitPointerToDataMemberBinaryExpr()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l16012">FindTypeTagExpr()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14545">getBaseAlignmentAndOffsetFromLValue()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14632">getBaseAlignmentAndOffsetFromPtr()</a>, <a class="el" href="Expr_8h_source.html#l03895">getEndLoc()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l04677">HandleMemberPointerAccess()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l10524">ignoreLiteralAdditions()</a>, <a class="el" href="ParentMap_8cpp_source.html#l00171">clang::ParentMap::isConsumedExpr()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00066">isLeftShiftResultUnrepresentable()</a>, <a class="el" href="Transforms_8cpp_source.html#l00067">clang::arcmt::trans::isPlusOneAssign()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00061">isShiftOverflow()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="DeadStoresChecker_8cpp_source.html#l00104">LookThroughTransitiveAssignmentsAndCommaOperators()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, <a class="el" href="CFG_8cpp_source.html#l00114">tryNormalizeBinaryOperator()</a>, <a class="el" href="ByteCodeExprGen_8cpp_source.html#l00146">clang::interp::ByteCodeExprGen&lt; Emitter &gt;::VisitBinaryOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>, <a class="el" href="Consumed_8cpp_source.html#l00701">clang::consumed::ConsumedStmtVisitor::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07049">clang::ASTNodeImporter::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07157">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l10656">clang::Sema::ActOnOpenMPAtomicDirective()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l15123">CheckICE()</a>, <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="ComputeDependence_8cpp_source.html#l00143">clang::computeDependence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14416">DiagnoseBitwisePrecedence()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03608">clang::CodeGen::CodeGenFunction::EmitARCStoreAutoreleasing()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03577">clang::CodeGen::CodeGenFunction::EmitARCStoreStrong()</a>, <a class="el" href="CGObjC_8cpp_source.html#l03558">clang::CodeGen::CodeGenFunction::EmitARCStoreUnsafeUnretained()</a>, <a class="el" href="CGExpr_8cpp_source.html#l04987">clang::CodeGen::CodeGenFunction::EmitBinaryOperatorLValue()</a>, <a class="el" href="CGExprCXX_8cpp_source.html#l00431">clang::CodeGen::CodeGenFunction::EmitCXXMemberPointerCallExpr()</a>, <a class="el" href="CGExpr_8cpp_source.html#l05354">clang::CodeGen::CodeGenFunction::EmitPointerToDataMemberBinaryExpr()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l16039">FindTypeTagExpr()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14572">getBaseAlignmentAndOffsetFromLValue()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l14659">getBaseAlignmentAndOffsetFromPtr()</a>, <a class="el" href="Expr_8h_source.html#l03906">getEndLoc()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l04677">HandleMemberPointerAccess()</a>, <a class="el" href="SemaChecking_8cpp_source.html#l10551">ignoreLiteralAdditions()</a>, <a class="el" href="ParentMap_8cpp_source.html#l00171">clang::ParentMap::isConsumedExpr()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00066">isLeftShiftResultUnrepresentable()</a>, <a class="el" href="Transforms_8cpp_source.html#l00067">clang::arcmt::trans::isPlusOneAssign()</a>, <a class="el" href="UndefResultChecker_8cpp_source.html#l00061">isShiftOverflow()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, <a class="el" href="DeadStoresChecker_8cpp_source.html#l00104">LookThroughTransitiveAssignmentsAndCommaOperators()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, <a class="el" href="CFG_8cpp_source.html#l00114">tryNormalizeBinaryOperator()</a>, <a class="el" href="ByteCodeExprGen_8cpp_source.html#l00146">clang::interp::ByteCodeExprGen&lt; Emitter &gt;::VisitBinaryOperator()</a>, <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>, <a class="el" href="Consumed_8cpp_source.html#l00701">clang::consumed::ConsumedStmtVisitor::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07079">clang::ASTNodeImporter::VisitBinaryOperator()</a>, <a class="el" href="ASTImporter_8cpp_source.html#l07187">clang::ASTNodeImporter::VisitCompoundAssignOperator()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -1894,11 +1894,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Get FPFeatures from trailing storage. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04024">4024</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04035">4035</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03849">getTrailingFPFeatures()</a>, and <a class="el" href="Expr_8h_source.html#l04021">hasStoredFPFeatures()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03860">getTrailingFPFeatures()</a>, and <a class="el" href="Expr_8h_source.html#l04032">hasStoredFPFeatures()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04043">getFPFeatures()</a>, and <a class="el" href="Expr_8h_source.html#l04036">getFPFeaturesInEffect()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04054">getFPFeatures()</a>, and <a class="el" href="Expr_8h_source.html#l04047">getFPFeaturesInEffect()</a>.</p>
 
 </div>
 </div>
@@ -1927,11 +1927,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Return a pointer to the trailing <a class="el" href="classclang_1_1FPOptions.html">FPOptions</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03849">3849</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03860">3860</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l04130">offsetOfTrailingStorage()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l04141">offsetOfTrailingStorage()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04024">getStoredFPFeatures()</a>, and <a class="el" href="Expr_8h_source.html#l04029">setStoredFPFeatures()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l04035">getStoredFPFeatures()</a>, and <a class="el" href="Expr_8h_source.html#l04040">setStoredFPFeatures()</a>.</p>
 
 </div>
 </div>
@@ -1958,9 +1958,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03854">3854</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03865">3865</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l04130">offsetOfTrailingStorage()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l04141">offsetOfTrailingStorage()</a>.</p>
 
 </div>
 </div>
@@ -1987,11 +1987,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04021">4021</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04032">4032</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, and <a class="el" href="Expr_8h_source.html#l04024">getStoredFPFeatures()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, and <a class="el" href="Expr_8h_source.html#l04035">getStoredFPFeatures()</a>.</p>
 
 </div>
 </div>
@@ -2018,11 +2018,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03924">3924</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03935">3935</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03924">isAdditiveOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03935">isAdditiveOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00224">decomposeSymbol()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00239">doRearrangeUnchecked()</a>, <a class="el" href="Expr_8h_source.html#l03924">isAdditiveOp()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l08663">IsArithmeticOp()</a>, and <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00314">tryRearrange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00224">decomposeSymbol()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00239">doRearrangeUnchecked()</a>, <a class="el" href="Expr_8h_source.html#l03935">isAdditiveOp()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l08692">IsArithmeticOp()</a>, and <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00314">tryRearrange()</a>.</p>
 
 </div>
 </div>
@@ -2050,9 +2050,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03923">3923</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03934">3934</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaChecking_8cpp_source.html#l10524">ignoreLiteralAdditions()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaChecking_8cpp_source.html#l10551">ignoreLiteralAdditions()</a>, <a class="el" href="BugReporterVisitors_8cpp_source.html#l00074">peelOffPointerArithmetic()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>.</p>
 
 </div>
 </div>
@@ -2079,11 +2079,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03976">3976</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03987">3987</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03976">isAssignmentOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03987">isAssignmentOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03976">isAssignmentOp()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03987">isAssignmentOp()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -2111,7 +2111,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03973">3973</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03984">3984</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ExprClassification_8cpp_source.html#l00558">ClassifyBinaryOp()</a>, <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>, <a class="el" href="Expr_8cpp_source.html#l02517">clang::Expr::isUnusedResultAWarning()</a>, and <a class="el" href="ExprEngineC_8cpp_source.html#l00040">clang::ento::ExprEngine::VisitBinaryOperator()</a>.</p>
 
@@ -2140,11 +2140,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03929">3929</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03940">3940</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03929">isBitwiseOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03940">isBitwiseOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14535">DiagnoseBinOpPrecedence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l08745">DiagnoseConditionalPrecedence()</a>, and <a class="el" href="Expr_8h_source.html#l03929">isBitwiseOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14583">DiagnoseBinOpPrecedence()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l08774">DiagnoseConditionalPrecedence()</a>, and <a class="el" href="Expr_8h_source.html#l03940">isBitwiseOp()</a>.</p>
 
 </div>
 </div>
@@ -2172,9 +2172,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03928">3928</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03939">3939</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14368">DiagnoseBitwisePrecedence()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14416">DiagnoseBitwisePrecedence()</a>.</p>
 
 </div>
 </div>
@@ -2201,11 +2201,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03941">3941</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03952">3952</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03941">isCommaOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03952">isCommaOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03941">isCommaOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03952">isCommaOp()</a>.</p>
 
 </div>
 </div>
@@ -2233,7 +2233,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03940">3940</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03951">3951</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2260,11 +2260,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03938">3938</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03949">3949</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03938">isComparisonOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03949">isComparisonOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RangedConstraintManager_8cpp_source.html#l00023">clang::ento::RangedConstraintManager::assumeSym()</a>, <a class="el" href="RangedConstraintManager_8cpp_source.html#l00146">clang::ento::RangedConstraintManager::assumeSymRel()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14535">DiagnoseBinOpPrecedence()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00239">doRearrangeUnchecked()</a>, <a class="el" href="SVals_8cpp_source.html#l00246">clang::ento::loc::ConcreteInt::evalBinOp()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00650">evalBinOpFieldRegionFieldRegion()</a>, <a class="el" href="SMTConv_8h_source.html#l00346">clang::ento::SMTConv::getBinExpr()</a>, <a class="el" href="SMTConv_8h_source.html#l00422">clang::ento::SMTConv::getSymExpr()</a>, <a class="el" href="Expr_8h_source.html#l03938">isComparisonOp()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00306">shouldRearrange()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00314">tryRearrange()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RangedConstraintManager_8cpp_source.html#l00023">clang::ento::RangedConstraintManager::assumeSym()</a>, <a class="el" href="RangedConstraintManager_8cpp_source.html#l00146">clang::ento::RangedConstraintManager::assumeSymRel()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l14583">DiagnoseBinOpPrecedence()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00239">doRearrangeUnchecked()</a>, <a class="el" href="SVals_8cpp_source.html#l00305">clang::ento::loc::ConcreteInt::evalBinOp()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00650">evalBinOpFieldRegionFieldRegion()</a>, <a class="el" href="SMTConv_8h_source.html#l00346">clang::ento::SMTConv::getBinExpr()</a>, <a class="el" href="SMTConv_8h_source.html#l00422">clang::ento::SMTConv::getSymExpr()</a>, <a class="el" href="Expr_8h_source.html#l03949">isComparisonOp()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00306">shouldRearrange()</a>, <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00314">tryRearrange()</a>, and <a class="el" href="BugReporterVisitors_8cpp_source.html#l02753">clang::ento::ConditionBRVisitor::VisitTrueTest()</a>.</p>
 
 </div>
 </div>
@@ -2292,9 +2292,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03937">3937</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03948">3948</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14368">DiagnoseBitwisePrecedence()</a>, and <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l14416">DiagnoseBitwisePrecedence()</a>, and <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>.</p>
 
 </div>
 </div>
@@ -2321,11 +2321,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03981">3981</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03992">3992</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, <a class="el" href="Expr_8h_source.html#l04095">clang::CompoundAssignOperator::CompoundAssignOperator()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, and <a class="el" href="Expr_8h_source.html#l03984">getOpForCompoundAssignment()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>, <a class="el" href="Expr_8h_source.html#l04106">clang::CompoundAssignOperator::CompoundAssignOperator()</a>, <a class="el" href="SemaOverload_8cpp_source.html#l13498">clang::Sema::CreateOverloadedBinOp()</a>, and <a class="el" href="Expr_8h_source.html#l03995">getOpForCompoundAssignment()</a>.</p>
 
 </div>
 </div>
@@ -2353,7 +2353,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03978">3978</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03989">3989</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2380,11 +2380,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03935">3935</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03946">3946</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03935">isEqualityOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03946">isEqualityOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="RangedConstraintManager_8cpp_source.html#l00023">clang::ento::RangedConstraintManager::assumeSym()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l11796">clang::Sema::CheckCompareOperands()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l12297">clang::Sema::CheckVectorCompareOperands()</a>, and <a class="el" href="Expr_8h_source.html#l03935">isEqualityOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="RangedConstraintManager_8cpp_source.html#l00023">clang::ento::RangedConstraintManager::assumeSym()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l11825">clang::Sema::CheckCompareOperands()</a>, <a class="el" href="SemaExpr_8cpp_source.html#l12326">clang::Sema::CheckVectorCompareOperands()</a>, and <a class="el" href="Expr_8h_source.html#l03946">isEqualityOp()</a>.</p>
 
 </div>
 </div>
@@ -2412,7 +2412,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03934">3934</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03945">3945</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>.</p>
 
@@ -2442,9 +2442,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04057">4057</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04068">4068</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l04036">getFPFeaturesInEffect()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l04047">getFPFeaturesInEffect()</a>.</p>
 
 </div>
 </div>
@@ -2472,9 +2472,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04051">4051</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04062">4062</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="LangOptions_8h_source.html#l00535">clang::FPOptions::allowFPContractWithinStatement()</a>, and <a class="el" href="Expr_8h_source.html#l04036">getFPFeaturesInEffect()</a>.</p>
+<p class="reference">References <a class="el" href="LangOptions_8h_source.html#l00547">clang::FPOptions::allowFPContractWithinStatement()</a>, and <a class="el" href="Expr_8h_source.html#l04047">getFPFeaturesInEffect()</a>.</p>
 
 </div>
 </div>
@@ -2501,11 +2501,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03971">3971</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03982">3982</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03971">isLogicalOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03982">isLogicalOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SMTConv_8h_source.html#l00346">clang::ento::SMTConv::getBinExpr()</a>, and <a class="el" href="Expr_8h_source.html#l03971">isLogicalOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SMTConv_8h_source.html#l00346">clang::ento::SMTConv::getBinExpr()</a>, and <a class="el" href="Expr_8h_source.html#l03982">isLogicalOp()</a>.</p>
 
 </div>
 </div>
@@ -2533,9 +2533,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03970">3970</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03981">3981</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="CodeGenFunction_8cpp_source.html#l01734">clang::CodeGen::CodeGenFunction::isInstrumentedCondition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="CodeGenFunction_8cpp_source.html#l01740">clang::CodeGen::CodeGenFunction::isInstrumentedCondition()</a>.</p>
 
 </div>
 </div>
@@ -2562,11 +2562,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03922">3922</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03933">3933</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03922">isMultiplicativeOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03933">isMultiplicativeOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l08663">IsArithmeticOp()</a>, and <a class="el" href="Expr_8h_source.html#l03922">isMultiplicativeOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l08692">IsArithmeticOp()</a>, and <a class="el" href="Expr_8h_source.html#l03933">isMultiplicativeOp()</a>.</p>
 
 </div>
 </div>
@@ -2594,7 +2594,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03919">3919</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03930">3930</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2648,7 +2648,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="Type_8h_source.html#l07188">clang::Type::getAs()</a>, <a class="el" href="Type_8h_source.html#l02654">clang::PointerType::getPointeeType()</a>, <a class="el" href="Expr_8h_source.html#l00141">clang::Expr::getType()</a>, <a class="el" href="Expr_8cpp_source.html#l02980">clang::Expr::IgnoreParenCasts()</a>, <a class="el" href="Type_8cpp_source.html#l01946">clang::Type::isCharType()</a>, <a class="el" href="Type_8h_source.html#l07014">clang::Type::isIntegerType()</a>, <a class="el" href="Expr_8cpp_source.html#l03802">clang::Expr::isNullPointerConstant()</a>, <a class="el" href="Type_8h_source.html#l06685">clang::Type::isPointerType()</a>, and <a class="el" href="Expr_8h_source.html#l00778">clang::Expr::NPC_ValueDependentIsNotNull</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l10723">clang::Sema::CheckAdditionOperands()</a>, and <a class="el" href="CGExprScalar_8cpp_source.html#l03408">emitPointerArithmetic()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l10752">clang::Sema::CheckAdditionOperands()</a>, and <a class="el" href="CGExprScalar_8cpp_source.html#l03395">emitPointerArithmetic()</a>.</p>
 
 </div>
 </div>
@@ -2675,11 +2675,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03917">3917</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03928">3928</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03917">isPtrMemOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03928">isPtrMemOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03917">isPtrMemOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03928">isPtrMemOp()</a>.</p>
 
 </div>
 </div>
@@ -2709,7 +2709,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>predicates to categorize the respective opcodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03914">3914</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03925">3925</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2736,11 +2736,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03932">3932</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03943">3943</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03932">isRelationalOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03943">isRelationalOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l11796">clang::Sema::CheckCompareOperands()</a>, and <a class="el" href="Expr_8h_source.html#l03932">isRelationalOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l11825">clang::Sema::CheckCompareOperands()</a>, and <a class="el" href="Expr_8h_source.html#l03943">isRelationalOp()</a>.</p>
 
 </div>
 </div>
@@ -2768,7 +2768,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03931">3931</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03942">3942</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="ExprConstant_8cpp_source.html#l12541">EvaluateComparisonBinaryOperator()</a>.</p>
 
@@ -2797,9 +2797,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03995">3995</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04006">4006</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>.</p>
 
 </div>
 </div>
@@ -2827,7 +2827,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03992">3992</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04003">4003</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2854,11 +2854,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03926">3926</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03937">3937</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Expr_8h_source.html#l03882">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03926">isShiftOp()</a>.</p>
+<p class="reference">References <a class="el" href="Expr_8h_source.html#l03893">getOpcode()</a>, and <a class="el" href="Expr_8h_source.html#l03937">isShiftOp()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l08663">IsArithmeticOp()</a>, and <a class="el" href="Expr_8h_source.html#l03926">isShiftOp()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="SemaExpr_8cpp_source.html#l08692">IsArithmeticOp()</a>, and <a class="el" href="Expr_8h_source.html#l03937">isShiftOp()</a>.</p>
 
 </div>
 </div>
@@ -2886,7 +2886,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03925">3925</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03936">3936</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -2914,7 +2914,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03943">3943</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03954">3954</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="RangedConstraintManager_8cpp_source.html#l00023">clang::ento::RangedConstraintManager::assumeSym()</a>.</p>
 
@@ -2943,11 +2943,11 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04130">4130</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04141">4141</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03849">getTrailingFPFeatures()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Expr_8h_source.html#l03860">getTrailingFPFeatures()</a>.</p>
 
 </div>
 </div>
@@ -2975,7 +2975,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03956">3956</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03967">3967</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="SemaOpenMP_8cpp_source.html#l05430">clang::Sema::ActOnOpenMPCanonicalLoop()</a>, <a class="el" href="RangedConstraintManager_8cpp_source.html#l00023">clang::ento::RangedConstraintManager::assumeSym()</a>, and <a class="el" href="SimpleSValBuilder_8cpp_source.html#l00239">doRearrangeUnchecked()</a>.</p>
 
@@ -3007,7 +3007,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set and fetch the bit that shows whether FPFeatures needs to be allocated in Trailing Storage. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04020">4020</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04031">4031</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
@@ -3037,7 +3037,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03888">3888</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03899">3899</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -3065,7 +3065,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03885">3885</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03896">3896</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
@@ -3095,7 +3095,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03880">3880</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03891">3891</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>.</p>
 
@@ -3125,7 +3125,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03890">3890</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l03901">3901</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 </div>
 </div>
@@ -3155,9 +3155,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Set FPFeatures in trailing storage, used only by Serialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04029">4029</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04040">4040</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
-<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l03849">getTrailingFPFeatures()</a>.</p>
+<p class="reference">References <a class="el" href="Stmt_8h_source.html#l01034">clang::Stmt::BinaryOperatorBits</a>, and <a class="el" href="Expr_8h_source.html#l03860">getTrailingFPFeatures()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04529">BinaryOperator()</a>.</p>
 
@@ -3190,7 +3190,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Return the size in bytes needed for the trailing objects. </p>
 <p>Used to allocate the right amount of storage. </p>
 
-<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04074">4074</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Expr_8h_source.html#l04085">4085</a> of file <a class="el" href="Expr_8h_source.html">Expr.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Expr_8cpp_source.html#l04571">Create()</a>, <a class="el" href="Expr_8cpp_source.html#l04593">clang::CompoundAssignOperator::Create()</a>, <a class="el" href="Expr_8cpp_source.html#l04563">CreateEmpty()</a>, and <a class="el" href="Expr_8cpp_source.html#l04585">clang::CompoundAssignOperator::CreateEmpty()</a>.</p>
 
@@ -3203,7 +3203,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:31 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:12 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

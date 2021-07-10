@@ -183,7 +183,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6b48c3de8e8b7bffeceb4d7d7d61e4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the attributes we can overload on are identical for A and B.  <a href="ASTReaderDecl_8cpp.html#a6b48c3de8e8b7bffeceb4d7d7d61e4dc">More...</a><br /></td></tr>
 <tr class="separator:a6b48c3de8e8b7bffeceb4d7d7d61e4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a661dde4d6ab53541d2b82fd2c5e76f63"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ASTReaderDecl_8cpp.html#a661dde4d6ab53541d2b82fd2c5e76f63">isSameEntity</a> (<a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *<a class="el" href="JSONCompilationDatabase_8cpp.html#ae2bfabb8d55939ef9b159c988453ee04">X</a>, <a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *Y)</td></tr>
-<tr class="memdesc:a661dde4d6ab53541d2b82fd2c5e76f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the two declarations refer to the same entity.pr.  <a href="ASTReaderDecl_8cpp.html#a661dde4d6ab53541d2b82fd2c5e76f63">More...</a><br /></td></tr>
+<tr class="memdesc:a661dde4d6ab53541d2b82fd2c5e76f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether the two declarations refer to the same entity.  <a href="ASTReaderDecl_8cpp.html#a661dde4d6ab53541d2b82fd2c5e76f63">More...</a><br /></td></tr>
 <tr class="separator:a661dde4d6ab53541d2b82fd2c5e76f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c5073de44c1fcedb6ca2a3d7ed5d594"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ASTReaderDecl_8cpp.html#a1c5073de44c1fcedb6ca2a3d7ed5d594">getDeclForMerging</a> (<a class="el" href="classclang_1_1NamedDecl.html">NamedDecl</a> *Found, <a class="el" href="stdbool_8h.html#abb452686968e48b67397da5f97445f5b">bool</a> IsTypedefNameForLinkage)</td></tr>
 <tr class="memdesc:a1c5073de44c1fcedb6ca2a3d7ed5d594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the declaration that should be merged into, given the declaration found by name lookup.  <a href="ASTReaderDecl_8cpp.html#a1c5073de44c1fcedb6ca2a3d7ed5d594">More...</a><br /></td></tr>
@@ -635,11 +635,11 @@ template&lt;typename DeclT , typename Fn &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l04426">4426</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l04435">4435</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DeclBase_8h_source.html#l00999">clang::Decl::getMostRecentDecl()</a>, and <a class="el" href="DeclBase_8h_source.html#l00984">clang::Decl::getPreviousDecl()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTReaderDecl_8cpp_source.html#l04446">clang::ASTDeclReader::UpdateDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTReaderDecl_8cpp_source.html#l04455">clang::ASTDeclReader::UpdateDecl()</a>.</p>
 
 </div>
 </div>
@@ -680,7 +680,7 @@ template&lt;typename DeclT , typename Fn &gt; </div>
 <p>Find the declaration that should be merged into, given the declaration found by name lookup. </p>
 <p>If we're merging an anonymous declaration within a typedef, we need a matching typedef, and we merge with the type inside it. </p>
 
-<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03354">3354</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03363">3363</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="DeclBase_8h_source.html#l00716">clang::Decl::isFromASTFile()</a>.</p>
 
@@ -808,9 +808,9 @@ template&lt;typename ParmDecl &gt; </div>
 <p>Inherit the default template argument from <code>From</code> to <code>To</code>. </p>
 <p>Returns <code>false</code> if there is no default template for <code>From</code>. </p>
 
-<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03670">3670</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03679">3679</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTReaderDecl_8cpp_source.html#l03679">inheritDefaultTemplateArguments()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTReaderDecl_8cpp_source.html#l03688">inheritDefaultTemplateArguments()</a>.</p>
 
 </div>
 </div>
@@ -854,11 +854,11 @@ template&lt;typename ParmDecl &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03679">3679</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03688">3688</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="DeclTemplate_8h_source.html#l00418">clang::TemplateDecl::getTemplateParameters()</a>, and <a class="el" href="ASTReaderDecl_8cpp_source.html#l03670">inheritDefaultTemplateArgument()</a>.</p>
+<p class="reference">References <a class="el" href="DeclTemplate_8h_source.html#l00418">clang::TemplateDecl::getTemplateParameters()</a>, and <a class="el" href="ASTReaderDecl_8cpp_source.html#l03679">inheritDefaultTemplateArgument()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="ASTReaderDecl_8cpp_source.html#l03700">clang::ASTDeclReader::attachPreviousDecl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="ASTReaderDecl_8cpp_source.html#l03709">clang::ASTDeclReader::attachPreviousDecl()</a>.</p>
 
 </div>
 </div>
@@ -945,7 +945,7 @@ template&lt;typename ParmDecl &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Determine whether the two declarations refer to the same entity.pr. </p>
+<p>Determine whether the two declarations refer to the same entity. </p>
 
 <p class="definition">Definition at line <a class="el" href="ASTReaderDecl_8cpp_source.html#l03071">3071</a> of file <a class="el" href="ASTReaderDecl_8cpp_source.html">ASTReaderDecl.cpp</a>.</p>
 
@@ -1126,7 +1126,7 @@ template&lt;typename DeclT &gt; </div>
 <div class="ttc" id="aUnwrappedLineFormatter_8cpp_html_a367365df5b490f2ddb411318d9d421a9"><div class="ttname"><a href="UnwrappedLineFormatter_8cpp.html#a367365df5b490f2ddb411318d9d421a9">Previous</a></div><div class="ttdeci">StateNode * Previous</div><div class="ttdef"><b>Definition:</b> <a href="UnwrappedLineFormatter_8cpp_source.html#l00987">UnwrappedLineFormatter.cpp:987</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:28 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:09 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

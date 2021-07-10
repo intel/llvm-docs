@@ -242,173 +242,178 @@ $(function() {
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> PaddingSum;</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a> = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#ad236937ee0824ce057d168e31290370a">toCharUnitsFromBits</a>(RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a868621049cf1bb3694a2757472553651">getFieldOffset</a>(0));</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classclang_1_1FieldDecl.html">FieldDecl</a> *FD : RD-&gt;<a class="code" href="classclang_1_1RecordDecl.html#a5e73db3d805697af36d80739d55369ec">fields</a>()) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="comment">// This checker only cares about the padded size of the</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="comment">// field, and not the data size. If the field is a record</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="comment">// with tail padding, then we won&#39;t put that number in our</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="comment">// total because reordering fields won&#39;t fix that problem.</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> FieldSize = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#aa8c44e88d6ce9b3cce885b62d3cd5dff">getTypeSizeInChars</a>(FD-&gt;getType());</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="keyword">auto</span> FieldOffsetBits = RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a868621049cf1bb3694a2757472553651">getFieldOffset</a>(FD-&gt;getFieldIndex());</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> FieldOffset = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#ad236937ee0824ce057d168e31290370a">toCharUnitsFromBits</a>(FieldOffsetBits);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      PaddingSum += (FieldOffset - <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a> = FieldOffset + FieldSize;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    PaddingSum += RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a6dadc2ec53fd8477a8ae6ad84cf967f2">getSize</a>() - <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a>;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span> PaddingSum;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="comment">  /// Optimal padding overview:</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">  /// 1.  Find a close approximation to where we can place our first field.</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">  ///     This will usually be at offset 0.</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment">  /// 2.  Try to find the best field that can legally be placed at the current</span></div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">  ///     offset.</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">  ///   a.  &quot;Best&quot; is the largest alignment that is legal, but smallest size.</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">  ///       This is to account for overly aligned types.</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">  /// 3.  If no fields can fit, pad by rounding the current offset up to the</span></div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">  ///     smallest alignment requirement of our fields. Measure and track the</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"></span>  <span class="comment">//      amount of padding added. Go back to 2.</span><span class="comment"></span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">  /// 4.  Increment the current offset by the size of the chosen field.</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">  /// 5.  Remove the chosen field from the set of future possibilities.</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">  /// 6.  Go back to 2 if there are still unplaced fields.</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">  /// 7.  Add tail padding by rounding the current offset up to the structure</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment">  ///     alignment. Track the amount of padding added.</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keyword">static</span> std::pair&lt;CharUnits, SmallVector&lt;const FieldDecl *, 20&gt;&gt;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  calculateOptimalPad(<span class="keyword">const</span> <a class="code" href="classclang_1_1RecordDecl.html">RecordDecl</a> *RD, <span class="keyword">const</span> <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;<a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>,</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                      <span class="keyword">const</span> <a class="code" href="classclang_1_1ASTRecordLayout.html">ASTRecordLayout</a> &amp;RL) {</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keyword">struct </span>FieldInfo {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> Align;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> <a class="code" href="namespaceclang_1_1syntax.html#a0d10149d69e32e3c86140b4d325925e5a6f6cb72d544962fa333e2e34ce64f719">Size</a>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keyword">const</span> <a class="code" href="classclang_1_1FieldDecl.html">FieldDecl</a> *<a class="code" href="namespaceclang_1_1index.html#a2f70a3d61ba9b8a97d8e609dcdf069dea6f16a5f8ff5d75ab84c018adacdfcbb7">Field</a>;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="namespaceclang.html#a51e572049a11fe5cf42e8da840bf69af">operator&lt;</a>(<span class="keyword">const</span> FieldInfo &amp;RHS)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">// Order from small alignments to large alignments,</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="comment">// then large sizes to small sizes.</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="comment">// then large field indices to small field indices</span></div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">return</span> std::make_tuple(Align, -Size,</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                               Field ? -<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="namespaceclang_1_1index.html#a2f70a3d61ba9b8a97d8e609dcdf069dea6f16a5f8ff5d75ab84c018adacdfcbb7">Field</a>-&gt;getFieldIndex())</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                                     : 0) &lt;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;               std::make_tuple(</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                   RHS.Align, -RHS.Size,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                   RHS.Field ? -<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(RHS.Field-&gt;getFieldIndex())</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                             : 0);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    };</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;FieldInfo, 20&gt;</a> Fields;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">auto</span> GatherSizesAndAlignments = [](<span class="keyword">const</span> <a class="code" href="classclang_1_1FieldDecl.html">FieldDecl</a> *FD) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      FieldInfo RetVal;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      RetVal.Field = FD;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keyword">auto</span> &amp;Ctx = FD-&gt;getASTContext();</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keyword">auto</span> Info = Ctx.getTypeInfoInChars(FD-&gt;getType());</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      RetVal.Size = Info.Width;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      RetVal.Align = Info.Align;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      assert(llvm::isPowerOf2_64(RetVal.Align.getQuantity()));</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">auto</span> Max = FD-&gt;getMaxAlignment())</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        RetVal.Align = <a class="code" href="____clang__cuda__math_8h.html#ae6bb573e13e3bd5738c8faa552b6a129">std::max</a>(Ctx.toCharUnitsFromBits(Max), RetVal.Align);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordflow">return</span> RetVal;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    };</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::transform(RD-&gt;<a class="code" href="classclang_1_1RecordDecl.html#afc36412f0657ec2e9810e6f9d321b29a">field_begin</a>(), RD-&gt;<a class="code" href="classclang_1_1RecordDecl.html#a5c6e33929fd31d2c56ae28db7ff01237">field_end</a>(),</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                   std::back_inserter(Fields), GatherSizesAndAlignments);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    llvm::sort(Fields);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// This lets us skip over vptrs and non-virtual bases,</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// so that we can just worry about the fields in our object.</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// Note that this does cause us to miss some cases where we</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// could pack more bytes in to a base class&#39;s tail padding.</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NewOffset = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#ad236937ee0824ce057d168e31290370a">toCharUnitsFromBits</a>(RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a868621049cf1bb3694a2757472553651">getFieldOffset</a>(0));</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NewPad;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;const FieldDecl *, 20&gt;</a> OptimalFieldsOrder;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">while</span> (!Fields.empty()) {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <span class="keywordtype">unsigned</span> TrailingZeros =</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;          llvm::countTrailingZeros((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>)NewOffset.<a class="code" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">getQuantity</a>());</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="comment">// If NewOffset is zero, then countTrailingZeros will be 64. Shifting</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <span class="comment">// 64 will overflow our unsigned long long. Shifting 63 will turn</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      <span class="comment">// our long long (and CharUnits internal type) negative. So shift 62.</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">long</span> CurAlignmentBits = 1ull &lt;&lt; (<a class="code" href="____clang__cuda__math_8h.html#a56979bdbfd9314c50e30a5c645f2bc4d">std::min</a>)(TrailingZeros, 62u);</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> CurAlignment = <a class="code" href="classclang_1_1CharUnits.html#adf6d3a79993b58285a0626b61c2c6c82">CharUnits::fromQuantity</a>(CurAlignmentBits);</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      FieldInfo InsertPoint = {CurAlignment, <a class="code" href="classclang_1_1CharUnits.html#ae8fbc6063b513b85cd488904994ac8c2">CharUnits::Zero</a>(), <span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <span class="comment">// In the typical case, this will find the last element</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="comment">// of the vector. We won&#39;t find a middle element unless</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      <span class="comment">// we started on a poorly aligned address or have an overly</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <span class="comment">// aligned field.</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      <span class="keyword">auto</span> Iter = llvm::upper_bound(Fields, InsertPoint);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="keywordflow">if</span> (Iter != Fields.begin()) {</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="comment">// We found a field that we can layout with the current alignment.</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        --Iter;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        NewOffset += Iter-&gt;Size;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        OptimalFieldsOrder.push_back(Iter-&gt;Field);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        Fields.erase(Iter);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="comment">// We are poorly aligned, and we need to pad in order to layout another</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="comment">// field. Round up to at least the smallest field alignment that we</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="comment">// currently have.</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NextOffset = NewOffset.<a class="code" href="classclang_1_1CharUnits.html#ae265331f6b24a3478598c5a68f426dec">alignTo</a>(Fields[0].Align);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        NewPad += NextOffset - NewOffset;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        NewOffset = NextOffset;</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="comment">// Calculate tail padding.</span></div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NewSize = NewOffset.<a class="code" href="classclang_1_1CharUnits.html#ae265331f6b24a3478598c5a68f426dec">alignTo</a>(RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a21a3c59ebb2c4af5a86c557b2bbeb4ab">getAlignment</a>());</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    NewPad += NewSize - NewOffset;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">return</span> {NewPad, std::move(OptimalFieldsOrder)};</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <span class="keywordtype">void</span> reportRecord(</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      <span class="keyword">const</span> <a class="code" href="classclang_1_1RecordDecl.html">RecordDecl</a> *RD, <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> BaselinePad, <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> OptimalPad,</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="keyword">const</span> <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;const FieldDecl *, 20&gt;</a> &amp;OptimalFieldsOrder)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordflow">if</span> (!PaddingBug)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      PaddingBug =</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;          std::make_unique&lt;BugType&gt;(<span class="keyword">this</span>, <span class="stringliteral">&quot;Excessive Padding&quot;</span>, <span class="stringliteral">&quot;Performance&quot;</span>);</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="classllvm_1_1SmallString.html">SmallString&lt;100&gt;</a> Buf;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    llvm::raw_svector_ostream Os(Buf);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    Os &lt;&lt; <span class="stringliteral">&quot;Excessive padding in &#39;&quot;</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    Os &lt;&lt; <a class="code" href="classclang_1_1QualType.html#ab6d17bbf405e8fdb04a67518be3b46d1">QualType::getAsString</a>(RD-&gt;<a class="code" href="classclang_1_1TypeDecl.html#a84a2dafb93379e1b892012e92193d3a7">getTypeForDecl</a>(), <a class="code" href="classclang_1_1Qualifiers.html">Qualifiers</a>(),</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                                <a class="code" href="classclang_1_1LangOptions.html">LangOptions</a>())</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> *TSD = dyn_cast&lt;ClassTemplateSpecializationDecl&gt;(RD)) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="comment">// TODO: make this show up better in the console output and in</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      <span class="comment">// the HTML. Maybe just make it show up in HTML like the path</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      <span class="comment">// diagnostics show.</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> ILoc = TSD-&gt;getPointOfInstantiation();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordflow">if</span> (ILoc.<a class="code" href="classclang_1_1SourceLocation.html#a980da8d6100c0a0c3764991ca80ce6e7">isValid</a>())</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        Os &lt;&lt; <span class="stringliteral">&quot; instantiated here: &quot;</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;           &lt;&lt; ILoc.<a class="code" href="classclang_1_1SourceLocation.html#a3f4a60515d3e0094caa8561570c7ee03">printToString</a>(BR-&gt;getSourceManager());</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    Os &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; BaselinePad.<a class="code" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">getQuantity</a>() &lt;&lt; <span class="stringliteral">&quot; padding bytes, where &quot;</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;       &lt;&lt; OptimalPad.<a class="code" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">getQuantity</a>() &lt;&lt; <span class="stringliteral">&quot; is optimal). \n&quot;</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;Optimal fields order: \n&quot;</span>;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *FD : OptimalFieldsOrder)</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      Os &lt;&lt; FD-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;, \n&quot;</span>;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    Os &lt;&lt; <span class="stringliteral">&quot;consider reordering the fields or adding explicit padding &quot;</span></div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;          <span class="stringliteral">&quot;members.&quot;</span>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    PathDiagnosticLocation CELoc =</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <a class="code" href="classclang_1_1ento_1_1PathDiagnosticLocation.html#ad5e9747a36878bcaaf1c734e417f7fd6">PathDiagnosticLocation::create</a>(RD, BR-&gt;getSourceManager());</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keyword">auto</span> Report =</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        std::make_unique&lt;BasicBugReport&gt;(*PaddingBug, Os.str(), CELoc);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    Report-&gt;setDeclWithIssue(RD);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    Report-&gt;addRange(RD-&gt;<a class="code" href="classclang_1_1TagDecl.html#a7c854a112be6cbcd7a089d2e703cae32">getSourceRange</a>());</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    BR-&gt;emitReport(std::move(Report));</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  }</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;};</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;} <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keywordtype">void</span> ento::registerPaddingChecker(CheckerManager &amp;Mgr) {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  <span class="keyword">auto</span> *Checker = Mgr.registerChecker&lt;PaddingChecker&gt;();</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  Checker-&gt;AllowedPad = Mgr.getAnalyzerOptions()</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;          .getCheckerIntegerOption(Checker, <span class="stringliteral">&quot;AllowedPad&quot;</span>);</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">if</span> (Checker-&gt;AllowedPad &lt; 0)</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    Mgr.reportInvalidCheckerOptionValue(</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        Checker, <span class="stringliteral">&quot;AllowedPad&quot;</span>, <span class="stringliteral">&quot;a non-negative value&quot;</span>);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">bool</span> ento::shouldRegisterPaddingChecker(<span class="keyword">const</span> CheckerManager &amp;mgr) {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;}</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <span class="comment">// Skip field that is a subobject of zero size, marked with</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="comment">// [[no_unique_address]] or an empty bitfield, because its address can be</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="comment">// set the same as the other fields addresses.</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      <span class="keywordflow">if</span> (FD-&gt;isZeroSize(<a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>))</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      <span class="comment">// This checker only cares about the padded size of the</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      <span class="comment">// field, and not the data size. If the field is a record</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="comment">// with tail padding, then we won&#39;t put that number in our</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="comment">// total because reordering fields won&#39;t fix that problem.</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> FieldSize = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#aa8c44e88d6ce9b3cce885b62d3cd5dff">getTypeSizeInChars</a>(FD-&gt;getType());</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keyword">auto</span> FieldOffsetBits = RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a868621049cf1bb3694a2757472553651">getFieldOffset</a>(FD-&gt;getFieldIndex());</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> FieldOffset = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#ad236937ee0824ce057d168e31290370a">toCharUnitsFromBits</a>(FieldOffsetBits);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      PaddingSum += (FieldOffset - <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a>);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a> = FieldOffset + FieldSize;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    PaddingSum += RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a6dadc2ec53fd8477a8ae6ad84cf967f2">getSize</a>() - <a class="code" href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="keywordflow">return</span> PaddingSum;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="comment">  /// Optimal padding overview:</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="comment">  /// 1.  Find a close approximation to where we can place our first field.</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">  ///     This will usually be at offset 0.</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment">  /// 2.  Try to find the best field that can legally be placed at the current</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment">  ///     offset.</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment">  ///   a.  &quot;Best&quot; is the largest alignment that is legal, but smallest size.</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment">  ///       This is to account for overly aligned types.</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">  /// 3.  If no fields can fit, pad by rounding the current offset up to the</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="comment">  ///     smallest alignment requirement of our fields. Measure and track the</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="comment"></span>  <span class="comment">//      amount of padding added. Go back to 2.</span><span class="comment"></span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="comment">  /// 4.  Increment the current offset by the size of the chosen field.</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="comment">  /// 5.  Remove the chosen field from the set of future possibilities.</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment">  /// 6.  Go back to 2 if there are still unplaced fields.</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="comment">  /// 7.  Add tail padding by rounding the current offset up to the structure</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="comment">  ///     alignment. Track the amount of padding added.</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="keyword">static</span> std::pair&lt;CharUnits, SmallVector&lt;const FieldDecl *, 20&gt;&gt;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  calculateOptimalPad(<span class="keyword">const</span> <a class="code" href="classclang_1_1RecordDecl.html">RecordDecl</a> *RD, <span class="keyword">const</span> <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a> &amp;<a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>,</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                      <span class="keyword">const</span> <a class="code" href="classclang_1_1ASTRecordLayout.html">ASTRecordLayout</a> &amp;RL) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keyword">struct </span>FieldInfo {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> Align;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> <a class="code" href="namespaceclang_1_1syntax.html#a0d10149d69e32e3c86140b4d325925e5a6f6cb72d544962fa333e2e34ce64f719">Size</a>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="keyword">const</span> <a class="code" href="classclang_1_1FieldDecl.html">FieldDecl</a> *<a class="code" href="namespaceclang_1_1index.html#a2f70a3d61ba9b8a97d8e609dcdf069dea6f16a5f8ff5d75ab84c018adacdfcbb7">Field</a>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="namespaceclang.html#a51e572049a11fe5cf42e8da840bf69af">operator&lt;</a>(<span class="keyword">const</span> FieldInfo &amp;RHS)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="comment">// Order from small alignments to large alignments,</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        <span class="comment">// then large sizes to small sizes.</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// then large field indices to small field indices</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">return</span> std::make_tuple(Align, -Size,</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                               Field ? -<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="namespaceclang_1_1index.html#a2f70a3d61ba9b8a97d8e609dcdf069dea6f16a5f8ff5d75ab84c018adacdfcbb7">Field</a>-&gt;getFieldIndex())</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                                     : 0) &lt;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;               std::make_tuple(</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                   RHS.Align, -RHS.Size,</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                   RHS.Field ? -<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(RHS.Field-&gt;getFieldIndex())</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                             : 0);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    };</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;FieldInfo, 20&gt;</a> Fields;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">auto</span> GatherSizesAndAlignments = [](<span class="keyword">const</span> <a class="code" href="classclang_1_1FieldDecl.html">FieldDecl</a> *FD) {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      FieldInfo RetVal;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      RetVal.Field = FD;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keyword">auto</span> &amp;Ctx = FD-&gt;getASTContext();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keyword">auto</span> Info = Ctx.getTypeInfoInChars(FD-&gt;getType());</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      RetVal.Size = FD-&gt;isZeroSize(Ctx) ? <a class="code" href="classclang_1_1CharUnits.html#ae8fbc6063b513b85cd488904994ac8c2">CharUnits::Zero</a>() : Info.Width;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      RetVal.Align = Info.Align;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      assert(llvm::isPowerOf2_64(RetVal.Align.getQuantity()));</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;      <span class="keywordflow">if</span> (<span class="keyword">auto</span> Max = FD-&gt;getMaxAlignment())</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        RetVal.Align = <a class="code" href="____clang__cuda__math_8h.html#ae6bb573e13e3bd5738c8faa552b6a129">std::max</a>(Ctx.toCharUnitsFromBits(Max), RetVal.Align);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordflow">return</span> RetVal;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    };</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    std::transform(RD-&gt;<a class="code" href="classclang_1_1RecordDecl.html#afc36412f0657ec2e9810e6f9d321b29a">field_begin</a>(), RD-&gt;<a class="code" href="classclang_1_1RecordDecl.html#a5c6e33929fd31d2c56ae28db7ff01237">field_end</a>(),</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                   std::back_inserter(Fields), GatherSizesAndAlignments);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    llvm::sort(Fields);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// This lets us skip over vptrs and non-virtual bases,</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// so that we can just worry about the fields in our object.</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">// Note that this does cause us to miss some cases where we</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="comment">// could pack more bytes in to a base class&#39;s tail padding.</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NewOffset = <a class="code" href="classclang_1_1ASTContext.html">ASTContext</a>.<a class="code" href="classclang_1_1ASTContext.html#ad236937ee0824ce057d168e31290370a">toCharUnitsFromBits</a>(RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a868621049cf1bb3694a2757472553651">getFieldOffset</a>(0));</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NewPad;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;const FieldDecl *, 20&gt;</a> OptimalFieldsOrder;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">while</span> (!Fields.empty()) {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordtype">unsigned</span> TrailingZeros =</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;          llvm::countTrailingZeros((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>)NewOffset.<a class="code" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">getQuantity</a>());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="comment">// If NewOffset is zero, then countTrailingZeros will be 64. Shifting</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <span class="comment">// 64 will overflow our unsigned long long. Shifting 63 will turn</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <span class="comment">// our long long (and CharUnits internal type) negative. So shift 62.</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">long</span> CurAlignmentBits = 1ull &lt;&lt; (<a class="code" href="____clang__cuda__math_8h.html#a56979bdbfd9314c50e30a5c645f2bc4d">std::min</a>)(TrailingZeros, 62u);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> CurAlignment = <a class="code" href="classclang_1_1CharUnits.html#adf6d3a79993b58285a0626b61c2c6c82">CharUnits::fromQuantity</a>(CurAlignmentBits);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      FieldInfo InsertPoint = {CurAlignment, <a class="code" href="classclang_1_1CharUnits.html#ae8fbc6063b513b85cd488904994ac8c2">CharUnits::Zero</a>(), <span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <span class="comment">// In the typical case, this will find the last element</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="comment">// of the vector. We won&#39;t find a middle element unless</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <span class="comment">// we started on a poorly aligned address or have an overly</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="comment">// aligned field.</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      <span class="keyword">auto</span> Iter = llvm::upper_bound(Fields, InsertPoint);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      <span class="keywordflow">if</span> (Iter != Fields.begin()) {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="comment">// We found a field that we can layout with the current alignment.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        --Iter;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        NewOffset += Iter-&gt;Size;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        OptimalFieldsOrder.push_back(Iter-&gt;Field);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        Fields.erase(Iter);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="comment">// We are poorly aligned, and we need to pad in order to layout another</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="comment">// field. Round up to at least the smallest field alignment that we</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="comment">// currently have.</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NextOffset = NewOffset.<a class="code" href="classclang_1_1CharUnits.html#ae265331f6b24a3478598c5a68f426dec">alignTo</a>(Fields[0].Align);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        NewPad += NextOffset - NewOffset;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        NewOffset = NextOffset;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">// Calculate tail padding.</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> NewSize = NewOffset.<a class="code" href="classclang_1_1CharUnits.html#ae265331f6b24a3478598c5a68f426dec">alignTo</a>(RL.<a class="code" href="classclang_1_1ASTRecordLayout.html#a21a3c59ebb2c4af5a86c557b2bbeb4ab">getAlignment</a>());</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    NewPad += NewSize - NewOffset;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> {NewPad, std::move(OptimalFieldsOrder)};</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordtype">void</span> reportRecord(</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keyword">const</span> <a class="code" href="classclang_1_1RecordDecl.html">RecordDecl</a> *RD, <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> BaselinePad, <a class="code" href="classclang_1_1CharUnits.html">CharUnits</a> OptimalPad,</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      <span class="keyword">const</span> <a class="code" href="classllvm_1_1SmallVector.html">SmallVector&lt;const FieldDecl *, 20&gt;</a> &amp;OptimalFieldsOrder)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">if</span> (!PaddingBug)</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      PaddingBug =</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;          std::make_unique&lt;BugType&gt;(<span class="keyword">this</span>, <span class="stringliteral">&quot;Excessive Padding&quot;</span>, <span class="stringliteral">&quot;Performance&quot;</span>);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <a class="code" href="classllvm_1_1SmallString.html">SmallString&lt;100&gt;</a> Buf;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    llvm::raw_svector_ostream Os(Buf);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    Os &lt;&lt; <span class="stringliteral">&quot;Excessive padding in &#39;&quot;</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    Os &lt;&lt; <a class="code" href="classclang_1_1QualType.html#ab6d17bbf405e8fdb04a67518be3b46d1">QualType::getAsString</a>(RD-&gt;<a class="code" href="classclang_1_1TypeDecl.html#a84a2dafb93379e1b892012e92193d3a7">getTypeForDecl</a>(), <a class="code" href="classclang_1_1Qualifiers.html">Qualifiers</a>(),</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                                <a class="code" href="classclang_1_1LangOptions.html">LangOptions</a>())</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">auto</span> *TSD = dyn_cast&lt;ClassTemplateSpecializationDecl&gt;(RD)) {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      <span class="comment">// TODO: make this show up better in the console output and in</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <span class="comment">// the HTML. Maybe just make it show up in HTML like the path</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="comment">// diagnostics show.</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <a class="code" href="classclang_1_1SourceLocation.html">SourceLocation</a> ILoc = TSD-&gt;getPointOfInstantiation();</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      <span class="keywordflow">if</span> (ILoc.<a class="code" href="classclang_1_1SourceLocation.html#a980da8d6100c0a0c3764991ca80ce6e7">isValid</a>())</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        Os &lt;&lt; <span class="stringliteral">&quot; instantiated here: &quot;</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;           &lt;&lt; ILoc.<a class="code" href="classclang_1_1SourceLocation.html#a3f4a60515d3e0094caa8561570c7ee03">printToString</a>(BR-&gt;getSourceManager());</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    Os &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; BaselinePad.<a class="code" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">getQuantity</a>() &lt;&lt; <span class="stringliteral">&quot; padding bytes, where &quot;</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;       &lt;&lt; OptimalPad.<a class="code" href="classclang_1_1CharUnits.html#a968b1a66a449ab256c4dd176bd663c07">getQuantity</a>() &lt;&lt; <span class="stringliteral">&quot; is optimal). \n&quot;</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;       &lt;&lt; <span class="stringliteral">&quot;Optimal fields order: \n&quot;</span>;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> *FD : OptimalFieldsOrder)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      Os &lt;&lt; FD-&gt;getName() &lt;&lt; <span class="stringliteral">&quot;, \n&quot;</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    Os &lt;&lt; <span class="stringliteral">&quot;consider reordering the fields or adding explicit padding &quot;</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;          <span class="stringliteral">&quot;members.&quot;</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    PathDiagnosticLocation CELoc =</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <a class="code" href="classclang_1_1ento_1_1PathDiagnosticLocation.html#ad5e9747a36878bcaaf1c734e417f7fd6">PathDiagnosticLocation::create</a>(RD, BR-&gt;getSourceManager());</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    <span class="keyword">auto</span> Report =</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        std::make_unique&lt;BasicBugReport&gt;(*PaddingBug, Os.str(), CELoc);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    Report-&gt;setDeclWithIssue(RD);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    Report-&gt;addRange(RD-&gt;<a class="code" href="classclang_1_1TagDecl.html#a7c854a112be6cbcd7a089d2e703cae32">getSourceRange</a>());</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    BR-&gt;emitReport(std::move(Report));</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;};</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;} <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keywordtype">void</span> ento::registerPaddingChecker(CheckerManager &amp;Mgr) {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <span class="keyword">auto</span> *Checker = Mgr.registerChecker&lt;PaddingChecker&gt;();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  Checker-&gt;AllowedPad = Mgr.getAnalyzerOptions()</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;          .getCheckerIntegerOption(Checker, <span class="stringliteral">&quot;AllowedPad&quot;</span>);</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <span class="keywordflow">if</span> (Checker-&gt;AllowedPad &lt; 0)</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    Mgr.reportInvalidCheckerOptionValue(</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        Checker, <span class="stringliteral">&quot;AllowedPad&quot;</span>, <span class="stringliteral">&quot;a non-negative value&quot;</span>);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keywordtype">bool</span> ento::shouldRegisterPaddingChecker(<span class="keyword">const</span> CheckerManager &amp;mgr) {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassclang_1_1ASTContext_html_aa8c44e88d6ce9b3cce885b62d3cd5dff"><div class="ttname"><a href="classclang_1_1ASTContext.html#aa8c44e88d6ce9b3cce885b62d3cd5dff">clang::ASTContext::getTypeSizeInChars</a></div><div class="ttdeci">CharUnits getTypeSizeInChars(QualType T) const</div><div class="ttdoc">Return the size of the specified (complete) type T, in characters.</div><div class="ttdef"><b>Definition:</b> <a href="ASTContext_8cpp_source.html#l02448">ASTContext.cpp:2448</a></div></div>
-<div class="ttc" id="a____clang__cuda__math_8h_html_ae6bb573e13e3bd5738c8faa552b6a129"><div class="ttname"><a href="____clang__cuda__math_8h.html#ae6bb573e13e3bd5738c8faa552b6a129">max</a></div><div class="ttdeci">__DEVICE__ int max(int __a, int __b)</div><div class="ttdef"><b>Definition:</b> <a href="____clang__cuda__math_8h_source.html#l00194">__clang_cuda_math.h:194</a></div></div>
+<div class="ttc" id="a____clang__cuda__math_8h_html_ae6bb573e13e3bd5738c8faa552b6a129"><div class="ttname"><a href="____clang__cuda__math_8h.html#ae6bb573e13e3bd5738c8faa552b6a129">max</a></div><div class="ttdeci">__DEVICE__ int max(int __a, int __b)</div><div class="ttdef"><b>Definition:</b> <a href="____clang__cuda__math_8h_source.html#l00196">__clang_cuda_math.h:196</a></div></div>
 <div class="ttc" id="aclassclang_1_1Decl_html_a213239e747fb0b3a0cacd86267339af2"><div class="ttname"><a href="classclang_1_1Decl.html#a213239e747fb0b3a0cacd86267339af2">clang::Decl::getASTContext</a></div><div class="ttdeci">ASTContext &amp; getASTContext() const LLVM_READONLY</div><div class="ttdef"><b>Definition:</b> <a href="DeclBase_8cpp_source.html#l00414">DeclBase.cpp:414</a></div></div>
 <div class="ttc" id="aclassclang_1_1Type_html_aa540c2bc36e5163ad8344a282d2f3045"><div class="ttname"><a href="classclang_1_1Type.html#aa540c2bc36e5163ad8344a282d2f3045">clang::Type::getAsArrayTypeUnsafe</a></div><div class="ttdeci">const ArrayType * getAsArrayTypeUnsafe() const</div><div class="ttdoc">A variant of getAs&lt;&gt; for array types which silently discards qualifiers from the outermost type.</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l07239">Type.h:7239</a></div></div>
 <div class="ttc" id="aclassclang_1_1RecordDecl_html_afc36412f0657ec2e9810e6f9d321b29a"><div class="ttname"><a href="classclang_1_1RecordDecl.html#afc36412f0657ec2e9810e6f9d321b29a">clang::RecordDecl::field_begin</a></div><div class="ttdeci">field_iterator field_begin() const</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8cpp_source.html#l04575">Decl.cpp:4575</a></div></div>
@@ -427,7 +432,7 @@ $(function() {
 <div class="ttc" id="anamespaceclang_1_1SrcMgr_html_a27297b3568f189486de6df08a8cba35d"><div class="ttname"><a href="namespaceclang_1_1SrcMgr.html#a27297b3568f189486de6df08a8cba35d">clang::SrcMgr::CharacteristicKind</a></div><div class="ttdeci">CharacteristicKind</div><div class="ttdoc">Indicates whether a file or directory holds normal user code, system code, or system code which is im...</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8h_source.html#l00078">SourceManager.h:78</a></div></div>
 <div class="ttc" id="aFormat_8cpp_html_a9fcf84dffafb0ea03c0f9b686ddbf2b3"><div class="ttname"><a href="Format_8cpp.html#a9fcf84dffafb0ea03c0f9b686ddbf2b3">Offset</a></div><div class="ttdeci">unsigned Offset</div><div class="ttdef"><b>Definition:</b> <a href="Format_8cpp_source.html#l02227">Format.cpp:2227</a></div></div>
 <div class="ttc" id="aclassclang_1_1TranslationUnitDecl_html"><div class="ttname"><a href="classclang_1_1TranslationUnitDecl.html">clang::TranslationUnitDecl</a></div><div class="ttdoc">The top declaration context.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00082">Decl.h:82</a></div></div>
-<div class="ttc" id="a____clang__cuda__math_8h_html_a56979bdbfd9314c50e30a5c645f2bc4d"><div class="ttname"><a href="____clang__cuda__math_8h.html#a56979bdbfd9314c50e30a5c645f2bc4d">min</a></div><div class="ttdeci">__DEVICE__ int min(int __a, int __b)</div><div class="ttdef"><b>Definition:</b> <a href="____clang__cuda__math_8h_source.html#l00195">__clang_cuda_math.h:195</a></div></div>
+<div class="ttc" id="a____clang__cuda__math_8h_html_a56979bdbfd9314c50e30a5c645f2bc4d"><div class="ttname"><a href="____clang__cuda__math_8h.html#a56979bdbfd9314c50e30a5c645f2bc4d">min</a></div><div class="ttdeci">__DEVICE__ int min(int __a, int __b)</div><div class="ttdef"><b>Definition:</b> <a href="____clang__cuda__math_8h_source.html#l00197">__clang_cuda_math.h:197</a></div></div>
 <div class="ttc" id="aclassclang_1_1RecordType_html"><div class="ttname"><a href="classclang_1_1RecordType.html">clang::RecordType</a></div><div class="ttdoc">A helper class that allows the use of isa/cast/dyncast to detect TagType objects of structs/unions/cl...</div><div class="ttdef"><b>Definition:</b> <a href="Type_8h_source.html#l04625">Type.h:4625</a></div></div>
 <div class="ttc" id="aBuiltinCheckerRegistration_8h_html"><div class="ttname"><a href="BuiltinCheckerRegistration_8h.html">BuiltinCheckerRegistration.h</a></div></div>
 <div class="ttc" id="aDeclTemplate_8h_html"><div class="ttname"><a href="DeclTemplate_8h.html">DeclTemplate.h</a></div></div>
@@ -442,7 +447,7 @@ $(function() {
 <div class="ttc" id="anamespaceclang_1_1index_html_a2f70a3d61ba9b8a97d8e609dcdf069dea6f16a5f8ff5d75ab84c018adacdfcbb7"><div class="ttname"><a href="namespaceclang_1_1index.html#a2f70a3d61ba9b8a97d8e609dcdf069dea6f16a5f8ff5d75ab84c018adacdfcbb7">clang::index::SymbolKind::Field</a></div><div class="ttdeci">@ Field</div></div>
 <div class="ttc" id="aclassllvm_1_1SmallString_html"><div class="ttname"><a href="classllvm_1_1SmallString.html">llvm::SmallString</a></div><div class="ttdef"><b>Definition:</b> <a href="LLVM_8h_source.html#l00037">LLVM.h:37</a></div></div>
 <div class="ttc" id="aclassclang_1_1VarDecl_html"><div class="ttname"><a href="classclang_1_1VarDecl.html">clang::VarDecl</a></div><div class="ttdoc">Represents a variable declaration or definition.</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l00849">Decl.h:849</a></div></div>
-<div class="ttc" id="aclassclang_1_1QualType_html_ab6d17bbf405e8fdb04a67518be3b46d1"><div class="ttname"><a href="classclang_1_1QualType.html#ab6d17bbf405e8fdb04a67518be3b46d1">clang::QualType::getAsString</a></div><div class="ttdeci">std::string getAsString() const</div><div class="ttdef"><b>Definition:</b> <a href="TypePrinter_8cpp_source.html#l02242">TypePrinter.cpp:2242</a></div></div>
+<div class="ttc" id="aclassclang_1_1QualType_html_ab6d17bbf405e8fdb04a67518be3b46d1"><div class="ttname"><a href="classclang_1_1QualType.html#ab6d17bbf405e8fdb04a67518be3b46d1">clang::QualType::getAsString</a></div><div class="ttdeci">std::string getAsString() const</div><div class="ttdef"><b>Definition:</b> <a href="TypePrinter_8cpp_source.html#l02241">TypePrinter.cpp:2241</a></div></div>
 <div class="ttc" id="aclassclang_1_1TagDecl_html_a938e536b03a85612984a4a2155b8fc6c"><div class="ttname"><a href="classclang_1_1TagDecl.html#a938e536b03a85612984a4a2155b8fc6c">clang::TagDecl::isUnion</a></div><div class="ttdeci">bool isUnion() const</div><div class="ttdef"><b>Definition:</b> <a href="Decl_8h_source.html#l03478">Decl.h:3478</a></div></div>
 <div class="ttc" id="anamespaceclang_1_1SrcMgr_html_a27297b3568f189486de6df08a8cba35dab0548ddada8d87ad92e94d67e5af0a4f"><div class="ttname"><a href="namespaceclang_1_1SrcMgr.html#a27297b3568f189486de6df08a8cba35dab0548ddada8d87ad92e94d67e5af0a4f">clang::SrcMgr::C_User</a></div><div class="ttdeci">@ C_User</div><div class="ttdef"><b>Definition:</b> <a href="SourceManager_8h_source.html#l00079">SourceManager.h:79</a></div></div>
 <div class="ttc" id="aclassclang_1_1CharUnits_html_ae8fbc6063b513b85cd488904994ac8c2"><div class="ttname"><a href="classclang_1_1CharUnits.html#ae8fbc6063b513b85cd488904994ac8c2">clang::CharUnits::Zero</a></div><div class="ttdeci">static CharUnits Zero()</div><div class="ttdoc">Zero - Construct a CharUnits quantity of zero.</div><div class="ttdef"><b>Definition:</b> <a href="CharUnits_8h_source.html#l00053">CharUnits.h:53</a></div></div>
@@ -478,7 +483,7 @@ $(function() {
 <div class="ttc" id="aclassclang_1_1SourceLocation_html_a3f4a60515d3e0094caa8561570c7ee03"><div class="ttname"><a href="classclang_1_1SourceLocation.html#a3f4a60515d3e0094caa8561570c7ee03">clang::SourceLocation::printToString</a></div><div class="ttdeci">std::string printToString(const SourceManager &amp;SM) const</div><div class="ttdef"><b>Definition:</b> <a href="SourceLocation_8cpp_source.html#l00089">SourceLocation.cpp:89</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 9 2021 01:57:19 for clang by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jul 10 2021 01:52:00 for clang by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

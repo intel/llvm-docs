@@ -226,8 +226,16 @@ object as a data section with the name <code class="docutils literal notranslate
 </tbody>
 </table>
 </dd>
-<dt><strong>target-triple</strong></dt><dd><p>The target triple of the code object.</p>
+<dt><strong>target-triple</strong></dt><dd><p>The target triple of the code object:</p>
 </dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Architecture</span><span class="o">&gt;-&lt;</span><span class="n">Vendor</span><span class="o">&gt;-&lt;</span><span class="n">OS</span><span class="o">&gt;-&lt;</span><span class="n">Environment</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>It is required to have all four components present, if target-id is present.
+Components are hyphen separated. If a component is not specified then the
+empty string must be used in its place.</p>
+<dl class="simple">
 <dt><strong>target-id</strong></dt><dd><p>The canonical target ID of the code object. Present only if the target
 supports a target ID. See <a class="reference internal" href="#clang-target-id"><span class="std std-ref">Target ID</span></a>.</p>
 </dd>

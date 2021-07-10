@@ -1,7 +1,5 @@
 var NAVTREEINDEX36 =
 {
-"structcl_1_1sycl_1_1detail_1_1NDLoop.html#ad3177e9c10ac738c0f9e159c8673bda2":[3,0,1,1,0,286,0],
-"structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl.html":[3,0,1,1,0,287],
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl.html#a2740ec121cb8b1d86a3e123dbdeb2da6":[3,0,1,1,0,287,0],
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html":[3,0,1,1,0,288],
 "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html#a2067e161d2459ace54fa45711ad1bdc0":[3,0,1,1,0,288,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX36 =
 "structcl_1_1sycl_1_1detail_1_1is__integral.html":[3,0,1,1,0,181],
 "structcl_1_1sycl_1_1detail_1_1is__native__op.html":[3,0,1,1,0,182],
 "structcl_1_1sycl_1_1detail_1_1is__native__op.html#a9204b57a5c232158218dbedd9ee63472":[3,0,1,1,0,182,0],
-"structcl_1_1sycl_1_1detail_1_1is__output__iterator.html":[3,0,1,1,0,183]
+"structcl_1_1sycl_1_1detail_1_1is__output__iterator.html":[3,0,1,1,0,183],
+"structcl_1_1sycl_1_1detail_1_1is__output__iterator.html#a773bcc38adac557a00242f925bc388f9":[3,0,1,1,0,183,0],
+"structcl_1_1sycl_1_1detail_1_1is__output__iterator_3_01T_00_01output__iterator__requirements_3_01T_01_4_01_4.html":[3,0,1,1,0,184]
 };

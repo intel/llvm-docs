@@ -1,7 +1,5 @@
 var NAVTREEINDEX38 =
 {
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type_3_04ef4366081b5c35a0d2d32373cdcfa35.html#a6d9b5b38efe5e276275f928f8500ec45":[3,0,1,1,1,0,1,0,0,12,0],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type_3_0f802593b24584329d37fcca4c1e4c47e.html":[3,0,1,1,1,0,1,0,0,11],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type_3_0f802593b24584329d37fcca4c1e4c47e.html#a00f863d37436f6458e29efe429c9bc89":[3,0,1,1,1,0,1,0,0,11,1],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type_3_0f802593b24584329d37fcca4c1e4c47e.html#a16510e901f09b51469fffde9b0fc91cd":[3,0,1,1,1,0,1,0,0,11,3],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail_1_1compute__format__type_3_0f802593b24584329d37fcca4c1e4c47e.html#a35b64b49144da17ffa6998fc10e71c11":[3,0,1,1,1,0,1,0,0,11,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX38 =
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01int_01_4.html":[3,0,1,1,1,0,1,0,1,0,80],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01int_01_4.html#a0527506343880387a2eb7d8b158d0ba5":[3,0,1,1,1,0,1,0,1,0,80,0],
 "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01short_01_4.html":[3,0,1,1,1,0,1,0,1,0,81],
-"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01short_01_4.html#a6eb1f63baaa63e87e96cc089845ba168":[3,0,1,1,1,0,1,0,1,0,81,0]
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01short_01_4.html#a6eb1f63baaa63e87e96cc089845ba168":[3,0,1,1,1,0,1,0,1,0,81,0],
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01unsigned_01char_01_4.html":[3,0,1,1,1,0,1,0,1,0,82],
+"structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1emu_1_1detail_1_1restype__ex_3_01char_00_01unsigned_01char_01_4.html#ae6a910170a0cbb955997df0e397f9aeb":[3,0,1,1,1,0,1,0,1,0,82,0]
 };
