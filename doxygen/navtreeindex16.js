@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classcl_1_1sycl_1_1queue.html#acfa699830b8c540a01fc8d559a6ce8c0":[1,2,26,53],
 "classcl_1_1sycl_1_1queue.html#ad1e6845be9c7ce965fce626b14f1c0ac":[1,2,26,42],
 "classcl_1_1sycl_1_1queue.html#adc6bd404213c1c28d9193fe1d18c15ec":[1,2,26,41],
 "classcl_1_1sycl_1_1queue.html#adddf14c63128569224aad4967408ecf1":[1,2,26,25],
@@ -151,8 +152,8 @@ var NAVTREEINDEX16 =
 "config_8cpp.html#a05173f8c38c09b31b5736fb458b8a930":[4,0,2,1,18,4],
 "config_8cpp.html#a1f241bbf862f5877b46f9b764fcf2127":[4,0,2,1,18,6],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,0],
-"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,1],
 "config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,2],
+"config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95":[4,0,2,1,18,1],
 "config_8cpp.html#abbdcbea69a36cd9ddd50332f7020c4bd":[4,0,2,1,18,7],
 "config_8cpp.html#abff350c80e1a1b4643da8212a47ff6f9":[4,0,2,1,18,5],
 "config_8cpp.html#ad5d0dadaaad78e00b3a3d991e539d4a8":[4,0,2,1,18,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "detail_2builtins_8hpp_source.html":[4,0,0,0,1,2,6],
 "device_8cpp.html":[4,0,2,5],
 "device_8cpp.html#a19c21325808f4aff08c7df73450029a1":[4,0,2,5,2],
-"device_8cpp.html#a1f36315d17e874dd0370bdd2e24e1740":[4,0,2,5,1],
-"device_8cpp.html#a5fe378f308708d9b3ba9b451ad7f024a":[4,0,2,5,4]
+"device_8cpp.html#a1f36315d17e874dd0370bdd2e24e1740":[4,0,2,5,1]
 };

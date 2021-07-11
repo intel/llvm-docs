@@ -1581,237 +1581,238 @@ $(document).ready(function(){initNavTree('program__manager_8cpp_source.html','')
 <div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;      <span class="comment">/*user_data=*/</span><span class="keyword">nullptr</span>, &amp;LinkedProg);</div>
 <div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160; </div>
 <div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160;  <span class="keywordflow">if</span> (Error != <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717a94809a014464a857cf2ec1035988b322">PI_SUCCESS</a>) {</div>
-<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;    <span class="keyword">const</span> std::string ErrorMsg =</div>
-<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;        LinkedProg ? getProgramBuildLog(LinkedProg, ContextImpl)</div>
-<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;                   : <span class="stringliteral">&quot;Online link operation failed&quot;</span>;</div>
-<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;    <span class="keywordflow">throw</span> <a class="code" href="classcl_1_1sycl_1_1exception.html">sycl::exception</a>(<a class="code" href="namespacecl_1_1sycl.html#a8369f4dd6e58ade77a91161768e54377">make_error_code</a>(<a class="code" href="namespacecl_1_1sycl.html#ada9f6df5384b58bbb680aba8eec3d387">errc::build</a>), ErrorMsg);</div>
-<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;  }</div>
-<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160; </div>
-<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;  std::vector&lt;kernel_id&gt; KernelIDs;</div>
-<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1device__image__plain.html">device_image_plain</a> &amp;DeviceImage : DeviceImages) {</div>
-<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;    <span class="comment">// Duplicates are not expected here, otherwise piProgramLink should fail</span></div>
-<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;    KernelIDs.insert(KernelIDs.end(),</div>
-<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;                     <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(DeviceImage)-&gt;<a class="code" href="namespacecl_1_1sycl.html#a95cd163d1fcfc6a552a18b213326f099">get_kernel_ids</a>().begin(),</div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;                     <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(DeviceImage)-&gt;<a class="code" href="namespacecl_1_1sycl.html#a95cd163d1fcfc6a552a18b213326f099">get_kernel_ids</a>().end());</div>
-<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;  }</div>
-<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;  <span class="comment">// device_image_impl expects kernel ids to be sorted for fast search</span></div>
-<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;  std::sort(KernelIDs.begin(), KernelIDs.end(), <a class="code" href="structcl_1_1sycl_1_1detail_1_1LessByNameComp.html">LessByNameComp</a>{});</div>
-<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160; </div>
-<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af937791ac4fabd0f2a1a1576fec9b6df">DeviceImageImplPtr</a> ExecutableImpl =</div>
-<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;      std::make_shared&lt;detail::device_image_impl&gt;(</div>
-<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;          <span class="comment">/*BinImage=*/</span><span class="keyword">nullptr</span>, Context, Devs, bundle_state::object,</div>
-<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;          std::move(KernelIDs), LinkedProg);</div>
-<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160; </div>
-<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160;  <span class="comment">// TODO: Make multiple sets of device images organized by devices they are</span></div>
-<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;  <span class="comment">// compiled for.</span></div>
-<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;  <span class="keywordflow">return</span> {createSyclObjFromImpl&lt;device_image_plain&gt;(ExecutableImpl)};</div>
-<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;}</div>
-<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160; </div>
-<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;<span class="comment">// The function duplicates most of the code from existing getBuiltPIProgram.</span></div>
-<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;<span class="comment">// The differences are:</span></div>
-<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;<span class="comment">// Different API - uses different objects to extract required info</span></div>
-<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;<span class="comment">// Supports caching of a program built for multiple devices</span></div>
-<div class="line"><a name="l01535"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a8741c6349eecf28bf2fb4a6ac25d5027"> 1535</a></span>&#160;<a class="code" href="classcl_1_1sycl_1_1detail_1_1device__image__plain.html">device_image_plain</a> <a class="code" href="namespacecl_1_1sycl.html#ada9f6df5384b58bbb680aba8eec3d387">ProgramManager::build</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1device__image__plain.html">device_image_plain</a> &amp;DeviceImage,</div>
-<div class="line"><a name="l01536"></a><span class="lineno"> 1536</span>&#160;                                         <span class="keyword">const</span> std::vector&lt;device&gt; &amp;Devs,</div>
-<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;                                         <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList) {</div>
-<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;  (void)PropList;</div>
-<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160; </div>
-<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;  <span class="keyword">const</span> std::shared_ptr&lt;device_image_impl&gt; &amp;InputImpl =</div>
-<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;      <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(DeviceImage);</div>
-<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160; </div>
-<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> Context = InputImpl-&gt;get_context();</div>
-<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160; </div>
-<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> ContextImpl = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Context);</div>
-<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160; </div>
-<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160;  <span class="keyword">using</span> PiProgramT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#acb6791d7cd345c64d90af3b6f434999e">KernelProgramCache::PiProgramT</a>;</div>
-<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  <span class="keyword">using</span> ProgramCacheT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#adaa15b38586684e15ed7e79c3666dbf1">KernelProgramCache::ProgramCacheT</a>;</div>
-<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160; </div>
-<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache = ContextImpl-&gt;getKernelProgramCache();</div>
-<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160; </div>
-<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;  <span class="keyword">auto</span> AcquireF = [](<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache) {</div>
-<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;    <span class="keywordflow">return</span> Cache.<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a17b2499a86f9e34248b8f7405cac891f">acquireCachedPrograms</a>();</div>
-<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;  };</div>
-<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;  <span class="keyword">auto</span> GetF = [](<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1Locked.html">Locked&lt;ProgramCacheT&gt;</a> &amp;LockedCache) -&gt; ProgramCacheT &amp; {</div>
-<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;    <span class="keywordflow">return</span> LockedCache.get();</div>
-<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;  };</div>
-<div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160; </div>
-<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;  std::string CompileOpts;</div>
-<div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;  std::string LinkOpts;</div>
-<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a544654732c56b677e0137fbc089f8082">applyOptionsFromEnvironment</a>(CompileOpts, LinkOpts);</div>
-<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160; </div>
-<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> *ImgPtr = InputImpl-&gt;get_bin_image_ref();</div>
-<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;Img = *ImgPtr;</div>
-<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160; </div>
-<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;  <span class="comment">// TODO: Unify this code with getBuiltPIProgram</span></div>
-<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;  <span class="keyword">auto</span> BuildF = [<span class="keyword">this</span>, &amp;Context, Img, &amp;Devs, &amp;CompileOpts, &amp;LinkOpts,</div>
-<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;                 &amp;InputImpl] {</div>
-<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;    <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9ffc0ae08d547d915aad9f427a4300c9">applyOptionsFromImage</a>(CompileOpts, LinkOpts, Img);</div>
-<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;    <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> ContextImpl = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Context);</div>
-<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = ContextImpl-&gt;getPlugin();</div>
-<div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160; </div>
-<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;    <span class="comment">// TODO: Add support for creating non-SPIRV programs from multiple devices.</span></div>
-<div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;    <span class="keywordflow">if</span> (InputImpl-&gt;get_bin_image_ref()-&gt;getFormat() !=</div>
-<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;            <a class="code" href="pi_8h.html#a8f0f398bde1666167996bdee9f169819">PI_DEVICE_BINARY_TYPE_SPIRV</a> &amp;&amp;</div>
-<div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;        Devs.size() &gt; 1)</div>
-<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;      <a class="code" href="classcl_1_1sycl_1_1runtime__error.html">sycl::runtime_error</a>(</div>
-<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;          <span class="stringliteral">&quot;Creating a program from AOT binary for multiple device is not &quot;</span></div>
-<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;          <span class="stringliteral">&quot;supported&quot;</span>,</div>
-<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;          <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717ac0b20865d2c8f3a70ec43905a8ebf6da">PI_INVALID_OPERATION</a>);</div>
-<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160; </div>
-<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160;    <span class="comment">// Device is not used when creating program from SPIRV, so passing only one</span></div>
-<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;    <span class="comment">// device is OK.</span></div>
-<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;    <a class="code" href="struct__pi__program.html">RT::PiProgram</a> NativePrg = createPIProgram(Img, Context, Devs[0]);</div>
-<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160; </div>
-<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Dev : Devs)</div>
-<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;      <span class="keywordflow">if</span> (InputImpl-&gt;get_bin_image_ref()-&gt;supportsSpecConstants())</div>
-<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;        <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a0ea7870d9e490539007fc3072897dd47">enableITTAnnotationsIfNeeded</a>(NativePrg,</div>
-<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;                                     <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Dev)-&gt;<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a25a3cf13e929d772f08013fea813fb41">getPlugin</a>());</div>
-<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160; </div>
-<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;    <span class="keyword">const</span> std::vector&lt;unsigned char&gt; &amp;SpecConstsBlob =</div>
-<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;        InputImpl-&gt;get_spec_const_blob_ref();</div>
-<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160; </div>
-<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160;    {</div>
-<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;      std::lock_guard&lt;std::mutex&gt; Lock{InputImpl-&gt;get_spec_const_data_lock()};</div>
-<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;      <span class="keyword">const</span> std::map&lt;std::string,</div>
-<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;                     std::vector&lt;device_image_impl::SpecConstDescT&gt;&gt;</div>
-<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;          &amp;SpecConstData = InputImpl-&gt;get_spec_const_data_ref();</div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160; </div>
-<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;DescPair : SpecConstData) {</div>
-<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html">device_image_impl::SpecConstDescT</a> &amp;SpecIDDesc :</div>
-<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;             DescPair.second) {</div>
-<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;          <span class="keywordflow">if</span> (SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#ac486c3bcfe98da28229bc90e1d6a7d48">IsSet</a>) {</div>
-<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;            Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a6536605da4d4b98245a07ab1edfc861e">PiApiKind::piextProgramSetSpecializationConstant</a>&gt;(</div>
-<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;                NativePrg, SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#a1ccac5b8ff2952a9990bb4f08a6b07f5">ID</a>, SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#ab1520355129eb430e5367cfc339b4eb1">Size</a>,</div>
-<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;                SpecConstsBlob.data() + SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#aa654afb4b0275e072886836c84bcc9f8">BlobOffset</a>);</div>
-<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;          }</div>
-<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;        }</div>
-<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;      }</div>
-<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;    }</div>
-<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160; </div>
-<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;    ProgramPtr ProgramManaged(</div>
-<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;        NativePrg, Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a883c22acd2148838d33adba2e8ff9993">getPiPlugin</a>().<a class="code" href="struct__pi__plugin.html#abd09f41d9a88b7a981f7be6e0df4e8f7">PiFunctionTable</a>.piProgramRelease);</div>
-<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160; </div>
-<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;    <span class="comment">// Link a fallback implementation of device libraries if they are not</span></div>
-<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;    <span class="comment">// supported by a device compiler.</span></div>
-<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;    <span class="comment">// Pre-compiled programs are supposed to be already linked.</span></div>
-<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;    <span class="comment">// If device image is not SPIR-V, DeviceLibReqMask will be 0 which means</span></div>
-<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;    <span class="comment">// no fallback device library will be linked.</span></div>
-<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;    uint32_t DeviceLibReqMask = 0;</div>
-<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;    <span class="keywordflow">if</span> (Img.getFormat() == <a class="code" href="pi_8h.html#a8f0f398bde1666167996bdee9f169819">PI_DEVICE_BINARY_TYPE_SPIRV</a> &amp;&amp;</div>
-<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;        !<a class="code" href="classcl_1_1sycl_1_1detail_1_1SYCLConfig.html">SYCLConfig&lt;SYCL_DEVICELIB_NO_FALLBACK&gt;::get</a>())</div>
-<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;      DeviceLibReqMask = getDeviceLibReqMask(Img);</div>
-<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160; </div>
-<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;    ProgramPtr BuiltProgram =</div>
-<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;        <a class="code" href="namespacecl_1_1sycl.html#ada9f6df5384b58bbb680aba8eec3d387">build</a>(std::move(ProgramManaged), ContextImpl, CompileOpts, LinkOpts,</div>
-<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;              <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">getRawSyclObjImpl</a>(Devs[0])-&gt;getHandleRef(),</div>
-<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;              ContextImpl-&gt;getCachedLibPrograms(), DeviceLibReqMask);</div>
-<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160; </div>
-<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;    {</div>
-<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;      std::lock_guard&lt;std::mutex&gt; Lock(MNativeProgramsMutex);</div>
-<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;      NativePrograms[BuiltProgram.get()] = &amp;Img;</div>
-<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;    }</div>
-<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160; </div>
-<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;    <span class="keywordflow">return</span> BuiltProgram.release();</div>
-<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;  };</div>
-<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160; </div>
-<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab1f3ef7d24733d4267179aa700fff51f">SerializedObj</a> SpecConsts = InputImpl-&gt;get_spec_const_blob_ref();</div>
-<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160; </div>
-<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160;  <span class="keyword">const</span> <a class="code" href="struct__pi__device.html">RT::PiDevice</a> <a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">PiDevice</a> = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">getRawSyclObjImpl</a>(Devs[0])-&gt;getHandleRef();</div>
-<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;  <span class="comment">// TODO: Throw SYCL2020 style exception</span></div>
-<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;  <span class="keyword">auto</span> BuildResult = getOrBuild&lt;PiProgramT, compile_program_error&gt;(</div>
-<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;      Cache,</div>
-<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;      std::make_pair(std::make_pair(std::move(SpecConsts), (<span class="keywordtype">size_t</span>)ImgPtr),</div>
-<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;                     std::make_pair(<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">PiDevice</a>, CompileOpts + LinkOpts)),</div>
-<div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;      AcquireF, GetF, BuildF);</div>
-<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160; </div>
-<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;  <a class="code" href="struct__pi__program.html">RT::PiProgram</a> ResProgram = BuildResult-&gt;Ptr.load();</div>
-<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160; </div>
-<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;  <span class="comment">// Cache supports key with once device only, but here we have multiple</span></div>
-<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;  <span class="comment">// devices a program is built for, so add the program to the cache for all</span></div>
-<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;  <span class="comment">// other devices.</span></div>
-<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;  <span class="keyword">auto</span> CacheOtherDevices = [ResProgram]() { <span class="keywordflow">return</span> ResProgram; };</div>
-<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160; </div>
-<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160;  <span class="comment">// The program for device &quot;0&quot; is already added to the cache during the first</span></div>
-<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;  <span class="comment">// call to getOrBuild, so starting with &quot;1&quot;</span></div>
-<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> Idx = 1; Idx &lt; Devs.size(); ++Idx) {</div>
-<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;    <span class="keyword">const</span> <a class="code" href="struct__pi__device.html">RT::PiDevice</a> PiDeviceAdd =</div>
-<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;        <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">getRawSyclObjImpl</a>(Devs[Idx])-&gt;getHandleRef();</div>
-<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160; </div>
-<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160;    getOrBuild&lt;PiProgramT, compile_program_error&gt;(</div>
-<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;        Cache,</div>
-<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;        std::make_pair(std::make_pair(std::move(SpecConsts), (<span class="keywordtype">size_t</span>)ImgPtr),</div>
-<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;                       std::make_pair(PiDeviceAdd, CompileOpts + LinkOpts)),</div>
-<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;        AcquireF, GetF, CacheOtherDevices);</div>
-<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;  }</div>
-<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160; </div>
-<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160;  <span class="comment">// devive_image_impl shares ownership of PIProgram with, at least, program</span></div>
-<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;  <span class="comment">// cache. The ref counter will be descremented in the destructor of</span></div>
-<div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;  <span class="comment">// device_image_impl</span></div>
-<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = ContextImpl-&gt;getPlugin();</div>
-<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;  Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a387ff9784ca6787e042ff5e89175b7bf">PiApiKind::piProgramRetain</a>&gt;(ResProgram);</div>
-<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160; </div>
-<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af937791ac4fabd0f2a1a1576fec9b6df">DeviceImageImplPtr</a> ExecImpl = std::make_shared&lt;detail::device_image_impl&gt;(</div>
-<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;      InputImpl-&gt;get_bin_image_ref(), Context, Devs, bundle_state::executable,</div>
-<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;      InputImpl-&gt;get_kernel_ids_ref(), ResProgram,</div>
-<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;      InputImpl-&gt;get_spec_const_data_ref(),</div>
-<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;      InputImpl-&gt;get_spec_const_blob_ref());</div>
-<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160; </div>
-<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160;  <span class="keywordflow">return</span> createSyclObjFromImpl&lt;device_image_plain&gt;(ExecImpl);</div>
-<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;}</div>
-<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160; </div>
-<div class="line"><a name="l01683"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#abe3d27df766f8691a901ad200f7ac9ee"> 1683</a></span>&#160;std::pair&lt;RT::PiKernel, std::mutex *&gt; ProgramManager::getOrCreateKernel(</div>
-<div class="line"><a name="l01684"></a><span class="lineno"> 1684</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, <span class="keyword">const</span> std::string &amp;KernelName,</div>
-<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList, <a class="code" href="struct__pi__program.html">RT::PiProgram</a> Program) {</div>
-<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160; </div>
-<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;  (void)PropList;</div>
-<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160; </div>
-<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> Ctx = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Context);</div>
-<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160; </div>
-<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160;  <span class="keyword">using</span> PiKernelT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ade38d5b66114bf42727698039497326d">KernelProgramCache::PiKernelT</a>;</div>
-<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;  <span class="keyword">using</span> KernelCacheT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ae45b79c025b522795f8677b223a047d8">KernelProgramCache::KernelCacheT</a>;</div>
-<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;  <span class="keyword">using</span> KernelByNameT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#af46a95f0c39e1c69769c9a56034edf55">KernelProgramCache::KernelByNameT</a>;</div>
-<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160; </div>
-<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache = Ctx-&gt;getKernelProgramCache();</div>
-<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160; </div>
-<div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160;  <span class="keyword">auto</span> AcquireF = [](<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache) {</div>
-<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;    <span class="keywordflow">return</span> Cache.<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a08a0951e5e5026ee6aa0088e057c837d">acquireKernelsPerProgramCache</a>();</div>
-<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;  };</div>
-<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;  <span class="keyword">auto</span> GetF =</div>
-<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;      [&amp;Program](<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1Locked.html">Locked&lt;KernelCacheT&gt;</a> &amp;LockedCache) -&gt; KernelByNameT &amp; {</div>
-<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;    <span class="keywordflow">return</span> LockedCache.get()[Program];</div>
-<div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;  };</div>
-<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;  <span class="keyword">auto</span> BuildF = [&amp;Program, &amp;KernelName, &amp;Ctx] {</div>
-<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;    PiKernelT *Result = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160; </div>
-<div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = Ctx-&gt;getPlugin();</div>
-<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;    Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a0917d3a7da3d18319665e9aed9ebe918">PiApiKind::piKernelCreate</a>&gt;(Program, KernelName.c_str(),</div>
-<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;                                           &amp;Result);</div>
-<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160; </div>
-<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;    Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a77a53aab5ce0b731870bfb0da975b60f">PiApiKind::piKernelSetExecInfo</a>&gt;(Result, <a class="code" href="pi_8h.html#a3dd6b4cc5d31184f62f6637e33752c57a0e36dac80ca63c7dd03e3602f79caeda">PI_USM_INDIRECT_ACCESS</a>,</div>
-<div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160;                                                <span class="keyword">sizeof</span>(<a class="code" href="pi_8h.html#a173fc5f1f6b91efe7320dbee895e1072">pi_bool</a>), &amp;<a class="code" href="pi_8h.html#a39b5f0fc5dbb20bdf9f837230f3c36f4">PI_TRUE</a>);</div>
-<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160; </div>
-<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160;    <span class="keywordflow">return</span> Result;</div>
-<div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;  };</div>
-<div class="line"><a name="l01716"></a><span class="lineno"> 1716</span>&#160; </div>
-<div class="line"><a name="l01717"></a><span class="lineno"> 1717</span>&#160;  <span class="keyword">auto</span> BuildResult = getOrBuild&lt;PiKernelT, invalid_object_error&gt;(</div>
-<div class="line"><a name="l01718"></a><span class="lineno"> 1718</span>&#160;      Cache, KernelName, AcquireF, GetF, BuildF);</div>
-<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;  <span class="keywordflow">return</span> std::make_pair(BuildResult-&gt;Ptr.load(),</div>
-<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;                        &amp;(BuildResult-&gt;MBuildResultMutex));</div>
-<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;}</div>
-<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160; </div>
-<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160;} <span class="comment">// namespace detail</span></div>
-<div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;} <span class="comment">// namespace sycl</span></div>
-<div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
-<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160; </div>
-<div class="line"><a name="l01727"></a><span class="lineno"><a class="line" href="program__manager_8hpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e"> 1727</a></span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> <a class="code" href="program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e">__sycl_register_lib</a>(<a class="code" href="structpi__device__binaries__struct.html">pi_device_binaries</a> desc) {</div>
-<div class="line"><a name="l01728"></a><span class="lineno"> 1728</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a9e830067ea4f87b1ca4c225abeacc666">cl::sycl::detail::ProgramManager::getInstance</a>().<a class="code" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afed37c794b0fd9dbb7bb4cad149d39b6">addImages</a>(desc);</div>
-<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;}</div>
-<div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160; </div>
-<div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160;<span class="comment">// Executed as a part of current module&#39;s (.exe, .dll) static initialization</span></div>
-<div class="line"><a name="l01732"></a><span class="lineno"><a class="line" href="program__manager_8hpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d"> 1732</a></span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> <a class="code" href="program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d">__sycl_unregister_lib</a>(<a class="code" href="structpi__device__binaries__struct.html">pi_device_binaries</a> desc) {</div>
-<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;  (void)desc;</div>
-<div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160;  <span class="comment">// TODO implement the function</span></div>
-<div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;}</div>
+<div class="line"><a name="l01505"></a><span class="lineno"> 1505</span>&#160;    <span class="keywordflow">if</span> (LinkedProg) {</div>
+<div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;      <span class="keyword">const</span> string_class ErrorMsg = getProgramBuildLog(LinkedProg, ContextImpl);</div>
+<div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;      <span class="keywordflow">throw</span> <a class="code" href="classcl_1_1sycl_1_1exception.html">sycl::exception</a>(<a class="code" href="namespacecl_1_1sycl.html#a8369f4dd6e58ade77a91161768e54377">make_error_code</a>(<a class="code" href="namespacecl_1_1sycl.html#ada9f6df5384b58bbb680aba8eec3d387">errc::build</a>), ErrorMsg);</div>
+<div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160;    }</div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;    Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a39f0e8cb0d7d64e4d497e8f6a544609d">reportPiError</a>(Error, <span class="stringliteral">&quot;link()&quot;</span>);</div>
+<div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;  }</div>
+<div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160; </div>
+<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;  std::vector&lt;kernel_id&gt; KernelIDs;</div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1device__image__plain.html">device_image_plain</a> &amp;DeviceImage : DeviceImages) {</div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;    <span class="comment">// Duplicates are not expected here, otherwise piProgramLink should fail</span></div>
+<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;    KernelIDs.insert(KernelIDs.end(),</div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;                     <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(DeviceImage)-&gt;<a class="code" href="namespacecl_1_1sycl.html#a95cd163d1fcfc6a552a18b213326f099">get_kernel_ids</a>().begin(),</div>
+<div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;                     <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(DeviceImage)-&gt;<a class="code" href="namespacecl_1_1sycl.html#a95cd163d1fcfc6a552a18b213326f099">get_kernel_ids</a>().end());</div>
+<div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;  }</div>
+<div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;  <span class="comment">// device_image_impl expects kernel ids to be sorted for fast search</span></div>
+<div class="line"><a name="l01520"></a><span class="lineno"> 1520</span>&#160;  std::sort(KernelIDs.begin(), KernelIDs.end(), <a class="code" href="structcl_1_1sycl_1_1detail_1_1LessByNameComp.html">LessByNameComp</a>{});</div>
+<div class="line"><a name="l01521"></a><span class="lineno"> 1521</span>&#160; </div>
+<div class="line"><a name="l01522"></a><span class="lineno"> 1522</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af937791ac4fabd0f2a1a1576fec9b6df">DeviceImageImplPtr</a> ExecutableImpl =</div>
+<div class="line"><a name="l01523"></a><span class="lineno"> 1523</span>&#160;      std::make_shared&lt;detail::device_image_impl&gt;(</div>
+<div class="line"><a name="l01524"></a><span class="lineno"> 1524</span>&#160;          <span class="comment">/*BinImage=*/</span><span class="keyword">nullptr</span>, Context, Devs, bundle_state::object,</div>
+<div class="line"><a name="l01525"></a><span class="lineno"> 1525</span>&#160;          std::move(KernelIDs), LinkedProg);</div>
+<div class="line"><a name="l01526"></a><span class="lineno"> 1526</span>&#160; </div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;  <span class="comment">// TODO: Make multiple sets of device images organized by devices they are</span></div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;  <span class="comment">// compiled for.</span></div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;  <span class="keywordflow">return</span> {createSyclObjFromImpl&lt;device_image_plain&gt;(ExecutableImpl)};</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;}</div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160; </div>
+<div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;<span class="comment">// The function duplicates most of the code from existing getBuiltPIProgram.</span></div>
+<div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;<span class="comment">// The differences are:</span></div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;<span class="comment">// Different API - uses different objects to extract required info</span></div>
+<div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160;<span class="comment">// Supports caching of a program built for multiple devices</span></div>
+<div class="line"><a name="l01536"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a8741c6349eecf28bf2fb4a6ac25d5027"> 1536</a></span>&#160;<a class="code" href="classcl_1_1sycl_1_1detail_1_1device__image__plain.html">device_image_plain</a> <a class="code" href="namespacecl_1_1sycl.html#ada9f6df5384b58bbb680aba8eec3d387">ProgramManager::build</a>(<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1device__image__plain.html">device_image_plain</a> &amp;DeviceImage,</div>
+<div class="line"><a name="l01537"></a><span class="lineno"> 1537</span>&#160;                                         <span class="keyword">const</span> std::vector&lt;device&gt; &amp;Devs,</div>
+<div class="line"><a name="l01538"></a><span class="lineno"> 1538</span>&#160;                                         <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList) {</div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;  (void)PropList;</div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160; </div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;  <span class="keyword">const</span> std::shared_ptr&lt;device_image_impl&gt; &amp;InputImpl =</div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;      <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(DeviceImage);</div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160; </div>
+<div class="line"><a name="l01544"></a><span class="lineno"> 1544</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> Context = InputImpl-&gt;get_context();</div>
+<div class="line"><a name="l01545"></a><span class="lineno"> 1545</span>&#160; </div>
+<div class="line"><a name="l01546"></a><span class="lineno"> 1546</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> ContextImpl = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Context);</div>
+<div class="line"><a name="l01547"></a><span class="lineno"> 1547</span>&#160; </div>
+<div class="line"><a name="l01548"></a><span class="lineno"> 1548</span>&#160;  <span class="keyword">using</span> PiProgramT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#acb6791d7cd345c64d90af3b6f434999e">KernelProgramCache::PiProgramT</a>;</div>
+<div class="line"><a name="l01549"></a><span class="lineno"> 1549</span>&#160;  <span class="keyword">using</span> ProgramCacheT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#adaa15b38586684e15ed7e79c3666dbf1">KernelProgramCache::ProgramCacheT</a>;</div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160; </div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache = ContextImpl-&gt;getKernelProgramCache();</div>
+<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160; </div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;  <span class="keyword">auto</span> AcquireF = [](<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache) {</div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160;    <span class="keywordflow">return</span> Cache.<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a17b2499a86f9e34248b8f7405cac891f">acquireCachedPrograms</a>();</div>
+<div class="line"><a name="l01555"></a><span class="lineno"> 1555</span>&#160;  };</div>
+<div class="line"><a name="l01556"></a><span class="lineno"> 1556</span>&#160;  <span class="keyword">auto</span> GetF = [](<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1Locked.html">Locked&lt;ProgramCacheT&gt;</a> &amp;LockedCache) -&gt; ProgramCacheT &amp; {</div>
+<div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160;    <span class="keywordflow">return</span> LockedCache.get();</div>
+<div class="line"><a name="l01558"></a><span class="lineno"> 1558</span>&#160;  };</div>
+<div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160; </div>
+<div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;  std::string CompileOpts;</div>
+<div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;  std::string LinkOpts;</div>
+<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a544654732c56b677e0137fbc089f8082">applyOptionsFromEnvironment</a>(CompileOpts, LinkOpts);</div>
+<div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160; </div>
+<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> *ImgPtr = InputImpl-&gt;get_bin_image_ref();</div>
+<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1RTDeviceBinaryImage.html">RTDeviceBinaryImage</a> &amp;Img = *ImgPtr;</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160; </div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;  <span class="comment">// TODO: Unify this code with getBuiltPIProgram</span></div>
+<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;  <span class="keyword">auto</span> BuildF = [<span class="keyword">this</span>, &amp;Context, Img, &amp;Devs, &amp;CompileOpts, &amp;LinkOpts,</div>
+<div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;                 &amp;InputImpl] {</div>
+<div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;    <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a9ffc0ae08d547d915aad9f427a4300c9">applyOptionsFromImage</a>(CompileOpts, LinkOpts, Img);</div>
+<div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;    <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> ContextImpl = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Context);</div>
+<div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = ContextImpl-&gt;getPlugin();</div>
+<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160; </div>
+<div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;    <span class="comment">// TODO: Add support for creating non-SPIRV programs from multiple devices.</span></div>
+<div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;    <span class="keywordflow">if</span> (InputImpl-&gt;get_bin_image_ref()-&gt;getFormat() !=</div>
+<div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;            <a class="code" href="pi_8h.html#a8f0f398bde1666167996bdee9f169819">PI_DEVICE_BINARY_TYPE_SPIRV</a> &amp;&amp;</div>
+<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;        Devs.size() &gt; 1)</div>
+<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;      <a class="code" href="classcl_1_1sycl_1_1runtime__error.html">sycl::runtime_error</a>(</div>
+<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;          <span class="stringliteral">&quot;Creating a program from AOT binary for multiple device is not &quot;</span></div>
+<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;          <span class="stringliteral">&quot;supported&quot;</span>,</div>
+<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160;          <a class="code" href="pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717ac0b20865d2c8f3a70ec43905a8ebf6da">PI_INVALID_OPERATION</a>);</div>
+<div class="line"><a name="l01582"></a><span class="lineno"> 1582</span>&#160; </div>
+<div class="line"><a name="l01583"></a><span class="lineno"> 1583</span>&#160;    <span class="comment">// Device is not used when creating program from SPIRV, so passing only one</span></div>
+<div class="line"><a name="l01584"></a><span class="lineno"> 1584</span>&#160;    <span class="comment">// device is OK.</span></div>
+<div class="line"><a name="l01585"></a><span class="lineno"> 1585</span>&#160;    <a class="code" href="struct__pi__program.html">RT::PiProgram</a> NativePrg = createPIProgram(Img, Context, Devs[0]);</div>
+<div class="line"><a name="l01586"></a><span class="lineno"> 1586</span>&#160; </div>
+<div class="line"><a name="l01587"></a><span class="lineno"> 1587</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1device.html">device</a> &amp;Dev : Devs)</div>
+<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;      <span class="keywordflow">if</span> (InputImpl-&gt;get_bin_image_ref()-&gt;supportsSpecConstants())</div>
+<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;        <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a0ea7870d9e490539007fc3072897dd47">enableITTAnnotationsIfNeeded</a>(NativePrg,</div>
+<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;                                     <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Dev)-&gt;<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a25a3cf13e929d772f08013fea813fb41">getPlugin</a>());</div>
+<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160; </div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160;    <span class="keyword">const</span> std::vector&lt;unsigned char&gt; &amp;SpecConstsBlob =</div>
+<div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160;        InputImpl-&gt;get_spec_const_blob_ref();</div>
+<div class="line"><a name="l01594"></a><span class="lineno"> 1594</span>&#160; </div>
+<div class="line"><a name="l01595"></a><span class="lineno"> 1595</span>&#160;    {</div>
+<div class="line"><a name="l01596"></a><span class="lineno"> 1596</span>&#160;      std::lock_guard&lt;std::mutex&gt; Lock{InputImpl-&gt;get_spec_const_data_lock()};</div>
+<div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160;      <span class="keyword">const</span> std::map&lt;std::string,</div>
+<div class="line"><a name="l01598"></a><span class="lineno"> 1598</span>&#160;                     std::vector&lt;device_image_impl::SpecConstDescT&gt;&gt;</div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;          &amp;SpecConstData = InputImpl-&gt;get_spec_const_data_ref();</div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160; </div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;DescPair : SpecConstData) {</div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html">device_image_impl::SpecConstDescT</a> &amp;SpecIDDesc :</div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160;             DescPair.second) {</div>
+<div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160;          <span class="keywordflow">if</span> (SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#ac486c3bcfe98da28229bc90e1d6a7d48">IsSet</a>) {</div>
+<div class="line"><a name="l01605"></a><span class="lineno"> 1605</span>&#160;            Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a6536605da4d4b98245a07ab1edfc861e">PiApiKind::piextProgramSetSpecializationConstant</a>&gt;(</div>
+<div class="line"><a name="l01606"></a><span class="lineno"> 1606</span>&#160;                NativePrg, SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#a1ccac5b8ff2952a9990bb4f08a6b07f5">ID</a>, SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#ab1520355129eb430e5367cfc339b4eb1">Size</a>,</div>
+<div class="line"><a name="l01607"></a><span class="lineno"> 1607</span>&#160;                SpecConstsBlob.data() + SpecIDDesc.<a class="code" href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#aa654afb4b0275e072886836c84bcc9f8">BlobOffset</a>);</div>
+<div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160;          }</div>
+<div class="line"><a name="l01609"></a><span class="lineno"> 1609</span>&#160;        }</div>
+<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;      }</div>
+<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;    }</div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160; </div>
+<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;    ProgramPtr ProgramManaged(</div>
+<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160;        NativePrg, Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a883c22acd2148838d33adba2e8ff9993">getPiPlugin</a>().<a class="code" href="struct__pi__plugin.html#abd09f41d9a88b7a981f7be6e0df4e8f7">PiFunctionTable</a>.piProgramRelease);</div>
+<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160; </div>
+<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160;    <span class="comment">// Link a fallback implementation of device libraries if they are not</span></div>
+<div class="line"><a name="l01617"></a><span class="lineno"> 1617</span>&#160;    <span class="comment">// supported by a device compiler.</span></div>
+<div class="line"><a name="l01618"></a><span class="lineno"> 1618</span>&#160;    <span class="comment">// Pre-compiled programs are supposed to be already linked.</span></div>
+<div class="line"><a name="l01619"></a><span class="lineno"> 1619</span>&#160;    <span class="comment">// If device image is not SPIR-V, DeviceLibReqMask will be 0 which means</span></div>
+<div class="line"><a name="l01620"></a><span class="lineno"> 1620</span>&#160;    <span class="comment">// no fallback device library will be linked.</span></div>
+<div class="line"><a name="l01621"></a><span class="lineno"> 1621</span>&#160;    uint32_t DeviceLibReqMask = 0;</div>
+<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;    <span class="keywordflow">if</span> (Img.getFormat() == <a class="code" href="pi_8h.html#a8f0f398bde1666167996bdee9f169819">PI_DEVICE_BINARY_TYPE_SPIRV</a> &amp;&amp;</div>
+<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;        !<a class="code" href="classcl_1_1sycl_1_1detail_1_1SYCLConfig.html">SYCLConfig&lt;SYCL_DEVICELIB_NO_FALLBACK&gt;::get</a>())</div>
+<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;      DeviceLibReqMask = getDeviceLibReqMask(Img);</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160; </div>
+<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;    ProgramPtr BuiltProgram =</div>
+<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;        <a class="code" href="namespacecl_1_1sycl.html#ada9f6df5384b58bbb680aba8eec3d387">build</a>(std::move(ProgramManaged), ContextImpl, CompileOpts, LinkOpts,</div>
+<div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160;              <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">getRawSyclObjImpl</a>(Devs[0])-&gt;getHandleRef(),</div>
+<div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;              ContextImpl-&gt;getCachedLibPrograms(), DeviceLibReqMask);</div>
+<div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160; </div>
+<div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;    {</div>
+<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;      std::lock_guard&lt;std::mutex&gt; Lock(MNativeProgramsMutex);</div>
+<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;      NativePrograms[BuiltProgram.get()] = &amp;Img;</div>
+<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;    }</div>
+<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160; </div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;    <span class="keywordflow">return</span> BuiltProgram.release();</div>
+<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160;  };</div>
+<div class="line"><a name="l01638"></a><span class="lineno"> 1638</span>&#160; </div>
+<div class="line"><a name="l01639"></a><span class="lineno"> 1639</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab1f3ef7d24733d4267179aa700fff51f">SerializedObj</a> SpecConsts = InputImpl-&gt;get_spec_const_blob_ref();</div>
+<div class="line"><a name="l01640"></a><span class="lineno"> 1640</span>&#160; </div>
+<div class="line"><a name="l01641"></a><span class="lineno"> 1641</span>&#160;  <span class="keyword">const</span> <a class="code" href="struct__pi__device.html">RT::PiDevice</a> <a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">PiDevice</a> = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">getRawSyclObjImpl</a>(Devs[0])-&gt;getHandleRef();</div>
+<div class="line"><a name="l01642"></a><span class="lineno"> 1642</span>&#160;  <span class="comment">// TODO: Throw SYCL2020 style exception</span></div>
+<div class="line"><a name="l01643"></a><span class="lineno"> 1643</span>&#160;  <span class="keyword">auto</span> BuildResult = getOrBuild&lt;PiProgramT, compile_program_error&gt;(</div>
+<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;      Cache,</div>
+<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;      std::make_pair(std::make_pair(std::move(SpecConsts), (<span class="keywordtype">size_t</span>)ImgPtr),</div>
+<div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;                     std::make_pair(<a class="code" href="namespacecl_1_1sycl_1_1detail_1_1pi.html#a28623983b1d8a1d4b8bc92a17dd83d1d">PiDevice</a>, CompileOpts + LinkOpts)),</div>
+<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;      AcquireF, GetF, BuildF);</div>
+<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160; </div>
+<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160;  <a class="code" href="struct__pi__program.html">RT::PiProgram</a> ResProgram = BuildResult-&gt;Ptr.load();</div>
+<div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160; </div>
+<div class="line"><a name="l01651"></a><span class="lineno"> 1651</span>&#160;  <span class="comment">// Cache supports key with once device only, but here we have multiple</span></div>
+<div class="line"><a name="l01652"></a><span class="lineno"> 1652</span>&#160;  <span class="comment">// devices a program is built for, so add the program to the cache for all</span></div>
+<div class="line"><a name="l01653"></a><span class="lineno"> 1653</span>&#160;  <span class="comment">// other devices.</span></div>
+<div class="line"><a name="l01654"></a><span class="lineno"> 1654</span>&#160;  <span class="keyword">auto</span> CacheOtherDevices = [ResProgram]() { <span class="keywordflow">return</span> ResProgram; };</div>
+<div class="line"><a name="l01655"></a><span class="lineno"> 1655</span>&#160; </div>
+<div class="line"><a name="l01656"></a><span class="lineno"> 1656</span>&#160;  <span class="comment">// The program for device &quot;0&quot; is already added to the cache during the first</span></div>
+<div class="line"><a name="l01657"></a><span class="lineno"> 1657</span>&#160;  <span class="comment">// call to getOrBuild, so starting with &quot;1&quot;</span></div>
+<div class="line"><a name="l01658"></a><span class="lineno"> 1658</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> Idx = 1; Idx &lt; Devs.size(); ++Idx) {</div>
+<div class="line"><a name="l01659"></a><span class="lineno"> 1659</span>&#160;    <span class="keyword">const</span> <a class="code" href="struct__pi__device.html">RT::PiDevice</a> PiDeviceAdd =</div>
+<div class="line"><a name="l01660"></a><span class="lineno"> 1660</span>&#160;        <a class="code" href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">getRawSyclObjImpl</a>(Devs[Idx])-&gt;getHandleRef();</div>
+<div class="line"><a name="l01661"></a><span class="lineno"> 1661</span>&#160; </div>
+<div class="line"><a name="l01662"></a><span class="lineno"> 1662</span>&#160;    getOrBuild&lt;PiProgramT, compile_program_error&gt;(</div>
+<div class="line"><a name="l01663"></a><span class="lineno"> 1663</span>&#160;        Cache,</div>
+<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;        std::make_pair(std::make_pair(std::move(SpecConsts), (<span class="keywordtype">size_t</span>)ImgPtr),</div>
+<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;                       std::make_pair(PiDeviceAdd, CompileOpts + LinkOpts)),</div>
+<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;        AcquireF, GetF, CacheOtherDevices);</div>
+<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;  }</div>
+<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160; </div>
+<div class="line"><a name="l01669"></a><span class="lineno"> 1669</span>&#160;  <span class="comment">// devive_image_impl shares ownership of PIProgram with, at least, program</span></div>
+<div class="line"><a name="l01670"></a><span class="lineno"> 1670</span>&#160;  <span class="comment">// cache. The ref counter will be descremented in the destructor of</span></div>
+<div class="line"><a name="l01671"></a><span class="lineno"> 1671</span>&#160;  <span class="comment">// device_image_impl</span></div>
+<div class="line"><a name="l01672"></a><span class="lineno"> 1672</span>&#160;  <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = ContextImpl-&gt;getPlugin();</div>
+<div class="line"><a name="l01673"></a><span class="lineno"> 1673</span>&#160;  Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a387ff9784ca6787e042ff5e89175b7bf">PiApiKind::piProgramRetain</a>&gt;(ResProgram);</div>
+<div class="line"><a name="l01674"></a><span class="lineno"> 1674</span>&#160; </div>
+<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;  <a class="code" href="namespacecl_1_1sycl_1_1detail.html#af937791ac4fabd0f2a1a1576fec9b6df">DeviceImageImplPtr</a> ExecImpl = std::make_shared&lt;detail::device_image_impl&gt;(</div>
+<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;      InputImpl-&gt;get_bin_image_ref(), Context, Devs, bundle_state::executable,</div>
+<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;      InputImpl-&gt;get_kernel_ids_ref(), ResProgram,</div>
+<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;      InputImpl-&gt;get_spec_const_data_ref(),</div>
+<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160;      InputImpl-&gt;get_spec_const_blob_ref());</div>
+<div class="line"><a name="l01680"></a><span class="lineno"> 1680</span>&#160; </div>
+<div class="line"><a name="l01681"></a><span class="lineno"> 1681</span>&#160;  <span class="keywordflow">return</span> createSyclObjFromImpl&lt;device_image_plain&gt;(ExecImpl);</div>
+<div class="line"><a name="l01682"></a><span class="lineno"> 1682</span>&#160;}</div>
+<div class="line"><a name="l01683"></a><span class="lineno"> 1683</span>&#160; </div>
+<div class="line"><a name="l01684"></a><span class="lineno"><a class="line" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#abe3d27df766f8691a901ad200f7ac9ee"> 1684</a></span>&#160;std::pair&lt;RT::PiKernel, std::mutex *&gt; ProgramManager::getOrCreateKernel(</div>
+<div class="line"><a name="l01685"></a><span class="lineno"> 1685</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1context.html">context</a> &amp;Context, <span class="keyword">const</span> std::string &amp;KernelName,</div>
+<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1property__list.html">property_list</a> &amp;PropList, <a class="code" href="struct__pi__program.html">RT::PiProgram</a> Program) {</div>
+<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160; </div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;  (void)PropList;</div>
+<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160; </div>
+<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacecl_1_1sycl_1_1detail.html#ab3344d056975e3c60daac83b7487bb0f">ContextImplPtr</a> Ctx = <a class="code" href="namespacecl_1_1sycl_1_1detail.html#aca24864f8cbfc6d620391f40575fde81">getSyclObjImpl</a>(Context);</div>
+<div class="line"><a name="l01691"></a><span class="lineno"> 1691</span>&#160; </div>
+<div class="line"><a name="l01692"></a><span class="lineno"> 1692</span>&#160;  <span class="keyword">using</span> PiKernelT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ade38d5b66114bf42727698039497326d">KernelProgramCache::PiKernelT</a>;</div>
+<div class="line"><a name="l01693"></a><span class="lineno"> 1693</span>&#160;  <span class="keyword">using</span> KernelCacheT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#ae45b79c025b522795f8677b223a047d8">KernelProgramCache::KernelCacheT</a>;</div>
+<div class="line"><a name="l01694"></a><span class="lineno"> 1694</span>&#160;  <span class="keyword">using</span> KernelByNameT = <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#af46a95f0c39e1c69769c9a56034edf55">KernelProgramCache::KernelByNameT</a>;</div>
+<div class="line"><a name="l01695"></a><span class="lineno"> 1695</span>&#160; </div>
+<div class="line"><a name="l01696"></a><span class="lineno"> 1696</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache = Ctx-&gt;getKernelProgramCache();</div>
+<div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160; </div>
+<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;  <span class="keyword">auto</span> AcquireF = [](<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html">KernelProgramCache</a> &amp;Cache) {</div>
+<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;    <span class="keywordflow">return</span> Cache.<a class="code" href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#a08a0951e5e5026ee6aa0088e057c837d">acquireKernelsPerProgramCache</a>();</div>
+<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;  };</div>
+<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160;  <span class="keyword">auto</span> GetF =</div>
+<div class="line"><a name="l01702"></a><span class="lineno"> 1702</span>&#160;      [&amp;Program](<span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1Locked.html">Locked&lt;KernelCacheT&gt;</a> &amp;LockedCache) -&gt; KernelByNameT &amp; {</div>
+<div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;    <span class="keywordflow">return</span> LockedCache.get()[Program];</div>
+<div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;  };</div>
+<div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;  <span class="keyword">auto</span> BuildF = [&amp;Program, &amp;KernelName, &amp;Ctx] {</div>
+<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;    PiKernelT *Result = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160; </div>
+<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;    <span class="keyword">const</span> <a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html">detail::plugin</a> &amp;Plugin = Ctx-&gt;getPlugin();</div>
+<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;    Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a0917d3a7da3d18319665e9aed9ebe918">PiApiKind::piKernelCreate</a>&gt;(Program, KernelName.c_str(),</div>
+<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;                                           &amp;Result);</div>
+<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160; </div>
+<div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160;    Plugin.<a class="code" href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">call</a>&lt;<a class="code" href="pi_8h.html#a77a53aab5ce0b731870bfb0da975b60f">PiApiKind::piKernelSetExecInfo</a>&gt;(Result, <a class="code" href="pi_8h.html#a3dd6b4cc5d31184f62f6637e33752c57a0e36dac80ca63c7dd03e3602f79caeda">PI_USM_INDIRECT_ACCESS</a>,</div>
+<div class="line"><a name="l01713"></a><span class="lineno"> 1713</span>&#160;                                                <span class="keyword">sizeof</span>(<a class="code" href="pi_8h.html#a173fc5f1f6b91efe7320dbee895e1072">pi_bool</a>), &amp;<a class="code" href="pi_8h.html#a39b5f0fc5dbb20bdf9f837230f3c36f4">PI_TRUE</a>);</div>
+<div class="line"><a name="l01714"></a><span class="lineno"> 1714</span>&#160; </div>
+<div class="line"><a name="l01715"></a><span class="lineno"> 1715</span>&#160;    <span class="keywordflow">return</span> Result;</div>
+<div class="line"><a name="l01716"></a><span class="lineno"> 1716</span>&#160;  };</div>
+<div class="line"><a name="l01717"></a><span class="lineno"> 1717</span>&#160; </div>
+<div class="line"><a name="l01718"></a><span class="lineno"> 1718</span>&#160;  <span class="keyword">auto</span> BuildResult = getOrBuild&lt;PiKernelT, invalid_object_error&gt;(</div>
+<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;      Cache, KernelName, AcquireF, GetF, BuildF);</div>
+<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;  <span class="keywordflow">return</span> std::make_pair(BuildResult-&gt;Ptr.load(),</div>
+<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;                        &amp;(BuildResult-&gt;MBuildResultMutex));</div>
+<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;}</div>
+<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160; </div>
+<div class="line"><a name="l01724"></a><span class="lineno"> 1724</span>&#160;} <span class="comment">// namespace detail</span></div>
+<div class="line"><a name="l01725"></a><span class="lineno"> 1725</span>&#160;} <span class="comment">// namespace sycl</span></div>
+<div class="line"><a name="l01726"></a><span class="lineno"> 1726</span>&#160;} <span class="comment">// __SYCL_INLINE_NAMESPACE(cl)</span></div>
+<div class="line"><a name="l01727"></a><span class="lineno"> 1727</span>&#160; </div>
+<div class="line"><a name="l01728"></a><span class="lineno"><a class="line" href="program__manager_8hpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e"> 1728</a></span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> <a class="code" href="program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e">__sycl_register_lib</a>(<a class="code" href="structpi__device__binaries__struct.html">pi_device_binaries</a> desc) {</div>
+<div class="line"><a name="l01729"></a><span class="lineno"> 1729</span>&#160;  <a class="code" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#a9e830067ea4f87b1ca4c225abeacc666">cl::sycl::detail::ProgramManager::getInstance</a>().<a class="code" href="classcl_1_1sycl_1_1detail_1_1ProgramManager.html#afed37c794b0fd9dbb7bb4cad149d39b6">addImages</a>(desc);</div>
+<div class="line"><a name="l01730"></a><span class="lineno"> 1730</span>&#160;}</div>
+<div class="line"><a name="l01731"></a><span class="lineno"> 1731</span>&#160; </div>
+<div class="line"><a name="l01732"></a><span class="lineno"> 1732</span>&#160;<span class="comment">// Executed as a part of current module&#39;s (.exe, .dll) static initialization</span></div>
+<div class="line"><a name="l01733"></a><span class="lineno"><a class="line" href="program__manager_8hpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d"> 1733</a></span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> <a class="code" href="program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d">__sycl_unregister_lib</a>(<a class="code" href="structpi__device__binaries__struct.html">pi_device_binaries</a> desc) {</div>
+<div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160;  (void)desc;</div>
+<div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;  <span class="comment">// TODO implement the function</span></div>
+<div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a6d4fd5807cb06ff2dd5025318b3260ad"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a6d4fd5807cb06ff2dd5025318b3260ad">cl::sycl::detail::getRawSyclObjImpl</a></div><div class="ttdeci">detail::add_pointer_t&lt; typename decltype(T::impl)::element_type &gt; getRawSyclObjImpl(const T &amp;SyclObject)</div><div class="ttdef"><b>Definition:</b> <a href="CL_2sycl_2detail_2common_8hpp_source.html#l00177">common.hpp:177</a></div></div>
@@ -1899,7 +1900,7 @@ $(document).ready(function(){initNavTree('program__manager_8cpp_source.html','')
 <div class="ttc" id="api_8h_html_ab5acc77df906e66f21ea8e32a31de767a010e85c0147984822ee7f734023040a7"><div class="ttname"><a href="pi_8h.html#ab5acc77df906e66f21ea8e32a31de767a010e85c0147984822ee7f734023040a7">PI_KERNEL_INFO_PROGRAM</a></div><div class="ttdeci">@ PI_KERNEL_INFO_PROGRAM</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00328">pi.h:328</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult_html_a81f6a7ba01d114b4e2790d2775f961ec"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#a81f6a7ba01d114b4e2790d2775f961ec">cl::sycl::detail::KernelProgramCache::BuildResult::Ptr</a></div><div class="ttdeci">std::atomic&lt; T * &gt; Ptr</div><div class="ttdef"><b>Definition:</b> <a href="kernel__program__cache_8hpp_source.html#l00046">kernel_program_cache.hpp:46</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_a2704d20220e08bb580fed24428b051d0"><div class="ttname"><a href="namespacecl_1_1sycl.html#a2704d20220e08bb580fed24428b051d0">cl::sycl::bundle_state</a></div><div class="ttdeci">bundle_state</div><div class="ttdef"><b>Definition:</b> <a href="kernel__bundle__enums_8hpp_source.html#l00014">kernel_bundle_enums.hpp:14</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html_ae0c3e4a9606a7b31199e1dc5530bd295"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295">cl::sycl::detail::plugin::call_nocheck</a></div><div class="ttdeci">RT::PiResult call_nocheck(ArgsT... Args) const</div><div class="ttdoc">Calls the PiApi, traces the call, and returns the result.</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00070">plugin.hpp:70</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html_ae0c3e4a9606a7b31199e1dc5530bd295"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html#ae0c3e4a9606a7b31199e1dc5530bd295">cl::sycl::detail::plugin::call_nocheck</a></div><div class="ttdeci">RT::PiResult call_nocheck(ArgsT... Args) const</div><div class="ttdoc">Calls the PiApi, traces the call, and returns the result.</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00080">plugin.hpp:80</a></div></div>
 <div class="ttc" id="astruct__pi__kernel_html"><div class="ttname"><a href="struct__pi__kernel.html">_pi_kernel</a></div><div class="ttdoc">Implementation of a PI Kernel for CUDA.</div><div class="ttdef"><b>Definition:</b> <a href="pi__cuda_8hpp_source.html#l00547">pi_cuda.hpp:547</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1context_html_af27561da9f307daeedbeeedc9ee6dee1"><div class="ttname"><a href="classcl_1_1sycl_1_1context.html#af27561da9f307daeedbeeedc9ee6dee1">cl::sycl::context::get_platform</a></div><div class="ttdeci">platform get_platform() const</div><div class="ttdoc">Gets platform associated with this SYCL context.</div><div class="ttdef"><b>Definition:</b> <a href="context_8cpp_source.html#l00123">context.cpp:123</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a9ffc0ae08d547d915aad9f427a4300c9"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a9ffc0ae08d547d915aad9f427a4300c9">cl::sycl::detail::applyOptionsFromImage</a></div><div class="ttdeci">static void applyOptionsFromImage(std::string &amp;CompileOpts, std::string &amp;LinkOpts, const RTDeviceBinaryImage &amp;Img)</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l00361">program_manager.cpp:361</a></div></div>
@@ -1913,10 +1914,10 @@ $(document).ready(function(){initNavTree('program__manager_8cpp_source.html','')
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty_html_a8530c3ba340a24c5055c3e97f3759e8a"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryProperty.html#a8530c3ba340a24c5055c3e97f3759e8a">cl::sycl::detail::pi::DeviceBinaryProperty::asUint32</a></div><div class="ttdeci">pi_uint32 asUint32() const</div><div class="ttdef"><b>Definition:</b> <a href="pi_8cpp_source.html#l00557">pi.cpp:557</a></div></div>
 <div class="ttc" id="api_8h_html_a7ba1e56a5e3454993474aea3651fb1e9"><div class="ttname"><a href="pi_8h.html#a7ba1e56a5e3454993474aea3651fb1e9">pi_uint32</a></div><div class="ttdeci">uint32_t pi_uint32</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00063">pi.h:63</a></div></div>
 <div class="ttc" id="astructpi__device__binary__struct_html"><div class="ttname"><a href="structpi__device__binary__struct.html">pi_device_binary_struct</a></div><div class="ttdoc">This struct is a record of the device binary information.</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00697">pi.h:697</a></div></div>
-<div class="ttc" id="aprogram__manager_8cpp_html_a642b1fd767a6ee2a54ff894c3eb5cf2e"><div class="ttname"><a href="program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e">__sycl_register_lib</a></div><div class="ttdeci">void __sycl_register_lib(pi_device_binaries desc)</div><div class="ttdoc">Executed as a part of current module's (.exe, .dll) static initialization.</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l01727">program_manager.cpp:1727</a></div></div>
+<div class="ttc" id="aprogram__manager_8cpp_html_a642b1fd767a6ee2a54ff894c3eb5cf2e"><div class="ttname"><a href="program__manager_8cpp.html#a642b1fd767a6ee2a54ff894c3eb5cf2e">__sycl_register_lib</a></div><div class="ttdeci">void __sycl_register_lib(pi_device_binaries desc)</div><div class="ttdoc">Executed as a part of current module's (.exe, .dll) static initialization.</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l01728">program_manager.cpp:1728</a></div></div>
 <div class="ttc" id="aprogram__impl_8hpp_html"><div class="ttname"><a href="program__impl_8hpp.html">program_impl.hpp</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1device_html"><div class="ttname"><a href="classcl_1_1sycl_1_1device.html">cl::sycl::device</a></div><div class="ttdoc">The SYCL device class encapsulates a single SYCL device on which kernels may be executed.</div><div class="ttdef"><b>Definition:</b> <a href="device_8hpp_source.html#l00034">device.hpp:34</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1program__impl_html_a347496ee85036a08b248197e1e7db1c7"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1program__impl.html#a347496ee85036a08b248197e1e7db1c7">cl::sycl::detail::program_impl::flush_spec_constants</a></div><div class="ttdeci">void flush_spec_constants(const RTDeviceBinaryImage &amp;Img, RT::PiProgram NativePrg=nullptr) const</div><div class="ttdoc">Takes current values of specialization constants and &quot;injects&quot; them into the underlying native progra...</div><div class="ttdef"><b>Definition:</b> <a href="program__impl_8cpp_source.html#l00529">program_impl.cpp:529</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1program__impl_html_a347496ee85036a08b248197e1e7db1c7"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1program__impl.html#a347496ee85036a08b248197e1e7db1c7">cl::sycl::detail::program_impl::flush_spec_constants</a></div><div class="ttdeci">void flush_spec_constants(const RTDeviceBinaryImage &amp;Img, RT::PiProgram NativePrg=nullptr) const</div><div class="ttdoc">Takes current values of specialization constants and &quot;injects&quot; them into the underlying native progra...</div><div class="ttdef"><b>Definition:</b> <a href="program__impl_8cpp_source.html#l00533">program_impl.cpp:533</a></div></div>
 <div class="ttc" id="api_8h_html_a07afae9d8b7df8cb752c6f44ce076484"><div class="ttname"><a href="pi_8h.html#a07afae9d8b7df8cb752c6f44ce076484">piProgramGetBuildInfo</a></div><div class="ttdeci">pi_result piProgramGetBuildInfo(pi_program program, pi_device device, cl_program_build_info param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</div><div class="ttdef"><b>Definition:</b> <a href="pi__esimd__cpu_8cpp_source.html#l00788">pi_esimd_cpu.cpp:788</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_ac2d3fdc86f5fb4e36334638b3fb3c6de"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#ac2d3fdc86f5fb4e36334638b3fb3c6de">cl::sycl::detail::createSpirvProgram</a></div><div class="ttdeci">static RT::PiProgram createSpirvProgram(const ContextImplPtr Context, const unsigned char *Data, size_t DataLen)</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l00096">program_manager.cpp:96</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_html_ac868cad0e949a42913fe6ba31bc636b9"><div class="ttname"><a href="namespacecl_1_1sycl.html#ac868cad0e949a42913fe6ba31bc636b9">cl::sycl::compile</a></div><div class="ttdeci">kernel_bundle&lt; bundle_state::object &gt; compile(const kernel_bundle&lt; bundle_state::input &gt; &amp;InputBundle, const std::vector&lt; device &gt; &amp;Devs, const property_list &amp;PropList={})</div><div class="ttdef"><b>Definition:</b> <a href="kernel__bundle_8hpp_source.html#l00578">kernel_bundle.hpp:578</a></div></div>
@@ -1930,7 +1931,7 @@ $(document).ready(function(){initNavTree('program__manager_8cpp_source.html','')
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage_html_a121bde47ef2fe3dca3674f01ca14d5fd"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1pi_1_1DeviceBinaryImage.html#a121bde47ef2fe3dca3674f01ca14d5fd">cl::sycl::detail::pi::DeviceBinaryImage::getDeviceLibReqMask</a></div><div class="ttdeci">const PropertyRange &amp; getDeviceLibReqMask() const</div><div class="ttdef"><b>Definition:</b> <a href="pi_8hpp_source.html#l00337">pi.hpp:337</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT_html_aa654afb4b0275e072886836c84bcc9f8"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#aa654afb4b0275e072886836c84bcc9f8">cl::sycl::detail::device_image_impl::SpecConstDescT::BlobOffset</a></div><div class="ttdeci">unsigned int BlobOffset</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00045">device_image_impl.hpp:45</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a71d37979557aa87f873963bbccde99b6a63ca16a252db0db8d56394971ac5bdb1"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a71d37979557aa87f873963bbccde99b6a63ca16a252db0db8d56394971ac5bdb1">cl::sycl::detail::BS_Done</a></div><div class="ttdeci">@ BS_Done</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l00048">program_manager.cpp:48</a></div></div>
-<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html_a5b3c3999b6abd71d9c8e5f2ab56c8395"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">cl::sycl::detail::plugin::call</a></div><div class="ttdeci">void call(ArgsT... Args) const</div><div class="ttdoc">Calls the API, traces the call, checks the result.</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00104">plugin.hpp:104</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html_a5b3c3999b6abd71d9c8e5f2ab56c8395"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html#a5b3c3999b6abd71d9c8e5f2ab56c8395">cl::sycl::detail::plugin::call</a></div><div class="ttdeci">void call(ArgsT... Args) const</div><div class="ttdoc">Calls the API, traces the call, checks the result.</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00114">plugin.hpp:114</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT_html_ab1520355129eb430e5367cfc339b4eb1"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#ab1520355129eb430e5367cfc339b4eb1">cl::sycl::detail::device_image_impl::SpecConstDescT::Size</a></div><div class="ttdeci">unsigned int Size</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00044">device_image_impl.hpp:44</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult_html_aefa4a1b7eab3fd5e3ca4d90e8ce6df5b"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildResult.html#aefa4a1b7eab3fd5e3ca4d90e8ce6df5b">cl::sycl::detail::KernelProgramCache::BuildResult::MBuildResultMutex</a></div><div class="ttdeci">std::mutex MBuildResultMutex</div><div class="ttdoc">A mutex to be employed along with MBuildCV.</div><div class="ttdef"><b>Definition:</b> <a href="kernel__program__cache_8hpp_source.html#l00062">kernel_program_cache.hpp:62</a></div></div>
 <div class="ttc" id="api_8h_html_a4c04cf52d4de11e8706f60d51a953d60"><div class="ttname"><a href="pi_8h.html#a4c04cf52d4de11e8706f60d51a953d60">piDeviceGetInfo</a></div><div class="ttdeci">pi_result piDeviceGetInfo(pi_device device, pi_device_info param_name, size_t param_value_size, void *param_value, size_t *param_value_size_ret)</div><div class="ttdef"><b>Definition:</b> <a href="pi__esimd__cpu_8cpp_source.html#l00561">pi_esimd_cpu.cpp:561</a></div></div>
@@ -1956,7 +1957,7 @@ $(document).ready(function(){initNavTree('program__manager_8cpp_source.html','')
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT_html_a1ccac5b8ff2952a9990bb4f08a6b07f5"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1device__image__impl_1_1SpecConstDescT.html#a1ccac5b8ff2952a9990bb4f08a6b07f5">cl::sycl::detail::device_image_impl::SpecConstDescT::ID</a></div><div class="ttdeci">unsigned int ID</div><div class="ttdef"><b>Definition:</b> <a href="device__image__impl_8hpp_source.html#l00042">device_image_impl.hpp:42</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1feature__not__supported_html"><div class="ttname"><a href="classcl_1_1sycl_1_1feature__not__supported.html">cl::sycl::feature_not_supported</a></div><div class="ttdef"><b>Definition:</b> <a href="exception_8hpp_source.html#l00116">exception.hpp:116</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_addb9edfde61bdf52df402caafbf4b097"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#addb9edfde61bdf52df402caafbf4b097">cl::sycl::detail::UseSpvEnv</a></div><div class="ttdeci">static constexpr char UseSpvEnv(&quot;SYCL_USE_KERNEL_SPV&quot;)</div></div>
-<div class="ttc" id="aprogram__manager_8cpp_html_ae9b4d15d1b49d10be414b1c09ebaf49d"><div class="ttname"><a href="program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d">__sycl_unregister_lib</a></div><div class="ttdeci">void __sycl_unregister_lib(pi_device_binaries desc)</div><div class="ttdoc">Executed as a part of current module's (.exe, .dll) static de-initialization.</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l01732">program_manager.cpp:1732</a></div></div>
+<div class="ttc" id="aprogram__manager_8cpp_html_ae9b4d15d1b49d10be414b1c09ebaf49d"><div class="ttname"><a href="program__manager_8cpp.html#ae9b4d15d1b49d10be414b1c09ebaf49d">__sycl_unregister_lib</a></div><div class="ttdeci">void __sycl_unregister_lib(pi_device_binaries desc)</div><div class="ttdoc">Executed as a part of current module's (.exe, .dll) static de-initialization.</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l01733">program_manager.cpp:1733</a></div></div>
 <div class="ttc" id="anamespacecl_1_1sycl_1_1detail_html_a9d9d71ad5d342fb6adb367c7a0413773"><div class="ttname"><a href="namespacecl_1_1sycl_1_1detail.html#a9d9d71ad5d342fb6adb367c7a0413773">cl::sycl::detail::compatibleWithDevice</a></div><div class="ttdeci">static bool compatibleWithDevice(RTDeviceBinaryImage *BinImage, const device &amp;Dev)</div><div class="ttdef"><b>Definition:</b> <a href="program__manager_8cpp_source.html#l01216">program_manager.cpp:1216</a></div></div>
 <div class="ttc" id="astructcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError_html_ae8665653a1132b94504bae878da2e92b"><div class="ttname"><a href="structcl_1_1sycl_1_1detail_1_1KernelProgramCache_1_1BuildError.html#ae8665653a1132b94504bae878da2e92b">cl::sycl::detail::KernelProgramCache::BuildError::Msg</a></div><div class="ttdeci">std::string Msg</div><div class="ttdef"><b>Definition:</b> <a href="kernel__program__cache_8hpp_source.html#l00033">kernel_program_cache.hpp:33</a></div></div>
 <div class="ttc" id="anamespacestd_html_af85f882012afa318c51f819f24e48af4"><div class="ttname"><a href="namespacestd.html#af85f882012afa318c51f819f24e48af4">std::get</a></div><div class="ttdeci">constexpr tuple_element&lt; I, tuple&lt; Types... &gt; &gt;::type &amp; get(cl::sycl::detail::tuple&lt; Types... &gt; &amp;Arg) noexcept</div><div class="ttdef"><b>Definition:</b> <a href="tuple_8hpp_source.html#l00199">tuple.hpp:199</a></div></div>
@@ -1999,6 +2000,7 @@ $(document).ready(function(){initNavTree('program__manager_8cpp_source.html','')
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1program__impl_html_a1cf094d15bf1212af809f76fc3a1d3a5"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1program__impl.html#a1cf094d15bf1212af809f76fc3a1d3a5">cl::sycl::detail::program_impl::getHandleRef</a></div><div class="ttdeci">RT::PiProgram &amp; getHandleRef()</div><div class="ttdef"><b>Definition:</b> <a href="program__impl_8hpp_source.html#l00130">program_impl.hpp:130</a></div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1exception_html_a7b0f9af176ae1b6e5d857dbe02d05f0e"><div class="ttname"><a href="classcl_1_1sycl_1_1exception.html#a7b0f9af176ae1b6e5d857dbe02d05f0e">cl::sycl::exception::what</a></div><div class="ttdeci">const char * what() const noexcept final</div><div class="ttdef"><b>Definition:</b> <a href="exception_8cpp_source.html#l00016">exception.cpp:16</a></div></div>
 <div class="ttc" id="astruct__pi__offload__entry__struct_html_a25fd5ebf183672b3bed64e2be713a048"><div class="ttname"><a href="struct__pi__offload__entry__struct.html#a25fd5ebf183672b3bed64e2be713a048">_pi_offload_entry_struct::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00599">pi.h:599</a></div></div>
+<div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1plugin_html_a39f0e8cb0d7d64e4d497e8f6a544609d"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1plugin.html#a39f0e8cb0d7d64e4d497e8f6a544609d">cl::sycl::detail::plugin::reportPiError</a></div><div class="ttdeci">void reportPiError(RT::PiResult pi_result, const char *context) const</div><div class="ttdef"><b>Definition:</b> <a href="plugin_8hpp_source.html#l00059">plugin.hpp:59</a></div></div>
 <div class="ttc" id="api_8h_html_a39b5f0fc5dbb20bdf9f837230f3c36f4"><div class="ttname"><a href="pi_8h.html#a39b5f0fc5dbb20bdf9f837230f3c36f4">PI_TRUE</a></div><div class="ttdeci">const pi_bool PI_TRUE</div><div class="ttdef"><b>Definition:</b> <a href="pi_8h_source.html#l00465">pi.h:465</a></div></div>
 <div class="ttc" id="api_8h_html_a7b97b450acfc8ecd2c2fadb25e2b9ca4"><div class="ttname"><a href="pi_8h.html#a7b97b450acfc8ecd2c2fadb25e2b9ca4">piProgramBuild</a></div><div class="ttdeci">pi_result piProgramBuild(pi_program program, pi_uint32 num_devices, const pi_device *device_list, const char *options, void(*pfn_notify)(pi_program program, void *user_data), void *user_data)</div></div>
 <div class="ttc" id="aclasscl_1_1sycl_1_1detail_1_1KernelProgramCache_html_acb6791d7cd345c64d90af3b6f434999e"><div class="ttname"><a href="classcl_1_1sycl_1_1detail_1_1KernelProgramCache.html#acb6791d7cd345c64d90af3b6f434999e">cl::sycl::detail::KernelProgramCache::PiProgramT</a></div><div class="ttdeci">std::remove_pointer&lt; RT::PiProgram &gt;::type PiProgramT</div><div class="ttdef"><b>Definition:</b> <a href="kernel__program__cache_8hpp_source.html#l00067">kernel_program_cache.hpp:67</a></div></div>

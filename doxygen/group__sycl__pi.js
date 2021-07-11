@@ -22,6 +22,7 @@ var group__sycl__pi =
       [ "getPiPlugin", "classcl_1_1sycl_1_1detail_1_1plugin.html#a883c22acd2148838d33adba2e8ff9993", null ],
       [ "operator=", "classcl_1_1sycl_1_1detail_1_1plugin.html#a73af91cfa440a1e87d6c1210dea79d7a", null ],
       [ "operator=", "classcl_1_1sycl_1_1detail_1_1plugin.html#aeaa69fb83a0955dfa917dbba4cfa45a6", null ],
+      [ "reportPiError", "classcl_1_1sycl_1_1detail_1_1plugin.html#a39f0e8cb0d7d64e4d497e8f6a544609d", null ],
       [ "unload", "classcl_1_1sycl_1_1detail_1_1plugin.html#af360ab867da0b340615c97823bed306d", null ]
     ] ]
 ];
