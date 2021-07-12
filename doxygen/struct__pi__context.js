@@ -22,7 +22,7 @@ var struct__pi__context =
     [ "~_pi_context", "struct__pi__context.html#a7f2b9fc69db23537259267800cd8e4ea", null ],
     [ "decrement_reference_count", "struct__pi__context.html#a7299c02da0e3d6f14c31d4019919c466", null ],
     [ "decrement_reference_count", "struct__pi__context.html#a7299c02da0e3d6f14c31d4019919c466", null ],
-    [ "decrementAliveEventsInPool", "struct__pi__context.html#ae6ffe44f8513da731cc5d36448665b69", null ],
+    [ "decrementUnreleasedEventsInPool", "struct__pi__context.html#a947d80ab7e0c6ab4e91792d4a96b9464", null ],
     [ "finalize", "struct__pi__context.html#a267920a9c97b33dbc59a034183f3a938", null ],
     [ "get", "struct__pi__context.html#a3d64a8851d139de4d1c29a331b53a962", null ],
     [ "get", "struct__pi__context.html#a3d64a8851d139de4d1c29a331b53a962", null ],
