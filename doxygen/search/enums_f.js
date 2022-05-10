@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['queue_11742',['queue',['../namespacecl_1_1sycl_1_1info.html#a298d56c26b4eec2a4d4fb1649e2d1063',1,'cl::sycl::info']]],
-  ['queueorder_11743',['QueueOrder',['../namespacecl_1_1sycl_1_1detail.html#a74a50612bd831e329413cf55545b3b06',1,'cl::sycl::detail']]]
+  ['partition_5faffinity_5fdomain_18195',['partition_affinity_domain',['../namespacesycl_1_1__V1_1_1info.html#a30d4df09615affe3636030c2cd9fea1d',1,'sycl::_V1::info']]],
+  ['partition_5fproperty_18196',['partition_property',['../namespacesycl_1_1__V1_1_1info.html#a92b8a6dc9937b3402bd277d21a4aacaa',1,'sycl::_V1::info']]],
+  ['peer_5faccess_18197',['peer_access',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi.html#a5d53e5f2cde123e24abab8233270d940',1,'sycl::_V1::ext::oneapi']]],
+  ['pi_5fext_5fstructure_5ftype_18198',['pi_ext_structure_type',['../pi_8h.html#af1bdf859b0256c85aea797717f8b50cb',1,'pi.h']]],
+  ['pi_5fexternal_5fmem_5fhandle_5ftype_18199',['pi_external_mem_handle_type',['../pi_8h.html#a4f6ffe057f31deac08ad37a41a3e6996',1,'pi.h']]],
+  ['pi_5fexternal_5fsemaphore_5fhandle_5ftype_18200',['pi_external_semaphore_handle_type',['../pi_8h.html#a1c703162d887993bc06b8e8f07fbed85',1,'pi.h']]],
+  ['pi_5fproperty_5ftype_18201',['pi_property_type',['../pi_8h.html#a3bddf119fac52fe9d9486f8ce1be4d7f',1,'pi.h']]],
+  ['piapikind_18202',['PiApiKind',['../namespacesycl_1_1__V1_1_1detail.html#a7b7f4b08ac07f2752578c703096f4c29',1,'sycl::_V1::detail']]],
+  ['placeholder_18203',['placeholder',['../namespacesycl_1_1__V1_1_1access.html#a11137a39dde634340bfd78c474ef1f8a',1,'sycl::_V1::access']]],
+  ['pointer_5faccess_5fattribute_18204',['pointer_access_attribute',['../namespacesyclcompat_1_1detail.html#ae27f132e6deb2d5dc91006293b10cc10',1,'syclcompat::detail']]],
+  ['preference_18205',['Preference',['../namespacesycl_1_1__V1_1_1ext_1_1intel.html#ad03a9a3725b7497c89fa1351b98a2ef2',1,'sycl::_V1::ext::intel']]],
+  ['program_5fstate_18206',['program_state',['../namespacesycl_1_1__V1_1_1detail.html#ab402f93955bba45dfe1cdeb6b216d164',1,'sycl::_V1::detail']]],
+  ['propagate_18207',['Propagate',['../namespacesycl_1_1__V1_1_1ext_1_1intel.html#a997a2d6cbf696413641f0810e46ff3e7',1,'sycl::_V1::ext::intel']]],
+  ['propertysupport_18208',['PropertySupport',['../classsycl_1_1__V1_1_1detail_1_1context__impl.html#af8b76c9ca5969650a0f37e1717ed00e1',1,'sycl::_V1::detail::context_impl']]],
+  ['propkind_18209',['PropKind',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail.html#a2846d6df72dc521669f09e1bb755cd99',1,'sycl::_V1::ext::oneapi::experimental::detail']]],
+  ['propwithdatakind_18210',['PropWithDataKind',['../namespacesycl_1_1__V1_1_1detail.html#a3a16bc5608ef9bb9ebeeba8645b6934d',1,'sycl::_V1::detail']]],
+  ['protocol_5fname_18211',['protocol_name',['../namespacesycl_1_1__V1_1_1ext_1_1intel_1_1experimental.html#a2ee0351addd2a879332617a18576f687',1,'sycl::_V1::ext::intel::experimental']]]
 ];

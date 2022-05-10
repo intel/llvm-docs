@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__cuda_00_01buffer_3_01Da67670513165dc3b0ef1a07206839ef88 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__cuda_00_01buffer_3_01Da67670513165dc3b0ef1a07206839ef88.html#ad076f65b033e7c3be9c510ddda175596", null ],
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__cuda_00_01buffer_3_01Da67670513165dc3b0ef1a07206839ef88.html#a6f817caae4376fdb078cf3ea4b7b3211", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1RuntimePropertyStorage_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1RuntimePropertyStorage_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4.html#a588d0ffe475505f3a2295a59d90ce621", null ]
+];

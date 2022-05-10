@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4 =
-[
-    [ "scope", "structcl_1_1sycl_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1global__space_01_4.html#a1f2f9409aa5c0ef331a729843ea688de", null ]
-];

@@ -1,0 +1,27 @@
+var classsycl_1_1__V1_1_1detail_1_1platform__impl =
+[
+    [ "platform_impl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a27ded76ca5b1cf87ad18aae262b47d2e", null ],
+    [ "platform_impl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#af4e57cc4acb28d4bc5ac98cb924634dd", null ],
+    [ "~platform_impl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#abd1bc777224b4442f93a95ca44e58f6a", null ],
+    [ "get", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#aa5849b7296589920206de01322b437fa", null ],
+    [ "get_backend_info", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#aff73394077c8c06147c123a457622ddc", null ],
+    [ "get_devices", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#aafe8d107fe74020653b7613b46c05096", null ],
+    [ "get_info", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a4068924e7b9196995f4cbcb71414612c", null ],
+    [ "get_platforms", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a443d234826683385a5d7312cdf1f3c90", null ],
+    [ "getBackend", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a4ee3723d70b597d6c2f2bd672a1c5dcc", null ],
+    [ "getBackendOption", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a12f34448c916a3c272d46b4ef85141b2", null ],
+    [ "getDeviceImpl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a7ffc2271d0001d4b55c41da1bb0cdf24", null ],
+    [ "getHandleRef", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#ab5e11fcd4429ab45adc813b93930b2e8", null ],
+    [ "getHostPlatformImpl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a092d999adf415f9c26b213cb08cecab3", null ],
+    [ "getNative", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a0518ca073e67f9c58ea97a64c0cd85d9", null ],
+    [ "getOrMakeDeviceImpl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a0ba2ef5a4f13002275bf2e6a0925c63a", null ],
+    [ "getOrMakePlatformImpl", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a25420413c114d76d6d914179858a761e", null ],
+    [ "getPlatformFromPiDevice", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#ab780834ad9445f0fd6ad5e93559994ca", null ],
+    [ "getPlugin", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#ac094eb0003f5eb5cc4420e7ad8637b1e", null ],
+    [ "has", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a62c33e667223623c5a39e04e47c26229", null ],
+    [ "has_extension", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a85e700af78e91777d07fd96422a09fbd", null ],
+    [ "is_host", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a598084cc661aa9f03d58359bf4117d7d", null ],
+    [ "setPlugin", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a980d64d61707779e0c2cbcd8398dc47e", null ],
+    [ "supports_usm", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#aecb956dcfb23baa446d5ecaa701cd4b8", null ],
+    [ "MAlwaysRootDevice", "classsycl_1_1__V1_1_1detail_1_1platform__impl.html#a03a0dcb3d1d0cba68c458e20371f0170", null ]
+];

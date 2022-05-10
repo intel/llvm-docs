@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__elem__type_3_01multi__ptr_3_01ElementType_00_01Space_00_01DecorateAddress_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1get__elem__type_3_01multi__ptr_3_01ElementType_00_01Space_00_01DecorateAddress_01_4_01_4.html#a11c054203ba1cf23c068a1a8ae53c29d", null ]
+];

@@ -1,0 +1,6 @@
+var structsycl_1_1__V1_1_1detail_1_1LegacyPointerTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4 =
+[
+    [ "const_pointer_t", "structsycl_1_1__V1_1_1detail_1_1LegacyPointerTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#ad29b5bb56b29a67105793922e9186f35", null ],
+    [ "decorated_type", "structsycl_1_1__V1_1_1detail_1_1LegacyPointerTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#a21b66f647cbb7c0dfa9c0182f587d0df", null ],
+    [ "pointer_t", "structsycl_1_1__V1_1_1detail_1_1LegacyPointerTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#a2a5b8354f3478db5db5bf29b83d0d465", null ]
+];

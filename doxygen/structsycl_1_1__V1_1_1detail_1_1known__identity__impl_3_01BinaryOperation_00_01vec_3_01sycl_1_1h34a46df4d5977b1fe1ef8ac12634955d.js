@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01vec_3_01sycl_1_1h34a46df4d5977b1fe1ef8ac12634955d =
+[
+    [ "value", "structsycl_1_1__V1_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01vec_3_01sycl_1_1h34a46df4d5977b1fe1ef8ac12634955d.html#a09f84e55daac0a534668c43aa3ec7002", null ]
+];

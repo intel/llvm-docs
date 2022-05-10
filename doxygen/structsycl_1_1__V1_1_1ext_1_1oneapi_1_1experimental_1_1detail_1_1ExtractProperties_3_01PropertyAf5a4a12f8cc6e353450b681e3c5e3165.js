@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01PropertyAf5a4a12f8cc6e353450b681e3c5e3165 =
+[
+    [ "Extract", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ExtractProperties_3_01PropertyAf5a4a12f8cc6e353450b681e3c5e3165.html#a882a2d4f313ce7ea10eec8186d15e2d6", null ]
+];

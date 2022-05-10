@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4 =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01kernel__bundle_3_01State_01_4_01_4.html#a7ea348df081009d836137381fc98a33f", null ]
-];

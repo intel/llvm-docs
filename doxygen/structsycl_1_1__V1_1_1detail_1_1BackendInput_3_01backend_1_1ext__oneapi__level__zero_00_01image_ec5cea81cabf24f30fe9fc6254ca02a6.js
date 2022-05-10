@@ -1,0 +1,8 @@
+var structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01image_ec5cea81cabf24f30fe9fc6254ca02a6 =
+[
+    [ "ChanOrder", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01image_ec5cea81cabf24f30fe9fc6254ca02a6.html#af29a0f6322bf438698a3552702e933fb", null ],
+    [ "ChanType", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01image_ec5cea81cabf24f30fe9fc6254ca02a6.html#a307206fe36335919433f9c2b74aa5626", null ],
+    [ "Ownership", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01image_ec5cea81cabf24f30fe9fc6254ca02a6.html#aa8c8d4889d5149996040c18e53528080", null ],
+    [ "Range", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01image_ec5cea81cabf24f30fe9fc6254ca02a6.html#a7b3015b18507ccae73e4fa8489389d60", null ],
+    [ "ZeImageHandle", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01image_ec5cea81cabf24f30fe9fc6254ca02a6.html#a48c77862b87e558c53582fc5338bf714", null ]
+];

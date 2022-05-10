@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Specialization constants &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A brief overview of kernel and program caching mechanism" href="KernelProgramCache.html" />
+    <link rel="prev" title="The DPC++ Runtime Plugin Interface." href="PluginInterface.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Specialization constants</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="PluginInterface.html">The DPC++ Runtime Plugin Interface.</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="KernelProgramCache.html">A brief overview of kernel and program caching mechanism</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="specialization-constants">
+<h1>Specialization constants<a class="headerlink" href="#specialization-constants" title="Link to this heading">¶</a></h1>
+<p>Specialization constants are implemented in accordance with how they are defined
+by SYCL 2020 specification: <a class="reference external" href="https://www.khronos.org/registry/SYCL/">SYCL registry</a>,
+<a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html">direct link to the specification</a>.</p>
+<blockquote>
+<div><p>Specialization constants represent constants whose values can be set
+dynamically during execution of the SYCL application. The values of these
+constants are fixed when a SYCL kernel function is invoked, and they do not
+change during the execution of the kernel. However, the application is able to
+set a new value for a specialization constants each time a kernel is invoked,
+so the values can be tuned differently for each invocation.</p>
+<p><a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html#_specialization_constants">Section 4.9.5 Specialization constants</a></p>
+</div></blockquote>
+<p>Example usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;sycl/sycl.hpp&gt;</span>
+<span class="n">using</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">;</span>
+
+<span class="n">using</span> <span class="n">coeff_t</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">array</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">array</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">3</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="o">//</span> <span class="n">Read</span> <span class="n">coefficients</span> <span class="kn">from</span> <span class="nn">somewhere.</span>
+<span class="n">coeff_t</span> <span class="n">get_coefficients</span><span class="p">();</span>
+
+<span class="o">//</span> <span class="n">Identify</span> <span class="n">the</span> <span class="n">specialization</span> <span class="n">constant</span><span class="o">.</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">coeff_t</span><span class="o">&gt;</span> <span class="n">coeff_id</span><span class="p">;</span>
+
+<span class="n">void</span> <span class="n">do_conv</span><span class="p">(</span><span class="n">buffer</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="ow">in</span><span class="p">,</span> <span class="n">buffer</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">out</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">queue</span> <span class="n">myQueue</span><span class="p">;</span>
+
+  <span class="n">myQueue</span><span class="o">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">cgh</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">accessor</span> <span class="n">in_acc</span> <span class="p">{</span> <span class="ow">in</span><span class="p">,</span> <span class="n">cgh</span><span class="p">,</span> <span class="n">read_only</span> <span class="p">};</span>
+    <span class="n">accessor</span> <span class="n">out_acc</span> <span class="p">{</span> <span class="n">out</span><span class="p">,</span> <span class="n">cgh</span><span class="p">,</span> <span class="n">write_only</span> <span class="p">};</span>
+
+    <span class="o">//</span> <span class="n">Set</span> <span class="n">the</span> <span class="n">coefficient</span> <span class="n">of</span> <span class="n">the</span> <span class="n">convolution</span> <span class="k">as</span> <span class="n">constant</span><span class="o">.</span>
+    <span class="o">//</span> <span class="n">This</span> <span class="n">will</span> <span class="n">build</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">kernel</span> <span class="n">the</span> <span class="n">coefficient</span> <span class="n">available</span> <span class="k">as</span> <span class="n">literals</span><span class="o">.</span>
+    <span class="n">cgh</span><span class="o">.</span><span class="n">set_specialization_constant</span><span class="o">&lt;</span><span class="n">coeff_id</span><span class="o">&gt;</span><span class="p">(</span><span class="n">get_coefficients</span><span class="p">());</span>
+
+    <span class="n">cgh</span><span class="o">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">Convolution</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="ow">in</span><span class="o">.</span><span class="n">get_range</span><span class="p">(),</span> <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span> <span class="n">item_id</span><span class="p">,</span> <span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nb">float</span> <span class="n">acc</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+          <span class="n">coeff_t</span> <span class="n">coeff</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">coeff_id</span><span class="o">&gt;</span><span class="p">();</span>
+          <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">item_id</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">item_id</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">in_acc</span><span class="o">.</span><span class="n">get_range</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+              <span class="k">continue</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">if</span> <span class="p">(</span><span class="n">item_id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">item_id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">j</span> <span class="o">&gt;=</span> <span class="n">in_acc</span><span class="o">.</span><span class="n">get_range</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">continue</span><span class="p">;</span>
+              <span class="o">//</span> <span class="n">The</span> <span class="n">underlying</span> <span class="n">JIT</span> <span class="n">can</span> <span class="n">see</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">values</span> <span class="n">of</span> <span class="n">the</span> <span class="n">array</span> <span class="n">returned</span>
+              <span class="o">//</span> <span class="n">by</span> <span class="n">coeff</span><span class="o">.</span><span class="n">get</span><span class="p">()</span><span class="o">.</span>
+              <span class="n">acc</span> <span class="o">+=</span> <span class="n">coeff</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span>
+                     <span class="n">in_acc</span><span class="p">[</span><span class="n">item_id</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span><span class="p">][</span><span class="n">item_id</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">j</span><span class="p">];</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+          <span class="n">out_acc</span><span class="p">[</span><span class="n">item_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">acc</span><span class="p">;</span>
+        <span class="p">});</span>
+  <span class="p">});</span>
+
+  <span class="n">myQueue</span><span class="o">.</span><span class="n">wait</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="design-objectives">
+<h2>Design objectives<a class="headerlink" href="#design-objectives" title="Link to this heading">¶</a></h2>
+<p>SYCL 2020 <a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html#specialization-constant">defines specialization constant</a>
+as:</p>
+<blockquote>
+<div><p>A constant variable where the value is not known until compilation of the
+SYCL kernel function.</p>
+<p><a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html#glossary">Glossary</a></p>
+</div></blockquote>
+<p>And implementation is based on <a class="reference external" href="https://www.khronos.org/registry/spir-v/specs/unified1/SPIRV.html">SPIR-V speficiation</a> support
+for <a class="reference external" href="https://www.khronos.org/registry/spir-v/specs/unified1/SPIRV.html#SpecializationSection">Specialization</a>. However, the specification also
+states the following:</p>
+<blockquote>
+<div><p>It is expected that many implementations will use an intermediate language
+representation … such as SPIR-V, and the intermediate language will have
+native support for specialization constants. However, implementations that do
+not have such native support must still support specialization constants in
+some other way.</p>
+<p><a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html#_specialization_constant_support">Section 4.11.12.2. Specialization constant support</a></p>
+</div></blockquote>
+<p>Having that said, the following should be implemented:</p>
+<ol class="arabic simple">
+<li><p>We need to ensure that in generated SPIR-V, calls to
+<code class="docutils literal notranslate"><span class="pre">get_specialization_constant</span></code> are replaced with corresponding instructions for
+referencing SPIR-V specialization constants.</p></li>
+<li><p>SYCL provides a mechanism to specify default values of specialization
+constants, which should be reflected in the generated SPIR-V. This part is
+especially tricky, because this happens in host part of the SYCL program, which
+means that without special handling it won’t even be visible to the device
+compiler.</p></li>
+<li><p>We need to ensure that DPC++ RT properly sets specialization constants used
+in the program: SYCL spec uses non-type template parameters to identify
+specialization constants in the program, while at SPIR-V and OpenCL levels, each
+specialization constant is defined by its numerical ID, which means that we
+need to maintain some mapping from SYCL identifiers to a numeric identifiers in
+order to be able to set specialization constants. Moreover, at SPIR-V level
+composite specialization constants do not have separate ID and can only be set
+by setting value to each member of a composite, which means that we have <code class="docutils literal notranslate"><span class="pre">1:n</span></code>
+mapping between SYCL identifiers and numeric IDs of specialization constants.</p></li>
+<li><p>When AOT compilation is used or the target device does not use SPIR-V as the
+device code format (for example, CUDA device, where NVPTX intermediate
+representation is used), we need to somehow emulate support for specialization
+constants.</p></li>
+</ol>
+</section>
+<section id="design">
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
+<p>As stated above, native specialization constants support is based on
+corresponding SPIR-V functionality, while emulation is implemented through
+transforming specialization constants into kernel arguments.</p>
+<p>In DPC++ Headers/DPC++ RT we don’t know a lot of necessary information about
+specialization constants, like: which numeric ID is used for particular
+specialization constant (since we support <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code>, those IDs can only
+be allocated by the compiler during link stage) or which kernel argument is used
+to pass particular specialization constant (because they are not explicitly
+captured by SYCL kernel functions and regular mechanism for kernel arguments
+handling can’t be used here).</p>
+<p>Therefore, we can’t have headers-only implementation and the crucial part of
+design is how to organize mapping mechanism between SYCL identifiers for
+specialization constants (<code class="docutils literal notranslate"><span class="pre">specialization_id</span></code>s) and low-level identifiers
+(numeric IDs in SPIR-V or information about corresponding kernel arguments).</p>
+<p>That mapping mechanism is particularly tricky, because of some additional
+complexity coming from SYCL 2020 specification:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> variables, which are used as specialization constant
+identifiers (being non-type template parameters of some methods) can’t be
+forward-declared in general case (for example, if defined as <code class="docutils literal notranslate"><span class="pre">static</span></code>), which
+means that we can’t use integration header to attach some information to them
+through some C++ templates tricks (like it is done for regular kernel
+arguments or kernel names, for example).</p></li>
+<li><p>they also can be declared as <code class="docutils literal notranslate"><span class="pre">static</span></code> or just non-<code class="docutils literal notranslate"><span class="pre">inline</span></code> <code class="docutils literal notranslate"><span class="pre">constexpr</span></code>, which
+means that they have internal linkage and can’t be referenced from other
+translation units, which means that we can’t for example create a new
+translation unit which contains some mapping from <code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> address
+to some desired info.</p></li>
+</ul>
+<p>Based on those limitations, the following mapping design is proposed:</p>
+<ul>
+<li><p>DPC++ RT uses special function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">detail</span> <span class="p">{</span>
+  <span class="n">template</span><span class="o">&lt;</span><span class="n">auto</span> <span class="o">&amp;</span><span class="n">SpecName</span><span class="o">&gt;</span>
+  <span class="n">inline</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">get_spec_constant_symbolic_ID</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Which is only declared, but not defined in there and used to retrieve required
+information like numeric ID of a specialization constant.</p>
+</li>
+<li><p>Definition of that function template are provided by DPC++ FE in form of
+<em>integration footer</em>: the compiler generates a piece of C++ code which is
+injected at the end of a translation unit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">detail</span> <span class="p">{</span>
+  <span class="o">//</span> <span class="n">assuming</span> <span class="n">user</span> <span class="n">defined</span> <span class="n">the</span> <span class="n">following</span> <span class="n">specialization_id</span><span class="p">:</span>
+  <span class="o">//</span> <span class="n">constexpr</span> <span class="n">specialiation_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">int_const</span><span class="p">;</span>
+  <span class="o">//</span> <span class="k">class</span> <span class="nc">Wrapper</span> <span class="p">{</span>
+  <span class="o">//</span> <span class="n">public</span><span class="p">:</span>
+  <span class="o">//</span>   <span class="n">static</span> <span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">float_const</span><span class="p">;</span>
+  <span class="o">//</span> <span class="p">};</span>
+
+  <span class="n">template</span><span class="o">&lt;&gt;</span>
+  <span class="n">inline</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">get_spec_constant_symbolic_ID</span><span class="o">&lt;</span><span class="n">int_const</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;unique_name_for_int_const&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">template</span><span class="o">&lt;&gt;</span>
+  <span class="n">inline</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">get_spec_constant_symbolic_ID</span><span class="o">&lt;</span><span class="n">Wrapper</span><span class="p">::</span><span class="n">float_const</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">&quot;unique_name_for_Wrapper_float_const&quot;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Those symbolic IDs are used to identify device image properties corresponding
+to those specialization constants, which store additional information (like
+numeric SPIR-V ID of a constant) needed for DPC++ RT.</p>
+</li>
+<li><p>That integration footer is automatically appended by the compiler at the end
+of user-provided translation unit by driver.</p></li>
+</ul>
+<p>Another significant part of the design is how specialization constants support
+is emulated: as briefly mentioned before, the general approach is to transform
+specialization constants into kernel arguments. In fact all specialization
+constants used within a program are bundled together and stored into a single
+buffer, which is passed as implicit kernel argument. The layout of that buffer
+is well-defined and known to both the compiler and the runtime, so when user
+sets the value of a specialization constant, that value is being copied into
+particular place within that buffer and once the constant is requested in
+device code, the compiler generates a load from the same place of the buffer.</p>
+<p>Summarizing, overall design looks like:</p>
+<p>DPC++ Headers provide special markup, which used by the compiler to detect
+presence of specialization constants and properly handle them.</p>
+<p>DPC++ FE handles <code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> SYCL kernel function argument, creates
+additional kernel argument to pass specialization constants through buffer if
+necessary (i.e. if native support is not available) and generates integration
+footer.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> transforms device code to either generate proper SPIR-V
+Friendly IR with specialization constants (when native support is available) or
+to generate correct access to corresponding kernel argument (which are used
+when native support is not available); also the tool generates some device image
+properties with all information needed for DPC++ RT (like which numeric SPIR-V
+ID was assigned to which symbolic ID).</p>
+<p>With help of <code class="docutils literal notranslate"><span class="pre">clang-offload-wrapper</span></code> tool, those device image properties are
+embedded into the application together with device code and used by DPC++ RT
+while handling specialization constants during application execution: it either
+calls corresponding PI API to set a value of a specialization constant or it
+fills a special buffer with values of specialization constants and passes it as
+kernel argument to emulate support of specialization constants.</p>
+<p>Sections below describe each component in more details.</p>
+<section id="dpc-headers">
+<h3>DPC++ Headers<a class="headerlink" href="#dpc-headers" title="Link to this heading">¶</a></h3>
+<p>DPC++ Headers provide required definitions of <code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> and
+<code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> classes as well as of many other classes and methods.</p>
+<p><code class="docutils literal notranslate"><span class="pre">kernel_handler::get_specialization_constant</span></code> method, which provides an access
+to specialization constants within device code implements an interface between
+DPC++ Headers and the compiler (<code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool): it contains a special
+markup, which allows the compiler to detect specialization constants in the
+device code and properly handle them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">__sycl_getScalar2020SpecConstantValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">SymbolicID</span><span class="p">,</span> <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">DefaultValue</span><span class="p">,</span> <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">RTBuffer</span><span class="p">);</span>
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">__sycl_getComposite2020SpecConstantValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">SymbolicID</span><span class="p">,</span> <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">DefaultValue</span><span class="p">,</span> <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">RTBuffer</span><span class="p">);</span>
+
+<span class="k">class</span> <span class="nc">kernel_handler</span> <span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+  <span class="n">template</span><span class="o">&lt;</span><span class="n">auto</span><span class="o">&amp;</span> <span class="n">SpecName</span><span class="o">&gt;</span>
+  <span class="n">typename</span> <span class="n">std</span><span class="p">::</span><span class="n">remove_reference_t</span><span class="o">&lt;</span><span class="n">decltype</span><span class="p">(</span><span class="n">SpecName</span><span class="p">)</span><span class="o">&gt;</span><span class="p">::</span><span class="nb">type</span> <span class="n">get_specialization_constant</span><span class="p">()</span> <span class="p">{</span>
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+    <span class="k">return</span> <span class="n">get_on_device</span><span class="o">&lt;</span><span class="n">SpecName</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="c1">#else</span>
+    <span class="o">//</span> <span class="n">some</span> <span class="n">fallback</span> <span class="n">implementation</span> <span class="ow">in</span> <span class="n">case</span> <span class="n">this</span> <span class="n">code</span> <span class="ow">is</span> <span class="n">launched</span> <span class="n">on</span> <span class="n">host</span>
+<span class="c1">#endif __SYCL_DEVICE_ONLY__</span>
+  <span class="p">}</span>
+
+<span class="n">private</span><span class="p">:</span>
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="n">template</span><span class="o">&lt;</span><span class="n">auto</span> <span class="o">&amp;</span><span class="n">SpecName</span><span class="p">,</span> <span class="n">typename</span> <span class="n">T</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">remove_reference_t</span><span class="o">&lt;</span><span class="n">decltype</span><span class="p">(</span><span class="n">SpecName</span><span class="p">)</span><span class="o">&gt;</span><span class="p">::</span><span class="nb">type</span><span class="o">&gt;</span>
+  <span class="o">//</span> <span class="n">enable_if</span> <span class="n">T</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">scalar</span> <span class="nb">type</span>
+  <span class="n">T</span> <span class="n">get_on_device</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">auto</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">__builtin_sycl_unique_id</span><span class="p">(</span><span class="n">SpecName</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">__sycl_getScalar2020SpecConstantValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ID</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">SpecName</span><span class="p">,</span> <span class="n">Ptr</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">template</span><span class="o">&lt;</span><span class="n">auto</span> <span class="o">&amp;</span><span class="n">SpecName</span><span class="p">,</span> <span class="n">typename</span> <span class="n">T</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">remove_reference_t</span><span class="o">&lt;</span><span class="n">decltype</span><span class="p">(</span><span class="n">SpecName</span><span class="p">)</span><span class="o">&gt;</span><span class="p">::</span><span class="nb">type</span><span class="o">&gt;</span>
+  <span class="o">//</span> <span class="n">enable_if</span> <span class="n">T</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">composite</span> <span class="nb">type</span>
+  <span class="n">T</span> <span class="n">get_on_device</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">auto</span> <span class="n">ID</span> <span class="o">=</span> <span class="n">__builtin_sycl_unique_id</span><span class="p">(</span><span class="n">SpecName</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">__sycl_getComposite2020SpecConstantValue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">ID</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">SpecName</span><span class="p">,</span> <span class="n">Ptr</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="c1">#endif // __SYCL_DEVICE_ONLY__</span>
+
+  <span class="n">byte</span> <span class="o">*</span><span class="n">Ptr</span> <span class="o">=</span> <span class="n">nullptr</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span>
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code> is a new compiler built-in which is supposed to
+generate unique symbolic IDs for specialization constants.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__sycl_getScalar2020SpecConstantValue&lt;T&gt;</span></code> and
+<code class="docutils literal notranslate"><span class="pre">__sycl_getComposite2020SpecConstant&lt;T&gt;</span></code> are functions with special names - they
+are declared in the headers but never defined. Calls to them are recognized by
+a special LLVM pass later and this is aforementioned special markup required for
+the compiler.</p>
+<p>Those functions accept three parameters:</p>
+<ol class="arabic simple">
+<li><p>Symbolic ID of specialization constant. This must be a constant string, which
+will be used by the compiler to uniquely identify the specialization
+constant. Device image properties generated by the compiler will use that
+string as well to attach additional data to the constant.</p></li>
+<li><p>Default value of the specialization constant.
+It is expected that at LLVM IR level the argument will contain a pointer to
+a global variable with the initializer, which should be used as the default
+value of the specialization constants.</p></li>
+<li><p>Pointer to a buffer, which will be used if native specialization constants
+are not available. This pointer is described later in the section
+corresponding to emulation of specialization constants.</p></li>
+</ol>
+<p>Compilation and subsequent linkage of the device code results in a number of
+<code class="docutils literal notranslate"><span class="pre">__sycl_getScalar2020SpecConstantValue</span></code> and
+<code class="docutils literal notranslate"><span class="pre">__sycl_getComposite2020SpecConstantValue</span></code> calls. Before generating a device
+binary, each linked device code LLVM IR module undergoes processing by
+<code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool which can run LLVM IR passes before passing the module
+onto the SPIR-V translator.</p>
+</section>
+<section id="dpc-compiler-sycl-post-link-tool">
+<h3>DPC++ Compiler: sycl-post-link tool<a class="headerlink" href="#dpc-compiler-sycl-post-link-tool" title="Link to this heading">¶</a></h3>
+<p>As it is stated above, the only place where we can properly handle
+specialization constants is somewhere during or after linking device code from
+different translation units, so it happens in <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool.</p>
+<p>There is a <code class="docutils literal notranslate"><span class="pre">SpecConstantsPass</span></code> LLVM IR pass which:</p>
+<ol class="arabic simple">
+<li><p>Assigns numeric IDs to specialization constants found in the linked module.</p></li>
+<li><p>Transforms IR to either:</p>
+<ol class="arabic simple">
+<li><p>The form expected by the SPIR-V translator (format of the
+expected IR is covered in “Transformation of LLVM IR to SPIR-V friendly IR
+form” section).</p></li>
+<li><p>The form which is used for emulating specialization constants.</p></li>
+</ol>
+</li>
+<li><p>Collects and provides &lt;Symbolic ID&gt; =&gt; &lt;numeric IDs + additional info&gt;
+mapping, which is later being used by DPC++ RT to set specialization constant
+values provided by user (section “Collecting spec constants info and
+communicating it to DPC++ RT” provides more info on that)</p></li>
+</ol>
+<section id="assignment-of-numeric-ids-to-specialization-constants">
+<h4>1. Assignment of numeric IDs to specialization constants<a class="headerlink" href="#assignment-of-numeric-ids-to-specialization-constants" title="Link to this heading">¶</a></h4>
+<p>This task is achieved by maintaining a map, which holds a list of numeric IDs
+for each encountered symbolic ID of a specialization constant. Those IDs are
+used to identify the specialization constants at SPIR-V level.</p>
+<p>As noted above one symbolic ID can have several numeric IDs assigned to it -
+such 1:N mapping comes from the fact that at SPIR-V level, composite
+specialization constants don’t have dedicated IDs and they are being identified
+and specialized through their scalar leafs and corresponding numeric IDs.</p>
+<p>For example, the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Nested</span> <span class="p">{</span>
+  <span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">struct</span> <span class="n">A</span> <span class="p">{</span>
+  <span class="nb">int</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">Nested</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">id_int</span><span class="p">;</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">id_A</span><span class="p">;</span>
+<span class="o">//</span> <span class="o">...</span>
+  <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_int</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_A</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Will result in the following numeric IDs assignment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// since `id_int` is a simple arithmetic specialization constant, we only
+// have a single numeric ID associated with its symbolic ID
+unique_symbolic_id_for_id_int -&gt; { 0 }
+// `id_A` is a composite with three leafs (scalar members, including ones
+// located in nested composite types), which results in three numeric IDs
+// associated with the same symbolic ID
+unique_symbolic_id_for_id_A -&gt; { 1, 2, 3 }
+</pre></div>
+</div>
+<p>As it is shown in the example above, if a composite specialization constant
+contains another composite within it, that nested composite is also being
+“flattened” and its leafs are considered to be leafs of the parent
+specialization constants. This done by depth-first search through the composite
+elements.</p>
+</section>
+<section id="transformation-of-llvm-ir-to-spir-v-friendly-ir-form">
+<h4>2.1 Transformation of LLVM IR to SPIR-V friendly IR form<a class="headerlink" href="#transformation-of-llvm-ir-to-spir-v-friendly-ir-form" title="Link to this heading">¶</a></h4>
+<p>SPIR-V friendly IR form is a special representation of LLVM IR, where some
+function are named in particular way in order to be recognizable by the SPIR-V
+translator to convert them into corresponding SPIR-V instructions later.
+The format is documented <a class="reference external" href="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/blob/master/docs/SPIRVRepresentationInLLVM.rst">here</a>.</p>
+<p>For specialization constant, we need to generate the following constructs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="o">//</span> <span class="n">T</span> <span class="ow">is</span> <span class="n">arithmetic</span> <span class="nb">type</span>
+<span class="n">T</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="nb">int</span> <span class="n">numericID</span><span class="p">,</span> <span class="n">T</span> <span class="n">default_value</span><span class="p">);</span>
+
+<span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="p">,</span> <span class="n">typename</span><span class="o">...</span> <span class="n">Elements</span><span class="o">&gt;</span> <span class="o">//</span> <span class="n">T</span> <span class="ow">is</span> <span class="n">composite</span> <span class="nb">type</span><span class="p">,</span>
+<span class="o">//</span> <span class="n">Elements</span> <span class="n">are</span> <span class="n">arithmetic</span> <span class="ow">or</span> <span class="n">composite</span> <span class="n">types</span>
+<span class="n">T</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="n">Elements</span><span class="o">...</span> <span class="n">elements</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Particularly, <code class="docutils literal notranslate"><span class="pre">SpecConstantsPass</span></code> translates calls to the
+<code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">__sycl_getScalar2020SpecConstantValue(const</span> <span class="pre">char</span> <span class="pre">*SymbolicID,</span> <span class="pre">const</span> <span class="pre">void</span> <span class="pre">*DefaultValue,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*RTBuffer)</span></code>
+intrinsic into calls to <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">__spirv_SpecConstant(int</span> <span class="pre">ID,</span> <span class="pre">T</span> <span class="pre">default_val)</span></code>.
+And for <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">__sycl_getComposite2020SpecConstantValue(const</span> <span class="pre">char</span> <span class="pre">*SybmolicID,</span> <span class="pre">const</span> <span class="pre">void</span> <span class="pre">*DefaultValue,</span> <span class="pre">const</span> <span class="pre">char</span> <span class="pre">*RTBuffer)</span></code>
+it generates number of <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">__spirv_SpecConstant(int</span> <span class="pre">ID,</span> <span class="pre">T</span> <span class="pre">default_val)</span></code> calls for
+each leaf of the composite type, plus number of
+<code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">__spirv_SpecConstantComposite(Elements...</span> <span class="pre">elements)</span></code> for each composite type
+(including the outermost one).</p>
+<p>Example of LLVM IR transformation can be found below, input LLVM IR:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="o">=</span> <span class="nb">type</span> <span class="p">{</span> <span class="p">[</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">],</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="p">}</span>
+<span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="nb">type</span> <span class="p">{</span> <span class="n">i32</span><span class="p">,</span> <span class="nb">float</span> <span class="p">}</span>
+
+<span class="nd">@gold_scalar_default</span> <span class="o">=</span> <span class="k">global</span> <span class="o">%</span><span class="n">class</span><span class="o">.</span><span class="n">specialization_id</span> <span class="p">{</span> <span class="n">i32</span> <span class="mi">42</span> <span class="p">}</span>
+<span class="nd">@gold_default</span> <span class="o">=</span> <span class="k">global</span> <span class="o">%</span><span class="n">class</span><span class="o">.</span><span class="n">specialization_id</span> <span class="p">{</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="p">{</span> <span class="p">[</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">]</span> <span class="p">[</span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="p">{</span> <span class="n">i32</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">float</span> <span class="mf">2.000000e+00</span> <span class="p">},</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="p">{</span> <span class="n">i32</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">float</span> <span class="mf">3.000000e+00</span> <span class="p">}],</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">i32</span> <span class="mi">44</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">44</span><span class="o">&gt;</span> <span class="p">}</span> <span class="p">}</span>
+
+
+<span class="p">;</span> <span class="n">the</span> <span class="n">second</span> <span class="n">argument</span> <span class="n">of</span> <span class="n">intrinsics</span> <span class="n">below</span> <span class="n">are</span> <span class="n">simplified</span> <span class="n">a</span> <span class="n">bit</span>
+<span class="p">;</span> <span class="ow">in</span> <span class="n">real</span><span class="o">-</span><span class="n">life</span> <span class="n">LLVM</span> <span class="n">IR</span> <span class="n">it</span> <span class="n">looks</span> <span class="n">like</span><span class="p">:</span>
+<span class="p">;</span>   <span class="n">i8</span><span class="o">*</span> <span class="n">bitcast</span> <span class="p">(</span><span class="o">%</span><span class="n">class</span><span class="o">.</span><span class="n">specialization_id</span><span class="o">*</span> <span class="nd">@gold_scalar_default</span> <span class="n">to</span> <span class="n">i8</span><span class="o">*</span>
+<span class="o">%</span><span class="n">gold_scalar</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__sycl_getScalar2020SpecConstantValue</span><span class="o">&lt;</span><span class="nb">int</span> <span class="nb">type</span> <span class="n">mangling</span><span class="o">&gt;</span> <span class="p">(</span><span class="s2">&quot;gold_scalar_identifier&quot;</span><span class="p">,</span> <span class="nd">@gold_scalar_default</span><span class="p">,</span> <span class="n">i8</span><span class="o">*</span> <span class="o">%</span><span class="n">buffer</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__sycl_getComposite2020SpecConstantValue</span><span class="o">&lt;</span><span class="n">POD</span> <span class="nb">type</span> <span class="n">mangling</span><span class="o">&gt;</span> <span class="p">(</span><span class="s2">&quot;gold_identifier&quot;</span><span class="p">,</span> <span class="nd">@gold_default</span><span class="p">,</span> <span class="n">i8</span><span class="o">*</span> <span class="o">%</span><span class="n">default</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>LLVM IR generated by <code class="docutils literal notranslate"><span class="pre">SpecConstantsPass</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">gold_scalar</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">42</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A0_x</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">1</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">1</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_A0_y</span> <span class="o">=</span> <span class="n">call</span> <span class="nb">float</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">float</span> <span class="mf">2.000000e+00</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A0</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_A0_x</span><span class="p">,</span> <span class="nb">float</span> <span class="o">%</span><span class="n">gold_POD_A0_y</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A1_x</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">3</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">2</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_A1_y</span> <span class="o">=</span> <span class="n">call</span> <span class="nb">float</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">4</span><span class="p">,</span> <span class="nb">float</span> <span class="mf">3.000000e+00</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A1</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_A1_x</span><span class="p">,</span> <span class="nb">float</span> <span class="o">%</span><span class="n">gold_POD_A1_y</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_A</span> <span class="o">=</span> <span class="n">call</span> <span class="p">[</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">]</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">(</span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">%</span><span class="n">gold_POD_A0</span><span class="p">,</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">%</span><span class="n">gold_POD_A1</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold_POD_b0</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">44</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_b1</span> <span class="o">=</span> <span class="n">call</span> <span class="n">i32</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="mi">6</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">44</span><span class="p">)</span>
+<span class="o">%</span><span class="n">gold_POD_b</span> <span class="o">=</span> <span class="n">call</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="n">__spirv_SpecConstant</span><span class="p">(</span><span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_b0</span><span class="p">,</span> <span class="n">i32</span> <span class="o">%</span><span class="n">gold_POD_b1</span><span class="p">)</span>
+
+<span class="o">%</span><span class="n">gold</span> <span class="o">=</span> <span class="n">call</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">POD</span> <span class="n">__spirv_SpecConstantComposite</span><span class="p">([</span><span class="mi">2</span> <span class="n">x</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="p">]</span> <span class="o">%</span><span class="n">gold_POD_A</span><span class="p">,</span> <span class="o">&lt;</span><span class="mi">2</span> <span class="n">x</span> <span class="n">i32</span><span class="o">&gt;</span> <span class="o">%</span><span class="n">gold_POD_b</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="transformation-of-llvm-ir-for-emulating-specialization-constants">
+<h4>2.2 Transformation of LLVM IR for emulating specialization constants<a class="headerlink" href="#transformation-of-llvm-ir-for-emulating-specialization-constants" title="Link to this heading">¶</a></h4>
+<p>In case we are not targeting SPIR-V, we don’t have a native support for
+specialization constants and have to emulate them somehow. As stated above, it
+is done by converting specialization constants into kernel arguments: they all
+bundled together and put into a single buffer.</p>
+<p><code class="docutils literal notranslate"><span class="pre">SpecConstantsPass</span></code> should generate proper accesses to that buffer when
+specialization constants are used: this is done by replacing special
+<code class="docutils literal notranslate"><span class="pre">__sycl_getScalar2020SpecConstantValue</span></code> and
+<code class="docutils literal notranslate"><span class="pre">__sycl_getComposite2020SpecConstantValue</span></code> functions with accesses to their
+third argument, which contains a pointer to the buffer with values of all
+specialization constants. That access looks like a sequence of the following
+LLVM IR instruction <code class="docutils literal notranslate"><span class="pre">getelementptr</span></code> from the buffer pointer by calculated,
+offset, then <code class="docutils literal notranslate"><span class="pre">bitcast</span></code> to pointer to proper return type (because the buffer
+pointer is just an “untyped” <code class="docutils literal notranslate"><span class="pre">i8</span> <span class="pre">*</span></code>) and <code class="docutils literal notranslate"><span class="pre">load</span></code>. An example of that LLVM IR:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">an</span> <span class="n">example</span> <span class="k">for</span><span class="p">:</span>
+<span class="p">;</span> <span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">id_double</span><span class="p">;</span>
+<span class="p">;</span>   <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">;</span>     <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_double</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="p">;</span> <span class="n">__sycl_getScalar2020SpecConstantValue</span><span class="p">(</span><span class="nd">@SymbolicID</span><span class="p">,</span> <span class="o">%</span><span class="n">DefaultValue</span><span class="p">,</span> <span class="n">i8</span> <span class="o">*%</span><span class="n">RTBuffer</span><span class="p">)</span>
+<span class="p">;</span> <span class="ow">is</span> <span class="n">being</span> <span class="n">replaced</span> <span class="k">with</span>
+
+<span class="o">%</span><span class="n">gep</span> <span class="o">=</span> <span class="n">getelementptr</span> <span class="n">i8</span><span class="p">,</span> <span class="n">i8</span><span class="o">*</span> <span class="o">%</span><span class="n">RTBuffer</span><span class="p">,</span> <span class="n">i32</span> <span class="p">[</span><span class="n">calculated</span><span class="o">-</span><span class="n">offset</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="nd">@SymbolicID</span><span class="p">]</span>
+<span class="o">%</span><span class="n">bitcast</span> <span class="o">=</span> <span class="n">bitcase</span> <span class="n">i8</span><span class="o">*</span> <span class="o">%</span><span class="n">gep</span> <span class="n">to</span> <span class="n">double</span><span class="o">*</span>
+<span class="o">%</span><span class="n">load</span> <span class="o">=</span> <span class="n">load</span> <span class="n">double</span><span class="p">,</span> <span class="n">double</span><span class="o">*</span> <span class="o">%</span><span class="n">bitcast</span>
+
+<span class="p">;</span> <span class="o">%</span><span class="n">load</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">resulting</span> <span class="n">value</span><span class="p">,</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">used</span> <span class="n">further</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">a</span> <span class="n">result</span> <span class="n">of</span>
+<span class="p">;</span> <span class="n">call</span> <span class="n">to</span> <span class="n">__sycl_getScalar2020SpecConstantValue</span>
+</pre></div>
+</div>
+<p>The layout of that buffer is defined as follows: all specialization constants
+are placed there one after another in ascending order of their numeric IDs
+assigned to them by <code class="docutils literal notranslate"><span class="pre">SpecConstantPass</span></code> previously.</p>
+<p>For example, the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Nested</span> <span class="p">{</span>
+  <span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">struct</span> <span class="n">A</span> <span class="p">{</span>
+  <span class="nb">int</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">Nested</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">id_int</span><span class="p">;</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">id_A</span><span class="p">;</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">Nested</span><span class="o">&gt;</span> <span class="n">id_Nested</span><span class="p">;</span>
+<span class="o">//</span> <span class="o">...</span>
+  <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_int</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_A</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_Nested</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Will result in the following buffer layout, i.e. offsets of each specialization
+constant in that buffer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="mi">0</span><span class="p">,</span> <span class="o">//</span> <span class="k">for</span> <span class="n">id_int</span><span class="p">,</span> <span class="n">the</span> <span class="n">first</span> <span class="n">constant</span> <span class="ow">is</span> <span class="n">at</span> <span class="n">the</span> <span class="n">beginning</span> <span class="n">of</span> <span class="n">the</span> <span class="n">buffer</span>
+  <span class="mi">4</span><span class="p">,</span> <span class="o">//</span> <span class="n">sizeof</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="n">the</span> <span class="n">second</span> <span class="n">constant</span> <span class="ow">is</span> <span class="n">located</span> <span class="n">right</span> <span class="n">after</span> <span class="n">the</span> <span class="n">fisrt</span> <span class="n">one</span>
+  <span class="mi">16</span><span class="p">,</span> <span class="o">//</span> <span class="n">sizeof</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span> <span class="o">+</span> <span class="n">sizezof</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">,</span> <span class="n">the</span> <span class="n">same</span> <span class="n">approach</span> <span class="k">for</span> <span class="n">the</span> <span class="n">third</span> <span class="n">constant</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="collecting-spec-constants-info-and-communicating-it-to-dpc-rt">
+<h4>3. Collecting spec constants info and communicating it to DPC++ RT<a class="headerlink" href="#collecting-spec-constants-info-and-communicating-it-to-dpc-rt" title="Link to this heading">¶</a></h4>
+<p>For each encountered specialization constants <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> emits a property,
+which encodes information required by DPC++ RT to set the value of a
+specialization constant through corresponding API.</p>
+<p>These properties are stored in “SYCL/specialization constants” property set and
+their names are the same as symbolic IDs of corresponding specialization
+constants (i.e. strings returned by <code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code> for associated
+<code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> variables).</p>
+<p>Each such property contains an array of tuples (descriptors)
+&lt;leaf spec ID, offset, size&gt;. This descriptor might be overcomplicated for
+simple arithmetic spec constants, but it is still used for them in order to
+unify internal representation of scalar and composite spec constants and
+simplify their handling in DPC++ RT.
+This descriptor is needed, because at DPC++ RT level, composite constants are
+set by user as a byte array and we have to break it down to the leaf members of
+the composite and set a value for each leaf as for a separate scalar
+specialization constant.</p>
+<p>For simple scalar specialization constants the array will only contain a single
+descriptor representing the constant itself. For composite specialization
+constants the array will contain several descriptors for each leaf of the
+composite type.</p>
+<p>The descriptor contains the following fields:</p>
+<ul class="simple">
+<li><p>ID of a composite constant leaf, i.e. ID of a scalar specialization constant,
+which is a part of a composite type or ID of a constant itself if it is a
+scalar.</p></li>
+<li><p>Offset from the beginning of composite, which points to the location of a
+scalar value within the composite, i.e. the position where scalar
+specialization constant resides within the byte array supplied by the user.
+For scalar specialization constants it will always be 0.</p></li>
+<li><p>Size of the scalar specialization constant</p></li>
+</ul>
+<p>For example, the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Nested</span> <span class="p">{</span>
+  <span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">struct</span> <span class="n">A</span> <span class="p">{</span>
+  <span class="nb">int</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">Nested</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">id_int</span><span class="p">;</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">id_A</span><span class="p">;</span>
+<span class="o">//</span> <span class="o">...</span>
+  <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_int</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_A</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>Will result in the following property set generated:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">property_set</span> <span class="p">{</span>
+  <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;SYCL/specialization constants&quot;</span><span class="p">,</span>
+  <span class="n">properties</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nb">property</span> <span class="p">{</span>
+      <span class="n">Name</span><span class="p">:</span> <span class="s2">&quot;id_int_symbolic_ID&quot;</span><span class="p">,</span>
+      <span class="n">ValAddr</span><span class="p">:</span> <span class="n">points</span> <span class="n">to</span> <span class="n">byte</span> <span class="n">array</span> <span class="p">[{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">}],</span>
+      <span class="n">Type</span><span class="p">:</span> <span class="n">PI_PROPERTY_TYPE_BYTE_ARRAY</span><span class="p">,</span>
+      <span class="n">Size</span><span class="p">:</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">byte</span> <span class="n">array</span> <span class="n">above</span><span class="p">)</span>
+    <span class="p">},</span>
+    <span class="nb">property</span> <span class="p">{</span>
+      <span class="n">Name</span><span class="p">:</span> <span class="s2">&quot;id_A_symbolic_ID&quot;</span><span class="p">,</span>
+      <span class="n">ValAddr</span><span class="p">:</span> <span class="n">points</span> <span class="n">to</span> <span class="n">byte</span> <span class="n">array</span> <span class="p">[{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">},</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">}],</span>
+      <span class="n">Type</span><span class="p">:</span> <span class="n">PI_PROPERTY_TYPE_BYTE_ARRAY</span><span class="p">,</span>
+      <span class="n">Size</span><span class="p">:</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">byte</span> <span class="n">array</span> <span class="n">above</span><span class="p">)</span>
+    <span class="p">},</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The property set described above is mainly intended to be used when native
+specialization constants are available, but it will be also used for emulation
+of specialization constants: SPIR-V IDs and sizes of specialization constants
+will be used to calculate offset of each specialization constant within a
+buffer, which is used to propagate them to kernel through kernel arguments.</p>
+<p>Additionally, another property set will be generated to support emulated
+specialization constants, which will contain a single property with default
+values of all specialization constants in the same form as they will be
+propagated from host to device through kernel arguments, i.e. this property will
+simply contain a blob that for each specialization constant of type <code class="docutils literal notranslate"><span class="pre">A</span></code>
+represents an object of type <code class="docutils literal notranslate"><span class="pre">A</span></code> constructed with values passed to
+<code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> constructor; those values are ordered in ascending order of
+numeric SPIR-V IDs assigned to corresponding specialization constants.</p>
+<p>This blob can be used by DPC++ RT to either pre-initialize the whole buffer for
+specialization constants with their default value or to extract default value of
+a particular specialization constant out of it.</p>
+<p>For example, the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">Nested</span> <span class="p">{</span>
+  <span class="n">constexpr</span> <span class="n">Nested</span><span class="p">(</span><span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="nb">float</span> <span class="n">b</span><span class="p">)</span> <span class="p">:</span> <span class="n">a</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="mf">1.0</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">struct</span> <span class="n">A</span> <span class="p">{</span>
+  <span class="n">constexpr</span> <span class="n">A</span><span class="p">(</span><span class="nb">int</span> <span class="n">x</span><span class="p">,</span> <span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="nb">float</span> <span class="n">b</span><span class="p">)</span> <span class="p">:</span> <span class="n">x</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">n</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="nb">int</span> <span class="n">x</span><span class="p">;</span>
+  <span class="n">Nested</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">id_int</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">id_A</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">);</span>
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">Nested</span><span class="o">&gt;</span> <span class="n">id_Nested</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">);</span>
+<span class="o">//</span> <span class="o">...</span>
+  <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_int</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_A</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_Nested</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>The following property set will be generated:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">property_set</span> <span class="p">{</span>
+  <span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;SYCL/specialization constants default values&quot;</span><span class="p">,</span>
+  <span class="n">properties</span><span class="p">:</span> <span class="p">[</span>
+    <span class="nb">property</span> <span class="p">{</span>
+      <span class="n">Name</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
+      <span class="n">ValAddr</span><span class="p">:</span> <span class="n">points</span> <span class="n">to</span> <span class="n">byte</span> <span class="n">array</span> <span class="p">[</span>
+        <span class="mi">42</span><span class="p">,</span> <span class="o">//</span> <span class="n">id_int</span>
+        <span class="mi">1</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="o">//</span> <span class="n">id_A</span>
+        <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span> <span class="o">//</span> <span class="n">id_Nested</span>
+      <span class="p">],</span>
+      <span class="n">Type</span><span class="p">:</span> <span class="n">PI_PROPERTY_TYPE_BYTE_ARRAY</span><span class="p">,</span>
+      <span class="n">Size</span><span class="p">:</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">byte</span> <span class="n">array</span> <span class="n">above</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="dpc-compiler-front-end">
+<h3>DPC++ Compiler: front-end<a class="headerlink" href="#dpc-compiler-front-end" title="Link to this heading">¶</a></h3>
+<p>DPC++ FE is responsible for several things related to specialization constants:</p>
+<p>While transforming SYCL kernel function into an OpenCL kernel, DPC++ FE should</p>
+<ul class="simple">
+<li><p>Handle <code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> argument: it is not captured by lambda and therefore
+should be separately handled in DPC++ FE</p></li>
+<li><p>Communicate to DPC++ RT which kernel argument should be used for passing
+a buffer with specialization constant values when they are emulated.</p></li>
+</ul>
+<p>DPC++ FE provides implementation of <code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code> built-in function and
+it also populates special integration footer with the content required by DPC++
+RT for access to right device image properties describing specialization
+constants.</p>
+<section id="sycl-kernel-function-transformations">
+<h4>SYCL Kernel function transformations<a class="headerlink" href="#sycl-kernel-function-transformations" title="Link to this heading">¶</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> is defined by SYCL 2020 specification as interface for
+retrieving specialization constant values in SYCL kernel functions, but it
+actually used only in emulation mode: since native specialization constant are
+directly lowered into corresponding SPIR-V instructions, no additional handling
+is needed. However, in order to get a value of a specialization constant which
+was passed through a buffer, we need to have a pointer to that buffer: as it is
+shown in DPC++ Headers section of the document, pointer to that buffer is stored
+within <code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> object and passed to <code class="docutils literal notranslate"><span class="pre">__sycl_get*2020SpecConstantValue</span></code>
+function.</p>
+<p>According to the <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/CompilerAndRuntimeDesign.md#lowering-of-lambda-function-objects-and-named-function-objects">compiler design</a>, DPC++ FE wraps
+SYCL kernel functions into OpenCL kernels and when <code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> object is
+passed as an argument to SYCL kernel function, DPC++ FE should re-create that
+object within the wrapper function and initialize it from implicitly created
+OpenCL kernel argument.</p>
+<p>Note: that extra <code class="docutils literal notranslate"><span class="pre">kernel_handler</span></code> object is not needed in every case: for,
+example it is effectively unused when native specialization constants are
+supported. However, per our <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/CompilerAndRuntimeDesign.md#lowering-of-lambda-function-objects-and-named-function-objects">compiler-design</a>, we
+don’t have per-target information about kernel signatures, which means that
+kernel signatures must be the same for all targets, i.e. the same between
+native and emulated specialization constants (JIT vs AOT compilation).</p>
+<p>Considering the following input to DPC++ FE:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">KernelName</span><span class="p">,</span> <span class="n">typename</span> <span class="n">KernelType</span><span class="o">&gt;</span>
+  <span class="n">__attribute__</span><span class="p">((</span><span class="n">sycl_kernel</span><span class="p">))</span> <span class="n">void</span>
+  <span class="n">kernel_single_task</span><span class="p">(</span><span class="n">const</span> <span class="n">KernelType</span> <span class="o">&amp;</span><span class="n">KernelFunc</span><span class="p">,</span> <span class="n">kernel_handler</span> <span class="n">kh</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">KernelFunc</span><span class="p">(</span><span class="n">kh</span><span class="p">);</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>It should be transformed into something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">__kernel</span> <span class="n">void</span> <span class="n">oclKernel</span><span class="p">(</span><span class="n">args_for_lambda_init</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">specialization_constants_buffer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">KernelType</span> <span class="n">LocalLambdaClone</span> <span class="o">=</span> <span class="p">{</span> <span class="n">args_for_lambda_init</span> <span class="p">};</span> <span class="o">//</span> <span class="n">We</span> <span class="n">already</span> <span class="n">do</span> <span class="n">this</span>
+  <span class="n">kernel_handler</span> <span class="n">LocalKernelHandler</span><span class="p">;</span>
+  <span class="n">LocalKernelHandler</span><span class="o">.</span><span class="n">__init_specialization_constants_buffer</span><span class="p">(</span><span class="n">specialization_constants_buffer</span><span class="p">);</span>
+  <span class="o">//</span> <span class="k">for</span> <span class="n">simplicity</span> <span class="n">we</span> <span class="n">could</span> <span class="n">have</span> <span class="n">just</span> <span class="n">used</span>
+  <span class="o">//</span> <span class="n">kernel_handler</span> <span class="n">LocalKernelHandler</span> <span class="o">=</span> <span class="p">{</span> <span class="n">args_for_kernel_handler_init</span> <span class="p">};</span>
+  <span class="o">//</span> <span class="n">here</span><span class="p">,</span> <span class="n">but</span> <span class="n">we</span> <span class="n">assume</span> <span class="n">that</span> <span class="n">kernel_handler</span> <span class="n">might</span> <span class="n">be</span> <span class="n">used</span> <span class="k">for</span> <span class="n">more</span> <span class="n">than</span> <span class="n">just</span>
+  <span class="o">//</span> <span class="n">accessing</span> <span class="n">specialization</span> <span class="n">constants</span> <span class="ow">and</span> <span class="n">therefore</span> <span class="n">there</span> <span class="n">could</span> <span class="n">be</span> <span class="n">other</span>
+  <span class="o">//</span> <span class="n">initialization</span> <span class="n">parameters</span> <span class="n">which</span> <span class="n">also</span> <span class="n">could</span> <span class="n">be</span> <span class="n">conditional</span>
+  <span class="o">//</span> <span class="n">Even</span> <span class="n">now</span> <span class="n">we</span> <span class="n">don</span><span class="s1">&#39;t need to always initialize the kernel_handler object</span>
+  <span class="o">//</span> <span class="n">Re</span><span class="o">-</span><span class="n">used</span> <span class="n">body</span> <span class="n">of</span> <span class="s2">&quot;sycl_kernel&quot;</span> <span class="n">function</span><span class="p">:</span>
+  <span class="p">{</span>
+     <span class="n">LocalLambdaClone</span><span class="p">(</span><span class="n">LocalKernelHandler</span><span class="p">);</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The argument is communicated to DPC++ through regular integration header
+mechanism, i.e. it is added as new entry to <code class="docutils literal notranslate"><span class="pre">kernel_signatures</span></code> structure there
+with parameter kind set to a new enumeration value
+<code class="docutils literal notranslate"><span class="pre">kernel_param_kind_t::kind_specialization_constants_buffer</span></code>.</p>
+</section>
+<section id="builtin-sycl-unique-id">
+<h4><code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code><a class="headerlink" href="#builtin-sycl-unique-id" title="Link to this heading">¶</a></h4>
+<p>This built-in is used to generate unique identifiers for specialization
+constants, which are used in communication between the compiler and the runtime.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code> is defined as follows: it accepts a variable and
+returns a C-string (<code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">char</span> <span class="pre">*</span></code>), which:</p>
+<ul class="simple">
+<li><p>if the input variable has external linkage, the string must be the same in all
+translation units that pass this same variable to the built-in.</p></li>
+<li><p>if the input variable has internal linkage, the string must be unique across
+all translation units.</p></li>
+<li><p>return string must be the same if the built-in was called twice for the same
+variable within a single translation unit (regardless of its linkage type).</p></li>
+</ul>
+</section>
+<section id="integration-footer-generation">
+<h4>Integration footer generation<a class="headerlink" href="#integration-footer-generation" title="Link to this heading">¶</a></h4>
+<p>Note: we could have used <code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code> directly in DPC++ Headers,
+but this would break compilation of those with a third-party C++ 17-compatible
+compiler, which is unaware of this built-in function. Therefore, the compiler
+generates a header file, which includes <em>the result</em> of calling
+<code class="docutils literal notranslate"><span class="pre">__builtin_sycl_unique_id</span></code> function and it is included into the user’s program.
+By doing so we can still use this non-standard built-in function and preserve
+support for third-party host compilers.</p>
+<p>However, as noted above, we can’t use regular integration header here, because
+in general case, <code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> variables can’t be forward-declared.
+Therefore, we are using <em>integration footer</em> approach, i.e. we generate a header
+file which must be included at the end of a translation unit.</p>
+<p>For the following code snippet:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">A</span> <span class="p">{</span>
+  <span class="nb">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">id_int</span><span class="p">;</span>
+<span class="n">struct</span> <span class="n">Wraper</span> <span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+  <span class="n">static</span> <span class="n">constexpr</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span> <span class="n">id_A</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">constexpr</span> <span class="n">inline</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">id_double</span><span class="p">;</span>
+<span class="n">constexpr</span> <span class="n">inline</span> <span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">id_float</span><span class="p">;</span>
+<span class="o">//</span> <span class="o">...</span>
+<span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">cgh</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">cgh</span><span class="o">.</span><span class="n">set_specialization_constant</span><span class="o">&lt;</span><span class="n">id_int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">42</span><span class="p">);</span>
+  <span class="n">cgh</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_double</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="o">//</span> <span class="o">...</span>
+  <span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">kernel_handler</span> <span class="n">h</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">id_int</span><span class="o">&gt;</span><span class="p">();</span>
+    <span class="n">h</span><span class="o">.</span><span class="n">get_specialization_constant</span><span class="o">&lt;</span><span class="n">Wrapper</span><span class="p">::</span><span class="n">id_A</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The integration footer will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>namespace sycl {
+inline namespace _V1 {
+namespace detail {
+// Note: we do not declare `get_spec_constant_symbolic_ID` here and assume that
+// it is declared in some other header which was already included.
+
+// specializations for each specialization constant (for each `specialization_id`):
+// we can refer to all those specialization_id variables, because integration
+// footer was _appended_ to the user-provided translation unit
+template&lt;&gt;
+inline const char *get_spec_constant_symbolic_ID&lt;id_int&gt;() {
+  return &quot;result of __builtin_sycl_unique_id(id_int) encoded here&quot;;
+}
+
+template&lt;&gt;
+inline const char *get_spec_constant_symbolic_ID&lt;Wrapper::id_A&gt;() {
+  return &quot;result of __builtin_sycl_unique_id(Wrapper::id_A) encoded here&quot;;
+}
+
+template&lt;&gt;
+inline const char *get_spec_constant_symbolic_ID&lt;id_double&gt;() {
+  return &quot;result of __builtin_sycl_unique_id(id_double) encoded here&quot;;
+}
+
+template&lt;&gt;
+inline const char *get_spec_constant_symbolic_ID&lt;id_float&gt;() {
+  return &quot;result of __builtin_sycl_unique_id(id_float) encoded here&quot;;
+}
+
+} // namespace detail
+} // namespace _V1
+} // namespace sycl
+
+// Detailed description of this header is provided below in corresponding RT section
+#include &lt;sycl/detail/spec_const_integration.hpp&gt;
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">get_spec_constant_symbolic_ID</span></code> specialization are generated for each
+definition of <code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> object regardless of its uses within SYCL
+kernel functions: those IDs are used by DPC++ RT as well even for those spec
+constants, which are never accessed on device.</p>
+<section id="ambiguous-references-to-specialization-id">
+<h5>Ambiguous references to specialization_id<a class="headerlink" href="#ambiguous-references-to-specialization-id" title="Link to this heading">¶</a></h5>
+<p>There are valid C++ code examples, where references to <code class="docutils literal notranslate"><span class="pre">specialization_id</span></code>
+variables could be ambiguous if they just referenced from a global namespace
+like shown above. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">constexpr</span> <span class="n">sycl</span><span class="p">::</span><span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">same_name</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>
+
+<span class="o">/*</span> <span class="n">application</span> <span class="n">code</span> <span class="n">that</span> <span class="n">references</span> <span class="s2">&quot;::same_name&quot;</span> <span class="o">*/</span>
+
+<span class="n">namespace</span> <span class="p">{</span>
+  <span class="n">constexpr</span> <span class="n">sycl</span><span class="p">::</span><span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">same_name</span><span class="p">{</span><span class="mi">2</span><span class="p">}:</span>
+  <span class="o">/*</span> <span class="n">application</span> <span class="n">code</span> <span class="n">that</span> <span class="n">referenes</span> <span class="p">::(</span><span class="n">unnamed</span><span class="p">)::</span><span class="n">same_name</span> <span class="o">*/</span>
+  <span class="n">namespace</span> <span class="p">{</span>
+    <span class="n">constexpr</span> <span class="n">sycl</span><span class="p">::</span><span class="n">specialization_id</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">same_name</span><span class="p">{</span><span class="mi">3</span><span class="p">}:</span>
+    <span class="o">/*</span> <span class="n">application</span> <span class="n">code</span> <span class="n">that</span> <span class="n">referenes</span> <span class="p">::(</span><span class="n">unnamed</span><span class="p">)::(</span><span class="n">unnamed</span><span class="p">)::</span><span class="n">same_name</span> <span class="o">*/</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">/*</span> <span class="n">application</span> <span class="n">code</span> <span class="n">that</span> <span class="n">references</span> <span class="s2">&quot;::same_name&quot;</span> <span class="o">*/</span>
+</pre></div>
+</div>
+<p>In that case we can’t use <code class="docutils literal notranslate"><span class="pre">same_name</span></code> for specializing
+<code class="docutils literal notranslate"><span class="pre">get_spec_constant_symbolic_ID</span></code>, because it would be ambiguous reference.
+However, we can do the following trick:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Content</span> <span class="n">of</span> <span class="n">integration</span> <span class="n">footer</span> <span class="k">for</span> <span class="n">the</span> <span class="n">example</span> <span class="n">above</span>
+
+<span class="o">//</span> <span class="n">For</span> <span class="n">unambiguous</span> <span class="n">references</span> <span class="n">we</span> <span class="n">can</span> <span class="n">generate</span> <span class="n">regular</span> <span class="n">specialization</span>
+<span class="n">template</span><span class="o">&lt;&gt;</span>
+<span class="n">inline</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">get_spec_constant_symbolic_ID</span><span class="o">&lt;</span><span class="p">::</span><span class="n">same_name</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">&quot;result of __builtin_sycl_unique_id(::same_name) encoded here&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">For</span> <span class="n">ambiguous</span> <span class="n">references</span> <span class="n">we</span> <span class="n">generate</span> <span class="s1">&#39;shim&#39;</span> <span class="n">functions</span><span class="p">,</span> <span class="n">which</span> <span class="n">allows</span> <span class="n">us</span> <span class="n">to</span>
+<span class="o">//</span> <span class="n">get</span> <span class="n">an</span> <span class="n">address</span> <span class="n">of</span> <span class="n">a</span> <span class="n">variable</span> <span class="n">within</span> <span class="n">a</span> <span class="p">(</span><span class="n">possible</span> <span class="n">nested</span><span class="p">)</span> <span class="n">anonymous</span> <span class="n">namespace</span>
+<span class="o">//</span> <span class="n">without</span> <span class="n">spelling</span> <span class="n">it</span><span class="o">.</span>
+<span class="n">namespace</span> <span class="p">{</span>
+  <span class="n">namespace</span> <span class="n">__sycl_detail</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">This</span> <span class="n">helper</span> <span class="ow">is</span> <span class="n">need</span> <span class="n">to</span> <span class="n">get</span> <span class="n">addresses</span> <span class="n">of</span> <span class="n">variables</span> <span class="n">defined</span> <span class="n">within</span>
+    <span class="o">//</span> <span class="n">anonymous</span> <span class="n">namespace</span><span class="o">.</span>
+    <span class="o">//</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">generated</span> <span class="k">for</span> <span class="n">each</span> <span class="n">specialization_id</span> <span class="n">within</span> <span class="n">an</span> <span class="n">anonymous</span> <span class="n">namespace</span>
+    <span class="o">//</span> <span class="k">if</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">same</span> <span class="n">specialization_id</span> <span class="n">defined</span> <span class="ow">in</span> <span class="k">global</span> <span class="n">namespace</span>
+    <span class="n">static</span> <span class="n">constexpr</span> <span class="n">decltype</span><span class="p">(</span><span class="n">same_name</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">__shim_0</span><span class="p">()</span> <span class="p">{</span>
+      <span class="o">//</span> <span class="n">address</span> <span class="n">of</span> <span class="p">::(</span><span class="n">unnamed</span><span class="p">)::</span><span class="n">same_name</span><span class="p">;</span>
+      <span class="k">return</span> <span class="n">same_name</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+  <span class="n">namespace</span> <span class="n">detail</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">By</span> <span class="n">using</span> <span class="s1">&#39;shim&#39;</span> <span class="n">function</span> <span class="n">were</span> <span class="n">are</span> <span class="n">able</span> <span class="n">to</span> <span class="n">unambiguously</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">a</span>
+    <span class="o">//</span> <span class="n">variable</span> <span class="n">within</span> <span class="n">an</span> <span class="n">anonymous</span> <span class="n">namespace</span>
+    <span class="n">template</span><span class="o">&lt;&gt;</span>
+    <span class="n">inline</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">get_spec_constant_symbolic_ID</span><span class="o">&lt;</span><span class="p">::</span><span class="n">__sycl_detail</span><span class="p">::</span><span class="n">__shim_0</span><span class="p">()</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="s2">&quot;unique id for ::(unnamed)::same_name&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">namespace</span> <span class="p">{</span>
+  <span class="n">namespace</span> <span class="p">{</span>
+    <span class="n">namespace</span> <span class="n">__sycl_detail</span> <span class="p">{</span>
+      <span class="n">static</span> <span class="n">constexpr</span> <span class="n">decltype</span><span class="p">(</span><span class="n">same_name</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">__shim_1</span><span class="p">()</span> <span class="p">{</span>
+        <span class="o">//</span> <span class="n">address</span> <span class="n">of</span> <span class="p">::(</span><span class="n">unnamed</span><span class="p">)::(</span><span class="n">unnamed</span><span class="p">)::</span><span class="n">same_name</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">same_name</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="n">namespace</span> <span class="n">__sycl_detail</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">Sometimes</span> <span class="n">we</span> <span class="n">need</span> <span class="n">a</span> <span class="s1">&#39;shim&#39;</span><span class="p">,</span> <span class="n">which</span> <span class="n">points</span> <span class="n">to</span> <span class="n">another</span> <span class="s1">&#39;shim&#39;</span> <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span>
+    <span class="o">//</span> <span class="s2">&quot;extract&quot;</span> <span class="n">a</span> <span class="n">variable</span> <span class="kn">from</span> <span class="nn">an</span> <span class="n">anonymous</span> <span class="n">namespace</span> <span class="n">unambiguosly</span>
+    <span class="n">static</span> <span class="n">constexpr</span> <span class="n">decltype</span><span class="p">(</span><span class="n">__sycl_detail</span><span class="p">::</span><span class="n">__shim_1</span><span class="p">())</span> <span class="o">&amp;</span><span class="n">__shim_2</span><span class="p">()</span> <span class="p">{</span>
+      <span class="o">//</span> <span class="n">still</span> <span class="n">address</span> <span class="n">of</span> <span class="p">::(</span><span class="n">unnamed</span><span class="p">)::(</span><span class="n">unnamed</span><span class="p">)::</span><span class="n">same_name</span><span class="p">;</span>
+      <span class="k">return</span> <span class="n">__sycl_detail</span><span class="p">::</span><span class="n">__shim_1</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+  <span class="n">namespace</span> <span class="n">detail</span> <span class="p">{</span>
+    <span class="n">template</span><span class="o">&lt;&gt;</span>
+    <span class="n">inline</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">get_spec_constant_symbolic_ID</span><span class="o">&lt;</span><span class="p">::</span><span class="n">__sycl_detail</span><span class="p">::</span><span class="n">__shim_2</span><span class="p">()</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="s2">&quot;unique id for ::(unnamed)::(unnamed)::same_name&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">#include &lt;sycl/detail/spec_const_integration.hpp&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="dpc-runtime">
+<h3>DPC++ runtime<a class="headerlink" href="#dpc-runtime" title="Link to this heading">¶</a></h3>
+<p>For each device binary compiler generates a map
+&lt;Symbolic ID&gt; =&gt; &lt;list of spec constant descriptors&gt; (“ID map”). DPC++
+runtime imports that map when loading device binaries.
+It also maintains another map &lt;Symbolic ID&gt; =&gt; &lt;its value&gt; (“value map”)
+per <code class="docutils literal notranslate"><span class="pre">sycl::kernel_bundle</span></code> object. The value map is updated upon
+<code class="docutils literal notranslate"><span class="pre">kernel_bundler::set_specialization_constant&lt;ID&gt;(val)</span></code> and
+<code class="docutils literal notranslate"><span class="pre">handler::set_specialization_constant&lt;ID&gt;(val)</span></code> calls from the app.</p>
+<p>In order for runtime to access the right property, it need to compute the
+symbolic ID of a specialization constant based on user-provided inputs, such
+as non-type template argument passed to <code class="docutils literal notranslate"><span class="pre">set_specialization_constant</span></code> argument.
+DPC++ Headers section describes how symbolic IDs are generated and the same
+trick is used within <code class="docutils literal notranslate"><span class="pre">set_specialization_constant</span></code> method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="n">auto</span><span class="o">&amp;</span> <span class="n">SpecName</span><span class="o">&gt;</span>
+<span class="n">void</span> <span class="n">set_specialization_constant</span><span class="p">(</span>
+  <span class="n">typename</span> <span class="n">std</span><span class="p">::</span><span class="n">remove_reference_t</span><span class="o">&lt;</span><span class="n">decltype</span><span class="p">(</span><span class="n">SpecName</span><span class="p">)</span><span class="o">&gt;</span><span class="p">::</span><span class="nb">type</span> <span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">SymbolicID</span> <span class="o">=</span> <span class="n">detail</span><span class="p">::</span><span class="n">get_spec_constant_symbolic_ID</span><span class="o">&lt;</span><span class="n">SpecName</span><span class="o">&gt;</span><span class="p">();</span>
+  <span class="o">//</span> <span class="n">remember</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">specialization</span> <span class="n">constant</span>
+  <span class="n">SpecConstantValuesMap</span><span class="p">[</span><span class="n">SymbolicID</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Before invoking JIT compilation of a program, the runtime “flushes”
+specialization constants:</p>
+<p>If native specialization constants are supported by the target device, the
+runtime iterates through the value map and invokes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pi_result</span> <span class="n">piextProgramSetSpecializationConstant</span><span class="p">(</span><span class="n">pi_program</span> <span class="n">prog</span><span class="p">,</span>
+                                                <span class="n">pi_uint32</span> <span class="n">spec_id</span><span class="p">,</span>
+                                                <span class="n">size_t</span> <span class="n">spec_size</span><span class="p">,</span>
+                                                <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">spec_value</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Plugin Interface function for descriptor of each property: <code class="docutils literal notranslate"><span class="pre">spec_id</span></code> and
+<code class="docutils literal notranslate"><span class="pre">spec_size</span></code> are taken from the descriptor, <code class="docutils literal notranslate"><span class="pre">spec_value</span></code> is calculated based on
+address of the specialization constant provided by user and <code class="docutils literal notranslate"><span class="pre">offset</span></code> field of
+the descriptor as <code class="docutils literal notranslate"><span class="pre">(char*)(SpecConstantValuesMap[SymbolicID])</span> <span class="pre">+</span> <span class="pre">offset</span></code>.</p>
+<p>That calculation is required, because at SPIR-V level composite
+specialization constants are respresented by several specialization constants
+for each element of a composite, whilst on a SYCL level, the whole composite
+is passed by user as a single blob of data. <code class="docutils literal notranslate"><span class="pre">offset</span></code> field from properties is
+used to specify which exact piece of that blob should be extracted to perform
+per-element composite specialization constant initialization.</p>
+<p>If native specialization constants are not supported by the target device, then
+the runtime calculates the location (offset) of each specialization constant in
+corresponding runtime buffer and copied user-provided value into that location.</p>
+<p>That buffer should be allocated for each <code class="docutils literal notranslate"><span class="pre">device_image</span></code> and
+it should be set as a kernel argument, if corresponding <code class="docutils literal notranslate"><span class="pre">kernel_signature</span></code>
+contains <code class="docutils literal notranslate"><span class="pre">kernel_param_kind_t::kind_specialization_constants_buffer</span></code>.</p>
+<p>Offsets into that buffer are calculated based on “SYCL/specialization constants”
+property set, i.e. all properties from there are sorted in ascending order of
+their numeric IDs and offset for each specialization constant is calculated as
+sum of sizes of all other specialization constants with smaller numeric ID.</p>
+<p>In order to properly set default values of specialization constants,
+“SYCL/specialization constants default values” property set is used: its content
+is used to either fully or partially initialize the buffer with specialization
+constant values.</p>
+<section id="sycl-detail-spec-const-integration-hpp-header-file">
+<h4>sycl/detail/spec_const_integration.hpp header file<a class="headerlink" href="#sycl-detail-spec-const-integration-hpp-header-file" title="Link to this heading">¶</a></h4>
+<p>DPC++ RT needs to have access to a mapping between <code class="docutils literal notranslate"><span class="pre">specialization_id</span></code> variables
+and corresponding unique symbolic IDs used by the compiler. As already stated
+above, we use integration footer for that by providing template specializations
+of <code class="docutils literal notranslate"><span class="pre">get_spec_constant_symbolic_ID</span></code> function template.</p>
+<p>The tricky thing here, is that C++ specification states the following:</p>
+<blockquote>
+<div><p>Specialization must be declared before the first use that would cause implicit
+instantiation, in every translation unit where such use occurs.</p>
+<p><a class="reference external" href="https://en.cppreference.com/w/cpp/language/template_specialization">cppreference</a></p>
+</div></blockquote>
+<p>That means that all users of <code class="docutils literal notranslate"><span class="pre">get_spec_constant_symbolic_ID</span></code> has to appear
+<em>after</em> we defined all <code class="docutils literal notranslate"><span class="pre">get_spec_constant_symbolic_ID</span></code> template specializations.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sycl/detail/spec_const/integration.hpp</span></code> header file is intended to be a
+location for such methods/classes/functions.</p>
+</section>
+</section>
+<section id="spirv-llvm-translator">
+<h3>SPIRV-LLVM-Translator<a class="headerlink" href="#spirv-llvm-translator" title="Link to this heading">¶</a></h3>
+<p>Given the <code class="docutils literal notranslate"><span class="pre">__spirv_SpecConstant</span></code> intrinsic calls produced by the
+<code class="docutils literal notranslate"><span class="pre">SpecConstants</span></code> pass:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">;</span> <span class="n">Function</span> <span class="n">Attrs</span><span class="p">:</span> <span class="n">alwaysinline</span>
+<span class="n">define</span> <span class="n">dso_local</span> <span class="n">spir_func</span> <span class="n">i32</span> <span class="nd">@get</span><span class="p">()</span> <span class="n">local_unnamed_addr</span> <span class="c1">#0 {</span>
+  <span class="p">;</span> <span class="n">args</span> <span class="n">are</span> <span class="s2">&quot;ID&quot;</span> <span class="ow">and</span> <span class="s2">&quot;default value&quot;</span><span class="p">:</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="n">i32</span> <span class="nd">@_Z20__spirv_SpecConstantii</span><span class="p">(</span><span class="n">i32</span> <span class="mi">42</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">ret</span> <span class="n">i32</span> <span class="o">%</span><span class="mi">1</span>
+<span class="p">}</span>
+
+<span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="nb">type</span> <span class="p">{</span> <span class="n">i32</span><span class="p">,</span> <span class="nb">float</span> <span class="p">}</span>
+
+<span class="p">;</span> <span class="n">Function</span> <span class="n">Attrs</span><span class="p">:</span> <span class="n">alwaysinline</span>
+<span class="n">define</span> <span class="n">dso_local</span> <span class="n">spir_func</span> <span class="n">void</span> <span class="nd">@get2</span><span class="p">(</span><span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="o">*</span> <span class="n">sret</span> <span class="o">%</span><span class="n">ret</span><span class="o">.</span><span class="n">ptr</span><span class="p">)</span> <span class="n">local_unnamed_addr</span> <span class="c1">#0 {</span>
+  <span class="p">;</span> <span class="n">args</span> <span class="n">are</span> <span class="s2">&quot;ID&quot;</span> <span class="ow">and</span> <span class="s2">&quot;default value&quot;</span><span class="p">:</span>
+  <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="n">i32</span> <span class="nd">@_Z20__spirv_SpecConstantii</span><span class="p">(</span><span class="n">i32</span> <span class="mi">43</span><span class="p">,</span> <span class="n">i32</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="nb">float</span> <span class="nd">@_Z20__spirv_SpecConstantif</span><span class="p">(</span><span class="n">i32</span> <span class="mi">44</span><span class="p">,</span> <span class="nb">float</span> <span class="mf">0.000000e+00</span><span class="p">)</span>
+  <span class="o">%</span><span class="n">ret</span> <span class="o">=</span> <span class="n">tail</span> <span class="n">call</span> <span class="n">spir_func</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="nd">@_Z29__spirv_SpecConstantCompositeif</span><span class="p">(</span><span class="o">%</span><span class="mi">1</span><span class="p">,</span> <span class="o">%</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">store</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span> <span class="o">%</span><span class="n">ret</span><span class="p">,</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">A</span><span class="o">*</span> <span class="o">%</span><span class="n">ret</span><span class="o">.</span><span class="n">ptr</span>
+  <span class="n">ret</span> <span class="n">void</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>the translator will generate <code class="docutils literal notranslate"><span class="pre">OpSpecConstant</span></code> SPIR-V instructions with proper
+<code class="docutils literal notranslate"><span class="pre">SpecId</span></code> decorations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              <span class="n">OpDecorate</span> <span class="o">%</span><span class="n">i32</span> <span class="n">SpecId</span> <span class="mi">42</span> <span class="p">;</span> <span class="n">ID</span>
+       <span class="o">%</span><span class="n">i32</span> <span class="o">=</span> <span class="n">OpSpecConstant</span> <span class="o">%</span><span class="nb">int</span> <span class="mi">0</span>     <span class="p">;</span> <span class="n">Default</span> <span class="n">value</span>
+              <span class="n">OpDecorate</span> <span class="o">%</span><span class="n">A</span><span class="o">.</span><span class="n">i32</span> <span class="n">SpecId</span> <span class="mi">43</span>                          <span class="p">;</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="mi">1</span><span class="n">st</span> <span class="n">member</span>
+              <span class="n">OpDecorate</span> <span class="o">%</span><span class="n">A</span><span class="o">.</span><span class="n">float</span> <span class="n">SpecId</span> <span class="mi">44</span>                        <span class="p">;</span> <span class="n">ID</span> <span class="n">of</span> <span class="n">the</span> <span class="mi">2</span><span class="n">nd</span> <span class="n">member</span>
+     <span class="o">%</span><span class="n">A</span><span class="o">.</span><span class="n">i32</span> <span class="o">=</span> <span class="n">OpSpecConstant</span> <span class="o">%</span><span class="nb">int</span><span class="o">.</span><span class="n">type</span> <span class="mi">0</span>                           <span class="p">;</span> <span class="mi">1</span><span class="n">st</span> <span class="n">member</span> <span class="k">with</span> <span class="n">default</span> <span class="n">value</span>
+   <span class="o">%</span><span class="n">A</span><span class="o">.</span><span class="n">float</span> <span class="o">=</span> <span class="n">OpSpecConstant</span> <span class="o">%</span><span class="nb">float</span><span class="o">.</span><span class="n">type</span> <span class="mf">0.0</span>                       <span class="p">;</span> <span class="mi">2</span><span class="n">nd</span> <span class="n">member</span> <span class="k">with</span> <span class="n">default</span> <span class="n">value</span>
+    <span class="o">%</span><span class="n">struct</span> <span class="o">=</span> <span class="n">OpSpecConstantComposite</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">type</span> <span class="o">%</span><span class="n">A</span><span class="o">.</span><span class="n">i32</span> <span class="o">%</span><span class="n">A</span><span class="o">.</span><span class="n">float</span> <span class="p">;</span> <span class="n">Composite</span> <span class="n">doens</span><span class="s1">&#39;t need IDs or default value</span>
+         <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">OpTypeFunction</span> <span class="o">%</span><span class="nb">int</span>
+
+       <span class="o">%</span><span class="n">get</span> <span class="o">=</span> <span class="n">OpFunction</span> <span class="o">%</span><span class="nb">int</span> <span class="kc">None</span> <span class="o">%</span><span class="mi">1</span>
+         <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">OpLabel</span>
+              <span class="n">OpReturnValue</span> <span class="o">%</span><span class="n">i32</span>
+              <span class="n">OpFunctionEnd</span>
+         <span class="o">%</span><span class="mi">1</span> <span class="o">=</span> <span class="n">OpTypeFunction</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">type</span>
+
+      <span class="o">%</span><span class="n">get2</span> <span class="o">=</span> <span class="n">OpFunction</span> <span class="o">%</span><span class="n">struct</span><span class="o">.</span><span class="n">type</span> <span class="kc">None</span> <span class="o">%</span><span class="n">struct</span>
+         <span class="o">%</span><span class="mi">2</span> <span class="o">=</span> <span class="n">OpLabel</span>
+              <span class="n">OpReturnValue</span> <span class="o">%</span><span class="n">struct</span>
+              <span class="n">OpFunctionEnd</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="PluginInterface.html">The DPC++ Runtime Plugin Interface.</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="KernelProgramCache.html">A brief overview of kernel and program caching mechanism</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

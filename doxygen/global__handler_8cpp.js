@@ -1,8 +1,11 @@
 var global__handler_8cpp =
 [
-    [ "DefaultContextReleaseHandler", "structcl_1_1sycl_1_1detail_1_1DefaultContextReleaseHandler.html", "structcl_1_1sycl_1_1detail_1_1DefaultContextReleaseHandler" ],
-    [ "LockGuard", "global__handler_8cpp.html#aa80a658d662094d45b7e9289f89fe5b0", null ],
-    [ "__attribute__", "global__handler_8cpp.html#aff496f9d989f86a57d010bd72fa489ba", null ],
-    [ "releaseDefaultContexts", "global__handler_8cpp.html#a35b3df29d3bc266891c197d6013698ee", null ],
-    [ "shutdown", "global__handler_8cpp.html#a9f94841af0069345de116d9b6bf66124", null ]
+    [ "ObjectUsageCounter", "classsycl_1_1__V1_1_1detail_1_1ObjectUsageCounter.html", "classsycl_1_1__V1_1_1detail_1_1ObjectUsageCounter" ],
+    [ "EarlyShutdownHandler", "structsycl_1_1__V1_1_1detail_1_1EarlyShutdownHandler.html", "structsycl_1_1__V1_1_1detail_1_1EarlyShutdownHandler" ],
+    [ "LockGuard", "global__handler_8cpp.html#ab5860ca52712fff555ab9f910a45ae08", null ],
+    [ "__attribute__", "global__handler_8cpp.html#aaf4ac1e5d25cf18f6663747fc67599ff", null ],
+    [ "enableOnCrashStackPrinting", "global__handler_8cpp.html#adbd9058f4316cbea718081cba812e3bd", null ],
+    [ "shutdown_early", "global__handler_8cpp.html#a782f5eb363547152e96209169e338955", null ],
+    [ "shutdown_late", "global__handler_8cpp.html#af23c111ec264a199acbe04fee89700a0", null ],
+    [ "shutdown_win", "global__handler_8cpp.html#af944453dc94b271c8ac318688997a98b", null ]
 ];

@@ -1,0 +1,27 @@
+var classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55 =
+[
+    [ "difference_type", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ac137867c9a9b3e2b97f29faaf492c42f", null ],
+    [ "value_type", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ac7bdaf357f8f6c688a798c9acbd04d81", null ],
+    [ "fetch_add", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#aee8307076a427660ed8e62cedb8cb86c", null ],
+    [ "fetch_and", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ac619d111fed897f68050b1e7fa375873", null ],
+    [ "fetch_max", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ad88e6b1d7a02a2773249788dc4e08301", null ],
+    [ "fetch_min", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a7309b05e0b8618d8b1109255716d0643", null ],
+    [ "fetch_or", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a6a77c0d83bba4f463e029fa628ee9d28", null ],
+    [ "fetch_sub", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a22b8c5ecff60b7f18777146a28b885f7", null ],
+    [ "fetch_xor", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ac5592c2433d3a07533ba1f0a0c9d671d", null ],
+    [ "operator&=", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a8d9f69397c0cb02c2e304f89225f80a4", null ],
+    [ "operator++", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a4ce24b8130ee75ac5bd0283c5466ad8c", null ],
+    [ "operator++", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#af48c82ea9afe526e6b5bcf853faeb306", null ],
+    [ "operator+=", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a242f8019388adb98efb2ef1f684b227f", null ],
+    [ "operator--", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a9b2d7f794c54f49f9f38bfea725f1ba2", null ],
+    [ "operator--", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ae9431e95013ba5728a0966bbf667b888", null ],
+    [ "operator-=", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#aa27ba97e8a99de5013a7245d0315612a", null ],
+    [ "operator^=", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#ae08255272cb14df215bf42dce3678abe", null ],
+    [ "operator|=", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a0118d0000a8f621af143968faae58798", null ],
+    [ "default_read_modify_write_order", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a1f70d6544b193564251d9aa59a6891d5", null ],
+    [ "default_read_order", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a8b89f974e7b5401d76846effd1886871", null ],
+    [ "default_scope", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a954821c0e043dbdf107bfbb1d36873d1", null ],
+    [ "default_write_order", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#af574f7ee55e109f0b36f6548892fa936", null ],
+    [ "is_always_lock_free", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#aa3f4c9452b9ad82bbbfbcfe2fc7266d3", null ],
+    [ "required_alignment", "classsycl_1_1__V1_1_1detail_1_1atomic__ref__impl_3_01T_00_01IsAspectAtomic64AttrUsed_00_01Defaulad241d3634931145ffca5ffed099ef55.html#a6f48cdea3ceea47390ecf6b08eaf53e2", null ]
+];

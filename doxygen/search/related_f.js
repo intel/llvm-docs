@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usm_5fallocator_12787',['usm_allocator',['../classcl_1_1sycl_1_1usm__allocator.html#aec7ce7aae6c590129a2fdd34f7461985',1,'cl::sycl::usm_allocator']]]
+  ['queue_5fimpl_19421',['queue_impl',['../classsycl_1_1__V1_1_1detail_1_1Scheduler.html#ada31d15c00c8f3992ab6c85f7ec414cb',1,'sycl::_V1::detail::Scheduler']]]
 ];

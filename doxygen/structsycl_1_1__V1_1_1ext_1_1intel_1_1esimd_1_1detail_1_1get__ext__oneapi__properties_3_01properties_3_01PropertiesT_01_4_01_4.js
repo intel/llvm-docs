@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1get__ext__oneapi__properties_3_01properties_3_01PropertiesT_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1get__ext__oneapi__properties_3_01properties_3_01PropertiesT_01_4_01_4.html#ae77cd1104f4f0de0c840b463a77a79ef", null ]
+];

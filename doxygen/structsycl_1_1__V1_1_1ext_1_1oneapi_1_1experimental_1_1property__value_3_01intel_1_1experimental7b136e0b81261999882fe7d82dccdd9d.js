@@ -1,0 +1,7 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01intel_1_1experimental7b136e0b81261999882fe7d82dccdd9d =
+[
+    [ "key_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01intel_1_1experimental7b136e0b81261999882fe7d82dccdd9d.html#a88b2e535a52adc771084ebbe538e1ff8", null ],
+    [ "cycle", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01intel_1_1experimental7b136e0b81261999882fe7d82dccdd9d.html#ae27c7270a94eb8b96f6acef83525ab91", null ],
+    [ "target", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01intel_1_1experimental7b136e0b81261999882fe7d82dccdd9d.html#ad1d9fc94fb4d78036a6606ef14cecc71", null ],
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01intel_1_1experimental7b136e0b81261999882fe7d82dccdd9d.html#a953bae00e9ff0de506c9fcdebd1ec488", null ]
+];

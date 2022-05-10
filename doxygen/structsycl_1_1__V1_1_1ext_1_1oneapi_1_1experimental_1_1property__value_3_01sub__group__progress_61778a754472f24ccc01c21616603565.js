@@ -1,0 +1,6 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01sub__group__progress_61778a754472f24ccc01c21616603565 =
+[
+    [ "key_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01sub__group__progress_61778a754472f24ccc01c21616603565.html#a22668fb7f3a59934d4b08976607af6cc", null ],
+    [ "coordinationScope", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01sub__group__progress_61778a754472f24ccc01c21616603565.html#a7ceda395b7277cbedc01971a8c7a9ab4", null ],
+    [ "guarantee", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01sub__group__progress_61778a754472f24ccc01c21616603565.html#a6c2e1c0510aa65f80783e4a3ef4a4a63", null ]
+];

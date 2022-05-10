@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__elem__type_3_01T_00_01std_1_1enable__if__t_3_01is__ext__vector__v_3_01T_01_4_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1get__elem__type_3_01T_00_01std_1_1enable__if__t_3_01is__ext__vector__v_3_01T_01_4_01_4_01_4.html#a163b65135c940058ce69ff54e9957246", null ]
+];

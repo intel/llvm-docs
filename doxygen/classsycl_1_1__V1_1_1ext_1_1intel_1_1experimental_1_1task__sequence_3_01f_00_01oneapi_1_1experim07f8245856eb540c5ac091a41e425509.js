@@ -1,0 +1,13 @@
+var classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509 =
+[
+    [ "task_sequence", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a3d5cbd974ac7b24dd95347301a559b86", null ],
+    [ "task_sequence", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#aa0ee41d2e9cc8fdae4565fe63e5059b2", null ],
+    [ "task_sequence", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a33ad832b3b82cef227e28c738ac162ed", null ],
+    [ "~task_sequence", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#afb8972be8ecb16a4a8755ab3c4a87000", null ],
+    [ "async", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a9dafe2889244bda167f8b3ab3add2bf9", null ],
+    [ "get", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a0f2f3f423de75c57ff02794058a3998f", null ],
+    [ "get_property", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a6be2907f09ee66c995503e496ba2f7eb", null ],
+    [ "has_property", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a1be64622f88c7a18355f0c191eb546c6", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#a37f1728dffdcd0793e68784fba6f20ec", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1task__sequence_3_01f_00_01oneapi_1_1experim07f8245856eb540c5ac091a41e425509.html#afbac7968ee12abb66fbed06b8cdc2948", null ]
+];

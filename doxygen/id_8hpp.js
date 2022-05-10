@@ -1,7 +1,5 @@
 var id_8hpp =
 [
-    [ "RoundedRangeKernel", "classcl_1_1sycl_1_1detail_1_1RoundedRangeKernel.html", "classcl_1_1sycl_1_1detail_1_1RoundedRangeKernel" ],
-    [ "RoundedRangeKernelWithKH", "classcl_1_1sycl_1_1detail_1_1RoundedRangeKernelWithKH.html", "classcl_1_1sycl_1_1detail_1_1RoundedRangeKernelWithKH" ],
     [ "__SYCL_GEN_OPT", "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3", null ],
     [ "__SYCL_GEN_OPT", "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3", null ],
     [ "__SYCL_GEN_OPT", "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3", null ],
@@ -9,10 +7,8 @@ var id_8hpp =
     [ "__SYCL_GEN_OPT", "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3", null ],
     [ "__SYCL_GEN_OPT", "id_8hpp.html#a93bee456e4dda914698eeb2e457085b3", null ],
     [ "__SYCL_GEN_OPT_BASE", "id_8hpp.html#aa999c9ff2be6ea85802409903755f482", null ],
-    [ "getDelinearizedId", "id_8hpp.html#afec828b57cdcfbb63d665470285ada03", null ],
-    [ "getDelinearizedId", "id_8hpp.html#a482f03edf9cd1a5880b5d12ab491be84", null ],
-    [ "getDelinearizedId", "id_8hpp.html#a0f512100a11bb7355768d852aa4dbfe1", null ],
-    [ "getOffsetForId", "id_8hpp.html#aa8953bc09b85c70fd186496488a89a76", null ],
-    [ "this_id", "id_8hpp.html#adac70abbf3b03ed041f6b6f22802b175", null ],
-    [ "this_id", "id_8hpp.html#a59afcc9cc4375cd30020132725b574d3", null ]
+    [ "getDelinearizedId", "id_8hpp.html#a4540a30162f8715afa89ca47cc0cfa5e", null ],
+    [ "getDelinearizedId", "id_8hpp.html#a44799f78abf0235b2cae2a9272af3c8b", null ],
+    [ "getDelinearizedId", "id_8hpp.html#a554439feeb2659ec304497dcc412b19c", null ],
+    [ "getOffsetForId", "id_8hpp.html#a85a771d6e3deb418b88e4282f6a2557b", null ]
 ];

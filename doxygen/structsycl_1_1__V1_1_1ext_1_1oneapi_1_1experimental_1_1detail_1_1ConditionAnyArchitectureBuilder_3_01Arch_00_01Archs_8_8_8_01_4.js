@@ -1,0 +1,7 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_00_01Archs_8_8_8_01_4 =
+[
+    [ "rest", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_00_01Archs_8_8_8_01_4.html#ac1e53947f38a6c456272a14b563e64f6", null ],
+    [ "seq", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_00_01Archs_8_8_8_01_4.html#af45e03ac16d682ad6951eaf269e1d408", null ],
+    [ "append", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_00_01Archs_8_8_8_01_4.html#a300726293a426849fba5776b50f31eff", null ],
+    [ "arch", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_00_01Archs_8_8_8_01_4.html#a5a2138737714351dae1911e8fc6b1035", null ]
+];

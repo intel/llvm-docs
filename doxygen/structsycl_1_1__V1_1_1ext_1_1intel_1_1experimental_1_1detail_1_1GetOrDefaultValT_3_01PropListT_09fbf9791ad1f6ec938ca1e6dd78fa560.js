@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1detail_1_1GetOrDefaultValT_3_01PropListT_09fbf9791ad1f6ec938ca1e6dd78fa560 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1detail_1_1GetOrDefaultValT_3_01PropListT_09fbf9791ad1f6ec938ca1e6dd78fa560.html#a1a4dc4a32ff7c35eb01d624b1ed04269", null ]
+];

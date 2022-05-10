@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__cuda_00_01buffer_3_01Dat1ad4c16ac40f9e03428605140dfe2921 =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__cuda_00_01buffer_3_01Dat1ad4c16ac40f9e03428605140dfe2921.html#ae9c31dfcd306b9bc8b0bfb7450e36105", null ]
-];

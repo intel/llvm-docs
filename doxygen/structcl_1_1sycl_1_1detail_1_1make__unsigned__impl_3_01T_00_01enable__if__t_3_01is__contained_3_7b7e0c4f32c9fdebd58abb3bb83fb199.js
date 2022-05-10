@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199 =
-[
-    [ "base_type", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html#ad7e7b7a635238d36e3f17a8c525acd90", null ],
-    [ "type", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_01is__contained_3_7b7e0c4f32c9fdebd58abb3bb83fb199.html#ac2e2b102d8424e80120fedaa44813c22", null ]
-];

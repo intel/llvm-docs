@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1CountContainedProps_3_01Propert06f186d98ecdfcb905b3dd385007953a =
+[
+    [ "NumOccurrences", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1CountContainedProps_3_01Propert06f186d98ecdfcb905b3dd385007953a.html#a85aa21a080cb0c7d6c05e6fc403e4758", null ],
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1CountContainedProps_3_01Propert06f186d98ecdfcb905b3dd385007953a.html#a57e58416926cc5f065d05eba3ae33000", null ]
+];

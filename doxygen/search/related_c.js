@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queue_5fimpl_12772',['queue_impl',['../classcl_1_1sycl_1_1detail_1_1Scheduler.html#ada31d15c00c8f3992ab6c85f7ec414cb',1,'cl::sycl::detail::Scheduler']]]
+  ['nd_5fitem_19388',['nd_item',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1root__group.html#a34d79f0f4f3665bcdb8f2b588e8cff02',1,'sycl::_V1::ext::oneapi::experimental::root_group']]]
 ];

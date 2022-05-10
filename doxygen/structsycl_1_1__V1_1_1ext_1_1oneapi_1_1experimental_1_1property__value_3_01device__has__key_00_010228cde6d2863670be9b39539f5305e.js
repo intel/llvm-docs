@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01device__has__key_00_010228cde6d2863670be9b39539f5305e =
+[
+    [ "key_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01device__has__key_00_010228cde6d2863670be9b39539f5305e.html#a5d56a4e5eb7f34a402127f1906b6a4b8", null ],
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01device__has__key_00_010228cde6d2863670be9b39539f5305e.html#a2be8bdcfe3970a3cd76fc9166a26731b", null ]
+];

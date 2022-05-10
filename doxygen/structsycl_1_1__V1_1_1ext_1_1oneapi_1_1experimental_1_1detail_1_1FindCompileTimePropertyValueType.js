@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1FindCompileTimePropertyValueType.html#a38246b6de16c8ec36bf9fb2c12135cdc", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01bool_00_01info_1_1device_1_1usm__shared__allocations_01_4 =
+[
+    [ "get", "structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01bool_00_01info_1_1device_1_1usm__shared__allocations_01_4.html#ae473c509e45c2d0673c4f6382e5b774e", null ]
+];

@@ -1,5 +1,0 @@
-var classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470 =
-[
-    [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html#a31e33f8d677f8ca202ede49467d33735", null ],
-    [ "accessor", "classcl_1_1sycl_1_1accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01access_1_1target_1_1h385dee24bf38be7a88946beb79d86470.html#a3cebb9ddd78f23aef86520a98f2eea63", null ]
-];

@@ -1,0 +1,7 @@
+var classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01Explicd0b1c85a1a8a92e44b6655cc31306083 =
+[
+    [ "ReductionIdentityContainer", "classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01Explicd0b1c85a1a8a92e44b6655cc31306083.html#a9a815320d82f7723f2ce82fa5a57daf2", null ],
+    [ "ReductionIdentityContainer", "classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01Explicd0b1c85a1a8a92e44b6655cc31306083.html#afd2d2543262ce114afceced12c5bd6bb", null ],
+    [ "getIdentity", "classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01Explicd0b1c85a1a8a92e44b6655cc31306083.html#a71114bf18be0cdd7f7ec283af6935c33", null ],
+    [ "has_identity", "classsycl_1_1__V1_1_1detail_1_1ReductionIdentityContainer_3_01T_00_01BinaryOperation_00_01Explicd0b1c85a1a8a92e44b6655cc31306083.html#a50a705288917243d2d7ad47d298bc01c", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4 =
+[
+    [ "scope", "structsycl_1_1__V1_1_1detail_1_1GetSpirvMemoryScope_3_01access_1_1address__space_1_1local__space_01_4.html#a0da91e19e73070b78e99a29b4aaaa4c8", null ]
+];
