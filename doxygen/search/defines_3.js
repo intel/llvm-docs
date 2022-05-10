@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['elems_5fper_5fdword_12991',['ELEMS_PER_DWORD',['../matrix-aot-amx_8hpp.html#a15757985fb60ef94840e19826d9f734c',1,'matrix-aot-amx.hpp']]],
-  ['enable_5fsycl_5fext_5foneapi_5finvoke_5fsimd_12992',['ENABLE_SYCL_EXT_ONEAPI_INVOKE_SIMD',['../std_2experimental_2simd_8hpp.html#ae7199ddb03ce7feeb554b6ff206f0bdb',1,'simd.hpp']]],
-  ['esimdemuplugindataversion_12993',['ESIMDEmuPluginDataVersion',['../pi__esimd__emulator_8cpp.html#aecb9787561a252345148d226eaac97fd',1,'pi_esimd_emulator.cpp']]],
-  ['esimdemuplugininterfaceversion_12994',['ESIMDEmuPluginInterfaceVersion',['../pi__esimd__emulator_8cpp.html#a49082a35887e4ebb7f24975990f9faa6',1,'pi_esimd_emulator.cpp']]]
+  ['check_5fur_5fsuccess_17782',['CHECK_UR_SUCCESS',['../ur_8cpp.html#a6641e80776ca1130851805b77df7334a',1,'ur.cpp']]],
+  ['cl_5ftarget_5fopencl_5fversion_17783',['CL_TARGET_OPENCL_VERSION',['../cl_8h.html#a5990dea19d4ccb046a3d81b311457add',1,'cl.h']]],
+  ['config_17784',['CONFIG',['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8cpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.cpp'],['../config_8hpp.html#acaa9617679f6b60fc24220c53822c283',1,'CONFIG():&#160;config.hpp'],['../config_8hpp.html#a8331a411b061628ac3915d8a2c52bf95',1,'CONFIG():&#160;config.hpp']]]
 ];

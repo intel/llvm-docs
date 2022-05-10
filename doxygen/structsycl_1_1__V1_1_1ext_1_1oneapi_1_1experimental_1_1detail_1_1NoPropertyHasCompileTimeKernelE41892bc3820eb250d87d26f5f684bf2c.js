@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1NoPropertyHasCompileTimeKernelE41892bc3820eb250d87d26f5f684bf2c =
+[
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1NoPropertyHasCompileTimeKernelE41892bc3820eb250d87d26f5f684bf2c.html#ad43451b0f186fa9bfc55d6e0468ce619", null ]
+];

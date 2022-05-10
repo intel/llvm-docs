@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1make__larger__impl_3_01T_00_01std_1_1enable__if__t_3_01is__conta44da496902a714e5ca77f9d4094ef7c4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1make__larger__impl_3_01T_00_01std_1_1enable__if__t_3_01is__conta44da496902a714e5ca77f9d4094ef7c4.html#a88b6f999f7d8c1375410e5c565aebac9", null ]
+];

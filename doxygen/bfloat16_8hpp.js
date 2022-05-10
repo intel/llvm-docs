@@ -1,7 +1,27 @@
 var bfloat16_8hpp =
 [
-    [ "bfloat16", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1bfloat16.html", "classcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1bfloat16" ],
+    [ "bfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16.html", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1bfloat16" ],
+    [ "ConvertToBfloat16", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1detail_1_1ConvertToBfloat16.html", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1detail_1_1ConvertToBfloat16" ],
     [ "OP", "bfloat16_8hpp.html#abb6ddc3ad6b4c1ff94de4861474c3e34", null ],
     [ "OP", "bfloat16_8hpp.html#abb6ddc3ad6b4c1ff94de4861474c3e34", null ],
-    [ "OP", "bfloat16_8hpp.html#adc70b2ee336fc46f195adc56e2e30f5e", null ]
+    [ "OP", "bfloat16_8hpp.html#adc70b2ee336fc46f195adc56e2e30f5e", null ],
+    [ "Bfloat16StorageT", "bfloat16_8hpp.html#adf032ffcab451eee8ff84784649879b6", null ],
+    [ "__devicelib_ConvertBF16ToFINTEL", "bfloat16_8hpp.html#abc283a309bd4e0bfe51d70163c4a4925", null ],
+    [ "__devicelib_ConvertBF16ToFINTELVec1", "bfloat16_8hpp.html#a76068dfc1c2ac773c0e42306a68a8121", null ],
+    [ "__devicelib_ConvertBF16ToFINTELVec16", "bfloat16_8hpp.html#a4eebd75faafed771347a118f8306ba51", null ],
+    [ "__devicelib_ConvertBF16ToFINTELVec2", "bfloat16_8hpp.html#a7a4f71a9b797ba757058ef9cc12c4278", null ],
+    [ "__devicelib_ConvertBF16ToFINTELVec3", "bfloat16_8hpp.html#aa1d146c7deb3c21ca90ba03cddc8c1fa", null ],
+    [ "__devicelib_ConvertBF16ToFINTELVec4", "bfloat16_8hpp.html#aac5e8b6a4667aae78239341bb2b13d67", null ],
+    [ "__devicelib_ConvertBF16ToFINTELVec8", "bfloat16_8hpp.html#aca32d3ded93b45d603f134b3458049f5", null ],
+    [ "__devicelib_ConvertFToBF16INTEL", "bfloat16_8hpp.html#aa32f262b141a77452367e164ce0a2b42", null ],
+    [ "__devicelib_ConvertFToBF16INTELVec1", "bfloat16_8hpp.html#a7bd0da0ad177f1fdcb126d8d17969c07", null ],
+    [ "__devicelib_ConvertFToBF16INTELVec16", "bfloat16_8hpp.html#a2d7d71e0cfd432550d26e5802f210abf", null ],
+    [ "__devicelib_ConvertFToBF16INTELVec2", "bfloat16_8hpp.html#abbc24da0ba7b09b13406b53fa230081e", null ],
+    [ "__devicelib_ConvertFToBF16INTELVec3", "bfloat16_8hpp.html#a4387c1004a03280be669939cf5a3a090", null ],
+    [ "__devicelib_ConvertFToBF16INTELVec4", "bfloat16_8hpp.html#a041039790d88f8b268e55e3f0cf4b551", null ],
+    [ "__devicelib_ConvertFToBF16INTELVec8", "bfloat16_8hpp.html#a6a903ea6b23edf57b12b43cc041029f4", null ],
+    [ "BF16VecToFloatVec", "bfloat16_8hpp.html#a8a143fccec3f51630b1f5f393f1a9451", null ],
+    [ "bfloat16ToBits", "bfloat16_8hpp.html#aa655ec030b6b638df66dd5b4458e9a47", null ],
+    [ "bitsToBfloat16", "bfloat16_8hpp.html#a7686c5b016cee0ae272f52520225850f", null ],
+    [ "FloatVecToBF16Vec", "bfloat16_8hpp.html#a04d460afa2d35c844a00b62eef1b2d41", null ]
 ];

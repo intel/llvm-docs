@@ -1,15 +1,20 @@
 var commands_8cpp =
 [
-    [ "DispatchHostTask", "classcl_1_1sycl_1_1detail_1_1DispatchHostTask.html", "classcl_1_1sycl_1_1detail_1_1DispatchHostTask" ],
-    [ "accessModeToString", "commands_8cpp.html#a7f8329fec344e6491fb49164038e9e7c", null ],
-    [ "adjustNDRangePerKernel", "commands_8cpp.html#a35843ff50f01502809e89173773b75fb", null ],
-    [ "cgTypeToString", "commands_8cpp.html#aab1bfd598a112b6d4dbb5cdfa57119fb", null ],
-    [ "demangleKernelName", "commands_8cpp.html#afe9b88aa99ae3546ca5e417610558828", null ],
-    [ "deviceToString", "commands_8cpp.html#a915960afad317275b53378a368e5b2ee", null ],
-    [ "DispatchNativeKernel", "commands_8cpp.html#a1a3478d21ad44f2d6d9593d3e46116f5", null ],
-    [ "enqueueImpKernel", "commands_8cpp.html#a9f43efb8cca912f7abf4f450f80e51ab", null ],
-    [ "flushCrossQueueDeps", "commands_8cpp.html#ab4a1a19d9d20efe4a13c6250214779ca", null ],
-    [ "getPiEvents", "commands_8cpp.html#a97e573b6f998390464b5c73dccbb40d4", null ],
-    [ "ReverseRangeDimensionsForKernel", "commands_8cpp.html#a84be692381bbdc741a3c167cf23db314", null ],
-    [ "SetKernelParamsAndLaunch", "commands_8cpp.html#a51ae5cf2574cb422bbb20fcde1cf8626", null ]
+    [ "DispatchHostTask", "classsycl_1_1__V1_1_1detail_1_1DispatchHostTask.html", "classsycl_1_1__V1_1_1detail_1_1DispatchHostTask" ],
+    [ "accessModeToString", "commands_8cpp.html#af36e95b7059b238f2a5f9698393eef44", null ],
+    [ "AccessModeToUr", "commands_8cpp.html#a5f02315fc90861cc2f14e4c288155731", null ],
+    [ "adjustNDRangePerKernel", "commands_8cpp.html#abf5f22d423044890d44913e7b9223983", null ],
+    [ "applyFuncOnFilteredArgs", "commands_8cpp.html#ac4a30dd0a223595b067bd8d9712732a5", null ],
+    [ "cgTypeToString", "commands_8cpp.html#a600019942f0a036124738c523d74dedc", null ],
+    [ "demangleKernelName", "commands_8cpp.html#a2d625fa4f10dc8c37b81614fb60c7a07", null ],
+    [ "enqueueImpCommandBufferKernel", "commands_8cpp.html#aa2b267b6ee033e975ba3f426103188bc", null ],
+    [ "enqueueImpKernel", "commands_8cpp.html#a676305bb017040607f1be327e8f861c5", null ],
+    [ "enqueueReadWriteHostPipe", "commands_8cpp.html#ac7102c49570760829741b55f9097bb7c", null ],
+    [ "flushCrossQueueDeps", "commands_8cpp.html#a23f2ee6918e376e1c9097fe33d260bdd", null ],
+    [ "getContext", "commands_8cpp.html#ae2682b454c360cf2e171b0753dc08239", null ],
+    [ "ReverseRangeDimensionsForKernel", "commands_8cpp.html#a640d08079648abf6355a513402e7abc3", null ],
+    [ "SetArgBasedOnType", "commands_8cpp.html#a703ce78dea0c560d668816cf8dfc8d4b", null ],
+    [ "SetKernelParamsAndLaunch", "commands_8cpp.html#a2dd3c2caf46ebb37993bed4508914584", null ],
+    [ "func", "commands_8cpp.html#a26e60b5f720b7b363528715e1a813881", null ],
+    [ "ih", "commands_8cpp.html#a7ef3c153c869efff4de8691c044ee55e", null ]
 ];

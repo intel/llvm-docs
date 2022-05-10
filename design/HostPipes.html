@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Implementation design for “Host Pipes” &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ESIMD “stateless” accessors support design" href="ESIMDStatelesAccessors.html" />
+    <link rel="prev" title="Implementation design for compile time constant properties" href="CompileTimeProperties.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Implementation design for “Host Pipes”</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="CompileTimeProperties.html">Implementation design for compile time constant properties</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="ESIMDStatelesAccessors.html">ESIMD “stateless” accessors support design</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="implementation-design-for-host-pipes">
+<h1>Implementation design for “Host Pipes”<a class="headerlink" href="#implementation-design-for-host-pipes" title="Link to this heading">¶</a></h1>
+<p>This document describes the implementation design for the host pipes section
+of the DPC++ extension <a class="reference download internal" download="" href="../_downloads/2da03f05c300bc8cd85a4b0831091d6b/sycl_ext_intel_dataflow_pipes.asciidoc"><span class="xref download myst">SYCL_INTEL_data_flow_pipes</span></a>. Pipes are a FIFO construct
+that provide links between elements of a design that are accessed through read
+and write application programming interfaces (APIs), without the notion of a
+memory address/pointer to elements within the FIFO. A host pipe is a pipe that
+links a device kernel with a host program.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>The extension specification document referenced above contains the full set of
+requirements for this feature, but a requirement that is particularly
+relevant to the design, and similar in nature to one raised in the <a class="reference internal" href="DeviceGlobal.html"><span class="std std-doc">device_global</span></a>
+design is called out here.</p>
+<p>This issue relates to the mechanism for integrating host and device code.
+Like device global variables, host pipes are referenced in both
+host and device code, so they require some mechanism to correlate the pipe
+instance in device code with the pipe instance in host code. We will use
+a similar mechanism as the device global implementation that creates a map
+database in the integration headers and footers.</p>
+</section>
+<section id="design">
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
+<section id="changes-to-dpc-headers">
+<h3>Changes to DPC++ headers<a class="headerlink" href="#changes-to-dpc-headers" title="Link to this heading">¶</a></h3>
+<section id="attributes-attached-to-the-class">
+<h4>Attributes attached to the class<a class="headerlink" href="#attributes-attached-to-the-class" title="Link to this heading">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">pipe</span></code> class uses a new C++ attribute <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::host_pipe]]</span></code> on the
+<code class="docutils literal notranslate"><span class="pre">pipe::__pipeType</span></code> type to identify the <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">const</span> <span class="pre">__pipeType</span></code> member <code class="docutils literal notranslate"><span class="pre">__pipe</span></code>
+as a host pipe. Similar to <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::device_global]]</span></code>, this will inform
+the front end to generate a <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> for each <code class="docutils literal notranslate"><span class="pre">__pipe</span></code>. The <code class="docutils literal notranslate"><span class="pre">pipe</span></code> class
+also introduces the global variable attribute <code class="docutils literal notranslate"><span class="pre">sycl-host-pipe</span></code> attribute to inform the sycl-post-link tool
+to generate the SPIR-V decoration <code class="docutils literal notranslate"><span class="pre">HostAccessINTEL</span></code> for each <code class="docutils literal notranslate"><span class="pre">__pipe</span></code> using the
+<code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> generated.</p>
+<p>As these attributes are only needed for the device compiler, the <code class="docutils literal notranslate"><span class="pre">#ifdef</span> <span class="pre">__SYCL_DEVICE_ONLY__</span></code>
+allows the customer to use another host compiler, even if it does not recognize these attributes.
+Also note that these attributes are all in the <code class="docutils literal notranslate"><span class="pre">__sycl_detail__</span></code> namespace, so
+they are considered implementation details of DPC++.  We do not intend to
+support them as general attributes that customer code can use.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">name</span><span class="p">,</span> <span class="n">typename</span> <span class="n">dataT</span><span class="p">,</span> <span class="n">typename</span> <span class="n">propertiesT</span> <span class="o">=</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span><span class="p">::</span><span class="n">empty_properties_t</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">pipe</span> <span class="p">{</span><span class="o">/*...*/</span><span class="p">};</span>
+
+<span class="o">//</span> <span class="n">Partial</span> <span class="n">specialization</span> <span class="n">to</span> <span class="n">make</span> <span class="n">propertiesT</span> <span class="n">visible</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span> <span class="n">pack</span>
+<span class="o">//</span> <span class="n">of</span> <span class="n">properties</span><span class="o">.</span>
+<span class="n">template</span> <span class="o">&lt;</span><span class="n">typename</span> <span class="n">Name</span><span class="p">,</span> <span class="n">typename</span> <span class="n">DataT</span><span class="p">,</span> <span class="n">typename</span> <span class="o">...</span><span class="n">Props</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">pipe</span>
+<span class="p">{</span> 
+  <span class="n">struct</span>
+<span class="c1">#ifdef __SYCL_DEVICE_ONLY__</span>
+  <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">add_ir_attributes_global_variable</span><span class="p">(</span>
+    <span class="s2">&quot;sycl-host-pipe&quot;</span><span class="p">,</span>
+    <span class="n">Props</span><span class="p">::</span><span class="n">meta_name</span><span class="o">...</span><span class="p">,</span>
+    <span class="n">nullptr</span><span class="p">,</span>
+    <span class="n">Props</span><span class="p">::</span><span class="n">meta_value</span><span class="o">...</span>
+    <span class="p">)]]</span>
+  <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">host_pipe</span><span class="p">]]</span>
+  <span class="p">[[</span><span class="n">__sycl_detail__</span><span class="p">::</span><span class="n">global_variable_allowed</span><span class="p">]]</span> <span class="o">//</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">needed</span>
+<span class="c1">#endif</span>
+  <span class="n">__pipeType</span> <span class="p">{</span> <span class="n">const</span> <span class="n">char</span> <span class="n">__p</span><span class="p">;</span> <span class="p">};</span>
+  
+  <span class="n">static</span> <span class="n">constexpr</span> <span class="n">__pipeType</span> <span class="n">__pipe</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+  <span class="o">...</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_attributes_global_variable()]]</span></code> attribute is
+described more fully by the <a class="reference internal" href="CompileTimeProperties.html"><span class="std std-doc">compile-time properties</span></a> design
+document. This attribute is also used for other classes that have properties,
+so it is not specific to the <code class="docutils literal notranslate"><span class="pre">pipe</span></code> class.</p>
+<p>The address of <code class="docutils literal notranslate"><span class="pre">static</span> <span class="pre">const</span> <span class="pre">__pipeType</span></code> member <code class="docutils literal notranslate"><span class="pre">__pipe</span></code> will be used to identify the pipe
+in host code, and provide one half of the host-to-device mapping of the pipe
+(see the section on <strong>New content in the integration header and footer</strong> below).</p>
+</section>
+</section>
+<section id="changes-to-the-dpc-front-end">
+<h3>Changes to the DPC++ front-end<a class="headerlink" href="#changes-to-the-dpc-front-end" title="Link to this heading">¶</a></h3>
+<p>There are several changes to the device compiler front-end:</p>
+<ul class="simple">
+<li><p>The front-end adds a new LLVM IR attribute <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> to the definition
+of each <code class="docutils literal notranslate"><span class="pre">pipe</span></code> variable, which provides a unique string identifier
+for each.</p></li>
+<li><p>The front-end generates new content in both the integration header and the
+integration footer, which is described in more detail below.</p></li>
+</ul>
+<section id="new-content-in-the-integration-header-and-footer">
+<h4>New content in the integration header and footer<a class="headerlink" href="#new-content-in-the-integration-header-and-footer" title="Link to this heading">¶</a></h4>
+<p>New content in the integration header and footer provides a mapping from the
+host address of each pipe variable to the unique string for that
+variable. To illustrate, consider a translation unit that defines two
+<code class="docutils literal notranslate"><span class="pre">pipe</span></code> classes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;sycl/sycl.hpp&gt;</span>
+
+<span class="k">class</span> <span class="nc">some_pipe</span><span class="p">;</span>
+<span class="n">namespace</span> <span class="n">inner</span> <span class="p">{</span>
+  <span class="k">class</span> <span class="nc">some_other_pipe</span><span class="p">;</span>
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">inner</span>
+<span class="o">...</span>
+<span class="n">pipe</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">some_pipe</span><span class="p">,</span> <span class="o">...&gt;</span><span class="p">::</span><span class="n">write</span><span class="p">(</span><span class="o">...</span><span class="p">);</span> <span class="o">//</span> <span class="n">a</span> <span class="n">usage</span> <span class="n">of</span> <span class="n">pipe</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">some_pipe</span><span class="p">,</span> <span class="o">...&gt;</span>
+<span class="o">...</span>
+<span class="n">pipe</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">some_other_pipe</span><span class="p">,</span> <span class="o">...&gt;</span><span class="p">::</span><span class="n">read</span><span class="p">(</span><span class="o">...</span><span class="p">);</span> <span class="o">//</span> <span class="n">a</span> <span class="n">usage</span> <span class="n">of</span> <span class="n">pipe</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">some_other_pipe</span><span class="p">,</span> <span class="o">...&gt;</span> 
+<span class="o">...</span>
+
+</pre></div>
+</div>
+<p>The corresponding integration header defines a namespace scope variable of type
+<code class="docutils literal notranslate"><span class="pre">__sycl_host_pipe_registration</span></code> (referred to below as the <strong>host pipe registrar</strong>)
+whose sole purpose is to run its constructor before the application’s main() function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">detail</span> <span class="p">{</span>
+<span class="n">namespace</span> <span class="p">{</span>
+
+<span class="k">class</span> <span class="nc">__sycl_host_pipe_registration</span> <span class="p">{</span>
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">__sycl_host_pipe_registration</span><span class="p">()</span> <span class="n">noexcept</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="n">__sycl_host_pipe_registration</span> <span class="n">__sycl_host_pipe_registrar</span><span class="p">;</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="p">(</span><span class="n">unnamed</span><span class="p">)</span>
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">detail</span>
+</pre></div>
+</div>
+<p>The integration footer contains the definition of the constructor, which calls
+a function in the DPC++ runtime with the following information for each host
+pipe that is used in the translation unit:</p>
+<ul class="simple">
+<li><p>The (host) address of the static member variable <code class="docutils literal notranslate"><span class="pre">__pipe</span></code>.</p></li>
+<li><p>The variable’s string from the <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> attribute.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">detail</span> <span class="p">{</span>
+<span class="n">namespace</span> <span class="p">{</span>
+
+<span class="n">__sycl_host_pipe_registration</span><span class="p">::</span><span class="n">__sycl_host_pipe_registration</span><span class="p">()</span> <span class="n">noexcept</span> <span class="p">{</span>
+  <span class="n">host_pipe_map</span><span class="p">::</span><span class="n">add</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pipe</span><span class="o">&lt;</span><span class="n">some_pipe</span><span class="p">,</span> <span class="o">...&gt;</span><span class="p">::</span><span class="n">__pipe</span><span class="p">,</span>
+    <span class="o">/*</span> <span class="n">same</span> <span class="n">string</span> <span class="n">returned</span> <span class="kn">from</span> <span class="nn">__builtin_sycl_unique_pipe_id</span><span class="p">(</span><span class="n">pipe</span><span class="o">&lt;</span><span class="n">some_pipe</span><span class="p">,</span> <span class="o">...&gt;</span><span class="p">::</span><span class="n">__pipe</span><span class="p">)</span> <span class="o">*/</span><span class="p">);</span>
+  <span class="n">host_pipe_map</span><span class="p">::</span><span class="n">add</span><span class="p">(</span><span class="o">&amp;</span><span class="n">inner</span><span class="p">::</span><span class="n">pipe</span><span class="o">&lt;</span><span class="n">some_other_pipe</span><span class="o">&gt;</span><span class="p">::</span><span class="n">__pipe</span><span class="p">,</span>
+    <span class="o">/*</span> <span class="n">same</span> <span class="n">string</span> <span class="n">returned</span> <span class="kn">from</span> <span class="nn">__builtin_sycl_unique_pipe_id</span><span class="p">(</span><span class="n">pipe</span><span class="o">&lt;</span><span class="n">some_other_pipe</span><span class="p">,</span> <span class="o">...&gt;</span><span class="p">::</span><span class="n">__pipe</span><span class="p">)</span> <span class="o">*/</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="p">(</span><span class="n">unnamed</span><span class="p">)</span>
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span><span class="p">::</span><span class="n">detail</span>
+</pre></div>
+</div>
+<p>Further details on adherence to C++ rules for unconstructed objects can be found
+in the <a class="reference internal" href="DeviceGlobal.html"><span class="std std-doc">device_global</span></a> design.</p>
+<p>Unique pipe ids will be generated by the same method as <a class="reference internal" href="DeviceGlobal.html"><span class="std std-doc">device_global</span></a> uses to generate <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code>s.</p>
+</section>
+</section>
+<section id="changes-to-the-dpc-runtime">
+<h3>Changes to the DPC++ runtime<a class="headerlink" href="#changes-to-the-dpc-runtime" title="Link to this heading">¶</a></h3>
+<p>Several changes are needed to the DPC++ runtime</p>
+<ul class="simple">
+<li><p>As we noted above, the front-end generates new content in the integration
+footer which calls the function <code class="docutils literal notranslate"><span class="pre">sycl::detail::host_pipe_map::add()</span></code>.
+The runtime defines this function and maintains information about all the
+host pipe variables in the application.  This information includes:</p>
+<ul>
+<li><p>The host address of the variable.</p></li>
+<li><p>The string which uniquely identifies the variable.</p></li>
+</ul>
+</li>
+<li><p>The runtime implements the <code class="docutils literal notranslate"><span class="pre">read</span></code> and <code class="docutils literal notranslate"><span class="pre">write</span></code> functions of the pipe
+class. These will use this <a class="reference external" href="https://github.com/intel-sandbox/ip-authoring-specs/blob/MJ_ChangeDocs4/Pipe/Spec/cl_intel_host_pipe_symbol.asciidoc">host pipe API</a>. These functions will
+need to retrieve the mapping added to the <strong>host pipe registrar</strong>
+for the pipe being read or written to, and pass it to the corresponding
+underlying OpenCL API call</p></li>
+</ul>
+</section>
+<section id="changes-to-the-sycl-post-link-tool">
+<h3>Changes to the sycl-post-link tool<a class="headerlink" href="#changes-to-the-sycl-post-link-tool" title="Link to this heading">¶</a></h3>
+<p>As mentioned in the <strong>Attributes attached to the class</strong> section, the sycl-post-link tool
+will generate the <code class="docutils literal notranslate"><span class="pre">HostAccessINTEL</span></code> decoration for each variable declared of a
+type marked with the global variable attribute <code class="docutils literal notranslate"><span class="pre">sycl-host-pipe</span></code>. The name operand
+should be filled with the id generated by the front end when the <code class="docutils literal notranslate"><span class="pre">host-pipe</span></code> attribute
+is encountered. Since there is no current use for specific host access information,
+the access field can be set to <code class="docutils literal notranslate"><span class="pre">1</span></code> (read/write). If a use for this information
+is found, this can be changed in the future.</p>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="CompileTimeProperties.html">Implementation design for compile time constant properties</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="ESIMDStatelesAccessors.html">ESIMD “stateless” accessors support design</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

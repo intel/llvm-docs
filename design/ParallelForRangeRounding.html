@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Parallel For Range Rounding &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SYCL Instrumentation" href="SYCLInstrumentationUsingXPTI.html" />
+    <link rel="prev" title="Behavior for optional kernel features" href="OptionalDeviceFeatures.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Parallel For Range Rounding</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="OptionalDeviceFeatures.html">Behavior for optional kernel features</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="SYCLInstrumentationUsingXPTI.html">SYCL Instrumentation</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="parallel-for-range-rounding">
+<h1>Parallel For Range Rounding<a class="headerlink" href="#parallel-for-range-rounding" title="Link to this heading">¶</a></h1>
+<p>Kernels to be executed using a <code class="docutils literal notranslate"><span class="pre">sycl::range</span></code>, and not a <code class="docutils literal notranslate"><span class="pre">sycl::nd_range</span></code>,
+may have their execution space reconfigured by the SYCL runtime. This is done
+since oddly shaped execution dimensions can hinder performance, especially when
+executing kernels on GPUs. It is worth noting that although the
+<code class="docutils literal notranslate"><span class="pre">sycl::parallel_for</span></code> using a <code class="docutils literal notranslate"><span class="pre">sycl::range</span></code> does not expose the concept of a
+<code class="docutils literal notranslate"><span class="pre">work_group</span></code> to the user, behind the scenes all GPU APIs require a work group
+configuration when dispatching kernels. In this case the work group
+configuration is provided by the implementation and not the user.</p>
+<p>As an example, imagine a SYCL kernel is dispatched with 1d range <code class="docutils literal notranslate"><span class="pre">{7727}</span></code>. Since
+7727 is a prime number, there is no way to divide this kernel up into workgroups
+of any size other than 1. Therefore 7727 workgroups are dispatched, each with
+size 1. Because of the parallel nature of execution on modern GPUs, this
+results in low occupancy, since we are not using all of the available work items
+that execute in lockstep in each (implicit) subgroup. This can hinder
+performance.</p>
+<p>To mitigate the performance hit of choosing an awkward implicit workgroup size,
+for each kernel using a <code class="docutils literal notranslate"><span class="pre">sycl::range</span></code>, the SYCL runtime will generate two
+kernels:</p>
+<ol class="arabic simple">
+<li><p>The original kernel without any modifications.</p></li>
+<li><p>The “Range rounded” kernel, which checks the global index of each work item
+at the beginning of execution, exiting early for a work item if the global
+index exceeds the user provided execution range. If the original kernel has
+the signature <code class="docutils literal notranslate"><span class="pre">foo</span></code>, then this kernel will have a signature akin to
+<code class="docutils literal notranslate"><span class="pre">_ZTSN4sycl3_V16detail19__pf_kernel_wrapperI3fooEE</span></code>.</p></li>
+</ol>
+<p>In this way, if a range rounded kernel is executed at runtime, a kernel
+dispatched with the range <code class="docutils literal notranslate"><span class="pre">{7727}</span></code> may be executed by <code class="docutils literal notranslate"><span class="pre">{7808}</span></code> work items,
+where work items <code class="docutils literal notranslate"><span class="pre">{7727..7807}</span></code> all exit early before doing any work. This would
+give much better performance on a GPU platform since the implementation can use
+the implicit <code class="docutils literal notranslate"><span class="pre">nd_range</span></code> <code class="docutils literal notranslate"><span class="pre">{7808,</span> <span class="pre">32}</span></code>, which corresponds to a workgroup size of
+32, instead of <code class="docutils literal notranslate"><span class="pre">{7727,</span> <span class="pre">1}</span></code>, which corresponds to a workgroup size of 1.</p>
+<p>The parallel for range rounding will only be used in the X (outermost)
+dimension of a <code class="docutils literal notranslate"><span class="pre">sycl::range</span></code>, since if the inner dimensions are changed by the
+SYCL runtime this can change the stride offset of different dimensions. Range
+rounding will only be used if the SYCL runtime X dimension exceeds some minimum
+value, which can be configured using the
+<code class="docutils literal notranslate"><span class="pre">SYCL_PARALLEL_FOR_RANGE_ROUNDING_PARAMS</span></code> environment variable.</p>
+<p>In order to reduce binary size, the user can tell the compiler only to generate
+the range rounded kernel, <code class="docutils literal notranslate"><span class="pre">-fsycl-range-rounding=force</span></code>. The user can also tell
+the SYCL implementation to only produce the unrounded kernel using the flag
+<code class="docutils literal notranslate"><span class="pre">-fsycl-range-rounding=disable</span></code>. By default both kernels will be generated,
+which is equivalent to <code class="docutils literal notranslate"><span class="pre">-fsycl-range-rounding=on</span></code>.</p>
+<section id="experimental-range-rounding">
+<h2>Experimental Range Rounding<a class="headerlink" href="#experimental-range-rounding" title="Link to this heading">¶</a></h2>
+<p>Experimental range rounding will perform rounding in all dimensions.
+Experimental range rounding can be set using the <code class="docutils literal notranslate"><span class="pre">-fsycl-exp-range-rounding</span></code>
+flag.</p>
+<p>Some oddly shaped ranges and how they might round:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">43</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">64</span><span class="p">}</span>
+<span class="p">{</span><span class="mi">43</span><span class="p">,</span> <span class="mi">79</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">64</span><span class="p">,</span> <span class="mi">96</span><span class="p">}</span>
+<span class="p">{</span><span class="mi">43</span><span class="p">,</span> <span class="mi">79</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">64</span><span class="p">,</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>The user can specify the factor that they want the rounded range to be a
+multiple of in all dimensions using the
+<code class="docutils literal notranslate"><span class="pre">SYCL_PARALLEL_FOR_RANGE_ROUNDING_PARAMS</span></code> environment variable. When
+experimental range rounding is used, only the middle value in
+<code class="docutils literal notranslate"><span class="pre">SYCL_PARALLEL_FOR_RANGE_ROUNDING_PARAMS</span></code> is used.
+If <code class="docutils literal notranslate"><span class="pre">SYCL_PARALLEL_FOR_RANGE_ROUNDING_PARAMS</span></code> is set to <code class="docutils literal notranslate"><span class="pre">1:256:1</span></code>, the rounded
+range will divide <code class="docutils literal notranslate"><span class="pre">256</span></code> in all dimensions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="mi">43</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">256</span><span class="p">}</span>
+<span class="p">{</span><span class="mi">43</span><span class="p">,</span> <span class="mi">257</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">256</span><span class="p">,</span> <span class="mi">512</span><span class="p">}</span>
+<span class="p">{</span><span class="mi">43</span><span class="p">,</span> <span class="mi">257</span><span class="p">,</span> <span class="mi">7</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="mi">256</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">256</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">-fsycl-range-rounding=disable</span></code> will override <code class="docutils literal notranslate"><span class="pre">-fsycl-exp-range-rounding</span></code>. If
+both are used in conjunction then no range rounding will happen.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="OptionalDeviceFeatures.html">Behavior for optional kernel features</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="SYCLInstrumentationUsingXPTI.html">SYCL Instrumentation</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

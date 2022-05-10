@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1ScalarConversionOperatorMixIn_3_01Vec_00_01T_00_01N_00_01std_1_1cded0709c478ea86bd8399238d12d3ed =
+[
+    [ "operator T", "structsycl_1_1__V1_1_1detail_1_1ScalarConversionOperatorMixIn_3_01Vec_00_01T_00_01N_00_01std_1_1cded0709c478ea86bd8399238d12d3ed.html#a175f933ac169f3be83d235b0cdd1da6d", null ]
+];

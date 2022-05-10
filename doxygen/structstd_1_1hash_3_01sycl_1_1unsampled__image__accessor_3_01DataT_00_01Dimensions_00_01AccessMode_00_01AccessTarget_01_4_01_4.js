@@ -1,0 +1,5 @@
+var structstd_1_1hash_3_01sycl_1_1unsampled__image__accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01AccessTarget_01_4_01_4 =
+[
+    [ "AccType", "structstd_1_1hash_3_01sycl_1_1unsampled__image__accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01AccessTarget_01_4_01_4.html#a8de62944d7d51f952ccaa4366a10a785", null ],
+    [ "operator()", "structstd_1_1hash_3_01sycl_1_1unsampled__image__accessor_3_01DataT_00_01Dimensions_00_01AccessMode_00_01AccessTarget_01_4_01_4.html#a3d7893bcd96834d7d68f51d4f1e0a2cf", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__elem__type__unqual_3_01SwizzleOp_3_01VecT_00_01OperationLef3fc948b714f8a649d9617e2a2bc7484b =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1get__elem__type__unqual_3_01SwizzleOp_3_01VecT_00_01OperationLef3fc948b714f8a649d9617e2a2bc7484b.html#aa537d5c2ba38aab19c3707111b6af62f", null ]
+];

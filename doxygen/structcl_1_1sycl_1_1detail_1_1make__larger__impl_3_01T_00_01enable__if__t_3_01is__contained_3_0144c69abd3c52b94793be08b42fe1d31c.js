@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1make__larger__impl_3_01T_00_01enable__if__t_3_01is__contained_3_0144c69abd3c52b94793be08b42fe1d31c.html#a92faca2394d73cb895444dd413258eca", null ]
-];

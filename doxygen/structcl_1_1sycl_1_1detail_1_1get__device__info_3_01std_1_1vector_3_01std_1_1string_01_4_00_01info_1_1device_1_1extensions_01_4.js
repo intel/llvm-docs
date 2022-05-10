@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01std_1_1string_01_4_00_01info_1_1device_1_1extensions_01_4 =
-[
-    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01std_1_1string_01_4_00_01info_1_1device_1_1extensions_01_4.html#a541cebd81963905398f88b3f137c8775", null ]
-];

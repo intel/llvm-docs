@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01ddec9283469768fe5be3859937c39541 =
+[
+    [ "htype", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01ddec9283469768fe5be3859937c39541.html#ae03ca4d61cf4916a1af8e52c04af2bbc", null ],
+    [ "ttype", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01ddec9283469768fe5be3859937c39541.html#ab604877ad78495e6806e70028854b155", null ]
+];

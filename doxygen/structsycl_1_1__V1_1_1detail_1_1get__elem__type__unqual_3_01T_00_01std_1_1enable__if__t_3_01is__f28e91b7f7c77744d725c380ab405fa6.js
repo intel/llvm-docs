@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__elem__type__unqual_3_01T_00_01std_1_1enable__if__t_3_01is__f28e91b7f7c77744d725c380ab405fa6 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1get__elem__type__unqual_3_01T_00_01std_1_1enable__if__t_3_01is__f28e91b7f7c77744d725c380ab405fa6.html#af3571a122b6bd2610808621384782797", null ]
+];

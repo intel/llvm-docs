@@ -1,0 +1,5 @@
+var structsyclcompat_1_1experimental_1_1detail_1_1tuple__template__index__helper_3_01PropertyContain0ca9a426cfede1527ef10bf515e37bc3 =
+[
+    [ "RestTuple", "structsyclcompat_1_1experimental_1_1detail_1_1tuple__template__index__helper_3_01PropertyContain0ca9a426cfede1527ef10bf515e37bc3.html#a4382cf882130286f2ff02c0e8d792007", null ],
+    [ "value", "structsyclcompat_1_1experimental_1_1detail_1_1tuple__template__index__helper_3_01PropertyContain0ca9a426cfede1527ef10bf515e37bc3.html#a38a079d71068a8aac4e78d987b14d2bc", null ]
+];

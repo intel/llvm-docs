@@ -1,0 +1,11 @@
+var classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c =
+[
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#a08cd2a1c28d3c2b7949041d3232cfd24", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#ab68c020df1472d2dcd3f25be45ea801a", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#a4f102281d8051711784e2d534bab9d7a", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#ae349b76f8097624ea1b5fb7c7c9ca7ae", null ],
+    [ "combine", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#ad6bbf03e2d290503fdd52e5a41182ac0", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#a58ddad7552fbe88f62814b9be5887a36", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#a9671b02ffb419fdb46c567c6b4640668", null ],
+    [ "detail::ReducerAccess", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#a5d02f911d625e17a420491abe4d33630", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01single__task__kernel__key_01_4 =
+[
+    [ "key_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property__value_3_01single__task__kernel__key_01_4.html#ab3149b8cf904806e8d9fd8b0293eb596", null ]
+];

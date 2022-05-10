@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__non__trivially__copyable__uniform_3_01void_01_4 =
+[
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__non__trivially__copyable__uniform_3_01void_01_4.html#a9f36439d79f7a439f24fc27311abc6cd", null ]
+];

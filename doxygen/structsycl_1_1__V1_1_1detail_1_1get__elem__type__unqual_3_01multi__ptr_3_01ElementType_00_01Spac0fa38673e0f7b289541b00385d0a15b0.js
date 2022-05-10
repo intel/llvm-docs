@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__elem__type__unqual_3_01multi__ptr_3_01ElementType_00_01Spac0fa38673e0f7b289541b00385d0a15b0 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1get__elem__type__unqual_3_01multi__ptr_3_01ElementType_00_01Spac0fa38673e0f7b289541b00385d0a15b0.html#a04040befccc1cd5a09c199850aa1274a", null ]
+];

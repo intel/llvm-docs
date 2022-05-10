@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Propagation of optimization levels used by front-end compiler to backend &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SYCL Native CPU" href="SYCLNativeCPU.html" />
+    <link rel="prev" title="Implementation Design for Device Configuration File" href="DeviceConfigFile.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Propagation of optimization levels used by front-end compiler to backend</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="DeviceConfigFile.html">Implementation Design for Device Configuration File</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="SYCLNativeCPU.html">SYCL Native CPU</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="propagation-of-optimization-levels-used-by-front-end-compiler-to-backend">
+<h1>Propagation of optimization levels used by front-end compiler to backend<a class="headerlink" href="#propagation-of-optimization-levels-used-by-front-end-compiler-to-backend" title="Link to this heading">¶</a></h1>
+<p>In order to ease the process of debugging, there is a user requirement to
+compile different modules with different levels of optimization. This document
+proposes a compiler flow that will enable propagation of compiler options
+specified from front-end to the runtimes and eventually to the backend.
+Currently, only <code class="docutils literal notranslate"><span class="pre">O0</span></code>/<code class="docutils literal notranslate"><span class="pre">O1</span></code>/<code class="docutils literal notranslate"><span class="pre">O2</span></code>/<code class="docutils literal notranslate"><span class="pre">O3</span></code> options are handled.
+Please note that this document only describes support for JIT path. AOT path
+support will be added later.</p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Link to this heading">¶</a></h2>
+<p>When building an application with several source and object files, it is
+possible to specify the optimization parameters individually for each source
+file/object file (for each invocation of the DPCPP compiler). The SYCL runtime
+should pass the original optimization options (e.g. <code class="docutils literal notranslate"><span class="pre">-O0</span></code> or <code class="docutils literal notranslate"><span class="pre">-O2</span></code>) used when
+building an object file to the device backend compiler. This will improve the
+debugging experience by selectively disabling/enabling optimizations for each
+source file, and therefore achieving better debuggability and better performance
+as needed.</p>
+<p>The current behavior is that the optimization level option is captured at link
+time and converted into its backend-specific equivalent. This option is
+propagated to the backend. For example, If <code class="docutils literal notranslate"><span class="pre">-O0</span></code> option is specified during
+link-time when using the OpenCL backend, the SYCL runtime will pass
+<code class="docutils literal notranslate"><span class="pre">-cl-opt-disable</span></code> option to the backend device compiler for all modules
+essentially disabling optimizations globally. Otherwise, if the <code class="docutils literal notranslate"><span class="pre">-O0</span></code>
+option is not specified for linker, it will not pass <code class="docutils literal notranslate"><span class="pre">-cl-opt-disable</span></code> option at
+all, therefore making the kernels mostly undebuggable, regardless of the
+original front-end compiler options. Link-time capturing of optimization option
+is the essence of the current implementation and this leads to loss of
+information about the compile-time options. Proposed design aims to rectify this
+behavior.</p>
+<p>Here is an example that demonstrates this pain point:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">c</span> <span class="n">test_host</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">o</span> <span class="n">test_host</span><span class="o">.</span><span class="n">o</span>
+<span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">fsycl</span> <span class="n">test_device_1</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">o</span> <span class="n">test_device_1</span><span class="o">.</span><span class="n">o</span>
+<span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">g</span> <span class="o">-</span><span class="n">O0</span> <span class="n">test_device_2</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">o</span> <span class="n">test_device_2</span><span class="o">.</span><span class="n">o</span>
+<span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">g</span> <span class="n">test_host</span><span class="o">.</span><span class="n">o</span> <span class="n">test_device_1</span><span class="o">.</span><span class="n">o</span> <span class="n">test_device_2</span><span class="o">.</span><span class="n">o</span> <span class="o">-</span><span class="n">o</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>In this scenario, the fat binary is ‘test’ and there are no compilation flags
+sent across to the backend compiler. Though the user wanted to have full
+debuggability with test_device_2.cpp module, some of the debuggability is lost.</p>
+<p>Another scenario is shown below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">c</span> <span class="o">-</span><span class="n">g</span> <span class="o">-</span><span class="n">O0</span> <span class="o">-</span><span class="n">fsycl</span> <span class="n">test</span><span class="o">.</span><span class="n">cpp</span> <span class="o">-</span><span class="n">o</span> <span class="n">test</span><span class="o">.</span><span class="n">o</span>
+<span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">g</span> <span class="o">-</span><span class="n">fsycl</span> <span class="n">test</span><span class="o">.</span><span class="n">o</span> <span class="o">-</span><span class="n">o</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>In this scenario, the fat binary is ‘test’ and there are no compilation flags
+sent across to the backend compiler. Though the user wanted to have full
+debuggability with test.cpp module, some of the debuggability is lost. The user
+was not able to set a breakpoint inside device code.</p>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>In order to support module-level debuggability, the user will compile different
+module files with different levels of optimization. These optimization levels
+must be preserved and made use of during the backend compilation. The following
+is a key requirement for this feature.</p>
+<ul class="simple">
+<li><p>If the user specifies <code class="docutils literal notranslate"><span class="pre">-Ox</span></code> as a front-end compile option for a particular
+module, this option must be converted to appropriate backend option and then
+propagated fo use during backend JIT compilation.</p></li>
+</ul>
+<p>The following table specifies the appropriate backend options for level-zero and
+OpenCL backends.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Front-end option</p></th>
+<th class="head"><p>L0 backend option</p></th>
+<th class="head"><p>OpenCL backend option</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-O0</p></td>
+<td><p>-ze-opt-disable</p></td>
+<td><p>-cl-opt-disable</p></td>
+</tr>
+<tr class="row-odd"><td><p>-O1</p></td>
+<td><p>-ze-opt-level=2</p></td>
+<td><p>/* no option */</p></td>
+</tr>
+<tr class="row-even"><td><p>-O2</p></td>
+<td><p>-ze-opt-level=2</p></td>
+<td><p>/* no option */</p></td>
+</tr>
+<tr class="row-odd"><td><p>-O3</p></td>
+<td><p>-ze-opt-level=2</p></td>
+<td><p>/* no option */</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="proposed-design">
+<h2>Proposed design<a class="headerlink" href="#proposed-design" title="Link to this heading">¶</a></h2>
+<p>This chapter discusses changes required in various stages of the compilation
+pipeline.</p>
+<section id="changes-to-the-clang-front-end">
+<h3>Changes to the clang front-end<a class="headerlink" href="#changes-to-the-clang-front-end" title="Link to this heading">¶</a></h3>
+<p>For each function in SYCL device code, we add a new function attribute that is
+named <code class="docutils literal notranslate"><span class="pre">sycl-optlevel</span></code>. Value of this attribute is set to the optimization level
+which was used to compile the overlying module.</p>
+</section>
+<section id="changes-to-the-sycl-post-link-tool">
+<h3>Changes to the sycl-post-link tool<a class="headerlink" href="#changes-to-the-sycl-post-link-tool" title="Link to this heading">¶</a></h3>
+<p>During device code split performed in the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool, optimization
+level attribute <code class="docutils literal notranslate"><span class="pre">sycl-optlevel</span></code> is treated as an optional feature,
+i.e. device code split algorithm ensures that no kernels with different values
+of sycl-optlevel are bundled into the same device image. See also optional
+kernel features <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/design/OptionalDeviceFeatures.md#changes-to-the-post-link-tool">design document</a>.
+The <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool also adds a new property into the
+<code class="docutils literal notranslate"><span class="pre">SYCL/misc</span> <span class="pre">properties</span></code> property set for each device code module. This entry will
+be used to store the optimization level. Name of this property is <code class="docutils literal notranslate"><span class="pre">optLevel</span></code> and
+the value is stored as a 32-bit integer. If there is a module where the user did
+not specify an optimization module, there is no new entry in the property set.</p>
+</section>
+<section id="changes-to-the-sycl-runtime">
+<h3>Changes to the SYCL runtime<a class="headerlink" href="#changes-to-the-sycl-runtime" title="Link to this heading">¶</a></h3>
+<p>In the SYCL runtime, the device image properties can be accessed to extract the
+associated optimization level. Once the optimization level is available, it is
+converted to its equivalent frontend option string
+(<code class="docutils literal notranslate"><span class="pre">-O0</span></code>, <code class="docutils literal notranslate"><span class="pre">-O1</span></code>, <code class="docutils literal notranslate"><span class="pre">-O2</span></code>, or <code class="docutils literal notranslate"><span class="pre">-O3</span></code>). This frontend option string is passed into a
+query that is made to the plugin to identify the correct backend option. This
+backend option is added to the existing list of compiler options and is sent to
+the backend.</p>
+</section>
+<section id="changes-to-the-plugin">
+<h3>Changes to the plugin<a class="headerlink" href="#changes-to-the-plugin" title="Link to this heading">¶</a></h3>
+<p>A new plugin API has been added. It takes the frontend option string as input in
+string format and returns <code class="docutils literal notranslate"><span class="pre">pi_result</span></code>. A string format is used for sending the
+frontend option so that this API can be used for querying other frontend
+options as well. The signature of this API is as follows:</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="n">pi_result</span><span class="w"> </span><span class="nf">piPluginGetBackendOption</span><span class="p">(</span><span class="n">pi_platform</span><span class="w"> </span><span class="n">platform</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">frontend_option</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">backend_option</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In the level-zero and OpenCL plugins, the table provided in the ‘Requirements’
+section is used as a guide to identify the appropriate backend option.
+The option is returned in <code class="docutils literal notranslate"><span class="pre">backend_option</span></code>. For other plugins (HIP, cuda),
+empty string is returned. This API returns <code class="docutils literal notranslate"><span class="pre">PI_SUCCESS</span></code> for
+valid inputs (frontend_option != “”). For invalid inputs, it returns
+<code class="docutils literal notranslate"><span class="pre">PI_ERROR_INVALID_VALUE</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="DeviceConfigFile.html">Implementation Design for Device Configuration File</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="SYCLNativeCPU.html">SYCL Native CPU</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

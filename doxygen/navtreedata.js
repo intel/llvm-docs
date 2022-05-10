@@ -1,24 +1,26 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var NAVTREE =
 [
@@ -30,7 +32,7 @@ var NAVTREE =
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", "namespacemembers_dup" ],
         [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
-        [ "Variables", "namespacemembers_vars.html", null ],
+        [ "Variables", "namespacemembers_vars.html", "namespacemembers_vars" ],
         [ "Typedefs", "namespacemembers_type.html", "namespacemembers_type" ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -47,7 +49,7 @@ var NAVTREE =
         [ "Typedefs", "functions_type.html", "functions_type" ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Functions", "functions_rela.html", "functions_rela" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -58,7 +60,7 @@ var NAVTREE =
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", "globals_eval" ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
@@ -67,56 +69,131 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"CL_2sycl_2atomic_8hpp.html",
-"CL_2sycl_2detail_2builtins_8hpp.html#aa385e76f8cf9e2f0ac50f50f04ad3a25",
-"access_8hpp_source.html",
-"buffer__impl_8hpp.html#a7a19058abadafdeccbb4ef44cdb2b318",
-"builtins__integer_8cpp.html#a9d8af2983f4b24338b65552d22cb845b",
-"builtins__math_8cpp.html#ae369f88723ab0824fb210055cabde075",
-"classcl_1_1____ESIMD__DNS_1_1simd__view__impl.html#a09c125f29c9314b0b8f2bcc751b85579",
-"classcl_1_1sycl_1_1accessor.html#a8c3d83d697711e00224d44dbbb245a9f",
-"classcl_1_1sycl_1_1detail_1_1CG.html#a65252a5ac16a1586132d2abd63bee8c4ab4daca084ad9eabfc8de231929477ed6",
-"classcl_1_1sycl_1_1detail_1_1GlobalHandler.html#adf6ce91503a14a040328bd03befe5a76",
-"classcl_1_1sycl_1_1detail_1_1PropertyListBase.html#a306c270da80409f684377a1df2e21803",
-"classcl_1_1sycl_1_1detail_1_1SwizzleOp.html#a831f9fba0d213971e5464b29839bfb13",
-"classcl_1_1sycl_1_1detail_1_1context__impl.html#a0ba80013dfcb22a4aec8cbad60d77bff",
-"classcl_1_1sycl_1_1detail_1_1kernel__bundle__impl.html#a0217dbe2ac866eac88608a169e434902",
-"classcl_1_1sycl_1_1detail_1_1queue__impl.html#a95de85437f8215a63fe32274534732ba",
-"classcl_1_1sycl_1_1ext_1_1oneapi_1_1atomic__accessor.html",
-"classcl_1_1sycl_1_1group.html#aed7cadf56a34658c6f8e3840e5ba3dfe",
-"classcl_1_1sycl_1_1marray.html",
-"classcl_1_1sycl_1_1queue.html#a82dd44ca8026ba7e4e7c585496dfa870",
-"classwhere__expression.html#a8228d88f686fb14ab93436fac7d670eb",
-"device__info_8hpp.html#ab09b783329802eb831c772bcd3d62658",
-"event__impl_8cpp.html#a460b458b586abd02459944fb9371cd53",
-"force__device_8hpp.html",
-"generic__type__lists_8hpp.html#ab43108a0a1cccd0334a2df96a2b8884e",
-"group__sycl__esimd__bitmanip.html",
-"group__sycl__esimd__math__ext.html#ga98ae3f423b023d83edbf5aded699a4ed",
-"image_8hpp.html#a78b713c5436596506d5232e591a3b7aeaddf4ea35fce94c84a02bbbc0f508b3a7",
-"info__desc_8hpp.html#ab329ccdc28ac4187f67d14db9cbb6190ab9da9a117e34d2a352c44b645083599f",
-"matrix-aot-amx_8hpp.html#a83e42bd05273a505954e55af7262dff4a55e5bef9f48cf4e944a16a034eac0704",
-"namespacemembers_func_e.html",
-"pi_8h.html#a15a332a6c4c1701b7e20d5bf0afef717ad519230f2f7ea522dbdd87a7f5791623",
-"pi_8h.html#a51fb8a9c431e708becdc604ebce5e9e2ac93aa4ddce1199d61e1e1d2935cf9ef8",
-"pi_8h.html#ad0eb6b12728df62c4cbec6367058868a",
-"pi__cuda_8cpp.html#ae706bc52d81ef45789bbb61a7a04f7a5",
-"pi__hip_8cpp.html#adb6996c07d19ee555677a9f4f64ebab0",
-"pi__opencl_8cpp.html#a88881713d9d9f6dc9501904756dbe2e7",
-"queue__impl_8hpp.html#a3e65b92996d59ada3452ecba0fd88524",
-"std_2experimental_2simd_8hpp.html#aada9860752f4e0894539533c7a6c360b",
-"struct____spv_1_1Scope.html#a66ace66bdab48e79e10037a25edb5de4aeb370dc85602eb0978fbb4cfe3f71020",
-"struct__pi__image.html",
-"struct__pi__platform.html#a9913efa9437be0f2688408e058cd1a90",
-"structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01device_01_4.html#abb65dd41aa7881fe552fd11d585b6d03",
-"structcl_1_1sycl_1_1detail_1_1KernelInfo.html#a56e405e1b51976e89317445566ff61e1",
-"structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01info_1_1partition__affinit72fd5d1aafd3b7caa2bc62838b399b34.html",
-"structcl_1_1sycl_1_1detail_1_1select__cl__mptr__or__vector__or__scalar.html",
-"structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1CreateTuplePairs_3_01L_00_01R_00_01Rest_8_8_8_01_4.html",
-"structcl_1_1sycl_1_1ext_1_1oneapi_1_1sub__group__mask.html#a4e748238f3fab957f823534a4b369fb4",
-"structstd_1_1numeric__limits_3_01cl_1_1sycl_1_1half_01_4.html#ae3b298e9c8fbe350862d132574a88989",
-"sycl_2ext_2oneapi_2group__algorithm_8hpp.html#a8ee6ed8bfd554c3c5c214523a0cd19b9",
-"usm__impl_8cpp.html#a4982e8a06f5ecc549b97d01a579a8a01"
+"CL_2sycl_8hpp.html",
+"allowlist_8cpp.html#a424bfc2acd2bf7289580a7dc9756cf46",
+"bfloat16_8hpp.html#aa655ec030b6b638df66dd5b4458e9a47",
+"cache__control__properties_8hpp.html#a7b05ae4d0903bf5b2e5419f2273efa4a",
+"classsycl_1_1__V1_1_1buffer.html#a02e92208323dd428d3e5c28dfffd2de7",
+"classsycl_1_1__V1_1_1detail_1_1AllocaSubBufCommand.html#affcae063b55f72b0bd3fb465da963dfc",
+"classsycl_1_1__V1_1_1detail_1_1CGFill.html",
+"classsycl_1_1__V1_1_1detail_1_1Command.html#ada0213e1750b764be51ce325cef40246",
+"classsycl_1_1__V1_1_1detail_1_1HostTask.html#a77af1c50b9e8be9964bb4acbd70cdea1",
+"classsycl_1_1__V1_1_1detail_1_1MapMemObject.html",
+"classsycl_1_1__V1_1_1detail_1_1ProgramManager.html#a6ed5c23d1676b75fe6d8f5e295e83798",
+"classsycl_1_1__V1_1_1detail_1_1ReducerAccess.html",
+"classsycl_1_1__V1_1_1detail_1_1SYCLMemObjI.html#a19400b649d16c686095c259ec762a1bc",
+"classsycl_1_1__V1_1_1detail_1_1Scheduler.html#a9c6d3ba4ce59124a2bb3a1fb724724e3",
+"classsycl_1_1__V1_1_1detail_1_1UnsampledImageAccessorBaseHost.html#a6c4fa934d6698b61370d6a75eda0925a",
+"classsycl_1_1__V1_1_1detail_1_1array.html#a39505e407851504141200534239f17f2",
+"classsycl_1_1__V1_1_1detail_1_1buffer__plain.html#a27bc3957c76b0f066edd8805b1af006c",
+"classsycl_1_1__V1_1_1detail_1_1device__impl.html#a4f38013f07020e6864189beeb9d97afe",
+"classsycl_1_1__V1_1_1detail_1_1fusion__wrapper__impl.html#aecac4d0a298fcf0f2e4754bea81b0151",
+"classsycl_1_1__V1_1_1detail_1_1image__impl.html#a2b8ff1e2bf46669835b30a802b282d93",
+"classsycl_1_1__V1_1_1detail_1_1kernel__bundle__plain.html#ad13d469861547e382986ed67c772b5f7",
+"classsycl_1_1__V1_1_1detail_1_1queue__impl.html#a00a722aa969f7fce5261809112d8f399",
+"classsycl_1_1__V1_1_1detail_1_1reduction__impl__algo.html#aa7c16cc37938931a9f0098a83c6001ea",
+"classsycl_1_1__V1_1_1event.html#a80d0f8d910fffe7a403e32f344f969e7",
+"classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1simd__view__impl.html#ae066b21643a660b3584c926e198af5a1",
+"classsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1online__compile__error.html#a1e9c4398f9b5f5a143a77390d360bf6e",
+"classsycl_1_1__V1_1_1ext_1_1oneapi_1_1detail_1_1wi__element_3_01sycl_1_1ext_1_1oneapi_1_1bfloat177c91451c4e0f35ee64557d091d22148.html#a62ccf47aa05fbb508b913da0141a457e",
+"classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1default__sorters_1_1group__sorter.html#a56c1636d5e272025b9f1f400ef335a18",
+"classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1modifiable__command__graph.html#ace9543bfd8a5fde56375e011d76fb1b1",
+"classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1node.html#a952be2f2925d78ad8bfadeac2dddd556",
+"classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1uniform.html#adf30623d237a2115ba358faec9350f27",
+"classsycl_1_1__V1_1_1host__accessor.html#a278bfc4b333e3581a431267fc74cb3d7",
+"classsycl_1_1__V1_1_1kernel__bundle.html#abe5716d50627a79cc90a7a05fbdd1290",
+"classsycl_1_1__V1_1_1queue.html#a33a466db5791c5059a46afc86ae9eaff",
+"classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta922e4e20ef01baa3adede47b5770977c.html#ae349b76f8097624ea1b5fb7c7c9ca7ae",
+"classsycl_1_1__V1_1_1unsampled__image.html#a3039d1f8b4c22d58fdc50cdad3120ee1",
+"classsyclcompat_1_1device__info.html#a58788f4f2e99fea34572103314935da9",
+"complex__math_8hpp.html",
+"device__architecture_8hpp.html#a5129cc125689947a1172fe2f437d0457aa8de3dd68673b59b87521d9de6f37e6c",
+"device__event_8hpp_source.html",
+"event_8cpp.html",
+"ext_2intel_2esimd_2math_8hpp.html#ga3af2d41d0423e7fd8ddc4e6ff0c64b07",
+"ext_2intel_2esimd_2memory_8hpp.html#ga721d14b99de46db0426e2a31b2460e41",
+"ext_2intel_2experimental_2esimd_2memory_8hpp.html#ab72a78dca03cce6db793477e700cfc35",
+"fp__control__kernel__properties_8hpp.html#ad6f264e7a0903d9badc0049b9f29ebc0a524dae6baae363e8ab780ac6abea6ccb",
+"functions_vars_w.html",
+"generic__type__traits_8hpp_source.html",
+"group__sort_8hpp.html#ae6cbbec46c3ea0e9d94d59af9d6f55c6",
+"group__sycl__esimd__core.html#gga51d9236d9d20da467da1697426b1b8e4a5b61a1b298a0d06efa6933a97e68d763",
+"group__sycl__esimd__math.html#gab5fddd6f25c832583d676537a53e4b90",
+"group__sycl__esimd__memory.html#ga76862c56e39d4464ee6015f0c69ac537",
+"group__sycl__esimd__memory__atomics.html#ga5416ada3001749505277b9f4381f0172",
+"group__sycl__esimd__memory__lsc.html#ga08eaeb98ae6480eaf5ce761476d91b23",
+"group__sycl__esimd__memory__nbarrier.html#gab394978b511a064dbd1cf161d51cf563",
+"group__sycl__esimd__misc.html#gab5eca9ca12bb6fe52e4226b2f427d657",
+"host__pipe__map__entry_8hpp_source.html",
+"imf__fp__conversions_8hpp.html#a444b27bcce80b404223959d8729857e4",
+"imf__fp__conversions_8hpp.html#ae8f96213f48e6771be419f4e6d95978f",
+"imf__rounding__math_8hpp.html#ab4f0fb1d648ad481284c0063b68e274e",
+"imf__simd_8hpp.html#ae7a0f698e7360f7bd3b0cbc427cd32f9",
+"kernel__bundle_8cpp.html#af3330573d5283572e7bd9a75e1ac7464",
+"level__zero_8cpp.html",
+"multi__ptr_8hpp.html#a516868ff1c007bc1d3e470e4a922198b",
+"namespacesycl.html#a9b3eefbf42f0cc6ace1a979adfc94f0cab5c9f53b2d60279eb66dcc8dfd43d2bd",
+"namespacesycl_1_1__V1.html#a2aa62421734e3cd3d2fa2ae4495c1bcf",
+"namespacesycl_1_1__V1.html#a5f6e0d270f71d7dc52fbd673ab353c88",
+"namespacesycl_1_1__V1.html#aa192581f7d9d6a87027766b7fe873677",
+"namespacesycl_1_1__V1.html#ad18a4545c1bfee111bf013c12b6a3fb4",
+"namespacesycl_1_1__V1_1_1access.html#a4f9becdfa0cf7d00e28cc8efdee4841ba5521dbab91d3894807c5ad7e84e14f4b",
+"namespacesycl_1_1__V1_1_1detail.html#a1aea4e330bea78a997a0d63181c9c30a",
+"namespacesycl_1_1__V1_1_1detail.html#a3a16bc5608ef9bb9ebeeba8645b6934da9496f1d3d12143c67418bf733476b952",
+"namespacesycl_1_1__V1_1_1detail.html#a5bc7a2e56474869b108b404e62e5962c",
+"namespacesycl_1_1__V1_1_1detail.html#a7df4d10275ba3547879016dbe2baafaf",
+"namespacesycl_1_1__V1_1_1detail.html#aa97cadc31478f1cb9383103a60739636a1363a7962b67f3a935a85730c12516c0",
+"namespacesycl_1_1__V1_1_1detail.html#acb9207d756822d8efb7380b1ff8ff458",
+"namespacesycl_1_1__V1_1_1detail.html#aeca4e3ba23ec573461bf9d6caee61566",
+"namespacesycl_1_1__V1_1_1detail_1_1gtl.html#a23f3c74c3845ab75ec571359a0f9a4a5",
+"namespacesycl_1_1__V1_1_1detail_1_1gvl.html",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1esimd.html#a21ab41e12b646172519cd7afa15c2c79",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail.html#a7ae7b427d4fffbef9d0ef2010f84e68aa8cd892b7b97ef9489ae4479d3f4ef0fc",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1experimental.html#a4ccd182c032a8d9e88c409c400006352",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1esimd_1_1detail.html#aa278ccc07b6bb25efd5d4e91640b18d9",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1math.html#a397fbad8a48e8916b1b03316886c0a9b",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1math.html#a7cee7078a94d5e1b0f9fd955d8678340",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1math.html#ab878849cbf6655e566f7a22ff7bb429f",
+"namespacesycl_1_1__V1_1_1ext_1_1intel_1_1math.html#afbc014141aaa23c19d126db9bcda9123",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#a173f224c92465a9ab5b15a6da656b82cae7033a15e879ce2691396d52ee7869f2",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#a5bb019d2087504c25585322e4587adef",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#a95ac4625ecd805ccfa1e9ccb69652b4a",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#ad72af8989b540e4bfc902cbf11ddd0be",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail.html#a20f438233ffdf78e4273b873bb967fe9",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail.html#a75d59166f0e903754089948e1d1ede05",
+"namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1graph.html",
+"namespacesyclcompat.html#a087d2c6930b8d056ee4824ef599deeae",
+"namespacesyclcompat_1_1detail.html#a0dd330f55320e489ea4f5390fb693c48",
+"ompat_2math_8hpp.html#aa6e292b332c72f1e012dfff1543122ad",
+"operators_8hpp.html#aac400387181737ac5100e936e770fc92",
+"property_8hpp.html#a2846d6df72dc521669f09e1bb755cd99a086427dc670d560c421cac7928d40f92",
+"reduction_8hpp.html#a81644f10c19b63e7c794e0d4fd7aa28f",
+"std_2experimental_2simd_8hpp.html#a3acd72c6ad085da92b9cb1b03cf335f9",
+"struct____spv_1_1Scope.html",
+"structsycl_1_1__V1_1_1detail_1_1ArrayCreator_3_01DataT_00_01FlattenF_00_01ArgT_00_01ArgTN_8_8_8_01_4.html",
+"structsycl_1_1__V1_1_1detail_1_1BackendReturn_3_01backend_1_1ext__oneapi__hip_00_01event_01_4.html",
+"structsycl_1_1__V1_1_1detail_1_1GetMArrayArgsSize_3_4.html",
+"structsycl_1_1__V1_1_1detail_1_1IsSwizzleOp_3_01sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Operatcf49b4af7f27549e12339a6e6731b7a1.html",
+"structsycl_1_1__V1_1_1detail_1_1NDRangeReduction.html",
+"structsycl_1_1__V1_1_1detail_1_1change__base__type_3_01vec_3_01T_00_01N_01_4_00_01B_01_4.html#a71ff157dc7760cfec145875e24d41a1b",
+"structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01info_1_1partition__property_00_01inf89d306f11b44731233b24b8af42ea084.html#a9f9dcb0307a6c524b5902bd4a3eca9ae",
+"structsycl_1_1__V1_1_1detail_1_1interop_3_01backend_1_1ext__oneapi__level__zero_00_01event_01_4.html#a0b0dd8a7c06b82666b13f7c27ab91785",
+"structsycl_1_1__V1_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01marray_3_01std_1_bedc9dcad10b3670eb40ed78d4d024fb.html#a8c1f5dac9a1c427244eef16050ed6aea",
+"structsycl_1_1__V1_1_1detail_1_1same__size__signed__int.html",
+"structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1cache__hint__L3__key.html#a3635aa7d6a9dd198082d5263c293da4b",
+"structsycl_1_1__V1_1_1ext_1_1intel_1_1experimental_1_1protocol__key.html",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____numeric__type.html#a430aa5318eb271fa1eb5c2bf634e2a3f",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_00_01false_01_4.html#a8d74f95f8a73c0218543ce5114792e7c",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01intel_1_1ec238f194f32d0671768bd8b266bb750c.html",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__instance__of__tmpl__int__boe88a3968af1baa9e7eb7e8b7d826474d.html",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem__handle.html#a3b241664e234360c8782d86db437783c",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1is__valid__property_3_01T_00_01dwidth__key_1_1value__t_3_01W_01_4_01_4.html",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architecture8f4f6e8296f98caf49f16e90a7a66e2f.html#a5cd6a97b8d7aff1bb1c0036ef42b76b1",
+"structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1resource__win32__handle.html",
+"structsycl_1_1__V1_1_1is__device__copyable_3_01std_1_1array_3_01T_00_010_01_4_01_4.html",
+"structsycl__device__binary__struct.html#a6337dfd37e481a2794a8ea1f4ef9b87a",
+"test__proxy_8hpp_source.html",
+"usm__pointer__info_8hpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

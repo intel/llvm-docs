@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01info_1_1partition__property_00_01inf89d306f11b44731233b24b8af42ea084 =
+[
+    [ "get", "structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01info_1_1partition__property_00_01inf89d306f11b44731233b24b8af42ea084.html#a9f9dcb0307a6c524b5902bd4a3eca9ae", null ]
+];

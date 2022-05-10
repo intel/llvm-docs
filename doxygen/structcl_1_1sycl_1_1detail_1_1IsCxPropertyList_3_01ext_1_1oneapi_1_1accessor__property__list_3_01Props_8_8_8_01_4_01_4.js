@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ext_1_1oneapi_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4 =
-[
-    [ "value", "structcl_1_1sycl_1_1detail_1_1IsCxPropertyList_3_01ext_1_1oneapi_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html#a8cb4321b3f8af24215cb9bf19d4f9a92", null ]
-];

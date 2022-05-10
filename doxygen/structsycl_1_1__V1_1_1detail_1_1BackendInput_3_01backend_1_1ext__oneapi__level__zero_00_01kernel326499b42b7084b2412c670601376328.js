@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel326499b42b7084b2412c670601376328 =
+[
+    [ "NativeHandle", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel326499b42b7084b2412c670601376328.html#a31f89d2b207cbbf967878a910292ae8d", null ],
+    [ "Ownership", "structsycl_1_1__V1_1_1detail_1_1BackendInput_3_01backend_1_1ext__oneapi__level__zero_00_01kernel326499b42b7084b2412c670601376328.html#a274870c3013b509c52c57b84bc8e2251", null ]
+];

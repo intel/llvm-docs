@@ -1,7 +1,7 @@
 var mem__alloc__helper_8hpp =
 [
-    [ "memBufferCreateHelper", "mem__alloc__helper_8hpp.html#a2d93436312c7dda9da76c3e86e8be8a9", null ],
-    [ "memBufferMapHelper", "mem__alloc__helper_8hpp.html#ab630e0339fff9658667b44e280ccea42", null ],
-    [ "memReleaseHelper", "mem__alloc__helper_8hpp.html#a0baba8a8597feadc98fea4ef38481682", null ],
-    [ "memUnmapHelper", "mem__alloc__helper_8hpp.html#a077510c221961b4ad259c9a57295514d", null ]
+    [ "memBufferCreateHelper", "mem__alloc__helper_8hpp.html#a8b7e887a45ebdbdbd6ad4230b89a394d", null ],
+    [ "memBufferMapHelper", "mem__alloc__helper_8hpp.html#ae58db526252c22768ea01811df8e562a", null ],
+    [ "memReleaseHelper", "mem__alloc__helper_8hpp.html#a1cc77235d5b2aff990d3c930c81d1c79", null ],
+    [ "memUnmapHelper", "mem__alloc__helper_8hpp.html#a6d35ace09b9782b6600827d24506e65d", null ]
 ];

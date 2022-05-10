@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The DPC++ Runtime Plugin Interface. &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Specialization constants" href="SpecializationConstants.html" />
+    <link rel="next" title="Specialization constants" href="SYCL2020-SpecializationConstants.html" />
     <link rel="prev" title="SYCL Kernel Parameter Handling and Array Support" href="KernelParameterPassing.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
@@ -29,17 +27,17 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="SpecializationConstants.html">Specialization constants</a>&#160;&#160;»
+        <a href="SYCL2020-SpecializationConstants.html">Specialization constants</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="the-dpc-runtime-plugin-interface">
-<h1>The DPC++ Runtime Plugin Interface.<a class="headerlink" href="#the-dpc-runtime-plugin-interface" title="Permalink to this headline">¶</a></h1>
+  <section id="the-dpc-runtime-plugin-interface">
+<h1>The DPC++ Runtime Plugin Interface.<a class="headerlink" href="#the-dpc-runtime-plugin-interface" title="Link to this heading">¶</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>The DPC++ Runtime Plugin Interface (PI) is an interface layer between the
 device-agnostic part of DPC++ runtime and the device-specific runtime layers
 which control execution on devices. It employs the “plugin” mechanism to bind
@@ -67,14 +65,14 @@ to grow, for example in areas of memory model and management, program
 management.</p>
 </section>
 <section id="discovery-and-linkage-of-pi-implementations">
-<h2>Discovery and linkage of PI implementations<a class="headerlink" href="#discovery-and-linkage-of-pi-implementations" title="Permalink to this headline">¶</a></h2>
+<h2>Discovery and linkage of PI implementations<a class="headerlink" href="#discovery-and-linkage-of-pi-implementations" title="Link to this heading">¶</a></h2>
 <p><img alt="PI implementation discovery" src="../_images/PluginDiscovery.svg" /></p>
 <p>Device discovery phase enumerates all available devices and their features by
 querying underlying plugins found in the system. This process is performed when
 all attached platforms or devices are queried in an application; for example,
 during device selection.</p>
 <section id="plugin-discovery">
-<h3>Plugin discovery<a class="headerlink" href="#plugin-discovery" title="Permalink to this headline">¶</a></h3>
+<h3>Plugin discovery<a class="headerlink" href="#plugin-discovery" title="Link to this heading">¶</a></h3>
 <p>Plugins are physically dynamic libraries or shared objects.
 The process to discover plugins follows the following guidelines.</p>
 <p>The DPC++ Runtime reads the names of the plugins from a configuration file
@@ -102,22 +100,20 @@ SYCL_PI_TRACE=0x02 provides trace of all PI calls made from the DPC++ runtime
 with arguments and returned values.
 SYCL_PI_TRACE=-1 lists all PI Traces above and more debug messages.</p>
 <section id="plugin-binary-interface">
-<h4>Plugin binary interface<a class="headerlink" href="#plugin-binary-interface" title="Permalink to this headline">¶</a></h4>
-<p>Plugins should implement all the Interface APIs required for the PI Version
-it supports. There is <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../../include/CL/sycl/detail/pi.def"><span class="xref myst">pi.def</span></a>/
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../../include/CL/sycl/detail/pi.h"><span class="xref myst">pi.h</span></a> file listing all PI API names that
-can be called by the specific version of Plugin Interface.
-It exports a function - “piPluginInit” that returns the plugin details and
-function pointer table containing the list of pointers to implemented Interface
-Functions defined in pi.h.
-In the future, this document will list the minimum set of Interface APIs
+<h4>Plugin binary interface<a class="headerlink" href="#plugin-binary-interface" title="Link to this heading">¶</a></h4>
+<p>Plugins should implement all the Interface APIs required for the PI Version it
+supports. There is pi.def/ pi.h file listing all PI API names that can be
+called by the specific version of Plugin Interface. It exports a function -
+“piPluginInit” that returns the plugin details and function pointer table
+containing the list of pointers to implemented Interface Functions defined in
+pi.h. In the future, this document will list the minimum set of Interface APIs
 to be supported by Plugins. This will also require adding functionality to SYCL
 Runtime to work with such limited functionality plugins.</p>
 <p>(TBD - list and describe the symbols that a plugin must implement in order to
 be picked up by the DPC++ runtime for offload.)</p>
 </section>
 <section id="binding-a-plugin">
-<h4>Binding a Plugin<a class="headerlink" href="#binding-a-plugin" title="Permalink to this headline">¶</a></h4>
+<h4>Binding a Plugin<a class="headerlink" href="#binding-a-plugin" title="Link to this heading">¶</a></h4>
 <p>The DPC++ Runtime loads all discovered Plugins and tries to bind them by calling
 piPluginInit API for each loaded Plugin. The Plugins return the information of
 supported PI version and the list of implemented PI API Function pointers.
@@ -129,13 +125,13 @@ stored in the associated platforms during platform object construction.
 The PI API calls are later forwarded using this information.
 A plugin is said to “bind” after this process completes with no errors.
 During device selection, the user can prefer selection of a device from a
-specific Plugin or Backend using the env SYCL_BE. The correspondence between
-a plugin and a SYCL_BE value is currently hardcoded in the runtime.
+specific Plugin or Backend using the env ONEAPI_DEVICE_SELECTOR. The correspondence between
+a plugin and a ONEAPI_DEVICE_SELECTOR value is currently hardcoded in the runtime.
 ( TBD: Make this a part of configuration file).
-Eg: SYCL_BE=PI_OPENCL corresponds to OpenCL Plugin.</p>
+Eg: ONEAPI_DEVICE_SELECTOR=opencl:* corresponds to OpenCL Plugin.</p>
 </section>
 <section id="opencl-plugin">
-<h4>OpenCL plugin<a class="headerlink" href="#opencl-plugin" title="Permalink to this headline">¶</a></h4>
+<h4>OpenCL plugin<a class="headerlink" href="#opencl-plugin" title="Link to this heading">¶</a></h4>
 <p>OpenCL plugin is a usual plugin from DPC++ runtime standpoint, but its loading
 and initialization involves a nested discovery process which finds out available
 OpenCL implementations. They can be installed either in the standard Khronos
@@ -146,7 +142,7 @@ performed by the OpenCL plugin</p>
 </section>
 </section>
 <section id="device-enumeration-by-plugins">
-<h3>Device enumeration by plugins<a class="headerlink" href="#device-enumeration-by-plugins" title="Permalink to this headline">¶</a></h3>
+<h3>Device enumeration by plugins<a class="headerlink" href="#device-enumeration-by-plugins" title="Link to this heading">¶</a></h3>
 <p>Devices from all bound plugins are queried and listed as and when required, eg:
 during device selection in device_selector.
 The trace shows the PI API calls made when using SYCL_PI_TRACE=-1.
@@ -154,7 +150,7 @@ The trace shows the PI API calls made when using SYCL_PI_TRACE=-1.
 bound.)</p>
 </section>
 <section id="plugin-unloading">
-<h3>Plugin Unloading<a class="headerlink" href="#plugin-unloading" title="Permalink to this headline">¶</a></h3>
+<h3>Plugin Unloading<a class="headerlink" href="#plugin-unloading" title="Link to this heading">¶</a></h3>
 <p>The plugins not chosen to be connected to should be unloaded. piInitializePlugins()
 can be called to load and bound the necessary plugins. In addition, piTearDown()
 can be called when plugins are not needed any more. It notifies each
@@ -173,7 +169,7 @@ will take care of deallocation of these global variables safely.</p>
 </section>
 </section>
 <section id="pi-api-specification">
-<h2>PI API Specification<a class="headerlink" href="#pi-api-specification" title="Permalink to this headline">¶</a></h2>
+<h2>PI API Specification<a class="headerlink" href="#pi-api-specification" title="Link to this heading">¶</a></h2>
 <p>PI interface is logically divided into few subsets:</p>
 <ul class="simple">
 <li><p><strong>Core API</strong> which must be implemented by all plugins for DPC++ runtime to be
@@ -187,10 +183,9 @@ into</p>
 <li><p><strong>Interoperability API</strong> which allows interoperability with underlying
 runtimes such as OpenCL.</p></li>
 </ul>
-<p>See <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../../include/CL/sycl/detail/pi.h"><span class="xref myst">pi.h</span></a> header for the full list and
-descriptions of PI APIs.</p>
+<p>See pi.h header for the full list and descriptions of PI APIs.</p>
 <section id="the-core-opencl-based-pi-apis">
-<h3>The Core OpenCL-based PI APIs<a class="headerlink" href="#the-core-opencl-based-pi-apis" title="Permalink to this headline">¶</a></h3>
+<h3>The Core OpenCL-based PI APIs<a class="headerlink" href="#the-core-opencl-based-pi-apis" title="Link to this heading">¶</a></h3>
 <p>This subset defines functions representing core functionality,
 such as device memory management, kernel creation and parameter setting,
 enqueuing kernel for execution, etc. Functions in this subset fully match
@@ -202,7 +197,7 @@ piKernelSetArg
 </div>
 </section>
 <section id="the-extension-pi-apis">
-<h3>The Extension PI APIs<a class="headerlink" href="#the-extension-pi-apis" title="Permalink to this headline">¶</a></h3>
+<h3>The Extension PI APIs<a class="headerlink" href="#the-extension-pi-apis" title="Link to this heading">¶</a></h3>
 <p>Those APIs don’t have OpenCL counter parts and require full specification. For
 example, the function below selects the most appropriate device binary based
 on runtime information and the binary’s characteristics</p>
@@ -224,24 +219,12 @@ object for further linkage. The wrapped binaries reside inside this descriptor
 in a data section.</p>
 </section>
 <section id="the-interoperability-pi-apis">
-<h3>The Interoperability PI APIs<a class="headerlink" href="#the-interoperability-pi-apis" title="Permalink to this headline">¶</a></h3>
+<h3>The Interoperability PI APIs<a class="headerlink" href="#the-interoperability-pi-apis" title="Link to this heading">¶</a></h3>
 <p>These are APIs needed to implement DPC++ runtime interoperability with
-underlying “native” device runtimes such as OpenCL.
-There are some OpenCL interoperability APIs, which are to be implemented
-by the OpenCL PI plugin only. These APIs match semantics of the corresponding
-OpenCL APIs exactly.
-For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pi_result</span> <span class="n">piclProgramCreateWithSource</span><span class="p">(</span>
-  <span class="n">pi_context</span>        <span class="n">context</span><span class="p">,</span>
-  <span class="n">pi_uint32</span>         <span class="n">count</span><span class="p">,</span>
-  <span class="n">const</span> <span class="n">char</span> <span class="o">**</span>     <span class="n">strings</span><span class="p">,</span>
-  <span class="n">const</span> <span class="n">size_t</span> <span class="o">*</span>    <span class="n">lengths</span><span class="p">,</span>
-  <span class="n">pi_program</span> <span class="o">*</span>      <span class="n">ret_program</span><span class="p">);</span>
-</pre></div>
-</div>
-<p>Some interoperability extension APIs have been added to get native runtime
-handles from the backend-agnostic PI Objects or to create PI Objects using the
-native handles. Eg:</p>
+underlying “native” device runtimes such as OpenCL.</p>
+<p>Interoperability extension APIs have been added to get native runtime handles
+from the backend-agnostic PI Objects or to create PI Objects using the native
+handles. Eg:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pi_result</span> <span class="n">piextDeviceGetNativeHandle</span><span class="p">(</span>
   <span class="n">pi_device</span> <span class="n">device</span><span class="p">,</span>
   <span class="n">pi_native_handle</span> <span class="o">*</span><span class="n">nativeHandle</span><span class="p">);</span>
@@ -254,7 +237,7 @@ native handles. Eg:</p>
 </div>
 </section>
 <section id="pi-extension-mechanism">
-<h3>PI Extension mechanism<a class="headerlink" href="#pi-extension-mechanism" title="Permalink to this headline">¶</a></h3>
+<h3>PI Extension mechanism<a class="headerlink" href="#pi-extension-mechanism" title="Link to this heading">¶</a></h3>
 <p>TBD This section describes a mechanism for DPC++ or other runtimes to detect
 availability of and obtain interfaces beyond those defined by the PI dispatch.</p>
 <p>TBD Add API to query PI version supported by plugin at runtime.</p>
@@ -271,14 +254,14 @@ availability of and obtain interfaces beyond those defined by the PI dispatch.</
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="SpecializationConstants.html">Specialization constants</a>&#160;&#160;»
+        <a href="SYCL2020-SpecializationConstants.html">Specialization constants</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

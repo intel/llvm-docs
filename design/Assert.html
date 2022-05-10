@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Assert feature &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Dynamic linking of device code" href="SharedLibraries.html" />
@@ -36,8 +34,8 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="assert-feature">
-<h1>Assert feature<a class="headerlink" href="#assert-feature" title="Permalink to this headline">¶</a></h1>
+  <section id="assert-feature">
+<h1>Assert feature<a class="headerlink" href="#assert-feature" title="Link to this heading">¶</a></h1>
 <p><strong>IMPORTANT</strong>: This document is a draft.</p>
 <p>Using the standard C++ <code class="docutils literal notranslate"><span class="pre">assert</span></code> API (“assertions”) is an important debugging
 technique widely used by developers. This document describes the design of
@@ -47,35 +45,35 @@ The basic approach we chose is delivering device-side assertions as call to
 <p>As usual, device-side assertions can be disabled by defining <code class="docutils literal notranslate"><span class="pre">NDEBUG</span></code> macro at
 compile time.</p>
 <section id="use-case-example">
-<h2>Use-case example<a class="headerlink" href="#use-case-example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>#include &lt;cassert&gt;
-#include &lt;sycl/sycl.hpp&gt;
+<h2>Use-case example<a class="headerlink" href="#use-case-example" title="Link to this heading">¶</a></h2>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sycl/sycl.hpp&gt;</span>
 
-using namespace sycl;
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
 
-void user_func(item&lt;2&gt; Item) {
-  assert((Item[0] % 2) &amp;&amp; “Nil”);
-}
+<span class="kt">void</span><span class="w"> </span><span class="nf">user_func</span><span class="p">(</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">assert</span><span class="p">((</span><span class="n">Item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="err">“</span><span class="n">Nil</span><span class="err">”</span><span class="p">);</span>
+<span class="p">}</span>
 
-int main() {
-  queue Q;
-  Q.submit([&amp;] (handler&amp; CGH) {
-    CGH.parallel_for&lt;class TheKernel&gt;(range&lt;2&gt;{N, M}, [=](item&lt;2&gt; It) {
-      do_smth();
-      user_func(It);
-      do_smth_else();
-    });
-  });
-  Q.wait();
-  std::cout &lt;&lt; “One shouldn’t see this message.“;
-  return 0;
-}
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">TheKernel</span><span class="o">&gt;</span><span class="p">(</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">{</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="w"> </span><span class="n">It</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">do_smth</span><span class="p">();</span>
+<span class="w">      </span><span class="n">user_func</span><span class="p">(</span><span class="n">It</span><span class="p">);</span>
+<span class="w">      </span><span class="n">do_smth_else</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="n">Q</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="err">“</span><span class="n">One</span><span class="w"> </span><span class="n">shouldn</span><span class="err">’</span><span class="n">t</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="err">“</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>In this use-case every work-item with even index along 0 dimension will trigger
 assertion failure. Assertion failure should trigger a call to <code class="docutils literal notranslate"><span class="pre">std::abort()</span></code> at
 host as described in
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/supported/SYCL_EXT_ONEAPI_ASSERT.asciidoc"><span class="xref myst">extension</span></a>.
+<a class="reference download internal" download="" href="../_downloads/292bf929b84890cb56c6e35dc55dfc02/sycl_ext_oneapi_assert.asciidoc"><span class="xref download myst">extension</span></a>.
 Even though multiple failures of the same or different assertions can happen in
 multiple work-items, implementation is required to deliver at least one
 assertion. The assertion failure message is printed to <code class="docutils literal notranslate"><span class="pre">stderr</span></code> by DPCPP
@@ -84,9 +82,9 @@ Runtime or underlying backend.</p>
 one assertion should be reported.</p>
 </section>
 <section id="user-requirements">
-<h2>User requirements<a class="headerlink" href="#user-requirements" title="Permalink to this headline">¶</a></h2>
+<h2>User requirements<a class="headerlink" href="#user-requirements" title="Link to this heading">¶</a></h2>
 <p>From user’s point of view there are the following requirements:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>#</p></th>
 <th class="head"><p>Title</p></th>
@@ -123,7 +121,7 @@ guarantee assertion failure delivery to host, but is still useful in many
 practical cases.</p>
 </section>
 <section id="terms">
-<h2>Terms<a class="headerlink" href="#terms" title="Permalink to this headline">¶</a></h2>
+<h2>Terms<a class="headerlink" href="#terms" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Device-side Runtime - runtime library supplied by the Native Device Compiler
 and running on the device.</p></li>
@@ -134,9 +132,9 @@ Plugin Interface.</p></li>
 </ul>
 </section>
 <section id="how-it-works">
-<h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<h2>How it works?<a class="headerlink" href="#how-it-works" title="Link to this heading">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">assert(expr)</span></code> macro ends up in call to <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code>. This function
-is part of <a class="reference external" href="DeviceLibExtensions.rst#cl_intel_devicelib_cassert">Device library extension</a>.</p>
+is part of <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/doc/design/DeviceLibExtensions.rst#cl_intel_devicelib_cassert">Device library extension</a>.</p>
 <p>The format of the assert message is unspecified, but it will always include the
 text of the failing expression, the values of the standard macros <code class="docutils literal notranslate"><span class="pre">__FILE__</span></code> and
 <code class="docutils literal notranslate"><span class="pre">__LINE__</span></code>, and the value of the standard variable <code class="docutils literal notranslate"><span class="pre">__func__</span></code>. If the failing
@@ -149,7 +147,7 @@ safe approach or by DPCPP Compiler for fallback one.</p>
 available, then fallback implementation is used.</p>
 </section>
 <section id="safe-approach">
-<h2>Safe approach<a class="headerlink" href="#safe-approach" title="Permalink to this headline">¶</a></h2>
+<h2>Safe approach<a class="headerlink" href="#safe-approach" title="Link to this heading">¶</a></h2>
 <p>This is the preferred approach and implementations should use it when possible.
 It guarantees assertion failure notification delivery to the host regardless of
 kernel behavior which hit the assertion. If backend suports the safe approach,
@@ -166,7 +164,7 @@ and runtime. The Low-Level Runtime is responsible for:</p>
 <p>The following sequence of events describes how user code gets notified:</p>
 <ul class="simple">
 <li><p>Device side:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Assert fails in device-code in kernel
 // It’s not defined if GPU thread stops execution
 // Other GPU threads are left untouched</p></li>
@@ -175,7 +173,7 @@ and runtime. The Low-Level Runtime is responsible for:</p>
 </ol>
 </li>
 <li><p>Host side:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The assert failure gets detected by Low-Level Runtime</p></li>
 <li><p>Low-Level Runtime prints assert failure message to <code class="docutils literal notranslate"><span class="pre">stderr</span></code></p></li>
 <li><p>Low-Level Runtime calls <code class="docutils literal notranslate"><span class="pre">abort()</span></code></p></li>
@@ -184,7 +182,7 @@ and runtime. The Low-Level Runtime is responsible for:</p>
 </ul>
 </section>
 <section id="fallback-approach">
-<h2>Fallback approach<a class="headerlink" href="#fallback-approach" title="Permalink to this headline">¶</a></h2>
+<h2>Fallback approach<a class="headerlink" href="#fallback-approach" title="Link to this heading">¶</a></h2>
 <p>If Device-side Runtime doesn’t support <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code> (as reported
 via <code class="docutils literal notranslate"><span class="pre">PI_DEVICE_INFO_EXTENSION_DEVICELIB_ASSERT</span></code> extension query) then a fallback
 approach comes in place. The approach doesn’t require any support from
@@ -197,7 +195,7 @@ DPCPP Runtime is able to detect assert failure after kernel finishes.</p>
 <p>The following sequence of events describes how user code gets notified:</p>
 <ul class="simple">
 <li><p>Device side:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Assert fails in device-code in kernel</p></li>
 <li><p>Fallback version of <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code> is called</p></li>
 <li><p>Assert information is stored into program-scope variable</p></li>
@@ -205,7 +203,7 @@ DPCPP Runtime is able to detect assert failure after kernel finishes.</p>
 </ol>
 </li>
 <li><p>Host side:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>A copy ‘kernel’ is enqueued as the one depending on user’s kernel to get
 the value of assert failure flag.</p></li>
 <li><p>A host-task is enqueued to check value of assert failure flag.</p></li>
@@ -224,32 +222,32 @@ used. So there is no host-side runtime overhead when assertion are not used.</p>
 </ul>
 <p>The resulting graph will look like this: <img alt="graph" src="../_images/assert-fallback-graph.svg" /></p>
 <section id="interface-to-program-scope-variable">
-<h3>Interface to program scope variable<a class="headerlink" href="#interface-to-program-scope-variable" title="Permalink to this headline">¶</a></h3>
+<h3>Interface to program scope variable<a class="headerlink" href="#interface-to-program-scope-variable" title="Link to this heading">¶</a></h3>
 <p>Multiple translation units could be compiled/linked into a single device binary
 image. All of them should have <code class="docutils literal notranslate"><span class="pre">extern</span></code> declaration of program scope variable
 available. Definition of the variable is only available within devicelib in the
 same binary image where fallback <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code> resides.</p>
-<p><a name="prog-scope-var-decl">The variable has the following structure and
+<p id="prog-scope-var-decl"><a name="prog-scope-var-decl">The variable has the following structure and
 declaration:</a></p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">__SYCL_AssertHappened</span> <span class="p">{</span>
-  <span class="kt">int</span> <span class="n">Flag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">Expr</span><span class="p">[</span><span class="mi">256</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">File</span><span class="p">[</span><span class="mi">256</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
-  <span class="kt">char</span> <span class="n">Func</span><span class="p">[</span><span class="mi">128</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">__SYCL_AssertHappened</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">Flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">Expr</span><span class="p">[</span><span class="mi">256</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">File</span><span class="p">[</span><span class="mi">256</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="n">Func</span><span class="p">[</span><span class="mi">128</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
 
-  <span class="kt">int32_t</span> <span class="n">Line</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">Line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-  <span class="kt">uint64_t</span> <span class="n">GID0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">uint64_t</span> <span class="n">GID1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">uint64_t</span> <span class="n">GID2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">GID0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">GID1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">GID2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-  <span class="kt">uint64_t</span> <span class="n">LID0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">uint64_t</span> <span class="n">LID1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="kt">uint64_t</span> <span class="n">LID2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">LID0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">LID1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">LID2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="cp">#ifdef __SYCL_DEVICE_ONLY__</span>
-<span class="k">extern</span> <span class="n">SYCL_GLOBAL_VAR</span> <span class="n">__SYCL_AssertHappened</span> <span class="n">__SYCL_AssertHappenedMem</span><span class="p">;</span>
+<span class="k">extern</span><span class="w"> </span><span class="n">SYCL_GLOBAL_VAR</span><span class="w"> </span><span class="n">__SYCL_AssertHappened</span><span class="w"> </span><span class="n">__SYCL_AssertHappenedMem</span><span class="p">;</span>
 <span class="cp">#endif</span>
 </pre></div>
 </div>
@@ -258,10 +256,10 @@ mutable program-scope variable.</p>
 <p>The reference to extern variable is resolved within online-linking against
 fallback devicelib.</p>
 <section id="description-of-fields">
-<h4>Description of fields<a class="headerlink" href="#description-of-fields" title="Permalink to this headline">¶</a></h4>
+<h4>Description of fields<a class="headerlink" href="#description-of-fields" title="Link to this heading">¶</a></h4>
 <p>The value stored here denotes if assert happened at all. There are two valid
 values at host:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Value</p></th>
 <th class="head"><p>Meaning</p></th>
@@ -288,7 +286,7 @@ work-item in which assert had failed.</p>
 </section>
 </section>
 <section id="online-linking-fallback-devicelib-assert-fail">
-<h3>Online-linking fallback <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code><a class="headerlink" href="#online-linking-fallback-devicelib-assert-fail" title="Permalink to this headline">¶</a></h3>
+<h3>Online-linking fallback <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code><a class="headerlink" href="#online-linking-fallback-devicelib-assert-fail" title="Link to this heading">¶</a></h3>
 <p>Online linking against fallback implementation of <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code> is
 performed only when assertion is enabled and Device-side Runtime doesn’t provide
 implementation of <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code>.</p>
@@ -297,7 +295,7 @@ with <code class="docutils literal notranslate"><span class="pre">#ifdef</span><
 device binary image descriptor’s property sets.</p>
 <p>Each device image is supplied with an array of property sets. For description
 of property sets see <code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">pi_device_binary_struct</span></code> in
-<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/include/CL/sycl/detail/pi.h#L692"><code class="docutils literal notranslate"><span class="pre">pi.h</span></code></a></p>
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/include/sycl/detail/pi.h#L692"><code class="docutils literal notranslate"><span class="pre">pi.h</span></code></a></p>
 <p>A distinct property set <code class="docutils literal notranslate"><span class="pre">SYCL/assert</span> <span class="pre">used</span></code> is added. In this set a property
 with the name of the kernel is added whenever the kernel uses assert. The use of
 assert is detected by a specific LLVM IR pass invoked by the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code>
@@ -317,21 +315,21 @@ are conservatively marked as using asserts.</p>
 host-task.</p></li>
 </ul>
 <p>Suppose the following example user code:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>void user_func(int X) {
-  assert(X &amp;&amp; “X is nil”);
-}
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">user_func</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">assert</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="err">“</span><span class="n">X</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">nil</span><span class="err">”</span><span class="p">);</span>
+<span class="p">}</span>
 
-int main() {
-  queue Q(...);
-  Q.submit([&amp;] (handler&amp; CGH) {
-    CGH.single_task([=] () {
-      do_smth();
-      user_func(0);
-      do_smth_else();
-    });
-  });
-  ...
-}
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">queue</span><span class="w"> </span><span class="n">Q</span><span class="p">(...);</span>
+<span class="w">  </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">CGH</span><span class="p">.</span><span class="n">single_task</span><span class="p">([</span><span class="o">=</span><span class="p">]</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">do_smth</span><span class="p">();</span>
+<span class="w">      </span><span class="n">user_func</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">do_smth_else</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The following LLVM IR pseudo code will be generated after linking against
@@ -370,53 +368,53 @@ void __devicelib_assert_fail(Expr, File, Line, GlobalID, LocalID) {
 </pre></div>
 </div>
 <section id="compiling-with-assert-enabled-disabled">
-<h4>Compiling with assert enabled/disabled<a class="headerlink" href="#compiling-with-assert-enabled-disabled" title="Permalink to this headline">¶</a></h4>
+<h4>Compiling with assert enabled/disabled<a class="headerlink" href="#compiling-with-assert-enabled-disabled" title="Link to this heading">¶</a></h4>
 <p>Consider the following example sources:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// impl.cpp</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">sycl</span><span class="p">;</span>
-<span class="kt">int</span> <span class="nf">calculus</span><span class="p">(</span><span class="kt">int</span> <span class="n">X</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">assert</span><span class="p">(</span><span class="n">X</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Invalid value&quot;</span><span class="p">);</span>
-  <span class="k">return</span> <span class="n">X</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">calculus</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">assert</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">&quot;Invalid value&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">enqueueKernel</span><span class="p">(</span><span class="n">queue</span> <span class="o">&amp;</span><span class="n">Q</span><span class="p">,</span> <span class="n">buffer</span> <span class="o">&amp;</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">H</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">Acc</span> <span class="o">=</span> <span class="n">B</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
-    <span class="n">H</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* range */</span><span class="p">,</span> <span class="p">[](</span><span class="n">item</span> <span class="n">It</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">assert</span><span class="p">(</span><span class="n">Acc</span><span class="p">[</span><span class="n">It</span><span class="p">]);</span>
-      <span class="c1">// ...</span>
-    <span class="p">});</span>
-  <span class="p">});</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">enqueueKernel</span><span class="p">(</span><span class="n">queue</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Q</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">B</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([](</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">H</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">Acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
+<span class="w">    </span><span class="n">H</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* range */</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">item</span><span class="w"> </span><span class="n">It</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">Acc</span><span class="p">[</span><span class="n">It</span><span class="p">]);</span>
+<span class="w">      </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
 <span class="p">}</span>
 
 <span class="c1">// main.cpp</span>
 <span class="c1">// ...</span>
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">sycl</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
 
-<span class="n">SYCL_EXTERNAL</span> <span class="kt">int</span> <span class="nf">calculus</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">enqueueKernel</span><span class="p">(</span><span class="n">queue</span><span class="o">&amp;</span><span class="p">,</span> <span class="n">buffer</span><span class="o">&amp;</span><span class="p">);</span>
+<span class="n">SYCL_EXTERNAL</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">calculus</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">enqueueKernel</span><span class="p">(</span><span class="n">queue</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span><span class="o">&amp;</span><span class="p">);</span>
 
-<span class="kt">void</span> <span class="nf">workload</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">queue</span> <span class="n">Q</span><span class="p">;</span>
-  <span class="n">buffer</span> <span class="n">B</span><span class="p">;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">workload</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">queue</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
+<span class="w">  </span><span class="n">buffer</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
 
-  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">H</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">auto</span> <span class="n">Acc</span> <span class="o">=</span> <span class="n">B</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
-    <span class="n">H</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* range */</span><span class="p">,</span> <span class="p">[](</span><span class="n">item</span> <span class="n">It</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kt">int</span> <span class="n">X</span> <span class="o">=</span> <span class="n">calculus</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// should fail assertion</span>
-      <span class="n">assert</span><span class="p">(</span><span class="n">X</span> <span class="o">&amp;&amp;</span> <span class="s">&quot;Nil in result&quot;</span><span class="p">);</span>
-      <span class="n">Acc</span><span class="p">[</span><span class="n">It</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">;</span>
-    <span class="p">});</span>
-  <span class="p">});</span>
+<span class="w">  </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([](</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">H</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">Acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">H</span><span class="p">);</span>
+<span class="w">    </span><span class="n">H</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="cm">/* range */</span><span class="p">,</span><span class="w"> </span><span class="p">[](</span><span class="n">item</span><span class="w"> </span><span class="n">It</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calculus</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// should fail assertion</span>
+<span class="w">      </span><span class="n">assert</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">&quot;Nil in result&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Acc</span><span class="p">[</span><span class="n">It</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">X</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">});</span>
 
-  <span class="n">enqueueKernel</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="n">B</span><span class="p">);</span>
-  <span class="p">...</span>
+<span class="w">  </span><span class="n">enqueueKernel</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="p">);</span>
+<span class="w">  </span><span class="p">...</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>These two files are compiled into a single binary application. There are four
 states of definition of <code class="docutils literal notranslate"><span class="pre">NDEBUG</span></code> macro available:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>#</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">impl.cpp</span></code></p></th>
@@ -447,7 +445,7 @@ fail.</p>
 </section>
 </section>
 <section id="raising-assert-failure-flag-and-reading-it-on-host">
-<h3>Raising assert failure flag and reading it on host<a class="headerlink" href="#raising-assert-failure-flag-and-reading-it-on-host" title="Permalink to this headline">¶</a></h3>
+<h3>Raising assert failure flag and reading it on host<a class="headerlink" href="#raising-assert-failure-flag-and-reading-it-on-host" title="Link to this heading">¶</a></h3>
 <p>In DPCPP headers one can see if assert is enabled with status of <code class="docutils literal notranslate"><span class="pre">NDEBUG</span></code> macro
 with <code class="docutils literal notranslate"><span class="pre">#ifdef</span></code>’s. Though, in order to support for multi translation unit use-case
 it’s not allowed to rely on definition of <code class="docutils literal notranslate"><span class="pre">NDEBUG</span></code> macro.</p>
@@ -462,61 +460,61 @@ binary image for this kernel tells that it may use (maybe indirectly) the
 <code class="docutils literal notranslate"><span class="pre">assert</span></code> in its code.</p>
 <p>All translation units provided by the user should have a declaration of the
 assert flag read function available:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">__devicelib_assert_read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">__devicelib_assert_read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Also, the <a class="reference external" href="#prog-scope-var-decl">AssertHappened</a> structure type should be
+<p>Also, the <a class="reference internal" href="#prog-scope-var-decl">AssertHappened</a> structure type should be
 available for the copier kernel.</p>
 <p>The definition is only provided within devicelib along with
 <code class="docutils literal notranslate"><span class="pre">__devicelib_assert_fail</span></code> function which raises the flag.</p>
 <p>Reading of assert failure flag is performed with the help of auxiliary kernel
 which is enqueued as dependent on user’s one. The flag state is checked later
 in host-task. This is achieved with approximately the following changes:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">AssertFlagCopier</span><span class="p">;</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">AssertFlagCopier</span><span class="p">;</span>
 <span class="cp">#ifdef __SYCL_DEVICE_ONLY__</span>
-<span class="kt">int</span> <span class="nf">__devicelib_assert_read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">__devicelib_assert_read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 <span class="cp">#endif</span>
 
-<span class="k">class</span> <span class="nc">queue</span> <span class="p">{</span>
-  <span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">event</span> <span class="n">submit</span><span class="p">(</span><span class="n">T</span> <span class="n">CGF</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">event</span> <span class="n">Event</span> <span class="o">=</span> <span class="n">submit_impl</span><span class="p">(</span><span class="n">CGF</span><span class="p">);</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">KernelName</span> <span class="o">=</span> <span class="cm">/* get kernel name from calls to parallel_for, etc. */</span><span class="p">;</span>
-    <span class="c1">// assert required</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">get_device</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">assert_fail_supported</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">isAssertUsed</span><span class="p">(</span><span class="n">KernelName</span><span class="p">))</span> <span class="p">{</span>
-      <span class="c1">// __devicelib_assert_fail isn&#39;t supported by Device-side Runtime</span>
-      <span class="c1">// Linking against fallback impl of __devicelib_assert_fail is performed</span>
-      <span class="c1">// by program manager class</span>
-      <span class="n">AssertHappened</span> <span class="o">*</span><span class="n">AH</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AssertHappened</span><span class="p">;</span>
-      <span class="n">buffer</span><span class="o">&lt;</span><span class="n">AssertHappened</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">Buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">buffer</span><span class="o">&lt;</span><span class="n">AssertHappened</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="n">AH</span><span class="p">};</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">queue</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">submit</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">CGF</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">event</span><span class="w"> </span><span class="n">Event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">submit_impl</span><span class="p">(</span><span class="n">CGF</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">KernelName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="cm">/* get kernel name from calls to parallel_for, etc. */</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// assert required</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">get_device</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">assert_fail_supported</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">isAssertUsed</span><span class="p">(</span><span class="n">KernelName</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// __devicelib_assert_fail isn&#39;t supported by Device-side Runtime</span>
+<span class="w">      </span><span class="c1">// Linking against fallback impl of __devicelib_assert_fail is performed</span>
+<span class="w">      </span><span class="c1">// by program manager class</span>
+<span class="w">      </span><span class="n">AssertHappened</span><span class="w"> </span><span class="o">*</span><span class="n">AH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AssertHappened</span><span class="p">;</span>
+<span class="w">      </span><span class="n">buffer</span><span class="o">&lt;</span><span class="n">AssertHappened</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">Buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">buffer</span><span class="o">&lt;</span><span class="n">AssertHappened</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">AH</span><span class="p">};</span>
 
-      <span class="c1">// read flag value</span>
-      <span class="n">event</span> <span class="n">CopierEv</span> <span class="o">=</span> <span class="n">submit_impl</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">Event</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// read flag value</span>
+<span class="w">      </span><span class="n">event</span><span class="w"> </span><span class="n">CopierEv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">submit_impl</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">Event</span><span class="p">);</span>
 
-        <span class="k">auto</span> <span class="n">Acc</span> <span class="o">=</span> <span class="n">Buffer</span><span class="o">-&gt;</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">CGH</span><span class="p">);</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">Acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Buffer</span><span class="o">-&gt;</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">CGH</span><span class="p">);</span>
 
-        <span class="n">CGH</span><span class="p">.</span><span class="n">single_task</span><span class="o">&lt;</span><span class="n">AssertFlagCopier</span><span class="o">&gt;</span><span class="p">([</span><span class="o">=</span><span class="p">]</span> <span class="p">{</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">single_task</span><span class="o">&lt;</span><span class="n">AssertFlagCopier</span><span class="o">&gt;</span><span class="p">([</span><span class="o">=</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
 <span class="cp">#ifdef __SYCL_DEVICE_ONLY__</span>
-          <span class="n">Acc</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Flag</span> <span class="o">=</span> <span class="n">__devicelib_assert_read</span><span class="p">();</span>
+<span class="w">          </span><span class="n">Acc</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">Flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">__devicelib_assert_read</span><span class="p">();</span>
 <span class="cp">#endif</span>
-        <span class="p">});</span>
-      <span class="p">});</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
 
-      <span class="c1">// check flag state</span>
-      <span class="n">submit_impl</span><span class="p">([</span><span class="o">=</span><span class="p">](</span><span class="n">handler</span> <span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">CopierEv</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// check flag state</span>
+<span class="w">      </span><span class="n">submit_impl</span><span class="p">([</span><span class="o">=</span><span class="p">](</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CGH</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">CopierEv</span><span class="p">);</span>
 
-        <span class="n">CGH</span><span class="p">.</span><span class="n">codeplay_host_task</span><span class="p">([</span><span class="o">=</span><span class="p">]</span> <span class="p">{</span>
-          <span class="k">if</span> <span class="p">(</span><span class="n">AH</span><span class="o">-&gt;</span><span class="n">Flag</span><span class="p">)</span>
-            <span class="n">abort</span><span class="p">();</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">codeplay_host_task</span><span class="p">([</span><span class="o">=</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">AH</span><span class="o">-&gt;</span><span class="n">Flag</span><span class="p">)</span>
+<span class="w">            </span><span class="n">abort</span><span class="p">();</span>
 
-          <span class="n">free</span><span class="p">(</span><span class="n">Buffer</span><span class="p">);</span>
-          <span class="n">free</span><span class="p">(</span><span class="n">AH</span><span class="p">);</span>
-        <span class="p">});</span>
-      <span class="p">});</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="n">Event</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">          </span><span class="n">free</span><span class="p">(</span><span class="n">Buffer</span><span class="p">);</span>
+<span class="w">          </span><span class="n">free</span><span class="p">(</span><span class="n">AH</span><span class="p">);</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Event</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -539,8 +537,8 @@ in host-task. This is achieved with approximately the following changes:</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1BufferInterop_3_01backend_1_1opencl_00_01DataT_00_01Dimensions_00_01AllocatorT_01_4 =
+[
+    [ "ReturnType", "structsycl_1_1__V1_1_1detail_1_1BufferInterop_3_01backend_1_1opencl_00_01DataT_00_01Dimensions_00_01AllocatorT_01_4.html#ae1a4ddcc61635a319fb1fecc3c3f343b", null ],
+    [ "GetNativeObjs", "structsycl_1_1__V1_1_1detail_1_1BufferInterop_3_01backend_1_1opencl_00_01DataT_00_01Dimensions_00_01AllocatorT_01_4.html#a9102db79257a2ffdfe52ae01be24a2ea", null ]
+];

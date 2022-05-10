@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['get_5fnative_12734',['get_native',['../classcl_1_1sycl_1_1event.html#a93c48c53733505713cf25f65c2d69a20',1,'cl::sycl::event::get_native()'],['../classcl_1_1sycl_1_1kernel__bundle.html#a9a72d0fc813d676b711cc41a878aea27',1,'cl::sycl::kernel_bundle::get_native()']]],
-  ['group_3c_20dimensions_20_3e_12735',['group&lt; dimensions &gt;',['../classcl_1_1sycl_1_1h__item.html#a1439893f2f4ad7149be5f67f831216a4',1,'cl::sycl::h_item']]],
-  ['group_5fballot_12736',['group_ballot',['../structcl_1_1sycl_1_1ext_1_1oneapi_1_1sub__group__mask.html#a34026b6f68d55d6e6102dc5ee37f7cf7',1,'cl::sycl::ext::oneapi::sub_group_mask']]]
+  ['get_5fballot_5fgroup_17302',['get_ballot_group',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1ballot__group.html#ad1fc521e6daafff59f311455afc307c0',1,'sycl::_V1::ext::oneapi::experimental::ballot_group']]],
+  ['get_5ffixed_5fsize_5fgroup_17303',['get_fixed_size_group',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1fixed__size__group.html#a4dc5485cfeab115905ff5fe38adbaa59',1,'sycl::_V1::ext::oneapi::experimental::fixed_size_group']]],
+  ['get_5fnative_17304',['get_native',['../classsycl_1_1__V1_1_1context.html#a9a72d0fc813d676b711cc41a878aea27',1,'sycl::_V1::context::get_native()'],['../classsycl_1_1__V1_1_1device.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::device::get_native()'],['../classsycl_1_1__V1_1_1event.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::event::get_native()'],['../classsycl_1_1__V1_1_1kernel.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::kernel::get_native()'],['../classsycl_1_1__V1_1_1kernel__bundle.html#abe5716d50627a79cc90a7a05fbdd1290',1,'sycl::_V1::kernel_bundle::get_native()'],['../classsycl_1_1__V1_1_1platform.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::platform::get_native()'],['../classsycl_1_1__V1_1_1queue.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::queue::get_native()']]],
+  ['get_5ftangle_5fgroup_17305',['get_tangle_group',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1tangle__group.html#a706b9878ace5662e0701d3fdb4a97616',1,'sycl::_V1::ext::oneapi::experimental::tangle_group']]],
+  ['group_3c_20dimensions_20_3e_17306',['group&lt; Dimensions &gt;',['../classsycl_1_1__V1_1_1h__item.html#af4d23efe05fdc10eefdb063366ed8915',1,'sycl::_V1::h_item']]],
+  ['group_5fballot_17307',['group_ballot',['../structsycl_1_1__V1_1_1ext_1_1oneapi_1_1sub__group__mask.html#a6dfdfd9d4e9cfd562823441a4c0958fb',1,'sycl::_V1::ext::oneapi::sub_group_mask']]]
 ];

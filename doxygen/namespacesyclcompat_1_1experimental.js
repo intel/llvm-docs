@@ -1,0 +1,46 @@
+var namespacesyclcompat_1_1experimental =
+[
+    [ "detail", "namespacesyclcompat_1_1experimental_1_1detail.html", "namespacesyclcompat_1_1experimental_1_1detail" ],
+    [ "kernel_properties", "structsyclcompat_1_1experimental_1_1kernel__properties.html", "structsyclcompat_1_1experimental_1_1kernel__properties" ],
+    [ "launch_properties", "structsyclcompat_1_1experimental_1_1launch__properties.html", "structsyclcompat_1_1experimental_1_1launch__properties" ],
+    [ "local_mem_size", "structsyclcompat_1_1experimental_1_1local__mem__size.html", "structsyclcompat_1_1experimental_1_1local__mem__size" ],
+    [ "launch_policy", "classsyclcompat_1_1experimental_1_1launch__policy.html", "classsyclcompat_1_1experimental_1_1launch__policy" ],
+    [ "memcpy_parameter", "structsyclcompat_1_1experimental_1_1memcpy__parameter.html", "structsyclcompat_1_1experimental_1_1memcpy__parameter" ],
+    [ "logical_group", "classsyclcompat_1_1experimental_1_1logical__group.html", "classsyclcompat_1_1experimental_1_1logical__group" ],
+    [ "group_base", "classsyclcompat_1_1experimental_1_1group__base.html", "classsyclcompat_1_1experimental_1_1group__base" ],
+    [ "group", "classsyclcompat_1_1experimental_1_1group.html", "classsyclcompat_1_1experimental_1_1group" ],
+    [ "group_type", "namespacesyclcompat_1_1experimental.html#a55b58b823c973bbe1ff5ce3f4e44781d", [
+      [ "work_group", "namespacesyclcompat_1_1experimental.html#a55b58b823c973bbe1ff5ce3f4e44781dab3e0f839df2b0e6f5abea4204282dc5e", null ],
+      [ "sub_group", "namespacesyclcompat_1_1experimental.html#a55b58b823c973bbe1ff5ce3f4e44781da651f1a87340bd311aa665c6e56f1df7c", null ],
+      [ "logical_group", "namespacesyclcompat_1_1experimental.html#a55b58b823c973bbe1ff5ce3f4e44781dafa4afdc65010ad482238a6dc176fd28f", null ],
+      [ "root_group", "namespacesyclcompat_1_1experimental.html#a55b58b823c973bbe1ff5ce3f4e44781da7882d14e196057770b59e53dbcc38197", null ]
+    ] ],
+    [ "memcpy_direction", "namespacesyclcompat_1_1experimental.html#a321dc9daa7408cb2f2784ecc193f092f", [
+      [ "host_to_host", "namespacesyclcompat_1_1experimental.html#a321dc9daa7408cb2f2784ecc193f092faccebb3564bb2ec37046b06c3171f874b", null ],
+      [ "host_to_device", "namespacesyclcompat_1_1experimental.html#a321dc9daa7408cb2f2784ecc193f092fa504aef2270835b28079ac5a9e4a049e5", null ],
+      [ "device_to_host", "namespacesyclcompat_1_1experimental.html#a321dc9daa7408cb2f2784ecc193f092fab54d2376a1853e37113c27a6ad13c1cf", null ],
+      [ "device_to_device", "namespacesyclcompat_1_1experimental.html#a321dc9daa7408cb2f2784ecc193f092fa9bcb68a7c5c356647d239820ba3eac7c", null ],
+      [ "automatic", "namespacesyclcompat_1_1experimental.html#a321dc9daa7408cb2f2784ecc193f092fa33eb589c75203b5f9ebb739f8cf2c269", null ]
+    ] ],
+    [ "calculate_max_active_wg_per_xecore", "namespacesyclcompat_1_1experimental.html#a0065cef62cf34d5e12ae0bd9ae60e2a1", null ],
+    [ "calculate_max_potential_wg", "namespacesyclcompat_1_1experimental.html#a65651e273df26a76db0286baa595aaf1", null ],
+    [ "kernel_properties", "namespacesyclcompat_1_1experimental.html#a0e2b5136556e24c83d8a32ba5f12ef60", null ],
+    [ "kernel_properties", "namespacesyclcompat_1_1experimental.html#a3a50f1fd358e0ebee78322aaca6c48cd", null ],
+    [ "launch", "namespacesyclcompat_1_1experimental.html#a309d5c410bd13bac2800d7ad636a4085", null ],
+    [ "launch", "namespacesyclcompat_1_1experimental.html#a2144ffebfbcb60570eb1260dc042969a", null ],
+    [ "launch_policy", "namespacesyclcompat_1_1experimental.html#a741d8cbcb4a5d14e66f9d04f76fc51e2", null ],
+    [ "launch_policy", "namespacesyclcompat_1_1experimental.html#a3e5f0aa1a13795e718ae3677111d4926", null ],
+    [ "launch_policy", "namespacesyclcompat_1_1experimental.html#a4b65780f28677d16c2f41fb807504ca3", null ],
+    [ "launch_policy", "namespacesyclcompat_1_1experimental.html#af53524601654dfb2a0b9c7235e4eabd0", null ],
+    [ "launch_properties", "namespacesyclcompat_1_1experimental.html#a5af878ae638bd8b2b236057d96b2b6d9", null ],
+    [ "launch_properties", "namespacesyclcompat_1_1experimental.html#a7a66ebb7b16a0379df077f70762a2499", null ],
+    [ "memcpy", "namespacesyclcompat_1_1experimental.html#a99ab864d5141cce249913215d02b0fa2", null ],
+    [ "memcpy_async", "namespacesyclcompat_1_1experimental.html#adc12a8894e7d576cb57826c67878859e", null ],
+    [ "nd_range_barrier", "namespacesyclcompat_1_1experimental.html#a5fe213ea50fe136825ce037c5bf69f75", null ],
+    [ "nd_range_barrier", "namespacesyclcompat_1_1experimental.html#adc8d1c5b77eabc06cbfaf4618d50e268", null ],
+    [ "permute_sub_group_by_xor", "namespacesyclcompat_1_1experimental.html#a970d9f06efb5571c463274cf3ac1f571", null ],
+    [ "select_from_sub_group", "namespacesyclcompat_1_1experimental.html#a723fd2f82a50dacdf294d1950921aefb", null ],
+    [ "shift_sub_group_left", "namespacesyclcompat_1_1experimental.html#a25378eae518bcd39efdb2ebd1bc60020", null ],
+    [ "shift_sub_group_right", "namespacesyclcompat_1_1experimental.html#ace8660dd1134480c4c358f096e38cef7", null ],
+    [ "barrier_memory_order", "namespacesyclcompat_1_1experimental.html#a29f6c491d634eec6242416ae44d2e864", null ]
+];

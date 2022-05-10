@@ -1,7 +1,6 @@
 var group_8hpp =
 [
-    [ "private_memory", "classcl_1_1sycl_1_1private__memory.html", "classcl_1_1sycl_1_1private__memory" ],
-    [ "this_group", "group_8hpp.html#a9988e164184b386e580267e9a08829df", null ],
-    [ "this_group", "group_8hpp.html#af375b96cdbdb2b70bba6f1ae230186bb", null ],
-    [ "workGroupBarrier", "group_8hpp.html#a40a063097235eddf08bf5152dfdca067", null ]
+    [ "__SYCL_TYPE", "group_8hpp.html#ga6cbcd3053d22f519373d2c4cd6f64ddf", null ],
+    [ "__SYCL_TYPE", "group_8hpp.html#a2e1cc4cbb30499a47792e5cf16b0aa3c", null ],
+    [ "workGroupBarrier", "group_8hpp.html#ac94d90e56c8af334cde9ef27966a02fe", null ]
 ];

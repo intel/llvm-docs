@@ -1,0 +1,25 @@
+var classsycl_1_1__V1_1_1detail_1_1plugin =
+[
+    [ "plugin", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a30f828efb3f1f4982fdae79ad3750a25", null ],
+    [ "plugin", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a26b4cc0cdc0bf2ce0a6c7514a273f990", null ],
+    [ "plugin", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a55666ed8ebc888effa4156a0cb747a37", null ],
+    [ "plugin", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a37dc17d94999880297f1d4bdb72dd3ae", null ],
+    [ "~plugin", "classsycl_1_1__V1_1_1detail_1_1plugin.html#af3362fec259e788a1454d8efe6d23864", null ],
+    [ "adjustLastDeviceId", "classsycl_1_1__V1_1_1detail_1_1plugin.html#ac9bc939c2469b2c383b8f722c3b7066d", null ],
+    [ "call", "classsycl_1_1__V1_1_1detail_1_1plugin.html#ad4f0baecbe5151c83e153b37e9d6e70d", null ],
+    [ "call", "classsycl_1_1__V1_1_1detail_1_1plugin.html#ab9e650b9dbc75799a14d14ee861ca2d0", null ],
+    [ "call_nocheck", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a1afb054357eb523bae8271fda5771be9", null ],
+    [ "checkUrResult", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a8e2823e336fb9bb8c13faa32ce250151", null ],
+    [ "containsUrPlatform", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a3c4b64cfa6a2446470ee9c0d3f0d5524", null ],
+    [ "getPlatformId", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a391ac88438e1841d68e0446e1d910895", null ],
+    [ "getPluginMutex", "classsycl_1_1__V1_1_1detail_1_1plugin.html#ab976c1c28a0d958d7ad0e073492ab534", null ],
+    [ "getStartingDeviceId", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a22214819ee966d1dd0f735c29a0eb739", null ],
+    [ "getUrAdapter", "classsycl_1_1__V1_1_1detail_1_1plugin.html#afc86bfab52a63ff50fe4e2da0c2a280f", null ],
+    [ "getUrPlatforms", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a30619b323ab536ce386c6961255c2230", null ],
+    [ "hasBackend", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a02470c652c38ee3e9d0172c14f337aa7", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a15c4e919076d43c38bb85ea9c26c0a10", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a6e076e1c7c234abb8949cd9eac9912be", null ],
+    [ "release", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a89031379b096d48870c7c9de08ccb566", null ],
+    [ "setLastDeviceId", "classsycl_1_1__V1_1_1detail_1_1plugin.html#a39b685f50e86853cbc32e4f7c796b1dc", null ],
+    [ "adapterReleased", "classsycl_1_1__V1_1_1detail_1_1plugin.html#abdf79f5202a461e2baee5a17db6bd427", null ]
+];

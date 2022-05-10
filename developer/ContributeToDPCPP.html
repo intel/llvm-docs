@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Contributing to DPC++ &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="ABI Policy Guide" href="ABIPolicyGuide.html" /> 
@@ -33,14 +31,20 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="contributing-to-dpc">
-<h1>Contributing to DPC++<a class="headerlink" href="#contributing-to-dpc" title="Permalink to this headline">¶</a></h1>
+  <section id="contributing-to-dpc">
+<h1>Contributing to DPC++<a class="headerlink" href="#contributing-to-dpc" title="Link to this heading">¶</a></h1>
+<section id="general-guidelines">
+<h2>General guidelines<a class="headerlink" href="#general-guidelines" title="Link to this heading">¶</a></h2>
+<p>Read <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/CONTRIBUTING.md">CONTRIBUTING.md</a> first.</p>
+</section>
 <section id="maintaining-stable-abi-api">
-<h2>Maintaining stable ABI/API<a class="headerlink" href="#maintaining-stable-abi-api" title="Permalink to this headline">¶</a></h2>
+<h2>Maintaining stable ABI/API<a class="headerlink" href="#maintaining-stable-abi-api" title="Link to this heading">¶</a></h2>
 <p>All changes made to the DPC++ compiler and runtime library should generally
 preserve existing ABI/API and contributors should avoid making incompatible
 changes. One of the exceptions is experimental APIs, clearly marked so by
-namespace or related specification.</p>
+namespace or related specification.
+If you wish to propose a new experimental DPC++ extension then read
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/extensions/README-process.md">README-process.md</a>.</p>
 <p>Another exceptional case is the transition from SYCL 1.2.1 to SYCL 2020
 standard.</p>
 <p>Deprecation of older APIs is happening in the following order:</p>
@@ -52,33 +56,43 @@ on the change made)</p></li>
 <li><p>Old API is removed in headers</p></li>
 <li><p>Old API is removed in library</p></li>
 </ul>
-<p>See <a class="reference internal" href="ABIPolicyGuide.html"><span class="doc std std-doc">ABI Policy Guide</span></a> for more information.</p>
+<p>See <a class="reference internal" href="ABIPolicyGuide.html"><span class="std std-doc">ABI Policy Guide</span></a> for more information.</p>
 </section>
 <section id="project-build-and-local-testing">
-<h2>Project build and local testing<a class="headerlink" href="#project-build-and-local-testing" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference internal" href="../GetStartedGuide.html"><span class="doc std std-doc">Get Started Guide instructions</span></a></p>
+<h2>Project build and local testing<a class="headerlink" href="#project-build-and-local-testing" title="Link to this heading">¶</a></h2>
+<p>See <a class="reference internal" href="../GetStartedGuide.html"><span class="std std-doc">Get Started Guide instructions</span></a></p>
 </section>
 <section id="commit-message">
-<h2>Commit message<a class="headerlink" href="#commit-message" title="Permalink to this headline">¶</a></h2>
+<h2>Commit message<a class="headerlink" href="#commit-message" title="Link to this heading">¶</a></h2>
 <p>For any DPC++-related commit, the <code class="docutils literal notranslate"><span class="pre">[SYCL]</span></code> tag should be present in the
 commit message title. To a reasonable extent, additional tags can be used
 to signify the component changed, e.g.: <code class="docutils literal notranslate"><span class="pre">[PI]</span></code>, <code class="docutils literal notranslate"><span class="pre">[CUDA]</span></code>, <code class="docutils literal notranslate"><span class="pre">[Doc]</span></code>.</p>
 </section>
+<section id="using-iostream">
+<h2>Using &lt;iostream&gt;<a class="headerlink" href="#using-iostream" title="Link to this heading">¶</a></h2>
+<p>According to
+<a class="reference external" href="https://llvm.org/docs/CodingStandards.html#include-iostream-is-forbidden">LLVM Coding Standards</a>,
+the use <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;iostream&gt;</span></code> is forbidden in library files. Instead, the
+sycl/detail/iostream_proxy.hpp header offers the functionality of <iostream>
+without its static constructor.
+This header should be used in place of <iostream> in DPC++ headers and runtime
+library files.</p>
+</section>
 <section id="tests-development">
-<h2>Tests development<a class="headerlink" href="#tests-development" title="Permalink to this headline">¶</a></h2>
+<h2>Tests development<a class="headerlink" href="#tests-development" title="Link to this heading">¶</a></h2>
 <p>Every product change should be accompanied with corresponding test modification
 (adding new test(s), extending, removing or modifying existing test(s)).</p>
 <p>There are 3 types of tests which are used for DPC++ toolchain validation:</p>
 <ul class="simple">
-<li><p>DPC++ in-tree tests</p></li>
+<li><p>DPC++ device-independent tests</p></li>
 <li><p>DPC++ end-to-end (E2E) tests</p></li>
 <li><p>SYCL Conformance Test Suite (CTS)</p></li>
 </ul>
-<section id="dpc-in-tree-tests">
-<h3>DPC++ in-tree tests<a class="headerlink" href="#dpc-in-tree-tests" title="Permalink to this headline">¶</a></h3>
-<p>DPC++ in-tree tests are hosted in this repository. They can be run by
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer//llvm/test"><span class="xref myst">check-llvm</span></a>, <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer//clang/test"><span class="xref myst">check-clang</span></a>,
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer//llvm-spirv/test"><span class="xref myst">check-llvm-spirv</span></a> and <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer//sycl/test"><span class="xref myst">check-sycl</span></a> targets.
+<section id="dpc-device-independent-tests">
+<h3>DPC++ device-independent tests<a class="headerlink" href="#dpc-device-independent-tests" title="Link to this heading">¶</a></h3>
+<p>DPC++ device-independent tests are hosted in this repository. They can be run by
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/llvm/test">check-llvm</a>, <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/clang/test">check-clang</a>,
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/llvm-spirv/test">check-llvm-spirv</a> and <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/test">check-sycl</a> targets.
 These tests are expected not to have hardware (e.g. GPU, FPGA, etc.) or
 external software (e.g. OpenCL, Level Zero, CUDA runtimes) dependencies. All
 other tests should land at DPC++ end-to-end or SYCL CTS tests.</p>
@@ -86,8 +100,8 @@ other tests should land at DPC++ end-to-end or SYCL CTS tests.</p>
 should be accompanied by one or more tests of this type when possible. They
 allow verifying individual components and tend to be more lightweight than
 end-to-end or SYCL-CTS tests.</p>
-<section id="general-guidelines">
-<h4>General guidelines<a class="headerlink" href="#general-guidelines" title="Permalink to this headline">¶</a></h4>
+<section id="id1">
+<h4>General guidelines<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">sycl::</span></code> namespace instead of <code class="docutils literal notranslate"><span class="pre">cl::sycl::</span></code></p></li>
 <li><p>Add a helpful comment describing what the test does at the beginning and
@@ -100,50 +114,77 @@ much as possible. Please refer to
 </ul>
 </section>
 <section id="dpc-clang-fe-tests">
-<h4>DPC++ clang FE tests<a class="headerlink" href="#dpc-clang-fe-tests" title="Permalink to this headline">¶</a></h4>
+<h4>DPC++ clang FE tests<a class="headerlink" href="#dpc-clang-fe-tests" title="Link to this heading">¶</a></h4>
 <ul>
 <li><p>Include sycl mock headers as system headers.
 Example: <code class="docutils literal notranslate"><span class="pre">-internal-isystem</span> <span class="pre">%S/Inputs</span></code></p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>`#include &quot;sycl.hpp&quot;`
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="err">`#</span><span class="n">include</span><span class="w"> </span><span class="s">&quot;sycl.hpp&quot;</span><span class="err">`</span>
 </pre></div>
 </div>
 </li>
 <li><p>Use SYCL functions for invoking kernels from the mock header
 <code class="docutils literal notranslate"><span class="pre">(single_task,</span> <span class="pre">parallel_for,</span> <span class="pre">parallel_for_work_group)</span></code>
 Example:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span>`#include &quot;Inputs/sycl.hpp&quot;`
-sycl::queue q;
-q.submit([&amp;](cl::sycl::handler &amp;h) {
-h.single_task( { //code });
-});
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="err">`#</span><span class="n">include</span><span class="w"> </span><span class="s">&quot;Inputs/sycl.hpp&quot;</span><span class="err">`</span>
+<span class="n">sycl</span><span class="o">::</span><span class="n">queue</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="w"> </span><span class="o">&amp;</span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">h</span><span class="p">.</span><span class="n">single_task</span><span class="p">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//code });</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </li>
 </ul>
 </section>
 <section id="dpc-headers-and-runtime-tests">
-<h4>DPC++ headers and runtime tests<a class="headerlink" href="#dpc-headers-and-runtime-tests" title="Permalink to this headline">¶</a></h4>
+<h4>DPC++ headers and runtime tests<a class="headerlink" href="#dpc-headers-and-runtime-tests" title="Link to this heading">¶</a></h4>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer//sycl/test"><span class="xref myst">check-sycl</span></a> target contains 2 types of tests: LIT tests and
+<li><p><a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/test">check-sycl</a> target contains 2 types of tests: LIT tests and
 unit tests. LIT tests make compile-time checks of DPC++ headers, e.g. device
-code IR verification, static_assert tests. Unit tests check DPC++ runtime
+code IR verification, <code class="docutils literal notranslate"><span class="pre">static_assert</span></code> tests. Unit tests check DPC++ runtime
 behavior and do not perform any device code compilation, instead relying on
-redefining plugin API with <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/developer//sycl/unittests/helpers/PiMock.hpp"><span class="xref myst">PiMock</span></a> when
+redefining plugin API with <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/unittests/helpers/PiMock.hpp">PiMock</a> when
 necessary.</p></li>
+</ul>
+<p>When adding new test to <code class="docutils literal notranslate"><span class="pre">check-sycl</span></code>, please consider the following:</p>
+<ul class="simple">
+<li><p>if you only need to check that compilation succeeds, please use
+<a class="reference external" href="https://clang.llvm.org/docs/ClangCommandLineReference.html#cmdoption-clang-fsyntax-only"><code class="docutils literal notranslate"><span class="pre">-fsyntax-only</span></code></a>
+compiler flag for such tests: it instructs the compiler to launch reduced
+set of commands and produce no output (no need to add <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">%t.out</span></code>).</p></li>
+<li><p>if you are only interested in checking device or host compilation, please use
+corresponding flags to reduce the scope of test and therefore speed it up.
+To launch only device compilation, use <code class="docutils literal notranslate"><span class="pre">-fsycl-device-only</span></code> compiler flag; to
+launch only host compilation, use <code class="docutils literal notranslate"><span class="pre">%fsycl-host-only</span></code> substitution.</p></li>
+<li><p>tests which want to check generated device code (either in LLVM IR or SPIR-V
+form) should be placed under <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/test/check_device_code">check_device_code</a>
+folder.</p></li>
+<li><p>if compiler invocation in your LIT test produces an output file, please make
+sure to redirect it into a temporary file using <code class="docutils literal notranslate"><span class="pre">-o</span></code> option and
+<a class="reference external" href="https://llvm.org/docs/CommandGuide/lit.html#substitutions"><code class="docutils literal notranslate"><span class="pre">%t</span></code></a>
+substitution. This is needed to avoid possible race conditions when two LIT
+tests attempt to write into the same file.</p></li>
+<li><p>if you need to check some runtime behavior please add unit test instead of
+LIT test. Unit tests are built with regular C++ compiler which is used to
+build the project and therefore they are not affected by <code class="docutils literal notranslate"><span class="pre">clang++</span></code> being slow
+when the project is built in Debug mode. As another side effect of using
+standard C++ compiler, device side compilation is skipped entirely, making
+them quicker to compile. And finally, unit tests are written with
+<a class="reference external" href="https://google.github.io/googletest/primer.html">googletest</a> framework,
+which allows to use plenty of useful assertions and other helpers.</p></li>
 </ul>
 </section>
 </section>
 <section id="dpc-end-to-end-e2e-tests">
-<h3>DPC++ end-to-end (E2E) tests<a class="headerlink" href="#dpc-end-to-end-e2e-tests" title="Permalink to this headline">¶</a></h3>
-<p>These tests are extension to
-<a class="reference external" href="https://github.com/intel/llvm-test-suite/tree/intel/SYCL">LLVM test suite</a>
-and hosted at separate repository.
-A test which requires full stack including backend runtimes (e.g. OpenCL,
-Level Zero or CUDA) should be added to DPC++ E2E test suite following
-<a class="reference external" href="https://github.com/intel/llvm-test-suite/blob/intel/CONTRIBUTING.md">CONTRIBUTING</a>.</p>
+<h3>DPC++ end-to-end (E2E) tests<a class="headerlink" href="#dpc-end-to-end-e2e-tests" title="Link to this heading">¶</a></h3>
+<p>These tests are located in <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/test-e2e">/sycl/test-e2e</a> directory and are not
+configured to be run by default. See
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/test-e2e/README.md">End-to-End tests documentation</a>
+for instructions on how to run them.</p>
+<p>A test which requires full stack including backend runtimes (e.g. OpenCL,
+Level Zero or CUDA) should be added to DPC++ E2E tests.</p>
 </section>
 <section id="sycl-conformance-test-suite-cts">
-<h3>SYCL Conformance Test Suite (CTS)<a class="headerlink" href="#sycl-conformance-test-suite-cts" title="Permalink to this headline">¶</a></h3>
+<h3>SYCL Conformance Test Suite (CTS)<a class="headerlink" href="#sycl-conformance-test-suite-cts" title="Link to this heading">¶</a></h3>
 <p>These tests are hosted at
 <a class="reference external" href="https://github.com/KhronosGroup/SYCL-CTS">Khronos SYCL conformance tests</a>.
 These tests verify SYCL specification conformance. All implementation details
@@ -151,6 +192,44 @@ are out of scope for the tests.
 See DPC++ compiler invocation definitions at
 <a class="reference external" href="https://github.com/KhronosGroup/SYCL-CTS/blob/SYCL-1.2.1/master/cmake/FindIntel_SYCL.cmake">FindIntel_SYCL</a>)</p>
 </section>
+</section>
+<section id="unified-runtime-updates">
+<h2>Unified Runtime Updates<a class="headerlink" href="#unified-runtime-updates" title="Link to this heading">¶</a></h2>
+<p>To integrate changes from the <a class="reference external" href="https://github.com/oneapi-src/unified-runtime">Unified Runtime</a> project into DPC++ there
+two main options which depend on the scope of those changes and the current
+state of DPC++.</p>
+<ol class="arabic simple">
+<li><p>Synchronized update:</p></li>
+</ol>
+<ul class="simple">
+<li><p>When: If the Unified Runtime change touches the API/ABI, more than one
+adapter, or common code such as the loader.</p></li>
+<li><p>How: Update the <code class="docutils literal notranslate"><span class="pre">UNIFIED_RUNTIME_TAG</span></code> to point at the desired commit or tag
+name in the Unified Runtime repository and ensure that any tag for specific
+adapters are set to use <code class="docutils literal notranslate"><span class="pre">${UNIFIED_RUNTIME_TAG}</span></code>.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Decoupled update:</p></li>
+</ol>
+<ul class="simple">
+<li><p>When: If only a single Unified Runtime adatper has changed.</p></li>
+<li><p>How: Update the tag used in the <code class="docutils literal notranslate"><span class="pre">fetch_adapter_source()</span></code> call for a
+specific Unified Runtime adapter, e.g. Level Zero, OpenCL, CUDA, HIP, or
+Native CPU.</p></li>
+</ul>
+<p>In general, a synchronized update should be the default. However, when there
+are a lot of changes in flight in parallel always synchronizing the tag can be
+troublesome. This is when a decoupled update can help sustain the merge
+velocity of Unified Runtime changes.</p>
+<p>The <a class="reference external" href="https://github.com/orgs/intel/teams/unified-runtime-reviewers">intel/unified-runtime-reviewers</a> team is responsible
+for ensuring that the Unified Runtime tag is updated correctly and will only
+provide code owner approval to pull requests once the following criteria are
+met:</p>
+<ul class="simple">
+<li><p>Tags are pointing to a valid commit or tag on Unified Runtime main branch.</p></li>
+<li><p>Changes to additional code owned files are in a good state.</p></li>
+<li><p>GitHub Actions checks are passing.</p></li>
+</ul>
 </section>
 </section>
 
@@ -167,8 +246,8 @@ See DPC++ compiler invocation definitions at
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

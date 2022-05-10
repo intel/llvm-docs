@@ -1,0 +1,4 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node_1_1depends__on__all__leaves =
+[
+    [ "depends_on_all_leaves", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1node_1_1depends__on__all__leaves.html#a68d1a35b90ce1e9723de34298f767f43", null ]
+];

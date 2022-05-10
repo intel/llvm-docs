@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opencl_20plugin_13085',['OpenCL Plugin',['../group__sycl__pi__ocl.html',1,'']]]
+  ['raw_20send_20apis_2e_17938',['Raw send APIs.',['../group__sycl__esimd__raw__send.html',1,'']]]
 ];

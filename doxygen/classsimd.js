@@ -8,12 +8,13 @@ var classsimd =
     [ "simd", "classsimd.html#a52c36bb3f8291eb1b79884d438107f51", null ],
     [ "simd", "classsimd.html#a61c144842326d748a4f6d0c4cbe40c90", null ],
     [ "simd", "classsimd.html#aa68c019a3dea2459042a0bb25399a59f", null ],
+    [ "simd", "classsimd.html#a2a4036cb11416584eddf83a1918a4767", null ],
     [ "simd", "classsimd.html#a8546328bbe5ac0a7969f7ab88504f817", null ],
     [ "simd", "classsimd.html#a3e3040cd069c34b9723166fe0ebb42e6", null ],
     [ "simd", "classsimd.html#a161f65ba6a9bf5876b8e91acbeb773f3", null ],
     [ "simd", "classsimd.html#ad915cdf8ec336af46aec5cfe2950f437", null ],
-    [ "copy_from", "classsimd.html#a2b68256093cf2bc044256df90e809caa", null ],
-    [ "copy_to", "classsimd.html#a68059f923f8414aef4428ebbd850b148", null ],
+    [ "copy_from", "classsimd.html#ae6752f6b2136ec89916b35945f2515be", null ],
+    [ "copy_to", "classsimd.html#a12a70728617dff514803cf023d5071e3", null ],
     [ "operator raw_storage_type", "classsimd.html#a399d7178795b1f4a6be013c25eda9135", null ],
     [ "operator!", "classsimd.html#a2dc7a91163c9f7d18f1335b5f9c88a38", null ],
     [ "operator+", "classsimd.html#ae75e5474862e90057ded1a86c7feea40", null ],
@@ -55,5 +56,6 @@ var classsimd =
     [ "operator^", "classsimd.html#a3a0c8c4e90ad50ecbb5f25b8e9da2cde", null ],
     [ "operator^=", "classsimd.html#a44027d65efe36f7d4c6e51a96db64e0d", null ],
     [ "operator|", "classsimd.html#a56da4ecf3392e3301d2e2c53fb69a5e0", null ],
-    [ "operator|=", "classsimd.html#a704c2b2af67602d16443cdd07d4e5008", null ]
+    [ "operator|=", "classsimd.html#a704c2b2af67602d16443cdd07d4e5008", null ],
+    [ "simd", "classsimd.html#a3a3cb691aa9b2fe08cd8f4e608f352fc", null ]
 ];

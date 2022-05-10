@@ -1,0 +1,28 @@
+var classsycl_1_1__V1_1_1exception =
+[
+    [ "~exception", "classsycl_1_1__V1_1_1exception.html#ab8941231470456b82a6545fc6817fcc1", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#ae879f88433f558efa7655f19a13188a5", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a72662e55c974e2b6549be8e71c3e77d3", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a32ca36533e3670ce8454de33d0e997f0", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#aebb0ef1b4e53967afd2d7ca34967083c", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#adeb5e7a1c0d21726030e86cafa42a1f5", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a7f69d06c96f159fd29718392a2a3150a", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#aa35edfdc1c65ac9b9464c264886b4e6d", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#ae5a8037e50279e0da9b4fbc8005d1bd2", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a941219cfe1fadf3c5f97a3182d0da395", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a4393caea9ebfbbb9d12a6a9d9f48bae0", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#af5cd72340caa0efd0fe519b6ff98aaed", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a3d1570539443e982b06e7d15fdf1d70b", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a61dbe90bf1fd3ee0f4c7828b28e45a12", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a0ed0a2521afc65faa452f7e19e83155e", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a4595019d09223e89b09df183dfb6de29", null ],
+    [ "exception", "classsycl_1_1__V1_1_1exception.html#a5e843f29034d0c5aa78d866209bf487d", null ],
+    [ "__SYCL2020_DEPRECATED", "classsycl_1_1__V1_1_1exception.html#ae84cad0f75265679c770db5a2d090684", null ],
+    [ "category", "classsycl_1_1__V1_1_1exception.html#ada2d87c04e458467b64ed626d8b13fc8", null ],
+    [ "code", "classsycl_1_1__V1_1_1exception.html#aaa7de90efb6b99a1a856449cb870acfc", null ],
+    [ "get_context", "classsycl_1_1__V1_1_1exception.html#a8a43da0e4d157c777540628485f0064f", null ],
+    [ "has_context", "classsycl_1_1__V1_1_1exception.html#a599becbae22e3481b134da32c062b33f", null ],
+    [ "what", "classsycl_1_1__V1_1_1exception.html#aa172e3f74106bea2d06325617e067caf", null ],
+    [ "detail::get_ur_error", "classsycl_1_1__V1_1_1exception.html#a100932b9f2903c5569d60dd6343f2ca1", null ],
+    [ "detail::set_ur_error", "classsycl_1_1__V1_1_1exception.html#af8e618b9681231ba6c4201d1264fd411", null ]
+];

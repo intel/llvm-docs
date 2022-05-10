@@ -1,0 +1,7 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1sampled__image__handle =
+[
+    [ "raw_image_handle_type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1sampled__image__handle.html#af0b1c756983e9c4401caa575a2ed3d95", null ],
+    [ "sampled_image_handle", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1sampled__image__handle.html#abf3d976bf70bd202ba30881cdcf1781e", null ],
+    [ "sampled_image_handle", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1sampled__image__handle.html#a8594ddc3fd9b5a89458ae5ffa2b4258e", null ],
+    [ "raw_handle", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1sampled__image__handle.html#a17c55b326f5d8895574e3c5899c19354", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01bool_00_01info_1_1device_1_1ext__oneapi__cuda__cluster__group_01_4 =
+[
+    [ "get", "structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01bool_00_01info_1_1device_1_1ext__oneapi__cuda__cluster__group_01_4.html#a6f9bedbca30f578eef713e705b5063c9", null ]
+];
