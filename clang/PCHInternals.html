@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Precompiled Header and Modules Internals &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Precompiled Header and Modules Internals &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="ABI tags" href="ItaniumMangleAbiTags.html" />
     <link rel="prev" title="Offloading Design &amp; Internals" href="OffloadingDesign.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Precompiled Header and Modules Internals</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,8 +36,8 @@
         
         
   <section id="precompiled-header-and-modules-internals">
-<h1>Precompiled Header and Modules Internals<a class="headerlink" href="#precompiled-header-and-modules-internals" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
+<h1>Precompiled Header and Modules Internals<a class="headerlink" href="#precompiled-header-and-modules-internals" title="Link to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#using-precompiled-headers-with-clang" id="id1">Using Precompiled Headers with <code class="docutils literal notranslate"><span class="pre">clang</span></code></a></p></li>
 <li><p><a class="reference internal" href="#design-philosophy" id="id2">Design Philosophy</a></p></li>
@@ -58,16 +57,16 @@
 <li><p><a class="reference internal" href="#chained-precompiled-headers" id="id13">Chained precompiled headers</a></p></li>
 <li><p><a class="reference internal" href="#modules" id="id14">Modules</a></p></li>
 </ul>
-</div>
+</nav>
 <p>This document describes the design and implementation of Clang’s precompiled
 headers (PCH) and modules.  If you are interested in the end-user view, please
 see the <a class="reference internal" href="UsersManual.html#usersmanual-precompiled-headers"><span class="std std-ref">User’s Manual</span></a>.</p>
 <section id="using-precompiled-headers-with-clang">
-<h2><a class="toc-backref" href="#id1">Using Precompiled Headers with <code class="docutils literal notranslate"><span class="pre">clang</span></code></a><a class="headerlink" href="#using-precompiled-headers-with-clang" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Using Precompiled Headers with <code class="docutils literal notranslate"><span class="pre">clang</span></code></a><a class="headerlink" href="#using-precompiled-headers-with-clang" title="Link to this heading">¶</a></h2>
 <p>The Clang compiler frontend, <code class="docutils literal notranslate"><span class="pre">clang</span> <span class="pre">-cc1</span></code>, supports two command line options
 for generating and using PCH files.</p>
 <p>To generate PCH files using <code class="docutils literal notranslate"><span class="pre">clang</span> <span class="pre">-cc1</span></code>, use the option <cite>-emit-pch</cite>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ clang -cc1 test.h -emit-pch -o test.h.pch
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>clang<span class="w"> </span>-cc1<span class="w"> </span>test.h<span class="w"> </span>-emit-pch<span class="w"> </span>-o<span class="w"> </span>test.h.pch
 </pre></div>
 </div>
 <p>This option is transparently used by <code class="docutils literal notranslate"><span class="pre">clang</span></code> when generating PCH files.  The
@@ -75,12 +74,12 @@ resulting PCH file contains the serialized form of the compiler’s internal
 representation after it has completed parsing and semantic analysis.  The PCH
 file can then be used as a prefix header with the <cite>-include-pch</cite>
 option:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ clang -cc1 -include-pch test.h.pch test.c -o test.s
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>clang<span class="w"> </span>-cc1<span class="w"> </span>-include-pch<span class="w"> </span>test.h.pch<span class="w"> </span>test.c<span class="w"> </span>-o<span class="w"> </span>test.s
 </pre></div>
 </div>
 </section>
 <section id="design-philosophy">
-<h2><a class="toc-backref" href="#id2">Design Philosophy</a><a class="headerlink" href="#design-philosophy" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Design Philosophy</a><a class="headerlink" href="#design-philosophy" title="Link to this heading">¶</a></h2>
 <p>Precompiled headers are meant to improve overall compile times for projects, so
 the design of precompiled headers is entirely driven by performance concerns.
 The use case for precompiled headers is relatively simple: when there is a
@@ -160,7 +159,7 @@ mechanisms behind chained precompiled headers are discussed in a <a class="refer
 section</span></a>.</p>
 </section>
 <section id="ast-file-contents">
-<h2><a class="toc-backref" href="#id3">AST File Contents</a><a class="headerlink" href="#ast-file-contents" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">AST File Contents</a><a class="headerlink" href="#ast-file-contents" title="Link to this heading">¶</a></h2>
 <p>An AST file produced by clang is an object file container with a <code class="docutils literal notranslate"><span class="pre">clangast</span></code>
 (COFF) or <code class="docutils literal notranslate"><span class="pre">__clangast</span></code> (ELF and Mach-O) section containing the serialized AST.
 Other target-specific sections in the object file container are used to hold
@@ -181,7 +180,7 @@ section.  This information can be used both to help understand the structure of
 the AST section and to isolate areas where the AST representation can still be
 optimized, e.g., through the introduction of abbreviations.</p>
 <section id="metadata-block">
-<h3><a class="toc-backref" href="#id4">Metadata Block</a><a class="headerlink" href="#metadata-block" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Metadata Block</a><a class="headerlink" href="#metadata-block" title="Link to this heading">¶</a></h3>
 <p>The metadata block contains several records that provide information about how
 the AST file was built.  This metadata is primarily used to validate the use of
 an AST file.  For example, a precompiled header built for a 32-bit x86 target
@@ -222,7 +221,7 @@ predefines buffer data is taken from the end of the chain, since they have to
 match anyway.</p>
 </section>
 <section id="source-manager-block">
-<span id="pchinternals-sourcemgr"></span><h3><a class="toc-backref" href="#id5">Source Manager Block</a><a class="headerlink" href="#source-manager-block" title="Permalink to this headline">¶</a></h3>
+<span id="pchinternals-sourcemgr"></span><h3><a class="toc-backref" href="#id5" role="doc-backlink">Source Manager Block</a><a class="headerlink" href="#source-manager-block" title="Link to this heading">¶</a></h3>
 <p>The source manager block contains the serialized representation of Clang’s
 <a class="reference internal" href="InternalsManual.html#sourcemanager"><span class="std std-ref">SourceManager</span></a> class, which handles the mapping from
 source locations (as represented in Clang’s abstract syntax tree) into actual
@@ -245,7 +244,7 @@ that the contents of the header dependent on a macro like
 <code class="docutils literal notranslate"><span class="pre">LLVM_CLANG_SOURCEMANAGER_H</span></code>).</p>
 </section>
 <section id="preprocessor-block">
-<span id="pchinternals-preprocessor"></span><h3><a class="toc-backref" href="#id6">Preprocessor Block</a><a class="headerlink" href="#preprocessor-block" title="Permalink to this headline">¶</a></h3>
+<span id="pchinternals-preprocessor"></span><h3><a class="toc-backref" href="#id6" role="doc-backlink">Preprocessor Block</a><a class="headerlink" href="#preprocessor-block" title="Link to this heading">¶</a></h3>
 <p>The preprocessor block contains the serialized representation of the
 preprocessor.  Specifically, it contains all of the macros that have been
 defined by the end of the header used to build the AST file, along with the
@@ -255,7 +254,7 @@ lazy loading of macro definitions is triggered by lookups into the
 <a class="reference internal" href="#pchinternals-ident-table"><span class="std std-ref">identifier table</span></a>.</p>
 </section>
 <section id="types-block">
-<span id="pchinternals-types"></span><h3><a class="toc-backref" href="#id7">Types Block</a><a class="headerlink" href="#types-block" title="Permalink to this headline">¶</a></h3>
+<span id="pchinternals-types"></span><h3><a class="toc-backref" href="#id7" role="doc-backlink">Types Block</a><a class="headerlink" href="#types-block" title="Link to this heading">¶</a></h3>
 <p>The types block contains the serialized representation of all of the types
 referenced in the translation unit.  Each Clang type node (<code class="docutils literal notranslate"><span class="pre">PointerType</span></code>,
 <code class="docutils literal notranslate"><span class="pre">FunctionProtoType</span></code>, etc.) has a corresponding record type in the AST file.
@@ -274,7 +273,7 @@ bits.  The lower three bits are used to represent the <code class="docutils lite
 and <code class="docutils literal notranslate"><span class="pre">restrict</span></code> qualifiers, as in Clang’s <a class="reference internal" href="InternalsManual.html#qualtype"><span class="std std-ref">QualType</span></a> class.</p>
 </section>
 <section id="declarations-block">
-<span id="pchinternals-decls"></span><h3><a class="toc-backref" href="#id8">Declarations Block</a><a class="headerlink" href="#declarations-block" title="Permalink to this headline">¶</a></h3>
+<span id="pchinternals-decls"></span><h3><a class="toc-backref" href="#id8" role="doc-backlink">Declarations Block</a><a class="headerlink" href="#declarations-block" title="Link to this heading">¶</a></h3>
 <p>The declarations block contains the serialized representation of all of the
 declarations referenced in the translation unit.  Each Clang declaration node
 (<code class="docutils literal notranslate"><span class="pre">VarDecl</span></code>, <code class="docutils literal notranslate"><span class="pre">FunctionDecl</span></code>, etc.) has a corresponding record type in the
@@ -323,7 +322,7 @@ the common case.</p></li>
 </ul>
 </section>
 <section id="statements-and-expressions">
-<h3><a class="toc-backref" href="#id9">Statements and Expressions</a><a class="headerlink" href="#statements-and-expressions" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Statements and Expressions</a><a class="headerlink" href="#statements-and-expressions" title="Link to this heading">¶</a></h3>
 <p>Statements and expressions are stored in the AST file in both the <a class="reference internal" href="#pchinternals-types"><span class="std std-ref">types</span></a> and the <a class="reference internal" href="#pchinternals-decls"><span class="std std-ref">declarations</span></a> blocks,
 because every statement or expression will be associated with either a type or
 declaration.  The actual statement and expression records are stored
@@ -340,9 +339,6 @@ reverse order, prior to the expression that owns those expression, using a form
 of <a class="reference external" href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">Reverse Polish Notation</a>. For example, an
 expression <code class="docutils literal notranslate"><span class="pre">3</span> <span class="pre">-</span> <span class="pre">4</span> <span class="pre">+</span> <span class="pre">5</span></code> would be represented as follows:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">IntegerLiteral(5)</span></code></p></td>
 </tr>
@@ -367,7 +363,7 @@ of a serialized expression or statement; other expression or statement records
 may follow, but they are part of a different expression.</p>
 </section>
 <section id="pchinternals-ident-table">
-<span id="identifier-table-block"></span><h3><a class="toc-backref" href="#id10">Identifier Table Block</a><a class="headerlink" href="#pchinternals-ident-table" title="Permalink to this headline">¶</a></h3>
+<span id="identifier-table-block"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink">Identifier Table Block</a><a class="headerlink" href="#pchinternals-ident-table" title="Link to this heading">¶</a></h3>
 <p>The identifier table block contains an on-disk hash table that maps each
 identifier mentioned within the AST file to the serialized representation of
 the identifier’s information (e.g, the <code class="docutils literal notranslate"><span class="pre">IdentifierInfo</span></code> structure).  The
@@ -397,7 +393,7 @@ a declaration, the identifier of a token, or any other construct in the AST
 file that refers to a name.</p>
 </section>
 <section id="method-pool-block">
-<span id="pchinternals-method-pool"></span><h3><a class="toc-backref" href="#id11">Method Pool Block</a><a class="headerlink" href="#method-pool-block" title="Permalink to this headline">¶</a></h3>
+<span id="pchinternals-method-pool"></span><h3><a class="toc-backref" href="#id11" role="doc-backlink">Method Pool Block</a><a class="headerlink" href="#method-pool-block" title="Link to this heading">¶</a></h3>
 <p>The method pool block is represented as an on-disk hash table that serves two
 purposes: it provides a mapping from the names of Objective-C selectors to the
 set of Objective-C instance and class methods that have that particular
@@ -417,7 +413,7 @@ the selector.</p>
 </section>
 </section>
 <section id="ast-reader-integration-points">
-<h2><a class="toc-backref" href="#id12">AST Reader Integration Points</a><a class="headerlink" href="#ast-reader-integration-points" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">AST Reader Integration Points</a><a class="headerlink" href="#ast-reader-integration-points" title="Link to this heading">¶</a></h2>
 <p>The “lazy” deserialization behavior of AST files requires their integration
 into several completely different submodules of Clang.  For example, lazily
 deserializing the declarations during name lookup requires that the name-lookup
@@ -453,7 +449,7 @@ method pool</span></a>.</p>
 </dl>
 </section>
 <section id="chained-precompiled-headers">
-<span id="pchinternals-chained"></span><h2><a class="toc-backref" href="#id13">Chained precompiled headers</a><a class="headerlink" href="#chained-precompiled-headers" title="Permalink to this headline">¶</a></h2>
+<span id="pchinternals-chained"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink">Chained precompiled headers</a><a class="headerlink" href="#chained-precompiled-headers" title="Link to this heading">¶</a></h2>
 <p>Chained precompiled headers were initially intended to improve the performance
 of IDE-centric operations such as syntax highlighting and code completion while
 a particular source file is being edited by the user.  To minimize the amount
@@ -509,7 +505,7 @@ the original entity.</p>
 </dl>
 </section>
 <section id="modules">
-<span id="pchinternals-modules"></span><h2><a class="toc-backref" href="#id14">Modules</a><a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+<span id="pchinternals-modules"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink">Modules</a><a class="headerlink" href="#modules" title="Link to this heading">¶</a></h2>
 <p>Modules generalize the chained precompiled header model yet further, from a
 linear chain of precompiled headers to an arbitrary directed acyclic graph
 (DAG) of AST files.  All of the same techniques used to make chained
@@ -573,8 +569,8 @@ is notified of the import.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

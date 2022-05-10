@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Behavior for optional kernel features &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SYCL Instrumentation" href="SYCLInstrumentationUsingXPTI.html" />
+    <link rel="next" title="Parallel For Range Rounding" href="ParallelForRangeRounding.html" />
     <link rel="prev" title="Dynamic linking of device code" href="SharedLibraries.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
@@ -29,15 +27,15 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="SYCLInstrumentationUsingXPTI.html">SYCL Instrumentation</a>&#160;&#160;»
+        <a href="ParallelForRangeRounding.html">Parallel For Range Rounding</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="behavior-for-optional-kernel-features">
-<h1>Behavior for optional kernel features<a class="headerlink" href="#behavior-for-optional-kernel-features" title="Permalink to this headline">¶</a></h1>
+  <section id="behavior-for-optional-kernel-features">
+<h1>Behavior for optional kernel features<a class="headerlink" href="#behavior-for-optional-kernel-features" title="Link to this heading">¶</a></h1>
 <p>This design document describes the changes that are needed in DPC++ in order to
 conform to the SYCL 2020 specification regarding the behavior of applications
 that use optional kernel features.  An optional kernel feature is any feature
@@ -50,9 +48,9 @@ optional kernel features.</p>
 attribute <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code> that is described in <a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html#sec:kernel.attributes">section 5.8.1 “Kernel
 attributes”</a> and <a class="reference external" href="https://www.khronos.org/registry/SYCL/specs/sycl-2020/html/sycl-2020.html#_device_function_attributes">section 5.8.2 “Device function attributes”</a>.</p>
 <section id="definition-of-terms">
-<h2>Definition of terms<a class="headerlink" href="#definition-of-terms" title="Permalink to this headline">¶</a></h2>
+<h2>Definition of terms<a class="headerlink" href="#definition-of-terms" title="Link to this heading">¶</a></h2>
 <section id="a-kernel-s-static-call-graph">
-<h3>A kernel’s static call graph<a class="headerlink" href="#a-kernel-s-static-call-graph" title="Permalink to this headline">¶</a></h3>
+<h3>A kernel’s static call graph<a class="headerlink" href="#a-kernel-s-static-call-graph" title="Link to this heading">¶</a></h3>
 <p>The term “static call graph” of a kernel means the set of all functions that
 a kernel may call, including functions that are called transitively from other
 functions.  In standard SYCL, device code is not allowed to contain function
@@ -77,12 +75,12 @@ The details about how this will work are expected to be included in the DPC++
 extension specification that enables indirect function calls.</p>
 </section>
 <section id="an-exported-device-function">
-<h3>An exported device function<a class="headerlink" href="#an-exported-device-function" title="Permalink to this headline">¶</a></h3>
+<h3>An exported device function<a class="headerlink" href="#an-exported-device-function" title="Link to this heading">¶</a></h3>
 <p>The term “exported device function” means a device function that is exported
-from a shared library as defined by <a class="reference internal" href="SharedLibraries.html"><span class="doc std std-doc">Device Code Dynamic Linking</span></a>.</p>
+from a shared library as defined by <a class="reference internal" href="SharedLibraries.html"><span class="std std-doc">Device Code Dynamic Linking</span></a>.</p>
 </section>
 <section id="the-fe-compiler">
-<h3>The FE compiler<a class="headerlink" href="#the-fe-compiler" title="Permalink to this headline">¶</a></h3>
+<h3>The FE compiler<a class="headerlink" href="#the-fe-compiler" title="Link to this heading">¶</a></h3>
 <p>The term “FE compiler” refers to the entire DPC++ compiler chain that runs
 when the user executes the <code class="docutils literal notranslate"><span class="pre">clang++</span></code> command.  This includes the clang
 front-end itself, all passes over LLVM IR, the post-link tool, and any AOT
@@ -92,7 +90,7 @@ into native code when the application executes.</p>
 </section>
 </section>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>There are several categories of requirements covered by this design.  Each of
 these is described in more detail in the sections that follow:</p>
 <ul class="simple">
@@ -108,7 +106,7 @@ speculative compilation of a kernel for a device, when the application does
 not specifically submit the kernel to that device.</p></li>
 </ul>
 <section id="diagnostics-from-the-fe-compiler">
-<h3>Diagnostics from the FE compiler<a class="headerlink" href="#diagnostics-from-the-fe-compiler" title="Permalink to this headline">¶</a></h3>
+<h3>Diagnostics from the FE compiler<a class="headerlink" href="#diagnostics-from-the-fe-compiler" title="Link to this heading">¶</a></h3>
 <p>In general, the FE compiler does not know which kernels the application will
 submit to which devices.  Therefore, the FE compiler does not generally know
 which optional features a kernel can legally use.  Thus, in general, the FE
@@ -138,7 +136,7 @@ simply because the middleware header contains device code for devices that
 are not being compiled for.</p>
 </section>
 <section id="runtime-exception-if-device-doesn-t-support-feature">
-<h3>Runtime exception if device doesn’t support feature<a class="headerlink" href="#runtime-exception-if-device-doesn-t-support-feature" title="Permalink to this headline">¶</a></h3>
+<h3>Runtime exception if device doesn’t support feature<a class="headerlink" href="#runtime-exception-if-device-doesn-t-support-feature" title="Link to this heading">¶</a></h3>
 <p>When the application submits a kernel to a device via one of the kernel
 invocation commands (e.g. <code class="docutils literal notranslate"><span class="pre">parallel_for()</span></code>), the runtime must check if the
 kernel uses optional features that are not supported on that device.  If the
@@ -180,7 +178,7 @@ if the device does not support the work group size <code class="docutils literal
 the queue’s asynchronous handler.</p>
 </section>
 <section id="no-runtime-exception-for-speculative-compilation">
-<h3>No runtime exception for speculative compilation<a class="headerlink" href="#no-runtime-exception-for-speculative-compilation" title="Permalink to this headline">¶</a></h3>
+<h3>No runtime exception for speculative compilation<a class="headerlink" href="#no-runtime-exception-for-speculative-compilation" title="Link to this heading">¶</a></h3>
 <p>It is currently common for the runtime to speculatively compile some kernels.
 For example, DPC++ may bundle all kernels from the same translation unit
 together into a single device image.  When the application submits one kernel
@@ -191,7 +189,7 @@ to throw an exception in such a case just because some other kernel in the same
 device image uses a feature that is not supported by device <em>D</em>.</p>
 </section>
 <section id="compiler-switch-to-diagnose-optional-feature-usage">
-<h3>Compiler switch to diagnose optional feature usage<a class="headerlink" href="#compiler-switch-to-diagnose-optional-feature-usage" title="Permalink to this headline">¶</a></h3>
+<h3>Compiler switch to diagnose optional feature usage<a class="headerlink" href="#compiler-switch-to-diagnose-optional-feature-usage" title="Link to this heading">¶</a></h3>
 <p>As noted above, the FE compiler does not generally know which kernels will be
 submitted to which devices, and this limits the errors that the FE compiler can
 diagnose.  However, some users may know that all code in their application will
@@ -240,7 +238,7 @@ will only AOT compile for the devices that are present in both lists (i.e. the
 intersection of the two sets <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code>).</p>
 </section>
 <section id="must-preserve-ability-to-precisely-control-device-images">
-<h3>Must preserve ability to precisely control device images<a class="headerlink" href="#must-preserve-ability-to-precisely-control-device-images" title="Permalink to this headline">¶</a></h3>
+<h3>Must preserve ability to precisely control device images<a class="headerlink" href="#must-preserve-ability-to-precisely-control-device-images" title="Link to this heading">¶</a></h3>
 <p>FPGA users need the ability to control how kernels are bundled together into
 device images because an FPGA device is reprogrammed with the contents of a
 single device image.  Most FPGA users want all kernels in their application to
@@ -266,7 +264,7 @@ the <code class="docutils literal notranslate"><span class="pre">-fsycl-device-c
 kernels into device images that FPGA users expect.</p>
 <p>Note that these switches are useful even for non-FPGA users.  For example,
 non-FPGA users may want to use the <code class="docutils literal notranslate"><span class="pre">device_global</span></code> property
-<a class="reference external" href="../extensions/proposed/sycl_ext_oneapi_device_global.asciidoc#properties-for-device-global-variables"><code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code></a>, which requires even non-FPGA users to have precise
+<a class="reference download internal" download="" href="../_downloads/ba88595f12ef1a14d94e3dc26fa352c0/sycl_ext_oneapi_device_global.asciidoc"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code></span></a>, which requires even non-FPGA users to have precise
 control over the way kernels are bundled into device images.</p>
 <p>The new definition of <code class="docutils literal notranslate"><span class="pre">-fsycl-device-code-split</span></code> is as follows:</p>
 <blockquote>
@@ -308,9 +306,9 @@ no value.</p>
 </section>
 </section>
 <section id="design">
-<h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
 <section id="changes-to-dpc-headers">
-<h3>Changes to DPC++ headers<a class="headerlink" href="#changes-to-dpc-headers" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to DPC++ headers<a class="headerlink" href="#changes-to-dpc-headers" title="Link to this heading">¶</a></h3>
 <p>With the exception of the <code class="docutils literal notranslate"><span class="pre">[[sycl::reqd_work_group_size()]]</span></code> and
 <code class="docutils literal notranslate"><span class="pre">[[sycl::reqd_sub_group_size()]]</span></code> attributes, all kernel optional features
 are associated with some device aspect.  For example, the <code class="docutils literal notranslate"><span class="pre">sycl::half</span></code> type
@@ -349,7 +347,7 @@ to optional features.  Illustrating a hypothetical AMX extension:</p>
 </pre></div>
 </div>
 <p>This attribute can also be used to decorate class templates where only certain
-instantiations correspond to optional features.  See <a class="reference external" href="#appendix-adding-an-attribute-to-8-byte-atomic_ref">“Appendix: Adding an
+instantiations correspond to optional features.  See <a class="reference internal" href="#appendix-adding-an-attribute-to-8-byte-atomic-ref">“Appendix: Adding an
 attribute to 8-byte <code class="docutils literal notranslate"><span class="pre">atomic_ref</span></code>”</a> for an illustration of how this attribute
 can be used in conjunction with partial specialization to mark only certain
 instantiations of <code class="docutils literal notranslate"><span class="pre">sycl::atomic_ref</span></code> as an optional feature.</p>
@@ -372,46 +370,60 @@ must behave as though there was an implicit
 that uses the <code class="docutils literal notranslate"><span class="pre">double</span></code> type.</p>
 </section>
 <section id="new-llvm-ir-metadata">
-<h3>New LLVM IR metadata<a class="headerlink" href="#new-llvm-ir-metadata" title="Permalink to this headline">¶</a></h3>
+<h3>New LLVM IR metadata<a class="headerlink" href="#new-llvm-ir-metadata" title="Link to this heading">¶</a></h3>
 <p>In order to communicate the information from <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code> and
 <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code> attributes to the DPC++ post-link tool, we
 introduce several new LLVM IR metadata.</p>
-<p>The named metadata <code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> conveys information about
+<p>The named metadata <code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> conveys information about
 types that are decorated with <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code>.  This metadata
 is not referenced by any instruction in the module, so it must be looked up by
 name.  The format looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!intel_types_that_use_aspects = !{!0, !1, !2}
-!0 = !{!&quot;class.cl::sycl::detail::half_impl::half&quot;, i32 8}
-!1 = !{!&quot;class.cl::sycl::amx_type&quot;, i32 9}
-!2 = !{!&quot;class.cl::sycl::other_type&quot;, i32 8, i32 9}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!sycl_types_that_use_aspects = !{!0, !1, !2}
+!0 = !{!&quot;class.sycl::detail::half_impl::half&quot;, i32 8}
+!1 = !{!&quot;class.sycl::amx_type&quot;, i32 9}
+!2 = !{!&quot;class.sycl::other_type&quot;, i32 8, i32 9}
 </pre></div>
 </div>
-<p>The value of the <code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> metadata is a list of unnamed
+<p>The value of the <code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> metadata is a list of unnamed
 metadata nodes, each of which describes one type that is decorated with
 <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code>.  The value of each unnamed metadata node
 starts with a string giving the name of the type which is followed by a list of
 <code class="docutils literal notranslate"><span class="pre">i32</span></code> constants where each constant is a value from <code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span> <span class="pre">aspect</span></code> telling
 the numerical value of an aspect from the type’s
 <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code> attribute.  In the example above, the type
-<code class="docutils literal notranslate"><span class="pre">cl::sycl::detail::half_impl::half</span></code> uses an aspect whose numerical value is
-<code class="docutils literal notranslate"><span class="pre">8</span></code> and the type <code class="docutils literal notranslate"><span class="pre">cl::sycl::other_type</span></code> uses two aspects <code class="docutils literal notranslate"><span class="pre">8</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">sycl::detail::half_impl::half</span></code> uses an aspect whose numerical value is
+<code class="docutils literal notranslate"><span class="pre">8</span></code> and the type <code class="docutils literal notranslate"><span class="pre">sycl::other_type</span></code> uses two aspects <code class="docutils literal notranslate"><span class="pre">8</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>.</p>
 <p><strong>NOTE</strong>: The reason we choose this representation is because LLVM IR does not
 allow metadata to be attached directly to types.  This representation works
 around that limitation by creating global named metadata that references the
 type’s name.</p>
-<p>We also introduce three metadata that can be attached to a function definition
-similar to the existing <code class="docutils literal notranslate"><span class="pre">!intel_reqd_sub_group_size</span></code>:</p>
+<p>To synchronize the integral values of given aspects between the SYCL headers and
+the compiler, the <code class="docutils literal notranslate"><span class="pre">!sycl_aspects</span></code> metadata is added to the module, based on the
+values defined in the enum. Inside this metadata node, each value of the aspect
+enum is represented by another metadata node with two operands; the name of the
+value and the corresponding integral value. An example of this is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!sycl_aspects = !{!0, !1, !2, ...}
+!0 = !{!&quot;host&quot;, i32 0}
+!1 = !{!&quot;cpu&quot;, i32 1}
+!2 = !{!&quot;gpu&quot;, i32 2}
+...
+</pre></div>
+</div>
+<p><strong>NOTE</strong>: The <code class="docutils literal notranslate"><span class="pre">!sycl_aspects</span></code> metadata is both used by the compiler to identify
+the aspect values of implicit aspect requirements, such as <code class="docutils literal notranslate"><span class="pre">aspect::fp64</span></code> from
+the use of <code class="docutils literal notranslate"><span class="pre">double</span></code>, and to offer better diagnostic messages.</p>
+<p>We also introduce three metadata that can be attached to a function definition:</p>
 <ul>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> metadata is used for functions that are
+<li><p>The <code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> metadata is used for functions that are
 decorated with <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code>.  The value of the metadata node is a
 list of <code class="docutils literal notranslate"><span class="pre">i32</span></code> constants, where each constant is a value from
 <code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span> <span class="pre">aspect</span></code> representing the aspects listed in the attribute.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> metadata is used to store the propagated
+<li><p>The <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata is used to store the propagated
 information about all aspects used by a kernel or exported device function.
 The value of this metadata node is also a list of <code class="docutils literal notranslate"><span class="pre">i32</span></code> constants, where each
 constant is a value from <code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span> <span class="pre">aspect</span></code> representing the aspects that
 are used by the kernel or exported device function.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">!intel_fixed_targets</span></code> metadata is used to decorate kernel functions and
+<li><p>The <code class="docutils literal notranslate"><span class="pre">!sycl_fixed_targets</span></code> metadata is used to decorate kernel functions and
 <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> functions, telling the value of the <code class="docutils literal notranslate"><span class="pre">-fsycl-fixed-targets</span></code>
 switch that was used to compile the translation unit.  The value of this
 metadata node is a list of string literals corresponding to the list of
@@ -430,14 +442,14 @@ with no metadata might be created by backend IR passes, even when this switch
 decorated with <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code> where the required aspects have the
 numerical values <code class="docutils literal notranslate"><span class="pre">8</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>.  In addition, the function uses an optional
 feature that corresponds to an aspect with numerical value <code class="docutils literal notranslate"><span class="pre">8</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>define void @foo() !intel_declared_aspects !1 !intel_used_aspects !2 {}
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>define void @foo() !sycl_declared_aspects !1 !sycl_used_aspects !2 {}
 !1 = !{i32 8, i32 9}
 !2 = !{i32 8}
 </pre></div>
 </div>
 </section>
 <section id="changes-to-the-dpc-front-end">
-<h3>Changes to the DPC++ front-end<a class="headerlink" href="#changes-to-the-dpc-front-end" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the DPC++ front-end<a class="headerlink" href="#changes-to-the-dpc-front-end" title="Link to this heading">¶</a></h3>
 <p>The front-end of the device compiler is responsible for parsing the
 <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code> and <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code> attributes and
 transferring the information to the LLVM IR metadata described above according
@@ -445,35 +457,46 @@ to the following rules:</p>
 <ul class="simple">
 <li><p>If the translation unit contains any type definitions that are decorated with
 <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code>, the front-end creates an
-<code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> metadata describing the aspects used by all
+<code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> metadata describing the aspects used by all
 such types.</p></li>
 <li><p>If a function is decorated with <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code>, the
-front-end adds an <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> metadata to the function’s definition
+front-end adds an <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata to the function’s definition
 listing the aspects from that attribute.</p></li>
 <li><p>If a function is decorated with <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code>, the front-end adds
-an <code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> metadata to the function’s definition listing
+an <code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> metadata to the function’s definition listing
 the aspects from that attribute.</p></li>
+<li><p>If a completed enum is decorated with <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::sycl_type(aspect)]]</span></code> the
+front-end adds an <code class="docutils literal notranslate"><span class="pre">!sycl_aspects</span></code> metadata to the module containing one
+metadata node for each value in the enum. If there are multiple enum
+definitions with the <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::sycl_type(aspect)]]</span></code> attribute a
+diagnostic is issued.</p></li>
 </ul>
 </section>
 <section id="new-llvm-ir-pass-to-propagate-aspect-usage">
-<h3>New LLVM IR pass to propagate aspect usage<a class="headerlink" href="#new-llvm-ir-pass-to-propagate-aspect-usage" title="Permalink to this headline">¶</a></h3>
+<h3>New LLVM IR pass to propagate aspect usage<a class="headerlink" href="#new-llvm-ir-pass-to-propagate-aspect-usage" title="Link to this heading">¶</a></h3>
 <p>We add a new IR phase to the device compiler which does the following:</p>
 <ul class="simple">
-<li><p>Creates (or augments) a function’s <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> metadata with
+<li><p>Creates (or augments) a function’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata with
 aspects that come from references to types in the
-<code class="docutils literal notranslate"><span class="pre">intel_types_that_use_aspects</span></code> list.</p></li>
-<li><p>Propagates each function’s <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> metadata up the static call
+<code class="docutils literal notranslate"><span class="pre">sycl_types_that_use_aspects</span></code> list.</p></li>
+<li><p>If a function has the <code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> metadata, creates (or augments)
+the function’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata with aspects from the
+<code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> list.</p></li>
+<li><p>Propagates each function’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata up the static call
 graph so that each function lists the aspects used by that function and by
 any functions it calls.</p></li>
-<li><p>Diagnoses a warning if any function that has <code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> uses
-an aspect not listed in that declared set.</p></li>
-<li><p>Creates an <code class="docutils literal notranslate"><span class="pre">!intel_fixed_targets</span></code> metadata for each kernel function or
+<li><p>Creates an <code class="docutils literal notranslate"><span class="pre">!sycl_fixed_targets</span></code> metadata for each kernel function or
 <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> function that is defined.  This is done regardless of whether
 the <code class="docutils literal notranslate"><span class="pre">-fsycl-fixed-targets</span></code> command line switch is specified.  If the switch
 is not specified, the metadata has an empty list of targets.</p></li>
-<li><p>If the <code class="docutils literal notranslate"><span class="pre">-fsycl-fixed-targets</span></code> command line switch is specified, diagnoses a
-warning if any function uses an aspect that is not compatible with all target
-devices specified by that switch.</p></li>
+</ul>
+<p>Additionally, the pass will issue warning diagnostics in the following cases:</p>
+<ul class="simple">
+<li><p>If any function that has <code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> uses an aspect not listed in
+that declared set.</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">-fsycl-fixed-targets</span></code> command line switch is specified and any
+function uses an aspect that is not compatible with all target devices
+specified by that switch.</p></li>
 </ul>
 <p>It is important that this IR phase runs before any other optimization phase
 that might eliminate a reference to a type or inline a function call because
@@ -482,36 +505,37 @@ used.  Therefore, it is recommended that this new phase run first, before all
 other IR phases.</p>
 <p>Implementing the first bullet point is straightforward.  The implementation can
 scan the IR for each function looking for instructions that reference a type.
-It can then see if that type is in the <code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> set; if
-so it adds the type’s aspects to the function’s <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> set.
+It can then see if that type is in the <code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> set; if
+so it adds the type’s aspects to the function’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> set.
 While doing this, the implementation must have a special case for the <code class="docutils literal notranslate"><span class="pre">double</span></code>
 type because the front-end does not include that type in the
-<code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> set.  If a function references the <code class="docutils literal notranslate"><span class="pre">double</span></code>
+<code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> set.  If a function references the <code class="docutils literal notranslate"><span class="pre">double</span></code>
 type, the implementation implicitly assumes that the function uses
-<code class="docutils literal notranslate"><span class="pre">aspect::fp64</span></code> and adds that aspect to the function’s <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code>
-set.</p>
+<code class="docutils literal notranslate"><span class="pre">aspect::fp64</span></code> and adds that aspect to the function’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code>
+set. If <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> is attached to instruction then it is also added
+to the function’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> set.</p>
 <p><strong>NOTE</strong>: This scan of the IR will require comparing the type referenced by
 each IR instruction with the names of the types in the
-<code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> metadata.  It would be very inefficient if we
+<code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> metadata.  It would be very inefficient if we
 did a string comparison each time.  As an optimization, the implementation can
-first lookup up each type name in the <code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> metadata
+first lookup up each type name in the <code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> metadata
 set, finding the “type pointer” that corresponds to each type name.  Then the
 pass over the IR can compare the type pointer in each IR instruction with the
-type pointers from the <code class="docutils literal notranslate"><span class="pre">!intel_types_that_use_aspects</span></code> metadata set.</p>
+type pointers from the <code class="docutils literal notranslate"><span class="pre">!sycl_types_that_use_aspects</span></code> metadata set.</p>
 <p>The second bullet point requires building the static call graph, but the
 implementation need not scan the instructions in each function.  Instead, it
-need only look at the <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> metadata for each function,
+need only look at the <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata for each function,
 propagating the aspects used by each function up to it callers and augmenting
-the caller’s <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> set.</p>
-<p>Diagnosing warnings for the third bullet point is then straightforward.  The
-implementation looks for functions that have <code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> and
-compares that set with the <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> set (if any).  If a function
+the caller’s <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> set.</p>
+<p>Diagnosing warnings for the fifth bullet point is then straightforward.  The
+implementation looks for functions that have <code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> and
+compares that set with the <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> set (if any).  If a function
 uses an aspect that is not in the declared set, the implementation issues a
 warning.</p>
-<p>Diagnosing warnings for the fifth bullet point requires the <a class="reference external" href="#device-configuration-file">device
+<p>Diagnosing warnings for the sixth bullet point requires the <a class="reference internal" href="#device-configuration-file">device
 configuration file</a> which gives the set of allowed optional features for
 each target device.  The implementation looks for functions that have either
-<code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> or <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code>, and it compares the aspects
+<code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> or <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code>, and it compares the aspects
 from these metadata to the allowed list in the configuration file.  If any
 aspect is not on the allowed list, the implementation issues a warning.  In
 addition, the implementation looks for device functions that have
@@ -556,11 +580,42 @@ too expensive in the front-end because it requires an additional pass over the
 AST.  By contrast, we can diagnose the warning more efficiently in an IR pass
 because traversal of the IR is much more efficient than traversal of the AST.
 The downside, though, is that the warning message is less informative.</p>
+<section id="pre-and-post-optimization-aspect-propagation">
+<h4>Pre- and post-optimization aspect propagation<a class="headerlink" href="#pre-and-post-optimization-aspect-propagation" title="Link to this heading">¶</a></h4>
+<p>Sometimes aspects that are used by a kernel in source code are eliminated during
+optimization. The most common case is when a kernel uses a double precision
+floating point literal to initialize a single precision floating point variable.
+Although the kernel uses the aspect <code class="docutils literal notranslate"><span class="pre">fp64</span></code> (corresponding to <code class="docutils literal notranslate"><span class="pre">double</span></code>) in its
+source code, the optimizer commonly replaces the double precision literal with a
+single precision literal, and this can sometimes mean that the kernel does not
+actually rely on the <code class="docutils literal notranslate"><span class="pre">fp64</span></code> aspect at all. We therefore have a quandary, should
+kernels like this be allowed to run on a device that doesn’t have <code class="docutils literal notranslate"><span class="pre">fp64</span></code>
+support?</p>
+<p>It seems too extreme to raise an exception if the application attempts to submit
+a kernel like this to a device without fp64 support because applications like
+this previously ran without error (prior to this design being implemented).
+However, it also seems useful to issue a warning in a case like this if the
+application specifically decorated the kernel with <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code>
+(i.e. requesting a warning if the kernel uses aspects not listed in that
+attribute). We therefore run the aspect propagation pass twice: once before
+optimization and again after optimization.</p>
+<p>The first run of the pass takes a list of aspect names to exclude when saving
+the result of the propagation. It will still propagate the excluded aspects to
+correctly issue strict warning diagnostics for the cases mentioned above, but
+after the pass finishes functions will only have the excluded aspects in their
+<code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata if they had them prior to the execution of the
+pass.</p>
+<p>In the second run of the pass, all aspects are propagated and saved. For the
+aspects that were not excluded from the first run of the pass this will have no
+effect and the pass may elect to ignore these aspects. To avoid repeating
+warnings issued by the previous execution of the pass, this run will not issue
+any warning diagnostics.</p>
+</section>
 </section>
 <section id="assumptions-on-other-phases-of-clang">
-<h3>Assumptions on other phases of clang<a class="headerlink" href="#assumptions-on-other-phases-of-clang" title="Permalink to this headline">¶</a></h3>
-<p>The post-link tool (described below) uses the <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> and
-<code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> metadata, so this metadata must be retained by any
+<h3>Assumptions on other phases of clang<a class="headerlink" href="#assumptions-on-other-phases-of-clang" title="Link to this heading">¶</a></h3>
+<p>The post-link tool (described below) uses the <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> and
+<code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> metadata, so this metadata must be retained by any
 other clang passes.  However, post-link only uses this metadata when it
 decorates the definition of a kernel function or the definition of an exported
 device function, so it does not matter if intervening clang passes discard the
@@ -571,7 +626,7 @@ kernel functions.  Second, the kernel functions and exported device functions
 always have external linkage, so there is no possibility that a clang phase
 will optimize them away.</p>
 <p><strong>NOTE</strong>: Ideally, we would change the llvm-link tool to somehow preserve the
-<code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> and <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> metadata for functions
+<code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> and <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> metadata for functions
 marked <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> so that we could compare the declared aspects (in the
 module that imports the function) with the used aspects (in the module the
 exports the function).  This would allow us to diagnose errors where the
@@ -585,7 +640,7 @@ the header) is decorated with <code class="docutils literal notranslate"><span c
 will ensure that the definition stays in sync with the declaration.</p>
 </section>
 <section id="changes-to-the-post-link-tool">
-<h3>Changes to the post-link tool<a class="headerlink" href="#changes-to-the-post-link-tool" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the post-link tool<a class="headerlink" href="#changes-to-the-post-link-tool" title="Link to this heading">¶</a></h3>
 <p>As noted in the requirements section above, DPC++ currently bundles kernels
 together regardless of the optional features they use, and this can lead to
 problems resulting from speculative compilation.  To illustrate, consider
@@ -599,7 +654,7 @@ causes the entire bundle to be compiled, and this fails when trying to compile
 <p>We solve this problem by changing the post-link tool to bundle kernels and
 exported device functions according to the aspects that they use.</p>
 <section id="changes-to-the-device-code-split-algorithm">
-<h4>Changes to the device code split algorithm<a class="headerlink" href="#changes-to-the-device-code-split-algorithm" title="Permalink to this headline">¶</a></h4>
+<h4>Changes to the device code split algorithm<a class="headerlink" href="#changes-to-the-device-code-split-algorithm" title="Link to this heading">¶</a></h4>
 <p>The algorithm for splitting device functions into images must be changed to
 account for the aspects used by each kernel or exported device function.  The
 goal is to ensure that two kernels or exported device functions are only
@@ -607,7 +662,7 @@ bundled together into the same device image if they use exactly the same set
 of aspects.</p>
 <p>For the purposes of this analysis, the set of <em>UsedAspects</em> aspects is computed
 by taking the union of the aspects listed in the kernel’s (or device
-function’s) <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> and <code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> sets.  This is
+function’s) <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> and <code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> sets.  This is
 consistent with the SYCL specification, which says that a kernel decorated with
 <code class="docutils literal notranslate"><span class="pre">[[sycl::device_has()]]</span></code> may only be submitted to a device that provides the
 listed aspects, regardless of whether the kernel actually uses those aspects.</p>
@@ -630,11 +685,11 @@ device image so long as the translation units were compiled with the same
 <p>Therefore, two kernels or exported device functions can only be bundled
 together into the same device image if:</p>
 <ul class="simple">
-<li><p>They both have <code class="docutils literal notranslate"><span class="pre">!intel_fixed_targets</span></code> metadata with the same non-empty set of
+<li><p>They both have <code class="docutils literal notranslate"><span class="pre">!sycl_fixed_targets</span></code> metadata with the same non-empty set of
 targets, or</p></li>
 <li><p>All of the following are true:</p>
 <ul>
-<li><p>Both have an empty set of <code class="docutils literal notranslate"><span class="pre">!intel_fixed_targets</span></code> metadata,</p></li>
+<li><p>Both have an empty set of <code class="docutils literal notranslate"><span class="pre">!sycl_fixed_targets</span></code> metadata,</p></li>
 <li><p>They share the same set of <em>UsedAspects</em> aspects,</p></li>
 <li><p>They either both have no required work-group size or both have the same
 required work-group size, and</p></li>
@@ -658,7 +713,7 @@ image contains only kernels or exported device functions that meet the criteria
 listed above.</p>
 </section>
 <section id="error-checking-for-sycl-external-functions">
-<h4>Error checking for SYCL_EXTERNAL functions<a class="headerlink" href="#error-checking-for-sycl-external-functions" title="Permalink to this headline">¶</a></h4>
+<h4>Error checking for SYCL_EXTERNAL functions<a class="headerlink" href="#error-checking-for-sycl-external-functions" title="Link to this heading">¶</a></h4>
 <p>After bundling the device functions into images, the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool does
 another pass over the IR of each image to catch errors that occur with
 <code class="docutils literal notranslate"><span class="pre">SYCL_EXTERNAL</span></code> functions:</p>
@@ -683,8 +738,8 @@ the empty set if the image has no required sub-group size).</p></li>
 the empty set if the image has no required work-group size).</p></li>
 <li><p>Scan over all functions in the image and examine the function’s metadata:</p>
 <ul>
-<li><p>If the function has either <code class="docutils literal notranslate"><span class="pre">!intel_used_aspects</span></code> or
-<code class="docutils literal notranslate"><span class="pre">!intel_declared_aspects</span></code> metadata and one of the aspects in that metadata
+<li><p>If the function has either <code class="docutils literal notranslate"><span class="pre">!sycl_used_aspects</span></code> or
+<code class="docutils literal notranslate"><span class="pre">!sycl_declared_aspects</span></code> metadata and one of the aspects in that metadata
 is not in the image’s <em>UsedAspects</em> set, issue a warning and add that
 aspect to the <em>FinalUsedAspects</em> set.</p></li>
 <li><p>If the function has <code class="docutils literal notranslate"><span class="pre">!intel_reqd_sub_group_size</span></code> metadata and the size is
@@ -721,7 +776,7 @@ the pass works as follows:</p>
 <ul class="simple">
 <li><p>Set <em>FinalFixedTargets</em> to the image’s set of fixed target devices.</p></li>
 <li><p>Scan over all functions in the image looking for functions that have the
-<code class="docutils literal notranslate"><span class="pre">!intel_fixed_targets</span></code> metadata.  If the metadata exists and its set includes
+<code class="docutils literal notranslate"><span class="pre">!sycl_fixed_targets</span></code> metadata.  If the metadata exists and its set includes
 any target devices not in the image’s set of fixed targets, issue a warning
 and set <em>FinalFixedTargets</em> to the intersection of the metadata’s target set
 and the <em>FinalFixedTargets</em> set.  (This may result in <em>FinalFixedTargets</em>
@@ -741,14 +796,14 @@ than its calling kernel.
 </div>
 </section>
 <section id="create-the-sycl-device-requirements-property-set">
-<h4>Create the “SYCL/device requirements” property set<a class="headerlink" href="#create-the-sycl-device-requirements-property-set" title="Permalink to this headline">¶</a></h4>
+<h4>Create the “SYCL/device requirements” property set<a class="headerlink" href="#create-the-sycl-device-requirements-property-set" title="Link to this heading">¶</a></h4>
 <p>The DPC++ runtime needs some way to know about the requirements of an image
 (e.g. the set of aspects that it uses).  Therefore, the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool
 provides this information in a new property set named
 “SYCL/device requirements”.</p>
 <p>The following table lists the properties that this set may contain and their
 types:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Property Name</p></th>
 <th class="head"><p>Property Type</p></th>
@@ -804,7 +859,7 @@ aspects in the array.</p>
 </section>
 </section>
 <section id="changes-specific-to-aot-mode">
-<h3>Changes specific to AOT mode<a class="headerlink" href="#changes-specific-to-aot-mode" title="Permalink to this headline">¶</a></h3>
+<h3>Changes specific to AOT mode<a class="headerlink" href="#changes-specific-to-aot-mode" title="Link to this heading">¶</a></h3>
 <p>In AOT mode, for each AOT target specified by the <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code> command
 line option, DPC++ normally invokes the AOT compiler for each device IR module
 resulting from the sycl-post-link tool.  For example, this is the <code class="docutils literal notranslate"><span class="pre">ocloc</span></code>
@@ -823,21 +878,28 @@ file to decide whether to invoke a particular AOT compiler on each device IR
 module, using the information from the module’s “SYCL/device requirements”
 property set.</p>
 <section id="device-configuration-file">
-<h4>Device configuration file<a class="headerlink" href="#device-configuration-file" title="Permalink to this headline">¶</a></h4>
+<h4>Device configuration file<a class="headerlink" href="#device-configuration-file" title="Link to this heading">¶</a></h4>
 <p>The configuration file uses a simple YAML format where each top-level key is
 a name of a device architecture. There are sub-keys under each device for
 the supported aspects and sub-group sizes.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intel_gpu_11_1</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intel_gpu_12_0_0</span><span class="p">:</span>
   <span class="n">aspects</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="n">may_support_other_aspects</span><span class="p">:</span> <span class="n">false</span>
   <span class="n">sub</span><span class="o">-</span><span class="n">group</span><span class="o">-</span><span class="n">sizes</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 <span class="n">intel_gpu_icl</span><span class="p">:</span>
   <span class="n">aspects</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+  <span class="n">may_support_other_aspects</span><span class="p">:</span> <span class="n">false</span>
   <span class="n">sub</span><span class="o">-</span><span class="n">group</span><span class="o">-</span><span class="n">sizes</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 <span class="n">x86_64_avx512</span><span class="p">:</span>
   <span class="n">aspects</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+  <span class="n">may_support_other_aspects</span><span class="p">:</span> <span class="n">false</span>
   <span class="n">sub</span><span class="o">-</span><span class="n">group</span><span class="o">-</span><span class="n">sizes</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
 </pre></div>
 </div>
+<p>The device entries have an optional <code class="docutils literal notranslate"><span class="pre">may_support_other_aspects</span></code> sub-key
+specifying if a given target may be supported by devices that support aspects
+not in the <code class="docutils literal notranslate"><span class="pre">aspects</span></code> list. This is used by the <a class="reference internal" href="DeviceAspectTraitDesign.html"><span class="std std-doc">DeviceAspectTraitDesign.md</span></a>
+design.</p>
 <p>The values of the aspects in this configuration file can be the numerical
 values from the <code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span> <span class="pre">aspect</span></code> enumeration or the enum identifier itself.</p>
 <p>One advantage to encoding this information in a textual configuration file is
@@ -851,14 +913,14 @@ to select an alternate configuration file.</p>
 </ul>
 </section>
 <section id="new-features-in-clang-compilation-driver-and-tools">
-<h4>New features in clang compilation driver and tools<a class="headerlink" href="#new-features-in-clang-compilation-driver-and-tools" title="Permalink to this headline">¶</a></h4>
+<h4>New features in clang compilation driver and tools<a class="headerlink" href="#new-features-in-clang-compilation-driver-and-tools" title="Link to this heading">¶</a></h4>
 <p>NOTE: the term <em>device binary image</em> used to refer to a device
 code form consumable by the DPC++ runtime library. Earlier device code forms are
 referred to as <em>device code module</em> or <em>device IR module</em>. In case of AOT,
 device binary image is a natively compiled binary, and IR module - either a
 SPIR-V or LLVM IR bitcode module.</p>
 <section id="overview">
-<h5>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h5>
+<h5>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h5>
 <p>After the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> performs necessary aspect usage analysis and splits
 the incoming monolithic device code module into pieces - smaller device code
 modules - it outputs a file table as a result. Each row in the table corresponds
@@ -887,7 +949,7 @@ example set of targets used for the illustration is 4 targets</p>
 </li>
 <li><p>SPIR-V based</p>
 <ul>
-<li><p>intel_gpu_12 (Intel Graphics)</p></li>
+<li><p>intel_gpu_12_0_0 (Intel Graphics)</p></li>
 <li><p>x86_64_avx512 (AVX512)</p></li>
 </ul>
 </li>
@@ -897,7 +959,7 @@ example set of targets used for the illustration is 4 targets</p>
 <p><img alt="Device SPIRV translation and AOT compilation" src="../_images/DeviceLinkAOTAndWrap.svg" /></p>
 </section>
 <section id="aspect-filter-tool">
-<h5>Aspect filter tool<a class="headerlink" href="#aspect-filter-tool" title="Permalink to this headline">¶</a></h5>
+<h5>Aspect filter tool<a class="headerlink" href="#aspect-filter-tool" title="Link to this heading">¶</a></h5>
 <p>This tool transforms an input file table by removing rows with device code files
 that use features unsupported for the target architecture given as tool’s
 argument.</p>
@@ -920,7 +982,7 @@ tools</p></li>
 <li><p>the input file table filtered as needed</p></li>
 </ul>
 <p>In more details, the tool performs the following actions:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Checks if the input file table contains “Properties” column. If not, copies
 the input file table to output and exits without error.</p></li>
 <li><p>Reads in the device configuration file and finds some entry <code class="docutils literal notranslate"><span class="pre">E</span></code> corresponding
@@ -953,65 +1015,72 @@ this aspect if <code class="docutils literal notranslate"><span class="pre">E</s
 </ol>
 </section>
 <section id="configuration-file-location-and-driver-option">
-<h5>Configuration file location and driver option<a class="headerlink" href="#configuration-file-location-and-driver-option" title="Permalink to this headline">¶</a></h5>
+<h5>Configuration file location and driver option<a class="headerlink" href="#configuration-file-location-and-driver-option" title="Link to this heading">¶</a></h5>
 <p>A default device configuration file is present in DPC++ build. Users may override it using the
 <code class="docutils literal notranslate"><span class="pre">-fsycl-device-config-file=&lt;path&gt;</span></code> compiler command line option.
 Exact location of the file and final name of the compiler option is TBD.</p>
 </section>
 <section id="aot-target-identification">
-<h5>AOT target identification<a class="headerlink" href="#aot-target-identification" title="Permalink to this headline">¶</a></h5>
+<h5>AOT target identification<a class="headerlink" href="#aot-target-identification" title="Link to this heading">¶</a></h5>
 <p>There are several user-visible places in the SDK where SYCL device target
 architectures need to be identified:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code> option</p></li>
 <li><p>a device configuration file entry</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-target</span></code> option of the <code class="docutils literal notranslate"><span class="pre">sycl-aspec-filter</span></code> tool</p></li>
-<li><p>a SYCL aspect enum identifier (we expect to add a new SYCL aspect for each
-device target architecture)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-target</span></code> option of the <code class="docutils literal notranslate"><span class="pre">sycl-aspect-filter</span></code> tool</p></li>
+<li><p>a new SYCL enumeration named <code class="docutils literal notranslate"><span class="pre">architecture</span></code></p></li>
 </ul>
-<p>In all such places architecture naming should be the same. In some cases aliases
-are allowed. Below is a list of target architectures supported by DPC++:</p>
-<table class="colwidths-auto docutils align-default">
+<p>The following table lists these target names:</p>
+<table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>target/alias(es)</p></th>
+<tr class="row-odd"><th class="head"><p>name</p></th>
+<th class="head"><p>has <code class="docutils literal notranslate"><span class="pre">architecture</span></code> enum</p></th>
 <th class="head"><p>description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>intel_gpu</p></td>
-<td><p>Generic Intel graphics architecture</p></td>
-</tr>
-<tr class="row-odd"><td><p>intel_gpu_tgl, intel_gpu_12_0</p></td>
-<td><p>Intel Tiger Lake (11th generation Core) integrated graphics architecture</p></td>
-</tr>
 <tr class="row-even"><td><p>ptx64</p></td>
+<td><p>no</p></td>
 <td><p>Generic 64-bit PTX target architecture</p></td>
 </tr>
 <tr class="row-odd"><td><p>spir64</p></td>
+<td><p>no</p></td>
 <td><p>Generic 64-bit SPIR-V target</p></td>
 </tr>
 <tr class="row-even"><td><p>x86_64</p></td>
+<td><p>yes</p></td>
 <td><p>Generic 64-bit x86 architecture</p></td>
+</tr>
+<tr class="row-odd"><td><p>intel_gpu_&lt;name&gt;</p></td>
+<td><p>yes</p></td>
+<td><p>Intel graphics architecture &lt;name&gt;</p></td>
 </tr>
 </tbody>
 </table>
-<p>TODO: Provide full list of AOT targets supported by the identification
-mechanism.</p>
+<p>The “name” column in this table lists the possible target names.  Since not all
+targets have a corresponding enumerator in the <code class="docutils literal notranslate"><span class="pre">architecture</span></code> enumeration, the
+second column tells when there is such an enumerator.  The last row in this
+table corresponds to all of the architecture names listed in the
+<a class="reference download internal" download="" href="../_downloads/29eec7da90e760d8eaf2283a50ff5ea3/sycl_ext_oneapi_device_architecture.asciidoc"><span class="xref download myst">sycl_ext_oneapi_device_architecture</span></a> extension whose name starts with
+<code class="docutils literal notranslate"><span class="pre">intel_gpu_</span></code>.</p>
+<p>TODO: This table needs to be filled out for the CPU variants supported by the
+<code class="docutils literal notranslate"><span class="pre">opencl-aot</span></code> tool (avx512, avx2, avx, sse4.2) and for the FPGA targets.  We
+also need to figure out how CUDA fits in here.</p>
 <p>Example of clang compilation invocation with 2 AOT targets and generic SPIR-V:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">targets</span><span class="o">=</span><span class="n">spir64</span><span class="p">,</span><span class="n">intel_gpu_12_0</span><span class="p">,</span><span class="n">ptx64</span> <span class="o">...</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">fsycl</span> <span class="o">-</span><span class="n">fsycl</span><span class="o">-</span><span class="n">targets</span><span class="o">=</span><span class="n">spir64</span><span class="p">,</span><span class="n">intel_gpu_12_0_0</span><span class="p">,</span><span class="n">ptx64</span> <span class="o">...</span>
 </pre></div>
 </div>
 </section>
 </section>
 </section>
 <section id="changes-to-the-dpc-runtime">
-<h3>Changes to the DPC++ runtime<a class="headerlink" href="#changes-to-the-dpc-runtime" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the DPC++ runtime<a class="headerlink" href="#changes-to-the-dpc-runtime" title="Link to this heading">¶</a></h3>
 <p>The DPC++ runtime must be changed to check if a kernel uses any optional
 features that the device does not support.  If this happens, the runtime must
 raise a synchronous <code class="docutils literal notranslate"><span class="pre">errc::kernel_not_supported</span></code> exception.</p>
 <p>When the application submits a kernel to a device, the runtime identifies all
 the other device images that export device functions which are needed by the
-kernel as described in <a class="reference internal" href="SharedLibraries.html"><span class="doc std std-doc">Device Code Dynamic Linking</span></a>.  Before the runtime
+kernel as described in <a class="reference internal" href="SharedLibraries.html"><span class="std std-doc">Device Code Dynamic Linking</span></a>.  Before the runtime
 actually links these images together, it compares each image’s
 “SYCL/device requirements” against the features provided by the target
 device.  If any of the following checks fail, the runtime throws
@@ -1034,7 +1103,7 @@ provide other checks.</p></li>
 access the contents of the device image.</p>
 <p>The exception’s <code class="docutils literal notranslate"><span class="pre">what</span></code> string contains a message describing the reason the
 device image is incompatible.  For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span> <span class="n">was</span> <span class="n">compiled</span> <span class="k">with</span> <span class="s1">&#39;-fsycl-fixed-targets=intel_gpu_11_1&#39;</span> <span class="n">but</span> <span class="n">was</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Kernel</span> <span class="n">was</span> <span class="n">compiled</span> <span class="k">with</span> <span class="s1">&#39;-fsycl-fixed-targets=intel_gpu_12_0_0&#39;</span> <span class="n">but</span> <span class="n">was</span>
 <span class="n">submitted</span> <span class="n">to</span> <span class="n">a</span> <span class="n">different</span> <span class="n">device</span><span class="o">.</span>
 
 <span class="n">Kernel</span> <span class="n">uses</span> <span class="n">optional</span> <span class="n">feature</span> <span class="n">corresponding</span> <span class="n">to</span> <span class="s1">&#39;aspect::fp16&#39;</span> <span class="n">but</span> <span class="n">device</span> <span class="n">does</span>
@@ -1045,10 +1114,26 @@ device image is incompatible.  For example:</p>
 </pre></div>
 </div>
 </section>
+<section id="sycl-internal-aspects-for-device-image-splitting">
+<h3>SYCL internal aspects for device image splitting<a class="headerlink" href="#sycl-internal-aspects-for-device-image-splitting" title="Link to this heading">¶</a></h3>
+<p>There are scenarios when we would like to split device images based on
+optional kernel features but we don’t want to expose corresponding
+aspects to the user. Internal SYCL aspects are used for this purpose.</p>
+<p>To differentiate them from regular aspects, internal aspects are assigned
+negative values. If optional feature is used in the kernel then SYCL
+device compiler adds value of internal aspect to ‘sycl_used_aspects’ metadata,
+it gets propagated through the call graph and participates in device image
+splitting together with regular aspects but it’s not passed to the SYCL runtime,
+it is filtered out when generating a set of device requirements.</p>
+<p>New value can be added to ‘SYCLInternalAspect’ enum to introduce new internal
+aspect.</p>
+<p>Example of internal aspects usage is splitting device images based on floating
+point accuracy level for math functions provided by user using -ffp-accuracy option.</p>
+</section>
 </section>
 <section id="appendix-adding-an-attribute-to-8-byte-atomic-ref">
-<h2>Appendix: Adding an attribute to 8-byte <code class="docutils literal notranslate"><span class="pre">atomic_ref</span></code><a class="headerlink" href="#appendix-adding-an-attribute-to-8-byte-atomic-ref" title="Permalink to this headline">¶</a></h2>
-<p>As described above under <a class="reference external" href="#changes-to-dpc-headers">“Changes to DPC++ headers”</a>, we need to decorate
+<h2>Appendix: Adding an attribute to 8-byte <code class="docutils literal notranslate"><span class="pre">atomic_ref</span></code><a class="headerlink" href="#appendix-adding-an-attribute-to-8-byte-atomic-ref" title="Link to this heading">¶</a></h2>
+<p>As described above under <a class="reference internal" href="#changes-to-dpc-headers">“Changes to DPC++ headers”</a>, we need to decorate
 any SYCL type representing an optional device feature with the
 <code class="docutils literal notranslate"><span class="pre">[[sycl_detail::uses_aspects()]]</span></code> attribute.  This is somewhat tricky for
 <code class="docutils literal notranslate"><span class="pre">atomic_ref</span></code>, though, because it is only an optional feature when specialized
@@ -1110,14 +1195,14 @@ class atomic_ref : public detail::atomic_ref_impl&lt;T, sizeof(T)&gt; {
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="SYCLInstrumentationUsingXPTI.html">SYCL Instrumentation</a>&#160;&#160;»
+        <a href="ParallelForRangeRounding.html">Parallel For Range Rounding</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

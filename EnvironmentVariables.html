@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Environment Variables &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Considerations for programming to multi-tile and multi-card under Level-Zero backend" href="MultiTileCardWithLevelZero.html" />
@@ -36,13 +34,13 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="environment-variables">
-<h1>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h1>
+  <section id="environment-variables">
+<h1>Environment Variables<a class="headerlink" href="#environment-variables" title="Link to this heading">¶</a></h1>
 <p>This document describes environment variables that are having effect on DPC++
 compiler and runtime.</p>
 <section id="controlling-dpc-runtime">
-<h2>Controlling DPC++ runtime<a class="headerlink" href="#controlling-dpc-runtime" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto docutils align-default">
+<h2>Controlling DPC++ runtime<a class="headerlink" href="#controlling-dpc-runtime" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
 <th class="head"><p>Values</p></th>
@@ -50,21 +48,13 @@ compiler and runtime.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> (deprecated)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">PI_OPENCL</span></code>, <code class="docutils literal notranslate"><span class="pre">PI_LEVEL_ZERO</span></code>, <code class="docutils literal notranslate"><span class="pre">PI_CUDA</span></code></p></td>
-<td><p>Force SYCL RT to consider only devices of the specified backend during the device selection. We are planning to deprecate <code class="docutils literal notranslate"><span class="pre">SYCL_BE</span></code> environment variable in the future. The specific grace period is not decided yet. Please use the new env var <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code> instead.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_TYPE</span></code> (deprecated)</p></td>
-<td><p>CPU, GPU, ACC, HOST</p></td>
-<td><p>Force SYCL to use the specified device type. If unset, default selection rules are applied. If set to any unlisted value, this control has no effect. If the requested device type is not found, a <code class="docutils literal notranslate"><span class="pre">cl::sycl::runtime_error</span></code> exception is thrown. If a non-default device selector is used, a device must satisfy both the selector and this control to be chosen. This control only has effect on devices created with a selector. We are planning to deprecate <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_TYPE</span></code> environment variable in the future. The specific grace period is not decided yet. Please use the new env var <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code> instead.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">backend:device_type:device_num</span></code></p></td>
-<td><p>See Section <a class="reference external" href="#sycl_device_filter"><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code></a>  below.</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR</span></code></p></td>
+<td><p><a class="reference internal" href="#oneapi-device-selector">See below.</a></p></td>
+<td><p>This device selection environment variable can be used to limit the choice of devices available when the SYCL-using application is run.  Useful for limiting devices to a certain type (like GPUs or accelerators) or backends (like Level Zero or OpenCL).  This device selection mechanism is replacing <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code> .  The <code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR</span></code> syntax is shared with OpenMP and also allows sub-devices to be chosen. <a class="reference internal" href="#oneapi-device-selector">See below.</a> for a full description.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_ALLOWLIST</span></code></p></td>
-<td><p>See <a class="reference external" href="#sycl_device_allowlist">below</a></p></td>
-<td><p>Filter out devices that do not match the pattern specified. <code class="docutils literal notranslate"><span class="pre">BackendName</span></code> accepts <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">opencl</span></code>, <code class="docutils literal notranslate"><span class="pre">level_zero</span></code> or <code class="docutils literal notranslate"><span class="pre">cuda</span></code>. <code class="docutils literal notranslate"><span class="pre">DeviceType</span></code> accepts <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">cpu</span></code>, <code class="docutils literal notranslate"><span class="pre">gpu</span></code> or <code class="docutils literal notranslate"><span class="pre">acc</span></code>. <code class="docutils literal notranslate"><span class="pre">DeviceVendorId</span></code> accepts uint32_t in hex form (<code class="docutils literal notranslate"><span class="pre">0xXYZW</span></code>). <code class="docutils literal notranslate"><span class="pre">DriverVersion</span></code>, <code class="docutils literal notranslate"><span class="pre">PlatformVersion</span></code>, <code class="docutils literal notranslate"><span class="pre">DeviceName</span></code> and <code class="docutils literal notranslate"><span class="pre">PlatformName</span></code> accept regular expression. Special characters, such as parenthesis, must be escaped. DPC++ runtime will select only those devices which satisfy provided values above and regex. More than one device can be specified using the piping symbol “|”.</p></td>
+<td><p>See <a class="reference internal" href="#sycl-device-allowlist">below</a></p></td>
+<td><p>Filter out devices that do not match the pattern specified. <code class="docutils literal notranslate"><span class="pre">BackendName</span></code> accepts <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">opencl</span></code>, <code class="docutils literal notranslate"><span class="pre">level_zero</span></code>, <code class="docutils literal notranslate"><span class="pre">native_cpu</span></code> or <code class="docutils literal notranslate"><span class="pre">cuda</span></code>. <code class="docutils literal notranslate"><span class="pre">DeviceType</span></code> accepts <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">cpu</span></code>, <code class="docutils literal notranslate"><span class="pre">gpu</span></code> or <code class="docutils literal notranslate"><span class="pre">acc</span></code>. <code class="docutils literal notranslate"><span class="pre">DeviceVendorId</span></code> accepts uint32_t in hex form (<code class="docutils literal notranslate"><span class="pre">0xXYZW</span></code>). <code class="docutils literal notranslate"><span class="pre">DriverVersion</span></code>, <code class="docutils literal notranslate"><span class="pre">PlatformVersion</span></code>, <code class="docutils literal notranslate"><span class="pre">DeviceName</span></code> and <code class="docutils literal notranslate"><span class="pre">PlatformName</span></code> accept regular expression. Special characters, such as parenthesis, must be escaped. DPC++ runtime will select only those devices which satisfy provided values above and regex. More than one device can be specified using the piping symbol “|”.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_PARALLEL_FOR_RANGE_ROUNDING</span></code></p></td>
 <td><p>Any(*)</p></td>
@@ -82,76 +72,196 @@ compiler and runtime.</p>
 <td><p>Integer</p></td>
 <td><p>Controls persistent device compiled code cache. Turns it on if set to ‘1’ and turns it off if set to ‘0’. When cache is enabled SYCL runtime will try to cache and reuse JIT-compiled binaries. Default is off.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_EVICTION_DISABLE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_IN_MEM</span></code></p></td>
+<td><p>‘1’ or ‘0’</p></td>
+<td><p>Enable (‘1’) or disable (‘0’) in-memory caching of device compiled code. When cache is enabled SYCL runtime will try to cache and reuse JIT-compiled binaries. Default is ‘1’.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_EVICTION_DISABLE</span></code></p></td>
 <td><p>Any(*)</p></td>
 <td><p>Switches cache eviction off when the variable is set.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_SIZE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_SIZE</span></code></p></td>
 <td><p>Positive integer</p></td>
 <td><p>Cache eviction is triggered once total size of cached images exceeds the value in megabytes (default - 8 192 for 8 GB). Set to 0 to disable size-based cache eviction.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_THRESHOLD</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_THRESHOLD</span></code></p></td>
 <td><p>Positive integer</p></td>
 <td><p>Cache eviction threshold in days (default value is 7 for 1 week). Set to 0 for disabling time-based cache eviction.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE</span></code></p></td>
 <td><p>Positive integer</p></td>
 <td><p>Minimum size of device code image in bytes which is reasonable to cache on disk because disk access operation may take more time than do JIT compilation for it. Default value is 0 to cache all images.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE</span></code></p></td>
 <td><p>Positive integer</p></td>
 <td><p>Maximum size of device image in bytes which is cached. Too big kernels may overload disk too fast. Default value is 1 GB.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_ENABLE_DEFAULT_CONTEXTS</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_ENABLE_DEFAULT_CONTEXTS</span></code></p></td>
 <td><p>‘1’ or ‘0’</p></td>
-<td><p>Enable (‘1’) or disable (‘0’) creation of default platform contexts in SYCL runtime. The default context for each platform contains all devices in the platform. Refer to <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/extensions/supported/sycl_ext_oneapi_default_context.asciidoc"><span class="xref myst">Platform Default Contexts</span></a> extension to learn more. Enabled by default on Linux and disabled on Windows.</p></td>
+<td><p>Enable (‘1’) or disable (‘0’) creation of default platform contexts in SYCL runtime. The default context for each platform contains all devices in the platform. Refer to <a class="reference download internal" download="" href="_downloads/c424949bb4d02bb0ff0eee84d50d3bbf/sycl_ext_oneapi_default_context.asciidoc"><span class="xref download myst">Platform Default Contexts</span></a> extension to learn more. Enabled by default on Linux and disabled on Windows.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_RT_WARNING_LEVEL</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_RT_WARNING_LEVEL</span></code></p></td>
 <td><p>Positive integer</p></td>
 <td><p>The higher warning level is used the more warnings and performance hints the runtime library may print. Default value is ‘0’, which means no warning/hint messages from the runtime library are allowed. The value ‘1’ enables performance warnings from device runtime/codegen. The values greater than 1 are reserved for future use.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_USM_HOSTPTR_IMPORT</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_USM_HOSTPTR_IMPORT</span></code></p></td>
 <td><p>Integer</p></td>
 <td><p>Enable by specifying non-zero value. Buffers created with a host pointer will result in host data promotion to USM, improving data transfer performance. To use this feature, also set SYCL_HOST_UNIFIED_MEMORY=1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_EAGER_INIT</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Enable by specifying non-zero value. Tells the SYCL runtime to do as much as possible initialization at objects construction as opposed to doing lazy initialization on the fly. This may mean doing some redundant work at warmup but ensures fastest possible execution on the following hot and reportable paths. It also instructs PI plugins to do the same. Default is “0”.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_REDUCTION_PREFERRED_WORKGROUP_SIZE</span></code></p></td>
+<td><p>See <a class="reference internal" href="#sycl-reduction-preferred-workgroup-size">below</a></p></td>
+<td><p>Controls the preferred work-group size of reductions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_ENABLE_FUSION_CACHING</span></code></p></td>
+<td><p>‘1’ or ‘0’</p></td>
+<td><p>Enable (‘1’) or disable (‘0’) caching of JIT compilations for kernel fusion. Caching avoids repeatedly running the JIT compilation pipeline if the same sequence of kernels is fused multiple times. Default value is ‘1’.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_JIT_AMDGCN_PTX_KERNELS</span></code></p></td>
+<td><p>‘1’ or ‘0’</p></td>
+<td><p>Enable (‘1’) or disable (‘0’) JIT compilation of kernels. Only supported for Nvidia and AMD backends. Note, that it is required to have a valid binary for the desired backend (AMD or CUDA), that was compiled with <code class="docutils literal notranslate"><span class="pre">-fsycl-embed-ir</span></code> in order to use JIT-ing. When JIT-ing is enabled SYCL runtime will try to cache and reuse JIT-compiled kernels, furthermore if a kernel uses specialization constants the compiler will attempt to materialize the values in place, turning them to de-facto compile time constants. Default is ‘0’.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_JIT_AMDGCN_PTX_TARGET_CPU</span></code></p></td>
+<td><p>Any(*)</p></td>
+<td><p>Allows setting the target architecture to be used when JIT-ing kernels. Examples include setting SM version for Nvidia, or target architecture for AMD.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_JIT_AMDGCN_PTX_TARGET_FEATURES</span></code></p></td>
+<td><p>Any(*)</p></td>
+<td><p>Allows setting desired target features to be used when JIT-ing kernels. Examples include setting PTX version for Nvidia.</p></td>
 </tr>
 </tbody>
 </table>
 <p><code class="docutils literal notranslate"><span class="pre">(*)</span> <span class="pre">Note:</span> <span class="pre">Any</span> <span class="pre">means</span> <span class="pre">this</span> <span class="pre">environment</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">effective</span> <span class="pre">when</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">any</span> <span class="pre">non-null</span> <span class="pre">value.</span></code></p>
+<section id="oneapi-device-selector">
+<h3><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR</span></code><a class="headerlink" href="#oneapi-device-selector" title="Link to this heading">¶</a></h3>
+<p>With no environment variables set to say otherwise, all platforms and devices presently on the machine are available. The default choice will be one of these devices, usually preferring a Level Zero GPU device, if available. The <code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR</span></code> can be used to limit that choice of devices, and to expose GPU sub-devices or sub-sub-devices as individual devices.</p>
+<p>The syntax of this environment variable follows this BNF grammar:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ONEAPI_DEVICE_SELECTOR = &lt;selector-string&gt;
+&lt;selector-string&gt; ::= { &lt;accept-filters&gt; | &lt;discard-filters&gt; | &lt;accept-filters&gt;;&lt;discard-filters&gt; }
+&lt;accept-filters&gt; ::= &lt;accept-filter&gt;[;&lt;accept-filter&gt;...]
+&lt;discard-filters&gt; ::= &lt;discard-filter&gt;[;&lt;discard-filter&gt;...]
+&lt;accept-filter&gt; ::= &lt;term&gt;
+&lt;discard-filter&gt; ::= !&lt;term&gt;
+&lt;term&gt; ::= &lt;backend&gt;:&lt;devices&gt;
+&lt;backend&gt; ::= { * | level_zero | opencl | cuda | hip | native_cpu }  // case insensitive
+&lt;devices&gt; ::= &lt;device&gt;[,&lt;device&gt;...]
+&lt;device&gt; ::= { * | cpu | gpu | fpga | &lt;num&gt; | &lt;num&gt;.&lt;num&gt; | &lt;num&gt;.* | *.* | &lt;num&gt;.&lt;num&gt;.&lt;num&gt; | &lt;num&gt;.&lt;num&gt;.* | &lt;num&gt;.*.* | *.*.*  }  // case insensitive
+</pre></div>
+</div>
+<p>Each term in the grammar selects a collection of devices from a particular backend. The device names cpu, gpu, and fpga select all devices from that backend with the corresponding type. A backend’s device can also be selected by its numeric index (zero-based) or by using <code class="docutils literal notranslate"><span class="pre">*</span></code> which selects all devices in the backend.</p>
+<p>The dot syntax (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;num&gt;.&lt;num&gt;</span></code>) causes one or more GPU sub-devices to be exposed to the application as SYCL root devices. For example, <code class="docutils literal notranslate"><span class="pre">1.0</span></code> exposes the first sub-device of the second device as a SYCL root device. The syntax <code class="docutils literal notranslate"><span class="pre">&lt;num&gt;.*</span></code> exposes all sub-devices of the give device as SYCL root devices. The syntax <code class="docutils literal notranslate"><span class="pre">*.*</span></code> exposes all sub-devices of all GPU devices as SYCL root devices.</p>
+<p>In general, a term with one or more asterisks ( <code class="docutils literal notranslate"><span class="pre">*</span></code> ) matches all backends, devices, or sub-devices with the given pattern. However, a warning is generated if the term does not match anything. For example, <code class="docutils literal notranslate"><span class="pre">*:gpu</span></code> matches all GPU devices in all backends (ignoring backends with no GPU devices), but it generates a warning if there are no GPU devices in any backend. Likewise, <code class="docutils literal notranslate"><span class="pre">level_zero:*.*</span></code> matches all sub-devices of partitionable GPUs in the Level Zero backend, but it generates a warning if there are no Level Zero GPU devices that are partitionable into sub-devices.</p>
+<p>The device indices are zero-based and are unique only within a backend. Therefore, <code class="docutils literal notranslate"><span class="pre">level_zero:0</span></code> is a different device from <code class="docutils literal notranslate"><span class="pre">cuda:0</span></code>. To see the indices of all available devices, run the <code class="docutils literal notranslate"><span class="pre">sycl-ls</span></code> tool. Note that different backends sometimes expose the same hardware as different “devices”. For example, the level_zero and opencl backends both expose the Intel GPU devices.</p>
+<p>Additionally, if a sub-device is chosen (via numeric index or wildcard), then an additional layer of partitioning can be specified. In other words, a sub-sub-device can be selected. Like sub-devices, this is done with a period ( <code class="docutils literal notranslate"><span class="pre">.</span></code> ) and a sub-sub-device specifier which is a wildcard symbol ( <code class="docutils literal notranslate"><span class="pre">*</span></code> ) or a numeric index.  Example <code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=level_zero:0.*.*</span></code> would partition device 0 into sub-devices and then partition each of those into sub-sub-devices. The range of grandchild sub-sub-devices would be the final devices available to the app, neither device 0, nor its child partitions would be in that list.</p>
+<p>Lastly, a filter in the grammar can be thought of as a term in conjunction with an action that is taken on all devices that are selected by the term. The action can be an accept action or a discard action. Based on the action, a filter can be an accept filter or a discard filter.
+The string <code class="docutils literal notranslate"><span class="pre">&lt;term&gt;</span></code> represents an accept filter and the string <code class="docutils literal notranslate"><span class="pre">!&lt;term&gt;</span></code> represents a discard filter. The underlying term is the same but they perform different actions on the matching devices list.
+For example, <code class="docutils literal notranslate"><span class="pre">!opencl:*</span></code> discards all devices of the opencl backend from the list of available devices. The discarding filters, if there are any, must all appear at the end of the selector string.
+When one or more filters accept a device and one or more filters discard the device, the latter have priority and the device is ultimately not made available to the user. This allows the user to provide selector strings such as <code class="docutils literal notranslate"><span class="pre">*:gpu;!cuda:*</span></code> that accepts all gpu devices except those with a CUDA backend.
+Furthermore, if the value of this environment variable only has discarding filters, an accepting filter that matches all devices, but not sub-devices and sub-sub-devices, will be implicitly included in the
+environment variable to allow the user to specify only the list of devices that must not be made available. Therefore, <code class="docutils literal notranslate"><span class="pre">!*:cpu</span></code> will accept all devices except those that are of the cpu type and <code class="docutils literal notranslate"><span class="pre">opencl:*;!*:cpu</span></code>
+will accept all devices of the opencl backend except those that are of the opencl backend and of the cpu type. It is legal to have a rejection filter even if it specifies devices have already been omitted by previous filters in the selection string. Doing so has no effect; the rejected devices are still omitted.</p>
+<p>The following examples further illustrate the usage of this environment variable:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Example</p></th>
+<th class="head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=opencl:*</span></code></p></td>
+<td><p>Only the OpenCL devices are available</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=level_zero:gpu</span></code></p></td>
+<td><p>Only GPU devices on the Level Zero platform are available.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=&quot;opencl:gpu;level_zero:gpu&quot;</span></code></p></td>
+<td><p>GPU devices from both Level Zero and OpenCL are available. Note that escaping (like quotation marks) will likely be needed when using semi-colon separated entries.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=opencl:gpu,cpu</span></code></p></td>
+<td><p>Only CPU and GPU devices on the OpenCL platform are available.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=opencl:0</span></code></p></td>
+<td><p>Only the device with index 0 on the OpenCL backend is available.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=hip:0,2</span></code></p></td>
+<td><p>Only devices with indices of 0 and 2 from the HIP backend are available.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=opencl:0.*</span></code></p></td>
+<td><p>All the sub-devices from the OpenCL device with index 0 are exposed as SYCL root devices. No other devices are available.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=opencl:0.2</span></code></p></td>
+<td><p>The third sub-device (2 in zero-based counting) of the OpenCL device with index 0 will be the sole device available.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=level_zero:*,*.*</span></code></p></td>
+<td><p>Exposes Level Zero devices to the application in two different ways. Each device (aka “card”) is exposed as a SYCL root device and each sub-device is also exposed as a SYCL root device.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=&quot;opencl:*;!opencl:0&quot;</span></code></p></td>
+<td><p>All OpenCL devices except for the device with index 0 are available.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ONEAPI_DEVICE_SELECTOR=&quot;!*:cpu&quot;</span></code></p></td>
+<td><p>All devices except for CPU devices are available.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>The backend argument is always required. An error will be thrown if it is absent.</p></li>
+<li><p>Additionally, the backend MUST be followed by colon ( <code class="docutils literal notranslate"><span class="pre">:</span></code> ) and at least one device specifier of some sort, else an error is thrown.</p></li>
+<li><p>The sub-device and sub-sub-device syntax attempt to partition the root device
+according to the rules defined by
+<code class="docutils literal notranslate"><span class="pre">info::partition_property::partition_by_affinity_domain</span></code> and
+<code class="docutils literal notranslate"><span class="pre">info::partition_affinity_domain::next_partitionable</span></code>.
+(See the SYCL 2020 specification for a precise definition.)
+The root device is determined by the underlying backend.</p></li>
+<li><p>When using the Level Zero backend, see also the documentation of the
+<a class="reference external" href="https://spec.oneapi.io/level-zero/latest/core/PROG.html#environment-variables"><code class="docutils literal notranslate"><span class="pre">ZE_FLAT_DEVICE_HIERARCHY</span></code></a> environment variable because it affects
+how this backend exposes root devices to SYCL.
+For Intel GPUs, the sub-device and sub-sub-device syntax can be used to
+expose tiles or CCSs to the SYCL application as SYCL root devices, however
+the exact mapping is determined by the <code class="docutils literal notranslate"><span class="pre">ZE_FLAT_DEVICE_HIERARCHY</span></code> environment
+variable.</p></li>
+<li><p>The semi-colon character ( <code class="docutils literal notranslate"><span class="pre">;</span></code> ) and the exclamation mark character ( <code class="docutils literal notranslate"><span class="pre">!</span></code>  ) are treated specially by many shells, so you may need to enclose the string in quotes if the selection string contains these characters.</p></li>
+</ul>
+</section>
 <section id="sycl-device-allowlist">
-<h3><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_ALLOWLIST</span></code><a class="headerlink" href="#sycl-device-allowlist" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_ALLOWLIST</span></code><a class="headerlink" href="#sycl-device-allowlist" title="Link to this heading">¶</a></h3>
 <p>A list of devices and their driver version following the pattern:
 <code class="docutils literal notranslate"><span class="pre">BackendName:XXX,DeviceType:YYY,DeviceVendorId:0xXYZW,DriverVersion:{{X.Y.Z.W}}</span></code>.
 Also may contain <code class="docutils literal notranslate"><span class="pre">PlatformVersion</span></code>, <code class="docutils literal notranslate"><span class="pre">DeviceName</span></code> and <code class="docutils literal notranslate"><span class="pre">PlatformName</span></code>. There is no
 fixed order of properties in the pattern.</p>
 </section>
-<section id="sycl-device-filter">
-<h3><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code><a class="headerlink" href="#sycl-device-filter" title="Permalink to this headline">¶</a></h3>
-<p>This environment variable limits the SYCL RT to use only a subset of the system’s devices. Setting this environment variable affects all of the device query functions (<code class="docutils literal notranslate"><span class="pre">platform::get_devices()</span></code> and <code class="docutils literal notranslate"><span class="pre">platform::get_platforms()</span></code>) and all of the device selectors.</p>
-<p>The value of this environment variable is a comma separated list of filters, where each filter is a triple of the form “<code class="docutils literal notranslate"><span class="pre">backend</span></code>:<code class="docutils literal notranslate"><span class="pre">device_type</span></code>:<code class="docutils literal notranslate"><span class="pre">device_num</span></code>” (without the quotes). Each element of the triple is optional, but each filter must have at least one value. Possible values of <code class="docutils literal notranslate"><span class="pre">backend</span></code> are:</p>
+</section>
+<section id="sycl-reduction-preferred-workgroup-size">
+<h2><code class="docutils literal notranslate"><span class="pre">SYCL_REDUCTION_PREFERRED_WORKGROUP_SIZE</span></code><a class="headerlink" href="#sycl-reduction-preferred-workgroup-size" title="Link to this heading">¶</a></h2>
+<p>This environment variable controls the preferred work-group size for reductions on specified device types. Setting this will affect all reductions without an explicitly specified work-group size on devices of types in the value of the environment variable.</p>
+<p>The value of this environment variable is a comma separated list of one or more configurations, where each configuration is a pair of the form “<code class="docutils literal notranslate"><span class="pre">device_type</span></code>:<code class="docutils literal notranslate"><span class="pre">size</span></code>” (without the quotes). Possible values of <code class="docutils literal notranslate"><span class="pre">device_type</span></code> are:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">level_zero</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">opencl</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cuda</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hip</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></li>
-</ul>
-<p>Possible values of <code class="docutils literal notranslate"><span class="pre">device_type</span></code> are:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">acc</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">device_num</span></code> is an integer that indexes the enumeration of devices from the sycl-ls utility tool, where the first device in that enumeration has index zero in each backend. For example, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER=2</span></code> will return all devices with index ‘2’ from all different backends. If multiple devices satisfy this device number (e.g., GPU and CPU devices can be assigned device number ‘2’), then default_selector will choose the device with the highest heuristic point.  When <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_ALLOWLIST</span></code> is set, it is applied before enumerating devices and affects <code class="docutils literal notranslate"><span class="pre">device_num</span></code> values.</p>
-<p>Assuming a filter has all three elements of the triple, it selects only those devices that come from the given backend, have the specified device type, AND have the given device index. If more than one filter is specified, the RT is restricted to the union of devices selected by all filters. The RT does not include the <code class="docutils literal notranslate"><span class="pre">host</span></code> backend and the <code class="docutils literal notranslate"><span class="pre">host</span></code> device automatically unless one of the filters explicitly specifies the <code class="docutils literal notranslate"><span class="pre">host</span></code> device type. Therefore, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER=host</span></code> should be set to enforce SYCL to use the <code class="docutils literal notranslate"><span class="pre">host</span></code> device only.</p>
-<p>Note that all device selectors will throw an exception if the filtered list of devices does not include a device that satisfies the selector. For instance, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER=cpu,level_zero</span></code> will cause <code class="docutils literal notranslate"><span class="pre">host_selector()</span></code> to throw an exception. <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER</span></code> also limits loading only specified plugins into the SYCL RT. In particular, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER=level_zero</span></code> will cause the <code class="docutils literal notranslate"><span class="pre">cpu_selector</span></code> to throw an exception since SYCL RT will only load the <code class="docutils literal notranslate"><span class="pre">level_zero</span></code> backend which does not support any CPU devices at this time. When multiple devices satisfy the filter (e..g, <code class="docutils literal notranslate"><span class="pre">SYCL_DEVICE_FILTER=gpu</span></code>), only one of them will be selected.</p>
+<p><code class="docutils literal notranslate"><span class="pre">size</span></code> is a positive integer larger than 0.</p>
+<p>For a configuration <code class="docutils literal notranslate"><span class="pre">device_type</span></code>:<code class="docutils literal notranslate"><span class="pre">size</span></code> the <code class="docutils literal notranslate"><span class="pre">device_type</span></code> element specifies the type of device the configuration applies to, that is <code class="docutils literal notranslate"><span class="pre">cpu</span></code> is for CPU devices, <code class="docutils literal notranslate"><span class="pre">gpu</span></code> is for GPU devices, and <code class="docutils literal notranslate"><span class="pre">acc</span></code> is for accelerator devices. If <code class="docutils literal notranslate"><span class="pre">device_type</span></code> is <code class="docutils literal notranslate"><span class="pre">*</span></code> the configuration applies to all applicable device types. <code class="docutils literal notranslate"><span class="pre">size</span></code> denotes the preferred work-group size to be used for devices of types specified by <code class="docutils literal notranslate"><span class="pre">device_type</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">info::device::max_work_group_size</span></code> on a device on which a reduction is being enqueued is less than the value specified by a configuration in this environment variable, the value of <code class="docutils literal notranslate"><span class="pre">info::device::max_work_group_size</span></code> on that device is used instead.</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">sycl::exception</span></code> with <code class="docutils literal notranslate"><span class="pre">sycl::errc::invalid</span></code> is thrown during submission of a reduction kernel in the following cases:</p>
+<ul class="simple">
+<li><p>If the specified device type in any configuration is not one of the valid values.</p></li>
+<li><p>If the specified preferred work-group size in any configuration is not a valid integer.</p></li>
+<li><p>If the specified preferred work-group size in any configuration is not an integer value larger than 0.</p></li>
+<li><p>If any configuration does not have the <code class="docutils literal notranslate"><span class="pre">:</span></code> delimiter.</p></li>
+</ul>
+<p>If this environment variable is not set, the preferred work-group size for reductions is implementation defined.</p>
+<p>Note that conflicting configuration tuples in the same list will favor the last entry. For example, a list <code class="docutils literal notranslate"><span class="pre">cpu:32,gpu:32,cpu:16</span></code> will set the preferred work-group size of reductions to 32 for GPUs and 16 for CPUs. This also applies to <code class="docutils literal notranslate"><span class="pre">*</span></code>, for example <code class="docutils literal notranslate"><span class="pre">cpu:32,*:16</span></code> sets the preferred work-group size of reductions on all devices to 16, while <code class="docutils literal notranslate"><span class="pre">*:16,cpu:32</span></code> sets the preferred work-group size of reductions to 32 on CPUs and to 16 on all other devices.</p>
 </section>
-</section>
-<section id="controlling-dpc-level-zero-plugin">
-<h2>Controlling DPC++ Level Zero Plugin<a class="headerlink" href="#controlling-dpc-level-zero-plugin" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto docutils align-default">
+<section id="range-rounding-environment-variables">
+<h2>Range Rounding Environment Variables<a class="headerlink" href="#range-rounding-environment-variables" title="Link to this heading">¶</a></h2>
+<p>For a description of parallel for range rounding in DPC++ see
+<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/design/ParallelForRangeRounding.md">Parallel For Range Rounding</a>.</p>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
 <th class="head"><p>Values</p></th>
@@ -159,9 +269,42 @@ fixed order of properties in the pattern.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_ENABLE_PCI</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_PARALLEL_FOR_RANGE_ROUNDING</span></code></p></td>
+<td><p>Any(*)</p></td>
+<td><p>Disables automatic rounding-up of <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code> invocation ranges.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PARALLEL_FOR_RANGE_ROUNDING_TRACE</span></code></p></td>
+<td><p>Any(*)</p></td>
+<td><p>Enables tracing of <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code> invocations with rounded-up ranges.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PARALLEL_FOR_RANGE_ROUNDING_PARAMS</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MinFactorX:GoodFactor:MinRangeX</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MinFactorX</span></code>: The minimum range that the rounded range should be a multiple of (Default 16)</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">GoodFactor</span></code>: The preferred range that the rounded range be a multiple of (Default 32)</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">MinRangeX</span></code>: The minimum X dimension of the range such that range rounding is activated (Default 1024)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="controlling-dpc-level-zero-plugin">
+<h2>Controlling DPC++ Level Zero Plugin<a class="headerlink" href="#controlling-dpc-level-zero-plugin" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Environment variable</p></th>
+<th class="head"><p>Values</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_ENABLE_PCI</span></code> (Deprecated)</p></td>
 <td><p>Integer</p></td>
-<td><p>When set to 1, enables obtaining the GPU PCI address when using the Level Zero backend. The default is 0.</p></td>
+<td><p>When set to 1, enables obtaining the GPU PCI address when using the Level Zero backend. The default is 1. This option is kept for compatibility reasons and is immediately deprecated.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_DISABLE_USM_ALLOCATOR</span></code></p></td>
 <td><p>Any(*)</p></td>
@@ -175,9 +318,43 @@ fixed order of properties in the pattern.</p>
 </table>
 <p><code class="docutils literal notranslate"><span class="pre">(*)</span> <span class="pre">Note:</span> <span class="pre">Any</span> <span class="pre">means</span> <span class="pre">this</span> <span class="pre">environment</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">effective</span> <span class="pre">when</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">any</span> <span class="pre">non-null</span> <span class="pre">value.</span></code></p>
 </section>
+<section id="controlling-dpc-cuda-plugin">
+<h2>Controlling DPC++ CUDA Plugin<a class="headerlink" href="#controlling-dpc-cuda-plugin" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Environment variable</p></th>
+<th class="head"><p>Values</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_CUDA_MAX_LOCAL_MEM_SIZE</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Specifies the maximum size of a local memory allocation in bytes. If the value exceeds the device’s capabilities then a <code class="docutils literal notranslate"><span class="pre">sycl::runtime_error</span></code> is thrown. In order for the full error message to be printed, <code class="docutils literal notranslate"><span class="pre">SYCL_RT_WARNING_LEVEL=2</span></code> must be set. The default value for <code class="docutils literal notranslate"><span class="pre">SYCL_PI_CUDA_MAX_LOCAL_MEM_SIZE</span></code> is determined by the hardware.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="controlling-dpc-hip-plugin">
+<h2>Controlling DPC++ HIP Plugin<a class="headerlink" href="#controlling-dpc-hip-plugin" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Environment variable</p></th>
+<th class="head"><p>Values</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_HIP_MAX_LOCAL_MEM_SIZE</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Specifies the maximum size of a local memory allocation in bytes. If the value exceeds the device’s capabilities then a <code class="docutils literal notranslate"><span class="pre">sycl::runtime_error</span></code> is thrown. In order for the full error message to be printed, <code class="docutils literal notranslate"><span class="pre">SYCL_RT_WARNING_LEVEL=2</span></code> must be set. The default value for <code class="docutils literal notranslate"><span class="pre">SYCL_PI_HIP_MAX_LOCAL_MEM_SIZE</span></code> is determined by the hardware.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="tools-variables">
-<h2>Tools variables<a class="headerlink" href="#tools-variables" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto docutils align-default">
+<h2>Tools variables<a class="headerlink" href="#tools-variables" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
 <th class="head"><p>Values</p></th>
@@ -207,12 +384,12 @@ fixed order of properties in the pattern.</p>
 <code class="docutils literal notranslate"><span class="pre">(**)</span> <span class="pre">Note:</span> <span class="pre">These</span> <span class="pre">variables</span> <span class="pre">come</span> <span class="pre">from</span> <span class="pre">XPTI</span> <span class="pre">framework</span></code></p>
 </section>
 <section id="debugging-variables-for-dpc-runtime">
-<h2>Debugging variables for DPC++ Runtime<a class="headerlink" href="#debugging-variables-for-dpc-runtime" title="Permalink to this headline">¶</a></h2>
+<h2>Debugging variables for DPC++ Runtime<a class="headerlink" href="#debugging-variables-for-dpc-runtime" title="Link to this heading">¶</a></h2>
 <p>:warning: <strong>Warning:</strong> <span style="color:red">the environment variables
 described below are used for development and debugging of DPC++ compiler
 and runtime. Their semantics are subject to change. Do not rely on these
 variables in production code.</span></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
 <th class="head"><p>Values</p></th>
@@ -220,49 +397,57 @@ variables in production code.</span></p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_TRACE</span></code></p></td>
-<td><p>Described <a class="reference external" href="#sycl_pi_trace-options">below</a></p></td>
-<td><p>Enable specified level of tracing for PI.</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PREFER_UR</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>If non-0 then run through Unified Runtime if desired backend is supported there. Default is 0.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_QUEUE_THREAD_POOL_SIZE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_UR_TRACE</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Described <a class="reference internal" href="#sycl-ur-trace-options">below</a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_QUEUE_THREAD_POOL_SIZE</span></code></p></td>
 <td><p>Positive integer</p></td>
 <td><p>Number of threads in thread pool of queue.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICELIB_NO_FALLBACK</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICELIB_NO_FALLBACK</span></code></p></td>
 <td><p>Any(*)</p></td>
 <td><p>Disable loading and linking of device library images</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code></p></td>
-<td><p>Described <a class="reference external" href="#sycl_print_execution_graph-options">below</a></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code></p></td>
+<td><p>Described <a class="reference internal" href="#sycl-print-execution-graph-options">below</a></p></td>
 <td><p>Print execution graph to DOT text file.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP</span></code></p></td>
 <td><p>Any(*)</p></td>
-<td><p>Disable cleanup of finished command nodes at host-device synchronization points.</p></td>
+<td><p>Disable regular cleanup of enqueued (or finished, in case of host tasks) non-leaf command nodes. If disabled, command nodes will be cleaned up only during the destruction of the last remaining memory object used by them.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_POST_ENQUEUE_CLEANUP</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_POST_ENQUEUE_CLEANUP</span></code> (deprecated)</p></td>
 <td><p>Any(*)</p></td>
-<td><p>Disable cleanup of enqueued command nodes during submission.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_THROW_ON_BLOCK</span></code></p></td>
-<td><p>Any(*)</p></td>
-<td><p>Throw an exception on attempt to wait for a blocked command.</p></td>
+<td><p>Use <code class="docutils literal notranslate"><span class="pre">SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP</span></code> instead.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DEVICELIB_INHIBIT_NATIVE</span></code></p></td>
 <td><p>String of device library extensions (separated by a whitespace)</p></td>
 <td><p>Do not rely on device native support for devicelib extensions listed in this option.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PROGRAM_COMPILE_OPTIONS</span></code></p></td>
-<td><p>String of valid OpenCL compile options</p></td>
+<td><p>String of valid compile options</p></td>
 <td><p>Override compile options for all programs.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PROGRAM_LINK_OPTIONS</span></code></p></td>
-<td><p>String of valid OpenCL link options</p></td>
+<td><p>String of valid link options</p></td>
 <td><p>Override link options for all programs.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PROGRAM_APPEND_COMPILE_OPTIONS</span></code></p></td>
+<td><p>String of valid compile options</p></td>
+<td><p>Append to the end of compile options for all programs.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PROGRAM_APPEND_LINK_OPTIONS</span></code></p></td>
+<td><p>String of valid link options</p></td>
+<td><p>Append to the end of link options for all programs.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_USE_KERNEL_SPV</span></code></p></td>
 <td><p>Path to the SPIR-V binary</p></td>
-<td><p>Load device image from the specified file. If runtime is unable to read the file, <code class="docutils literal notranslate"><span class="pre">cl::sycl::runtime_error</span></code> exception is thrown.</p></td>
+<td><p>Load device image from the specified file. If runtime is unable to read the file, <code class="docutils literal notranslate"><span class="pre">sycl::runtime_error</span></code> exception is thrown. The image is assumed to have been created using the <code class="docutils literal notranslate"><span class="pre">-fno-sycl-dead-args-optimization</span></code> option.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_DUMP_IMAGES</span></code></p></td>
 <td><p>Any(*)</p></td>
@@ -280,13 +465,21 @@ variables in production code.</span></p>
 <td><p>Any(*)</p></td>
 <td><p>Enables tracing of <code class="docutils literal notranslate"><span class="pre">parallel_for</span></code> invocations with rounded-up ranges.</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_SUPPRESS_ERROR_MESSAGE</span></code></p></td>
+<td><p>Any(*)</p></td>
+<td><p>Suppress printing of error message, only used for CI in order not to interrupt errors generated by underlying toolchains; note that the variable only modifies the printing of the error message (error value, name, description and location), the handling of error return code and aborting/throwing behaviour remains unchanged.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_JIT_COMPILER_DEBUG</span></code></p></td>
+<td><p>Any(*)</p></td>
+<td><p>Passes can specify their own debug types, <code class="docutils literal notranslate"><span class="pre">sycl-spec-const-materializer</span></code> enables debug output generation in specialization constants materialization pass.</p></td>
+</tr>
 </tbody>
 </table>
 <p><code class="docutils literal notranslate"><span class="pre">(*)</span> <span class="pre">Note:</span> <span class="pre">Any</span> <span class="pre">means</span> <span class="pre">this</span> <span class="pre">environment</span> <span class="pre">variable</span> <span class="pre">is</span> <span class="pre">effective</span> <span class="pre">when</span> <span class="pre">set</span> <span class="pre">to</span> <span class="pre">any</span> <span class="pre">non-null</span> <span class="pre">value.</span></code></p>
 <section id="sycl-print-execution-graph-options">
-<h3><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code> Options<a class="headerlink" href="#sycl-print-execution-graph-options" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code> Options<a class="headerlink" href="#sycl-print-execution-graph-options" title="Link to this heading">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">SYCL_PRINT_EXECUTION_GRAPH</span></code> can accept one or more comma separated values from the table below</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Option</p></th>
 <th class="head"><p>Description</p></th>
@@ -317,10 +510,12 @@ variables in production code.</span></p>
 </tbody>
 </table>
 </section>
-<section id="sycl-pi-trace-options">
-<h3><code class="docutils literal notranslate"><span class="pre">SYCL_PI_TRACE</span></code> Options<a class="headerlink" href="#sycl-pi-trace-options" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_TRACE</span></code> accepts a bit-mask. Supported tracing levels are in the table below</p>
-<table class="colwidths-auto docutils align-default">
+<section id="sycl-ur-trace-options">
+<h3><code class="docutils literal notranslate"><span class="pre">SYCL_UR_TRACE</span></code> Options<a class="headerlink" href="#sycl-ur-trace-options" title="Link to this heading">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">SYCL_UR_TRACE</span></code> accepts a bit-mask, so individual tracing types can be enabled.
+Setting a value of <code class="docutils literal notranslate"><span class="pre">-1</span></code> will enable all tracing types.</p>
+<p>Supported tracing levels are in the table below</p>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Option</p></th>
 <th class="head"><p>Description</p></th>
@@ -328,10 +523,10 @@ variables in production code.</span></p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
-<td><p>Enable basic tracing, which is tracing of PI plugins/devices discovery</p></td>
+<td><p>Enable basic tracing, which is tracing of UR adapters/devices discovery</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
-<td><p>Enable tracing of the PI calls</p></td>
+<td><p>Enable tracing of the UR calls</p></td>
 </tr>
 <tr class="row-even"><td><p>-1</p></td>
 <td><p>Enable all levels of tracing</p></td>
@@ -341,12 +536,12 @@ variables in production code.</span></p>
 </section>
 </section>
 <section id="debugging-variables-for-level-zero-plugin">
-<h2>Debugging variables for Level Zero Plugin<a class="headerlink" href="#debugging-variables-for-level-zero-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>Debugging variables for Level Zero Plugin<a class="headerlink" href="#debugging-variables-for-level-zero-plugin" title="Link to this heading">¶</a></h2>
 <p>:warning: <strong>Warning:</strong> <span style="color:red">the environment variables
 described below are used for development and debugging of DPC++ compiler
 and runtime. Their semantics are subject to change. Do not rely on these
 variables in production code.</span></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
 <th class="head"><p>Values</p></th>
@@ -358,52 +553,88 @@ variables in production code.</span></p>
 <td><p>Integer</p></td>
 <td><p>A single-threaded app has an opportunity to enable this mode to avoid overhead from mutex locking in the Level Zero plugin. A value greater than 0 enables single thread mode. A value of 0 disables single thread mode. The default is 0.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_MAX_COMMAND_LIST_CACHE</span></code></p></td>
-<td><p>Positive integer</p></td>
-<td><p>Maximum number of oneAPI Level Zero Command lists that can be allocated with no reuse before throwing an “out of resources” error. Default is 20000, threshold may be increased based on resource availabilty and workload demand.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR</span></code></p></td>
 <td><p>[EnableBuffers][;[MaxPoolSize][;[host|device|shared:][MaxPoolableSize][,[Capacity][,SlabMinSize]]]…]</p></td>
-<td><p>EnableBuffers enables pooling for SYCL buffers, default 0, set to 1 to enable. MaxPoolSize is the maximum size of the pool, default 0. MemType is host, device or shared. Other parameters are values specified as positive integers with optional K, M or G suffix. MaxPoolableSize is the maximum allocation size that may be pooled, default 0 for host and shared, 32KB for device. Capacity is the number of allocations in each size range freed by the program but retained in the pool for reallocation, default 0. Size ranges follow this pattern: 64, 96, 128, 192, and so on, i.e., powers of 2, with one range in between. SlabMinSize is the minimum allocation size, 64KB for host and device, 2MB for shared. Example: SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR=1;32M;host:1M,4,64K;device:1M,4,64K;shared:0,0,2M</p></td>
+<td><p>EnableBuffers enables pooling for SYCL buffers, default 1, set to 0 to disable. MaxPoolSize is the maximum size of the pool, by default there is no size limit. MemType is host, device, shared or read_only_shared. Other parameters are values specified as positive integers with optional K, M or G suffix. MaxPoolableSize is the maximum allocation size that may be pooled, default 0 for shared, 2MB for host, 4MB for device and read_only_shared. Capacity is the number of allocations in each size range freed by the program but retained in the pool for reallocation, default 4. Size ranges follow this pattern: 64, 96, 128, 192, and so on, i.e., powers of 2, with one range in between. SlabMinSize is the minimum allocation size, 64KB for host and device, 2MB for shared and read_only_shared. Example: SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR=1;32M;host:1M,4,64K;device:1M,4,64K;shared:0,0,2M</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_BATCH_SIZE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_BATCH_SIZE</span></code></p></td>
 <td><p>Integer</p></td>
 <td><p>Sets a preferred number of compute commands to batch into a command list before executing the command list. A value of 0 causes the batch size to be adjusted dynamically. A value greater than 0 specifies fixed size batching, with the batch size set to the specified value. The default is 0.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_COPY_BATCH_SIZE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_COPY_BATCH_SIZE</span></code></p></td>
 <td><p>Integer</p></td>
 <td><p>Sets a preferred number of copy commands to batch into a command list before executing the command list. A value of 0 causes the batch size to be adjusted dynamically. A value greater than 0 specifies fixed size batching, with the batch size set to the specified value. The default is 0.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_FILTER_EVENT_WAIT_LIST</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_FILTER_EVENT_WAIT_LIST</span></code></p></td>
 <td><p>Integer</p></td>
-<td><p>When set to 0, disables filtering of signaled events from wait lists when using the Level Zero backend. The default is 1.</p></td>
+<td><p>When set to 0, disables filtering of signaled events from wait lists when using the Level Zero backend. The default is 0.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE</span></code></p></td>
 <td><p>Any(*)</p></td>
-<td><p>This environment variable enables users to control use of copy engines for copy operations. If the value is an integer, it will allow the use of copy engines, if available in the device, in Level Zero plugin to transfer SYCL buffer or image data between the host and/or device(s) and to fill SYCL buffer or image data in device or shared memory. The value of this environment variable can also be a pair of the form “lower_index:upper_index” where the indices point to copy engines in a list of all available copy engines. The default is 1.</p></td>
+<td><p>This environment variable enables users to control use of copy engines for copy operations. If the value is an integer, it will allow the use of copy engines, if available in the device, in Level Zero plugin to transfer SYCL buffer or image data between the host and/or device(s) and to fill SYCL buffer or image data in device or shared memory. The value of this environment variable can also be a pair of the form “lower_index:upper_index” where the indices point to copy engines in a list of all available copy engines. The default is 0:0 when immediate command lists are being used on the device and 1 otherwise. (Also see description of SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS).</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COMPUTE_ENGINE</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COMPUTE_ENGINE</span></code></p></td>
 <td><p>Integer</p></td>
 <td><p>It can be set to an integer (&gt;=0) in which case all compute commands will be submitted to the command-queue with the given index in the compute command group. If it is instead set to a negative value then all available compute engines may be used. The default value is “0”</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE_FOR_D2D_COPY</span></code> (experimental)</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE_FOR_D2D_COPY</span></code> (experimental)</p></td>
 <td><p>Integer</p></td>
 <td><p>Allows the use of copy engine, if available in the device, in Level Zero plugin for device to device copy operations. The default is 0. This option is experimental and will be removed once heuristics are added to make a decision about use of copy engine for device to device copy operations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS</span></code></p></td>
 <td><p>Any(*)</p></td>
-<td><p>Enable support of device-scope events whose state is not visible to the host. If enabled mode is SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS=1 the Level Zero plugin would create all events having device-scope only and create proxy host-visible events for them when their status is needed (wait/query) on the host. If enabled mode is SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS=2 the Level Zero plugin would create all events having device-scope and add proxy host-visible event at the end of each command-list submission. The default is 0, meaning all events are host-visible.</p></td>
+<td><p>Enable support of device-scope events whose state is not visible to the host. If enabled mode is SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS=1 the Level Zero plugin would create all events having device-scope only and create proxy host-visible events for them when their status is needed (wait/query) on the host. If enabled mode is SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS=2 the Level Zero plugin would create all events having device-scope and add proxy host-visible event at the end of each command-list submission. The default is 0, meaning all events have host visibility. SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS is ignored when using immediate command lists (SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS = 1) and all events use default scope of 0.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>When set to a positive value enables use of Level Zero immediate commandlists, which means there is no batching and all commands are immediately submitted for execution. When set to 1, unique immediate commandlists are created for each SYCL queue. When set to 2, unique immediate commandlists are created per host thread per SYCL queue. Default is 1 on Intel® Data Center GPU Max Series running Linux and 0 elsewhere.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_MULTIPLE_COMMANDLIST_BARRIERS</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>When set to a positive value enables use of multiple Level Zero commandlists when submitting barriers. Default is 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE_FOR_FILL</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>When set to a positive value enables use of a copy engine for memory fill operations. Default is 0.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_SINGLE_ROOT_DEVICE_BUFFER_MIGRATION</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>When set to “0” tells to use single root-device allocation for all devices in a context where all devices have same root. Otherwise performs regular buffer migration. Default is 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_REUSE_DISCARDED_EVENTS</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>When set to a positive value enables the mode when discarded Level Zero events are reset and reused in scope of the same in-order queue based on the dependency chain between commands. Default is 1.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_EXPOSE_CSLICE_IN_AFFINITY_PARTITIONING</span></code> (Deprecated)</p></td>
+<td><p>Integer</p></td>
+<td><p>When set to non-zero value exposes compute slices as sub-sub-devices in <code class="docutils literal notranslate"><span class="pre">sycl::info::partition_property::partition_by_affinity_domain</span></code> partitioning scheme. Default is zero meaning that they are only exposed when partitioning by <code class="docutils literal notranslate"><span class="pre">sycl::info::partition_property::ext_intel_partition_by_cslice</span></code>. This option is introduced for compatibility reasons and is immediately deprecated. New code must not rely on this behavior. Also note that even if sub-sub-device was created using <code class="docutils literal notranslate"><span class="pre">partition_by_affinity_domain</span></code> it would still be reported as created via partitioning by compute slices.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_COMMANDLISTS_CLEANUP_THRESHOLD</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>If non-negative then the threshold is set to this value. If negative, the threshold is set to INT_MAX. Whenever the number of command lists in a queue exceeds this threshold, an attempt is made to cleanup completed command lists for their subsequent reuse. The default is 20.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_IMMEDIATE_COMMANDLISTS_EVENT_CLEANUP_THRESHOLD</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>If non-negative then the threshold is set to this value. If negative, the threshold is set to INT_MAX. Whenever the number of events associated with an immediate command list exceeds this threshold, a check is made for signaled events and these events are recycled. Setting this threshold low causes events to be checked more often, which could result in unneeded events being recycled sooner. However, more frequent event status checks may cost time. The default is 1000.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USM_RESIDENT</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>Bit-mask controls if/where to make USM allocations resident at the time of allocation. Input value is of the form 0xHSD, where 4-bits of D control device allocations, 4-bits of S control shared allocations, and 4-bits of H control host allocations. Each 4-bit component is holding one of the following values: “0” - then no special residency is forced, “1” - then allocation is made resident at the device of allocation, or “2” - then allocation is made resident on all devices in the context of allocation that have P2P access to the device of allocation. Default is 0x002, i.e. force full residency for device allocations only.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SYCL_PI_LEVEL_ZERO_USE_NATIVE_USM_MEMCPY2D</span></code></p></td>
+<td><p>Integer</p></td>
+<td><p>When set to a positive value enables the use of Level Zero USM 2D memory copy operations. Default is 0.</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="debugging-variables-for-cuda-plugin">
-<h2>Debugging variables for CUDA Plugin<a class="headerlink" href="#debugging-variables-for-cuda-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>Debugging variables for CUDA Plugin<a class="headerlink" href="#debugging-variables-for-cuda-plugin" title="Link to this heading">¶</a></h2>
 <p>:warning: <strong>Warning:</strong> <span style="color:red">the environment variables
 described below are used for development and debugging of DPC++ compiler
 and runtime. Their semantics are subject to change. Do not rely on these
 variables in production code.</span></p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Environment variable</p></th>
 <th class="head"><p>Values</p></th>
@@ -436,8 +667,8 @@ variables in production code.</span></p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

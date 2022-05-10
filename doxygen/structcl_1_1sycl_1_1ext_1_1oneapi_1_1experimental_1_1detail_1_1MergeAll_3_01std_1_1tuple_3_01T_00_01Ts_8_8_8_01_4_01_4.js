@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergeAll_3_01std_1_1tuple_3_01T_00_01Ts_8_8_8_01_4_01_4 =
-[
-    [ "reduced", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergeAll_3_01std_1_1tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html#a3680c7d680b1b53b12373ccc40bcf6cb", null ],
-    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergeAll_3_01std_1_1tuple_3_01T_00_01Ts_8_8_8_01_4_01_4.html#a3cb3870e6bf4e06ccfb168e6d36bf0e1", null ]
-];

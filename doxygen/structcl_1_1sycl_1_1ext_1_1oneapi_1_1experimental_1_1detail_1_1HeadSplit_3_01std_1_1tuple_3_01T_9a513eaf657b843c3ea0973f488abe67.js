@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01T_9a513eaf657b843c3ea0973f488abe67 =
-[
-    [ "htype", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01T_9a513eaf657b843c3ea0973f488abe67.html#af7e494bbe7b1231287882697fa1f8b48", null ],
-    [ "ttype", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HeadSplit_3_01std_1_1tuple_3_01T_9a513eaf657b843c3ea0973f488abe67.html#a319aa61944ee7cbb17733a9142ad14bf", null ]
-];

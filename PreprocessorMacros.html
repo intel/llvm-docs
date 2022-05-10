@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Preprocessor Macros &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Experimental CUDA backend for DPC++" href="cuda/contents.html" />
+    <link rel="next" title="CUDA backend for DPC++" href="cuda/contents.html" />
     <link rel="prev" title="Users Manual" href="UsersManual.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
@@ -29,15 +27,15 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="cuda/contents.html">Experimental CUDA backend for DPC++</a>&#160;&#160;»
+        <a href="cuda/contents.html">CUDA backend for DPC++</a>&#160;&#160;»
         </p>
 
       </div>
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="preprocessor-macros">
-<h1>Preprocessor Macros<a class="headerlink" href="#preprocessor-macros" title="Permalink to this headline">¶</a></h1>
+  <section id="preprocessor-macros">
+<h1>Preprocessor Macros<a class="headerlink" href="#preprocessor-macros" title="Link to this heading">¶</a></h1>
 <p>This file describes macros that have effect on SYCL compiler and run-time.</p>
 <ul>
 <li><p><strong>RESTRICT_WRITE_ACCESS_TO_CONSTANT_PTR</strong></p>
@@ -56,10 +54,6 @@ This behavior is not following the SYCL spec since <code class="docutils literal
 the underlying pointer types return pointers without any additional qualifiers
 so it’s disabled by default.</p>
 </li>
-<li><p><strong>DISABLE_SYCL_INSTRUMENTATION_METADATA</strong></p>
-<p>This macro is used to disable passing of code location information to public
-methods.</p>
-</li>
 <li><p><strong>SYCL2020_DISABLE_DEPRECATION_WARNINGS</strong></p>
 <p>Disables warnings coming from usage of SYCL 1.2.1 APIs, that are deprecated in
 SYCL 2020.</p>
@@ -68,8 +62,9 @@ SYCL 2020.</p>
 <p>Disables all deprecation warnings in SYCL runtime headers, including SYCL
 1.2.1 deprecations.</p>
 </li>
-<li><p><strong>SYCL_DISABLE_CPP_VERSION_CHECK_WARNING</strong></p>
-<p>Disables a message which warns about unsupported C++ version.</p>
+<li><p><strong>SYCL_DISABLE_IMAGE_ASPECT_WARNING</strong></p>
+<p>Disables warning diagnostic issued when calling <code class="docutils literal notranslate"><span class="pre">device::has(aspect::image)</span></code>
+and <code class="docutils literal notranslate"><span class="pre">platform::has(aspect::image)</span></code>.</p>
 </li>
 <li><p><strong>SYCL_FALLBACK_ASSERT</strong></p>
 <p>Defining as non-zero enables the fallback assert feature even on devices
@@ -84,21 +79,15 @@ does not add any extra overhead. One can check to see if a device has native
 support for <code class="docutils literal notranslate"><span class="pre">assert()</span></code> via <code class="docutils literal notranslate"><span class="pre">aspect::ext_oneapi_native_assert</span></code>.
 This macro is undefined by default.</p>
 </li>
-<li><p><strong>SYCL2020_CONFORMANT_APIS</strong>
+<li><p><strong>SYCL2020_CONFORMANT_APIS (deprecated)</strong>
 This macro is used to comply with the SYCL 2020 specification, as some of the current
 implementations may be widespread and not conform to it.
-Description of what it changes:</p>
-<ol class="simple">
-<li><p>According to spec, <code class="docutils literal notranslate"><span class="pre">backend_return_t</span></code> for opencl event
-should be <code class="docutils literal notranslate"><span class="pre">std::vector&lt;cl_event&gt;</span></code> instead of <code class="docutils literal notranslate"><span class="pre">cl_event</span></code>. Defining this macro
-will change the behavior of <code class="docutils literal notranslate"><span class="pre">sycl::get_native()</span></code> function and using types for
-next structs: <code class="docutils literal notranslate"><span class="pre">interop&lt;backend::opencl,</span> <span class="pre">event&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">BackendInput&lt;backend::opencl,</span> <span class="pre">event&gt;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">BackendReturn&lt;backend::opencl,</span> <span class="pre">event&gt;</span></code> to be in line with the spec.</p></li>
-</ol>
-</li>
+Defining this macro currently has no effect on the API.
+This preprocessor macro has been deprecated in favor of the
+<code class="docutils literal notranslate"><span class="pre">-fpreview-breaking-changes</span></code> compiler option.</p></li>
 </ul>
 <section id="version-macros">
-<h2>Version macros<a class="headerlink" href="#version-macros" title="Permalink to this headline">¶</a></h2>
+<h2>Version macros<a class="headerlink" href="#version-macros" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_MAJOR_VERSION</span></code> is set to SYCL runtime library major version.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__LIBSYCL_MINOR_VERSION</span></code> is set to SYCL runtime library minor version.</p></li>
@@ -116,14 +105,14 @@ next structs: <code class="docutils literal notranslate"><span class="pre">inter
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="cuda/contents.html">Experimental CUDA backend for DPC++</a>&#160;&#160;»
+        <a href="cuda/contents.html">CUDA backend for DPC++</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

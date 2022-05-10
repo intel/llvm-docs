@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Matching the Clang AST &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Matching the Clang AST &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Clang Transformer Tutorial" href="ClangTransformerTutorial.html" />
     <link rel="prev" title="Tutorial for building tools using LibTooling and LibASTMatchers" href="LibASTMatchersTutorial.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Matching the Clang AST</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,7 +36,7 @@
         
         
   <section id="matching-the-clang-ast">
-<h1>Matching the Clang AST<a class="headerlink" href="#matching-the-clang-ast" title="Permalink to this headline">¶</a></h1>
+<h1>Matching the Clang AST<a class="headerlink" href="#matching-the-clang-ast" title="Link to this heading">¶</a></h1>
 <p>This document explains how to use Clang’s LibASTMatchers to match interesting
 nodes of the AST and execute code that uses the matched nodes.  Combined with
 <a class="reference internal" href="LibTooling.html"><span class="doc">LibTooling</span></a>, LibASTMatchers helps to write code-to-code transformation
@@ -46,7 +45,7 @@ tools or query tools.</p>
 to the Clang AST</span></a> if you want to learn more
 about how the AST is structured.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>LibASTMatchers provides a domain specific language to create predicates on
 Clang’s AST.  This DSL is written in and can be used from C++, allowing users
 to write a single program to both match AST nodes and access the node’s C++
@@ -66,7 +65,7 @@ down the match, for example to match all classes that are derived from
 “<code class="docutils literal notranslate"><span class="pre">Bar</span></code>”: <code class="docutils literal notranslate"><span class="pre">recordDecl(hasName(&quot;Foo&quot;),</span> <span class="pre">isDerivedFrom(&quot;Bar&quot;))</span></code>.</p>
 </section>
 <section id="how-to-create-a-matcher">
-<h2>How to create a matcher<a class="headerlink" href="#how-to-create-a-matcher" title="Permalink to this headline">¶</a></h2>
+<h2>How to create a matcher<a class="headerlink" href="#how-to-create-a-matcher" title="Link to this heading">¶</a></h2>
 <p>With more than a thousand classes in the Clang AST, one can quickly get lost
 when trying to figure out how to create a matcher for a specific pattern.  This
 section will teach you how to use a rigorous step-by-step pattern to build the
@@ -89,7 +88,7 @@ attributes on the node.</p></li>
 </ol>
 </section>
 <section id="binding-nodes-in-match-expressions">
-<span id="astmatchers-bind"></span><h2>Binding nodes in match expressions<a class="headerlink" href="#binding-nodes-in-match-expressions" title="Permalink to this headline">¶</a></h2>
+<span id="astmatchers-bind"></span><h2>Binding nodes in match expressions<a class="headerlink" href="#binding-nodes-in-match-expressions" title="Link to this heading">¶</a></h2>
 <p>Matcher expressions allow you to specify which parts of the AST are interesting
 for a certain task.  Often you will want to then do something with the nodes
 that were matched, like building source code transformations.</p>
@@ -99,11 +98,11 @@ bind the matched <code class="docutils literal notranslate"><span class="pre">re
 retrieved in the <a class="reference external" href="https://clang.llvm.org/doxygen/classclang_1_1ast__matchers_1_1MatchFinder_1_1MatchCallback.html">match callback</a>.</p>
 </section>
 <section id="writing-your-own-matchers">
-<h2>Writing your own matchers<a class="headerlink" href="#writing-your-own-matchers" title="Permalink to this headline">¶</a></h2>
+<h2>Writing your own matchers<a class="headerlink" href="#writing-your-own-matchers" title="Link to this heading">¶</a></h2>
 <p>There are multiple different ways to define a matcher, depending on its type
 and flexibility.</p>
 <section id="variadicdyncastallofmatcher-base-derived">
-<h3><code class="docutils literal notranslate"><span class="pre">VariadicDynCastAllOfMatcher&lt;Base,</span> <span class="pre">Derived&gt;</span></code><a class="headerlink" href="#variadicdyncastallofmatcher-base-derived" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">VariadicDynCastAllOfMatcher&lt;Base,</span> <span class="pre">Derived&gt;</span></code><a class="headerlink" href="#variadicdyncastallofmatcher-base-derived" title="Link to this heading">¶</a></h3>
 <p>Those match all nodes of type <em>Base</em> if they can be dynamically casted to
 <em>Derived</em>.  The names of those matchers are nouns, which closely resemble
 <em>Derived</em>.  <code class="docutils literal notranslate"><span class="pre">VariadicDynCastAllOfMatchers</span></code> are the backbone of the matcher
@@ -115,7 +114,7 @@ template functions in C++03.  They take an arbitrary number of
 <code class="docutils literal notranslate"><span class="pre">Matcher&lt;Derived&gt;</span></code> and return a <code class="docutils literal notranslate"><span class="pre">Matcher&lt;Base&gt;</span></code>.</p>
 </section>
 <section id="ast-matcher-p-type-name-paramtype-param">
-<h3><code class="docutils literal notranslate"><span class="pre">AST_MATCHER_P(Type,</span> <span class="pre">Name,</span> <span class="pre">ParamType,</span> <span class="pre">Param)</span></code><a class="headerlink" href="#ast-matcher-p-type-name-paramtype-param" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">AST_MATCHER_P(Type,</span> <span class="pre">Name,</span> <span class="pre">ParamType,</span> <span class="pre">Param)</span></code><a class="headerlink" href="#ast-matcher-p-type-name-paramtype-param" title="Link to this heading">¶</a></h3>
 <p>Most matcher definitions use the matcher creation macros.  Those define both
 the matcher of type <code class="docutils literal notranslate"><span class="pre">Matcher&lt;Type&gt;</span></code> itself, and a matcher-creation function
 named <em>Name</em> that takes a parameter of type <em>ParamType</em> and returns the
@@ -124,7 +123,7 @@ corresponding matcher.</p>
 values and different parameter counts.  See <a class="reference external" href="https://clang.llvm.org/doxygen/ASTMatchersMacros_8h.html">ASTMatchersMacros.h</a>.</p>
 </section>
 <section id="matcher-creation-functions">
-<span id="astmatchers-writing"></span><h3>Matcher creation functions<a class="headerlink" href="#matcher-creation-functions" title="Permalink to this headline">¶</a></h3>
+<span id="astmatchers-writing"></span><h3>Matcher creation functions<a class="headerlink" href="#matcher-creation-functions" title="Link to this heading">¶</a></h3>
 <p>Matchers are generated by nesting calls to matcher creation functions.  Most of
 the time those functions are either created by using
 <code class="docutils literal notranslate"><span class="pre">VariadicDynCastAllOfMatcher</span></code> or the matcher creation macros (see below).
@@ -149,8 +148,8 @@ combination of other matchers, as is for example the case with <a class="referen
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

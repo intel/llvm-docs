@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Implementation Design for Device Configuration File &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Propagation of optimization levels used by front-end compiler to backend" href="PropagateCompilerFlagsToRuntime.html" />
+    <link rel="prev" title="Implementation design for sycl::any_device_has and sycl::all_devices_have" href="DeviceAspectTraitDesign.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Implementation Design for Device Configuration File</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="DeviceAspectTraitDesign.html">Implementation design for <code class="docutils literal notranslate"><span class="pre">sycl::any_device_has</span></code> and <code class="docutils literal notranslate"><span class="pre">sycl::all_devices_have</span></code></a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PropagateCompilerFlagsToRuntime.html">Propagation of optimization levels used by front-end compiler to backend</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="implementation-design-for-device-configuration-file">
+<h1>Implementation Design for Device Configuration File<a class="headerlink" href="#implementation-design-for-device-configuration-file" title="Link to this heading">¶</a></h1>
+<p>This design document describes the implementation of the DPC++ Device
+Configuration File.</p>
+<p>In summary, there several scenarios where we need to know information about a
+target at compile-time, which is the main purpose of this Device Configuration
+File. Examples are <code class="docutils literal notranslate"><span class="pre">any_device_has/all_devices_have</span></code> which defines macros
+depending on the optional features supported by a target; or conditional AOT
+compilation based on optional features used in kernels and supported by targets.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>We need a default Device Configuration File embedded in the compiler describing
+the well known targets at the time of building the compiler.  This embedded
+knowledge must be extendable, since our AOT toolchain allows compiling for
+targets not known at the time of building the compiler so long as the
+appropriate toolchain –AOT compiler and driver– support such targets. In
+other words, we need to provide a way for users to add entries for new targets or
+update existing targets at application compile time.</p>
+<p>An entry of the Device Configuration File should include:</p>
+<ul class="simple">
+<li><p>Name of the target. Target names should be spelled exactly as expected in
+<code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>, since these are going to be used to implement validation of
+supported targets.</p></li>
+<li><p>List of supported aspects.</p></li>
+<li><p>List of supported sub-group sizes.</p></li>
+<li><p>[Optional] <code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> name/identifier describing the toolchain used to compile
+for this target. This information is optional because we plan to implement an
+auto-detection mechanism that is able to infer the <code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> from the
+target name for well known targets.</p></li>
+<li><p>[Optional] <code class="docutils literal notranslate"><span class="pre">aot-toolchain-%option_name</span></code> information to be passed to the
+<code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> command. This information is optional. For some targets, the
+auto-detection mechanism might be able to infer values for this. One example of this
+information would be <code class="docutils literal notranslate"><span class="pre">ocloc-device</span> <span class="pre">%device_id</span></code>.</p></li>
+</ul>
+<p>The information provided in the Device Configuration File is required from
+different tools and compiler modules:</p>
+<ul class="simple">
+<li><p>Compiler driver:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">any_device_has/all_devices_have</span></code> requires compiler driver to read the
+config file and define corresponding macros.
+[<a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/design/DeviceAspectTraitDesign.md">DeviceAspectTraitDesign</a>]</p></li>
+<li><p>Compiler driver requires <code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> and <code class="docutils literal notranslate"><span class="pre">ocloc-device</span></code> to trigger the
+compilation for the required targets.
+[https://github.com/intel/llvm/pull/6775/files]</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sycl-aspect-filter</span></code>:
+https://github.com/intel/llvm/blob/sycl/sycl/doc/design/OptionalDeviceFeatures.md#aspect-filter-tool</p></li>
+</ul>
+<p>Finally, overhead should be minimal. Particularly, users should not pay for what
+they do not use. This motivates our decision to embed the default Device
+Configuration File rather than releasing it as a separate file.</p>
+</section>
+<section id="high-level-design">
+<h2>High-Level Design<a class="headerlink" href="#high-level-design" title="Link to this heading">¶</a></h2>
+<p>The default Device Configuration File is a <code class="docutils literal notranslate"><span class="pre">.td</span></code> file located in the compiler
+source code. <code class="docutils literal notranslate"><span class="pre">.td</span></code> is the file extension for <a class="reference external" href="https://llvm.org/docs/TableGen/">LLVM
+TableGen</a>. This default file will include all
+the devices known by the developers at the time of the release. During the
+build process, using a custom TableGen backend, we generate a <code class="docutils literal notranslate"><span class="pre">.inc</span></code> C++ file
+containing a <code class="docutils literal notranslate"><span class="pre">std::map</span></code> with one key/value element for each entry in the <code class="docutils literal notranslate"><span class="pre">.td</span></code>
+file. Using a map we can later update or add new elements if the user provides
+new targets at application compile time. Finally, the tools and compiler
+modules that need information about the targets can simply query the map to get
+it.</p>
+<p>Further information about TableGen can be found in <a class="reference external" href="https://releases.llvm.org/1.9/docs/TableGenFundamentals.html">TableGenFundamentals</a>.</p>
+<section id="new-tablegen-backend">
+<h3>New <code class="docutils literal notranslate"><span class="pre">TableGen</span></code> backend<a class="headerlink" href="#new-tablegen-backend" title="Link to this heading">¶</a></h3>
+<p>Note: This <a class="reference external" href="https://llvm.org/docs/TableGen/BackGuide.html">guide</a> details how
+to implement new TableGen backends. Also, the <a class="reference external" href="https://llvm.org/docs/TableGen/BackEnds.html#search-indexes">Search
+Indexes</a> backend
+already does something very similar to what we seek. It generates a table that
+provides a lookup function, but it cannot be extended with new entries. We can
+use <em>Search Indexes</em> backend as inspiration for ours.</p>
+<p>Our backend should generate a map where the key is the target name and the value
+is an object of a custom class/struct including all the information required.</p>
+<p>Firstly, we need to provide a file describing the <code class="docutils literal notranslate"><span class="pre">DynamicTable</span></code> class. An
+example for this is <code class="docutils literal notranslate"><span class="pre">SearchableTable.td</span></code>, which describes <code class="docutils literal notranslate"><span class="pre">GenericEnum</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">GenericTable</span></code> classes for <code class="docutils literal notranslate"><span class="pre">gen-searchable-tables</span></code> backend. File
+<code class="docutils literal notranslate"><span class="pre">llvm/include/llvm/TableGen/DynamicTable.td</span></code> should look like the one below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//===-</span> <span class="n">DynamicTable</span><span class="o">.</span><span class="n">td</span> <span class="o">----------------------------------*-</span> <span class="n">tablegen</span> <span class="o">-*-===//</span>
+<span class="o">//</span>
+<span class="o">//</span> <span class="n">Part</span> <span class="n">of</span> <span class="n">the</span> <span class="n">LLVM</span> <span class="n">Project</span><span class="p">,</span> <span class="n">under</span> <span class="n">the</span> <span class="n">Apache</span> <span class="n">License</span> <span class="n">v2</span><span class="mf">.0</span> <span class="k">with</span> <span class="n">LLVM</span> <span class="n">Exceptions</span><span class="o">.</span>
+<span class="o">//</span> <span class="n">See</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">llvm</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">LICENSE</span><span class="o">.</span><span class="n">txt</span> <span class="k">for</span> <span class="n">license</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">//</span> <span class="n">SPDX</span><span class="o">-</span><span class="n">License</span><span class="o">-</span><span class="n">Identifier</span><span class="p">:</span> <span class="n">Apache</span><span class="o">-</span><span class="mf">2.0</span> <span class="n">WITH</span> <span class="n">LLVM</span><span class="o">-</span><span class="n">exception</span>
+<span class="o">//</span>
+<span class="o">//===----------------------------------------------------------------------===//</span>
+<span class="o">//</span>
+<span class="o">//</span> <span class="n">This</span> <span class="n">file</span> <span class="n">defines</span> <span class="n">the</span> <span class="n">key</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">classes</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">produce</span> <span class="n">a</span> <span class="n">reasonably</span>
+<span class="o">//</span> <span class="n">generic</span> <span class="n">dynamic</span> <span class="n">table</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">updated</span> <span class="ow">in</span> <span class="n">runtime</span><span class="o">.</span> <span class="n">DynamicTable</span> <span class="n">objects</span>
+<span class="o">//</span> <span class="n">can</span> <span class="n">be</span> <span class="n">defined</span> <span class="n">using</span> <span class="n">the</span> <span class="k">class</span> <span class="nc">in</span> <span class="n">this</span> <span class="n">file</span><span class="p">:</span>
+<span class="o">//</span> <span class="mf">1.</span> <span class="p">(</span><span class="n">Dynamic</span><span class="p">)</span> <span class="n">Tables</span><span class="o">.</span> <span class="n">By</span> <span class="n">instantiating</span> <span class="n">the</span> <span class="n">DynamicTable</span>
+<span class="o">//</span> <span class="k">class</span> <span class="nc">once</span><span class="p">,</span> <span class="n">a</span> <span class="n">table</span> <span class="k">with</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">instantiating</span> <span class="k">def</span> <span class="nf">is</span> <span class="n">generated</span> <span class="ow">and</span>
+<span class="o">//</span> <span class="n">guarded</span> <span class="n">by</span> <span class="n">the</span> <span class="n">GET_name_IMPL</span> <span class="n">preprocessor</span> <span class="n">guard</span><span class="o">.</span>
+<span class="o">//</span>
+<span class="o">//===----------------------------------------------------------------------===//</span>
+<span class="o">//</span> <span class="n">Define</span> <span class="n">a</span> <span class="n">record</span> <span class="n">derived</span> <span class="kn">from</span> <span class="nn">this</span> <span class="k">class</span> <span class="nc">to</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">dynamic</span> <span class="n">table</span><span class="o">.</span> <span class="n">This</span>
+<span class="o">//</span> <span class="n">table</span> <span class="n">resembles</span> <span class="n">a</span> <span class="n">hashtable</span> <span class="k">with</span> <span class="n">a</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span> <span class="n">pair</span><span class="p">,</span> <span class="ow">and</span> <span class="n">can</span> <span class="n">updated</span> <span class="ow">in</span> <span class="n">runtime</span><span class="o">.</span>
+<span class="o">//</span>
+<span class="o">//</span> <span class="n">The</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">record</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="k">global</span> <span class="n">primary</span> <span class="n">array</span> <span class="n">of</span>
+<span class="o">//</span> <span class="n">entries</span> <span class="n">of</span> <span class="n">the</span> <span class="n">table</span> <span class="ow">in</span> <span class="n">C</span><span class="o">++.</span>
+<span class="k">class</span> <span class="nc">DynamicTable</span> <span class="p">{</span>
+  <span class="o">//</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">a</span> <span class="n">class</span><span class="o">.</span> <span class="n">The</span> <span class="n">table</span> <span class="n">will</span> <span class="n">have</span> <span class="n">one</span> <span class="n">entry</span> <span class="k">for</span> <span class="n">each</span> <span class="n">record</span> <span class="n">that</span>
+  <span class="o">//</span> <span class="n">derives</span> <span class="kn">from</span> <span class="nn">that</span> <span class="n">class</span><span class="o">.</span>
+  <span class="n">string</span> <span class="n">FilterClass</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">C</span><span class="o">++</span> <span class="n">struct</span><span class="o">/</span><span class="k">class</span> <span class="nc">type</span> <span class="n">that</span> <span class="n">holds</span> <span class="n">table</span> <span class="n">entries</span><span class="o">.</span> <span class="n">The</span>
+  <span class="o">//</span> <span class="n">declaration</span> <span class="n">of</span> <span class="n">this</span> <span class="nb">type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">generated</span> <span class="n">automatically</span><span class="o">.</span>
+  <span class="n">string</span> <span class="n">CppTypeName</span> <span class="o">=</span> <span class="n">FilterClass</span><span class="p">;</span>
+
+  <span class="o">//</span> <span class="n">List</span> <span class="n">of</span> <span class="n">the</span> <span class="n">names</span> <span class="n">of</span> <span class="n">fields</span> <span class="n">of</span> <span class="n">collected</span> <span class="n">records</span> <span class="n">that</span> <span class="n">contain</span> <span class="n">the</span> <span class="n">data</span> <span class="k">for</span>
+  <span class="o">//</span> <span class="n">table</span> <span class="n">entries</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">order</span> <span class="n">that</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">initialization</span> <span class="ow">in</span> <span class="n">C</span><span class="o">++.</span>
+  <span class="o">//</span>
+  <span class="o">//</span> <span class="n">TableGen</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">know</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">fields</span> <span class="n">so</span> <span class="n">that</span> <span class="n">it</span> <span class="n">can</span> <span class="nb">format</span>
+  <span class="o">//</span> <span class="n">the</span> <span class="n">initializers</span> <span class="n">correctly</span><span class="o">.</span>
+  <span class="o">//</span>
+  <span class="o">//</span> <span class="n">For</span> <span class="n">each</span> <span class="n">field</span> <span class="n">of</span> <span class="n">the</span> <span class="n">table</span> <span class="n">named</span> <span class="n">xxx</span><span class="p">,</span> <span class="n">TableGen</span> <span class="n">will</span> <span class="n">look</span> <span class="k">for</span> <span class="n">a</span> <span class="n">field</span>
+  <span class="o">//</span> <span class="n">named</span> <span class="n">TypeOf_xxx</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">that</span> <span class="k">as</span> <span class="n">a</span> <span class="n">more</span> <span class="n">detailed</span> <span class="n">description</span> <span class="n">of</span> <span class="n">the</span>
+  <span class="o">//</span> <span class="nb">type</span> <span class="n">of</span> <span class="n">the</span> <span class="n">field</span><span class="o">.</span>
+
+  <span class="o">//</span>   <span class="k">class</span> <span class="nc">MyTableEntry</span> <span class="p">{</span>
+  <span class="o">//</span>     <span class="n">MyEnum</span> <span class="n">V</span><span class="p">;</span>
+  <span class="o">//</span>     <span class="o">...</span>
+  <span class="o">//</span>   <span class="p">}</span>
+  <span class="o">//</span>
+  <span class="o">//</span>   <span class="k">def</span> <span class="nf">MyTable</span> <span class="p">:</span> <span class="n">DynamicTable</span> <span class="p">{</span>
+  <span class="o">//</span>     <span class="n">let</span> <span class="n">FilterClass</span> <span class="o">=</span> <span class="s2">&quot;MyTableEntry&quot;</span><span class="p">;</span>
+  <span class="o">//</span>     <span class="n">let</span> <span class="n">Fields</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">];</span>
+  <span class="o">//</span>     <span class="n">string</span> <span class="n">TypeOf_V</span> <span class="o">=</span> <span class="s2">&quot;list&lt;int&gt;&quot;</span><span class="p">;</span>
+  <span class="o">//</span>   <span class="p">}</span>
+  <span class="nb">list</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">Fields</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This file should be included –either directly or indirectly– in any other
+<code class="docutils literal notranslate"><span class="pre">.td</span></code> file that uses <code class="docutils literal notranslate"><span class="pre">DynamicTable</span></code> class.</p>
+<p>The default device configuration <code class="docutils literal notranslate"><span class="pre">.td</span></code> file should look like the one below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">include</span> <span class="s2">&quot;llvm/TableGen/DynamicTable.td&quot;</span>
+
+<span class="o">//</span> <span class="n">Aspect</span> <span class="ow">and</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">aspects</span> <span class="n">definitions</span> <span class="n">could</span> <span class="n">be</span> <span class="n">outlined</span>
+<span class="o">//</span> <span class="n">to</span> <span class="n">another</span> <span class="o">.</span><span class="n">td</span> <span class="n">file</span> <span class="n">that</span> <span class="n">could</span> <span class="n">be</span> <span class="n">included</span> <span class="n">into</span> <span class="n">this</span> <span class="n">file</span>
+<span class="k">class</span> <span class="nc">Aspect</span><span class="o">&lt;</span><span class="n">string</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="n">string</span> <span class="n">Name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">AspectCpu</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;cpu&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectGpu</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;gpu&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectAccelerator</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;accelerator&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectCustom</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;custom&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectFp16</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;fp16&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectFp64</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;fp64&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectImage</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;image&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectOnline_compiler</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;online_compiler&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectOnline_linker</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;online_linker&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectQueue_profiling</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;queue_profiling&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectUsm_device_allocations</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;usm_device_allocations&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectUsm_host_allocations</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;usm_host_allocations&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectUsm_shared_allocations</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;usm_shared_allocations&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectUsm_system_allocations</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;usm_system_allocations&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_pci_address</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_pci_address&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_gpu_eu_count</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_gpu_eu_count&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_gpu_eu_simd_width</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_gpu_eu_simd_width&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_gpu_slices</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_gpu_slices&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_gpu_subslices_per_slice</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_gpu_subslices_per_slice&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_gpu_eu_count_per_subslice</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_gpu_eu_count_per_subslice&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_max_mem_bandwidth</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_max_mem_bandwidth&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_mem_channel</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_mem_channel&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectUsm_atomic_host_allocations</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;usm_atomic_host_allocations&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectUsm_atomic_shared_allocations</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;usm_atomic_shared_allocations&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectAtomic64</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;atomic64&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_device_info_uuid</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_device_info_uuid&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_oneapi_srgb</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_oneapi_srgb&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_oneapi_native_assert</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_oneapi_native_assert&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectHost_debuggable</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;host_debuggable&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_gpu_hw_threads_per_eu</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_gpu_hw_threads_per_eu&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_oneapi_cuda_async_barrier</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_oneapi_cuda_async_barrier&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_free_memory</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_free_memory&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_device_id</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_device_id&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_memory_clock_rate</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_memory_clock_rate&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_intel_memory_bus_width</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_intel_memory_bus_width&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectExt_oneapi_cuda_cluster_group</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;ext_oneapi_cuda_cluster_group&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="nf">AspectEmulated</span> <span class="p">:</span> <span class="n">Aspect</span><span class="o">&lt;</span><span class="s2">&quot;emulated&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+    
+<span class="k">def</span> <span class="nf">TargetTable</span> <span class="p">:</span> <span class="n">DynamicTable</span> <span class="p">{</span> 
+    <span class="n">let</span> <span class="n">FilterClass</span> <span class="o">=</span> <span class="s2">&quot;TargetInfo&quot;</span><span class="p">;</span>
+    <span class="n">let</span> <span class="n">Fields</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TargetName&quot;</span><span class="p">,</span> <span class="s2">&quot;aspects&quot;</span><span class="p">,</span> <span class="s2">&quot;maySupportOtherAspects&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;subGroupSizes&quot;</span><span class="p">,</span> <span class="s2">&quot;aotToolchain&quot;</span><span class="p">,</span> <span class="s2">&quot;aotToolchainOptions&quot;</span><span class="p">];</span>
+    <span class="n">string</span> <span class="n">TypeOf_aspects</span> <span class="o">=</span> <span class="s2">&quot;list&lt;Aspect&gt;&quot;</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">TypeOf_subGroupSizes</span> <span class="o">=</span> <span class="s2">&quot;list&lt;int&gt;&quot;</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">TargetInfo</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">tgtName</span><span class="p">,</span> <span class="nb">list</span><span class="o">&lt;</span><span class="n">Aspect</span><span class="o">&gt;</span> <span class="n">aspectList</span><span class="p">,</span> <span class="n">bit</span> <span class="n">otherAspects</span><span class="p">,</span>
+                  <span class="nb">list</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">listSubGroupSizes</span><span class="p">,</span> <span class="n">string</span> <span class="n">toolchain</span><span class="p">,</span> <span class="n">string</span> <span class="n">options</span><span class="o">&gt;</span>
+<span class="p">{</span>
+    <span class="nb">list</span><span class="o">&lt;</span><span class="n">Aspect</span><span class="o">&gt;</span> <span class="n">aspects</span> <span class="o">=</span> <span class="n">aspectList</span><span class="p">;</span>
+    <span class="n">bits</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span> <span class="n">maySupportOtherAspects</span> <span class="o">=</span> <span class="n">otherAspects</span><span class="p">;</span>
+    <span class="nb">list</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">subGroupSizes</span> <span class="o">=</span> <span class="n">listSubGroupSizes</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">aotToolchain</span> <span class="o">=</span> <span class="n">toolchain</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">aotToolchainOptions</span> <span class="o">=</span> <span class="n">options</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="p">:</span> <span class="n">TargetInfo</span><span class="o">&lt;</span><span class="s2">&quot;TargetA&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">AspectCpu</span><span class="p">,</span> <span class="n">AspectAtomic64</span><span class="p">],</span> 
+                                  <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="s2">&quot;ocloc&quot;</span><span class="p">,</span> <span class="s2">&quot;-device tgtA&quot;</span><span class="o">&gt;</span><span class="p">;</span> 
+<span class="k">def</span> <span class="p">:</span> <span class="n">TargetInfo</span><span class="o">&lt;</span><span class="s2">&quot;TargetB&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">AspectGpu</span><span class="p">,</span> <span class="n">AspectFp16</span><span class="p">],</span>
+                                  <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="s2">&quot;ocloc&quot;</span><span class="p">,</span> <span class="s2">&quot;-device tgtB&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">def</span> <span class="p">:</span> <span class="n">TargetInfo</span><span class="o">&lt;</span><span class="s2">&quot;TargetC&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">AspectEmulated</span><span class="p">,</span> <span class="n">AspectImage</span><span class="p">],</span>
+                                   <span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">32</span><span class="p">],</span> <span class="s2">&quot;ocloc&quot;</span><span class="p">,</span> <span class="s2">&quot;-device tgtC, -option2 val&quot;</span><span class="o">&gt;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Note: backends tested don’t allow lists within <code class="docutils literal notranslate"><span class="pre">TargetInfo</span></code> class. This is a
+backend limitation, rather than a TableGen limitation. Thus, we should be able
+to lift this limitation in our own backend, as shown in the initial prototype
+implemented to drive the design.</p>
+<p>The generated <code class="docutils literal notranslate"><span class="pre">.inc</span></code> file should look like the example below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">TargetInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">TargetTable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;TargetA&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">{{</span><span class="s">&quot;cpu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;atomic64&quot;</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;ocloc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-device tgtA&quot;</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;TargetB&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">{{</span><span class="s">&quot;gpu&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;fp16&quot;</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;ocloc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-device tgtB&quot;</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;TargetC&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">{{</span><span class="s">&quot;emulated&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;image&quot;</span><span class="p">},</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;ocloc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;-device tgtC, -option2 val&quot;</span><span class="p">}}};</span>
+</pre></div>
+</div>
+<p>We also need a header file that includes the <code class="docutils literal notranslate"><span class="pre">.inc</span></code> file generated by the
+TableGen backend. Other backends don’t generate the definition of <code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">TargetInfo</span></code>, and this seems a good idea to me: it simplifies the backend
+implementation, and it is easier for developers to check the data structure
+to understand how to work with it. The idea is simply to define the struct
+in this header file. This header file should look like the code below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">DeviceConfigFile</span><span class="w"> </span><span class="p">{</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">TargetInfo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">maySupportOtherAspects</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">aspects</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="o">&gt;</span><span class="w"> </span><span class="n">subGroupSizes</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">aotToolchain</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">aotToolchainOptions</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;device_config_file.inc&quot;</span>
+<span class="k">using</span><span class="w"> </span><span class="n">TargetTable_t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">TargetInfo</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="p">};</span><span class="w"> </span><span class="c1">// namespace DeviceConfigFile</span>
+</pre></div>
+</div>
+<p>Other modules can query the map to get the information like in the example
+below:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">DeviceConfigFile</span><span class="o">::</span><span class="n">TargetInfo</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeviceConfigFile</span><span class="o">::</span><span class="n">targets</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;TargetA&quot;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">info</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DeviceConfigFile</span><span class="o">::</span><span class="n">targets</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="cm">/* Target not found */</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">aspects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">aspects</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">maySupportOtherAspects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">maySupportOtherAspects</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">subGroupSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">info</span><span class="p">.</span><span class="n">subGroupSizes</span><span class="p">;</span>
+<span class="w">  </span><span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="tools-and-modules-interacting-with-device-config-file">
+<h2>Tools and Modules Interacting with Device Config File<a class="headerlink" href="#tools-and-modules-interacting-with-device-config-file" title="Link to this heading">¶</a></h2>
+<p>This is a list of the tools and compiler modules that require using the file:</p>
+<ul class="simple">
+<li><p>The <em>compiler driver</em> needs the file to determine the set of legal values for
+<code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code>.</p></li>
+<li><p>The <em>compiler driver</em> needs the file to define macros for <code class="docutils literal notranslate"><span class="pre">any_device_has/all_devices_have</span></code>.</p></li>
+<li><p><em>Clang</em> needs the file to emit diagnostics related to <code class="docutils literal notranslate"><span class="pre">-fsycl-fixed-targets.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> needs the file to filter kernels in device images when doing AOT
+compilation.</p></li>
+</ul>
+<p>Following, you can find the changes required in different parts of the project
+in more detail.</p>
+<section id="changes-to-build-infrastructure">
+<h3>Changes to Build Infrastructure<a class="headerlink" href="#changes-to-build-infrastructure" title="Link to this heading">¶</a></h3>
+<p>We need the information about the targets in multiple tools and compiler
+modules listed in <a class="reference internal" href="#requirements">Requirements</a>.  Thus, we need to make sure
+that the generation of the <code class="docutils literal notranslate"><span class="pre">.inc</span></code> file out of the <code class="docutils literal notranslate"><span class="pre">.td</span></code> file is done in time
+for all the consumers. The command we need to run for TableGen is <code class="docutils literal notranslate"><span class="pre">llvm-tblgen</span> <span class="pre">-gen-dynamic-tables</span> <span class="pre">-I</span> <span class="pre">/llvm-root/llvm/include/</span> <span class="pre">input.td</span> <span class="pre">-o</span> <span class="pre">output.inc</span></code>.
+Additionally, we need to set dependencies adequately so that this command is
+run before any of the consumers need it.</p>
+</section>
+<section id="changes-to-the-dpc-frontend">
+<h3>Changes to the DPC++ Frontend<a class="headerlink" href="#changes-to-the-dpc-frontend" title="Link to this heading">¶</a></h3>
+<p>To allow users to add new targets we provide a new flag:
+<code class="docutils literal notranslate"><span class="pre">fsycl-device-config-file=/path/to/file.yaml</span></code>. Users can pass a <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file
+describing the targets to be added/updated. An example of how such <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file
+should look like is shown below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intel_gpu_skl</span><span class="p">:</span>
+    <span class="n">aspects</span><span class="p">:</span> <span class="p">[</span><span class="n">aspect_name1</span><span class="p">,</span> <span class="n">aspect_name2</span><span class="p">]</span>
+    <span class="n">may_support_other_aspects</span><span class="p">:</span> <span class="n">true</span><span class="o">/</span><span class="n">false</span>
+    <span class="n">sub</span><span class="o">-</span><span class="n">group</span><span class="o">-</span><span class="n">sizes</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+    <span class="n">aot</span><span class="o">-</span><span class="n">toolchain</span><span class="p">:</span> <span class="n">ocloc</span>
+    <span class="n">aot</span><span class="o">-</span><span class="n">toolchain</span><span class="o">-</span><span class="n">options</span><span class="p">:</span> <span class="o">-</span><span class="n">device</span> <span class="n">skl</span>
+</pre></div>
+</div>
+<p>The frontend module should parse the user-provided <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file and update the
+map with the new information about targets. LLVM provides
+<a class="reference external" href="https://llvm.org/docs/YamlIO.html">YAML/IO</a> library to easily parse <code class="docutils literal notranslate"><span class="pre">.yaml</span></code>
+files. The driver should propagate this option to all the tools that require
+the Device Configuration File (e.g. <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code>) so that each of the
+tools can modify the map according to the user extensions described in the
+<code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file.</p>
+<p>As mentioned in <a class="reference internal" href="#requirements">Requirements</a>, there is an auto-detection
+mechanism for <code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> and <code class="docutils literal notranslate"><span class="pre">aot-toolchain-options</span></code> that is able to
+infer these from the target name. In the <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> example shown above the target
+name is <code class="docutils literal notranslate"><span class="pre">intel_gpu_skl</span></code>. From that name, we can infer that <code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> is
+<code class="docutils literal notranslate"><span class="pre">ocloc</span></code> because the name starts with <code class="docutils literal notranslate"><span class="pre">intel_gpu</span></code>. Also, we can infer that it needs
+<code class="docutils literal notranslate"><span class="pre">aot-toolchain-options</span></code> set to <code class="docutils literal notranslate"><span class="pre">-device</span> <span class="pre">skl</span></code> just by keeping what is left after the
+prefix <code class="docutils literal notranslate"><span class="pre">intel_gpu</span></code>.</p>
+<section id="potential-issues-limitations">
+<h4>Potential Issues/Limitations<a class="headerlink" href="#potential-issues-limitations" title="Link to this heading">¶</a></h4>
+<ul class="simple">
+<li><p>Multiple targets with the same name: On the one hand, the compiler emits a
+warning so that the user is aware that multiple targets share the same name. On
+the other hand, it simply processes each new entry and updates the map with the
+latest information found.</p></li>
+</ul>
+<p>The auto-detection mechanism is a best effort to relieve users from specifying
+<code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> and <code class="docutils literal notranslate"><span class="pre">aot-toolchain-options</span></code> from well known devices. However,
+it has its own limitations and potential issues:</p>
+<ul class="simple">
+<li><p>Rules for target names: As of now, auto-detection is only available for Intel GPU
+targets. All targets starting with <code class="docutils literal notranslate"><span class="pre">intel_gpu_</span></code> will automatically set
+<code class="docutils literal notranslate"><span class="pre">aot-toolchain=ocloc</span></code> and <code class="docutils literal notranslate"><span class="pre">aot-toolchain-options=-device</span> <span class="pre">suffix</span></code> being suffix the part
+left after <code class="docutils literal notranslate"><span class="pre">intel_gpu_</span></code> prefix.</p></li>
+<li><p>User specifies <code class="docutils literal notranslate"><span class="pre">aot-toolchain</span></code> and <code class="docutils literal notranslate"><span class="pre">aot-toolchain-options</span></code> for a target name
+that can be auto-detected: user-specified information has precedence over auto-detected
+information.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
+<p>There is a danger that the device configuration file will get out-of-sync with the
+actual device capabilities. In order to prevent that, we need testing to validate
+that the device config file does not go out-of-sync. There are two tests that we
+should include:</p>
+<ul class="simple">
+<li><p>A test that compares the list of aspects known to SYCL RT (defined in <code class="docutils literal notranslate"><span class="pre">aspects.def</span></code>)
+with the list of aspects defined in the <code class="docutils literal notranslate"><span class="pre">.td</span></code> file describing the default configuration.
+This will be useful to detect new aspects added to SYCL RT that have not been added in
+the <code class="docutils literal notranslate"><span class="pre">.td</span></code> file.</p></li>
+<li><p>A test that compares the aspects listed in the <code class="docutils literal notranslate"><span class="pre">.td</span></code> file with the aspects reported
+via <code class="docutils literal notranslate"><span class="pre">device::has</span></code> for each device listed in the <code class="docutils literal notranslate"><span class="pre">.td</span></code> file. Both lists should match.
+This test could copy the mechanism of the test for <code class="docutils literal notranslate"><span class="pre">any_device_has</span></code> that goes over each
+item in <code class="docutils literal notranslate"><span class="pre">aspects.def</span></code> and tries to instantiate <code class="docutils literal notranslate"><span class="pre">any_device_has</span></code> with that enumerator.</p></li>
+</ul>
+<p>Neither of the tests provides guarantees that nothing went out-of-sync <em>per se</em>, we
+would require running the second test in all the targets described in the <code class="docutils literal notranslate"><span class="pre">.td</span></code> file
+for such guarantees, but at least provides the mechanism to detect potential desyncs.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="DeviceAspectTraitDesign.html">Implementation design for <code class="docutils literal notranslate"><span class="pre">sycl::any_device_has</span></code> and <code class="docutils literal notranslate"><span class="pre">sycl::all_devices_have</span></code></a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="PropagateCompilerFlagsToRuntime.html">Propagation of optimization levels used by front-end compiler to backend</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

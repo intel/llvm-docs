@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MSVC compatibility &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>MSVC compatibility &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="OpenCL Support" href="OpenCLSupport.html" />
+    <link rel="next" title="Misexpect" href="MisExpect.html" />
     <link rel="prev" title="Modules" href="Modules.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>MSVC compatibility</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -29,7 +28,7 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="OpenCLSupport.html">OpenCL Support</a>&#160;&#160;»
+        <a href="MisExpect.html">Misexpect</a>&#160;&#160;»
         </p>
 
       </div>
@@ -41,7 +40,7 @@
   .partial { background-color: #FFFF99 }
   .good { background-color: #CCFF99 }
 </style><section id="msvc-compatibility">
-<h1>MSVC compatibility<a class="headerlink" href="#msvc-compatibility" title="Permalink to this headline">¶</a></h1>
+<h1>MSVC compatibility<a class="headerlink" href="#msvc-compatibility" title="Link to this heading">¶</a></h1>
 <p>When Clang compiles C++ code for Windows, it attempts to be compatible with
 MSVC.  There are multiple dimensions to compatibility.</p>
 <p>First, Clang attempts to be ABI-compatible, meaning that Clang-compiled code
@@ -62,7 +61,7 @@ in progress.</p>
 <p>Finally, there is <a class="reference internal" href="UsersManual.html#clang-cl"><span class="std std-ref">clang-cl</span></a>, a driver program for clang that attempts to
 be compatible with MSVC’s cl.exe.</p>
 <section id="abi-features">
-<h2>ABI features<a class="headerlink" href="#abi-features" title="Permalink to this headline">¶</a></h2>
+<h2>ABI features<a class="headerlink" href="#abi-features" title="Link to this heading">¶</a></h2>
 <p>The status of major ABI-impacting C++ features:</p>
 <ul class="simple">
 <li><p>Record layout: <span class="good">Complete</span>.  We’ve tested this with a fuzzer and have
@@ -120,7 +119,7 @@ extension is non-conforming.</p></li>
 </ul>
 </section>
 <section id="template-instantiation-and-name-lookup">
-<h2>Template instantiation and name lookup<a class="headerlink" href="#template-instantiation-and-name-lookup" title="Permalink to this headline">¶</a></h2>
+<h2>Template instantiation and name lookup<a class="headerlink" href="#template-instantiation-and-name-lookup" title="Link to this heading">¶</a></h2>
 <p>MSVC allows many invalid constructs in class templates that Clang has
 historically rejected.  In order to parse widely distributed headers for
 libraries such as the Active Template Library (ATL) and Windows Runtime Library
@@ -142,11 +141,11 @@ follow the normal lookup rules, but if lookup fails, it will assume that the
 user intended to find the name in a dependent base.  While parsing the
 following program, Clang will recover as if the user had written the
 commented-out code:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="nl">Foo</span> <span class="p">:</span> <span class="n">T</span> <span class="p">{</span>
-  <span class="kt">void</span> <span class="n">f</span><span class="p">()</span> <span class="p">{</span>
-    <span class="cm">/*typename*/</span> <span class="n">T</span><span class="o">::</span><span class="n">UnknownType</span> <span class="n">x</span> <span class="o">=</span>  <span class="cm">/*this-&gt;*/</span><span class="n">unknownMember</span><span class="p">;</span>
-  <span class="p">}</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/*typename*/</span><span class="w"> </span><span class="n">T</span><span class="o">::</span><span class="n">UnknownType</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="cm">/*this-&gt;*/</span><span class="n">unknownMember</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 </pre></div>
 </div>
@@ -155,6 +154,111 @@ a hint suggesting how to fix the problem.</p>
 <p>As of this writing, Clang is able to compile a simple ATL hello world
 application.  There are still issues parsing WRL headers for modern Windows 8
 apps, but they should be addressed soon.</p>
+</section>
+<section id="forceinline-behavior">
+<h2>__forceinline behavior<a class="headerlink" href="#forceinline-behavior" title="Link to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">__forceinline</span></code> behaves like <code class="docutils literal notranslate"><span class="pre">[[clang::always_inline]]</span></code>.
+Inlining is always attempted regardless of optimization level.</p>
+<p>This differs from MSVC where <code class="docutils literal notranslate"><span class="pre">__forceinline</span></code> is only respected once inline expansion is enabled
+which allows any function marked implicitly or explicitly <code class="docutils literal notranslate"><span class="pre">inline</span></code> or <code class="docutils literal notranslate"><span class="pre">__forceinline</span></code> to be expanded.
+Therefore functions marked <code class="docutils literal notranslate"><span class="pre">__forceinline</span></code> will be expanded when the optimization level is <code class="docutils literal notranslate"><span class="pre">/Od</span></code> unlike
+MSVC where <code class="docutils literal notranslate"><span class="pre">__forceinline</span></code> will not be expanded under <code class="docutils literal notranslate"><span class="pre">/Od</span></code>.</p>
+</section>
+<section id="simd-and-instruction-set-intrinsic-behavior">
+<h2>SIMD and instruction set intrinsic behavior<a class="headerlink" href="#simd-and-instruction-set-intrinsic-behavior" title="Link to this heading">¶</a></h2>
+<p>Clang follows the GCC model for intrinsics and not the MSVC model.
+There are currently no plans to support the MSVC model.</p>
+<p>MSVC intrinsics always emit the machine instruction the intrinsic models regardless of the compile time options specified.
+For example <code class="docutils literal notranslate"><span class="pre">__popcnt</span></code> always emits the x86 popcnt instruction even if the compiler does not have the option enabled to emit popcnt on its own volition.</p>
+<p>There are two common cases where code that compiles with MSVC will need reworking to build on clang.
+Assume the examples are only built with <cite>-msse2</cite> so we do not have the intrinsics at compile time.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">PopCnt</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HavePopCnt</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">__popcnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">GenericPopCnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kr">__m128</span><span class="w"> </span><span class="n">dot4_sse3</span><span class="p">(</span><span class="kr">__m128</span><span class="w"> </span><span class="n">v0</span><span class="p">,</span><span class="w"> </span><span class="kr">__m128</span><span class="w"> </span><span class="n">v1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">__m128</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_mul_ps</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_hadd_ps</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">  </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_hadd_ps</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Clang expects that either you have compile time support for the target features, <cite>-msse3</cite> and <cite>-mpopcnt</cite>, you mark the function with the expected target feature or use runtime detection with an indirect call.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">__attribute__</span><span class="p">((</span><span class="n">__target__</span><span class="p">(</span><span class="s">&quot;sse3&quot;</span><span class="p">)))</span><span class="w"> </span><span class="kr">__m128</span><span class="w"> </span><span class="n">dot4_sse3</span><span class="p">(</span><span class="kr">__m128</span><span class="w"> </span><span class="n">v0</span><span class="p">,</span><span class="w"> </span><span class="kr">__m128</span><span class="w"> </span><span class="n">v1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">__m128</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_mul_ps</span><span class="p">(</span><span class="n">v0</span><span class="p">,</span><span class="w"> </span><span class="n">v1</span><span class="p">);</span>
+<span class="w">  </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_hadd_ps</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">  </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_hadd_ps</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The SSE3 dot product can be easily fixed by either building the translation unit with SSE3 support or using <cite>__target__</cite> to compile that specific function with SSE3 support.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">PopCnt</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HavePopCnt</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">__popcnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">GenericPopCnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The above <code class="docutils literal notranslate"><span class="pre">PopCnt</span></code> example must be changed to work with clang. If we mark the function with <cite>__target__(“popcnt”)</cite> then the compiler is free to emit popcnt at will which we do not want. While this isn’t a concern in our small example it is a concern in larger functions with surrounding code around the intrinsics. Similar reasoning for compiling the translation unit with <cite>-mpopcnt</cite>.
+We must split each branch into its own function that can be called indirectly instead of using the intrinsic directly.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">__attribute__</span><span class="p">((</span><span class="n">__target__</span><span class="p">(</span><span class="s">&quot;popcnt&quot;</span><span class="p">)))</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">hwPopCnt</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">__popcnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">PopCnt</span><span class="p">)(</span><span class="kt">unsigned</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HavePopCnt</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">hwPopCnt</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">GenericPopCnt</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">__attribute__</span><span class="p">((</span><span class="n">__target__</span><span class="p">(</span><span class="s">&quot;popcnt&quot;</span><span class="p">)))</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="n">hwPopCnt</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">__popcnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="kt">unsigned</span><span class="w"> </span><span class="n">PopCnt</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HavePopCnt</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hwPopCnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">GenericPopCnt</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the above example <code class="docutils literal notranslate"><span class="pre">hwPopCnt</span></code> will not be inlined into <code class="docutils literal notranslate"><span class="pre">PopCnt</span></code> since <code class="docutils literal notranslate"><span class="pre">PopCnt</span></code> doesn’t have the popcnt target feature.
+With a larger function that does real work the function call overhead is negligible. However in our popcnt example there is the function call
+overhead. There is no analog for this specific MSVC behavior in clang.</p>
+<p>For clang we effectively have to create the dispatch function ourselves to each specfic implementation.</p>
+</section>
+<section id="simd-vector-types">
+<h2>SIMD vector types<a class="headerlink" href="#simd-vector-types" title="Link to this heading">¶</a></h2>
+<p>Clang’s simd vector types are builtin types and not user defined types as in MSVC. This does have some observable behavior changes.
+We will look at the x86 <cite>__m128</cite> type for the examples below but the statements apply to all vector types including ARM’s <cite>float32x4_t</cite>.</p>
+<p>There are no members that can be accessed on the vector types. Vector types are not structs in clang.
+You cannot use <code class="docutils literal notranslate"><span class="pre">__m128.m128_f32[0]</span></code> to access the first element of the <cite>__m128</cite>.
+This also means struct initialization like <code class="docutils literal notranslate"><span class="pre">__m128{</span> <span class="pre">{</span> <span class="pre">0.0f,</span> <span class="pre">0.0f,</span> <span class="pre">0.0f,</span> <span class="pre">0.0f</span> <span class="pre">}</span> <span class="pre">}</span></code> will not compile with clang.</p>
+<p>Since vector types are builtin types, clang implements operators on them natively.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef _MSC_VER</span>
+<span class="kr">__m128</span><span class="w"> </span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="kr">__m128</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kr">__m128</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">_mm_add_ps</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>The above code will fail to compile since overloaded ‘operator+’ must have at least one parameter of class or enumeration type.
+You will need to fix such code to have the check <code class="docutils literal notranslate"><span class="pre">#if</span> <span class="pre">defined(_MSC_VER)</span> <span class="pre">&amp;&amp;</span> <span class="pre">!defined(__clang__)</span></code>.</p>
+<p>Since <cite>__m128</cite> is not a class type in clang any overloads after a template definition will not be considered.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">bar</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">foo</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="kr">__m128</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">bar</span><span class="p">(</span><span class="n">_mm_setzero_ps</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With MSVC <code class="docutils literal notranslate"><span class="pre">foo(__m128)</span></code> will be selected but with clang <code class="docutils literal notranslate"><span class="pre">foo&lt;__m128&gt;()</span></code> will be selected since on clang <cite>__m128</cite> is a builtin type.</p>
+<p>In general the takeaway is <cite>__m128</cite> is a builtin type on clang while a class type on MSVC.</p>
 </section>
 </section>
 
@@ -167,14 +271,14 @@ apps, but they should be addressed soon.</p>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="OpenCLSupport.html">OpenCL Support</a>&#160;&#160;»
+        <a href="MisExpect.html">Misexpect</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

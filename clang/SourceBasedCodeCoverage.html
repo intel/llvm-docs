@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Source-based Code Coverage &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Source-based Code Coverage &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Modules" href="Modules.html" />
+    <link rel="next" title="Standard C++ Modules" href="StandardCPlusPlusModules.html" />
     <link rel="prev" title="ShadowCallStack" href="ShadowCallStack.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Source-based Code Coverage</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -29,7 +28,7 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="Modules.html">Modules</a>&#160;&#160;»
+        <a href="StandardCPlusPlusModules.html">Standard C++ Modules</a>&#160;&#160;»
         </p>
 
       </div>
@@ -37,8 +36,8 @@
         
         
   <section id="source-based-code-coverage">
-<h1>Source-based Code Coverage<a class="headerlink" href="#source-based-code-coverage" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
+<h1>Source-based Code Coverage<a class="headerlink" href="#source-based-code-coverage" title="Link to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p></li>
 <li><p><a class="reference internal" href="#the-code-coverage-workflow" id="id2">The code coverage workflow</a></p></li>
@@ -60,13 +59,14 @@
 <ul>
 <li><p><a class="reference internal" href="#gap-regions" id="id15">Gap regions</a></p></li>
 <li><p><a class="reference internal" href="#branch-regions" id="id16">Branch regions</a></p></li>
-<li><p><a class="reference internal" href="#switch-statements" id="id17">Switch statements</a></p></li>
+<li><p><a class="reference internal" href="#mc-dc-instrumentation" id="id17">MC/DC Instrumentation</a></p></li>
+<li><p><a class="reference internal" href="#switch-statements" id="id18">Switch statements</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <section id="introduction">
-<h2><a class="toc-backref" href="#id1">Introduction</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>This document explains how to use clang’s source-based code coverage feature.
 It’s called “source-based” because it operates on AST and preprocessor
 information directly. This allows it to generate very precise coverage data.</p>
@@ -80,7 +80,7 @@ This is enabled by <code class="docutils literal notranslate"><span class="pre">
 <p>From this point onwards “code coverage” will refer to the source-based kind.</p>
 </section>
 <section id="the-code-coverage-workflow">
-<h2><a class="toc-backref" href="#id2">The code coverage workflow</a><a class="headerlink" href="#the-code-coverage-workflow" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">The code coverage workflow</a><a class="headerlink" href="#the-code-coverage-workflow" title="Link to this heading">¶</a></h2>
 <p>The code coverage workflow consists of three main steps:</p>
 <ul class="simple">
 <li><p>Compiling with coverage enabled.</p></li>
@@ -89,33 +89,37 @@ This is enabled by <code class="docutils literal notranslate"><span class="pre">
 </ul>
 <p>The next few sections work through a complete, copy-‘n-paste friendly example
 based on this program:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span> <span class="o">&gt;</span> <span class="n">foo</span><span class="p">.</span><span class="n">cc</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="w"> </span><span class="n">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="n">EOF</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">foo</span><span class="p">.</span><span class="n">cc</span>
 <span class="cp">#define BAR(x) ((x) || (x))</span>
-<span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">foo</span><span class="p">(</span><span class="n">T</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">I</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">I</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="o">++</span><span class="n">I</span><span class="p">)</span> <span class="p">{</span> <span class="n">BAR</span><span class="p">(</span><span class="n">I</span><span class="p">);</span> <span class="p">}</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">foo</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">I</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">BAR</span><span class="p">(</span><span class="n">I</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 <span class="p">}</span>
-<span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">foo</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-  <span class="n">foo</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">foo</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">foo</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="n">EOF</span>
 </pre></div>
 </div>
 </section>
 <section id="compiling-with-coverage-enabled">
-<h2><a class="toc-backref" href="#id3">Compiling with coverage enabled</a><a class="headerlink" href="#compiling-with-coverage-enabled" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Compiling with coverage enabled</a><a class="headerlink" href="#compiling-with-coverage-enabled" title="Link to this heading">¶</a></h2>
 <p>To compile code with coverage enabled, pass <code class="docutils literal notranslate"><span class="pre">-fprofile-instr-generate</span>
 <span class="pre">-fcoverage-mapping</span></code> to the compiler:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Step <span class="m">1</span>: Compile with coverage enabled.
-<span class="gp">%</span> clang++ -fprofile-instr-generate -fcoverage-mapping foo.cc -o foo
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Step<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>Compile<span class="w"> </span>with<span class="w"> </span>coverage<span class="w"> </span>enabled.
+<span class="gp">% </span>clang++<span class="w"> </span>-fprofile-instr-generate<span class="w"> </span>-fcoverage-mapping<span class="w"> </span>foo.cc<span class="w"> </span>-o<span class="w"> </span>foo
 </pre></div>
 </div>
 <p>Note that linking together code with and without coverage instrumentation is
 supported. Uninstrumented code simply won’t be accounted for in reports.</p>
+<p>To compile code with Modified Condition/Decision Coverage (MC/DC) enabled,
+pass <code class="docutils literal notranslate"><span class="pre">-fcoverage-mcdc</span></code> in addition to the clang options specified above.
+MC/DC is an advanced form of code coverage most applicable in the embedded
+space.</p>
 </section>
 <section id="running-the-instrumented-program">
-<h2><a class="toc-backref" href="#id4">Running the instrumented program</a><a class="headerlink" href="#running-the-instrumented-program" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Running the instrumented program</a><a class="headerlink" href="#running-the-instrumented-program" title="Link to this heading">¶</a></h2>
 <p>The next step is to run the instrumented program. When the program exits it
 will write a <strong>raw profile</strong> to the path specified by the <code class="docutils literal notranslate"><span class="pre">LLVM_PROFILE_FILE</span></code>
 environment variable. If that variable does not exist, the profile is written
@@ -132,9 +136,8 @@ Darwin, this is typically set to a temporary scratch directory.</p></li>
 is specified, the runtime creates a pool of N raw profiles which are used for
 on-line profile merging. The runtime takes care of selecting a raw profile
 from the pool, locking it, and updating it before the program exits.  If N is
-not specified (i.e the pattern is “%m”), it’s assumed that <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">1</span></code>. N must
-be between 1 and 9. The merge pool specifier can only occur once per filename
-pattern.</p></li>
+not specified (i.e the pattern is “%m”), it’s assumed that <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">1</span></code>. The
+merge pool specifier can only occur once per filename pattern.</p></li>
 <li><p>“%c” expands out to nothing, but enables a mode in which profile counter
 updates are continuously synced to a file. This means that if the
 instrumented program crashes, or is killed by a signal, perfect coverage
@@ -144,8 +147,8 @@ Linux may be mostly complete but requires testing, and support for Windows
 may require more extensive changes: please get involved if you are interested
 in porting this feature.</p></li>
 </ul>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Step <span class="m">2</span>: Run the program.
-<span class="gp">%</span> <span class="nv">LLVM_PROFILE_FILE</span><span class="o">=</span><span class="s2">&quot;foo.profraw&quot;</span> ./foo
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Step<span class="w"> </span><span class="m">2</span>:<span class="w"> </span>Run<span class="w"> </span>the<span class="w"> </span>program.
+<span class="gp">% </span><span class="nv">LLVM_PROFILE_FILE</span><span class="o">=</span><span class="s2">&quot;foo.profraw&quot;</span><span class="w"> </span>./foo
 </pre></div>
 </div>
 <p>Note that continuous mode is also used on Fuchsia where it’s the only supported
@@ -168,23 +171,30 @@ plus duplication of counters (i.e. one copy in the binary itself and another
 copy that’s mapped into memory). This implementation can be also enabled for
 other platforms by passing the <code class="docutils literal notranslate"><span class="pre">-runtime-counter-relocation</span></code> option to the
 backend during compilation.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">%</span> clang++ -fprofile-instr-generate -fcoverage-mapping -mllvm -runtime-counter-relocation foo.cc -o foo
+<p>For a program such as the <a class="reference external" href="https://llvm.org/docs/CommandGuide/lit.html">Lit</a>
+testing tool which invokes other programs, it may be necessary to set
+<code class="docutils literal notranslate"><span class="pre">LLVM_PROFILE_FILE</span></code> for each invocation. The pattern strings “%p” or “%Nm”
+may help to avoid corruption due to concurrency. Note that “%p” is also a Lit
+token and needs to be escaped as “%%p”.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">% </span>clang++<span class="w"> </span>-fprofile-instr-generate<span class="w"> </span>-fcoverage-mapping<span class="w"> </span>-mllvm<span class="w"> </span>-runtime-counter-relocation<span class="w"> </span>foo.cc<span class="w"> </span>-o<span class="w"> </span>foo
 </pre></div>
 </div>
 </section>
 <section id="creating-coverage-reports">
-<h2><a class="toc-backref" href="#id5">Creating coverage reports</a><a class="headerlink" href="#creating-coverage-reports" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Creating coverage reports</a><a class="headerlink" href="#creating-coverage-reports" title="Link to this heading">¶</a></h2>
 <p>Raw profiles have to be <strong>indexed</strong> before they can be used to generate
 coverage reports. This is done using the “merge” tool in <code class="docutils literal notranslate"><span class="pre">llvm-profdata</span></code>
 (which can combine multiple raw profiles and index them at the same time):</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Step <span class="m">3</span><span class="o">(</span>a<span class="o">)</span>: Index the raw profile.
-<span class="gp">%</span> llvm-profdata merge -sparse foo.profraw -o foo.profdata
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Step<span class="w"> </span><span class="m">3</span><span class="o">(</span>a<span class="o">)</span>:<span class="w"> </span>Index<span class="w"> </span>the<span class="w"> </span>raw<span class="w"> </span>profile.
+<span class="gp">% </span>llvm-profdata<span class="w"> </span>merge<span class="w"> </span>-sparse<span class="w"> </span>foo.profraw<span class="w"> </span>-o<span class="w"> </span>foo.profdata
 </pre></div>
 </div>
+<p>For an example of merging multiple profiles created by testing,
+see the LLVM <a class="reference external" href="https://github.com/llvm/llvm-zorg/blob/main/zorg/jenkins/jobs/jobs/llvm-coverage">coverage build script</a>.</p>
 <p>There are multiple different ways to render coverage reports. The simplest
 option is to generate a line-oriented report:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Step <span class="m">3</span><span class="o">(</span>b<span class="o">)</span>: Create a line-oriented coverage report.
-<span class="gp">%</span> llvm-cov show ./foo -instr-profile<span class="o">=</span>foo.profdata
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Step<span class="w"> </span><span class="m">3</span><span class="o">(</span>b<span class="o">)</span>:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>line-oriented<span class="w"> </span>coverage<span class="w"> </span>report.
+<span class="gp">% </span>llvm-cov<span class="w"> </span>show<span class="w"> </span>./foo<span class="w"> </span>-instr-profile<span class="o">=</span>foo.profdata
 </pre></div>
 </div>
 <p>This report includes a summary view as well as dedicated sub-views for
@@ -235,10 +245,14 @@ region counts:</p>
 ------------------
 </pre></div>
 </div>
+<p>If the application was instrumented for Modified Condition/Decision Coverage
+(MC/DC) using the clang option <code class="docutils literal notranslate"><span class="pre">-fcoverage-mcdc</span></code>, an MC/DC subview can be
+enabled using <code class="docutils literal notranslate"><span class="pre">--show-mcdc</span></code> that will show detailed MC/DC information for
+each complex condition boolean expression containing at most six conditions.</p>
 <p>To generate a file-level summary of coverage statistics instead of a
 line-oriented report, try:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span> Step <span class="m">3</span><span class="o">(</span>c<span class="o">)</span>: Create a coverage summary.
-<span class="gp">%</span> llvm-cov report ./foo -instr-profile<span class="o">=</span>foo.profdata
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Step<span class="w"> </span><span class="m">3</span><span class="o">(</span>c<span class="o">)</span>:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>coverage<span class="w"> </span>summary.
+<span class="gp">% </span>llvm-cov<span class="w"> </span>report<span class="w"> </span>./foo<span class="w"> </span>-instr-profile<span class="o">=</span>foo.profdata
 <span class="go">Filename           Regions    Missed Regions     Cover   Functions  Missed Functions  Executed       Lines      Missed Lines     Cover     Branches    Missed Branches     Cover</span>
 <span class="go">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
 <span class="go">/tmp/foo.cc             13                 0   100.00%           3                 0   100.00%          13                 0   100.00%           12                  2    83.33%</span>
@@ -261,21 +275,21 @@ out of scope.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">llvm-profdata</span></code> tool can be used to merge together multiple raw or
 indexed profiles. To combine profiling data from multiple runs of a program,
 try e.g:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">%</span> llvm-profdata merge -sparse foo1.profraw foo2.profdata -o foo3.profdata
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">% </span>llvm-profdata<span class="w"> </span>merge<span class="w"> </span>-sparse<span class="w"> </span>foo1.profraw<span class="w"> </span>foo2.profdata<span class="w"> </span>-o<span class="w"> </span>foo3.profdata
 </pre></div>
 </div>
 </li>
 </ul>
 </section>
 <section id="exporting-coverage-data">
-<h2><a class="toc-backref" href="#id6">Exporting coverage data</a><a class="headerlink" href="#exporting-coverage-data" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Exporting coverage data</a><a class="headerlink" href="#exporting-coverage-data" title="Link to this heading">¶</a></h2>
 <p>Coverage data can be exported into JSON using the <code class="docutils literal notranslate"><span class="pre">llvm-cov</span> <span class="pre">export</span></code>
 sub-command. There is a comprehensive reference which defines the structure of
 the exported data at a high level in the llvm-cov source code.</p>
 </section>
 <section id="interpreting-reports">
-<h2><a class="toc-backref" href="#id7">Interpreting reports</a><a class="headerlink" href="#interpreting-reports" title="Permalink to this headline">¶</a></h2>
-<p>There are five statistics tracked in a coverage summary:</p>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Interpreting reports</a><a class="headerlink" href="#interpreting-reports" title="Link to this heading">¶</a></h2>
+<p>There are six statistics tracked in a coverage summary:</p>
 <ul class="simple">
 <li><p>Function coverage is the percentage of functions which have been executed at
 least once. A function is considered to be executed if any of its
@@ -299,14 +313,33 @@ conditions may comprise larger boolean expressions linked by boolean logical
 operators. For example, “x = (y == 2) || (z &lt; 10)” is a boolean expression
 that is comprised of two individual conditions, each of which evaluates to
 either true or false, producing four total branch outcomes.</p></li>
+<li><p>Modified Condition/Decision Coverage (MC/DC) is the percentage of individual
+branch conditions that have been shown to independently affect the decision
+outcome of the boolean expression they comprise. This is accomplished using
+the analysis of executed control flow through the expression (i.e. test
+vectors) to show that as a condition’s outcome is varied between “true” and
+false”, the decision’s outcome also varies between “true” and false”, while
+the outcome of all other conditions is held fixed (or they are masked out as
+unevaluatable, as happens in languages whose logical operators have
+short-circuit semantics).  MC/DC builds on top of branch coverage and
+requires that all code blocks and all execution paths have been tested.  This
+statistic is hidden by default in reports, but it can be enabled via the
+<code class="docutils literal notranslate"><span class="pre">-show-mcdc-summary</span></code> option as long as code was also compiled using the
+clang option <code class="docutils literal notranslate"><span class="pre">-fcoverage-mcdc</span></code>.</p>
+<ul>
+<li><p>Boolean expressions that are only comprised of one condition (and therefore
+have no logical operators) are not included in MC/DC analysis and are
+trivially deducible using branch coverage.</p></li>
 </ul>
-<p>Of these five statistics, function coverage is usually the least granular while
-branch coverage is the most granular. 100% branch coverage for a function
-implies 100% region coverage for a function. The project-wide totals for each
-statistic are listed in the summary.</p>
+</li>
+</ul>
+<p>Of these six statistics, function coverage is usually the least granular while
+branch coverage (with MC/DC) is the most granular. 100% branch coverage for a
+function implies 100% region coverage for a function. The project-wide totals
+for each statistic are listed in the summary.</p>
 </section>
 <section id="format-compatibility-guarantees">
-<h2><a class="toc-backref" href="#id8">Format compatibility guarantees</a><a class="headerlink" href="#format-compatibility-guarantees" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Format compatibility guarantees</a><a class="headerlink" href="#format-compatibility-guarantees" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>There are no backwards or forwards compatibility guarantees for the raw
 profile format. Raw profiles may be dependent on the specific compiler
@@ -325,7 +358,7 @@ increments are for bugfixes.</p></li>
 </ul>
 </section>
 <section id="impact-of-llvm-optimizations-on-coverage-reports">
-<h2><a class="toc-backref" href="#id9">Impact of llvm optimizations on coverage reports</a><a class="headerlink" href="#impact-of-llvm-optimizations-on-coverage-reports" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Impact of llvm optimizations on coverage reports</a><a class="headerlink" href="#impact-of-llvm-optimizations-on-coverage-reports" title="Link to this heading">¶</a></h2>
 <p>llvm optimizations (such as inlining or CFG simplification) should have no
 impact on coverage report quality. This is due to the fact that the mapping
 from source regions to profile counters is immutable, and is generated before
@@ -336,7 +369,7 @@ program emits), and so leaves it alone.</p>
 during the course of optimization, such as debug info line tables.</p>
 </section>
 <section id="using-the-profiling-runtime-without-static-initializers">
-<h2><a class="toc-backref" href="#id10">Using the profiling runtime without static initializers</a><a class="headerlink" href="#using-the-profiling-runtime-without-static-initializers" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Using the profiling runtime without static initializers</a><a class="headerlink" href="#using-the-profiling-runtime-without-static-initializers" title="Link to this heading">¶</a></h2>
 <p>By default the compiler runtime uses a static initializer to determine the
 profile output path and to register a writer function. To collect profiles
 without using static initializers, do this manually:</p>
@@ -359,7 +392,7 @@ existing on-disk raw profile.</p></li>
 </ul>
 <p>In C++ files, declare these as <code class="docutils literal notranslate"><span class="pre">extern</span> <span class="pre">&quot;C&quot;</span></code>.</p>
 <section id="using-the-profiling-runtime-without-a-filesystem">
-<h3><a class="toc-backref" href="#id11">Using the profiling runtime without a filesystem</a><a class="headerlink" href="#using-the-profiling-runtime-without-a-filesystem" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Using the profiling runtime without a filesystem</a><a class="headerlink" href="#using-the-profiling-runtime-without-a-filesystem" title="Link to this heading">¶</a></h3>
 <p>The profiling runtime also supports freestanding environments that lack a
 filesystem. The runtime ships as a static archive that’s structured to make
 dependencies on a hosted environment optional, depending on what features
@@ -384,7 +417,7 @@ from the profile.</p></li>
 </section>
 </section>
 <section id="collecting-coverage-reports-for-the-llvm-project">
-<h2><a class="toc-backref" href="#id12">Collecting coverage reports for the llvm project</a><a class="headerlink" href="#collecting-coverage-reports-for-the-llvm-project" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Collecting coverage reports for the llvm project</a><a class="headerlink" href="#collecting-coverage-reports-for-the-llvm-project" title="Link to this heading">¶</a></h2>
 <p>To prepare a coverage report for llvm (and any of its sub-projects), add
 <code class="docutils literal notranslate"><span class="pre">-DLLVM_BUILD_INSTRUMENTED_COVERAGE=On</span></code> to the cmake configuration. Raw
 profiles will be written to <code class="docutils literal notranslate"><span class="pre">$BUILD_DIR/profiles/</span></code>. To prepare an html
@@ -394,7 +427,7 @@ report, run <code class="docutils literal notranslate"><span class="pre">llvm/ut
 <code class="docutils literal notranslate"><span class="pre">-DLLVM_PROFILE_MERGE_POOL_SIZE</span></code>.</p>
 </section>
 <section id="drawbacks-and-limitations">
-<h2><a class="toc-backref" href="#id13">Drawbacks and limitations</a><a class="headerlink" href="#drawbacks-and-limitations" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Drawbacks and limitations</a><a class="headerlink" href="#drawbacks-and-limitations" title="Link to this heading">¶</a></h2>
 <ul>
 <li><p>Prior to version 2.26, the GNU binutils BFD linker is not able link programs
 compiled with <code class="docutils literal notranslate"><span class="pre">-fcoverage-mapping</span></code> in its <code class="docutils literal notranslate"><span class="pre">--gc-sections</span></code> mode.  Possible
@@ -403,9 +436,9 @@ of BFD, or using the Gold linker.</p></li>
 <li><p>Code coverage does not handle unpredictable changes in control flow or stack
 unwinding in the presence of exceptions precisely. Consider the following
 function:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">f</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">may_throw</span><span class="p">();</span>
-  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">may_throw</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -416,11 +449,11 @@ not. A call to <code class="docutils literal notranslate"><span class="pre">long
 </ul>
 </section>
 <section id="clang-implementation-details">
-<h2><a class="toc-backref" href="#id14">Clang implementation details</a><a class="headerlink" href="#clang-implementation-details" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Clang implementation details</a><a class="headerlink" href="#clang-implementation-details" title="Link to this heading">¶</a></h2>
 <p>This section may be of interest to those wishing to understand or improve
 the clang code coverage implementation.</p>
 <section id="gap-regions">
-<h3><a class="toc-backref" href="#id15">Gap regions</a><a class="headerlink" href="#gap-regions" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Gap regions</a><a class="headerlink" href="#gap-regions" title="Link to this heading">¶</a></h3>
 <p>Gap regions are source regions with counts. A reporting tool cannot set a line
 execution count to the count from a gap region unless that region is the only
 one on a line.</p>
@@ -430,7 +463,7 @@ or blue “executed” highlights present at the start of a line that is otherwi
 not executed.</p>
 </section>
 <section id="branch-regions">
-<h3><a class="toc-backref" href="#id16">Branch regions</a><a class="headerlink" href="#branch-regions" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Branch regions</a><a class="headerlink" href="#branch-regions" title="Link to this heading">¶</a></h3>
 <p>When viewing branch coverage details in source-based file-level sub-views using
 <code class="docutils literal notranslate"><span class="pre">--show-branches</span></code>, it is recommended that users show all macro expansions
 (using option <code class="docutils literal notranslate"><span class="pre">--show-expansions</span></code>) since macros may contain hidden branch
@@ -445,8 +478,38 @@ users are informed about what happened.</p>
 code.  Users should not see hidden branches that aren’t actually tied to the
 source code.</p>
 </section>
+<section id="mc-dc-instrumentation">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">MC/DC Instrumentation</a><a class="headerlink" href="#mc-dc-instrumentation" title="Link to this heading">¶</a></h3>
+<p>When instrumenting for Modified Condition/Decision Coverage (MC/DC) using the
+clang option <code class="docutils literal notranslate"><span class="pre">-fcoverage-mcdc</span></code>, there are two hard limits.</p>
+<p>The maximum number of terms is limited to 32767, which is practical for
+handwritten expressions. To be more restrictive in order to enforce coding rules,
+use <code class="docutils literal notranslate"><span class="pre">-Xclang</span> <span class="pre">-fmcdc-max-conditions=n</span></code>. Expressions with exceeded condition
+counts <code class="docutils literal notranslate"><span class="pre">n</span></code> will generate warnings and will be excluded in the MC/DC coverage.</p>
+<p>The number of test vectors (the maximum number of possible combinations of
+expressions) is limited to 2,147,483,646. In this case, approximately
+256MiB (==2GiB/8) is used to record test vectors.</p>
+<p>To reduce memory usage, users can limit the maximum number of test vectors per
+expression with <code class="docutils literal notranslate"><span class="pre">-Xclang</span> <span class="pre">-fmcdc-max-test-vectors=m</span></code>.
+If the number of test vectors resulting from the analysis of an expression
+exceeds <code class="docutils literal notranslate"><span class="pre">m</span></code>, a warning will be issued and the expression will be excluded
+from the MC/DC coverage.</p>
+<p>The number of test vectors <code class="docutils literal notranslate"><span class="pre">m</span></code>, for <code class="docutils literal notranslate"><span class="pre">n</span></code> terms in an expression, can be
+<code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;=</span> <span class="pre">2^n</span></code> in the theoretical worst case, but is usually much smaller.
+In simple cases, such as expressions consisting of a sequence of single
+operators, <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">==</span> <span class="pre">n+1</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">(a</span> <span class="pre">&amp;&amp;</span> <span class="pre">b</span> <span class="pre">&amp;&amp;</span> <span class="pre">c</span> <span class="pre">&amp;&amp;</span> <span class="pre">d</span> <span class="pre">&amp;&amp;</span> <span class="pre">e</span> <span class="pre">&amp;&amp;</span> <span class="pre">f</span> <span class="pre">&amp;&amp;</span> <span class="pre">g)</span></code>
+requires 8 test vectors.</p>
+<p>Expressions such as <code class="docutils literal notranslate"><span class="pre">((a0</span> <span class="pre">&amp;&amp;</span> <span class="pre">b0)</span> <span class="pre">||</span> <span class="pre">(a1</span> <span class="pre">&amp;&amp;</span> <span class="pre">b1)</span> <span class="pre">||</span> <span class="pre">...)</span></code> can cause the
+number of test vectors to increase exponentially.</p>
+<p>Also, if a boolean expression is embedded in the nest of another boolean
+expression but separated by a non-logical operator, this is also not supported.
+For example, in <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">(a</span> <span class="pre">&amp;&amp;</span> <span class="pre">b</span> <span class="pre">&amp;&amp;</span> <span class="pre">c</span> <span class="pre">&amp;&amp;</span> <span class="pre">func(d</span> <span class="pre">&amp;&amp;</span> <span class="pre">f))</span></code>, the <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">&amp;&amp;</span> <span class="pre">f</span></code> case
+starts a new boolean expression that is separated from the other conditions by
+the operator <code class="docutils literal notranslate"><span class="pre">func()</span></code>.  When this is encountered, a warning will be generated
+and the boolean expression will not be instrumented.</p>
+</section>
 <section id="switch-statements">
-<h3><a class="toc-backref" href="#id17">Switch statements</a><a class="headerlink" href="#switch-statements" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Switch statements</a><a class="headerlink" href="#switch-statements" title="Link to this heading">¶</a></h3>
 <p>The region mapping for a switch body consists of a gap region that covers the
 entire body (starting from the ‘{’ in ‘switch (…) {’, and terminating where the
 last case ends). This gap region has a zero count: this causes “gap” areas in
@@ -476,14 +539,14 @@ implicit case exists.</p>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="Modules.html">Modules</a>&#160;&#160;»
+        <a href="StandardCPlusPlusModules.html">Standard C++ Modules</a>&#160;&#160;»
         </p>
 
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

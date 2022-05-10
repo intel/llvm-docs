@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01AccumulatorT_00_01sfbd5e115aaface973701d582b3766327 =
-[
-    [ "value", "structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01AccumulatorT_00_01sfbd5e115aaface973701d582b3766327.html#ac2f7fa979d4c437e8ba3e828360b5822", null ]
-];

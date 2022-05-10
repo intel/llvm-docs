@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SYCL Graph Usage Guide and Examples &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="oneAPI DPC++ Compiler and Runtime architecture design" href="../design/CompilerAndRuntimeDesign.html" />
+    <link rel="prev" title="Considerations for programming to multi-tile and multi-card under Level-Zero backend" href="../MultiTileCardWithLevelZero.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>SYCL Graph Usage Guide and Examples</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../MultiTileCardWithLevelZero.html">Considerations for programming to multi-tile and multi-card under Level-Zero backend</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../design/CompilerAndRuntimeDesign.html">oneAPI DPC++ Compiler and Runtime architecture design</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="sycl-graph-usage-guide-and-examples">
+<h1>SYCL Graph Usage Guide and Examples<a class="headerlink" href="#sycl-graph-usage-guide-and-examples" title="Link to this heading">¶</a></h1>
+<p>This document describes recommended usage guidelines for using the
+<code class="docutils literal notranslate"><span class="pre">sycl_ext_oneapi_graph</span></code> extension (referred to as SYCL Graph in this document)
+as well as provides example code snippets for various features and usage
+scenarios.</p>
+<p>The specification for the <code class="docutils literal notranslate"><span class="pre">sycl_ext_oneapi_graph</span></code> extension can be found
+<a class="reference download internal" download="" href="../_downloads/8c14e68e6250995a6aa452e77be3b313/sycl_ext_oneapi_graph.asciidoc"><span class="xref download myst">here</span></a>.</p>
+<section id="general-usage-guidelines">
+<h2>General Usage Guidelines<a class="headerlink" href="#general-usage-guidelines" title="Link to this heading">¶</a></h2>
+<p>The following section provides some general usage guidelines when working
+with SYCL Graph or adapting an existing SYCL application to use SYCL Graph.
+Examples here will generally only use one graph creation API (“Explicit” or
+“Record &amp; Replay”) for simplicity, but can generally be applied to either API
+unless specifically noted.</p>
+<section id="use-host-tasks-for-host-work">
+<h3>Use Host-Tasks For Host Work<a class="headerlink" href="#use-host-tasks-for-host-work" title="Link to this heading">¶</a></h3>
+<p>SYCL Graph cannot capture work done on the host in application code which does
+not go through the SYCL runtime, including direct operations (for example kernel
+submissions) through a backend API (level-zero, cuda, etc). Any work to be done
+on the host should be captured within a SYCL host-task as a node in the
+graph. Workloads which require a lot of host-tasks may see reduced performance
+due to host synchronization or preventing the runtime from submitted the entire
+graph to the device at once.</p>
+<p>Direct operations with backend APIs are supported in SYCL Graph through
+host-tasks using an interop handle, but it is currently not possible to obtain
+the native backend objects associated with SYCL Graph objects.</p>
+<p>Some applications may also execute host code inside of the Command Group
+Function (CGF). This is not explicitly disallowed in normal SYCL code but is
+generally discouraged. Consider the following example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Queue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">){</span>
+<span class="w">    </span><span class="c1">// Do some host work here to prepare for the kernel to be executed</span>
+<span class="w">    </span><span class="n">do_some_host_work</span><span class="p">();</span>
+<span class="w">    </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(...);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>In normal SYCL usage <code class="docutils literal notranslate"><span class="pre">do_some_host_work()</span></code> will be evaluated during the call to
+submit. With SYCL Graph this code will be evaluated once during the call to
+<code class="docutils literal notranslate"><span class="pre">submit()</span></code> or <code class="docutils literal notranslate"><span class="pre">command_graph::add()</span></code> but will not be evaluated on subsequent
+runs of the graph which may lead to incorrect behavior. This code should be
+placed into a host-task node which the kernel (or other operation) depends on,
+like so:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Graph</span><span class="p">.</span><span class="n">begin_recording</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+
+<span class="n">sycl</span><span class="o">::</span><span class="n">event</span><span class="w"> </span><span class="n">HostWorkEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Queue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">){</span>
+<span class="w">    </span><span class="n">CGH</span><span class="p">.</span><span class="n">host_task</span><span class="p">([</span><span class="o">=</span><span class="p">](){</span>
+<span class="w">        </span><span class="n">do_some_host_work</span><span class="p">();</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="n">Queue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">){</span>
+<span class="w">    </span><span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">HostWorkEvent</span><span class="p">);</span>
+<span class="w">    </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(...);</span>
+<span class="p">});</span>
+
+<span class="n">Graph</span><span class="p">.</span><span class="n">end_recording</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="graph-execution-concurrency">
+<h3>Graph Execution Concurrency<a class="headerlink" href="#graph-execution-concurrency" title="Link to this heading">¶</a></h3>
+<p>Normally the SYCL runtime will prevent multiple submissions of a given
+<code class="docutils literal notranslate"><span class="pre">command_graph</span></code> from executing concurrently to prevent data races when accessing
+the same memory resources. However, it is quite common to wish to execute the
+same graph on different sets of data concurrently. This can be accomplished by
+using graph update functionality, but this must also be serialized with a host
+synchronization. Consider this example (it uses whole graph update for
+simplicity):</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">sycl</span><span class="o">::</span><span class="nn">ext</span><span class="o">::</span><span class="nn">oneapi</span><span class="o">::</span><span class="nn">experimental</span><span class="p">;</span>
+
+<span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="o">&lt;</span><span class="n">graph_state</span><span class="o">::</span><span class="n">executable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ExecutableGraph</span>
+<span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ModifiableGraph</span><span class="p">.</span><span class="n">finalize</span><span class="p">();</span>
+
+<span class="n">Queue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">ExecutableGraph</span><span class="p">);</span>
+<span class="c1">// Updating the graph here to use new memory, this forces a host synchronization</span>
+<span class="n">ExecutableGraph</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">ModifiableGraphWithNewParams</span><span class="p">);</span>
+
+<span class="c1">// Re-execute the update graph</span>
+<span class="n">Queue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">ExecutableGraph</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If your sets of inputs are known (such as a double-buffering type scenario), you
+can create multiple executable graphs up front, avoiding the need for expensive
+host sync between executions (assuming there are no implicit dependencies from
+accessing the same <code class="docutils literal notranslate"><span class="pre">sycl::buffer</span></code>) for updating, and potentially increasing
+device occupancy (if the device supports it). Modifying the example from above:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">sycl</span><span class="o">::</span><span class="nn">ext</span><span class="o">::</span><span class="nn">oneapi</span><span class="o">::</span><span class="nn">experimental</span><span class="p">;</span>
+
+<span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="o">&lt;</span><span class="n">graph_state</span><span class="o">::</span><span class="n">executable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ExecutableGraph</span>
+<span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ModifiableGraph</span><span class="p">.</span><span class="n">finalize</span><span class="p">();</span>
+<span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="o">&lt;</span><span class="n">graph_state</span><span class="o">::</span><span class="n">executable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ExecutableGraphOtherParams</span>
+<span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">ModifiableGraphWithNewParams</span><span class="p">.</span><span class="n">finalize</span><span class="p">();</span>
+
+<span class="n">Queue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">ExecutableGraph</span><span class="p">);</span>
+<span class="c1">// We can now execute the second graph with no implicit dependency</span>
+<span class="n">Queue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">ExecutableGraphOtherParams</span><span class="p">);</span>
+
+<span class="c1">// Repeatedly executing the graphs will create dependencies on their individual</span>
+<span class="c1">// preceeding executions, but not on each other.</span>
+<span class="n">Queue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">ExecutableGraph</span><span class="p">);</span>
+<span class="n">Queue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">ExecutableGraphOtherParams</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>If the amount of different inputs is not always known up front a similar
+strategy could be employed but instead using a pool of graphs to hide the
+potential host-synchronization caused when updating and increase device
+occupancy.</p>
+</section>
+<section id="recording-library-calls">
+<h3>Recording Library Calls<a class="headerlink" href="#recording-library-calls" title="Link to this heading">¶</a></h3>
+<section id="a-note-on-library-compatibility">
+<h4>A Note On Library Compatibility<a class="headerlink" href="#a-note-on-library-compatibility" title="Link to this heading">¶</a></h4>
+<p>Since the extension is still experimental and currently under active
+development, compatibility with capturing calls to SYCL-based libraries is not
+guaranteed. Typically these libraries were developed without knowledge of SYCL
+Graph and thus may behave in ways that are incompatible with graph capture (such
+as the ones detailed in this guide).</p>
+</section>
+<section id="warmups">
+<h4>Warmups<a class="headerlink" href="#warmups" title="Link to this heading">¶</a></h4>
+<p>Some libraries may perform one-time warmups on first execution of some
+operations (for example to trigger kernel creation) that are not desirable to
+capture in a graph. Consider the following simplified example:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Hypothetical library function</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">SomeLibrary::Operation</span><span class="p">(</span><span class="n">sycl</span><span class="o">::</span><span class="n">Queue</span><span class="w"> </span><span class="n">Queue</span><span class="p">){</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">IsFirstTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">IsFirstTime</span><span class="p">){</span>
+<span class="w">        </span><span class="c1">// Warmup by launching kernel once</span>
+<span class="w">        </span><span class="n">do_warmup</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// Execute the actual operation</span>
+<span class="w">        </span><span class="n">execute_operation</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+<span class="w">        </span><span class="n">IsFirstTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">execute_operation</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// SYCL Application Code</span>
+
+<span class="n">Graph</span><span class="p">.</span><span class="n">begin_recording</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+
+<span class="c1">// do_warmup() will be captured here and executed every time the graph is</span>
+<span class="c1">// executed in future which is undesirable.</span>
+<span class="n">SomeLibrary</span><span class="o">::</span><span class="n">Operation</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+
+<span class="n">Graph</span><span class="p">.</span><span class="n">end_recording</span><span class="p">(</span><span class="n">Queue</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>In this case it may be necessary to first manually trigger the warmup by calling
+<code class="docutils literal notranslate"><span class="pre">SomeLibrary::Operation()</span></code> before starting to record the queue with
+<code class="docutils literal notranslate"><span class="pre">Graph.begin_recording(Queue)</span></code> to prevent the warmup from being captured in a
+graph when recording.</p>
+</section>
+</section>
+</section>
+<section id="code-examples">
+<h2>Code Examples<a class="headerlink" href="#code-examples" title="Link to this heading">¶</a></h2>
+<p>The examples below demonstrate intended usage of the extension, but may not be
+compatible with the proof-of-concept implementation, as the proof-of-concept
+implementation is currently under development.</p>
+<p>These examples for demonstrative purposes only, and may leave out details such
+as how input data is set.</p>
+<section id="dot-product">
+<h3>Dot Product<a class="headerlink" href="#dot-product" title="Link to this heading">¶</a></h3>
+<p>This example uses the explicit graph creation API to perform a dot product
+operation.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sycl/sycl.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sycl/ext/oneapi/experimental/graph.hpp&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">sycl</span><span class="o">::</span><span class="nn">ext</span><span class="o">::</span><span class="nn">oneapi</span><span class="o">::</span><span class="nn">experimental</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0f</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0f</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">sycl</span><span class="o">::</span><span class="n">queue</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="w">    </span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">get_context</span><span class="p">(),</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">get_device</span><span class="p">());</span>
+
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">dotp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sycl</span><span class="o">::</span><span class="n">malloc_shared</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sycl</span><span class="o">::</span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sycl</span><span class="o">::</span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="o">*</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sycl</span><span class="o">::</span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Add commands to the graph to create the following topology.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">//     i</span>
+<span class="w">    </span><span class="c1">//    / \</span>
+<span class="c1">    //   a   b</span>
+<span class="w">    </span><span class="c1">//    \ /</span>
+<span class="w">    </span><span class="c1">//     c</span>
+
+<span class="w">    </span><span class="c1">// init data on the device</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">node_i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">add</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">h</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">id</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">){</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0f</span><span class="p">;</span>
+<span class="w">            </span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0f</span><span class="p">;</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">node_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">add</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">h</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="n">sycl</span><span class="o">::</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">id</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">property</span><span class="o">::</span><span class="n">node</span><span class="o">::</span><span class="n">depends_on</span><span class="p">(</span><span class="n">node_i</span><span class="p">)});</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">node_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">add</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">h</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="n">sycl</span><span class="o">::</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">id</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="w">            </span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">property</span><span class="o">::</span><span class="n">node</span><span class="o">::</span><span class="n">depends_on</span><span class="p">(</span><span class="n">node_i</span><span class="p">)});</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">node_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">add</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">sycl</span><span class="o">::</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">h</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">h</span><span class="p">.</span><span class="n">single_task</span><span class="p">([</span><span class="o">=</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">for</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">                  </span><span class="o">*</span><span class="n">dotp</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">});</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">property</span><span class="o">::</span><span class="n">node</span><span class="o">::</span><span class="n">depends_on</span><span class="p">(</span><span class="n">node_a</span><span class="p">,</span><span class="w"> </span><span class="n">node_b</span><span class="p">)});</span>
+
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">exec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">finalize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// use queue shortcut for graph submission</span>
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">exec</span><span class="p">).</span><span class="n">wait</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// memory can be freed inside or outside the graph</span>
+<span class="w">    </span><span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">    </span><span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">    </span><span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+<span class="w">    </span><span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">dotp</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="diamond-dependency">
+<h3>Diamond Dependency<a class="headerlink" href="#diamond-dependency" title="Link to this heading">¶</a></h3>
+<p>The following snippet of code shows how a SYCL <code class="docutils literal notranslate"><span class="pre">queue</span></code> can be put into a
+recording state, which allows a <code class="docutils literal notranslate"><span class="pre">command_graph</span></code> object to be populated by the
+command-groups submitted to the queue. Once the graph is complete, recording
+finishes on the queue to put it back into the default executing state. The
+graph is then finalized so that no more nodes can be added. Lastly, the graph is
+submitted in its entirety for execution via
+<code class="docutils literal notranslate"><span class="pre">handler::ext_oneapi_graph(command_graph&lt;graph_state::executable&gt;)</span></code>.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">sycl_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">sycl</span><span class="o">::</span><span class="nn">ext</span><span class="o">::</span><span class="nn">oneapi</span><span class="o">::</span><span class="nn">experimental</span><span class="p">;</span>
+
+<span class="n">queue</span><span class="w"> </span><span class="n">q</span><span class="p">{</span><span class="n">default_selector</span><span class="p">{}};</span>
+
+<span class="c1">// Lifetime of buffers must exceed the lifetime of graphs they are used in.</span>
+<span class="n">buffer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bufferA</span><span class="p">{</span><span class="n">dataA</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="n">elements</span><span class="p">}};</span>
+<span class="n">bufferA</span><span class="p">.</span><span class="n">set_write_back</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="n">buffer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bufferB</span><span class="p">{</span><span class="n">dataB</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="n">elements</span><span class="p">}};</span>
+<span class="n">bufferB</span><span class="p">.</span><span class="n">set_write_back</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="n">buffer</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bufferC</span><span class="p">{</span><span class="n">dataC</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">{</span><span class="n">elements</span><span class="p">}};</span>
+<span class="n">bufferC</span><span class="p">.</span><span class="n">set_write_back</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// New object representing graph of command-groups</span>
+<span class="w">    </span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="w"> </span><span class="nf">graph</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">get_context</span><span class="p">(),</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">get_device</span><span class="p">(),</span>
+<span class="w">          </span><span class="p">{</span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">property</span><span class="o">::</span><span class="n">graph</span><span class="o">::</span><span class="n">assume_buffer_outlives_graph</span><span class="p">{}});</span>
+
+
+<span class="w">    </span><span class="c1">// `q` will be put in the recording state where commands are recorded to</span>
+<span class="w">    </span><span class="c1">// `graph` rather than submitted for execution immediately.</span>
+<span class="w">    </span><span class="n">graph</span><span class="p">.</span><span class="n">begin_recording</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Record commands to `graph` with the following topology.</span>
+<span class="w">    </span><span class="c1">//</span>
+<span class="w">    </span><span class="c1">//      increment_kernel</span>
+<span class="w">    </span><span class="c1">//       /         \</span>
+<span class="c1">    //   A-&gt;/        A-&gt;\</span>
+<span class="c1">    //     /             \</span>
+<span class="c1">    //   add_kernel  subtract_kernel</span>
+<span class="w">    </span><span class="c1">//     \             /</span>
+<span class="w">    </span><span class="c1">//   B-&gt;\        C-&gt;/</span>
+<span class="w">    </span><span class="c1">//       \         /</span>
+<span class="w">    </span><span class="c1">//     decrement_kernel</span>
+
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferA</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">increment_kernel</span><span class="o">&gt;</span><span class="p">(</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">elements</span><span class="p">),</span>
+<span class="w">                                          </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pData</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferA</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferB</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">add_kernel</span><span class="o">&gt;</span><span class="p">(</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">elements</span><span class="p">),</span>
+<span class="w">                                    </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pData2</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">pData1</span><span class="p">[</span><span class="n">id</span><span class="p">];</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferA</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferC</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">subtract_kernel</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">elements</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">pData2</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">pData1</span><span class="p">[</span><span class="n">id</span><span class="p">];</span><span class="w"> </span><span class="p">});</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferB</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="k">auto</span><span class="w"> </span><span class="n">pData2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bufferC</span><span class="p">.</span><span class="n">get_access</span><span class="o">&lt;</span><span class="n">access</span><span class="o">::</span><span class="n">mode</span><span class="o">::</span><span class="n">read_write</span><span class="o">&gt;</span><span class="p">(</span><span class="n">cgh</span><span class="p">);</span>
+<span class="w">        </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="o">&lt;</span><span class="n">decrement_kernel</span><span class="o">&gt;</span><span class="p">(</span><span class="n">range</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">(</span><span class="n">elements</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="o">=</span><span class="p">](</span><span class="n">item</span><span class="o">&lt;</span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">pData1</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+<span class="w">            </span><span class="n">pData2</span><span class="p">[</span><span class="n">id</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// queue `q` will be returned to the executing state where commands are</span>
+<span class="w">    </span><span class="c1">// submitted immediately for extension.</span>
+<span class="w">    </span><span class="n">graph</span><span class="p">.</span><span class="n">end_recording</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Finalize the modifiable graph to create an executable graph that can be</span>
+<span class="w">    </span><span class="c1">// submitted for execution.</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">exec_graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">graph</span><span class="p">.</span><span class="n">finalize</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// Execute graph</span>
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cgh</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">exec_graph</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}).</span><span class="n">wait</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Check output using host accessors</span>
+<span class="n">host_accessor</span><span class="w"> </span><span class="n">hostAccA</span><span class="p">(</span><span class="n">bufferA</span><span class="p">);</span>
+<span class="n">host_accessor</span><span class="w"> </span><span class="nf">hostAccB</span><span class="p">(</span><span class="n">bufferB</span><span class="p">);</span>
+<span class="n">host_accessor</span><span class="w"> </span><span class="nf">hostAccC</span><span class="p">(</span><span class="n">bufferC</span><span class="p">);</span>
+
+<span class="p">...</span>
+</pre></div>
+</div>
+</section>
+<section id="dynamic-parameter-update">
+<h3>Dynamic Parameter Update<a class="headerlink" href="#dynamic-parameter-update" title="Link to this heading">¶</a></h3>
+<p>Example showing a graph with a single kernel node that is created using a kernel
+bundle with <code class="docutils literal notranslate"><span class="pre">handler::set_args()</span></code> and having its node arguments updated.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">sycl_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">sycl</span><span class="o">::</span><span class="nn">ext</span><span class="o">::</span><span class="nn">oneapi</span><span class="o">::</span><span class="nn">experimental</span><span class="p">;</span>
+
+<span class="n">queue</span><span class="w"> </span><span class="n">myQueue</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">myContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myQueue</span><span class="p">.</span><span class="n">get_context</span><span class="p">();</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">myDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myQueue</span><span class="p">.</span><span class="n">get_device</span><span class="p">();</span>
+
+<span class="c1">// USM allocations for kernel input/output</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptrX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc_shared</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptrY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptrZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc_shared</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptrQ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+
+<span class="c1">// Kernel loaded from kernel bundle</span>
+<span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">kernel_id</span><span class="o">&gt;</span><span class="w"> </span><span class="n">builtinKernelIds</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="n">myDevice</span><span class="p">.</span><span class="n">get_info</span><span class="o">&lt;</span><span class="n">info</span><span class="o">::</span><span class="n">device</span><span class="o">::</span><span class="n">built_in_kernel_ids</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">kernel_bundle</span><span class="o">&lt;</span><span class="n">bundle_state</span><span class="o">::</span><span class="n">executable</span><span class="o">&gt;</span><span class="w"> </span><span class="n">myBundle</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="n">get_kernel_bundle</span><span class="p">(</span><span class="n">myContext</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">myDevice</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">builtinKernelIds</span><span class="p">);</span>
+<span class="n">kernel</span><span class="w"> </span><span class="n">builtinKernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myBundle</span><span class="p">.</span><span class="n">get_kernel</span><span class="p">(</span><span class="n">builtinKernelIds</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+<span class="c1">// Graph containing a kernel node</span>
+<span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="w"> </span><span class="nf">myGraph</span><span class="p">(</span><span class="n">myContext</span><span class="p">,</span><span class="w"> </span><span class="n">myDevice</span><span class="p">);</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">myScalar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+<span class="c1">// Create graph dynamic parameters</span>
+<span class="n">dynamic_parameter</span><span class="w"> </span><span class="nf">dynParamInput</span><span class="p">(</span><span class="n">myGraph</span><span class="p">,</span><span class="w"> </span><span class="n">ptrX</span><span class="p">);</span>
+<span class="n">dynamic_parameter</span><span class="w"> </span><span class="nf">dynParamScalar</span><span class="p">(</span><span class="n">myGraph</span><span class="p">,</span><span class="w"> </span><span class="n">myScalar</span><span class="p">);</span>
+
+<span class="c1">// The node uses ptrX as an input &amp; output parameter, with operand</span>
+<span class="c1">// mySclar as another argument.</span>
+<span class="n">node</span><span class="w"> </span><span class="n">kernelNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGraph</span><span class="p">.</span><span class="n">add</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">cgh</span><span class="p">.</span><span class="n">set_args</span><span class="p">(</span><span class="n">dynParamInput</span><span class="p">,</span><span class="w"> </span><span class="n">ptrY</span><span class="p">,</span><span class="w"> </span><span class="n">dynParamScalar</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="n">builtinKernel</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// Create an executable graph with the updatable property.</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">execGraph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGraph</span><span class="p">.</span><span class="n">finalize</span><span class="p">({</span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">property</span><span class="o">::</span><span class="n">graph</span><span class="o">::</span><span class="n">updatable</span><span class="p">});</span>
+
+<span class="c1">// Execute graph, then update without needing to wait for it to complete</span>
+<span class="n">myQueue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">execGraph</span><span class="p">);</span>
+
+<span class="c1">// Change ptrX argument to ptrZ</span>
+<span class="n">dynParamInput</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">ptrZ</span><span class="p">);</span>
+
+<span class="c1">// Change myScalar argument to newScalar</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">newScalar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span>
+<span class="n">dynParamScalar</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">newScalar</span><span class="p">);</span>
+
+<span class="c1">// Update kernelNode in the executable graph with the new parameters</span>
+<span class="n">execGraph</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">kernelNode</span><span class="p">);</span>
+<span class="c1">// Execute graph again</span>
+<span class="n">myQueue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">execGraph</span><span class="p">);</span>
+<span class="n">myQueue</span><span class="p">.</span><span class="n">wait</span><span class="p">();</span>
+
+<span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">ptrX</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">ptrY</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">ptrZ</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">sycl</span><span class="o">::</span><span class="n">free</span><span class="p">(</span><span class="n">ptrQ</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Example snippet showing how to use accessors with <code class="docutils literal notranslate"><span class="pre">dynamic_parameter</span></code> update:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">sycl</span><span class="o">::</span><span class="n">buffer</span><span class="w"> </span><span class="n">bufferA</span><span class="p">{...};</span>
+<span class="n">sycl</span><span class="o">::</span><span class="n">buffer</span><span class="w"> </span><span class="n">bufferB</span><span class="p">{...};</span>
+
+<span class="c1">// Create graph dynamic parameter using a placeholder accessor, since the</span>
+<span class="c1">// sycl::handler is not available here outside of the command-group scope.</span>
+<span class="n">dynamic_parameter</span><span class="w"> </span><span class="nf">dynParamAccessor</span><span class="p">(</span><span class="n">myGraph</span><span class="p">,</span><span class="w"> </span><span class="n">bufferA</span><span class="p">.</span><span class="n">get_access</span><span class="p">());</span>
+
+<span class="n">node</span><span class="w"> </span><span class="n">kernelNode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myGraph</span><span class="p">.</span><span class="n">add</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Require the accessor contained in the dynamic paramter</span>
+<span class="w">    </span><span class="n">cgh</span><span class="p">.</span><span class="n">require</span><span class="p">(</span><span class="n">dynParamAccessor</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Set the arg on the kernel using the dynamic parameter directly</span>
+<span class="w">    </span><span class="n">cgh</span><span class="p">.</span><span class="n">set_args</span><span class="p">(</span><span class="n">dynParamAccessor</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cgh</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="n">builtinKernel</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="p">...</span>
+<span class="c1">// Update the dynamic parameter with a placeholder accessor from bufferB instead</span>
+<span class="n">dynParamAccessor</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">bufferB</span><span class="p">.</span><span class="n">get_access</span><span class="p">());</span>
+</pre></div>
+</div>
+</section>
+<section id="whole-graph-update">
+<h3>Whole Graph Update<a class="headerlink" href="#whole-graph-update" title="Link to this heading">¶</a></h3>
+<p>Example that shows recording and updating several nodes with different
+parameters using whole-graph update.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">sycl</span><span class="p">;</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">sycl_ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">sycl</span><span class="o">::</span><span class="nn">ext</span><span class="o">::</span><span class="nn">oneapi</span><span class="o">::</span><span class="nn">experimental</span><span class="p">;</span>
+
+<span class="c1">// Enqueue several kernels which use inputPtr</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">run_kernels</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">inputPtr</span><span class="p">,</span><span class="w"> </span><span class="n">queue</span><span class="w"> </span><span class="n">syclQueue</span><span class="p">){</span>
+<span class="w">    </span><span class="n">event</span><span class="w"> </span><span class="n">eventA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syclQueue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">){</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(...);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="n">event</span><span class="w"> </span><span class="n">eventB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">syclQueue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">){</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">eventA</span><span class="p">);</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(...);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="n">syclQueue</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">CGH</span><span class="p">){</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">depends_on</span><span class="p">(</span><span class="n">eventB</span><span class="p">);</span>
+<span class="w">        </span><span class="n">CGH</span><span class="p">.</span><span class="n">parallel_for</span><span class="p">(...);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="p">...</span>
+
+<span class="n">queue</span><span class="w"> </span><span class="n">myQueue</span><span class="p">;</span>
+
+<span class="c1">// USM allocations</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1024</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptrA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptrB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc_device</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+
+<span class="c1">// Main graph which will be updated later</span>
+<span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="w"> </span><span class="nf">mainGraph</span><span class="p">(</span><span class="n">myQueue</span><span class="p">);</span>
+
+<span class="c1">// Record the kernels to mainGraph, using ptrA</span>
+<span class="n">mainGraph</span><span class="p">.</span><span class="n">begin_recording</span><span class="p">(</span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">run_kernels</span><span class="p">(</span><span class="n">ptrA</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">mainGraph</span><span class="p">.</span><span class="n">end_recording</span><span class="p">();</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">execMainGraph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mainGraph</span><span class="p">.</span><span class="n">finalize</span><span class="p">({</span><span class="n">sycl_ext</span><span class="o">::</span><span class="n">property</span><span class="o">::</span><span class="n">graph</span><span class="o">::</span><span class="n">updatable</span><span class="p">});</span>
+
+<span class="c1">// Execute execMainGraph</span>
+<span class="n">myQueue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">execMainGraph</span><span class="p">);</span>
+
+<span class="c1">// Record a second graph which records the same kernels, but using ptrB instead</span>
+<span class="n">sycl_ext</span><span class="o">::</span><span class="n">command_graph</span><span class="w"> </span><span class="nf">updateGraph</span><span class="p">(</span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">updateGraph</span><span class="p">.</span><span class="n">begin_recording</span><span class="p">(</span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">run_kernels</span><span class="p">(</span><span class="n">ptrB</span><span class="p">,</span><span class="w"> </span><span class="n">myQueue</span><span class="p">);</span>
+<span class="n">updateGraph</span><span class="p">.</span><span class="n">end_recording</span><span class="p">();</span>
+
+<span class="c1">// Update execMainGraph using updateGraph. We do not need to finalize</span>
+<span class="c1">// updateGraph (this would be expensive)</span>
+<span class="n">execMainGraph</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="n">updateGraph</span><span class="p">);</span>
+
+<span class="c1">// Execute execMainGraph again, which will now be operating on ptrB instead of</span>
+<span class="c1">// ptrA</span>
+<span class="n">myQueue</span><span class="p">.</span><span class="n">ext_oneapi_graph</span><span class="p">(</span><span class="n">execMainGraph</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../MultiTileCardWithLevelZero.html">Considerations for programming to multi-tile and multi-card under Level-Zero backend</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../design/CompilerAndRuntimeDesign.html">oneAPI DPC++ Compiler and Runtime architecture design</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

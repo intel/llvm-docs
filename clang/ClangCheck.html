@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ClangCheck &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>ClangCheck &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="ClangFormat" href="ClangFormat.html" />
     <link rel="prev" title="Overview" href="ClangTools.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>ClangCheck</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,15 +36,15 @@
         
         
   <section id="clangcheck">
-<h1>ClangCheck<a class="headerlink" href="#clangcheck" title="Permalink to this headline">¶</a></h1>
+<h1>ClangCheck<a class="headerlink" href="#clangcheck" title="Link to this heading">¶</a></h1>
 <p><cite>ClangCheck</cite> is a small wrapper around <a class="reference internal" href="LibTooling.html"><span class="doc">LibTooling</span></a> which can be used to
 do basic error checking and AST dumping.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat <span class="s">&lt;&lt;EOF &gt; snippet.cc</span>
-<span class="gp">&gt;</span><span class="s"> void f() {</span>
-<span class="gp">&gt;</span><span class="s">   int a = 0</span>
-<span class="gp">&gt;</span><span class="s"> }</span>
-<span class="gp">&gt;</span><span class="s"> EOF</span>
-<span class="gp">$</span> ~/clang/build/bin/clang-check snippet.cc -ast-dump --
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>&lt;&lt;EOF<span class="w"> </span>&gt;<span class="w"> </span>snippet.cc
+<span class="go">&gt; void f() {</span>
+<span class="go">&gt;   int a = 0</span>
+<span class="go">&gt; }</span>
+<span class="go">&gt; EOF</span>
+<span class="gp">$ </span>~/clang/build/bin/clang-check<span class="w"> </span>snippet.cc<span class="w"> </span>-ast-dump<span class="w"> </span>--
 <span class="go">Processing: /Users/danieljasper/clang/llvm/tools/clang/docs/snippet.cc.</span>
 <span class="go">/Users/danieljasper/clang/llvm/tools/clang/docs/snippet.cc:2:12: error: expected &#39;;&#39; at end of</span>
 <span class="go">      declaration</span>
@@ -85,8 +84,8 @@ use <strong class="program">clang-check</strong> in a project, see <a class="ref
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

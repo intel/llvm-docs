@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s2d0bd9346834bd0613862eb9bb2ef83f =
-[
-    [ "merged", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s2d0bd9346834bd0613862eb9bb2ef83f.html#a6916a6de82fcf0a14eeac5925d8650e2", null ],
-    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1MergePairs_3_01std_1_1tuple_3_01s2d0bd9346834bd0613862eb9bb2ef83f.html#a235a0940d961cc1375227dd411d81cf9", null ]
-];

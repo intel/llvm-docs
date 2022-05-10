@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ESIMD “stateless” accessors support design &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Explicit SIMD design notes" href="ESIMDDesignNotes.html" />
+    <link rel="prev" title="Implementation design for “Host Pipes”" href="HostPipes.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>ESIMD “stateless” accessors support design</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="HostPipes.html">Implementation design for “Host Pipes”</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="ESIMDDesignNotes.html">Explicit SIMD design notes</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="esimd-stateless-accessors-support-design">
+<h1>ESIMD “stateless” accessors support design<a class="headerlink" href="#esimd-stateless-accessors-support-design" title="Link to this heading">¶</a></h1>
+<p>This document describes design of automatic conversion of “stateful” memory
+accesses via SYCL accessors to “stateless” accesses within ESIMD kernels by the
+SYCL compiler.</p>
+<section id="overview-of-intel-gpu-memory-access-types">
+<h2>Overview of Intel GPU memory access types<a class="headerlink" href="#overview-of-intel-gpu-memory-access-types" title="Link to this heading">¶</a></h2>
+<p>Intel GPU hardware has two main modes of accessing memory - <em>stateless</em> and
+<em>stateful</em>, with specific memory access data port messages corresponding to each
+of the modes (<code class="docutils literal notranslate"><span class="pre">send</span></code> instructions with dataport fixed function target).</p>
+<ul class="simple">
+<li><p>In a <em>stateless</em> access base memory location(s) is represented with a single
+virtual memory address, which can be a USM pointer.</p></li>
+<li><p>In <em>stateful</em> - with a &lt;<em>surface index</em>, <em>32-bit offset</em>&gt; pair of values, where
+the <em>surface index</em> is an index into a “binding table” which contains surface
+descriptors available to the kernel. Surface is a contigous memory area
+accessible through its descriptor by stateful accesses. Each descriptor contains
+various information about the surface - for example, its size and format.</p></li>
+</ul>
+<p>Pointers used in statless accesses are usually coming from USM or C++ memory
+allocation routines and are passed directly by the runtime as kernel arguments.</p>
+<p>The stateful access style has a number of drawbacks which makes it undesirable
+to use in HPC application. The biggest one is 4Gb limitation on the surface
+size. Another one is problems with creating data structures with nested
+pointer fields or double indirection on host and use them on the device.</p>
+</section>
+<section id="accessor-and-usm-pointer-kernel-argument-passing-details">
+<h2>Accessor and USM pointer kernel argument passing details<a class="headerlink" href="#accessor-and-usm-pointer-kernel-argument-passing-details" title="Link to this heading">¶</a></h2>
+<p>ESIMD compiler when compiling a kernel records information about each memory
+argument and stores it together with the kernel’s SPIRV. Basically, for each
+kernel argument, there is information whether it is a memory argument, and, if
+yes, whether it is surface-based or pointer-based.</p>
+<p>When JITting the kernel, the scalar GPU compiler back-end can convert memory
+arguments and memory accesses between the two modes depending on optimization
+or other settings, and record final type of memory argument with the generated
+kernel executable. GPU runtime uses that information to wrap/not wrap incoming
+memory pointer with a surface before passing it onto the harware into the
+actual kernel argument.</p>
+<p>The vector back-end can’t do this in many cases, as memory accesses in SPIRV
+are represented by hardware-specific intrinsics rather then standard generic
+memory access SPIRV instructions. This design basically enables the vector BE
+to redirect code generation for stateful memory access APIs to stateless or
+stateful intrinsics, and also generate correct annotations. Since it uses the
+same runtime, which relies on parameter annotation when making the wrap/no-wrap
+decision, the runtime part does not need much changes.</p>
+</section>
+<section id="problem-definition">
+<h2>Problem definition<a class="headerlink" href="#problem-definition" title="Link to this heading">¶</a></h2>
+<p>Currently, ESIMD compiler always maps buffer/accessor-based memory accesses to
+stateful accesses, thus imposing the 4Gb datum size limitation on user programs
+with accessors.</p>
+</section>
+<section id="proposed-solution">
+<h2>Proposed solution<a class="headerlink" href="#proposed-solution" title="Link to this heading">¶</a></h2>
+<section id="short-mid-term">
+<h3>Short/mid-term<a class="headerlink" href="#short-mid-term" title="Link to this heading">¶</a></h3>
+<section id="api-header-changes">
+<h4>API header changes<a class="headerlink" href="#api-header-changes" title="Link to this heading">¶</a></h4>
+<p>The general idea is to introduce C++ preprocessor macro
+<code class="docutils literal notranslate"><span class="pre">ESIMD_FORCE_STATELESS_MEM_ACCESS</span></code> which will control code generation for the
+stateful memory access APIs - such as:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Tx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AccessorTy</span><span class="p">,</span>
+<span class="w">          </span><span class="k">typename</span><span class="w"> </span><span class="nc">Flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vector_aligned_tag</span><span class="p">,</span>
+<span class="w">          </span><span class="k">typename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_if_t</span><span class="o">&lt;</span><span class="n">is_simd_flag_type_v</span><span class="o">&lt;</span><span class="n">Flags</span><span class="o">&gt;&gt;</span><span class="p">,</span>
+<span class="w">          </span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detail</span><span class="o">::</span><span class="n">__raw_t</span><span class="o">&lt;</span><span class="n">Tx</span><span class="o">&gt;&gt;</span>
+<span class="n">__ESIMD_API</span><span class="w"> </span><span class="n">simd</span><span class="o">&lt;</span><span class="n">Tx</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span><span class="w"> </span><span class="n">block_load</span><span class="p">(</span><span class="n">AccessorTy</span><span class="w"> </span><span class="n">acc</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span>
+<span class="w">                                   </span><span class="n">Flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{});</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">AccessorTy</span><span class="o">&gt;</span>
+<span class="n">__ESIMD_API</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">enable_if_t</span><span class="o">&lt;</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                                 </span><span class="p">(</span><span class="n">N</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">                                 </span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_pointer</span><span class="o">&lt;</span><span class="n">AccessorTy</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
+<span class="w">                             </span><span class="n">simd</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;&gt;</span>
+<span class="n">gather</span><span class="p">(</span><span class="n">AccessorTy</span><span class="w"> </span><span class="n">acc</span><span class="p">,</span><span class="w"> </span><span class="n">simd</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="o">&gt;</span><span class="w"> </span><span class="n">offsets</span><span class="p">,</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">glob_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">       </span><span class="n">simd_mask</span><span class="o">&lt;</span><span class="n">N</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Implementation of the APIs would follow this pattern:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// this API should verify that accessor is to global address space, this is needed both for</span>
+<span class="c1">// the case with conversion to stateless and the case w/o.</span>
+<span class="n">T</span><span class="w"> </span><span class="nf">stateful_memory_api</span><span class="p">(</span><span class="n">accessor</span><span class="w"> </span><span class="n">acc</span><span class="p">,</span><span class="w"> </span><span class="n">uint32</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">...)</span><span class="w"> </span><span class="p">{</span>
+<span class="cp">#ifdef ESIMD_FORCE_STATELESS_MEM_ACCESS</span>
+<span class="w">  </span><span class="n">accessor_elelemt_type</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acc</span><span class="p">.</span><span class="n">get_pointer</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">stateless_memory_api</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">...);</span>
+<span class="cp">#else</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="n">original</span><span class="w"> </span><span class="n">implementation</span><span class="o">&gt;</span>
+<span class="cp">#endif</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The new macro is supposed to be set by users directly or via some logic based on
+other macros set by users.</p>
+</section>
+<section id="compiler-changes">
+<h4>Compiler changes<a class="headerlink" href="#compiler-changes" title="Link to this heading">¶</a></h4>
+<p>The API part of the implementation is as simple as above, the compiler
+one is slightly more complicated. Compiler needs to make sure that in presence
+of <code class="docutils literal notranslate"><span class="pre">ESIMD_FORCE_STATELESS_MEM_ACCESS</span></code> macro, the actual memory parameter
+annotation described above is correct and tells that memory is a pointer, not a
+surface index. Parameter annotations are generated by the front-end - these are
+<code class="docutils literal notranslate"><span class="pre">kernel_arg_accessor_ptr</span></code> and <code class="docutils literal notranslate"><span class="pre">kernel_arg_type</span></code> metadata nodes, which are
+then translated to <code class="docutils literal notranslate"><span class="pre">buffer_t</span></code> (for surface) or <code class="docutils literal notranslate"><span class="pre">svmptr_t</span></code> (for pointer)
+metadata annotations consumed by the back-end.</p>
+<section id="variant-1">
+<h5>Variant 1<a class="headerlink" href="#variant-1" title="Link to this heading">¶</a></h5>
+<p>This is the recommended variant. A new driver option is added -
+<code class="docutils literal notranslate"><span class="pre">-fsycl-esimd-force-stateless-mem-access</span></code>. Under this option:</p>
+<ul class="simple">
+<li><p>SYCL C++ device compiler FE defines the <code class="docutils literal notranslate"><span class="pre">ESIMD_FORCE_STATELESS_MEM_ACCESS</span></code>
+macro</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool is run with a new option
+<code class="docutils literal notranslate"><span class="pre">-esimd-force-stateless-mem-access</span></code>. Under this option, the tool
+configures the LowerESIMD.cpp pass to ignore the <code class="docutils literal notranslate"><span class="pre">kernel_arg_accessor_ptr</span></code>
+and always generate <code class="docutils literal notranslate"><span class="pre">svmptr_t</span></code> annotation for memory arguments.</p></li>
+</ul>
+</section>
+<section id="variant-2">
+<h5>Variant 2<a class="headerlink" href="#variant-2" title="Link to this heading">¶</a></h5>
+<p>Clang C++ FE is changed to generate desired <code class="docutils literal notranslate"><span class="pre">kernel_arg_accessor_ptr</span></code>
+metadata depending on <code class="docutils literal notranslate"><span class="pre">ESIMD_FORCE_STATELESS_MEM_ACCESS</span></code> macro setting. If
+set, it will mark all memory arguments as pointers in
+<code class="docutils literal notranslate"><span class="pre">kernel_arg_accessor_ptr</span></code> and <code class="docutils literal notranslate"><span class="pre">kernel_arg_type</span></code> MD nodes.</p>
+</section>
+<section id="variant-3-no-go">
+<h5>Variant 3 (no go)<a class="headerlink" href="#variant-3-no-go" title="Link to this heading">¶</a></h5>
+<p>Definition of <code class="docutils literal notranslate"><span class="pre">SYCL_ESIMD_KERNEL</span></code> is changed depending on presence of
+<code class="docutils literal notranslate"><span class="pre">ESIMD_FORCE_STATELESS_MEM_ACCESS</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifdef ESIMD_FORCE_STATELESS_MEM_ACCESS</span>
+<span class="cp">#define SYCL_ESIMD_KERNEL __attribute__((sycl_explicit_simd)) __attribute__((sycl_explicit_simd_force_stateless))</span>
+<span class="cp">#else</span>
+<span class="cp">#define SYCL_ESIMD_KERNEL __attribute__((sycl_explicit_simd))</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>Then LowerESIMD lowers parameter annotation depending on
+<code class="docutils literal notranslate"><span class="pre">sycl_explicit_simd_force_stateless</span></code> attribute presence.
+The drawback is that is allowed to use <code class="docutils literal notranslate"><span class="pre">[[intel::sycl_explicit_simd]]</span></code> w/o
+<code class="docutils literal notranslate"><span class="pre">SYCL_ESIMD_KERNEL</span></code></p>
+</section>
+</section>
+<section id="esimd-verifier-changes">
+<h4>ESIMD Verifier changes<a class="headerlink" href="#esimd-verifier-changes" title="Link to this heading">¶</a></h4>
+<p>All the compiler variants require that accessor::get_pointer() can be used in
+the device code. <code class="docutils literal notranslate"><span class="pre">ESIMDVerifier.cpp</span></code> needs to additionally allow the following
+regexps:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="s2">&quot;^cl::sycl::accessor&lt;.+&gt;::getPointerAdjusted&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;^cl::sycl::accessor&lt;.+&gt;::getQualifiedPtr&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;^cl::sycl::accessor&lt;.+&gt;::get_pointer&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;^cl::sycl::multi_ptr&lt;.+&gt;::.+&quot;</span>
+</pre></div>
+</div>
+<p>But only if it is run in “force-stateless” mode.</p>
+</section>
+</section>
+<section id="long-term">
+<h3>Long-term<a class="headerlink" href="#long-term" title="Link to this heading">¶</a></h3>
+<p>Long term solution would be replacing the</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="c1">#ifdef ESIMD_FORCE_STATELESS_MEM_ACCESS</span>
+</pre></div>
+</div>
+<p>with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">if_device_has</span><span class="p">(</span><span class="n">platform_requires_stateless_access</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and removing all the changes in other components.
+Plus VC BE need to be taught to generate correct pointer parameter annotation
+not relying on the middle-end providing it.</p>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="HostPipes.html">Implementation design for “Host Pipes”</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="ESIMDDesignNotes.html">Explicit SIMD design notes</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

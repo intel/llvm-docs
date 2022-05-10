@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to the Clang AST &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Introduction to the Clang AST &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="LibTooling" href="LibTooling.html" />
     <link rel="prev" title="External Clang Examples" href="ExternalClangExamples.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Introduction to the Clang AST</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,14 +36,14 @@
         
         
   <section id="introduction-to-the-clang-ast">
-<h1>Introduction to the Clang AST<a class="headerlink" href="#introduction-to-the-clang-ast" title="Permalink to this headline">¶</a></h1>
+<h1>Introduction to the Clang AST<a class="headerlink" href="#introduction-to-the-clang-ast" title="Link to this heading">¶</a></h1>
 <p>This document gives a gentle introduction to the mysteries of the Clang
 AST. It is targeted at developers who either want to contribute to
 Clang, or use tools that work based on Clang’s AST, like the AST
 matchers.</p>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/VqCkCDFLSsc?vq=hd720" frameborder="0" allowfullscreen></iframe></center><p><a class="reference external" href="https://llvm.org/devmtg/2013-04/klimek-slides.pdf">Slides</a></p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>Clang’s AST is different from ASTs produced by some other compilers in
 that it closely resembles both the written C++ code and the C++
 standard. For example, parenthesis expressions and compile time
@@ -58,7 +57,7 @@ the doxygen of the class you’re looking for (for example, search for:
 clang ParenExpr).</p>
 </section>
 <section id="examining-the-ast">
-<h2>Examining the AST<a class="headerlink" href="#examining-the-ast" title="Permalink to this headline">¶</a></h2>
+<h2>Examining the AST<a class="headerlink" href="#examining-the-ast" title="Link to this heading">¶</a></h2>
 <p>A good way to familiarize yourself with the Clang AST is to actually look
 at it on some simple example code. Clang has a builtin AST-dump mode,
 which can be enabled with the flag <code class="docutils literal notranslate"><span class="pre">-ast-dump</span></code>.</p>
@@ -102,7 +101,7 @@ that declares our result variable, and the <a class="reference external" href="h
 statement</a>.</p>
 </section>
 <section id="ast-context">
-<h2>AST Context<a class="headerlink" href="#ast-context" title="Permalink to this headline">¶</a></h2>
+<h2>AST Context<a class="headerlink" href="#ast-context" title="Link to this heading">¶</a></h2>
 <p>All information about the AST for a translation unit is bundled up in
 the class
 <a class="reference external" href="https://clang.llvm.org/doxygen/classclang_1_1ASTContext.html">ASTContext</a>.
@@ -113,7 +112,7 @@ identifiers</a>
 for the parsed translation unit.</p>
 </section>
 <section id="ast-nodes">
-<h2>AST Nodes<a class="headerlink" href="#ast-nodes" title="Permalink to this headline">¶</a></h2>
+<h2>AST Nodes<a class="headerlink" href="#ast-nodes" title="Link to this heading">¶</a></h2>
 <p>Clang’s AST nodes are modeled on a class hierarchy that does not have a
 common ancestor. Instead, there are multiple larger hierarchies for
 basic node types like
@@ -161,8 +160,8 @@ also statements in Clang’s AST.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

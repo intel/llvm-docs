@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Implementation design for “device_if” and “device_architecture” &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=dfa0e015" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="User driven Kernel Fusion" href="KernelFusionJIT.html" />
+    <link rel="prev" title="Explicit SIMD design notes" href="ESIMDDesignNotes.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Implementation design for “device_if” and “device_architecture”</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="ESIMDDesignNotes.html">Explicit SIMD design notes</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="KernelFusionJIT.html">User driven Kernel Fusion</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="implementation-design-for-device-if-and-device-architecture">
+<h1>Implementation design for “device_if” and “device_architecture”<a class="headerlink" href="#implementation-design-for-device-if-and-device-architecture" title="Link to this heading">¶</a></h1>
+<p>This document describes the design for the DPC++ implementation of the
+<a class="reference download internal" download="" href="../_downloads/ff081d9da16b0e716ce1b7787452a6a3/sycl_ext_oneapi_device_if.asciidoc"><span class="xref download myst">sycl_ext_oneapi_device_if</span></a> and
+<a class="reference download internal" download="" href="../_downloads/29eec7da90e760d8eaf2283a50ff5ea3/sycl_ext_oneapi_device_architecture.asciidoc"><span class="xref download myst">sycl_ext_oneapi_device_architecture</span></a> extensions.</p>
+<section id="phased-implementation">
+<h2>Phased implementation<a class="headerlink" href="#phased-implementation" title="Link to this heading">¶</a></h2>
+<p>The implementation is divided into two phases.  In the first phase, we support
+only <a class="reference download internal" download="" href="../_downloads/29eec7da90e760d8eaf2283a50ff5ea3/sycl_ext_oneapi_device_architecture.asciidoc"><span class="xref download myst">sycl_ext_oneapi_device_architecture</span></a> and it is supported only in
+AOT mode.  The second phase adds support for both extensions in both AOT and
+JIT modes.</p>
+</section>
+<section id="changes-to-compiler-driver">
+<h2>Changes to compiler driver<a class="headerlink" href="#changes-to-compiler-driver" title="Link to this heading">¶</a></h2>
+<p>Both phases require changes to the <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code> option that is recognized
+by the compiler driver.  The problem is that the current form of that option
+does not identify a specific device name.  As a reminder, the current command
+line for AOT compilation on GPU looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ clang++ -fsycl -fsycl-targets=spir64_gen -Xs &quot;-device skl&quot; ...
+</pre></div>
+</div>
+<p>Notice that <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code> option specifies only the generic name
+<code class="docutils literal notranslate"><span class="pre">spir64_gen</span></code> whereas the device name is passed directly to <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> (the Intel
+GPU AOT compiler) via <code class="docutils literal notranslate"><span class="pre">-Xs</span> <span class="pre">&quot;-device</span> <span class="pre">skl&quot;</span></code>.  Since the compiler driver merely
+passes the <code class="docutils literal notranslate"><span class="pre">-Xs</span></code> options directly to the underlying <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> without
+understanding them, the compiler driver does not currently know the target
+device(s) of the AOT compilation.</p>
+<p>To fix this, the <code class="docutils literal notranslate"><span class="pre">-fsycl-targets</span></code> option should be changed to accept the
+following GPU device names in addition to the target names it currently
+recognizes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_bdw</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_skl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_kbl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_cfl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_apl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_glk</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_whl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_aml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_cml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_icllp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_tgllp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_rkl</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_adl_s</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_rpl_s</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_adl_p</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_adl_n</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_dg1</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_acm_g10</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_acm_g11</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_acm_g12</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_pvc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_8_0_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_bdw</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_0_9</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_skl</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_1_9</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_kbl</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_2_9</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_cfl</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_3_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_apl</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_4_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_glk</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_5_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_whl</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_6_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_aml</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_9_7_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_cml</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_11_0_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_icllp</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_12_0_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_tgllp</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">intel_gpu_12_10_0</span></code> (alias for <code class="docutils literal notranslate"><span class="pre">intel_gpu_dg1</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_50</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_52</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_53</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_60</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_61</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_62</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_70</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_72</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_75</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_80</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_86</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_87</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_89</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nvidia_gpu_sm_90</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx700</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx701</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx702</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx801</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx802</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx803</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx805</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx810</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx900</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx902</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx904</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx906</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx908</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx909</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx90a</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx90c</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx940</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx941</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx942</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1010</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1011</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1012</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1013</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1030</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1031</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1032</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1033</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1034</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1035</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1036</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1100</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1101</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1102</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1103</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1150</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1151</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1200</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amd_gpu_gfx1201</span></code></p></li>
+</ul>
+<p>The above listed device names may not be mixed with the existing target name
+<code class="docutils literal notranslate"><span class="pre">spir64_gen</span></code> on the same command line.  In addition, the user must not pass the
+<code class="docutils literal notranslate"><span class="pre">-device</span></code> option to <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> via <code class="docutils literal notranslate"><span class="pre">-Xs</span></code> or related command line options because
+the compiler driver will pass this option to <code class="docutils literal notranslate"><span class="pre">ocloc</span></code> automatically.</p>
+<p>Note that in the first phase of implementation, only one of the above listed
+GPU device names may appear on the command line.  As a result, the first phase
+of implementation supports AOT compilation in this new mode only for a single
+GPU device.</p>
+</section>
+<section id="phase-1">
+<h2>Phase 1<a class="headerlink" href="#phase-1" title="Link to this heading">¶</a></h2>
+<p>The first phase requires changes only to the compiler driver and to the
+device headers.</p>
+<section id="compiler-driver-macro-predefines">
+<h3>Compiler driver macro predefines<a class="headerlink" href="#compiler-driver-macro-predefines" title="Link to this heading">¶</a></h3>
+<p>Most of the changes to the compiler driver are described above, but there are
+a few small additional changes that are specific to phase 1.  If the user
+invokes the compiler driver with <code class="docutils literal notranslate"><span class="pre">-fsycl-targets=&lt;device&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;device&gt;</span></code> is
+one of the GPU device names listed above, the compiler driver must predefine
+one of the following corresponding C++ macro names:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_BDW__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_SKL__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_KBL__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_CFL__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_APL__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_GLK__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_WHL__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_AML__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_CML__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ICLLP__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_TGLLP__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_RKL__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ADL_S__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_RPL_S__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ADL_P__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ADL_N__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_DG1__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ACM_G10__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ACM_G11__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_ACM_G12__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_GPU_PVC__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM50__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM52__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM53__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM60__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM61__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM62__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM70__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM72__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM75__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM80__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM86__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM87__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM89__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM90__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_NVIDIA_GPU_SM90A__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX700__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX701__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX702__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX801__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX802__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX803__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX805__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX810__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX900__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX902__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX904__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX906__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX908__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX909__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX90A__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX90C__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX940__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX941__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX942__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1010__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1011__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1012__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1013__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1030__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1031__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1032__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1033__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1034__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1035__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1036__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1100__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1101__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1102__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1103__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1150__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1151__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1200__</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_AMD_GPU_GFX1201__</span></code></p></li>
+</ul>
+<p>If the user invokes the compiler driver with <code class="docutils literal notranslate"><span class="pre">-fsycl-targets=spir64_x86_64</span></code>,
+the compiler driver must predefine the following C++ macro name:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__SYCL_TARGET_INTEL_X86_64__</span></code></p></li>
+</ul>
+<p>These macros are an internal implementation detail, so they should not be
+documented to users, and user code should not make use of them.</p>
+</section>
+<section id="changes-to-the-device-headers">
+<h3>Changes to the device headers<a class="headerlink" href="#changes-to-the-device-headers" title="Link to this heading">¶</a></h3>
+<p>The device headers implement the <a class="reference download internal" download="" href="../_downloads/29eec7da90e760d8eaf2283a50ff5ea3/sycl_ext_oneapi_device_architecture.asciidoc"><span class="xref download myst">sycl_ext_oneapi_device_architecture</span></a>
+extension using these predefined macros and leverage <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">constexpr</span></code> to discard
+statements in the “if” or “else” body when the device does not match one of the
+listed architectures.  The following code snippet illustrates the technique:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">sycl</span> <span class="p">{</span>
+<span class="n">namespace</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span> <span class="p">{</span>
+
+<span class="n">enum</span> <span class="k">class</span> <span class="nc">architecture</span> <span class="p">{</span>
+  <span class="n">x86_64</span><span class="p">,</span>
+  <span class="n">intel_gpu_bdw</span><span class="p">,</span>
+  <span class="n">intel_gpu_skl</span><span class="p">,</span>
+  <span class="n">intel_gpu_kbl</span>
+  <span class="o">//</span> <span class="o">...</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span>
+
+<span class="n">namespace</span> <span class="n">detail</span> <span class="p">{</span>
+
+<span class="c1">#ifndef __SYCL_TARGET_INTEL_X86_64__</span>
+<span class="c1">#define __SYCL_TARGET_INTEL_X86_64__ 0</span>
+<span class="c1">#endif</span>
+<span class="c1">#ifndef __SYCL_TARGET_INTEL_GPU_BDW__</span>
+<span class="c1">#define __SYCL_TARGET_INTEL_GPU_BDW__ 0</span>
+<span class="c1">#endif</span>
+<span class="c1">#ifndef __SYCL_TARGET_INTEL_GPU_SKL__</span>
+<span class="c1">#define __SYCL_TARGET_INTEL_GPU_SKL__ 0</span>
+<span class="c1">#endif</span>
+<span class="c1">#ifndef __SYCL_TARGET_INTEL_GPU_KBL__</span>
+<span class="c1">#define __SYCL_TARGET_INTEL_GPU_KBL__ 0</span>
+<span class="c1">#endif</span>
+<span class="o">//</span> <span class="o">...</span>
+
+<span class="o">//</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">true</span> <span class="n">when</span> <span class="n">the</span> <span class="n">translation</span> <span class="n">unit</span> <span class="ow">is</span> <span class="n">compiled</span> <span class="ow">in</span> <span class="n">AOT</span> <span class="n">mode</span> <span class="k">with</span> <span class="n">target</span>
+<span class="o">//</span> <span class="n">names</span> <span class="n">that</span> <span class="n">supports</span> <span class="n">the</span> <span class="s2">&quot;if_architecture_is&quot;</span> <span class="n">features</span><span class="o">.</span>  <span class="n">If</span> <span class="n">an</span> <span class="n">unsupported</span>
+<span class="o">//</span> <span class="n">target</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">specified</span> <span class="n">via</span> <span class="s2">&quot;-fsycl-targets&quot;</span><span class="p">,</span> <span class="n">the</span> <span class="n">associated</span> <span class="n">invocation</span> <span class="n">of</span>
+<span class="o">//</span> <span class="n">the</span> <span class="n">device</span> <span class="n">compiler</span> <span class="n">will</span> <span class="nb">set</span> <span class="n">this</span> <span class="n">variable</span> <span class="n">to</span> <span class="n">false</span><span class="p">,</span> <span class="ow">and</span> <span class="n">that</span> <span class="n">will</span> <span class="n">trigger</span>
+<span class="o">//</span> <span class="n">an</span> <span class="n">error</span> <span class="k">for</span> <span class="n">code</span> <span class="n">that</span> <span class="n">uses</span> <span class="s2">&quot;if_architecture_is&quot;</span><span class="o">.</span>
+<span class="n">static</span> <span class="n">constexpr</span> <span class="nb">bool</span> <span class="n">is_allowable_aot_mode</span> <span class="o">=</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_X86_64__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_GPU_BDW__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_GPU_SKL__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_GPU_KBL__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="o">//</span> <span class="o">...</span>
+  <span class="p">;</span>
+
+<span class="o">//</span> <span class="n">One</span> <span class="n">entry</span> <span class="k">for</span> <span class="n">each</span> <span class="n">enumerator</span> <span class="ow">in</span> <span class="s2">&quot;architecture&quot;</span> <span class="n">telling</span> <span class="n">whether</span> <span class="n">the</span> <span class="n">AOT</span>
+<span class="o">//</span> <span class="n">target</span> <span class="n">matches</span> <span class="n">that</span> <span class="n">architecture</span><span class="o">.</span>
+<span class="n">static</span> <span class="n">constexpr</span> <span class="nb">bool</span> <span class="n">is_aot_for_architecture</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_X86_64__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_GPU_BDW__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_GPU_SKL__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span>
+  <span class="p">(</span><span class="n">__SYCL_TARGET_INTEL_GPU_KBL__</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="o">//</span> <span class="o">...</span>
+<span class="p">};</span>
+
+<span class="o">//</span> <span class="n">Read</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="s2">&quot;is_allowable_aot_mode&quot;</span> <span class="n">via</span> <span class="n">a</span> <span class="n">template</span> <span class="n">to</span> <span class="n">defer</span> <span class="n">triggering</span>
+<span class="o">//</span> <span class="n">static_assert</span><span class="p">()</span> <span class="n">until</span> <span class="n">template</span> <span class="n">instantiation</span> <span class="n">time</span><span class="o">.</span>
+<span class="n">template</span><span class="o">&lt;</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span><span class="p">::</span><span class="n">architecture</span><span class="o">...</span> <span class="n">Archs</span><span class="o">&gt;</span>
+<span class="n">constexpr</span> <span class="n">static</span> <span class="nb">bool</span> <span class="n">allowable_aot_mode</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">is_allowable_aot_mode</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">Tells</span> <span class="k">if</span> <span class="n">the</span> <span class="n">current</span> <span class="n">device</span> <span class="n">has</span> <span class="n">one</span> <span class="n">of</span> <span class="n">the</span> <span class="n">architectures</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">parameter</span>
+<span class="o">//</span> <span class="n">pack</span><span class="o">.</span>
+<span class="n">template</span><span class="o">&lt;</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span><span class="p">::</span><span class="n">architecture</span><span class="o">...</span> <span class="n">Archs</span><span class="o">&gt;</span>
+<span class="n">constexpr</span> <span class="n">static</span> <span class="nb">bool</span> <span class="n">device_architecture_is</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">is_aot_for_architecture</span><span class="p">[</span><span class="n">static_cast</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Archs</span><span class="p">)]</span> <span class="o">||</span> <span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="n">Helper</span> <span class="nb">object</span> <span class="n">used</span> <span class="n">to</span> <span class="n">implement</span> <span class="s2">&quot;else_if_architecture_is&quot;</span> <span class="ow">and</span> <span class="s2">&quot;otherwise&quot;</span><span class="o">.</span>
+<span class="o">//</span> <span class="n">The</span> <span class="s2">&quot;MakeCall&quot;</span> <span class="n">template</span> <span class="n">parameter</span> <span class="n">tells</span> <span class="n">whether</span> <span class="n">a</span> <span class="n">previous</span> <span class="n">clause</span> <span class="ow">in</span> <span class="n">the</span>
+<span class="o">//</span> <span class="s2">&quot;if-elseif-elseif ...&quot;</span> <span class="n">chain</span> <span class="n">was</span> <span class="n">true</span><span class="o">.</span>  <span class="n">When</span> <span class="s2">&quot;MakeCall&quot;</span> <span class="ow">is</span> <span class="n">false</span><span class="p">,</span> <span class="n">some</span>
+<span class="o">//</span> <span class="n">previous</span> <span class="n">clause</span> <span class="n">was</span> <span class="n">true</span><span class="p">,</span> <span class="n">so</span> <span class="n">none</span> <span class="n">of</span> <span class="n">the</span> <span class="n">subsequent</span>
+<span class="o">//</span> <span class="s2">&quot;else_if_architecture_is&quot;</span> <span class="ow">or</span> <span class="s2">&quot;otherwise&quot;</span> <span class="n">member</span> <span class="n">functions</span> <span class="n">should</span> <span class="n">call</span> <span class="n">the</span>
+<span class="o">//</span> <span class="n">user</span><span class="s1">&#39;s function.</span>
+<span class="n">template</span><span class="o">&lt;</span><span class="nb">bool</span> <span class="n">MakeCall</span><span class="o">&gt;</span>
+<span class="k">class</span> <span class="nc">if_architecture_helper</span> <span class="p">{</span>
+ <span class="n">public</span><span class="p">:</span>
+  <span class="n">template</span><span class="o">&lt;</span><span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span><span class="p">::</span><span class="n">architecture</span> <span class="o">...</span><span class="n">Archs</span><span class="p">,</span> <span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+  <span class="n">constexpr</span> <span class="n">auto</span> <span class="n">else_if_architecture_is</span><span class="p">(</span><span class="n">T</span> <span class="n">fnTrue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">constexpr</span> <span class="p">(</span><span class="n">MakeCall</span> <span class="o">&amp;&amp;</span> <span class="n">device_architecture_is</span><span class="o">&lt;</span><span class="n">Archs</span><span class="o">...&gt;</span><span class="p">())</span> <span class="p">{</span>
+      <span class="n">fnTrue</span><span class="p">();</span>
+      <span class="k">return</span> <span class="n">if_architecture_helper</span><span class="o">&lt;</span><span class="n">false</span><span class="o">&gt;</span><span class="p">{};</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">if_architecture_helper</span><span class="o">&lt;</span><span class="n">MakeCall</span><span class="o">&gt;</span><span class="p">{};</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+  <span class="n">constexpr</span> <span class="n">void</span> <span class="n">otherwise</span><span class="p">(</span><span class="n">T</span> <span class="n">fn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">constexpr</span> <span class="p">(</span><span class="n">MakeCall</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">fn</span><span class="p">();</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">detail</span>
+
+<span class="n">namespace</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span> <span class="p">{</span>
+
+<span class="n">template</span><span class="o">&lt;</span><span class="n">architecture</span> <span class="o">...</span><span class="n">Archs</span><span class="p">,</span> <span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">constexpr</span> <span class="n">static</span> <span class="n">auto</span> <span class="n">if_architecture_is</span><span class="p">(</span><span class="n">T</span> <span class="n">fnTrue</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">static_assert</span><span class="p">(</span><span class="n">detail</span><span class="p">::</span><span class="n">allowable_aot_mode</span><span class="o">&lt;</span><span class="n">Archs</span><span class="o">...&gt;</span><span class="p">(),</span>
+    <span class="s2">&quot;The if_architecture_is function may only be used when AOT &quot;</span>
+    <span class="s2">&quot;compiling with &#39;-fsycl-targets=spir64_x86_64&#39; or &quot;</span>
+    <span class="s2">&quot;&#39;-fsycl-targets=intel_gpu_*&#39;&quot;</span><span class="p">);</span>
+  <span class="k">if</span> <span class="n">constexpr</span> <span class="p">(</span><span class="n">detail</span><span class="p">::</span><span class="n">device_architecture_is</span><span class="o">&lt;</span><span class="n">Archs</span><span class="o">...&gt;</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">fnTrue</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">detail</span><span class="p">::</span><span class="n">if_architecture_helper</span><span class="o">&lt;</span><span class="n">false</span><span class="o">&gt;</span><span class="p">{};</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">detail</span><span class="p">::</span><span class="n">if_architecture_helper</span><span class="o">&lt;</span><span class="n">true</span><span class="o">&gt;</span><span class="p">{};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">ext</span><span class="p">::</span><span class="n">oneapi</span><span class="p">::</span><span class="n">experimental</span>
+<span class="p">}</span> <span class="o">//</span> <span class="n">namespace</span> <span class="n">sycl</span>
+</pre></div>
+</div>
+</section>
+<section id="analysis-of-error-checking-for-unsupported-aot-modes">
+<h3>Analysis of error checking for unsupported AOT modes<a class="headerlink" href="#analysis-of-error-checking-for-unsupported-aot-modes" title="Link to this heading">¶</a></h3>
+<p>The header file code presented above triggers a <code class="docutils literal notranslate"><span class="pre">static_assert</span></code> if the
+<code class="docutils literal notranslate"><span class="pre">if_architecture_is</span></code> function is used in a translation unit that is compiled
+for an unsupported target. The supported targets are <code class="docutils literal notranslate"><span class="pre">spir64_x86_64</span></code>,
+the new <code class="docutils literal notranslate"><span class="pre">intel_gpu_*</span></code>, <code class="docutils literal notranslate"><span class="pre">nvidia_gpu_*</span></code> and <code class="docutils literal notranslate"><span class="pre">amd_gpu_*</span></code> GPU device names.</p>
+<p>The error checking relies on the fact that the device compiler is invoked
+separately for each target listed in <code class="docutils literal notranslate"><span class="pre">-fsycl-target</span></code>.  If any target is
+unsupported, the associated device compilation will compute
+<code class="docutils literal notranslate"><span class="pre">is_allowable_aot_mode</span></code> as <code class="docutils literal notranslate"><span class="pre">false</span></code>, and this will trigger the <code class="docutils literal notranslate"><span class="pre">static_assert</span></code>
+in that compilation phase.</p>
+</section>
+</section>
+<section id="phase-2">
+<h2>Phase 2<a class="headerlink" href="#phase-2" title="Link to this heading">¶</a></h2>
+<p>TBD.</p>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="ESIMDDesignNotes.html">Explicit SIMD design notes</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="KernelFusionJIT.html">User driven Kernel Fusion</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Clang Plugins &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Clang Plugins &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="How to write RecursiveASTVisitor based ASTFrontendActions." href="RAVFrontendAction.html" />
     <link rel="prev" title="LibFormat" href="LibFormat.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Clang Plugins</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,77 +36,77 @@
         
         
   <section id="clang-plugins">
-<h1>Clang Plugins<a class="headerlink" href="#clang-plugins" title="Permalink to this headline">¶</a></h1>
+<h1>Clang Plugins<a class="headerlink" href="#clang-plugins" title="Link to this heading">¶</a></h1>
 <p>Clang Plugins make it possible to run extra user defined actions during a
 compilation. This document will provide a basic walkthrough of how to write and
 run a Clang Plugin.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>Clang Plugins run FrontendActions over code. See the <a class="reference internal" href="RAVFrontendAction.html"><span class="doc">FrontendAction
 tutorial</span></a> on how to write a <code class="docutils literal notranslate"><span class="pre">FrontendAction</span></code> using the
 <code class="docutils literal notranslate"><span class="pre">RecursiveASTVisitor</span></code>. In this tutorial, we’ll demonstrate how to write a
 simple clang plugin.</p>
 </section>
 <section id="writing-a-pluginastaction">
-<h2>Writing a <code class="docutils literal notranslate"><span class="pre">PluginASTAction</span></code><a class="headerlink" href="#writing-a-pluginastaction" title="Permalink to this headline">¶</a></h2>
+<h2>Writing a <code class="docutils literal notranslate"><span class="pre">PluginASTAction</span></code><a class="headerlink" href="#writing-a-pluginastaction" title="Link to this heading">¶</a></h2>
 <p>The main difference from writing normal <code class="docutils literal notranslate"><span class="pre">FrontendActions</span></code> is that you can
 handle plugin command line options. The <code class="docutils literal notranslate"><span class="pre">PluginASTAction</span></code> base class declares
 a <code class="docutils literal notranslate"><span class="pre">ParseArgs</span></code> method which you have to implement in your plugin.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="nf">ParseArgs</span><span class="p">(</span><span class="k">const</span> <span class="n">CompilerInstance</span> <span class="o">&amp;</span><span class="n">CI</span><span class="p">,</span>
-               <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">e</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s">&quot;-some-arg&quot;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// Handle the command line argument.</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">ParseArgs</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">CompilerInstance</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CI</span><span class="p">,</span>
+<span class="w">               </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;-some-arg&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Handle the command line argument.</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="registering-a-plugin">
-<h2>Registering a plugin<a class="headerlink" href="#registering-a-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>Registering a plugin<a class="headerlink" href="#registering-a-plugin" title="Link to this heading">¶</a></h2>
 <p>A plugin is loaded from a dynamic library at runtime by the compiler. To
 register a plugin in a library, use <code class="docutils literal notranslate"><span class="pre">FrontendPluginRegistry::Add&lt;&gt;</span></code>:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span> <span class="n">FrontendPluginRegistry</span><span class="o">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">MyPlugin</span><span class="o">&gt;</span> <span class="n">X</span><span class="p">(</span><span class="s">&quot;my-plugin-name&quot;</span><span class="p">,</span> <span class="s">&quot;my plugin description&quot;</span><span class="p">);</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="n">FrontendPluginRegistry</span><span class="o">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">MyPlugin</span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="s">&quot;my-plugin-name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;my plugin description&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="defining-pragmas">
-<h2>Defining pragmas<a class="headerlink" href="#defining-pragmas" title="Permalink to this headline">¶</a></h2>
+<h2>Defining pragmas<a class="headerlink" href="#defining-pragmas" title="Link to this heading">¶</a></h2>
 <p>Plugins can also define pragmas by declaring a <code class="docutils literal notranslate"><span class="pre">PragmaHandler</span></code> and
 registering it using <code class="docutils literal notranslate"><span class="pre">PragmaHandlerRegistry::Add&lt;&gt;</span></code>:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define a pragma handler for #pragma example_pragma</span>
-<span class="k">class</span> <span class="nc">ExamplePragmaHandler</span> <span class="o">:</span> <span class="k">public</span> <span class="n">PragmaHandler</span> <span class="p">{</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExamplePragmaHandler</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">PragmaHandler</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-  <span class="n">ExamplePragmaHandler</span><span class="p">()</span> <span class="o">:</span> <span class="n">PragmaHandler</span><span class="p">(</span><span class="s">&quot;example_pragma&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
-  <span class="kt">void</span> <span class="n">HandlePragma</span><span class="p">(</span><span class="n">Preprocessor</span> <span class="o">&amp;</span><span class="n">PP</span><span class="p">,</span> <span class="n">PragmaIntroducer</span> <span class="n">Introducer</span><span class="p">,</span>
-                    <span class="n">Token</span> <span class="o">&amp;</span><span class="n">PragmaTok</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Handle the pragma</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="n">ExamplePragmaHandler</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">PragmaHandler</span><span class="p">(</span><span class="s">&quot;example_pragma&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">HandlePragma</span><span class="p">(</span><span class="n">Preprocessor</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PP</span><span class="p">,</span><span class="w"> </span><span class="n">PragmaIntroducer</span><span class="w"> </span><span class="n">Introducer</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">Token</span><span class="w"> </span><span class="o">&amp;</span><span class="n">PragmaTok</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Handle the pragma</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 
-<span class="k">static</span> <span class="n">PragmaHandlerRegistry</span><span class="o">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">ExamplePragmaHandler</span><span class="o">&gt;</span> <span class="n">Y</span><span class="p">(</span><span class="s">&quot;example_pragma&quot;</span><span class="p">,</span><span class="s">&quot;example pragma description&quot;</span><span class="p">);</span>
+<span class="k">static</span><span class="w"> </span><span class="n">PragmaHandlerRegistry</span><span class="o">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">ExamplePragmaHandler</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Y</span><span class="p">(</span><span class="s">&quot;example_pragma&quot;</span><span class="p">,</span><span class="s">&quot;example pragma description&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>
 <section id="defining-attributes">
-<h2>Defining attributes<a class="headerlink" href="#defining-attributes" title="Permalink to this headline">¶</a></h2>
+<h2>Defining attributes<a class="headerlink" href="#defining-attributes" title="Link to this heading">¶</a></h2>
 <p>Plugins can define attributes by declaring a <code class="docutils literal notranslate"><span class="pre">ParsedAttrInfo</span></code> and registering
 it using <code class="docutils literal notranslate"><span class="pre">ParsedAttrInfoRegister::Add&lt;&gt;</span></code>:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ExampleAttrInfo</span> <span class="o">:</span> <span class="k">public</span> <span class="n">ParsedAttrInfo</span> <span class="p">{</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ExampleAttrInfo</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">ParsedAttrInfo</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-  <span class="n">ExampleAttrInfo</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">Spellings</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">ParsedAttr</span><span class="o">::</span><span class="n">AS_GNU</span><span class="p">,</span><span class="s">&quot;example&quot;</span><span class="p">});</span>
-  <span class="p">}</span>
-  <span class="n">AttrHandling</span> <span class="n">handleDeclAttribute</span><span class="p">(</span><span class="n">Sema</span> <span class="o">&amp;</span><span class="n">S</span><span class="p">,</span> <span class="n">Decl</span> <span class="o">*</span><span class="n">D</span><span class="p">,</span>
-                                   <span class="k">const</span> <span class="n">ParsedAttr</span> <span class="o">&amp;</span><span class="n">Attr</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span> <span class="p">{</span>
-    <span class="c1">// Handle the attribute</span>
-    <span class="k">return</span> <span class="n">AttributeApplied</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="n">ExampleAttrInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Spellings</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">ParsedAttr</span><span class="o">::</span><span class="n">AS_GNU</span><span class="p">,</span><span class="s">&quot;example&quot;</span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">AttrHandling</span><span class="w"> </span><span class="n">handleDeclAttribute</span><span class="p">(</span><span class="n">Sema</span><span class="w"> </span><span class="o">&amp;</span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">Decl</span><span class="w"> </span><span class="o">*</span><span class="n">D</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="n">ParsedAttr</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Attr</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Handle the attribute</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">AttributeApplied</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">};</span>
 
-<span class="k">static</span> <span class="n">ParsedAttrInfoRegistry</span><span class="o">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">ExampleAttrInfo</span><span class="o">&gt;</span> <span class="n">Z</span><span class="p">(</span><span class="s">&quot;example_attr&quot;</span><span class="p">,</span><span class="s">&quot;example attribute description&quot;</span><span class="p">);</span>
+<span class="k">static</span><span class="w"> </span><span class="n">ParsedAttrInfoRegistry</span><span class="o">::</span><span class="n">Add</span><span class="o">&lt;</span><span class="n">ExampleAttrInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Z</span><span class="p">(</span><span class="s">&quot;example_attr&quot;</span><span class="p">,</span><span class="s">&quot;example attribute description&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The members of <code class="docutils literal notranslate"><span class="pre">ParsedAttrInfo</span></code> that a plugin attribute must define are:</p>
@@ -141,32 +140,32 @@ target.</p></li>
 <p>To see a working example of an attribute plugin, see <a class="reference external" href="https://github.com/llvm/llvm-project/blob/main/clang/examples/Attribute/Attribute.cpp">the Attribute.cpp example</a>.</p>
 </section>
 <section id="putting-it-all-together">
-<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Link to this heading">¶</a></h2>
 <p>Let’s look at an example plugin that prints top-level function names.  This
 example is checked into the clang repository; please take a look at
 the <a class="reference external" href="https://github.com/llvm/llvm-project/blob/main/clang/examples/PrintFunctionNames/PrintFunctionNames.cpp">latest version of PrintFunctionNames.cpp</a>.</p>
 </section>
 <section id="running-the-plugin">
-<h2>Running the plugin<a class="headerlink" href="#running-the-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>Running the plugin<a class="headerlink" href="#running-the-plugin" title="Link to this heading">¶</a></h2>
 <section id="using-the-compiler-driver">
-<h3>Using the compiler driver<a class="headerlink" href="#using-the-compiler-driver" title="Permalink to this headline">¶</a></h3>
+<h3>Using the compiler driver<a class="headerlink" href="#using-the-compiler-driver" title="Link to this heading">¶</a></h3>
 <p>The Clang driver accepts the <cite>-fplugin</cite> option to load a plugin.
 Clang plugins can receive arguments from the compiler driver command
 line via the <cite>fplugin-arg-&lt;plugin name&gt;-&lt;argument&gt;</cite> option. Using this
 method, the plugin name cannot contain dashes itself, but the argument
 passed to the plugin can.</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">BD</span><span class="o">=</span>/path/to/build/directory
-<span class="gp">$</span> make -C <span class="nv">$BD</span> CallSuperAttr
-<span class="gp">$</span> clang++ -fplugin<span class="o">=</span><span class="nv">$BD</span>/lib/CallSuperAttr.so <span class="se">\</span>
-          -fplugin-arg-call_super_plugin-help <span class="se">\</span>
-          test.cpp
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">BD</span><span class="o">=</span>/path/to/build/directory
+<span class="gp">$ </span>make<span class="w"> </span>-C<span class="w"> </span><span class="nv">$BD</span><span class="w"> </span>CallSuperAttr
+<span class="gp">$ </span>clang++<span class="w"> </span>-fplugin<span class="o">=</span><span class="nv">$BD</span>/lib/CallSuperAttr.so<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-fplugin-arg-call_super_plugin-help<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>test.cpp
 </pre></div>
 </div>
 <p>If your plugin name contains dashes, either rename the plugin or used the
 cc1 command line options listed below.</p>
 </section>
 <section id="using-the-cc1-command-line">
-<h3>Using the cc1 command line<a class="headerlink" href="#using-the-cc1-command-line" title="Permalink to this headline">¶</a></h3>
+<h3>Using the cc1 command line<a class="headerlink" href="#using-the-cc1-command-line" title="Link to this heading">¶</a></h3>
 <p>To run a plugin, the dynamic library containing the plugin registry must be
 loaded via the <cite>-load</cite> command line option. This will load all plugins
 that are registered, and you can select the plugins to run by specifying the
@@ -185,35 +184,35 @@ line.</p></li>
 <p>For example, to run the <code class="docutils literal notranslate"><span class="pre">print-function-names</span></code> plugin over a source file in
 clang, first build the plugin, and then call clang with the plugin from the
 source tree:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">BD</span><span class="o">=</span>/path/to/build/directory
-<span class="gp">$</span> <span class="o">(</span><span class="nb">cd</span> <span class="nv">$BD</span> <span class="o">&amp;&amp;</span> make PrintFunctionNames <span class="o">)</span>
-<span class="gp">$</span> clang++ -D_GNU_SOURCE -D_DEBUG -D__STDC_CONSTANT_MACROS <span class="se">\</span>
-          -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -D_GNU_SOURCE <span class="se">\</span>
-          -I<span class="nv">$BD</span>/tools/clang/include -Itools/clang/include -I<span class="nv">$BD</span>/include -Iinclude <span class="se">\</span>
-          tools/clang/tools/clang-check/ClangCheck.cpp -fsyntax-only <span class="se">\</span>
-          -Xclang -load -Xclang <span class="nv">$BD</span>/lib/PrintFunctionNames.so -Xclang <span class="se">\</span>
-          -plugin -Xclang print-fns
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">export</span><span class="w"> </span><span class="nv">BD</span><span class="o">=</span>/path/to/build/directory
+<span class="gp">$ </span><span class="o">(</span><span class="nb">cd</span><span class="w"> </span><span class="nv">$BD</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>PrintFunctionNames<span class="w"> </span><span class="o">)</span>
+<span class="gp">$ </span>clang++<span class="w"> </span>-D_GNU_SOURCE<span class="w"> </span>-D_DEBUG<span class="w"> </span>-D__STDC_CONSTANT_MACROS<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-D__STDC_FORMAT_MACROS<span class="w"> </span>-D__STDC_LIMIT_MACROS<span class="w"> </span>-D_GNU_SOURCE<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-I<span class="nv">$BD</span>/tools/clang/include<span class="w"> </span>-Itools/clang/include<span class="w"> </span>-I<span class="nv">$BD</span>/include<span class="w"> </span>-Iinclude<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>tools/clang/tools/clang-check/ClangCheck.cpp<span class="w"> </span>-fsyntax-only<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-Xclang<span class="w"> </span>-load<span class="w"> </span>-Xclang<span class="w"> </span><span class="nv">$BD</span>/lib/PrintFunctionNames.so<span class="w"> </span>-Xclang<span class="w"> </span><span class="se">\</span>
+<span class="w">          </span>-plugin<span class="w"> </span>-Xclang<span class="w"> </span>print-fns
 </pre></div>
 </div>
 <p>Also see the print-function-name plugin example’s
 <a class="reference external" href="https://github.com/llvm/llvm-project/blob/main/clang/examples/PrintFunctionNames/README.txt">README</a></p>
 </section>
 <section id="using-the-clang-command-line">
-<h3>Using the clang command line<a class="headerlink" href="#using-the-clang-command-line" title="Permalink to this headline">¶</a></h3>
+<h3>Using the clang command line<a class="headerlink" href="#using-the-clang-command-line" title="Link to this heading">¶</a></h3>
 <p>Using <cite>-fplugin=plugin</cite> on the clang command line passes the plugin
 through as an argument to <cite>-load</cite> on the cc1 command line. If the plugin
 class implements the <code class="docutils literal notranslate"><span class="pre">getActionType</span></code> method then the plugin is run
 automatically. For example, to run the plugin automatically after the main AST
 action (i.e. the same as using <cite>-add-plugin</cite>):</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Automatically run the plugin after the main AST action</span>
-<span class="n">PluginASTAction</span><span class="o">::</span><span class="n">ActionType</span> <span class="n">getActionType</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="n">AddAfterMainAction</span><span class="p">;</span>
+<span class="n">PluginASTAction</span><span class="o">::</span><span class="n">ActionType</span><span class="w"> </span><span class="nf">getActionType</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">AddAfterMainAction</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="interaction-with-clear-ast-before-backend">
-<h3>Interaction with <code class="docutils literal notranslate"><span class="pre">-clear-ast-before-backend</span></code><a class="headerlink" href="#interaction-with-clear-ast-before-backend" title="Permalink to this headline">¶</a></h3>
+<h3>Interaction with <code class="docutils literal notranslate"><span class="pre">-clear-ast-before-backend</span></code><a class="headerlink" href="#interaction-with-clear-ast-before-backend" title="Link to this heading">¶</a></h3>
 <p>To reduce peak memory usage of the compiler, plugins are recommended to run
 <em>before</em> the main action, which is usually code generation. This is because
 having any plugins that run after the codegen action automatically turns off
@@ -242,8 +241,8 @@ otherwise they should run after the main action.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Cross-compilation using Clang &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <title>Cross-compilation using Clang &#8212; Clang 20.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=dfa0e015" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <script src="_static/documentation_options.js?v=5cbea708"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Clang Static Analyzer" href="ClangStaticAnalyzer.html" />
     <link rel="prev" title="Diagnostic flags in Clang" href="DiagnosticsReference.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 20.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>Cross-compilation using Clang</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,9 +36,9 @@
         
         
   <section id="cross-compilation-using-clang">
-<h1>Cross-compilation using Clang<a class="headerlink" href="#cross-compilation-using-clang" title="Permalink to this headline">¶</a></h1>
+<h1>Cross-compilation using Clang<a class="headerlink" href="#cross-compilation-using-clang" title="Link to this heading">¶</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
 <p>This document will guide you in choosing the right Clang options
 for cross-compiling your code to a different architecture. It assumes you
 already know how to compile the code in question for the host architecture,
@@ -54,7 +53,7 @@ related to cross-compilation, and what main compiler options Clang provides
 for performing cross-compilation.</p>
 </section>
 <section id="cross-compilation-issues">
-<h2>Cross compilation issues<a class="headerlink" href="#cross-compilation-issues" title="Permalink to this headline">¶</a></h2>
+<h2>Cross compilation issues<a class="headerlink" href="#cross-compilation-issues" title="Link to this heading">¶</a></h2>
 <p>In GCC world, every host/target combination has its own set of binaries,
 headers, libraries, etc. So, it’s usually simple to download a package
 with all files in, unzip to a directory and point the build system to
@@ -96,21 +95,21 @@ out by itself</p></li>
 </dl>
 </section>
 <section id="general-cross-compilation-options-in-clang">
-<h2>General Cross-Compilation Options in Clang<a class="headerlink" href="#general-cross-compilation-options-in-clang" title="Permalink to this headline">¶</a></h2>
+<h2>General Cross-Compilation Options in Clang<a class="headerlink" href="#general-cross-compilation-options-in-clang" title="Link to this heading">¶</a></h2>
 <section id="target-triple">
-<h3>Target Triple<a class="headerlink" href="#target-triple" title="Permalink to this headline">¶</a></h3>
+<h3>Target Triple<a class="headerlink" href="#target-triple" title="Link to this heading">¶</a></h3>
 <p>The basic option is to define the target architecture. For that, use
 <code class="docutils literal notranslate"><span class="pre">-target</span> <span class="pre">&lt;triple&gt;</span></code>. If you don’t specify the target, CPU names won’t
 match (since Clang assumes the host triple), and the compilation will
 go ahead, creating code for the host platform, which will break later
 on when assembling or linking.</p>
 <dl class="simple">
-<dt>The triple has the general format <code class="docutils literal notranslate"><span class="pre">&lt;arch&gt;&lt;sub&gt;-&lt;vendor&gt;-&lt;sys&gt;-&lt;abi&gt;</span></code>, where:</dt><dd><ul class="simple">
+<dt>The triple has the general format <code class="docutils literal notranslate"><span class="pre">&lt;arch&gt;&lt;sub&gt;-&lt;vendor&gt;-&lt;sys&gt;-&lt;env&gt;</span></code>, where:</dt><dd><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arch</span></code> = <code class="docutils literal notranslate"><span class="pre">x86_64</span></code>, <code class="docutils literal notranslate"><span class="pre">i386</span></code>, <code class="docutils literal notranslate"><span class="pre">arm</span></code>, <code class="docutils literal notranslate"><span class="pre">thumb</span></code>, <code class="docutils literal notranslate"><span class="pre">mips</span></code>, etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sub</span></code> = for ex. on ARM: <code class="docutils literal notranslate"><span class="pre">v5</span></code>, <code class="docutils literal notranslate"><span class="pre">v6m</span></code>, <code class="docutils literal notranslate"><span class="pre">v7a</span></code>, <code class="docutils literal notranslate"><span class="pre">v7m</span></code>, etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vendor</span></code> = <code class="docutils literal notranslate"><span class="pre">pc</span></code>, <code class="docutils literal notranslate"><span class="pre">apple</span></code>, <code class="docutils literal notranslate"><span class="pre">nvidia</span></code>, <code class="docutils literal notranslate"><span class="pre">ibm</span></code>, etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code> = <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">linux</span></code>, <code class="docutils literal notranslate"><span class="pre">win32</span></code>, <code class="docutils literal notranslate"><span class="pre">darwin</span></code>, <code class="docutils literal notranslate"><span class="pre">cuda</span></code>, etc.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">abi</span></code> = <code class="docutils literal notranslate"><span class="pre">eabi</span></code>, <code class="docutils literal notranslate"><span class="pre">gnu</span></code>, <code class="docutils literal notranslate"><span class="pre">android</span></code>, <code class="docutils literal notranslate"><span class="pre">macho</span></code>, <code class="docutils literal notranslate"><span class="pre">elf</span></code>, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">env</span></code> = <code class="docutils literal notranslate"><span class="pre">eabi</span></code>, <code class="docutils literal notranslate"><span class="pre">gnu</span></code>, <code class="docutils literal notranslate"><span class="pre">android</span></code>, <code class="docutils literal notranslate"><span class="pre">macho</span></code>, <code class="docutils literal notranslate"><span class="pre">elf</span></code>, etc.</p></li>
 </ul>
 </dd>
 </dl>
@@ -125,12 +124,12 @@ like the bare-metal “none”.</p>
 choose <code class="docutils literal notranslate"><span class="pre">unknown</span></code> and the defaults will be used. If you choose a parameter
 that Clang doesn’t know, like <code class="docutils literal notranslate"><span class="pre">blerg</span></code>, it’ll ignore and assume
 <code class="docutils literal notranslate"><span class="pre">unknown</span></code>, which is not always desired, so be careful.</p>
-<p>Finally, the ABI option is something that will pick default CPU/FPU,
-define the specific behaviour of your code (PCS, extensions),
+<p>Finally, the env (environment) option is something that will pick default
+CPU/FPU, define the specific behaviour of your code (PCS, extensions),
 and also choose the correct library calls, etc.</p>
 </section>
 <section id="cpu-fpu-abi">
-<h3>CPU, FPU, ABI<a class="headerlink" href="#cpu-fpu-abi" title="Permalink to this headline">¶</a></h3>
+<h3>CPU, FPU, ABI<a class="headerlink" href="#cpu-fpu-abi" title="Link to this heading">¶</a></h3>
 <p>Once your target is specified, it’s time to pick the hardware you’ll
 be compiling to. For every architecture, a default set of CPU/FPU/ABI
 will be chosen, so you’ll almost always have to change it via flags.</p>
@@ -154,7 +153,7 @@ NEON, but still using soft-float, which is much better, but still not
 great.</p>
 </section>
 <section id="toolchain-options">
-<h3>Toolchain Options<a class="headerlink" href="#toolchain-options" title="Permalink to this headline">¶</a></h3>
+<h3>Toolchain Options<a class="headerlink" href="#toolchain-options" title="Link to this heading">¶</a></h3>
 <p>There are three main options to control access to your cross-compiler:
 <code class="docutils literal notranslate"><span class="pre">--sysroot</span></code>, <code class="docutils literal notranslate"><span class="pre">-I</span></code>, and <code class="docutils literal notranslate"><span class="pre">-L</span></code>. The two last ones are well known,
 but they’re particularly important for additional libraries
@@ -185,7 +184,7 @@ directories manually (via <code class="docutils literal notranslate"><span class
 </section>
 </section>
 <section id="target-specific-libraries">
-<h2>Target-Specific Libraries<a class="headerlink" href="#target-specific-libraries" title="Permalink to this headline">¶</a></h2>
+<h2>Target-Specific Libraries<a class="headerlink" href="#target-specific-libraries" title="Link to this heading">¶</a></h2>
 <p>All libraries that you compile as part of your build will be
 cross-compiled to your target, and your build system will probably
 find them in the right place. But all dependencies that are
@@ -207,7 +206,7 @@ of your build can get things wrong when setting their own library
 paths, and you’ll have to augment it via additional flags (configure,
 Make, CMake, etc).</p>
 <section id="multilibs">
-<h3>Multilibs<a class="headerlink" href="#multilibs" title="Permalink to this headline">¶</a></h3>
+<h3>Multilibs<a class="headerlink" href="#multilibs" title="Link to this heading">¶</a></h3>
 <p>When you want to cross-compile to more than one configuration, for
 example hard-float-ARM and soft-float-ARM, you’ll have to have multiple
 copies of your libraries and (possibly) headers.</p>
@@ -216,9 +215,9 @@ for you in an easier way, but if you’re not careful and, for instance,
 forget to specify <code class="docutils literal notranslate"><span class="pre">-ccc-gcc-name</span> <span class="pre">armv7l-linux-gnueabihf-gcc</span></code> (which
 uses hard-float), Clang will pick the <code class="docutils literal notranslate"><span class="pre">armv7l-linux-gnueabi-ld</span></code>
 (which uses soft-float) and linker errors will happen.</p>
-<p>The same is true if you’re compiling for different ABIs, like <code class="docutils literal notranslate"><span class="pre">gnueabi</span></code>
-and <code class="docutils literal notranslate"><span class="pre">androideabi</span></code>, and might even link and run, but produce run-time
-errors, which are much harder to track down and fix.</p>
+<p>The same is true if you’re compiling for different environments, like
+<code class="docutils literal notranslate"><span class="pre">gnueabi</span></code> and <code class="docutils literal notranslate"><span class="pre">androideabi</span></code>, and might even link and run, but produce
+run-time errors, which are much harder to track down and fix.</p>
 </section>
 </section>
 </section>
@@ -238,8 +237,8 @@ errors, which are much harder to track down and fix.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>
 </html>

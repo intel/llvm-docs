@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01memory__scope_01_4_00_01inb17c617f5c07eee308635d1c9a8cb682 =
-[
-    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01memory__scope_01_4_00_01inb17c617f5c07eee308635d1c9a8cb682.html#a08d63e31a9c2e2fe4a44a43caed0cd2c", null ]
-];

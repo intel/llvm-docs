@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1generic__space_01_4 =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1DecoratedType_3_01ElementType_00_01access_1_1address__space_1_1generic__space_01_4.html#a8812c5a6f6403b943b4824837dd1c686", null ]
-];

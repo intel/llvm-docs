@@ -1,5 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g49a305b346f178fa4260746622fcd342 =
-[
-    [ "arg_type", "structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g49a305b346f178fa4260746622fcd342.html#ad150a60b44a53be900a2cafcb393fad9", null ],
-    [ "ret_type", "structcl_1_1sycl_1_1detail_1_1nan__types_3_01T_00_01enable__if__t_3_01is__contained_3_01T_00_01g49a305b346f178fa4260746622fcd342.html#a616361d6120aef888cd970a403623582", null ]
-];

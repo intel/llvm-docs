@@ -408,7 +408,8 @@ and destructor refer to the capability via different names; see the
 Scoped capabilities are treated as capabilities that are implicitly acquired
 on construction and released on destruction. They are associated with
 the set of (regular) capabilities named in thread safety attributes on the
-constructor. Acquire-type attributes on other member functions are treated as
+constructor or function returning them by value (using C++17 guaranteed copy
+elision). Acquire-type attributes on other member functions are treated as
 applying to that set of associated capabilities, while ``RELEASE`` implies that
 a function releases all associated capabilities in whatever mode they're held.
 
@@ -763,10 +764,11 @@ doesn't know that munl.mu == mutex.  The SCOPED_CAPABILITY attribute handles
 aliasing for MutexLocker, but does so only for that particular pattern.
 
 
-ACQUIRED_BEFORE(...) and ACQUIRED_AFTER(...) are currently unimplemented.
--------------------------------------------------------------------------
+ACQUIRED_BEFORE(...) and ACQUIRED_AFTER(...) support is still experimental.
+---------------------------------------------------------------------------
 
-To be fixed in a future update.
+ACQUIRED_BEFORE(...) and ACQUIRED_AFTER(...) are currently being developed under
+the ``-Wthread-safety-beta`` flag.
 
 
 .. _mutexheader:
@@ -929,6 +931,13 @@ implementation.
 
     // Assume mu is not held, implicitly acquire *this and associate it with mu.
     MutexLocker(Mutex *mu, defer_lock_t) EXCLUDES(mu) : mut(mu), locked(false) {}
+
+    // Same as constructors, but without tag types. (Requires C++17 copy elision.)
+    static MutexLocker Lock(Mutex *mu) ACQUIRE(mu);
+    static MutexLocker Adopt(Mutex *mu) REQUIRES(mu);
+    static MutexLocker ReaderLock(Mutex *mu) ACQUIRE_SHARED(mu);
+    static MutexLocker AdoptReaderLock(Mutex *mu) REQUIRES_SHARED(mu);
+    static MutexLocker DeferLock(Mutex *mu) EXCLUDES(mu);
 
     // Release *this and all associated mutexes, if they are still held.
     // There is no warning if the scope was already unlocked before.
