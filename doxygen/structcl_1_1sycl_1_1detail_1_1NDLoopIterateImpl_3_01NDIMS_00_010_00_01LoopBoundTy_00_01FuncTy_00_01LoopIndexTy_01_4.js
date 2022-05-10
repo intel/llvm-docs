@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4 =
-[
-    [ "NDLoopIterateImpl", "structcl_1_1sycl_1_1detail_1_1NDLoopIterateImpl_3_01NDIMS_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html#a2067e161d2459ace54fa45711ad1bdc0", null ]
-];

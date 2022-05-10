@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01intel_1_1e514cfcf9510e71306881190b270595e1 =
+[
+    [ "name", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01intel_1_1e514cfcf9510e71306881190b270595e1.html#ac11c215c029f9b45dc00fc225d1c1fea", null ],
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01intel_1_1e514cfcf9510e71306881190b270595e1.html#aa34a27231cb36e92795fae3e37a492c9", null ]
+];

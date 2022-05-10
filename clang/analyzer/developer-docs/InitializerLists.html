@@ -1,25 +1,24 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.3. Initializer List &#8212; Clang 15.0.0git documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/haiku.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <title>3.3. Initializer List &#8212; Clang 19.0.0git documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/haiku.css?v=e491ac2d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <script src="../../_static/documentation_options.js?v=f778a350"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="3.4. Nullability Checks" href="nullability.html" />
     <link rel="prev" title="3.2. Inlining" href="IPA.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
-          <span>Clang 15.0.0git documentation</span></a></h1>
+          <span>Clang 19.0.0git documentation</span></a></h1>
         <h2 class="heading"><span>3.3. Initializer List</span></h2>
       </div>
       <div class="topnav" role="navigation" aria-label="top navigation">
@@ -37,7 +36,7 @@
         
         
   <section id="initializer-list">
-<h1><span class="section-number">3.3. </span>Initializer List<a class="headerlink" href="#initializer-list" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3.3. </span>Initializer List<a class="headerlink" href="#initializer-list" title="Link to this heading">¶</a></h1>
 <p>This discussion took place in <a class="reference external" href="https://reviews.llvm.org/D35216">https://reviews.llvm.org/D35216</a>
 “Escape symbols when creating std::initializer_list”.</p>
 <p>It touches problems of modelling C++ standard library constructs in general,
@@ -216,20 +215,20 @@ the job.</p>
 change the data after the object is constructed - so this region’s contents are
 essentially immutable. For the future, i feel as if it is a dead end.</p>
 <p>I’d like to consider another funny example. Suppose we’re trying to model</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="p">.</span> <span class="n">Consider</span><span class="o">::</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="p">.</span><span class="w"> </span><span class="n">Consider</span><span class="o">::</span>
 
-  <span class="kt">void</span> <span class="n">bar</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">bar</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
 
-  <span class="kt">void</span> <span class="nf">foo</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>   <span class="c1">// (a, 0, direct): &amp;AbstractStorageRegion</span>
-    <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>             <span class="c1">// (AbstractStorageRegion, 0, direct): 1 S32b</span>
-    <span class="kt">int</span> <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>
-    <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>             <span class="c1">// (SymRegion{conj_$0&lt;int *&gt;}, 0 ,direct): 2 S32b</span>
-    <span class="n">x</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>         <span class="c1">// Checker map: x -&gt; SymRegion{conj_$0&lt;int *&gt;}</span>
-    <span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>             <span class="c1">// &#39;a&#39; doesn&#39;t escape (the pointer was unique), &#39;b&#39; does.</span>
-    <span class="n">clang_analyzer_eval</span><span class="p">(</span><span class="o">*</span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// Making this true is up to the checker.</span>
-    <span class="n">clang_analyzer_eval</span><span class="p">(</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// Making this unknown is up to the checker.</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">get</span><span class="p">();</span><span class="w">   </span><span class="c1">// (a, 0, direct): &amp;AbstractStorageRegion</span>
+<span class="w">    </span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">             </span><span class="c1">// (AbstractStorageRegion, 0, direct): 1 S32b</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">;</span>
+<span class="w">    </span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">             </span><span class="c1">// (SymRegion{conj_$0&lt;int *&gt;}, 0 ,direct): 2 S32b</span>
+<span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="n">reset</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w">         </span><span class="c1">// Checker map: x -&gt; SymRegion{conj_$0&lt;int *&gt;}</span>
+<span class="w">    </span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">             </span><span class="c1">// &#39;a&#39; doesn&#39;t escape (the pointer was unique), &#39;b&#39; does.</span>
+<span class="w">    </span><span class="n">clang_analyzer_eval</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// Making this true is up to the checker.</span>
+<span class="w">    </span><span class="n">clang_analyzer_eval</span><span class="p">(</span><span class="o">*</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Making this unknown is up to the checker.</span>
+<span class="w">  </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The checker doesn’t totally need to ensure that <code class="docutils literal notranslate"><span class="pre">*a</span> <span class="pre">==</span> <span class="pre">1</span></code> passes - even though the
@@ -327,8 +326,8 @@ back to the original trivial patch.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2007-2022, The Clang Team.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2007-2024, The Clang Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,13 +1,11 @@
 var image__impl_8hpp =
 [
-    [ "image_impl", "classcl_1_1sycl_1_1detail_1_1image__impl.html", "classcl_1_1sycl_1_1detail_1_1image__impl" ],
-    [ "EnableIfImgAccDataT", "image__impl_8hpp.html#a2cd8b112623a0be1392c629e5456a1ca", null ],
-    [ "image_allocator", "image__impl_8hpp.html#a98d16930deb260075c397874b7891e4c", null ],
-    [ "is_validImageDataT", "image__impl_8hpp.html#a8dd0f06cff51e006655776f760e19267", null ],
-    [ "convertChannelOrder", "image__impl_8hpp.html#a30caf6569fd3e03fe3dc0a3bd55b3f9e", null ],
-    [ "convertChannelOrder", "image__impl_8hpp.html#a66fd17be4a4b52c3a8df83a8401d3954", null ],
-    [ "convertChannelType", "image__impl_8hpp.html#a77d9dea295ea5f12503064a8fd23d686", null ],
-    [ "convertChannelType", "image__impl_8hpp.html#a77f9c1fc741b736fc5441ef0b0f0a42b", null ],
-    [ "getImageElementSize", "image__impl_8hpp.html#a4128ee2df85645610625e3fcb85e3849", null ],
-    [ "getImageNumberChannels", "image__impl_8hpp.html#a51d59afbb66df71edc59625d1ef19197", null ]
+    [ "image_impl", "classsycl_1_1__V1_1_1detail_1_1image__impl.html", "classsycl_1_1__V1_1_1detail_1_1image__impl" ],
+    [ "image_allocator", "image__impl_8hpp.html#a19015e5ded01c1bb433c8212d191ccf4", null ],
+    [ "convertChannelOrder", "image__impl_8hpp.html#a2ce1255504c9d85fa035576e2153604e", null ],
+    [ "convertChannelOrder", "image__impl_8hpp.html#a0b989e4fe3b1af5ccd6a13fa93ca1b7f", null ],
+    [ "convertChannelType", "image__impl_8hpp.html#adbf01d60cb7b1b4335790e8eb2d5885d", null ],
+    [ "convertChannelType", "image__impl_8hpp.html#a4d47e07d2a4b3b3545241ff69dec7973", null ],
+    [ "getImageElementSize", "image__impl_8hpp.html#a29338755abdb0c9f66ef5616ed56f3a8", null ],
+    [ "getImageNumberChannels", "image__impl_8hpp.html#af59148a7a1a2bb94c40e1fdcdc8e3c43", null ]
 ];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__non__trivially__copyable__uniform =
+[
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__non__trivially__copyable__uniform.html#a7db92a8c7b2001cc939379c00087f6a3", null ]
+];

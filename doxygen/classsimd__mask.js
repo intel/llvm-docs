@@ -1,15 +1,17 @@
 var classsimd__mask =
 [
     [ "abi_type", "classsimd__mask.html#a18a4c4196f4f988e6a31ce225c22a993", null ],
-    [ "reference", "classsimd__mask.html#ad9434c42b723eb95e9517bc343eb5691", null ],
+    [ "reference", "classsimd__mask.html#a2084082ec80be13f6d4e8277c9308669", null ],
     [ "simd_type", "classsimd__mask.html#a15c07dea721baca4cee61fab58cdc5a0", null ],
     [ "value_type", "classsimd__mask.html#adfc3ef3923d0b8fd7c2c49903fe9d6d0", null ],
     [ "simd_mask", "classsimd__mask.html#a301f05976b5fd2ad06e5ce0721dbab1b", null ],
     [ "simd_mask", "classsimd__mask.html#a4b8e834c087bbbcbb6a057165333e553", null ],
     [ "simd_mask", "classsimd__mask.html#a916fd68ba6a4fd346938ec77dbc930a3", null ],
+    [ "simd_mask", "classsimd__mask.html#a90c6249cf166a1e4ba4bcca57eb05573", null ],
     [ "simd_mask", "classsimd__mask.html#a5244a4e1137b775c3a0e50c0068f0950", null ],
     [ "copy_from", "classsimd__mask.html#a9e49cdc6c54fc4ac04533487d50b3206", null ],
     [ "copy_to", "classsimd__mask.html#afae3802debba6690f302ec53d4f5030b", null ],
+    [ "data", "classsimd__mask.html#af0fc05dbfb4a752e58527f2892e06f84", null ],
     [ "operator!", "classsimd__mask.html#a88a127acd30c49905f32ce9978e3afe5", null ],
     [ "operator[]", "classsimd__mask.html#a882b181aa28e36678bfc224845cd7da5", null ],
     [ "operator[]", "classsimd__mask.html#a5e05182b60f330cd4a6468bbce15808c", null ],

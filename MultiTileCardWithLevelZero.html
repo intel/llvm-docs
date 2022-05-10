@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Considerations for programming to multi-tile and multi-card under Level-Zero backend &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css?v=e491ac2d" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="oneAPI DPC++ Compiler and Runtime architecture design" href="design/CompilerAndRuntimeDesign.html" />
@@ -36,12 +34,12 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="considerations-for-programming-to-multi-tile-and-multi-card-under-level-zero-backend">
-<h1>Considerations for programming to multi-tile and multi-card under Level-Zero backend<a class="headerlink" href="#considerations-for-programming-to-multi-tile-and-multi-card-under-level-zero-backend" title="Permalink to this headline">¶</a></h1>
+  <section id="considerations-for-programming-to-multi-tile-and-multi-card-under-level-zero-backend">
+<h1>Considerations for programming to multi-tile and multi-card under Level-Zero backend<a class="headerlink" href="#considerations-for-programming-to-multi-tile-and-multi-card-under-level-zero-backend" title="Link to this heading">¶</a></h1>
 <section id="devices-discovery">
-<h2>1 Devices discovery<a class="headerlink" href="#devices-discovery" title="Permalink to this headline">¶</a></h2>
+<h2>1 Devices discovery<a class="headerlink" href="#devices-discovery" title="Link to this heading">¶</a></h2>
 <section id="root-devices">
-<h3>1.1 Root-devices<a class="headerlink" href="#root-devices" title="Permalink to this headline">¶</a></h3>
+<h3>1.1 Root-devices<a class="headerlink" href="#root-devices" title="Link to this heading">¶</a></h3>
 <p>Intel GPUs are represented as SYCL GPU devices, root-devices.
 The discovery of root-devices is best with “sycl-ls” tool, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sycl-ls
@@ -55,31 +53,31 @@ The discovery of root-devices is best with “sycl-ls” tool, for example:</p>
 by SYCL runtime. Thus in the example above there is CPU (managed by OpenCL backend) and 2!
 GPUs corresponding to the single physical GPU (managed by either OpenCL or Level-Zero backend).
 There are few ways to filter observable root-devices.</p>
-<p>One is using environment variable SYCL_DEVICE_FILTER described in <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/EnvironmentVariables.md">EnvironmentVariables.md</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ SYCL_DEVICE_FILTER=level_zero sycl-ls
+<p>One is using environment variable ONEAPI_DEVICE_SELECTOR described in <a class="reference external" href="https://github.com/intel/llvm/blob/sycl/sycl/doc/EnvironmentVariables.md">EnvironmentVariables.md</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ONEAPI_DEVICE_SELECTOR=level_zero:* sycl-ls
 [level_zero:0] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
 </pre></div>
 </div>
-<p>Another way is to use similar SYCL API described in <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/extensions/supported/sycl_ext_oneapi_filter_selector.asciidoc"><span class="xref myst">sycl_ext_oneapi_filter_selector</span></a>
+<p>Another way is to use similar SYCL API described in <a class="reference download internal" download="" href="_downloads/3a42249235acf49425c6116924a4671b/sycl_ext_oneapi_filter_selector.asciidoc"><span class="xref download myst">sycl_ext_oneapi_filter_selector</span></a>
 E.g. <code class="docutils literal notranslate"><span class="pre">filter_selector(&quot;level_zero&quot;)</span></code> will only see Level-Zero operated devices.</p>
 <p>If there are multiple GPUs in a system then they will be seen as multiple different root-devices.
 On Linux these would be multiple SYCL root-devices of the same SYCL platform (representing Level-Zero driver).
 On Windows these would appear as root-devices of multiple different SYCL platforms (Level-Zero drivers).</p>
 <p><code class="docutils literal notranslate"><span class="pre">CreateMultipleRootDevices=N</span> <span class="pre">NEOReadDebugKeys=1</span></code> evironment variables can be used to emulate multiple GPU cards, e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ CreateMultipleRootDevices=2 NEOReadDebugKeys=1 SYCL_DEVICE_FILTER=level_zero sycl-ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ CreateMultipleRootDevices=2 NEOReadDebugKeys=1 ONEAPI_DEVICE_SELECTOR=level_zero:* sycl-ls
 [level_zero:0] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
 [level_zero:1] GPU : Intel(R) Level-Zero 1.1 [1.1.19792]
 </pre></div>
 </div>
 </section>
 <section id="sub-devices">
-<h3>1.2 Sub-devices<a class="headerlink" href="#sub-devices" title="Permalink to this headline">¶</a></h3>
+<h3>1.2 Sub-devices<a class="headerlink" href="#sub-devices" title="Link to this heading">¶</a></h3>
 <p>Some Intel GPU HW is composed of multiple tiles, e.g. 4 tile ATS.
 The root-device in such cases can be partitioned to sub-devices, each corresponding to the physical tiles.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="n">SubDevices</span> <span class="o">=</span> <span class="n">RootDevice</span><span class="p">.</span><span class="n">create_sub_devices</span><span class="o">&lt;</span>
-  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="o">::</span><span class="n">partition_property</span><span class="o">::</span><span class="n">partition_by_affinity_domain</span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="n">cl</span><span class="o">::</span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="o">::</span><span class="n">partition_affinity_domain</span><span class="o">::</span><span class="n">next_partitionable</span><span class="p">);</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SubDevices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RootDevice</span><span class="p">.</span><span class="n">create_sub_devices</span><span class="o">&lt;</span>
+<span class="w">  </span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="o">::</span><span class="n">partition_property</span><span class="o">::</span><span class="n">partition_by_affinity_domain</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">  </span><span class="n">sycl</span><span class="o">::</span><span class="n">info</span><span class="o">::</span><span class="n">partition_affinity_domain</span><span class="o">::</span><span class="n">next_partitionable</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -91,16 +89,16 @@ Similar <code class="docutils literal notranslate"><span class="pre">next_partit
 </section>
 </section>
 <section id="context">
-<h2>2 Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h2>
+<h2>2 Context<a class="headerlink" href="#context" title="Link to this heading">¶</a></h2>
 <p>Contexts are used for resources isolation and sharing. A SYCL context may consist of one or multiple devices.
 Both root-devices and sub-devices can be within single context, but they all should be of the same SYCL platform.
 A SYCL program (kernel_bundle) created against a context with multiple devices will be built to each of the root-devices in the context.
 For context that consists of multiple sub-devices of the same root-device only single build (to that root-device) is needed.</p>
 </section>
 <section id="memory">
-<h2>3 Memory<a class="headerlink" href="#memory" title="Permalink to this headline">¶</a></h2>
+<h2>3 Memory<a class="headerlink" href="#memory" title="Link to this heading">¶</a></h2>
 <section id="usm">
-<h3>3.1 USM<a class="headerlink" href="#usm" title="Permalink to this headline">¶</a></h3>
+<h3>3.1 USM<a class="headerlink" href="#usm" title="Link to this heading">¶</a></h3>
 <p>There are multiple ways to allocate memory:</p>
 <p><code class="docutils literal notranslate"><span class="pre">malloc_device</span></code>:</p>
 <ul class="simple">
@@ -125,7 +123,7 @@ So if operating on a context with multiple sub-devices of the same root-device t
 Remember that if using <code class="docutils literal notranslate"><span class="pre">malloc_device</span></code> you’d need an explicit copy out to the host if it necessary to see data there.</p>
 </section>
 <section id="buffer">
-<h3>3.2 Buffer<a class="headerlink" href="#buffer" title="Permalink to this headline">¶</a></h3>
+<h3>3.2 Buffer<a class="headerlink" href="#buffer" title="Link to this heading">¶</a></h3>
 <p>SYCL buffers are also created against a context and under the hood are mapped to the Level-Zero USM allocation discussed above.
 The current mapping is following:</p>
 <ul class="simple">
@@ -137,7 +135,7 @@ Thus they are readily accessible by all the devices in such context. The synchro
 </section>
 </section>
 <section id="queue">
-<h2>4 Queue<a class="headerlink" href="#queue" title="Permalink to this headline">¶</a></h2>
+<h2>4 Queue<a class="headerlink" href="#queue" title="Link to this heading">¶</a></h2>
 <p>SYCL queue is always attached to a single device in a possibly multi-device context.
 Some typical scenarios are the following (from most performant to least performant):</p>
 <p><strong>A.</strong> Context with a single sub-device in it and the queue is attached to that sub-device (tile)</p>
@@ -146,13 +144,13 @@ Some typical scenarios are the following (from most performant to least performa
 <li><p>Expected to offer the best performance per tile</p></li>
 <li><p>Example:</p></li>
 </ul>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="n">SubDevices</span> <span class="o">=</span> <span class="p">...;</span>
-  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">D</span> <span class="p">:</span> <span class="n">SubDevices</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Each queue is in its own context, no data sharing across them.</span>
-    <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">D</span><span class="p">);</span>
-    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
-  <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SubDevices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">D</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">SubDevices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Each queue is in its own context, no data sharing across them.</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="p">(</span><span class="n">D</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{...});</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -162,14 +160,14 @@ Some typical scenarios are the following (from most performant to least performa
 <li><p>The root-device should not be passed to such context for better performance</p></li>
 <li><p>Example:</p></li>
 </ul>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-  <span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span> <span class="n">SubDevices</span> <span class="o">=</span> <span class="p">...;</span>
-  <span class="k">auto</span> <span class="n">C</span> <span class="o">=</span> <span class="n">context</span><span class="p">(</span><span class="n">SubDevices</span><span class="p">);</span>
-  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">D</span> <span class="p">:</span> <span class="n">SubDevices</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// All queues share the same context, data can be shared across queues.</span>
-    <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">);</span>
-    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
-  <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">device</span><span class="o">&gt;</span><span class="w"> </span><span class="n">SubDevices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">(</span><span class="n">SubDevices</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">D</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">SubDevices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// All queues share the same context, data can be shared across queues.</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{...});</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -179,11 +177,10 @@ Some typical scenarios are the following (from most performant to least performa
 <li><p>The most simple way to enable multi-tile HW but doesn’t offer possibility to target specific tiles</p></li>
 <li><p>Example:</p></li>
 </ul>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-  <span class="c1">// The queue is attached to the root-device, driver distributes to sub-devices, if any.</span>
-  <span class="k">auto</span> <span class="n">D</span> <span class="o">=</span> <span class="n">device</span><span class="p">(</span><span class="n">gpu_selector</span><span class="p">{});</span>
-  <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">D</span><span class="p">);</span>
-  <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// The queue is attached to the root-device, driver distributes to sub-devices, if any.</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="p">(</span><span class="n">gpu_selector_v</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{...});</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -193,22 +190,22 @@ Some typical scenarios are the following (from most performant to least performa
 <li><p>Offers most sharing possibilities at the cost of slow access through host memory or explicit copies needed</p></li>
 <li><p>Example:</p></li>
 </ul>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-  <span class="k">auto</span> <span class="n">P</span> <span class="o">=</span> <span class="n">platform</span><span class="p">(</span><span class="n">gpu_selector</span><span class="p">{});</span>
-  <span class="k">auto</span> <span class="n">RootDevices</span> <span class="o">=</span> <span class="n">P</span><span class="p">.</span><span class="n">get_devices</span><span class="p">();</span>
-  <span class="k">auto</span> <span class="n">C</span> <span class="o">=</span> <span class="n">context</span><span class="p">(</span><span class="n">RootDevices</span><span class="p">);</span>
-  <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">D</span> <span class="p">:</span> <span class="n">RootDevices</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Context has multiple root-devices, data can be shared across multi-card (requires explict copying)</span>
-    <span class="k">auto</span> <span class="n">Q</span> <span class="o">=</span> <span class="n">queue</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">D</span><span class="p">);</span>
-    <span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span> <span class="n">cgh</span><span class="p">)</span> <span class="p">{...});</span>
-  <span class="p">}</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">platform</span><span class="p">(</span><span class="n">gpu_selector_v</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">RootDevices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P</span><span class="p">.</span><span class="n">get_devices</span><span class="p">();</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">(</span><span class="n">RootDevices</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">D</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">RootDevices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Context has multiple root-devices, data can be shared across multi-card (requires explict copying)</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">.</span><span class="n">submit</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">handler</span><span class="o">&amp;</span><span class="w"> </span><span class="n">cgh</span><span class="p">)</span><span class="w"> </span><span class="p">{...});</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Depending on the chosen programming model (A,B,C,D) and algorithm used make sure to do proper memory allocation/synchronization.</p>
 </section>
 <section id="examples">
-<h2>5 Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<h2>5 Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
 <p>These are few examples of programming to multiple tiles and multiple cards:</p>
 <ul class="simple">
 <li><p>https://github.com/jeffhammond/PRK/blob/dpct/Cxx11/dgemm-multigpu-onemkl.cc</p></li>
@@ -232,8 +229,8 @@ Some typical scenarios are the following (from most performant to least performa
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

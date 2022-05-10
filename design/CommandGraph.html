@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Command-Graph Extension &#8212; oneAPI DPC++ Compiler  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Proposed design for offloading model" href="OffloadDesign.html" />
+    <link rel="prev" title="SYCL Native CPU" href="SYCLNativeCPU.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
+        <h2 class="heading"><span>Command-Graph Extension</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="SYCLNativeCPU.html">SYCL Native CPU</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="OffloadDesign.html">Proposed design for offloading model</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="command-graph-extension">
+<h1>Command-Graph Extension<a class="headerlink" href="#command-graph-extension" title="Link to this heading">¶</a></h1>
+<p>This document describes the implementation design of the
+<a class="reference download internal" download="" href="../_downloads/8c14e68e6250995a6aa452e77be3b313/sycl_ext_oneapi_graph.asciidoc"><span class="xref download myst">SYCL Graph Extension</span></a>.</p>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>A recording of a presentation on the extension can be found
+<a class="reference external" href="https://www.youtube.com/watch?v=aOTAmyr04rM">on Youtube</a>.</p></li>
+<li><p>A blog post introducing the extension can be found
+<a class="reference external" href="https://codeplay.com/portal/blogs/2024/01/22/sycl-graphs">on Codeplay.com</a>.</p></li>
+</ul>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>An efficient implementation of a lazy command-graph execution and its replay
+requires extensions to the Unified Runtime (UR) layer. Such an extension is
+the command-buffer experimental feature, where a command-buffer object
+represents a series of operations to be enqueued to the backend device and
+their dependencies. A single command-graph can be partitioned into more
+than one command-buffer by the runtime. The SYCL Graph extension
+distinguishes between backends that support the command-buffer extension
+and those that do not, and only reports support for the extension via the
+<code class="docutils literal notranslate"><span class="pre">aspect::ext_oneapi_graph</span></code> aspect on backends that do support command-buffers.</p>
+<p>See the <a class="reference internal" href="#backend-implementation">Backend Implementation</a> section of this
+document for details of support of different SYCL backends.</p>
+<section id="ur-command-buffer-experimental-feature">
+<h3>UR Command-Buffer Experimental Feature<a class="headerlink" href="#ur-command-buffer-experimental-feature" title="Link to this heading">¶</a></h3>
+<p>The command-buffer concept has been introduced to UR as an
+<a class="reference external" href="https://oneapi-src.github.io/unified-runtime/core/api.html#command-buffer-experimental">experimental feature</a>
+with the following entry-points:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferCreateExp</span></code></p></td>
+<td><p>Create a command-buffer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferRetainExp</span></code></p></td>
+<td><p>Incrementing reference count of command-buffer.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferReleaseExp</span></code></p></td>
+<td><p>Decrementing reference count of command-buffer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferFinalizeExp</span></code></p></td>
+<td><p>No more commands can be appended, makes command-buffer ready to enqueue on a command-queue.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendKernelLaunchExp</span></code></p></td>
+<td><p>Append a kernel execution command to command-buffer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendUSMMemcpyExp</span></code></p></td>
+<td><p>Append a USM memcpy command to the command-buffer.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendUSMFillExp</span></code></p></td>
+<td><p>Append a USM fill command to the command-buffer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferCopyExp</span></code></p></td>
+<td><p>Append a mem buffer copy command to the command-buffer.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferWriteExp</span></code></p></td>
+<td><p>Append a memory write command to a command-buffer object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferReadExp</span></code></p></td>
+<td><p>Append a memory read command to a command-buffer object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferCopyRectExp</span></code></p></td>
+<td><p>Append a rectangular memory copy command to a command-buffer object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferWriteRectExp</span></code></p></td>
+<td><p>Append a rectangular memory write command to a command-buffer object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferReadRectExp</span></code></p></td>
+<td><p>Append a rectangular memory read command to a command-buffer object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferAppendMemBufferFillExp</span></code></p></td>
+<td><p>Append a memory fill command to a command-buffer object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferEnqueueExp</span></code></p></td>
+<td><p>Submit command-buffer to a command-queue for execution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">urCommandBufferUpdateKernelLaunchExp</span></code></p></td>
+<td><p>Updates the parameters of a previous kernel launch command.</p></td>
+</tr>
+</tbody>
+</table>
+<p>See the <a class="reference external" href="https://oneapi-src.github.io/unified-runtime/core/EXP-COMMAND-BUFFER.html">UR EXP-COMMAND-BUFFER</a>
+specification for more details.</p>
+</section>
+</section>
+<section id="design">
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
+<p><img alt="Basic architecture diagram." src="../_images/SYCL-Graph-Architecture.svg" /></p>
+<p>There are two sets of user facing interfaces that can be used to create a
+command-graph object: Explicit and Record &amp; Replay API. Within the runtime they
+share a common infrastructure.</p>
+</section>
+<section id="nodes-edges">
+<h2>Nodes &amp; Edges<a class="headerlink" href="#nodes-edges" title="Link to this heading">¶</a></h2>
+<p>A node in a graph is a SYCL <a class="reference external" href="https://registry.khronos.org/SYCL/specs/sycl-2020/html/sycl-2020.html#command-group">command-group</a>
+(CG) that is defined by a <a class="reference external" href="https://registry.khronos.org/SYCL/specs/sycl-2020/html/sycl-2020.html#command-group-function-object">command-group function</a>
+(CGF).</p>
+<p>Internally, a node is represented by the <code class="docutils literal notranslate"><span class="pre">detail::node_impl</span></code> class, and a command-group
+by the <code class="docutils literal notranslate"><span class="pre">sycl::detail::CG</span></code> class. An instance of <code class="docutils literal notranslate"><span class="pre">detail::node_impl</span></code> stores a
+<code class="docutils literal notranslate"><span class="pre">sycl::detail::CG</span></code> object for the command-group that the node represents.</p>
+<p>A <a class="reference external" href="https://registry.khronos.org/SYCL/specs/sycl-2020/html/sycl-2020.html#handler">command-group handler</a>
+lets the user define the operations that are to be performed in the command-group,
+e.g. kernel execution, memory copy, host-task. In DPC++ an internal “finalization”
+operation is done inside the <code class="docutils literal notranslate"><span class="pre">sycl::handler</span></code> implementation, which constructs a
+CG object of a specific type. During normal operation, <code class="docutils literal notranslate"><span class="pre">handler::finalize()</span></code>
+then passes the CG object to the scheduler, and a <code class="docutils literal notranslate"><span class="pre">sycl::event</span></code> object
+representing the command-group is returned.</p>
+<p>However during graph construction, inside <code class="docutils literal notranslate"><span class="pre">hander::finalize()</span></code> the CG object is
+not submitted for execution as normal, but stored in the graph as a new node
+instead.</p>
+<p>When a user adds a node to a graph using the explicit
+<code class="docutils literal notranslate"><span class="pre">command_graph&lt;modifiable&gt;::add()</span></code> API passing a CGF, in our graph runtime
+implementation a <code class="docutils literal notranslate"><span class="pre">sycl::handler</span></code> object is constructed with a graph parameter
+telling it to not submit the CG object to the scheduler on finalization.
+This handler finalizes the CGF, and after finalization the CG object from the
+handler is moved to the node.</p>
+<p>For creating a node in the graph using queue recording mode. When the
+<code class="docutils literal notranslate"><span class="pre">sycl::handler</span></code> from a queue submission is finalized, if the queue the
+handler was created from is in the recording mode, then the handler knows
+not to submit the CG object to the scheduler. Instead, the CG object is
+added to the graph associated with the queue as a new node.</p>
+<p>Edges are stored in each node as lists of predecessor and successor nodes.</p>
+</section>
+<section id="execution-order">
+<h2>Execution Order<a class="headerlink" href="#execution-order" title="Link to this heading">¶</a></h2>
+<p>The current way graph nodes are linearized into execution order is using a
+reversed depth-first sorting algorithm. Alternative algorithms, such as
+breadth-first, are possible and may give better performance on certain
+workloads/hardware. In the future there might be options for allowing the
+user to control this implementation detail.</p>
+</section>
+<section id="scheduler-integration">
+<h2>Scheduler Integration<a class="headerlink" href="#scheduler-integration" title="Link to this heading">¶</a></h2>
+<p>When there are no requirements from accessors in a command-graph submission,
+the scheduler is bypassed and the underlying UR command-buffer is directly
+enqueued to a UR queue. If there are accessor requirements, the UR
+command-buffer for the executable graph needs to be enqueued by the scheduler.</p>
+<p>When individual graph nodes have requirements from SYCL accessors, the
+underlying <code class="docutils literal notranslate"><span class="pre">sycl::detail::CG</span></code> object stored in the node is copied and passed to
+the scheduler for adding to the UR command-buffer, otherwise the node can
+be appended directly as a command in the UR command-buffer. This is in-keeping
+with the existing behavior of the handler with normal queue submissions.</p>
+<p>Scheduler commands for adding graph nodes differ from typical command-group
+submission in the scheduler, in that they do not launch any asynchronous work
+which relies on their dependencies, and are considered complete immediately
+after adding the command-group node to the graph.</p>
+<p>This presents problems with device allocations which create both an allocation
+command and a separate initial copy command of data to the new allocation.
+Since future command-graph execution submissions will only receive
+dependencies on the allocation command (since this is all the information
+available), this could lead to situations where the device execution of the
+initial copy command is delayed due to device occupancy, and the command-graph
+and initial copy could execute on the device in an incorrect order.</p>
+<p>To solve this issue, when the scheduler enqueues command-groups to add as nodes
+in a command-graph, it will perform a blocking wait on the dependencies of the
+command-group first. The user will experience this wait as part of graph
+finalization.</p>
+</section>
+<section id="graph-partitioning">
+<h2>Graph Partitioning<a class="headerlink" href="#graph-partitioning" title="Link to this heading">¶</a></h2>
+<p>To handle dependencies from other devices, the graph can be partitioned during
+the finalization process. A partition is a set of one or more nodes intended
+to run on the same device. Each partition instantiates a command-buffer
+(or equivalent) which contains all the commands to be executed on the device.
+Therefore, the partitioning only impacts graphs in the executable state and
+occurs during finalization. Synchronization between partitions is managed
+by the runtime unlike internal partition dependencies that are handled directly
+by the backend.</p>
+<p>Since runtime synchronization and multiple command-buffer involves
+extra latency, the implementation ensures to minimize the number of partitions.
+Currently, the creation of a new partition is triggered by a node containing
+a host-task.
+When a host-task is encountered the predecessors of this host-task node
+are assigned to one partition, the host-task is assigned to another partition,
+and the successors are assigned to a third partition as shown below:</p>
+<p><img alt="Graph partition illustration." src="../_images/SYCL-Graph-partitions.jpg" /></p>
+<p>Partition numbers are allocated in order. Hence, the runtime must ensure that
+Partition <code class="docutils literal notranslate"><span class="pre">n</span></code> complete before starting execution of Partition <code class="docutils literal notranslate"><span class="pre">n+1</span></code>.</p>
+<p>Note that partitioning can only happen during the finalization stage due to
+potential backward dependencies that could be created using
+the <code class="docutils literal notranslate"><span class="pre">make_edge</span></code> function.</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h3>
+<p>The partitioning process is achieved is two main stages:</p>
+<p>1 - Nodes are assigned to a temporary group/partition.</p>
+<p>2 - Once all the nodes have been annotated with a group number, actual
+partitions are created based on these annotations.</p>
+<p>The following diagrams show the annotation process:</p>
+<p><img alt="Graph partition illustration step 1." src="../_images/SYCL-Graph-partitions_step1.jpg" />
+<img alt="Graph partition illustration step 2." src="../_images/SYCL-Graph-partitions_step2.jpg" />
+<img alt="Graph partition illustration step 3." src="../_images/SYCL-Graph-partitions_step3.jpg" />
+<img alt="Graph partition illustration step 4." src="../_images/SYCL-Graph-partitions_step4.jpg" />
+<img alt="Graph partition illustration step 5." src="../_images/SYCL-Graph-partitions_step5.jpg" />
+<img alt="Graph partition illustration step 6." src="../_images/SYCL-Graph-partitions_step6.jpg" /></p>
+<p>Now consider a slightly different graph. We used the <code class="docutils literal notranslate"><span class="pre">make_edge</span></code> function to
+create a dependency between Node E and Node HT1. The first 5 steps are identical.
+However, from the step 6 the process changes and a group merge is needed as
+illustrated in the following diagrams:</p>
+<p><img alt="Graph partition illustration step 6b." src="../_images/SYCL-Graph-partitions_step7.jpg" />
+<img alt="Graph partition illustration step 7b." src="../_images/SYCL-Graph-partitions_step8.jpg" />
+<img alt="Graph partition illustration step 8b." src="../_images/SYCL-Graph-partitions_step9.jpg" />
+<img alt="Graph partition illustration step 9b." src="../_images/SYCL-Graph-partitions_step10.jpg" />
+<img alt="Graph partition illustration step 10b." src="../_images/SYCL-Graph-partitions_step11.jpg" />
+<img alt="Graph partition illustration step 11b." src="../_images/SYCL-Graph-partitions_step12.jpg" /></p>
+</section>
+<section id="multiple-roots-execution-flow">
+<h3>Multiple Roots Execution Flow<a class="headerlink" href="#multiple-roots-execution-flow" title="Link to this heading">¶</a></h3>
+<p>The following diagram shows the partitions of a graph with two roots and a
+host-task in each branch.</p>
+<p><img alt="Multiple roots graph partition illustration." src="../_images/SYCL-Graph-multiple_roots_partitions.jpg" /></p>
+<p>When executing this graph, the partitions were enqueued one after the other,
+with each partition waiting for the previous one to complete (see top of the
+following diagram). However, for a multi-root graph, this behavior adds
+unnecessary dependencies between partitions, slowing down the execution of the
+whole graph. Now, we keep track of the actual predecessors of each partition
+and only enforce dependencies between partitions when necessary.
+In our example, the extra dependency is therefore removed and both branches can
+be executed concurrently. But as we can see on this diagram, this new approach
+can involve multiple execution tails, which leads to difficulties when we want
+to know when the graph execution has finished. To cope with this issue, the
+events associated to the completion of each partition are linked to the event
+returned to users. Hence, when the returned event is complete, we can guarantee
+that all work associated with the graph has been completed.</p>
+<p><img alt="Multiple roots graph partition execution flow." src="../_images/SYCL-Graph-partition_execution_flow.jpg" /></p>
+</section>
+</section>
+<section id="memory-handling-buffer-and-accessor">
+<h2>Memory handling: Buffer and Accessor<a class="headerlink" href="#memory-handling-buffer-and-accessor" title="Link to this heading">¶</a></h2>
+<p>There is no extra support for graph-specific USM allocations in the current
+proposal. Memory operations will be supported subsequently by the current
+implementation starting with <code class="docutils literal notranslate"><span class="pre">memcpy</span></code>.</p>
+<p>Buffers and accessors are supported in a command-graph. There are
+<a class="reference download internal" download="" href="../_downloads/8c14e68e6250995a6aa452e77be3b313/sycl_ext_oneapi_graph.asciidoc"><span class="xref download myst">spec restrictions</span></a>
+on buffer usage in a graph so that their lifetime semantics are compatible with
+a lazy work execution model. However these changes to storage lifetimes have not
+yet been implemented.</p>
+</section>
+<section id="graph-update">
+<h2>Graph Update<a class="headerlink" href="#graph-update" title="Link to this heading">¶</a></h2>
+<section id="design-challenges">
+<h3>Design Challenges<a class="headerlink" href="#design-challenges" title="Link to this heading">¶</a></h3>
+<section id="explicit-update">
+<h4>Explicit Update<a class="headerlink" href="#explicit-update" title="Link to this heading">¶</a></h4>
+<p>Explicit updates of individual nodes faces significant design challenges in SYCL:</p>
+<ul class="simple">
+<li><p>Lambda capture order is explicitly undefined in C++, so the user cannot reason
+about the indices of arguments captured by kernel lambdas.</p></li>
+<li><p>Once arguments have been captured the actual type information is lost in the
+transition through the integration header and extracting arguments in the SYCL
+runtime, therefore we cannot automatically match new argument values by
+querying the captured arguments without significant possibility for
+collisions. For example, if a kernel captures two USM pointers and the user
+wishes to update one, we cannot reason about which pointer they actually want
+to update when we only know that: they are pointer args of a certain size.</p></li>
+</ul>
+<p>The current approach is to limit graph update to the explicit APIs and where the
+user is using <code class="docutils literal notranslate"><span class="pre">handler::set_arg()</span></code> or some equivalent to manually set kernel
+arguments using indices. Therefore when updating we can use indices to avoid
+collisions. In practice there are only a few current scenarios where <code class="docutils literal notranslate"><span class="pre">set_arg()</span></code>
+can be used:</p>
+<ul class="simple">
+<li><p>The proposed <a class="reference download internal" download="" href="../_downloads/0b971420c49573bfc6375354d05d2214/sycl_ext_oneapi_free_function_kernels.asciidoc"><span class="xref download myst">“Free Function Kernel”
+extension</span></a></p></li>
+<li><p>OpenCL interop kernels created from SPIR-V source at runtime.</p></li>
+</ul>
+<p>A workaround for the lambda capture issues is the “Whole-Graph Update” feature.
+Since the lambda capture order is the same across two different recordings, we
+can match the parameter order when updating.</p>
+</section>
+<section id="whole-graph-update">
+<h4>Whole-Graph Update<a class="headerlink" href="#whole-graph-update" title="Link to this heading">¶</a></h4>
+<p>The current implementation of the whole-graph update feature relies on the
+assumption that both graphs should have a similar topology. Currently, the
+implementation only checks that both graphs have an identical number of nodes
+and that each node contains the same number of edges. Further investigation
+should be done to see if it is possible to add extra checks (e.g. check that the
+nodes and edges were added in the same order).</p>
+</section>
+</section>
+<section id="id1">
+<h3>Scheduler Integration<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Graph updates in the runtime are synchronous calls however they can optionally
+be done through the scheduler using a new command,
+<code class="docutils literal notranslate"><span class="pre">sycl::detail::UpdateCommandBufferCommand</span></code>. This is needed when dealing with
+accessor updates. Since a new buffer which the user creates for updating may not
+yet have been lazily initialized on device we schedule a new command which has
+requirements for these new accessors to correctly trigger allocations before
+updating. This is similar to how individual graph commands are enqueued when
+accessors are used in a graph node.</p>
+</section>
+</section>
+<section id="optimizations">
+<h2>Optimizations<a class="headerlink" href="#optimizations" title="Link to this heading">¶</a></h2>
+<section id="interactions-with-profiling">
+<h3>Interactions with Profiling<a class="headerlink" href="#interactions-with-profiling" title="Link to this heading">¶</a></h3>
+<p>Enabling profiling on a graph may disable optimizations from being performed on
+the graph if they are incompatible with profiling. For example, enabling
+profiling prevents the in-order optimization since the removal of events would
+prevent collecting profiling information.</p>
+</section>
+<section id="in-order-graph-partitions">
+<h3>In-Order Graph Partitions<a class="headerlink" href="#in-order-graph-partitions" title="Link to this heading">¶</a></h3>
+<p>On finalization graph partitions are checked to see if they are in-order, i.e.
+the graph follows a single path where each node depends on the previous node. If
+so a hint is provided to the backend that it may create the command-buffers in
+an in-order fashion. Support for this is backend specific but it may provide
+benefits through the removal of the need for synchronization primitives between
+kernels.</p>
+<p>This optimization is only performed in this very limited case where it can be
+safely assumed to be more performant. It is not likely we’ll try to allow
+in-order execution in more scenarios through a complicated (and imperfect)
+heuristic but rather expose this as a hint the user can provide.</p>
+</section>
+</section>
+<section id="backend-implementation">
+<h2>Backend Implementation<a class="headerlink" href="#backend-implementation" title="Link to this heading">¶</a></h2>
+<p>Implementation of UR command-buffers for each of the supported SYCL 2020
+backends.</p>
+<p>Backends which are implemented currently are: <a class="reference internal" href="#level-zero">Level Zero</a>,
+<a class="reference internal" href="#cuda">CUDA</a>, <a class="reference internal" href="#hip">HIP</a> and partial support for <a class="reference internal" href="#opencl">OpenCL</a>.</p>
+<section id="level-zero">
+<h3>Level Zero<a class="headerlink" href="#level-zero" title="Link to this heading">¶</a></h3>
+<p>The UR <code class="docutils literal notranslate"><span class="pre">urCommandBufferEnqueueExp</span></code> interface for submitting a command-buffer
+takes a list of events to wait on, and returns an event representing the
+completion of that specific submission of the command-buffer.</p>
+<p>However, in the equivalent Level Zero function
+<a class="reference external" href="https://spec.oneapi.io/level-zero/latest/core/api.html#zecommandqueueexecutecommandlists">zeCommandQueueExecuteCommandLists</a>
+there are no parameters to take a wait-list, and the only sync primitive
+returned is blocking on host.</p>
+<p>In order to achieve the expected UR command-buffer enqueue semantics with Level
+Zero, the adapter implementation needs extra commands.</p>
+<ul class="simple">
+<li><p>Prefix - Commands added <strong>before</strong> the graph workload.</p></li>
+<li><p>Suffix - Commands added <strong>after</strong> the graph workload.</p></li>
+</ul>
+<p>These extra commands operate on L0 event synchronization primitives, used by
+the command-list to interact with the external UR wait-list and UR return event
+required for the enqueue interface. Unlike the graph workload (i.e. commands
+needed to perform the graph workload) the external UR wait-list and UR return
+event are submission dependent, which mean they can change from one submission
+to the next.</p>
+<p>For performance concerns, the command-list that will execute the graph workload
+is made only once (during the command-buffer finalization stage). This allows
+the adapter to save time when submitting the command-buffer, by executing only
+this command-list (i.e. without enqueuing any commands of the graph workload).</p>
+<section id="prefix">
+<h4>Prefix<a class="headerlink" href="#prefix" title="Link to this heading">¶</a></h4>
+<p>The prefix’s commands aim to:</p>
+<ol class="arabic simple">
+<li><p>Handle the list of events to wait on, which is passed by the runtime
+when the UR command-buffer enqueue function is called. As mentioned above, this
+list of events changes from one submission to the next. Consequently, managing
+this mutable dependency in the graph-workload command-list implies rebuilding
+the command-list for each submission (note that this can change with mutable
+command-list). To avoid the significant time penalty of rebuilding this
+potentially large command-list each time, we prefer to add an extra command
+handling the wait list into another command-list (<em>wait command-list</em>). This
+command-list consists of a single L0 command: a barrier that waits for
+dependencies passed by the wait-list and signals a signal called <em>WaitEvent</em>
+when the barrier is complete. This <em>WaitEvent</em> is defined in the
+<code class="docutils literal notranslate"><span class="pre">ur_exp_command_buffer_handle_t</span></code> class. In the front of the graph workload
+command list, an extra barrier command waiting for this event is added (when
+the command-buffer is created). This ensures that the graph workload does not
+start running before the dependencies to be completed. The <em>WaitEvent</em> event is
+reset in the suffix.</p></li>
+<li><p>Reset events associated with the command-buffer except the <em>WaitEvent</em> event.
+Indeed, L0 events needs to be explicitly reset by an API call  (L0 command in
+our case). Since a command-buffer is expected to be submitted multiple times,
+we need to ensure that L0 events associated with graph commands have not been
+signaled by a previous execution. These events are therefore reset to the
+non-signaled state before running the graph-workload command-list. Note that
+this reset is performed in the prefix and not in the suffix to avoid additional
+synchronization w.r.t profiling data extraction. We use a new command list
+(<em>reset command-list</em>) for performance concerns.
+Indeed:</p>
+<ul class="simple">
+<li><p>This allows the <em>WaitEvent</em> to be signaled directly on the host if the
+waiting list is empty, thus avoiding the need to submit a command list.</p></li>
+<li><p>Enqueuing a reset L0 command for all events in the command-buffer is time
+consuming, especially for large graphs. However, this task is not needed for
+every submission, but only once, when the command-buffer is fixed, i.e. when
+the command-buffer is finalized. The decorrelation between the reset
+command-list and the wait command-list allow us to create and enqueue the
+reset commands when finalizing the command-buffer, and only create the wait
+command-list at submission.</p></li>
+</ul>
+</li>
+</ol>
+<p>This command list consists of a reset command for each of the graph commands
+and another reset command for resetting the signal we use to signal the
+completion of the graph workload. This signal is called <em>SignalEvent</em> and is
+defined in the <code class="docutils literal notranslate"><span class="pre">ur_exp_command_buffer_handle_t</span></code> class.</p>
+</section>
+<section id="suffix">
+<h4>Suffix<a class="headerlink" href="#suffix" title="Link to this heading">¶</a></h4>
+<p>The suffix’s commands aim to:</p>
+<ol class="arabic simple">
+<li><p>Handle the completion of the graph workload and signal a UR return event.
+Thus, at the end of the graph workload command-list a command, which signals
+the <em>SignalEvent</em>, is added (when the command-buffer is finalized). In an
+additional command-list (<em>signal command-list</em>), a barrier waiting for this
+event is also added. This barrier signals, in turn, the UR return event that
+has be defined by the runtime layer when calling the
+<code class="docutils literal notranslate"><span class="pre">urCommandBufferEnqueueExp</span></code> function.</p></li>
+<li><p>Manage the profiling. If a command-buffer is about to be submitted to a
+queue with the profiling property enabled, an extra command that copies
+timestamps of L0 events associated with graph commands into a dedicated memory
+which is attached to the returned UR event. This memory stores the profiling
+information that corresponds to the current submission of the command-buffer.</p></li>
+</ol>
+<p><img alt="L0 command-buffer diagram" src="../_images/L0_UR_command-buffer-v5.jpg" /></p>
+<p>For a call to <code class="docutils literal notranslate"><span class="pre">urCommandBufferEnqueueExp</span></code> with an <code class="docutils literal notranslate"><span class="pre">event_list</span></code> <em>EL</em>,
+command-buffer <em>CB</em>, and return event <em>RE</em> our implementation has to submit three
+new command-lists for the above approach to work. Two before the command-list
+with extra commands associated with <em>CB</em>, and the other after <em>CB</em>. These new
+command-lists are retrieved from the UR queue, which will likely reuse existing
+command-lists and only create a new one in the worst case.</p>
+</section>
+<section id="drawbacks">
+<h4>Drawbacks<a class="headerlink" href="#drawbacks" title="Link to this heading">¶</a></h4>
+<p>There are three drawbacks of this approach to implementing UR command-buffers for
+Level Zero:</p>
+<ol class="arabic simple">
+<li><p>3x the command-list resources are used, if there are many UR command-buffers in
+flight, this may exhaust L0 driver resources. A trivial graph requires 3 L0
+command-lists and if we implement partitioning a graph into multiple UR
+command-buffers, then each partition will contain 3 L0 command-lists.</p></li>
+<li><p>Each L0 command-list is submitted individually with a
+<code class="docutils literal notranslate"><span class="pre">ur_queue_handle_t_::executeCommandList</span></code> call which introduces serialization
+in the submission pipeline that is heavier than having a barrier or a
+<code class="docutils literal notranslate"><span class="pre">waitForEvents</span></code> on the same command-list. Resulting in additional latency when
+executing a UR command-buffer.</p></li>
+<li><p>Dependencies between multiple submissions must be handled by the runtime.
+Indeed, when a second submission is performed the signal conditions of
+<em>WaitEvent</em> are redefined by this second submission. Therefore, this can
+lead to an undefined behavior and potential hangs especially if the
+conditions of the first submissions were not yet satisfied and the event has
+not yet been signaled.</p></li>
+</ol>
+<p>Future work will include exploring L0 API extensions to improve the mapping of
+UR command-buffer to L0 command-list.</p>
+</section>
+</section>
+<section id="cuda">
+<h3>CUDA<a class="headerlink" href="#cuda" title="Link to this heading">¶</a></h3>
+<p>The SYCL Graph CUDA backend relies on the
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#cuda-graphs">CUDA Graphs feature</a>,
+which is the CUDA public API for batching series of operations, such as kernel
+launches, connected by dependencies.</p>
+<p>UR commands (e.g. kernels) are mapped as graph nodes using the
+<a class="reference external" href="https://docs.nvidia.com/cuda/cuda-driver-api/group__CUDA__GRAPH.html#group__CUDA__GRAPH">CUDA Driver API</a>.
+The CUDA Driver API is preferred over the CUDA Runtime API to implement the
+SYCL Graph backend to remain consistent with other UR functions.
+Synchronization between commands (UR sync-points) is implemented using graph
+dependencies.</p>
+<p>Executable CUDA Graphs can be submitted to a CUDA stream in the same way as
+regular kernels. The CUDA backend enables enqueuing events to wait for into a
+stream. It also allows signaling the completion of a submission with an event.
+Therefore, submitting a UR command-buffer consists only of submitting to a
+stream the executable CUDA Graph that represent this series of operations.</p>
+<p>An executable CUDA Graph, which contains all commands and synchronization
+information, is saved in the UR command-buffer to allow for efficient graph
+resubmission.</p>
+</section>
+<section id="hip">
+<h3>HIP<a class="headerlink" href="#hip" title="Link to this heading">¶</a></h3>
+<p>The HIP backend offers a graph management API very similar to CUDA Graph
+feature for batching series of operations. The SYCL Graph HIP backend
+implementation is therefore very similar to that of CUDA.</p>
+<p>The minimum version of ROCm required to support <code class="docutils literal notranslate"><span class="pre">sycl_ext_oneapi_graph</span></code> is 5.5.1.</p>
+<p>UR commands (e.g. kernels) are mapped as graph nodes using the
+<a class="reference external" href="https://rocm.docs.amd.com/projects/HIP/en/docs-5.5.1/doxygen/html/group___graph.html">HIP Management API</a>.
+Synchronization between commands (UR sync-points) is implemented using graph
+dependencies. Executable HIP Graphs can be submitted to a HIP stream in the
+same way as regular kernels. The HIP backend enables enqueuing events to wait
+for into a stream. It also allows signaling the completion of a submission
+with an event. Therefore, submitting a UR command-buffer consists only of
+submitting to a stream the executable HIP Graph that represent this series of
+operations.</p>
+<p>An executable HIP Graph, which contains all commands and synchronization
+information, is saved in the UR command-buffer to allow for efficient
+graph resubmission.</p>
+</section>
+<section id="opencl">
+<h3>OpenCL<a class="headerlink" href="#opencl" title="Link to this heading">¶</a></h3>
+<p>SYCL-Graph is only enabled for an OpenCL backend when the
+<a class="reference external" href="https://registry.khronos.org/OpenCL/specs/3.0-unified/html/OpenCL_Ext.html#cl_khr_command_buffer">cl_khr_command_buffer</a>
+extension is available, however this information isn’t available until runtime
+due to OpenCL implementations being loaded through an ICD.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ur_exp_command_buffer</span></code> string is conditionally returned from the OpenCL
+command-buffer UR backend at runtime based on <code class="docutils literal notranslate"><span class="pre">cl_khr_command_buffer</span></code> support
+to indicate that the graph extension should be enabled. This is information
+is propagated to the SYCL user via the
+<code class="docutils literal notranslate"><span class="pre">device.get_info&lt;info::device::graph_support&gt;()</span></code> query for graph extension
+support.</p>
+<section id="limitations">
+<h4>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">¶</a></h4>
+<p>Due to the API mapping gaps documented in the following section, OpenCL as a
+SYCL backend cannot fully support the graph API. Instead, there are
+limitations in the types of nodes which a user can add to a graph, using
+an unsupported node type will cause a SYCL exception to be thrown in graph
+finalization with error code <code class="docutils literal notranslate"><span class="pre">sycl::errc::feature_not_supported</span></code> and a message
+mentioning the unsupported command. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">terminate</span> <span class="n">called</span> <span class="n">after</span> <span class="n">throwing</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="s1">&#39;sycl::_V1::exception&#39;</span>
+<span class="n">what</span><span class="p">():</span>  <span class="n">USM</span> <span class="n">copy</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">by</span> <span class="n">graph</span> <span class="n">backend</span>
+</pre></div>
+</div>
+<p>The types of commands which are unsupported, and lead to this exception are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::copy(src,</span> <span class="pre">dest)</span></code> - Where <code class="docutils literal notranslate"><span class="pre">src</span></code> is an accessor and <code class="docutils literal notranslate"><span class="pre">dest</span></code> is a pointer.
+This corresponds to a memory buffer read command.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::copy(src,</span> <span class="pre">dest)</span></code> - Where <code class="docutils literal notranslate"><span class="pre">src</span></code> is an pointer and <code class="docutils literal notranslate"><span class="pre">dest</span></code> is an accessor.
+This corresponds to a memory buffer write command.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::copy(src,</span> <span class="pre">dest)</span></code> or <code class="docutils literal notranslate"><span class="pre">handler::memcpy(dest,</span> <span class="pre">src)</span></code> - Where both <code class="docutils literal notranslate"><span class="pre">src</span></code> and
+<code class="docutils literal notranslate"><span class="pre">dest</span></code> are USM pointers. This corresponds to a USM copy command.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::fill(ptr,</span> <span class="pre">pattern,</span> <span class="pre">count)</span></code> - This corresponds to a USM memory
+fill command.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::memset(ptr,</span> <span class="pre">value,</span> <span class="pre">numBytes)</span></code> - This corresponds to a USM memory
+fill command.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::prefetch()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handler::mem_advise()</span></code>.</p></li>
+</ul>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">handler::copy(src,</span> <span class="pre">dest)</span></code> where both <code class="docutils literal notranslate"><span class="pre">src</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> are an accessor
+is supported, as a memory buffer copy command exists in the OpenCL extension.</p>
+</section>
+<section id="ur-api-mapping">
+<h4>UR API Mapping<a class="headerlink" href="#ur-api-mapping" title="Link to this heading">¶</a></h4>
+<p>There are some gaps in both the OpenCL and UR specifications for Command
+Buffers shown in the list below. There are implementations in the UR OpenCL
+adapter where there is matching support for each function in the list.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>UR</p></th>
+<th class="head"><p>OpenCL</p></th>
+<th class="head"><p>Supported</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>urCommandBufferCreateExp</p></td>
+<td><p>clCreateCommandBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferRetainExp</p></td>
+<td><p>clRetainCommandBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferReleaseExp</p></td>
+<td><p>clReleaseCommandBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferFinalizeExp</p></td>
+<td><p>clFinalizeCommandBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferAppendKernelLaunchExp</p></td>
+<td><p>clCommandNDRangeKernelKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferAppendUSMMemcpyExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferAppendUSMFillExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferAppendMembufferCopyExp</p></td>
+<td><p>clCommandCopyBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferAppendMemBufferWriteExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferAppendMemBufferReadExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferAppendMembufferCopyRectExp</p></td>
+<td><p>clCommandCopyBufferRectKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferAppendMemBufferWriteRectExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferAppendMemBufferReadRectExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferAppendMemBufferFillExp</p></td>
+<td><p>clCommandFillBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferAppendUSMPrefetchExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>urCommandBufferAppendUSMAdviseExp</p></td>
+<td><p></p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferEnqueueExp</p></td>
+<td><p>clEnqueueCommandBufferKHR</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>clCommandBarrierWithWaitListKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>clCommandCopyImageKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>clCommandCopyImageToBufferKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>clCommandFillImageKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>clGetCommandBufferInfoKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>clCommandSVMMemcpyKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>clCommandSVMMemFillKHR</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>urCommandBufferUpdateKernelLaunchExp</p></td>
+<td><p>clUpdateMutableCommandsKHR</p></td>
+<td><p>Yes[1]</p></td>
+</tr>
+</tbody>
+</table>
+<p>We are looking to address these gaps in the future so that SYCL-Graph can be
+fully supported on a <code class="docutils literal notranslate"><span class="pre">cl_khr_command_buffer</span></code> backend.</p>
+<p>[1] Support for <code class="docutils literal notranslate"><span class="pre">urCommandBufferUpdateKernelLaunchExp</span></code> used to update the
+configuration of kernel commands requires an OpenCL implementation with the
+<a class="reference external" href="https://registry.khronos.org/OpenCL/specs/3.0-unified/html/OpenCL_Ext.html#cl_khr_command_buffer_mutable_dispatch">cl_khr_command_buffer_mutable_dispatch</a>
+extension. The optional capabilities that are reported by this extension must
+include all of of <code class="docutils literal notranslate"><span class="pre">CL_MUTABLE_DISPATCH_GLOBAL_OFFSET_KHR</span></code>,
+<code class="docutils literal notranslate"><span class="pre">CL_MUTABLE_DISPATCH_GLOBAL_SIZE_KHR</span></code>, <code class="docutils literal notranslate"><span class="pre">CL_MUTABLE_DISPATCH_LOCAL_SIZE_KHR</span></code>,
+<code class="docutils literal notranslate"><span class="pre">CL_MUTABLE_DISPATCH_ARGUMENTS_KHR</span></code>, and <code class="docutils literal notranslate"><span class="pre">CL_MUTABLE_DISPATCH_EXEC_INFO_KHR</span></code>.</p>
+</section>
+<section id="ur-command-buffer-implementation">
+<h4>UR Command-Buffer Implementation<a class="headerlink" href="#ur-command-buffer-implementation" title="Link to this heading">¶</a></h4>
+<p>Many of the OpenCL functions take a <code class="docutils literal notranslate"><span class="pre">cl_command_queue</span></code> parameter which is not
+present in most of the UR functions. Instead, when a new command buffer is
+created in <code class="docutils literal notranslate"><span class="pre">urCommandBufferCreateExp</span></code> we also create and maintain a new
+internal <code class="docutils literal notranslate"><span class="pre">ur_queue_handle_t</span></code> with a reference stored inside of the
+<code class="docutils literal notranslate"><span class="pre">ur_exp_command_buffer_handle_t_</span></code> struct. The internal queue is retained and
+released whenever the owning command buffer is retained or released.</p>
+<p>With command buffers being an OpenCL extension, each function is accessed by
+loading a function pointer to its implementation. These are defined in a common
+header file in the UR OpenCL adapter. The symbols for the functions are however
+defined in <a class="reference external" href="https://github.com/KhronosGroup/OpenCL-Headers/blob/main/CL/cl_ext.h">OpenCL-Headers</a>
+but it is not known at this time what version of the headers will be used in
+the UR GitHub CI configuration, so loading the function pointers will be used
+until this can be verified. A future piece of work would be replacing the
+custom defined symbols with the ones from OpenCL-Headers.</p>
+</section>
+<section id="available-opencl-command-buffer-implementations">
+<h4>Available OpenCL Command-Buffer Implementations<a class="headerlink" href="#available-opencl-command-buffer-implementations" title="Link to this heading">¶</a></h4>
+<p>Publicly available implementations of <code class="docutils literal notranslate"><span class="pre">cl_khr_command_buffer</span></code> that can be used
+to enable the graph extension in OpenCL:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/codeplaysoftware/oneapi-construction-kit">OneAPI Construction Kit</a>
+(must enable <code class="docutils literal notranslate"><span class="pre">OCL_EXTENSION_cl_khr_command_buffer</span></code> when building)</p></li>
+<li><p><a class="reference external" href="http://portablecl.org/">PoCL</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bashbaug/SimpleOpenCLSamples/tree/efeae73139ddf064fafce565cc39640af10d900f/layers/10_cmdbufemu">Command-Buffer Emulation Layer</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="SYCLNativeCPU.html">SYCL Native CPU</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="OffloadDesign.html">Proposed design for offloading model</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>

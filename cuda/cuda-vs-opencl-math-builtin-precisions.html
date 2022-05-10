@@ -1,22 +1,20 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>CUDA vs OpenCL math builtin precision &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CUDA crosslane vs OpenCL sub-groups" href="opencl-subgroup-vs-cuda-crosslane-op.html" />
-    <link rel="prev" title="Experimental CUDA backend for DPC++" href="contents.html" /> 
+    <link rel="prev" title="CUDA backend for DPC++" href="contents.html" /> 
   </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
           <span>oneAPI DPC++ Compiler  documentation</span></a></h1>
@@ -25,7 +23,7 @@
       <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
-        «&#160;&#160;<a href="contents.html">Experimental CUDA backend for DPC++</a>
+        «&#160;&#160;<a href="contents.html">CUDA backend for DPC++</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
@@ -36,10 +34,10 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="cuda-vs-opencl-math-builtin-precision">
-<h1>CUDA vs OpenCL math builtin precision<a class="headerlink" href="#cuda-vs-opencl-math-builtin-precision" title="Permalink to this headline">¶</a></h1>
+  <section id="cuda-vs-opencl-math-builtin-precision">
+<h1>CUDA vs OpenCL math builtin precision<a class="headerlink" href="#cuda-vs-opencl-math-builtin-precision" title="Link to this heading">¶</a></h1>
 <section id="cuda-guarantees">
-<h2>CUDA Guarantees<a class="headerlink" href="#cuda-guarantees" title="Permalink to this headline">¶</a></h2>
+<h2>CUDA Guarantees<a class="headerlink" href="#cuda-guarantees" title="Link to this heading">¶</a></h2>
 <p>From <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#standard-functions">Appendix E.1 of the CUDA C Programming Guide</a>:</p>
 <blockquote>
 <div><p>This section specifies the error bounds of each function when executed on the device and also
@@ -52,7 +50,7 @@ guaranteed bounds.</p>
 Compiler Flags, there are mentions of the precision of math built-ins.</p>
 </section>
 <section id="single-precision">
-<h2>Single Precision<a class="headerlink" href="#single-precision" title="Permalink to this headline">¶</a></h2>
+<h2>Single Precision<a class="headerlink" href="#single-precision" title="Link to this heading">¶</a></h2>
 <p>The following table uses the following sources:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/opencl-1.2.pdf#page=319">Section 7.4 of the OpenCL 1.2 Specification</a></p></li>
@@ -78,7 +76,7 @@ between the two non-equal finite floating-point numbers nearest x.  Moreover, ul
 <div><p>The maximum error is stated as the absolute value of the difference in ulps between a correctly
 rounded single-precision result and the result returned by the CUDA library function.</p>
 </div></blockquote>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>OpenCL Built-in</p></th>
 <th class="head"><p>OpenCL Min Accuracy (ULP)</p></th>
@@ -637,7 +635,7 @@ are correctly rounded.</p>
 <a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/2.2/html/OpenCL_Env.html#relative-error-as-ulps">found in this document</a>.</p>
 </section>
 <section id="double-precision">
-<h2>Double Precision<a class="headerlink" href="#double-precision" title="Permalink to this headline">¶</a></h2>
+<h2>Double Precision<a class="headerlink" href="#double-precision" title="Link to this heading">¶</a></h2>
 <p>The following table uses the following sources:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/opencl-1.2.pdf#page=322">Section 7.4 of the OpenCL 1.2 Specification</a></p></li>
@@ -652,7 +650,7 @@ whereas rint() maps to a single instruction. trunc(), ceil(), and floor() each m
 </div></blockquote>
 <p>Only differences from single precision are included. There are only changes to <code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">/</span> <span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code>
 and <code class="docutils literal notranslate"><span class="pre">sqrt</span></code> from OpenCL. All built-in names changed for CUDA and many precisions too.</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>OpenCL Built-in</p></th>
 <th class="head"><p>OpenCL Min Accuracy (ULP)</p></th>
@@ -1185,14 +1183,14 @@ and <code class="docutils literal notranslate"><span class="pre">sqrt</span></co
 </table>
 </section>
 <section id="half-precision">
-<h2>Half Precision<a class="headerlink" href="#half-precision" title="Permalink to this headline">¶</a></h2>
+<h2>Half Precision<a class="headerlink" href="#half-precision" title="Link to this heading">¶</a></h2>
 <p>The following tables uses the following sources:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.khronos.org/registry/OpenCL/specs/opencl-1.2.pdf#page=322">Section 7.4 of the OpenCL 1.2 Specification</a></p></li>
 <li><p><a class="reference external" href="https://docs.nvidia.com/cuda/cuda-math-api/group__CUDA__MATH__INTRINSIC__HALF.html#group__CUDA__MATH__INTRINSIC__HALF">CUDA Math API documentation</a></p></li>
 </ul>
 <p>CUDA doesn’t specify the ULP values for any of its half precision math builtins:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>OpenCL Built-in</p></th>
 <th class="head"><p>OpenCL Min Accuracy (ULP)</p></th>
@@ -1409,7 +1407,7 @@ and <code class="docutils literal notranslate"><span class="pre">sqrt</span></co
 </tbody>
 </table>
 <p>CUDA also defines math builtins that operate on a <code class="docutils literal notranslate"><span class="pre">half2</span></code> type to which there is no OpenCL parallel:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>CUDA Built-in</p></th>
 <th class="head"><p>CUDA Maximum Error (ULP)</p></th>
@@ -1563,7 +1561,7 @@ and <code class="docutils literal notranslate"><span class="pre">sqrt</span></co
 </tbody>
 </table>
 <p>Further, CUDA defines conversion and data movement functions:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>CUDA Built-in</p></th>
 <th class="head"><p>CUDA Maximum Error (ULP)</p></th>
@@ -1811,7 +1809,7 @@ and <code class="docutils literal notranslate"><span class="pre">sqrt</span></co
       <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
-        «&#160;&#160;<a href="contents.html">Experimental CUDA backend for DPC++</a>
+        «&#160;&#160;<a href="contents.html">CUDA backend for DPC++</a>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
@@ -1821,8 +1819,8 @@ and <code class="docutils literal notranslate"><span class="pre">sqrt</span></co
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

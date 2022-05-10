@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1AllNonZero_3_01X_00_01Xs_8_8_8_01_4 =
+[
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1AllNonZero_3_01X_00_01Xs_8_8_8_01_4.html#af1c15ce6aa6a316f366d41bb9821069c", null ]
+];

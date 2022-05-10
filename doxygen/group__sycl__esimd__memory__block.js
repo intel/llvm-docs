@@ -1,0 +1,25 @@
+var group__sycl__esimd__memory__block =
+[
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga49ae87e4075911a7e92549fb1e25fdb8", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga3972b27da87b098bd3a5a4210e5cf58e", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga25fa0c8cc614de20602c6b59cae470a0", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga1cef3de9f1cac6acf5d11fcf3a07ab43", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga32d25f4fe10f0c79bbed061293813da6", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#gad8ad8f44d928b312fe483062bd87c21b", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#gaf6ce51fcd9012aac82528d731cb21b5c", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga7894851ec14747893eac472ad8add7b0", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga8615bdbbe10f01eed1890d41b3c10bbf", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#gaa9252b08b7c4467a792391d854dd559a", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga480ebe06c1d5d2050d8e2603d62de995", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#gad65df008f55259009a111386082da30f", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#ga277bed1c03435c7fc557a3ceb86ab2c5", null ],
+    [ "block_load", "group__sycl__esimd__memory__block.html#gaf853809d4b13a456607b0e10525e0e17", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#ga0fd624e96124663a6ae4c920706007f4", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#ga59adec9467f16b6031eba98db1d38c04", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#gaeaa6f746325b1be167c897ff9a554e1b", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#ga30be02856481196cc276e77cf721d74e", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#ga67a5b4228984629dd3215235c3bc3829", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#ga9c3e5935f0c9edd7a6e35d49e5c088ba", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#gaa81d900f8d9b9954362c8420182619a6", null ],
+    [ "block_store", "group__sycl__esimd__memory__block.html#ga5128f1ec8f70e26fe4258bbb49123133", null ]
+];

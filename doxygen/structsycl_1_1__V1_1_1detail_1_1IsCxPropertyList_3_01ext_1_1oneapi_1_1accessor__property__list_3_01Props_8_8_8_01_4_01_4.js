@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1IsCxPropertyList_3_01ext_1_1oneapi_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4 =
+[
+    [ "value", "structsycl_1_1__V1_1_1detail_1_1IsCxPropertyList_3_01ext_1_1oneapi_1_1accessor__property__list_3_01Props_8_8_8_01_4_01_4.html#acf262797ae42335feba42d0c83d62ed4", null ]
+];

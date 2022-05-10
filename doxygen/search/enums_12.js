@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['target_11753',['target',['../namespacecl_1_1sycl_1_1access.html#a54d2e6e700c92ce57c6fe2ba91432598',1,'cl::sycl::access']]],
-  ['tpu_11754',['tpu',['../namespacecl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1matrix.html#a34d9bb21a1f0c00a7b467f03ef0ed42f',1,'cl::sycl::ext::oneapi::experimental::matrix']]],
-  ['tracelevel_11755',['TraceLevel',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a153495ba443668e0febb9335940a9153',1,'cl::sycl::detail::pi']]],
-  ['type_11756',['type',['../structcm__buffer__ptr__slot.html#ad6776a810584a03814673b01fab204e6',1,'cm_buffer_ptr_slot::type()'],['../structcm__image__ptr__slot.html#a5ee79e65d6eb6808561aef2fe37b808e',1,'cm_image_ptr_slot::type()'],['../struct__pi__device_1_1queue__group__info__t.html#af041558b8699c4016e60526253ec4ff9',1,'_pi_device::queue_group_info_t::type()'],['../namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental.html#a303ff30027ade1cadb4ba5f31bfb660b',1,'cl::sycl::ext::intel::experimental::type()']]],
-  ['typeindex_11757',['TypeIndex',['../structcl_1_1sycl_1_1detail_1_1PlatformUtil.html#ae05e82d34d72e9b5a0e418dc91c8929a',1,'cl::sycl::detail::PlatformUtil']]]
+  ['sorting_5forder_17502',['sorting_order',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#a5e90a7b09d68b4e050adb8f196026290',1,'sycl::_V1::ext::oneapi::experimental']]],
+  ['source_5flanguage_17503',['source_language',['../namespacesycl_1_1__V1_1_1ext_1_1intel_1_1experimental.html#af9f8bef448e330cef6863a36b9619c2c',1,'sycl::_V1::ext::intel::experimental::source_language()'],['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#a573be41a9d7811195b2aa9248f69fb0e',1,'sycl::_V1::ext::oneapi::experimental::source_language()']]],
+  ['split_5fbarrier_5faction_17504',['split_barrier_action',['../group__sycl__esimd__core.html#gafa86c8afcf13781bdecb4c245b402ee5',1,'sycl::_V1::ext::intel::experimental::esimd']]],
+  ['strategy_17505',['strategy',['../namespacesycl_1_1__V1_1_1detail_1_1reduction.html#add41a70c3306936515a7da53ab114df4',1,'sycl::_V1::detail::reduction']]],
+  ['stream_5fmanipulator_17506',['stream_manipulator',['../namespacesycl_1_1__V1.html#abe19e9a20756f2e2bc66217b50b209f0',1,'sycl::stream_manipulator()'],['../namespacesycl_1_1__V1.html#abe19e9a20756f2e2bc66217b50b209f0',1,'sycl::_V1::stream_manipulator()']]],
+  ['streaming_5finterface_5foptions_5fenum_17507',['streaming_interface_options_enum',['../namespacesycl_1_1__V1_1_1ext_1_1intel_1_1experimental.html#a010d4c7f3aabb6876a371a34ed1767c7',1,'sycl::_V1::ext::intel::experimental']]]
 ];

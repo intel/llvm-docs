@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01latency__key_1_1value__t_3_01N_01_4_01_4 =
+[
+    [ "name", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01latency__key_1_1value__t_3_01N_01_4_01_4.html#a8b5e93d1f0a7f7f973d464d05b7903ae", null ],
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1PropertyMetaInfo_3_01latency__key_1_1value__t_3_01N_01_4_01_4.html#a82ab56074d5c5f92085851012b85aa87", null ]
+];

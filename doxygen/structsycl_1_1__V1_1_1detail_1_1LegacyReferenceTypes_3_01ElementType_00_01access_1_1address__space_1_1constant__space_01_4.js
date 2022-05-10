@@ -1,0 +1,6 @@
+var structsycl_1_1__V1_1_1detail_1_1LegacyReferenceTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4 =
+[
+    [ "const_reference_t", "structsycl_1_1__V1_1_1detail_1_1LegacyReferenceTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#a56ffefd19ae6bc23fd2c5222da30144b", null ],
+    [ "decorated_type", "structsycl_1_1__V1_1_1detail_1_1LegacyReferenceTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#a3c7d9a522f4eaf502a38076139ca0628", null ],
+    [ "reference_t", "structsycl_1_1__V1_1_1detail_1_1LegacyReferenceTypes_3_01ElementType_00_01access_1_1address__space_1_1constant__space_01_4.html#ae0fb46d66b0ae69fd3949fa1195df320", null ]
+];

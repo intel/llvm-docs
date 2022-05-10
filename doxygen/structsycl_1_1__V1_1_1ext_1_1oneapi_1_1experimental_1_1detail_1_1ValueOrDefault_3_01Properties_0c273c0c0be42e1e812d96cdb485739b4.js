@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ValueOrDefault_3_01Properties_0c273c0c0be42e1e812d96cdb485739b4 =
+[
+    [ "get", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ValueOrDefault_3_01Properties_0c273c0c0be42e1e812d96cdb485739b4.html#a644aec567a573d587e87c74fc77e2c32", null ]
+];

@@ -1,0 +1,6 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1annotationHelper_3_01I_00_01detail_1_1pro080d014f8c2ba994bdb9603134ef7a8d =
+[
+    [ "annotate", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1annotationHelper_3_01I_00_01detail_1_1pro080d014f8c2ba994bdb9603134ef7a8d.html#adffd865f08f04d336463821ae3da3b2a", null ],
+    [ "load", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1annotationHelper_3_01I_00_01detail_1_1pro080d014f8c2ba994bdb9603134ef7a8d.html#ab8389403df1b93cc82eadbe3a9cbb758", null ],
+    [ "store", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1annotationHelper_3_01I_00_01detail_1_1pro080d014f8c2ba994bdb9603134ef7a8d.html#a68416b507e28727c6e028d2569894902", null ]
+];

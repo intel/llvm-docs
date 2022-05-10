@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['address_5fspace_11657',['address_space',['../namespacecl_1_1sycl_1_1access.html#a0b32461aa4a1867f288b640d7fc64fbf',1,'cl::sycl::access']]],
-  ['addressing_5fmode_11658',['addressing_mode',['../namespacecl_1_1sycl.html#a1b4377b5144c86548305fcdc66aa42df',1,'cl::sycl']]],
-  ['alloc_11659',['alloc',['../namespacecl_1_1sycl_1_1usm.html#a6af7b613a7092386eaad216e9c9c1f0e',1,'cl::sycl::usm']]],
-  ['alloc_5fmode_11660',['alloc_mode',['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55',1,'_pi_mem::mem_::buffer_mem_::alloc_mode()'],['../struct__pi__mem_1_1mem___1_1buffer__mem__.html#a7d3d0ba430c6e85f1db7e3988db7cb55',1,'_pi_mem::mem_::buffer_mem_::alloc_mode()']]],
-  ['argument_5ftype_11661',['argument_type',['../group__sycl__esimd__core.html#gac9afb7a6a63e35b3ad812e4893376750',1,'cl::__ESIMD_ENS']]],
-  ['aspect_11662',['aspect',['../namespacecl_1_1sycl.html#a0c5593ca4fbd8828493d37b723b9261e',1,'cl::sycl']]],
-  ['atomic_5fop_11663',['atomic_op',['../group__sycl__esimd__core.html#ga23fb0ca831ce2cf4176c9c1ad518bc48',1,'cl::__ESIMD_NS']]]
+  ['address_5fspace_17393',['address_space',['../namespacesycl_1_1__V1_1_1access.html#a8489635b23eac2e3a71c188d9235befb',1,'sycl::_V1::access']]],
+  ['addressing_5fmode_17394',['addressing_mode',['../namespacesycl_1_1__V1.html#a99c979c4fbdfca1acac0824375876b3e',1,'sycl::addressing_mode()'],['../namespacesycl_1_1__V1.html#a99c979c4fbdfca1acac0824375876b3e',1,'sycl::_V1::addressing_mode()']]],
+  ['alloc_17395',['alloc',['../namespacesycl_1_1__V1_1_1usm.html#adec943cf2b0ce1e251d50a73c10c3177',1,'sycl::_V1::usm']]],
+  ['arch_5fcategory_17396',['arch_category',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#a5129cc125689947a1172fe2f437d0457',1,'sycl::_V1::ext::oneapi::experimental']]],
+  ['architecture_17397',['architecture',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#ac11972ee927e5fc3fd682e3184d999e9',1,'sycl::_V1::ext::oneapi::experimental']]],
+  ['atomic_5fop_17398',['atomic_op',['../group__sycl__esimd__core.html#gad3d821293325e83ff7ea04b0562225aa',1,'sycl::_V1::ext::intel::esimd::atomic_op()'],['../group__sycl__esimd__memory__lsc.html#ga7f152f10c9444355e56f3934d4a41b39',1,'sycl::_V1::ext::intel::esimd::native::lsc::atomic_op()']]]
 ];

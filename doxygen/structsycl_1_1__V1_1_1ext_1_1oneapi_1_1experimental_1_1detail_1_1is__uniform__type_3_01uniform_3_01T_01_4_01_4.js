@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__uniform__type_3_01uniform_3_01T_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__uniform__type_3_01uniform_3_01T_01_4_01_4.html#a7f757eb877bac73c179e9f9724d43715", null ]
+];

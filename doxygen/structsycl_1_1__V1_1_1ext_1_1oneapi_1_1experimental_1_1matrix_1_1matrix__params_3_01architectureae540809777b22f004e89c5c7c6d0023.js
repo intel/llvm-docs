@@ -1,0 +1,10 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023 =
+[
+    [ "joint_matrix_a", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#a7273829faec0de5300ecf79af3e19bdb", null ],
+    [ "joint_matrix_b", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#a3d0c6a9ad1c52de1cdbe780c0990dbe7", null ],
+    [ "joint_matrix_c", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#a6dd0d1ae748b12b3ea6da883050ed317", null ],
+    [ "joint_matrix_d", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#a06e74ee9df4b98173aee5d4d5bf542a1", null ],
+    [ "K", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#ab68021bea9ef4063819230c7cd726eb0", null ],
+    [ "M", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#a2250a78614188f8fd5c2e7c4d4ecfae6", null ],
+    [ "N", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1matrix_1_1matrix__params_3_01architectureae540809777b22f004e89c5c7c6d0023.html#ad647e3306aa4d5a5763e482af6ee2407", null ]
+];

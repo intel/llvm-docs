@@ -1,0 +1,4 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1graph_1_1enable__profiling =
+[
+    [ "enable_profiling", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1property_1_1graph_1_1enable__profiling.html#a59eef836eb146b12a59e01446275fddd", null ]
+];

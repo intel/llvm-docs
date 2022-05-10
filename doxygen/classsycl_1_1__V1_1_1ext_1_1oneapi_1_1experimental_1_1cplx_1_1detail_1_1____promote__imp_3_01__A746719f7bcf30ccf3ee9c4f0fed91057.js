@@ -1,0 +1,5 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____promote__imp_3_01__A746719f7bcf30ccf3ee9c4f0fed91057 =
+[
+    [ "type", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____promote__imp_3_01__A746719f7bcf30ccf3ee9c4f0fed91057.html#a2282a1c45a32edc6d3a2d6fd432bf4e5", null ],
+    [ "value", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____promote__imp_3_01__A746719f7bcf30ccf3ee9c4f0fed91057.html#a3651b124e81335ca1f67523e989f7188", null ]
+];

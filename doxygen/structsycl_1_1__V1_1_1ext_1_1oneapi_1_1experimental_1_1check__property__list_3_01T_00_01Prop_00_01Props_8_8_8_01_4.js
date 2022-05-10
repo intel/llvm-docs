@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1check__property__list_3_01T_00_01Prop_00_01Props_8_8_8_01_4 =
+[
+    [ "is_valid_property_for_given_type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1check__property__list_3_01T_00_01Prop_00_01Props_8_8_8_01_4.html#a6f811ff8d214588e95b3167053c7608e", null ]
+];

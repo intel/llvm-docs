@@ -1,0 +1,4 @@
+var classsycl_1_1__V1_1_1detail_1_1SYCLConfig_3_01SYCL__PARALLEL__FOR__RANGE__ROUNDING__PARAMS_01_4 =
+[
+    [ "GetSettings", "classsycl_1_1__V1_1_1detail_1_1SYCLConfig_3_01SYCL__PARALLEL__FOR__RANGE__ROUNDING__PARAMS_01_4.html#a5f69f64441c255d2825035d5ff014eb6", null ]
+];

@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Implementation design for “device_global” &#8212; oneAPI DPC++ Compiler  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/haiku.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/haiku.css?v=e491ac2d" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Implementation design for compile time constant properties" href="CompileTimeProperties.html" />
@@ -36,13 +34,13 @@
       <div class="content" role="main">
         
         
-  <section class="tex2jax_ignore mathjax_ignore" id="implementation-design-for-device-global">
-<h1>Implementation design for “device_global”<a class="headerlink" href="#implementation-design-for-device-global" title="Permalink to this headline">¶</a></h1>
+  <section id="implementation-design-for-device-global">
+<h1>Implementation design for “device_global”<a class="headerlink" href="#implementation-design-for-device-global" title="Link to this heading">¶</a></h1>
 <p>This document describes the implementation design for the DPC++ extension
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/proposed/sycl_ext_oneapi_device_global.asciidoc"><span class="xref myst">sycl_ext_oneapi_device_global</span></a>, which allows applications to declare
+<a class="reference download internal" download="" href="../_downloads/ba88595f12ef1a14d94e3dc26fa352c0/sycl_ext_oneapi_device_global.asciidoc"><span class="xref download myst">sycl_ext_oneapi_device_global</span></a>, which allows applications to declare
 global variables in device code.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>The extension specification document referenced above contains the full set of
 requirements for this feature, but some requirements that are particularly
 relevant to the design are called out here.</p>
@@ -100,13 +98,13 @@ quite different from device global variables that are not declared with this
 property.  The sections below describe both implementations.</p>
 </section>
 <section id="design">
-<h2>Design<a class="headerlink" href="#design" title="Permalink to this headline">¶</a></h2>
+<h2>Design<a class="headerlink" href="#design" title="Link to this heading">¶</a></h2>
 <section id="changes-to-dpc-headers">
-<h3>Changes to DPC++ headers<a class="headerlink" href="#changes-to-dpc-headers" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to DPC++ headers<a class="headerlink" href="#changes-to-dpc-headers" title="Link to this heading">¶</a></h3>
 <section id="class-specializations-based-on-device-image-scope">
-<h4>Class specializations based on <code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code><a class="headerlink" href="#class-specializations-based-on-device-image-scope" title="Permalink to this headline">¶</a></h4>
+<h4>Class specializations based on <code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code><a class="headerlink" href="#class-specializations-based-on-device-image-scope" title="Link to this heading">¶</a></h4>
 <p>The headers, of course, include the declaration of the new <code class="docutils literal notranslate"><span class="pre">device_global</span></code>
-class, which is described in the <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/proposed/sycl_ext_oneapi_device_global.asciidoc"><span class="xref myst">extension specification</span></a>.  The declaration
+class, which is described in the <a class="reference download internal" download="" href="../_downloads/ba88595f12ef1a14d94e3dc26fa352c0/sycl_ext_oneapi_device_global.asciidoc"><span class="xref download myst">extension specification</span></a>.  The declaration
 of this class uses partial specialization to define the class differently
 depending on whether it has the <code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code> property.  When the
 property is not present, the class has a member variable which is a pointer to
@@ -141,7 +139,7 @@ the address of the <code class="docutils literal notranslate"><span class="pre">
 of this member variable.</p>
 </section>
 <section id="attributes-attached-to-the-class">
-<h4>Attributes attached to the class<a class="headerlink" href="#attributes-attached-to-the-class" title="Permalink to this headline">¶</a></h4>
+<h4>Attributes attached to the class<a class="headerlink" href="#attributes-attached-to-the-class" title="Link to this heading">¶</a></h4>
 <p>The <code class="docutils literal notranslate"><span class="pre">device_global</span></code> class declaration contains three C++ attributes which
 convey information to the front-end.  These attributes are only needed for the
 device compiler, and the <code class="docutils literal notranslate"><span class="pre">#ifdef</span> <span class="pre">__SYCL_DEVICE_ONLY__</span></code> allows the customer to
@@ -171,7 +169,7 @@ class
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::add_ir_global_variable_attributes()]]</span></code> attribute is
 used to convey information about the compile-time properties to the front-end,
-and it is described more fully by the <a class="reference internal" href="CompileTimeProperties.html"><span class="doc std std-doc">compile-time properties</span></a> design
+and it is described more fully by the <a class="reference internal" href="CompileTimeProperties.html"><span class="std std-doc">compile-time properties</span></a> design
 document.  This attribute is also used for other classes that have properties,
 so it is not specific to the <code class="docutils literal notranslate"><span class="pre">device_global</span></code> class.</p>
 <p>Note that the parameter list to
@@ -205,7 +203,7 @@ declared.  Rather than have the front-end recognize the name of the
 restrictions to enforce for this type.</p>
 </section>
 <section id="declaration-of-member-functions-to-copy-device-global-variables">
-<h4>Declaration of member functions to copy device global variables<a class="headerlink" href="#declaration-of-member-functions-to-copy-device-global-variables" title="Permalink to this headline">¶</a></h4>
+<h4>Declaration of member functions to copy device global variables<a class="headerlink" href="#declaration-of-member-functions-to-copy-device-global-variables" title="Link to this heading">¶</a></h4>
 <p>The headers are also updated to add the new <code class="docutils literal notranslate"><span class="pre">copy()</span></code> and <code class="docutils literal notranslate"><span class="pre">memcpy()</span></code> member
 functions to <code class="docutils literal notranslate"><span class="pre">handler</span></code> and <code class="docutils literal notranslate"><span class="pre">queue</span></code> which copy data to or from a device global
 variable.  These declarations use SFINAE such that they are conditionally
@@ -213,7 +211,7 @@ available depending on the <code class="docutils literal notranslate"><span clas
 </section>
 </section>
 <section id="changes-to-the-dpc-front-end">
-<h3>Changes to the DPC++ front-end<a class="headerlink" href="#changes-to-the-dpc-front-end" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the DPC++ front-end<a class="headerlink" href="#changes-to-the-dpc-front-end" title="Link to this heading">¶</a></h3>
 <p>There are several changes to the device compiler front-end:</p>
 <ul class="simple">
 <li><p>The front-end adds a new LLVM IR attribute <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> to the definition
@@ -225,7 +223,7 @@ algorithm when generating the string.</p></li>
 <code class="docutils literal notranslate"><span class="pre">device_global</span></code> type.  As described above, the front-end uses the
 <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::device_global]]</span></code> attribute (rather than the class name)
 to know which set of restrictions to check.  The restrictions specific to
-device global variables are documented in the <a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/../extensions/proposed/sycl_ext_oneapi_device_global.asciidoc"><span class="xref myst">extension specification</span></a>.</p></li>
+device global variables are documented in the <a class="reference download internal" download="" href="../_downloads/ba88595f12ef1a14d94e3dc26fa352c0/sycl_ext_oneapi_device_global.asciidoc"><span class="xref download myst">extension specification</span></a>.</p></li>
 <li><p>The front-end <em>avoids</em> diagnosing an error when variables of type
 <code class="docutils literal notranslate"><span class="pre">device_global</span></code> are referenced in device code because the type is decorated
 with the <code class="docutils literal notranslate"><span class="pre">[[__sycl_detail__::global_variable_allowed]]</span></code> attribute.</p></li>
@@ -233,7 +231,7 @@ with the <code class="docutils literal notranslate"><span class="pre">[[__sycl_d
 integration footer, which is described in more detail below.</p></li>
 </ul>
 <section id="new-content-in-the-integration-header-and-footer">
-<h4>New content in the integration header and footer<a class="headerlink" href="#new-content-in-the-integration-header-and-footer" title="Permalink to this headline">¶</a></h4>
+<h4>New content in the integration header and footer<a class="headerlink" href="#new-content-in-the-integration-header-and-footer" title="Link to this heading">¶</a></h4>
 <p>New content in the integration header and footer provides a mapping from the
 host address of each device global variable to the unique string for that
 variable.  To illustrate, consider a translation unit that defines two
@@ -305,7 +303,7 @@ device global variables in the translation unit will be registered with the
 DPC++ runtime before any user code could legally use them.</p>
 </section>
 <section id="handling-shadowed-device-global-variables">
-<h4>Handling shadowed device global variables<a class="headerlink" href="#handling-shadowed-device-global-variables" title="Permalink to this headline">¶</a></h4>
+<h4>Handling shadowed device global variables<a class="headerlink" href="#handling-shadowed-device-global-variables" title="Link to this heading">¶</a></h4>
 <p>The example above shows a simple case where the user’s device global variables
 can all be uniquely referenced via fully qualified lookup (e.g.
 <code class="docutils literal notranslate"><span class="pre">::inner::Bar</span></code>).  However, it is possible for users to construct applications
@@ -351,17 +349,17 @@ shadowed device global:</p>
 name lookup.  Furthermore, the name of the shim function is globally unique, so
 it is guaranteed not to be shadowed by any other name in the translation unit.
 This problem with variable shadowing is also a problem for the integration
-footer we use for specialization constants.  See the <a class="reference internal" href="SpecializationConstants.html"><span class="doc std std-doc">specialization constant
+footer we use for specialization constants.  See the <a class="reference internal" href="SYCL2020-SpecializationConstants.html"><span class="std std-doc">specialization constant
 design document</span></a> for more details on this topic.</p>
 </section>
 </section>
 <section id="changes-to-the-dpc-driver">
-<h3>Changes to the DPC++ driver<a class="headerlink" href="#changes-to-the-dpc-driver" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the DPC++ driver<a class="headerlink" href="#changes-to-the-dpc-driver" title="Link to this heading">¶</a></h3>
 <p>A new command line argument, <code class="docutils literal notranslate"><span class="pre">--device-globals</span></code> must be passed to the
 <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool to enable processing device global variables.</p>
 </section>
 <section id="changes-to-the-sycl-post-link-tool">
-<h3>Changes to the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool<a class="headerlink" href="#changes-to-the-sycl-post-link-tool" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool<a class="headerlink" href="#changes-to-the-sycl-post-link-tool" title="Link to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool performs its normal algorithm to identify the set of
 kernels and device functions that are bundled together into each module.  Once
 it identifies the functions in each module, it scans those functions looking
@@ -377,7 +375,7 @@ than one module, the <code class="docutils literal notranslate"><span class="pre
 <p>Assuming that no error diagnostic is issued, the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool includes
 the IR definition of each <code class="docutils literal notranslate"><span class="pre">device_global</span></code> variable in the modules that
 reference that variable.</p>
-<p>As described in the design for <a class="reference internal" href="CompileTimeProperties.html"><span class="doc std std-doc">compile-time properties</span></a>, the
+<p>As described in the design for <a class="reference internal" href="CompileTimeProperties.html"><span class="std std-doc">compile-time properties</span></a>, the
 <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool is responsible for generating idiomatic LLVM IR for any
 compile-time properties that need to be generated in SPIR-V.</p>
 <p>The <strong>HostAccessINTEL</strong> decoration is required for all device global variables
@@ -391,13 +389,13 @@ device global’s <code class="docutils literal notranslate"><span class="pre">s
 <strong>InitModeINTEL</strong> decoration (if the device global has the <code class="docutils literal notranslate"><span class="pre">init_mode</span></code>
 property) and for the <strong>ImplementInCSRINTEL</strong> decoration (if the device global
 has the <code class="docutils literal notranslate"><span class="pre">implement_in_csr</span></code> property).  See the
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/spirv-extensions/SPV_INTEL_global_variable_decorations.asciidoc"><span class="xref myst">SPV_INTEL_global_variable_decorations</span></a> SPIR-V extension for details
+<a class="reference download internal" download="" href="../_downloads/87bb3ed4eb84391e74bf28214c5e4abb/SPV_INTEL_global_variable_decorations.asciidoc"><span class="xref download myst">SPV_INTEL_global_variable_decorations</span></a> SPIR-V extension for details
 about all of these decorations.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool also create a “SYCL/device globals” property set for
 each device code module that contains at least one device global variable.</p>
 </section>
 <section id="new-sycl-device-globals-property-set">
-<h3>New “SYCL/device globals” property set<a class="headerlink" href="#new-sycl-device-globals-property-set" title="Permalink to this headline">¶</a></h3>
+<h3>New “SYCL/device globals” property set<a class="headerlink" href="#new-sycl-device-globals-property-set" title="Link to this heading">¶</a></h3>
 <p>Each device code module that references one or more device global variables
 has an associated “SYCL/device globals” property set.  The name of each
 property in this set is the <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> string of a <code class="docutils literal notranslate"><span class="pre">device_global</span></code>
@@ -418,7 +416,7 @@ whether the device global variable was declared with the <code class="docutils l
 property.</p>
 </section>
 <section id="changes-to-the-dpc-runtime">
-<h3>Changes to the DPC++ runtime<a class="headerlink" href="#changes-to-the-dpc-runtime" title="Permalink to this headline">¶</a></h3>
+<h3>Changes to the DPC++ runtime<a class="headerlink" href="#changes-to-the-dpc-runtime" title="Link to this heading">¶</a></h3>
 <p>Several changes are needed to the DPC++ runtime</p>
 <ul>
 <li><p>As noted in the requirements section, an instance of a device global variable
@@ -449,7 +447,7 @@ have the <code class="docutils literal notranslate"><span class="pre">device_ima
 variables.</p></li>
 </ul>
 <section id="initializing-the-device-global-variables-in-device-code">
-<h4>Initializing the device global variables in device code<a class="headerlink" href="#initializing-the-device-global-variables-in-device-code" title="Permalink to this headline">¶</a></h4>
+<h4>Initializing the device global variables in device code<a class="headerlink" href="#initializing-the-device-global-variables-in-device-code" title="Link to this heading">¶</a></h4>
 <p>When a DPC++ application submits a kernel, the runtime constructs a
 <code class="docutils literal notranslate"><span class="pre">pi_program</span></code> containing this kernel that is compiled for the target device, if
 such a <code class="docutils literal notranslate"><span class="pre">pi_program</span></code> does not yet exist.  If the kernel resides in a device code
@@ -473,7 +471,7 @@ of the buffer.  The pointer to this buffer is saved in the database for
 future reuse.</p></li>
 <li><p>Regardless of whether the USM buffer has already been created for the
 variable, the runtime initializes the <code class="docutils literal notranslate"><span class="pre">usmptr</span></code> member in the <em>device
-instance</em> of the variable by using a new <a class="reference external" href="#new-pi-interface-to-copy-to-or-from-a-module-scope-variable">PI interface</a> which copies
+instance</em> of the variable by using a new <a class="reference internal" href="#new-pi-interface-to-copy-to-or-from-a-module-scope-variable">PI interface</a> which copies
 data from the host to a global variable in a <code class="docutils literal notranslate"><span class="pre">pi_program</span></code>.  It is a
 simple matter to use this interface to overwrite the <code class="docutils literal notranslate"><span class="pre">usmptr</span></code> member with
 the address of the USM buffer.</p></li>
@@ -486,7 +484,7 @@ the <code class="docutils literal notranslate"><span class="pre">val</span></cod
 zero initialized.</p>
 </section>
 <section id="implementing-the-copy-and-memcpy-functions-in-queue-and-handler">
-<h4>Implementing the <code class="docutils literal notranslate"><span class="pre">copy</span></code> and <code class="docutils literal notranslate"><span class="pre">memcpy</span></code> functions in <code class="docutils literal notranslate"><span class="pre">queue</span></code> and <code class="docutils literal notranslate"><span class="pre">handler</span></code><a class="headerlink" href="#implementing-the-copy-and-memcpy-functions-in-queue-and-handler" title="Permalink to this headline">¶</a></h4>
+<h4>Implementing the <code class="docutils literal notranslate"><span class="pre">copy</span></code> and <code class="docutils literal notranslate"><span class="pre">memcpy</span></code> functions in <code class="docutils literal notranslate"><span class="pre">queue</span></code> and <code class="docutils literal notranslate"><span class="pre">handler</span></code><a class="headerlink" href="#implementing-the-copy-and-memcpy-functions-in-queue-and-handler" title="Link to this heading">¶</a></h4>
 <p>Each of these functions accepts a (host) pointer to a device global variable as
 one of its parameters, and the runtime uses this pointer to find the associated
 information for this variable in the device global database.  The code in the
@@ -519,7 +517,7 @@ contains this variable and uses its normal mechanism for creating a
 <code class="docutils literal notranslate"><span class="pre">pi_program</span></code> from this device code module.  (The algorithm for creating device
 code modules in the <code class="docutils literal notranslate"><span class="pre">sycl-post-link</span></code> tool ensures that there will be no more
 than one module that contains the variable.)  Finally, the runtime uses the
-new <a class="reference external" href="#new-pi-interface-to-copy-to-or-from-a-module-scope-variable">PI interface</a> to copy to or from the contents of the variable in this
+new <a class="reference internal" href="#new-pi-interface-to-copy-to-or-from-a-module-scope-variable">PI interface</a> to copy to or from the contents of the variable in this
 <code class="docutils literal notranslate"><span class="pre">pi_program</span></code>.</p>
 <p>It is possible that a device global variable with <code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code> is not
 referenced by <em>any</em> kernel, in which case the variable’s unique string will not
@@ -531,19 +529,34 @@ will read or write beyond the end of the device global variable’s storage.  If
 so, the runtime diagnoses an error by throwing <code class="docutils literal notranslate"><span class="pre">errc::invalid</span></code>.</p>
 </section>
 <section id="new-pi-interface-to-copy-to-or-from-a-module-scope-variable">
-<h4>New PI interface to copy to or from a module scope variable<a class="headerlink" href="#new-pi-interface-to-copy-to-or-from-a-module-scope-variable" title="Permalink to this headline">¶</a></h4>
+<h4>New PI interface to copy to or from a module scope variable<a class="headerlink" href="#new-pi-interface-to-copy-to-or-from-a-module-scope-variable" title="Link to this heading">¶</a></h4>
 <p>As noted above, we need new PI interfaces that can copy data to or from an
 instance of a device global variable in a <code class="docutils literal notranslate"><span class="pre">pi_program</span></code>.  This functionality is
 exposed as two new PI interfaces:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pi_result</span> <span class="n">piextCopyToDeviceVariable</span><span class="p">(</span><span class="n">pi_device</span> <span class="n">Device</span><span class="p">,</span> <span class="n">pi_program</span> <span class="n">Program</span><span class="p">,</span>
-  <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">offset</span><span class="p">);</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pi_result</span> <span class="n">piextEnqueueDeviceGlobalVariableRead</span><span class="p">(</span>
+    <span class="n">pi_queue</span> <span class="n">Queue</span><span class="p">,</span> <span class="n">pi_program</span> <span class="n">Program</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">Name</span><span class="p">,</span> <span class="n">pi_bool</span> <span class="n">BlockingRead</span><span class="p">,</span>
+    <span class="n">size_t</span> <span class="n">Count</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">Offset</span><span class="p">,</span> <span class="n">void</span> <span class="o">*</span><span class="n">Dst</span><span class="p">,</span> <span class="n">pi_uint32</span> <span class="n">NumEventsInWaitList</span><span class="p">,</span>
+    <span class="n">const</span> <span class="n">pi_event</span> <span class="o">*</span><span class="n">EventsWaitList</span><span class="p">,</span> <span class="n">pi_event</span> <span class="o">*</span><span class="n">Event</span><span class="p">);</span>
 
-<span class="n">pi_result</span> <span class="n">piextCopyFromDeviceVariable</span><span class="p">(</span><span class="n">pi_device</span> <span class="n">Device</span><span class="p">,</span> <span class="n">pi_program</span> <span class="n">Program</span><span class="p">,</span>
-  <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="n">void</span> <span class="o">*</span><span class="n">dst</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">count</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">offset</span><span class="p">);</span>
+<span class="n">pi_result</span> <span class="n">piextEnqueueDeviceGlobalVariableWrite</span><span class="p">(</span>
+    <span class="n">pi_queue</span> <span class="n">Queue</span><span class="p">,</span> <span class="n">pi_program</span> <span class="n">Program</span><span class="p">,</span> <span class="n">const</span> <span class="n">char</span> <span class="o">*</span><span class="n">Name</span><span class="p">,</span> <span class="n">pi_bool</span> <span class="n">BlockingWrite</span><span class="p">,</span>
+    <span class="n">size_t</span> <span class="n">Count</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">Offset</span><span class="p">,</span> <span class="n">const</span> <span class="n">void</span> <span class="o">*</span><span class="n">Src</span><span class="p">,</span> <span class="n">pi_uint32</span> <span class="n">NumEventsInWaitList</span><span class="p">,</span>
+    <span class="n">const</span> <span class="n">pi_event</span> <span class="o">*</span><span class="n">EventsWaitList</span><span class="p">,</span> <span class="n">pi_event</span> <span class="o">*</span><span class="n">Event</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>In both cases the <code class="docutils literal notranslate"><span class="pre">name</span></code> parameter is the same as the <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> string
-that is associated with the device global variable.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">piextEnqueueDeviceGlobalVariableRead</span></code> function reads <code class="docutils literal notranslate"><span class="pre">Count</span></code> bytes at
+byte-offset <code class="docutils literal notranslate"><span class="pre">Offset</span></code> from a device global variable in <code class="docutils literal notranslate"><span class="pre">Program</span></code> identified by
+the name <code class="docutils literal notranslate"><span class="pre">Name</span></code>. The read data is stored in <code class="docutils literal notranslate"><span class="pre">Dst</span></code>. Likewise, the
+<code class="docutils literal notranslate"><span class="pre">piextEnqueueDeviceGlobalVariableWrite</span></code> function reads <code class="docutils literal notranslate"><span class="pre">Count</span></code> bytes from <code class="docutils literal notranslate"><span class="pre">Dst</span></code>
+and stores them at byte-offset <code class="docutils literal notranslate"><span class="pre">Offset</span></code> in the device global variable in
+<code class="docutils literal notranslate"><span class="pre">Program</span></code> identified by the name <code class="docutils literal notranslate"><span class="pre">Name</span></code>.</p>
+<p>Both functions will enqueue the associated memory command on <code class="docutils literal notranslate"><span class="pre">Queue</span></code> where it
+will first wait for <code class="docutils literal notranslate"><span class="pre">NumEventsInWaitList</span></code> events in <code class="docutils literal notranslate"><span class="pre">EventsWaitList</span></code> to finish.
+<code class="docutils literal notranslate"><span class="pre">Event</span></code> will be populated with the event associated with resulting enqueued
+command. If either <code class="docutils literal notranslate"><span class="pre">BlockingRead</span></code> or <code class="docutils literal notranslate"><span class="pre">BlockingWrite</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> the call will
+block on the host until the enqueued command finishes execution.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">device_global</span></code> variables the <code class="docutils literal notranslate"><span class="pre">Name</span></code> parameter in calls to these functions
+is the same as the associated <code class="docutils literal notranslate"><span class="pre">sycl-unique-id</span></code> string.</p>
 <p>The Level Zero backend has existing APIs that can implement these PI
 interfaces.  The plugin first calls <a class="reference external" href="https://spec.oneapi.io/level-zero/latest/core/api.html#zemodulegetglobalpointer"><code class="docutils literal notranslate"><span class="pre">zeModuleGetGlobalPointer()</span></code></a> to get a
 device pointer for the variable and then calls
@@ -579,20 +592,20 @@ dynamically linked before the variable’s pointer may be queried.</p></li>
 </ul>
 </div></blockquote>
 <p>The OpenCL backend has a proposed extension
-<a class="reference external" href="https://github.com/intel/llvm/tree/sycl/sycl/doc/design/opencl-extensions/cl_intel_global_variable_access.asciidoc"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">cl_intel_global_variable_access</span></code></span></a> that defines functions
+<a class="reference download internal" download="" href="../_downloads/25521849051b3aaeb3a7298185e34332/cl_intel_global_variable_access.asciidoc"><span class="xref download myst"><code class="docutils literal notranslate"><span class="pre">cl_intel_global_variable_access</span></code></span></a> that defines functions
 <code class="docutils literal notranslate"><span class="pre">clEnqueueReadGlobalVariableINTEL()</span></code> and <code class="docutils literal notranslate"><span class="pre">clEnqueueWriteGlobalVariableINTEL()</span></code>
 which can be easily used to implement these PI interfaces.  This DPC++ design
 depends upon implementation of that OpenCL extension.</p>
-<p>The CUDA backend has existing APIs <code class="docutils literal notranslate"><span class="pre">cudaMemcpyToSymbol()</span></code> and
-<code class="docutils literal notranslate"><span class="pre">cudaMemcpyFromSymbol()</span></code> which can be used to implement these PI interfaces.</p>
+<p>The CUDA backend has existing APIs <code class="docutils literal notranslate"><span class="pre">cuModuleGetGlobal()</span></code> and <code class="docutils literal notranslate"><span class="pre">cuMemcpyAsync()</span></code>
+which can be used to implement these PI interfaces.</p>
 </section>
 </section>
 </section>
 <section id="design-choices">
-<h2>Design choices<a class="headerlink" href="#design-choices" title="Permalink to this headline">¶</a></h2>
+<h2>Design choices<a class="headerlink" href="#design-choices" title="Link to this heading">¶</a></h2>
 <p>This section captures some of the discussions about aspects of the design.</p>
 <section id="should-the-value-be-zero-initialized">
-<h3>Should the value be zero-initialized<a class="headerlink" href="#should-the-value-be-zero-initialized" title="Permalink to this headline">¶</a></h3>
+<h3>Should the value be zero-initialized<a class="headerlink" href="#should-the-value-be-zero-initialized" title="Link to this heading">¶</a></h3>
 <p>There was some debate about whether the value in the <code class="docutils literal notranslate"><span class="pre">device_global</span></code> should
 always be zero-initialized.  We decided to require this in order to be
 consistent with C++ rules for global variables.  We want <code class="docutils literal notranslate"><span class="pre">device_global</span></code> to
@@ -608,7 +621,7 @@ prevents initialization of the device global value.  For example, we could add
 a new parameter to the <code class="docutils literal notranslate"><span class="pre">init_mode</span></code> property called <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p>
 </section>
 <section id="why-not-include-both-val-and-usmptr-member-variables">
-<h3>Why not include both <code class="docutils literal notranslate"><span class="pre">val</span></code> and <code class="docutils literal notranslate"><span class="pre">usmptr</span></code> member variables<a class="headerlink" href="#why-not-include-both-val-and-usmptr-member-variables" title="Permalink to this headline">¶</a></h3>
+<h3>Why not include both <code class="docutils literal notranslate"><span class="pre">val</span></code> and <code class="docutils literal notranslate"><span class="pre">usmptr</span></code> member variables<a class="headerlink" href="#why-not-include-both-val-and-usmptr-member-variables" title="Link to this heading">¶</a></h3>
 <p>Rather than using partial specialization to define <code class="docutils literal notranslate"><span class="pre">device_global</span></code> differently
 based on the <code class="docutils literal notranslate"><span class="pre">device_image_scope</span></code> property, we could instead define both member
 variables regardless of the properties.  This would make the header file
@@ -638,8 +651,8 @@ wasted memory.</p>
       </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2022, Intel Corporation.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+    &#169; Copyright 2024, Intel Corporation.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

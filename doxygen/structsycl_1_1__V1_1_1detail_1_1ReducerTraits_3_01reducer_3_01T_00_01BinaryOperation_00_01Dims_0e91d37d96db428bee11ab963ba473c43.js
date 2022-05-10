@@ -1,0 +1,9 @@
+var structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43 =
+[
+    [ "element_type", "structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43.html#a2fbf6054ab57769ad02d05c665701333", null ],
+    [ "op", "structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43.html#a5f73e7458fea55b134cba02f3d223e76", null ],
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43.html#a0ba2ed87d2890f75d9edac3d9ac72710", null ],
+    [ "dims", "structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43.html#a77f60e2b20db172dad90c69b1d5313d5", null ],
+    [ "extent", "structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43.html#ab96ca8b1d29dac4ccdbba2ca376ceda6", null ],
+    [ "has_identity", "structsycl_1_1__V1_1_1detail_1_1ReducerTraits_3_01reducer_3_01T_00_01BinaryOperation_00_01Dims_0e91d37d96db428bee11ab963ba473c43.html#a25f7a6ae89e3e03f756ed76553c77f3f", null ]
+];

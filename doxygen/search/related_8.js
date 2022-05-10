@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['handler_12737',['handler',['../classcl_1_1sycl_1_1range.html#a72db39b889f34257a4c691d6acd383ab',1,'cl::sycl::range::handler()'],['../classcl_1_1sycl_1_1stream.html#a72db39b889f34257a4c691d6acd383ab',1,'cl::sycl::stream::handler()']]]
+  ['get_5fballot_5fgroup_18732',['get_ballot_group',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1ballot__group.html#ad1fc521e6daafff59f311455afc307c0',1,'sycl::_V1::ext::oneapi::experimental::ballot_group']]],
+  ['get_5ffixed_5fsize_5fgroup_18733',['get_fixed_size_group',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1fixed__size__group.html#a4dc5485cfeab115905ff5fe38adbaa59',1,'sycl::_V1::ext::oneapi::experimental::fixed_size_group']]],
+  ['get_5fnative_18734',['get_native',['../classsycl_1_1__V1_1_1context.html#a9a72d0fc813d676b711cc41a878aea27',1,'sycl::_V1::context::get_native()'],['../classsycl_1_1__V1_1_1device.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::device::get_native()'],['../classsycl_1_1__V1_1_1event.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::event::get_native()'],['../classsycl_1_1__V1_1_1kernel.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::kernel::get_native()'],['../classsycl_1_1__V1_1_1kernel__bundle.html#abe5716d50627a79cc90a7a05fbdd1290',1,'sycl::_V1::kernel_bundle::get_native()'],['../classsycl_1_1__V1_1_1platform.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::platform::get_native()'],['../classsycl_1_1__V1_1_1queue.html#a93c48c53733505713cf25f65c2d69a20',1,'sycl::_V1::queue::get_native()']]],
+  ['get_5ftangle_5fgroup_18735',['get_tangle_group',['../classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1tangle__group.html#a706b9878ace5662e0701d3fdb4a97616',1,'sycl::_V1::ext::oneapi::experimental::tangle_group']]],
+  ['getorwaitevents_18736',['getOrWaitEvents',['../classsycl_1_1__V1_1_1detail_1_1event__impl.html#a1bd0b20d1378e1425a8635d1b2fd6f92',1,'sycl::_V1::detail::event_impl']]],
+  ['group_3c_20dimensions_20_3e_18737',['group&lt; Dimensions &gt;',['../classsycl_1_1__V1_1_1h__item.html#af4d23efe05fdc10eefdb063366ed8915',1,'sycl::_V1::h_item']]],
+  ['group_5fballot_18738',['group_ballot',['../structsycl_1_1__V1_1_1ext_1_1oneapi_1_1sub__group__mask.html#a6dfdfd9d4e9cfd562823441a4c0958fb',1,'sycl::_V1::ext::oneapi::sub_group_mask']]]
 ];

@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1VecStorage_3_01bool_00_01N_00_01typename_01std_1_1enable__if__t_28d98bb2e5a1e68a39a42e3c567c6ecc =
+[
+    [ "DataType", "structsycl_1_1__V1_1_1detail_1_1VecStorage_3_01bool_00_01N_00_01typename_01std_1_1enable__if__t_28d98bb2e5a1e68a39a42e3c567c6ecc.html#a34f2ecbe69b728437b45590ef3891bd5", null ],
+    [ "DataType", "structsycl_1_1__V1_1_1detail_1_1VecStorage_3_01bool_00_01N_00_01typename_01std_1_1enable__if__t_28d98bb2e5a1e68a39a42e3c567c6ecc.html#a34f2ecbe69b728437b45590ef3891bd5", null ]
+];

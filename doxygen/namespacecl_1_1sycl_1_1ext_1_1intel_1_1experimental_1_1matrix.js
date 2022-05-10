@@ -1,6 +1,0 @@
-var namespacecl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix =
-[
-    [ "enable_if<!((NumRows<=tile_size) &&(NumCols *sizeof(T)/4<=tile_size) &&(Layout !=matrix_layout::col_major))>::type >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_ab58ef9ed9f548b61e86fb169021e5f8.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_ab58ef9ed9f548b61e86fb169021e5f8" ],
-    [ "enable_if<(NumRows<=tile_size) &&(NumCols *sizeof(T)/4<=tile_size)>::type >", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix_3_01Group_00_01T_00_e28840b6272c59a83c75250fcc7f67b3" ],
-    [ "joint_matrix", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix.html", "structcl_1_1sycl_1_1ext_1_1intel_1_1experimental_1_1matrix_1_1joint__matrix" ]
-];

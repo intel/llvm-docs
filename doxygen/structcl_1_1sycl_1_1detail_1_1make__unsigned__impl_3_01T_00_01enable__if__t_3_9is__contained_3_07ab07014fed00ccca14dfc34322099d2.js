@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_9is__contained_3_07ab07014fed00ccca14dfc34322099d2 =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1make__unsigned__impl_3_01T_00_01enable__if__t_3_9is__contained_3_07ab07014fed00ccca14dfc34322099d2.html#ae025ba19e1bdc24edf77f2c80c999209", null ]
-];

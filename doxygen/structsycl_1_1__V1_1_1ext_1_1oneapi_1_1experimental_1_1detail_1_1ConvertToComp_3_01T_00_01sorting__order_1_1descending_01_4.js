@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConvertToComp_3_01T_00_01sorting__order_1_1descending_01_4 =
+[
+    [ "Type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConvertToComp_3_01T_00_01sorting__order_1_1descending_01_4.html#a3cf9e46d2fb212a4dfc20590685e274c", null ]
+];

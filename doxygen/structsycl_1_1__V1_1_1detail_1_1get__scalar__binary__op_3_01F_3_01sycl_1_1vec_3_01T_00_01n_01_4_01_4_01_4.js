@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__scalar__binary__op_3_01F_3_01sycl_1_1vec_3_01T_00_01n_01_4_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1get__scalar__binary__op_3_01F_3_01sycl_1_1vec_3_01T_00_01n_01_4_01_4_01_4.html#ab5d76329600cd7768b362a819b71322d", null ]
+];

@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetPropertyValueFromPropList_3_e0e34b7ef339390fe739a50772629a23 =
+[
+    [ "prop_val_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetPropertyValueFromPropList_3_e0e34b7ef339390fe739a50772629a23.html#a7af59bcc364ba39875e45cfb83fd90ce", null ],
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetPropertyValueFromPropList_3_e0e34b7ef339390fe739a50772629a23.html#a95b4bd6be7eddab1a3990cb10835365c", null ]
+];

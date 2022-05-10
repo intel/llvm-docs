@@ -1,16 +1,19 @@
 var graph__builder_8cpp =
 [
-    [ "checkHostUnifiedMemory", "graph__builder_8cpp.html#a18c867be644aa20966ffa66d9821363f", null ],
-    [ "combineAccessModes", "graph__builder_8cpp.html#a65776d5e8f85b717273c5dfc687cac66", null ],
-    [ "combineAccessModesOfReqs", "graph__builder_8cpp.html#a39243161a06e47dbe68fae2068624e20", null ],
-    [ "doOverlap", "graph__builder_8cpp.html#ac1c5057b8252144f747e2744de81a3b1", null ],
-    [ "handleVisitedNodes", "graph__builder_8cpp.html#acee8807640f3e62bbebba998936189d8", null ],
-    [ "insertMapUnmapForLinkedCmds", "graph__builder_8cpp.html#aae0a90daa016c8b864c809a7760da289", null ],
-    [ "isAccessModeAllowed", "graph__builder_8cpp.html#ac183d6ea9de3741a2d1578b6a188244b", null ],
-    [ "isInteropHostTask", "graph__builder_8cpp.html#a83e686f5f3aeef5b6690991efd3421e8", null ],
-    [ "IsSuitableSubReq", "graph__builder_8cpp.html#a4da48b99b7eb2999c5baea51ea22e144", null ],
-    [ "markNodeAsVisited", "graph__builder_8cpp.html#a8c0939499a0fc7e980bc9182a678ae47", null ],
-    [ "printDotRecursive", "graph__builder_8cpp.html#a2b0c086ebff61c6ed675f6c0607f6c24", null ],
-    [ "sameCtx", "graph__builder_8cpp.html#a71c60f38463c832aa4c4ed586ba8d5b0", null ],
-    [ "unmarkVisitedNodes", "graph__builder_8cpp.html#ae7a5023af1d334815428a03644c3e773", null ]
+    [ "checkForCircularDependency", "graph__builder_8cpp.html#a437e775f585ff2ee9ee45cf08df1df0b", null ],
+    [ "checkHostUnifiedMemory", "graph__builder_8cpp.html#ac1cfde60c5eb9dc33546fb4c89a6dd6c", null ],
+    [ "combineAccessModes", "graph__builder_8cpp.html#a5effe2f7751a86f17c83844fe76b3111", null ],
+    [ "combineAccessModesOfReqs", "graph__builder_8cpp.html#adda6f5b2cf446383aac19bc5bf42c6d4", null ],
+    [ "createsCircularDependency", "graph__builder_8cpp.html#a2c091874e22ed13f55281650a4700ad1", null ],
+    [ "doOverlap", "graph__builder_8cpp.html#a0cb7e057633607fa5aedb0704e28c663", null ],
+    [ "handleVisitedNodes", "graph__builder_8cpp.html#aaac8eefd298eba2866fbc39d4016cc2f", null ],
+    [ "insertMapUnmapForLinkedCmds", "graph__builder_8cpp.html#ab7a7e73c6f28babfcbbf6bbcbc02e1a1", null ],
+    [ "isAccessModeAllowed", "graph__builder_8cpp.html#ad60694f2d5cd6884ac8078ac31f936c7", null ],
+    [ "isInteropHostTask", "graph__builder_8cpp.html#a362726ef87c037117edd1827ac2ab087", null ],
+    [ "isPartOfFusion", "graph__builder_8cpp.html#a741ec5d9d3bc5c36d419289e601838f6", null ],
+    [ "IsSuitableSubReq", "graph__builder_8cpp.html#aadcef5afd0a32da6e210853edb218aaf", null ],
+    [ "markNodeAsVisited", "graph__builder_8cpp.html#a5fd98b811b23c392b812e07b8b4feeec", null ],
+    [ "printDotRecursive", "graph__builder_8cpp.html#aa1de7973f28bbe9393ea49511653b44e", null ],
+    [ "sameCtx", "graph__builder_8cpp.html#aebf45502f9334033f73ba50bddb84295", null ],
+    [ "unmarkVisitedNodes", "graph__builder_8cpp.html#a3cc004a740e44396530fa0aea5b5235f", null ]
 ];

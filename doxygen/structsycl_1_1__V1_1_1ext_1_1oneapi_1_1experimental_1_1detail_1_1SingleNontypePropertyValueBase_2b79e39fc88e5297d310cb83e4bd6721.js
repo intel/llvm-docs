@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1SingleNontypePropertyValueBase_2b79e39fc88e5297d310cb83e4bd6721 =
+[
+    [ "value", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1SingleNontypePropertyValueBase_2b79e39fc88e5297d310cb83e4bd6721.html#a79da6746420b801fdc8fb79d3f4a5842", null ]
+];

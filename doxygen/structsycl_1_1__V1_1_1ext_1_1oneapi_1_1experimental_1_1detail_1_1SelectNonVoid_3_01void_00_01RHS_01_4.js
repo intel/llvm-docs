@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1SelectNonVoid_3_01void_00_01RHS_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1SelectNonVoid_3_01void_00_01RHS_01_4.html#a1e6d2dadfdf642c2a35655490b82bdca", null ]
+];

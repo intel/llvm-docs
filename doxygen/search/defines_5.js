@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['ocloc_5fmake_5fversion_13011',['OCLOC_MAKE_VERSION',['../ocloc__api_8h.html#a7a86576721d9125c61337d30db01ce39',1,'ocloc_api.h']]],
-  ['op_13012',['OP',['../bfloat16_8hpp.html#abb6ddc3ad6b4c1ff94de4861474c3e34',1,'OP():&#160;bfloat16.hpp'],['../bfloat16_8hpp.html#abb6ddc3ad6b4c1ff94de4861474c3e34',1,'OP():&#160;bfloat16.hpp'],['../bfloat16_8hpp.html#adc70b2ee336fc46f195adc56e2e30f5e',1,'OP():&#160;bfloat16.hpp'],['../matrix-jit_8hpp.html#abb6ddc3ad6b4c1ff94de4861474c3e34',1,'OP():&#160;matrix-jit.hpp'],['../matrix-jit_8hpp.html#abb6ddc3ad6b4c1ff94de4861474c3e34',1,'OP():&#160;matrix-jit.hpp'],['../matrix-jit_8hpp.html#a01f2b2da4563dfc55e1d750cd34fc7ca',1,'OP():&#160;matrix-jit.hpp']]]
+  ['enable_5fsycl_5fext_5foneapi_5finvoke_5fsimd_19242',['ENABLE_SYCL_EXT_ONEAPI_INVOKE_SIMD',['../std_2experimental_2simd_8hpp.html#ae7199ddb03ce7feeb554b6ff206f0bdb',1,'simd.hpp']]],
+  ['expand_19243',['EXPAND',['../helper__macros_8hpp.html#ae4b532a93c757194ec73b6790a3e6b1f',1,'helper_macros.hpp']]],
+  ['export_5fpi_5fapi_5fsymbols_19244',['EXPORT_PI_API_SYMBOLS',['../pi__native__cpu_8cpp.html#ad99e04077fe58e3025acf05b30677c22',1,'pi_native_cpu.cpp']]],
+  ['export_5fscalar_19245',['EXPORT_SCALAR',['../host__helper__macros_8hpp.html#a63d1565b73c95cd8d2b8ff17c2c1251c',1,'host_helper_macros.hpp']]],
+  ['export_5fscalar_5fand_5fvec_5f1_5f16_19246',['EXPORT_SCALAR_AND_VEC_1_16',['../host__helper__macros_8hpp.html#a6524f686637346e13126938f39476500',1,'host_helper_macros.hpp']]],
+  ['export_5fscalar_5fand_5fvec_5f1_5f16_5fimpl_19247',['EXPORT_SCALAR_AND_VEC_1_16_IMPL',['../host__helper__macros_8hpp.html#ab813e566526961ad85d3b9e8bb81d9e0',1,'host_helper_macros.hpp']]],
+  ['export_5fscalar_5fand_5fvec_5f1_5f16_5fns_19248',['EXPORT_SCALAR_AND_VEC_1_16_NS',['../host__helper__macros_8hpp.html#aee3334da42d85a9fc6f6c101afc2607b',1,'host_helper_macros.hpp']]],
+  ['export_5fscalar_5fand_5fvec_5f2_5f4_19249',['EXPORT_SCALAR_AND_VEC_2_4',['../host__helper__macros_8hpp.html#a28f58a6748cb8313a572f8dcdda9fba1',1,'host_helper_macros.hpp']]],
+  ['export_5fscalar_5fand_5fvec_5f2_5f4_5fimpl_19250',['EXPORT_SCALAR_AND_VEC_2_4_IMPL',['../host__helper__macros_8hpp.html#a9a782babe55a015ff3baac0f3016d739',1,'host_helper_macros.hpp']]],
+  ['export_5fscalar_5fns_19251',['EXPORT_SCALAR_NS',['../host__helper__macros_8hpp.html#a474fdb7de36bb12ccf560a552d97bcb3',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_19252',['EXPORT_VEC',['../host__helper__macros_8hpp.html#a887af7cf8714b893e97d55755e294749',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_5f1_5f16_19253',['EXPORT_VEC_1_16',['../host__helper__macros_8hpp.html#aef28fb4846d00c424c14e39c8c6e4e14',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_5f1_5f16_5fimpl_19254',['EXPORT_VEC_1_16_IMPL',['../host__helper__macros_8hpp.html#af00608324bfa3af7496c94763c6fad72',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_5f1_5f16_5fns_19255',['EXPORT_VEC_1_16_NS',['../host__helper__macros_8hpp.html#a0514dd418ce8b2e38ee08033deb9e72c',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_5f3_5f4_19256',['EXPORT_VEC_3_4',['../host__helper__macros_8hpp.html#a5913ac015c8f16bb63c6073b8e2dea62',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_5f3_5f4_5fimpl_19257',['EXPORT_VEC_3_4_IMPL',['../host__helper__macros_8hpp.html#a853aeeb83ea02a6854afd321438455da',1,'host_helper_macros.hpp']]],
+  ['export_5fvec_5flast_5fint_19258',['EXPORT_VEC_LAST_INT',['../math__functions_8cpp.html#a32226336a12bab5ff2e38aa7bab9fb5f',1,'math_functions.cpp']]],
+  ['export_5fvec_5flast_5fint_5f1_5f16_19259',['EXPORT_VEC_LAST_INT_1_16',['../math__functions_8cpp.html#aacadc335914c12cf336b9def5953ad9b',1,'math_functions.cpp']]],
+  ['export_5fvec_5fns_19260',['EXPORT_VEC_NS',['../host__helper__macros_8hpp.html#ac83b4eda324afdc0c8403bbb6236bf0d',1,'host_helper_macros.hpp']]]
 ];

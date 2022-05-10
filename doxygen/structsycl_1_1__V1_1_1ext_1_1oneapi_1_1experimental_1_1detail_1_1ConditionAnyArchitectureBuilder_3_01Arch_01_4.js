@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_01_4 =
+[
+    [ "seq", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_01_4.html#a2df16d8ccf39c4d734108b5faba8b930", null ],
+    [ "arch", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1ConditionAnyArchitectureBuilder_3_01Arch_01_4.html#a14a492c98c6b4e3ff3b8e5c7b151ef78", null ]
+];

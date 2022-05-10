@@ -1,4 +1,4 @@
 var exception__list_8hpp =
 [
-    [ "async_handler", "exception__list_8hpp.html#a188564f925b1631d80a119dc0eb70817", null ]
+    [ "defaultAsyncHandler", "exception__list_8hpp.html#a54fe182c49d3483640d9284ebe0391d7", null ]
 ];

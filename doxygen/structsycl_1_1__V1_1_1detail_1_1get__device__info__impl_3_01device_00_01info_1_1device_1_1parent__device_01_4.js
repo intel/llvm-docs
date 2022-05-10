@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01device_00_01info_1_1device_1_1parent__device_01_4 =
+[
+    [ "get", "structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01device_00_01info_1_1device_1_1parent__device_01_4.html#af839cc64927348920a17a342197a80bb", null ]
+];

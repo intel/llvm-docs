@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_01std_1_1en50934fe1e87c5556170d9e468b3f52f3 =
-[
-    [ "value", "structcl_1_1sycl_1_1detail_1_1known__identity__impl_3_01BinaryOperation_00_01half_00_01std_1_1en50934fe1e87c5556170d9e468b3f52f3.html#a099240257639fe59a30ba9f153cf3d0e", null ]
-];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1remove__ref__from__func__ptr__rdf23e6f03e728da6d5dad16252095963 =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1remove__ref__from__func__ptr__rdf23e6f03e728da6d5dad16252095963.html#afd37d8b9d2c246fcbe058bd12118b840", null ]
+];

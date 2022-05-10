@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['datalesspropkind_11680',['DataLessPropKind',['../namespacecl_1_1sycl_1_1detail.html#a77f2e70072cd746b3ce56a3b5788bfda',1,'cl::sycl::detail']]],
-  ['decorated_11681',['decorated',['../namespacecl_1_1sycl_1_1access.html#a1710db9142bc9d95385a5a51ac7d87f3',1,'cl::sycl::access']]],
-  ['device_11682',['device',['../namespacecl_1_1sycl_1_1info.html#ab329ccdc28ac4187f67d14db9cbb6190',1,'cl::sycl::info']]],
-  ['device_5ftype_11683',['device_type',['../namespacecl_1_1sycl_1_1info.html#a952e2d85fd3f1f3eeca7d883c6526165',1,'cl::sycl::info']]],
-  ['devicelibext_11684',['DeviceLibExt',['../namespacecl_1_1sycl_1_1detail.html#a045cbe01ad07bfc1cf04c73a8b8c6cce',1,'cl::sycl::detail']]]
+  ['data_5fplacement_5fenum_17419',['data_placement_enum',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#aaaa64f1a6ea173125cff8b94bdd38c7f',1,'sycl::_V1::ext::oneapi::experimental']]],
+  ['datalesspropkind_17420',['DataLessPropKind',['../namespacesycl_1_1__V1_1_1detail.html#affd700a36b7b1db9c19c988fae5b4147',1,'sycl::_V1::detail']]],
+  ['decorated_17421',['decorated',['../namespacesycl_1_1__V1_1_1access.html#a8172e9c7ab4d7b5e93c771df85c335e4',1,'sycl::_V1::access']]],
+  ['device_5ftype_17422',['device_type',['../namespacesycl_1_1__V1_1_1info.html#add3b3d75faa0047ac9079f8595d65dd3',1,'sycl::_V1::info']]],
+  ['devicelibext_17423',['DeviceLibExt',['../namespacesycl_1_1__V1_1_1detail.html#a3829edcccc3224fc6e0570c193377410',1,'sycl::_V1::detail']]],
+  ['dpas_5fargument_5ftype_17424',['dpas_argument_type',['../namespacesycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1xmx.html#a34e2bca0877bbba2177b78461a0ea5ca',1,'sycl::_V1::ext::intel::esimd::xmx']]]
 ];

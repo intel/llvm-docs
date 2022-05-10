@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HasKernelPropertiesGetMethod_3_12ecee98638b889671997d9f9b799143 =
+[
+    [ "properties_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1HasKernelPropertiesGetMethod_3_12ecee98638b889671997d9f9b799143.html#a1041f6c61e8fd60f6b893232042d2131", null ]
+];

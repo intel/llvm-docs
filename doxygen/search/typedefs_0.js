@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['_5f_5fhalf16_5fvec_5ft_10920',['__half16_vec_t',['../CL_2sycl_2types_8hpp.html#a290ab2bbf8dc4044bc23df3ced112886',1,'types.hpp']]],
-  ['_5f_5fhalf2_5fvec_5ft_10921',['__half2_vec_t',['../CL_2sycl_2types_8hpp.html#a078ed71e8266e98e74cc42286e0bb23a',1,'types.hpp']]],
-  ['_5f_5fhalf3_5fvec_5ft_10922',['__half3_vec_t',['../CL_2sycl_2types_8hpp.html#a55606a5fb19a6144017b8ae67902dd57',1,'types.hpp']]],
-  ['_5f_5fhalf4_5fvec_5ft_10923',['__half4_vec_t',['../CL_2sycl_2types_8hpp.html#a54ccfe0f2a676e2dd735fcc5a2eff30f',1,'types.hpp']]],
-  ['_5f_5fhalf8_5fvec_5ft_10924',['__half8_vec_t',['../CL_2sycl_2types_8hpp.html#a71029ed6f74bbb3e17e33d2f19de7b93',1,'types.hpp']]],
-  ['_5f_5fhalf_5ft_10925',['__half_t',['../CL_2sycl_2types_8hpp.html#a7c143f8207744272ec644cb1404dbf43',1,'types.hpp']]],
-  ['_5f_5focl_5fevent_5ft_10926',['__ocl_event_t',['../spirv__types_8hpp.html#a7fdac044910b3c3880cbc8bdbde69fe9',1,'spirv_types.hpp']]],
-  ['_5f_5focl_5fsampler_5ft_10927',['__ocl_sampler_t',['../spirv__types_8hpp.html#aa8b8d03ccae0846a82d453abd2802a52',1,'spirv_types.hpp']]],
-  ['_5fpi_5foffload_5fentry_10928',['_pi_offload_entry',['../pi_8h.html#aecf4fcab95187d0884bc298b7e7f34e2',1,'pi.h']]]
+  ['_5f_5focl_5fevent_5ft_16554',['__ocl_event_t',['../spirv__types_8hpp.html#a7fdac044910b3c3880cbc8bdbde69fe9',1,'spirv_types.hpp']]],
+  ['_5f_5focl_5fsampler_5ft_16555',['__ocl_sampler_t',['../spirv__types_8hpp.html#aa8b8d03ccae0846a82d453abd2802a52',1,'spirv_types.hpp']]],
+  ['_5f_5fsycl2020_5fdeprecated_16556',['__SYCL2020_DEPRECATED',['../namespacesycl_1_1__V1.html#a578f69e9613962984f1e79c092ea0032',1,'sycl::__SYCL2020_DEPRECATED()'],['../namespacesycl_1_1__V1.html#a578f69e9613962984f1e79c092ea0032',1,'sycl::_V1::__SYCL2020_DEPRECATED()']]],
+  ['_5f_5fsycl_5finit_5fmem_5ffor_16557',['__sycl_init_mem_for',['../namespacesycl_1_1__V1_1_1detail.html#a6bef678cde52599b40668aa172e260a8',1,'sycl::_V1::detail']]],
+  ['_5f_5fsycl_5freduction_5fkernel_16558',['__sycl_reduction_kernel',['../namespacesycl_1_1__V1_1_1detail.html#acb9207d756822d8efb7380b1ff8ff458',1,'sycl::_V1::detail']]],
+  ['_5fboolconstant_16559',['_BoolConstant',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail.html#a6d7d6e1f0fe009dd5100e18ac65bd38a',1,'sycl::_V1::ext::oneapi::experimental::cplx::detail']]],
+  ['_5fcomplextype_16560',['_ComplexType',['../structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ov19bb304031fa795a80f91aa542d43369.html#ada9c21b9ce0ef7b0b97799ae27a13255',1,'sycl::_V1::ext::oneapi::experimental::cplx::detail::__libcpp_complex_overload_traits&lt; _Tp, true, false &gt;::_ComplexType()'],['../structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ovbde7d409aff9dbbaf908637a4b1de101.html#a16229458df3e6cebf66ac455ad096ce6',1,'sycl::_V1::ext::oneapi::experimental::cplx::detail::__libcpp_complex_overload_traits&lt; _Tp, false, true &gt;::_ComplexType()']]],
+  ['_5fiml_5fhalf_5finternal_16561',['_iml_half_internal',['../ext_2intel_2math_8hpp.html#a1d64470d0be1214336d6c801981523db',1,'math.hpp']]],
+  ['_5fisnotsame_16562',['_IsNotSame',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail.html#a20f46bef21f5380acbc26ee1c2224f7a',1,'sycl::_V1::ext::oneapi::experimental::cplx::detail']]],
+  ['_5fpi_5foffload_5fentry_16563',['_pi_offload_entry',['../pi_8h.html#aecf4fcab95187d0884bc298b7e7f34e2',1,'pi.h']]],
+  ['_5fpi_5fstream_5fguard_16564',['_pi_stream_guard',['../pi__cuda_8hpp.html#a394fb85c08318bbec55b52daab680089',1,'_pi_stream_guard():&#160;pi_cuda.hpp'],['../pi__hip_8hpp.html#a394fb85c08318bbec55b52daab680089',1,'_pi_stream_guard():&#160;pi_hip.hpp']]],
+  ['_5fvaluetype_16565',['_ValueType',['../structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ov19bb304031fa795a80f91aa542d43369.html#ae0caa5a74c447534d12bec681835eba4',1,'sycl::_V1::ext::oneapi::experimental::cplx::detail::__libcpp_complex_overload_traits&lt; _Tp, true, false &gt;::_ValueType()'],['../structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1cplx_1_1detail_1_1____libcpp__complex__ovbde7d409aff9dbbaf908637a4b1de101.html#aab4e0bc4a6687d005613e044620f2312',1,'sycl::_V1::ext::oneapi::experimental::cplx::detail::__libcpp_complex_overload_traits&lt; _Tp, false, true &gt;::_ValueType()']]]
 ];

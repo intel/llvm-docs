@@ -1,7 +1,7 @@
 var online__compiler_8cpp =
 [
-    [ "__SYCL2020_DEPRECATED", "online__compiler_8cpp.html#a385a3bff3a013544cdbc94cc8434d7b2", null ],
-    [ "__SYCL2020_DEPRECATED", "online__compiler_8cpp.html#ac38cffd055713bc9eeb5fd02a73cc211", null ],
-    [ "compileToSPIRV", "online__compiler_8cpp.html#a780d3d23fb446a749cf16f163c7a2f16", null ],
-    [ "prepareOclocArgs", "online__compiler_8cpp.html#a398da74415c380dfc158c1ef92a80046", null ]
+    [ "__SYCL2020_DEPRECATED", "online__compiler_8cpp.html#af37aa1fa8d71fb716bfdab40149309fa", null ],
+    [ "__SYCL2020_DEPRECATED", "online__compiler_8cpp.html#a506acb040e8c356a9eea9be690502be2", null ],
+    [ "compileToSPIRV", "online__compiler_8cpp.html#a1222edb9cb25a4c68583a3a4fbf7cf8d", null ],
+    [ "prepareOclocArgs", "online__compiler_8cpp.html#afd216d1ac893f4f05853376f71b45111", null ]
 ];

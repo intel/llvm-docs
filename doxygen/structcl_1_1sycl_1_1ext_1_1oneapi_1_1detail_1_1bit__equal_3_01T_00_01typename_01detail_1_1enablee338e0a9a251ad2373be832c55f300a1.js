@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enablee338e0a9a251ad2373be832c55f300a1 =
-[
-    [ "operator()", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1detail_1_1bit__equal_3_01T_00_01typename_01detail_1_1enablee338e0a9a251ad2373be832c55f300a1.html#a6a6325e0717007150d8bb3995a1386d1", null ]
-];

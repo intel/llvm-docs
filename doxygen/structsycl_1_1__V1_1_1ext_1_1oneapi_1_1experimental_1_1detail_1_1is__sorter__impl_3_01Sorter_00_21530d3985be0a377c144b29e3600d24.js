@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__sorter__impl_3_01Sorter_00_21530d3985be0a377c144b29e3600d24 =
+[
+    [ "test", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__sorter__impl_3_01Sorter_00_21530d3985be0a377c144b29e3600d24.html#a5cef76df209089b12c834d362c19cca6", null ],
+    [ "test", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1is__sorter__impl_3_01Sorter_00_21530d3985be0a377c144b29e3600d24.html#a3e235674a892181e7b11884fe5c4fca7", null ]
+];

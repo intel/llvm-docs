@@ -1,0 +1,13 @@
+var classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e =
+[
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a45dd4324426704c80a77cc75a5433a8d", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#ad2e4c1e82153b709ca2820f6202d8e55", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#af0ca621dd7d1509d4088e2ba57b05e21", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a47f0534055ab1d6e1d48a84c67112574", null ],
+    [ "reducer", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#ac6ae4c24b460d764926f77f429c563dc", null ],
+    [ "combine", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a1b831346c68cb5b6a32ba2d95bf67527", null ],
+    [ "identity", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a25a43dea2cc3982e0756a312e9c1f873", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a8e5e59333d6486bcda3b4040d02548cf", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a5861ad1f52ab4cbea09bc566e7000652", null ],
+    [ "detail::ReducerAccess", "classsycl_1_1__V1_1_1reducer_3_01T_00_01BinaryOperation_00_01Dims_00_01Extent_00_01IdentityConta8ae6dfedf246ab49a706d49c1462187e.html#a5d02f911d625e17a420491abe4d33630", null ]
+];

@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__multi__ptr__decoration_3_01multi__ptr_3_01ElementType_00_012e56ef67c39fd40246eabf63c7e7aebe =
+[
+    [ "value", "structsycl_1_1__V1_1_1detail_1_1get__multi__ptr__decoration_3_01multi__ptr_3_01ElementType_00_012e56ef67c39fd40246eabf63c7e7aebe.html#a19bc2075ea0a5eeb46fc77dbd9604b08", null ]
+];

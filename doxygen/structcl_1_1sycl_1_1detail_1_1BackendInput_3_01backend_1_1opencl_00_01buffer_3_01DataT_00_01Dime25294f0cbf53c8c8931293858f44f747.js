@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dime25294f0cbf53c8c8931293858f44f747 =
-[
-    [ "type", "structcl_1_1sycl_1_1detail_1_1BackendInput_3_01backend_1_1opencl_00_01buffer_3_01DataT_00_01Dime25294f0cbf53c8c8931293858f44f747.html#a6c98f51e6f2bfae44792c2b6e553e39d", null ]
-];

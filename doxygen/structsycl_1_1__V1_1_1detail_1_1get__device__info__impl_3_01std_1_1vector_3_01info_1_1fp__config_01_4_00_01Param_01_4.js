@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01std_1_1vector_3_01info_1_1fp__config_01_4_00_01Param_01_4 =
+[
+    [ "get", "structsycl_1_1__V1_1_1detail_1_1get__device__info__impl_3_01std_1_1vector_3_01info_1_1fp__config_01_4_00_01Param_01_4.html#aadf9bed51918f88a0b72d780c33dbefd", null ]
+];

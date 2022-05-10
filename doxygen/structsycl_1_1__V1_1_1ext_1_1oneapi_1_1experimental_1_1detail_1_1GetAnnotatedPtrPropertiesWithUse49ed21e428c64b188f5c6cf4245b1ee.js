@@ -1,0 +1,6 @@
+var structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetAnnotatedPtrPropertiesWithUse49ed21e428c64b188f5c6cf4245b1ee =
+[
+    [ "filtered_input_properties_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetAnnotatedPtrPropertiesWithUse49ed21e428c64b188f5c6cf4245b1ee.html#afb43fa7ea26b17320f64ff0994f6068c", null ],
+    [ "input_properties_t", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetAnnotatedPtrPropertiesWithUse49ed21e428c64b188f5c6cf4245b1ee.html#a0119e1723ffba97b38655fc409778f7f", null ],
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1GetAnnotatedPtrPropertiesWithUse49ed21e428c64b188f5c6cf4245b1ee.html#a093cd3f3d1f2ed74dd689077b624898d", null ]
+];

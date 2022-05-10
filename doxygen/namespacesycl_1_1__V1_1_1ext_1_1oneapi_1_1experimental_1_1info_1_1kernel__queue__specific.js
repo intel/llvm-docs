@@ -1,0 +1,4 @@
+var namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1info_1_1kernel__queue__specific =
+[
+    [ "max_num_work_group_sync", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1info_1_1kernel__queue__specific_1_1max__num__work__group__sync.html", "structsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1info_1_1kernel__queue__specific_1_1max__num__work__group__sync" ]
+];

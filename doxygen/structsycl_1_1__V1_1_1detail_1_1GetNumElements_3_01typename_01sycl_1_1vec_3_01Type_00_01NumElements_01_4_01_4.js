@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1GetNumElements_3_01typename_01sycl_1_1vec_3_01Type_00_01NumElements_01_4_01_4 =
+[
+    [ "value", "structsycl_1_1__V1_1_1detail_1_1GetNumElements_3_01typename_01sycl_1_1vec_3_01Type_00_01NumElements_01_4_01_4.html#af6b50f1bcbb2473c837a2c8b13f93758", null ]
+];

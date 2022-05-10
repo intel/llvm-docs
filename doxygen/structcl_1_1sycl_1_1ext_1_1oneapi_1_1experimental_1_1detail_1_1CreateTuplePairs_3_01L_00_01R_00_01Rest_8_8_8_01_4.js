@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1CreateTuplePairs_3_01L_00_01R_00_01Rest_8_8_8_01_4 =
-[
-    [ "type", "structcl_1_1sycl_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1CreateTuplePairs_3_01L_00_01R_00_01Rest_8_8_8_01_4.html#add1a5083930103197725a118a7e0bcac", null ]
-];

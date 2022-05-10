@@ -1,24 +1,26 @@
 /*
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
+ @licstart  The following is the entire license notice for the JavaScript code in this file.
 
-Copyright (C) 1997-2019 by Dimitri van Heesch
+ The MIT License (MIT)
 
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
+ Copyright (C) 1997-2020 by Dimitri van Heesch
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ and associated documentation files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, merge, publish, distribute,
+ sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ The above copyright notice and this permission notice shall be included in all copies or
+ substantial portions of the Software.
 
-@licend  The above is the entire license notice
-for the JavaScript code in this file
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
@@ -71,6 +73,7 @@ var menudata={children:[
 {text:"n",url:"namespacemembers_func_n.html#index_n"},
 {text:"o",url:"namespacemembers_func_o.html#index_o"},
 {text:"p",url:"namespacemembers_func_p.html#index_p"},
+{text:"q",url:"namespacemembers_func_q.html#index_q"},
 {text:"r",url:"namespacemembers_func_r.html#index_r"},
 {text:"s",url:"namespacemembers_func_s.html#index_s"},
 {text:"t",url:"namespacemembers_func_t.html#index_t"},
@@ -125,7 +128,9 @@ var menudata={children:[
 {text:"t",url:"namespacemembers_type_t.html#index_t"},
 {text:"u",url:"namespacemembers_type_u.html#index_u"},
 {text:"v",url:"namespacemembers_type_v.html#index_v"},
-{text:"x",url:"namespacemembers_type_x.html#index_x"}]},
+{text:"w",url:"namespacemembers_type_w.html#index_w"},
+{text:"x",url:"namespacemembers_type_x.html#index_x"},
+{text:"z",url:"namespacemembers_type_z.html#index_z"}]},
 {text:"Enumerations",url:"namespacemembers_enum.html",children:[
 {text:"a",url:"namespacemembers_enum.html#index_a"},
 {text:"b",url:"namespacemembers_enum_b.html#index_b"},
@@ -134,6 +139,7 @@ var menudata={children:[
 {text:"e",url:"namespacemembers_enum_e.html#index_e"},
 {text:"f",url:"namespacemembers_enum_f.html#index_f"},
 {text:"g",url:"namespacemembers_enum_g.html#index_g"},
+{text:"h",url:"namespacemembers_enum_h.html#index_h"},
 {text:"i",url:"namespacemembers_enum_i.html#index_i"},
 {text:"j",url:"namespacemembers_enum_j.html#index_j"},
 {text:"k",url:"namespacemembers_enum_k.html#index_k"},
@@ -147,6 +153,7 @@ var menudata={children:[
 {text:"t",url:"namespacemembers_enum_t.html#index_t"},
 {text:"u",url:"namespacemembers_enum_u.html#index_u"},
 {text:"v",url:"namespacemembers_enum_v.html#index_v"},
+{text:"w",url:"namespacemembers_enum_w.html#index_w"},
 {text:"x",url:"namespacemembers_enum_x.html#index_x"}]},
 {text:"Enumerator",url:"namespacemembers_eval.html",children:[
 {text:"a",url:"namespacemembers_eval.html#index_a"},
@@ -335,6 +342,7 @@ var menudata={children:[
 {text:"v",url:"functions_eval_v.html#index_v"},
 {text:"w",url:"functions_eval_w.html#index_w"},
 {text:"x",url:"functions_eval_x.html#index_x"},
+{text:"y",url:"functions_eval_y.html#index_y"},
 {text:"z",url:"functions_eval_z.html#index_z"}]},
 {text:"Related Functions",url:"functions_rela.html",children:[
 {text:":",url:"functions_rela.html#index_:"},
@@ -408,7 +416,6 @@ var menudata={children:[
 {text:"n",url:"globals_func_n.html#index_n"},
 {text:"o",url:"globals_func_o.html#index_o"},
 {text:"p",url:"globals_func_p.html#index_p"},
-{text:"q",url:"globals_func_q.html#index_q"},
 {text:"r",url:"globals_func_r.html#index_r"},
 {text:"s",url:"globals_func_s.html#index_s"},
 {text:"t",url:"globals_func_t.html#index_t"},
@@ -426,7 +433,10 @@ var menudata={children:[
 {text:"e",url:"globals_vars_e.html#index_e"},
 {text:"f",url:"globals_vars_f.html#index_f"},
 {text:"g",url:"globals_vars_g.html#index_g"},
+{text:"h",url:"globals_vars_h.html#index_h"},
 {text:"i",url:"globals_vars_i.html#index_i"},
+{text:"j",url:"globals_vars_j.html#index_j"},
+{text:"k",url:"globals_vars_k.html#index_k"},
 {text:"l",url:"globals_vars_l.html#index_l"},
 {text:"m",url:"globals_vars_m.html#index_m"},
 {text:"n",url:"globals_vars_n.html#index_n"},
@@ -441,34 +451,33 @@ var menudata={children:[
 {text:"x",url:"globals_vars_x.html#index_x"}]},
 {text:"Typedefs",url:"globals_type.html",children:[
 {text:"_",url:"globals_type.html#index__5F"},
-{text:"a",url:"globals_type.html#index_a"},
-{text:"b",url:"globals_type.html#index_b"},
-{text:"c",url:"globals_type.html#index_c"},
-{text:"d",url:"globals_type.html#index_d"},
-{text:"e",url:"globals_type.html#index_e"},
-{text:"f",url:"globals_type.html#index_f"},
-{text:"g",url:"globals_type.html#index_g"},
-{text:"h",url:"globals_type.html#index_h"},
-{text:"i",url:"globals_type.html#index_i"},
-{text:"k",url:"globals_type.html#index_k"},
-{text:"l",url:"globals_type.html#index_l"},
-{text:"m",url:"globals_type.html#index_m"},
-{text:"n",url:"globals_type.html#index_n"},
-{text:"o",url:"globals_type.html#index_o"},
-{text:"p",url:"globals_type.html#index_p"},
-{text:"q",url:"globals_type.html#index_q"},
-{text:"r",url:"globals_type.html#index_r"},
-{text:"s",url:"globals_type.html#index_s"},
-{text:"t",url:"globals_type.html#index_t"},
-{text:"u",url:"globals_type.html#index_u"},
-{text:"v",url:"globals_type.html#index_v"},
-{text:"w",url:"globals_type.html#index_w"}]},
+{text:"a",url:"globals_type_a.html#index_a"},
+{text:"b",url:"globals_type_b.html#index_b"},
+{text:"c",url:"globals_type_c.html#index_c"},
+{text:"d",url:"globals_type_d.html#index_d"},
+{text:"e",url:"globals_type_e.html#index_e"},
+{text:"f",url:"globals_type_f.html#index_f"},
+{text:"g",url:"globals_type_g.html#index_g"},
+{text:"h",url:"globals_type_h.html#index_h"},
+{text:"i",url:"globals_type_i.html#index_i"},
+{text:"k",url:"globals_type_k.html#index_k"},
+{text:"l",url:"globals_type_l.html#index_l"},
+{text:"m",url:"globals_type_m.html#index_m"},
+{text:"n",url:"globals_type_n.html#index_n"},
+{text:"o",url:"globals_type_o.html#index_o"},
+{text:"p",url:"globals_type_p.html#index_p"},
+{text:"q",url:"globals_type_q.html#index_q"},
+{text:"r",url:"globals_type_r.html#index_r"},
+{text:"s",url:"globals_type_s.html#index_s"},
+{text:"t",url:"globals_type_t.html#index_t"},
+{text:"u",url:"globals_type_u.html#index_u"},
+{text:"v",url:"globals_type_v.html#index_v"},
+{text:"w",url:"globals_type_w.html#index_w"}]},
 {text:"Enumerations",url:"globals_enum.html",children:[
 {text:"_",url:"globals_enum.html#index__5F"},
 {text:"a",url:"globals_enum.html#index_a"},
 {text:"b",url:"globals_enum.html#index_b"},
 {text:"c",url:"globals_enum.html#index_c"},
-{text:"d",url:"globals_enum.html#index_d"},
 {text:"f",url:"globals_enum.html#index_f"},
 {text:"g",url:"globals_enum.html#index_g"},
 {text:"i",url:"globals_enum.html#index_i"},

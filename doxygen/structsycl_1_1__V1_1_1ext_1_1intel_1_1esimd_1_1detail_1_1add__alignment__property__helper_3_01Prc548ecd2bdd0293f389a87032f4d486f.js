@@ -1,0 +1,6 @@
+var structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1add__alignment__property__helper_3_01Prc548ecd2bdd0293f389a87032f4d486f =
+[
+    [ "AlignmentPropList", "structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1add__alignment__property__helper_3_01Prc548ecd2bdd0293f389a87032f4d486f.html#aac48ac6e2fc4d29d1b9fd6445c89e8dd", null ],
+    [ "ExpPropertyListT", "structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1add__alignment__property__helper_3_01Prc548ecd2bdd0293f389a87032f4d486f.html#a743ad6e9df24660e86112bc3994a9072", null ],
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1add__alignment__property__helper_3_01Prc548ecd2bdd0293f389a87032f4d486f.html#ae5f2cb62bda2abecfc91ab1c76c293c6", null ]
+];

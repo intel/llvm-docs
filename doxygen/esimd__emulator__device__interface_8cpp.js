@@ -1,4 +1,5 @@
 var esimd__emulator__device__interface_8cpp =
 [
-    [ "getESIMDDeviceInterface", "esimd__emulator__device__interface_8cpp.html#a5c0653745de6ea66b096aeb35b07b4d2", null ]
+    [ "ESIMDDeviceInterface", "structsycl_1_1__V1_1_1detail_1_1ESIMDDeviceInterface.html", "structsycl_1_1__V1_1_1detail_1_1ESIMDDeviceInterface" ],
+    [ "getESIMDDeviceInterface", "esimd__emulator__device__interface_8cpp.html#acd9f42d93600e568170b14845079e63b", null ]
 ];

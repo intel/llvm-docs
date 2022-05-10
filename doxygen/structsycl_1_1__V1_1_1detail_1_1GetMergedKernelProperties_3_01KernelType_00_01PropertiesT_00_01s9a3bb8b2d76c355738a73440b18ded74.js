@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1GetMergedKernelProperties_3_01KernelType_00_01PropertiesT_00_01s9a3bb8b2d76c355738a73440b18ded74 =
+[
+    [ "get_method_properties", "structsycl_1_1__V1_1_1detail_1_1GetMergedKernelProperties_3_01KernelType_00_01PropertiesT_00_01s9a3bb8b2d76c355738a73440b18ded74.html#a9dd7c2f0b04779a5f6af761523fa1de6", null ],
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1GetMergedKernelProperties_3_01KernelType_00_01PropertiesT_00_01s9a3bb8b2d76c355738a73440b18ded74.html#a93d3c0f45d966535771defad5a27c4b9", null ]
+];

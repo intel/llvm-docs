@@ -1,0 +1,9 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015 =
+[
+    [ "device_global_base", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015.html#a85f28bbcd43b0ceee8c42ec2041b979c", null ],
+    [ "get_multi_ptr", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015.html#a89db82fa8356e9e961858d3ff93271cb", null ],
+    [ "get_multi_ptr", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015.html#aa537107d9bb69c60d26f4a7f30a92c44", null ],
+    [ "get_ptr", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015.html#a3810c99bcb23c66187fd9c6924f1cd6f", null ],
+    [ "get_ptr", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015.html#aa842be502f33de9bf3d556433a379683", null ],
+    [ "val", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1detail_1_1device__global__base_3_01T_00_01945db6e09aca41aaab0ef54abbb96015.html#a09016e455fc9fc5ef4b0942b4e17f21f", null ]
+];

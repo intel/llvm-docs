@@ -1,8 +1,8 @@
 var queue_8cpp =
 [
-    [ "__SYCL_PARAM_TRAITS_SPEC", "queue_8cpp.html#a30a916082ca626a2a55d5e0e5931f398", null ],
-    [ "queue::get_property< property::queue::enable_profiling >", "queue_8cpp.html#aea79727faf0c39623dbc3ef6cc2b9d10", null ],
-    [ "queue::get_property< property::queue::in_order >", "queue_8cpp.html#a8af5300dcf5007001820c90962922c33", null ],
-    [ "queue::has_property< property::queue::enable_profiling >", "queue_8cpp.html#a8af5b2dc342f13cc9b4b81732d1f1fea", null ],
-    [ "queue::has_property< property::queue::in_order >", "queue_8cpp.html#a4f7be2c531955d44c5b869b0e09bf11b", null ]
+    [ "__SYCL_DATA_LESS_PROP", "queue_8cpp.html#a2bec89ed64e118f0018dca7c0d0dd813", null ],
+    [ "__SYCL_MANUALLY_DEFINED_PROP", "queue_8cpp.html#a895e95e13459f8595e23ed3441d8d002", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "queue_8cpp.html#accb6470a1618f087d460dfadff8b27e3", null ],
+    [ "__SYCL_PARAM_TRAITS_SPEC", "queue_8cpp.html#accb6470a1618f087d460dfadff8b27e3", null ],
+    [ "getBarrierEventForInorderQueueHelper", "queue_8cpp.html#a46f2d1d9dae985d7ea48ccf72ffa7450", null ]
 ];

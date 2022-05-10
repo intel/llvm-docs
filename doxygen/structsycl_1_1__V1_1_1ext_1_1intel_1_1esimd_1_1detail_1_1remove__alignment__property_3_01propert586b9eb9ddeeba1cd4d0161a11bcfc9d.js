@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1remove__alignment__property_3_01propert586b9eb9ddeeba1cd4d0161a11bcfc9d =
+[
+    [ "type", "structsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1detail_1_1remove__alignment__property_3_01propert586b9eb9ddeeba1cd4d0161a11bcfc9d.html#a609faba6ac09672729ca8cfa80ed8467", null ]
+];

@@ -1,0 +1,26 @@
+var classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4 =
+[
+    [ "base_type", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#aacd2c9ab71c65d680905d4860fece467", null ],
+    [ "BaseClass", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#ac70d38cdc58bce33ae85aa2d89696613", null ],
+    [ "element_type", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a548b5e6deec8e266f6067ccf9c68463d", null ],
+    [ "get_simd_t", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a1e7ac275d44511c6f1efa9d804870fce", null ],
+    [ "RegionTy", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#aecd1caaf0a9f67b559617dbfbd1a6c13", null ],
+    [ "ShapeTy", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a6873fe8a62c17f71717efe601f4b5101", null ],
+    [ "value_type", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a4d5cff757a3c17d048242fa12f6d72a0", null ],
+    [ "simd_view", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#ab345b3c00c24003b5c963a99b49a4408", null ],
+    [ "operator element_type", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a3b31286ee52dfeb069809de749d728b2", null ],
+    [ "operator++", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#ad2332e4d1dd88d8c98fce31b4dd8efb0", null ],
+    [ "operator++", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a44464d777f94278c61d1b411d3717c45", null ],
+    [ "operator--", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#afe79250233a28d41a91af0d4b9fe0b62", null ],
+    [ "operator--", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a5a1447e37afc07f15f77a6c964225368", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a859968f17d7b5236d98087c97b520ead", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a9b56da79b70c22c3724bc55874486763", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#ac826074d3911727f8aa12ca08d421035", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a671fa61fb9a4773be765db354f650a05", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a61605728c1a5604f9190b4679779336f", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#aa04ef9095a93bfe12afd1fac3ce9bd82", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a5433fe285d8971448017b257773b2416", null ],
+    [ "detail::simd_obj_impl", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a5fb403b4cafec472d70131e8cebd3526", null ],
+    [ "detail::simd_view_impl", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#a33c80ca338c17e57946765e05e8acb85", null ],
+    [ "length", "classsycl_1_1__V1_1_1ext_1_1intel_1_1esimd_1_1simd__view_3_01BaseTy_00_01region1d__scalar__t_3_01ViewedElemT_01_4_01_4.html#aab835148987147e8b846d1465c5485f4", null ]
+];

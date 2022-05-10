@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1NDLoopIterateImpl_3_01NDims_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4 =
+[
+    [ "NDLoopIterateImpl", "structsycl_1_1__V1_1_1detail_1_1NDLoopIterateImpl_3_01NDims_00_010_00_01LoopBoundTy_00_01FuncTy_00_01LoopIndexTy_01_4.html#a6fdbe5b99955eeb79fe096435ae56e40", null ]
+];

@@ -1,0 +1,25 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem =
+[
+    [ "image_mem", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a2068cb56feed65adbf03dad33b724ac5", null ],
+    [ "image_mem", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a70de743ba55f40580e6197405e8ec0e1", null ],
+    [ "image_mem", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a32b3f2570d24ca3dc82b63c166143e82", null ],
+    [ "image_mem", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a1ed3ff22d100f76416ea4ded0abc4dac", null ],
+    [ "image_mem", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a672baf19b0339ec95617d6bbc12df070", null ],
+    [ "~image_mem", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a566c3dacf86bcd915683fc2ac04536aa", null ],
+    [ "get_channel_order", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a4c73db15f7c15889906bc070c246daa7", null ],
+    [ "get_channel_type", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a05b31d09ada2492cb062481d1fe23a7b", null ],
+    [ "get_context", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#ae7d816c8f34012400fe72f79a73873e7", null ],
+    [ "get_descriptor", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#af4811150fee91cf7322083efef4b5630", null ],
+    [ "get_device", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#ab3b8206e79c4bc0f68a3bb16ed4f7f18", null ],
+    [ "get_handle", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a413762590170e7715569b9e35c24f145", null ],
+    [ "get_mip_level_mem_handle", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#ae2ed5bde89e3e1b09487847d39ec1670", null ],
+    [ "get_num_channels", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a58cd6ed86a634d12b9a0be7287aa85d0", null ],
+    [ "get_range", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a736462a6e85ed54b2345f394f51a7110", null ],
+    [ "get_type", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a6c99b201158d97b8d4ead8f931a45970", null ],
+    [ "operator!=", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a2b1e432e94a3786a461f1a678d5ad757", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a9e69fdbbe3a61833d1e0060734a6c291", null ],
+    [ "operator=", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#ac8aa1a2dc58bfbb9e7b6f216ab0ea1b5", null ],
+    [ "operator==", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#ac2b55f870f8a0b9a7b47e9ad16c787d3", null ],
+    [ "sycl::detail::getSyclObjImpl", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a3840706d58192363ffe8f90e002e0996", null ],
+    [ "impl", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1image__mem.html#a933103f5d2ab6340bfb0ab6e73357d7e", null ]
+];

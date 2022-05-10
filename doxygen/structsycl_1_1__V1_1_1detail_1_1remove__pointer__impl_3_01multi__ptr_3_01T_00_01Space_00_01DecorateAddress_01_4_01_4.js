@@ -1,0 +1,4 @@
+var structsycl_1_1__V1_1_1detail_1_1remove__pointer__impl_3_01multi__ptr_3_01T_00_01Space_00_01DecorateAddress_01_4_01_4 =
+[
+    [ "type", "structsycl_1_1__V1_1_1detail_1_1remove__pointer__impl_3_01multi__ptr_3_01T_00_01Space_00_01DecorateAddress_01_4_01_4.html#a48368101fb471139673157be71018294", null ]
+];

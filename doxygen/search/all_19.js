@@ -1,12 +1,12 @@
 var searchData=
 [
-  ['x_6184',['x',['../structpi__image__offset__struct.html#ac94d4063741aab1034f2758c30a9e49f',1,'pi_image_offset_struct::x()'],['../structcl_1_1sycl_1_1elem.html#a089abc6a7d823616e5091e5ff293f088',1,'cl::sycl::elem::x()']]],
-  ['x_5fbytes_6185',['x_bytes',['../structpi__buff__rect__offset__struct.html#a3ee51903a6b2674d24300a1e472bb56f',1,'pi_buff_rect_offset_struct']]],
-  ['xchg_6186',['xchg',['../group__sycl__esimd__core.html#gga23fb0ca831ce2cf4176c9c1ad518bc48a8fb8e41d797861ffe5ef78c9b4353f3b',1,'cl::__ESIMD_NS']]],
-  ['xpti_5fcreate_5ftracepoint_6187',['XPTI_CREATE_TRACEPOINT',['../usm__impl_8cpp.html#a84af7d88bb91ecdc251d87e9aa9ef340',1,'usm_impl.cpp']]],
-  ['xpti_5fregistry_2ecpp_6188',['xpti_registry.cpp',['../xpti__registry_8cpp.html',1,'']]],
-  ['xpti_5fregistry_2ehpp_6189',['xpti_registry.hpp',['../xpti__registry_8hpp.html',1,'']]],
-  ['xptiinitdone_6190',['XPTIInitDone',['../namespacecl_1_1sycl_1_1detail_1_1pi.html#a7ebb67d911d0fd533044b2f6646f9c9f',1,'cl::sycl::detail::pi']]],
-  ['xptiregistry_6191',['XPTIRegistry',['../classcl_1_1sycl_1_1detail_1_1XPTIRegistry.html',1,'cl::sycl::detail']]],
-  ['xterm_6192',['XTerm',['../structcl_1_1sycl_1_1detail_1_1TermPositions.html#a733f043bb59b36efdfafd786840ef188',1,'cl::sycl::detail::TermPositions']]]
+  ['x_9363',['x',['../namespacesycl_1_1__V1.html#aeb98a006d1d0b7d9447fd33bea7afd4b',1,'sycl::_V1::x()'],['../namespacesyclcompat_1_1global__id.html#a1061f7f47f4dc792a8fc1876d4c78fb0',1,'syclcompat::global_id::x()'],['../namespacesyclcompat_1_1global__range.html#af5730d95880bc225b3f35f7b2436860b',1,'syclcompat::global_range::x()'],['../namespacesyclcompat_1_1work__group__range.html#ad6fac6edf83e8320d77e54b0c4f174c6',1,'syclcompat::work_group_range::x()'],['../namespacesyclcompat_1_1work__group__id.html#a660326ea95f98aaa3dd56a77fae7fa72',1,'syclcompat::work_group_id::x()'],['../namespacesyclcompat_1_1local__range.html#a2ec3d5d497bf495c4cffe108da0946a4',1,'syclcompat::local_range::x()'],['../namespacesyclcompat_1_1local__id.html#a8edceb8d7b62f522ed23dbf1370e3131',1,'syclcompat::local_id::x()'],['../namespacesycl_1_1__V1_1_1native.html#adcb422c9f2729fe7250476c11aaa276d',1,'sycl::_V1::native::x()'],['../namespacesycl_1_1__V1_1_1half__precision.html#a3f6a1ed2c462fb0db4fdecd14d70044e',1,'sycl::_V1::half_precision::x()'],['../namespacesycl_1_1__V1.html#aeb98a006d1d0b7d9447fd33bea7afd4b',1,'sycl::x()'],['../group__sycl__esimd__logical.html#gga3e02a716e3ba958acf101e2503052dc7a9dd4e461268c8034f5c8564e155c67a6',1,'sycl::_V1::ext::intel::esimd::x()'],['../classsyclcompat_1_1dim3.html#aeaed673db11b63b9ce5e534cbd2de1c4',1,'syclcompat::dim3::x()'],['../structsycl_1_1__V1_1_1elem.html#a53dbf6536ae17c8e3b514cc944b47edd',1,'sycl::_V1::elem::x()'],['../structpi__image__offset__struct.html#ac94d4063741aab1034f2758c30a9e49f',1,'pi_image_offset_struct::x()']]],
+  ['x86_5f64_9364',['x86_64',['../namespacesycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental.html#ac11972ee927e5fc3fd682e3184d999e9a0027f42e1e5dfcb4fd5f8f9c6db89af3',1,'sycl::_V1::ext::oneapi::experimental']]],
+  ['x_5fbytes_9365',['x_bytes',['../structpi__buff__rect__offset__struct.html#a3ee51903a6b2674d24300a1e472bb56f',1,'pi_buff_rect_offset_struct']]],
+  ['xchg_9366',['xchg',['../group__sycl__esimd__core.html#ggad3d821293325e83ff7ea04b0562225aaa8fb8e41d797861ffe5ef78c9b4353f3b',1,'sycl::_V1::ext::intel::esimd']]],
+  ['xpti_5fregistry_2ecpp_9367',['xpti_registry.cpp',['../xpti__registry_8cpp.html',1,'']]],
+  ['xpti_5fregistry_2ehpp_9368',['xpti_registry.hpp',['../xpti__registry_8hpp.html',1,'']]],
+  ['xptiinitdone_9369',['XPTIInitDone',['../namespacesycl_1_1__V1_1_1detail_1_1pi.html#a9d012a0e570ebefb2ff7585f801bc60e',1,'sycl::_V1::detail::pi']]],
+  ['xptiregistry_9370',['XPTIRegistry',['../classsycl_1_1__V1_1_1detail_1_1XPTIRegistry.html',1,'sycl::_V1::detail']]],
+  ['xterm_9371',['XTerm',['../structsycl_1_1__V1_1_1detail_1_1TermPositions.html#a22180458f5328283f78bae4695273c02',1,'sycl::_V1::detail::TermPositions']]]
 ];

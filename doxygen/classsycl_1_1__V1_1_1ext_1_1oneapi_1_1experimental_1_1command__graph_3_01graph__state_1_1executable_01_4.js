@@ -1,0 +1,4 @@
+var classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1command__graph_3_01graph__state_1_1executable_01_4 =
+[
+    [ "detail::modifiable_command_graph::finalize", "classsycl_1_1__V1_1_1ext_1_1oneapi_1_1experimental_1_1command__graph_3_01graph__state_1_1executable_01_4.html#a706ab496d902ee05749d13767d184e7c", null ]
+];

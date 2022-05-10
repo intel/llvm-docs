@@ -1,4 +1,0 @@
-var structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01info_1_1partition__affinit72fd5d1aafd3b7caa2bc62838b399b34 =
-[
-    [ "get", "structcl_1_1sycl_1_1detail_1_1get__device__info_3_01std_1_1vector_3_01info_1_1partition__affinit72fd5d1aafd3b7caa2bc62838b399b34.html#a19a18cae5dc6ccf024e7a5ea2d34b091", null ]
-];

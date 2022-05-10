@@ -1,0 +1,5 @@
+var structsycl_1_1__V1_1_1detail_1_1IsSwizzleOp_3_01sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Operatcf49b4af7f27549e12339a6e6731b7a1 =
+[
+    [ "T", "structsycl_1_1__V1_1_1detail_1_1IsSwizzleOp_3_01sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Operatcf49b4af7f27549e12339a6e6731b7a1.html#a2499c87c3d89b45925536594033ffd57", null ],
+    [ "Type", "structsycl_1_1__V1_1_1detail_1_1IsSwizzleOp_3_01sycl_1_1detail_1_1SwizzleOp_3_01VecT_00_01Operatcf49b4af7f27549e12339a6e6731b7a1.html#a79e0dfe35d3ef7a5831d306200c39c34", null ]
+];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['queue_7185',['queue',['../classcl_1_1sycl_1_1queue.html',1,'cl::sycl']]],
-  ['queue_5fgroup_5finfo_5ft_7186',['queue_group_info_t',['../struct__pi__device_1_1queue__group__info__t.html',1,'_pi_device']]],
-  ['queue_5fimpl_7187',['queue_impl',['../classcl_1_1sycl_1_1detail_1_1queue__impl.html',1,'cl::sycl::detail']]]
+  ['queue_10991',['queue',['../classsycl_1_1__V1_1_1queue.html',1,'sycl::_V1::queue'],['../classsycl_1_1__V1_1_1queue.html',1,'sycl::queue']]],
+  ['queue_5fimpl_10992',['queue_impl',['../classsycl_1_1__V1_1_1detail_1_1queue__impl.html',1,'sycl::_V1::detail']]]
 ];
